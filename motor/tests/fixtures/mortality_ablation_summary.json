@@ -1,0 +1,25 @@
+{
+  "source": "paired Casanova mortality ablation summarized from original full outputs",
+  "on_sha256": "54ddab69b1e6ad73c0e653da526734cd4bd65d7bb013aa52285255785436f5de",
+  "off_sha256": "a484b2bd9138273e318b50cf9edeca8e3c7fa5d1224d9aa778b90e0efbc965dd",
+  "on": {
+    "H1": {
+      "family": "trayectoria_escritores_creativos",
+      "rank_fusion": 24.015836
+    },
+    "H2": {
+      "family": "9_audaz_empresa",
+      "rank_fusion": 23.375
+    }
+  },
+  "off": {
+    "H1": {
+      "family": "trayectoria_escritores_creativos",
+      "rank_fusion": 24.015836
+    },
+    "H2": {
+      "family": "9_audaz_empresa",
+      "rank_fusion": 23.375
+    }
+  }
+}

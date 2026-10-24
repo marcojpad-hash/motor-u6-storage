@@ -1,0 +1,3728 @@
+{
+  "registro": "REGISTRO_LUCES_GEMINI_PACKS",
+  "version": "1.2.0-hpe",
+  "fecha": "2026-09-20",
+  "nota_bitacora": "Cableado provisional al bus Capa 2. Pesos/tokens EDITABLES: los auditores aún no aportan tokens canónicos de cruce; se puede recalibrar sin tocar Engine/244/H. | 2026-09-20: +pat/ins/sab/vin/cue/fam/cla (38 luces persona-en-escena). Distinto de sidecar ama.* (arquetipos amorosos). Alimenta_H=NO. Editable. | +hpe.* (8) hist-pol-econ; 7fam re-check = ya cableadas sin delta",
+  "candados": {
+    "TOCA_F": "NO",
+    "TOCA_244": "NO",
+    "TOCA_Engine_V5": "NO",
+    "TOCA_FREEZE": "NO",
+    "Alimenta_H": "NO",
+    "ES_PILAR": "NO",
+    "fuse_patterns": "NO"
+  },
+  "politica": {
+    "editable_pesos": true,
+    "editable_tokens_favor": true,
+    "motivo_editable": "auditores sin tokens de cruce aún; bitácora permite modificación posterior",
+    "activacion": "sidecar_luces_gemini_packs.leer()",
+    "namespaces": [
+      "soc",
+      "hist",
+      "ar",
+      "sit",
+      "pat",
+      "ins",
+      "sab",
+      "vin",
+      "cue",
+      "fam",
+      "cla",
+      "hpe"
+    ],
+    "subcapas": {
+      "bus_luces": [
+        "ar",
+        "cla",
+        "cue",
+        "fam",
+        "hist",
+        "ins",
+        "pat",
+        "sab",
+        "sit",
+        "soc",
+        "vin"
+      ],
+      "sidecar_ama": "POST_TOKENS — ver registro_sidecar_amantes_arquetipos.json"
+    }
+  },
+  "packs": {
+    "soc": {
+      "n": 16,
+      "items": [
+        {
+          "id": "soc.soldado",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "soldado",
+          "luces_sugeridas": [
+            "digno",
+            "firme",
+            "justo",
+            "recto",
+            "protector"
+          ],
+          "pesos_favor": {
+            "digno": 0.65,
+            "firme": 0.72,
+            "justo": 0.58,
+            "recto": 0.69,
+            "protector": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.bombero",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "bombero",
+          "luces_sugeridas": [
+            "rapido",
+            "dedicado",
+            "valiente",
+            "rescata",
+            "peligroso"
+          ],
+          "pesos_favor": {
+            "rapido": 0.68,
+            "dedicado": 0.71,
+            "valiente": 0.85,
+            "rescata": 0.78,
+            "peligroso": 0.62
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.profesor",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "profesor",
+          "luces_sugeridas": [
+            "erudito",
+            "conocedor",
+            "educador"
+          ],
+          "pesos_favor": {
+            "erudito": 0.74,
+            "conocedor": 0.69,
+            "educador": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.psicoterapeuta",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "psicoterapeuta",
+          "luces_sugeridas": [
+            "observador",
+            "empatico",
+            "paciente",
+            "amable",
+            "ayuda"
+          ],
+          "pesos_favor": {
+            "observador": 0.77,
+            "empatico": 0.83,
+            "paciente": 0.75,
+            "amable": 0.64,
+            "ayuda": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.empresario",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "empresario",
+          "luces_sugeridas": [
+            "interes",
+            "rico",
+            "astuto",
+            "ganancias"
+          ],
+          "pesos_favor": {
+            "interes": 0.61,
+            "rico": 0.73,
+            "astuto": 0.79,
+            "ganancias": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.retornado",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "retornado",
+          "luces_sugeridas": [
+            "estudio_fuera",
+            "idioma",
+            "informado",
+            "educado"
+          ],
+          "pesos_favor": {
+            "estudio_fuera": 0.67,
+            "idioma": 0.59,
+            "informado": 0.71,
+            "educado": 0.66
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.funcionario",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "funcionario",
+          "luces_sugeridas": [
+            "estable",
+            "de_por_vida",
+            "tranquilo",
+            "bien_pagado"
+          ],
+          "pesos_favor": {
+            "estable": 0.74,
+            "de_por_vida": 0.68,
+            "tranquilo": 0.61,
+            "bien_pagado": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.rico",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "rico",
+          "luces_sugeridas": [
+            "extravagancia",
+            "arrogancia",
+            "astucia",
+            "derroche"
+          ],
+          "pesos_favor": {
+            "extravagancia": 0.81,
+            "arrogancia": 0.74,
+            "astucia": 0.69,
+            "derroche": 0.83
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.anciano",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "anciano",
+          "luces_sugeridas": [
+            "cuidado",
+            "afecto",
+            "hablador",
+            "lento",
+            "amable"
+          ],
+          "pesos_favor": {
+            "cuidado": 0.72,
+            "afecto": 0.68,
+            "hablador": 0.55,
+            "lento": 0.64,
+            "amable": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.agricultor",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "agricultor",
+          "luces_sugeridas": [
+            "duro",
+            "campo",
+            "trabajador",
+            "sencillo_honesto",
+            "bajos_ingresos"
+          ],
+          "pesos_favor": {
+            "duro": 0.71,
+            "campo": 0.85,
+            "trabajador": 0.79,
+            "sencillo_honesto": 0.74,
+            "bajos_ingresos": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.ama_de_casa",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "ama_de_casa",
+          "luces_sugeridas": [
+            "cocina_cuidado",
+            "familia",
+            "tareas",
+            "virtuosa",
+            "trabajadora"
+          ],
+          "pesos_favor": {
+            "cocina_cuidado": 0.73,
+            "familia": 0.81,
+            "tareas": 0.76,
+            "virtuosa": 0.64,
+            "trabajadora": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.migrante",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "migrante",
+          "luces_sugeridas": [
+            "sobrecarga",
+            "dificil",
+            "vulnerable"
+          ],
+          "pesos_favor": {
+            "sobrecarga": 0.75,
+            "dificil": 0.72,
+            "vulnerable": 0.83
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.nino_dejado_atras",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "nino_dejado_atras",
+          "luces_sugeridas": [
+            "soledad",
+            "descuido",
+            "compania"
+          ],
+          "pesos_favor": {
+            "soledad": 0.84,
+            "descuido": 0.79,
+            "compania": 0.61
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.limpieza",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "limpieza",
+          "luces_sugeridas": [
+            "madrugador",
+            "trabajador",
+            "sencillo",
+            "respetable",
+            "laborioso",
+            "bajo_salario"
+          ],
+          "pesos_favor": {
+            "madrugador": 0.7,
+            "trabajador": 0.76,
+            "sencillo": 0.68,
+            "respetable": 0.72,
+            "laborioso": 0.74,
+            "bajo_salario": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.celebridad",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "celebridad",
+          "luces_sugeridas": [
+            "ingresos",
+            "glamur",
+            "atractivo",
+            "escandalos"
+          ],
+          "pesos_favor": {
+            "ingresos": 0.78,
+            "glamur": 0.86,
+            "atractivo": 0.73,
+            "escandalos": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "soc.criminal",
+          "pack": "SOCIALES",
+          "namespace": "soc",
+          "token_gemini": "criminal",
+          "luces_sugeridas": [
+            "prision",
+            "odioso",
+            "feroz",
+            "violento_cruel"
+          ],
+          "pesos_favor": {
+            "prision": 0.79,
+            "odioso": 0.71,
+            "feroz": 0.76,
+            "violento_cruel": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "hist": {
+      "n": 37,
+      "items": [
+        {
+          "id": "hist.guerra",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "guerra",
+          "luces_sugeridas": [
+            "conflicto_armado",
+            "movilizacion_militar",
+            "bajas_combate",
+            "destruccion_infraestructura",
+            "logistica_campana"
+          ],
+          "pesos_favor": {
+            "conflicto_armado": 0.85,
+            "movilizacion_militar": 0.78,
+            "bajas_combate": 0.82,
+            "destruccion_infraestructura": 0.74,
+            "logistica_campana": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.revolucion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "revolucion",
+          "luces_sugeridas": [
+            "insurreccion_popular",
+            "ruptura_institucional",
+            "cambio_estructural",
+            "ideologia_radical",
+            "subversion_orden"
+          ],
+          "pesos_favor": {
+            "insurreccion_popular": 0.88,
+            "ruptura_institucional": 0.84,
+            "cambio_estructural": 0.79,
+            "ideologia_radical": 0.72,
+            "subversion_orden": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.golpe_de_estado",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "golpe_de_estado",
+          "luces_sugeridas": [
+            "pronunciamiento_militar",
+            "quiebre_constitucional",
+            "toma_palacio",
+            "destitucion_ejecutiva",
+            "decreto_excepcion"
+          ],
+          "pesos_favor": {
+            "pronunciamiento_militar": 0.86,
+            "quiebre_constitucional": 0.89,
+            "toma_palacio": 0.73,
+            "destitucion_ejecutiva": 0.81,
+            "decreto_excepcion": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.invasion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "invasion",
+          "luces_sugeridas": [
+            "traspaso_fronteras",
+            "ofensiva_exterior",
+            "ruptura_soberania",
+            "despliegue_vanguardia",
+            "neutralizacion_defensas"
+          ],
+          "pesos_favor": {
+            "traspaso_fronteras": 0.83,
+            "ofensiva_exterior": 0.87,
+            "ruptura_soberania": 0.85,
+            "despliegue_vanguardia": 0.71,
+            "neutralizacion_defensas": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.ocupacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "ocupacion",
+          "luces_sugeridas": [
+            "administracion_extranjera",
+            "control_territorial",
+            "resistencia_clandestina",
+            "ley_marcial",
+            "asimilacion_recursos"
+          ],
+          "pesos_favor": {
+            "administracion_extranjera": 0.82,
+            "control_territorial": 0.8,
+            "resistencia_clandestina": 0.74,
+            "ley_marcial": 0.79,
+            "asimilacion_recursos": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.guerra_civil",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "guerra_civil",
+          "luces_sugeridas": [
+            "faccionalismo_interno",
+            "polarizacion_social",
+            "ruptura_cohesion",
+            "lineas_frente_internas",
+            "purga_retaguardia"
+          ],
+          "pesos_favor": {
+            "faccionalismo_interno": 0.89,
+            "polarizacion_social": 0.84,
+            "ruptura_cohesion": 0.81,
+            "lineas_frente_internas": 0.76,
+            "purga_retaguardia": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.crisis_economica",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "crisis_economica",
+          "luces_sugeridas": [
+            "recesion_actividad",
+            "contraccion_credito",
+            "caida_pib",
+            "quiebra_empresarial",
+            "perdida_poder_adquisitivo"
+          ],
+          "pesos_favor": {
+            "recesion_actividad": 0.82,
+            "contraccion_credito": 0.79,
+            "caida_pib": 0.85,
+            "quiebra_empresarial": 0.77,
+            "perdida_poder_adquisitivo": 0.8
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.inflacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "inflacion",
+          "luces_sugeridas": [
+            "depreciacion_monetaria",
+            "espiral_precios",
+            "emision_inorganica",
+            "perdida_confianza_divisa",
+            "especulacion_mercado"
+          ],
+          "pesos_favor": {
+            "depreciacion_monetaria": 0.86,
+            "espiral_precios": 0.88,
+            "emision_inorganica": 0.74,
+            "perdida_confianza_divisa": 0.81,
+            "especulacion_mercado": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.desempleo_masivo",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "desempleo_masivo",
+          "luces_sugeridas": [
+            "despido_escala",
+            "inactividad_laboral",
+            "precarizacion_social",
+            "subsidios_insuficientes",
+            "destruccion_puestos"
+          ],
+          "pesos_favor": {
+            "despido_escala": 0.83,
+            "inactividad_laboral": 0.76,
+            "precarizacion_social": 0.79,
+            "subsidios_insuficientes": 0.65,
+            "destruccion_puestos": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.colapso_financiero",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "colapso_financiero",
+          "luces_sugeridas": [
+            "panico_bancario",
+            "quiebra_sistemica",
+            "desplome_bursatil",
+            "evaporacion_liquidez",
+            "cesacion_pagos"
+          ],
+          "pesos_favor": {
+            "panico_bancario": 0.87,
+            "quiebra_sistemica": 0.89,
+            "desplome_bursatil": 0.84,
+            "evaporacion_liquidez": 0.82,
+            "cesacion_pagos": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.hambruna",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "hambruna",
+          "luces_sugeridas": [
+            "escasez_alimentos",
+            "desnutricion_generalizada",
+            "mortalidad_catastrofica",
+            "colapso_abasto",
+            "racionamiento_extremo"
+          ],
+          "pesos_favor": {
+            "escasez_alimentos": 0.91,
+            "desnutricion_generalizada": 0.88,
+            "mortalidad_catastrofica": 0.85,
+            "colapso_abasto": 0.82,
+            "racionamiento_extremo": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.migracion_masiva",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "migracion_masiva",
+          "luces_sugeridas": [
+            "desplazamiento_poblacional",
+            "flujos_fronterizos",
+            "exodo_colectivo",
+            "presion_receptora",
+            "asentamiento_precario"
+          ],
+          "pesos_favor": {
+            "desplazamiento_poblacional": 0.86,
+            "flujos_fronterizos": 0.81,
+            "exodo_colectivo": 0.84,
+            "presion_receptora": 0.72,
+            "asentamiento_precario": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.exilio",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "exilio",
+          "luces_sugeridas": [
+            "destierro_politico",
+            "comunidades_diaspora",
+            "desarraigo_cultural",
+            "actividad_exterior",
+            "refugio_diplomatico"
+          ],
+          "pesos_favor": {
+            "destierro_politico": 0.85,
+            "comunidades_diaspora": 0.77,
+            "desarraigo_cultural": 0.72,
+            "actividad_exterior": 0.66,
+            "refugio_diplomatico": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.epidemia",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "epidemia",
+          "luces_sugeridas": [
+            "brote_infeccioso",
+            "contagio_regional",
+            "saturacion_sanitaria",
+            "cuarentena_focalizada",
+            "letalidad_aguda"
+          ],
+          "pesos_favor": {
+            "brote_infeccioso": 0.84,
+            "contagio_regional": 0.79,
+            "saturacion_sanitaria": 0.76,
+            "cuarentena_focalizada": 0.71,
+            "letalidad_aguda": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.pandemia",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "pandemia",
+          "luces_sugeridas": [
+            "propagacion_global",
+            "morbilidad_escala",
+            "colapso_sanitario_sistemico",
+            "confinamiento_poblacional",
+            "interrupcion_conectividad"
+          ],
+          "pesos_favor": {
+            "propagacion_global": 0.89,
+            "morbilidad_escala": 0.83,
+            "colapso_sanitario_sistemico": 0.86,
+            "confinamiento_poblacional": 0.8,
+            "interrupcion_conectividad": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.desastre_natural_con_consecuencias_historicas",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "desastre_natural_con_consecuencias_historicas",
+          "luces_sugeridas": [
+            "evento_cataclismico",
+            "devastacion_geografica",
+            "destruccion_asentamientos",
+            "alteracion_climatica_local",
+            "reorganizacion_emergencia"
+          ],
+          "pesos_favor": {
+            "evento_cataclismico": 0.87,
+            "devastacion_geografica": 0.81,
+            "destruccion_asentamientos": 0.79,
+            "alteracion_climatica_local": 0.68,
+            "reorganizacion_emergencia": 0.72
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.industrializacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "industrializacion",
+          "luces_sugeridas": [
+            "transicion_manufacturera",
+            "crecimiento_fabril",
+            "acumulacion_capital",
+            "reorganizacion_produccion",
+            "desarrollo_infraestructura_pesada"
+          ],
+          "pesos_favor": {
+            "transicion_manufacturera": 0.84,
+            "crecimiento_fabril": 0.81,
+            "acumulacion_capital": 0.76,
+            "reorganizacion_produccion": 0.78,
+            "desarrollo_infraestructura_pesada": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.mecanizacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "mecanizacion",
+          "luces_sugeridas": [
+            "introduccion_maquinaria",
+            "sustitucion_traccion_animal",
+            "estandarizacion_procesos",
+            "aumento_productividad_por_hora",
+            "reduccion_esfuerzo_manual"
+          ],
+          "pesos_favor": {
+            "introduccion_maquinaria": 0.82,
+            "sustitucion_traccion_animal": 0.75,
+            "estandarizacion_procesos": 0.71,
+            "aumento_productividad_por_hora": 0.79,
+            "reduccion_esfuerzo_manual": 0.67
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.automatizacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "automatizacion",
+          "luces_sugeridas": [
+            "sistemas_auto_regulados",
+            "eliminacion_mano_obra_directa",
+            "control_algoritmico",
+            "produccion_continua",
+            "optimizacion_eficiencia"
+          ],
+          "pesos_favor": {
+            "sistemas_auto_regulados": 0.8,
+            "eliminacion_mano_obra_directa": 0.83,
+            "control_algoritmico": 0.76,
+            "produccion_continua": 0.74,
+            "optimizacion_eficiencia": 0.72
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.ruptura_tecnologica",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "ruptura_tecnologica",
+          "luces_sugeridas": [
+            "obsolescencia_paradigmas",
+            "aparicion_innovacion_critica",
+            "reconfiguracion_mercados",
+            "desplazamiento_sectores",
+            "aceleracion_difusion"
+          ],
+          "pesos_favor": {
+            "obsolescencia_paradigmas": 0.86,
+            "aparicion_innovacion_critica": 0.88,
+            "reconfiguracion_mercados": 0.81,
+            "desplazamiento_sectores": 0.78,
+            "aceleracion_difusion": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.colonizacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "colonizacion",
+          "luces_sugeridas": [
+            "asentamiento_metropolitano",
+            "sometimiento_poblaciones",
+            "extraccion_materias_primas",
+            "imposicion_juridica",
+            "asimetria_metropoli_periferia"
+          ],
+          "pesos_favor": {
+            "asentamiento_metropolitano": 0.84,
+            "sometimiento_poblaciones": 0.87,
+            "extraccion_materias_primas": 0.82,
+            "imposicion_juridica": 0.79,
+            "asimetria_metropoli_periferia": 0.85
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.descolonizacion",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "descolonizacion",
+          "luces_sugeridas": [
+            "retirada_metropolitana",
+            "transferencia_soberania",
+            "surgimiento_estado_nacion",
+            "tension_post_colonial",
+            "reclamacion_identitaria"
+          ],
+          "pesos_favor": {
+            "retirada_metropolitana": 0.85,
+            "transferencia_soberania": 0.81,
+            "surgimiento_estado_nacion": 0.83,
+            "tension_post_colonial": 0.76,
+            "reclamacion_identitaria": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.independencia",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "independencia",
+          "luces_sugeridas": [
+            "proclamacion_soberania",
+            "emancipacion_politica",
+            "guerra_liberacion",
+            "reconocimiento_internacional",
+            "redaccion_constitutiva"
+          ],
+          "pesos_favor": {
+            "proclamacion_soberania": 0.88,
+            "emancipacion_politica": 0.86,
+            "guerra_liberacion": 0.82,
+            "reconocimiento_internacional": 0.74,
+            "redaccion_constitutiva": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.expansion_imperial",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "expansion_imperial",
+          "luces_sugeridas": [
+            "anexion_territorial",
+            "proyeccion_poder_exterior",
+            "asimilacion_provincias",
+            "tributacion_periferica",
+            "hegemonia_militar"
+          ],
+          "pesos_favor": {
+            "anexion_territorial": 0.87,
+            "proyeccion_poder_exterior": 0.84,
+            "asimilacion_provincias": 0.75,
+            "tributacion_periferica": 0.78,
+            "hegemonia_militar": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.caida_de_un_regimen",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "caida_de_un_regimen",
+          "luces_sugeridas": [
+            "colapso_autoridad",
+            "vacio_poder",
+            "desintegracion_institucional",
+            "fuga_dirigentes",
+            "persecucion_oficiales"
+          ],
+          "pesos_favor": {
+            "colapso_autoridad": 0.89,
+            "vacio_poder": 0.86,
+            "desintegracion_institucional": 0.83,
+            "fuga_dirigentes": 0.75,
+            "persecucion_oficiales": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.transicion_politica",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "transicion_politica",
+          "luces_sugeridas": [
+            "reforma_institucional",
+            "negociacion_elites",
+            "apertura_procesos",
+            "rediseño_reglas_juego",
+            "pacificacion_gradual"
+          ],
+          "pesos_favor": {
+            "reforma_institucional": 0.81,
+            "negociacion_elites": 0.78,
+            "apertura_procesos": 0.74,
+            "rediseño_reglas_juego": 0.76,
+            "pacificacion_gradual": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.persecucion_religiosa",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "persecucion_religiosa",
+          "luces_sugeridas": [
+            "prohibicion_culto",
+            "martirio_creyentes",
+            "destruccion_templos",
+            "clandestinidad_liturgica",
+            "ortodoxia_estatal"
+          ],
+          "pesos_favor": {
+            "prohibicion_culto": 0.86,
+            "martirio_creyentes": 0.8,
+            "destruccion_templos": 0.77,
+            "clandestinidad_liturgica": 0.73,
+            "ortodoxia_estatal": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.persecucion_politica",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "persecucion_politica",
+          "luces_sugeridas": [
+            "proscripcion_oposicion",
+            "encarcelamiento_disidentes",
+            "aparato_seguridad_activo",
+            "purga_aparato_estatal",
+            "vigilancia_ideologica"
+          ],
+          "pesos_favor": {
+            "proscripcion_oposicion": 0.88,
+            "encarcelamiento_disidentes": 0.85,
+            "aparato_seguridad_activo": 0.81,
+            "purga_aparato_estatal": 0.78,
+            "vigilancia_ideologica": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.censura",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "censura",
+          "luces_sugeridas": [
+            "control_editorial",
+            "clausura_medios",
+            "linea_oficial_narrativa",
+            "supresion_disidencia_expresiva",
+            "secuestro_publicaciones"
+          ],
+          "pesos_favor": {
+            "control_editorial": 0.84,
+            "clausura_medios": 0.81,
+            "linea_oficial_narrativa": 0.79,
+            "supresion_disidencia_expresiva": 0.83,
+            "secuestro_publicaciones": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.protesta_social",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "protesta_social",
+          "luces_sugeridas": [
+            "movilizacion_callejera",
+            "concentracion_publica",
+            "consignas_colectivas",
+            "descontento_manifiesto",
+            "disturbios_urbanos"
+          ],
+          "pesos_favor": {
+            "movilizacion_callejera": 0.82,
+            "concentracion_publica": 0.76,
+            "consignas_colectivas": 0.74,
+            "descontento_manifiesto": 0.79,
+            "disturbios_urbanos": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.huelga_general",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "huelga_general",
+          "luces_sugeridas": [
+            "paro_actividades_total",
+            "bloqueo_vias_comunicacion",
+            "congelamiento_economico",
+            "comites_conflicto",
+            "desafio_patronal_estatal"
+          ],
+          "pesos_favor": {
+            "paro_actividades_total": 0.87,
+            "bloqueo_vias_comunicacion": 0.79,
+            "congelamiento_economico": 0.83,
+            "comites_conflicto": 0.72,
+            "desafio_patronal_estatal": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.movimiento_obrero",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "movimiento_obrero",
+          "luces_sugeridas": [
+            "organizacion_sindical",
+            "conciencia_clase",
+            "reivindicacion_laboral",
+            "solidaridad_gremial",
+            "agitacion_fabril"
+          ],
+          "pesos_favor": {
+            "organizacion_sindical": 0.85,
+            "conciencia_clase": 0.8,
+            "reivindicacion_laboral": 0.82,
+            "solidaridad_gremial": 0.75,
+            "agitacion_fabril": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.reforma_social",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "reforma_social",
+          "luces_sugeridas": [
+            "legislacion_progresiva",
+            "concesion_derechos",
+            "redistribucion_recursos",
+            "atenuacion_conflictos",
+            "politica_bienestar"
+          ],
+          "pesos_favor": {
+            "legislacion_progresiva": 0.78,
+            "concesion_derechos": 0.81,
+            "redistribucion_recursos": 0.74,
+            "atenuacion_conflictos": 0.71,
+            "politica_bienestar": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.urbanizacion_acelerada",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "urbanizacion_acelerada",
+          "luces_sugeridas": [
+            "crecimiento_periferias",
+            "exodo_rural_urbano",
+            "densificacion_habitacional",
+            "demanda_servicios_basicos",
+            "transformacion_paisaje"
+          ],
+          "pesos_favor": {
+            "crecimiento_periferias": 0.8,
+            "exodo_rural_urbano": 0.85,
+            "densificacion_habitacional": 0.78,
+            "demanda_servicios_basicos": 0.82,
+            "transformacion_paisaje": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.crisis_demografica",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "crisis_demografica",
+          "luces_sugeridas": [
+            "caida_natalidad",
+            "envejecimiento_poblacional",
+            "quiebre_reemplazo_generacional",
+            "despoblacion_territorial",
+            "tension_sistemas_soporte"
+          ],
+          "pesos_favor": {
+            "caida_natalidad": 0.84,
+            "envejecimiento_poblacional": 0.79,
+            "quiebre_reemplazo_generacional": 0.82,
+            "despoblacion_territorial": 0.75,
+            "tension_sistemas_soporte": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.auge_comercial",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "auge_comercial",
+          "luces_sugeridas": [
+            "expansion_rutas",
+            "incremento_transacciones",
+            "acumulacion_excedentes",
+            "florecimiento_mercados",
+            "desarrollo_centros_intercambio"
+          ],
+          "pesos_favor": {
+            "expansion_rutas": 0.82,
+            "incremento_transacciones": 0.85,
+            "acumulacion_excedentes": 0.79,
+            "florecimiento_mercados": 0.81,
+            "desarrollo_centros_intercambio": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "hist.expansion_territorial",
+          "pack": "HISTORICOS",
+          "namespace": "hist",
+          "token_gemini": "expansion_territorial",
+          "luces_sugeridas": [
+            "incorporacion_tierras",
+            "desplazamiento_fronteras_exteriores",
+            "establecimiento_avanzadas",
+            "trazado_nuevos_limites",
+            "ocupacion_espacios_perifericos"
+          ],
+          "pesos_favor": {
+            "incorporacion_tierras": 0.83,
+            "desplazamiento_fronteras_exteriores": 0.81,
+            "establecimiento_avanzadas": 0.76,
+            "trazado_nuevos_limites": 0.72,
+            "ocupacion_espacios_perifericos": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "ar": {
+      "n": 38,
+      "items": [
+        {
+          "id": "ar.identidad",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "identidad",
+          "luces_sugeridas": [
+            "soberania_del_self",
+            "continuidad_temporal",
+            "nucleo_invariante",
+            "reconocimiento_propio",
+            "diferenciacion_entorno"
+          ],
+          "pesos_favor": {
+            "ar.fav.soberania_del_self": 0.88,
+            "ar.fav.continuidad_temporal": 0.82,
+            "ar.fav.nucleo_invariante": 0.79,
+            "ar.fav.reconocimiento_propio": 0.85,
+            "ar.fav.diferenciacion_entorno": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.autoimagen",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "autoimagen",
+          "luces_sugeridas": [
+            "proyeccion_reflejada",
+            "registro_perceptual",
+            "espejo_interno",
+            "distorsion_optica",
+            "fijeza_forma"
+          ],
+          "pesos_favor": {
+            "ar.fav.proyeccion_reflejada": 0.76,
+            "ar.fav.registro_perceptual": 0.71,
+            "ar.fav.espejo_interno": 0.83,
+            "ar.fav.distorsion_optica": 0.58,
+            "ar.fav.fijeza_forma": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.autoconcepto",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "autoconcepto",
+          "luces_sugeridas": [
+            "definicion_axiomatica",
+            "estructura_creencias",
+            "coherencia_narrativa",
+            "evaluacion_limite",
+            "mapeo_atributos"
+          ],
+          "pesos_favor": {
+            "ar.fav.definicion_axiomatica": 0.84,
+            "ar.fav.estructura_creencias": 0.81,
+            "ar.fav.coherencia_narrativa": 0.78,
+            "ar.fav.evaluacion_limite": 0.72,
+            "ar.fav.mapeo_atributos": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.deseo",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "deseo",
+          "luces_sugeridas": [
+            "vector_atraccion",
+            "carencia_motora",
+            "impulso_hacia_objeto",
+            "insatisfaccion_latente",
+            "foco_pulsional"
+          ],
+          "pesos_favor": {
+            "ar.fav.vector_atraccion": 0.86,
+            "ar.fav.carencia_motora": 0.81,
+            "ar.fav.impulso_hacia_objeto": 0.89,
+            "ar.fav.insatisfaccion_latente": 0.73,
+            "ar.fav.foco_pulsional": 0.77
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.intencion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "intencion",
+          "luces_sugeridas": [
+            "direccion_acto",
+            "voluntad_manifiesta",
+            "deliberacion_previa",
+            "fijacion_objetivo",
+            "sesgo_teleologico"
+          ],
+          "pesos_favor": {
+            "ar.fav.direccion_acto": 0.89,
+            "ar.fav.voluntad_manifiesta": 0.84,
+            "ar.fav.deliberacion_previa": 0.76,
+            "ar.fav.fijacion_objetivo": 0.82,
+            "ar.fav.sesgo_teleologico": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.motivacion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "motivacion",
+          "luces_sugeridas": [
+            "energia_arranque",
+            "recompensa_interna",
+            "estimulo_subyacente",
+            "persistencia_conducta",
+            "factor_concurrente"
+          ],
+          "pesos_favor": {
+            "ar.fav.energia_arranque": 0.82,
+            "ar.fav.recompensa_interna": 0.79,
+            "ar.fav.estimulo_subyacente": 0.85,
+            "ar.fav.persistencia_conducta": 0.74,
+            "ar.fav.factor_concurrente": 0.67
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.proposito",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "proposito",
+          "luces_sugeridas": [
+            "sentido_direccion",
+            "arquitectura_meta",
+            "justificacion_existencial",
+            "anclaje_futuro",
+            "ordenamiento_actos"
+          ],
+          "pesos_favor": {
+            "ar.fav.sentido_direccion": 0.87,
+            "ar.fav.arquitectura_meta": 0.83,
+            "ar.fav.justificacion_existencial": 0.91,
+            "ar.fav.anclaje_futuro": 0.78,
+            "ar.fav.ordenamiento_actos": 0.8
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.creencia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "creencia",
+          "luces_sugeridas": [
+            "asuncion_verdad",
+            "premisa_ciega",
+            "filtro_interpretativo",
+            "arraigo_cognitivo",
+            "resistencia_evidencia"
+          ],
+          "pesos_favor": {
+            "ar.fav.asuncion_verdad": 0.85,
+            "ar.fav.premisa_ciega": 0.73,
+            "ar.fav.filtro_interpretativo": 0.79,
+            "ar.fav.arraigo_cognitivo": 0.81,
+            "ar.fav.resistencia_evidencia": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.valor",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "valor",
+          "luces_sugeridas": [
+            "pilar_axiologico",
+            "criterio_preferencia",
+            "filtro_conductual",
+            "jerarquia_importancia",
+            "imperativo_interno"
+          ],
+          "pesos_favor": {
+            "ar.fav.pilar_axiologico": 0.88,
+            "ar.fav.criterio_preferencia": 0.82,
+            "ar.fav.filtro_conductual": 0.76,
+            "ar.fav.jerarquia_importancia": 0.79,
+            "ar.fav.imperativo_interno": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.conviccion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "conviccion",
+          "luces_sugeridas": [
+            "certeza_arraigada",
+            "ausencia_duda",
+            "firmeza_posicion",
+            "resistencia_friccion",
+            "anclaje_doctrinal"
+          ],
+          "pesos_favor": {
+            "ar.fav.certeza_arraigada": 0.92,
+            "ar.fav.ausencia_duda": 0.86,
+            "ar.fav.firmeza_posicion": 0.89,
+            "ar.fav.resistencia_friccion": 0.77,
+            "ar.fav.anclaje_doctrinal": 0.72
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.duda",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "duda",
+          "luces_sugeridas": [
+            "oscilacion_valencia",
+            "suspension_juicio",
+            "friccion_cognitiva",
+            "quiebre_certeza",
+            "paralisis_vectorial"
+          ],
+          "pesos_favor": {
+            "ar.fav.oscilacion_valencia": 0.81,
+            "ar.fav.suspension_juicio": 0.78,
+            "ar.fav.friccion_cognitiva": 0.84,
+            "ar.fav.quiebre_certeza": 0.86,
+            "ar.fav.paralisis_vectorial": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.miedo",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "miedo",
+          "luces_sugeridas": [
+            "alerta_vulnerabilidad",
+            "impulso_retraimiento",
+            "anticipacion_daño",
+            "bloqueo_agencia",
+            "hipervigilancia"
+          ],
+          "pesos_favor": {
+            "ar.fav.alerta_vulnerabilidad": 0.87,
+            "ar.fav.impulso_retraimiento": 0.83,
+            "ar.fav.anticipacion_daño": 0.89,
+            "ar.fav.bloqueo_agencia": 0.74,
+            "ar.fav.hipervigilancia": 0.8
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.esperanza",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "esperanza",
+          "luces_sugeridas": [
+            "proyeccion_positiva",
+            "mitigacion_incertidumbre",
+            "apertura_posibilidad",
+            "espera_activa",
+            "atenuador_estres"
+          ],
+          "pesos_favor": {
+            "ar.fav.proyeccion_positiva": 0.78,
+            "ar.fav.mitigacion_incertidumbre": 0.74,
+            "ar.fav.apertura_posibilidad": 0.81,
+            "ar.fav.espera_activa": 0.66,
+            "ar.fav.atenuador_estres": 0.7
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.ambicion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "ambicion",
+          "luces_sugeridas": [
+            "empuje_ascendente",
+            "expansion_limite",
+            "foco_ganancia",
+            "insatisfaccion_estatus",
+            "tension_logro"
+          ],
+          "pesos_favor": {
+            "ar.fav.empuje_ascendente": 0.84,
+            "ar.fav.expansion_limite": 0.81,
+            "ar.fav.foco_ganancia": 0.76,
+            "ar.fav.insatisfaccion_estatus": 0.79,
+            "ar.fav.tension_logro": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.culpa",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "culpa",
+          "luces_sugeridas": [
+            "auto_reproche",
+            "registro_transgresion",
+            "carga_retroactiva",
+            "deuda_interna",
+            "friccion_moral"
+          ],
+          "pesos_favor": {
+            "ar.fav.auto_reproche": 0.86,
+            "ar.fav.registro_transgresion": 0.83,
+            "ar.fav.carga_retroactiva": 0.89,
+            "ar.fav.deuda_interna": 0.78,
+            "ar.fav.friccion_moral": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.verguenza",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "verguenza",
+          "luces_sugeridas": [
+            "exposicion_defecto",
+            "impulso_ocultamiento",
+            "auto_desvalorizacion",
+            "ruptura_ideal_propio",
+            "retraimiento_social"
+          ],
+          "pesos_favor": {
+            "ar.fav.exposicion_defecto": 0.88,
+            "ar.fav.impulso_ocultamiento": 0.85,
+            "ar.fav.auto_desvalorizacion": 0.81,
+            "ar.fav.ruptura_ideal_propio": 0.76,
+            "ar.fav.retraimiento_social": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.orgullo",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "orgullo",
+          "luces_sugeridas": [
+            "auto_afirmacion",
+            "reivindicacion_logro",
+            "blindaje_autoimagen",
+            "satisfaccion_posicional",
+            "resistencia_sumision"
+          ],
+          "pesos_favor": {
+            "ar.fav.auto_afirmacion": 0.82,
+            "ar.fav.reivindicacion_logro": 0.79,
+            "ar.fav.blindaje_autoimagen": 0.75,
+            "ar.fav.satisfaccion_posicional": 0.71,
+            "ar.fav.resistencia_sumision": 0.77
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.afecto",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "afecto",
+          "luces_sugeridas": [
+            "valencia_positiva",
+            "apertura_relacional",
+            "resonancia_emocional",
+            "atenuacion_distancia",
+            "lazo_subjetivo"
+          ],
+          "pesos_favor": {
+            "ar.fav.valencia_positiva": 0.79,
+            "ar.fav.apertura_relacional": 0.82,
+            "ar.fav.resonancia_emocional": 0.84,
+            "ar.fav.atenuacion_distancia": 0.71,
+            "ar.fav.lazo_subjetivo": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.apego",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "apego",
+          "luces_sugeridas": [
+            "fijacion_objeto",
+            "resistencia_perdida",
+            "dependencia_vincular",
+            "anclaje_seguridad",
+            "reduccion_autonomia"
+          ],
+          "pesos_favor": {
+            "ar.fav.fijacion_objeto": 0.85,
+            "ar.fav.resistencia_perdida": 0.89,
+            "ar.fav.dependencia_vincular": 0.81,
+            "ar.fav.anclaje_seguridad": 0.78,
+            "ar.fav.reduccion_autonomia": 0.69
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.soledad",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "soledad",
+          "luces_sugeridas": [
+            "aislamiento_vincular",
+            "vacio_perceptivo",
+            "conciencia_monada",
+            "ausencia_espejo",
+            "repliegue_interno"
+          ],
+          "pesos_favor": {
+            "ar.fav.aislamiento_vincular": 0.83,
+            "ar.fav.vacio_perceptivo": 0.79,
+            "ar.fav.conciencia_monada": 0.86,
+            "ar.fav.ausencia_espejo": 0.81,
+            "ar.fav.repliegue_interno": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.conflicto_interno",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "conflicto_interno",
+          "luces_sugeridas": [
+            "colision_vectores",
+            "paralisis_decision",
+            "friccion_identitaria",
+            "lineas_fuerza_opuestas",
+            "desgaste_energetico"
+          ],
+          "pesos_favor": {
+            "ar.fav.colision_vectores": 0.91,
+            "ar.fav.paralisis_decision": 0.85,
+            "ar.fav.friccion_identitaria": 0.88,
+            "ar.fav.lineas_fuerza_opuestas": 0.82,
+            "ar.fav.desgaste_energetico": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.disonancia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "disonancia",
+          "luces_sugeridas": [
+            "desajuste_cognitivo",
+            "incompatibilidad_datos",
+            "friccion_creencia_acto",
+            "alarma_coherencia",
+            "racionalizacion_emergencia"
+          ],
+          "pesos_favor": {
+            "ar.fav.desajuste_cognitivo": 0.87,
+            "ar.fav.incompatibilidad_datos": 0.84,
+            "ar.fav.friccion_creencia_acto": 0.89,
+            "ar.fav.alarma_coherencia": 0.81,
+            "ar.fav.racionalizacion_emergencia": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.certeza",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "certeza",
+          "luces_sugeridas": [
+            "ausencia_friccion",
+            "estabilidad_matriz",
+            "fijacion_dato",
+            "anclaje_predictivo",
+            "reduccion_entropia"
+          ],
+          "pesos_favor": {
+            "ar.fav.ausencia_friccion": 0.89,
+            "ar.fav.estabilidad_matriz": 0.86,
+            "ar.fav.fijacion_dato": 0.83,
+            "ar.fav.anclaje_predictivo": 0.81,
+            "ar.fav.reduccion_entropia": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.incertidumbre",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "incertidumbre",
+          "luces_sugeridas": [
+            "dispersion_probabilidades",
+            "ruido_predictivo",
+            "ausencia_anclaje",
+            "entropia_bucle",
+            "alerta_indeterminacion"
+          ],
+          "pesos_favor": {
+            "ar.fav.dispersion_probabilidades": 0.88,
+            "ar.fav.ruido_predictivo": 0.83,
+            "ar.fav.ausencia_anclaje": 0.85,
+            "ar.fav.entropia_bucle": 0.81,
+            "ar.fav.alerta_indeterminacion": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.agencia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "agencia",
+          "luces_sugeridas": [
+            "capacidad_acto",
+            "ejercicio_voluntad",
+            "autonomia_causal",
+            "rompimiento_restriccion",
+            "control_proceso"
+          ],
+          "pesos_favor": {
+            "ar.fav.capacidad_acto": 0.89,
+            "ar.fav.ejercicio_voluntad": 0.86,
+            "ar.fav.autonomia_causal": 0.84,
+            "ar.fav.rompimiento_restriccion": 0.81,
+            "ar.fav.control_proceso": 0.77
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.impotencia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "impotencia",
+          "luces_sugeridas": [
+            "bloqueo_causal",
+            "anulacion_agencia",
+            "restriccion_entorno",
+            "colapso_voluntad",
+            "percepcion_limite"
+          ],
+          "pesos_favor": {
+            "ar.fav.bloqueo_causal": 0.87,
+            "ar.fav.anulacion_agencia": 0.91,
+            "ar.fav.restriccion_entorno": 0.83,
+            "ar.fav.colapso_voluntad": 0.79,
+            "ar.fav.percepcion_limite": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.resiliencia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "resiliencia",
+          "luces_sugeridas": [
+            "absorcion_impacto",
+            "reconfiguracion_estructura",
+            "recuperacion_agencia",
+            "persistencia_trazo",
+            "tolerancia_estres"
+          ],
+          "pesos_favor": {
+            "ar.fav.absorcion_impacto": 0.85,
+            "ar.fav.reconfiguracion_estructura": 0.82,
+            "ar.fav.recuperacion_agencia": 0.88,
+            "ar.fav.persistencia_trazo": 0.79,
+            "ar.fav.tolerancia_estres": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.renuncia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "renuncia",
+          "luces_sugeridas": [
+            "abandono_vector",
+            "desactivacion_deseo",
+            "aceptacion_limite",
+            "corte_friccion",
+            "liberacion_carga"
+          ],
+          "pesos_favor": {
+            "ar.fav.abandono_vector": 0.82,
+            "ar.fav.desactivacion_deseo": 0.79,
+            "ar.fav.aceptacion_limite": 0.76,
+            "ar.fav.corte_friccion": 0.71,
+            "ar.fav.liberacion_carga": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.aspiracion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "aspiracion",
+          "luces_sugeridas": [
+            "proyeccion_ideal",
+            "tension_ascendente",
+            "modelo_referencia",
+            "impulso_transformacion",
+            "foco_potencial"
+          ],
+          "pesos_favor": {
+            "ar.fav.proyeccion_ideal": 0.81,
+            "ar.fav.tension_ascendente": 0.84,
+            "ar.fav.modelo_referencia": 0.75,
+            "ar.fav.impulso_transformacion": 0.79,
+            "ar.fav.foco_potencial": 0.72
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.transformacion_del_self",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "transformacion_del_self",
+          "luces_sugeridas": [
+            "mutacion_estructural",
+            "reconfiguracion_identidad",
+            "quiebre_historico",
+            "reemplazo_matriz",
+            "emergencia_nuevo_orden"
+          ],
+          "pesos_favor": {
+            "ar.fav.mutacion_estructural": 0.92,
+            "ar.fav.reconfiguracion_identidad": 0.89,
+            "ar.fav.quiebre_historico": 0.84,
+            "ar.fav.reemplazo_matriz": 0.81,
+            "ar.fav.emergencia_nuevo_orden": 0.86
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.sentido",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "sentido",
+          "luces_sugeridas": [
+            "coherencia_sistemica",
+            "articulacion_total",
+            "justificacion_trazo",
+            "reduccion_absurdo",
+            "anclaje_operativo"
+          ],
+          "pesos_favor": {
+            "ar.fav.coherencia_sistemica": 0.89,
+            "ar.fav.articulacion_total": 0.85,
+            "ar.fav.justificacion_trazo": 0.87,
+            "ar.fav.reduccion_absurdo": 0.81,
+            "ar.fav.anclaje_operativo": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.pertenencia",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "pertenencia",
+          "luces_sugeridas": [
+            "inclusion_matriz",
+            "identificacion_grupo",
+            "cohesion_entorno",
+            "reduccion_aislamiento",
+            "anclaje_colectivo"
+          ],
+          "pesos_favor": {
+            "ar.fav.inclusion_matriz": 0.83,
+            "ar.fav.identificacion_grupo": 0.79,
+            "ar.fav.cohesion_entorno": 0.76,
+            "ar.fav.reduccion_aislamiento": 0.71,
+            "ar.fav.anclaje_colectivo": 0.68
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.alienacion",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "alienacion",
+          "luces_sugeridas": [
+            "desconexion_matriz",
+            "extrañamiento_propio",
+            "ruptura_pertenencia",
+            "perdida_anclaje",
+            "vacio_significativo"
+          ],
+          "pesos_favor": {
+            "ar.fav.desconexion_matriz": 0.87,
+            "ar.fav.extrañamiento_propio": 0.91,
+            "ar.fav.ruptura_pertenencia": 0.85,
+            "ar.fav.perdida_anclaje": 0.82,
+            "ar.fav.vacio_significativo": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.memoria_personal",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "memoria_personal",
+          "luces_sugeridas": [
+            "registro_historico",
+            "caja_negra",
+            "continuidad_traza",
+            "recuperacion_anclaje",
+            "evitacion_reseteo"
+          ],
+          "pesos_favor": {
+            "ar.fav.registro_historico": 0.86,
+            "ar.fav.caja_negra": 0.89,
+            "ar.fav.continuidad_traza": 0.84,
+            "ar.fav.recuperacion_anclaje": 0.81,
+            "ar.fav.evitacion_reseteo": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.interpretacion_de_si",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "interpretacion_de_si",
+          "luces_sugeridas": [
+            "auto_lectura_patron",
+            "traduccion_actos",
+            "codificacion_narrativa",
+            "ajuste_autoimagen",
+            "hermeneutica_self"
+          ],
+          "pesos_favor": {
+            "ar.fav.auto_lectura_patron": 0.85,
+            "ar.fav.traduccion_actos": 0.81,
+            "ar.fav.codificacion_narrativa": 0.78,
+            "ar.fav.ajuste_autoimagen": 0.74,
+            "ar.fav.hermeneutica_self": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.proyecto_de_vida",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "proyecto_de_vida",
+          "luces_sugeridas": [
+            "matriz_prospectiva",
+            "planificacion_trazos",
+            "secuencia_actos_ordenados",
+            "coherencia_temporal_larga",
+            "sostenimiento_direccion"
+          ],
+          "pesos_favor": {
+            "ar.fav.matriz_prospectiva": 0.88,
+            "ar.fav.planificacion_trazos": 0.83,
+            "ar.fav.secuencia_actos_ordenados": 0.85,
+            "ar.fav.coherencia_temporal_larga": 0.81,
+            "ar.fav.sostenimiento_direccion": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.legado",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "legado",
+          "luces_sugeridas": [
+            "trazabilidad_posterior",
+            "registro_permanente",
+            "trascendencia_matriz",
+            "continuidad_obra",
+            "memoria_externa"
+          ],
+          "pesos_favor": {
+            "ar.fav.trazabilidad_posterior": 0.89,
+            "ar.fav.registro_permanente": 0.86,
+            "ar.fav.trascendencia_matriz": 0.82,
+            "ar.fav.continuidad_obra": 0.78,
+            "ar.fav.memoria_externa": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ar.muerte_y_finitud",
+          "pack": "AUTORREFERENCIA_INTERNA",
+          "namespace": "ar",
+          "token_gemini": "muerte_y_finitud",
+          "luces_sugeridas": [
+            "limite_absoluto",
+            "terminacion_traza",
+            "entropia_maxima",
+            "horizonte_fijo",
+            "cierre_sistema"
+          ],
+          "pesos_favor": {
+            "ar.fav.limite_absoluto": 0.94,
+            "ar.fav.terminacion_traza": 0.91,
+            "ar.fav.entropia_maxima": 0.87,
+            "ar.fav.horizonte_fijo": 0.83,
+            "ar.fav.cierre_sistema": 0.89
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "sit": {
+      "n": 21,
+      "items": [
+        {
+          "id": "sit.DTE.transgresion_de_limite",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DTE",
+          "token_gemini": "transgresion_de_limite",
+          "luces_sugeridas": [
+            "transgresion_de_limite"
+          ],
+          "pesos_favor": {
+            "transgresion_de_limite": 0.89
+          },
+          "definicion": "Cruce físico o formal de una frontera restringida o prohibida.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DTE.retorno_al_origen",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DTE",
+          "token_gemini": "retorno_al_origen",
+          "luces_sugeridas": [
+            "retorno_al_origen"
+          ],
+          "pesos_favor": {
+            "retorno_al_origen": 0.85
+          },
+          "definicion": "Reingreso a un espacio geográfico o estructural abandonado previamente.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DTE.evacuacion_de_emergencia",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DTE",
+          "token_gemini": "evacuacion_de_emergencia",
+          "luces_sugeridas": [
+            "evacuacion_de_emergencia"
+          ],
+          "pesos_favor": {
+            "evacuacion_de_emergencia": 0.82
+          },
+          "definicion": "Abandono masivo y apresurado de un recinto debido a la insostenibilidad del entorno.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAC.coordinacion_de_vectores",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAC",
+          "token_gemini": "coordinacion_de_vectores",
+          "luces_sugeridas": [
+            "coordinacion_de_vectores"
+          ],
+          "pesos_favor": {
+            "coordinacion_de_vectores": 0.88
+          },
+          "definicion": "Sincronización de acciones independientes para superar un obstáculo común.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAC.ruptura_de_consenso",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAC",
+          "token_gemini": "ruptura_de_consenso",
+          "luces_sugeridas": [
+            "ruptura_de_consenso"
+          ],
+          "pesos_favor": {
+            "ruptura_de_consenso": 0.79
+          },
+          "definicion": "Cese de la colaboración debido a una divergencia irreconciliable en los objetivos.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DCR.privacion_abrupta",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DCR",
+          "token_gemini": "privacion_abrupta",
+          "luces_sugeridas": [
+            "privacion_abrupta"
+          ],
+          "pesos_favor": {
+            "privacion_abrupta": 0.84
+          },
+          "definicion": "Pérdida inmediata del control o posesión de un recurso vital.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DCR.hallazgo_fortuito",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DCR",
+          "token_gemini": "hallazgo_fortuito",
+          "luces_sugeridas": [
+            "hallazgo_fortuito"
+          ],
+          "pesos_favor": {
+            "hallazgo_fortuito": 0.81
+          },
+          "definicion": "Encuentro accidental de un recurso o herramienta de alto valor sin búsqueda previa.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DCR.sustitucion_de_insumo",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DCR",
+          "token_gemini": "sustitucion_de_insumo",
+          "luces_sugeridas": [
+            "sustitucion_de_insumo"
+          ],
+          "pesos_favor": {
+            "sustitucion_de_insumo": 0.72
+          },
+          "definicion": "Intercambio funcional de un elemento por otro ante la ausencia del original.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAD.persecucion_por_convergencia",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAD",
+          "token_gemini": "persecucion_por_convergencia",
+          "luces_sugeridas": [
+            "persecucion_por_convergencia"
+          ],
+          "pesos_favor": {
+            "persecucion_por_convergencia": 0.91
+          },
+          "definicion": "Un vector rastrea y reduce la distancia respecto a un blanco en movimiento.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAD.asedio_estatico",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAD",
+          "token_gemini": "asedio_estatico",
+          "luces_sugeridas": [
+            "asedio_estatico"
+          ],
+          "pesos_favor": {
+            "asedio_estatico": 0.87
+          },
+          "definicion": "Bloqueo perimetral completo que anula los vectores de salida de una entidad.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAD.represalia_proporcional",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAD",
+          "token_gemini": "represalia_proporcional",
+          "luces_sugeridas": [
+            "represalia_proporcional"
+          ],
+          "pesos_favor": {
+            "represalia_proporcional": 0.86
+          },
+          "definicion": "Ejecución de una acción punitiva o compensatoria disparada por un agravio previo.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DAD.emboscada_por_fijacion",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DAD",
+          "token_gemini": "emboscada_por_fijacion",
+          "luces_sugeridas": [
+            "emboscada_por_fijacion"
+          ],
+          "pesos_favor": {
+            "emboscada_por_fijacion": 0.93
+          },
+          "definicion": "Ataque sorpresivo desde una posición oculta aprovechando un embudo geográfico o vial.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DIM.revelacion_de_asimetria",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DIM",
+          "token_gemini": "revelacion_de_asimetria",
+          "luces_sugeridas": [
+            "revelacion_de_asimetria"
+          ],
+          "pesos_favor": {
+            "revelacion_de_asimetria": 0.88
+          },
+          "definicion": "Descubrimiento de un dato oculto que cambia por completo el balance de poder o la estrategia.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DIM.filtracion_accidental",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DIM",
+          "token_gemini": "filtracion_accidental",
+          "luces_sugeridas": [
+            "filtracion_accidental"
+          ],
+          "pesos_favor": {
+            "filtracion_accidental": 0.83
+          },
+          "definicion": "Exposición involuntaria de datos restringidos debido a un fallo operativo o descuido.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DDR.colapso_de_salvaguarda",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DDR",
+          "token_gemini": "colapso_de_salvaguarda",
+          "luces_sugeridas": [
+            "colapso_de_salvaguarda"
+          ],
+          "pesos_favor": {
+            "colapso_de_salvaguarda": 0.85
+          },
+          "definicion": "Fallo o neutralización del mecanismo de protección principal de un sistema o entorno.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DDR.expulsion_forzosa",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DDR",
+          "token_gemini": "expulsion_forzosa",
+          "luces_sugeridas": [
+            "expulsion_forzosa"
+          ],
+          "pesos_favor": {
+            "expulsion_forzosa": 0.8
+          },
+          "definicion": "Extracción violenta o institucional de una entidad fuera de los límites de un sistema.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DVD.bifurcacion_excluyente",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DVD",
+          "token_gemini": "bifurcacion_excluyente",
+          "luces_sugeridas": [
+            "bifurcacion_excluyente"
+          ],
+          "pesos_favor": {
+            "bifurcacion_excluyente": 0.87
+          },
+          "definicion": "Elección forzada entre dos cursos de acción donde optar por uno destruye irremediablemente el otro.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DVD.claudicacion_estrategica",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DVD",
+          "token_gemini": "claudicacion_estrategica",
+          "luces_sugeridas": [
+            "claudicacion_estrategica"
+          ],
+          "pesos_favor": {
+            "claudicacion_estrategica": 0.76
+          },
+          "definicion": "Cese voluntario de la resistencia o del avance ante la evidencia de inviabilidad.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sit.DCR.transaccion_bajo_friccion",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DCR",
+          "token_gemini": "transaccion_bajo_friccion",
+          "luces_sugeridas": [
+            "transaccion_bajo_friccion"
+          ],
+          "pesos_favor": {
+            "transaccion_bajo_friccion": 0.8
+          },
+          "definicion": "Entrega de recursos condicionada a concesión recíproca en entorno no seguro.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "LATENTE_FUSION_SUGERIDA"
+        },
+        {
+          "id": "sit.DDR.falsa_resolucion",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DDR",
+          "token_gemini": "falsa_resolucion",
+          "luces_sugeridas": [
+            "falsa_resolucion"
+          ],
+          "pesos_favor": {
+            "falsa_resolucion": 0.84
+          },
+          "definicion": "Aparente retorno al equilibrio mientras variables críticas siguen activas bajo superficie.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "LATENTE_HUECO"
+        },
+        {
+          "id": "sit.DVD.recurrencia_ciclica",
+          "pack": "SITUACIONES_NARRATIVAS",
+          "namespace": "sit",
+          "familia": "DVD",
+          "token_gemini": "recurrencia_ciclica",
+          "luces_sugeridas": [
+            "recurrencia_ciclica"
+          ],
+          "pesos_favor": {
+            "recurrencia_ciclica": 0.78
+          },
+          "definicion": "Reaparición de un acontecimiento bajo coordenadas estructurales equivalentes.",
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "LATENTE_HUECO"
+        }
+      ]
+    },
+    "pat": {
+      "n": 6,
+      "items": [
+        {
+          "id": "pat.patron",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "patron",
+          "luces_sugeridas": [
+            "financiamiento",
+            "arbitrariedad",
+            "asimetria_poder",
+            "exigencia_lealtad",
+            "condescendencia",
+            "influencia_politica"
+          ],
+          "pesos_favor": {
+            "financiamiento": 0.85,
+            "arbitrariedad": 0.72,
+            "asimetria_poder": 0.88,
+            "exigencia_lealtad": 0.79,
+            "condescendencia": 0.65,
+            "influencia_politica": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "pat.favorito_caido",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "favorito_caido",
+          "luces_sugeridas": [
+            "deshonra",
+            "vulnerabilidad",
+            "perdida_privilegio",
+            "aislamiento",
+            "resentimiento",
+            "sustitucion_inmediata"
+          ],
+          "pesos_favor": {
+            "deshonra": 0.89,
+            "vulnerabilidad": 0.82,
+            "perdida_privilegio": 0.94,
+            "aislamiento": 0.76,
+            "resentimiento": 0.71,
+            "sustitucion_inmediata": 0.85
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "pat.cortesano",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "cortesano",
+          "luces_sugeridas": [
+            "adulacion",
+            "intriga_palaciega",
+            "superficialidad",
+            "sumision_tactica",
+            "etiqueta_estricta",
+            "oportunismo"
+          ],
+          "pesos_favor": {
+            "adulacion": 0.91,
+            "intriga_palaciega": 0.86,
+            "superficialidad": 0.73,
+            "sumision_tactica": 0.84,
+            "etiqueta_estricta": 0.78,
+            "oportunismo": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "pat.protegido",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "protegido",
+          "luces_sugeridas": [
+            "dependencia",
+            "talento_subordinado",
+            "vulnerabilidad_entorno",
+            "deuda_gratitud",
+            "sumision_voluntaria",
+            "ascenso_asistido"
+          ],
+          "pesos_favor": {
+            "dependencia": 0.87,
+            "talento_subordinado": 0.68,
+            "vulnerabilidad_entorno": 0.74,
+            "deuda_gratitud": 0.79,
+            "sumision_voluntaria": 0.71,
+            "ascenso_asistido": 0.83
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "pat.mecenas",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "mecenas",
+          "luces_sugeridas": [
+            "prestigio_cultural",
+            "ostentacion_riqueza",
+            "control_artistico",
+            "legado_historico",
+            "condescendencia_intelectual",
+            "capital_social"
+          ],
+          "pesos_favor": {
+            "prestigio_cultural": 0.89,
+            "ostentacion_riqueza": 0.76,
+            "control_artistico": 0.72,
+            "legado_historico": 0.81,
+            "condescendencia_intelectual": 0.69,
+            "capital_social": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "pat.clientela",
+          "pack": "PATRONAZGO_CORTE_CLIENTELA",
+          "namespace": "pat",
+          "token_gemini": "clientela",
+          "luces_sugeridas": [
+            "subordinacion_colectiva",
+            "voto_fiel",
+            "intercambio_favores",
+            "dependencia_recursos",
+            "sumision_economica",
+            "lealtad_condicionada"
+          ],
+          "pesos_favor": {
+            "subordinacion_colectiva": 0.86,
+            "voto_fiel": 0.79,
+            "intercambio_favores": 0.92,
+            "dependencia_recursos": 0.85,
+            "sumision_economica": 0.74,
+            "lealtad_condicionada": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "ins": {
+      "n": 6,
+      "items": [
+        {
+          "id": "ins.sacerdote",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "sacerdote",
+          "luces_sugeridas": [
+            "autoridad_espiritual",
+            "mediacion_divina",
+            "dogmatismo",
+            "preservacion_institucional",
+            "voto_obediencia",
+            "gestion_culpa"
+          ],
+          "pesos_favor": {
+            "autoridad_espiritual": 0.92,
+            "mediacion_divina": 0.88,
+            "dogmatismo": 0.76,
+            "preservacion_institucional": 0.83,
+            "voto_obediencia": 0.85,
+            "gestion_culpa": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ins.hereje",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "hereje",
+          "luces_sugeridas": [
+            "desviacion_doctrinal",
+            "persecucion_institucional",
+            "obstinacion",
+            "ruptura_dogma",
+            "excomunion",
+            "anfiteatro_publico"
+          ],
+          "pesos_favor": {
+            "desviacion_doctrinal": 0.95,
+            "persecucion_institucional": 0.91,
+            "obstinacion": 0.78,
+            "ruptura_dogma": 0.89,
+            "excomunion": 0.86,
+            "anfiteatro_publico": 0.72
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ins.reformador",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "reformador",
+          "luces_sugeridas": [
+            "purificacion_institucional",
+            "ruptura_interna",
+            "fanatismo_moral",
+            "retorno_origen",
+            "disidencia_estructural",
+            "carisma_popular"
+          ],
+          "pesos_favor": {
+            "purificacion_institucional": 0.84,
+            "ruptura_interna": 0.81,
+            "fanatismo_moral": 0.76,
+            "retorno_origen": 0.79,
+            "disidencia_estructural": 0.87,
+            "carisma_popular": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ins.inquisidor",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "inquisidor",
+          "luces_sugeridas": [
+            "ortodoxia_estricta",
+            "interrogatorio_coercitivo",
+            "fanatismo_doctrinal",
+            "busqueda_culpa",
+            "frialdad_burocratica",
+            "ejecucion_ejemplar"
+          ],
+          "pesos_favor": {
+            "ortodoxia_estricta": 0.96,
+            "interrogatorio_coercitivo": 0.93,
+            "fanatismo_doctrinal": 0.88,
+            "busqueda_culpa": 0.91,
+            "frialdad_burocratica": 0.82,
+            "ejecucion_ejemplar": 0.85
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ins.disidente_doctrinal",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "disidente_doctrinal",
+          "luces_sugeridas": [
+            "interpretacion_propia",
+            "clandestinidad_liturgica",
+            "friccion_jerarquica",
+            "aislamiento_comunitario",
+            "rigor_textual",
+            "resistencia_silenciosa"
+          ],
+          "pesos_favor": {
+            "interpretacion_propia": 0.88,
+            "clandestinidad_liturgica": 0.83,
+            "friccion_jerarquica": 0.86,
+            "aislamiento_comunitario": 0.74,
+            "rigor_textual": 0.79,
+            "resistencia_silenciosa": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "ins.laico_en_tension",
+          "pack": "INSTITUCION_DOCTRINA_FE",
+          "namespace": "ins",
+          "token_gemini": "laico_en_tension",
+          "luces_sugeridas": [
+            "friccion_clerical",
+            "culpa_secular",
+            "insubordinacion_moral",
+            "demanda_autonomia",
+            "piedad_externa",
+            "doble_vida"
+          ],
+          "pesos_favor": {
+            "friccion_clerical": 0.83,
+            "culpa_secular": 0.71,
+            "insubordinacion_moral": 0.79,
+            "demanda_autonomia": 0.85,
+            "piedad_externa": 0.67,
+            "doble_vida": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "sab": {
+      "n": 6,
+      "items": [
+        {
+          "id": "sab.maestro",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "maestro",
+          "luces_sugeridas": [
+            "transmision_canon",
+            "autoridad_intelectual",
+            "exigencia_ortodoxa",
+            "celo_conocimiento",
+            "paternalismo_asimetrico",
+            "preservacion_escuela"
+          ],
+          "pesos_favor": {
+            "transmision_canon": 0.89,
+            "autoridad_intelectual": 0.92,
+            "exigencia_ortodoxa": 0.81,
+            "celo_conocimiento": 0.74,
+            "paternalismo_asimetrico": 0.78,
+            "preservacion_escuela": 0.85
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sab.discipulo",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "discipulo",
+          "luces_sugeridas": [
+            "asimilacion_doctrinal",
+            "fidelidad_ciega",
+            "subordinacion_intelectual",
+            "emulacion_estilo",
+            "ansiedad_influencia",
+            "relevo_generacional"
+          ],
+          "pesos_favor": {
+            "asimilacion_doctrinal": 0.88,
+            "fidelidad_ciega": 0.81,
+            "subordinacion_intelectual": 0.84,
+            "emulacion_estilo": 0.76,
+            "ansiedad_influencia": 0.79,
+            "relevo_generacional": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sab.charlatan",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "charlatan",
+          "luces_sugeridas": [
+            "impostura_tecnica",
+            "retorica_seductora",
+            "lucro_asimetrico",
+            "ausencia_metodo",
+            "credulidad_ajena",
+            "fuga_oportuna"
+          ],
+          "pesos_favor": {
+            "impostura_tecnica": 0.93,
+            "retorica_seductora": 0.89,
+            "lucro_asimetrico": 0.84,
+            "ausencia_metodo": 0.87,
+            "credulidad_ajena": 0.91,
+            "fuga_oportuna": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sab.inventor_perseguido",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "inventor_perseguido",
+          "luces_sugeridas": [
+            "ruptura_paradigma",
+            "incomprension_oficial",
+            "marginacion_academica",
+            "obsesion_solitaria",
+            "despojo_patente",
+            "escasez_recursos"
+          ],
+          "pesos_favor": {
+            "ruptura_paradigma": 0.89,
+            "incomprension_oficial": 0.86,
+            "marginacion_academica": 0.83,
+            "obsesion_solitaria": 0.81,
+            "despojo_patente": 0.78,
+            "escasez_recursos": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sab.academico_de_corte",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "academico_de_corte",
+          "luces_sugeridas": [
+            "erudicion_burocratica",
+            "defensa_statu_quo",
+            "formalismo_excesivo",
+            "intolerancia_innovacion",
+            "dependencia_presupuesto",
+            "prestigio_institucional"
+          ],
+          "pesos_favor": {
+            "erudicion_burocratica": 0.85,
+            "defensa_statu_quo": 0.89,
+            "formalismo_excesivo": 0.82,
+            "intolerancia_innovacion": 0.84,
+            "dependencia_presupuesto": 0.79,
+            "prestigio_institucional": 0.87
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "sab.rival_de_escuela",
+          "pack": "SABER_SCHOOL_RIVALIDAD",
+          "namespace": "sab",
+          "token_gemini": "rival_de_escuela",
+          "luces_sugeridas": [
+            "impugnacion_metodo",
+            "debate_publico",
+            "celo_intelectual",
+            "polarizacion_teorica",
+            "descalificacion_personal",
+            "disputa_discipulos"
+          ],
+          "pesos_favor": {
+            "impugnacion_metodo": 0.91,
+            "debate_publico": 0.84,
+            "celo_intelectual": 0.88,
+            "polarizacion_teorica": 0.83,
+            "descalificacion_personal": 0.79,
+            "disputa_discipulos": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "vin": {
+      "n": 5,
+      "items": [
+        {
+          "id": "vin.amante_secreto",
+          "pack": "VINCULO_AMANTES",
+          "namespace": "vin",
+          "token_gemini": "amante_secreto",
+          "luces_sugeridas": [
+            "clandestinidad_espacial",
+            "riesgo_exposicion",
+            "pacto_silencio",
+            "tension_adrenalinica",
+            "temporalidad_fragmentada",
+            "transgresion_contrato"
+          ],
+          "pesos_favor": {
+            "clandestinidad_espacial": 0.94,
+            "riesgo_exposicion": 0.91,
+            "pacto_silencio": 0.88,
+            "tension_adrenalinica": 0.83,
+            "temporalidad_fragmentada": 0.79,
+            "transgresion_contrato": 0.86
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "vin.celoso_posesivo",
+          "pack": "VINCULO_AMANTES",
+          "namespace": "vin",
+          "token_gemini": "celoso_posesivo",
+          "luces_sugeridas": [
+            "hipervigilancia",
+            "delirio_infidelidad",
+            "demanda_exclusividad",
+            "friccion_asfixiante",
+            "interpretacion_sesgada",
+            "impulso_confinamiento"
+          ],
+          "pesos_favor": {
+            "hipervigilancia": 0.95,
+            "delirio_infidelidad": 0.91,
+            "demanda_exclusividad": 0.89,
+            "friccion_asfixiante": 0.84,
+            "interpretacion_sesgada": 0.82,
+            "impulso_confinamiento": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "vin.alianza_por_interes",
+          "pack": "VINCULO_AMANTES",
+          "namespace": "vin",
+          "token_gemini": "alianza_por_interes",
+          "luces_sugeridas": [
+            "calculo_financiero",
+            "falsedad_afectiva",
+            "contrato_explicito",
+            "beneficio_estatus",
+            "ausencia_intimidad",
+            "estabilidad_utilitaria"
+          ],
+          "pesos_favor": {
+            "calculo_financiero": 0.89,
+            "falsedad_afectiva": 0.86,
+            "contrato_explicito": 0.83,
+            "beneficio_estatus": 0.91,
+            "ausencia_intimidad": 0.74,
+            "estabilidad_utilitaria": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "vin.duelo_amoroso",
+          "pack": "VINCULO_AMANTES",
+          "namespace": "vin",
+          "token_gemini": "duelo_amoroso",
+          "luces_sugeridas": [
+            "friccion_vengativa",
+            "litigio_afectivo",
+            "destruccion_mutua",
+            "orgullo_herido",
+            "exposicion_intimidad",
+            "quiebre_irreversible"
+          ],
+          "pesos_favor": {
+            "friccion_vengativa": 0.88,
+            "litigio_afectivo": 0.84,
+            "destruccion_mutua": 0.89,
+            "orgullo_herido": 0.85,
+            "exposicion_intimidad": 0.79,
+            "quiebre_irreversible": 0.92
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "vin.idealizacion_y_caida",
+          "pack": "VINCULO_AMANTES",
+          "namespace": "vin",
+          "token_gemini": "idealizacion_y_caida",
+          "luces_sugeridas": [
+            "proyeccion_perfecta",
+            "desengano_abrupto",
+            "desvalorizacion_posterior",
+            "distorsion_perceptiva",
+            "abismo_expectativa",
+            "resentimiento_retrospectivo"
+          ],
+          "pesos_favor": {
+            "proyeccion_perfecta": 0.87,
+            "desengano_abrupto": 0.91,
+            "desvalorizacion_posterior": 0.84,
+            "distorsion_perceptiva": 0.78,
+            "abismo_expectativa": 0.86,
+            "resentimiento_retrospectivo": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "cue": {
+      "n": 5,
+      "items": [
+        {
+          "id": "cue.enfermo_cronico",
+          "pack": "CUERPO_ENFERMEDAD_LIMITE",
+          "namespace": "cue",
+          "token_gemini": "enfermo_cronico",
+          "luces_sugeridas": [
+            "dependencia_farmacologica",
+            "rutina_confinamiento",
+            "deterioro_progresivo",
+            "conciencia_finitud",
+            "gasto_sostenido",
+            "fatiga_vincular"
+          ],
+          "pesos_favor": {
+            "dependencia_farmacologica": 0.89,
+            "rutina_confinamiento": 0.84,
+            "deterioro_progresivo": 0.91,
+            "conciencia_finitud": 0.86,
+            "gasto_sostenido": 0.78,
+            "fatiga_vincular": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cue.convaleciente",
+          "pack": "CUERPO_ENFERMEDAD_LIMITE",
+          "namespace": "cue",
+          "token_gemini": "convaleciente",
+          "luces_sugeridas": [
+            "vulnerabilidad_transitoria",
+            "recuperacion_gradual",
+            "aislamiento_protegido",
+            "limite_motriz",
+            "dependencia_asistencia",
+            "retorno_lento"
+          ],
+          "pesos_favor": {
+            "vulnerabilidad_transitoria": 0.85,
+            "recuperacion_gradual": 0.88,
+            "aislamiento_protegido": 0.76,
+            "limite_motriz": 0.79,
+            "dependencia_asistencia": 0.82,
+            "retorno_lento": 0.71
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cue.cuerpo_como_obstaculo",
+          "pack": "CUERPO_ENFERMEDAD_LIMITE",
+          "namespace": "cue",
+          "token_gemini": "cuerpo_como_obstaculo",
+          "luces_sugeridas": [
+            "bloqueo_agencia",
+            "friccion_motriz",
+            "dolor_intermitente",
+            "limitacion_espacial",
+            "disociacion_mente_cuerpo",
+            "dependencia_entorno"
+          ],
+          "pesos_favor": {
+            "bloqueo_agencia": 0.92,
+            "friccion_motriz": 0.87,
+            "dolor_intermitente": 0.89,
+            "limitacion_espacial": 0.81,
+            "disociacion_mente_cuerpo": 0.76,
+            "dependencia_entorno": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cue.adiccion_como_limite",
+          "pack": "CUERPO_ENFERMEDAD_LIMITE",
+          "namespace": "cue",
+          "token_gemini": "adiccion_como_límite",
+          "luces_sugeridas": [
+            "compulsion_bucle",
+            "perdida_autonomia",
+            "degradacion_vincular",
+            "ocultamiento_sistematico",
+            "sindrome_abstinencia",
+            "gasto_destructivo"
+          ],
+          "pesos_favor": {
+            "compulsion_bucle": 0.94,
+            "perdida_autonomia": 0.91,
+            "degradacion_vincular": 0.86,
+            "ocultamiento_sistematico": 0.83,
+            "sindrome_abstinencia": 0.89,
+            "gasto_destructivo": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cue.discapacidad_en_lo_publico",
+          "pack": "CUERPO_ENFERMEDAD_LIMITE",
+          "namespace": "cue",
+          "token_gemini": "discapacidad_en_lo_publico",
+          "luces_sugeridas": [
+            "barrera_arquitectonica",
+            "estigmatizacion_visual",
+            "demanda_accesibilidad",
+            "paternalismo_social",
+            "asimetria_interaccion",
+            "exclusion_laboral"
+          ],
+          "pesos_favor": {
+            "barrera_arquitectonica": 0.88,
+            "estigmatizacion_visual": 0.82,
+            "demanda_accesibilidad": 0.85,
+            "paternalismo_social": 0.79,
+            "asimetria_interaccion": 0.74,
+            "exclusion_laboral": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "fam": {
+      "n": 5,
+      "items": [
+        {
+          "id": "fam.propagandista",
+          "pack": "FAMA_VOZ_PUBLICA_MEDIOS",
+          "namespace": "fam",
+          "token_gemini": "propagandista",
+          "luces_sugeridas": [
+            "linea_oficial",
+            "distorsion_informativa",
+            "repeticion_bucle",
+            "agitacion_masas",
+            "ausencia_critica",
+            "subvencion_estatal"
+          ],
+          "pesos_favor": {
+            "linea_oficial": 0.92,
+            "distorsion_informativa": 0.88,
+            "repeticion_bucle": 0.85,
+            "agitacion_masas": 0.89,
+            "ausencia_critica": 0.83,
+            "subvencion_estatal": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "fam.periodista",
+          "pack": "FAMA_VOZ_PUBLICA_MEDIOS",
+          "namespace": "fam",
+          "token_gemini": "periodista",
+          "luces_sugeridas": [
+            "busqueda_dato",
+            "filtro_noticioso",
+            "exposicion_riesgo",
+            "denuncia_publica",
+            "presion_editorial",
+            "verificacion_fuentes"
+          ],
+          "pesos_favor": {
+            "busqueda_dato": 0.86,
+            "filtro_noticioso": 0.81,
+            "exposicion_riesgo": 0.78,
+            "denuncia_publica": 0.84,
+            "presion_editorial": 0.79,
+            "verificacion_fuentes": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "fam.escandalo",
+          "pack": "FAMA_VOZ_PUBLICA_MEDIOS",
+          "namespace": "fam",
+          "token_gemini": "escandalo",
+          "luces_sugeridas": [
+            "exposicion_vicio",
+            "indignacion_colectiva",
+            "perdida_reputacion",
+            "difusion_acelerada",
+            "linchamiento_digital",
+            "lucro_mediatico"
+          ],
+          "pesos_favor": {
+            "exposicion_vicio": 0.93,
+            "indignacion_colectiva": 0.91,
+            "perdida_reputacion": 0.95,
+            "difusion_acelerada": 0.89,
+            "linchamiento_digital": 0.86,
+            "lucro_mediatico": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "fam.disidente_mediatico",
+          "pack": "FAMA_VOZ_PUBLICA_MEDIOS",
+          "namespace": "fam",
+          "token_gemini": "disidente_mediatico",
+          "luces_sugeridas": [
+            "bloqueo_canales",
+            "narrativa_alternativa",
+            "persecucion_digital",
+            "clandestinidad_emision",
+            "estigmatizacion_oficial",
+            "credibilidad_periferica"
+          ],
+          "pesos_favor": {
+            "bloqueo_canales": 0.89,
+            "narrativa_alternativa": 0.86,
+            "persecucion_digital": 0.83,
+            "clandestinidad_emision": 0.81,
+            "estigmatizacion_oficial": 0.85,
+            "credibilidad_periferica": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "fam.figura_de_rumor",
+          "pack": "FAMA_VOZ_PUBLICA_MEDIOS",
+          "namespace": "fam",
+          "token_gemini": "figura_de_rumor",
+          "luces_sugeridas": [
+            "identidad_difusa",
+            "especulacion_colectiva",
+            "deformacion_datos",
+            "ausencia_verificacion",
+            "proyeccion_miedos",
+            "ubicuidad_narrativa"
+          ],
+          "pesos_favor": {
+            "identidad_difusa": 0.84,
+            "especulacion_colectiva": 0.89,
+            "deformacion_datos": 0.86,
+            "ausencia_verificacion": 0.91,
+            "proyeccion_miedos": 0.79,
+            "ubicuidad_narrativa": 0.73
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "cla": {
+      "n": 5,
+      "items": [
+        {
+          "id": "cla.nuevo_rico",
+          "pack": "CLASE_ESTATUS_CAIDA",
+          "namespace": "cla",
+          "token_gemini": "nuevo_rico",
+          "luces_sugeridas": [
+            "ostentacion_material",
+            "ausencia_capital_cultural",
+            "derroche_monetario",
+            "busqueda_aceptacion",
+            "vulgaridad_estetica",
+            "consumo_posicional"
+          ],
+          "pesos_favor": {
+            "ostentacion_material": 0.94,
+            "ausencia_capital_cultural": 0.89,
+            "derroche_monetario": 0.86,
+            "busqueda_aceptacion": 0.81,
+            "vulgaridad_estetica": 0.83,
+            "consumo_posicional": 0.88
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cla.aristocrata_caido",
+          "pack": "CLASE_ESTATUS_CAIDA",
+          "namespace": "cla",
+          "token_gemini": "aristocrata_caido",
+          "luces_sugeridas": [
+            "nostalgia_estatus",
+            "conservacion_modales",
+            "deuda_financiera",
+            "orgullo_herido",
+            "desprecio_secular",
+            "ruina_patrimonial"
+          ],
+          "pesos_favor": {
+            "nostalgia_estatus": 0.91,
+            "conservacion_modales": 0.85,
+            "deuda_financiera": 0.88,
+            "orgullo_herido": 0.83,
+            "desprecio_secular": 0.76,
+            "ruina_patrimonial": 0.89
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cla.pobre_vergonzante",
+          "pack": "CLASE_ESTATUS_CAIDA",
+          "namespace": "cla",
+          "token_gemini": "pobre_vergonzante",
+          "luces_sugeridas": [
+            "ocultamiento_miseria",
+            "fachada_estatus",
+            "aislamiento_social",
+            "terror_exposicion",
+            "dignidad_precaria",
+            "privacion_silenciosa"
+          ],
+          "pesos_favor": {
+            "ocultamiento_miseria": 0.93,
+            "fachada_estatus": 0.89,
+            "aislamiento_social": 0.84,
+            "terror_exposicion": 0.91,
+            "dignidad_precaria": 0.78,
+            "privacion_silenciosa": 0.86
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cla.advenedizo",
+          "pack": "CLASE_ESTATUS_CAIDA",
+          "namespace": "cla",
+          "token_gemini": "advenedizo",
+          "luces_sugeridas": [
+            "mimetismo_tactico",
+            "intrusismo_social",
+            "oportunismo_relacional",
+            "ambicion_ascendente",
+            "temor_exclusion",
+            "falsificacion_origen"
+          ],
+          "pesos_favor": {
+            "mimetismo_tactico": 0.87,
+            "intrusismo_social": 0.84,
+            "oportunismo_relacional": 0.89,
+            "ambicion_ascendente": 0.85,
+            "temor_exclusion": 0.79,
+            "falsificacion_origen": 0.82
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        },
+        {
+          "id": "cla.decadente",
+          "pack": "CLASE_ESTATUS_CAIDA",
+          "namespace": "cla",
+          "token_gemini": "decadente",
+          "luces_sugeridas": [
+            "indulgencia_vicios",
+            "apatia_productiva",
+            "desgaste_patrimonial",
+            "esteticismo_inutil",
+            "cinismo_existencial",
+            "abandono_funciones"
+          ],
+          "pesos_favor": {
+            "indulgencia_vicios": 0.88,
+            "apatia_productiva": 0.82,
+            "desgaste_patrimonial": 0.85,
+            "esteticismo_inutil": 0.79,
+            "cinismo_existencial": 0.81,
+            "abandono_funciones": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL"
+        }
+      ]
+    },
+    "hpe": {
+      "n": 8,
+      "items": [
+        {
+          "id": "hpe.tecnocrata",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "tecnocrata",
+          "luces_sugeridas": [
+            "gestion_algoritmica",
+            "frialdad_burocratica",
+            "reduccionismo_economico",
+            "ausencia_carisma",
+            "ortodoxia_financiera",
+            "desconexion_popular"
+          ],
+          "pesos_favor": {
+            "gestion_algoritmica": 0.89,
+            "frialdad_burocratica": 0.84,
+            "reduccionismo_economico": 0.91,
+            "ausencia_carisma": 0.76,
+            "ortodoxia_financiera": 0.88,
+            "desconexion_popular": 0.85
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.oligarca",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "oligarca",
+          "luces_sugeridas": [
+            "concentracion_capital",
+            "influencia_estatal",
+            "monopolio_recursos",
+            "blindaje_juridico",
+            "patrimonialismo",
+            "opacidad_financiera"
+          ],
+          "pesos_favor": {
+            "concentracion_capital": 0.95,
+            "influencia_estatal": 0.92,
+            "monopolio_recursos": 0.89,
+            "blindaje_juridico": 0.83,
+            "patrimonialismo": 0.86,
+            "opacidad_financiera": 0.81
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.agitador_de_masas",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "agitador_de_masas",
+          "luces_sugeridas": [
+            "retorica_inflamatoria",
+            "polarizacion_social",
+            "movilizacion_callejera",
+            "canalizacion_descontento",
+            "carisma_periferico",
+            "ruptura_institucional"
+          ],
+          "pesos_favor": {
+            "retorica_inflamatoria": 0.93,
+            "polarizacion_social": 0.91,
+            "movilizacion_callejera": 0.88,
+            "canalizacion_descontento": 0.86,
+            "carisma_periferico": 0.82,
+            "ruptura_institucional": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.burocrata_de_partido",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "burocrata_de_partido",
+          "luces_sugeridas": [
+            "disciplina_aparato",
+            "conservacion_puesto",
+            "formalismo_ideologico",
+            "obediencia_vertical",
+            "resistencia_cambio",
+            "gestion_influencias"
+          ],
+          "pesos_favor": {
+            "disciplina_aparato": 0.91,
+            "conservacion_puesto": 0.87,
+            "formalismo_ideologico": 0.82,
+            "obediencia_vertical": 0.89,
+            "resistencia_cambio": 0.84,
+            "gestion_influencias": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.cacique_territorial",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "cacique_territorial",
+          "luces_sugeridas": [
+            "control_feudal_local",
+            "clientelismo_coercitivo",
+            "arbitrariedad_juridica",
+            "violencia_subyacente",
+            "monopolio_regional",
+            "mediacion_centro_periferia"
+          ],
+          "pesos_favor": {
+            "control_feudal_local": 0.92,
+            "clientelismo_coercitivo": 0.89,
+            "arbitrariedad_juridica": 0.85,
+            "violencia_subyacente": 0.87,
+            "monopolio_regional": 0.81,
+            "mediacion_centro_periferia": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.diplomatico_de_carrera",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "diplomatico_de_carrera",
+          "luces_sugeridas": [
+            "etiqueta_estricta",
+            "ambiguedad_calculada",
+            "neutralidad_fachada",
+            "cosmopolitismo",
+            "preservacion_canales",
+            "opacidad_negociacion"
+          ],
+          "pesos_favor": {
+            "etiqueta_estricta": 0.88,
+            "ambiguedad_calculada": 0.91,
+            "neutralidad_fachada": 0.85,
+            "cosmopolitismo": 0.79,
+            "preservacion_canales": 0.83,
+            "opacidad_negociacion": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.especulador_financiero",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "especulador_financiero",
+          "luces_sugeridas": [
+            "arbitraje_riesgo",
+            "lucro_asimetrico",
+            "movilidad_capital",
+            "ausencia_arraigo",
+            "explotacion_crisis",
+            "volatilidad_conductual"
+          ],
+          "pesos_favor": {
+            "arbitraje_riesgo": 0.89,
+            "lucro_asimetrico": 0.93,
+            "movilidad_capital": 0.86,
+            "ausencia_arraigo": 0.81,
+            "explotacion_crisis": 0.88,
+            "volatilidad_conductual": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        },
+        {
+          "id": "hpe.disidente_exiliado",
+          "pack": "HISTORICO_POLITICO_ECONOMICO",
+          "namespace": "hpe",
+          "token_gemini": "disidente_exiliado",
+          "luces_sugeridas": [
+            "impugnacion_exterior",
+            "denuncia_internacional",
+            "desarraigo_cultural",
+            "vigilancia_remota",
+            "romantizacion_retorno",
+            "faccionalismo_diaspora"
+          ],
+          "pesos_favor": {
+            "impugnacion_exterior": 0.87,
+            "denuncia_internacional": 0.85,
+            "desarraigo_cultural": 0.81,
+            "vigilancia_remota": 0.79,
+            "romantizacion_retorno": 0.72,
+            "faccionalismo_diaspora": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL",
+          "nota_vector": "familia distinta a soc/hist/pat/fam; matiz≠redundancia"
+        }
+      ]
+    }
+  },
+  "puente_244": {
+    "estado": "VACIO_EDITABLE",
+    "nota": "Mapa Gemini→hoja 244 se llena cuando auditores/Claude aporten tokens. Mientras tanto luces se reportan en namespace propio.",
+    "mapa": {}
+  },
+  "conteos": {
+    "soc": 16,
+    "hist": 37,
+    "ar": 38,
+    "sit": 21,
+    "pat": 6,
+    "ins": 6,
+    "sab": 6,
+    "vin": 5,
+    "cue": 5,
+    "fam": 5,
+    "cla": 5,
+    "hpe": 8,
+    "total": 158
+  },
+  "notas_matiz_vs_redundancia": {
+    "hpe.agitador_de_masas_vs_fam.propagandista": "calle/polarizacion vs linea_oficial — vector distinto",
+    "hpe.burocrata_de_partido_vs_soc.funcionario": "aparato/partido vs rol civil — matiz",
+    "hpe.cacique_territorial_vs_pat.clientela": "poder local coercitivo vs clientela — vector",
+    "hpe.diplomatico_vs_pat.cortesano": "canal exterior vs adulacion corte — vector",
+    "hpe.especulador_vs_cla.nuevo_rico": "arbitraje/crisis vs ostentacion clase — vector",
+    "hpe.disidente_exiliado_vs_hist.exilio_ins.disidente": "exilio politico-denuncia vs evento/doctrina — vector",
+    "vin_vs_ama": "vin=estereotipo escena bus; ama=arquetipo amoroso sidecar — no fusionar"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+  "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+  "module": "Grupo B predictor lateral de trayectorias",
+  "validation": "leave_one_out",
+  "n_reference_biographies": 15,
+  "n_evaluable_predictions": 121,
+  "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+  "functions_tested": {
+    "linear": "max(0, 1-d)",
+    "exponential": "exp(-3d)",
+    "inverse": "1/(1+3d)"
+  },
+  "top1_accuracy_pct": 64.46,
+  "top3_recall_pct": 97.52,
+  "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+  "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+}

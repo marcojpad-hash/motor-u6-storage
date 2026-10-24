@@ -1,0 +1,65 @@
+{
+ "id": "triangulo_dramatico_karpman",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "rol_perseguidor_activo": 0.88,
+  "rol_victima_indefensa": 0.9,
+  "rol_salvador_condescendiente": 0.85,
+  "inversion_roles_inesperada": 0.92,
+  "escalada_conflicto_interpersonal": 0.8,
+  "manipulacion_culpa_latente": 0.84,
+  "juego_psicologico_ulterior": 0.78,
+  "triangulacion_tercer_actor": 0.86
+ },
+ "tokens_contra": {
+  "responsabilidad_adulta_autonoma": -0.92,
+  "comunicacion_asertiva_directa": -0.88,
+  "limite_operativo_saludable": -0.85,
+  "neutralidad_observador_externo": -0.82,
+  "mediacion_formal_institucional": -0.75,
+  "desactivacion_juego_salida": -0.9,
+  "contrato_relacional_claro": -0.7
+ },
+ "senales": {
+  "rol_perseguidor_activo": "Postura de acusacion, control o castigo hacia el entorno.",
+  "rol_victima_indefensa": "Incapacidad declarada para resolver y demanda de rescate.",
+  "rol_salvador_condescendiente": "Intervencion paternalista que crea codependencia.",
+  "inversion_roles_inesperada": "El salvador pasa a victima o el perseguidor a perseguido.",
+  "escalada_conflicto_interpersonal": "Incremento de recriminaciones y hostilidad.",
+  "manipulacion_culpa_latente": "Uso del remordimiento o agravio para coaccionar.",
+  "juego_psicologico_ulterior": "Interacciones con motivacion oculta y desenlace predecible.",
+  "triangulacion_tercer_actor": "Inclusion de un tercero para romper una tension de dos y buscar aliado.",
+  "responsabilidad_adulta_autonoma": "Asumir consecuencias propias sin delegar culpa.",
+  "comunicacion_asertiva_directa": "Expresion clara de necesidades sin subtextos.",
+  "limite_operativo_saludable": "Barreras firmes contra la coaccion.",
+  "neutralidad_observador_externo": "Actor periferico que se niega a tomar partido.",
+  "mediacion_formal_institucional": "Organo imparcial que procesa la disputa con reglas fijas.",
+  "desactivacion_juego_salida": "Negarse a validar los roles del triangulo.",
+  "contrato_relacional_claro": "Acuerdos explicitos previos que reducen malas lecturas."
+ },
+ "no_canonico_declarado_por_fuente": [
+  "triangulacion_tercer_actor_es_bowen_no_karpman",
+  "mediacion_formal_institucional_contagio_vocabulario"
+ ],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "d397d86bd3bcaf86"
+}

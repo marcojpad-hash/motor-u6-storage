@@ -1,0 +1,3 @@
+AVISO MANIFIESTO: deriva=0 ausentes=6 fuera=0
+WALL_SECONDS=18.81
+EXIT_STATUS=0

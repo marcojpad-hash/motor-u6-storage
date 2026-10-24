@@ -1,0 +1,78 @@
+{
+ "version": "INVENTARIO_COMPONENTES_UNICO_20260927",
+ "nota": "Piezas del proyecto que NO corren dentro del motor en cada corrida, con motivo. Las que sí corren salen en result.registro_componentes con su estado por corrida.",
+ "estaticas": [
+  {
+   "pieza": "B9_V0_9_TORTUGA.py",
+   "sha8": "c66faf03",
+   "estado": "SUPERADA",
+   "motivo": "motor alterno V0.9 viejo; las tortugas nativas y la ruta de tortugas de guardianes ya corren en este motor"
+  },
+  {
+   "pieza": "stinkbox v0.1",
+   "sha8": "77ef3486",
+   "estado": "SUPERADA",
+   "motivo": "contenida en StinkBox v0.2 (86b791d6, activa con compuerta de pendientes)"
+  },
+  {
+   "pieza": "caldero_run.py (Caldero II 2.0)",
+   "sha8": "f670b872",
+   "estado": "NO_CORRE",
+   "motivo": "necesita lib/ propia y una escaleta/fixture externo; los 7 casos no la traen"
+  },
+  {
+   "pieza": "montecarlo_predictibilidad_semantica_v1",
+   "estado": "FUERA_DEL_MOTOR",
+   "motivo": "análisis específico del caso Jobs; no es pieza de corrida general"
+  },
+  {
+   "pieza": "sofista.py",
+   "estado": "FUERA_DEL_MOTOR",
+   "motivo": "laboratorio de red team; no se ejecuta en corridas"
+  },
+  {
+   "pieza": "v153_lateral_metrics (versiones previas)",
+   "estado": "SUPERADA",
+   "motivo": "activa lente_lateral_metrics_v1_1_galileo (con dimensión = 3×len(catálogo))"
+  },
+  {
+   "pieza": "tracing_engine / V11 / V15.1 / V15.2",
+   "estado": "SUPERADA",
+   "motivo": "versiones anteriores del motor"
+  },
+  {
+   "pieza": "sidecar_latencia_decimo_hombre",
+   "sha8": "e37e319d",
+   "estado": "SUPERADA",
+   "motivo": "alias contenido en control_latencia_decimo_hombre (activo)"
+  },
+  {
+   "pieza": "plugin_pregunta_dirigida 0.4.1",
+   "estado": "SUPERADA",
+   "motivo": "reemplazada por 0.5.1 (8aa9fc79)"
+  },
+  {
+   "pieza": "plugin_circulo_monomito v1",
+   "estado": "SUPERADA",
+   "motivo": "el motor carga primero monomito_v2 (8cd81bc1); v1 queda como respaldo si falta v2"
+  },
+  {
+   "pieza": "plugin_pregunta_detras_v2 2.3.2",
+   "sha8": "f0b1a92b",
+   "estado": "SUPERADA",
+   "motivo": "falso positivo 'esta' demostrativo corregido en 2.3.3; original en rescate/"
+  },
+  {
+   "pieza": "guardianes_control_v1 V1.1",
+   "sha8": "f26f8c56",
+   "estado": "SUPERADA",
+   "motivo": "V1.2 espera detrás 2.3.3; original en rescate/"
+  },
+  {
+   "pieza": "Engine falso",
+   "sha8": "665c39a2",
+   "estado": "PROHIBIDA",
+   "motivo": "candado: nunca se copia ni se carga; el orquestador lo verifica en cada run dir"
+  }
+ ]
+}

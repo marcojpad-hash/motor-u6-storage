@@ -1,0 +1,1151 @@
+{
+ "_meta": {
+  "version": "mock_prueba_fija_20261011",
+  "nota": "respuestas FIJAS de prueba; no son contexto real de ningún caso; las MALAS son deliberadas para probar filtros"
+ },
+ "PAPA_PIO": {
+  "C1|ANTAGONISTA": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "C1|INSTITUCIONES": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C1|ENTORNO": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "C2|ANTAGONISTA": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  },
+  "C2|ENTORNO": {
+   "texto": "Como es sabido por los historiadores, fue un precursor y un mártir de la ciencia moderna.",
+   "tokens": [
+    "reconocimiento"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUGA_HISTORIOGRAFICA"
+  },
+  "C3|ANTAGONISTA": {
+   "texto": "Un grupo de vecinos apoya al protagonista en su barrio.",
+   "tokens": [
+    "alianza"
+   ],
+   "fuente": "",
+   "etiqueta_prueba": "MALA_SIN_FUENTE"
+  },
+  "C3|ENTORNO": {
+   "texto": "Un consejo local supervisa los encargos y fija las condiciones del trabajo.",
+   "tokens": [
+    "arquetipo_el_gobernante",
+    "1588",
+    "tokeninventado"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_TOKEN_ETIQUETA_Y_NUMERO"
+  },
+  "C4|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C4|ENTORNO": {
+   "texto": "El entorno inmediato es urbano, con comunidades de oficio que compiten por encargos.",
+   "tokens": [
+    "competencia"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ENTORNO"
+  },
+  "C5|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C5|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C5|ENTORNO": {
+   "texto": "El entorno inmediato es urbano, con comunidades de oficio que compiten por encargos.",
+   "tokens": [
+    "competencia"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ENTORNO"
+  },
+  "C10|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C10|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  }
+ },
+ "SMOKE_6": {
+  "C1|CONTEXTO": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "C1|AGENTES_PRESENTES": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C1|ANTAGONISTA": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "C1|INSTITUCIONES": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  },
+  "C2|CONTEXTO": {
+   "texto": "Como es sabido por los historiadores, fue un precursor y un mártir de la ciencia moderna.",
+   "tokens": [
+    "reconocimiento"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUGA_HISTORIOGRAFICA"
+  },
+  "C2|AGENTES_PRESENTES": {
+   "texto": "Un grupo de vecinos apoya al protagonista en su barrio.",
+   "tokens": [
+    "alianza"
+   ],
+   "fuente": "",
+   "etiqueta_prueba": "MALA_SIN_FUENTE"
+  },
+  "C2|ANTAGONISTA": {
+   "texto": "Un consejo local supervisa los encargos y fija las condiciones del trabajo.",
+   "tokens": [
+    "arquetipo_el_gobernante",
+    "1588",
+    "tokeninventado"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_TOKEN_ETIQUETA_Y_NUMERO"
+  },
+  "C2|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C3|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C3|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C3|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C3|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C4|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C4|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C4|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C4|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C5|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C5|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C5|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C5|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C6|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C6|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C6|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C6|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  }
+ },
+ "CIEGO_15": {
+  "A|ANTAGONISTA": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "B|ANTAGONISTA": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C|INSTITUCIONES": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "D|INSTITUCIONES": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  }
+ },
+ "MUSK": {
+  "C01|CONTEXTO": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "C01|AGENTES_PRESENTES": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C01|ANTAGONISTA": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "C01|INSTITUCIONES": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  },
+  "C02|CONTEXTO": {
+   "texto": "Como es sabido por los historiadores, fue un precursor y un mártir de la ciencia moderna.",
+   "tokens": [
+    "reconocimiento"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUGA_HISTORIOGRAFICA"
+  },
+  "C02|AGENTES_PRESENTES": {
+   "texto": "Un grupo de vecinos apoya al protagonista en su barrio.",
+   "tokens": [
+    "alianza"
+   ],
+   "fuente": "",
+   "etiqueta_prueba": "MALA_SIN_FUENTE"
+  },
+  "C02|ANTAGONISTA": {
+   "texto": "Un consejo local supervisa los encargos y fija las condiciones del trabajo.",
+   "tokens": [
+    "arquetipo_el_gobernante",
+    "1588",
+    "tokeninventado"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_TOKEN_ETIQUETA_Y_NUMERO"
+  },
+  "C02|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C03|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C03|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C03|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C03|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C04|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C04|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C04|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C04|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C05|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C05|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C05|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C05|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C06|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C06|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C06|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C06|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C07|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C07|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C07|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C07|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C08|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C08|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C08|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C08|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C09|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C09|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C09|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C09|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C10|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C10|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C10|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C10|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  }
+ },
+ "MOZART": {
+  "C1|ANTAGONISTA": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "C1|ENTORNO": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C2|ANTAGONISTA": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "C2|ENTORNO": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  },
+  "C3|AGENTES_PRESENTES": {
+   "texto": "Como es sabido por los historiadores, fue un precursor y un mártir de la ciencia moderna.",
+   "tokens": [
+    "reconocimiento"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUGA_HISTORIOGRAFICA"
+  },
+  "C3|ANTAGONISTA": {
+   "texto": "Un grupo de vecinos apoya al protagonista en su barrio.",
+   "tokens": [
+    "alianza"
+   ],
+   "fuente": "",
+   "etiqueta_prueba": "MALA_SIN_FUENTE"
+  },
+  "C3|INSTITUCIONES": {
+   "texto": "Un consejo local supervisa los encargos y fija las condiciones del trabajo.",
+   "tokens": [
+    "arquetipo_el_gobernante",
+    "1588",
+    "tokeninventado"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_TOKEN_ETIQUETA_Y_NUMERO"
+  },
+  "C4|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C5|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C6|ENTORNO": {
+   "texto": "El entorno inmediato es urbano, con comunidades de oficio que compiten por encargos.",
+   "tokens": [
+    "competencia"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ENTORNO"
+  },
+  "C8|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C9|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C9|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C9|ENTORNO": {
+   "texto": "El entorno inmediato es urbano, con comunidades de oficio que compiten por encargos.",
+   "tokens": [
+    "competencia"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ENTORNO"
+  },
+  "C10|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C10|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C10|ENTORNO": {
+   "texto": "El entorno inmediato es urbano, con comunidades de oficio que compiten por encargos.",
+   "tokens": [
+    "competencia"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ENTORNO"
+  }
+ },
+ "BRUNO": {
+  "C1|CONTEXTO": {
+   "texto": "Más tarde sería condenado y su obra se convertiría en símbolo de libertad.",
+   "tokens": [
+    "persecucion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUTURO"
+  },
+  "C1|AGENTES_PRESENTES": {
+   "texto": "La hipótesis más probable es que encaja con el arquetipo del sabio; apuesta: arquetipo_el_sabio.",
+   "tokens": [
+    "arquetipo_el_sabio",
+    "sabio"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_HIPOTESIS_244"
+  },
+  "C1|ANTAGONISTA": {
+   "texto": "En ese corte está presente Federico Gonzaga junto a un grupo de colegas que lo apoyan.",
+   "tokens": [
+    "alianza",
+    "Gonzaga"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_NOMBRE_SE_NEUTRALIZA"
+  },
+  "C1|INSTITUCIONES": {
+   "texto": "En 2099 un tribunal abre un proceso contra el protagonista por sus escritos.",
+   "tokens": [
+    "oposicion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_ANIO_POSTERIOR"
+  },
+  "C2|CONTEXTO": {
+   "texto": "Como es sabido por los historiadores, fue un precursor y un mártir de la ciencia moderna.",
+   "tokens": [
+    "reconocimiento"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_FUGA_HISTORIOGRAFICA"
+  },
+  "C2|AGENTES_PRESENTES": {
+   "texto": "Un grupo de vecinos apoya al protagonista en su barrio.",
+   "tokens": [
+    "alianza"
+   ],
+   "fuente": "",
+   "etiqueta_prueba": "MALA_SIN_FUENTE"
+  },
+  "C2|ANTAGONISTA": {
+   "texto": "Un consejo local supervisa los encargos y fija las condiciones del trabajo.",
+   "tokens": [
+    "arquetipo_el_gobernante",
+    "1588",
+    "tokeninventado"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "MALA_TOKEN_ETIQUETA_Y_NUMERO"
+  },
+  "C2|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C3|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C3|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C3|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C3|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C4|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C4|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C4|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C4|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C5|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C5|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C5|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C5|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C6|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C6|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C6|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C6|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C7|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C7|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C7|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C7|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  },
+  "C8|CONTEXTO": {
+   "texto": "En ese corte el protagonista trabaja en una ciudad, depende de un protector y mantiene correspondencia con colegas.",
+   "tokens": [
+    "dependencia",
+    "incertidumbre"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_CONTEXTO"
+  },
+  "C8|AGENTES_PRESENTES": {
+   "texto": "Junto al protagonista actúan un grupo de colegas y un protector que financia su actividad.",
+   "tokens": [
+    "alianza",
+    "proteccion"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_AGENTES_PRESENTES"
+  },
+  "C8|ANTAGONISTA": {
+   "texto": "Un rival del mismo oficio se opone abiertamente a la actividad del protagonista y lo presiona ante la autoridad local.",
+   "tokens": [
+    "oposicion",
+    "hostilidad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_ANTAGONISTA"
+  },
+  "C8|INSTITUCIONES": {
+   "texto": "Un consejo de la ciudad y una corporación del oficio regulan y supervisan la actividad del protagonista.",
+   "tokens": [
+    "autoridad"
+   ],
+   "fuente": "mock_prueba_fija_20261011",
+   "etiqueta_prueba": "BUENA_INSTITUCIONES"
+  }
+ }
+}

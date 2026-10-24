@@ -1,0 +1,357 @@
+{
+  "schema": "stinkbox_documentary_family_candidates_v1",
+  "created_from": "U6_UNIFICADO_20261020/BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+  "source_family": "black_mirror_tecnodistopia_lateral",
+  "source_version": "borrador_0.1",
+  "source_date": "2026-10-19",
+  "integrated_into_motor": false,
+  "count": 18,
+  "candidates": [
+    {
+      "token": "bm_espectaculo_mediacion_pantalla",
+      "definition": "La vida pasa de acto a representacion: la pantalla media lo real y la actuacion sustituye a la accion.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Modugno & Krijnen 2020, Catalan J. Comm. & Cult. Studies 12(1):3-19, https://doi.org/10.1386/cjcs_00011_1 (PDF abierto: https://pure.eur.nl/ws/portalfiles/portal/48126032/Repub_128872.pdf)"
+      ],
+      "mapping_244": "NUEVO",
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Gran tema 1 de MK, presente en casi todos los episodios T1-T4. Sin equivalente en 244 (frye_mythos_ironia_satira solo roza)."
+    },
+    {
+      "token": "bm_nuevo_contrato_social_cesion",
+      "definition": "Las personas ceden autonomia, privacidad y rendicion de cuentas a la tecnologia a cambio de orden/comodidad.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Modugno & Krijnen 2020, Catalan J. Comm. & Cult. Studies 12(1):3-19, https://doi.org/10.1386/cjcs_00011_1 (PDF abierto: https://pure.eur.nl/ws/portalfiles/portal/48126032/Repub_128872.pdf)",
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d"
+      ],
+      "mapping_244": [
+        "distopia_tecnica_herramienta_manda",
+        "distopia_coercion_total"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Gran tema 2 de MK. Solapa parcial: en 244 la coercion es impuesta; aqui la cesion es voluntaria."
+    },
+    {
+      "token": "bm_riesgo_perdida_privacidad_seguridad",
+      "definition": "Riesgo dominante: perdida de privacidad o seguridad por la tecnologia.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Blanco-Herrero & Rodriguez-Contreras 2019, TEEM'19 pp.899-905, https://doi.org/10.1145/3362789.3362844",
+        "Communicating Values... in Black Mirror, Social Communication 2022, https://doi.org/10.2478/sc-2022-0006"
+      ],
+      "mapping_244": [
+        "sistema_domiciano_delacion"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "BH: riesgo mas relevante en 22 episodios. Solapa parcial con vigilancia-delacion."
+    },
+    {
+      "token": "bm_confusion_real_virtual",
+      "definition": "Se borra la frontera entre mundo real y virtual/simulado.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Blanco-Herrero & Rodriguez-Contreras 2019, TEEM'19 pp.899-905, https://doi.org/10.1145/3362789.3362844",
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d"
+      ],
+      "mapping_244": "NUEVO",
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "BH riesgo #2; DS oposicion presencia/mediacion."
+    },
+    {
+      "token": "bm_conducta_adictiva_tecnologica",
+      "definition": "La tecnologia genera dependencia/adiccion conductual.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Blanco-Herrero & Rodriguez-Contreras 2019, TEEM'19 pp.899-905, https://doi.org/10.1145/3362789.3362844"
+      ],
+      "mapping_244": [
+        "sustancias_01_leve",
+        "sustancias_02_moderado",
+        "sustancias_03_severo"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Analogia solo: los patrones sustancias son clinicos DSM, no conductuales-tecnologicos."
+    },
+    {
+      "token": "bm_puntuacion_social_ranking",
+      "definition": "El valor de la persona se fija por calificacion/ranking publico.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Klassen & Fiesler, SIGCSE 2022 'Black Mirror Writers Room', https://doi.org/10.1145/3478431.3499308"
+      ],
+      "mapping_244": [
+        "social_01_asch_conformidad",
+        "social_07_noelle_neumann_espiral_silencio"
+      ],
+      "documentary_status": "NO_VERIFICADO",
+      "registry_status": "PENDIENTE_VALIDACION_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "FI lo usa como ejemplo (un episodio), no como categoria codificada de toda la serie."
+    },
+    {
+      "token": "bm_justicia_digital_turba",
+      "definition": "Castigo colectivo en red / vigilantismo digital.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d"
+      ],
+      "mapping_244": [
+        "social_08_girard_mimesis_y_chivo_expiatorio",
+        "social_10_cohen_panico_moral",
+        "social_13_le_bon_comportamiento_masas"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "DS codifica 'digital vigilantism' (14 episodios, muestra intencional)."
+    },
+    {
+      "token": "bm_transferencia_conciencia_copia",
+      "definition": "La mente se copia/transfiere; la copia sufre o vive como persona.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d",
+        "Cave & Dihal 2019, Nature Machine Intelligence 1:74-78, https://doi.org/10.1038/s42256-019-0020-9"
+      ],
+      "mapping_244": [
+        "erikson_05_identidad_vs_confusion_rol"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "DS 'consciousness transfer'; CD par inmortalidad/inhumanidad. Mapeo debil."
+    },
+    {
+      "token": "bm_oposicion_autonomia_control",
+      "definition": "Eje autonomia vs control de la agencia humana.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d"
+      ],
+      "mapping_244": [
+        "distopia_coercion_total",
+        "utopia_principio_libertades"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Ya cubierto en 244 (tokens autonomia/control)."
+    },
+    {
+      "token": "bm_responsabilidad_externalizada",
+      "definition": "La responsabilidad moral se delega a la maquina/sistema.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d",
+        "Modugno & Krijnen 2020, Catalan J. Comm. & Cult. Studies 12(1):3-19, https://doi.org/10.1386/cjcs_00011_1 (PDF abierto: https://pure.eur.nl/ws/portalfiles/portal/48126032/Repub_128872.pdf)"
+      ],
+      "mapping_244": [
+        "social_02_milgram_obediencia"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "DS oposicion responsabilidad/outsourcing; MK 'accountability'."
+    },
+    {
+      "token": "bm_corporeidad_vs_desencarnacion",
+      "definition": "Eje cuerpo presente vs existencia sin cuerpo.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Semiotic analysis of human and machine interaction: The Black Mirror, EMC Review 2026, https://doi.org/10.7251/emc2603719d"
+      ],
+      "mapping_244": "NUEVO",
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": ""
+    },
+    {
+      "token": "ia_inmortalidad_vs_inhumanidad",
+      "definition": "Esperanza de vida extendida vs miedo a perder la humanidad/identidad.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Cave & Dihal 2019, Nature Machine Intelligence 1:74-78, https://doi.org/10.1038/s42256-019-0020-9"
+      ],
+      "mapping_244": "NUEVO",
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Corpus: narrativas de IA en ficcion, no solo Black Mirror."
+    },
+    {
+      "token": "ia_comodidad_vs_obsolescencia",
+      "definition": "Liberarse del trabajo vs volverse prescindible.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Cave & Dihal 2019, Nature Machine Intelligence 1:74-78, https://doi.org/10.1038/s42256-019-0020-9"
+      ],
+      "mapping_244": [
+        "tainter_02_rendimientos_decrecientes"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Mapeo debil."
+    },
+    {
+      "token": "ia_gratificacion_vs_alienacion",
+      "definition": "La maquina satisface deseos vs los humanos dejan de necesitarse entre si.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Cave & Dihal 2019, Nature Machine Intelligence 1:74-78, https://doi.org/10.1038/s42256-019-0020-9"
+      ],
+      "mapping_244": [
+        "utopia_abundancia_sybaris",
+        "erikson_06_intimidad_vs_aislamiento"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": ""
+    },
+    {
+      "token": "ia_dominio_vs_rebelion",
+      "definition": "Poder sobre otros mediante la maquina vs la maquina se vuelve contra el humano.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Cave & Dihal 2019, Nature Machine Intelligence 1:74-78, https://doi.org/10.1038/s42256-019-0020-9"
+      ],
+      "mapping_244": [
+        "dialectica_02_antitesis_contradiccion_y_conflicto",
+        "8_rebelion"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": ""
+    },
+    {
+      "token": "bm_seduccion_tecnologica_degradacion",
+      "definition": "La tecnologia seduce y libera instintos bajos; erosiona la confianza mutua.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Communicating Values... in Black Mirror, Social Communication 2022, https://doi.org/10.2478/sc-2022-0006"
+      ],
+      "mapping_244": [
+        "jaldun_03_entropia_y_perdida_de_cohesion"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "SC: episodios seleccionados, no todos."
+    },
+    {
+      "token": "bm_tecnologia_neutra_uso_humano_desviado",
+      "definition": "La tecnologia no es mala en si; lo distopico surge cuando humanos la negocian para fines desviados.",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "Modugno & Krijnen 2020, Catalan J. Comm. & Cult. Studies 12(1):3-19, https://doi.org/10.1386/cjcs_00011_1 (PDF abierto: https://pure.eur.nl/ws/portalfiles/portal/48126032/Repub_128872.pdf)"
+      ],
+      "mapping_244": [
+        "17_fatal_imprudencia"
+      ],
+      "documentary_status": "VERIFICADO",
+      "registry_status": "CANDIDATO_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Hallazgo explicito de MK."
+    },
+    {
+      "token": "bm_valencia_final",
+      "definition": "Valencia del desenlace (negativo/ambiguo/positivo).",
+      "source_type": "DOCUMENTAL_CANDIDATE_NOT_RUN_OBSERVATION",
+      "source_family": "black_mirror_tecnodistopia_lateral",
+      "source_version": "borrador_0.1",
+      "source_file": "BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json",
+      "sources": [
+        "SIN FUENTE: propuesta de hueco"
+      ],
+      "mapping_244": "NUEVO",
+      "documentary_status": "NO_VERIFICADO",
+      "registry_status": "PENDIENTE_VALIDACION_DOCUMENTAL",
+      "integrated_into_motor": false,
+      "must_not_count_as_observed_token": true,
+      "notes": "Ningun estudio encontrado codifica el final de todos los episodios. Habria que construirlo."
+    }
+  ]
+}

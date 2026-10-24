@@ -1,0 +1,62 @@
+{
+ "id": "etapas_vitales_evolutivas",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Erik Erikson (Identity and the Life Cycle), Daniel Levinson (The Seasons of a Man's Life)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "crisis_identidad_moratoria": 0.85,
+  "urgencia_generatividad_estancamiento": 0.88,
+  "transicion_mitad_vida_quiebre": 0.92,
+  "revaluacion_estructural_vida": 0.8,
+  "desilusion_metas_alcanzadas": 0.78,
+  "conciencia_finitud_tiempo_restante": 0.84,
+  "discrepancia_yo_ideal_real": 0.86
+ },
+ "tokens_contra": {
+  "consolidacion_identidad_fiel": -0.88,
+  "compromiso_mentor_legado_transmision": -0.9,
+  "estabilizacion_estructura_vida": -0.84,
+  "aceptacion_integridad_ego": -0.94,
+  "red_soporte_familiar_comunitario": -0.75,
+  "guardrail_rutina_responsabilidad_fija": -0.72,
+  "adaptacion_heuristica_expectativas": -0.8
+ },
+ "senales": {
+  "crisis_identidad_moratoria": "cuestiona quien es y ensaya roles nuevos",
+  "urgencia_generatividad_estancamiento": "necesidad de dejar obra o guiar a otros",
+  "transicion_mitad_vida_quiebre": "giro drastico al sentir la estructura falsa",
+  "revaluacion_estructural_vida": "revisa logros y elecciones pasadas",
+  "desilusion_metas_alcanzadas": "vacio tras conseguir el exito buscado",
+  "conciencia_finitud_tiempo_restante": "cambia prioridades por sentir el tiempo corto",
+  "discrepancia_yo_ideal_real": "brecha entre suenos y realidad",
+  "consolidacion_identidad_fiel": "compromiso firme con una direccion propia",
+  "compromiso_mentor_legado_transmision": "forma a otros y cede protagonismo",
+  "estabilizacion_estructura_vida": "etapa estable con reglas propias",
+  "aceptacion_integridad_ego": "paz con errores y aciertos",
+  "red_soporte_familiar_comunitario": "vinculos que contienen la crisis",
+  "guardrail_rutina_responsabilidad_fija": "obligaciones que sostienen el funcionamiento",
+  "adaptacion_heuristica_expectativas": "ajuste maduro de ideales"
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_rutina_responsabilidad_fija"
+  ],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "46228426bc1ac9d4"
+}

@@ -1,0 +1,4 @@
+{
+  "_instrucciones": "Llenar SOLO cuando el desenlace real sea conocido. Una entrada por case_id sellado. 'familias' = familias del catálogo que el desenlace confirma; 'escenario' es opcional (CONTINUIDAD_ASCENDENTE, CONTINUIDAD_DESCENDENTE, MESETA_O_ESTABILIZACION, GIRO_O_DIVERGENCIA_MULTIESCALA). Borrar esta clave y el ejemplo antes de evaluar.",
+  "CASO_NUEVO_AAAAMMDD_01": {"familias": ["familia_del_catalogo"], "escenario": "CONTINUIDAD_ASCENDENTE", "fuente": "dónde consta el desenlace"}
+}

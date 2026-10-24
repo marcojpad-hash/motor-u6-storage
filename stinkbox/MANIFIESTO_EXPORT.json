@@ -1,0 +1,22 @@
+{
+ "generado": "2026-10-24",
+ "generado_por": "Grok Bot",
+ "herramienta": "stinkbox_registry.py ingest (dedup por sha256 de artefacto y por evento)",
+ "tokens_unicos": 848,
+ "artefactos_importados": 407,
+ "raices_ingestadas": [
+  "MOTOR_1019/U6_CONT_AGNOSTICO_20261024",
+  "MOTOR_1019/TIRADA_TODO_ACTIVO_20261024",
+  "UNIFICADO_20261011",
+  "/cursor/stores (0 artefactos)",
+  "~/STINKBOX_PERSISTENTE"
+ ],
+ "nota": "Los 18 candidatos documentales Black Mirror estan aparte en familias_candidatas_documentales.json; no son tokens observados.",
+ "artefactos_por_raiz": {
+  "UNIFICADO_20261011/TRABAJO": 390,
+  "MOTOR_1019/TIRADA_TODO_ACTIVO_20261024": 7,
+  "UNIFICADO_20261011/B_HISTORICO": 5,
+  "STINKBOX_PERSISTENTE/STINKBOX_STORAGE": 4,
+  "MOTOR_1019/U6_CONT_AGNOSTICO_20261024": 1
+ }
+}

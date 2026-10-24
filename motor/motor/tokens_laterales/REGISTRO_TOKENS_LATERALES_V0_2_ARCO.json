@@ -1,0 +1,22 @@
+{
+  "registry_version": "V0.2",
+  "purpose": "Persistent registry for non-canonical token families, structural lenses, and blind analogical arcs.",
+  "canonical_patterns": "patterns_final_v14.json",
+  "canonical_count": 244,
+  "entries": {
+    "dynamis_dramatica_sistemica": {"status":"INTEGRATED","engine":"V0.17_DYNAMIS_SYMBIOTIC","source":"Gemini","persistent_layer":"stinkbox_vault"},
+    "kindleberger_minsky": {"status":"DESIGN_APPROVED_NOT_YET_WIRED","source":"Gemini","persistent_layer":"tokens_laterales"},
+    "geopolitica_trampa_tucidides": {"status":"DESIGN_APPROVED_NOT_YET_WIRED","source":"Gemini","persistent_layer":"tokens_laterales"},
+    "propp_booker_greimas_frye": {"status":"INTEGRATED","engine":"V0.16_STRUCTURAL_SYMBIOTIC","source":"Gemini","persistent_layer":"stinkbox_vault"},
+    "arco_analogico_pre_H": {"status":"INTEGRATED_UNIT_TESTED","engine":"V0.18_ARCO_ANALOGICO_SYMBIOTIC","source":"external_search_api_contract","persistent_layer":"vecinos_caldero + stinkbox_vault","role":"orientation_before_H"},
+    "arco_analogico_post_H": {"status":"CONTRACT_DEFINED_NOT_FULLY_EXECUTED","engine":"V0.18_ARCO_ANALOGICO_SYMBIOTIC","role":"contrast_after_H"}
+  },
+  "rules": [
+    "Lateral material is preserved and executable as evidence without modifying canonical F=244.",
+    "Pre-H analogical search may introduce new lateral tokens and relations before hypothesis formation.",
+    "Pre-H search is blind to case identity and future outcome.",
+    "Search results do not assign canonical weights and cannot decide H alone.",
+    "Post-H contrast cannot rewrite the already formulated H.",
+    "External API retrieval is a transport layer; the motor remains provider-neutral through SearchAdapter."
+  ]
+}

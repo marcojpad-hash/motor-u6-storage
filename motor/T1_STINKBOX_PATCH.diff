@@ -1,0 +1,104 @@
+--- a/MOTOR_ACTUAL_U6/correr_estandar.py
++++ b/MOTOR_ACTUAL_U6/correr_estandar.py
+@@ -123,14 +123,48 @@
+ 
+ 
+ def puntuar_t1(sello: dict, cuts_t1, motor_t1: dict) -> dict:
++    """Contrasta H sellada con evidencia predictiva explícita en T+1.
++
++    Los candidatos recuperados desde el propio corte sirven para continuidad
++    operativa/TORTUGAS, pero no se cuentan como predicción prospectiva. El runner
++    previo leía solo P/A_top5_ANEXO y devolvía tops_t1=[]; la primera reparación
++    encontró candidatos recuperados y habría contado un HIT espurio. Esta versión
++    conserva ambos datos y solo emite HIT/MISS cuando hay candidatos predictivos
++    no recuperados o anexos explícitos de T+1.
++    """
+     h1 = _fam(sello.get("H1"))
+     h2 = _fam(sello.get("H2"))
+-    last = (motor_t1.get("cuts") or [{}])[-1]
+-    tops = [r[0] for r in (last.get("P_top5_ANEXO") or [])]
+-    tops += [r[0] for r in (last.get("A_top5_ANEXO") or [])]
+-    if h1 and h1 in tops:
++    tops, evidence_tops, recovered = [], [], []
++    predictor = motor_t1.get("predictor") or {}
++    terminal = motor_t1.get("resolucion_operativa_terminal_017") or {}
++    for collection in (predictor.get("candidates") or [], terminal.get("candidates") or []):
++        for item in collection:
++            name = _fam(item)
++            if not name:
++                continue
++            if name not in tops:
++                tops.append(name)
++            if isinstance(item, dict) and item.get("recovered_from_cut"):
++                if name not in recovered:
++                    recovered.append(name)
++            elif name not in evidence_tops:
++                evidence_tops.append(name)
++    # Explicit per-cut predictive annexes are valid T+1 evidence.
++    cuts = motor_t1.get("cuts") or (motor_t1.get("motor") or {}).get("cuts") or []
++    last = cuts[-1] if cuts else {}
++    for key in ("P_top5_ANEXO", "A_top5_ANEXO"):
++        for row in (last.get(key) or []):
++            name = _fam(row[0] if isinstance(row, (list, tuple)) and row else row)
++            if name:
++                if name not in tops:
++                    tops.append(name)
++                if name not in evidence_tops:
++                    evidence_tops.append(name)
++    if not evidence_tops:
++        hit = "INCONCLUSO_CANDIDATOS_RECUPERADOS_NO_PRONOSTICO" if tops else "INCONCLUSO_SIN_CANDIDATOS_T1"
++    elif h1 and h1 in evidence_tops:
+         hit = "HIT_H1"
+-    elif h2 and h2 in tops:
++    elif h2 and h2 in evidence_tops:
+         hit = "HIT_H2"
+     else:
+         hit = "MISS"
+@@ -140,8 +174,11 @@
+         "H1_sellada": h1,
+         "H2_sellada": h2,
+         "tops_t1": tops[:10],
++        "tops_t1_con_evidencia_predictiva": evidence_tops[:10],
++        "candidatos_recuperados_no_contados_como_prediccion": recovered[:10],
+         "hit_H": hit,
+         "n_cuts_t1": len(list(cuts_t1)),
++        "fuente_tops_t1": "anexo T+1/candidatos no recuperados" if evidence_tops else "solo candidatos recuperados o sin candidatos",
+     }
+ 
+ 
+@@ -153,10 +190,12 @@
+ 
+     if "--t1" in argv:
+         i = argv.index("--t1")
+-        sello = json.loads(Path(argv[1]).read_text(encoding="utf-8"))
+-        fut = json.loads(Path(argv[i + 1]).read_text(encoding="utf-8"))
++        seal_path = Path(argv[1]).resolve()
++        future_path = Path(argv[i + 1]).resolve()
++        sello = json.loads(seal_path.read_text(encoding="utf-8"))
++        fut = json.loads(future_path.read_text(encoding="utf-8"))
+         cuts_t1 = fut["cuts"] if isinstance(fut, dict) and "cuts" in fut else fut
+-        out = Path(argv[i + 2]) if len(argv) > i + 2 else ROOT / "RESULT_T1.json"
++        out = Path(argv[i + 2]).resolve() if len(argv) > i + 2 else (ROOT / "RESULT_T1.json").resolve()
+         nombre = str((sello.get("case_id") or "T1") + "_t1")
+         case = _envolver({"cuts": cuts_t1, "case_id": nombre, "question": nombre}, nombre)
+         case["random_seed"] = 0
+--- a/MOTOR_ACTUAL_U6/motor/stinkbox_transport_v0_2.py
++++ b/MOTOR_ACTUAL_U6/motor/stinkbox_transport_v0_2.py
+@@ -383,4 +383,17 @@
+     transported["idempotencia_011"] = {"input_sha": input_sha, "repeticion": bool(repeticion),
+                                        "escrituras_omitidas": (["trajectory_events", "token_events/token_frequency/coactivation", "formula10", "latency_events"] if repeticion else []),
+                                        "regla": "mismo input sha => no se vuelven a sumar contadores"}
++    token_occurrences = sum(len(v) for v in by_cut.values())
++    token_unique = sorted({str(t).strip().casefold() for vals in by_cut.values() for t in vals if str(t).strip()})
++    token_events_total = len(box.data.get("token_events") or [])
++    transported["token_persistence_audit"] = {
++        "status": ("SKIPPED_IDEMPOTENT_REPLAY" if repeticion else ("NO_TOKEN_INPUT" if not token_unique else "TOKENS_PERSISTED")),
++        "input_token_occurrences": token_occurrences,
++        "input_unique_tokens": len(token_unique),
++        "input_cut_buckets": len(by_cut),
++        "persisted_token_events_total": token_events_total,
++        "persisted_unique_tokens_total": len(box.data.get("token_frequency") or {}),
++        "input_sha": input_sha,
++        "note": "No se inventan tokens: NO_TOKEN_INPUT significa que las fuentes laterales no aportaron tokens en esta corrida."
++    }
+     return transported

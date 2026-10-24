@@ -1,0 +1,22 @@
+{
+  "tokens": [
+    {
+      "case_id": "CASO_TOKEN_NUEVO_20261002",
+      "corte": "T1",
+      "eje": "P",
+      "token": "oficio",
+      "equivalente": null,
+      "estado": "PENDIENTE_REVISION",
+      "entra_a_canon": false
+    },
+    {
+      "case_id": "CASO_TOKEN_NUEVO_20261002",
+      "corte": "T2",
+      "eje": "A",
+      "token": "oficio",
+      "equivalente": null,
+      "estado": "PENDIENTE_REVISION",
+      "entra_a_canon": false
+    }
+  ]
+}

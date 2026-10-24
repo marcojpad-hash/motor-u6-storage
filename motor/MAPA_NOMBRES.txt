@@ -1,0 +1,14 @@
+MAPA: mismo rol, otro nombre. No son “versiones distintas de casos”.
+
+plugin_pregunta_detras.py        = plugin_pregunta_detras_v2.py
+plugin_circulo_monomito.py       = plugin_circulo_monomito_v2.py
+caldero_run.py                   = caldero_II_runner_generico.py   (NO el Marco-16)
+stinkbox_transport_v0_2.py       = adaptador sobre stinkbox_transport_v0_1.py
+ricci_forman_coocurrencia_v0_1.py= wrapper sobre estructura_ricci.py
+Engine que CORRE                 = Engine_V5_CANONICO_SOLO.py (30507)
+Engine histórico                 = Engine_V5_CANONICO_SOLO_30507_e5d9ab3a.py
+
+NO son el motor:
+rescate/caldero_marco16/*        ejercicio de un caso
+raw_compacto/*                   salidas de 7 casos
+RESULT_*.json                    corridas

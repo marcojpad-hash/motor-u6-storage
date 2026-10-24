@@ -1,0 +1,963 @@
+{
+  "files": [
+    {
+      "bytes": 930,
+      "path": "ACTIVE_ENGINE_SELECTION.json",
+      "sha256": "8980e79507f6392955b10e9e662eef4c91870c0dd4519fed52db2e5a5ed5e43f"
+    },
+    {
+      "bytes": 543,
+      "path": "CANDADO_ENGINE.json",
+      "sha256": "40066336b6a7c836563cd61297796b1f9f01a640159c99b28f9ac6902de04ea0"
+    },
+    {
+      "bytes": 1437,
+      "path": "CONTRATO_ENTRADA_LLM.txt",
+      "sha256": "ab4aaf95926020eb8e3420ca70aac2bdae83b8357cccbe90d85aa4c7da0e6815"
+    },
+    {
+      "bytes": 853,
+      "path": "HISTORICAL_PREDICTIVE_REFERENCE.json",
+      "sha256": "6a33195d011d6b06bd55b4eee86952dee2c966c22e70a64bdc67ff03025a0423"
+    },
+    {
+      "bytes": 748,
+      "path": "MAPA_NOMBRES.txt",
+      "sha256": "246aa92b2ab630524eb7fb6812d24fd588c80280d9f5e6bbd513a3e91d87cd74"
+    },
+    {
+      "bytes": 694,
+      "path": "NOMBRES_CANONICOS.txt",
+      "sha256": "02a8811c64f538cc86b11f6ab4f5e6ee634d3226fb34dbe89ce25be4c84e4eaa"
+    },
+    {
+      "bytes": 11185,
+      "path": "PATCH19_CHECKPOINT_SIZE_AUDIT.json",
+      "sha256": "79ff96720d55165742189260c8344ae284e8232b9e37b4b1825e6d1bc418ff31"
+    },
+    {
+      "bytes": 697,
+      "path": "PATCH19_FULL_PYTEST.txt",
+      "sha256": "6c9b13e4c7165511744332732db6fcdcc6eef2ef9e37e8a5a361b053f1ef81d9"
+    },
+    {
+      "bytes": 111,
+      "path": "PATCH19_PYTEST.txt",
+      "sha256": "b06b272670fe8567d73c408d67bdf14a682f9538eb3f9b034b625fde79107518"
+    },
+    {
+      "bytes": 2275,
+      "path": "PATCH19_REPAIR_REPORT.json",
+      "sha256": "e76ca2357b4a8c04e45c0dac30517ff0cdee5b6903ba04433d75f5272ccd04b6"
+    },
+    {
+      "bytes": 2957,
+      "path": "PATCH19_REPAIR_REPORT.md",
+      "sha256": "72ce16618bff88802f4779a0ad4f6584c91d67587a896b98f81996aba33f483f"
+    },
+    {
+      "bytes": 3522,
+      "path": "RUN_STDERR.txt",
+      "sha256": "8700fa77527188db5876b3407fab0fed3f22abfdd8aeb2bf6c02bc09250b2fed"
+    },
+    {
+      "bytes": 3801,
+      "path": "RUN_STDOUT.txt",
+      "sha256": "9e10ea37b73aa3821893ad3c575dada00978afe132f8265112d435917dbc58b8"
+    },
+    {
+      "bytes": 766776,
+      "path": "STINKBOX_STORAGE/STINKBOX_TOKENS_UNIFICADOS.json",
+      "sha256": "fe74f3165c4f5185ebeae3a34552be9940f3230588297f9e4d8caf998c42f483"
+    },
+    {
+      "bytes": 10717,
+      "path": "STINKBOX_STORAGE/resolved_cases_index.json",
+      "sha256": "5a85ec72297e6df75c2b90b2a1f7b592e32dbe47d07bcc37e422d3bca80c4093"
+    },
+    {
+      "bytes": 189488,
+      "path": "STINKBOX_STORAGE/stinkbox_GIORDANO_BRUNO_V15_3_PATCH09_20261010.json",
+      "sha256": "04a2df592b27a2f331b7c8f22ec5d4d81b2d03d8dbb404d0f5df072fa8035d58"
+    },
+    {
+      "bytes": 75519,
+      "path": "STINKBOX_STORAGE/stinkbox_GIORDANO_BRUNO_V15_3_PATCH09_20261010_RETENIDO.json",
+      "sha256": "a0d1e632317e79a1df39131e6549e9f3f8cda88e893f3b3e57dfc664a28780a0"
+    },
+    {
+      "bytes": 2685,
+      "path": "STINKBOX_STORAGE/stinkbox_GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO.json",
+      "sha256": "91d58a449a691933e6cc896f3da6beb226bfa516daba4b03c808f960bba2cdd8"
+    },
+    {
+      "bytes": 179215,
+      "path": "STINKBOX_STORAGE/stinkbox_OBSERVATORIO_LUCERNA_001.json",
+      "sha256": "19484ee3a84b7e6cd05f27c71843fb3c064cb8b54b2b705e74a53cf7b1e97b4c"
+    },
+    {
+      "bytes": 15429,
+      "path": "STINKBOX_STORAGE/stinkbox_OBSERVATORIO_LUCERNA_001_RETENIDO.json",
+      "sha256": "4bd018291a80fb7c163784cf622fc09aa50c95518998485c01b4bf0dcb0d0aa8"
+    },
+    {
+      "bytes": 180857,
+      "path": "STINKBOX_STORAGE/stinkbox_OBSERVATORIO_LUCERNA_001_SIN_ULTIMO.json",
+      "sha256": "2648b20075b152117eac95c2bc0e0991f28136ffc0031589c7cc22a09ff25788"
+    },
+    {
+      "bytes": 426471,
+      "path": "STINKBOX_STORAGE/vecinos_caldero/neighbor_events.jsonl",
+      "sha256": "7a4423aa477bd188769a611e032efe82ecf7d3589f2763cca5209f22fe573892"
+    },
+    {
+      "bytes": 305646,
+      "path": "STINKBOX_STORAGE/vecinos_caldero/neighbor_index.json",
+      "sha256": "dceed316374126411613bf9bb0b28809aa584e55fef6d7d0cab986a7abfea0c8"
+    },
+    {
+      "bytes": 3131,
+      "path": "UNIFICACION_MANIFEST.json",
+      "sha256": "10ed555638ab39b781de64f8bc66fe2986bf73b24482024aa250be526d8ccc2a"
+    },
+    {
+      "bytes": 13663,
+      "path": "correr_estandar.py",
+      "sha256": "778a4c16882514da4636702a37dabed168dcb6d1e62cc66f9e0c438b2ee83bd1"
+    },
+    {
+      "bytes": 8852,
+      "path": "inputs/GIORDANO_BRUNO_PATCH19_COMPACTO.json",
+      "sha256": "56daf3601390af5115fe159f223516e03589247b59c44d9f2ff5ba90e52b64a3"
+    },
+    {
+      "bytes": 394,
+      "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+      "sha256": "0c4a6c864746bab053fb4a42ced3536b3b0658160076e7bc27b5e44c99563eb6"
+    },
+    {
+      "bytes": 5752,
+      "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+      "sha256": "fe87b7456086a7d4ae83dc4c901deb1d12a8e0b1c01d2078b9bdbaa209e5adf9"
+    },
+    {
+      "bytes": 1231,
+      "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+      "sha256": "4a6755214c0b8063737c66fd98461c4834138755d1c5fae0511279ba98dbd536"
+    },
+    {
+      "bytes": 12047,
+      "path": "motor/Corpus_Final_Unificado_17_Formulas.txt",
+      "sha256": "8f10b0072ea28436c53c04531696496fc5545a4185808395e7f9f22589b64446"
+    },
+    {
+      "bytes": 15617,
+      "path": "motor/DIFF_ESTRICTO_to_UNICO.diff",
+      "sha256": "9df5e65adeef896b5b65f3220f00d06576fed487588fe81366fa3c45a16390f1"
+    },
+    {
+      "bytes": 1749,
+      "path": "motor/DIFF_NATIVO_V0_9_to_UNICO.diff",
+      "sha256": "140794b0c7d3f3d586427aa2544037964f3985cb043d9020857f6b47aa9608bf"
+    },
+    {
+      "bytes": 429,
+      "path": "motor/DIFF_lente_lateral_metrics_to_UNICO.diff",
+      "sha256": "c2a28db78cc0d22a6d10225cd6fadd94bdfb2839231087552ddad041a10b3d48"
+    },
+    {
+      "bytes": 30507,
+      "path": "motor/Engine_V5_CANONICO_SOLO.py",
+      "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
+    },
+    {
+      "bytes": 2477,
+      "path": "motor/INVENTARIO_COMPONENTES_UNICO.json",
+      "sha256": "8328b3e40dd184fe6b9b757579b24f869e056b819ce08a9a109d23693d310874"
+    },
+    {
+      "bytes": 105190,
+      "path": "motor/MATRIZ_EQUIVALENCIAS_ESCALA.json",
+      "sha256": "66f83e77409c404a9f00b2250a81b0bfffa2fbb94577abed4792ebcf4e9368d7"
+    },
+    {
+      "bytes": 594,
+      "path": "motor/MOTOR_V15_3_NATIVO_V0_9.py",
+      "sha256": "cfbb3b0974a7e241dc4c20cb5353d17cc610cedfd1621ef4d0cd46fdf135c4b3"
+    },
+    {
+      "bytes": 30048,
+      "path": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
+      "sha256": "674935c7311c02f9ea3482c94311b67a722da9d8c8f8b8484aa376ec0e10bc59"
+    },
+    {
+      "bytes": 239975,
+      "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+      "sha256": "7864ad0a2cc046971f29b65900dfaaa5004b0e444c22a2f07ad64fd0e5634947"
+    },
+    {
+      "bytes": 225775,
+      "path": "motor/MOTOR_V15_3_UNICO_20260927_PATCH10_PRE_GEOMETRIA.py",
+      "sha256": "ec7f72f4aef17b69d68e3b9b3e52bea8efee6f79ea0752b771ee8724cc8cb432"
+    },
+    {
+      "bytes": 1593,
+      "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
+      "sha256": "02843569f6394e681c7cf82d73d1241bc3a0831a978dbcd8b425e1b5bc715cfa"
+    },
+    {
+      "bytes": 193162,
+      "path": "motor/PUENTE_244_FAMILIAS.json",
+      "sha256": "3cc9fd253d1d669f81663839ed46d47429db7467ecaadd49b6b41303f46adfbf"
+    },
+    {
+      "bytes": 1019,
+      "path": "motor/analogos_fase_v1.py",
+      "sha256": "d70be0fd85c4627c014b76dda49799837cc92f56465b3ff1f9088489d229ee8f"
+    },
+    {
+      "bytes": 1061,
+      "path": "motor/arcos_emocionales_laterales.json",
+      "sha256": "396393e5d2093b534b0ba83b0aa5cbb2b8cb02ac97d019ad6422c7d4471adcb2"
+    },
+    {
+      "bytes": 2508,
+      "path": "motor/caldero_II_runner_generico.py",
+      "sha256": "849d6702e0bee68602d3cc1d7aad40dd6ec2d746e18ee2eeb2d7c142741def80"
+    },
+    {
+      "bytes": 5570,
+      "path": "motor/caldero_zoomout_acero_v0_1.py",
+      "sha256": "aef329444ca2bac0c9e0d7d2c56e3a7cdfa959a8ec855008a3940cadb2e66ed4"
+    },
+    {
+      "bytes": 3980,
+      "path": "motor/calibracion_predictiva_v1.py",
+      "sha256": "e399c4845b7070dd3ff52032b59ba9d4d15b599218a8d33f1b595136429e6640"
+    },
+    {
+      "bytes": 11554,
+      "path": "motor/cameo_codebook_lateral_v1.json",
+      "sha256": "d575473d4ea4a81f71ab37b36da9a342e623e99c18bae7fd99eeee8bc2162057"
+    },
+    {
+      "bytes": 4038,
+      "path": "motor/cameo_to_244_adapter_v1.py",
+      "sha256": "1e1ac4759692c897f986171cf3b6e9b21708858d45f1fdb9d317f8a4e2c94947"
+    },
+    {
+      "bytes": 4550,
+      "path": "motor/cameo_to_703_lateral_v1.json",
+      "sha256": "7c15ddc7861e598c72bd1b01c785b447bd43a74c76a46b39f84dfac036a98376"
+    },
+    {
+      "bytes": 3314,
+      "path": "motor/cameo_to_703_lateral_v1.py",
+      "sha256": "1f9589d1bc16fa230a953c709a6bcdc2a9cc0b5709e9315eef7188daef83fb8b"
+    },
+    {
+      "bytes": 6423,
+      "path": "motor/candado_plugins.py",
+      "sha256": "2a66950516dfa751b0d1a4e4162d80046ba59187b7041dffd6831cff31842de1"
+    },
+    {
+      "bytes": 9833,
+      "path": "motor/capa_integracion_semantica_v1_2.py",
+      "sha256": "4de3ddef696e8686a8ff272ca02c6d9e84cd8b9c540221d63c6f46bd213a6f2c"
+    },
+    {
+      "bytes": 6066,
+      "path": "motor/capa_interrelacion_tokens.py",
+      "sha256": "c7491981db4e46d23ec29b7df82d326dc3be9a445321d83f2ab41e7e4a0bfe05"
+    },
+    {
+      "bytes": 14657,
+      "path": "motor/catalogo_capa2_familias_semilla.json",
+      "sha256": "a7142b3eb59a2d3151decc734b56d331ca8abb259e412267cde08feeaf080f4e"
+    },
+    {
+      "bytes": 15365,
+      "path": "motor/ceb_runtime_v0_3_flow.py",
+      "sha256": "7dfaf3b11b1ef3a35a2aa177df604689e32030753da8f48921e1447b5a956b18"
+    },
+    {
+      "bytes": 27884,
+      "path": "motor/ceb_runtime_v0_6_flow.py",
+      "sha256": "05f86a0d7109e329c485a94ae22f4b8846e22879ba1dcb97bd43e9dc8d8f755b"
+    },
+    {
+      "bytes": 10318,
+      "path": "motor/coactivacion_escalas.py",
+      "sha256": "f316ebb07bf84d8169c69ecd076392af73c5aa5c8c9426e34c2f475ee4b822c5"
+    },
+    {
+      "bytes": 11121,
+      "path": "motor/control_flujo_soluciones.py",
+      "sha256": "058e834825495f153b53afffbdca99ce3ca089a6aa37dc296eaeb8106b9427ea"
+    },
+    {
+      "bytes": 10038,
+      "path": "motor/control_latencia_decimo_hombre.py",
+      "sha256": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345"
+    },
+    {
+      "bytes": 22756,
+      "path": "motor/decimo_hombre_esteroides_mayeutica_v1.py",
+      "sha256": "c000284559cb084e83dc11ab777431319e41401c8044f07105abf84f9763ed2f"
+    },
+    {
+      "bytes": 254,
+      "path": "motor/espacio_souriau.py",
+      "sha256": "448bb6b5be9ba50e88dd57dcc4d6481538366713edd995c3e29c3ce69a73f44b"
+    },
+    {
+      "bytes": 4120,
+      "path": "motor/estabilidad_vectorial_h.py",
+      "sha256": "60574cb3d1a0431461e7550547c180b30b5e643e41bebb7fbb90b073aa23de04"
+    },
+    {
+      "bytes": 6515,
+      "path": "motor/estado_latencia_decimo_hombre.json",
+      "sha256": "6185e900848fdccb0d7588f145c81ef8c8763234e8ee008ad058f9b25630efc4"
+    },
+    {
+      "bytes": 2616,
+      "path": "motor/estado_latencia_v15_3_nativo.json",
+      "sha256": "906cef79c8475115115c0ce30a44d772bf330347c121e07a4078f0d6682cc67f"
+    },
+    {
+      "bytes": 2568,
+      "path": "motor/familias_tokens/arquetipos_sistemicos_senge_faltantes.json",
+      "sha256": "7761b4ecc0aba3e9fc324822310a5dd133ccac7b633872c4d6a76269d1d62b94"
+    },
+    {
+      "bytes": 4465,
+      "path": "motor/familias_tokens/ciclo_vida_organizacional_adizes.json",
+      "sha256": "7f8481a38523b98a0fed5a331b18f9f2f651e1accd20fdbd142e84c9fd678864"
+    },
+    {
+      "bytes": 2935,
+      "path": "motor/familias_tokens/ciclos_poder_decadencia_macrohistoria.json",
+      "sha256": "1e1615a0946dd79c47121e9ba67893ccdda94ec75cdf689e424905c32bcf9d2a"
+    },
+    {
+      "bytes": 2845,
+      "path": "motor/familias_tokens/deseo_mimetico_chivo_expiatorio.json",
+      "sha256": "65bc3b7d83740aa8743ad8676b36d47509d8f3deb171a2c8296672ac24a64bec"
+    },
+    {
+      "bytes": 2958,
+      "path": "motor/familias_tokens/estructura_dramatica_clasica.json",
+      "sha256": "fb73c3d2da5160504874a02193e6ce71841f773c7c0f5491334688b19516f0d2"
+    },
+    {
+      "bytes": 2583,
+      "path": "motor/familias_tokens/etapas_vitales_evolutivas.json",
+      "sha256": "defaa4881ce47ffac986c25feb202ff5b58f423a73d3a4bd5a042ef1772b5886"
+    },
+    {
+      "bytes": 5240,
+      "path": "motor/familias_tokens/geopolitica_trampa_tucidides.json",
+      "sha256": "38a12c52796afc9936ed92bd2a454d256bf28e22a9592db7844bf1679ffba67f"
+    },
+    {
+      "bytes": 3651,
+      "path": "motor/familias_tokens/kishotenketsu_estructura_giro.json",
+      "sha256": "ac99be9589e5c673664651a7211992361f60ca26ee3fb9104fcfbf74304700a8"
+    },
+    {
+      "bytes": 2498,
+      "path": "motor/familias_tokens/narrativa_vida_mcadams.json",
+      "sha256": "bb94d0a41c51d79d8d0466e3e8fef1ed0094ac731fc459d988c3f50c9a28384c"
+    },
+    {
+      "bytes": 2786,
+      "path": "motor/familias_tokens/triangulo_dramatico_karpman.json",
+      "sha256": "4a98ae64a559a35152a086253f9d1bc09650fda84f72229bb0916eabec159d55"
+    },
+    {
+      "bytes": 2750,
+      "path": "motor/familias_tokens/viaje_del_heroe.json",
+      "sha256": "f177b5bb8186a9fb75f5e3108f63197982c223bd55f8f100c5f7042dd1f24b46"
+    },
+    {
+      "bytes": 17266,
+      "path": "motor/filtro_identidad_zoom_out_zoom_in.py",
+      "sha256": "1d00fb10f02f0e0f68863654d67d5d368a66c3e3b7b1ec4accb319e1430f48be"
+    },
+    {
+      "bytes": 7764,
+      "path": "motor/formular_h_apuesta.py",
+      "sha256": "0319a42b8ef011ab09f48dfc9a973a553f5e7280d1266881998c61444c97ff27"
+    },
+    {
+      "bytes": 6623,
+      "path": "motor/guardian_acero_rival_v1.py",
+      "sha256": "314d19f5d477d4be370d1c40e7ee06ce391383c2eef26139e42a52e43a007f79"
+    },
+    {
+      "bytes": 18385,
+      "path": "motor/guardian_logica_copi_v1.py",
+      "sha256": "0101f666ecd70c9cd7aeaa3691f8c34e8d04e75a68594e61c2af3f481a12d519"
+    },
+    {
+      "bytes": 65554,
+      "path": "motor/guardian_tropos_beristain_v1.py",
+      "sha256": "1886af5e9247464a7f87f74a25863cf4a5eee46375c22d44668f80d81e8baf68"
+    },
+    {
+      "bytes": 29862,
+      "path": "motor/guardianes_control_v1.py",
+      "sha256": "e043b84cca0c3af1f2297615936f9ba5e533d1dd977a56aed3b914c02f629f4b"
+    },
+    {
+      "bytes": 89429,
+      "path": "motor/laterales_unico_v1.py",
+      "sha256": "5f79012b1aee6aa1702a59029b423a96a9d182f43e67574a53fb77f2155377c2"
+    },
+    {
+      "bytes": 9964,
+      "path": "motor/lectura_negativo_ricci_vs_billar_v0_1.py",
+      "sha256": "777666dca137d09533fd18257d33992a87fb91584199b6444d7d04d09c693027"
+    },
+    {
+      "bytes": 4988,
+      "path": "motor/lente_lateral_metrics_v1_1_galileo.py",
+      "sha256": "3fa20944fc6fc6026eafbc399911503953f5630d5454b17fbdf144dbdd63cbca"
+    },
+    {
+      "bytes": 7557,
+      "path": "motor/lexico_narrador_v0_1.py",
+      "sha256": "0d6bc005e8e55e002fa16e33790bcc51e69ac166d115c2f29fc3e81aaec45c4a"
+    },
+    {
+      "bytes": 1637,
+      "path": "motor/marco_7783.py",
+      "sha256": "991932e24845e1b0c76e9c28d5ea4ecf3861ef9af5935d9fceae612fa88f86c5"
+    },
+    {
+      "bytes": 5132,
+      "path": "motor/marco_funciones_souriau.py",
+      "sha256": "4e7f825109c8b32b76c57291ac632a1ae155334b04c7c5608efee0109401ec81"
+    },
+    {
+      "bytes": 6636,
+      "path": "motor/matriz_corrida.py",
+      "sha256": "9cf60a5404ba876615f27efbfaf584aa2e5a2b9af4192c1d1671d769f0875cd3"
+    },
+    {
+      "bytes": 7219,
+      "path": "motor/metacognition_v0_1.py",
+      "sha256": "935c78871f886ce2cb103f4e8084b11148d1fd9e0bd812745af8a3ad24b9ec20"
+    },
+    {
+      "bytes": 17194,
+      "path": "motor/modo_estricto_v1.py",
+      "sha256": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e"
+    },
+    {
+      "bytes": 6192,
+      "path": "motor/motor_interrelacion_extensible_v0_1.py",
+      "sha256": "e40c3c29a2c9971bcf69e265975e5bcb366ff6c1d31af057af85d99ebf87358c"
+    },
+    {
+      "bytes": 6232,
+      "path": "motor/normalizar_familia_tokens.py",
+      "sha256": "da1235298b85d89701de19f9c26a7b38f6b5cca16f2968cf9c71244f624cd739"
+    },
+    {
+      "bytes": 123937,
+      "path": "motor/patterns_final_v14.json",
+      "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "bytes": 24319,
+      "path": "motor/personajes_corte_016.py",
+      "sha256": "9760ae26cc47cdb321a7a6517145727a60bba5fed4223c624f98dc21dfa8a93e"
+    },
+    {
+      "bytes": 2368,
+      "path": "motor/plugin_alias_reactivacion.py",
+      "sha256": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e"
+    },
+    {
+      "bytes": 9852,
+      "path": "motor/plugin_aquiles_ancla_estricto.py",
+      "sha256": "16b793d38ce72c74c6925b42e4b69435e983db05fe6a1956c8de318926ae8640"
+    },
+    {
+      "bytes": 5831,
+      "path": "motor/plugin_aquiles_h.py",
+      "sha256": "3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc"
+    },
+    {
+      "bytes": 6105,
+      "path": "motor/plugin_arco_field_snyder_mckee.py",
+      "sha256": "ed672db0cf93ffacbbe79fd58fadee4997e845319ac5c3fe9dbdd633fae91acc"
+    },
+    {
+      "bytes": 2508,
+      "path": "motor/plugin_arcos_emocionales_laterales.py",
+      "sha256": "3bd4e1ac24968f5c49c79b997e811ae098d1470c93d98579b1e20fd7a03fe0ec"
+    },
+    {
+      "bytes": 2853,
+      "path": "motor/plugin_arquetipos_dinamicos.py",
+      "sha256": "529e79afb7dfabd605da3dc220949d1325e786700e59b58b1fde3e11b23f2d79"
+    },
+    {
+      "bytes": 2753,
+      "path": "motor/plugin_cameo_institucional.py",
+      "sha256": "98a58d5bed02a0fececb3cb9df2f7fb76b78cd7c8b1947bd7887c8d0dfefe36c"
+    },
+    {
+      "bytes": 15243,
+      "path": "motor/plugin_capa2_antecedentes_arquetipos.py",
+      "sha256": "e20f2ad955cc63bfa1811789bf9d1f31fee7d0a550eb28751e6e11171a01657d"
+    },
+    {
+      "bytes": 7993,
+      "path": "motor/plugin_circulo_monomito_v2.py",
+      "sha256": "4e087be78b9ad5b5c9a6925a4befe879eab6c416f1a5fd79e33b8ab0242f8d58"
+    },
+    {
+      "bytes": 3294,
+      "path": "motor/plugin_embudo_clinico.py",
+      "sha256": "deb37f7e0124217c6f4ad329782063a830b61977e531fa91d6d144339413b2ee"
+    },
+    {
+      "bytes": 1010,
+      "path": "motor/plugin_entrega_luces_v1.py",
+      "sha256": "ca79faf6429bba9984776e273a2c221539ba887ea7f9cbdf854a43cb8d45abf2"
+    },
+    {
+      "bytes": 2564,
+      "path": "motor/plugin_familias_gloria_sacro.py",
+      "sha256": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f"
+    },
+    {
+      "bytes": 2637,
+      "path": "motor/plugin_fix_entrada.py",
+      "sha256": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd"
+    },
+    {
+      "bytes": 5133,
+      "path": "motor/plugin_guardia_no_cruce.py",
+      "sha256": "27759007f33abe577cc53ebaff785d922cbdd096072ac7c2fcf9ec614cb6e828"
+    },
+    {
+      "bytes": 1594,
+      "path": "motor/plugin_metodo_rigor.py",
+      "sha256": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0"
+    },
+    {
+      "bytes": 2309,
+      "path": "motor/plugin_otto_numinoso.py",
+      "sha256": "2f22f06e6c3e8eececb54a839aa08a1391a7ab0c27f739492417768fed24954e"
+    },
+    {
+      "bytes": 2071,
+      "path": "motor/plugin_picos_mesetas.py",
+      "sha256": "7720b6eb614497fb6aaf38d527ea323dbef31b9748f9835385ae9c3ba6081149"
+    },
+    {
+      "bytes": 5316,
+      "path": "motor/plugin_polaridad_causal.py",
+      "sha256": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739"
+    },
+    {
+      "bytes": 36628,
+      "path": "motor/plugin_pregunta_detras_v2.py",
+      "sha256": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247"
+    },
+    {
+      "bytes": 605,
+      "path": "motor/plugin_pregunta_dirigida.py",
+      "sha256": "b9dc7533cd83047654f666ca40e6e961ebfe8fd01082d703b9ba08a7dc404ca8"
+    },
+    {
+      "bytes": 56609,
+      "path": "motor/plugin_pregunta_dirigida_v0_5_1.py",
+      "sha256": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e"
+    },
+    {
+      "bytes": 1698,
+      "path": "motor/plugin_reporte_3d.py",
+      "sha256": "20ecefed3def18319ea7a93a237148ab3092208d940dbe4d6d8a0e0621dfb05e"
+    },
+    {
+      "bytes": 5117,
+      "path": "motor/plugin_resolucion_autonoma_consistencia.py",
+      "sha256": "fdb05a1e59c4de8488d42d6f36b6547901d3d3eb70472ea2f4771972b1261dfb"
+    },
+    {
+      "bytes": 3341,
+      "path": "motor/plugin_sesgo_lectura.py",
+      "sha256": "fe098108d85ccc8a44d13a7a0beb556cf50d6e4450e7b631b5b665edb02e21a0"
+    },
+    {
+      "bytes": 1596,
+      "path": "motor/plugin_sombrero_blanco_token.py",
+      "sha256": "52cd7d13aef7d7f5769622b24a604428d50e7fe286364ff3671bb23fa3cee9c5"
+    },
+    {
+      "bytes": 11330,
+      "path": "motor/plugin_souriau_210141.py",
+      "sha256": "2129f5d66230458745c3659b90c6ecd39704fbd04d90acb88d4f02186cc3a7af"
+    },
+    {
+      "bytes": 1438,
+      "path": "motor/plugin_trayectoria_hosteleria.py",
+      "sha256": "06b368ff5ce1cc41ce401224d105e0020421993aed6566852c34757c662b1433"
+    },
+    {
+      "bytes": 6702,
+      "path": "motor/plugin_verificador_consistencia_adversarial.py",
+      "sha256": "10b5e163c22e002715a39c4997194e6211d3179fe2d4ae5ab37bf168d2dfef19"
+    },
+    {
+      "bytes": 7499,
+      "path": "motor/predictor_vecinos_prefijo_v1.py",
+      "sha256": "903d4a5bbd0a6d91d8d6b7df0ed3ec2568a2fa39161ef061d62853b73fb9d257"
+    },
+    {
+      "bytes": 11132,
+      "path": "motor/protocolo_kernel_motor.py",
+      "sha256": "e95f180246e5fad23615eedf74efd2464777cb6ffb2931a653f0888868209d99"
+    },
+    {
+      "bytes": 5618,
+      "path": "motor/puente_ciclo_completo.py",
+      "sha256": "dc87b0c969d710c285e055b12f468b1fd5e32ae937285770e139754f89219991"
+    },
+    {
+      "bytes": 24749,
+      "path": "motor/puente_souriau_caldero_polti_v1.py",
+      "sha256": "2a5d23962d60232e16ac152ac0ee443fb9bc4f261f6274dbd9934266eaa31338"
+    },
+    {
+      "bytes": 119250,
+      "path": "motor/registro_luces_gemini_packs.json",
+      "sha256": "bafef9f108a96e6524d644c6f66bee3db1e22c19e775b813766992fc24116e62"
+    },
+    {
+      "bytes": 11579,
+      "path": "motor/registro_sidecar_amantes_arquetipos.json",
+      "sha256": "3dab8d38d979efa5a4948a0e05b0a2dbd14421d9ab7ff6e09d5cda99c276aecc"
+    },
+    {
+      "bytes": 1320,
+      "path": "motor/ricci_forman_coocurrencia_v0_1.py",
+      "sha256": "b546e98a8b58fb3ec52b137cc05bcc648035d51f61c9a07d500d6484240379b9"
+    },
+    {
+      "bytes": 1323,
+      "path": "motor/salida_consultor_v1.py",
+      "sha256": "3812de0be67ca4ce88872d4b5ca050c77e178af5f573100f7174f3fef712423b"
+    },
+    {
+      "bytes": 2173,
+      "path": "motor/schrodinger_transport_esqueleto_v0_1.py",
+      "sha256": "e88cd66f1fbe4aead9a36c231d6f727d2cbdb8f0d138412215d448d1af68f599"
+    },
+    {
+      "bytes": 2245,
+      "path": "motor/semiotica_deriva_v0_1.py",
+      "sha256": "21c84195c45a88725fc3dd7d90f9152e6d324223805a724258ddd3a9be0cc8ff"
+    },
+    {
+      "bytes": 27535,
+      "path": "motor/sensor_perfil_narrador_v0_1.py",
+      "sha256": "bacdd4a4cc145e48ef333504682a3c753d6a8d84ac7dc7cb23f6ec2873eea2a7"
+    },
+    {
+      "bytes": 22186,
+      "path": "motor/sidecar_ablacion_hombre_acero.py",
+      "sha256": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60"
+    },
+    {
+      "bytes": 5436,
+      "path": "motor/sidecar_amantes_arquetipos.py",
+      "sha256": "7923d49cde131871186358ab078590da4d21a3f842a5ce268016c731c2c46ca9"
+    },
+    {
+      "bytes": 41680,
+      "path": "motor/sidecar_caldero_busqueda_arquetipos.py",
+      "sha256": "69be70279c1da5ff2896045b3cb172f096eff45a49c65dfb28890ec895605cdc"
+    },
+    {
+      "bytes": 23844,
+      "path": "motor/sidecar_corte_memento.py",
+      "sha256": "e56f5fb140484fe5ecaedece3871112d64cd1fd4067f68c40064d6dfca1f52d9"
+    },
+    {
+      "bytes": 7657,
+      "path": "motor/sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py",
+      "sha256": "cf153eeb6d8fb80823eecb71f0aac3d37d3999015977a55e5b1c2b01bdd103bd"
+    },
+    {
+      "bytes": 1463,
+      "path": "motor/sidecar_geometria.py",
+      "sha256": "27475c07abd38ebb842affda8ee3e952f2e47a109a0c4a90f1f6269694c5ecf9"
+    },
+    {
+      "bytes": 5319,
+      "path": "motor/sidecar_lente_souriau.py",
+      "sha256": "2fb351df37b4466c6923b22c22cea9ef4429f6c3d5c6e824ea5ea47e22eb7191"
+    },
+    {
+      "bytes": 9270,
+      "path": "motor/sidecar_luces_gemini_packs.py",
+      "sha256": "16ae145e79f35b6e6c6b47c972d21b5df93275282f7f06f3d9920445341d9fb1"
+    },
+    {
+      "bytes": 4303,
+      "path": "motor/sidecar_polti_caldero.py",
+      "sha256": "f72dbdaa37fe91f789de71e5317035a51bc2ca7accf663ca9bfb7d21b38ff4ff"
+    },
+    {
+      "bytes": 5893,
+      "path": "motor/sidecar_trazabilidad_temporal.py",
+      "sha256": "8c54ea392849eeaa68a647342f6454ff56b27ccccb2ff5efe07243267b6a56d7"
+    },
+    {
+      "bytes": 9655,
+      "path": "motor/sidecar_venn_sistemas_v1.py",
+      "sha256": "1d0401fdc509b4c91f58aad99087c6d66166fc744447e2f9115974bd901a03b6"
+    },
+    {
+      "bytes": 16656,
+      "path": "motor/stinkbox_transport_v0_2.py",
+      "sha256": "9575e492e4702adc9466900b873414fd167073560f7cbe9e7cbfedeb8649d2cd"
+    },
+    {
+      "bytes": 5152,
+      "path": "motor/stinkbox_vault/stinkbox_CAMEO_SMOKE_20260928.json",
+      "sha256": "045b377939781e3c89169c6fe7d63cde857f558c9203e33a68f4de315cfc7296"
+    },
+    {
+      "bytes": 374341,
+      "path": "motor/stinkbox_vault/stinkbox_MOZART_FRESH_WEB_BIO_V04_20260930.json",
+      "sha256": "94a321f85de091fe664b73632efd7fd43e87a06e37b01c7e99710dc376790938"
+    },
+    {
+      "bytes": 3435,
+      "path": "motor/stinkbox_vault/stinkbox_SMOKE_ESTANDAR.json",
+      "sha256": "4ac614ef36de838b3c75a6ae6f21b09c48914706405a44c90f1123820c644ae2"
+    },
+    {
+      "bytes": 2264,
+      "path": "motor/tokens_laterales/PROTOCOLO_ARCO_ANALOGICO_V018.md",
+      "sha256": "a5342cd8cc751f465ec51a1311f34625e289fcec43bff45653d239b4c1ab340d"
+    },
+    {
+      "bytes": 1729,
+      "path": "motor/tokens_laterales/REGISTRO_TOKENS_LATERALES_V0_2_ARCO.json",
+      "sha256": "9d53189cfb8907ee50483ec65621bc56950127f38b50d423e7c613c35e5e4726"
+    },
+    {
+      "bytes": 1136,
+      "path": "motor/tokens_laterales/dynamis_dramatica_sistemica_v0_1.json",
+      "sha256": "e07086165d0a2b6b7d2f59c7bc59a0e9cb9a97aabc318c0e7ccdf1f5fcb0d408"
+    },
+    {
+      "bytes": 5687,
+      "path": "motor/traza_campo_244.py",
+      "sha256": "7d1f397563b8f925349da22d7c4fea125bbe0eebd2a9fff44fa0da8de8d3097d"
+    },
+    {
+      "bytes": 2727,
+      "path": "motor/tusi_par_indice_exploratorio_v0_1.py",
+      "sha256": "290d1bb32bb86766593557bf5d139991cf708ac7b4b568412761f4e98b0f86f8"
+    },
+    {
+      "bytes": 8815,
+      "path": "motor/v153_lateral_metrics_v1_1.py",
+      "sha256": "1234e121fb7f516c843b3f9251c88315ab36d7fdbc549aeeea6eacadbddb5ff3"
+    },
+    {
+      "bytes": 23550,
+      "path": "motor/vecinos_caldero/neighbor_events.jsonl",
+      "sha256": "f759b566191d20f381e124a19db1caac78976c88fdd8d3c015909686846dd36c"
+    },
+    {
+      "bytes": 31115,
+      "path": "motor/vecinos_caldero/neighbor_index.json",
+      "sha256": "2580a3605d9dcf93d334d7c15cf8d8d6d75e2b9e8483b2df081cf67718117c35"
+    },
+    {
+      "bytes": 2618,
+      "path": "motor/vecinos_caldero/neighbor_store.py",
+      "sha256": "6989d1e959cfa049c8b0258a48f20e97ed5b07fb236fb360d9ba6fc39bbcd4f9"
+    },
+    {
+      "bytes": 598,
+      "path": "motor/vecinos_caldero_neighbor_store.py",
+      "sha256": "0e8e1c1875e13dff5cb009d8a650fc294b02d4ce506a9ee5a4dfbf0841993d41"
+    },
+    {
+      "bytes": 4181,
+      "path": "motor/zri_coupling_v0_2.py",
+      "sha256": "38aaeb5dcaded0e7c15ab3d5613de84baad2aefd3ed053611e2f4edce89efe61"
+    },
+    {
+      "bytes": 4875,
+      "path": "motor/zri_experience_v0_1.py",
+      "sha256": "500fa2b12a4eae491c7b7dc2e0e42db5651dce6cce5d98f44acd28ac55586a85"
+    },
+    {
+      "bytes": 4555102,
+      "path": "results/RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO.json",
+      "sha256": "c19fa3a512459daa2d1f721e83a655fd6688555773aefe1e0ce2497688e21012"
+    },
+    {
+      "bytes": 6593,
+      "path": "results/RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO_RECIBO_EJECUCION.json",
+      "sha256": "479d1fca13c90b6124d9d338e6185a9cd46d8a3422695341077f7244398d67f3"
+    },
+    {
+      "bytes": 421,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+      "sha256": "5e5ff388d01a3fb47f1f3bba10c13467fb2321b481b580d7e159b04cc3ed0f4c"
+    },
+    {
+      "bytes": 8851,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/_INPUT.json",
+      "sha256": "ba888c4b675f6a9c0252583bee8178b6bfa7ed52d235de7d825ea6e37fd48d2d"
+    },
+    {
+      "bytes": 7299791,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791736958880.flow_ledger.jsonl",
+      "sha256": "8296f42d1005b815af76e87217ff8b5cd20affb981eb173bd778551d895c40f7"
+    },
+    {
+      "bytes": 1229513,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_RETENIDO_1791736972012.flow_ledger.jsonl",
+      "sha256": "94b9fdae7ca021eca51ae6375cfc0b07ff4a7bfa6cb76d9833bcd49a691b30a8"
+    },
+    {
+      "bytes": 7571881,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791736965560.flow_ledger.jsonl",
+      "sha256": "f6f069babf41d3b2940b34cfd9f9b60eb3000660c8d0854750c600e7d9e8ec4e"
+    },
+    {
+      "bytes": 18,
+      "path": "runs/CORRIDA_ACTUAL_PATCH19/stinkbox_tokens_descubiertos.json",
+      "sha256": "ffecce6f150466db31f369a18815f03ed077af09496c036d5e7cf2fa9f17387d"
+    },
+    {
+      "bytes": 404,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+      "sha256": "39f9ca3952f585e3c54d67ed57bd2cb23523b0172a80eb80259682759a003176"
+    },
+    {
+      "bytes": 6531,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/EXECUTION_RECEIPT.json",
+      "sha256": "b2e613a7a95c4b905233568869728f3f8491eb9e48b9953815c1501b8db8e452"
+    },
+    {
+      "bytes": 4598144,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/RESULT.json",
+      "sha256": "98c8bd518d10937a6a9c1ad6124dd296a5e52c189032fccc354ba8e0c5534458"
+    },
+    {
+      "bytes": 5480,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/RUN_MANIFEST.json",
+      "sha256": "9ca803a6e4d20de2e7bb8b72ce3d8fbdac7a291268370e6f9364da6dfe515184"
+    },
+    {
+      "bytes": 7287381,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791749443589.flow_ledger.jsonl",
+      "sha256": "27fa861cade4e636cedbeb6803acca27084d1843cd02d901e741237eb467573f"
+    },
+    {
+      "bytes": 1224858,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_RETENIDO_1791749456713.flow_ledger.jsonl",
+      "sha256": "d71ec0a07a159262ec23072edc8dd010545b66759d0f1e956e5ea9ab1e48ab08"
+    },
+    {
+      "bytes": 7563202,
+      "path": "runs/VALIDACION_UNIFICACION_SMOKE_20261011/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791749450179.flow_ledger.jsonl",
+      "sha256": "ab57dfbed92498f8fda27482abf4c172daa9de7b3a76965f5f5db68cf736f6bf"
+    },
+    {
+      "bytes": 6692,
+      "path": "scripts/analizar_unico.py",
+      "sha256": "3290634c7074d22bf296e26e9d3cbe3ad434eb4fe021e54f4f7e5d2c224bd169"
+    },
+    {
+      "bytes": 1768,
+      "path": "scripts/candados.py",
+      "sha256": "2c0cd9973b4a8d8abbb24af416cd3b7112fdbff432e215bf015e0642ae8463a6"
+    },
+    {
+      "bytes": 2424,
+      "path": "scripts/comparar_con_registrado_unico.py",
+      "sha256": "1bdaa945c57f2d98432b6323ca41eb9cd9fb83acc35a2bd5cee17f3228fcfda6"
+    },
+    {
+      "bytes": 3431,
+      "path": "scripts/comparar_corridas.py",
+      "sha256": "e51e1537695d95c19c7b71785221d419a73befce867ebb4e8b6e22b0e41a52e8"
+    },
+    {
+      "bytes": 4707,
+      "path": "scripts/congelar_base.py",
+      "sha256": "d42bcc66bf3182fa9c3550eb3a55270aabf9320fa7d4bd074265c99e21f365c1"
+    },
+    {
+      "bytes": 10298,
+      "path": "scripts/construir_equivalencias_ORIGINAL.py",
+      "sha256": "16cc55302e79b16f0c14f5f4c38a886b100ad01f77e6df4993f39dd1028c504e"
+    },
+    {
+      "bytes": 743,
+      "path": "scripts/correr_todo.sh",
+      "sha256": "247ad8640dbf8e99d6acfde956ff5f87cc8e1cfe5b257137025fa1e16e28c920"
+    },
+    {
+      "bytes": 8109,
+      "path": "scripts/ensamblar_piezas.py",
+      "sha256": "4054455c95f66e52a3218a34b6743950f55eb7390877f2f7dee8fbb506cc1c00"
+    },
+    {
+      "bytes": 1772,
+      "path": "scripts/evaluar_calibracion.py",
+      "sha256": "1b6a6ab87aa9e2e507de4566b6b43434e7077f9890f2903ffa4b18db151478bf"
+    },
+    {
+      "bytes": 4881,
+      "path": "scripts/orquestador_unico.py",
+      "sha256": "d59af986d01b812e7cf2fd93485398e9bf0ff32ef74f938aea9568d92046262b"
+    },
+    {
+      "bytes": 1854,
+      "path": "scripts/preflight_integridad.py",
+      "sha256": "6f4ba098f643396fd0f84055f0d13a5a53037ada40e11088aaa1f02952ab1689"
+    },
+    {
+      "bytes": 1705,
+      "path": "scripts/regenerar_puentes.py",
+      "sha256": "899e22253e0e68ddd12d625a8221cf05b3f315130eaf7d05a8c90fc1ca0dd7a9"
+    },
+    {
+      "bytes": 31397,
+      "path": "scripts/reglas_equivalencias.py",
+      "sha256": "ec638c5079cd85f9c5008a7f56f9f9cdb23111ae54d7e230c23123b7fed5846e"
+    },
+    {
+      "bytes": 1604,
+      "path": "scripts/tabla_componentes.py",
+      "sha256": "134a7b020c0b291bc937f904793f0ee0a3f76a59b276e61e13acc4f433a08109"
+    },
+    {
+      "bytes": 2978,
+      "path": "tests/test_patch19_bridge_reuse.py",
+      "sha256": "6f748359b64df706e4805834c14416f7ef60a34de55588991e2e8419bbbe5fba"
+    }
+  ],
+  "files_count": 191,
+  "hash_algorithm": "SHA-256",
+  "note": "Manifest covers all files in this ZIP except this manifest file itself; archive integrity is separately checked by ZIP CRC and pytest.",
+  "schema": "UNIFICACION_SHA256_MANIFEST_V1"
+}

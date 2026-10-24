@@ -1,0 +1,37 @@
+44c44,48
+< N_CANON = 244
+---
+> N_CANON = 244  # valor del catálogo v14; UNICO: la validación usa len() del catálogo cargado
+> import os as _os_cat
+> def _PATTERNS_PATH():
+>     """UNICO 27-sep: ruta del catálogo configurable (MOTOR_PATTERNS_PATH); default patterns_final_v14.json junto al motor."""
+>     return Path(_os_cat.environ.get("MOTOR_PATTERNS_PATH") or (BASE / "patterns_final_v14.json"))
+504c508
+<     path = BASE / "patterns_final_v14.json"
+---
+>     path = _PATTERNS_PATH()
+506c510
+<         raise FileNotFoundError("Falta patterns_final_v14.json")
+---
+>         raise FileNotFoundError(f"Falta catalogo de patrones: {path}")
+508,509c512,514
+<     if len(lib) != N_CANON:
+<         raise RuntimeError(f"244 roto: len={len(lib)}")
+---
+>     _esp = int(_os_cat.environ.get("MOTOR_N_PATRONES_ESPERADO", "0") or 0)
+>     if len(lib) == 0 or (_esp and len(lib) != _esp):
+>         raise RuntimeError(f"catalogo roto: len={len(lib)} esperado={_esp or '>0'}")
+661,663c666,668
+<     ep = _engine(eng, str(BASE / "patterns_final_v14.json"), pregunta + "_P")
+<     ea = _engine(eng, str(BASE / "patterns_final_v14.json"), pregunta + "_A")
+<     ec = _engine(eng, str(BASE / "patterns_final_v14.json"), pregunta + "_C")
+---
+>     ep = _engine(eng, str(_PATTERNS_PATH()), pregunta + "_P")
+>     ea = _engine(eng, str(_PATTERNS_PATH()), pregunta + "_A")
+>     ec = _engine(eng, str(_PATTERNS_PATH()), pregunta + "_C")
+693,694c698,699
+<         if xt.size != 732:
+<             raise RuntimeError(f"R732_ROTO {cid} dim={xt.size}")
+---
+>         if xt.size != 3 * len(names_ref) or len(names_ref) == 0:  # UNICO: 3 × len(catálogo) (732 con el v14)
+>             raise RuntimeError(f"R732_ROTO {cid} dim={xt.size} esperado={3 * len(names_ref)}")

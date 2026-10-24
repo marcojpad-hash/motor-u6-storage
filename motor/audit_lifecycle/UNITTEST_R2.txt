@@ -1,0 +1,58 @@
+test_catalog_schema_is_named_pattern_map_not_numeric_vectors (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_catalog_schema_is_named_pattern_map_not_numeric_vectors) ... ok
+test_custom_catalog_requires_matching_hash_if_pinned (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_custom_catalog_requires_matching_hash_if_pinned) ... ok
+test_main_default_catalog_hash_and_count_are_enforced (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_main_default_catalog_hash_and_count_are_enforced) ... ok
+test_main_rejects_tampered_default_catalog (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_main_rejects_tampered_default_catalog) ... ok
+test_native_default_catalog_hash_and_count_are_enforced (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_native_default_catalog_hash_and_count_are_enforced) ... ok
+test_native_rejects_tampered_default_catalog (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_native_rejects_tampered_default_catalog) ... ok
+test_presentation_layer_never_reintroduces_null_for_missing_fill (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_presentation_layer_never_reintroduces_null_for_missing_fill) ... ok
+test_terminal_normalizer_does_not_rewrite_unresolved_states_as_resolved (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_terminal_normalizer_does_not_rewrite_unresolved_states_as_resolved) ... ok
+test_tortugas_executes_below_separation_gate_even_outside_narrow_020_band (test_catalog_integrity_contract.TestCanonicalCatalogContract.test_tortugas_executes_below_separation_gate_even_outside_narrow_020_band) ... ok
+test_attempted_core_ablation_without_candidates_is_not_called_resolved (test_decimo_truthful_status.TestDecimoTruthfulStatus.test_attempted_core_ablation_without_candidates_is_not_called_resolved) ... ok
+test_missing_candidate_dimensions_do_not_claim_adversarial_completion (test_decimo_truthful_status.TestDecimoTruthfulStatus.test_missing_candidate_dimensions_do_not_claim_adversarial_completion) ... ok
+test_ambicioso_still_marks (test_detras_2_3_3.TestPreguntaDetras233.test_ambicioso_still_marks) ... ok
+test_g0926_esta_prueba_no_marks (test_detras_2_3_3.TestPreguntaDetras233.test_g0926_esta_prueba_no_marks) ... ok
+test_gcal_esta_calibracion_no_marks (test_detras_2_3_3.TestPreguntaDetras233.test_gcal_esta_calibracion_no_marks) ... ok
+test_para_esta_etapa_no_marks (test_detras_2_3_3.TestPreguntaDetras233.test_para_esta_etapa_no_marks) ... ok
+test_version (test_detras_2_3_3.TestPreguntaDetras233.test_version) ... ok
+test_person_is_used_only_by_external_self_match_filter (test_focused_repairs.TestBlindSearchQuality.test_person_is_used_only_by_external_self_match_filter) ... ok
+test_search_tokenizer_removes_spanish_english_stopwords_and_number_noise (test_focused_repairs.TestBlindSearchQuality.test_search_tokenizer_removes_spanish_english_stopwords_and_number_noise) ... ok
+test_existing_ricci_sidecar_discloses_proxy_status (test_focused_repairs.TestMathPrimitives.test_existing_ricci_sidecar_discloses_proxy_status) ... ok
+test_forman_single_edge (test_focused_repairs.TestMathPrimitives.test_forman_single_edge) ... ok
+test_forman_triangle (test_focused_repairs.TestMathPrimitives.test_forman_triangle) ... ok
+test_so3_momentum_map_basis (test_focused_repairs.TestMathPrimitives.test_so3_momentum_map_basis) ... ok
+test_so3_rejects_wrong_dimension (test_focused_repairs.TestMathPrimitives.test_so3_rejects_wrong_dimension) ... ok
+test_tokens_survive_reopen (test_focused_repairs.TestStinkboxPersistence.test_tokens_survive_reopen) ... ok
+test_empty_candidates_are_inconclusive_not_miss (test_focused_repairs.TestT1Comparator.test_empty_candidates_are_inconclusive_not_miss) ... ok
+test_reads_predictor_candidates (test_focused_repairs.TestT1Comparator.test_reads_predictor_candidates) ... ok
+test_recovered_candidates_do_not_create_hit (test_focused_repairs.TestT1Comparator.test_recovered_candidates_do_not_create_hit) ... ok
+test_terminal_candidates_are_read (test_focused_repairs.TestT1Comparator.test_terminal_candidates_are_read) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.035s
+
+OK
+[PASS] <=5 tokens: pasan tal cual y sin log
+[PASS] cuello: 5 al Engine
+[PASS] cuello: primero catálogo, luego peso, desempate por posición
+[PASS] cuello: al_engine + fuera = entrada (no borra)
+[PASS] cuello: determinista
+[PASS] validador: 12 tokens por eje no lanza; registra cuello
+[PASS] validador: peso fuera de 0.60–0.84 sigue rechazado (no se recorta en silencio)
+[PASS] PICO
+[PASS] MESETA
+[PASS] ASCENSO_LENTO
+[PASS] DESCENSO
+[PASS] LATENTE_DORMIDO (token)
+[PASS] token aislado = PICO
+OK 13
+[PASS] evidencia: C6 (2 cortes previos) entra
+[PASS] evidencia: C5 (1 previo + apoyo eje A) entra
+[PASS] evidencia: el que no tiene evidencia y va al final por posición queda fuera
+[PASS] evidencia: se pasan en orden original
+[PASS] evidencia: log registra criterio
+[PASS] sin futuro: el núcleo pasa solo cortes previos (cuts[:_iu6])
+[PASS] legado: U6_DESEMPATE_CUELLO=posicion -> primeros 5
+[PASS] sin contexto: evidencia 0 -> posición (identidad con U4)
+[PASS] manifiesto: Engine/patterns no bloquean en el pack U6
+[PASS] candado_plugins: compila todo motor/*.py
+U6: 10 PASS

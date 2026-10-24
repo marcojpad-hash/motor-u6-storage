@@ -1,0 +1,102 @@
+{
+  "schema": "U6_WORKING_OPEN_HYPOTHESES_RUN_SUMMARY_V1",
+  "motor_version": "V15.3_UNICO_WORKING_OPEN_HYPOTHESES_20261020_R1",
+  "case_id": "CASO_NUEVO_20261013_01_CATALOG_REPAIR_R2",
+  "case_cuts": 3,
+  "duration_seconds": 17.475,
+  "receipt_status": "COMPLETED_WITH_TORTUGAS",
+  "primary_run_isolated_subprocess": true,
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "working_motor_sha256": "f0c901950de18a0b02b5a28d84ce57af258f624ce6969ed8a20d4a675f240fda",
+  "runner_sha256": "07dde4e7c4dcc9911d1bf2f76354b4cee45951a034676935cfea380f626850be",
+  "input_sha256": "6067686f138e3a54760e0ae1406c0a7a1eb0dd441a04ac8d92aecb81ad8aed7c",
+  "output_sha256": "2ba58aa88bdd0b85bb2baa0e3f30d24e7d5c30e492d08ec4b56ec09badc41c01",
+  "receipt_sha256": "a62d00a91b71f9564879e17418686ef2593179ee4302c9a4b0cf09b9ac9d7baf",
+  "candidate_count": 4,
+  "hypotheses": [
+    {
+      "id": "H_001",
+      "family": "13_enemistad_de_parientes",
+      "role": "eje",
+      "trace_links": 2
+    },
+    {
+      "id": "H_002",
+      "family": "social_08_girard_mimesis_y_chivo_expiatorio",
+      "role": "complementaria_trazabilidad_geometrica",
+      "trace_links": 3
+    },
+    {
+      "id": "H_003",
+      "family": "30_ambicion",
+      "role": "componente",
+      "trace_links": 4
+    },
+    {
+      "id": "H_004",
+      "family": "sombra",
+      "role": "componente",
+      "trace_links": 3
+    }
+  ],
+  "hypothesis_set_selection": "SET_021_MAS_COMPLEMENTARIAS_DE_TRAZABILIDAD",
+  "geometry_multilayer_status": "EXECUTED",
+  "geometry_trace_family_count": 22,
+  "forecast": {
+    "status": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "scenarios": [
+      {
+        "scenario": "CONTINUIDAD_ASCENDENTE",
+        "n_hypotheses": 4,
+        "relative_structural_support": 1.0,
+        "is_probability": false
+      }
+    ],
+    "calibration": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "total_simulations": 7273,
+    "converged_calls": 9,
+    "nonconverged_calls": 0
+  },
+  "external_search": {
+    "status": "EXECUTED",
+    "provider": "chatgpt_connected_tool",
+    "query_count": 1,
+    "result_count": 3
+  },
+  "retained_cut_check": {
+    "status": "HIT_HIPOTESIS_SET",
+    "internal_runs_isolated": true,
+    "sealed_hypotheses": [
+      "30_ambicion",
+      "sombra",
+      "13_enemistad_de_parientes"
+    ],
+    "matched_hypotheses": [
+      "sombra",
+      "13_enemistad_de_parientes"
+    ],
+    "is_future_outcome_calibration": false
+  },
+  "stinkbox": {
+    "checkpoint_status": "OK",
+    "ingest_status": "OK",
+    "new_events": 0,
+    "new_tokens": 0,
+    "unique_tokens_total": 73
+  },
+  "ceb_ledger_preserved": true,
+  "json_contract": {
+    "status": "LIMPIO_CON_TORTUGAS",
+    "tortugas_replacements": 1,
+    "nonfinite_replacements": 0
+  },
+  "limitations": [
+    "El recibo COMPLETED_WITH_TORTUGAS refleja la ausencia de data_table_sha256 en la matriz de mortalidad; se convirtió a TORTUGAS.",
+    "T+1 mide continuidad de hipótesis frente al corte retenido, no el desenlace futuro ni la calibración probabilística.",
+    "Los pesos de soporte estructural no son probabilidades."
+  ]
+}

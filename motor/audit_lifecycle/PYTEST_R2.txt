@@ -1,0 +1,5 @@
+..............................................s..s...........            [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_nuevos_guardianes_UNICO.py:85: No se recuperó el código original 0.5.0; no se inventa la línea base de comparación
+SKIPPED [1] tests/test_nuevos_guardianes_UNICO.py:143: Fixture histórico Bezos no está en el paquete; no se sustituye por datos inventados
+59 passed, 2 skipped in 2.13s

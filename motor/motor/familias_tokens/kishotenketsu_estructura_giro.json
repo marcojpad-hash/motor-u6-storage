@@ -1,0 +1,62 @@
+{
+ "id": "kishotenketsu_estructura_giro",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Composicion clasica China/Japon/Corea (qichengzhuanhe / kishotenketsu)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "ki_introduccion_exposicion_tema": 0.85,
+  "sho_desarrollo_continuidad_lineal": 0.88,
+  "ten_giro_dislocacion_inesperada": 0.95,
+  "ketsu_conclusion_sintesis_nueva": 0.9,
+  "asociacion_tematica_no_causal": 0.82,
+  "yuxtaposicion_elementos_dispares": 0.78,
+  "reconfiguracion_perspectiva_final": 0.84
+ },
+ "tokens_contra": {
+  "causalidad_occidental_accion_reaccion": -0.92,
+  "conflicto_central_antagonista_friccion": -0.95,
+  "climax_colision_fuerzas_opuestas": -0.9,
+  "guardrail_linealidad_cronologica_fija": -0.75,
+  "exigencia_resolucion_binaria": -0.86,
+  "intervencion_agente_ordenador_externo": -0.7,
+  "coherencia_deductiva_estricta": -0.8
+ },
+ "senales": {
+  "ki_introduccion_exposicion_tema": "Se presentan los personajes, el entorno o una situación cotidiana de forma estática y descriptiva.",
+  "sho_desarrollo_continuidad_lineal": "La historia avanza de forma lógica sobre la premisa inicial, expandiendo la información sin generar problemas.",
+  "ten_giro_dislocacion_inesperada": "Irrupción de un elemento, escena o punto de vista totalmente inconexo que descoloca la línea narrativa previa.",
+  "ketsu_conclusion_sintesis_nueva": "Cierre que conecta la normalidad inicial con el giro, revelando un sentido profundo, poético o complementario.",
+  "asociacion_tematica_no_causal": "El avance del relato se sostiene por la similitud de conceptos o ambientes, no por una cadena de causas y efectos.",
+  "yuxtaposicion_elementos_dispares": "Colocación de dos realidades distintas en la misma escena para que el lector deduzca la relación oculta.",
+  "reconfiguracion_perspectiva_final": "Cambio en la mirada del observador que le permite asimilar el giro sin necesidad de que haya un ganador.",
+  "causalidad_occidental_accion_reaccion": "Exigencia de que cada evento sea la consecuencia directa y obligatoria de una acción previa del protagonista.",
+  "conflicto_central_antagonista_friccion": "Presencia de un villano, obstáculo o dilema destructivo que obliga a entablar una lucha de suma cero.",
+  "climax_colision_fuerzas_opuestas": "Punto de máxima confrontación física o verbal donde se decide el destino de la trama mediante la victoria o la derrota.",
+  "guardrail_linealidad_cronologica_fija": "Restricciones de tiempo o formato que impiden saltar a escenas inconexas sin justificación previa.",
+  "exigencia_resolucion_binaria": "Presión del entorno o del género para terminar el relato con un resultado claro de éxito o fracaso absoluto.",
+  "intervencion_agente_ordenador_externo": "Aparición de una ley, juez o evento fortuito que fuerza las cosas a volver al carril lógico de origen.",
+  "coherencia_deductiva_estricta": "Análisis analítico del texto que penaliza la ambigüedad semántica o los cambios imprevistos de enfoque temático."
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_linealidad_cronologica_fija"
+  ],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "b9aaae3f06d554d8"
+}

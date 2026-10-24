@@ -1,0 +1,33 @@
+{
+  "version": "MORTALITY_STATISTICS_SCHEMA_V1",
+  "required_fields": [
+    "population",
+    "year",
+    "age_interval",
+    "deaths",
+    "exposure",
+    "rate_type",
+    "source_url",
+    "retrieved_at",
+    "source_sha256"
+  ],
+  "optional_fields": [
+    "historical_epoch",
+    "country",
+    "sex",
+    "cause",
+    "exposure_unit",
+    "notes"
+  ],
+  "rate_type_contract": {
+    "deaths_per_100000_exposure": "calculated_rate = deaths / exposure * 100000; exposure unit must be consistent and explicitly documented",
+    "q_x": "interval death probability; must be supplied by a life table source, not calculated as deaths/exposure",
+    "m_x": "central mortality rate; do not treat as equivalent to q_x"
+  },
+  "prohibitions": [
+    "No inferir población, periodo, edad, exposición ni tasa sin fuente",
+    "No equiparar q_x y m_x",
+    "No alimentar H1/H2 hasta validar mapeo y eficacia"
+  ],
+  "status": "SCHEMA_ONLY_NO_STATISTICAL_ROWS_FOUND_IN_ACTIVE_PACKAGE"
+}

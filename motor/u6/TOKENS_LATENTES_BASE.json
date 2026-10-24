@@ -1,0 +1,63 @@
+{
+ "version": "TOKENS_LATENTES_BASE_U6_20261012",
+ "fuente": "motor.sombrero_blanco (validar_corte -> fuera_catalogo, regla existente de subcadena del NATIVO) de las corridas U5 run1",
+ "regla_existente": "validar_corte: equivalente = único token del 244 que contiene al token o está contenido en él",
+ "politica_U6": "Se registran para la base (persistente, fuera de los stores que el harness vacía). NO se reescriben en el input: la regla de subcadena no es normalización semántica (reorganizacion ⊃ organizacion no significa lo mismo). No se crean familias ni tokens en el 244. Decisión de aplicar equivalentes: Mj.",
+ "can_decide_H": false,
+ "tokens": [
+  {
+   "token": "centralizacion",
+   "apariciones": [
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "E",
+     "eje": "A"
+    },
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "F",
+     "eje": "P"
+    }
+   ],
+   "equivalente_regla_existente": null,
+   "estado": "LATENTE_SIN_EQUIVALENTE",
+   "aplicado_al_input": false
+  },
+  {
+   "token": "reorganizacion",
+   "apariciones": [
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "E",
+     "eje": "P"
+    },
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "F",
+     "eje": "A"
+    }
+   ],
+   "equivalente_regla_existente": "organizacion",
+   "estado": "LATENTE_CON_EQUIVALENTE_SUGERIDO",
+   "aplicado_al_input": false
+  },
+  {
+   "token": "tradicion",
+   "apariciones": [
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "A",
+     "eje": "A"
+    },
+    {
+     "case_id": "CIEGO_15_ANTECEDENTES_C",
+     "corte": "F",
+     "eje": "C"
+    }
+   ],
+   "equivalente_regla_existente": "tradicionalismo",
+   "estado": "LATENTE_CON_EQUIVALENTE_SUGERIDO",
+   "aplicado_al_input": false
+  }
+ ]
+}

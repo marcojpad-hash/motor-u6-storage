@@ -1,0 +1,68 @@
+{
+  "policy": "Hashes de originales omitidos de la distribución operativa. Verificables extrayendo el miembro de su ZIP original recibido.",
+  "sources": [
+    {
+      "source_package": "laterales",
+      "path": "RESULT_GIORDANO_BRUNO_U6_MERGED_R1_FINAL.json",
+      "bytes": 5480109,
+      "sha256": "ce58e55182b6b8c561a4fc53c3e8c198224a631d35ca784430f4aaa1d138cd64",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "laterales",
+      "path": "laterales_unificado/tests/fixtures/RESULT_3CORTES_V04.json",
+      "bytes": 4151175,
+      "sha256": "1c717ed8a4d0c3d290ddc5488d2ecedf52b65a8d6bc7bf6c703f8d6557cff329",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "laterales",
+      "path": "resultados_unificado/PRE_UNIFICACION/RESULT_GIORDANO_BRUNO_PRE.json",
+      "bytes": 5468877,
+      "sha256": "296b90dfa12102e5e05514e1d0997be04da2abd360ec8ba103554d44ef2b79de",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "laterales",
+      "path": "resultados_unificado/PRE_UNIFICACION/RESULT_THEMISTOCLES_PRE.json",
+      "bytes": 4224519,
+      "sha256": "a6c360d83fb8c75177b26daf5961f14a72c8667ffc5a02fafea0f64f7acba029",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "laterales",
+      "path": "resultados_unificado/RESULT_GIORDANO_BRUNO_UNIFICADO.json",
+      "bytes": 4953000,
+      "sha256": "1b66e7e53ac3f895d37d342f63d0b62214a56b769cf23e70999f5b316d46ded6",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "laterales",
+      "path": "resultados_unificado/RESULT_THEMISTOCLES_UNIFICADO.json",
+      "bytes": 3688891,
+      "sha256": "c85e66cf6274c1baa430a2758264ec288c475505ebb55783067018d12a06a699",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "motor",
+      "path": "audit/FAMILIA_LATERAL_MORTALIDAD_U6_V0_1/ablation_outputs/casanova_mortality_ablation_off.json",
+      "bytes": 6753246,
+      "sha256": "a484b2bd9138273e318b50cf9edeca8e3c7fa5d1224d9aa778b90e0efbc965dd",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "motor",
+      "path": "audit/FAMILIA_LATERAL_MORTALIDAD_U6_V0_1/ablation_outputs/casanova_mortality_ablation_on.json",
+      "bytes": 7082998,
+      "sha256": "54ddab69b1e6ad73c0e653da526734cd4bd65d7bb013aa52285255785436f5de",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    },
+    {
+      "source_package": "motor",
+      "path": "results/RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO.json",
+      "bytes": 4555102,
+      "sha256": "c19fa3a512459daa2d1f721e83a655fd6688555773aefe1e0ce2497688e21012",
+      "reason": "resultado/ledger bruto omitido del paquete operativo; resumen conservado en REGISTRO_CORRIDAS.md"
+    }
+  ]
+}

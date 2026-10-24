@@ -1,0 +1,34 @@
+{
+  "source_case": "THEMISTOCLES_FREEZE_480BC.json",
+  "derived_case": "inputs/THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json",
+  "status": "SYNTHETIC_INPUT_REPAIR_NOT_HISTORICAL_VALIDATION",
+  "reason": "El caso original usaba etiquetas abstractas que no aparecen como tokens exactos en el catálogo de 244; el runner las aceptaba por contrato de pesos pero el motor no podía asociarlas con el vocabulario canónico.",
+  "replacements_by_cut": {
+    "C1_490BC": {
+      "amenaza_externa": "amenaza_central",
+      "defensa_colectiva": "defensa_debil + participacion_colectiva",
+      "liderazgo_politico": "liderazgo",
+      "estrategia_militar": "planificacion",
+      "conflicto_geopolitico": "poder"
+    },
+    "C2_483BC": {
+      "ambicion_politica": "ambicion",
+      "rivalidad_interna": "rivalidad",
+      "estrategia_naval": "planificacion",
+      "persuasion_politica": "persuasion",
+      "planificacion_largo_plazo": "planificacion",
+      "institucionalizacion": "control",
+      "competencia_por_el_poder": "competencia + poder"
+    },
+    "C3_480BC": {
+      "liderazgo_en_crisis": "liderazgo",
+      "engaño_estratégico": "NO_EQUIVALENTE_CANONICO; conservado solo como descriptor de búsqueda lateral",
+      "coalicion": "participacion_colectiva (aproximación explícita)",
+      "toma_decisiones_bajo_presion": "planificacion",
+      "victoria_militar": "victoria",
+      "prestigio_publico": "NO_EQUIVALENTE_CANONICO; conservado en facts",
+      "concentracion_de_poder": "poder"
+    }
+  },
+  "caveat": "Las correspondencias son aproximaciones operativas al vocabulario disponible, no equivalencias semánticas exactas. El resultado de esta corrida no valida el caso histórico original ni predice un desenlace."
+}

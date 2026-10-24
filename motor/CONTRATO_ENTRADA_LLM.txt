@@ -1,0 +1,37 @@
+CONTRATO DE ENTRADA — el LLM arma los datos
+===========================================
+Este motor no recibe prosa cruda. Recibe un JSON que un LLM produce
+desde lo que dijo el usuario (API, chat, o lo que sea). Un humano no
+va a escribir tokens 0.60–0.84 a mano de forma estable.
+
+PASO A — antes de H (el LLM rellena esto y se corre el motor)
+{
+  "case_id": "...",
+  "question": "pregunta de predictibilidad",
+  "z90_date": "YYYY-MM-DD o null si Z=presente",
+  "cuts": [
+    {"id":"C1","date":"...","P":[["token_del_244",0.72]],"A":[...],"C":[...]}
+  ],
+  "caldero_identity": {"nombre_o_alias": "", "prohibido_self_match": true},
+  "caldero_archetype_input": {"tokens_activos": ["..."]},
+  "caldero_search_sources": [
+    {"id":"src1","texto":"hallazgo de búsqueda de arquetipos / capa 2","origen":"llm"}
+  ],
+  "caldero_llm_neighbor_hints": [],
+  "external_lights": [{"token":"...","peso":0.7,"fuente":"capa2"}]
+}
+
+Reglas del LLM al tokenizar:
+- solo tokens del 244 o de familias laterales (Tucídides, etc.)
+- peso 0.60 a 0.84
+- no inventar el futuro (nada post-Z)
+- capa 2 / arquetipos: el LLM BUSCA y mete el resultado en
+  caldero_search_sources + external_lights
+- eso es lo que alimenta Caldero y, cuando esté el archivo,
+  StinkBox
+
+PASO B — el motor corre, sella H1/H2/apuesta, no reabre t+1
+
+PASO C — cuando exista el futuro
+python3 correr_estandar.py RESULT_X.json --t1 futuro.json
+No reescribe H. Solo HIT/MISS.

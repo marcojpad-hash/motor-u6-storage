@@ -1,0 +1,67 @@
+{
+ "id": "ciclos_poder_decadencia_macrohistoria",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Ibn Khaldun (Muqaddimah), Toynbee (A Study of History), Turchin (Secular Cycles)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "asabiyya_cohesion_social_alta": 0.85,
+  "reto_ambiental_estres_externo": 0.8,
+  "sobreproduccion_elites_competencia": 0.92,
+  "estancamiento_salario_real_atricion": 0.88,
+  "degradacion_asabiyya_individualismo": 0.9,
+  "minorias_dominantes_impositivas": 0.84,
+  "insolvencia_fiscal_estado_quiebra": 0.86,
+  "polarizacion_intra_elite_conflicto": 0.94
+ },
+ "tokens_contra": {
+  "respuesta_creativa_minorias_lideres": -0.85,
+  "pacto_cohesion_reconfiguracion_institucional": -0.88,
+  "cierre_regulacion_acceso_elites": -0.9,
+  "redistribucion_riqueza_mitigacion": -0.86,
+  "guardrail_reserva_fiscal_contingencia": -0.78,
+  "amenaza_externa_unificadora_cohesion": -0.82,
+  "reforma_burocratica_estabilizadora": -0.75
+ },
+ "senales": {
+  "asabiyya_cohesion_social_alta": "pertenencia y confianza mutua fuertes",
+  "reto_ambiental_estres_externo": "desafio externo que pone a prueba la estructura",
+  "sobreproduccion_elites_competencia": "exceso de aspirantes para pocos puestos",
+  "estancamiento_salario_real_atricion": "la base pierde poder adquisitivo",
+  "degradacion_asabiyya_individualismo": "se rompen lazos, prima lo personal",
+  "minorias_dominantes_impositivas": "la elite manda por coercion, no por ejemplo",
+  "insolvencia_fiscal_estado_quiebra": "el centro gasta mas de lo que recauda",
+  "polarizacion_intra_elite_conflicto": "se rompen consensos entre facciones altas",
+  "respuesta_creativa_minorias_lideres": "la elite inventa soluciones nuevas",
+  "pacto_cohesion_reconfiguracion_institucional": "acuerdo de refundacion",
+  "cierre_regulacion_acceso_elites": "se cierra el acceso al estrato dominante",
+  "redistribucion_riqueza_mitigacion": "reformas que alivian a la base",
+  "guardrail_reserva_fiscal_contingencia": "fondos de reserva",
+  "amenaza_externa_unificadora_cohesion": "rival externo obliga a reconciliarse",
+  "reforma_burocratica_estabilizadora": "reorganizacion que recorta gasto"
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:estancamiento_salario_real_atricion",
+   "CONTAGIO_VOCAB:guardrail_reserva_fiscal_contingencia"
+  ],
+  "log": [
+   "renombre: purgas_regulacion_acceso_elites -> cierre_regulacion_acceso_elites"
+  ],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "bb3ef07d79bcfc90"
+}

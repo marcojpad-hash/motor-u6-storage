@@ -1,0 +1,62 @@
+{
+ "id": "narrativa_vida_mcadams",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Dan McAdams (The Stories We Live By)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "secuencia_redencion_resiliencia": 0.88,
+  "secuencia_contaminacion_degradacion": 0.92,
+  "evento_punto_inflexion_identidad": 0.85,
+  "agencia_personal_empoderamiento": 0.82,
+  "comunion_conexion_pertenencia": 0.8,
+  "climax_narrativo_fundacional": 0.75,
+  "sesgo_negatividad_autobiografica": 0.86
+ },
+ "tokens_contra": {
+  "narrativa_estancamiento_meseta": -0.8,
+  "guardrail_hecho_historico_objetivo": -0.75,
+  "intervencion_terapeutica_reframing": -0.88,
+  "escepticismo_entorno_relato": -0.7,
+  "olvido_atenuacion_temporal_memoria": -0.78,
+  "evidencia_empirica_contraria": -0.84,
+  "reescritura_coherente_identidad": -0.9
+ },
+ "senales": {
+  "secuencia_redencion_resiliencia": "narra el dolor como aprendizaje",
+  "secuencia_contaminacion_degradacion": "de lo bueno al colapso por error o traicion",
+  "evento_punto_inflexion_identidad": "hito que cambio el rumbo",
+  "agencia_personal_empoderamiento": "enfasis en decidir y controlar el destino",
+  "comunion_conexion_pertenencia": "lazos como motor de la historia",
+  "climax_narrativo_fundacional": "recuerdo nuclear que explica quien es",
+  "sesgo_negatividad_autobiografica": "todo exito anuncia desgracia",
+  "narrativa_estancamiento_meseta": "relato plano sin progresion",
+  "guardrail_hecho_historico_objetivo": "registro externo que frena la distorsion",
+  "intervencion_terapeutica_reframing": "reestructura el guion",
+  "escepticismo_entorno_relato": "el entorno cuestiona la exageracion",
+  "olvido_atenuacion_temporal_memoria": "el tiempo baja la carga",
+  "evidencia_empirica_contraria": "hechos que contradicen el discurso",
+  "reescritura_coherente_identidad": "integra contradicciones en historia realista"
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_hecho_historico_objetivo"
+  ],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "02fce3ccec98bc41"
+}

@@ -1,0 +1,263 @@
+{
+  "CHECKPOINT_MOTOR_20261011_PATCH17_PROTOCOLO_MODELOS.zip": {
+    "name": "CHECKPOINT_MOTOR_20261011_PATCH17_PROTOCOLO_MODELOS.zip",
+    "zip_bytes": 34972023,
+    "zip_MiB": 33.352,
+    "entry_count": 2305,
+    "uncompressed_bytes": 301056754,
+    "uncompressed_MiB": 287.11,
+    "flow_ledger_count": 36,
+    "flow_ledger_bytes": 183843232,
+    "flow_ledger_MiB": 175.327,
+    "exact_duplicate_groups": 142,
+    "exact_duplicate_bytes": 24612232,
+    "exact_duplicate_MiB": 23.472,
+    "nested_archives": [
+      {
+        "path": "PATCH16_NULL_PROVENANCE/rescate/RUNS_HISTORICOS_PRE_PATCH02.zip",
+        "size": 1714635,
+        "compressed": 1675614
+      }
+    ],
+    "topdirs_MiB": {
+      "PATCH16_NULL_PROVENANCE": 286.651,
+      "PATCH17_MANIFEST.json": 0.459
+    },
+    "extensions_MiB": {
+      ".jsonl": 175.841,
+      ".json": 84.558,
+      ".py": 18.726,
+      ".pyc": 5.735,
+      ".zip": 1.635,
+      ".diff": 0.221,
+      ".txt": 0.207,
+      ".md": 0.183,
+      "": 0.003,
+      ".sh": 0.001,
+      ".tag": 0.0
+    },
+    "largest_files": [
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__OBSERVATORIO_LUCERNA_001_PATCH07_BUSQUEDA/ceb_runs/OBSERVATORIO_LUCERNA_001_SIN_ULTIMO_1791599883641.flow_ledger.jsonl",
+        "bytes": 8148634
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__OBSERVATORIO_LUCERNA_001_PATCH07_BUSQUEDA/ceb_runs/OBSERVATORIO_LUCERNA_001_1791599876572.flow_ledger.jsonl",
+        "bytes": 7869273
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_RETEST/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622336280.flow_ledger.jsonl",
+        "bytes": 7352709
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_FINAL/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622369587.flow_ledger.jsonl",
+        "bytes": 7351984
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622277374.flow_ledger.jsonl",
+        "bytes": 7347634
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH14_POSTH_CONTRACT/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791707198192.flow_ledger.jsonl",
+        "bytes": 7344135
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH15_NULL_CAUSES/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791708066917.flow_ledger.jsonl",
+        "bytes": 7327318
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH16/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791708734120.flow_ledger.jsonl",
+        "bytes": 7321594
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH11_GEOMETRIA/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791621200310.flow_ledger.jsonl",
+        "bytes": 7213756
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH12/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791621628137.flow_ledger.jsonl",
+        "bytes": 7206435
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_RETEST/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622329069.flow_ledger.jsonl",
+        "bytes": 7097036
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_FINAL/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622363500.flow_ledger.jsonl",
+        "bytes": 7096230
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH13/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622271017.flow_ledger.jsonl",
+        "bytes": 7091394
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH14_POSTH_CONTRACT/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791707192039.flow_ledger.jsonl",
+        "bytes": 7089306
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH15_NULL_CAUSES/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791708061138.flow_ledger.jsonl",
+        "bytes": 7069008
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH16/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791708727977.flow_ledger.jsonl",
+        "bytes": 7062624
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_V15_3_PATCH09_20261010/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791619161893.flow_ledger.jsonl",
+        "bytes": 7033812
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH11_GEOMETRIA/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791621194068.flow_ledger.jsonl",
+        "bytes": 6961166
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_PATCH12/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791621616913.flow_ledger.jsonl",
+        "bytes": 6952815
+      },
+      {
+        "path": "PATCH16_NULL_PROVENANCE/runs/ESTANDAR__GIORDANO_BRUNO_V15_3_PATCH09_20261010/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791619155416.flow_ledger.jsonl",
+        "bytes": 6785571
+      }
+    ]
+  },
+  "CHECKPOINT_MOTOR_20261011_PATCH18_REPARACION_CABLEADO.zip": {
+    "name": "CHECKPOINT_MOTOR_20261011_PATCH18_REPARACION_CABLEADO.zip",
+    "zip_bytes": 34233968,
+    "zip_MiB": 32.648,
+    "entry_count": 2172,
+    "uncompressed_bytes": 316943931,
+    "uncompressed_MiB": 302.261,
+    "flow_ledger_count": 39,
+    "flow_ledger_bytes": 199485384,
+    "flow_ledger_MiB": 190.244,
+    "exact_duplicate_groups": 142,
+    "exact_duplicate_bytes": 26665609,
+    "exact_duplicate_MiB": 25.43,
+    "nested_archives": [
+      {
+        "path": "rescate/RUNS_HISTORICOS_PRE_PATCH02.zip",
+        "size": 1714635,
+        "compressed": 1714635
+      }
+    ],
+    "topdirs_MiB": {
+      "runs": 217.843,
+      "results": 44.454,
+      "resultados": 15.064,
+      "CAMEO_RESULT_GALILEO_703_RESTORED_20260929.json": 2.684,
+      "motor": 2.548,
+      "CEB_V0_6_MOZART_RESULT_20261001.json": 2.363,
+      "VERIFY_FINAL_6.json": 2.295,
+      "VERIFY6.json": 2.292,
+      "rescate": 2.018,
+      "CALIBRACION_PATCH03_RESULT.json": 1.208,
+      "AUDIT_ABLATION_LATERAL_ADDITIVE.json": 1.199,
+      "AUDIT_CORRECTED_SMOKE.json": 1.193,
+      "PATCH02_RESULT.json": 1.191,
+      "AUDIT_BASELINE_SMOKE.json": 1.187,
+      "VERIFY_FINAL_2.json": 1.067,
+      "VERIFY2.json": 1.064,
+      "STINKBOX_STORAGE": 0.793,
+      "raw_compacto": 0.557,
+      "puentes_regenerados": 0.285,
+      "patches": 0.212
+    },
+    "extensions_MiB": {
+      ".jsonl": 190.817,
+      ".json": 88.942,
+      ".py": 20.215,
+      ".zip": 1.635,
+      ".diff": 0.238,
+      ".txt": 0.226,
+      ".md": 0.187,
+      ".sh": 0.001
+    },
+    "largest_files": [
+      {
+        "path": "runs/ESTANDAR__OBSERVATORIO_LUCERNA_001_PATCH07_BUSQUEDA/ceb_runs/OBSERVATORIO_LUCERNA_001_SIN_ULTIMO_1791599883641.flow_ledger.jsonl",
+        "bytes": 8148634
+      },
+      {
+        "path": "runs/ESTANDAR__OBSERVATORIO_LUCERNA_001_PATCH07_BUSQUEDA/ceb_runs/OBSERVATORIO_LUCERNA_001_1791599876572.flow_ledger.jsonl",
+        "bytes": 7869273
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_RETEST/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622336280.flow_ledger.jsonl",
+        "bytes": 7352709
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_FINAL/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622369587.flow_ledger.jsonl",
+        "bytes": 7351984
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791622277374.flow_ledger.jsonl",
+        "bytes": 7347634
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH14_POSTH_CONTRACT/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791707198192.flow_ledger.jsonl",
+        "bytes": 7344135
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH18_REPARACION/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791709623701.flow_ledger.jsonl",
+        "bytes": 7332545
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH15_NULL_CAUSES/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791708066917.flow_ledger.jsonl",
+        "bytes": 7327318
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH16/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791708734120.flow_ledger.jsonl",
+        "bytes": 7321594
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH11_GEOMETRIA/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791621200310.flow_ledger.jsonl",
+        "bytes": 7213756
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH12/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791621628137.flow_ledger.jsonl",
+        "bytes": 7206435
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_RETEST/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622329069.flow_ledger.jsonl",
+        "bytes": 7097036
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13_FINAL/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622363500.flow_ledger.jsonl",
+        "bytes": 7096230
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH13/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791622271017.flow_ledger.jsonl",
+        "bytes": 7091394
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH14_POSTH_CONTRACT/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791707192039.flow_ledger.jsonl",
+        "bytes": 7089306
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH18_REPARACION/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791709617601.flow_ledger.jsonl",
+        "bytes": 7074778
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH15_NULL_CAUSES/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791708061138.flow_ledger.jsonl",
+        "bytes": 7069008
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH16/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791708727977.flow_ledger.jsonl",
+        "bytes": 7062624
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_V15_3_PATCH09_20261010/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_SIN_ULTIMO_1791619161893.flow_ledger.jsonl",
+        "bytes": 7033812
+      },
+      {
+        "path": "runs/ESTANDAR__GIORDANO_BRUNO_PATCH11_GEOMETRIA/ceb_runs/GIORDANO_BRUNO_V15_3_PATCH09_20261010_1791621194068.flow_ledger.jsonl",
+        "bytes": 6961166
+      }
+    ]
+  },
+  "compact_checkpoint": {
+    "name": "CHECKPOINT_MOTOR_20261011_PATCH19_COMPACTO.zip",
+    "approx_zip_MiB": 2.91,
+    "purpose": "active reproducible snapshot with current source, case input/result/receipt, regression tests and current run ledgers; omits older historical runs and duplicate source snapshots",
+    "estimated_reduction_vs_patch18_pct": 91.1
+  }
+}

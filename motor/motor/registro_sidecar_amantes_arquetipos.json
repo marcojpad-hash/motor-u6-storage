@@ -1,0 +1,366 @@
+{
+  "registro": "REGISTRO_SIDECAR_AMANTES_ARQUETIPOS",
+  "version": "1.0.0-sidecar",
+  "fecha": "2026-09-20",
+  "nota": "Sidecar de arquetipos amorosos (como guerra). NO se prende junto a packs del bus principal. Activación POST tokens principales, solo si hay señal de vínculo/deseo/celos/triángulo/duelo. Sin señal → LATENCIA. Estante no-predictibilidad: perfilar, no HIT/MISS.",
+  "candados": {
+    "TOCA_F": "NO",
+    "TOCA_244": "NO",
+    "TOCA_Engine_V5": "NO",
+    "TOCA_FREEZE": "NO",
+    "Alimenta_H": "NO",
+    "ES_PILAR": "NO",
+    "fuse_patterns": "NO",
+    "subcapa": "SI",
+    "orden": "POST_TOKENS_PRINCIPALES"
+  },
+  "politica_activacion": {
+    "modo": "SIDECAR_CONDICIONAL",
+    "cuando": "despues_de_tokens_principales",
+    "gatillos_minimos": [
+      "vinculo",
+      "deseo",
+      "celos",
+      "triangulo",
+      "duelo",
+      "amante",
+      "pasion",
+      "abandono",
+      "reconciliacion",
+      "ruptura",
+      "posesion",
+      "idealizacion",
+      "vin.",
+      "ama.",
+      "triangulo_rivalidad_deseante",
+      "idealizacion_caida_desencanto",
+      "alianza_estrategica_afecto"
+    ],
+    "sin_gatillo": "LATENCIA",
+    "no_inventar_romance": true
+  },
+  "relacion": {
+    "hermano_de": "guerra (sidecar post-principal)",
+    "distinto_de": "vin.* luces estereotipo persona-en-escena (bus)",
+    "catalogo_germinal": [
+      "triangulo_rivalidad_deseante",
+      "idealizacion_caida_desencanto",
+      "alianza_estrategica_afecto"
+    ]
+  },
+  "packs": {
+    "ama": {
+      "n": 12,
+      "items": [
+        {
+          "id": "ama.amor_pasion",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "amor_pasion",
+          "luces_sugeridas": [
+            "fusion_absoluta",
+            "desborde_pulsional",
+            "obsesion_idilica",
+            "perdida_racionalidad",
+            "intensidad_efimera",
+            "idealizacion_mutua"
+          ],
+          "pesos_favor": {
+            "fusion_absoluta": 0.92,
+            "desborde_pulsional": 0.88,
+            "obsesion_idilica": 0.85,
+            "perdida_racionalidad": 0.81,
+            "intensidad_efimera": 0.79,
+            "idealizacion_mutua": 0.84
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.amor_odio",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "amor_odio",
+          "luces_sugeridas": [
+            "ambivalencia_vincular",
+            "atraccion_destructiva",
+            "friccion_constante",
+            "coercion_afectiva",
+            "sadomasoquismo_emocional",
+            "dependencia_toxica"
+          ],
+          "pesos_favor": {
+            "ambivalencia_vincular": 0.94,
+            "atraccion_destructiva": 0.91,
+            "friccion_constante": 0.86,
+            "coercion_afectiva": 0.83,
+            "sadomasoquismo_emocional": 0.89,
+            "dependencia_toxica": 0.87
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.posesion_celos",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "posesion_celos",
+          "luces_sugeridas": [
+            "hipervigilancia",
+            "demanda_exclusividad",
+            "delirio_infidelidad",
+            "asfixia_relacional",
+            "control_territorial",
+            "inseguridad_proyectada"
+          ],
+          "pesos_favor": {
+            "hipervigilancia": 0.95,
+            "demanda_exclusividad": 0.92,
+            "delirio_infidelidad": 0.88,
+            "asfixia_relacional": 0.85,
+            "control_territorial": 0.81,
+            "inseguridad_proyectada": 0.78
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.triangulo_deseante",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "triangulo_deseante",
+          "luces_sugeridas": [
+            "tercero_excluido",
+            "rivalidad_mimetica",
+            "deseo_mediado",
+            "tension_asimetrica",
+            "inestabilidad_cronica",
+            "secreto_compartido"
+          ],
+          "pesos_favor": {
+            "tercero_excluido": 0.89,
+            "rivalidad_mimetica": 0.86,
+            "deseo_mediado": 0.91,
+            "tension_asimetrica": 0.84,
+            "inestabilidad_cronica": 0.82,
+            "secreto_compartido": 0.75
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.amante_secreto_vs_vinculo_oficial",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "amante_secreto_vs_vinculo_oficial",
+          "luces_sugeridas": [
+            "clandestinidad_espacial",
+            "fachada_institucional",
+            "doble_vida",
+            "pacto_silencio",
+            "temporalidad_fragmentada",
+            "culpa_secular"
+          ],
+          "pesos_favor": {
+            "clandestinidad_espacial": 0.93,
+            "fachada_institucional": 0.89,
+            "doble_vida": 0.91,
+            "pacto_silencio": 0.84,
+            "temporalidad_fragmentada": 0.79,
+            "culpa_secular": 0.76
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.idealizacion_y_caida",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "idealizacion_y_caida",
+          "luces_sugeridas": [
+            "proyeccion_perfecta",
+            "desengano_abrupto",
+            "abismo_expectativa",
+            "desvalorizacion_posterior",
+            "resentimiento_retrospectivo",
+            "quiebre_narrativo"
+          ],
+          "pesos_favor": {
+            "proyeccion_perfecta": 0.88,
+            "desengano_abrupto": 0.93,
+            "abismo_expectativa": 0.86,
+            "desvalorizacion_posterior": 0.82,
+            "resentimiento_retrospectivo": 0.85,
+            "quiebre_narrativo": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.duelo_abandono",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "duelo_abandono",
+          "luces_sugeridas": [
+            "vacio_perceptivo",
+            "carga_retroactiva",
+            "falsa_aceptacion",
+            "aislamiento_vincular",
+            "rumiacion_melancolica",
+            "orgullo_herido"
+          ],
+          "pesos_favor": {
+            "vacio_perceptivo": 0.87,
+            "carga_retroactiva": 0.84,
+            "falsa_aceptacion": 0.72,
+            "aislamiento_vincular": 0.89,
+            "rumiacion_melancolica": 0.82,
+            "orgullo_herido": 0.79
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.alianza_por_interes",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "alianza_por_interes",
+          "luces_sugeridas": [
+            "calculo_financiero",
+            "contrato_explicito",
+            "beneficio_estatus",
+            "ausencia_intimidad",
+            "estabilidad_utilitaria",
+            "falsedad_afectiva"
+          ],
+          "pesos_favor": {
+            "calculo_financiero": 0.91,
+            "contrato_explicito": 0.85,
+            "beneficio_estatus": 0.88,
+            "ausencia_intimidad": 0.82,
+            "estabilidad_utilitaria": 0.79,
+            "falsedad_afectiva": 0.74
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.cuidador_salvador",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "cuidando_salvador",
+          "luces_sugeridas": [
+            "paternalismo_asimetrico",
+            "dependencia_inducida",
+            "complejo_redentor",
+            "sacrificio_voluntario",
+            "deuda_moral",
+            "control_sublimado"
+          ],
+          "pesos_favor": {
+            "paternalismo_asimetrico": 0.86,
+            "dependencia_inducida": 0.89,
+            "complejo_redentor": 0.92,
+            "sacrificio_voluntario": 0.81,
+            "deuda_moral": 0.78,
+            "control_sublimado": 0.83
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.atraccion_prohibida",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "atraccion_prohibida",
+          "luces_sugeridas": [
+            "transgresion_de_limite",
+            "tabu_institucional",
+            "peligro_exposicion",
+            "foco_pulsional",
+            "resistencia_entorno",
+            "fascinacion_abismal"
+          ],
+          "pesos_favor": {
+            "transgresion_de_limite": 0.94,
+            "tabu_institucional": 0.91,
+            "peligro_exposicion": 0.87,
+            "foco_pulsional": 0.83,
+            "resistencia_entorno": 0.86,
+            "fascinacion_abismal": 0.89
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.reconciliacion_ciclica",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "reconciliacion_ciclica",
+          "luces_sugeridas": [
+            "compulsion_bucle",
+            "retorno_al_origen",
+            "amnesia_traumatica",
+            "tregua_temporal",
+            "reinicio_fantaseado",
+            "falsa_resolucion"
+          ],
+          "pesos_favor": {
+            "compulsion_bucle": 0.91,
+            "retorno_al_origen": 0.84,
+            "amnesia_traumatica": 0.79,
+            "tregua_temporal": 0.85,
+            "reinicio_fantaseado": 0.76,
+            "falsa_resolucion": 0.88
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        },
+        {
+          "id": "ama.ruptura_irreversible",
+          "pack": "AMANTES_ARQUETIPOS",
+          "namespace": "ama",
+          "token_gemini": "ruptura_irreversible",
+          "luces_sugeridas": [
+            "quiebre_sistemico",
+            "corte_friccion",
+            "lineas_fuerza_separadas",
+            "anulacion_vincular",
+            "vacio_significativo",
+            "destruccion_puentes"
+          ],
+          "pesos_favor": {
+            "quiebre_sistemico": 0.96,
+            "corte_friccion": 0.89,
+            "lineas_fuerza_separadas": 0.84,
+            "anulacion_vincular": 0.92,
+            "vacio_significativo": 0.78,
+            "destruccion_puentes": 0.87
+          },
+          "Alimenta_H": "NO",
+          "editable": true,
+          "estado": "CABLEADO_PROVISIONAL_SIDECAR"
+        }
+      ]
+    }
+  },
+  "normalizaciones": {
+    "cuidando_salvador": "cuidador_salvador",
+    "farse_aceptacion": "falsa_aceptacion"
+  },
+  "puente_244": {
+    "estado": "VACIO_EDITABLE",
+    "mapa": {}
+  }
+}

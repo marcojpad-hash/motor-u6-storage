@@ -1,0 +1,48 @@
+{
+  "id": "mort_contexto_colectivo",
+  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "source": "propuesta lateral revisada",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "mort_mortalidad_colectiva_guerra": 0.8,
+    "mort_mortalidad_colectiva_epidemia": 0.82,
+    "mort_mortalidad_colectiva_hambruna_masacre": 0.82
+  },
+  "tokens_contra": {},
+  "senales": {
+    "guerra/epidemia/hambruna/masacre": "contexto colectivo, sin asignar a P"
+  },
+  "en_vocabulario_244": false,
+  "ejes_P_A_C": {
+    "declaracion": "cada token registra el dueño/eje sin fusionar P/A/C",
+    "default": "sin asignación hasta resolver sujeto"
+  },
+  "integration": {
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "can_decide_H": false,
+    "Alimenta_H": false,
+    "rank_effect": "NONE"
+  },
+  "guardrails": [
+    "Z90: mort_evento_propio posterior a Z90 se rechaza como insumo y solo se conserva para validación",
+    "finitud anticipada puede entrar antes de Z90",
+    "sujeto sin resolver -> mort_sujeto_no_resuelto; nunca asumir propio",
+    "cuerpo_arco solo recibe cuerpo_muerte_propia con sujeto resuelto"
+  ],
+  "token_metadata": {
+    "mort_mortalidad_colectiva_guerra": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    },
+    "mort_mortalidad_colectiva_epidemia": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    },
+    "mort_mortalidad_colectiva_hambruna_masacre": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    }
+  }
+}

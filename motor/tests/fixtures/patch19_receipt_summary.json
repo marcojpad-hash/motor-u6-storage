@@ -1,0 +1,12 @@
+{
+  "schema": "COMPACTED_EVIDENCE_FIXTURE_V1",
+  "source": "RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO.json",
+  "source_sha256": "c19fa3a512459daa2d1f721e83a655fd6688555773aefe1e0ce2497688e21012",
+  "source_bytes": 4555102,
+  "fixture_sha256": "18ce379017dc158377811479494d0e65733e5a4b084d33231b6b82be72f5d126",
+  "fixture_bytes": 131034,
+  "status": "COMPLETED",
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "note": "Resumen de campos usado por las pruebas; no es un recibo de una nueva corrida."
+}

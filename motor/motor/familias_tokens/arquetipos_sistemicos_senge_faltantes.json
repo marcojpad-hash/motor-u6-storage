@@ -1,0 +1,62 @@
+{
+ "id": "arquetipos_sistemicos_senge_faltantes",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Peter Senge (The Fifth Discipline)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "escalada_reaccion_reciproca": 0.88,
+  "erosion_metas_degradacion": 0.85,
+  "exito_para_el_exitoso_monopolio": 0.9,
+  "crecimiento_con_subinversion_cuello": 0.84,
+  "soluciones_que_fallan_rebote": 0.92,
+  "presion_corto_plazo_sintomatica": 0.78,
+  "retraso_percepcion_inversion": 0.75
+ },
+ "tokens_contra": {
+  "acuerdo_cooperacion_mutua_limite": -0.88,
+  "guardrail_estandar_calidad_fijo": -0.92,
+  "equilibrio_recursos_antimonopolio": -0.85,
+  "inversion_proactiva_capacidad_futura": -0.89,
+  "analisis_causa_raiz_estructural": -0.9,
+  "penalizacion_solucion_parche": -0.72,
+  "indicador_alerta_anticipada_retardo": -0.79
+ },
+ "senales": {
+  "escalada_reaccion_reciproca": "cada defensa de uno es amenaza para el otro",
+  "erosion_metas_degradacion": "se bajan las metas para justificar el rendimiento",
+  "exito_para_el_exitoso_monopolio": "recursos al que ya va ganando",
+  "crecimiento_con_subinversion_cuello": "demanda satura porque se posterga invertir",
+  "soluciones_que_fallan_rebote": "parche alivia hoy y vuelve peor manana",
+  "presion_corto_plazo_sintomatica": "exigencia inmediata que ignora fallas de fondo",
+  "retraso_percepcion_inversion": "tiempo muerto entre invertir y ver efecto",
+  "acuerdo_cooperacion_mutua_limite": "pacto entre rivales para frenar la escalada",
+  "guardrail_estandar_calidad_fijo": "politicas que impiden bajar metas",
+  "equilibrio_recursos_antimonopolio": "se redistribuye del nodo hipertrofiado",
+  "inversion_proactiva_capacidad_futura": "se invierte antes de saturar",
+  "analisis_causa_raiz_estructural": "se corrige el diseno en vez de parchar",
+  "penalizacion_solucion_parche": "se castigan los paliativos",
+  "indicador_alerta_anticipada_retardo": "metricas que anticipan el retraso"
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_estandar_calidad_fijo"
+  ],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "80a72aa54600de9e"
+}

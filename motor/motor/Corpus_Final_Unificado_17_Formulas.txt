@@ -1,0 +1,288 @@
+
+CORPUS COMPLETO DEL SISTEMA DE TRAZABILIDAD Y PERFILAMIENTO ESTRUCTURAL
+Versión Final — Documento Unificado
+
+---
+
+1. PROPÓSITO DEL MODELO
+
+Herramienta de trazabilidad y perfilamiento de personas o grupos basada en patrones estructurales recurrentes (arquetipos, situaciones dramáticas, trayectorias narrativas), sin esoterismo ni encasillamiento forzado.
+
+Principio rector:
+No se fuerza el encaje. Si los datos no sostienen una lectura, se declara indeterminada. La predictibilidad sale de la convergencia real de evidencia, no de meter a la persona en una categoría por comodidad.
+
+Diferencia clave con otros modelos:
+No es una campana de Gauss que fuerza a entrar en categorías. Es un sistema de contención que parte de la indeterminación y solo se mueve hacia un perfil si:
+
+· El Agente 1 encuentra razones de peso para sostenerlo.
+· El Agente 2 no encuentra razones de peso para derribarlo.
+· El Décimo Hombre confirma que la hipótesis no es una certeza impuesta.
+
+---
+
+2. PRINCIPIOS RECTORES
+
+· No se fuerza el encaje.
+· Si los datos no sostienen una hipótesis, se declara débil o indeterminada.
+· Los datos no se descartan nunca; se guardan en memoria latente y pueden reactivarse si aparece contexto que los haga relevantes.
+· La salida no es una etiqueta, sino un mapa de estados posibles con pesos y condiciones.
+· Siempre se mantiene abierta la posibilidad de que la lectura esté equivocada.
+
+---
+
+3. ARQUITECTURA CONCEPTUAL
+
+El sistema se organiza en torno a un flujo continuo que procesa información, la compara con patrones estructurales y genera una lectura probabilística. Los patrones estructurales son compresores de conducta: arquetipos (Jung), situaciones dramáticas (Polti), trayectorias narrativas (monomito de Campbell) y otros patrones recurrentes extraídos de corpus abiertos.
+
+Flujo general:
+
+1. Entra información sobre una persona o grupo: conducta, lenguaje, decisiones, contexto, historial observable.
+2. Se extraen marcadores observables (señales concretas, no interpretaciones).
+3. Se comparan con la biblioteca de patrones estructurales.
+4. Se asignan pesos dinámicos a cada marcador.
+5. Los pesos se actualizan con cada nueva evidencia.
+6. Se genera una lectura de posibles trayectorias.
+7. Se aplican mecanismos de control que evitan el sesgo de confirmación.
+
+---
+
+4. COMPONENTES DEL SISTEMA
+
+Componente | Función
+Activación por pregunta | El sustantivo principal de la pregunta activa su campo semántico; los tokens dentro de ese campo adquieren peso.
+Agente 1 | Busca razones por las que sí (evidencia a favor). Asigna pesos positivos.
+Agente 2 | Busca razones por las que no (inconsistencias contextuales). Asigna pesos de contradicción.
+Décimo Hombre | Siempre activo. Impide 0 y 100. En 50/50 reactiva trazabilidad. Incluye factor sorpresa irreducible. Su valor es dinámico: promedio de incertidumbres por token activado.
+Memoria latente | Datos que no tienen sentido en el momento se guardan y pueden reactivarse si aparece contexto relacionado (T10 → T70).
+Salida | Mapa de probabilidades condicionado a la pregunta, con indeterminación como opción válida.
+
+---
+
+5. LISTADO COMPLETO DE FÓRMULAS
+
+FÓRMULA 1 — ACTUALIZACIÓN DEL ESTADO DEL MODELO
+
+M_{t+1} = F(M_t, D_{t+1})
+
+· M_t: estado actual del modelo en el tiempo t.
+· D_{t+1}: nueva observación en el tiempo t+1.
+· F: mecanismo de actualización.
+
+Significado: El estado del modelo se actualiza continuamente con cada nueva información que llega.
+
+FÓRMULA 2 — INFERENCIA DE HIPÓTESIS
+
+P(H_t | E_{1:t}, C_t, Q) ∝ P(H_t) · ∏_i w_i(t) · P(E_i | H_t, C_t, Q)
+
+· H_t: hipótesis actual en el tiempo t.
+· E_{1:t}: evidencia acumulada desde el tiempo 1 hasta t.
+· C_t: contexto en el tiempo t.
+· Q: pregunta u objetivo.
+· w_i(t): peso dinámico del marcador i en el tiempo t.
+
+Significado: La probabilidad de una hipótesis depende de lo que ya se creía, del peso de cada marcador y del contexto. Los pesos dinámicos hacen que la importancia de cada marcador cambie con el tiempo y con la evidencia nueva.
+
+FÓRMULA 3 — MASA RESIDUAL DE INCERTIDUMBRE
+
+P(H_{t+1}) = (1 - ε) · P_conocido + ε · P_desconocido
+
+· ε: masa residual de incertidumbre.
+· P_conocido: probabilidad calculada con variables conocidas.
+· P_desconocido: probabilidad asignada a variables no observadas.
+
+Significado: El sistema siempre reserva un margen para lo desconocido. No puede ignorar que puede haber factores que no ha considerado.
+
+FÓRMULA 4 — ACTUALIZACIÓN POR EVIDENCIA
+
+S₀ → S₁ → S₂ → S₃ → ...
+
+· S_t: estado del sistema en el tiempo t.
+
+Significado: El sistema transita por estados que se actualizan con cada nueva evidencia.
+
+FÓRMULA 5 — DEPENDENCIA CONDICIONAL
+
+P(Q | P) ≠ P(Q)
+
+Significado: La presencia de P modifica la probabilidad de Q, pero no implica que P cause Q. Es una relación de influencia, no de causalidad fija.
+
+FÓRMULA 6 — ACTUALIZACIÓN ACUMULATIVA DE PERFILES
+
+Estado inicial:
+P_0(H_1, H_2, ..., H_n)
+
+Llega E_1:
+P_1 = f(P_0, E_1)
+
+Llega E_2:
+P_2 = f(P_1, E_2)
+
+Generalizando:
+P_t = f(P_{t-1}, E_t)
+
+Significado: El perfil no se reconstruye desde cero en cada paso. Se actualiza a partir del estado anterior y la nueva evidencia.
+
+FÓRMULA 7 — MEMORIA LATENTE (T10 → T70)
+
+T10: marcador aparentemente irrelevante → se guarda en frío.
+
+T70: aparece contexto relacionado → consulta → recuperación → recalibración.
+
+Significado: Los datos no se descartan aunque no tengan sentido en el momento. Se guardan y pueden reactivarse si el contexto los hace relevantes después.
+
+FÓRMULA 8 — VECTOR DE ESTADO MULTIDIMENSIONAL
+
+Estado(t) = [A(t), B(t), C(t), ..., N(t)]
+
+· A(t), B(t), C(t), ..., N(t): intensidad de cada marcador en el tiempo t.
+
+Significado: El perfil no es una etiqueta fija. Es un conjunto de intensidades que cambian en el tiempo.
+
+FÓRMULA 9 — FLUJO GENERAL DEL MOTOR (VERSIÓN CORTA)
+
+observación → marcaje → memoria → recurrencia → ponderación → hipótesis → contraste → recalibración
+
+Significado: Es el flujo completo del sistema en forma de secuencia de pasos.
+
+FÓRMULA 10 — ACTUALIZACIÓN POR CONTRADICCIÓN
+
+Si X normalmente produce Y, pero bajo Z produce Y1, Y2 o Y3, entonces:
+
+X + A → Y
+X + B → Y
+X + C → Y
+X + D → Y1
+X + E → Y2
+X + F → Y3
+
+Significado: La contradicción no destruye la hipótesis; revela condiciones que modifican la relación entre variables.
+
+FÓRMULA 11 — ACTUALIZACIÓN DE PESOS EVIDENCIALES
+
+T10: marcador con baja capacidad predictiva.
+T70: aparece evidencia adicional → aumenta su peso.
+T120: nueva evidencia contradice → vuelve a disminuir.
+
+Significado: Los datos no se borran. Se reponderan según la evidencia que los acompaña.
+
+FÓRMULA 12 — FUNCIÓN DE CONVERGENCIA EVIDENCIAL
+
+Convergencia = función de (diversidad de fuentes, independencia entre observaciones, recurrencia, condiciones de aparición, estabilidad temporal, intensidad, interacción con otros marcadores)
+
+Significado: La convergencia no es solo cantidad de observaciones. Es la calidad y variedad de las mismas.
+
+FÓRMULA 13 — FALSACIÓN / DIVERGENCIA
+
+17 marcadores indican X.
+5 marcadores incompatibles con X.
+
+Esto no significa "X es falso".
+Puede significar "X necesita una condición adicional".
+
+Descubrimiento posible:
+X ocurre cuando A + B.
+X no ocurre cuando A + C.
+
+Significado: La contradicción no invalida la hipótesis; revela una dependencia contextual.
+
+FÓRMULA 14 — DÉCIMO HOMBRE COMO LÍMITE DE PLAUSIBILIDAD
+
+Mejor escenario ← distribución de posibilidades → peor escenario
+
+Pregunta del décimo hombre:
+"¿Qué tendría que ser cierto para que esta predicción estuviera equivocada?"
+
+Significado: El décimo hombre no da una respuesta alternativa. Encierra la predicción dentro de un intervalo de plausibilidad y mantiene abiertas las posibilidades improbables pero no imposibles.
+
+FÓRMULA 15 — ESTABILIDAD DE RÉGIMEN
+
+Estado actual:
+- alta predictibilidad + alta estabilidad → probablemente continúa.
+- alta predictibilidad + baja estabilidad → puede cambiar con cualquier perturbación.
+- baja predictibilidad + alta estabilidad → permanece dentro del régimen.
+- baja predictibilidad + baja estabilidad → régimen altamente incierto.
+
+Significado: El sistema distingue entre predicción y estabilidad. Ambas se usan para calcular la fiabilidad de las hipótesis.
+
+FÓRMULA 16 — TRANSICIÓN DE ESTADO POR UMBRAL
+
+S₀ → (perturbación suficientemente fuerte) → S₂ (interrupción)
+
+Significado: El sistema cambia de estado cuando la perturbación supera un umbral.
+
+FÓRMULA 17 — FLUJO GENERAL DEL MOTOR (VERSIÓN EXTENDIDA)
+
+observar → comprimir → almacenar → recuperar → ponderar → comparar → ramificar → falsar → actualizar
+
+Significado: Es la cadena completa del sistema, aplicable a ambos modelos (humano y LLM). Define el flujo de trabajo sin especificar los datos concretos.
+
+---
+
+6. ANEXO — MECANISMOS ADICIONALES
+
+ACTIVACIÓN POR PREGUNTA (CAMPO SEMÁNTICO)
+
+El sistema no procesa toda la información disponible de forma pasiva. Se activa a partir de una pregunta concreta.
+
+Sea Q la pregunta activa.
+Sea N_Q el sustantivo principal de Q.
+Sea CS(N_Q) el campo semántico de N_Q, definido por la co-ocurrencia de palabras en el corpus de patrones.
+
+Activación_i = 1 si Token_i ∈ CS(N_Q), 0 en caso contrario.
+
+Significado: La pregunta determina qué información es relevante. Lo que no está en el campo semántico de la pregunta no participa en la lectura.
+
+PESO DINÁMICO POR TOKEN (CON REACTIVACIÓN)
+
+w_i(t) = w_i(t-1) · decaimiento + β · Activación_i · P(Token_i | N_Q) · (1 - σ_i)
+
+· decaimiento: incluye penalizaciones por contradicción, dependencia entre evidencias, baja calidad, cambio de contexto y antigüedad.
+· β: magnitud del refuerzo cuando el marcador se activa.
+· P(Token_i | N_Q): probabilidad de que el token aparezca dado el sustantivo principal de la pregunta (extraída del corpus).
+· σ_i: incertidumbre contextual del token (qué tan variable es su uso en el corpus).
+
+Significado: El peso de un marcador baja si no se reactiva, pero puede subir si aparece nueva evidencia que lo corrobora.
+
+FACTOR DE DESVIACIÓN DEL DÉCIMO HOMBRE
+
+δ_H(t) = (1/N) · Σ σ_i(t)
+
+· N: número de marcadores activados por la pregunta.
+· σ_i(t): incertidumbre contextual de cada token.
+
+Significado: Si los marcadores activados son muy variables, el Décimo Hombre fuerza más indeterminación. Si son estables, su interferencia es menor.
+
+RE-EVALUACIÓN EN SITUACIÓN DE 50/50
+
+Cuando la evidencia a favor y en contra es equiparable, el Décimo Hombre no da una respuesta inmediata. Activa una segunda pasada de análisis con prioridad en los marcadores que están en el límite de la ambigüedad.
+
+Si |P_favor - P_contra| < θ_ambigüedad:
+
+- Reactivar trazabilidad con prioridad en tokens límite.
+- Repetir el ciclo hasta que la diferencia supere el umbral.
+- Si persiste el empate, declarar indeterminación.
+
+SALIDA FINAL (CON FACTOR SORPRESA IRREDUCIBLE)
+
+La salida final nunca es un número exacto. Siempre incluye un margen de incertidumbre que no se puede eliminar.
+
+P_final(H | E, Q) = (1 - δ_min - σ_sorpresa) · P(H | E, Q) + δ_min · P_indet + σ_sorpresa · P_azar
+
+· δ_min: desviación mínima que impide llegar a 0 o 100.
+· σ_sorpresa: factor sorpresa irreducible, siempre mayor que 0.
+· P_indet: probabilidad base de indeterminación (por ejemplo, 0.5).
+· P_azar: probabilidad base de azar puro (por ejemplo, 0.5).
+
+Significado: Siempre hay un margen de error que no se puede eliminar. El sistema nunca puede afirmar certeza absoluta.
+
+---
+
+7. NOTAS PARA IMPLEMENTACIÓN
+
+· Corpus de patrones: necesario para construir P(Token_i | N_Q) y calcular σ_i.
+· Calibración de parámetros: β, λ, θ_ambigüedad, δ_min y σ_sorpresa deben ajustarse empíricamente con casos históricos.
+· Salida: nunca es una etiqueta fija. Siempre es un mapa de probabilidades con indeterminación como opción válida.
+
+---
+
+FIN DEL CORPUS

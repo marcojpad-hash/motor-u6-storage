@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "verifier_version": "CONSISTENCY_ADVERSARIAL_V0.1",
+  "violations": [],
+  "fixture_count": 8,
+  "packet": "/tmp/u6_motor_package/U6_UNIFICADO_20261020/motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+  "packet_sha256": "f0912a3415f6de1029efbc4e44ac8ce4ca958328615c4d36edc968b34eb730b9",
+  "rule_source": "explicit invariants + adversarial fixtures; no H mapping"
+}

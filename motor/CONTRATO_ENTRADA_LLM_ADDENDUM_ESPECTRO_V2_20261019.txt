@@ -1,0 +1,13 @@
+ADDENDUM V2 AL CONTRATO DE ENTRADA — espectro derivado del 244 + guardián de sesgo (2026-10-19)
+Amplía (no reemplaza) CONTRATO_ENTRADA_LLM.txt y el ADDENDUM de espectro V1.
+1. El LLM SOLO TRADUCE. Cada fuente (caldero_search_bridge.results[] o caldero_search_sources[]) lleva, además de url/title/snippet
+   literal, un campo  "tokens_244": [["token_del_244", peso 0..1], ...]  con tokens que nombran lo que el snippet dice literalmente.
+   El LLM no elige polo, no elige familia, no da probabilidades. Tokens fuera del 244 se rechazan.
+2. El polo de cada token y de cada fuente lo calcula lateral_espectro/espectro_v2.py a partir del catálogo (familias distopia_*/utopia_*).
+3. Buscar con el mismo esfuerzo ambos polos; la pregunta debe nombrar ambos polos o ninguno. El guardián
+   (lateral_espectro/guardian_sesgo_entrada.py) mide pregunta, mezcla de fuentes, marcado de tokens y cobertura de rivales y
+   publica veredicto, rebalanceo y penalización de grado. Su veredicto se repite, no se quita.
+4. Sin tokens_244 el canal de evidencia queda NO_TRADUCIDA (no se rellena con palabras clave).
+5. Todo es NO_CALIBRADO; híbrido es resultado válido; probabilidades acotadas a 5–95 %.
+Uso: python3 lateral_espectro/correr_con_capas.py INPUT NOMBRE DIR   (motor sin cambios)
+     python3 lateral_espectro/correr_espectro_v2.py DIR/RESULT_NOMBRE.json INPUT DIR/ESPECTRO_V2.json

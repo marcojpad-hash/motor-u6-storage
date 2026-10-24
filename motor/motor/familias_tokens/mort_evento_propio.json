@@ -1,0 +1,38 @@
+{
+  "id": "mort_evento_propio",
+  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "source": "propuesta lateral revisada",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "cuerpo_muerte_propia": 0.82
+  },
+  "tokens_contra": {},
+  "senales": {
+    "muerte del sujeto": "evento solo post-freeze para validación; nunca H1 ni insumo pre-freeze"
+  },
+  "en_vocabulario_244": false,
+  "ejes_P_A_C": {
+    "declaracion": "cada token registra el dueño/eje sin fusionar P/A/C",
+    "default": "sin asignación hasta resolver sujeto"
+  },
+  "integration": {
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "can_decide_H": false,
+    "Alimenta_H": false,
+    "rank_effect": "NONE"
+  },
+  "guardrails": [
+    "Z90: mort_evento_propio posterior a Z90 se rechaza como insumo y solo se conserva para validación",
+    "finitud anticipada puede entrar antes de Z90",
+    "sujeto sin resolver -> mort_sujeto_no_resuelto; nunca asumir propio",
+    "cuerpo_arco solo recibe cuerpo_muerte_propia con sujeto resuelto"
+  ],
+  "token_metadata": {
+    "cuerpo_muerte_propia": {
+      "owner_axis": "P",
+      "en_vocabulario_244": false
+    }
+  }
+}

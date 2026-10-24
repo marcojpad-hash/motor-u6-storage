@@ -1,0 +1,127 @@
+{
+  "schema": "DELIVERY_SHA256_R2",
+  "created_utc": "2026-10-14",
+  "scope": "Evidence files and active source hashes; runtime snapshot under runs/ excluded after preserving CEB ledgers.",
+  "files": [
+    {
+      "path": "INFORME_CIERRE_FINAL_U6_V15_3_20261014_R2.md",
+      "bytes": 6698,
+      "sha256": "a257daec7972293374b0428db355f5b09000ae81d18db45e2780150ce6fc73ee"
+    },
+    {
+      "path": "inputs/THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json",
+      "bytes": 7048,
+      "sha256": "6067686f138e3a54760e0ae1406c0a7a1eb0dd441a04ac8d92aecb81ad8aed7c"
+    },
+    {
+      "path": "audit_lifecycle/THEMISTOCLES_TOKEN_MAPPING_R2.json",
+      "bytes": 1740,
+      "sha256": "09362db612b5678147fb17b47f51045daee5fdbefedbab761a71248961affc8e"
+    },
+    {
+      "path": "audit_lifecycle/LIFECYCLE_R2.txt",
+      "bytes": 64,
+      "sha256": "03324b13b39d97c73f149a6d894657844101b649d177825bab8c0f563df82ae4"
+    },
+    {
+      "path": "audit_lifecycle/RUN_R2_STDOUT.txt",
+      "bytes": 6070,
+      "sha256": "4c70eac40f2c2fcdc0e275b31daca6a6c7ab286e72428323e561bff559cd64e4"
+    },
+    {
+      "path": "audit_lifecycle/RUN_R2_STDERR.txt",
+      "bytes": 79,
+      "sha256": "bb1eab220414050269ca508a51bfcbbb5830324e905a756abf851b55c767ac2a"
+    },
+    {
+      "path": "audit_lifecycle/PYTEST_R2.txt",
+      "bytes": 474,
+      "sha256": "6aa39634b6f6d30b6cf39f6466a61294895dad6b801b81eec432bfbf07a2011b"
+    },
+    {
+      "path": "audit_lifecycle/UNITTEST_R2.txt",
+      "bytes": 5316,
+      "sha256": "a48a622ae7dbae3dd7d3ea1920c450ea9682571a2241dff725256a81664c738e"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2.json",
+      "bytes": 4157958,
+      "sha256": "c4d45ef3c933b4812ac6857ce8fdc5e19ad60ad6d7437d8d020218abc16b467c"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2_RECIBO_EJECUCION.json",
+      "bytes": 11486,
+      "sha256": "10319095a2024c93d11945adffd9c0ce034b66401af91a80621ee53ffb89e240"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 1592,
+      "sha256": "04227a8528506d042dbb3978ec7a9f2c0c160dce965c4694892da00ff111c284"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2_CEB_LEDGER_1.jsonl",
+      "bytes": 9496369,
+      "sha256": "57f3c8383b5e023ab853ed8a670b3cf7942c41fd010c7c3003ce505dd31917f1"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2_CEB_LEDGER_2.jsonl",
+      "bytes": 4720540,
+      "sha256": "8e5969d3367a650278fd118111a3dd5c0da67528443fbf742af7e1d912f22b2b"
+    },
+    {
+      "path": "results/RESULT_THEMISTOCLES_CATALOG_REPAIR_R2_CEB_LEDGER_3.jsonl",
+      "bytes": 7180781,
+      "sha256": "f1cc266f83e88559793da785c4e4ec99214059482798d532bae64c48bbeb4481"
+    },
+    {
+      "path": "motor/Engine_V5_CANONICO_SOLO.py",
+      "bytes": 30507,
+      "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
+    },
+    {
+      "path": "motor/patterns_final_v14.json",
+      "bytes": 123937,
+      "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+      "bytes": 303270,
+      "sha256": "ecc768109c87447413075625ca613ba22c034082a08fca536eab0a90d213b9d4"
+    },
+    {
+      "path": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
+      "bytes": 38004,
+      "sha256": "c4054f73c52419800e7ce9625b5dc46ce20cfc0183a70c7c8ec02a43d2d18e38"
+    },
+    {
+      "path": "motor/sidecar_caldero_busqueda_arquetipos.py",
+      "bytes": 43522,
+      "sha256": "148b08ebd29306fe906c5544e6042233e635056b145fd102e0d8789eb7eb19cf"
+    },
+    {
+      "path": "correr_estandar.py",
+      "bytes": 26666,
+      "sha256": "df229697d27c00b37b8697e7227e944775bcf0941d5a1a500793ef49c12d368c"
+    },
+    {
+      "path": "UNIFICACION_SHA256_MANIFEST.json",
+      "bytes": 39659,
+      "sha256": "c09f8e5b7043c786172a0f246c4622133cc335e3db45b5460fb282bada8f3573"
+    }
+  ],
+  "repair_overlay_20261015": {
+    "status": "ADDED_IN_WORKING_DELIVERY",
+    "files": {
+      "motor/matriz_mortalidad_z90_v0_2.py": "81f3b33f3b5ad5a88fde2e71f9a57098e38cab44fb62cbb65bf3b47a93b5c99e",
+      "motor/familias_tokens/mortalidad_clasificador_lateral_v0_1.py": "ed20198ed1481a99f06631235bc77c58532ab6525975c25fcfb0e14c2670f7ee",
+      "motor/familias_tokens/mort_evento_ajeno.json": "fbd3c5d525ebb6bce3486030c30bf90c104800b5adb6ebe2c44612964376a9ef",
+      "motor/familias_tokens/mort_evento_propio.json": "b506e132a14896d45d3295fba964505ffd6db27ce9e2590c85b63ab07918361d",
+      "motor/familias_tokens/mort_finitud_anticipada.json": "404274470c36151c3abe68b82d0cb86582b8564499469d338e0430e52ebd3d82",
+      "motor/familias_tokens/mort_contexto_colectivo.json": "70be43af816fd900264c6fffca03d0df4d3fc2b9442f341240d15fbcdd3b18a3",
+      "motor/familias_tokens/mort_tema_representacion.json": "845621fb4bd2b6eee662df66d62dfc92fac7eb91c419aa124acccc5a13f8f38c",
+      "tests/test_matriz_mortalidad_z90_v0_2.py": "5cb4add83398ec3d4bf8465378b74769e246f84f5b5f1667b376b5caff48525d",
+      "MORTALITY_AUDIT/MORTALITY_STATISTICS_SCHEMA_V1.json": "5825f19700a0fa76304c988a4a3c7faa42a15603555d8693aeac665bb5e4f81c",
+      "MORTALITY_AUDIT/mortality_statistics_template.csv": "d99a37ca9f7b6cdcdaa8fdac44a56ca1f70d699d66095c4d71122c6837c9f1af"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "U6_PATCH_OVERLAY_MANIFEST_V1",
+  "created_utc": "2026-10-14",
+  "package_role": "overlay_only_no_canonical_engine_or_patterns",
+  "files": [
+    {
+      "path": "correr_estandar.py",
+      "bytes": 22539,
+      "sha256": "34637688b6a7570289e7f486b0651c8e6cc246566f0ec61578cd7634dc61a636"
+    },
+    {
+      "path": "UNIFICACION_SHA256_MANIFEST.json",
+      "bytes": 37640,
+      "sha256": "d8db0c47c4f7cdcbaa935f2e60e8462f91e20b4a96e26086dce15f5717a17293"
+    },
+    {
+      "path": "PATCH_REPORT_20261014_R1.md",
+      "bytes": 6702,
+      "sha256": "61ccb50faf79947fc8d274a1b5f09277ed6e729546d29df8f3ab2a15704508ec"
+    },
+    {
+      "path": "AUDIT_REAL_RUN_20261014_R1.json",
+      "bytes": 11336,
+      "sha256": "a055884a62d3daef20b03d08a1655eb1bbbf94c1e59a060b37979ffb7dd602eb"
+    },
+    {
+      "path": "ALL_TESTS_20261014_R1.log",
+      "bytes": 4536,
+      "sha256": "be54ef06aa50f17be0eec1a459dd05a6d69a90a621f94c04422e90c003a393f4"
+    },
+    {
+      "path": "T1_STINKBOX_PATCH.diff",
+      "bytes": 5364,
+      "sha256": "f1e62781c2b0b95e77b0b4ba16f71cb35bdc24ea51cdc6dd86ce3eaa33b7f107"
+    },
+    {
+      "path": "RESULT_THEMISTOCLES_T1_PATCHED.json",
+      "bytes": 829,
+      "sha256": "647aa4b95b29bf1d878f9a2dd7c93f193940f71171415f6706ad00ec428af072"
+    },
+    {
+      "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+      "bytes": 297464,
+      "sha256": "7f248db2186a3da37d311850ee901c0d7ca6ca779bad1d11d42a91a0b367a0ad"
+    },
+    {
+      "path": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
+      "bytes": 37788,
+      "sha256": "66dfe498f5591f13a9a45f084f17cd859e0cb69497cbd7e1aa523725961a8a7f"
+    },
+    {
+      "path": "motor/decimo_hombre_esteroides_mayeutica_v1.py",
+      "bytes": 27419,
+      "sha256": "1fa9b7798785b54122ccfd215b8134a619e3c1819ad6008ad9ad51f055e66521"
+    },
+    {
+      "path": "motor/lente_lateral_metrics_v1_1_galileo.py",
+      "bytes": 5313,
+      "sha256": "81e97895df05fbb7a7983aa57e94ee0a5cffe8e86699d35570cb9964ef51d6b2"
+    },
+    {
+      "path": "motor/marco_funciones_souriau.py",
+      "bytes": 5506,
+      "sha256": "db6f0c3de06f4ab64b613bf2284b0bbe442402aa859c3960344445d98da88f29"
+    },
+    {
+      "path": "motor/ricci_forman_coocurrencia_v0_1.py",
+      "bytes": 5101,
+      "sha256": "5349df3910c1d025f5e3c98bb9921f1cf74caac2514771aadef53161d4298e5b"
+    },
+    {
+      "path": "motor/stinkbox_transport_v0_2.py",
+      "bytes": 19668,
+      "sha256": "a0253e6e2f51fd362d9a38e365e14d4cb5370d404c5830ba58950a8b89f4d275"
+    },
+    {
+      "path": "motor/forman_ricci_weighted_graph.py",
+      "bytes": 2334,
+      "sha256": "8a01c7fde5ad2d9849f686799cf05c61616e5e36cbda8b591d160c221e7229c8"
+    },
+    {
+      "path": "motor/souriau_momentum_so3.py",
+      "bytes": 982,
+      "sha256": "32c6b1c014733207fac1495cb9211205c469f7ac88d84a9ed2dde92cbea1295f"
+    },
+    {
+      "path": "tests/test_catalog_integrity_contract.py",
+      "bytes": 4663,
+      "sha256": "ea81cefe56a35b3b2475ffcaae7df032b760584cde9dbbcd1f602d1da7a60e9d"
+    },
+    {
+      "path": "tests/test_decimo_truthful_status.py",
+      "bytes": 3188,
+      "sha256": "b8277531a3bc0eb5ebd67c0b1c15ec4e07c4bca533b2674c3c52aed31a0d66f9"
+    },
+    {
+      "path": "tests/test_focused_repairs.py",
+      "bytes": 3612,
+      "sha256": "99906b1a513a9bb9c80159e956dd8325d8bd70549fb19101e216b7838feff887"
+    },
+    {
+      "path": "tests/test_detras_2_3_3.py",
+      "bytes": 1232,
+      "sha256": "277a7e5060830983b6ea6781afa00e89a8c0ca551d816d3cab0078a6f8574d14"
+    }
+  ],
+  "protected_files_not_in_overlay": [
+    {
+      "path": "motor/Engine_V5_CANONICO_SOLO.py",
+      "bytes": 30507,
+      "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
+    },
+    {
+      "path": "motor/patterns_final_v14.json",
+      "bytes": 123937,
+      "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    }
+  ],
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "result": "24 passed; 0 failed; 0 errors"
+  },
+  "integration_case": {
+    "file": "THEMISTOCLES_FREEZE_480BC.json",
+    "case_id": "CASO_NUEVO_20261013_01",
+    "monte_carlo": false,
+    "H1": "arquetipo_heroe",
+    "H2": "crisis_vocacional",
+    "decimo_hombre": "EJECUTADO_CON_DIAGNOSTICO_INCOMPLETO"
+  },
+  "manifest_preflight": {
+    "status": "DRIFT_WARNED",
+    "hash_drift": 0,
+    "missing_paths": 30,
+    "motor_files_outside_manifest": 0,
+    "blocking_engine_or_patterns": 0
+  }
+}

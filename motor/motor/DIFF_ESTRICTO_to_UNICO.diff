@@ -1,0 +1,221 @@
+23c23,32
+< VERSION = "V15.3_UNIFICADO_CONSOLIDADO_GUARDIANES_TROPOS_ESTRICTO_20260927"
+---
+> VERSION = "V15.3_UNICO_20260927"
+> # UNICO_20260927 = ESTRICTO (456c7e9f) + (1) catálogo de patrones configurable (MOTOR_PATTERNS_PATH; default
+> # patterns_final_v14.json d827dcc3; nada asume 244: se usa len() del catálogo cargado; sha y n registrados;
+> # puentes validados contra el catálogo cargado) + (2) Aquiles con claves correctas (p_H/n) + (3) HUB
+> # laterales_unico_v1: VOTO negativo Ricci–Forman vs billar (siempre-on, independiente de MODO_ESTRICTO),
+> # VOTO familias de tokens (EXPERIMENTAL, un voto por candidato; FAMILIAS_TOKENS=0 lo apaga), sensores de todas
+> # las líneas (Memento, matriz_corrida, luces, amantes, trazabilidad, integración, interrelación, alias, fix_entrada,
+> # gloria/sacro, Souriau, Z-RI, Tusi, Schrödinger, perfil del narrador, contraste formular_h, Aquiles bootstrap)
+> # + (4) protocolo_kernel orden 0 + (5) monomito v2 + (6) guardianes V1.2 con detrás v2 2.3.3.
+> # Laterales/sensores: can_decide_H=False; nunca escriben H ni el catálogo. MODO_ESTRICTO=0 apaga el cierre estricto.
+47,48c56,65
+< PATTERNS_SHA = "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+< N_CANON = 244
+---
+> PATTERNS_SHA = "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"  # sha del catálogo DEFAULT (v14); no es condición
+> PATTERNS_SHA_DEFAULT = PATTERNS_SHA
+> N_CANON = 244  # solo informativo (v14). El motor usa _n_patrones() = len(catálogo cargado).
+> import os as _oscat
+> def _PATTERNS_PATH() -> Path:
+>     """Ruta del catálogo de patrones: MOTOR_PATTERNS_PATH o patterns_final_v14.json junto al motor."""
+>     return Path(_oscat.environ.get("MOTOR_PATTERNS_PATH") or (BASE / "patterns_final_v14.json"))
+> def _n_patrones() -> int:
+>     p = _patterns()
+>     return len(p) if isinstance(p, (dict, list)) else 0
+194c211
+<         "canonical_244":len(motor.get("cuts") or [])>0 and motor.get("n_canon")==N_CANON,
+---
+>         "canonical_244":len(motor.get("cuts") or [])>0 and motor.get("n_canon") is not None and len(((motor.get("cuts") or [{}])[-1].get("P_FULL_244") or {}))==_n_patrones(),
+293,294c310,315
+<                 pts.append({"corte":c.get("corte"),"top":top[0][0] if top else None,"p":float(top[0][1]) if top else None,"tops":[x[0] for x in top[:3]]})
+<             return aq.evaluar_serie(pts)
+---
+>                 # UNICO: claves correctas del plugin (p_H, n, winner, topk). Antes 'p'/'corte' -> salida siempre nula.
+>                 pts.append({"n":len(pts)+1,"corte":c.get("corte"),"winner":top[0][0] if top else None,"p_H":float(top[0][1]) if top else None,"topk":[x[0] for x in top[:3]]})
+>             out=aq.evaluar_serie(pts)
+>             out={k:v for k,v in out.items()}
+>             out["lectura"]="serie por cortes: p_H = p del top P de cada corte; winner = top P del corte (claves p_H/n corregidas)"
+>             return out
+371c392
+<     circ=_load("opt_circ","plugin_circulo_monomito.py")
+---
+>     circ=_load("opt_circ","plugin_circulo_monomito_v2.py") or _load("opt_circ","plugin_circulo_monomito.py")  # UNICO: v2 (resuelve en serie completa)
+470c491
+<         try: _PAT_CACHE["p"]=json.loads((BASE/"patterns_final_v14.json").read_text(encoding="utf-8"))
+---
+>         try: _PAT_CACHE["p"]=json.loads((_PATTERNS_PATH()).read_text(encoding="utf-8"))
+603c624
+< BRIDGE_EXCLUDE={"stinkbox_transport","caldero_neighbor_memory","cuts","pre_h_analogical_search","pre_h_lateral_tokens",
+---
+> BRIDGE_EXCLUDE={"laterales_unico_detalle","stinkbox_transport","caldero_neighbor_memory","cuts","pre_h_analogical_search","pre_h_lateral_tokens",
+984c1005
+<         pat=json.loads((BASE/"patterns_final_v14.json").read_text(encoding="utf-8"))
+---
+>         pat=json.loads((_PATTERNS_PATH()).read_text(encoding="utf-8"))
+1300a1322,1334
+> def _protocolo_orden0(case):
+>     """UNICO: protocolo_kernel_motor (orden 0) antes de todo. Solo registra; no para salvo candado duro (Engine/catálogo/FREEZE/H)."""
+>     k=_load("protocolo_kernel_orden0","protocolo_kernel_motor.py")
+>     if k is None: return {"status":"FALTA_ARCHIVO","file":"protocolo_kernel_motor.py"}
+>     try:
+>         k.limpiar_bitacora() if hasattr(k,"limpiar_bitacora") else None
+>         arr=k.arranque_matriz(); q=str(case.get("question",""))
+>         clas=k.clasificar_para_protocolo(q) if hasattr(k,"clasificar_para_protocolo") else None
+>         return {"status":"EXECUTED","version":getattr(k,"__version__",None),"arranque":arr,"clasificacion_pregunta":clas,
+>                 "bitacora":k.bitacora() if hasattr(k,"bitacora") else None,"can_decide_H":False}
+>     except Exception as e:
+>         return {"status":"ERROR","error":f"{type(e).__name__}:{e}"}
+> 
+1302a1337
+>     _orden0=_protocolo_orden0(case)
+1311c1346
+<     native=_load("v153_native_v09","MOTOR_V15_3_NATIVO_V0_9.py")
+---
+>     native=_load("v153_native_v09","MOTOR_V15_3_NATIVO_V0_9_UNICO.py") or _load("v153_native_v09","MOTOR_V15_3_NATIVO_V0_9.py")
+1321c1356
+<         pat_path=str(BASE / "patterns_final_v14.json")
+---
+>         pat_path=str(_PATTERNS_PATH())
+1331c1366
+<         if not all(a==b==c==N_CANON for a,b,c in dims):
+---
+>         if not all(a==b==c==_n_patrones() for a,b,c in dims):
+1333c1368
+<         motor["emission_adapter"]={"used":True,"mutates_canonical":False,"source":"native._engine + native._board","verified_dim":N_CANON}
+---
+>         motor["emission_adapter"]={"used":True,"mutates_canonical":False,"source":"native._engine + native._board","verified_dim":_n_patrones()}
+1335c1370
+<         motor["emission_adapter"]={"used":False,"mutates_canonical":False,"source":"native_output","verified_dim":N_CANON}
+---
+>         motor["emission_adapter"]={"used":False,"mutates_canonical":False,"source":"native_output","verified_dim":_n_patrones()}
+1456c1491
+<         patterns_path=BASE / "patterns_final_v14.json",
+---
+>         patterns_path=_PATTERNS_PATH(),
+1468a1504,1517
+>     # UNICO: HUB de laterales (votos + sensores) justo antes del predictor. Votos = un módulo más del puente de nombres.
+>     _hub=_load("laterales_unico_v1","laterales_unico_v1.py"); _hub_reg=[]; _hub_det={}
+>     if _hub is None:
+>         status.append({"component":"laterales_unico_v1.py","status":"FALTA_ARCHIVO"})
+>     else:
+>         try:
+>             _votos,_hub_det,_hub_reg=_hub.pre_predictor(case,motor,features,BASE,_PATTERNS_PATH(),_patterns())
+>             for _k,_v in _votos.items(): features[_k]=_v
+>             features["laterales_unico_detalle"]=_hub_det
+>             status.append({"component":"laterales_unico_v1.py(pre)","status":"EXECUTED","feeds_predictor":True,"feeds_H":False,"can_decide_H":False,
+>                            "votos":sorted(_votos),"n_piezas":len(_hub_reg)})
+>         except Exception as e:
+>             import traceback as _tbh
+>             status.append({"component":"laterales_unico_v1.py(pre)","status":"ERROR","error":f"{type(e).__name__}:{e}","trace":_tbh.format_exc()[-1500:]})
+1498,1499c1547,1548
+<     result={"version":VERSION,"hash_candado":CANON_HASH,"patterns_sha256":PATTERNS_SHA,"M":M,
+<             "n_canon":N_CANON,"case_id":case["case_id"],"protocol":case.get("protocol"),
+---
+>     result={"version":VERSION,"hash_candado":CANON_HASH,"patterns_sha256":_sha(_PATTERNS_PATH()),"M":M,
+>             "n_canon":_n_patrones(),"catalogo_patrones":{"ruta":str(_PATTERNS_PATH()),"sha256":_sha(_PATTERNS_PATH()),"n_patrones":_n_patrones(),"es_default_v14":_sha(_PATTERNS_PATH())==PATTERNS_SHA_DEFAULT,"validacion_puentes":(_hub_det.get("catalogo") if isinstance(_hub_det,dict) else None)},"protocolo_orden0":_orden0,"case_id":case["case_id"],"protocol":case.get("protocol"),
+1540c1589
+<     pat_antes=_sha(BASE/"patterns_final_v14.json")
+---
+>     pat_antes=_sha(_PATTERNS_PATH())
+1551c1600
+<     pat_despues=_sha(BASE/"patterns_final_v14.json")
+---
+>     pat_despues=_sha(_PATTERNS_PATH())
+1554c1603
+<         "patterns_sha256_antes":pat_antes,"patterns_sha256_despues":pat_despues,"patterns_igual":pat_antes==pat_despues and pat_antes==PATTERNS_SHA}
+---
+>         "patterns_sha256_antes":pat_antes,"patterns_sha256_despues":pat_despues,"patterns_igual":pat_antes==pat_despues,"catalogo_es_default_v14":pat_antes==PATTERNS_SHA_DEFAULT}
+1602c1651
+<         snapE=_h_snapshot(pred); hE=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patE=_sha(BASE/"patterns_final_v14.json")
+---
+>         snapE=_h_snapshot(pred); hE=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patE=_sha(_PATTERNS_PATH())
+1615c1664
+<                                        "top1_igual":top1E==(pred.get("candidates") or [{}])[0].get("family"),"patterns_igual":patE==_sha(BASE/"patterns_final_v14.json")==PATTERNS_SHA}
+---
+>                                        "top1_igual":top1E==(pred.get("candidates") or [{}])[0].get("family"),"patterns_igual":patE==_sha(_PATTERNS_PATH())}
+1621a1671,1690
+>     # UNICO: HUB post-predictor (sensores que necesitan top1) + convergencia lateral + reporte por caso.
+>     snapU=_h_snapshot(pred); hU=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patU=_sha(_PATTERNS_PATH())
+>     post={}
+>     if _hub is not None:
+>         try:
+>             vista={"_det_pre":_hub_det,"_patterns_path":str(_PATTERNS_PATH())}
+>             post=_hub.post_predictor(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),vista,BASE,_hub_reg)
+>         except Exception as e:
+>             import traceback as _tbp
+>             post={"status":"ERROR","error":f"{type(e).__name__}:{e}","trace":_tbp.format_exc()[-1500:]}
+>     conv=_convergencia_lateral(features,pred)
+>     result["laterales_unico"]={"version":getattr(_hub,"VERSION",None),"registro_piezas":_hub_reg,"pre":{k:v for k,v in (_hub_det or {}).items() if k!="sensores_pre"},
+>                               "sensores_pre":(_hub_det or {}).get("sensores_pre"),"post":post,"convergencia_lateral":conv,
+>                               "contrato":{"can_decide_H":False,"escribe_H":False,"escribe_catalogo":False,"votos_entran_como":"módulo del puente de nombres (lateral_contribution acotada)"}}
+>     result["laterales_unico"]["verificacion_H_intacto"]={"predictor_igual":snapU==_h_snapshot(pred),"H1_H2_igual":hU==json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str),
+>                                                         "catalogo_igual":patU==_sha(_PATTERNS_PATH())}
+>     status.append({"component":"laterales_unico_v1.py(post)","status":"EXECUTED" if not (isinstance(post,dict) and post.get("status")=="ERROR") else "ERROR",
+>                    "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"H_intacto":result["laterales_unico"]["verificacion_H_intacto"]})
+>     result["reporte_caso"]=_reporte_caso(result,pred,conv,post)
+>     result["registro_componentes"]=_registro_componentes(status,_hub_reg)
+1622a1692,1752
+> 
+> _MAPA_ESTADO={"EXECUTED":"ACTIVA","EXECUTED_WITH_FINDINGS":"ACTIVA","PLUGIN_SALTADO":"NO_CORRE","CABLEADO_NO_EJECUTADO":"NO_CORRE",
+>               "ERROR":"NO_CORRE","FALTA_ARCHIVO":"NO_CORRE","API_PENDING":"ACTIVA_MUDA","CABLEADO_ESPERANDO_LLM_SEARCH":"ACTIVA_MUDA"}
+> def _registro_componentes(status,hub_reg):
+>     """Tabla completa por corrida: componentes del motor + piezas del hub + inventario estático (SUPERADA/NO_CORRE/FUERA)."""
+>     filas=[]
+>     for c in status:
+>         if not isinstance(c,dict): continue
+>         st=str(c.get("status"))
+>         filas.append({"pieza":c.get("component"),"fuente":"motor","estado":_MAPA_ESTADO.get(st,"ACTIVA" if st.startswith("EXEC") else "ACTIVA_MUDA"),
+>                       "estado_crudo":st,"motivo":c.get("reason") or c.get("error"),"alimenta_predictor":bool(c.get("feeds_predictor")),"can_decide_H":False})
+>     for r in hub_reg or []:
+>         filas.append({"pieza":r.get("pieza"),"archivo":r.get("archivo"),"sha256":r.get("sha256"),"fuente":"laterales_unico_v1","estado":r.get("estado"),
+>                       "rol":r.get("rol"),"motivo":r.get("aporte"),"can_decide_H":False})
+>     try:
+>         inv=json.loads((BASE/"INVENTARIO_COMPONENTES_UNICO.json").read_text(encoding="utf-8"))
+>         for r in inv.get("estaticas") or []: filas.append({**r,"fuente":"inventario_estatico"})
+>     except Exception as e:
+>         filas.append({"pieza":"INVENTARIO_COMPONENTES_UNICO.json","fuente":"inventario_estatico","estado":"NO_CORRE","motivo":f"{type(e).__name__}"})
+>     cnt={}
+>     for f in filas: cnt[f["estado"]]=cnt.get(f["estado"],0)+1
+>     return {"conteo":cnt,"filas":filas}
+> 
+> def _convergencia_lateral(features,pred):
+>     """Qué dijo cada módulo lateral del puente sobre top1 vs top2 (share en [0,1] respecto del máximo del módulo)."""
+>     cands=[c["family"] for c in (pred.get("candidates") or [])]
+>     if len(cands)<2: return {"status":"SIN_RIVAL"}
+>     matrix,log=_bridge_matrix(features,sorted(set(cands)))
+>     t1,t2=cands[0],cands[1]; filas=[]
+>     for m,acc in sorted(matrix.items()):
+>         mx=max(acc.values()) if acc else 0.0
+>         if mx<=0 or (max(acc.values())-min(acc.values()))<=TIE_EPS: continue
+>         s1,s2=acc.get(t1,0.0)/mx,acc.get(t2,0.0)/mx
+>         filas.append({"modulo":m,"share_top1":round(s1,4),"share_top2":round(s2,4),"favorece":"top1" if s1>s2+1e-9 else ("top2" if s2>s1+1e-9 else "empate")})
+>     cnt={"top1":0,"top2":0,"empate":0}
+>     for f in filas: cnt[f["favorece"]]+=1
+>     return {"top1":t1,"top2":t2,"modulos_que_discriminan_entre_top10":len(filas),"conteo":cnt,"por_modulo":filas,
+>             "nota":"calculado sobre el top10 del predictor; no reordena ni escribe H"}
+> 
+> def _reporte_caso(result,pred,conv,post):
+>     cands=[c["family"] for c in (pred.get("candidates") or [])]
+>     ec=result.get("estado_cierre") or {}; ee=result.get("estado_cierre_estricto") or {}
+>     cg=result.get("cierre_guardianes") or {}
+>     guard=(result.get("guardianes") or {}).get("banderas")
+>     reg=(result.get("laterales_unico") or {}).get("registro_piezas") or []
+>     neg=((result.get("laterales_unico") or {}).get("pre") or {}).get("negativo_ricci_vs_billar") or {}
+>     fil={f["familia"]:f for f in (neg.get("filas") or [])}
+>     aq=(post or {}).get("aquiles_bootstrap") or {}
+>     return {"top1":cands[0] if cands else None,"top2":cands[1] if len(cands)>1 else None,"top3":cands[2] if len(cands)>2 else None,
+>             "H1":(result.get("H1") or {}).get("family") if isinstance(result.get("H1"),dict) else None,
+>             "H2":(result.get("H2") or {}).get("family") if isinstance(result.get("H2"),dict) else None,
+>             "cierre_vigente":ec.get("valor"),"motivos_vigente":[f"{m.get('guardian')}:{m.get('tipo')}" for m in (cg.get("motivos") or [])],
+>             "cierre_estricto":ee.get("valor"),"motivos_estricto":ee.get("motivos"),
+>             "sostenido":(ee.get("valor")=="CIERRE_ESTRICTO") if ee else (ec.get("valor")!="LATENTE"),
+>             "guardianes":guard,
+>             "negativo_top1":(fil.get(cands[0]) or {}).get("senal_descarte") if cands else None,
+>             "negativo_top2":(fil.get(cands[1]) or {}).get("senal_descarte") if len(cands)>1 else None,
+>             "aquiles_ganador_remuestreo":aq.get("ganador_remuestreo_final"),"aquiles_coincide_top1":aq.get("ganador_remuestreo_coincide_con_top1"),
+>             "convergencia_lateral":conv.get("conteo"),
+>             "laterales":[{"pieza":r.get("pieza"),"estado":r.get("estado"),"aporte":r.get("aporte")} for r in reg],
+>             "vocabulario":"neutro; sin veredictos de resultado (la comparación con lo registrado se hace fuera del motor, al final)"}

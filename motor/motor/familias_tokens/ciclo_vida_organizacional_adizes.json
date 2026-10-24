@@ -1,0 +1,83 @@
+{
+ "id": "ciclo_vida_organizacional_adizes",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Ichak Adizes (Corporate Lifecycles)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "etapa_arranque_infancia_esfuerzo": 0.85,
+  "etapa_adolescencia_conflicto_fundador": 0.88,
+  "etapa_plenitud_equilibrio_optimo": 0.92,
+  "etapa_aristocracia_formalismo_burocracia": 0.9,
+  "etapa_muerte_organizacional_cese": 0.95,
+  "trampa_del_fundador_centralizacion": 0.84,
+  "envejecimiento_prematuro_falta_vision": 0.8,
+  "etapa_gogo_crecimiento_acelerado": 0.9,
+  "trampa_gogo_expansion_desenfocada": 0.86,
+  "etapa_recriminacion_paralisis_politica": 0.92,
+  "fuga_talento_etapa_recriminacion": 0.84
+ },
+ "tokens_contra": {
+  "profesionalizacion_sistemas_delegacion": -0.88,
+  "inyeccion_capital_oxigeno_operativo": -0.82,
+  "rejuvenecimiento_estrategia_innovacion": -0.9,
+  "guardrail_auditoria_procesos_eficiencia": -0.78,
+  "reestructuracion_activos_ajuste_duro": -0.85,
+  "comite_gobierno_corporativo_limite": -0.86,
+  "separacion_fundador_gestion_madurez": -0.91,
+  "freno_control_presupuestario_gogo": -0.85,
+  "enfoque_priorizacion_lineas_negocio": -0.88,
+  "mediacion_institucional_resolucion_conflictos": -0.9,
+  "restructuracion_objetiva_roles_madurez": -0.89
+ },
+ "senales": {
+  "etapa_arranque_infancia_esfuerzo": "solo ventas, caja vulnerable, sin procesos",
+  "etapa_adolescencia_conflicto_fundador": "choque fundador contra gerentes nuevos",
+  "etapa_plenitud_equilibrio_optimo": "creatividad y control en equilibrio",
+  "etapa_aristocracia_formalismo_burocracia": "foco en formas mientras cae la innovacion",
+  "etapa_muerte_organizacional_cese": "paralisis, deudas y liquidacion",
+  "trampa_del_fundador_centralizacion": "el creador no delega",
+  "envejecimiento_prematuro_falta_vision": "rigidez temprana por miedo",
+  "profesionalizacion_sistemas_delegacion": "manuales, metricas y delegacion real",
+  "inyeccion_capital_oxigeno_operativo": "fondos frescos salvan la caja",
+  "rejuvenecimiento_estrategia_innovacion": "lineas nuevas rompen la rigidez",
+  "guardrail_auditoria_procesos_eficiencia": "revision de costos",
+  "reestructuracion_activos_ajuste_duro": "cierre de divisiones y recorte",
+  "comite_gobierno_corporativo_limite": "consejo que frena al fundador",
+  "separacion_fundador_gestion_madurez": "retiro ordenado del fundador",
+  "etapa_gogo_crecimiento_acelerado": "La organización ve oportunidades en todas partes, se expande a gran velocidad y diluye sus prioridades operativas.",
+  "trampa_gogo_expansion_desenfocada": "Incursión simultánea en múltiples proyectos nuevos sin estructura operativa real para soportar la ejecución.",
+  "etapa_recriminacion_paralisis_politica": "Búsqueda obsesiva de culpables por los errores de la adolescencia corporativa, deteniendo la operación por conflictos internos.",
+  "fuga_talento_etapa_recriminacion": "Salida masiva de personal operativo valioso y directivos técnicos cansados de las disputas de poder intestinas.",
+  "freno_control_presupuestario_gogo": "Implementación de límites estrictos al gasto y autorizaciones centralizadas que ralentizan los caprichos de expansión.",
+  "enfoque_priorizacion_lineas_negocio": "Decisión estratégica de concentrar los recursos únicamente en el núcleo del negocio que genera rentabilidad real.",
+  "mediacion_institucional_resolucion_conflictos": "Intervención de un comité neutral que procesa las disputas internas mediante reglas y auditorías de hechos objetivos.",
+  "restructuracion_objetiva_roles_madurez": "Asignación formal de responsabilidades basada en competencias y manuales de organización, eliminando batallas de ego."
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_auditoria_procesos_eficiencia"
+  ],
+  "log": [
+   "renombre: etapa_aristocracia_pompis_burocracia -> etapa_aristocracia_formalismo_burocracia"
+  ],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "fc26c0f4cbc1ed25",
+ "bloques_fusionados": [
+  "adizes_etapas_faltantes"
+ ]
+}

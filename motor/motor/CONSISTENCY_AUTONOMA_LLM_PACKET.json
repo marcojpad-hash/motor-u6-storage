@@ -1,0 +1,35 @@
+{
+  "verifier_version": "CONSISTENCY_AUTONOMA_V0.1",
+  "purpose": "independent reproduction of package-local consistency resolution",
+  "training_bias_guard": [
+    "Use only supplied package evidence.",
+    "Do not infer a missing artifact from general knowledge.",
+    "Do not choose H1/H2 or alter predictor state.",
+    "For each finding state RESOLVED_BY_ARTIFACT, UNRESOLVED, or HARD_STOP."
+  ],
+  "audit": {
+    "version": "CONSISTENCY_AUTONOMA_V0.1",
+    "role": "audit_continuity_control",
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "status": "CLEAN",
+    "findings": [],
+    "resolved": [],
+    "unresolved": [],
+    "hard_stop_policy": [
+      "CANON_MUTATION",
+      "FREEZE_FUTURE_ACCESS",
+      "INPUT_INVALIDO",
+      "PESO_FUERA_DE_CONTRATO",
+      "TIE_WINNER",
+      "TOKEN_INVALIDO"
+    ],
+    "rule": "resolver uses package-local authoritative artifacts; it never edits canon, predictor, H, or FREEZE",
+    "self_check": {
+      "package_root": "/tmp/u6_motor_package/U6_UNIFICADO_20261020/motor",
+      "motor_present": true,
+      "patterns_present": true
+    }
+  },
+  "instruction": "Recompute the claims from the listed artifacts and rules. If an artifact is absent, preserve absence."
+}

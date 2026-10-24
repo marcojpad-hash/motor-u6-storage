@@ -1,0 +1,48 @@
+{
+  "id": "mort_tema_representacion",
+  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "source": "propuesta lateral revisada",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "mort_tema_representacion_escritura": 0.78,
+    "mort_tema_representacion_estudio": 0.76,
+    "mort_tema_representacion_arte": 0.74
+  },
+  "tokens_contra": {},
+  "senales": {
+    "escribe/pinta/estudia la muerte": "tema, no evento"
+  },
+  "en_vocabulario_244": false,
+  "ejes_P_A_C": {
+    "declaracion": "cada token registra el dueño/eje sin fusionar P/A/C",
+    "default": "sin asignación hasta resolver sujeto"
+  },
+  "integration": {
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "can_decide_H": false,
+    "Alimenta_H": false,
+    "rank_effect": "NONE"
+  },
+  "guardrails": [
+    "Z90: mort_evento_propio posterior a Z90 se rechaza como insumo y solo se conserva para validación",
+    "finitud anticipada puede entrar antes de Z90",
+    "sujeto sin resolver -> mort_sujeto_no_resuelto; nunca asumir propio",
+    "cuerpo_arco solo recibe cuerpo_muerte_propia con sujeto resuelto"
+  ],
+  "token_metadata": {
+    "mort_tema_representacion_escritura": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    },
+    "mort_tema_representacion_estudio": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    },
+    "mort_tema_representacion_arte": {
+      "owner_axis": "C",
+      "en_vocabulario_244": false
+    }
+  }
+}

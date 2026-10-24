@@ -1,0 +1,55 @@
+{
+  "id": "mort_evento_ajeno",
+  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "source": "propuesta lateral revisada",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "mort_evento_ajeno_vinculo_cercano": 0.8,
+    "mort_evento_ajeno_antagonista": 0.74,
+    "mort_evento_ajeno_autoridad_figura": 0.72,
+    "mort_evento_ajeno_vinculo_no_resuelto": 0.68
+  },
+  "tokens_contra": {},
+  "senales": {
+    "vinculo cercano": "ilumina duelo_bonanno",
+    "antagonista": "muerte de rival/antagonista",
+    "autoridad/figura": "muerte de rey, maestro u otra figura"
+  },
+  "en_vocabulario_244": false,
+  "ejes_P_A_C": {
+    "declaracion": "cada token registra el dueño/eje sin fusionar P/A/C",
+    "default": "sin asignación hasta resolver sujeto"
+  },
+  "integration": {
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "can_decide_H": false,
+    "Alimenta_H": false,
+    "rank_effect": "NONE"
+  },
+  "guardrails": [
+    "Z90: mort_evento_propio posterior a Z90 se rechaza como insumo y solo se conserva para validación",
+    "finitud anticipada puede entrar antes de Z90",
+    "sujeto sin resolver -> mort_sujeto_no_resuelto; nunca asumir propio",
+    "cuerpo_arco solo recibe cuerpo_muerte_propia con sujeto resuelto"
+  ],
+  "token_metadata": {
+    "mort_evento_ajeno_vinculo_cercano": {
+      "owner_axis": "A",
+      "en_vocabulario_244": false
+    },
+    "mort_evento_ajeno_antagonista": {
+      "owner_axis": "A",
+      "en_vocabulario_244": false
+    },
+    "mort_evento_ajeno_autoridad_figura": {
+      "owner_axis": "A",
+      "en_vocabulario_244": false
+    },
+    "mort_evento_ajeno_vinculo_no_resuelto": {
+      "owner_axis": "A",
+      "en_vocabulario_244": false
+    }
+  }
+}

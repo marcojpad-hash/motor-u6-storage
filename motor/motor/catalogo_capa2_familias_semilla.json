@@ -1,0 +1,505 @@
+{
+  "plugin": "PLUGIN_CAPA2_ANTECEDENTES_ARQUETIPOS",
+  "version": 2,
+  "nota": "SEMILLA v2. Ampliar/calibrar con ciegos. No merge a V5. evidence_status=unverified. v2: capa estereotipos_situacionales = vecinos con carga situacional para luces faltantes.",
+  "capas": {
+    "historica_trayectoria": [
+      {
+        "id": "fundador_tecnico_control_vs_capital",
+        "nombre": "Fundador técnico-empresarial + mando vs capital",
+        "pinchos_favor": [
+          "audaz_empresa",
+          "ambicion",
+          "rivalidad_superior_inferior",
+          "empresa",
+          "acumulacion_capital",
+          "autodireccion",
+          "obtencion"
+        ],
+        "pinchos_contra": [
+          "arte_prestigio",
+          "escritores_creativos",
+          "6_desastre"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 24,
+          "cuaja_tipico": 30
+        },
+        "antecedente_tipo": [
+          "Musk freeze≤2000",
+          "serial founder"
+        ],
+        "nota": "Señal 'política' temprana suele ser mando organizacional."
+      },
+      {
+        "id": "productor_masa_imagen_yo_publico",
+        "nombre": "Productor de imagen de masa + yo público como medio",
+        "pinchos_favor": [
+          "creador",
+          "camaleon",
+          "fama",
+          "difusion_innovaciones",
+          "cotidiano",
+          "redes_prestigio",
+          "contagio"
+        ],
+        "pinchos_contra": [
+          "audaz_empresa",
+          "arquetipo_el_gobernante"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 18,
+          "cuaja_tipico": 30
+        },
+        "antecedente_tipo": [
+          "Warhol"
+        ],
+        "nota": "Obra + apariencia + red."
+      },
+      {
+        "id": "intelectual_camaleon_provocacion",
+        "nombre": "Intelectual/crítico-orador + imagen provocadora",
+        "pinchos_favor": [
+          "escritores_creativos",
+          "arte_prestigio",
+          "trickster",
+          "camaleon",
+          "fama",
+          "oratoria",
+          "extraversion"
+        ],
+        "pinchos_contra": [
+          "audaz_empresa",
+          "6_desastre"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 16,
+          "cuaja_tipico": 28
+        },
+        "antecedente_tipo": [
+          "Wilde freeze temprano"
+        ],
+        "nota": "Overton/moral dominante: choque legal puede ser cola, no rumbo temprano."
+      },
+      {
+        "id": "mando_personalista_sucesion",
+        "nombre": "Mando personalista / crisis de sucesión",
+        "pinchos_favor": [
+          "arquetipo_el_gobernante",
+          "ambicion",
+          "rivalidad_superior_inferior",
+          "schwartz_06_poder",
+          "predictivo_02_mdp_politica_optima"
+        ],
+        "pinchos_contra": [
+          "creador",
+          "arte_prestigio"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 30,
+          "cuaja_tipico": 50
+        },
+        "antecedente_tipo": [
+          "Porfiriato",
+          "Roma tardía",
+          "César (cuaja tarde)"
+        ],
+        "nota": "No mapear todo 'poder' aquí; exige ancla estatal/personalista."
+      },
+      {
+        "id": "saber_prestigio_creativo_temprano_moderno",
+        "nombre": "Saber + prestigio creativo (reacomodo de circuitos)",
+        "pinchos_favor": [
+          "aprendizaje",
+          "creador",
+          "arte_prestigio",
+          "difusion_innovaciones",
+          "redes_prestigio"
+        ],
+        "pinchos_contra": [
+          "6_desastre",
+          "situacion_dramatica_venganza"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 20,
+          "cuaja_tipico": 40
+        },
+        "antecedente_tipo": [
+          "antecedentes Renacimiento"
+        ],
+        "nota": "Descarta colapso como familia dominante."
+      }
+    ],
+    "vinculo_amoroso": [
+      {
+        "id": "triangulo_rivalidad_deseante",
+        "nombre": "Triángulo / rivalidad deseante",
+        "pinchos_favor": [
+          "rivalidad",
+          "celos",
+          "ambicion",
+          "estatus_social",
+          "doble_agenda"
+        ],
+        "pinchos_contra": [
+          "autonomia",
+          "metodicidad"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 16,
+          "cuaja_tipico": 25
+        },
+        "antecedente_tipo": [
+          "patrones de vínculo competitivos"
+        ],
+        "nota": "Capa amorosa: solo si el campo prende vínculo; no forzar bios políticas."
+      },
+      {
+        "id": "idealizacion_caida_desencanto",
+        "nombre": "Idealización → caída / desencanto",
+        "pinchos_favor": [
+          "idealizacion",
+          "traicion",
+          "perdida_seres_queridos",
+          "awakening",
+          "6_desastre"
+        ],
+        "pinchos_contra": [
+          "pragmatismo_frio"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 18,
+          "cuaja_tipico": 30
+        },
+        "antecedente_tipo": [
+          "arcos de desilusión amorosa"
+        ],
+        "nota": "Lateral; no es familia histórica por defecto."
+      },
+      {
+        "id": "alianza_estrategica_afecto",
+        "nombre": "Alianza estratégica con afecto instrumental",
+        "pinchos_favor": [
+          "negociacion",
+          "doble_agenda",
+          "calculo_frio",
+          "redes_prestigio",
+          "ambicion"
+        ],
+        "pinchos_contra": [
+          "vulnerabilidad_financiera_inmediata"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 22,
+          "cuaja_tipico": 35
+        },
+        "antecedente_tipo": [
+          "matrimonio-alianza / sponsor"
+        ],
+        "nota": "Útil en cortes donde el vínculo es vehículo de capital/estatus."
+      }
+    ],
+    "estilo_psic": [
+      {
+        "id": "estilo_histrionico_exposicion",
+        "nombre": "Estilo exposición / dramatización (NO diagnóstico)",
+        "pinchos_favor": [
+          "extraversion",
+          "fama",
+          "camaleon",
+          "oratoria",
+          "atencion_social",
+          "alta_tension_exposicion"
+        ],
+        "pinchos_contra": [
+          "mbti_introvertido",
+          "humildad"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 15,
+          "cuaja_tipico": 25
+        },
+        "antecedente_tipo": [
+          "Wilde imagen",
+          "figuras de salón"
+        ],
+        "nota": "Cambia la PREGUNTA (¿busca audiencia?), no etiqueta clínica."
+      },
+      {
+        "id": "estilo_obsesivo_control",
+        "nombre": "Estilo control / perfeccionismo operativo (NO diagnóstico)",
+        "pinchos_favor": [
+          "perfeccionismo",
+          "metodicidad",
+          "ambicion",
+          "sed_de_mando",
+          "control"
+        ],
+        "pinchos_contra": [
+          "ambiguedad",
+          "monotonia"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 20,
+          "cuaja_tipico": 35
+        },
+        "antecedente_tipo": [
+          "fundadores que no sueltan CEO"
+        ],
+        "nota": "Ancla a mando operativo, no a 'loco'."
+      },
+      {
+        "id": "estilo_paranoide_vigilancia",
+        "nombre": "Estilo vigilancia / amenaza percibida (NO diagnóstico)",
+        "pinchos_favor": [
+          "persecucion",
+          "doble_agenda",
+          "desconfianza",
+          "alta_tension_exposicion"
+        ],
+        "pinchos_contra": [
+          "confianza",
+          "apertura"
+        ],
+        "ventana_edad": {
+          "ya_se_ve_desde": 25,
+          "cuaja_tipico": 45
+        },
+        "antecedente_tipo": [
+          "cortes de acecho/conspiración"
+        ],
+        "nota": "Solo si el campo trae acecho; no proyectar."
+      }
+    ],
+    "estereotipos_situacionales": [
+      {
+        "id": "estereo_sabio_discapacitado_publico",
+        "nombre": "Sabio/teórico con cuerpo limitado + voz pública",
+        "tipo_vecino": "estereotipo",
+        "pinchos_favor": [
+          "teorizacion",
+          "aprendizaje",
+          "transmision_saber",
+          "obstaculo",
+          "dependencia",
+          "desgaste_fisico",
+          "reconocimiento",
+          "oratoria"
+        ],
+        "pinchos_contra": [
+          "audaz_empresa",
+          "sed_de_mando"
+        ],
+        "contextos_situacionales": [
+          "aula_o_laboratorio_con_asistente",
+          "conferencia_con_mediacion_tecnologica",
+          "fama_por_ideas_no_por_cuerpo_atleta"
+        ],
+        "luces_sugeridas": [
+          "teorizacion",
+          "transmision_saber",
+          "obstaculo",
+          "dependencia",
+          "redes_prestigio",
+          "arte_prestigio"
+        ],
+        "prototipo_padre": "saber_prestigio_creativo_temprano_moderno",
+        "ventana_edad": {
+          "ya_se_ve_desde": 25,
+          "cuaja_tipico": 40
+        },
+        "antecedente_tipo": [
+          "Hawking-like situacional",
+          "teórico mediático"
+        ],
+        "nota": "Estereotipo situacional: escena = mente fuerte / cuerpo frágil / micrófono. Sugiere luces si faltan en board."
+      },
+      {
+        "id": "estereo_fundador_garage_capital",
+        "nombre": "Fundador garage → capital / mando vs inversionistas",
+        "tipo_vecino": "estereotipo",
+        "pinchos_favor": [
+          "audaz_empresa",
+          "ambicion",
+          "empresa",
+          "acumulacion_capital",
+          "autodireccion",
+          "rivalidad_superior_inferior",
+          "obtencion"
+        ],
+        "pinchos_contra": [
+          "arte_prestigio",
+          "6_desastre"
+        ],
+        "contextos_situacionales": [
+          "taller_o_garage_inicial",
+          "rondas_capital_vs_control",
+          "producto_tecnico_como_identidad"
+        ],
+        "luces_sugeridas": [
+          "audaz_empresa",
+          "rivalidad_superior_inferior",
+          "acumulacion_capital",
+          "autodireccion",
+          "empresa"
+        ],
+        "prototipo_padre": "fundador_tecnico_control_vs_capital",
+        "ventana_edad": {
+          "ya_se_ve_desde": 22,
+          "cuaja_tipico": 32
+        },
+        "antecedente_tipo": [
+          "serial founder situacional"
+        ],
+        "nota": "Estereotipo: la escena del capital/control, no solo el tipo 'fundador'."
+      },
+      {
+        "id": "estereo_dandy_salon_escandalo",
+        "nombre": "Dandy de salón / provocación moral pública",
+        "tipo_vecino": "estereotipo",
+        "pinchos_favor": [
+          "escritores_creativos",
+          "arte_prestigio",
+          "trickster",
+          "camaleon",
+          "fama",
+          "oratoria",
+          "extraversion",
+          "atencion_social"
+        ],
+        "pinchos_contra": [
+          "audaz_empresa",
+          "metodicidad"
+        ],
+        "contextos_situacionales": [
+          "salon_literario",
+          "prensa_escandalo",
+          "choque_con_moral_dominante"
+        ],
+        "luces_sugeridas": [
+          "arte_prestigio",
+          "trickster",
+          "camaleon",
+          "fama",
+          "oratoria",
+          "alta_tension_exposicion"
+        ],
+        "prototipo_padre": "intelectual_camaleon_provocacion",
+        "ventana_edad": {
+          "ya_se_ve_desde": 16,
+          "cuaja_tipico": 28
+        },
+        "antecedente_tipo": [
+          "Wilde-salon situacional"
+        ],
+        "nota": "Estereotipo de escena social; si prende, pide luces de exposición/prestigio."
+      },
+      {
+        "id": "estereo_heroe_herido_pruebas",
+        "nombre": "Héroe herido bajo pruebas / obstáculo corporal",
+        "tipo_vecino": "estereotipo",
+        "pinchos_favor": [
+          "obstaculo",
+          "pruebas",
+          "dependencia",
+          "desgaste_fisico",
+          "supervivencia",
+          "presion"
+        ],
+        "pinchos_contra": [
+          "fama",
+          "camaleon"
+        ],
+        "contextos_situacionales": [
+          "enfermedad_o_herida_continua",
+          "dependencia_de_otros_para_acto_diario",
+          "prueba_que_no_termina"
+        ],
+        "luces_sugeridas": [
+          "obstaculo",
+          "dependencia",
+          "desgaste_fisico",
+          "pruebas",
+          "presion"
+        ],
+        "prototipo_padre": null,
+        "ventana_edad": {
+          "ya_se_ve_desde": 20,
+          "cuaja_tipico": 40
+        },
+        "antecedente_tipo": [
+          "arco monomito-herida"
+        ],
+        "nota": "Situacional de A; rival típico de lecturas solo-P o solo-fama."
+      },
+      {
+        "id": "estereo_amante_triangulo_salon",
+        "nombre": "Triángulo deseante en escena social",
+        "tipo_vecino": "estereotipo",
+        "pinchos_favor": [
+          "rivalidad",
+          "celos",
+          "ambicion",
+          "estatus_social",
+          "doble_agenda",
+          "fama"
+        ],
+        "pinchos_contra": [
+          "metodicidad",
+          "autonomia"
+        ],
+        "contextos_situacionales": [
+          "fiesta_o_salon_con_miradas",
+          "tercero_visible",
+          "estatus_como_moneda_del_deseo"
+        ],
+        "luces_sugeridas": [
+          "rivalidad",
+          "celos",
+          "doble_agenda",
+          "estatus_social",
+          "atencion_social"
+        ],
+        "prototipo_padre": "triangulo_rivalidad_deseante",
+        "ventana_edad": {
+          "ya_se_ve_desde": 16,
+          "cuaja_tipico": 25
+        },
+        "antecedente_tipo": [
+          "vínculo competitivo situacional"
+        ],
+        "nota": "Estereotipo amoroso-situacional; solo si el campo prende vínculo."
+      }
+    ]
+  },
+  "ejemplos_periodicidad": [
+    {
+      "tipo": "Alejandro",
+      "idea": "estructura ya legible ~15–16 (virtuoso temprano de mando)"
+    },
+    {
+      "tipo": "Cesar",
+      "idea": "misma familia de mando puede cuajar mucho más tarde (arranque/cuaje tardío)"
+    },
+    {
+      "tipo": "virtuoso_vs_tardio",
+      "idea": "edad resalta en la cola del perfil; no es requisito del match"
+    },
+    {
+      "uso": "early_signal es opcional; sin edades = solo score de pinchos"
+    }
+  ],
+  "edad_regla": {
+    "forzosa": false,
+    "uso": "cola / periodicidad opcional",
+    "polos": [
+      "virtuoso temprano: ya se ve en niñez/adolescencia",
+      "arranque tardío: la trayectoria cuaja tarde; igual pueden asomar señales flojas antes"
+    ],
+    "oficio": "Si no hay edad en el corpus, el plugin sigue solo con pinchos; no inventar edades ni forzar 'ya_se_ve'."
+  },
+  "distincion_vecinos": {
+    "prototipo": "molde tipológico grueso (familias historica/vinculo/estilo)",
+    "estereotipo": "molde + contexto situacional; más interrelación semántica situacional; alimenta luces_faltantes"
+  }
+}

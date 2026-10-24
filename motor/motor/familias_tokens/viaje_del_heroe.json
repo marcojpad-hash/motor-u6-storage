@@ -1,0 +1,65 @@
+{
+ "id": "viaje_del_heroe",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "llamado_a_la_aventura": 0.9,
+  "encuentro_con_el_mentor": 0.85,
+  "cruce_del_primer_umbral": 0.88,
+  "prueba_suprema_calvario": 0.95,
+  "recompensa_toma_del_elixir": 0.82,
+  "camino_de_regreso_acelerado": 0.78,
+  "resurreccion_transformacion_final": 0.92,
+  "ruptura_del_statu_quo": 0.7
+ },
+ "tokens_contra": {
+  "rechazo_del_llamado_inicial": -0.85,
+  "resistencia_al_cambio_interno": -0.78,
+  "aliados_y_soporte_operativo": -0.72,
+  "retorno_a_la_zona_confort": -0.8,
+  "guardia_del_umbral_bloqueo": -0.84,
+  "inercia_del_entorno_ordinario": -0.65,
+  "anclaje_institucional_fijo": -0.68
+ },
+ "senales": {
+  "llamado_a_la_aventura": "Crisis o desequilibrio externo que exige abandonar el entorno habitual.",
+  "encuentro_con_el_mentor": "Asesoria, herramientas o validacion de una figura experimentada.",
+  "cruce_del_primer_umbral": "Abandono explicito de la zona segura hacia territorio desconocido.",
+  "prueba_suprema_calvario": "Punto de maxima vulnerabilidad frente a la mayor amenaza.",
+  "recompensa_toma_del_elixir": "Adquisicion de ventaja, conocimiento o recurso tras la prueba.",
+  "camino_de_regreso_acelerado": "Urgencia externa que fuerza el retorno con el logro.",
+  "resurreccion_transformacion_final": "Prueba final donde demuestra cambio permanente.",
+  "ruptura_del_statu_quo": "Decision voluntaria de alterar rutinas por un objetivo mayor.",
+  "rechazo_del_llamado_inicial": "Miedo, excusas o postergacion ante el cambio.",
+  "resistencia_al_cambio_interno": "Aferramiento a conductas obsoletas.",
+  "aliados_y_soporte_operativo": "Capacidades compartidas que distribuyen el estres.",
+  "retorno_a_la_zona_confort": "Refugio en dinamicas familiares de bajo riesgo.",
+  "guardia_del_umbral_bloqueo": "Friccion inicial de un actor que evalua la resolucion del sujeto.",
+  "inercia_del_entorno_ordinario": "El contexto amortigua los impulsos de cambio.",
+  "anclaje_institucional_fijo": "Reglas o contratos rigidos que penalizan salir de los limites."
+ },
+ "no_canonico_declarado_por_fuente": [
+  "ruptura_del_statu_quo",
+  "anclaje_institucional_fijo"
+ ],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [],
+  "log": [],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "402bfc1a2c18b372"
+}

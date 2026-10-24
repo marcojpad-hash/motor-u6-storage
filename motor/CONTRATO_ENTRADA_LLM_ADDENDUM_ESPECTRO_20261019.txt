@@ -1,0 +1,23 @@
+ADDENDUM AL CONTRATO DE ENTRADA — capa lateral espectro (2026-10-19)
+=====================================================================
+No reemplaza CONTRATO_ENTRADA_LLM.txt; lo amplía para preguntas tipo
+"¿a qué futuro estamos más cerca: distópico, utópico o híbrido?".
+
+Reglas nuevas para el LLM:
+1. Cada evidencia de búsqueda va en caldero_search_bridge.results (o caldero_search_sources)
+   con url, title y snippet LITERAL de la fuente. Nada de resúmenes propios presentados como cita.
+2. Buscar con el MISMO esfuerzo evidencia de los dos polos. Obligatorio incluir al menos una
+   consulta por cada rival utópico/cooperativo:
+     cooperacion_institucional · transicion_ecologica · democratizacion_tecnologica
+   Si no se encuentra nada, se dice: el motor lo reporta como "rivales_sin_evidencia_externa".
+3. No se puede pedir al motor un veredicto distópico/utópico. La posición sale de
+   lateral_espectro/espectro.py (dos canales: P_FULL_244 del motor + puente de evidencia),
+   con probabilidades acotadas a 5–95 % y estado de calibración. "híbrido" es un resultado válido.
+4. Las probabilidades del espectro NO están calibradas mientras no haya desenlaces sellados
+   de casos del mismo dominio. El LLM debe repetir esa etiqueta, no quitarla.
+5. Analogías literarias: solo las del corpus lateral_espectro/corpus_literario/CORPUS_LITERARIO_V1.json,
+   con su cita y su estado de verificación. Una obra/mecanismo marcado NO_VERIFICADO se cita como tal.
+6. Para casos nuevos: correr con
+     python3 lateral_espectro/correr_con_capas.py INPUT.json NOMBRE SALIDA_DIR [Z]
+   (produce el SELLO). El desenlace se contrasta después con correr_estandar.py --t1 y
+   validacion_historica.verificar_sello; nunca se reescribe H ni el espectro sellado.

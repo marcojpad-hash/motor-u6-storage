@@ -1,0 +1,80 @@
+{
+ "id": "geopolitica_trampa_tucidides",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Tucidides (Guerra del Peloponeso); Allison (Destined for War, 2017, disputado); Jervis (dilema de seguridad, 1978); Keohane y Nye (interdependencia compleja)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "tucidides_potencia_ascendente_delta": 0.88,
+  "tucidides_ocupacion_espacio_hegemonico": 0.84,
+  "tucidides_friccion_periferica": 0.79,
+  "tucidides_alarma_defensiva_hegemonica": 0.82,
+  "escalada_retorica_mutua": 0.73,
+  "jervis_dilema_seguridad_escalado": 0.85,
+  "triada_motivacional_miedo": 0.92,
+  "triada_motivacional_honor": 0.85,
+  "triada_motivacional_interes": 0.88,
+  "stasis_fractura_civil_interna": 0.94,
+  "sobreextension_imperial_logistica": 0.9,
+  "dialogo_melos_ley_fuerte": 0.95
+ },
+ "tokens_contra": {
+  "tucidides_interdependencia_compleja_economica": -0.86,
+  "tucidides_disuasion_costo_inaceptable": -0.92,
+  "mecanismo_arbitraje_institucional": -0.78,
+  "convergencia_intereses_macro": -0.7,
+  "moderacion_prudencia_pericles": -0.88,
+  "cohesion_institucional_interna": -0.9,
+  "limite_expansion_logistica": -0.84,
+  "arbitraje_respeto_tratados": -0.82
+ },
+ "senales": {
+  "tucidides_potencia_ascendente_delta": "Un actor emergente registra tasas de crecimiento y acumulación de poder muy superiores a las del líder actual.",
+  "tucidides_ocupacion_espacio_hegemonico": "La expansión operativa o comercial del actor emergente invade zonas de influencia históricas de la potencia dominante.",
+  "tucidides_friccion_periferica": "Ocurrencia de micro-conflictos o disputas indirectas entre aliados menores de ambos bloques sin llegar a la guerra abierta.",
+  "tucidides_alarma_defensiva_hegemonica": "La potencia establecida interpreta cualquier movimiento del rival como una amenaza directa a su supervivencia y endurece sus políticas.",
+  "escalada_retorica_mutua": "Discursos oficiales y propaganda oficial que retratan al rival como un peligro existencial, hostil e inherentemente malicioso.",
+  "jervis_dilema_seguridad_escalado": "Acciones estrictamente defensivas de un bando son leídas obligatoriamente como preparativos de ataque por el otro bando.",
+  "tucidides_interdependencia_compleja_economica": "Vínculos comerciales, financieros y cadenas de suministro entrelazadas que hacen que un choque directo sea mutuamente destructivo.",
+  "tucidides_disuasion_costo_inaceptable": "Existencia de armamento o capacidades de represalia masiva que garantizan la aniquilación de ambos si inician el conflicto.",
+  "mecanismo_arbitraje_institucional": "Intervención de organismos internacionales, tratados o diplomacia multilateral formal que congela las hostilidades.",
+  "convergencia_intereses_macro": "Aparición de amenazas globales compartidas que obligan a ambas potencias a cooperar temporalmente dejando de lado su rivalidad.",
+  "triada_motivacional_miedo": "Acciones tomadas de forma urgente por el temor a perder la seguridad o la posición frente a un competidor.",
+  "triada_motivacional_honor": "Negativa a ceder o negociar por cuestiones de prestigio, estatus, orgullo político o deferencia sistémica.",
+  "triada_motivacional_interes": "Búsqueda directa de ventajas materiales, recursos económicos, ventajas geográficas o acumulación de poder tangible.",
+  "stasis_fractura_civil_interna": "Colapso del consenso político doméstico que degenera en polarización extrema, expulsiones internas o ruptura faccional abierta.",
+  "sobreextension_imperial_logistica": "Gasto desmesurado de recursos y fuerzas en expediciones o frentes distantes que debilitan el núcleo de la organización.",
+  "dialogo_melos_ley_fuerte": "Argumentación explícita de que los fuertes hacen lo que pueden y los débiles sufren lo que deben, ignorando la justicia formal.",
+  "moderacion_prudencia_pericles": "Estrategia que prioriza conservar lo que se tiene y evitar riesgos de expansión durante periodos de alta tensión.",
+  "cohesion_institucional_interna": "Capacidad del sistema institucional para resolver disputas domésticas sin romper el orden constitucional establecido.",
+  "limite_expansion_logistica": "Reconocimiento y freno voluntario de las líneas operativas antes de alcanzar el punto de saturación de recursos.",
+  "arbitraje_respeto_tratados": "Apelación y cumplimiento estricto de los acuerdos bilaterales de paz previos para resolver fricciones secundarias."
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "POCOS_TOKENS(<5 por lado)",
+   "SIN_SENAL:tucidides_ocupacion_espacio_hegemonico"
+  ],
+  "log": [
+   "acoplamientos con numeros removidos (dynamic_couplings); quedan NOT_HARDCODED"
+  ],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "c2cb4b0c95ebc5c3",
+ "bloques_fusionados": [
+  "tucidides_bloque_faltante"
+ ]
+}

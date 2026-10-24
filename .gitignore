@@ -1,0 +1,16 @@
+# Nunca subir binarios, vendor ni salidas completas
+**/_vendor_buscador/
+__pycache__/
+*.pyc
+.pytest_cache/
+runs/
+**/runs/
+**/_out/
+evidencia_agnostico/
+evidencia_continuidad_tortugas/
+salida_cal_*/
+_pendiente_subir/
+*.zip
+*.png
+*.b64
+*.gz

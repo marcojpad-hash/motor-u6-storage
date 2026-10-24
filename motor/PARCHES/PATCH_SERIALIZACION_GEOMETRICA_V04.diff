@@ -1,0 +1,14 @@
+--- a/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py
++++ b/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py
+@@ -842,6 +842,11 @@
+                 "C_top5_ANEXO": _top(bc),
+                 "P_candidatos_0a3": _candidatos(bp),
+                 "X_dim": int(xt.size),
++                # Geometry fix V0.4: serialize the EXACT boards used to build xt/R732.
++                # Do not regenerate them downstream with fresh Monte Carlo calls.
++                "P_FULL_244": {n: float(bp[n]) for n in names_ref},
++                "A_FULL_244": {n: float(ba[n]) for n in names_ref},
++                "C_FULL_244": {n: float(bc[n]) for n in names_ref},
+             }
+         )
+ 

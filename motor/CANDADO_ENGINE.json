@@ -1,0 +1,15 @@
+{
+  "pack": "MOTOR_UNICO_20261002_TRABAJO",
+  "engine_que_corre": {
+    "archivo": "motor/Engine_V5_CANONICO_SOLO.py",
+    "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+    "bytes": 30507,
+    "monte_carlo_default": true,
+    "nota": "Archivo fisico de esta copia. El candado anterior nombraba e5d9ab3a 24944, que no esta en este paquete."
+  },
+  "engine_nombrado_en_nota_vieja": {
+    "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+    "bytes": 24944,
+    "presente": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "patch": "PATCH19_REPARACION_BUSQUEDA",
+  "case_id": "GIORDANO_BRUNO_V15_3_PATCH09_20261010",
+  "run_output": "results/RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO.json",
+  "run_receipt": "results/RESULT_GIORDANO_BRUNO_PATCH19_COMPACTO_RECIBO_EJECUCION.json",
+  "execution_status": "COMPLETED",
+  "external_search": "registered connected-tool bridge reused; no new live web search by Python runner",
+  "bridge_sources": 3,
+  "pre_h_tokens": 70,
+  "identity_filter": {
+    "n_fuentes": 3,
+    "conservadas": [
+      "https://www.sciencedirect.com/science/article/abs/pii/S0039368111001142",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3778877/",
+      "https://journals.sagepub.com/doi/10.1177/007327530404200201"
+    ],
+    "descartadas": [],
+    "caldero_self_match_descartadas": 0,
+    "can_decide_H": false
+  },
+  "H1": "arquetipo_el_sabio",
+  "H2": "kwml_03_mago",
+  "H1_score": 58.78,
+  "H2_score": 55.03,
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "pattern_count": 244,
+  "nulls_result": 0,
+  "nonfinite_result": 0,
+  "missing_values_count": 474,
+  "missing_values_by_status": {
+    "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO": 98,
+    "MEDIDA_O_ESTADO_NO_EMITIDO": 254,
+    "SIN_MOTIVO_REGISTRADO": 19,
+    "EMITIDA_EN_CIERRE_RAIZ": 2,
+    "CAMPO_OPCIONAL_NO_EMITIDO": 24,
+    "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR": 66,
+    "NO_DETERMINADO_POR_ESTE_SENSOR": 3,
+    "MARCADOR_NULL_NO_INFORMADO": 2,
+    "LINEA_NO_LOCALIZADA": 6
+  },
+  "missing_values_note": "These are actual unavailable source measurements/metadata, not JSON nulls. No zero or invented value was substituted.",
+  "full_test_suite": "41 passed, 1 pre-existing warning",
+  "compact_regression_suite": "4 passed",
+  "source_hashes": {
+    "motor": "7864ad0a2cc046971f29b65900dfaaa5004b0e444c22a2f07ad64fd0e5634947",
+    "laterales": "5f79012b1aee6aa1702a59029b423a96a9d182f43e67574a53fb77f2155377c2",
+    "caldero": "69be70279c1da5ff2896045b3cb172f096eff45a49c65dfb28890ec895605cdc",
+    "output": "c19fa3a512459daa2d1f721e83a655fd6688555773aefe1e0ce2497688e21012",
+    "receipt": "479d1fca13c90b6124d9d338e6185a9cd46d8a3422695341077f7244398d67f3"
+  }
+}

@@ -1,0 +1,22 @@
+ESTÁNDAR — una subida, un comando
+=================================
+python3 correr_estandar.py cuts.json NOMBRE
+python3 correr_estandar.py RESULT.json --t1 futuro.json
+
+El JSON de entrada lo arma un LLM (CONTRATO_ENTRADA_LLM.txt):
+cortes + búsqueda de arquetipos/capa 2 + luces para StinkBox.
+Familias laterales ON (backup de arranque, no afinadas).
+Monte Carlo ON.
+
+Input:
+  [{"id":"C1","P":[["token",0.72]],"A":[["token",0.70]],"C":[["token",0.68]]}]
+o {case_id, question, z90_date, cuts:[...]}
+Pesos 0.60-0.84. Tokens del 244.
+
+Engine que CORRE: motor/Engine_V5_CANONICO_SOLO.py
+  30507 B  sha 665c39a2861e5877…  Monte Carlo ON
+Identidad: CANDADO_ENGINE.json (manda sobre MANIFEST histórico).
+El e5d9ab3a 30507 no está en el pack. No se usa.
+
+NO uses scripts/orquestador_unico.py en un modelo frío: apunta a /workspace ajeno.
+scripts/correr_todo.sh es batería de 7 casos, no el tubo.

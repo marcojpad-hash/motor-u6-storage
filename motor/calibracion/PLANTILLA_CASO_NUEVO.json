@@ -1,0 +1,17 @@
+{
+  "case_id": "CASO_NUEVO_AAAAMMDD_01",
+  "question": "Pregunta del caso en una frase (qué se quiere anticipar)",
+  "freeze": "AAAA-MM-DD (fecha de congelamiento: nada posterior entra a los cortes)",
+  "random_seed": 0,
+  "cuts": [
+    {"id": "C1", "date": "AAAA-MM-DD",
+     "P": [["token_proposito_1", 0.70], ["token_proposito_2", 0.60]],
+     "A": [["token_accion_1", 0.65], ["token_accion_2", 0.55]],
+     "C": [["token_contexto_1", 0.60], ["token_contexto_2", 0.50]]},
+    {"id": "C2", "date": "AAAA-MM-DD",
+     "P": [["token_proposito_1", 0.75]],
+     "A": [["token_accion_1", 0.60]],
+     "C": [["token_contexto_1", 0.55]]}
+  ],
+  "source_notes": "fuentes de cada corte (archivo/URL/fecha); sin datos posteriores al freeze"
+}

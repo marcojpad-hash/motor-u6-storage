@@ -1,0 +1,206 @@
+{
+  "verifier_version": "CONSISTENCY_ADVERSARIAL_V0.1",
+  "role": "control_only",
+  "feeds_predictor": false,
+  "feeds_H": false,
+  "rules": [
+    {
+      "id": "LATENCIA_NO_STOP",
+      "text": "LATENCIA es estado de información no resuelta; no detiene la exploración del input congelado."
+    },
+    {
+      "id": "TORTUGA_NO_CAMBIA_FAMILIA",
+      "text": "Borrosidad activa remesura; no cambia familia por sí misma."
+    },
+    {
+      "id": "TIE_NO_WINNER",
+      "text": "Margen exacto 0.0 no puede producir H1/H2 por desempate."
+    },
+    {
+      "id": "RESOLUTION_BEFORE_CLOSE",
+      "text": "El cierre sólo puede ocurrir después de agotar la resolución disponible del input."
+    },
+    {
+      "id": "LATERAL_NO_H",
+      "text": "Caldero/interrelación aportan evidencia lateral; no escriben H1/H2."
+    },
+    {
+      "id": "FREEZE_NO_FUTURE",
+      "text": "La resolución prospectiva usa únicamente información <= FREEZE."
+    },
+    {
+      "id": "CANON_IMMUTABLE",
+      "text": "Engine V5 y catálogo 244 no se modifican."
+    },
+    {
+      "id": "CALDERO_PERSIST_CROSS_CASE",
+      "text": "Vecinos pueden persistir transversalmente entre casos sin convertirse automáticamente en canon/H."
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "TIE_EXACT_0",
+      "observation": {
+        "top": 8.0,
+        "second": 8.0,
+        "new_signal": true,
+        "resolution_exhausted": true,
+        "repeated": true
+      },
+      "expected_state": "LATENCIA_INFORMACIONAL",
+      "rule": "TIE_NO_WINNER"
+    },
+    {
+      "id": "MISSING_DATA_BUT_INPUT_PRESENT",
+      "observation": {
+        "input_present": true,
+        "extraction_complete": false,
+        "new_signal": true,
+        "resolution_exhausted": false
+      },
+      "expected_state": "RESOLVER_INPUT",
+      "rule": "LATENCIA_NO_STOP"
+    },
+    {
+      "id": "REPEATED_WITHOUT_NEW_SIGNAL",
+      "observation": {
+        "repeated": true,
+        "margin": 1.5,
+        "new_signal": false,
+        "resolution_exhausted": true
+      },
+      "expected_state": "LATENCIA_INFORMACIONAL",
+      "rule": "RESOLUTION_BEFORE_CLOSE"
+    },
+    {
+      "id": "NEW_SIGNAL_WITHOUT_RESOLUTION",
+      "observation": {
+        "repeated": true,
+        "margin": 1.5,
+        "new_signal": true,
+        "resolution_exhausted": false
+      },
+      "expected_state": "RESOLVER_INPUT",
+      "rule": "RESOLUTION_BEFORE_CLOSE"
+    },
+    {
+      "id": "LATERAL_TRIES_TO_WRITE_H",
+      "observation": {
+        "caldero_feeds_H": true,
+        "interrelation_feeds_H": true
+      },
+      "expected_state": "REJECT_LATERAL_H",
+      "rule": "LATERAL_NO_H"
+    },
+    {
+      "id": "FUTURE_DATA_DURING_FREEZE",
+      "observation": {
+        "freeze": "C2",
+        "observed_cut": "C3",
+        "future_accessed": true
+      },
+      "expected_state": "REJECT_FUTURE",
+      "rule": "FREEZE_NO_FUTURE"
+    },
+    {
+      "id": "CANON_MUTATION",
+      "observation": {
+        "engine_hash_changed": true,
+        "patterns_hash_changed": false
+      },
+      "expected_state": "REJECT_CANON_MUTATION",
+      "rule": "CANON_IMMUTABLE"
+    },
+    {
+      "id": "CROSS_CASE_NEIGHBOR",
+      "observation": {
+        "cases": [
+          "A",
+          "B"
+        ],
+        "neighbor": "inquisicion",
+        "promote_to_pattern": false,
+        "write_H": false
+      },
+      "expected_state": "PERSIST_LATERAL",
+      "rule": "CALDERO_PERSIST_CROSS_CASE"
+    }
+  ],
+  "actual_run_observation": {
+    "information_state": {
+      "state": "LATENCIA_INFORMACIONAL",
+      "reason": "resolucion_agotada_sin_separacion",
+      "evidence_sufficient": false,
+      "top_margin": 3.905375,
+      "top_neighbor_support": 1,
+      "latest_dX_norm": 0.0,
+      "new_vector_signal": false,
+      "resolution_exhausted": true,
+      "closure_rule": "cerrar_solo_si_la_informacion_disponible_fue_resuelta_y_hay_separacion; latencia_no_detiene_la_ejecucion",
+      "rule": "LATENCIA = estado informacional, no permiso para dejar de explorar el input congelado"
+    },
+    "predictor_status": "LATENCIA_INFORMACIONAL",
+    "H1_present": false,
+    "H2_present": false,
+    "components": [
+      "geometria",
+      "polti_caldero",
+      "traza_campo_244",
+      "plugin_reporte_3d",
+      "otto_numinoso",
+      "embudo_clinico",
+      "trayectoria_hosteleria",
+      "estabilidad_vectorial",
+      "aquiles_h",
+      "billar_circular_v0_2",
+      "ricci_forman_v0_1",
+      "lateral_metrics_v1_1",
+      "acero_zoomout",
+      "capa2_antecedentes",
+      "plugin_picos_mesetas.py",
+      "plugin_arco_field_snyder_mckee.py",
+      "plugin_sesgo_lectura.py",
+      "plugin_pregunta_detras",
+      "plugin_metodo_rigor",
+      "semiotica_deriva",
+      "plugin_arquetipos_dinamicos",
+      "plugin_guardia_no_cruce.py",
+      "plugin_pregunta_dirigida",
+      "caldero_run.py",
+      "predictor_vecinos_prefijo_v1.py",
+      "plugin_cameo_institucional.py",
+      "cameo_to_703_lateral_v1.py",
+      "sidecar_caldero_busqueda_arquetipos.py",
+      "plugin_circulo_monomito_v2.py",
+      "motor_interrelacion_extensible_v0_1.py",
+      "sujetos_014.py",
+      "plugin_arcos_emocionales_laterales.py",
+      "dynamis_dramatica_sistemica",
+      "pre_h_analogical_search(V0.18)",
+      "stinkbox_transport_v0_2.py",
+      "filtro_relleno_013.py",
+      "stinkbox_to_light_bus_v1",
+      "protocolo_transversal_absorbido",
+      "laterales_unico_v1.py(pre)",
+      "hub:sombrero_blanco_entrada",
+      "hub:negativo_ricci_vs_billar",
+      "hub:familias_tokens_puente",
+      "hub:marco_7783_geometria",
+      "hub:caldero_ii_cuadrantes",
+      "hub:guardian_entrada_autoevidencia",
+      "cameo_to_244_adapter_v1.py",
+      "funciones_souriau",
+      "marcador_limite_geometrico_v0_1.py",
+      "matriz_clases",
+      "marco_7783",
+      "figura_pac",
+      "metacognition_v0_1.py",
+      "compuerta_cierre_latencia_v0_16_4",
+      "proyeccion_longitudinal",
+      "plugin_sombrero_blanco_token.py",
+      "plugin_entrega_luces",
+      "plugin_resolucion_autonoma_consistencia.py"
+    ]
+  },
+  "instruction_to_llm": "Reproduce each fixture independently from the stated rule only. Do not infer a desired H, do not use training priors, do not choose a winner. For each fixture return PASS/FAIL and the exact rule that was violated. Then compare the actual-run observation to the same invariants."
+}

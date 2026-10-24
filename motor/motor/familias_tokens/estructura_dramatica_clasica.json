@@ -1,0 +1,66 @@
+{
+ "id": "estructura_dramatica_clasica",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Aristoteles (Poetica) y Gustav Freytag (Die Technik des Dramas)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "incidente_incitador_quiebre": 0.88,
+  "escalada_complicacion_progresiva": 0.85,
+  "crisis_climax_inevitable": 0.95,
+  "fuerza_frenetica_desenlace": 0.78,
+  "revelacion_reconocimiento_anagnorisis": 0.82,
+  "reversion_fortuna_peripeteia": 0.9,
+  "impulso_fuerza_motriz": 0.72
+ },
+ "tokens_contra": {
+  "retardo_tension_meseta": -0.75,
+  "estabilizacion_exposicion_inicial": -0.85,
+  "resolucion_retorno_equilibrio": -0.92,
+  "catarsis_purgacion_emocional": -0.88,
+  "freno_fuerza_estatica": -0.68,
+  "guardrail_institucional_contencion": -0.7
+ },
+ "senales": {
+  "incidente_incitador_quiebre": "Evento disruptivo externo que destruye la normalidad del sujeto y lo obliga a actuar.",
+  "escalada_complicacion_progresiva": "Acumulacion sucesiva de obstaculos, fricciones o deudas.",
+  "crisis_climax_inevitable": "Punto de maxima tension donde las fuerzas en conflicto colisionan de forma irreversible.",
+  "fuerza_frenetica_desenlace": "Aceleracion abrupta de los acontecimientos despues del climax.",
+  "revelacion_reconocimiento_anagnorisis": "Descubrimiento de una verdad oculta que cambia la perspectiva del actor.",
+  "reversion_fortuna_peripeteia": "Giro radical de las circunstancias de exito a fracaso o viceversa.",
+  "impulso_fuerza_motriz": "Decision deliberada del protagonista que acelera la progresion.",
+  "retardo_tension_meseta": "Pausa o desvio que frena temporalmente el desenlace.",
+  "estabilizacion_exposicion_inicial": "Fase donde se describen reglas y statu quo sin alteracion.",
+  "resolucion_retorno_equilibrio": "Establecimiento de un nuevo orden y cierre del ciclo.",
+  "catarsis_purgacion_emocional": "Liberacion de la tension acumulada, calma o resignacion pos-crisis.",
+  "freno_fuerza_estatica": "Un tercero o factor ambiental contrarresta el impulso y congela el estado actual.",
+  "guardrail_institucional_contencion": "Normas o estructuras rigidas que absorben el conflicto."
+ },
+ "no_canonico_declarado_por_fuente": [
+  "impulso_fuerza_motriz",
+  "freno_fuerza_estatica"
+ ],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [
+   "CONTAGIO_VOCAB:guardrail_institucional_contencion"
+  ],
+  "log": [
+   "renombre: impulso_fuerza_fuerza_motriz -> impulso_fuerza_motriz",
+   "renombre: freno_fuerza_fuerza_estatica -> freno_fuerza_estatica"
+  ],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "16875cccc5c75850"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "dynamis_dramatica_sistemica",
+  "status": "LATERAL_INTEGRATED",
+  "source": "Gemini",
+  "canonical_244": false,
+  "role": "lateral_structural_force_and_loop_lens",
+  "tokens_favor": {
+    "vector_prosecucion_propulsor": 0.86,
+    "bucle_limites_al_exito": 0.83,
+    "bucle_desplazamiento_carga": 0.80,
+    "fuerza_desvio_contagonista": 0.76,
+    "oscilacion_emocional_caotica": 0.72,
+    "atricion_tragedia_comunes": 0.65
+  },
+  "tokens_contra": {
+    "fuerza_evitacion_resistencia": -0.88,
+    "vector_razon_homeostatica": -0.84,
+    "fuerza_guardian_atenuacion": -0.79,
+    "verificacion_esceptica_guardrails": -0.75,
+    "retroalimentacion_balance_sigma": -0.70
+  },
+  "dynamic_couplings": {
+    "arquetipo_icarus_ascenso": "NOT_HARDCODED_PENDING_VALIDATION",
+    "delta_multiplier": "NOT_HARDCODED",
+    "sigma_penalty": "NOT_HARDCODED"
+  },
+  "integration": {
+    "feeds_predictor": true,
+    "feeds_H": true,
+    "can_decide_H": false,
+    "contributes_to_H": true,
+    "contributes_to_apuesta": true,
+    "persistent_via": "stinkbox_vault",
+    "registry": "tokens_laterales/REGISTRO_TOKENS_LATERALES_V0_1.json"
+  }
+}

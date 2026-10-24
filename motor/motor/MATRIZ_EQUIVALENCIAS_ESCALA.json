@@ -1,0 +1,3199 @@
+{
+ "version": "EQUIVALENCIAS_ESCALA_20260927",
+ "can_decide_H": false,
+ "no_toca_canon": true,
+ "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+ "familias": {
+  "arquetipos_sistemicos_senge_faltantes": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/arquetipos_sistemicos_senge_faltantes.json",
+   "sha256_archivo": "7761b4ecc0aba3e9fc324822310a5dd133ccac7b633872c4d6a76269d1d62b94",
+   "fuente_teorica": "Peter Senge (The Fifth Discipline)",
+   "n_favor": 7,
+   "n_contra": 7,
+   "n_senales": 14,
+   "senales_sin_token": []
+  },
+  "ciclo_vida_organizacional_adizes": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/ciclo_vida_organizacional_adizes.json",
+   "sha256_archivo": "7f8481a38523b98a0fed5a331b18f9f2f651e1accd20fdbd142e84c9fd678864",
+   "fuente_teorica": "Ichak Adizes (Corporate Lifecycles)",
+   "n_favor": 11,
+   "n_contra": 11,
+   "n_senales": 22,
+   "senales_sin_token": []
+  },
+  "ciclos_poder_decadencia_macrohistoria": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/ciclos_poder_decadencia_macrohistoria.json",
+   "sha256_archivo": "1e1615a0946dd79c47121e9ba67893ccdda94ec75cdf689e424905c32bcf9d2a",
+   "fuente_teorica": "Ibn Khaldun (Muqaddimah), Toynbee (A Study of History), Turchin (Secular Cycles)",
+   "n_favor": 8,
+   "n_contra": 7,
+   "n_senales": 15,
+   "senales_sin_token": []
+  },
+  "deseo_mimetico_chivo_expiatorio": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/deseo_mimetico_chivo_expiatorio.json",
+   "sha256_archivo": "65bc3b7d83740aa8743ad8676b36d47509d8f3deb171a2c8296672ac24a64bec",
+   "fuente_teorica": "Rene Girard (Mensonge romantique; Le Bouc emissaire)",
+   "n_favor": 8,
+   "n_contra": 7,
+   "n_senales": 15,
+   "senales_sin_token": []
+  },
+  "estructura_dramatica_clasica": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/estructura_dramatica_clasica.json",
+   "sha256_archivo": "fb73c3d2da5160504874a02193e6ce71841f773c7c0f5491334688b19516f0d2",
+   "fuente_teorica": "Aristoteles (Poetica) y Gustav Freytag (Die Technik des Dramas)",
+   "n_favor": 7,
+   "n_contra": 6,
+   "n_senales": 13,
+   "senales_sin_token": []
+  },
+  "etapas_vitales_evolutivas": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/etapas_vitales_evolutivas.json",
+   "sha256_archivo": "defaa4881ce47ffac986c25feb202ff5b58f423a73d3a4bd5a042ef1772b5886",
+   "fuente_teorica": "Erik Erikson (Identity and the Life Cycle), Daniel Levinson (The Seasons of a Man's Life)",
+   "n_favor": 7,
+   "n_contra": 7,
+   "n_senales": 14,
+   "senales_sin_token": []
+  },
+  "geopolitica_trampa_tucidides": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/geopolitica_trampa_tucidides.json",
+   "sha256_archivo": "38a12c52796afc9936ed92bd2a454d256bf28e22a9592db7844bf1679ffba67f",
+   "fuente_teorica": "Tucidides (Guerra del Peloponeso); Allison (Destined for War, 2017, disputado); Jervis (dilema de seguridad, 1978); Keohane y Nye (interdependencia compleja)",
+   "n_favor": 12,
+   "n_contra": 8,
+   "n_senales": 20,
+   "senales_sin_token": []
+  },
+  "kishotenketsu_estructura_giro": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/kishotenketsu_estructura_giro.json",
+   "sha256_archivo": "ac99be9589e5c673664651a7211992361f60ca26ee3fb9104fcfbf74304700a8",
+   "fuente_teorica": "Composicion clasica China/Japon/Corea (qichengzhuanhe / kishotenketsu)",
+   "n_favor": 7,
+   "n_contra": 7,
+   "n_senales": 14,
+   "senales_sin_token": []
+  },
+  "narrativa_vida_mcadams": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/narrativa_vida_mcadams.json",
+   "sha256_archivo": "bb94d0a41c51d79d8d0466e3e8fef1ed0094ac731fc459d988c3f50c9a28384c",
+   "fuente_teorica": "Dan McAdams (The Stories We Live By)",
+   "n_favor": 7,
+   "n_contra": 7,
+   "n_senales": 14,
+   "senales_sin_token": []
+  },
+  "triangulo_dramatico_karpman": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/triangulo_dramatico_karpman.json",
+   "sha256_archivo": "4a98ae64a559a35152a086253f9d1bc09650fda84f72229bb0916eabec159d55",
+   "fuente_teorica": "",
+   "n_favor": 8,
+   "n_contra": 7,
+   "n_senales": 15,
+   "senales_sin_token": []
+  },
+  "viaje_del_heroe": {
+   "archivo": "/workspace/TOKENS_GEMINI_FAMILIAS_20260927/normalizados/viaje_del_heroe.json",
+   "sha256_archivo": "f177b5bb8186a9fb75f5e3108f63197982c223bd55f8f100c5f7042dd1f24b46",
+   "fuente_teorica": "",
+   "n_favor": 8,
+   "n_contra": 7,
+   "n_senales": 15,
+   "senales_sin_token": []
+  }
+ },
+ "n_tokens": 171,
+ "asignacion_por_tipo_de_regla": {
+  "R2_escalada": 11,
+  "R5_erosion": 16,
+  "R1_ascenso": 14,
+  "R6_sobrecrecimiento": 14,
+  "R4_arreglo": 13,
+  "R9_sin_coincidencia": 19,
+  "R5a_fractura": 6,
+  "EXCEPCION": 10,
+  "R8_giro": 10,
+  "R7_umbral": 28,
+  "R3_tercero": 16,
+  "R0_control_kishotenketsu": 14
+ },
+ "reglas": {
+  "dinamicas": {
+   "D1": "ascenso que amenaza al establecido",
+   "D2": "escalada reciproca",
+   "D3": "descarga en un tercero",
+   "D4": "arreglo rapido que rebota",
+   "D5": "erosion de cohesion (incluye fractura interna / stasis / recriminacion)",
+   "D6": "crecer mas de lo que aguanta la estructura (incluye sobreextension / go-go)",
+   "D7": "crisis de umbral",
+   "D8": "giro y reconocimiento",
+   "K0": "control kishotenketsu: avance sin conflicto (senuelo, no es dinamica)",
+   "otra/propia": "token propio de su familia, sin equivalente claro en D1..D8"
+  },
+  "escala_familia": {
+   "estructura_dramatica_clasica": [
+    "micro",
+    "forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista"
+   ],
+   "viaje_del_heroe": [
+    "micro",
+    "forma narrativa; protagonista individual"
+   ],
+   "triangulo_dramatico_karpman": [
+    "micro",
+    "relaciones interpersonales"
+   ],
+   "deseo_mimetico_chivo_expiatorio": [
+    "meso",
+    "dinamica de grupo/comunidad"
+   ],
+   "arquetipos_sistemicos_senge_faltantes": [
+    "meso",
+    "sistemas organizacionales"
+   ],
+   "ciclos_poder_decadencia_macrohistoria": [
+    "macro",
+    "sociedades/Estados"
+   ],
+   "etapas_vitales_evolutivas": [
+    "micro",
+    "ciclo vital de la persona"
+   ],
+   "narrativa_vida_mcadams": [
+    "micro",
+    "identidad narrativa personal"
+   ],
+   "ciclo_vida_organizacional_adizes": [
+    "meso",
+    "organizaciones"
+   ],
+   "kishotenketsu_estructura_giro": [
+    "micro",
+    "forma narrativa (control)"
+   ],
+   "geopolitica_trampa_tucidides": [
+    "macro",
+    "Estados/potencias"
+   ]
+  },
+  "escala_sube": [
+   [
+    "macro",
+    [
+     "social",
+     "estado",
+     "elite",
+     "hegemonic",
+     "macro",
+     "fiscal",
+     "salario",
+     "imperial",
+     "civil"
+    ]
+   ],
+   [
+    "meso",
+    [
+     "organizacional",
+     "corporativo",
+     "fundador",
+     "comite",
+     "grupo",
+     "equipo",
+     "comunitari",
+     "colectiv",
+     "institucional"
+    ]
+   ]
+  ],
+  "escala_baja_micro": [
+   "interpersonal",
+   "personal",
+   "_ego",
+   "yo_ideal"
+  ],
+  "reglas_dinamica_en_orden": [
+   [
+    "R4_arreglo",
+    "D4",
+    [
+     "soluciones_que_fallan",
+     "corto_plazo",
+     "sintomatic",
+     "juego",
+     "parche",
+     "causa_raiz",
+     "alerta_anticipada",
+     "retraso_percepcion",
+     "insolvencia",
+     "reserva_fiscal",
+     "contrato_relacional",
+     "responsabilidad_adulta",
+     "manipulacion"
+    ]
+   ],
+   [
+    "R3_tercero",
+    "D3",
+    [
+     "chivo",
+     "triangulacion",
+     "tercer_actor",
+     "todos_contra_uno",
+     "acusacion",
+     "unanimidad",
+     "rol_victima",
+     "rol_salvador",
+     "inversion_roles",
+     "amenaza_externa",
+     "inocencia",
+     "acusado",
+     "judicial",
+     "observador_externo",
+     "dispersion_foco",
+     "pluralismo",
+     "catarsis_pacificacion"
+    ]
+   ],
+   [
+    "R5a_fractura",
+    "D5",
+    [
+     "stasis",
+     "recriminacion",
+     "fuga_talento",
+     "cohesion_institucional",
+     "mediacion_institucional",
+     "roles_madurez"
+    ]
+   ],
+   [
+    "R2_escalada",
+    "D2",
+    [
+     "escalada",
+     "escalado",
+     "reciproca",
+     "mutua",
+     "perseguidor",
+     "disuasion",
+     "arbitraje",
+     "friccion"
+    ]
+   ],
+   [
+    "R1_ascenso",
+    "D1",
+    [
+     "ascendente",
+     "hegemonic",
+     "exito_para_el_exitoso",
+     "monopolio",
+     "mimetic",
+     "fundador",
+     "interdependencia",
+     "convergencia_intereses",
+     "diferenciacion_jerarquica",
+     "distancia_insalvable"
+    ]
+   ],
+   [
+    "R6_sobrecrecimiento",
+    "D6",
+    [
+     "subinversion",
+     "generatividad",
+     "sobreproduccion",
+     "salario_real",
+     "intra_elite",
+     "capacidad_futura",
+     "acceso_elites",
+     "redistribucion",
+     "legado",
+     "sobreextension",
+     "gogo",
+     "expansion",
+     "pericles",
+     "presupuestario",
+     "priorizacion"
+    ]
+   ],
+   [
+    "R5_erosion",
+    "D5",
+    [
+     "erosion",
+     "asabiyya",
+     "aristocracia",
+     "burocra",
+     "envejecimiento",
+     "muerte_organizacional",
+     "minorias_dominantes",
+     "indiferenciacion",
+     "soporte",
+     "comunion",
+     "pacto_cohesion",
+     "estandar_calidad",
+     "plenitud",
+     "auditoria"
+    ]
+   ],
+   [
+    "R7_umbral",
+    "D7",
+    [
+     "crisis_identidad",
+     "mitad_vida",
+     "revaluacion",
+     "desilusion",
+     "finitud",
+     "discrepancia",
+     "llamado",
+     "umbral",
+     "statu_quo",
+     "incidente_incitador",
+     "reto_ambiental",
+     "prueba_suprema",
+     "crisis_climax",
+     "resistencia_al_cambio",
+     "zona_confort",
+     "inercia",
+     "anclaje",
+     "consolidacion_identidad",
+     "estabilizacion",
+     "rutina",
+     "adaptacion_heuristica",
+     "meseta",
+     "freno_fuerza",
+     "contencion"
+    ]
+   ],
+   [
+    "R8_giro",
+    "D8",
+    [
+     "anagnorisis",
+     "peripeteia",
+     "resurreccion",
+     "redencion",
+     "punto_inflexion",
+     "rejuvenecimiento",
+     "respuesta_creativa",
+     "reescritura",
+     "reframing",
+     "aceptacion_integridad"
+    ]
+   ]
+  ],
+  "excepciones_dinamica": {
+   "profesionalizacion_sistemas_delegacion": [
+    "D1",
+    "Adizes: la profesionalizacion resuelve el choque fundador-gerentes (frena D1)"
+   ],
+   "comite_gobierno_corporativo_limite": [
+    "D1",
+    "senal Gemini: 'consejo que frena al fundador'"
+   ],
+   "recompensa_toma_del_elixir": [
+    "otra/propia",
+    "recompensa no es reconocimiento; no se fuerza a D8"
+   ],
+   "comunicacion_asertiva_directa": [
+    "D3",
+    "hablar directo es lo contrario de triangular (frena D3)"
+   ],
+   "mediacion_formal_institucional": [
+    "D2",
+    "la mediacion formal desescala (frena D2)"
+   ],
+   "triada_motivacional_miedo": [
+    "D1",
+    "Tucidides: el miedo del establecido ante el que asciende es el nucleo de la trampa"
+   ],
+   "triada_motivacional_honor": [
+    "D2",
+    "negarse a ceder por prestigio alimenta la escalada"
+   ],
+   "moderacion_prudencia_pericles": [
+    "D6",
+    "senal: evitar riesgos de expansion (frena D6)"
+   ],
+   "limite_expansion_logistica": [
+    "D6",
+    "freno voluntario antes de saturar recursos (frena D6)"
+   ],
+   "secuencia_contaminacion_degradacion": [
+    "otra/propia",
+    "contaminacion narrativa no equivale a erosion de cohesion; no se fuerza"
+   ]
+  },
+  "excepciones_polaridad": {
+   "asabiyya_cohesion_social_alta": [
+    "frena",
+    "cohesion alta es lo contrario de la erosion D5"
+   ],
+   "etapa_plenitud_equilibrio_optimo": [
+    "frena",
+    "plenitud = estructura sana (frena D5)"
+   ],
+   "comunion_conexion_pertenencia": [
+    "frena",
+    "pertenencia frena la erosion D5"
+   ],
+   "amenaza_externa_unificadora_cohesion": [
+    "empuja",
+    "es un tercero que unifica: empuja D3 aunque frene la decadencia"
+   ],
+   "respuesta_creativa_minorias_lideres": [
+    "empuja",
+    "respuesta creativa = giro D8"
+   ],
+   "rejuvenecimiento_estrategia_innovacion": [
+    "empuja",
+    "rejuvenecimiento = giro D8 (Mj)"
+   ],
+   "reescritura_coherente_identidad": [
+    "empuja",
+    "reescribir la identidad es reconocimiento D8"
+   ],
+   "intervencion_terapeutica_reframing": [
+    "empuja",
+    "reencuadre es giro D8"
+   ],
+   "aceptacion_integridad_ego": [
+    "empuja",
+    "integridad = reconocimiento final D8"
+   ]
+  },
+  "orden": "R0 (kishotenketsu->K0) > EXCEPCION > primera regla R* que coincide > R9 otra/propia; escala: E3 > E2 > E1; polaridad: P2 > P1"
+ },
+ "tokens": [
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "escalada_reaccion_reciproca",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "cada defensa de uno es amenaza para el otro",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'escalada')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "erosion_metas_degradacion",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "se bajan las metas para justificar el rendimiento",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'erosion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "exito_para_el_exitoso_monopolio",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "recursos al que ya va ganando",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'exito_para_el_exitoso')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "crecimiento_con_subinversion_cuello",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "demanda satura porque se posterga invertir",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'subinversion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "soluciones_que_fallan_rebote",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "parche alivia hoy y vuelve peor manana",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'soluciones_que_fallan')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "presion_corto_plazo_sintomatica",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "exigencia inmediata que ignora fallas de fondo",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'corto_plazo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "retraso_percepcion_inversion",
+   "lado": "favor",
+   "peso_familia": 0.75,
+   "senal": "tiempo muerto entre invertir y ver efecto",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'retraso_percepcion')",
+   "dinamica_secundaria_info": "D6",
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "acuerdo_cooperacion_mutua_limite",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "pacto entre rivales para frenar la escalada",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'mutua')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "guardrail_estandar_calidad_fijo",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "politicas que impiden bajar metas",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'estandar_calidad')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "equilibrio_recursos_antimonopolio",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "se redistribuye del nodo hipertrofiado",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'monopolio')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "inversion_proactiva_capacidad_futura",
+   "lado": "contra",
+   "peso_familia": -0.89,
+   "senal": "se invierte antes de saturar",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'capacidad_futura')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "analisis_causa_raiz_estructural",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "se corrige el diseno en vez de parchar",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'causa_raiz')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "penalizacion_solucion_parche",
+   "lado": "contra",
+   "peso_familia": -0.72,
+   "senal": "se castigan los paliativos",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'parche')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "arquetipos_sistemicos_senge_faltantes",
+   "token": "indicador_alerta_anticipada_retardo",
+   "lado": "contra",
+   "peso_familia": -0.79,
+   "senal": "metricas que anticipan el retraso",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'alerta_anticipada')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: sistemas organizacionales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_arranque_infancia_esfuerzo",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "solo ventas, caja vulnerable, sin procesos",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_adolescencia_conflicto_fundador",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "choque fundador contra gerentes nuevos",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'fundador')",
+   "dinamica_secundaria_info": "D7",
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_plenitud_equilibrio_optimo",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "creatividad y control en equilibrio",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'plenitud')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P2 EXCEPCION: plenitud = estructura sana (frena D5)"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_aristocracia_formalismo_burocracia",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "foco en formas mientras cae la innovacion",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'aristocracia')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_muerte_organizacional_cese",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "paralisis, deudas y liquidacion",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'muerte_organizacional')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "trampa_del_fundador_centralizacion",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "el creador no delega",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'fundador')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "envejecimiento_prematuro_falta_vision",
+   "lado": "favor",
+   "peso_familia": 0.8,
+   "senal": "rigidez temprana por miedo",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'envejecimiento')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_gogo_crecimiento_acelerado",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "La organización ve oportunidades en todas partes, se expande a gran velocidad y diluye sus prioridades operativas.",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'gogo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "trampa_gogo_expansion_desenfocada",
+   "lado": "favor",
+   "peso_familia": 0.86,
+   "senal": "Incursión simultánea en múltiples proyectos nuevos sin estructura operativa real para soportar la ejecución.",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'gogo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "etapa_recriminacion_paralisis_politica",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "Búsqueda obsesiva de culpables por los errores de la adolescencia corporativa, deteniendo la operación por conflictos internos.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'recriminacion')",
+   "dinamica_secundaria_info": "D3",
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "fuga_talento_etapa_recriminacion",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "Salida masiva de personal operativo valioso y directivos técnicos cansados de las disputas de poder intestinas.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'recriminacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "profesionalizacion_sistemas_delegacion",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "manuales, metricas y delegacion real",
+   "dinamica": "D1",
+   "regla_dinamica": "EXCEPCION: Adizes: la profesionalizacion resuelve el choque fundador-gerentes (frena D1)",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "inyeccion_capital_oxigeno_operativo",
+   "lado": "contra",
+   "peso_familia": -0.82,
+   "senal": "fondos frescos salvan la caja",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "rejuvenecimiento_estrategia_innovacion",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "lineas nuevas rompen la rigidez",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'rejuvenecimiento')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: rejuvenecimiento = giro D8 (Mj)"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "guardrail_auditoria_procesos_eficiencia",
+   "lado": "contra",
+   "peso_familia": -0.78,
+   "senal": "revision de costos",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'auditoria')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "reestructuracion_activos_ajuste_duro",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "cierre de divisiones y recorte",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "comite_gobierno_corporativo_limite",
+   "lado": "contra",
+   "peso_familia": -0.86,
+   "senal": "consejo que frena al fundador",
+   "dinamica": "D1",
+   "regla_dinamica": "EXCEPCION: senal Gemini: 'consejo que frena al fundador'",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "separacion_fundador_gestion_madurez",
+   "lado": "contra",
+   "peso_familia": -0.91,
+   "senal": "retiro ordenado del fundador",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'fundador')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "freno_control_presupuestario_gogo",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "Implementación de límites estrictos al gasto y autorizaciones centralizadas que ralentizan los caprichos de expansión.",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'gogo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "enfoque_priorizacion_lineas_negocio",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "Decisión estratégica de concentrar los recursos únicamente en el núcleo del negocio que genera rentabilidad real.",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'priorizacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "mediacion_institucional_resolucion_conflictos",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "Intervención de un comité neutral que procesa las disputas internas mediante reglas y auditorías de hechos objetivos.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'mediacion_institucional')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclo_vida_organizacional_adizes",
+   "token": "restructuracion_objetiva_roles_madurez",
+   "lado": "contra",
+   "peso_familia": -0.89,
+   "senal": "Asignación formal de responsabilidades basada en competencias y manuales de organización, eliminando batallas de ego.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'roles_madurez')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: organizaciones",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "asabiyya_cohesion_social_alta",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "pertenencia y confianza mutua fuertes",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'asabiyya')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P2 EXCEPCION: cohesion alta es lo contrario de la erosion D5"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "reto_ambiental_estres_externo",
+   "lado": "favor",
+   "peso_familia": 0.8,
+   "senal": "desafio externo que pone a prueba la estructura",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'reto_ambiental')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "sobreproduccion_elites_competencia",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "exceso de aspirantes para pocos puestos",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'sobreproduccion')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "estancamiento_salario_real_atricion",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "la base pierde poder adquisitivo",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'salario_real')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "degradacion_asabiyya_individualismo",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "se rompen lazos, prima lo personal",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'asabiyya')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "minorias_dominantes_impositivas",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "la elite manda por coercion, no por ejemplo",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'minorias_dominantes')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "insolvencia_fiscal_estado_quiebra",
+   "lado": "favor",
+   "peso_familia": 0.86,
+   "senal": "el centro gasta mas de lo que recauda",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'insolvencia')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "polarizacion_intra_elite_conflicto",
+   "lado": "favor",
+   "peso_familia": 0.94,
+   "senal": "se rompen consensos entre facciones altas",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'intra_elite')",
+   "dinamica_secundaria_info": "D2",
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "respuesta_creativa_minorias_lideres",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "la elite inventa soluciones nuevas",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'respuesta_creativa')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: respuesta creativa = giro D8"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "pacto_cohesion_reconfiguracion_institucional",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "acuerdo de refundacion",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'pacto_cohesion')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "cierre_regulacion_acceso_elites",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "se cierra el acceso al estrato dominante",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'acceso_elites')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "redistribucion_riqueza_mitigacion",
+   "lado": "contra",
+   "peso_familia": -0.86,
+   "senal": "reformas que alivian a la base",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'redistribucion')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "guardrail_reserva_fiscal_contingencia",
+   "lado": "contra",
+   "peso_familia": -0.78,
+   "senal": "fondos de reserva",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'reserva_fiscal')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "amenaza_externa_unificadora_cohesion",
+   "lado": "contra",
+   "peso_familia": -0.82,
+   "senal": "rival externo obliga a reconciliarse",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'amenaza_externa')",
+   "dinamica_secundaria_info": "D5",
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: es un tercero que unifica: empuja D3 aunque frene la decadencia"
+  },
+  {
+   "familia": "ciclos_poder_decadencia_macrohistoria",
+   "token": "reforma_burocratica_estabilizadora",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "reorganizacion que recorta gasto",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'burocra')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: sociedades/Estados",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "deseo_mimetico_mediado",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "copia metas u objetos de deseo de un modelo",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'mimetic')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "rivalidad_mimetica_simetrica",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "dos actores obsesionados con el mismo objetivo, obstaculo mutuo",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'mimetic')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "indiferenciacion_crisis_social",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "se pierden jerarquias y roles, disputa por lo mismo",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'indiferenciacion')",
+   "dinamica_secundaria_info": "D3",
+   "escala": "macro",
+   "regla_escala": "E2 sube a macro (clave 'social')",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "polarizacion_todos_contra_uno",
+   "lado": "favor",
+   "peso_familia": 0.94,
+   "senal": "la frustracion dispersa converge en un individuo o minoria",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'todos_contra_uno')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "acusacion_estereotipada_arbitraria",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "se culpa al elegido de males absurdos o sistemicos",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'acusacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "sacrificio_chivo_expiatorio",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "expulsion, despido o castigo del elegido para restaurar el orden",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'chivo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "unanimidad_coercitiva_colectiva",
+   "lado": "favor",
+   "peso_familia": 0.89,
+   "senal": "consenso ciego del grupo contra el culpable designado",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'unanimidad')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "catarsis_pacificacion_comunitaria",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "cesa la disputa interna tras excluir al elegido",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'catarsis_pacificacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "mediacion_distancia_insalvable",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "modelo tan lejano que no compiten por lo mismo",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'distancia_insalvable')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "diferenciacion_jerarquica_institucional",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "roles fijos impiden que los actores se igualen",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'diferenciacion_jerarquica')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "ley_mecanismo_judicial_imparcial",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "instancia independiente evalua pruebas, no presion",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'judicial')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "defensa_racional_acusado",
+   "lado": "contra",
+   "peso_familia": -0.8,
+   "senal": "alguien exige debido proceso",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'acusado')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "revelacion_inocencia_victima",
+   "lado": "contra",
+   "peso_familia": -0.95,
+   "senal": "se demuestra la inocencia del acusado",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'inocencia')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "pluralismo_fraccionamiento_opiniones",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "grupo dividido impide unanimidad",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'pluralismo')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "deseo_mimetico_chivo_expiatorio",
+   "token": "dispersion_foco_atencion",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "problema externo urgente diluye la fijacion",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'dispersion_foco')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E1 escala de la familia: dinamica de grupo/comunidad",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "incidente_incitador_quiebre",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "Evento disruptivo externo que destruye la normalidad del sujeto y lo obliga a actuar.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'incidente_incitador')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "escalada_complicacion_progresiva",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Acumulacion sucesiva de obstaculos, fricciones o deudas.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'escalada')",
+   "dinamica_secundaria_info": "D7",
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "crisis_climax_inevitable",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "Punto de maxima tension donde las fuerzas en conflicto colisionan de forma irreversible.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'crisis_climax')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "fuerza_frenetica_desenlace",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "Aceleracion abrupta de los acontecimientos despues del climax.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "revelacion_reconocimiento_anagnorisis",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "Descubrimiento de una verdad oculta que cambia la perspectiva del actor.",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'anagnorisis')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "reversion_fortuna_peripeteia",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "Giro radical de las circunstancias de exito a fracaso o viceversa.",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'peripeteia')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "impulso_fuerza_motriz",
+   "lado": "favor",
+   "peso_familia": 0.72,
+   "senal": "Decision deliberada del protagonista que acelera la progresion.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "retardo_tension_meseta",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "Pausa o desvio que frena temporalmente el desenlace.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'meseta')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "estabilizacion_exposicion_inicial",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "Fase donde se describen reglas y statu quo sin alteracion.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'estabilizacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "resolucion_retorno_equilibrio",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "Establecimiento de un nuevo orden y cierre del ciclo.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "catarsis_purgacion_emocional",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "Liberacion de la tension acumulada, calma o resignacion pos-crisis.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "freno_fuerza_estatica",
+   "lado": "contra",
+   "peso_familia": -0.68,
+   "senal": "Un tercero o factor ambiental contrarresta el impulso y congela el estado actual.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'freno_fuerza')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa sin escala propia; se fija micro porque describe el arco de un protagonista",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "estructura_dramatica_clasica",
+   "token": "guardrail_institucional_contencion",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "Normas o estructuras rigidas que absorben el conflicto.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'contencion')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E2 sube a meso (clave 'institucional')",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "crisis_identidad_moratoria",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "cuestiona quien es y ensaya roles nuevos",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'crisis_identidad')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "urgencia_generatividad_estancamiento",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "necesidad de dejar obra o guiar a otros",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'generatividad')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "transicion_mitad_vida_quiebre",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "giro drastico al sentir la estructura falsa",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'mitad_vida')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "revaluacion_estructural_vida",
+   "lado": "favor",
+   "peso_familia": 0.8,
+   "senal": "revisa logros y elecciones pasadas",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'revaluacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "desilusion_metas_alcanzadas",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "vacio tras conseguir el exito buscado",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'desilusion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "conciencia_finitud_tiempo_restante",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "cambia prioridades por sentir el tiempo corto",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'finitud')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "discrepancia_yo_ideal_real",
+   "lado": "favor",
+   "peso_familia": 0.86,
+   "senal": "brecha entre suenos y realidad",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'discrepancia')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E3 baja a micro (clave 'yo_ideal')",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "consolidacion_identidad_fiel",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "compromiso firme con una direccion propia",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'consolidacion_identidad')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "compromiso_mentor_legado_transmision",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "forma a otros y cede protagonismo",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'legado')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "estabilizacion_estructura_vida",
+   "lado": "contra",
+   "peso_familia": -0.84,
+   "senal": "etapa estable con reglas propias",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'estabilizacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "aceptacion_integridad_ego",
+   "lado": "contra",
+   "peso_familia": -0.94,
+   "senal": "paz con errores y aciertos",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'aceptacion_integridad')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E3 baja a micro (clave '_ego')",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: integridad = reconocimiento final D8"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "red_soporte_familiar_comunitario",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "vinculos que contienen la crisis",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'soporte')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E2 sube a meso (clave 'comunitari')",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "guardrail_rutina_responsabilidad_fija",
+   "lado": "contra",
+   "peso_familia": -0.72,
+   "senal": "obligaciones que sostienen el funcionamiento",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'rutina')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "etapas_vitales_evolutivas",
+   "token": "adaptacion_heuristica_expectativas",
+   "lado": "contra",
+   "peso_familia": -0.8,
+   "senal": "ajuste maduro de ideales",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'adaptacion_heuristica')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: ciclo vital de la persona",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_potencia_ascendente_delta",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "Un actor emergente registra tasas de crecimiento y acumulación de poder muy superiores a las del líder actual.",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'ascendente')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_ocupacion_espacio_hegemonico",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "La expansión operativa o comercial del actor emergente invade zonas de influencia históricas de la potencia dominante.",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'hegemonic')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_friccion_periferica",
+   "lado": "favor",
+   "peso_familia": 0.79,
+   "senal": "Ocurrencia de micro-conflictos o disputas indirectas entre aliados menores de ambos bloques sin llegar a la guerra abierta.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'friccion')",
+   "dinamica_secundaria_info": "D1",
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_alarma_defensiva_hegemonica",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "La potencia establecida interpreta cualquier movimiento del rival como una amenaza directa a su supervivencia y endurece sus políticas.",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'hegemonic')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "escalada_retorica_mutua",
+   "lado": "favor",
+   "peso_familia": 0.73,
+   "senal": "Discursos oficiales y propaganda oficial que retratan al rival como un peligro existencial, hostil e inherentemente malicioso.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'escalada')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "jervis_dilema_seguridad_escalado",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Acciones estrictamente defensivas de un bando son leídas obligatoriamente como preparativos de ataque por el otro bando.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'escalado')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "triada_motivacional_miedo",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "Acciones tomadas de forma urgente por el temor a perder la seguridad o la posición frente a un competidor.",
+   "dinamica": "D1",
+   "regla_dinamica": "EXCEPCION: Tucidides: el miedo del establecido ante el que asciende es el nucleo de la trampa",
+   "dinamica_secundaria_info": "D2",
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "triada_motivacional_honor",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Negativa a ceder o negociar por cuestiones de prestigio, estatus, orgullo político o deferencia sistémica.",
+   "dinamica": "D2",
+   "regla_dinamica": "EXCEPCION: negarse a ceder por prestigio alimenta la escalada",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "triada_motivacional_interes",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "Búsqueda directa de ventajas materiales, recursos económicos, ventajas geográficas o acumulación de poder tangible.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "stasis_fractura_civil_interna",
+   "lado": "favor",
+   "peso_familia": 0.94,
+   "senal": "Colapso del consenso político doméstico que degenera en polarización extrema, expulsiones internas o ruptura faccional abierta.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'stasis')",
+   "dinamica_secundaria_info": "D2",
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "sobreextension_imperial_logistica",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "Gasto desmesurado de recursos y fuerzas en expediciones o frentes distantes que debilitan el núcleo de la organización.",
+   "dinamica": "D6",
+   "regla_dinamica": "R6_sobrecrecimiento (clave 'sobreextension')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "dialogo_melos_ley_fuerte",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "Argumentación explícita de que los fuertes hacen lo que pueden y los débiles sufren lo que deben, ignorando la justicia formal.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_interdependencia_compleja_economica",
+   "lado": "contra",
+   "peso_familia": -0.86,
+   "senal": "Vínculos comerciales, financieros y cadenas de suministro entrelazadas que hacen que un choque directo sea mutuamente destructivo.",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'interdependencia')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "tucidides_disuasion_costo_inaceptable",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "Existencia de armamento o capacidades de represalia masiva que garantizan la aniquilación de ambos si inician el conflicto.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'disuasion')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "mecanismo_arbitraje_institucional",
+   "lado": "contra",
+   "peso_familia": -0.78,
+   "senal": "Intervención de organismos internacionales, tratados o diplomacia multilateral formal que congela las hostilidades.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'arbitraje')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "convergencia_intereses_macro",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "Aparición de amenazas globales compartidas que obligan a ambas potencias a cooperar temporalmente dejando de lado su rivalidad.",
+   "dinamica": "D1",
+   "regla_dinamica": "R1_ascenso (clave 'convergencia_intereses')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "moderacion_prudencia_pericles",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "Estrategia que prioriza conservar lo que se tiene y evitar riesgos de expansión durante periodos de alta tensión.",
+   "dinamica": "D6",
+   "regla_dinamica": "EXCEPCION: senal: evitar riesgos de expansion (frena D6)",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "cohesion_institucional_interna",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "Capacidad del sistema institucional para resolver disputas domésticas sin romper el orden constitucional establecido.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5a_fractura (clave 'cohesion_institucional')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "limite_expansion_logistica",
+   "lado": "contra",
+   "peso_familia": -0.84,
+   "senal": "Reconocimiento y freno voluntario de las líneas operativas antes de alcanzar el punto de saturación de recursos.",
+   "dinamica": "D6",
+   "regla_dinamica": "EXCEPCION: freno voluntario antes de saturar recursos (frena D6)",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "geopolitica_trampa_tucidides",
+   "token": "arbitraje_respeto_tratados",
+   "lado": "contra",
+   "peso_familia": -0.82,
+   "senal": "Apelación y cumplimiento estricto de los acuerdos bilaterales de paz previos para resolver fricciones secundarias.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'arbitraje')",
+   "dinamica_secundaria_info": null,
+   "escala": "macro",
+   "regla_escala": "E1 escala de la familia: Estados/potencias",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "ki_introduccion_exposicion_tema",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Se presentan los personajes, el entorno o una situación cotidiana de forma estática y descriptiva.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "sho_desarrollo_continuidad_lineal",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "La historia avanza de forma lógica sobre la premisa inicial, expandiendo la información sin generar problemas.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "ten_giro_dislocacion_inesperada",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "Irrupción de un elemento, escena o punto de vista totalmente inconexo que descoloca la línea narrativa previa.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "ketsu_conclusion_sintesis_nueva",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "Cierre que conecta la normalidad inicial con el giro, revelando un sentido profundo, poético o complementario.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "asociacion_tematica_no_causal",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "El avance del relato se sostiene por la similitud de conceptos o ambientes, no por una cadena de causas y efectos.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "yuxtaposicion_elementos_dispares",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "Colocación de dos realidades distintas en la misma escena para que el lector deduzca la relación oculta.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "reconfiguracion_perspectiva_final",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "Cambio en la mirada del observador que le permite asimilar el giro sin necesidad de que haya un ganador.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "causalidad_occidental_accion_reaccion",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "Exigencia de que cada evento sea la consecuencia directa y obligatoria de una acción previa del protagonista.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "conflicto_central_antagonista_friccion",
+   "lado": "contra",
+   "peso_familia": -0.95,
+   "senal": "Presencia de un villano, obstáculo o dilema destructivo que obliga a entablar una lucha de suma cero.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "climax_colision_fuerzas_opuestas",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "Punto de máxima confrontación física o verbal donde se decide el destino de la trama mediante la victoria o la derrota.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "guardrail_linealidad_cronologica_fija",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "Restricciones de tiempo o formato que impiden saltar a escenas inconexas sin justificación previa.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "exigencia_resolucion_binaria",
+   "lado": "contra",
+   "peso_familia": -0.86,
+   "senal": "Presión del entorno o del género para terminar el relato con un resultado claro de éxito o fracaso absoluto.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "intervencion_agente_ordenador_externo",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "Aparición de una ley, juez o evento fortuito que fuerza las cosas a volver al carril lógico de origen.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "kishotenketsu_estructura_giro",
+   "token": "coherencia_deductiva_estricta",
+   "lado": "contra",
+   "peso_familia": -0.8,
+   "senal": "Análisis analítico del texto que penaliza la ambigüedad semántica o los cambios imprevistos de enfoque temático.",
+   "dinamica": "K0",
+   "regla_dinamica": "R0_control_kishotenketsu",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa (control)",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "secuencia_redencion_resiliencia",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "narra el dolor como aprendizaje",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'redencion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "secuencia_contaminacion_degradacion",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "de lo bueno al colapso por error o traicion",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "EXCEPCION: contaminacion narrativa no equivale a erosion de cohesion; no se fuerza",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "evento_punto_inflexion_identidad",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "hito que cambio el rumbo",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'punto_inflexion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "agencia_personal_empoderamiento",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "enfasis en decidir y controlar el destino",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E3 baja a micro (clave 'personal')",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "comunion_conexion_pertenencia",
+   "lado": "favor",
+   "peso_familia": 0.8,
+   "senal": "lazos como motor de la historia",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'comunion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P2 EXCEPCION: pertenencia frena la erosion D5"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "climax_narrativo_fundacional",
+   "lado": "favor",
+   "peso_familia": 0.75,
+   "senal": "recuerdo nuclear que explica quien es",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "sesgo_negatividad_autobiografica",
+   "lado": "favor",
+   "peso_familia": 0.86,
+   "senal": "todo exito anuncia desgracia",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "narrativa_estancamiento_meseta",
+   "lado": "contra",
+   "peso_familia": -0.8,
+   "senal": "relato plano sin progresion",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'meseta')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "guardrail_hecho_historico_objetivo",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "registro externo que frena la distorsion",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "intervencion_terapeutica_reframing",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "reestructura el guion",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'reframing')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: reencuadre es giro D8"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "escepticismo_entorno_relato",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "el entorno cuestiona la exageracion",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "olvido_atenuacion_temporal_memoria",
+   "lado": "contra",
+   "peso_familia": -0.78,
+   "senal": "el tiempo baja la carga",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "evidencia_empirica_contraria",
+   "lado": "contra",
+   "peso_familia": -0.84,
+   "senal": "hechos que contradicen el discurso",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "narrativa_vida_mcadams",
+   "token": "reescritura_coherente_identidad",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "integra contradicciones en historia realista",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'reescritura')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: identidad narrativa personal",
+   "polaridad": "empuja",
+   "regla_polaridad": "P2 EXCEPCION: reescribir la identidad es reconocimiento D8"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "rol_perseguidor_activo",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "Postura de acusacion, control o castigo hacia el entorno.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'perseguidor')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "rol_victima_indefensa",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "Incapacidad declarada para resolver y demanda de rescate.",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'rol_victima')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "rol_salvador_condescendiente",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Intervencion paternalista que crea codependencia.",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'rol_salvador')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "inversion_roles_inesperada",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "El salvador pasa a victima o el perseguidor a perseguido.",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'inversion_roles')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "escalada_conflicto_interpersonal",
+   "lado": "favor",
+   "peso_familia": 0.8,
+   "senal": "Incremento de recriminaciones y hostilidad.",
+   "dinamica": "D2",
+   "regla_dinamica": "R2_escalada (clave 'escalada')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E3 baja a micro (clave 'interpersonal')",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "manipulacion_culpa_latente",
+   "lado": "favor",
+   "peso_familia": 0.84,
+   "senal": "Uso del remordimiento o agravio para coaccionar.",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'manipulacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "juego_psicologico_ulterior",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "Interacciones con motivacion oculta y desenlace predecible.",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'juego')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "triangulacion_tercer_actor",
+   "lado": "favor",
+   "peso_familia": 0.86,
+   "senal": "Inclusion de un tercero para romper una tension de dos y buscar aliado.",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'triangulacion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "responsabilidad_adulta_autonoma",
+   "lado": "contra",
+   "peso_familia": -0.92,
+   "senal": "Asumir consecuencias propias sin delegar culpa.",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'responsabilidad_adulta')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "comunicacion_asertiva_directa",
+   "lado": "contra",
+   "peso_familia": -0.88,
+   "senal": "Expresion clara de necesidades sin subtextos.",
+   "dinamica": "D3",
+   "regla_dinamica": "EXCEPCION: hablar directo es lo contrario de triangular (frena D3)",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "limite_operativo_saludable",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "Barreras firmes contra la coaccion.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "neutralidad_observador_externo",
+   "lado": "contra",
+   "peso_familia": -0.82,
+   "senal": "Actor periferico que se niega a tomar partido.",
+   "dinamica": "D3",
+   "regla_dinamica": "R3_tercero (clave 'observador_externo')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "mediacion_formal_institucional",
+   "lado": "contra",
+   "peso_familia": -0.75,
+   "senal": "Organo imparcial que procesa la disputa con reglas fijas.",
+   "dinamica": "D2",
+   "regla_dinamica": "EXCEPCION: la mediacion formal desescala (frena D2)",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E2 sube a meso (clave 'institucional')",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "desactivacion_juego_salida",
+   "lado": "contra",
+   "peso_familia": -0.9,
+   "senal": "Negarse a validar los roles del triangulo.",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'juego')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "triangulo_dramatico_karpman",
+   "token": "contrato_relacional_claro",
+   "lado": "contra",
+   "peso_familia": -0.7,
+   "senal": "Acuerdos explicitos previos que reducen malas lecturas.",
+   "dinamica": "D4",
+   "regla_dinamica": "R4_arreglo (clave 'contrato_relacional')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: relaciones interpersonales",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "llamado_a_la_aventura",
+   "lado": "favor",
+   "peso_familia": 0.9,
+   "senal": "Crisis o desequilibrio externo que exige abandonar el entorno habitual.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'llamado')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "encuentro_con_el_mentor",
+   "lado": "favor",
+   "peso_familia": 0.85,
+   "senal": "Asesoria, herramientas o validacion de una figura experimentada.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "cruce_del_primer_umbral",
+   "lado": "favor",
+   "peso_familia": 0.88,
+   "senal": "Abandono explicito de la zona segura hacia territorio desconocido.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'umbral')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "prueba_suprema_calvario",
+   "lado": "favor",
+   "peso_familia": 0.95,
+   "senal": "Punto de maxima vulnerabilidad frente a la mayor amenaza.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'prueba_suprema')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "recompensa_toma_del_elixir",
+   "lado": "favor",
+   "peso_familia": 0.82,
+   "senal": "Adquisicion de ventaja, conocimiento o recurso tras la prueba.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "EXCEPCION: recompensa no es reconocimiento; no se fuerza a D8",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "camino_de_regreso_acelerado",
+   "lado": "favor",
+   "peso_familia": 0.78,
+   "senal": "Urgencia externa que fuerza el retorno con el logro.",
+   "dinamica": "otra/propia",
+   "regla_dinamica": "R9_sin_coincidencia",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "resurreccion_transformacion_final",
+   "lado": "favor",
+   "peso_familia": 0.92,
+   "senal": "Prueba final donde demuestra cambio permanente.",
+   "dinamica": "D8",
+   "regla_dinamica": "R8_giro (clave 'resurreccion')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "ruptura_del_statu_quo",
+   "lado": "favor",
+   "peso_familia": 0.7,
+   "senal": "Decision voluntaria de alterar rutinas por un objetivo mayor.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'statu_quo')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "empuja",
+   "regla_polaridad": "P1 tokens_favor"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "rechazo_del_llamado_inicial",
+   "lado": "contra",
+   "peso_familia": -0.85,
+   "senal": "Miedo, excusas o postergacion ante el cambio.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'llamado')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "resistencia_al_cambio_interno",
+   "lado": "contra",
+   "peso_familia": -0.78,
+   "senal": "Aferramiento a conductas obsoletas.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'resistencia_al_cambio')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "aliados_y_soporte_operativo",
+   "lado": "contra",
+   "peso_familia": -0.72,
+   "senal": "Capacidades compartidas que distribuyen el estres.",
+   "dinamica": "D5",
+   "regla_dinamica": "R5_erosion (clave 'soporte')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "retorno_a_la_zona_confort",
+   "lado": "contra",
+   "peso_familia": -0.8,
+   "senal": "Refugio en dinamicas familiares de bajo riesgo.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'zona_confort')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "guardia_del_umbral_bloqueo",
+   "lado": "contra",
+   "peso_familia": -0.84,
+   "senal": "Friccion inicial de un actor que evalua la resolucion del sujeto.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'umbral')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "inercia_del_entorno_ordinario",
+   "lado": "contra",
+   "peso_familia": -0.65,
+   "senal": "El contexto amortigua los impulsos de cambio.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'inercia')",
+   "dinamica_secundaria_info": null,
+   "escala": "micro",
+   "regla_escala": "E1 escala de la familia: forma narrativa; protagonista individual",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  },
+  {
+   "familia": "viaje_del_heroe",
+   "token": "anclaje_institucional_fijo",
+   "lado": "contra",
+   "peso_familia": -0.68,
+   "senal": "Reglas o contratos rigidos que penalizan salir de los limites.",
+   "dinamica": "D7",
+   "regla_dinamica": "R7_umbral (clave 'anclaje')",
+   "dinamica_secundaria_info": null,
+   "escala": "meso",
+   "regla_escala": "E2 sube a meso (clave 'institucional')",
+   "polaridad": "frena",
+   "regla_polaridad": "P1 tokens_contra"
+  }
+ ],
+ "huecos": {
+  "D1": {
+   "celdas": {
+    "micro": {
+     "total": 0,
+     "empuja": 0,
+     "frena": 0,
+     "familias": []
+    },
+    "meso": {
+     "total": 11,
+     "empuja": 5,
+     "frena": 6,
+     "familias": [
+      "arquetipos_sistemicos_senge_faltantes",
+      "ciclo_vida_organizacional_adizes",
+      "deseo_mimetico_chivo_expiatorio"
+     ]
+    },
+    "macro": {
+     "total": 6,
+     "empuja": 4,
+     "frena": 2,
+     "familias": [
+      "geopolitica_trampa_tucidides"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [
+    "micro"
+   ],
+   "escalas_sin_token_que_empuje": [
+    "micro"
+   ]
+  },
+  "D2": {
+   "celdas": {
+    "micro": {
+     "total": 3,
+     "empuja": 3,
+     "frena": 0,
+     "familias": [
+      "estructura_dramatica_clasica",
+      "triangulo_dramatico_karpman"
+     ]
+    },
+    "meso": {
+     "total": 3,
+     "empuja": 1,
+     "frena": 2,
+     "familias": [
+      "arquetipos_sistemicos_senge_faltantes",
+      "triangulo_dramatico_karpman"
+     ]
+    },
+    "macro": {
+     "total": 7,
+     "empuja": 4,
+     "frena": 3,
+     "familias": [
+      "geopolitica_trampa_tucidides"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  },
+  "D3": {
+   "celdas": {
+    "micro": {
+     "total": 6,
+     "empuja": 4,
+     "frena": 2,
+     "familias": [
+      "triangulo_dramatico_karpman"
+     ]
+    },
+    "meso": {
+     "total": 10,
+     "empuja": 5,
+     "frena": 5,
+     "familias": [
+      "deseo_mimetico_chivo_expiatorio"
+     ]
+    },
+    "macro": {
+     "total": 1,
+     "empuja": 1,
+     "frena": 0,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  },
+  "D4": {
+   "celdas": {
+    "micro": {
+     "total": 5,
+     "empuja": 2,
+     "frena": 3,
+     "familias": [
+      "triangulo_dramatico_karpman"
+     ]
+    },
+    "meso": {
+     "total": 6,
+     "empuja": 3,
+     "frena": 3,
+     "familias": [
+      "arquetipos_sistemicos_senge_faltantes"
+     ]
+    },
+    "macro": {
+     "total": 2,
+     "empuja": 1,
+     "frena": 1,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  },
+  "D5": {
+   "celdas": {
+    "micro": {
+     "total": 2,
+     "empuja": 0,
+     "frena": 2,
+     "familias": [
+      "narrativa_vida_mcadams",
+      "viaje_del_heroe"
+     ]
+    },
+    "meso": {
+     "total": 12,
+     "empuja": 6,
+     "frena": 6,
+     "familias": [
+      "arquetipos_sistemicos_senge_faltantes",
+      "ciclo_vida_organizacional_adizes",
+      "etapas_vitales_evolutivas"
+     ]
+    },
+    "macro": {
+     "total": 8,
+     "empuja": 4,
+     "frena": 4,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria",
+      "deseo_mimetico_chivo_expiatorio",
+      "geopolitica_trampa_tucidides"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": [
+    "micro"
+   ]
+  },
+  "D6": {
+   "celdas": {
+    "micro": {
+     "total": 2,
+     "empuja": 1,
+     "frena": 1,
+     "familias": [
+      "etapas_vitales_evolutivas"
+     ]
+    },
+    "meso": {
+     "total": 6,
+     "empuja": 3,
+     "frena": 3,
+     "familias": [
+      "arquetipos_sistemicos_senge_faltantes",
+      "ciclo_vida_organizacional_adizes"
+     ]
+    },
+    "macro": {
+     "total": 8,
+     "empuja": 4,
+     "frena": 4,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria",
+      "geopolitica_trampa_tucidides"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  },
+  "D7": {
+   "celdas": {
+    "micro": {
+     "total": 25,
+     "empuja": 12,
+     "frena": 13,
+     "familias": [
+      "estructura_dramatica_clasica",
+      "etapas_vitales_evolutivas",
+      "narrativa_vida_mcadams",
+      "viaje_del_heroe"
+     ]
+    },
+    "meso": {
+     "total": 2,
+     "empuja": 0,
+     "frena": 2,
+     "familias": [
+      "estructura_dramatica_clasica",
+      "viaje_del_heroe"
+     ]
+    },
+    "macro": {
+     "total": 1,
+     "empuja": 1,
+     "frena": 0,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": [
+    "meso"
+   ]
+  },
+  "D8": {
+   "celdas": {
+    "micro": {
+     "total": 8,
+     "empuja": 8,
+     "frena": 0,
+     "familias": [
+      "estructura_dramatica_clasica",
+      "etapas_vitales_evolutivas",
+      "narrativa_vida_mcadams",
+      "viaje_del_heroe"
+     ]
+    },
+    "meso": {
+     "total": 1,
+     "empuja": 1,
+     "frena": 0,
+     "familias": [
+      "ciclo_vida_organizacional_adizes"
+     ]
+    },
+    "macro": {
+     "total": 1,
+     "empuja": 1,
+     "frena": 0,
+     "familias": [
+      "ciclos_poder_decadencia_macrohistoria"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  },
+  "K0": {
+   "celdas": {
+    "micro": {
+     "total": 14,
+     "empuja": 7,
+     "frena": 7,
+     "familias": [
+      "kishotenketsu_estructura_giro"
+     ]
+    },
+    "meso": {
+     "total": 0,
+     "empuja": 0,
+     "frena": 0,
+     "familias": []
+    },
+    "macro": {
+     "total": 0,
+     "empuja": 0,
+     "frena": 0,
+     "familias": []
+    }
+   },
+   "escalas_sin_tokens": [
+    "meso",
+    "macro"
+   ],
+   "escalas_sin_token_que_empuje": [
+    "meso",
+    "macro"
+   ]
+  },
+  "otra/propia": {
+   "celdas": {
+    "micro": {
+     "total": 16,
+     "empuja": 9,
+     "frena": 7,
+     "familias": [
+      "estructura_dramatica_clasica",
+      "narrativa_vida_mcadams",
+      "triangulo_dramatico_karpman",
+      "viaje_del_heroe"
+     ]
+    },
+    "meso": {
+     "total": 3,
+     "empuja": 1,
+     "frena": 2,
+     "familias": [
+      "ciclo_vida_organizacional_adizes"
+     ]
+    },
+    "macro": {
+     "total": 2,
+     "empuja": 2,
+     "frena": 0,
+     "familias": [
+      "geopolitica_trampa_tucidides"
+     ]
+    }
+   },
+   "escalas_sin_tokens": [],
+   "escalas_sin_token_que_empuje": []
+  }
+ }
+}

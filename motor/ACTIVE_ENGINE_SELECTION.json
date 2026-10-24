@@ -1,0 +1,20 @@
+{
+  "basis": "Reconciled against CANDADO_ENGINE.json and PRUEBA_IDENTIDAD_ENGINE_665C39A2_20261001; old PATCH19 selector contradicted the physical engine lock.",
+  "engine": {
+    "archivo": "motor/Engine_V5_CANONICO_SOLO.py",
+    "bytes": 30507,
+    "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
+  },
+  "patterns": {
+    "archivo": "motor/patterns_final_v14.json",
+    "n_patrones": 244,
+    "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+  },
+  "prohibited_engine": {
+    "archivo": "Engine_V5_CANONICO_SOLO.py (legacy 24,944-byte build)",
+    "reason": "legacy hash not present in this package; authoritative CANDADO_ENGINE.json identifies the 30,507-byte physical engine as the engine that runs",
+    "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23"
+  },
+  "schema": "ACTIVE_ENGINE_SELECTION_V1",
+  "status": "ACTIVE_CANONICAL_ENGINE"
+}

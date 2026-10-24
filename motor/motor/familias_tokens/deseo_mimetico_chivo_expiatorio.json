@@ -1,0 +1,64 @@
+{
+ "id": "deseo_mimetico_chivo_expiatorio",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "Gemini",
+ "fuente_teorica": "Rene Girard (Mensonge romantique; Le Bouc emissaire)",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "deseo_mimetico_mediado": 0.88,
+  "rivalidad_mimetica_simetrica": 0.9,
+  "indiferenciacion_crisis_social": 0.85,
+  "polarizacion_todos_contra_uno": 0.94,
+  "acusacion_estereotipada_arbitraria": 0.82,
+  "sacrificio_chivo_expiatorio": 0.95,
+  "unanimidad_coercitiva_colectiva": 0.89,
+  "catarsis_pacificacion_comunitaria": 0.78
+ },
+ "tokens_contra": {
+  "mediacion_distancia_insalvable": -0.85,
+  "diferenciacion_jerarquica_institucional": -0.88,
+  "ley_mecanismo_judicial_imparcial": -0.92,
+  "defensa_racional_acusado": -0.8,
+  "revelacion_inocencia_victima": -0.95,
+  "pluralismo_fraccionamiento_opiniones": -0.75,
+  "dispersion_foco_atencion": -0.7
+ },
+ "senales": {
+  "deseo_mimetico_mediado": "copia metas u objetos de deseo de un modelo",
+  "rivalidad_mimetica_simetrica": "dos actores obsesionados con el mismo objetivo, obstaculo mutuo",
+  "indiferenciacion_crisis_social": "se pierden jerarquias y roles, disputa por lo mismo",
+  "polarizacion_todos_contra_uno": "la frustracion dispersa converge en un individuo o minoria",
+  "acusacion_estereotipada_arbitraria": "se culpa al elegido de males absurdos o sistemicos",
+  "sacrificio_chivo_expiatorio": "expulsion, despido o castigo del elegido para restaurar el orden",
+  "unanimidad_coercitiva_colectiva": "consenso ciego del grupo contra el culpable designado",
+  "catarsis_pacificacion_comunitaria": "cesa la disputa interna tras excluir al elegido",
+  "mediacion_distancia_insalvable": "modelo tan lejano que no compiten por lo mismo",
+  "diferenciacion_jerarquica_institucional": "roles fijos impiden que los actores se igualen",
+  "ley_mecanismo_judicial_imparcial": "instancia independiente evalua pruebas, no presion",
+  "defensa_racional_acusado": "alguien exige debido proceso",
+  "revelacion_inocencia_victima": "se demuestra la inocencia del acusado",
+  "pluralismo_fraccionamiento_opiniones": "grupo dividido impide unanimidad",
+  "dispersion_foco_atencion": "problema externo urgente diluye la fijacion"
+ },
+ "no_canonico_declarado_por_fuente": [],
+ "dynamic_couplings": {
+  "todos": "NOT_HARDCODED_PENDING_VALIDATION"
+ },
+ "puente_244": "PENDIENTE (sin puente la familia queda cableada pero muda)",
+ "integration": {
+  "feeds_predictor": true,
+  "feeds_H": true,
+  "can_decide_H": false,
+  "no_va_a_patterns_json": true,
+  "persistent_via": "stinkbox_vault"
+ },
+ "revision": {
+  "flags": [],
+  "log": [
+   "renombre: unanimidad_violenta_colectiva -> unanimidad_coercitiva_colectiva"
+  ],
+  "nota": "flags = senal, no se cierran aqui; se validan en corridas"
+ },
+ "sha256_tokens": "1f681e8a15ff7e74"
+}

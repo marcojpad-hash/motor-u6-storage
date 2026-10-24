@@ -1,0 +1,26 @@
+{
+  "version": "ARCO_EMOCIONAL_LATERAL_V0_1",
+  "status": "PROVIDED_DATA",
+  "canonical_244_mutated": false,
+  "source_type": "user_supplied_lateral_data",
+  "patterns": {
+    "ttm_06_recaida_ciclica": {
+      "description": "Monitoreo de trayectorias oscilatorias basadas en atrición cognitiva de múltiples turnos y degradación de guardrails. Evalúa la fluctuación entre arcos de ascenso rápido (arquetipos expansivos) y caídas simétricas hacia estados de colapso o bucles recurrentes.",
+      "tokens_favor": {
+        "arquetipo_icarus_ascenso": 0.88,
+        "arco_narrativo_man_in_hole": 0.82,
+        "degradacion_logica_atricion": 0.79,
+        "arquetipo_oedipus_bucle": 0.75,
+        "delta_activacion_ciclica": 0.70,
+        "mimesis_conductual_limite": 0.64
+      },
+      "tokens_contra": {
+        "arquetipo_cinderella_rebote": -0.85,
+        "estabilizacion_heuristica": -0.78,
+        "sigma_amortiguacion_retorno": -0.74,
+        "trazabilidad_lineal_asintotica": -0.68,
+        "convergencia_probabilistica": -0.62
+      }
+    }
+  }
+}

@@ -1,0 +1,1253 @@
+{
+ "nombre": "BASE_ESTABLE_MOTOR_UNICO_V15_3_20260927",
+ "congelado_hora_local": "2026-09-27 04:24 CST (UTC-6)",
+ "motor": {
+  "archivo": "motor/MOTOR_V15_3_UNICO_20260927.py",
+  "sha256": "48f96cb028a301c1c32d26dbb172985d9f614add4b007925a9bffcb84a6fb3b4",
+  "version": "V15.3_UNICO_20260927",
+  "nombre_en_run_dir": "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9.py"
+ },
+ "catalogo": {
+  "archivo": "patterns_final_v14.json",
+  "ruta_origen": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/patterns_final_v14.json",
+  "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "n_patrones": 244,
+  "configurable_por": "MOTOR_PATTERNS_PATH (env) o orquestador --catalogo RUTA; puentes con --puentes DIR (scripts/regenerar_puentes.py)"
+ },
+ "engine": {
+  "archivo": "Engine_V5_CANONICO_SOLO.py",
+  "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+  "bytes": 24944
+ },
+ "engine_prohibido_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+ "flags_por_defecto": {
+  "MODO_ESTRICTO": "1 (on)",
+  "FAMILIAS_TOKENS": "1 (on, EXPERIMENTAL)",
+  "LAT_<PIEZA>": "1 (on)",
+  "PYTHONHASHSEED": "0",
+  "CONSOLIDADO_OFF": "''"
+ },
+ "piezas_motor_dir": {
+  "DIFF_ESTRICTO_to_UNICO.diff": "9df5e65adeef896b5b65f3220f00d06576fed487588fe81366fa3c45a16390f1",
+  "DIFF_NATIVO_V0_9_to_UNICO.diff": "140794b0c7d3f3d586427aa2544037964f3985cb043d9020857f6b47aa9608bf",
+  "DIFF_lente_lateral_metrics_to_UNICO.diff": "c2a28db78cc0d22a6d10225cd6fadd94bdfb2839231087552ddad041a10b3d48",
+  "INVENTARIO_COMPONENTES_UNICO.json": "8328b3e40dd184fe6b9b757579b24f869e056b819ce08a9a109d23693d310874",
+  "MATRIZ_EQUIVALENCIAS_ESCALA.json": "66f83e77409c404a9f00b2250a81b0bfffa2fbb94577abed4792ebcf4e9368d7",
+  "MOTOR_V15_3_NATIVO_V0_9_UNICO.py": "ed196441bb780b4d730d7a63ff40bdd98afdb614d8a25ae76728452caf814a95",
+  "MOTOR_V15_3_UNICO_20260927.py": "48f96cb028a301c1c32d26dbb172985d9f614add4b007925a9bffcb84a6fb3b4",
+  "PUENTE_244_FAMILIAS.json": "3cc9fd253d1d669f81663839ed46d47429db7467ecaadd49b6b41303f46adfbf",
+  "candado_plugins.py": "2a66950516dfa751b0d1a4e4162d80046ba59187b7041dffd6831cff31842de1",
+  "capa_integracion_semantica_v1_2.py": "4de3ddef696e8686a8ff272ca02c6d9e84cd8b9c540221d63c6f46bd213a6f2c",
+  "capa_interrelacion_tokens.py": "c7491981db4e46d23ec29b7df82d326dc3be9a445321d83f2ab41e7e4a0bfe05",
+  "catalogo_capa2_familias_semilla.json": "a7142b3eb59a2d3151decc734b56d331ca8abb259e412267cde08feeaf080f4e",
+  "coactivacion_escalas.py": "f316ebb07bf84d8169c69ecd076392af73c5aa5c8c9426e34c2f475ee4b822c5",
+  "control_flujo_soluciones.py": "058e834825495f153b53afffbdca99ce3ca089a6aa37dc296eaeb8106b9427ea",
+  "control_latencia_decimo_hombre.py": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345",
+  "familias_tokens/arquetipos_sistemicos_senge_faltantes.json": "7761b4ecc0aba3e9fc324822310a5dd133ccac7b633872c4d6a76269d1d62b94",
+  "familias_tokens/ciclo_vida_organizacional_adizes.json": "7f8481a38523b98a0fed5a331b18f9f2f651e1accd20fdbd142e84c9fd678864",
+  "familias_tokens/ciclos_poder_decadencia_macrohistoria.json": "1e1615a0946dd79c47121e9ba67893ccdda94ec75cdf689e424905c32bcf9d2a",
+  "familias_tokens/deseo_mimetico_chivo_expiatorio.json": "65bc3b7d83740aa8743ad8676b36d47509d8f3deb171a2c8296672ac24a64bec",
+  "familias_tokens/estructura_dramatica_clasica.json": "fb73c3d2da5160504874a02193e6ce71841f773c7c0f5491334688b19516f0d2",
+  "familias_tokens/etapas_vitales_evolutivas.json": "defaa4881ce47ffac986c25feb202ff5b58f423a73d3a4bd5a042ef1772b5886",
+  "familias_tokens/geopolitica_trampa_tucidides.json": "38a12c52796afc9936ed92bd2a454d256bf28e22a9592db7844bf1679ffba67f",
+  "familias_tokens/kishotenketsu_estructura_giro.json": "ac99be9589e5c673664651a7211992361f60ca26ee3fb9104fcfbf74304700a8",
+  "familias_tokens/narrativa_vida_mcadams.json": "bb94d0a41c51d79d8d0466e3e8fef1ed0094ac731fc459d988c3f50c9a28384c",
+  "familias_tokens/triangulo_dramatico_karpman.json": "4a98ae64a559a35152a086253f9d1bc09650fda84f72229bb0916eabec159d55",
+  "familias_tokens/viaje_del_heroe.json": "f177b5bb8186a9fb75f5e3108f63197982c223bd55f8f100c5f7042dd1f24b46",
+  "filtro_identidad_zoom_out_zoom_in.py": "1d00fb10f02f0e0f68863654d67d5d368a66c3e3b7b1ec4accb319e1430f48be",
+  "formular_h_apuesta.py": "0319a42b8ef011ab09f48dfc9a973a553f5e7280d1266881998c61444c97ff27",
+  "guardian_acero_rival_v1.py": "314d19f5d477d4be370d1c40e7ee06ce391383c2eef26139e42a52e43a007f79",
+  "guardian_logica_copi_v1.py": "0101f666ecd70c9cd7aeaa3691f8c34e8d04e75a68594e61c2af3f481a12d519",
+  "guardian_tropos_beristain_v1.py": "1886af5e9247464a7f87f74a25863cf4a5eee46375c22d44668f80d81e8baf68",
+  "guardianes_control_v1.py": "e043b84cca0c3af1f2297615936f9ba5e533d1dd977a56aed3b914c02f629f4b",
+  "laterales_unico_v1.py": "e2a07810b1c03b2853049d7e163e7601af09754010508b3a0edf3657fce3852b",
+  "lectura_negativo_ricci_vs_billar_v0_1.py": "777666dca137d09533fd18257d33992a87fb91584199b6444d7d04d09c693027",
+  "lente_lateral_metrics_v1_1_galileo.py": "a3e6653734ef0055074c4ad0e60a75a6364047562d25f611cb92a21b567597b9",
+  "lexico_narrador_v0_1.py": "0d6bc005e8e55e002fa16e33790bcc51e69ac166d115c2f29fc3e81aaec45c4a",
+  "matriz_corrida.py": "9cf60a5404ba876615f27efbfaf584aa2e5a2b9af4192c1d1671d769f0875cd3",
+  "modo_estricto_v1.py": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e",
+  "normalizar_familia_tokens.py": "da1235298b85d89701de19f9c26a7b38f6b5cca16f2968cf9c71244f624cd739",
+  "plugin_alias_reactivacion.py": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e",
+  "plugin_aquiles_ancla_estricto.py": "16b793d38ce72c74c6925b42e4b69435e983db05fe6a1956c8de318926ae8640",
+  "plugin_aquiles_h.py": "3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc",
+  "plugin_capa2_antecedentes_arquetipos.py": "e20f2ad955cc63bfa1811789bf9d1f31fee7d0a550eb28751e6e11171a01657d",
+  "plugin_circulo_monomito_v2.py": "8cd81bc1e6acc3d2b81e78bf6865eda54f3674f5173c59ddc287f08dbc069edf",
+  "plugin_embudo_clinico.py": "deb37f7e0124217c6f4ad329782063a830b61977e531fa91d6d144339413b2ee",
+  "plugin_familias_gloria_sacro.py": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f",
+  "plugin_fix_entrada.py": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd",
+  "plugin_metodo_rigor.py": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0",
+  "plugin_polaridad_causal.py": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739",
+  "plugin_pregunta_detras_v2.py": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247",
+  "plugin_pregunta_dirigida.py": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e",
+  "plugin_pregunta_dirigida_v0_5_1.py": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e",
+  "plugin_souriau_210141.py": "2129f5d66230458745c3659b90c6ecd39704fbd04d90acb88d4f02186cc3a7af",
+  "predictor_vecinos_prefijo_v1.py": "903d4a5bbd0a6d91d8d6b7df0ed3ec2568a2fa39161ef061d62853b73fb9d257",
+  "protocolo_kernel_motor.py": "e95f180246e5fad23615eedf74efd2464777cb6ffb2931a653f0888868209d99",
+  "registro_luces_gemini_packs.json": "bafef9f108a96e6524d644c6f66bee3db1e22c19e775b813766992fc24116e62",
+  "registro_sidecar_amantes_arquetipos.json": "3dab8d38d979efa5a4948a0e05b0a2dbd14421d9ab7ff6e09d5cda99c276aecc",
+  "schrodinger_transport_esqueleto_v0_1.py": "e88cd66f1fbe4aead9a36c231d6f727d2cbdb8f0d138412215d448d1af68f599",
+  "sensor_perfil_narrador_v0_1.py": "83d7717fab0aabd6bea8aae091e4cdfac4f9be1df8977db4b46d757803b5b975",
+  "sidecar_ablacion_hombre_acero.py": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60",
+  "sidecar_amantes_arquetipos.py": "7923d49cde131871186358ab078590da4d21a3f842a5ce268016c731c2c46ca9",
+  "sidecar_corte_memento.py": "e56f5fb140484fe5ecaedece3871112d64cd1fd4067f68c40064d6dfca1f52d9",
+  "sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py": "cf153eeb6d8fb80823eecb71f0aac3d37d3999015977a55e5b1c2b01bdd103bd",
+  "sidecar_lente_souriau.py": "2fb351df37b4466c6923b22c22cea9ef4429f6c3d5c6e824ea5ea47e22eb7191",
+  "sidecar_luces_gemini_packs.py": "16ae145e79f35b6e6c6b47c972d21b5df93275282f7f06f3d9920445341d9fb1",
+  "sidecar_trazabilidad_temporal.py": "8c54ea392849eeaa68a647342f6454ff56b27ccccb2ff5efe07243267b6a56d7",
+  "tusi_par_indice_exploratorio_v0_1.py": "290d1bb32bb86766593557bf5d139991cf708ac7b4b568412761f4e98b0f86f8",
+  "zri_coupling_v0_2.py": "38aaeb5dcaded0e7c15ab3d5613de84baad2aefd3ed053611e2f4edce89efe61",
+  "zri_experience_v0_1.py": "500fa2b12a4eae491c7b7dc2e0e42db5651dce6cce5d98f44acd28ac55586a85"
+ },
+ "piezas_run_dir": {
+  "CONSISTENCY_ADVERSARIAL_AUDIT.json": "f7511af316644cedb26dccc71a7db5d539bdc6e4f9c2534fe9315ff4e273ab42",
+  "CONSISTENCY_ADVERSARIAL_LLM_PACKET.json": "6f0eabca550d6c1f8cbea26fea2338242c1ae4897d03a26d078892c45b4e4a1a",
+  "CONSISTENCY_AUTONOMA_LLM_PACKET.json": "077b50376ad290b171f533ccfd2530fad95ebddc783e20c257a404f824b50080",
+  "Corpus_Final_Unificado_17_Formulas.txt": "8f10b0072ea28436c53c04531696496fc5545a4185808395e7f9f22589b64446",
+  "Engine_V5_CANONICO_SOLO.py": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+  "GALILEO_CALIBRACION_NUEVO_20260926_INPUT.json": "58bdf7ee436f510cb02ae41898168547df04e22026b7778f48e47b1b28a7e133",
+  "GALILEO_NUEVO_EJERCICIO_20260924.json": "878f8a6d3088dbad3744e4fe85aa6ad9f74b3935f8169afdabf71852f3b305ca",
+  "GALILEO_RESOLUCION_NUEVO_20260926_INPUT.json": "f482c9ceb8c372809cd3c342b453db290011619bb88826efb0821e5f68bc7471",
+  "INVENTARIO_COMPONENTES_UNICO.json": "8328b3e40dd184fe6b9b757579b24f869e056b819ce08a9a109d23693d310874",
+  "MATRIZ_EQUIVALENCIAS_ESCALA.json": "66f83e77409c404a9f00b2250a81b0bfffa2fbb94577abed4792ebcf4e9368d7",
+  "MOTOR_V15_3_NATIVO_V0_9.py": "76a7025a9d441a643d08c1b6bdb15a1a76d4851045a6902d6524f06911e0fa1f",
+  "MOTOR_V15_3_NATIVO_V0_9_UNICO.py": "ed196441bb780b4d730d7a63ff40bdd98afdb614d8a25ae76728452caf814a95",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9.py": "48f96cb028a301c1c32d26dbb172985d9f614add4b007925a9bffcb84a6fb3b4",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_13_bundle.py": "8b07d826af97ad313be39f2496e154c430b53ead7037da8a4bfb16366acd9de2",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_16_1_FRYEFIX.py": "8b7dc4fb519cab787aff41524fc0a238a4fef3f803e63418a1f1ddda1374666f",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_16_2_GEOM_TORTUGAS.py": "b33ab45b9c07c47fce46f7f811f75c247649f5c1923a9657e597d0bc9d5e790c",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_16_3_E_LENTES.py": "205a3c4b58ccc385cb815bfa5a1ab3a9ff022babbf07873e6cbaa056af8cc572",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_16_4_COMPUERTA_LATENCIA.py": "5feef94f3253eff14dce6b7ce887ace09ca48c0d9802a28d05b90cebb99e7b17",
+  "MOTOR_V15_3_UNIFICADO_ALTERNO_V0_9_V0_16_unfixed.py": "d550b806086fc4a571caec5d135c74d0a7b164626fd155141fc5e31466bbc11d",
+  "PUENTE_244_FAMILIAS.json": "3cc9fd253d1d669f81663839ed46d47429db7467ecaadd49b6b41303f46adfbf",
+  "README_ES_V0164.md": "b3abe393500fc5c00bba12094f82d3f275de8cda8d83f28005799352f1aa84aa",
+  "UNIFIED_BUILD_STATUS.md": "2d0c1d3340014bcdfba6ccdf6eb2e45fdc72f552ecd28af1ea10734e7b5694b1",
+  "UNIFIED_MANIFEST.json": "694823d7d7100563187eb226d7b1498bbf332059a992e0c2060827ff7238684a",
+  "_CANON_SHA_AFTER.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_CANON_SHA_AFTER_GEOM.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_CANON_SHA_AFTER_V0164.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_CANON_SHA_BEFORE.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_CANON_SHA_BEFORE_GEOM.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_CANON_SHA_BEFORE_V0164.txt": "f59a213c672cceff75e3bc4a39df42869168e5d1394438cae37b9670ce7a2c93",
+  "_COMPARISON_SUMMARY.json": "8036d50523d734714080d4c2cbe609b18141095dc9105f92e2bf43c5451721db",
+  "_COMPARISON_SUMMARY_GEOM.json": "cc6de853ef2618112a69cbde5cad30c73527d3d093bb21473a81cf23516b6346",
+  "_EXTRACTION_HASH_REPORT.json": "88acf1201274a1933e7041ec62e5ee759a9eb1dace41dde019fcb9e5c6c9f783",
+  "_REPORT_V0162_GEOM.md": "2fddd849b7351d1d30c0e2d4816d54469cd97b0929a79a83a0e5f358bb79bcfa",
+  "_RUN_FILES_SHA.txt": "b3d064a0c480b7bb475d0be6f644255b7f632a5107131e4b3e54def72e9daf02",
+  "_RUN_NOTES.md": "44e303559c21b2d2e8e1fa5be4f8007e3d9d8c7e31b2e52a2bb2a5645e5a6be6",
+  "_TABLE_A_E.md": "9fa808bb878b50c1f72fd76313aadfec710653603959f9adb408a51f03e3b2b8",
+  "_compare.py": "2dea7ba054f0bd1a01d514a22a5d766b653e22be0b60c8021d707347bc6d1862",
+  "_compare_geom.py": "900208eea686355ec0b344391d0d5030439ff381446052a56635250b6b654669",
+  "_compare_geom_out.txt": "6130e87121f381473a5761b131a3c01f0eb1b90388a85493f9a072f0b476ed64",
+  "_run_geom.sh": "4d40dd2a0e2c6bfadf01e0ba8fc1506483bc51ef229a15c8bee97f24f317d59a",
+  "_run_v0164.sh": "bb23580663fc6b99fe947be1c46fbfacf4ffd2b22f099047f8b64a2c4fbffbf9",
+  "_run_v0164_all.sh": "a24101daefdd61dd5a634f649a9dfd9e6c108d07a1a457e2b77f4aca1f00db47",
+  "_run_variant.sh": "9c727f0170c82a5935eb7a0ef4b700f0864abe69138cdc1bec8ad41a8cbf0364",
+  "_summ_v0164.py": "8fb4175d8d3c4b0cf03d4c12fdb087d82abeabf4151f3c6c057a7e276574bc4a",
+  "_synthetic_v0164.py": "f311881ea8aa9379b4c928083d5d03207e8f0204b96b2e9ee383005d3b3f6beb",
+  "_table_v0164.py": "9d657b70f2bedf21413b7b1b3f58c0c7028993a1e81f711389f7839b9c8bea5b",
+  "arcos_emocionales_laterales.json": "396393e5d2093b534b0ba83b0aa5cbb2b8cb02ac97d019ad6422c7d4471adcb2",
+  "billar_circular_convergencia_v0_1.py": "432e19cd700251dae85c3c1c60ac2b9add96cf9438a93e724d621c41f2b2247d",
+  "billar_circular_convergencia_v0_2.py": "9c501ac312260282507f551b4f8e75c5ad314ef76dcb05b3da35f2027c8d8b4f",
+  "caldero_zoomout_acero_v0_1.py": "aef329444ca2bac0c9e0d7d2c56e3a7cdfa959a8ec855008a3940cadb2e66ed4",
+  "candado_plugins.py": "2a66950516dfa751b0d1a4e4162d80046ba59187b7041dffd6831cff31842de1",
+  "capa_integracion_semantica_v1_2.py": "4de3ddef696e8686a8ff272ca02c6d9e84cd8b9c540221d63c6f46bd213a6f2c",
+  "capa_interrelacion_tokens.py": "c7491981db4e46d23ec29b7df82d326dc3be9a445321d83f2ab41e7e4a0bfe05",
+  "catalogo_capa2_familias_semilla.json": "a7142b3eb59a2d3151decc734b56d331ca8abb259e412267cde08feeaf080f4e",
+  "coactivacion_escalas.py": "f316ebb07bf84d8169c69ecd076392af73c5aa5c8c9426e34c2f475ee4b822c5",
+  "control_flujo_soluciones.py": "058e834825495f153b53afffbdca99ce3ca089a6aa37dc296eaeb8106b9427ea",
+  "control_latencia_decimo_hombre.py": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345",
+  "estabilidad_vectorial_h.py": "1dbcde588fae728eb0b69b555ce41374c10de0ddce1f6a7a09c709ba36d26fed",
+  "familias_tokens/arquetipos_sistemicos_senge_faltantes.json": "7761b4ecc0aba3e9fc324822310a5dd133ccac7b633872c4d6a76269d1d62b94",
+  "familias_tokens/ciclo_vida_organizacional_adizes.json": "7f8481a38523b98a0fed5a331b18f9f2f651e1accd20fdbd142e84c9fd678864",
+  "familias_tokens/ciclos_poder_decadencia_macrohistoria.json": "1e1615a0946dd79c47121e9ba67893ccdda94ec75cdf689e424905c32bcf9d2a",
+  "familias_tokens/deseo_mimetico_chivo_expiatorio.json": "65bc3b7d83740aa8743ad8676b36d47509d8f3deb171a2c8296672ac24a64bec",
+  "familias_tokens/estructura_dramatica_clasica.json": "fb73c3d2da5160504874a02193e6ce71841f773c7c0f5491334688b19516f0d2",
+  "familias_tokens/etapas_vitales_evolutivas.json": "defaa4881ce47ffac986c25feb202ff5b58f423a73d3a4bd5a042ef1772b5886",
+  "familias_tokens/geopolitica_trampa_tucidides.json": "38a12c52796afc9936ed92bd2a454d256bf28e22a9592db7844bf1679ffba67f",
+  "familias_tokens/kishotenketsu_estructura_giro.json": "ac99be9589e5c673664651a7211992361f60ca26ee3fb9104fcfbf74304700a8",
+  "familias_tokens/narrativa_vida_mcadams.json": "bb94d0a41c51d79d8d0466e3e8fef1ed0094ac731fc459d988c3f50c9a28384c",
+  "familias_tokens/triangulo_dramatico_karpman.json": "4a98ae64a559a35152a086253f9d1bc09650fda84f72229bb0916eabec159d55",
+  "familias_tokens/viaje_del_heroe.json": "f177b5bb8186a9fb75f5e3108f63197982c223bd55f8f100c5f7042dd1f24b46",
+  "filtro_identidad_zoom_out_zoom_in.py": "1d00fb10f02f0e0f68863654d67d5d368a66c3e3b7b1ec4accb319e1430f48be",
+  "formular_h_apuesta.py": "0319a42b8ef011ab09f48dfc9a973a553f5e7280d1266881998c61444c97ff27",
+  "guardian_acero_rival_v1.py": "314d19f5d477d4be370d1c40e7ee06ce391383c2eef26139e42a52e43a007f79",
+  "guardian_logica_copi_v1.py": "0101f666ecd70c9cd7aeaa3691f8c34e8d04e75a68594e61c2af3f481a12d519",
+  "guardian_tropos_beristain_v1.py": "1886af5e9247464a7f87f74a25863cf4a5eee46375c22d44668f80d81e8baf68",
+  "guardianes_control_v1.py": "e043b84cca0c3af1f2297615936f9ba5e533d1dd977a56aed3b914c02f629f4b",
+  "laterales_unico_v1.py": "e2a07810b1c03b2853049d7e163e7601af09754010508b3a0edf3657fce3852b",
+  "lectura_negativo_ricci_vs_billar_v0_1.py": "777666dca137d09533fd18257d33992a87fb91584199b6444d7d04d09c693027",
+  "lente_lateral_metrics_v1_1_galileo.py": "a3e6653734ef0055074c4ad0e60a75a6364047562d25f611cb92a21b567597b9",
+  "lexico_narrador_v0_1.py": "0d6bc005e8e55e002fa16e33790bcc51e69ac166d115c2f29fc3e81aaec45c4a",
+  "matriz_corrida.py": "9cf60a5404ba876615f27efbfaf584aa2e5a2b9af4192c1d1671d769f0875cd3",
+  "modo_estricto_v1.py": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e",
+  "motor_interrelacion_extensible_v0_1.py": "e40c3c29a2c9971bcf69e265975e5bcb366ff6c1d31af057af85d99ebf87358c",
+  "neighbor_store.py": "6989d1e959cfa049c8b0258a48f20e97ed5b07fb236fb360d9ba6fc39bbcd4f9",
+  "normalizar_familia_tokens.py": "da1235298b85d89701de19f9c26a7b38f6b5cca16f2968cf9c71244f624cd739",
+  "patterns_final_v14.json": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "plugin_alias_reactivacion.py": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e",
+  "plugin_aquiles_ancla_estricto.py": "16b793d38ce72c74c6925b42e4b69435e983db05fe6a1956c8de318926ae8640",
+  "plugin_aquiles_h.py": "3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc",
+  "plugin_arco_field_snyder_mckee.py": "ed672db0cf93ffacbbe79fd58fadee4997e845319ac5c3fe9dbdd633fae91acc",
+  "plugin_arcos_emocionales_laterales.py": "3bd4e1ac24968f5c49c79b997e811ae098d1470c93d98579b1e20fd7a03fe0ec",
+  "plugin_arquetipos_dinamicos.py": "529e79afb7dfabd605da3dc220949d1325e786700e59b58b1fde3e11b23f2d79",
+  "plugin_capa2_antecedentes_arquetipos.py": "e20f2ad955cc63bfa1811789bf9d1f31fee7d0a550eb28751e6e11171a01657d",
+  "plugin_circulo_monomito.py": "a731b13bcf9646251c0c2ed6e49f6731d48d3c1df29a92a20d5a1ef3d727a38d",
+  "plugin_circulo_monomito_v2.py": "8cd81bc1e6acc3d2b81e78bf6865eda54f3674f5173c59ddc287f08dbc069edf",
+  "plugin_embudo_clinico.py": "deb37f7e0124217c6f4ad329782063a830b61977e531fa91d6d144339413b2ee",
+  "plugin_familias_gloria_sacro.py": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f",
+  "plugin_fix_entrada.py": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd",
+  "plugin_guardia_no_cruce.py": "27759007f33abe577cc53ebaff785d922cbdd096072ac7c2fcf9ec614cb6e828",
+  "plugin_metodo_rigor.py": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0",
+  "plugin_otto_numinoso.py": "f5c151d8dbcfff54366eb5df4244bd035eb479aee1ac225761f83203641b286e",
+  "plugin_picos_mesetas.py": "7720b6eb614497fb6aaf38d527ea323dbef31b9748f9835385ae9c3ba6081149",
+  "plugin_polaridad_causal.py": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739",
+  "plugin_pregunta_detras.py": "b3c564610a01380aeabe87c2eba91c25c87d9ea754a98fbe8563c7b9a2d6c397",
+  "plugin_pregunta_detras_v2.py": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247",
+  "plugin_pregunta_dirigida.py": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e",
+  "plugin_pregunta_dirigida_v0_5_1.py": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e",
+  "plugin_reporte_3d.py": "a1de66ac91e443e031817b1874e6ffad73f0fbdfc212ee43316f0d7ee2d9f17b",
+  "plugin_resolucion_autonoma_consistencia.py": "60b47e99fd95b28c8276c4ed9f63c8b8d343c0ae76155e3f9a36b999ee30f7b6",
+  "plugin_sesgo_lectura.py": "fe098108d85ccc8a44d13a7a0beb556cf50d6e4450e7b631b5b665edb02e21a0",
+  "plugin_souriau_210141.py": "2129f5d66230458745c3659b90c6ecd39704fbd04d90acb88d4f02186cc3a7af",
+  "plugin_trayectoria_hosteleria.py": "623496a7b8e118921d2684056a530600512cbbbcc307c71ed8025a3c81b41369",
+  "plugin_verificador_consistencia_adversarial.py": "e9c5cae66fc0d1848c03dce54b1466b78ce25a4edba2567dac9e1ccf16a03e65",
+  "predictor_vecinos_prefijo_v1.py": "903d4a5bbd0a6d91d8d6b7df0ed3ec2568a2fa39161ef061d62853b73fb9d257",
+  "protocolo_kernel_motor.py": "e95f180246e5fad23615eedf74efd2464777cb6ffb2931a653f0888868209d99",
+  "registro_luces_gemini_packs.json": "bafef9f108a96e6524d644c6f66bee3db1e22c19e775b813766992fc24116e62",
+  "registro_sidecar_amantes_arquetipos.json": "3dab8d38d979efa5a4948a0e05b0a2dbd14421d9ab7ff6e09d5cda99c276aecc",
+  "ricci_forman_coocurrencia_v0_1.py": "fa38d23a70464fefb6ae7df37267e9f6895f15623db96e1844ab3c96aa4dc0b0",
+  "schrodinger_transport_esqueleto_v0_1.py": "e88cd66f1fbe4aead9a36c231d6f727d2cbdb8f0d138412215d448d1af68f599",
+  "sensor_perfil_narrador_v0_1.py": "83d7717fab0aabd6bea8aae091e4cdfac4f9be1df8977db4b46d757803b5b975",
+  "sidecar_ablacion_hombre_acero.py": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60",
+  "sidecar_amantes_arquetipos.py": "7923d49cde131871186358ab078590da4d21a3f842a5ce268016c731c2c46ca9",
+  "sidecar_caldero_busqueda_arquetipos.py": "aeccfe7d6f25d2c12910ae48ce5ef398ad9832fc15a58fcf9ce519f9b460bfdc",
+  "sidecar_corte_memento.py": "e56f5fb140484fe5ecaedece3871112d64cd1fd4067f68c40064d6dfca1f52d9",
+  "sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py": "cf153eeb6d8fb80823eecb71f0aac3d37d3999015977a55e5b1c2b01bdd103bd",
+  "sidecar_geometria.py": "4ab47dc50e3ba159395869aecff1458da59b34ce17c24a10d5da451c0763250e",
+  "sidecar_lente_souriau.py": "2fb351df37b4466c6923b22c22cea9ef4429f6c3d5c6e824ea5ea47e22eb7191",
+  "sidecar_luces_gemini_packs.py": "16ae145e79f35b6e6c6b47c972d21b5df93275282f7f06f3d9920445341d9fb1",
+  "sidecar_polti_caldero.py": "37400350ac0a9643ea2a8e9e1d33fad6fbd73725d7475f4908b462b64f136405",
+  "sidecar_trazabilidad_temporal.py": "8c54ea392849eeaa68a647342f6454ff56b27ccccb2ff5efe07243267b6a56d7",
+  "stinkbox_transport_v0_1.py": "77ef348665788eb972a3af75b04ad0d1cd2516af751bb03d1d91cf9302d385c4",
+  "stinkbox_transport_v0_2.py": "86b791d60054e705edcb05f0fa6e28754a2ad5ccbf7701373308bcefbce0cc6a",
+  "stinkbox_vault/stinkbox_GALILEO_RESOLUCION_NUEVO_20260926.json": "e1877287b5e95243ef588f19b8b2d8e4d0ef5531b372a02e778ae064fde988cf",
+  "stinkbox_vault/stinkbox_STINKBOX_SYNTHETIC_SUPPORT_TEST.json": "e49d6a13883074b106deaeda52071f5e25fee3cbe3a6ee664534ab46fceea659",
+  "tokens_laterales/dynamis_dramatica_sistemica_v0_1.json": "e07086165d0a2b6b7d2f59c7bc59a0e9cb9a97aabc318c0e7ccdf1f5fcb0d408",
+  "traza_campo_244.py": "7d1f397563b8f925349da22d7c4fea125bbe0eebd2a9fff44fa0da8de8d3097d",
+  "tusi_par_indice_exploratorio_v0_1.py": "290d1bb32bb86766593557bf5d139991cf708ac7b4b568412761f4e98b0f86f8",
+  "v153_lateral_metrics_v1_1.py": "c172a6370de1a1cea2c3c487a638e071980dea1169d2360e34a7cc44b4eca6cd",
+  "vecinos_caldero/neighbor_events.jsonl": "a9f8934ddfa977f695ee785c4e5c336b74b727712c34ba74b7361daf95a19277",
+  "vecinos_caldero/neighbor_index.json": "97f87352afc50659decedc6fdb943d2772664210a4c3a2c7a5fcc1a7a540131d",
+  "vecinos_caldero/neighbor_store.py": "6989d1e959cfa049c8b0258a48f20e97ed5b07fb236fb360d9ba6fc39bbcd4f9",
+  "zri_coupling_v0_2.py": "38aaeb5dcaded0e7c15ab3d5613de84baad2aefd3ed053611e2f4edce89efe61",
+  "zri_experience_v0_1.py": "500fa2b12a4eae491c7b7dc2e0e42db5651dce6cce5d98f44acd28ac55586a85"
+ },
+ "scripts": {
+  "analizar_unico.py": "3290634c7074d22bf296e26e9d3cbe3ad434eb4fe021e54f4f7e5d2c224bd169",
+  "candados.py": "7531e7231810e32544d0d9b0462560f749730e1fdd25c1949c5abfaedfbfb30d",
+  "comparar_con_registrado_unico.py": "1bdaa945c57f2d98432b6323ca41eb9cd9fb83acc35a2bd5cee17f3228fcfda6",
+  "comparar_corridas.py": "e51e1537695d95c19c7b71785221d419a73befce867ebb4e8b6e22b0e41a52e8",
+  "congelar_base.py": "7799e978f427bfb27576c27daa39d652ae572437590b3e183f39e39ee935b086",
+  "construir_equivalencias_ORIGINAL.py": "16cc55302e79b16f0c14f5f4c38a886b100ad01f77e6df4993f39dd1028c504e",
+  "correr_todo.sh": "247ad8640dbf8e99d6acfde956ff5f87cc8e1cfe5b257137025fa1e16e28c920",
+  "ensamblar_piezas.py": "4054455c95f66e52a3218a34b6743950f55eb7390877f2f7dee8fbb506cc1c00",
+  "orquestador_unico.py": "ca836cc806e51ecd57bbfbb44dc82a83ebc01a0ea338aa3e1163e6d6bfa85de9",
+  "regenerar_puentes.py": "899e22253e0e68ddd12d625a8221cf05b3f315130eaf7d05a8c90fc1ca0dd7a9",
+  "reglas_equivalencias.py": "ec638c5079cd85f9c5008a7f56f9f9cdb23111ae54d7e230c23123b7fed5846e"
+ },
+ "tests": [
+  {
+   "test": "originales (post hoc 0.5.0 y 0.5.1, latencia, polaridad, memento/acero smoke) con detrás 2.3.3",
+   "exit": 0,
+   "n_pass_marcas": 22,
+   "n_fail_marcas": 0,
+   "ultima_linea": "ALL SMOKE PASS"
+  },
+  {
+   "test": "nuevos guardianes (Copi, falacias, acero, contrato sobre las 28 corridas UNICO)",
+   "exit": 0,
+   "n_pass_marcas": 66,
+   "n_fail_marcas": 0,
+   "ultima_linea": "=== RESUMEN 66/66 PASS ==="
+  },
+  {
+   "test": "guardián tropos Beristáin (92)",
+   "exit": 0,
+   "n_pass_marcas": 92,
+   "n_fail_marcas": 0,
+   "ultima_linea": "=== RESUMEN test_guardian_tropos: 92/92 PASS ==="
+  },
+  {
+   "test": "sensor perfil del narrador",
+   "exit": 0,
+   "n_pass_marcas": 0,
+   "n_fail_marcas": 0,
+   "ultima_linea": "RESUMEN 7/7 PASS"
+  },
+  {
+   "test": "detrás v2 2.3.3 (falso positivo 'esta' demostrativo)",
+   "exit": 0,
+   "n_pass_marcas": 5,
+   "n_fail_marcas": 0,
+   "ultima_linea": "SUMMARY 5/5"
+  }
+ ],
+ "inputs": {
+  "BEZOS_FULL.json": "0963010c6499f5626e325497e5347af8b4e9671a4349d45b011fa5c60da99166",
+  "BEZOS_PREFIX.json": "5adc1a1d6101eb996da33b9b130a6ae4c28a68d59d3e2f3fc936e562a1205641",
+  "G0924_FULL.json": "eb078f0d04b94b3460b4634fc2e70606e384191c57f9b7b7f174e412fc17292a",
+  "G0924_PREFIX.json": "d64a5b7f2a2ca349a4a03adc88f2d13da0b6bc314eaff0402f3d08dcbfaf1d89",
+  "G0926_FULL.json": "066b545cb291d20dbe2dd8a7e32e6eb80e143cb1ec4ff864d3599d780df3c874",
+  "G0926_PREFIX.json": "ac75aeb5a4885331b4ccceefcd576242885d3112ad3308032ff0ee56b6789004",
+  "GCAL_FULL.json": "c16842f590a6f346d66ecaf5e2acdd56b0e0f083e4ad0ee45861bdc3f0e7a37d",
+  "GCAL_PREFIX.json": "9fa40c38a0ed70c6d8d901b8e23421b989956454b677ef62da4597d7e1a2f971",
+  "JOBS_FULL.json": "6b0dc8fedd1c24e9aa86167d6687a6c9f3f9d9991ed8cd8b89237ec50034df97",
+  "JOBS_PREFIX.json": "3b278ce70c61b8b2ef36672aab9dea912d2b3a4e48342d1746229ecbbe38dc9e",
+  "M35A_FULL.json": "0a5962ac8a6cc399d8b472aad08ca69798597f0dfd7e3d730017d7cb61dc01ab",
+  "M35A_PREFIX.json": "1caa3b816fece97e143a7c024b50e07d90c2e6c88eaa8b09503aeadc2ff6f018",
+  "MUSK_FULL.json": "03c9103b6e793fedbb6289d6b4974477a2bf23f3a03e3b77e56fc712b8237b7c",
+  "MUSK_PREFIX.json": "f8dceea03644562efb070a36368714a68e76c0065e019c68bd164f9cc3ecc2b9"
+ },
+ "linea_base": {
+  "descripcion": "7 casos × FULL/PREFIX, r1 (r2 idéntica). top10/cierres/motivos por corrida; sha_nucleo = sha de [ranking, H1, H2, reporte_caso].",
+  "corridas": [
+   {
+    "caso": "BEZOS",
+    "modo": "FULL",
+    "top1": "arquetipo_el_creador",
+    "top2": "schwartz_10_autodireccion",
+    "top10": [
+     "arquetipo_el_creador",
+     "schwartz_10_autodireccion",
+     "arquetipo_el_explorador",
+     "arquetipo_el_sabio",
+     "arquetipo_el_gobernante",
+     "kwml_01_rey"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "schwartz_10_autodireccion",
+    "cierre_vigente": "DETERMINADO",
+    "motivos_vigente": [],
+    "cierre_estricto": "CIERRE_ESTRICTO",
+    "motivos_estricto": [],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "TENSION_LATENTE_BAJO_NULO",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 3.0,
+    "aquiles_remuestreo_ganador": "schwartz_10_autodireccion",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 6,
+     "top2": 1,
+     "empate": 2
+    },
+    "sha_nucleo": "0590dd1220441ec4",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "schwartz_10_autodireccion",
+     "cierre_vigente": "DETERMINADO",
+     "cierre_estricto": "CIERRE_ESTRICTO"
+    }
+   },
+   {
+    "caso": "BEZOS",
+    "modo": "PREFIX",
+    "top1": "arquetipo_el_creador",
+    "top2": "arquetipo_el_explorador",
+    "top10": [
+     "arquetipo_el_creador",
+     "arquetipo_el_explorador",
+     "arquetipo_el_gobernante",
+     "schwartz_10_autodireccion",
+     "arquetipo_el_sabio",
+     "kwml_01_rey"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "arquetipo_el_explorador",
+    "cierre_vigente": "DETERMINADO",
+    "motivos_vigente": [],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C2: el acero no descarta al rival más fuerte arquetipo_el_explorador (dif_acero -1.062366, top1 CAE)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "schwartz_10_autodireccion",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 5,
+     "top2": 1,
+     "empate": 3
+    },
+    "sha_nucleo": "0e993126d2762a8d",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "arquetipo_el_explorador",
+     "cierre_vigente": "DETERMINADO",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "G0924",
+    "modo": "FULL",
+    "top1": "arquetipo_el_creador",
+    "top2": "utopia_mentalidad_liberal",
+    "top10": [
+     "arquetipo_el_creador",
+     "utopia_mentalidad_liberal",
+     "8_rebelion",
+     "arquetipo_el_sabio",
+     "mbti_factor_pensamiento_t"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "utopia_mentalidad_liberal",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE)",
+     "C1: arquetipo_el_creador no encabeza ningún corte (cadena P: arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, 8_rebelion, 8_rebelion, 8_rebelion)",
+     "C2: el acero no descarta al rival más fuerte utopia_mentalidad_liberal (dif_acero -0.257278, top1 CAE)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "DESCARTE_DEBIL_LATENTE_BAJO_NULO",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 1.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_creador",
+    "aquiles_remuestreo_coincide_top1": true,
+    "convergencia_lateral": {
+     "top1": 6,
+     "top2": 2,
+     "empate": 1
+    },
+    "sha_nucleo": "c38c15795ffb11f1",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "utopia_mentalidad_liberal",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "G0924",
+    "modo": "PREFIX",
+    "top1": "utopia_mentalidad_liberal",
+    "top2": "arquetipo_el_creador",
+    "top10": [
+     "utopia_mentalidad_liberal",
+     "arquetipo_el_creador",
+     "8_rebelion",
+     "mbti_factor_pensamiento_t",
+     "arquetipo_el_sabio"
+    ],
+    "H1": "utopia_mentalidad_liberal",
+    "H2": "arquetipo_el_creador",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE",
+     "LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE; LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2)",
+     "C1: utopia_mentalidad_liberal no encabeza ningún corte (cadena P: arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, 8_rebelion, 8_rebelion)",
+     "C2: el acero no descarta al rival más fuerte arquetipo_el_creador (dif_acero -0.745025, top1 CAE)",
+     "C3: H1/H2 no distinguibles: subdeterminado (margen 0.255 < 1.0, rival en 8 cortes vs top1 en 2)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "DESCARTE_DEBIL_LATENTE_BAJO_NULO",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 1.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_creador",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 2,
+     "top2": 6,
+     "empate": 1
+    },
+    "sha_nucleo": "f6715c432012268e",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "utopia_mentalidad_liberal",
+     "top2": "arquetipo_el_creador",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "G0926",
+    "modo": "FULL",
+    "top1": "arquetipo_el_sabio",
+    "top2": "mbti_factor_pensamiento_t",
+    "top10": [
+     "arquetipo_el_sabio",
+     "mbti_factor_pensamiento_t",
+     "utopia_mentalidad_liberal",
+     "bbk_03_individualista",
+     "arquetipo_el_mago",
+     "spengler_02_verano_otono_racionalizacion"
+    ],
+    "H1": "arquetipo_el_sabio",
+    "H2": "mbti_factor_pensamiento_t",
+    "cierre_vigente": "DETERMINADO",
+    "motivos_vigente": [],
+    "cierre_estricto": "CIERRE_ESTRICTO",
+    "motivos_estricto": [],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 2.0,
+    "voto_familias_top2": 1.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_sabio",
+    "aquiles_remuestreo_coincide_top1": true,
+    "convergencia_lateral": {
+     "top1": 2,
+     "top2": 4,
+     "empate": 2
+    },
+    "sha_nucleo": "222248f3d3e37f0e",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_sabio",
+     "top2": "mbti_factor_pensamiento_t",
+     "cierre_vigente": "DETERMINADO",
+     "cierre_estricto": "CIERRE_ESTRICTO"
+    }
+   },
+   {
+    "caso": "G0926",
+    "modo": "PREFIX",
+    "top1": "arquetipo_el_mago",
+    "top2": "mbti_factor_pensamiento_t",
+    "top10": [
+     "arquetipo_el_mago",
+     "mbti_factor_pensamiento_t",
+     "arquetipo_el_sabio",
+     "utopia_mentalidad_liberal",
+     "bbk_03_individualista",
+     "spengler_02_verano_otono_racionalizacion"
+    ],
+    "H1": "arquetipo_el_mago",
+    "H2": "mbti_factor_pensamiento_t",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE)",
+     "C1: arquetipo_el_mago no encabeza ningún corte (cadena P: arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 0.0,
+    "voto_familias_top2": 1.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_sabio",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 3,
+     "top2": 5,
+     "empate": 0
+    },
+    "sha_nucleo": "a4b060c20dbc26b9",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_mago",
+     "top2": "utopia_mentalidad_liberal",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "GCAL",
+    "modo": "FULL",
+    "top1": "arquetipo_el_mago",
+    "top2": "arquetipo_el_sabio",
+    "top10": [
+     "arquetipo_el_mago",
+     "arquetipo_el_sabio",
+     "utopia_mentalidad_liberal",
+     "arquetipo_el_creador",
+     "arquetipo_el_explorador",
+     "kwml_03_mago",
+     "bbk_03_individualista",
+     "spengler_02_verano_otono_racionalizacion"
+    ],
+    "H1": "arquetipo_el_mago",
+    "H2": "arquetipo_el_sabio",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE",
+     "LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE; LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2)",
+     "C1: arquetipo_el_mago no encabeza ningún corte (cadena P: arquetipo_el_explorador, arquetipo_el_explorador, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio, arquetipo_el_sabio)",
+     "C3: H1/H2 no distinguibles: subdeterminado (margen 0.469 < 1.0, rival en 9 cortes vs top1 en 5)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 0.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_sabio",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 3,
+     "top2": 4,
+     "empate": 1
+    },
+    "sha_nucleo": "214d6b549dc096ce",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_mago",
+     "top2": "arquetipo_el_sabio",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "GCAL",
+    "modo": "PREFIX",
+    "top1": "arquetipo_el_sabio",
+    "top2": "arquetipo_el_mago",
+    "top10": [
+     "arquetipo_el_sabio",
+     "arquetipo_el_mago",
+     "kwml_03_mago",
+     "utopia_mentalidad_liberal",
+     "arquetipo_el_creador",
+     "arquetipo_el_explorador",
+     "bbk_03_individualista",
+     "spengler_02_verano_otono_racionalizacion"
+    ],
+    "H1": "arquetipo_el_sabio",
+    "H2": "arquetipo_el_mago",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "DECIMO_HOMBRE_LATENCIA:CIERRE_EN_BANDA_DE_EMPATE"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (DECIMO_HOMBRE_LATENCIA:CIERRE_EN_BANDA_DE_EMPATE)",
+     "C2: el acero no descarta al rival más fuerte arquetipo_el_mago (dif_acero -0.316372, top1 CAE)",
+     "C3: H1/H2 no distinguibles: décimo hombre: cierre en banda de empate (p=0.5479)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "LATENTE",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 0.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "arquetipo_el_sabio",
+    "aquiles_remuestreo_coincide_top1": true,
+    "convergencia_lateral": {
+     "top1": 4,
+     "top2": 3,
+     "empate": 1
+    },
+    "sha_nucleo": "077b870167824c61",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_sabio",
+     "top2": "arquetipo_el_mago",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "JOBS",
+    "modo": "FULL",
+    "top1": "arquetipo_el_creador",
+    "top2": "schwartz_10_autodireccion",
+    "top10": [
+     "arquetipo_el_creador",
+     "schwartz_10_autodireccion",
+     "arquetipo_el_mago",
+     "weber_02_autoridad_carismatica",
+     "spengler_01_primavera_nacimiento_mistico",
+     "cliodinamica_03_fase_crisis_colapso",
+     "arquetipo_el_explorador"
+    ],
+    "H1": null,
+    "H2": null,
+    "cierre_vigente": "LATENCIA_INFORMACIONAL",
+    "motivos_vigente": [],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C2: el acero no descarta al rival más fuerte arquetipo_el_mago (dif_acero -0.627268, top1 CAE)",
+     "C3: H1/H2 no distinguibles: sin H1; sin H2"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 3.0,
+    "aquiles_remuestreo_ganador": "schwartz_10_autodireccion",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 3,
+     "top2": 5,
+     "empate": 1
+    },
+    "sha_nucleo": "264bcf09dd4d50a5",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "arquetipo_el_mago",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "JOBS",
+    "modo": "PREFIX",
+    "top1": "arquetipo_el_creador",
+    "top2": "schwartz_10_autodireccion",
+    "top10": [
+     "arquetipo_el_creador",
+     "schwartz_10_autodireccion",
+     "weber_02_autoridad_carismatica",
+     "arquetipo_el_mago",
+     "cliodinamica_03_fase_crisis_colapso",
+     "arquetipo_el_explorador",
+     "spengler_01_primavera_nacimiento_mistico"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "schwartz_10_autodireccion",
+    "cierre_vigente": "DETERMINADO",
+    "motivos_vigente": [],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C2: el acero no descarta al rival más fuerte schwartz_10_autodireccion (dif_acero -0.80841, top1 CAE)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 3.0,
+    "aquiles_remuestreo_ganador": "schwartz_10_autodireccion",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 3,
+     "top2": 5,
+     "empate": 1
+    },
+    "sha_nucleo": "1e868ce6ac8a0c83",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "schwartz_10_autodireccion",
+     "cierre_vigente": "DETERMINADO",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "M35A",
+    "modo": "FULL",
+    "top1": "heraldo",
+    "top2": "arquetipo_el_sabio",
+    "top10": [
+     "heraldo",
+     "arquetipo_el_sabio",
+     "utopia_mentalidad_liberal",
+     "monomito_01_mundo_ordinario",
+     "monomito_05_cruce_del_primer_umbral",
+     "monomito_06_pruebas_aliados_y_enemigos",
+     "monomito_10_el_camino_de_regreso",
+     "23_necesidad_de_sacrificar_a_los_seres_queridos",
+     "36_perdida_de_los_seres_queridos",
+     "tainter_01_inversion_complejidad_productiva"
+    ],
+    "H1": "heraldo",
+    "H2": "arquetipo_el_sabio",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2",
+     "HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_arquetipo_el_sabio",
+     "HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_monomito_05_cruce_del_primer_umbral"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2; HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_arquetipo_el_sabio; HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_monomito_05_cruce_del_primer_umbral)",
+     "C2: el acero no descarta al rival más fuerte monomito_01_mundo_ordinario (dif_acero -0.261075, top1 CAE)",
+     "C3: H1/H2 no distinguibles: subdeterminado (margen 0.226 < 1.0, rival en 7 cortes vs top1 en 3)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 6.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "monomito_06_pruebas_aliados_y_enemigos",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 2,
+     "top2": 6,
+     "empate": 0
+    },
+    "sha_nucleo": "afeb0f315d576d3c",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_sabio",
+     "top2": "heraldo",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "M35A",
+    "modo": "PREFIX",
+    "top1": "heraldo",
+    "top2": "monomito_05_cruce_del_primer_umbral",
+    "top10": [
+     "heraldo",
+     "monomito_05_cruce_del_primer_umbral",
+     "arquetipo_el_sabio",
+     "36_perdida_de_los_seres_queridos",
+     "23_necesidad_de_sacrificar_a_los_seres_queridos",
+     "tainter_01_inversion_complejidad_productiva",
+     "utopia_mentalidad_liberal",
+     "social_05_granovetter_modelos_de_umbral",
+     "monomito_06_pruebas_aliados_y_enemigos",
+     "monomito_10_el_camino_de_regreso"
+    ],
+    "H1": "heraldo",
+    "H2": "monomito_05_cruce_del_primer_umbral",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2)",
+     "C3: H1/H2 no distinguibles: subdeterminado (margen 0.527 < 1.0, rival en 3 cortes vs top1 en 3)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "MARCA",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 0.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "monomito_06_pruebas_aliados_y_enemigos",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 1,
+     "top2": 5,
+     "empate": 2
+    },
+    "sha_nucleo": "5f446aa36d975be1",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "heraldo",
+     "top2": "monomito_05_cruce_del_primer_umbral",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "MUSK",
+    "modo": "FULL",
+    "top1": "arquetipo_el_creador",
+    "top2": "arquetipo_el_explorador",
+    "top10": [
+     "arquetipo_el_creador",
+     "arquetipo_el_explorador",
+     "schwartz_09_estimulacion",
+     "schwartz_10_autodireccion",
+     "9_audaz_empresa"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "arquetipo_el_explorador",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (LOGICA_COPI:NO_RESUELTO_SUBDETERMINACION_H1_H2)",
+     "C3: H1/H2 no distinguibles: subdeterminado (margen 0.609 < 1.0, rival en 10 cortes vs top1 en 7)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "NO_RESUELTO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "LIMPIO",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 0.0,
+    "aquiles_remuestreo_ganador": "9_audaz_empresa",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 3,
+     "top2": 5,
+     "empate": 1
+    },
+    "sha_nucleo": "69fbb127cfe7a2e9",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "arquetipo_el_creador",
+     "top2": "arquetipo_el_explorador",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   },
+   {
+    "caso": "MUSK",
+    "modo": "PREFIX",
+    "top1": "arquetipo_el_creador",
+    "top2": "schwartz_10_autodireccion",
+    "top10": [
+     "arquetipo_el_creador",
+     "schwartz_10_autodireccion",
+     "9_audaz_empresa",
+     "arquetipo_el_explorador",
+     "schwartz_09_estimulacion"
+    ],
+    "H1": "arquetipo_el_creador",
+    "H2": "schwartz_10_autodireccion",
+    "cierre_vigente": "LATENTE",
+    "motivos_vigente": [
+     "HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_9_audaz_empresa"
+    ],
+    "cierre_estricto": "LATENTE",
+    "motivos_estricto": [
+     "C0: la ruta vigente ya dejó el cierre LATENTE (HOMBRE_DE_ACERO:TOP1_NO_RESUELTO_ANTE_ACERO_DE_9_audaz_empresa)",
+     "C2: el acero no descarta al rival más fuerte schwartz_10_autodireccion (dif_acero -1.116602, top1 CAE)"
+    ],
+    "guardianes": {
+     "DECIMO_HOMBRE_LATENCIA": "MARCA",
+     "PREGUNTA_DETRAS_V2": "LIMPIO",
+     "PREGUNTA_DIRIGIDA_POST_HOC": "LIMPIO",
+     "FALACIAS": "LIMPIO",
+     "LOGICA_COPI": "LIMPIO",
+     "POLARIDAD_CAUSAL": "LIMPIO",
+     "HOMBRE_DE_ACERO": "MARCA",
+     "SHERLOCK_RIGOR": "LIMPIO",
+     "TROPOS_BERISTAIN": "LIMPIO"
+    },
+    "negativo_top1": "SE_SOSTIENE",
+    "negativo_top2": "SE_SOSTIENE",
+    "voto_familias_top1": 1.0,
+    "voto_familias_top2": 3.0,
+    "aquiles_remuestreo_ganador": "9_audaz_empresa",
+    "aquiles_remuestreo_coincide_top1": false,
+    "convergencia_lateral": {
+     "top1": 5,
+     "top2": 2,
+     "empate": 2
+    },
+    "sha_nucleo": "85d4272d643e6ebb",
+    "determinista_r1_r2_json_completo": true,
+    "determinista_r1_r2_nucleo": true,
+    "referencia_FAMILIAS_TOKENS_0": {
+     "top1": "9_audaz_empresa",
+     "top2": "arquetipo_el_creador",
+     "cierre_vigente": "LATENTE",
+     "cierre_estricto": "LATENTE"
+    }
+   }
+  ]
+ },
+ "equivalencias": {
+  "UNICO_con_votos_laterales_apagados_vs_ESTRICTO_tirada": [
+   {
+    "caso": "BEZOS",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "BEZOS",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "G0924",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "G0924",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "G0926",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "G0926",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "GCAL",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "GCAL",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "JOBS",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "JOBS",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "M35A",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "M35A",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "MUSK",
+    "modo": "FULL",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   },
+   {
+    "caso": "MUSK",
+    "modo": "PREFIX",
+    "top10_igual": true,
+    "cierre_vigente_igual": true,
+    "cierre_estricto_igual": true
+   }
+  ]
+ },
+ "candados": {
+  "antes": {
+   "tag": "ANTES",
+   "hora_local": "2026-09-27 04:19:36 CST",
+   "engine": {
+    "ruta": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/Engine_V5_CANONICO_SOLO.py",
+    "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+    "bytes": 24944,
+    "ok": true
+   },
+   "patterns_v14": {
+    "ruta": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/patterns_final_v14.json",
+    "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+    "n_patrones": 244,
+    "ok": true
+   },
+   "engine_falso_en_paquete": [],
+   "previas": {
+    "motor_estricto": "456c7e9f5618d3afe1bf88d99028f3a216a6beb1fc2d085237925d73fe755d41",
+    "modo_estricto_origen": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e",
+    "motor_vigente_guardianes": "dfe4fd4177e9aac049f70e062d286e406d41cc4ca1dd2978aefb2694931d9990"
+   },
+   "ok": true
+  },
+  "despues": {
+   "tag": "DESPUES",
+   "hora_local": "2026-09-27 04:20:23 CST",
+   "engine": {
+    "ruta": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/Engine_V5_CANONICO_SOLO.py",
+    "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+    "bytes": 24944,
+    "ok": true
+   },
+   "patterns_v14": {
+    "ruta": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/patterns_final_v14.json",
+    "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+    "n_patrones": 244,
+    "ok": true
+   },
+   "engine_falso_en_paquete": [],
+   "previas": {
+    "motor_estricto": "456c7e9f5618d3afe1bf88d99028f3a216a6beb1fc2d085237925d73fe755d41",
+    "modo_estricto_origen": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e",
+    "motor_vigente_guardianes": "dfe4fd4177e9aac049f70e062d286e406d41cc4ca1dd2978aefb2694931d9990"
+   },
+   "ok": true
+  }
+ },
+ "como_medir_cambios": "bash scripts/correr_todo.sh [--catalogo RUTA --puentes DIR]; python3 scripts/analizar_unico.py; python3 scripts/comparar_corridas.py --raw raw"
+}

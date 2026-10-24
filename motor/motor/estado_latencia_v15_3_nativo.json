@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0-dinamica-20260920",
+  "expedientes": {
+    "v153::smoke": {
+      "clave": "v153::smoke",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1790578213.8956668,
+      "Alimenta_H": "NO"
+    },
+    "v153::¿Cómo evoluciona la tensión institucional, judicial y política?": {
+      "clave": "v153::¿Cómo evoluciona la tensión institucional, judicial y política?",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1790628613.1649175,
+      "Alimenta_H": "NO"
+    },
+    "v153::¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?": {
+      "clave": "v153::¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1790751873.0921946,
+      "Alimenta_H": "NO"
+    },
+    "v153::A partir de evidencia documental contemporanea y fechada obtenida externamente, ¿qué configuraciones del campo de patrones quedan activadas al cierre Z90 de Mozart?": {
+      "clave": "v153::A partir de evidencia documental contemporanea y fechada obtenida externamente, ¿qué configuraciones del campo de patrones quedan activadas al cierre Z90 de Mozart?",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62,
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1790842406.7887158,
+      "Alimenta_H": "NO"
+    },
+    "v153::Caso ciego de liderazgo estratégico ante amenaza externa, rivalidad interna, reforma de capacidades, persuasión política y coalición. Corte de información: C3_480BC.": {
+      "clave": "v153::Caso ciego de liderazgo estratégico ante amenaza externa, rivalidad interna, reforma de capacidades, persuasión política y coalición. Corte de información: C3_480BC.",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1792509143.5571465,
+      "Alimenta_H": "NO"
+    },
+    "v153::Caso ciego de liderazgo estratégico ante amenaza externa, rivalidad interna, reforma de capacidades, persuasión política y coalición. Corte de información: C3_480BC._ADVERSARIAL_ABLATION": {
+      "clave": "v153::Caso ciego de liderazgo estratégico ante amenaza externa, rivalidad interna, reforma de capacidades, persuasión política y coalición. Corte de información: C3_480BC._ADVERSARIAL_ABLATION",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62,
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1792509153.694738,
+      "Alimenta_H": "NO"
+    },
+    "v153::retenido": {
+      "clave": "v153::retenido",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1792509154.762415,
+      "Alimenta_H": "NO"
+    },
+    "v153::retenido_ADVERSARIAL_ABLATION": {
+      "clave": "v153::retenido_ADVERSARIAL_ABLATION",
+      "tema": "corrida",
+      "estado": "LATENCIA",
+      "p": 0.62,
+      "tokens": [
+        "arranque",
+        "corte"
+      ],
+      "historial_p": [
+        0.62,
+        0.62
+      ],
+      "n_desempates": 0,
+      "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
+      "actualizado_ts": 1792509160.388539,
+      "Alimenta_H": "NO"
+    }
+  },
+  "actualizado_ts": 1792509160.3885536
+}

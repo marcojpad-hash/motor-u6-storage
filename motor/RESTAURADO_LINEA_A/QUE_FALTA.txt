@@ -1,0 +1,4 @@
+Ricci: equivalente mínimo (estructura_ricci + wrapper correr_cuts). No es el Forman de laboratorio.
+Caldero II genérico: sidecar + runner (query ciega + self-match + neighbor store). El LLM llena search_sources.
+Souriau: espacio_souriau.py es stub de fase. El plugin 210141 ya estaba; v1.4 sigue pidiendo funciones en el input del LLM.
+

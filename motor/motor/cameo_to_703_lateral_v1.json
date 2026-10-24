@@ -1,0 +1,233 @@
+{
+  "schema": "CAMEO_TO_703_LATERAL_V1",
+  "version": "CAMEO_TO_703_LATERAL_V1",
+  "source": "CAMEO Event Data Codebook + existing 703-token vocabulary",
+  "mapping_rule": "Only explicit CAMEO code -> existing 703 token; no new weights; no new 244 patterns.",
+  "code_to_token": {
+    "020": "suplica",
+    "021": "cooperacion",
+    "0213": "cooperacion",
+    "030": "cooperacion",
+    "031": "cooperacion",
+    "0313": "cooperacion",
+    "046": "negociacion",
+    "057": "reconciliacion",
+    "063": "cooperacion",
+    "075": "asilo",
+    "0831": "liderazgo",
+    "0841": "retorno",
+    "0842": "restitucion",
+    "091": "corrupcion_poder",
+    "092": "injusticia",
+    "094": "justicia",
+    "1013": "cooperacion",
+    "1041": "liderazgo",
+    "106": "negociacion",
+    "107": "resolucion",
+    "108": "mediacion",
+    "111": "oposicion",
+    "113": "oposicion",
+    "115": "justicia",
+    "116": "culpa",
+    "120": "rechazo_ritual_autoritario",
+    "128": "desobediencia",
+    "129": "veto",
+    "130": "amenaza_central",
+    "131": "amenaza_central",
+    "137": "represion",
+    "141": "oposicion",
+    "144": "bloqueo",
+    "163": "prohibicion",
+    "164": "ruptura_barrera",
+    "165": "ruptura_barrera",
+    "171": "destruccion",
+    "172": "restriccion_iniciativa",
+    "1722": "prohibicion",
+    "173": "privacion_libertad",
+    "174": "retorno",
+    "175": "opresion",
+    "176": "ataque_cyber"
+  },
+  "code_triggers_es": {
+    "0213": [
+      "cooperación judicial",
+      "cooperacion judicial"
+    ],
+    "0241": [
+      "cambio de liderazgo",
+      "cambio en el liderazgo"
+    ],
+    "026": [
+      "negociación",
+      "negociacion",
+      "negociar"
+    ],
+    "046": [
+      "negociación",
+      "negociacion",
+      "negociar"
+    ],
+    "057": [
+      "acuerdo formal",
+      "firmó el acuerdo",
+      "firmo el acuerdo"
+    ],
+    "063": [
+      "cooperación judicial",
+      "cooperacion judicial"
+    ],
+    "075": [
+      "asilo"
+    ],
+    "0834": [
+      "cambio de instituciones",
+      "cambio de régimen",
+      "cambio de regimen"
+    ],
+    "0841": [
+      "liberó",
+      "libero",
+      "liberación",
+      "liberacion"
+    ],
+    "091": [
+      "corrupción",
+      "corrupcion"
+    ],
+    "092": [
+      "derechos humanos"
+    ],
+    "094": [
+      "crímenes de guerra",
+      "crimenes de guerra"
+    ],
+    "1041": [
+      "cambio de liderazgo",
+      "cambio en el liderazgo"
+    ],
+    "106": [
+      "negociación",
+      "negociacion",
+      "negociar"
+    ],
+    "107": [
+      "resolver la disputa",
+      "resolver el conflicto",
+      "acuerdo para resolver"
+    ],
+    "108": [
+      "mediación",
+      "mediacion"
+    ],
+    "111": [
+      "criticó",
+      "critico",
+      "criticó públicamente",
+      "critico publicamente",
+      "denunció",
+      "denuncio"
+    ],
+    "113": [
+      "oposición",
+      "oposicion"
+    ],
+    "115": [
+      "demanda judicial",
+      "presentó una demanda",
+      "presento una demanda",
+      "llevado a juicio"
+    ],
+    "116": [
+      "declarado culpable",
+      "declarado culpable",
+      "condenado"
+    ],
+    "120": [
+      "rechazó",
+      "rechazo",
+      "rechazar"
+    ],
+    "128": [
+      "desobedeció",
+      "desobedecio",
+      "desobedecer",
+      "violó la ley",
+      "violo la ley"
+    ],
+    "129": [
+      "vetó",
+      "veto",
+      "vetar"
+    ],
+    "130": [
+      "amenazó",
+      "amenazo",
+      "amenaza"
+    ],
+    "137": [
+      "represión",
+      "represion",
+      "reprimió",
+      "reprimio"
+    ],
+    "141": [
+      "protesta",
+      "protestó",
+      "protesto"
+    ],
+    "144": [
+      "bloqueó",
+      "bloqueo",
+      "bloquear"
+    ],
+    "163": [
+      "sanción",
+      "sancion",
+      "embargo",
+      "boicot"
+    ],
+    "164": [
+      "suspendió las negociaciones",
+      "suspendio las negociaciones",
+      "detuvo las negociaciones"
+    ],
+    "165": [
+      "suspendió la mediación",
+      "suspendio la mediacion"
+    ],
+    "171": [
+      "destruyó",
+      "destruyo",
+      "dañó",
+      "dano",
+      "daño"
+    ],
+    "1722": [
+      "prohibió",
+      "prohibio",
+      "prohibida",
+      "prohibido"
+    ],
+    "173": [
+      "arrestado",
+      "arrestó",
+      "arresto",
+      "detenido",
+      "detuvo",
+      "encarcelado",
+      "prisión",
+      "prision",
+      "arresto domiciliario"
+    ],
+    "174": [
+      "expulsó",
+      "expulso",
+      "deportó",
+      "deporto"
+    ],
+    "175": [
+      "represión violenta",
+      "represion violenta"
+    ]
+  }
+}

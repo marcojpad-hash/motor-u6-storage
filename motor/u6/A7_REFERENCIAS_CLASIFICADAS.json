@@ -1,0 +1,18 @@
+{
+ "version": "U6_A7_20261012",
+ "nota": "Referencias literales a archivos que no existen en el pack, revisadas a mano una por una. Las corregidas en código ya no aparecen; estas quedan con su clase. Una referencia no listada aquí sigue saliendo como A7_ARCHIVO_REFERENCIADO_AUSENTE.",
+ "clasificacion": {
+  "Engine_V5_CANONICO_SOLO.py": {"patterns.json": "NO_SE_TOCA: Engine inmutable (665c39a2); nombres por defecto de su CLI/test, la corrida pasa la ruta explícita", "patterns_v3_test.json": "NO_SE_TOCA: Engine inmutable; fixture de test interno", "priors_freeze_test.json": "NO_SE_TOCA: Engine inmutable; fixture de test interno"},
+  "MOTOR_V15_3_NATIVO_V0_9_UNICO.py": {"manifiesto_plugins.json": "OPCIONAL: el arranque lo lee solo si existe (if man.exists()); sin él hace hash-bypass y sigue. No se fabrica"},
+  "MOTOR_V15_3_UNICO_20260927.py": {"caldero_run.py": "REGISTRO_HISTORICO: fila de estado SUPERADA (PATCH 006); no se carga. Alias MAPA_NOMBRES -> caldero_II_runner_generico.py"},
+  "laterales_unico_v1.py": {"caldero_run.py": "REGISTRO_HISTORICO (ver nota_U6 en el registro)", "cameo_to_244.json": "AUSENCIA_DELIBERADA: mapping CAMEO->244 no aprobado; el adaptador lo reporta NOT_APPLICABLE", "zonas_7783.json": "STORE_SE_CREA_AL_ESCRIBIR (guardia de store heredado)", "zonas_7783.HEREDADO_PRE_RUN.json": "STORE_SE_CREA_AL_ESCRIBIR (renombre de un heredado)"},
+  "marco_7783.py": {"zonas_7783.json": "STORE_SE_CREA_AL_ESCRIBIR (visitar)"},
+  "cameo_to_244_adapter_v1.py": {"cameo_to_244.json": "AUSENCIA_DELIBERADA: mapping no aprobado (no se inventa)"},
+  "candado_plugins.py": {"manifiesto_plugins.json": "SALIDA: registrar_o_comparar lo crea; U6 usa solo verificar_plugin (no muta estado)"},
+  "coactivacion_escalas.py": {"COACTIVACION_RESULTADOS.json": "SALIDA (--out por defecto)"},
+  "control_latencia_decimo_hombre.py": {"estado_latencia_decimo_hombre_DEMO.json": "SALIDA del modo demo (__main__)"},
+  "lectura_negativo_ricci_vs_billar_v0_1.py": {"NEGATIVO_RICCI_VS_BILLAR_V0_1.json": "SALIDA (write_text)"},
+  "plugin_familias_gloria_sacro.py": {"patterns_v14_plus_gloria_sacro.json": "SALIDA (dest por defecto; nunca reemplaza patterns_final_v14.json)"},
+  "plugin_sombrero_blanco_token.py": {"stinkbox_tokens_descubiertos.json": "STORE (lo copia el harness de STORES_VACIO; falso positivo U5)"}
+ }
+}
