@@ -1,0 +1,281 @@
+{
+ "lote": "CALIBRACION_LOTE_01",
+ "registro_sha256": "9c27de9ed6e682a2cb3cc2590014e7e902381f6f9c975793080e4dfb835cfe2d",
+ "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+ "casos": [
+  {
+   "case_id": "CAL_LOTE01_01_NIXON",
+   "input_sha256": "ad6f139dda3243515c67accd57b25f59bd7a7935a95e0bfa79ed508c3a0d22e1",
+   "returncode": 0,
+   "H1": "sistema_domiciano",
+   "H2": "jaldun_02_institucionalizacion_y_sedentarismo",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "AJUSTADA",
+   "margen": 2.537886,
+   "huella_salida_sha256": "6fe2d549149348da282dd9efc2458a8a079b2667665436fcddd78bb25ff64127",
+   "result_sha256": "45b41ebea7aa187224c7b50f88f457160807be1768a5bb368741edac07c7b58c",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "17_fatal_imprudencia",
+    "33_error_de_juicio",
+    "frye_mythos_tragedia"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Watergate_scandal ; renuncia 9-ago-1974 ante juicio político inminente (cinta 'smoking gun'), indultado por Ford 8-sep-1974"
+  },
+  {
+   "case_id": "CAL_LOTE01_02_CHURCHILL",
+   "input_sha256": "5858c5deedeaa3159c3b41dc5a4e1042ca4c678f68d242b8c81471fc5c55aa79",
+   "returncode": 0,
+   "H1": "berlin_01_erizo",
+   "H2": "30_ambicion",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "grado": "AJUSTADA",
+   "margen": 4.2025,
+   "huella_salida_sha256": "80acd6963c926f972bdbbecd8eeeda80de3904784dcae4b115ab3183636e6f9f",
+   "result_sha256": "70404e69ce7327cb369082b6318113fadc4560bf861dea0025330e16c8f9298c",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "35_recuperacion_de_lo_perdido",
+    "arquetipo_el_heroe",
+    "monomito_08_la_odisea_o_prueba_suprema",
+    "weber_02_autoridad_carismatica"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Winston_Churchill ; Primer Ministro 10-may-1940, conduce la guerra hasta la victoria de 1945, pierde la elección de jul-1945"
+  },
+  {
+   "case_id": "CAL_LOTE01_03_SEMMELWEIS",
+   "input_sha256": "9cc748fb17f278ace264c2f4a7ea07f31f764a9b614f437e1473cd8dd77ba604",
+   "returncode": 0,
+   "H1": "20_sacrificio_por_un_ideal",
+   "H2": "arquetipo_el_sabio",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "AJUSTADA",
+   "margen": 6.993106,
+   "huella_salida_sha256": "477c905167637ce08314fbff6ce75878f2a0dd3b10afb1a16309d5032aaa5858",
+   "result_sha256": "a6a20937d81d81de45dbda8d68e4209c3b3ad874790fe984aea0356a0275430d",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 1,
+   "acierto_set": 1,
+   "desenlace_familias": [
+    "16_locura",
+    "20_sacrificio_por_un_ideal",
+    "5_persecucion",
+    "frye_mythos_tragedia"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis ; deja Viena 1850, libro de 1861 rechazado, internado en asilo y muere 13-ago-1865"
+  },
+  {
+   "case_id": "CAL_LOTE01_04_CURIE",
+   "input_sha256": "034a133f493cc989723cbb023675c380f4ff12c63542b59c44c52e8b0b1a12ea",
+   "returncode": 0,
+   "H1": "berlin_01_erizo",
+   "H2": "monomito_12_regreso_con_el_elixir",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "AJUSTADA",
+   "margen": 2.519981,
+   "huella_salida_sha256": "46bd1d7cf3933be7cec9f48912f0d59b940a14168370a71fd0031e5e2c046245",
+   "result_sha256": "38f4264fe5f355de3c6a920275ab4054c9cb9b74c566786ce43c02fe7add5298",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "20_sacrificio_por_un_ideal",
+    "duelo_bonanno_01_resiliencia",
+    "monomito_09_la_recompensa",
+    "schwartz_07_logro"
+   ],
+   "fuente": "https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/ ; primera profesora de la Sorbona (1906), Nobel de Química 1911, Instituto del Radio"
+  },
+  {
+   "case_id": "CAL_LOTE01_05_VANGOGH",
+   "input_sha256": "628b24529fd80b01735739e4a9935caf63c3df30b16286b8a34627a19b6d7308",
+   "returncode": 0,
+   "H1": "strauss_howe_02_the_awakening",
+   "H2": "20_sacrificio_por_un_ideal",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "grado": "FIRME",
+   "margen": 4.348214,
+   "huella_salida_sha256": "27b5a069b1b153e3ab123763db76890b3f1e3dc6f5d33d268396cfd13f0cae3b",
+   "result_sha256": "c8f49c56a7afbc7c7fd33ce62f0d7d6f0edf2fa3b78efb3fc6b6fd7386a25925",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "16_locura",
+    "22_todo_sacrificado_por_una_pasion",
+    "candidato_trayectoria_arte_prestigio",
+    "frye_mythos_tragedia"
+   ],
+   "fuente": "https://www.vangoghmuseum.nl/en/art-and-stories/vincent-van-gogh-faq ; asilo de Saint-Rémy 1889, muere 29-jul-1890 por herida de bala autoinfligida; fama póstuma"
+  },
+  {
+   "case_id": "CAL_LOTE01_06_BEETHOVEN",
+   "input_sha256": "432c9dfa85e913930dc4c65ce24c5a41151e1ad1c6151a6e601f363390b14b14",
+   "returncode": 6,
+   "H1": null,
+   "H2": null,
+   "apuesta_estado": "NO_SELLADA_PAUSA_EXIT6",
+   "escenario_principal": null,
+   "grado": "FRAGIL",
+   "margen": 0.0296,
+   "huella_salida_sha256": null,
+   "result_sha256": "f5959f5e841e3cf0c918908d2489871f76218efb2ba52d1ee8b732e2705d7763",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": null,
+   "acierto_set": null,
+   "desenlace_familias": null,
+   "fuente": null
+  },
+  {
+   "case_id": "CAL_LOTE01_07_FORD",
+   "input_sha256": "a9ebf27e65fe3d3624cf1321db523e6e71e9209991a4179338a98cd24b92d78f",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "schwartz_07_logro",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "FIRME",
+   "margen": 5.038656,
+   "huella_salida_sha256": "329f670706544333b533b08d5e45014e1df4b9c63710a6130ebd05b69d9b2226",
+   "result_sha256": "3ac29f29a068da7bf731ddfc3c9060fa9185be8188c17ab0a8261c6bba671aac",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 1,
+   "acierto_set": 1,
+   "desenlace_familias": [
+    "30_ambicion",
+    "9_audaz_empresa",
+    "schwartz_07_logro",
+    "social_04_rogers_difusion_innovaciones"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Henry_Ford ; Modelo T 1908, línea de ensamblaje móvil 1913, compra a socios 1919"
+  },
+  {
+   "case_id": "CAL_LOTE01_08_HOLMES",
+   "input_sha256": "d6ec5dae5082710b40c274b4d324ed6bd10611a3927da4f3c9862365de3216c7",
+   "returncode": 0,
+   "H1": "jaldun_02_institucionalizacion_y_sedentarismo",
+   "H2": "distopia_coercion_total",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "AJUSTADA",
+   "margen": 1.166667,
+   "huella_salida_sha256": "9ab0cc2ce2ca2aac8ab1f5203f303b0988c5f22f199065e6f1060e004d0d4745",
+   "result_sha256": "0d541cd68ac57212dce600299dc6238124d237de8659e83c695d00321578309d",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "17_fatal_imprudencia",
+    "frye_mythos_tragedia",
+    "minsky_03_ponzi",
+    "picar_trickster"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Elizabeth_Holmes ; Theranos se disuelve 2018; condena por fraude 3-ene-2022, 11 años 3 meses"
+  },
+  {
+   "case_id": "CAL_LOTE01_09_GORBACHEV",
+   "input_sha256": "4132e6ce014749a2746a42d6f78e4bdba1a3e74f477f879e603875a6e23721e9",
+   "returncode": 0,
+   "H1": "dialectica_03_sintesis_superacion_estructural",
+   "H2": "social_04_rogers_difusion_innovaciones",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "grado": "AJUSTADA",
+   "margen": 1.488698,
+   "huella_salida_sha256": "73151e5fbeced96ce39a55b2eb04fab12f7c9a85bab32535b0016a192fca2171",
+   "result_sha256": "6c15e2447ac9945ce042e684cd3fae79fad7bcfd2fc23f9dbf5896cb9242015d",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "cliodinamica_03_fase_crisis_colapso",
+    "jaldun_03_entropia_y_perdida_de_cohesion",
+    "predictivo_04_caos_bifurcacion_critica",
+    "tainter_04_colapso_por_simplificacion_forzada"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/Mikhail_Gorbachev ; golpe de ago-1991, renuncia 25-dic-1991 y disolución de la URSS"
+  },
+  {
+   "case_id": "CAL_LOTE01_10_CARDENAS",
+   "input_sha256": "744f7be3d03c354c59ae10fefa6a5617bc20488f845127295f179a1de2a89052",
+   "returncode": 0,
+   "H1": "aliado",
+   "H2": "21_sacrificio_por_los_parientes",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "grado": "AJUSTADA",
+   "margen": 7.509147,
+   "huella_salida_sha256": "032b6edf7cef0ad0d5a1754dbee344560f4c6486d91076e6b430b13acffdaaea",
+   "result_sha256": "44ffd4e593d33ffa3329c6b344f666fb6b6cd609b0d7fa7c25f6069f54bf4a3b",
+   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+   "acierto_H1": 0,
+   "acierto_set": 0,
+   "desenlace_familias": [
+    "24_rivalidad_de_superior_e_inferior",
+    "arquetipo_el_gobernante",
+    "utopia_mentalidad_socialista",
+    "utopia_principio_estado"
+   ],
+   "fuente": "https://en.wikipedia.org/wiki/L%C3%A1zaro_C%C3%A1rdenas ; expropiación petrolera 18-mar-1938, reforma agraria, entrega pacífica del poder 1940"
+  }
+ ],
+ "totales": {
+  "n_casos": 9,
+  "H1": {
+   "aciertos": 2,
+   "tasa_cruda": 0.2222222222222222,
+   "tasa_laplace": 0.2727272727272727,
+   "brier_loo_laplace": 0.21222222222222223
+  },
+  "set": {
+   "aciertos": 2,
+   "tasa_cruda": 0.2222222222222222,
+   "tasa_laplace": 0.2727272727272727,
+   "brier_loo_laplace": 0.21222222222222223
+  },
+  "escenario": {
+   "aciertos": 2,
+   "tasa_cruda": 0.2222222222222222,
+   "tasa_laplace": 0.2727272727272727,
+   "brier_loo_laplace": 0.21222222222222223
+  },
+  "brier_diagnostico_soporte_hipotesis": 0.1270356921874516,
+  "brier_diagnostico_soporte_escenario": 0.30539619178075944
+ },
+ "fiabilidad": [
+  {
+   "bin": "[0.05,0.20)",
+   "n": 8,
+   "p_media": 0.166,
+   "frecuencia_observada": 0.0
+  },
+  {
+   "bin": "[0.20,0.35)",
+   "n": 13,
+   "p_media": 0.269,
+   "frecuencia_observada": 0.154
+  },
+  {
+   "bin": "[0.35,0.50)",
+   "n": 6,
+   "p_media": 0.419,
+   "frecuencia_observada": 0.0
+  },
+  {
+   "bin": "[0.50,0.95)",
+   "n": 3,
+   "p_media": 0.566,
+   "frecuencia_observada": 0.333
+  }
+ ],
+ "aviso": "MUESTRA_INSUFICIENTE (<10): no elegir peso con esto"
+}
