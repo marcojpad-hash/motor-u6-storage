@@ -1,0 +1,35 @@
+{
+ "lote": "F001_D022",
+ "fecha_local": "2026-10-24T16:42:09",
+ "candados_antes": {
+  "motor/Engine_V5_CANONICO_SOLO.py": true,
+  "motor/patterns_final_v14.json": true
+ },
+ "casos": {
+  "CAL_F001_01_NAPOLEON": {
+   "input_sha256": "e05645ddb3eab1601992b86037b8ef530c6b27413575241b6bf0e3860e66b046",
+   "desenlace_sha256": "8368d3ad26fa8a7447a68b4c6271fca01b389e3bc9123f63f724a32e7e971cf4",
+   "destino_sha256": "3f0cdd85f429b8635c4ff6d6a68cc68b7fa4a776414a3d6453ace045e854299a"
+  },
+  "CAL_F001_02_TESLA": {
+   "input_sha256": "be89b315b99b09cb06f0cd46a5eb823aefd4e1b9681fea0279d8803128137635",
+   "desenlace_sha256": "106e6467fc59b6be079deb219f1883b935bfe7e6db2fe5c3854cb3c47e67ad5c",
+   "destino_sha256": "1fa5c6ee389db6b180a261225f00964191b47bd872c56e54b2f4dde8621df737"
+  },
+  "CAL_F001_03_WILDE": {
+   "input_sha256": "54247ffa2a4f5f1478ed253f5ae6f7c73fa947a3f991a979e12dc7a8ba4e9df8",
+   "desenlace_sha256": "32a3ddad793d8252a2a41bc8c8c1232b02ce73bdbd366d2f55e51b7350e87069",
+   "destino_sha256": "4207537160b7d1d19ba0c2c734d498fdb8aca8db54f906c60f3d18bc2bae8c34"
+  },
+  "CAL_F001_04_DISNEY": {
+   "input_sha256": "d546c10647b235bfffdc1d309ffcef91de4e2050302eff86614ad4938e61b014",
+   "desenlace_sha256": "b246e92c23647db7c1e1dcec6a76f8e43d10de675173e69ce5fcecac6c8902d3",
+   "destino_sha256": "8d54276b332d18df4877880629a65e7e1740d29e5f5a9a4cba3ed73124cb79a6"
+  },
+  "CAL_F001_05_TURING": {
+   "input_sha256": "1ac92339557934c04d1be9827344a1bc0f06e9d4299a05646890ae941cdd314a",
+   "desenlace_sha256": "e0ac563c6fa9f14b5d86912f7ad8e71a296f0b17c61f194ec2dd026cf7be0469",
+   "destino_sha256": "84e9f7171f7fe1489cd0451783d315b748fb14c0d460e4fac1f17ca0628e827a"
+  }
+ }
+}

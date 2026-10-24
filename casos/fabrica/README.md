@@ -29,3 +29,11 @@ existente `motor/calibracion/arnes_calibracion.py`. No cambia el protocolo, no t
 Lo único que no se automatiza sin riesgo de inventar es **escribir las semillas**: cada sujeto necesita hechos con fuente.
 Un agente (Grok Bot u otro) redacta un archivo de semillas por día con 5–10 sujetos variados (artistas, científicos, políticos,
 empresarios…) y luego corre `preparar` + `correr`. Cada caso tarda ~15 s de motor.
+
+## Apuesta de destino personal (PATCH 022)
+Además de H1, set y apuesta temática, cada corrida trae `apuesta_destino_personal`: auge | meseta | caida | ruptura.
+- Por cada sujeto, en `cola/<ID>/destino_sellado.json` (aparte de la entrada y del desenlace): `{"destino": ..., "porque": ..., "fuente": ...}`.
+  Su sha256 entra en el COMPROMISO antes de correr; si cambia, la fábrica no evalúa (DESTINO_ALTERADO).
+- La evaluación agrega `acierto_destino` (etiqueta exacta) y `acierto_destino_polaridad` (auge/meseta frente a caida/ruptura).
+- `python3 casos/fabrica/fabrica.py correr --lote X --rehacer ID1,ID2` vuelve a correr casos ya evaluados con sus mismos sellos (sirve para un parche nuevo, nunca para reetiquetar).
+- En las semillas de lotes nuevos, fija el destino ANTES de correr.

@@ -35,7 +35,8 @@ P_MIN, P_MAX = 0.60, 0.84
 PROHIBIDAS = ("desenlace", "outcome", "resultado_real", "ground_truth", "label_real")
 COLS = ["lote", "case_id", "sujeto", "tipo", "freeze", "input_sha256", "desenlace_sha256", "returncode",
         "H1", "H2", "apuesta_estado", "escenario_principal", "acierto_H1", "acierto_H2", "acierto_set",
-        "acierto_apuesta", "familias_desenlace", "fuente_desenlace", "engine_ok_antes", "engine_ok_despues", "fecha"]
+        "acierto_apuesta", "familias_desenlace", "fuente_desenlace", "engine_ok_antes", "engine_ok_despues", "fecha",
+        "destino_real", "apuesta_destino", "acierto_destino", "acierto_destino_polaridad"]  # PATCH 022
 
 
 def sha(p: Path) -> str:
@@ -102,8 +103,23 @@ def pendientes() -> list:
     return [d for d in sorted(COLA.iterdir()) if d.is_dir() and d.name not in hechos]
 
 
-def correr(lote: str, n: int) -> int:
-    casos = pendientes()[:n]
+def _migrar_csv():
+    """PATCH 022: si el CSV existe con columnas viejas, se reescribe con las nuevas (filas viejas quedan en blanco)."""
+    if not CSV.is_file(): return
+    with CSV.open(encoding="utf-8") as fh:
+        r = csv.DictReader(fh); viejas = list(r); cab = r.fieldnames
+    if cab != COLS:
+        with CSV.open("w", encoding="utf-8", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=COLS); w.writeheader(); w.writerows([{k: f.get(k, "") for k in COLS} for f in viejas])
+
+
+POL = lambda x: "abajo" if x in ("caida", "ruptura") else "arriba_o_igual"
+
+
+def correr(lote: str, n: int, rehacer: list | None = None) -> int:
+    _migrar_csv()
+    # --rehacer ID1,ID2: vuelve a correr casos ya evaluados con sus MISMOS sellos (para un parche nuevo; no se reetiqueta nada)
+    casos = [COLA / c for c in rehacer] if rehacer else pendientes()[:n]
     if not casos: print("sin casos pendientes en cola/"); return 0
     ok_antes = candados(MOTOR_REPO)
     if not all(ok_antes.values()): print(json.dumps({"error": "CANDADO_ROTO_ANTES", "detalle": ok_antes})); return 3
@@ -111,7 +127,8 @@ def correr(lote: str, n: int) -> int:
     if salida.exists(): print(f"ya existe {salida}: el sello no se reescribe; use otro --lote"); return 3
     # 1) Compromiso: hashes de entradas y desenlaces ANTES de correr (los desenlaces no se leen).
     comp = {"lote": lote, "fecha_local": datetime.now().isoformat(timespec="seconds"), "candados_antes": ok_antes,
-            "casos": {d.name: {"input_sha256": sha(d / "entrada.json"), "desenlace_sha256": sha(d / "desenlace_sellado.json")} for d in casos}}
+            "casos": {d.name: {"input_sha256": sha(d / "entrada.json"), "desenlace_sha256": sha(d / "desenlace_sellado.json"),
+                         **({"destino_sha256": sha(d / "destino_sellado.json")} if (d / "destino_sellado.json").is_file() else {})} for d in casos}}
     (LOTES / f"{lote}_COMPROMISO.json").write_text(json.dumps(comp, ensure_ascii=False, indent=1), encoding="utf-8")
     # 2) Copia temporal del motor y corrida con el arnés existente (sin LLM).
     tmp = Path(tempfile.mkdtemp(prefix="fabrica_motor_"))
@@ -133,6 +150,10 @@ def correr(lote: str, n: int) -> int:
         if sha(d / "desenlace_sellado.json") != comp["casos"][d.name]["desenlace_sha256"]:
             print(f"DESENLACE_ALTERADO {d.name}"); return 5
         des[d.name] = json.loads((d / "desenlace_sellado.json").read_text(encoding="utf-8"))
+        if (d / "destino_sellado.json").is_file():  # PATCH 022: destino personal sellado aparte
+            if sha(d / "destino_sellado.json") != comp["casos"][d.name].get("destino_sha256"):
+                print(f"DESTINO_ALTERADO {d.name}"); return 5
+            des[d.name]["destino"] = json.loads((d / "destino_sellado.json").read_text(encoding="utf-8"))["destino"]
     (salida / "desenlaces.json").write_text(json.dumps(des, ensure_ascii=False, indent=1), encoding="utf-8")
     subprocess.run([sys.executable, "-B", "calibracion/arnes_calibracion.py", "evaluar", str(reg_p), str(salida / "desenlaces.json")], cwd=str(mcopy), check=False)
     # 4) Filas acumuladas.
@@ -150,6 +171,9 @@ def correr(lote: str, n: int) -> int:
             f.update(returncode=r["returncode"], H1=r["H1"], H2=r["H2"], apuesta_estado=r["apuesta_estado"], escenario_principal=r["escenario_principal"],
                      acierto_H1=int(r["H1"] in fams), acierto_H2=int(r["H2"] in fams), acierto_set=int(bool(fams & set(hs))),
                      acierto_apuesta=int(bool(fams & set(r["hipotesis_escenario_principal"]))))
+            dr, pd = des[d.name].get("destino"), r.get("apuesta_destino_personal")
+            f.update(destino_real=dr or "", apuesta_destino=pd or "",
+                     acierto_destino=(int(pd == dr) if dr else ""), acierto_destino_polaridad=(int(bool(pd) and POL(pd) == POL(dr)) if dr else ""))
         else:
             f.update(returncode=errs.get(d.name, "?"), H1="NO_SELLADO", H2="", apuesta_estado="NO_SELLADA", escenario_principal="",
                      acierto_H1="", acierto_H2="", acierto_set="", acierto_apuesta="")
@@ -169,6 +193,9 @@ def correr(lote: str, n: int) -> int:
 def resumen_md():
     filas = list(csv.DictReader(CSV.open(encoding="utf-8")))
     ev = [f for f in filas if f["acierto_H1"] != ""]
+    evd = [f for f in filas if f.get("acierto_destino", "") != ""]
+    def tasad(k):
+        a = sum(int(f[k]) for f in evd); m_ = len(evd); return f"{a}/{m_} (Laplace {((a + 1) / (m_ + 2)):.2f})"
     n = len(ev)
     def tasa(k):
         a = sum(int(f[k]) for f in ev); return f"{a}/{n} ({(a / n * 100 if n else 0):.0f} %; Laplace {((a + 1) / (n + 2)):.2f})"
@@ -176,12 +203,14 @@ def resumen_md():
          f"Casos en la tabla: {len(filas)} · evaluados (sellados): {n} · no sellados: {len(filas) - n}", "",
          f"- Acierto H1: {tasa('acierto_H1')}", f"- Acierto H2: {tasa('acierto_H2')}",
          f"- Acierto set abierto (alguna hipótesis): {tasa('acierto_set')}", f"- Acierto apuesta (escenario principal): {tasa('acierto_apuesta')}",
+         f"- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): {tasad('acierto_destino')}" if evd else "",
+         f"- Acierto destino por polaridad (arriba/igual vs abajo): {tasad('acierto_destino_polaridad')}" if evd else "",
          "", "Aviso: con menos de 30 casos evaluados la tasa es muy ruidosa." if n < 30 else "", "",
-         "| Lote | Caso | Tipo | H1 | H2 | Escenario | H1 | H2 | Set | Apuesta | Engine OK |", "|---|---|---|---|---|---|---|---|---|---|---|"]
+         "| Lote | Caso | Tipo | H1 | H2 | Escenario | H1 | H2 | Set | Apuesta | Destino apostado | Destino real | Destino | Engine OK |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     m = lambda v: {"1": "sí", "0": "no", "": "—"}.get(str(v), str(v))
     for f in filas:
         L.append(f"| {f['lote']} | {f['sujeto']} ({f['freeze']}) | {f['tipo']} | {f['H1']} | {f['H2']} | {f['escenario_principal']} | "
-                 f"{m(f['acierto_H1'])} | {m(f['acierto_H2'])} | {m(f['acierto_set'])} | {m(f['acierto_apuesta'])} | {f['engine_ok_antes']}/{f['engine_ok_despues']} |")
+                 f"{m(f['acierto_H1'])} | {m(f['acierto_H2'])} | {m(f['acierto_set'])} | {m(f['acierto_apuesta'])} | {f.get('apuesta_destino') or '—'} | {f.get('destino_real') or '—'} | {m(f.get('acierto_destino', ''))} | {f['engine_ok_antes']}/{f['engine_ok_despues']} |")
     MD.write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
@@ -191,5 +220,6 @@ if __name__ == "__main__":
     if len(a) >= 2 and a[1] == "correr":
         lote = a[a.index("--lote") + 1] if "--lote" in a else datetime.now().strftime("F%Y%m%d")
         n = int(a[a.index("--n") + 1]) if "--n" in a else 5
-        sys.exit(correr(lote, n))
+        reh = a[a.index("--rehacer") + 1].split(",") if "--rehacer" in a else None
+        sys.exit(correr(lote, n, reh))
     print(__doc__); sys.exit(2)

@@ -79,6 +79,7 @@ def extraer(result: dict, peso: float) -> dict:
             "escenarios": [{"escenario": e.get("escenario"), "hipotesis": e.get("hipotesis_que_convergen"),
                             "soporte": e.get("soporte_estructural_agregado")} for e in (ap.get("escenarios") or [])],
             "escenario_principal": princ.get("escenario"),
+            "apuesta_destino_personal": (result.get("apuesta_destino_personal") or {}).get("apuesta"),  # PATCH 022
             "hipotesis_escenario_principal": princ.get("hipotesis_que_convergen") or [],
             "nucleo_estable_sha256": (result.get("nucleo_estable") or {}).get("sha256"),
             "huella_salida_sha256": _sha_obj({"H1": _fam(result.get("H1")), "H2": _fam(result.get("H2")),
@@ -139,11 +140,15 @@ def evaluar_registro(registro: dict, desenlaces: dict) -> dict:
             d = desenlaces[cid]; fams = set(d.get("familias") or [])
             hs = [h["familia"] for h in r["hipotesis"]]
             esc_ok = (r["escenario_principal"] == d["escenario"]) if d.get("escenario") else bool(fams & set(r["hipotesis_escenario_principal"]))
-            ev.append({"caso": cid, "y_H1": int(r["H1"] in fams), "y_set": int(bool(fams & set(hs))), "y_escenario": int(esc_ok),
+            # PATCH 022: destino personal (solo si el desenlace trae "destino"); polaridad = {auge,meseta} vs {caida,ruptura}
+            _dst = d.get("destino"); _pd = r.get("apuesta_destino_personal")
+            _pol = lambda x: "abajo" if x in ("caida", "ruptura") else "arriba_o_igual"
+            y_dest = {} if not _dst else {"y_destino": int(_pd == _dst), "y_destino_polaridad": int(bool(_pd) and _pol(_pd) == _pol(_dst))}
+            ev.append({"caso": cid, "y_H1": int(r["H1"] in fams), "y_set": int(bool(fams & set(hs))), "y_escenario": int(esc_ok), **y_dest,
                        "hip": [(h["familia"], h.get("soporte_estructural_relativo") or 0.0, int(h["familia"] in fams)) for h in r["hipotesis"]],
                        "soporte_principal": next((e["soporte"] for e in r["escenarios"] if e["escenario"] == r["escenario_principal"]), 0.0) or 0.0})
         n = len(ev); res = {"n_casos": n}
-        for key in ("y_H1", "y_set", "y_escenario"):
+        for key in ("y_H1", "y_set", "y_escenario") + (("y_destino", "y_destino_polaridad") if ev and all("y_destino" in e for e in ev) else ()):
             k = sum(e[key] for e in ev)
             # Brier prospectivo: cada caso se pronostica con la tasa Laplace de los DEMÁS casos (leave-one-out).
             pares = [(clip(laplace(k - e[key], n - 1)), e[key]) for e in ev]
@@ -151,7 +156,7 @@ def evaluar_registro(registro: dict, desenlaces: dict) -> dict:
                             "brier_loo_laplace": _brier(pares)}
         res["brier_diagnostico_soporte_hipotesis"] = _brier([(clip(s), y) for e in ev for _, s, y in e["hip"]])
         res["brier_diagnostico_soporte_escenario"] = _brier([(clip(e["soporte_principal"]), e["y_escenario"]) for e in ev])
-        res["detalle"] = [{k: e[k] for k in ("caso", "y_H1", "y_set", "y_escenario")} for e in ev]
+        res["detalle"] = [{k: e[k] for k in ("caso", "y_H1", "y_set", "y_escenario", "y_destino", "y_destino_polaridad") if k in e} for e in ev]
         por_peso[w] = res
     n = len(casos)
     return {"version": VERSION, "integridad_registro": integridad, "n_casos_con_desenlace": n,

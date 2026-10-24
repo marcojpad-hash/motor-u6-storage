@@ -1,0 +1,11 @@
+{
+ "destino": "caida",
+ "porque": "retirada de Moscú con pérdida de la mayor parte del ejército, derrota en Leipzig (1813), abdica y es exiliado (1814): pérdida progresiva de posición",
+ "fuente": "https://en.wikipedia.org/wiki/French_invasion_of_Russia ; retirada de Moscú con pérdida de la mayor parte del ejército (dic-1812), derrota en Leipzig (oct-1813), abdica 6-abr-1814 y es exiliado a Elba",
+ "definiciones": {
+  "auge": "mejora clara de posición del sujeto",
+  "meseta": "sin cambio claro",
+  "caida": "pérdida progresiva de posición/apoyo",
+  "ruptura": "quiebre brusco (condena, muerte, colapso) en el horizonte inmediato"
+ }
+}

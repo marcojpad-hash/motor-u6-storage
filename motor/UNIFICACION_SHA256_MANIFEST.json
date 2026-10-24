@@ -272,8 +272,8 @@
     },
     {
       "path": "calibracion/arnes_calibracion.py",
-      "bytes": 12400,
-      "sha256": "229dfe5f2a49a4c48f68ab4e7e8fcedd1e2fa192dad4dfed02b65cc0ed2699e3"
+      "bytes": 13096,
+      "sha256": "d1f93a2be98d3d109b74b8dff155782b15d053d1e4383ff895fd4ac8e07cabee"
     },
     {
       "path": "capa_llm/FIXTURE_MOCK_CONSULTA_20261011.json",
@@ -397,8 +397,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 321803,
-      "sha256": "608d73220e88c26b14fdd483f8e671ffb1538a7e9de22a98fc3351011a94a048"
+      "bytes": 323051,
+      "sha256": "3b9eff00df3d8d76c979de95726f61eeab05f96ed36e2f58d6bb1134cb1e460d"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -2709,6 +2709,11 @@
       "path": "u7/confianza_apuesta_u7.py",
       "bytes": 7024,
       "sha256": "2f84e60a1ed246c20a5ca4eb80b5300dd41f3fca623e798ae550f5a226e04d48"
+    },
+    {
+      "path": "motor/apuesta_destino_personal_022.py",
+      "sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
+      "bytes": 7428
     }
   ],
   "files_count": 542,

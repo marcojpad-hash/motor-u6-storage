@@ -1,0 +1,11 @@
+{
+ "destino": "caida",
+ "porque": "Marconi se adelanta (dic-1901), Morgan niega más fondos, proyecto abandonado (1906), deudas: pérdida progresiva de apoyo",
+ "fuente": "https://en.wikipedia.org/wiki/Wardenclyffe_Tower ; Marconi transmite a través del Atlántico (dic-1901), Morgan niega más fondos, el proyecto se abandona (1906) y la torre se demuele (1917); Tesla queda endeudado",
+ "definiciones": {
+  "auge": "mejora clara de posición del sujeto",
+  "meseta": "sin cambio claro",
+  "caida": "pérdida progresiva de posición/apoyo",
+  "ruptura": "quiebre brusco (condena, muerte, colapso) en el horizonte inmediato"
+ }
+}

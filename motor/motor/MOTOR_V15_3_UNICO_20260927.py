@@ -3172,6 +3172,19 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     result = _normalizar_salida_terminal(result)
     result = _aplicar_equivalencia_presentacion(result)
     result.update(_u4_attach)  # U4_todos_tokens: bloque lateral de traza (no toca nada de lo anterior)
+    # PATCH 022 (2026-10-24): APUESTA DE DESTINO PERSONAL (auge|meseta|caida|ruptura). Campo NUEVO y separado.
+    # Lee movimiento_de_fondo.series_familias (cortes <= Z). No toca H1/H2, set abierto, apuesta temática, rank ni Engine.
+    # can_decide_H=False. Se apaga con DESTINO_022=0.
+    import os as _os022
+    if (_os022.getenv("DESTINO_022") or "1").strip() != "0":
+        try:
+            _m022=_load("apuesta_destino_personal_022", "apuesta_destino_personal_022.py")
+            if _m022 is None: raise RuntimeError("MODULO_022_NO_CARGADO")
+            _snap022=(json.dumps(result.get("H1"),sort_keys=True,default=str),json.dumps(result.get("H2"),sort_keys=True,default=str),json.dumps(result.get("apuesta"),sort_keys=True,default=str))
+            result["apuesta_destino_personal"]=_m022.construir(result)
+            result["apuesta_destino_personal"]["H_y_apuesta_tematica_intactos"]=_snap022==(json.dumps(result.get("H1"),sort_keys=True,default=str),json.dumps(result.get("H2"),sort_keys=True,default=str),json.dumps(result.get("apuesta"),sort_keys=True,default=str))
+        except Exception as _e022:
+            result["apuesta_destino_personal"]={"estado":"ERROR","error":f"{type(_e022).__name__}:{_e022}","can_decide_H":False}
     if case.get("_internal_analysis_no_external_search"):
         result["internal_analysis_receipt"]={"status":"INTERNAL_T1_AUXILIARY_COMPLETED", "purpose":"comparacion de corte retenido",
             "ceb_primary_ledger":"NOT_APPLICABLE_INTERNAL_SUBRUN", "external_search":"SKIPPED_BY_CONTRACT",

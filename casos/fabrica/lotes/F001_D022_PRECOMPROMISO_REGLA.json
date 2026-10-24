@@ -1,0 +1,27 @@
+{
+ "lote": "F001_D022",
+ "nota": "Compromiso escrito ANTES de calcular la apuesta de destino 022 sobre F001. Etiquetas de destino tomadas de la fuente ya sellada en desenlace_sellado.json (juicio humano declarado). Regla 022 congelada por su sha256.",
+ "regla_sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
+ "casos": {
+  "CAL_F001_01_NAPOLEON": {
+   "input_sha256": "e05645ddb3eab1601992b86037b8ef530c6b27413575241b6bf0e3860e66b046",
+   "destino_sha256": "3f0cdd85f429b8635c4ff6d6a68cc68b7fa4a776414a3d6453ace045e854299a"
+  },
+  "CAL_F001_02_TESLA": {
+   "input_sha256": "be89b315b99b09cb06f0cd46a5eb823aefd4e1b9681fea0279d8803128137635",
+   "destino_sha256": "1fa5c6ee389db6b180a261225f00964191b47bd872c56e54b2f4dde8621df737"
+  },
+  "CAL_F001_03_WILDE": {
+   "input_sha256": "54247ffa2a4f5f1478ed253f5ae6f7c73fa947a3f991a979e12dc7a8ba4e9df8",
+   "destino_sha256": "4207537160b7d1d19ba0c2c734d498fdb8aca8db54f906c60f3d18bc2bae8c34"
+  },
+  "CAL_F001_04_DISNEY": {
+   "input_sha256": "d546c10647b235bfffdc1d309ffcef91de4e2050302eff86614ad4938e61b014",
+   "destino_sha256": "8d54276b332d18df4877880629a65e7e1740d29e5f5a9a4cba3ed73124cb79a6"
+  },
+  "CAL_F001_05_TURING": {
+   "input_sha256": "1ac92339557934c04d1be9827344a1bc0f06e9d4299a05646890ae941cdd314a",
+   "destino_sha256": "84e9f7171f7fe1489cd0451783d315b748fb14c0d460e4fac1f17ca0628e827a"
+  }
+ }
+}
