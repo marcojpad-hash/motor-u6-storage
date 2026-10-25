@@ -1,0 +1,31 @@
+{
+ "familias": [
+  "33_error_de_juicio",
+  "17_fatal_imprudencia",
+  "social_10_cohen_panico_moral",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Joseph_McCarthy ; https://en.wikipedia.org/wiki/Army%E2%80%93McCarthy_hearings",
+ "prohibidas_post_Z": [
+  "censura del Senado",
+  "censurado por el Senado",
+  "voto de censura",
+  "67-22",
+  "67–22",
+  "Joseph Welch",
+  "Welch",
+  "sentido de la decencia",
+  "audiencias Ejército-McCarthy",
+  "audiencias Ejército–McCarthy",
+  "Army-McCarthy",
+  "Army–McCarthy",
+  "See It Now",
+  "Ralph Flanders",
+  "Flanders",
+  "Comité Watkins",
+  "cirrosis",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

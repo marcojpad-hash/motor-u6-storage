@@ -1,0 +1,27 @@
+{
+ "familias": [
+  "17_fatal_imprudencia",
+  "33_error_de_juicio",
+  "minsky_02_especulativa",
+  "kondratiev_04_invierno_recesion"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/William_C._Durant",
+ "prohibidas_post_Z": [
+  "pierde el control",
+  "perdió el control",
+  "pérdida del control",
+  "renuncia a la presidencia",
+  "dimite",
+  "dimisión",
+  "Pierre du Pont asume la presidencia",
+  "Durant Motors",
+  "rescate",
+  "J. P. Morgan & Co.",
+  "bancarrota",
+  "quiebra",
+  "bolera",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

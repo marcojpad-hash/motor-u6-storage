@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "9_audaz_empresa",
+  "2_salvacion",
+  "schwartz_07_logro",
+  "arquetipo_el_sabio"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Louis_Pasteur ; https://en.wikipedia.org/wiki/Joseph_Meister",
+ "prohibidas_post_Z": [
+  "Joseph Meister",
+  "Meister",
+  "Jupille",
+  "Instituto Pasteur",
+  "Institut Pasteur",
+  "primer humano vacunado",
+  "primera persona vacunada",
+  "vacuna antirrábica humana",
+  "suscripción internacional",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

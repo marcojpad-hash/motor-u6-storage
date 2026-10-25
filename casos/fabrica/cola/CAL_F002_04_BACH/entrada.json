@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F002_04_BACH",
+ "question": "¿Qué trayectoria sigue Johann Sebastian Bach tras dejar la corte de Köthen y asumir el cargo de cantor de Santo Tomás y director musical de Leipzig?",
+ "person": "Johann Sebastian Bach",
+ "tipo_sujeto": "artista",
+ "freeze": "1723-06-01",
+ "z_trabajo": "1723-06-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1723-05-30",
+ "cuts": [
+  {
+   "id": "C1_1717",
+   "corte": "C1_1717",
+   "cut_id": "C1_1717",
+   "date": "1717-12-02",
+   "fecha_corte": "1717-12-02",
+   "hecho": "Al insistir con terquedad en que la corte de Weimar lo dejara ir, fue detenido el 6 de noviembre de 1717 y liberado el 2 de diciembre con un despido desfavorable; ese año el príncipe Leopoldo de Anhalt-Köthen, también músico, lo había contratado como maestro de capilla, con buen sueldo y amplia libertad.",
+   "P": [
+    [
+     "autonomia",
+     0.8
+    ],
+    [
+     "determinacion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "desafio_autoridad",
+     0.72
+    ],
+    [
+     "confrontacion_directa",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "privacion_libertad",
+     0.7
+    ],
+    [
+     "oportunidad",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Según el secretario de la corte, fue detenido el 6 de noviembre de 1717 por forzar su salida y liberado el 2 de diciembre con despido desfavorable.",
+     "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+     "source_date": "2026-10-25",
+     "claim_date": "1717-12-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Leopoldo de Anhalt-Köthen lo contrató como maestro de capilla en 1717, le pagaba bien y le daba amplia libertad.",
+     "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+     "source_date": "2026-10-25",
+     "claim_date": "1717",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1721",
+   "corte": "C2_1721",
+   "cut_id": "C2_1721",
+   "date": "1721-12-03",
+   "fecha_corte": "1721-12-03",
+   "hecho": "En Köthen se dedicó sobre todo a la música instrumental; el 7 de julio de 1720 perdió de forma repentina a su esposa Maria Barbara; el 24 de marzo de 1721 dedicó seis conciertos al margrave Christian Ludwig de Brandemburgo y el 3 de diciembre de 1721 se casó con la soprano Anna Magdalena Wilcke.",
+   "P": [
+    [
+     "logro_personal",
+     0.74
+    ],
+    [
+     "compromiso_afectivo",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "duelo",
+     0.76
+    ],
+    [
+     "soporte",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Bach perdió repentinamente a su esposa Maria Barbara el 7 de julio de 1720 y se casó con Anna Magdalena Wilcke el 3 de diciembre de 1721.",
+     "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+     "source_date": "2026-10-25",
+     "claim_date": "1721-12-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Los seis conciertos se dedicaron al margrave Christian Ludwig de Brandemburgo-Schwedt con dedicatoria del 24 de marzo de 1721.",
+     "source_url": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+     "source_date": "2026-10-25",
+     "claim_date": "1721-03-24",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1723",
+   "corte": "C3_1723",
+   "cut_id": "C3_1723",
+   "date": "1723-05-30",
+   "fecha_corte": "1723-05-30",
+   "hecho": "El concejo de Leipzig le ofreció el puesto de cantor de Santo Tomás después de que Telemann y Graupner lo rechazaran; asumió en 1723 la preparación del coro de Santo Tomás para cuatro iglesias luteranas y la música de los actos de la ciudad, y el 30 de mayo de 1723, su primer domingo en el cargo, estrenó la cantata BWV 75 en la Nikolaikirche.",
+   "P": [
+    [
+     "deber",
+     0.78
+    ],
+    [
+     "devocion",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "planificacion",
+     0.75
+    ],
+    [
+     "transmision_saber",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "jerarquia",
+     0.7
+    ],
+    [
+     "ascenso_reciente",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El puesto se le ofreció después de que Telemann y Graupner lo rechazaran; fue nombrado en 1723.",
+     "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+     "source_date": "2026-10-25",
+     "claim_date": "1723-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El Thomaskantor preparaba al coro de Santo Tomás para cuatro iglesias luteranas de Leipzig y organizaba la música de los actos de la ciudad.",
+     "source_url": "https://en.wikipedia.org/wiki/Thomaskantor",
+     "source_date": "2026-10-25",
+     "claim_date": "1723-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La cantata BWV 75 se estrenó el 30 de mayo de 1723 en la Nikolaikirche, primer domingo de Bach como Thomaskantor.",
+     "source_url": "https://en.wikipedia.org/wiki/Die_Elenden_sollen_essen,_BWV_75",
+     "source_date": "2026-10-25",
+     "claim_date": "1723-05-30",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (biografía, Conciertos de Brandemburgo, BWV 75, Thomaskantor); el informe del secretario de la corte de Weimar se cita a través de la biografía."
+}

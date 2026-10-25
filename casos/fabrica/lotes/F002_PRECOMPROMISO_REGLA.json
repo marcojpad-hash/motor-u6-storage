@@ -1,0 +1,58 @@
+{
+ "lote": "F002",
+ "fecha_local": "2026-10-25T05:02:04",
+ "nota": "Compromiso escrito ANTES de correr y de abrir destinos de F002. Regla 022 congelada por su sha256 (motor/motor/apuesta_destino_personal_022.py, sin cambios desde 40716a0). Semillas por GrokBot-preparador-ciego-F002 (no vio destinos); destinos por GrokBot-custodio-rutina-F002, en ejecutor separado.",
+ "regla_sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
+ "casos": {
+  "CAL_F002_01_GALILEI": {
+   "input_sha256": "7774f41d9de12c7130c70919fa93422d73b68acec3071b71916c20db2d37e799",
+   "desenlace_sha256": "9b54c7b24e25d417c0e68dfc4f48cac13af6b9649a400dfcc4c130d6af55e4f4",
+   "destino_sha256": "34b8495a1cc4ced342b59a6fbb5a71e1bb589aa110e0bd0d8c98c52c5c98b696"
+  },
+  "CAL_F002_02_PASTEUR": {
+   "input_sha256": "53fc65d239ad4c25dae1c7e70c8abf6099a7bfe04f4e5a2824a0d37c400eb59b",
+   "desenlace_sha256": "6d6afb4ea616908436842922966a1b169be865fe96e528cc41ab1949ddc99166",
+   "destino_sha256": "5a72fd1f1bd8622b56a40ca4a3fd1d79a0b35e92c22dd2dc5a1ea506ece83bc0"
+  },
+  "CAL_F002_03_ARBUCKLE": {
+   "input_sha256": "f737feea7743992fcf2e3a7b2ae0855c88070faee55e08de44093f00848f8e78",
+   "desenlace_sha256": "83c1067abf73e509d40b38aa09fb41cb9db1b5be58d6fe5e6ebfaa5f084e6089",
+   "destino_sha256": "bf23dcaff57b6553cddb511b72faf69160ce72f235b65052142dd874d41e375f"
+  },
+  "CAL_F002_04_BACH": {
+   "input_sha256": "805d719d412f057b567efe41f969b93fc58ebf3e4aa49f9181346eabf6e8222f",
+   "desenlace_sha256": "ba4d58ec6e16e376d869c78fe26d156fdf4b9270687bf9958a39924aa5d00258",
+   "destino_sha256": "d87241411fc94a05f924f36969cbcb626a2aab7772ecdb09a0b1c35a9d5af433"
+  },
+  "CAL_F002_05_MCCARTHY": {
+   "input_sha256": "a84c20ef8b32c2c09b1ca351f95628f8db81b3670194518dd09f96682db42ecb",
+   "desenlace_sha256": "ecf69225536d537ba1a28e07f67d722aa4a739262aee9f3539fb21be5f2f9ebe",
+   "destino_sha256": "3dff06ae8bffe4c67c86012ba4bac2f6ee100739f23cdce6f7497af03634b42a"
+  },
+  "CAL_F002_06_COOLIDGE": {
+   "input_sha256": "ce093eb238f160061a8c9d7e9f427c930d45a15b057ca0fbaee5665cdec446f1",
+   "desenlace_sha256": "7f771ec663fd1ea6a7e3c58de813ca04e6dd861b17c7f85917dd0fdf1020f85e",
+   "destino_sha256": "692be8fc219e7c23c0fe4366c5c61cbac8aa9c4aeb830c14119e1e3c4f7300db"
+  },
+  "CAL_F002_07_CATALINA": {
+   "input_sha256": "267264ce64257c224f7d68041ee924cb519a72de3959cb3a9a141f976a2d5ec5",
+   "desenlace_sha256": "344c0ce2282f0989d76b02a22dac110ba7c7fd689639dae8a435e3734cbd34a2",
+   "destino_sha256": "9fdc553a47376f87bce72361c2a2cda24d7056332ff5ff4d9c315851aa217df2"
+  },
+  "CAL_F002_08_LUISXVI": {
+   "input_sha256": "905cd94e3734ef2c44f6368c1e415adab41287e2208dc950be0511eac2a8ed27",
+   "desenlace_sha256": "acf99fc61e0682fed5ab7973367b9451f7c081a50935dcc0a8674da97279deb3",
+   "destino_sha256": "25b786c59d672b97f4da162366cffb9699f084509052cbc1de623785e6f4bc69"
+  },
+  "CAL_F002_09_ROCKEFELLER": {
+   "input_sha256": "8d817fffc938d0f56b280221eee35448556de19afa9e3623f78e0c080fd67151",
+   "desenlace_sha256": "ff7ee77c04202d9cd04696c3b2c81d4ffb6e81a1bb9895994437ec9a9327b7cd",
+   "destino_sha256": "1fe9ee8daa86f7af3f15d95a93555c093573fff892a08e6a4c62963b351cb91c"
+  },
+  "CAL_F002_10_DURANT": {
+   "input_sha256": "e3d8254732e64439841bdbdde8950f2d315d91f38c4bebd242c2168e4aa9b22b",
+   "desenlace_sha256": "f9988e569bb016abe401f6b2fae9d54aeb8d42035b420c4f33fdc864715c2e17",
+   "destino_sha256": "df8c2cc0bdc06384e816b79c5921a722c6af8059281afd7e4d92377a1f550451"
+  }
+ }
+}

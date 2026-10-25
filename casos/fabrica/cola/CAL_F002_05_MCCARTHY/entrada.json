@@ -1,0 +1,173 @@
+{
+ "case_id": "CAL_F002_05_MCCARTHY",
+ "question": "¿Qué trayectoria sigue el senador Joseph McCarthy tras llevar sus investigaciones anticomunistas al Ejército de Estados Unidos y enfrentarse en audiencia al general Ralph Zwicker?",
+ "person": "Joseph McCarthy",
+ "tipo_sujeto": "politico",
+ "freeze": "1954-02-28",
+ "z_trabajo": "1954-02-28",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1954-02-18",
+ "cuts": [
+  {
+   "id": "C1_1950",
+   "corte": "C1_1950",
+   "cut_id": "C1_1950",
+   "date": "1950-02-09",
+   "fecha_corte": "1950-02-09",
+   "hecho": "En un discurso en Wheeling, Virginia Occidental, mostró un papel que según dijo contenía una lista de comunistas conocidos que trabajaban en el Departamento de Estado; el discurso le dio notoriedad nacional.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "sed_de_mando",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.78
+    ],
+    [
+     "oratoria",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "atencion_social",
+     0.8
+    ],
+    [
+     "desconfianza",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Discurso de Wheeling del 9 de febrero de 1950 con una supuesta lista de comunistas en el Departamento de Estado.",
+     "source_url": "https://en.wikipedia.org/wiki/Joseph_McCarthy",
+     "source_date": "2026-10-25",
+     "claim_date": "1950-02-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1953",
+   "corte": "C2_1953",
+   "cut_id": "C2_1953",
+   "date": "1953-01",
+   "fecha_corte": "1953-01",
+   "hecho": "Al iniciar su segundo mandato en enero de 1953 pasó a presidir la Comisión de Operaciones Gubernamentales del Senado, que incluía el Subcomité Permanente de Investigaciones, cuyo mandato flexible usó para sus propias investigaciones sobre comunistas en el gobierno.",
+   "P": [
+    [
+     "poder",
+     0.8
+    ],
+    [
+     "sed_de_mando",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.75
+    ],
+    [
+     "astucia",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "autoridad",
+     0.78
+    ],
+    [
+     "atencion_social",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En enero de 1953 fue nombrado presidente de la Comisión de Operaciones Gubernamentales y usó el Subcomité Permanente de Investigaciones para investigar comunistas en el gobierno.",
+     "source_url": "https://en.wikipedia.org/wiki/Joseph_McCarthy",
+     "source_date": "2026-10-25",
+     "claim_date": "1953-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1954",
+   "corte": "C3_1954",
+   "cut_id": "C3_1954",
+   "date": "1954-02-18",
+   "fecha_corte": "1954-02-18",
+   "hecho": "El subcomité citó el 30 de enero de 1954 al mayor del Ejército Irving Peress, que se acogió a la Quinta Enmienda; el 18 de febrero de 1954 interrogó al general Ralph Zwicker, su comandante, que por consejo del Ejército se negó a responder algunas preguntas, y McCarthy le dijo que no era apto para vestir ese uniforme.",
+   "P": [
+    [
+     "ambicion",
+     0.74
+    ],
+    [
+     "obsesion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.82
+    ],
+    [
+     "impulsividad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.78
+    ],
+    [
+     "jerarquia",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Peress fue citado el 30 de enero de 1954 y se acogió a la Quinta Enmienda.",
+     "source_url": "https://en.wikipedia.org/wiki/Ralph_Wise_Zwicker",
+     "source_date": "2026-10-25",
+     "claim_date": "1954-01-30",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 18 de febrero de 1954 Zwicker compareció, se negó a responder algunas preguntas por consejo del Ejército y McCarthy le dijo que no era apto para vestir ese uniforme.",
+     "source_url": "https://en.wikipedia.org/wiki/Ralph_Wise_Zwicker",
+     "source_date": "2026-10-25",
+     "claim_date": "1954-02-18",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (biografía de McCarthy y de Ralph W. Zwicker); solo hechos hasta la audiencia del 18 de febrero de 1954."
+}

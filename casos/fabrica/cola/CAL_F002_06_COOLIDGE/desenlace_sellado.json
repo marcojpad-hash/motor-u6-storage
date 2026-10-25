@@ -1,0 +1,28 @@
+{
+ "familias": [
+  "weber_03_autoridad_legal_racional",
+  "schwartz_05_seguridad",
+  "kondratiev_02_verano_auge",
+  "arquetipo_el_gobernante"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Calvin_Coolidge",
+ "prohibidas_post_Z": [
+  "I do not choose to run",
+  "no elijo postularme",
+  "no elijo presentarme",
+  "no buscará la reelección",
+  "Black Hills",
+  "Rapid City",
+  "Kellogg-Briand",
+  "Kellogg–Briand",
+  "inundación del Misisipi",
+  "Gran Inundación",
+  "sucedido por Hoover",
+  "Hoover lo sucede",
+  "crac",
+  "jueves negro",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

@@ -1,0 +1,185 @@
+{
+ "case_id": "CAL_F002_07_CATALINA",
+ "question": "¿Qué trayectoria sigue Catalina Alexéievna, consorte del emperador Pedro III, tras la llegada de su esposo al trono ruso y el creciente distanciamiento entre ambos?",
+ "person": "Catalina Alexéievna (nacida Sofía de Anhalt-Zerbst)",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1762-06-01",
+ "z_trabajo": "1762-06-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1762-05-05",
+ "cuts": [
+  {
+   "id": "C1_1745",
+   "corte": "C1_1745",
+   "cut_id": "C1_1745",
+   "date": "1745-08-21",
+   "fecha_corte": "1745-08-21",
+   "hecho": "Princesa alemana llegada a Rusia en 1744 a los 15 años, se empeñó en aprender ruso y ganarse a la emperatriz Isabel; el 28 de junio de 1744 fue recibida en la Iglesia ortodoxa con el nombre de Yekaterina Alexéievna y el 21 de agosto de 1745 se casó con el gran duque Pedro.",
+   "P": [
+    [
+     "ambicion",
+     0.75
+    ],
+    [
+     "necesidad_pertenencia",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "astucia",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.76
+    ],
+    [
+     "presion_social",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Llegó a Rusia en 1744, fue recibida en la ortodoxia el 28 de junio de 1744 como Yekaterina Alexéievna y se casó con Pedro el 21 de agosto de 1745.",
+     "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+     "source_date": "2026-10-25",
+     "claim_date": "1745-08-21",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1754",
+   "corte": "C2_1754",
+   "cut_id": "C2_1754",
+   "date": "1754",
+   "fecha_corte": "1754",
+   "hecho": "El matrimonio resultó infeliz; Pedro tomó una amante y ella se relacionó con otras figuras de la corte, se ganó el favor de grupos políticos poderosos opuestos a su esposo y se volvió una lectora ávida en francés; en 1754 nació su hijo Pablo, heredero de la dinastía.",
+   "P": [
+    [
+     "conocimiento",
+     0.74
+    ],
+    [
+     "autonomia",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "analisis",
+     0.72
+    ],
+    [
+     "discrecion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "estancamiento_emocional",
+     0.7
+    ],
+    [
+     "infidelidad",
+     0.68
+    ],
+    [
+     "alianza",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El matrimonio fue infeliz; tras tomar Pedro una amante, Catalina se relacionó con otras figuras de la corte, ganó popularidad entre grupos opuestos a su esposo y se volvió lectora ávida.",
+     "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+     "source_date": "2026-10-25",
+     "claim_date": "1754",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Su hijo Pablo nació en 1754.",
+     "source_url": "https://en.wikipedia.org/wiki/Paul_I_of_Russia",
+     "source_date": "2026-10-25",
+     "claim_date": "1754",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1762",
+   "corte": "C3_1762",
+   "cut_id": "C3_1762",
+   "date": "1762-05-05",
+   "fecha_corte": "1762-05-05",
+   "hecho": "Pedro subió al trono el 5 de enero de 1762 y ella pasó a ser emperatriz consorte; admirador de Federico II, Pedro firmó el 5 de mayo de 1762 el Tratado de San Petersburgo, que cerró la guerra con Prusia y devolvió las ganancias rusas.",
+   "P": [
+    [
+     "busqueda_seguridad",
+     0.72
+    ],
+    [
+     "ambicion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "cautela",
+     0.72
+    ],
+    [
+     "discrecion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "incertidumbre",
+     0.72
+    ],
+    [
+     "rivalidad_poder",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Pedro III reinó desde el 5 de enero de 1762; Catalina fue emperatriz consorte desde esa fecha.",
+     "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+     "source_date": "2026-10-25",
+     "claim_date": "1762-01-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El Tratado de San Petersburgo del 5 de mayo de 1762 cerró la guerra entre Rusia y Prusia y devolvió las conquistas rusas.",
+     "source_url": "https://en.wikipedia.org/wiki/Treaty_of_Saint_Petersburg_(1762)",
+     "source_date": "2026-10-25",
+     "claim_date": "1762-05-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (Catalina, Pedro III, Tratado de San Petersburgo); las fechas siguen a esas fuentes."
+}

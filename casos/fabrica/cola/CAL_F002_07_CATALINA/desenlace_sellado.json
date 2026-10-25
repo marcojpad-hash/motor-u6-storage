@@ -1,0 +1,32 @@
+{
+ "familias": [
+  "30_ambicion",
+  "8_rebelion",
+  "arquetipo_el_gobernante",
+  "schwartz_06_poder"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+ "prohibidas_post_Z": [
+  "golpe de Estado",
+  "golpe de palacio",
+  "derroca",
+  "derrocó",
+  "derrocamiento",
+  "derrocado",
+  "Ropsha",
+  "abdica",
+  "abdicación",
+  "emperatriz reinante",
+  "autócrata",
+  "coronación",
+  "coronada",
+  "Catalina II",
+  "Catalina la Grande",
+  "Pedro III muere",
+  "muerte de Pedro III",
+  "asesinato de Pedro",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

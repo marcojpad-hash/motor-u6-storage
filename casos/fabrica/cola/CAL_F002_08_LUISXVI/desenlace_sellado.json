@@ -1,0 +1,36 @@
+{
+ "familias": [
+  "6_desastre",
+  "33_error_de_juicio",
+  "8_rebelion",
+  "cliodinamica_03_fase_crisis_colapso",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Flight_to_Varennes ; https://en.wikipedia.org/wiki/Louis_XVI",
+ "prohibidas_post_Z": [
+  "Varennes",
+  "Sainte-Menehould",
+  "Drouet",
+  "Montmédy",
+  "huida",
+  "fuga del rey",
+  "Pillnitz",
+  "Brunswick",
+  "Valmy",
+  "asalto a las Tullerías",
+  "10 de agosto",
+  "Convención Nacional",
+  "proclamación de la república",
+  "suspendido",
+  "depuesto",
+  "Luis Capet",
+  "Ciudadano Capet",
+  "guillotina",
+  "guillotinado",
+  "ejecutado",
+  "masacre del Campo de Marte",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

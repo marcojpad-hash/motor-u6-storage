@@ -1,0 +1,193 @@
+{
+ "case_id": "CAL_F002_06_COOLIDGE",
+ "question": "¿Qué trayectoria sigue Calvin Coolidge tras ganar la elección presidencial de 1924 e iniciar su primer mandato completo como presidente de Estados Unidos?",
+ "person": "Calvin Coolidge",
+ "tipo_sujeto": "politico",
+ "freeze": "1925-03-05",
+ "z_trabajo": "1925-03-05",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1925-03-04",
+ "cuts": [
+  {
+   "id": "C1_1919",
+   "corte": "C1_1919",
+   "cut_id": "C1_1919",
+   "date": "1919-09",
+   "fecha_corte": "1919-09",
+   "hecho": "Como gobernador de Massachusetts enfrentó la huelga de la policía de Boston iniciada el 9 de septiembre de 1919 y respondió por telegrama a Samuel Gompers que no existía el derecho a la huelga contra la seguridad pública; la firmeza le dio fama nacional.",
+   "P": [
+    [
+     "deber",
+     0.8
+    ],
+    [
+     "legalidad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "compromiso_firme",
+     0.78
+    ],
+    [
+     "prudencia",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "crisis_abrupta",
+     0.76
+    ],
+    [
+     "popularidad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "La huelga de la policía de Boston empezó el 9 de septiembre de 1919.",
+     "source_url": "https://en.wikipedia.org/wiki/Boston_police_strike",
+     "source_date": "2026-10-25",
+     "claim_date": "1919-09-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Telegrama de Coolidge a Gompers (14 de septiembre de 1919): no existe el derecho a la huelga contra la seguridad pública; la huelga le dio reputación nacional de líder decidido.",
+     "source_url": "https://en.wikipedia.org/wiki/Calvin_Coolidge",
+     "source_date": "2026-10-25",
+     "claim_date": "1919-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1923",
+   "corte": "C2_1923",
+   "cut_id": "C2_1923",
+   "date": "1923-08-03",
+   "fecha_corte": "1923-08-03",
+   "hecho": "Vicepresidente de Warren Harding desde 1921, al quedar vacante la presidencia juró el cargo a las 2:47 de la madrugada del 3 de agosto de 1923 en el salón de la casa familiar, ante su padre, notario público, a la luz de una lámpara de queroseno.",
+   "P": [
+    [
+     "deber",
+     0.8
+    ],
+    [
+     "humildad",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "discrecion",
+     0.75
+    ],
+    [
+     "moderacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "ascenso_reciente",
+     0.8
+    ],
+    [
+     "oportunidad",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Su padre, notario, le tomó juramento a las 2:47 de la madrugada del 3 de agosto de 1923.",
+     "source_url": "https://en.wikipedia.org/wiki/Calvin_Coolidge",
+     "source_date": "2026-10-25",
+     "claim_date": "1923-08-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1925",
+   "corte": "C3_1925",
+   "cut_id": "C3_1925",
+   "date": "1925-03-04",
+   "fecha_corte": "1925-03-04",
+   "hecho": "En julio de 1924 perdió a su hijo Calvin Jr., de 16 años, por una septicemia originada en una ampolla; en la elección de noviembre de 1924 obtuvo 382 votos electorales y el 54 % del voto popular, y su investidura del 4 de marzo de 1925 fue la primera transmitida por radio.",
+   "P": [
+    [
+     "deber",
+     0.78
+    ],
+    [
+     "moderacion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "autocontrol",
+     0.74
+    ],
+    [
+     "prudencia",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.8
+    ],
+    [
+     "duelo",
+     0.74
+    ],
+    [
+     "legitimidad_percibida",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Calvin Jr. se hizo una ampolla el 30 de junio de 1924, desarrolló septicemia y no sobrevivió; tenía 16 años.",
+     "source_url": "https://en.wikipedia.org/wiki/Calvin_Coolidge",
+     "source_date": "2026-10-25",
+     "claim_date": "1924-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Coolidge ganó la elección de 1924 con 382 votos electorales y alrededor del 54 % del voto popular.",
+     "source_url": "https://en.wikipedia.org/wiki/1924_United_States_presidential_election",
+     "source_date": "2026-10-25",
+     "claim_date": "1924-11",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La segunda investidura de Coolidge, el 4 de marzo de 1925, fue la primera transmitida por radio.",
+     "source_url": "https://en.wikipedia.org/wiki/Second_inauguration_of_Calvin_Coolidge",
+     "source_date": "2026-10-25",
+     "claim_date": "1925-03-04",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (biografía, huelga policial de Boston, elección de 1924 y segunda investidura)."
+}

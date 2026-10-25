@@ -1,0 +1,26 @@
+{
+ "familias": [
+  "5_persecucion",
+  "31_conflicto_con_un_dios",
+  "33_error_de_juicio",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Galileo_affair",
+ "prohibidas_post_Z": [
+  "abjura",
+  "abjuró",
+  "abjuración",
+  "abjurar",
+  "arresto domiciliario",
+  "vehementemente sospechoso",
+  "condenado por la Inquisición",
+  "proceso de 1633",
+  "Eppur si muove",
+  "Dos nuevas ciencias",
+  "Discorsi",
+  "ceguera",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

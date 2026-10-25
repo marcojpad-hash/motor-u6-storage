@@ -1,0 +1,26 @@
+{
+ "familias": [
+  "9_audaz_empresa",
+  "30_ambicion",
+  "schwartz_06_poder",
+  "schwartz_07_logro"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Standard_Oil ; https://en.wikipedia.org/wiki/John_D._Rockefeller",
+ "prohibidas_post_Z": [
+  "South Improvement",
+  "masacre de Cleveland",
+  "conquista de Cleveland",
+  "Standard Oil Trust",
+  "acuerdo fiduciario",
+  "90 por ciento",
+  "90 %",
+  "90%",
+  "monopolio",
+  "Sherman",
+  "Ida Tarbell",
+  "Tarbell",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

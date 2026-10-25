@@ -1,0 +1,27 @@
+{
+ "familias": [
+  "24_rivalidad_de_superior_e_inferior",
+  "arquetipo_el_creador",
+  "schwartz_03_tradicion",
+  "erikson_07_generatividad_vs_estancamiento"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+ "prohibidas_post_Z": [
+  "Pasión según San Juan",
+  "Pasión según San Mateo",
+  "Misa en si menor",
+  "Ofrenda musical",
+  "Arte de la fuga",
+  "Federico el Grande",
+  "Potsdam",
+  "Collegium Musicum",
+  "Ernesti",
+  "Harrer",
+  "John Taylor",
+  "cirugía de los ojos",
+  "hasta su muerte",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}

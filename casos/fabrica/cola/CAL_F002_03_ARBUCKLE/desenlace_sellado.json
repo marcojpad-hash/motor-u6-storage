@@ -1,0 +1,30 @@
+{
+ "familias": [
+  "7_caer_victima",
+  "5_persecucion",
+  "social_10_cohen_panico_moral",
+  "social_08_girard_mimesis_y_chivo_expiatorio"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Roscoe_Arbuckle",
+ "prohibidas_post_Z": [
+  "Virginia Rappe",
+  "Rappe",
+  "St. Francis",
+  "Saint Francis",
+  "Labor Day",
+  "Día del Trabajo",
+  "homicidio",
+  "arrestado",
+  "absuelto",
+  "tres juicios",
+  "Will Hays",
+  "vetado",
+  "vetadas",
+  "William Goodrich",
+  "Maude Delmont",
+  "Delmont",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F002"
+}
