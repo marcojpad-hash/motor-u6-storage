@@ -272,8 +272,8 @@
     },
     {
       "path": "calibracion/arnes_calibracion.py",
-      "bytes": 13096,
-      "sha256": "d1f93a2be98d3d109b74b8dff155782b15d053d1e4383ff895fd4ac8e07cabee"
+      "bytes": 13596,
+      "sha256": "0bcf20289ecd5ae182cb29839096e501102531ddf6c9cf1dc6ff97182e390090"
     },
     {
       "path": "capa_llm/FIXTURE_MOCK_CONSULTA_20261011.json",
@@ -2714,6 +2714,16 @@
       "path": "motor/apuesta_destino_personal_022.py",
       "sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
       "bytes": 7428
+    },
+    {
+      "path": "calibracion/gate_z90.py",
+      "sha256": "86e939f7ca23295e42d8494c5931d097f61f7aaca58d7b939d0d5caaca8ee698",
+      "bytes": 6677
+    },
+    {
+      "path": "CONTRATO_ENTRADA_LLM_ADDENDUM_Z_TRABAJO_20261024.txt",
+      "sha256": "b27f5f3a9b69a7e037a6a1451ae4066908aaf8d2861e072b7528f3d695bc34ea",
+      "bytes": 853
     }
   ],
   "files_count": 542,

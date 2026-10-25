@@ -98,6 +98,53 @@ def preparar(semillas: Path) -> int:
     print("preparado OK"); return 0
 
 
+def _gate():
+    spec = importlib.util.spec_from_file_location("gate_z90", MOTOR_REPO / "calibracion" / "gate_z90.py")
+    g = importlib.util.module_from_spec(spec); spec.loader.exec_module(g); return g
+
+
+def preparar_z(semillas: Path, destinos: Path) -> int:
+    """COMPUERTA Z_TRABAJO + preparación ciega. Dos archivos SEPARADOS:
+       semillas (SEMILLAS_Z, lo escribe quien NO conoce el final) y destinos (DESTINOS, lo escribe el custodio).
+       Si UNA entrada viola la compuerta, falla TODO el lote y no se escribe nada."""
+    load = lambda f, n: (lambda sp: (lambda m: (sp.loader.exec_module(m), m)[1])(importlib.util.module_from_spec(sp)))(importlib.util.spec_from_file_location(n, f))
+    S, D = load(semillas, "semillas_z").SEMILLAS_Z, load(destinos, "destinos_z").DESTINOS
+    V, FAM = vocab(); previos = hashes_previos(); g = _gate(); errores = []; listos = []
+    for sm in S:
+        sid = sm["id"]; pc = sm.get("preparacion_ciega") or {}; dz = D.get(sid)
+        if not dz: errores.append(f"{sid}: sin destino sellado en {destinos.name}"); continue
+        if (dz.get("custodio") or "") != (pc.get("custodio_destino") or ""): errores.append(f"{sid}: el custodio del destino no coincide con preparacion_ciega")
+        cs = []
+        for c in sm["cuts"]:
+            for t, w in c["P"] + c["A"] + c["C"]:
+                if t not in V: errores.append(f"{sid}: token fuera de vocabulario {t}")
+                if not (P_MIN <= w <= P_MAX): errores.append(f"{sid}: peso fuera de contrato {t}={w}")
+            cs.append({"id": c["id"], "corte": c["id"], "cut_id": c["id"], "date": c["date"], "fecha_corte": c["date"], "hecho": c["hecho"],
+                       "P": [list(x) for x in c["P"]], "A": [list(x) for x in c["A"]], "C": [list(x) for x in c["C"]], "evidencia": c["evidencia"]})
+        for f in dz.get("familias") or []:
+            if f not in FAM: errores.append(f"{sid}: familia de desenlace fuera del catálogo {f}")
+        entrada = {"case_id": f"CAL_{sid}", "question": sm["question"], "person": sm["person"], "tipo_sujeto": sm["tipo"],
+                   "freeze": sm["z_trabajo"], "z_trabajo": sm["z_trabajo"], "modo_z": sm["modo_z"], "gate_z": g.VERSION,
+                   "preparacion_ciega": pc, "random_seed": 20261024, "z_work_kind": "CASE_CUTOFF", "z_work_date": cs[-1]["date"] if cs else "",
+                   "cuts": cs, "source_notes": sm.get("source_notes", "")}
+        if _tiene(entrada): errores.append(f"{sid}: la entrada trae campo de desenlace")
+        errores += [f"{sid}: {x}" for x in g.validar_entrada(entrada, dz.get("prohibidas_post_Z"))]
+        listos.append((sid, entrada, dz))
+    if errores:
+        print("LOTE RECHAZADO por la compuerta Z_trabajo (no se escribió nada):\n" + "\n".join(errores)); return 1
+    for sid, entrada, dz in listos:
+        d = COLA / f"CAL_{sid}"
+        if d.exists(): print(f"ya en cola: {d.name}"); continue
+        d.mkdir(parents=True)
+        (d / "entrada.json").write_text(json.dumps(entrada, ensure_ascii=False, indent=1), encoding="utf-8")
+        if sha(d / "entrada.json") in previos: print(f"{sid}: entrada duplicada"); shutil.rmtree(d); return 1
+        (d / "desenlace_sellado.json").write_text(json.dumps({"familias": dz["familias"], "fuente": dz["fuente"],
+            "prohibidas_post_Z": dz.get("prohibidas_post_Z", []), "custodio": dz.get("custodio")}, ensure_ascii=False, indent=1), encoding="utf-8")
+        if dz.get("destino"):
+            (d / "destino_sellado.json").write_text(json.dumps({"destino": dz["destino"], "porque": dz.get("porque", ""), "fuente": dz["fuente"]}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"preparado OK (compuerta {g.VERSION})"); return 0
+
+
 def pendientes() -> list:
     hechos = {r["case_id"] for r in csv.DictReader(CSV.open(encoding="utf-8"))} if CSV.is_file() else set()
     return [d for d in sorted(COLA.iterdir()) if d.is_dir() and d.name not in hechos]
@@ -120,6 +167,13 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
     _migrar_csv()
     # --rehacer ID1,ID2: vuelve a correr casos ya evaluados con sus MISMOS sellos (para un parche nuevo; no se reetiqueta nada)
     casos = [COLA / c for c in rehacer] if rehacer else pendientes()[:n]
+    g = _gate()
+    for d in casos:  # COMPUERTA Z_TRABAJO otra vez justo antes del motor (por si alguien editó la cola a mano)
+        e = json.loads((d / "entrada.json").read_text(encoding="utf-8"))
+        if e.get("gate_z"):
+            pz = json.loads((d / "desenlace_sellado.json").read_text(encoding="utf-8")).get("prohibidas_post_Z")
+            bad = g.validar_entrada(e, pz)
+            if bad: print(f"GATE_Z_TRABAJO_RECHAZADO {d.name}: " + "; ".join(bad[:10])); return 8
     if not casos: print("sin casos pendientes en cola/"); return 0
     ok_antes = candados(MOTOR_REPO)
     if not all(ok_antes.values()): print(json.dumps({"error": "CANDADO_ROTO_ANTES", "detalle": ok_antes})); return 3
@@ -216,7 +270,11 @@ def resumen_md():
 
 if __name__ == "__main__":
     a = sys.argv
-    if len(a) >= 3 and a[1] == "preparar": sys.exit(preparar(Path(a[2]).resolve()))
+    if len(a) >= 4 and a[1] == "preparar-z": sys.exit(preparar_z(Path(a[2]).resolve(), Path(a[3]).resolve()))
+    if len(a) >= 3 and a[1] == "preparar":
+        print("AVISO: 'preparar' (formato viejo, sin compuerta Z_trabajo) queda solo para lotes ya sellados (F001). Lotes nuevos: preparar-z.")
+        if os.environ.get("FABRICA_PERMITIR_SIN_GATE") != "1": sys.exit(7)
+        sys.exit(preparar(Path(a[2]).resolve()))
     if len(a) >= 2 and a[1] == "correr":
         lote = a[a.index("--lote") + 1] if "--lote" in a else datetime.now().strftime("F%Y%m%d")
         n = int(a[a.index("--n") + 1]) if "--n" in a else 5

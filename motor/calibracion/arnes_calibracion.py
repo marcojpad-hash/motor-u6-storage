@@ -103,6 +103,12 @@ def correr(carpeta: Path, salida: Path, pesos) -> int:
         raw = json.loads(p.read_text(encoding="utf-8"))
         if _tiene_desenlace(raw):
             registro["errores"].append({"caso": p.name, "error": "INPUT_CON_CAMPO_DE_DESENLACE_RECHAZADO"}); continue
+        # COMPUERTA Z_TRABAJO: si la entrada la declara (o FABRICA_GATE_Z90=1), nada posterior al corte entra al motor.
+        if isinstance(raw, dict) and (raw.get("gate_z") or os.environ.get("FABRICA_GATE_Z90") == "1"):
+            sys.path.insert(0, str(Path(__file__).resolve().parent)); import gate_z90
+            _gz = gate_z90.validar_entrada(raw)
+            if _gz:
+                registro["errores"].append({"caso": p.name, "error": "GATE_Z90_RECHAZADO", "detalle": _gz[:20]}); continue
         cid = str(raw.get("case_id") or p.stem) if isinstance(raw, dict) else p.stem
         fila = {"input": p.name, "input_sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "por_peso": {}}
         for w in pesos:

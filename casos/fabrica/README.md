@@ -37,3 +37,11 @@ Además de H1, set y apuesta temática, cada corrida trae `apuesta_destino_perso
 - La evaluación agrega `acierto_destino` (etiqueta exacta) y `acierto_destino_polaridad` (auge/meseta frente a caida/ruptura).
 - `python3 casos/fabrica/fabrica.py correr --lote X --rehacer ID1,ID2` vuelve a correr casos ya evaluados con sus mismos sellos (sirve para un parche nuevo, nunca para reetiquetar).
 - En las semillas de lotes nuevos, fija el destino ANTES de correr.
+
+## Compuerta Z_trabajo + preparación ciega (obligatoria para lotes nuevos)
+- Lotes nuevos: `fabrica.py preparar-z semillas.py destinos.py`. Son dos archivos separados: el preparador no conoce el final; el custodio guarda destino y lista negra.
+- Validador: `motor/calibracion/gate_z90.py`, reglas R1–R7: fechas ≤ Z, evidencia por afirmación, primaria ≤ Z, secundaria congelada (modo vivo) o con preparación ciega (modo histórico), sin años posteriores a Z, sin lenguaje de futuro y sin palabras de la lista negra.
+- Una sola violación rechaza el lote entero. `correr` vuelve a pasar la compuerta antes del motor; el arnés también la aplica si la entrada trae `gate_z`.
+- El `preparar` viejo queda bloqueado (código 7) salvo `FABRICA_PERMITIR_SIN_GATE=1`, solo para lotes ya sellados como F001.
+- La regla que se califique se congela con su sha256 ANTES de abrir destinos, y conviene probarla en sujetos que quien la diseñó no ha visto.
+- Cómo escribir semillas: `PROMPT_SEMILLAS_Z.md`.

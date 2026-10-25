@@ -1,0 +1,7 @@
+ADDENDUM 2026-10-24 — COMPUERTA Z_TRABAJO (no cambia el Engine, el catálogo ni las reglas anteriores; solo agrega requisitos de entrada)
+- Z_trabajo = corte de trabajo del caso (en una pregunta de hoy, hoy). Nada posterior a Z entra al motor.
+- La entrada declara z_trabajo, modo_z (historico|vivo), preparacion_ciega {preparador_entrada, custodio_destino, vio_destino:false}
+  y, en cada corte, evidencia[] con afirmacion, source_url, source_date, claim_date<=Z, tipo_fuente, conocido_en_Z:"sí".
+- Prohibido: hechos posteriores a Z, años posteriores a Z, lenguaje de futuro o predicción, Wikipedia en vivo en modo vivo,
+  y palabras de la lista negra del sujeto (que vive junto al destino sellado, fuera de la entrada).
+- Validador: motor/calibracion/gate_z90.py (fábrica preparar-z y arnés correr). Prompt: casos/fabrica/PROMPT_SEMILLAS_Z.md.
