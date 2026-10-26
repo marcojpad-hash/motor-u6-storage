@@ -110,17 +110,52 @@ def resumen_corrida(d: Path) -> dict:
                      'compuerta_cierre': (res.get('compuerta_cierre') or {}).get('estado_pre_compuerta') if isinstance(res.get('compuerta_cierre'), dict) else None},
     }
 
-def tokens_corrida(d: Path) -> list[dict]:
+def _stinkbox_root(explicit=None):
+    for c in (explicit, os.environ.get('STINKBOX_STORAGE_ROOT'), os.environ.get('STINKBOX_STORAGE'),
+              str(Path.home() / 'STINKBOX_PERSISTENTE' / 'STINKBOX_STORAGE')):
+        if c and Path(c).expanduser().is_dir(): return Path(c).expanduser()
+    return None
+
+def _tokens_de_obj(obj):
+    toks = []
+    if isinstance(obj.get('tokens'), list): toks += [x.get('token') if isinstance(x, dict) else x for x in obj['tokens']]
+    # FIX_20261025: el StinkBox real (STINKBOX_TRANSPORT) guarda token_frequency / persistent_neighbor_tokens, no 'tokens'
+    if isinstance(obj.get('token_frequency'), dict): toks += list(obj['token_frequency'])
+    if isinstance(obj.get('persistent_neighbor_tokens'), list): toks += [x.get('token') if isinstance(x, dict) else x for x in obj['persistent_neighbor_tokens']]
+    for k in (obj.get('coactivation') or {}): toks += k.split('|')
+    return toks
+
+def tokens_corrida(d: Path, stinkbox_root=None, case_ids=None) -> list[dict]:
+    """Tokens de la corrida. FIX_20261025: el motor escribe el StinkBox en STINKBOX_STORAGE_ROOT
+    (p.ej. ~/STINKBOX_PERSISTENTE/STINKBOX_STORAGE), NO dentro de la carpeta de corrida; antes se buscaba
+    solo ahí y el lote 01 subió 0 observaciones."""
+    paths = list(d.glob('stinkbox_tokens_descubiertos.json')) + list(d.rglob('STINKBOX_STORAGE/stinkbox_*.json'))
+    root = _stinkbox_root(stinkbox_root)
+    if root is not None and case_ids:
+        paths += [root / f'stinkbox_{c}.json' for c in case_ids if (root / f'stinkbox_{c}.json').is_file()]
     out = []
-    for p in list(d.glob('stinkbox_tokens_descubiertos.json')) + list(d.rglob('STINKBOX_STORAGE/stinkbox_*.json')):
+    for p in dict.fromkeys(paths):
         obj = _cargar(p); h = sha_file(p)
         if not isinstance(obj, dict): continue
-        toks = []
-        if isinstance(obj.get('tokens'), list): toks = [x.get('token') for x in obj['tokens'] if isinstance(x, dict)]
-        for k in (obj.get('coactivation') or {}): toks += k.split('|')
-        for t in toks:
+        vistos = set()
+        for t in _tokens_de_obj(obj):
             t = re.sub(r'\s+', ' ', str(t or '').strip()).casefold()
-            if t: out.append({'token': t, 'caso': obj.get('case_id') or d.name, 'sha256_corrida': h})
+            if t and t not in vistos:
+                vistos.add(t); out.append({'token': t, 'caso': obj.get('case_id') or d.name, 'sha256_corrida': h})
+    return out
+
+def resumenes_lote(d: Path) -> list[dict]:
+    """Salida del arnés de calibración: DIR/corridas/<CASO>__w0.json (no _PRIMARY_RESULT.json)."""
+    out = []
+    for p in sorted((d / 'corridas').glob('*__w0.json')):
+        res = _cargar(p) or {}
+        h1 = res.get('H1') or {}; h2 = res.get('H2') or {}; ap = res.get('apuesta') if isinstance(res.get('apuesta'), dict) else {}
+        out.append({'corrida': f'{d.name}/{p.stem}', 'case_id': res.get('case_id'), 'case_hash_input_sha256': None,
+                    'output_sha256': sha_file(p), 'fecha': datetime.fromtimestamp(p.stat().st_mtime).strftime('%Y-%m-%d'),
+                    'version_motor': res.get('version'), 'hash_candado': res.get('hash_candado'), 'patterns_sha256': res.get('patterns_sha256'),
+                    'H1': {k: h1.get(k) for k in ('family', 'peso_relativo') if k in h1}, 'H2': {k: h2.get(k) for k in ('family', 'peso_relativo') if k in h2},
+                    'apuesta': {'estado': ap.get('estado')},
+                    'caldero_arquetipos': ((res.get('features') or {}).get('external_archetype_search_receipt') or {}).get('provider')})
     return out
 
 def anexar_tokens(repo: Path, nuevos: list[dict], fecha: str, destino: Path) -> int:
@@ -147,20 +182,25 @@ def anexar_tokens(repo: Path, nuevos: list[dict], fecha: str, destino: Path) -> 
     destino.write_text(''.join(json.dumps(reg[t], ensure_ascii=False) + '\n' for t in sorted(reg)), encoding='utf-8')
     return tocados
 
-def despues(repo: Path, corrida: Path, modelo: str):
-    res = resumen_corrida(corrida); res['modelo'] = modelo
-    fecha = res['fecha'] or datetime.now().strftime('%Y-%m-%d')
-    # dedupe de resumen por (case hash, output hash)
+def despues(repo: Path, corrida: Path, modelo: str, stinkbox=None):
+    lote = (corrida / 'corridas').is_dir() and not (corrida / '_PRIMARY_RESULT.json').is_file()
+    resl = resumenes_lote(corrida) if lote else [resumen_corrida(corrida)]
+    for r in resl: r['modelo'] = modelo
+    fecha = (resl[0]['fecha'] if resl and resl[0].get('fecha') else None) or datetime.now().strftime('%Y-%m-%d')
     rpath = repo / 'casos' / 'resultados' / 'resultados.jsonl'
     previos = rpath.read_text(encoding='utf-8').splitlines() if rpath.is_file() else []
-    ya = any((json.loads(l).get('case_hash_input_sha256'), json.loads(l).get('output_sha256')) == (res['case_hash_input_sha256'], res['output_sha256']) for l in previos if l.strip())
-    toks = tokens_corrida(corrida)
+    prev_keys = {(json.loads(l).get('case_hash_input_sha256'), json.loads(l).get('output_sha256')) for l in previos if l.strip()}
+    nuevos_res = [r for r in resl if (r['case_hash_input_sha256'], r['output_sha256']) not in prev_keys]
+    ya = not nuevos_res; res = resl[0] if resl else {}
+    ids = [r.get('case_id') for r in resl if r.get('case_id')]
+    toks = tokens_corrida(corrida, stinkbox, ids)
+    print(f'[sincronizar] {len(resl)} resumen(es), {len(toks)} observaciones StinkBox candidatas')
     puede_push = es_git(repo) and git(repo, 'ls-remote', 'origin', 'HEAD').returncode == 0
     if puede_push:
         n = anexar_tokens(repo, toks, fecha, repo / 'stinkbox' / 'tokens.jsonl')
         if not ya:
             rpath.parent.mkdir(parents=True, exist_ok=True)
-            with rpath.open('a', encoding='utf-8') as f: f.write(json.dumps(res, ensure_ascii=False) + '\n')
+            with rpath.open('a', encoding='utf-8') as f: f.writelines(json.dumps(r, ensure_ascii=False) + '\n' for r in nuevos_res)
         git(repo, 'add', *PERMITIDOS_PUSH)
         staged = git(repo, 'diff', '--cached', '--name-only').stdout.split()
         if any(s not in PERMITIDOS_PUSH for s in staged):
@@ -177,18 +217,18 @@ def despues(repo: Path, corrida: Path, modelo: str):
         with (pend / f'stinkbox_parche_{tag}.jsonl').open('w', encoding='utf-8') as f:
             for t in toks: f.write(json.dumps({**t, 'fecha': fecha}, ensure_ascii=False) + '\n')
         if not ya:
-            (pend / f'resultado_{tag}.jsonl').write_text(json.dumps(res, ensure_ascii=False) + '\n', encoding='utf-8')
+            (pend / f'resultado_{tag}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in nuevos_res), encoding='utf-8')
         print(f'Sin credenciales/red: parches locales en {pend} (subir despues).')
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('accion', choices=['antes', 'despues', 'resumen'])
     ap.add_argument('--repo', default=str(Path(__file__).resolve().parents[1]))
-    ap.add_argument('--corrida'); ap.add_argument('--modelo', default='DESCONOCIDO')
+    ap.add_argument('--corrida'); ap.add_argument('--modelo', default='DESCONOCIDO'); ap.add_argument('--stinkbox')
     a = ap.parse_args(); repo = Path(a.repo).resolve()
     if a.accion == 'antes': antes(repo)
     elif a.accion == 'resumen': print(json.dumps(resumen_corrida(Path(a.corrida)), ensure_ascii=False, indent=1))
     else:
         if not a.corrida: sys.exit('--corrida es obligatorio')
-        despues(repo, Path(a.corrida).resolve(), a.modelo)
+        despues(repo, Path(a.corrida).resolve(), a.modelo, a.stinkbox)
 
 if __name__ == '__main__': main()

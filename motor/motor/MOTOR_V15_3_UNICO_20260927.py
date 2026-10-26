@@ -1040,7 +1040,11 @@ def _run_pre_h_analogical_search(case: Dict[str,Any], motor: Dict[str,Any], feat
     # Caldero (`caldero_search_sources`) es reutilizable aquí. La ruta antigua
     # `analogical_search_sources` queda como alias de compatibilidad.
     prior=features.get("caldero_busqueda_arquetipos") or {}
-    if prior.get("status") == "EXECUTED" and prior.get("caldero_input"):
+    # FIX_20261025: el sidecar no emite 'status'; la reutilización nunca disparaba (PRE-H quedaba API_PENDING aunque
+    # el Caldero hubiera buscado en vivo). Aceptar recibo de proveedor vivo (no fixture) como EXECUTED.
+    _rcpt=(prior.get("audit") or {}).get("provider_receipt") or {}
+    _prior_ok=prior.get("status")=="EXECUTED" or (_rcpt.get("status")=="EXECUTED" and _rcpt.get("provider") not in (None,"static_fixture","provided_fixture"))
+    if _prior_ok and prior.get("caldero_input"):
         cal=prior.get("caldero_input") or {}
         return {**base,
                 "status":"EXECUTED","activated":True,"reason":"pre_h_orientation_reused_caldero_search",
@@ -1053,7 +1057,7 @@ def _run_pre_h_analogical_search(case: Dict[str,Any], motor: Dict[str,Any], feat
                 "tokens_neighbors":cal.get("tokens_neighbors") or [],
                 "raw_sources":prior.get("audit",{}).get("raw_sources_before_self_match") or [],
                 "discarded":prior.get("audit",{}).get("discarded_by_self_match") or [],
-                "feeds":"stinkbox_and_lateral_alignment_only"}
+                "provider_receipt":_rcpt,"feeds":"stinkbox_and_lateral_alignment_only"}
     # PATCH19: el orden del runner ejecuta esta etapa antes del Caldero principal.
     # Si existe un puente de herramienta conectada ya registrado, consumirlo aquí
     # directamente (sin red) para que la búsqueda PRE-H no quede API_PENDING.
@@ -2154,7 +2158,13 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                 adapter=caldero_mod.create_search_adapter()
                 _caldero_provider=getattr(adapter,"last_receipt",{}).get("provider") or type(adapter).__name__.replace("SearchAdapter", "").casefold()
             def _do_caldero():
-                out=caldero_mod.CalderoArchetypeSearchSidecar(adapter,caldero_mod.SelfMatchFilter(identity)).run(active,llm_neighbor_hints=case.get("caldero_llm_neighbor_hints"))
+                # GUARDIAN_PISTAS_LLM_20261025: las pistas LLM pasan por guardián (identidad/futuro/calendario) ANTES del sidecar;
+                # antes entraban crudas (las fuentes web sí pasaban SelfMatchFilter).
+                _hints=case.get("caldero_llm_neighbor_hints"); _gpl=_load("guardian_pistas_llm_caldero","guardian_pistas_llm_caldero_v1.py")
+                if _gpl is None and _hints: raise RuntimeError("GUARDIAN_PISTAS_LLM_AUSENTE")
+                _hints,_gpl_audit=(_gpl.filtrar(_hints,_identity_terms(case)) if _gpl is not None else ([],{"guardian":"ausente","entrada":0}))
+                out=caldero_mod.CalderoArchetypeSearchSidecar(adapter,caldero_mod.SelfMatchFilter(identity)).run(active,llm_neighbor_hints=_hints)
+                out.setdefault("audit",{})["guardian_pistas_llm"]=_gpl_audit
                 features["caldero_busqueda_arquetipos"]=out
                 return out
             caldero_search=_ceb_stage("sidecar_caldero_busqueda_arquetipos",_do_caldero)

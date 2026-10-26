@@ -190,7 +190,8 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
     shutil.copytree(MOTOR_REPO, mcopy, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache"))
     entradas = tmp / "casos"; entradas.mkdir()
     for d in casos: shutil.copy(d / "entrada.json", entradas / f"{d.name}.json")
-    env = {**os.environ, "CALDERO_BUSQUEDA_VIVA": os.environ.get("CALDERO_BUSQUEDA_VIVA", "1"), "CALDERO_BUSCADOR": os.environ.get("CALDERO_BUSCADOR", "auto")}
+    sb_root = os.environ.get("STINKBOX_STORAGE_ROOT") or str(Path.home() / "STINKBOX_PERSISTENTE" / "STINKBOX_STORAGE")  # persistente entre lotes
+    env = {**os.environ, "STINKBOX_STORAGE_ROOT": sb_root, "CALDERO_BUSQUEDA_VIVA": os.environ.get("CALDERO_BUSQUEDA_VIVA", "1"), "CALDERO_BUSCADOR": os.environ.get("CALDERO_BUSCADOR", "auto")}
     pr = subprocess.run([sys.executable, "-B", "calibracion/arnes_calibracion.py", "correr", str(entradas), str(salida), "--pesos", "0"],
                         cwd=str(mcopy), env=env, text=True, capture_output=True)
     print(pr.stdout[-2000:], pr.stderr[-2000:])
@@ -239,6 +240,12 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
     comp["candados_despues"] = ok_despues; comp["sha256_registro_sellado"] = reg.get("sha256_registro")
     (LOTES / f"{lote}_RESUMEN.json").write_text(json.dumps({**comp, "filas": filas}, ensure_ascii=False, indent=1), encoding="utf-8")
     resumen_md()
+    # 5) StinkBox -> GitHub (solo stinkbox/tokens.jsonl + casos/resultados/resultados.jsonl). FABRICA_SYNC=0 lo apaga.
+    if os.environ.get("FABRICA_SYNC", "1") != "0" and all(ok_despues.values()):
+        sy = subprocess.run([sys.executable, "-B", str(REPO / "scripts" / "sincronizar_storage.py"), "despues", "--corrida", str(salida),
+                             "--repo", str(REPO), "--stinkbox", sb_root, "--modelo", os.environ.get("FABRICA_MODELO", "GrokBot_fabrica")],
+                            text=True, capture_output=True)
+        print("[sync StinkBox]", sy.stdout[-1500:], sy.stderr[-800:])
     shutil.rmtree(tmp, ignore_errors=True)
     print(json.dumps({"lote": lote, "casos": len(filas), "candados_antes": ok_antes, "candados_despues": ok_despues}, ensure_ascii=False))
     return 0 if all(ok_despues.values()) else 6
