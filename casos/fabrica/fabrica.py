@@ -61,11 +61,18 @@ def _buscar_fila_caldero(o):
     return None
 
 
+def _corridas_caso(corridas_dir: Path):
+    """Solo las salidas del motor por caso; excluye sidecars del arnés (RECIBO_EJECUCION, CEB_LEDGER_MANIFIESTO),
+    que no son casos y antes daban FALLO_EJECUCION_CALDERO falso (SIN_RECIBO_CEB)."""
+    return [fp for fp in sorted(Path(corridas_dir).glob("*.json"))
+            if not (fp.stem.endswith("_RECIBO_EJECUCION") or "_CEB_LEDGER" in fp.stem)]
+
+
 def compuerta_caldero(corridas_dir: Path, requerido: bool) -> dict:
     """REGLA_MJ_20261025: en la fábrica de calibración Caldero DEBE buscar en vivo. Fixture/no invocado/fallido = incumplimiento.
     Sin fila CEB = SIN_RECIBO_CEB (también incumplimiento: no se puede probar que corrió)."""
     por_caso = {}
-    for fp in sorted(Path(corridas_dir).glob("*.json")):
+    for fp in _corridas_caso(corridas_dir):
         try:
             fila = _buscar_fila_caldero(json.loads(fp.read_text(encoding="utf-8")))
         except Exception as ex:
@@ -94,7 +101,7 @@ def _filas_fallo(o, acc):
 def compuerta_piezas(corridas_dir: Path, requerido: bool = True) -> dict:
     """REGLA_MJ_20261025 generalizada: junta TODAS las piezas en FALLO_EJECUCION/REQUIERE_CONTRATO de cada caso del lote."""
     por_caso, por_pieza = {}, {}
-    for fp in sorted(Path(corridas_dir).glob("*.json")):
+    for fp in _corridas_caso(corridas_dir):
         try:
             f = _filas_fallo(json.loads(fp.read_text(encoding="utf-8")), {})
         except Exception as ex:
