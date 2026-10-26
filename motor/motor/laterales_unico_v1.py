@@ -88,6 +88,59 @@ def alerta_ejecucion(estado, contrato_permite_omision=False, error=None):
             **({"error": error} if error else {})}
 
 
+# REGLA_MJ_20261025 (generalizada a TODAS las piezas): ninguna pieza está de adorno. El CEB localiza DÓNDE no corrió
+# para que el modelo investigue POR QUÉ y lo RESUELVA. Clasificación del estado de ejecución (no toca predicción).
+_EST_OK = {"ACTIVA", "MARCAJE", "GUARDIAN_FILTRO", "EJECUTADO", "CADENA_COMPLETA", "PERSISTED", "EXECUTED"}
+_EST_CORRIO_SIN_SENAL = {"ACTIVA_MUDA"}  # corrió; no aportó/no llegó a H en este caso -> INFO, no fallo de ejecución
+_EST_INFO_CONTRATO = {"SUPERADA": "pieza histórica sustituida (contrato: ya no debe correr)",
+                      "ABSORBIDO_EN_GUARDIA_TRANSVERSAL": "absorbida por otra pieza (contrato)",
+                      "NOT_APPLICABLE": "no aplica por contrato"}
+_EST_FALLO = {"NO_CORRE": "la pieza lanzó excepción: leer 'aporte'/trace, corregir el import/datos/código y re-correr smoke",
+              "APAGADA_POR_FLAG": "apagada por variable LAT_*=0: en fábrica no se apaga; quitar el flag o documentar contrato",
+              "API_PENDING": "adaptador/API sin conectar: cablear la API (credencial/endpoint) o el proveedor y re-correr",
+              "NO_INVOCADO": "no se llamó: buscar qué rama del motor/laterales la saltó",
+              "SIN_EJECUCION": "no corrió (dependencia previa no corrió): resolver primero la pieza de la que depende",
+              "NO_ENCONTRADO_EN_STORE": "corrió la búsqueda pero no persistió en el store: revisar ruta del store/escritura",
+              "SKIPPED": "saltada sin contrato que lo permita: averiguar la condición",
+              "FAILED": "falló: leer error y corregir", **_CAUSA}
+
+
+def alerta_pieza(estado, contrato_permite_omision=False, error=None):
+    """Marco Caldero (debe_ejecutarse/incumplimiento/severidad/accion) para CUALQUIER pieza."""
+    e = str(estado or "").split()[0] if estado else ""
+    if e in _EST_OK:
+        return {"debe_ejecutarse": True, "incumplimiento": False, "severidad": "OK", "accion": "ninguna"}
+    if e in _EST_CORRIO_SIN_SENAL:
+        return {"debe_ejecutarse": True, "incumplimiento": False, "severidad": "INFO_CORRIO_SIN_SENAL",
+                "accion": "corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos"}
+    if e in _EST_INFO_CONTRATO or contrato_permite_omision:
+        return {"debe_ejecutarse": False, "incumplimiento": False, "severidad": "INFO_OMISION_CONTRACTUAL",
+                "accion": _EST_INFO_CONTRATO.get(e, "omisión permitida por contrato (required=False)")}
+    if e in _EST_FALLO:
+        return {"debe_ejecutarse": True, "incumplimiento": True, "severidad": "FALLO_EJECUCION",
+                "alerta": f"FALLO DE EJECUCIÓN / A INVESTIGAR: {e}", "accion": _EST_FALLO[e], **({"error": error} if error else {})}
+    return {"debe_ejecutarse": None, "incumplimiento": True, "severidad": "REQUIERE_CONTRATO",
+            "alerta": f"estado '{e or '(vacío)'}' sin contrato de ejecución definido", "accion": "definir contrato (¿debe correr en fábrica?) antes de darlo por OK"}
+
+
+def aplicar_alertas(reg, filas=()):
+    """Añade el marco de alerta a cada fila (sin sobrescribir el de Caldero) y devuelve el resumen de fallos."""
+    fallos = {}
+    for r in list(reg) + list(filas):
+        if not isinstance(r, dict): continue
+        nombre = r.get("pieza") or r.get("componente")
+        est = r.get("estado_verificado") or r.get("estado_ejecucion") or r.get("estado")
+        if "severidad" not in r:
+            dec = str(r.get("declarado_UNICO") or "")
+            if est == "ACTIVA_MUDA" and dec.startswith("API_PENDING"):
+                est = "API_PENDING"
+            r.update(alerta_pieza(est, contrato_permite_omision=r.get("required") is False))
+        if r.get("severidad") in ("FALLO_EJECUCION", "REQUIERE_CONTRATO"):
+            fallos[str(nombre).replace("verificado:", "")] = {"estado": est, "severidad": r["severidad"], "accion": r.get("accion")}
+    return {"version": "CEB_ALERTAS_MULTIPIEZA_20261025", "n_filas": len(reg) + len(filas), "fallos": fallos,
+            "veredicto": "OK" if not fallos else "FALLO_EJECUCION_PIEZAS"}
+
+
 def flag_on(nombre: str) -> bool:
     return os.environ.get(f"LAT_{nombre.upper()}", "1") != "0"
 
@@ -1192,6 +1245,7 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
             reg.append({"pieza": f"verificado:{f['componente']}", "archivo": None, "sha256": None, "rol": "ESTADO VERIFICADO (PATCH 010a)", "estado": f["estado_verificado"],
                         "aporte": f"declarado={f['declarado_UNICO']} | llega={f['llega'] or 'no'} | {f['motivo']}", "feeds_predictor": f["feeds_predictor_verificado"], "can_decide_H": False})
     falsos = [f["componente"] for f in filas if "feeds_predictor=True" in str(f["declarado_UNICO"]) and not f["feeds_predictor_verificado"]]
-    return {"version": "ESTADO_VERIFICADO_PATCH010a", "filas": filas, "registro_resumen": resumen,
+    alertas = aplicar_alertas(reg, filas)
+    return {"version": "ESTADO_VERIFICADO_PATCH010a", "filas": filas, "registro_resumen": resumen, "alertas_ejecucion": alertas,
             "declarado_feeds_predictor_sin_llegada": falsos,
             "nota": "010a no puede reescribir component_status (vive en UNICO): aquí está el estado verificado al lado; 010b lo aplica en la fuente"}

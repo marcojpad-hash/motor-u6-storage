@@ -79,6 +79,37 @@ def compuerta_caldero(corridas_dir: Path, requerido: bool) -> dict:
             "veredicto": "OK" if not malos else "FALLO_EJECUCION_CALDERO"}
 
 
+def _filas_fallo(o, acc):
+    if isinstance(o, dict):
+        if o.get("severidad") in ("FALLO_EJECUCION", "REQUIERE_CONTRATO") and (o.get("pieza") or o.get("componente")):
+            n = str(o.get("pieza") or o.get("componente")).replace("verificado:", "")
+            acc.setdefault(n, {"estado": o.get("estado_verificado") or o.get("estado_busqueda_externa") or o.get("estado"),
+                               "severidad": o["severidad"], "accion": o.get("accion")})
+        for v in o.values(): _filas_fallo(v, acc)
+    elif isinstance(o, list):
+        for v in o: _filas_fallo(v, acc)
+    return acc
+
+
+def compuerta_piezas(corridas_dir: Path, requerido: bool = True) -> dict:
+    """REGLA_MJ_20261025 generalizada: junta TODAS las piezas en FALLO_EJECUCION/REQUIERE_CONTRATO de cada caso del lote."""
+    por_caso, por_pieza = {}, {}
+    for fp in sorted(Path(corridas_dir).glob("*.json")):
+        try:
+            f = _filas_fallo(json.loads(fp.read_text(encoding="utf-8")), {})
+        except Exception as ex:
+            f = {"(corrida ilegible)": {"estado": "SIN_RECIBO_CEB", "severidad": "FALLO_EJECUCION", "accion": f"no legible: {ex}"}}
+        por_caso[fp.stem] = f
+        for n, v in f.items():
+            por_pieza.setdefault(n, {**v, "casos": []})["casos"].append(fp.stem)
+    fallo = {n: v for n, v in por_pieza.items() if v["severidad"] == "FALLO_EJECUCION"}
+    contrato = {n: v for n, v in por_pieza.items() if v["severidad"] == "REQUIERE_CONTRATO"}
+    return {"requerido": requerido, "por_caso": por_caso, "por_pieza": por_pieza, "fallos_ejecucion": sorted(fallo),
+            "requiere_contrato": sorted(contrato),
+            "veredicto": "OK" if not (fallo or contrato) else ("FALLO_EJECUCION_PIEZAS" if fallo else "REQUIERE_CONTRATO"),
+            "playbook": "docs/CEB_INVESTIGAR_Y_RESOLVER.md"}
+
+
 def vocab() -> set:
     d = json.loads((MOTOR_REPO / "motor/patterns_final_v14.json").read_text(encoding="utf-8"))
     return set(t for p in d.values() for k in ("tokens_favor", "tokens_contra") for t in p.get(k, {})), set(d)
@@ -273,7 +304,10 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
     gc = compuerta_caldero(salida / "corridas", req); comp["compuerta_caldero"] = gc
     if gc["incumplimientos"]:
         print(f"FALLO_EJECUCION_CALDERO (lote marcado, no es éxito): {gc['incumplimientos']}")
-        comp["candados_despues"] = ok_despues; comp["sha256_registro_sellado"] = reg.get("sha256_registro")
+    gp = compuerta_piezas(salida / "corridas", os.environ.get("FABRICA_PIEZAS_REQUERIDAS", "1") != "0"); comp["compuerta_piezas"] = gp
+    for n, v in gp["por_pieza"].items():
+        print(f"[CEB] {v['severidad']} {n} estado={v['estado']} casos={len(v['casos'])} -> {v['accion']}")
+    comp["candados_despues"] = ok_despues; comp["sha256_registro_sellado"] = reg.get("sha256_registro")
     (LOTES / f"{lote}_RESUMEN.json").write_text(json.dumps({**comp, "filas": filas}, ensure_ascii=False, indent=1), encoding="utf-8")
     resumen_md()
     # 5) StinkBox -> GitHub (solo stinkbox/tokens.jsonl + casos/resultados/resultados.jsonl). FABRICA_SYNC=0 lo apaga.
@@ -285,7 +319,7 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
     shutil.rmtree(tmp, ignore_errors=True)
     print(json.dumps({"lote": lote, "casos": len(filas), "candados_antes": ok_antes, "candados_despues": ok_despues}, ensure_ascii=False))
     if not all(ok_despues.values()): return 6
-    return 9 if gc["incumplimientos"] else 0
+    return 9 if (gc["incumplimientos"] or (gp["requerido"] and gp["fallos_ejecucion"])) else 0
 
 
 def resumen_md():
