@@ -38,6 +38,36 @@ def _load(base: Path, fn: str, alias: str):
     return m, {"archivo": fn, "presente": True, "sha256": _sha(p)}
 
 
+
+# CEB_HONESTIDAD_CALDERO (20261025): "presente" != búsqueda externa real. Estados alineados con correr_estandar.search_performed.
+_PROV_FIXTURE = ("provided_fixture", "static_fixture")
+_GATED = ("SKIPPED_INTERNAL_ANALYSIS",)
+
+
+def _recibo_caldero(rc, cal):
+    rc = rc if isinstance(rc, dict) else {}
+    cal = cal if isinstance(cal, dict) else {}
+    pr = (cal.get("audit") or {}).get("provider_receipt") or {}
+    return {"provider": rc.get("provider") or pr.get("provider"), "attempt_status": rc.get("status"),
+            "query_count": int(rc.get("query_count", 0) or 0), "result_count": int(rc.get("result_count", 0) or 0),
+            "cal_status": cal.get("status"), "error": rc.get("error") or cal.get("error")}
+
+
+def estado_honesto_caldero(cb):
+    cb = cb or {}
+    st, prov = cb.get("attempt_status"), cb.get("provider")
+    if st in _GATED or cb.get("cal_status") in _GATED:
+        return "OMITIDO_POR_CONDICION"
+    if st == "EXECUTED_FIXTURE" or prov in _PROV_FIXTURE:
+        return "SIMULADO_FIXTURE"
+    if st == "EXECUTED" and prov not in (None, "", "auto", "none") and int(cb.get("query_count") or 0) >= 1 and int(cb.get("result_count") or 0) >= 1:
+        return "EJECUTADO"
+    if st in (None, "NOT_RUN") and not cb.get("presente"):
+        return "NO_INVOCADO"
+    if st == "FAILED" and cb.get("error") == "sidecar_missing" and not cb.get("presente"):
+        return "NO_INVOCADO"
+    return "INTENTADO_FALLIDO"
+
 def flag_on(nombre: str) -> bool:
     return os.environ.get(f"LAT_{nombre.upper()}", "1") != "0"
 
@@ -882,7 +912,9 @@ def pre_predictor(case, motor, features, base, patterns_path, patterns):
         "features_presentes": sorted(str(k) for k in f.keys()),
         "caldero_busqueda": {"presente": bool(cal), "status": cal.get("status") if isinstance(cal, dict) else None,
                              "tokens_neighbors": len(((cal.get("caldero_input") or {}).get("tokens_neighbors") or [])) if isinstance(cal, dict) else 0,
-                             "query_exact": ((cal.get("audit") or {}).get("query_exact") if isinstance(cal, dict) else None)},
+                             "query_exact": ((cal.get("audit") or {}).get("query_exact") if isinstance(cal, dict) else None),
+                             # CEB_HONESTIDAD_CALDERO: recibo real del intento (lo escribe UNICO en features).
+                             **_recibo_caldero(f.get("external_archetype_search_receipt"), cal)},
         "pre_h": {k: (f.get("pre_h_analogical_search") or {}).get(k) for k in ("status", "adapter", "reason", "tokens_neighbors", "raw_source_count")},
         "cameo_lateral": {k: (f.get("cameo_lateral") or {}).get(k) for k in ("status", "feeds_H", "discriminates", "selected_code_count")},
         "cameo_legacy": ((f.get("cameo_legacy_adapter_audit") or {}).get("audit") or {}),
@@ -1094,9 +1126,10 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
           [f"status={ph.get('status')}; fuentes={ph.get('raw_source_count')}; tokens analógicos={ph.get('tokens_neighbors')} (alimentan StinkBox y analog_alignment)"]) + mot)
     cb = foto.get("caldero_busqueda") or {}
     lleg, mot = llegada("sidecar_caldero_busqueda_arquetipos.py", "caldero_busqueda_arquetipos")
-    fila("sidecar_caldero_busqueda_arquetipos.py", "EXECUTED" if cb.get("presente") else "CABLEADO_ESPERANDO_LLM_SEARCH", "ACTIVA" if lleg else "ACTIVA_MUDA", lleg,
-         (["sin caldero_search_sources en el input: el buscador (StaticSearchAdapter) no tiene fuentes; no hay llamada LLM en el runner"] if not cb.get("presente") else
-          [f"{cb.get('tokens_neighbors')} tokens vecinos"]) + mot)
+    est_cal = estado_honesto_caldero(cb)
+    fila("sidecar_caldero_busqueda_arquetipos.py", est_cal, "ACTIVA" if lleg else "ACTIVA_MUDA", lleg,
+         [f"{est_cal}: provider={cb.get('provider')} intento={cb.get('attempt_status')} resultados={cb.get('result_count')} consultas={cb.get('query_count')}; {cb.get('tokens_neighbors')} tokens vecinos"] + mot,
+         estado_busqueda_externa=est_cal, search_performed=(est_cal == "EJECUTADO"))
     # neighbor_store: la persistencia se adjunta a una COPIA (ceb.call envuelve la salida) -> no aparece en RESULT. Se lee el evento del store (solo lectura).
     ns = {"status": "SIN_EJECUCION", "motivo": "sin búsqueda Caldero en este caso (nada que persistir)"}
     if cb.get("presente"):
@@ -1114,7 +1147,7 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
               "evento": {k: v for k, v in (last or {}).items() if k not in ("tokens_neighbors",)}, "n_tokens_neighbors": len((last or {}).get("tokens_neighbors") or []),
               "nota": "UNICO escribe caldero_search['persistence'] en la copia que devuelve ceb.call; features guarda otra copia -> invisible en RESULT (corrige 010b)"}
     lleg, mot = llegada("vecinos_caldero/neighbor_store.py")
-    fila("vecinos_caldero/neighbor_store.py", "EXECUTED feeds_H=True" if cb.get("presente") else "(sin fila)", "ACTIVA" if ns["status"] == "PERSISTED" else "ACTIVA_MUDA", lleg,
+    fila("vecinos_caldero/neighbor_store.py", (f"{est_cal} feeds_H=True" if cb.get("presente") else f"{est_cal} (sin fila)"), "ACTIVA" if ns["status"] == "PERSISTED" else "ACTIVA_MUDA", lleg,
          mot or ([ns.get("motivo")] if ns.get("motivo") else []), persistencia=ns, feeds_H_verificado=bool([x for x in lleg if x.startswith("H(")]))
     # cameo: feeds_H coherente (salida del módulo dice True siempre; fila = discriminates)
     cl = foto.get("cameo_lateral") or {}
