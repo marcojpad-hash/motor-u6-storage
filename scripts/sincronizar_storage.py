@@ -110,6 +110,17 @@ def resumen_corrida(d: Path) -> dict:
                      'compuerta_cierre': (res.get('compuerta_cierre') or {}).get('estado_pre_compuerta') if isinstance(res.get('compuerta_cierre'), dict) else None},
     }
 
+def _filtro_tok(t):
+    """Filtro de ruido (filtro_tokens_arquetipos_v1). Si el módulo no carga, no filtra (no rompe la sync)."""
+    global _FILTRO
+    try: _FILTRO
+    except NameError:
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'motor' / 'motor'))
+            import filtro_tokens_arquetipos_v1 as _m; _FILTRO = _m.conservar
+        except Exception: _FILTRO = None
+    return True if _FILTRO is None else _FILTRO(t)
+
 def _stinkbox_root(explicit=None):
     for c in (explicit, os.environ.get('STINKBOX_STORAGE_ROOT'), os.environ.get('STINKBOX_STORAGE'),
               str(Path.home() / 'STINKBOX_PERSISTENTE' / 'STINKBOX_STORAGE')):
@@ -140,7 +151,7 @@ def tokens_corrida(d: Path, stinkbox_root=None, case_ids=None) -> list[dict]:
         vistos = set()
         for t in _tokens_de_obj(obj):
             t = re.sub(r'\s+', ' ', str(t or '').strip()).casefold()
-            if t and t not in vistos:
+            if t and t not in vistos and _filtro_tok(t):
                 vistos.add(t); out.append({'token': t, 'caso': obj.get('case_id') or d.name, 'sha256_corrida': h})
     return out
 
@@ -163,12 +174,15 @@ def anexar_tokens(repo: Path, nuevos: list[dict], fecha: str, destino: Path) -> 
     p = repo / 'stinkbox' / 'tokens.jsonl'
     if p.is_file():
         for line in p.read_text(encoding='utf-8').splitlines():
-            if line.strip(): r = json.loads(line); reg[r['token']] = r
+            if line.strip():
+                r = json.loads(line)
+                if _filtro_tok(r['token']): reg[r['token']] = r
     vistos = set(); tocados = 0
     for n in nuevos:
         clave = (n['token'], n['caso'], n['sha256_corrida'])
         if clave in vistos: continue
         vistos.add(clave)
+        if not _filtro_tok(n['token']): continue
         r = reg.get(n['token'])
         prov = {'sha256_corrida': n['sha256_corrida'], 'fecha': fecha}
         if r is None:
