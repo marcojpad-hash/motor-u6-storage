@@ -47,6 +47,38 @@ def candados(base: Path) -> dict:
     return {rel: (sha(base / rel) == h if (base / rel).is_file() else False) for rel, h in CANONICOS.items()}
 
 
+def _buscar_fila_caldero(o):
+    if isinstance(o, dict):
+        if o.get("componente") == "sidecar_caldero_busqueda_arquetipos.py" and "estado_busqueda_externa" in o:
+            return o
+        for v in o.values():
+            r = _buscar_fila_caldero(v)
+            if r: return r
+    elif isinstance(o, list):
+        for v in o:
+            r = _buscar_fila_caldero(v)
+            if r: return r
+    return None
+
+
+def compuerta_caldero(corridas_dir: Path, requerido: bool) -> dict:
+    """REGLA_MJ_20261025: en la fábrica de calibración Caldero DEBE buscar en vivo. Fixture/no invocado/fallido = incumplimiento.
+    Sin fila CEB = SIN_RECIBO_CEB (también incumplimiento: no se puede probar que corrió)."""
+    por_caso = {}
+    for fp in sorted(Path(corridas_dir).glob("*.json")):
+        try:
+            fila = _buscar_fila_caldero(json.loads(fp.read_text(encoding="utf-8")))
+        except Exception as ex:
+            fila = {"estado_busqueda_externa": "SIN_RECIBO_CEB", "motivo": f"no legible: {ex}"}
+        est = (fila or {}).get("estado_busqueda_externa", "SIN_RECIBO_CEB")
+        permitido = bool((fila or {}).get("incumplimiento") is False)
+        por_caso[fp.stem] = {"estado": est, "incumplimiento": requerido and not (est == "EJECUTADO" or (est == "OMITIDO_POR_CONDICION" and permitido)),
+                             "accion": (fila or {}).get("accion") or "sin fila CEB de Caldero: averiguar por qué no se registró"}
+    malos = {k: v for k, v in por_caso.items() if v["incumplimiento"]}
+    return {"requerido_vivo": requerido, "por_caso": por_caso, "incumplimientos": sorted(malos),
+            "veredicto": "OK" if not malos else "FALLO_EJECUCION_CALDERO"}
+
+
 def vocab() -> set:
     d = json.loads((MOTOR_REPO / "motor/patterns_final_v14.json").read_text(encoding="utf-8"))
     return set(t for p in d.values() for k in ("tokens_favor", "tokens_contra") for t in p.get(k, {})), set(d)
@@ -237,7 +269,11 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
         w = csv.DictWriter(fh, fieldnames=COLS)
         if nuevo: w.writeheader()
         w.writerows(filas)
-    comp["candados_despues"] = ok_despues; comp["sha256_registro_sellado"] = reg.get("sha256_registro")
+    req = os.environ.get("CALDERO_BUSQUEDA_VIVA", "1") == "1" and os.environ.get("FABRICA_CALDERO_REQUERIDO", "1") != "0"
+    gc = compuerta_caldero(salida / "corridas", req); comp["compuerta_caldero"] = gc
+    if gc["incumplimientos"]:
+        print(f"FALLO_EJECUCION_CALDERO (lote marcado, no es éxito): {gc['incumplimientos']}")
+        comp["candados_despues"] = ok_despues; comp["sha256_registro_sellado"] = reg.get("sha256_registro")
     (LOTES / f"{lote}_RESUMEN.json").write_text(json.dumps({**comp, "filas": filas}, ensure_ascii=False, indent=1), encoding="utf-8")
     resumen_md()
     # 5) StinkBox -> GitHub (solo stinkbox/tokens.jsonl + casos/resultados/resultados.jsonl). FABRICA_SYNC=0 lo apaga.
@@ -248,7 +284,8 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
         print("[sync StinkBox]", sy.stdout[-1500:], sy.stderr[-800:])
     shutil.rmtree(tmp, ignore_errors=True)
     print(json.dumps({"lote": lote, "casos": len(filas), "candados_antes": ok_antes, "candados_despues": ok_despues}, ensure_ascii=False))
-    return 0 if all(ok_despues.values()) else 6
+    if not all(ok_despues.values()): return 6
+    return 9 if gc["incumplimientos"] else 0
 
 
 def resumen_md():

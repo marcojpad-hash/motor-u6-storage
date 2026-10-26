@@ -68,6 +68,26 @@ def estado_honesto_caldero(cb):
         return "NO_INVOCADO"
     return "INTENTADO_FALLIDO"
 
+# REGLA_MJ_20261025: las herramientas existen para EJECUTARSE. El CEB explica el fallo, no lo justifica.
+# Todo estado != EJECUTADO es un INCUMPLIMIENTO a investigar, salvo omisión documentada en contrato
+# (hoy solo: SKIPPED_INTERNAL_ANALYSIS de la subcorrida interna T1, required=False en el motor).
+_CAUSA = {"SIMULADO_FIXTURE": "usó fixture/grabación en vez de buscar en vivo: averiguar por qué no se buscó de verdad",
+          "NO_INVOCADO": "el sidecar ni siquiera se llamó: averiguar qué rama del motor lo saltó",
+          "INTENTADO_FALLIDO": "se intentó y falló o trajo 0 resultados: revisar error/proveedor/red",
+          "OMITIDO_POR_CONDICION": "omitido por compuerta: válido solo si el contrato lo permite"}
+
+
+def alerta_ejecucion(estado, contrato_permite_omision=False, error=None):
+    if estado == "EJECUTADO":
+        return {"debe_ejecutarse": True, "incumplimiento": False, "severidad": "OK", "accion": "ninguna"}
+    if estado == "OMITIDO_POR_CONDICION" and contrato_permite_omision:
+        return {"debe_ejecutarse": False, "incumplimiento": False, "severidad": "INFO_OMISION_CONTRACTUAL",
+                "accion": "omisión permitida por contrato (subcorrida interna)"}
+    return {"debe_ejecutarse": True, "incumplimiento": True, "severidad": "FALLO_EJECUCION",
+            "alerta": f"FALLO DE EJECUCIÓN / A INVESTIGAR: {estado}", "accion": _CAUSA.get(estado, "averiguar por qué no corrió"),
+            **({"error": error} if error else {})}
+
+
 def flag_on(nombre: str) -> bool:
     return os.environ.get(f"LAT_{nombre.upper()}", "1") != "0"
 
@@ -1129,7 +1149,8 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
     est_cal = estado_honesto_caldero(cb)
     fila("sidecar_caldero_busqueda_arquetipos.py", est_cal, "ACTIVA" if lleg else "ACTIVA_MUDA", lleg,
          [f"{est_cal}: provider={cb.get('provider')} intento={cb.get('attempt_status')} resultados={cb.get('result_count')} consultas={cb.get('query_count')}; {cb.get('tokens_neighbors')} tokens vecinos"] + mot,
-         estado_busqueda_externa=est_cal, search_performed=(est_cal == "EJECUTADO"))
+         estado_busqueda_externa=est_cal, search_performed=(est_cal == "EJECUTADO"),
+         **alerta_ejecucion(est_cal, contrato_permite_omision=(est_cal == "OMITIDO_POR_CONDICION" and cb.get("required") is False) or cb.get("cal_status") == "SKIPPED_INTERNAL_ANALYSIS", error=cb.get("error")))
     # neighbor_store: la persistencia se adjunta a una COPIA (ceb.call envuelve la salida) -> no aparece en RESULT. Se lee el evento del store (solo lectura).
     ns = {"status": "SIN_EJECUCION", "motivo": "sin búsqueda Caldero en este caso (nada que persistir)"}
     if cb.get("presente"):
