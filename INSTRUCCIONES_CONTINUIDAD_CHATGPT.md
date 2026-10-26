@@ -1,3 +1,5 @@
+> **No ZIP:** lee este repo archivo por archivo (API GitHub/conector o `git clone`). Mapa de carpetas: [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md). Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
+
 # CONTINUIDAD DE INTERACCIÓN — ChatGPT / Motor U6
 
 Fecha de preparación: 2026-10-24  

@@ -1,5 +1,11 @@
 # motor-u6-storage
 
+
+> **Para modelos (ChatGPT, Claude, Grok Bot):**
+> - Lee primero [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md): qué hay en cada carpeta.
+> - Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
+> - Continuidad: [`INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md).
+> - **No uses ZIP/zipball.** Lee archivo por archivo con la API de GitHub/conector o `git clone`.
 Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
 
 ## Carpetas
@@ -10,6 +16,8 @@ Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo 
 | `casos/` | Solo hashes de casos y entradas, la plantilla de caso nuevo y **resúmenes** de resultados (`casos/resultados/resultados.jsonl`). Nunca corridas completas. |
 | `stinkbox/` | Tokens StinkBox deduplicados con conteo y procedencia (`tokens.jsonl`), índice de artefactos de origen y candidatos documentales. |
 | `avances/` | Bitácora de cambios: quién, cuándo, qué cambió (antes → después), hashes y pruebas. |
+| `informes/` | Resúmenes por sesión para Mj y modelos. |
+| `docs/` | Documentos estables de método. |
 | `scripts/` | `sincronizar_storage.py` (antes y después de cada corrida). |
 
 ## Cómo contribuye cualquier modelo
