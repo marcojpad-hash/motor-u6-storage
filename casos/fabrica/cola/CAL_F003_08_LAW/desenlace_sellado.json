@@ -1,0 +1,25 @@
+{
+ "familias": [
+  "minsky_03_ponzi",
+  "17_fatal_imprudencia",
+  "6_desastre",
+  "33_error_de_juicio"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/John_Law_(economist) ; https://en.wikipedia.org/wiki/Mississippi_Company",
+ "prohibidas_post_Z": [
+  "burbuja",
+  "estallido",
+  "corrida bancaria",
+  "Bruselas",
+  "Venecia",
+  "destituido",
+  "huida de Francia",
+  "bancarrota",
+  "quiebra",
+  "9,000 libras",
+  "21 de mayo",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

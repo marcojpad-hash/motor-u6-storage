@@ -1,0 +1,27 @@
+{
+ "familias": [
+  "30_ambicion",
+  "weber_02_autoridad_carismatica",
+  "arquetipo_el_heroe",
+  "schwartz_07_logro"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Abraham_Lincoln ; https://en.wikipedia.org/wiki/Lincoln%E2%80%93Douglas_debates",
+ "prohibidas_post_Z": [
+  "Cooper Union",
+  "presidente electo",
+  "elección presidencial",
+  "Casa Blanca",
+  "Hannibal Hamlin",
+  "secesión",
+  "Fort Sumter",
+  "Gettysburg",
+  "emancipación",
+  "54–46",
+  "54-46",
+  "Ford's Theatre",
+  "Booth",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

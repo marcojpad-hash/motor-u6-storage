@@ -1,0 +1,205 @@
+{
+ "case_id": "CAL_F003_04_FARADAY",
+ "question": "¿Qué trayectoria sigue Michael Faraday tras publicar su experimento de rotación electromagnética sin reconocer el trabajo previo de Davy y Wollaston?",
+ "person": "Michael Faraday",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1822-01-01",
+ "z_trabajo": "1822-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1821",
+ "cuts": [
+  {
+   "id": "C1_1813",
+   "corte": "C1_1813",
+   "cut_id": "C1_1813",
+   "date": "1813-03-01",
+   "fecha_corte": "1813-03-01",
+   "hecho": "Aprendiz de encuadernador sin estudios formales, en 1812 asistió a las conferencias de Humphry Davy y le envió un libro de 300 páginas con sus notas; el 1 de marzo de 1813 Davy lo hizo contratar como asistente químico de la Royal Institution.",
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.82
+    ],
+    [
+     "ambicion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "iniciativa_infantil",
+     0.62
+    ]
+   ],
+   "C": [
+    [
+     "mentoria_activa",
+     0.82
+    ],
+    [
+     "oportunidad",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1812, al terminar su aprendizaje, asistió a conferencias de Humphry Davy y le envió un libro de 300 páginas basado en sus notas; Davy respondió de forma inmediata y favorable.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1812",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Faraday fue nombrado asistente químico de la Royal Institution el 1 de marzo de 1813.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1813-03-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1820",
+   "corte": "C2_1820",
+   "cut_id": "C2_1820",
+   "date": "1820",
+   "fecha_corte": "1820",
+   "hecho": "Entre 1813 y 1815 viajó por Europa con Davy; como su asistente estudió el cloro y en 1820 informó la primera síntesis de compuestos de carbono y cloro.",
+   "P": [
+    [
+     "conocimiento",
+     0.8
+    ],
+    [
+     "devocion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "metodicidad",
+     0.8
+    ],
+    [
+     "verificacion",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.7
+    ],
+    [
+     "jerarquia",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Su primer trabajo químico fue como asistente de Humphry Davy, estudiando el cloro y descubriendo dos compuestos de cloro y carbono.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1820",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1820 Faraday informó la primera síntesis de compuestos de carbono y cloro.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1820",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Su diario de viajes con Davy por Europa cubre los años 1813–1815.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1815",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1821",
+   "corte": "C3_1821",
+   "cut_id": "C3_1821",
+   "date": "1821",
+   "fecha_corte": "1821",
+   "hecho": "En 1821 fue nombrado superintendente asistente de la casa de la Royal Institution y el 12 de junio se casó con Sarah Barnard; ese año, tras conversar con Davy y Wollaston, que no habían logrado un motor eléctrico, construyó dos aparatos de rotación electromagnética y publicó los resultados sin reconocer el trabajo de ellos, lo que abrió una controversia en la Royal Society.",
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.82
+    ],
+    [
+     "orgullo",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "herramienta_nueva",
+     0.82
+    ],
+    [
+     "impulsividad",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_profesional",
+     0.78
+    ],
+    [
+     "reconocimiento",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Fue nombrado superintendente asistente de la casa de la Royal Institution en 1821.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1821",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Se casó con Sarah Barnard el 12 de junio de 1821.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1821-06-12",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1821, tras hablar con Davy y Wollaston, que no habían logrado diseñar un motor eléctrico, construyó dos aparatos de rotación electromagnética y publicó sin reconocer el trabajo de ellos, lo que causó una controversia en la Royal Society y tensó su relación con Davy.",
+     "source_url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+     "source_date": "2026-10-26",
+     "claim_date": "1821",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1821."
+}

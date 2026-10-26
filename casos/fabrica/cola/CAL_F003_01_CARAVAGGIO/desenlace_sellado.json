@@ -1,0 +1,26 @@
+{
+ "familias": [
+  "17_fatal_imprudencia",
+  "5_persecucion",
+  "33_error_de_juicio",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Caravaggio",
+ "prohibidas_post_Z": [
+  "Tomassoni",
+  "Ranuccio",
+  "Nápoles",
+  "Malta",
+  "Sicilia",
+  "pena de muerte",
+  "condenado a muerte",
+  "decapitación",
+  "homicidio",
+  "Porto Ercole",
+  "bando capital",
+  "Caballeros de Malta",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

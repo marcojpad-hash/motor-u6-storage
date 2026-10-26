@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F003_06_TROTSKY",
+ "question": "¿Qué trayectoria sigue León Trotski tras escribir al Comité Central contra la falta de democracia interna mientras Lenin está enfermo?",
+ "person": "León Trotski",
+ "tipo_sujeto": "politico",
+ "freeze": "1923-10-15",
+ "z_trabajo": "1923-10-15",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1923-10-15",
+ "cuts": [
+  {
+   "id": "C1_1918",
+   "corte": "C1_1918",
+   "cut_id": "C1_1918",
+   "date": "1918-03-13",
+   "fecha_corte": "1918-03-13",
+   "hecho": "Presidente del Sóviet de Petrogrado, dirigió la organización práctica de la Revolución de Octubre de 1917; fue comisario de Asuntos Exteriores y el 13 de marzo de 1918 fue nombrado comisario del Pueblo para el Ejército y la Marina, con control pleno del Ejército Rojo.",
+   "P": [
+    [
+     "sed_de_mando",
+     0.78
+    ],
+    [
+     "idealismo",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "oratoria",
+     0.8
+    ],
+    [
+     "organizacion",
+     0.82
+    ]
+   ],
+   "C": [
+    [
+     "poder",
+     0.82
+    ],
+    [
+     "ascenso_reciente",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Fue elegido presidente del Sóviet de Petrogrado el 8 de octubre de 1917 y dirigió los esfuerzos para derrocar al Gobierno Provisional.",
+     "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+     "source_date": "2026-10-26",
+     "claim_date": "1917-10-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 13 de marzo de 1918 fue nombrado comisario del Pueblo para el Ejército y la Marina y presidente del Consejo Militar Supremo, con control pleno del Ejército Rojo.",
+     "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+     "source_date": "2026-10-26",
+     "claim_date": "1918-03-13",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1922",
+   "corte": "C2_1922",
+   "cut_id": "C2_1922",
+   "date": "1922-09-11",
+   "fecha_corte": "1922-09-11",
+   "hecho": "Con Lenin enfermo tras su primer infarto cerebral de mayo de 1922, Stalin fue nombrado secretario general del Comité Central en abril de 1922 y Zinóviev y Kámenev formaron con él una troika; el 11 de septiembre de 1922 Lenin propuso a Trotski como su adjunto en el Consejo de Comisarios del Pueblo, y Trotski se negó categóricamente.",
+   "P": [
+    [
+     "orgullo",
+     0.76
+    ],
+    [
+     "independencia",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "renuncia",
+     0.68
+    ],
+    [
+     "evitacion_confrontacion",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.82
+    ],
+    [
+     "alianza",
+     0.62
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Lenin sufrió infartos cerebrales desde el 25 de mayo de 1922; Stalin fue elevado a secretario general en abril de 1922 y Zinóviev y Kámenev formaron con él una troika frente a Trotski, públicamente el número dos.",
+     "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+     "source_date": "2026-10-26",
+     "claim_date": "1922",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 11 de septiembre de 1922 Lenin propuso que Trotski fuera su adjunto en el Sovnarkom; el Politburó aprobó, pero Trotski se negó categóricamente.",
+     "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+     "source_date": "2026-10-26",
+     "claim_date": "1922-09-11",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1923",
+   "corte": "C3_1923",
+   "cut_id": "C3_1923",
+   "date": "1923-10-15",
+   "fecha_corte": "1923-10-15",
+   "hecho": "En el XII Congreso de abril de 1923 habló de democracia interna sin enfrentar a la troika y recibió una ovación; el 8 de octubre de 1923 escribió al Comité Central atribuyendo los problemas a la falta de democracia interna, y el 15 de octubre 46 dirigentes enviaron una declaración en el mismo sentido.",
+   "P": [
+    [
+     "idealismo",
+     0.78
+    ],
+    [
+     "orgullo",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "desafio_autoridad",
+     0.78
+    ],
+    [
+     "oratoria",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.84
+    ],
+    [
+     "aislamiento_social",
+     0.64
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En el XII Congreso de abril de 1923 habló de democracia interna evitando la confrontación directa con la troika y los delegados le dieron una ovación de pie.",
+     "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+     "source_date": "2026-10-26",
+     "claim_date": "1923-04",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 8 de octubre de 1923 Trotski escribió al Comité Central y a la Comisión Central de Control atribuyendo las dificultades a la falta de democracia interna; el 15 de octubre de 1923 se envió la Declaración de los 46.",
+     "source_url": "https://en.wikipedia.org/wiki/The_Declaration_of_46",
+     "source_date": "2026-10-26",
+     "claim_date": "1923-10-15",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta el 15 de octubre de 1923."
+}

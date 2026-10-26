@@ -1,0 +1,25 @@
+{
+ "familias": [
+  "arquetipo_el_creador",
+  "schwartz_07_logro",
+  "trayectoria_escritores_creativos",
+  "bbk_02_celebridad"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Charles_Dickens ; https://en.wikipedia.org/wiki/The_Pickwick_Papers",
+ "prohibidas_post_Z": [
+  "Sam Weller",
+  "Weller",
+  "Oliver Twist",
+  "Nicholas Nickleby",
+  "Nickleby",
+  "Bentley's Miscellany",
+  "Phiz",
+  "Hablot Browne",
+  "suicidio de Seymour",
+  "40,000 ejemplares",
+  "Mary Hogarth",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

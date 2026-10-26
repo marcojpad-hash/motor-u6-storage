@@ -1,13 +1,13 @@
 # Calibración acumulada — fábrica de casos
 
-Casos en la tabla: 20 · evaluados (sellados): 18 · no sellados: 2
+Casos en la tabla: 30 · evaluados (sellados): 27 · no sellados: 3
 
-- Acierto H1: 4/18 (22 %; Laplace 0.25)
-- Acierto H2: 1/18 (6 %; Laplace 0.10)
-- Acierto set abierto (alguna hipótesis): 4/18 (22 %; Laplace 0.25)
-- Acierto apuesta (escenario principal): 2/18 (11 %; Laplace 0.15)
-- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 5/13 (Laplace 0.40)
-- Acierto destino por polaridad (arriba/igual vs abajo): 7/13 (Laplace 0.53)
+- Acierto H1: 6/27 (22 %; Laplace 0.24)
+- Acierto H2: 3/27 (11 %; Laplace 0.14)
+- Acierto set abierto (alguna hipótesis): 9/27 (33 %; Laplace 0.34)
+- Acierto apuesta (escenario principal): 6/27 (22 %; Laplace 0.24)
+- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 9/22 (Laplace 0.42)
+- Acierto destino por polaridad (arriba/igual vs abajo): 14/22 (Laplace 0.62)
 
 Aviso: con menos de 30 casos evaluados la tasa es muy ruidosa.
 
@@ -33,3 +33,13 @@ Aviso: con menos de 30 casos evaluados la tasa es muy ruidosa.
 | F002 | Luis XVI de Francia (1791-06-01) | gobernante | NO_SELLADO |  |  | — | — | — | — | — | — | — | True/True |
 | F002 | John D. Rockefeller (1870-01-31) | empresario | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | sí | sí | sí | sí | auge | auge | sí | True/True |
 | F002 | William C. Durant (1920-06-30) | empresario | 12_obtencion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | caida | no | True/True |
+| F003 | Michelangelo Merisi da Caravaggio (1605-12-31) | artista | social_13_le_bon_comportamiento_masas | anacyclosis_06_oclocracia | CONTINUIDAD_ASCENDENTE | no | no | no | no | ruptura | ruptura | sí | True/True |
+| F003 | Charles Dickens (1836-04-02) | artista | schwartz_07_logro | 12_obtencion | CONTINUIDAD_ASCENDENTE | sí | no | sí | sí | auge | auge | sí | True/True |
+| F003 | Antoine Lavoisier (1790-01-01) | cientifico | arquetipo_el_sabio | 30_ambicion | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | ruptura | no | True/True |
+| F003 | Michael Faraday (1822-01-01) | cientifico | NO_SELLADO |  |  | — | — | — | — | — | — | — | True/True |
+| F003 | Nicolas Fouquet (1661-08-17) | politico | schwartz_07_logro | 12_obtencion | CONTINUIDAD_ASCENDENTE | no | no | sí | sí | caida | ruptura | no | True/True |
+| F003 | León Trotski (1923-10-15) | politico | 20_sacrificio_por_un_ideal | mauss_01_intercambio_agonistico | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | caida | sí | True/True |
+| F003 | Abraham Lincoln (1858-10-15) | politico | 12_obtencion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | sí | sí | sí | caida | auge | no | True/True |
+| F003 | John Law (1720-01-31) | empresario | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | sí | no | caida | ruptura | no | True/True |
+| F003 | Andrew Carnegie (1873-01-01) | empresario | schwartz_07_logro | 12_obtencion | CONTINUIDAD_ASCENDENTE | sí | sí | sí | sí | auge | auge | sí | True/True |
+| F003 | Pedro II de Brasil (1888-09-01) | gobernante | tainter_03_vulnerabilidad_sistemica | schwartz_01_universalismo | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |

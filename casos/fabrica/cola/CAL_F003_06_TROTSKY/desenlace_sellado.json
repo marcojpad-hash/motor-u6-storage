@@ -1,0 +1,27 @@
+{
+ "familias": [
+  "24_rivalidad_de_superior_e_inferior",
+  "5_persecucion",
+  "33_error_de_juicio",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+ "prohibidas_post_Z": [
+  "trotskismo",
+  "Alma Ata",
+  "Alma-Ata",
+  "Prinkipo",
+  "Coyoacán",
+  "Mercader",
+  "expulsado del partido",
+  "expulsado del Politburó",
+  "Lecciones de Octubre",
+  "El nuevo curso",
+  "Frunze",
+  "deportado",
+  "asesinado",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

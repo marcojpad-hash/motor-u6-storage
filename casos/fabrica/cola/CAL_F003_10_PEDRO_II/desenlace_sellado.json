@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "7_caer_victima",
+  "weber_01_autoridad_tradicional",
+  "anacyclosis_01_monarquia",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil",
+ "prohibidas_post_Z": [
+  "golpe de Estado",
+  "proclamación de la república",
+  "Deodoro",
+  "exilio",
+  "depuesto",
+  "destronado",
+  "Ouro Preto",
+  "Cannes",
+  "15 de noviembre",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}

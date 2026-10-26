@@ -1,0 +1,25 @@
+{
+ "familias": [
+  "33_error_de_juicio",
+  "30_ambicion",
+  "24_rivalidad_de_superior_e_inferior",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Nicolas_Fouquet ; https://en.wikipedia.org/wiki/Vaux-le-Vicomte",
+ "prohibidas_post_Z": [
+  "Artagnan",
+  "Pignerol",
+  "Pinerolo",
+  "Nantes",
+  "arrestado",
+  "arresto de Fouquet",
+  "peculado",
+  "lesa majestad",
+  "cadena perpetua",
+  "destierro",
+  "máscara de hierro",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F003"
+}
