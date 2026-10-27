@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F004_06_TRUMAN",
+ "question": "¿Qué trayectoria sigue Harry S. Truman después de julio de 1948?",
+ "person": "Harry S. Truman",
+ "tipo_sujeto": "politico",
+ "freeze": "1948-08-01",
+ "z_trabajo": "1948-08-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1948-07",
+ "cuts": [
+  {
+   "id": "C1_1945",
+   "corte": "C1_1945",
+   "cut_id": "C1_1945",
+   "date": "1945-04-12",
+   "fecha_corte": "1945-04-12",
+   "hecho": "Vicepresidente desde hace 82 días, poco consultado por Roosevelt; a la muerte de este jura como presidente y dice sentir que se le vinieron encima 'la luna, las estrellas y todos los planetas'.",
+   "P": [
+    [
+     "deber",
+     0.8
+    ],
+    [
+     "humildad",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "responsabilidad",
+     0.8
+    ],
+    [
+     "liderazgo",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "carga_cognitiva_evaluacion",
+     0.64
+    ],
+    [
+     "incertidumbre",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Truman llevaba 82 días como vicepresidente cuando Roosevelt murió el 12 de abril de 1945; juró como presidente esa tarde; Roosevelt rara vez lo consultaba.",
+     "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+     "source_date": "2026-10-27",
+     "claim_date": "1945-04-12",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1946",
+   "corte": "C2_1946",
+   "cut_id": "C2_1946",
+   "date": "1946-11",
+   "fecha_corte": "1946-11",
+   "hecho": "Su aprobación cae del 82 % (enero) al 52 % (junio) y luego al 32 %; los republicanos ganan el Congreso en las elecciones de mitad de periodo; el senador Fulbright sugiere que renuncie.",
+   "P": [
+    [
+     "orgullo",
+     0.7
+    ],
+    [
+     "determinacion",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.72
+    ],
+    [
+     "oposicion",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.8
+    ],
+    [
+     "hostilidad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "La aprobación de Truman cayó del 82 % en enero de 1946 al 52 % en junio; los demócratas sufrieron grandes pérdidas en las elecciones de 1946 y los republicanos tomaron el Congreso; con 32 % Fulbright sugirió que renunciara.",
+     "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+     "source_date": "2026-10-27",
+     "claim_date": "1946-11",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1948_07",
+   "corte": "C3_1948_07",
+   "cut_id": "C3_1948_07",
+   "date": "1948-07",
+   "fecha_corte": "1948-07",
+   "hecho": "En primavera tiene 36 % de aprobación y casi nadie lo cree capaz de ganar; en la convención ataca al 'Congreso que no hace nada'; firma la Orden 9981 contra la discriminación en las fuerzas armadas; el partido se parte en tres (Thurmond y los dixiecrats, Wallace y los progresistas); el 25 de junio inició el puente aéreo de Berlín.",
+   "P": [
+    [
+     "determinacion",
+     0.82
+    ],
+    [
+     "obligacion_moral",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.78
+    ],
+    [
+     "oratoria",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "fragmentacion",
+     0.8
+    ],
+    [
+     "oposicion",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En la primavera de 1948 la aprobación de Truman era del 36 % y casi universalmente se le veía incapaz de ganar; en la convención atacó al 'Do Nothing Congress'.",
+     "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+     "source_date": "2026-10-27",
+     "claim_date": "1948-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En julio de 1948 emitió la Orden Ejecutiva 9981; Thurmond encabezó la revuelta dixiecrat y Wallace la del Partido Progresista: el Partido Demócrata se dividía en tres.",
+     "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+     "source_date": "2026-10-27",
+     "claim_date": "1948-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 25 de junio de 1948 los aliados iniciaron el puente aéreo de Berlín, aprobado por Truman.",
+     "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+     "source_date": "2026-10-27",
+     "claim_date": "1948-06-25",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta julio de 1948."
+}

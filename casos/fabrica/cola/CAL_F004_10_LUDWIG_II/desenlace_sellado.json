@@ -1,0 +1,24 @@
+{
+ "familias": [
+  "16_locura",
+  "7_caer_victima",
+  "weber_01_autoridad_tradicional",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+ "prohibidas_post_Z": [
+  "Gudden",
+  "Luitpold",
+  "regencia",
+  "regente",
+  "depuesto",
+  "declarado incapaz",
+  "dictamen",
+  "Starnberg",
+  "ahogado",
+  "paranoia",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

@@ -1,0 +1,21 @@
+{
+ "familias": [
+  "2_salvacion",
+  "arquetipo_el_creador",
+  "schwartz_07_logro",
+  "trayectoria_escritores_creativos"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Richard_Wagner",
+ "prohibidas_post_Z": [
+  "Ludwig",
+  "Luis II",
+  "Múnich",
+  "Munich",
+  "Baviera",
+  "Cosima",
+  "Bayreuth",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

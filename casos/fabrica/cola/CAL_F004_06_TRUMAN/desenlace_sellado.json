@@ -1,0 +1,20 @@
+{
+ "familias": [
+  "schwartz_07_logro",
+  "35_recuperacion_de_lo_perdido",
+  "arquetipo_el_ciudadano",
+  "weber_03_autoridad_legal_racional"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+ "prohibidas_post_Z": [
+  "Dewey Defeats Truman",
+  "Chicago Tribune",
+  "303",
+  "reelegido",
+  "whistle-stop",
+  "Ferdinand Magellan",
+  "noviembre",
+  "victoria"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

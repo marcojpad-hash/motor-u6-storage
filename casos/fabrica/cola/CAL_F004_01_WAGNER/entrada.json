@@ -1,0 +1,173 @@
+{
+ "case_id": "CAL_F004_01_WAGNER",
+ "question": "¿Qué trayectoria sigue Richard Wagner después de su situación a finales de 1863?",
+ "person": "Richard Wagner",
+ "tipo_sujeto": "artista",
+ "freeze": "1864-01-01",
+ "z_trabajo": "1864-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1863",
+ "cuts": [
+  {
+   "id": "C1_1849",
+   "corte": "C1_1849",
+   "cut_id": "C1_1849",
+   "date": "1849",
+   "fecha_corte": "1849",
+   "hecho": "Participa en el fallido Levantamiento de Mayo de Dresde; se emiten órdenes de arresto, huye a París y se instala en Zúrich; comienza un exilio de Alemania.",
+   "P": [
+    [
+     "idealismo",
+     0.76
+    ],
+    [
+     "rebeldia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "insurreccion",
+     0.72
+    ],
+    [
+     "fugitivo",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "persecucion",
+     0.76
+    ],
+    [
+     "distancia_forzada",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1849 estalló el fallido Levantamiento de Mayo en Dresde, con un papel menor de Wagner; hubo órdenes de arresto y Wagner huyó a París y luego a Zúrich.",
+     "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+     "source_date": "2026-10-27",
+     "claim_date": "1849",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1861",
+   "corte": "C2_1861",
+   "cut_id": "C2_1861",
+   "date": "1861",
+   "fecha_corte": "1861",
+   "hecho": "El Tannhäuser de París es un fiasco notable: protestas organizadas por el Jockey Club y retirada de la obra tras pocas funciones.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "autoexpresion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "audacia",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.76
+    ],
+    [
+     "hostilidad",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Las funciones del Tannhäuser de París en 1861 fueron un fiasco notable, con manifestaciones organizadas por el Jockey Club en el teatro.",
+     "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+     "source_date": "2026-10-27",
+     "claim_date": "1861",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1863",
+   "corte": "C3_1863",
+   "cut_id": "C3_1863",
+   "date": "1863",
+   "fecha_corte": "1863",
+   "hecho": "Levantada la prohibición política (1862), vive en Biebrich, se separa de forma irrevocable de su esposa Minna y empieza Los maestros cantores; Tristán e Isolda sigue sin estrenarse en Viena, con fama de 'imposible', lo que agrava sus problemas económicos.",
+   "P": [
+    [
+     "determinacion",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.74
+    ],
+    [
+     "creatividad",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.8
+    ],
+    [
+     "obstaculo",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "La prohibición política sobre Wagner en la Confederación Germánica se levantó por completo en 1862; se instaló en Biebrich, donde se separó irrevocablemente de Minna.",
+     "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+     "source_date": "2026-10-27",
+     "claim_date": "1862",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En Biebrich comenzó Die Meistersinger von Nürnberg; entre 1861 y 1863 buscó estrenar Tristan und Isolde en Viena, que quedó sin representarse pese a muchos ensayos, con fama de 'imposible' de cantar, lo que se sumó a sus problemas económicos.",
+     "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+     "source_date": "2026-10-27",
+     "claim_date": "1863",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1863."
+}

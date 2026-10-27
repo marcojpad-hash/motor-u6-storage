@@ -1,0 +1,25 @@
+{
+ "familias": [
+  "17_fatal_imprudencia",
+  "6_desastre",
+  "33_error_de_juicio",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+ "prohibidas_post_Z": [
+  "bancarrota",
+  "quiebra",
+  "liquidación",
+  "escándalo de Panamá",
+  "sobornos",
+  "150 diputados",
+  "juicio",
+  "condenado",
+  "1888",
+  "1889",
+  "1893",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

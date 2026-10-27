@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F004_03_OPPENHEIMER",
+ "question": "¿Qué trayectoria sigue J. Robert Oppenheimer después de septiembre de 1953?",
+ "person": "J. Robert Oppenheimer",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1953-10-01",
+ "z_trabajo": "1953-10-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1953-06",
+ "cuts": [
+  {
+   "id": "C1_1947",
+   "corte": "C1_1947",
+   "cut_id": "C1_1947",
+   "date": "1947",
+   "fecha_corte": "1947",
+   "hecho": "Director del Instituto de Estudios Avanzados de Princeton y presidente del Comité Asesor General de la nueva Comisión de Energía Atómica; promueve el control internacional de las armas nucleares.",
+   "P": [
+    [
+     "ambicion",
+     0.74
+    ],
+    [
+     "idealismo",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1947 Oppenheimer fue nombrado director del Institute for Advanced Study y presidente del General Advisory Committee de la AEC; abogó por el control internacional de la energía y las armas nucleares.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1947",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1950",
+   "corte": "C2_1950",
+   "cut_id": "C2_1950",
+   "date": "1950-01-31",
+   "fecha_corte": "1950-01-31",
+   "hecho": "En 1949 testifica ante el Comité de Actividades Antiestadounidenses sobre sus vínculos comunistas de los años treinta y los de sus alumnos; el GAC que preside recomienda no desarrollar la Super; Truman decide desarrollarla y Oppenheimer piensa en renunciar.",
+   "P": [
+    [
+     "obligacion_moral",
+     0.78
+    ],
+    [
+     "orgullo",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "oposicion",
+     0.78
+    ],
+    [
+     "disenso_individual",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.74
+    ],
+    [
+     "desconfianza_autoridad",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 7 de junio de 1949 testificó ante el House Un-American Activities Committee sobre sus asociaciones con el Partido Comunista en los años treinta y señaló a varios alumnos.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1949-06-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En octubre de 1949 Oppenheimer y el GAC recomendaron no desarrollar la Super; el 31 de enero de 1950 Truman decidió hacerlo; los opositores del GAC pensaron en renunciar.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1950-01-31",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1953_06",
+   "corte": "C3_1953_06",
+   "cut_id": "C3_1953_06",
+   "date": "1953-06",
+   "fecha_corte": "1953-06",
+   "hecho": "Sale del GAC en agosto de 1952 porque Truman no lo renueva (opositores pidieron su salida); preside el panel de desarme y publica en Foreign Affairs (junio de 1953) contra arsenales cada vez mayores; Lewis Strauss, comisionado de la AEC, le guarda resentimiento.",
+   "P": [
+    [
+     "obligacion_moral",
+     0.76
+    ],
+    [
+     "orgullo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.74
+    ],
+    [
+     "transparencia",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.8
+    ],
+    [
+     "hostilidad",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Oppenheimer dejó el GAC al vencer su mandato en agosto de 1952; Truman no lo renovó y varios opositores habían pedido su salida.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1952-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Presidió en 1952 el panel de consultores de desarme del Departamento de Estado y en un artículo de junio de 1953 en Foreign Affairs expuso la inutilidad de arsenales cada vez mayores.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1953-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Strauss, comisionado de la AEC, guardaba resentimiento contra Oppenheimer por su oposición a la bomba de hidrógeno y por haberlo humillado ante el Congreso.",
+     "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+     "source_date": "2026-10-27",
+     "claim_date": "1953-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta junio de 1953."
+}

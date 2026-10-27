@@ -1,0 +1,24 @@
+{
+ "familias": [
+  "arquetipo_el_sabio",
+  "social_04_rogers_difusion_innovaciones",
+  "erikson_07_generatividad_vs_estancamiento",
+  "jaldun_02_institucionalizacion_y_sedentarismo"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+ "prohibidas_post_Z": [
+  "nombrado abad",
+  "abad del monasterio",
+  "abbot",
+  "Nägeli",
+  "redescubrimiento",
+  "de Vries",
+  "Correns",
+  "Tschermak",
+  "1900",
+  "ignorado",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

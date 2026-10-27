@@ -1,0 +1,22 @@
+{
+ "familias": [
+  "24_rivalidad_de_superior_e_inferior",
+  "33_error_de_juicio",
+  "7_caer_victima",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+ "prohibidas_post_Z": [
+  "Brezhnev",
+  "Brézhnev",
+  "Semichastny",
+  "Pitsunda",
+  "destituido",
+  "octubre de 1964",
+  "jubilación forzosa",
+  "Kosygin",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

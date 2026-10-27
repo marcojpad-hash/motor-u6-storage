@@ -1,0 +1,25 @@
+{
+ "familias": [
+  "minsky_03_ponzi",
+  "6_desastre",
+  "33_error_de_juicio",
+  "17_fatal_imprudencia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+ "prohibidas_post_Z": [
+  "bancarrota",
+  "quiebra",
+  "Chapter 11",
+  "Dynegy",
+  "Whalley",
+  "Watkins",
+  "fraude",
+  "acusado",
+  "condenado",
+  "renuncia de Skilling",
+  "Andersen",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

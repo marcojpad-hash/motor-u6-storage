@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "5_persecucion",
+  "33_error_de_juicio",
+  "7_caer_victima",
+  "social_08_girard_mimesis_y_chivo_expiatorio"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+ "prohibidas_post_Z": [
+  "Termidor",
+  "termidor",
+  "arrestado",
+  "prisión",
+  "encarcelado",
+  "cicuta",
+  "Napoleón",
+  "Bruselas",
+  "Luxemburgo",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}

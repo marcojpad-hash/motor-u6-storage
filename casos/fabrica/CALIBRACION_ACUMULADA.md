@@ -1,15 +1,15 @@
 # Calibración acumulada — fábrica de casos
 
-Casos en la tabla: 30 · evaluados (sellados): 27 · no sellados: 3
+Casos en la tabla: 40 · evaluados (sellados): 37 · no sellados: 3
 
-- Acierto H1: 6/27 (22 %; Laplace 0.24)
-- Acierto H2: 3/27 (11 %; Laplace 0.14)
-- Acierto set abierto (alguna hipótesis): 9/27 (33 %; Laplace 0.34)
-- Acierto apuesta (escenario principal): 6/27 (22 %; Laplace 0.24)
-- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 9/22 (Laplace 0.42)
-- Acierto destino por polaridad (arriba/igual vs abajo): 14/22 (Laplace 0.62)
+- Acierto H1: 9/37 (24 %; Laplace 0.26)
+- Acierto H2: 4/37 (11 %; Laplace 0.13)
+- Acierto set abierto (alguna hipótesis): 12/37 (32 %; Laplace 0.33)
+- Acierto apuesta (escenario principal): 9/37 (24 %; Laplace 0.26)
+- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 14/32 (Laplace 0.44)
+- Acierto destino por polaridad (arriba/igual vs abajo): 22/32 (Laplace 0.68)
 
-Aviso: con menos de 30 casos evaluados la tasa es muy ruidosa.
+
 
 | Lote | Caso | Tipo | H1 | H2 | Escenario | H1 | H2 | Set | Apuesta | Destino apostado | Destino real | Destino | Engine OK |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -43,3 +43,13 @@ Aviso: con menos de 30 casos evaluados la tasa es muy ruidosa.
 | F003 | John Law (1720-01-31) | empresario | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | sí | no | caida | ruptura | no | True/True |
 | F003 | Andrew Carnegie (1873-01-01) | empresario | schwartz_07_logro | 12_obtencion | CONTINUIDAD_ASCENDENTE | sí | sí | sí | sí | auge | auge | sí | True/True |
 | F003 | Pedro II de Brasil (1888-09-01) | gobernante | tainter_03_vulnerabilidad_sistemica | schwartz_01_universalismo | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |
+| F004 | Richard Wagner (1864-01-01) | artista | schwartz_07_logro | 30_ambicion | CONTINUIDAD_ASCENDENTE | sí | no | sí | sí | auge | auge | sí | True/True |
+| F004 | Jacques-Louis David (1794-07-01) | artista | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | caida | no | True/True |
+| F004 | J. Robert Oppenheimer (1953-10-01) | cientifico | mauss_02_deuda_de_honor | 30_ambicion | MESeta_O_ESTABILIZACION | no | no | no | no | caida | caida | sí | True/True |
+| F004 | Gregor Mendel (1867-01-01) | cientifico | arquetipo_el_sabio | schwartz_10_autodireccion | CONTINUIDAD_ASCENDENTE | sí | no | sí | sí | meseta | meseta | sí | True/True |
+| F004 | Nikita Jrushchov (1964-01-01) | gobernante | 9_audaz_empresa | 30_ambicion | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |
+| F004 | Harry S. Truman (1948-08-01) | politico | 9_audaz_empresa | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | sí | no | no | caida | auge | no | True/True |
+| F004 | Coco Chanel (1920-01-01) | empresaria | schwartz_07_logro | 12_obtencion | CONTINUIDAD_ASCENDENTE | sí | no | sí | sí | auge | auge | sí | True/True |
+| F004 | Ferdinand de Lesseps (1887-01-01) | empresario | 9_audaz_empresa | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |
+| F004 | Kenneth Lay (2001-08-01) | empresario | 31_conflicto_con_un_dios | 30_ambicion | CONTINUIDAD_ASCENDENTE | no | no | no | no | ruptura | ruptura | sí | True/True |
+| F004 | Luis II de Baviera (1886-01-01) | gobernante | 22_todo_sacrificado_por_una_pasion | strauss_howe_02_the_awakening | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |

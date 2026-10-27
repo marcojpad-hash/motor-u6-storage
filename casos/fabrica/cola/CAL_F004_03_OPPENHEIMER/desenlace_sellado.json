@@ -1,0 +1,22 @@
+{
+ "familias": [
+  "5_persecucion",
+  "24_rivalidad_de_superior_e_inferior",
+  "7_caer_victima",
+  "social_10_cohen_panico_moral"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+ "prohibidas_post_Z": [
+  "Borden",
+  "suspendida",
+  "revocada",
+  "audiencia",
+  "Nichols",
+  "Gray",
+  "1954",
+  "Fermi",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F004"
+}
