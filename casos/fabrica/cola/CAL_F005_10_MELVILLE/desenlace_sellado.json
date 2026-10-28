@@ -1,0 +1,22 @@
+{
+ "familias": [
+  "trayectoria_escritores_creativos",
+  "22_todo_sacrificado_por_una_pasion",
+  "erikson_07_generatividad_vs_estancamiento",
+  "frye_mythos_ironia_satira"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Herman_Melville",
+ "prohibidas_post_Z": [
+  "Moby-Dick",
+  "Pierre",
+  "Ambigüedades",
+  "aduanas",
+  "inspector",
+  "1852",
+  "Bartleby",
+  "olvidado",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

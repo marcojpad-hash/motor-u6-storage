@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F005_01_COURBET",
+ "question": "¿Qué trayectoria sigue Gustave Courbet después de su situación a finales de abril de 1871?",
+ "person": "Gustave Courbet",
+ "tipo_sujeto": "artista",
+ "freeze": "1871-05-01",
+ "z_trabajo": "1871-05-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1871-04-27",
+ "cuts": [
+  {
+   "id": "C1_1855",
+   "corte": "C1_1855",
+   "cut_id": "C1_1855",
+   "date": "1855",
+   "fecha_corte": "1855",
+   "hecho": "Le rechazan obras en la Exposición Universal (entre ellas Entierro en Ornans y El taller del pintor) y él levanta por su cuenta el Pabellón del Realismo junto al recinto oficial, con cuarenta cuadros.",
+   "P": [
+    [
+     "autoexpresion",
+     0.8
+    ],
+    [
+     "inconformismo",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.76
+    ],
+    [
+     "desafio_autoridad",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "rechazo_ritual_autoritario",
+     0.7
+    ],
+    [
+     "reconocimiento",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1855 le rechazaron tres de catorce obras para el Salón de la Exposición Universal, entre ellas Un entierro en Ornans y El taller del pintor; expuso cuarenta cuadros en su Pabellón del Realismo, una estructura temporal junto a la exposición oficial.",
+     "source_url": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+     "source_date": "2026-10-28",
+     "claim_date": "1855",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1870",
+   "corte": "C2_1870",
+   "cut_id": "C2_1870",
+   "date": "1870-09-04",
+   "fecha_corte": "1870-09-04",
+   "hecho": "Rechaza la Legión de Honor que le ofrece Napoleón III, lo que enoja al poder y lo vuelve muy popular entre la oposición; en septiembre pide por carta al Gobierno de Defensa Nacional desmontar la columna Vendôme.",
+   "P": [
+    [
+     "rebeldia",
+     0.78
+    ],
+    [
+     "idealismo",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "desafio_autoridad",
+     0.78
+    ],
+    [
+     "confrontacion_directa",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.74
+    ],
+    [
+     "hostilidad",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Napoleón III lo nominó a la Legión de Honor en 1870; su rechazo de la cruz enojó a los que estaban en el poder y lo hizo inmensamente popular entre los opositores del régimen.",
+     "source_url": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+     "source_date": "2026-10-28",
+     "claim_date": "1870",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 4 de septiembre de 1870 escribió al Gobierno de Defensa Nacional proponiendo desmontar la columna de la plaza Vendôme y trasladarla; el gobierno no hizo nada con la sugerencia.",
+     "source_url": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+     "source_date": "2026-10-28",
+     "claim_date": "1870-09-04",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1871_04",
+   "corte": "C3_1871_04",
+   "cut_id": "C3_1871_04",
+   "date": "1871-04-27",
+   "fecha_corte": "1871-04-27",
+   "hecho": "Con la Comuna de París organiza la Federación de Artistas; es elegido delegado del 6.º distrito y Delegado de Bellas Artes; el 27 de abril pide que se ejecute la demolición de la columna Vendôme decretada por la Comuna, aunque choca con la mayoría por el Comité de Salud Pública.",
+   "P": [
+    [
+     "idealismo",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "insurreccion",
+     0.76
+    ],
+    [
+     "liderazgo",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "poder",
+     0.68
+    ],
+    [
+     "escalada",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Courbet organizó la Federación de Artistas, que se reunió por primera vez el 5 de abril de 1871; el 12 de abril la Comuna decretó demoler la columna Vendôme; el 16 de abril fue elegido delegado del 6.º distrito y nombrado Delegado de Bellas Artes.",
+     "source_url": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+     "source_date": "2026-10-28",
+     "claim_date": "1871-04-16",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En la comisión del 27 de abril de 1871 pidió que se ejecutara la demolición de la columna; era parte de la minoría que se opuso a crear un Comité de Salud Pública.",
+     "source_url": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+     "source_date": "2026-10-28",
+     "claim_date": "1871-04-27",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta abril de 1871."
+}

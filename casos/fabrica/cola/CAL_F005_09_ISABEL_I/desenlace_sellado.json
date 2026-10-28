@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "arquetipo_el_gobernante",
+  "12_obtencion",
+  "kwml_01_rey",
+  "weber_01_autoridad_tradicional"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Elizabeth_I",
+ "prohibidas_post_Z": [
+  "17 de noviembre",
+  "6 de noviembre",
+  "coronación",
+  "Acta de Supremacía",
+  "Cecil",
+  "Armada",
+  "Reina Virgen",
+  "proclamada",
+  "1559",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

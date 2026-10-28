@@ -1,0 +1,420 @@
+{
+ "lote": "F005",
+ "fecha_local": "2026-10-28T04:39:39",
+ "candados_antes": {
+  "motor/Engine_V5_CANONICO_SOLO.py": true,
+  "motor/patterns_final_v14.json": true
+ },
+ "casos": {
+  "CAL_F005_01_COURBET": {
+   "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+   "desenlace_sha256": "48f1f06e4731efef8243553f0a646eebcc3af6754f7c95a938896786b9ad84f4",
+   "destino_sha256": "e07c9f977a71b0dcc84663d7f798dc671d1a81a473b9e092ad541e027cf43d90"
+  },
+  "CAL_F005_02_HABER": {
+   "input_sha256": "578a5e3b85e5c16634104c89da122c7be432c2c06689bcf4160c263067f84338",
+   "desenlace_sha256": "b8c2bd293b0b6566630180d26f7a3dccfbc5767ad55c5d05813ec38b8e79816c",
+   "destino_sha256": "e208b94dd1621f7fd811a688b1b4481cb13b8a827baeb56f3c7b97f3a171f165"
+  },
+  "CAL_F005_03_EINSTEIN": {
+   "input_sha256": "0965b7ae2e693b3f6dcc2c06b87f6ee33478df36686ca3ee3c7f499bc0ac996d",
+   "desenlace_sha256": "cf810b732eb666ef6dedd311583c9e3fec628257710827fc8985258057660c3f",
+   "destino_sha256": "c42ad788063cd0bd51e1ec34a410407b37addb6aecf556d23ba6360425fc10d9"
+  },
+  "CAL_F005_04_HOOVER": {
+   "input_sha256": "2dad1342091f9424f44247eb38c579d657dde63c7fe476586eafa4cbb852f466",
+   "desenlace_sha256": "759cb9e37c7127f322aab1665398e5d0783e9aa4396947d8eb7027c538ffd62c",
+   "destino_sha256": "9c5d88b6e20f0069e81e376310b4e41128db555ddf7c9802e2ef4e547d679ab1"
+  },
+  "CAL_F005_05_MUSSOLINI": {
+   "input_sha256": "ad61bff24f8e322957fc3cbe0459dfe5d79d1d31f8bd82704bf6a95896b8dbac",
+   "desenlace_sha256": "6657379ef2dd4846391b520eb1a772ddae8de1c44931249c0916d917c9fd0c5f",
+   "destino_sha256": "be8830083e87e75f81085da3a2a34153f0e8b77827f807c0c7f912d6b41b24f3"
+  },
+  "CAL_F005_06_KREUGER": {
+   "input_sha256": "9b3f8cd9326c2db5479c62521326a1db4c27ad63e0cb2883b4e3646d69bda93b",
+   "desenlace_sha256": "6c7eb61e4dd5c82da5e7088fa189a1ee25b9917e17c40883858b6a84d1f3f1d4",
+   "destino_sha256": "9719e20c3ca4ed062e28a16ddbb34d29fcf769e44ae2d107647b051e4fdd2ac9"
+  },
+  "CAL_F005_07_JOBS": {
+   "input_sha256": "c556241e0491a0e6fa2f909978d8a62c40b38e02f348a99c0ced12cffe8be749",
+   "desenlace_sha256": "ea72514d48b5f62ad5d05231dc0c4e0e6b0c9323ea03ff70f376a4557ba48b0c",
+   "destino_sha256": "d1ac35a201f90a42be522cdd51439c93c27a70d48329621c075fe111d1dceb17"
+  },
+  "CAL_F005_08_NICOLAS_II": {
+   "input_sha256": "f9d43876d181f8608a8c5996a9375a67428627aa8cc2a0c1ed62a320e622c55f",
+   "desenlace_sha256": "39c83c5bdbe5252a4141ed441572fa5aebc22e2c35bfa554992de8ed89e9c196",
+   "destino_sha256": "e1cf2ec35c2518ded86aefeb93a35f30c12267934c52250ab7341780b214f9f0"
+  },
+  "CAL_F005_09_ISABEL_I": {
+   "input_sha256": "678978f96d93fb46e2bfffc7d390939c32a765b1dfd3057b4de6bd0a5ff67d93",
+   "desenlace_sha256": "b646593466489a02108252427e72b6ee70d6fdd9cbedf354a417c441d15778b5",
+   "destino_sha256": "b8fe109ab44ab1d51c6d281d9a0af8388588e509a6e4de30694d891e47ff92fa"
+  },
+  "CAL_F005_10_MELVILLE": {
+   "input_sha256": "14cf75067e7501339246be3c3391980411f819dc83df2b223fe57538fcd33ba1",
+   "desenlace_sha256": "e9c35bb8cfab8014e5a225344707c96fcc3c793fe42dcbf7ce9bd635567fc3b3",
+   "destino_sha256": "06c0f39738f0cfe4f4454f96d5e6c3f9c35f7b7cef2b71184be375888e37f764"
+  }
+ },
+ "compuerta_caldero": {
+  "requerido_vivo": true,
+  "por_caso": {
+   "CAL_F005_01_COURBET__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_02_HABER__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_03_EINSTEIN__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_04_HOOVER__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_05_MUSSOLINI__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_06_KREUGER__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_07_JOBS__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_07_JOBS__w0_CHECKPOINT_REANUDABLE": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_08_NICOLAS_II__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_08_NICOLAS_II__w0_CHECKPOINT_REANUDABLE": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_09_ISABEL_I__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   },
+   "CAL_F005_10_MELVILLE__w0": {
+    "estado": "EJECUTADO",
+    "incumplimiento": false,
+    "accion": "ninguna"
+   }
+  },
+  "incumplimientos": [],
+  "veredicto": "OK"
+ },
+ "compuerta_piezas": {
+  "requerido": true,
+  "por_caso": {
+   "CAL_F005_01_COURBET__w0": {},
+   "CAL_F005_02_HABER__w0": {},
+   "CAL_F005_03_EINSTEIN__w0": {},
+   "CAL_F005_04_HOOVER__w0": {},
+   "CAL_F005_05_MUSSOLINI__w0": {},
+   "CAL_F005_06_KREUGER__w0": {},
+   "CAL_F005_07_JOBS__w0": {},
+   "CAL_F005_07_JOBS__w0_CHECKPOINT_REANUDABLE": {},
+   "CAL_F005_08_NICOLAS_II__w0": {},
+   "CAL_F005_08_NICOLAS_II__w0_CHECKPOINT_REANUDABLE": {},
+   "CAL_F005_09_ISABEL_I__w0": {},
+   "CAL_F005_10_MELVILLE__w0": {}
+  },
+  "por_pieza": {},
+  "fallos_ejecucion": [],
+  "requiere_contrato": [],
+  "veredicto": "OK",
+  "playbook": "docs/CEB_INVESTIGAR_Y_RESOLVER.md"
+ },
+ "candados_despues": {
+  "motor/Engine_V5_CANONICO_SOLO.py": true,
+  "motor/patterns_final_v14.json": true,
+  "copia::motor/Engine_V5_CANONICO_SOLO.py": true,
+  "copia::motor/patterns_final_v14.json": true
+ },
+ "sha256_registro_sellado": "9e5380152ab6d9a96a8e9dff02cc970de1d3f4cf8517da760f548c610b41f702",
+ "filas": [
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_01_COURBET",
+   "sujeto": "Gustave Courbet",
+   "tipo": "artista",
+   "freeze": "1871-05-01",
+   "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+   "desenlace_sha256": "48f1f06e4731efef8243553f0a646eebcc3af6754f7c95a938896786b9ad84f4",
+   "familias_desenlace": "5_persecucion|7_caer_victima|8_rebelion|arquetipo_el_rebelde",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "20_sacrificio_por_un_ideal",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "ruptura",
+   "apuesta_destino": "auge",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 0
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_02_HABER",
+   "sujeto": "Fritz Haber",
+   "tipo": "cientifico",
+   "freeze": "1933-01-01",
+   "input_sha256": "578a5e3b85e5c16634104c89da122c7be432c2c06689bcf4160c263067f84338",
+   "desenlace_sha256": "b8c2bd293b0b6566630180d26f7a3dccfbc5767ad55c5d05813ec38b8e79816c",
+   "familias_desenlace": "5_persecucion|7_caer_victima|frye_mythos_tragedia|social_08_girard_mimesis_y_chivo_expiatorio",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Fritz_Haber",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "schwartz_07_logro",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "ruptura",
+   "apuesta_destino": "caida",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 1
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_03_EINSTEIN",
+   "sujeto": "Albert Einstein",
+   "tipo": "cientifico",
+   "freeze": "1905-01-01",
+   "input_sha256": "0965b7ae2e693b3f6dcc2c06b87f6ee33478df36686ca3ee3c7f499bc0ac996d",
+   "desenlace_sha256": "cf810b732eb666ef6dedd311583c9e3fec628257710827fc8985258057660c3f",
+   "familias_desenlace": "arquetipo_el_creador|arquetipo_el_sabio|schwartz_07_logro|schwartz_10_autodireccion",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Albert_Einstein",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "mbti_factor_intuicion_n",
+   "H2": "schwartz_10_autodireccion",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "acierto_H1": 0,
+   "acierto_H2": 1,
+   "acierto_set": 1,
+   "acierto_apuesta": 1,
+   "destino_real": "auge",
+   "apuesta_destino": "auge",
+   "acierto_destino": 1,
+   "acierto_destino_polaridad": 1
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_04_HOOVER",
+   "sujeto": "Herbert Hoover",
+   "tipo": "politico",
+   "freeze": "1928-12-31",
+   "input_sha256": "2dad1342091f9424f44247eb38c579d657dde63c7fe476586eafa4cbb852f466",
+   "desenlace_sha256": "759cb9e37c7127f322aab1665398e5d0783e9aa4396947d8eb7027c538ffd62c",
+   "familias_desenlace": "33_error_de_juicio|6_desastre|cliodinamica_03_fase_crisis_colapso|kondratiev_04_invierno_recesion",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "schwartz_07_logro",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "caida",
+   "apuesta_destino": "auge",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 0
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_05_MUSSOLINI",
+   "sujeto": "Benito Mussolini",
+   "tipo": "politico",
+   "freeze": "1943-01-01",
+   "input_sha256": "ad61bff24f8e322957fc3cbe0459dfe5d79d1d31f8bd82704bf6a95896b8dbac",
+   "desenlace_sha256": "6657379ef2dd4846391b520eb1a772ddae8de1c44931249c0916d917c9fd0c5f",
+   "familias_desenlace": "17_fatal_imprudencia|24_rivalidad_de_superior_e_inferior|33_error_de_juicio|frye_mythos_tragedia",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "31_conflicto_con_un_dios",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "ruptura",
+   "apuesta_destino": "caida",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 1
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_06_KREUGER",
+   "sujeto": "Ivar Kreuger",
+   "tipo": "empresario",
+   "freeze": "1931-09-30",
+   "input_sha256": "9b3f8cd9326c2db5479c62521326a1db4c27ad63e0cb2883b4e3646d69bda93b",
+   "desenlace_sha256": "6c7eb61e4dd5c82da5e7088fa189a1ee25b9917e17c40883858b6a84d1f3f1d4",
+   "familias_desenlace": "17_fatal_imprudencia|6_desastre|frye_mythos_tragedia|minsky_03_ponzi",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "12_obtencion",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "ruptura",
+   "apuesta_destino": "caida",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 1
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_07_JOBS",
+   "sujeto": "Steve Jobs",
+   "tipo": "empresario",
+   "freeze": "1996-11-01",
+   "input_sha256": "c556241e0491a0e6fa2f909978d8a62c40b38e02f348a99c0ced12cffe8be749",
+   "desenlace_sha256": "ea72514d48b5f62ad5d05231dc0c4e0e6b0c9323ea03ff70f376a4557ba48b0c",
+   "familias_desenlace": "35_recuperacion_de_lo_perdido|arquetipo_el_creador|monomito_12_regreso_con_el_elixir|schwartz_07_logro",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Steve_Jobs",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 6,
+   "H1": "NO_SELLADO",
+   "H2": "",
+   "apuesta_estado": "NO_SELLADA",
+   "escenario_principal": "",
+   "acierto_H1": "",
+   "acierto_H2": "",
+   "acierto_set": "",
+   "acierto_apuesta": ""
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_08_NICOLAS_II",
+   "sujeto": "Nicolás II de Rusia",
+   "tipo": "gobernante",
+   "freeze": "1916-12-31",
+   "input_sha256": "f9d43876d181f8608a8c5996a9375a67428627aa8cc2a0c1ed62a320e622c55f",
+   "desenlace_sha256": "39c83c5bdbe5252a4141ed441572fa5aebc22e2c35bfa554992de8ed89e9c196",
+   "familias_desenlace": "33_error_de_juicio|6_desastre|cliodinamica_03_fase_crisis_colapso|weber_01_autoridad_tradicional",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 6,
+   "H1": "NO_SELLADO",
+   "H2": "",
+   "apuesta_estado": "NO_SELLADA",
+   "escenario_principal": "",
+   "acierto_H1": "",
+   "acierto_H2": "",
+   "acierto_set": "",
+   "acierto_apuesta": ""
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_09_ISABEL_I",
+   "sujeto": "Isabel Tudor (Isabel I de Inglaterra)",
+   "tipo": "gobernante",
+   "freeze": "1558-11-01",
+   "input_sha256": "678978f96d93fb46e2bfffc7d390939c32a765b1dfd3057b4de6bd0a5ff67d93",
+   "desenlace_sha256": "b646593466489a02108252427e72b6ee70d6fdd9cbedf354a417c441d15778b5",
+   "familias_desenlace": "12_obtencion|arquetipo_el_gobernante|kwml_01_rey|weber_01_autoridad_tradicional",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Elizabeth_I",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "kwml_02_guerrero",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "MESeta_O_ESTABILIZACION",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "auge",
+   "apuesta_destino": "meseta",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 1
+  },
+  {
+   "lote": "F005",
+   "case_id": "CAL_F005_10_MELVILLE",
+   "sujeto": "Herman Melville",
+   "tipo": "artista",
+   "freeze": "1851-10-01",
+   "input_sha256": "14cf75067e7501339246be3c3391980411f819dc83df2b223fe57538fcd33ba1",
+   "desenlace_sha256": "e9c35bb8cfab8014e5a225344707c96fcc3c793fe42dcbf7ce9bd635567fc3b3",
+   "familias_desenlace": "22_todo_sacrificado_por_una_pasion|erikson_07_generatividad_vs_estancamiento|frye_mythos_ironia_satira|trayectoria_escritores_creativos",
+   "fuente_desenlace": "https://en.wikipedia.org/wiki/Herman_Melville",
+   "engine_ok_antes": true,
+   "engine_ok_despues": true,
+   "fecha": "2026-10-28",
+   "returncode": 0,
+   "H1": "30_ambicion",
+   "H2": "schwartz_07_logro",
+   "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+   "acierto_H1": 0,
+   "acierto_H2": 0,
+   "acierto_set": 0,
+   "acierto_apuesta": 0,
+   "destino_real": "caida",
+   "apuesta_destino": "auge",
+   "acierto_destino": 0,
+   "acierto_destino_polaridad": 0
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "familias": [
+  "arquetipo_el_sabio",
+  "arquetipo_el_creador",
+  "schwartz_07_logro",
+  "schwartz_10_autodireccion"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Albert_Einstein",
+ "prohibidas_post_Z": [
+  "annus mirabilis",
+  "relatividad",
+  "fotoeléctrico",
+  "browniano",
+  "E=mc",
+  "1905",
+  "doctorado"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

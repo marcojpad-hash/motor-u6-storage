@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F005_08_NICOLAS_II",
+ "question": "¿Qué trayectoria sigue Nicolás II de Rusia después de su situación al cierre de 1916?",
+ "person": "Nicolás II de Rusia",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1916-12-31",
+ "z_trabajo": "1916-12-31",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1916-12-30",
+ "cuts": [
+  {
+   "id": "C1_1905",
+   "corte": "C1_1905",
+   "cut_id": "C1_1905",
+   "date": "1905-10",
+   "fecha_corte": "1905-10",
+   "hecho": "Tras el Domingo Sangriento (enero de 1905), la derrota naval de Tsushima y la revolución de 1905 tiene que firmar el Manifiesto de Octubre: crea la Duma y amplía derechos, aunque conserva el veto y la disuelve en 1906 y 1907.",
+   "P": [
+    [
+     "tradicionalismo",
+     0.8
+    ],
+    [
+     "rigidez",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "resistencia_cambio",
+     0.76
+    ],
+    [
+     "negociacion",
+     0.62
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.78
+    ],
+    [
+     "insurreccion",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 9 (22) de enero de 1905 ocurrió el Domingo Sangriento ante el Palacio de Invierno; la flota del Báltico fue casi aniquilada en Tsushima; por la revolución de 1905 Nicolás fue forzado a firmar el Manifiesto de Octubre, que creó la Duma.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+     "source_date": "2026-10-28",
+     "claim_date": "1905-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1915",
+   "corte": "C2_1915",
+   "cut_id": "C2_1915",
+   "date": "1915-09",
+   "fecha_corte": "1915-09",
+   "hecho": "Tras la Gran Retirada y la pérdida de Polonia destituye a su primo el gran duque Nicolás y asume el mando supremo del ejército en septiembre de 1915; queda en el cuartel de Mogilev, lejos del gobierno, y se le asocia personalmente con las derrotas. Rasputín, cercano a la emperatriz desde 1911, influye en nombramientos.",
+   "P": [
+    [
+     "deber",
+     0.8
+    ],
+    [
+     "devocion",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "decision_mal_informada",
+     0.78
+    ],
+    [
+     "aislamiento_voluntario",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "desgaste_psicosocial",
+     0.7
+    ],
+    [
+     "desconfianza_autoridad",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Tras la Gran Retirada y la pérdida del Reino de Polonia, Nicolás asumió el papel de comandante en jefe tras destituir a su primo, el gran duque Nicolás Nikoláyevich, en septiembre de 1915; quedó en el cuartel de Mogilev, lejos del gobierno directo.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+     "source_date": "2026-10-28",
+     "claim_date": "1915-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1911 Grigori Rasputín entró en el círculo íntimo de la pareja imperial; su influencia intensificó la desconfianza hacia la monarquía.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+     "source_date": "2026-10-28",
+     "claim_date": "1911",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1916_12",
+   "corte": "C3_1916_12",
+   "cut_id": "C3_1916_12",
+   "date": "1916-12-30",
+   "fecha_corte": "1916-12-30",
+   "hecho": "A fines de 1916 rechaza con firmeza la petición familiar de conceder una constitución y un gobierno responsable ante la Duma; el 2 de diciembre Purishkévich denuncia en la Duma a las 'fuerzas oscuras' del trono y el 30 de diciembre nobles encabezados por Yusúpov y el gran duque Dmitri asesinan a Rasputín.",
+   "P": [
+    [
+     "rigidez",
+     0.8
+    ],
+    [
+     "dogmatismo",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "resistencia_cambio",
+     0.8
+    ],
+    [
+     "negacion_problema",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "crisis_abrupta",
+     0.78
+    ],
+    [
+     "traicion",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "A finales de 1916 el gran duque Pablo pidió a Nicolás conceder una constitución y un gobierno responsable ante la Duma; Nicolás se negó con firmeza. El 2 de diciembre de 1916 Purishkévich denunció en la Duma a las 'fuerzas oscuras' que rodeaban el trono.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+     "source_date": "2026-10-28",
+     "claim_date": "1916-12-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Rasputín fue asesinado por nobles encabezados por el príncipe Félix Yusúpov y el gran duque Dmitri Pávlovich el 30 de diciembre de 1916 (calendario gregoriano).",
+     "source_url": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+     "source_date": "2026-10-28",
+     "claim_date": "1916-12-30",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta diciembre de 1916 (calendario gregoriano)."
+}

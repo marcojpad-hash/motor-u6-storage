@@ -1,0 +1,24 @@
+{
+ "familias": [
+  "24_rivalidad_de_superior_e_inferior",
+  "33_error_de_juicio",
+  "17_fatal_imprudencia",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+ "prohibidas_post_Z": [
+  "Grandi",
+  "destituido",
+  "arrestado",
+  "Badoglio",
+  "Sicilia",
+  "Gran Sasso",
+  "Saló",
+  "armisticio",
+  "julio de 1943",
+  "ejecutado",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

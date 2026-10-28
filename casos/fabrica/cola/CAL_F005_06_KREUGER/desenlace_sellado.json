@@ -1,0 +1,20 @@
+{
+ "familias": [
+  "minsky_03_ponzi",
+  "6_desastre",
+  "17_fatal_imprudencia",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+ "prohibidas_post_Z": [
+  "1932",
+  "suicidio",
+  "Price Waterhouse",
+  "quiebra",
+  "bancarrota",
+  "falsificados",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

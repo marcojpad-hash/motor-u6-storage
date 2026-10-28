@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F005_06_KREUGER",
+ "question": "¿Qué trayectoria sigue Ivar Kreuger después de su situación a finales de septiembre de 1931?",
+ "person": "Ivar Kreuger",
+ "tipo_sujeto": "empresario",
+ "freeze": "1931-09-30",
+ "z_trabajo": "1931-09-30",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1931-07",
+ "cuts": [
+  {
+   "id": "C1_1928",
+   "corte": "C1_1928",
+   "cut_id": "C1_1928",
+   "date": "1928",
+   "fecha_corte": "1928",
+   "hecho": "Ingeniero cofundador de Kreuger & Toll (1908); entre 1925 y 1928 presta a gobiernos europeos y latinoamericanos a cambio de monopolios de fósforos y con la International Match Corporation se acerca al 75 % de la producción mundial; firma préstamos sin saber de dónde saldrán los fondos.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "audacia",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "apuesta_extrema",
+     0.76
+    ],
+    [
+     "astucia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "acumulacion_capital",
+     0.8
+    ],
+    [
+     "poder",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1908 cofundó Kreuger & Toll; entre las guerras negoció monopolios de fósforos con gobiernos y llegó a controlar entre dos tercios y tres cuartos de la producción mundial, conocido como el 'Rey de los fósforos'.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1928",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Sus compañías prestaron a gobiernos entre 1925 y 1930 a cambio de monopolios; cuando firmó su primer préstamo soberano, a Polonia (1925), no sabía de dónde saldrían los fondos.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1925",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1929",
+   "corte": "C2_1929",
+   "cut_id": "C2_1929",
+   "date": "1929",
+   "fecha_corte": "1929",
+   "hecho": "En 1929 toma la mayoría de Ericsson, la minera Boliden, parte de SKF y bancos en Suecia, Alemania y Francia, a menudo con el propio dinero de la empresa adquirida; firma un préstamo de 125 millones de dólares a Alemania sin saber de dónde obtendrá la suma; el crac bursátil de 1929 golpea los mercados.",
+   "P": [
+    [
+     "codicia",
+     0.74
+    ],
+    [
+     "ambicion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "manipulacion",
+     0.72
+    ],
+    [
+     "apuesta_extrema",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "escalada_status",
+     0.76
+    ],
+    [
+     "vulnerabilidad",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1929 adquirió la mayoría de Ericsson, la minera Boliden, intereses importantes en SKF y bancos en Suecia, Alemania y Francia, a menudo con el propio dinero de la empresa adquirida.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1929",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Pactó con Alemania un préstamo de 125 millones de dólares a cambio de un monopolio de fósforos; al firmar no sabía de dónde obtendría la suma.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1929",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1931",
+   "corte": "C3_1931",
+   "cut_id": "C3_1931",
+   "date": "1931-07",
+   "fecha_corte": "1931-07",
+   "hecho": "En la primavera de 1930 lo recibe el presidente de EE. UU. en la Casa Blanca y Syracuse lo hace doctor honoris causa; en marzo de 1931 el banquero Felix Somary advierte en el Ministerio de Finanzas alemán de la insolvencia de su compañía de fósforos y a mediados de 1931 circulan rumores de inestabilidad financiera en Kreuger & Toll.",
+   "P": [
+    [
+     "confianza_propia",
+     0.76
+    ],
+    [
+     "orgullo",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "ocultamiento",
+     0.74
+    ],
+    [
+     "negacion_problema",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.82
+    ],
+    [
+     "sospecha_infundada",
+     0.6
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En la primavera de 1930 visitó Estados Unidos, el presidente lo invitó a la Casa Blanca y en junio la Universidad de Syracuse le dio un doctorado.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1930-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En marzo de 1931 el banquero suizo Felix Somary advirtió en el Ministerio de Finanzas alemán de la insolvencia de la compañía de fósforos de Kreuger; a mediados de 1931 corrían rumores de que Kreuger & Toll era financieramente inestable.",
+     "source_url": "https://en.wikipedia.org/wiki/Ivar_Kreuger",
+     "source_date": "2026-10-28",
+     "claim_date": "1931-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta septiembre de 1931."
+}

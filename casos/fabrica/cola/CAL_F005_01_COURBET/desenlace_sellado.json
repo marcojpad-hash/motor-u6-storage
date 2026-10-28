@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "5_persecucion",
+  "8_rebelion",
+  "7_caer_victima",
+  "arquetipo_el_rebelde"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+ "prohibidas_post_Z": [
+  "derribada",
+  "derribo",
+  "arrestado",
+  "prisión",
+  "encarcelado",
+  "Sainte-Pélagie",
+  "Semana Sangrienta",
+  "Suiza",
+  "exilio",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

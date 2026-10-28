@@ -1,0 +1,58 @@
+{
+ "lote": "F005",
+ "fecha_local": "2026-10-28T04:39:29",
+ "nota": "Compromiso escrito ANTES de correr F005. Regla 022 congelada por su sha256 (motor/motor/apuesta_destino_personal_022.py, sin cambios). Semillas con etiqueta GrokBot-preparador-ciego-F005 y destinos con etiqueta GrokBot-custodio-rutina-F005; AVISO: ambos los escribió el mismo ejecutor en la misma sesión (ceguera solo procedimental: semillas redactadas solo con hechos <= Z, compuerta Z y lista de palabras prohibidas). Los sujetos se eligieron conociendo su desenlace, como pide el encargo.",
+ "regla_sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
+ "casos": {
+  "CAL_F005_01_COURBET": {
+   "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+   "desenlace_sha256": "48f1f06e4731efef8243553f0a646eebcc3af6754f7c95a938896786b9ad84f4",
+   "destino_sha256": "e07c9f977a71b0dcc84663d7f798dc671d1a81a473b9e092ad541e027cf43d90"
+  },
+  "CAL_F005_02_HABER": {
+   "input_sha256": "578a5e3b85e5c16634104c89da122c7be432c2c06689bcf4160c263067f84338",
+   "desenlace_sha256": "b8c2bd293b0b6566630180d26f7a3dccfbc5767ad55c5d05813ec38b8e79816c",
+   "destino_sha256": "e208b94dd1621f7fd811a688b1b4481cb13b8a827baeb56f3c7b97f3a171f165"
+  },
+  "CAL_F005_03_EINSTEIN": {
+   "input_sha256": "0965b7ae2e693b3f6dcc2c06b87f6ee33478df36686ca3ee3c7f499bc0ac996d",
+   "desenlace_sha256": "cf810b732eb666ef6dedd311583c9e3fec628257710827fc8985258057660c3f",
+   "destino_sha256": "c42ad788063cd0bd51e1ec34a410407b37addb6aecf556d23ba6360425fc10d9"
+  },
+  "CAL_F005_04_HOOVER": {
+   "input_sha256": "2dad1342091f9424f44247eb38c579d657dde63c7fe476586eafa4cbb852f466",
+   "desenlace_sha256": "759cb9e37c7127f322aab1665398e5d0783e9aa4396947d8eb7027c538ffd62c",
+   "destino_sha256": "9c5d88b6e20f0069e81e376310b4e41128db555ddf7c9802e2ef4e547d679ab1"
+  },
+  "CAL_F005_05_MUSSOLINI": {
+   "input_sha256": "ad61bff24f8e322957fc3cbe0459dfe5d79d1d31f8bd82704bf6a95896b8dbac",
+   "desenlace_sha256": "6657379ef2dd4846391b520eb1a772ddae8de1c44931249c0916d917c9fd0c5f",
+   "destino_sha256": "be8830083e87e75f81085da3a2a34153f0e8b77827f807c0c7f912d6b41b24f3"
+  },
+  "CAL_F005_06_KREUGER": {
+   "input_sha256": "9b3f8cd9326c2db5479c62521326a1db4c27ad63e0cb2883b4e3646d69bda93b",
+   "desenlace_sha256": "6c7eb61e4dd5c82da5e7088fa189a1ee25b9917e17c40883858b6a84d1f3f1d4",
+   "destino_sha256": "9719e20c3ca4ed062e28a16ddbb34d29fcf769e44ae2d107647b051e4fdd2ac9"
+  },
+  "CAL_F005_07_JOBS": {
+   "input_sha256": "c556241e0491a0e6fa2f909978d8a62c40b38e02f348a99c0ced12cffe8be749",
+   "desenlace_sha256": "ea72514d48b5f62ad5d05231dc0c4e0e6b0c9323ea03ff70f376a4557ba48b0c",
+   "destino_sha256": "d1ac35a201f90a42be522cdd51439c93c27a70d48329621c075fe111d1dceb17"
+  },
+  "CAL_F005_08_NICOLAS_II": {
+   "input_sha256": "f9d43876d181f8608a8c5996a9375a67428627aa8cc2a0c1ed62a320e622c55f",
+   "desenlace_sha256": "39c83c5bdbe5252a4141ed441572fa5aebc22e2c35bfa554992de8ed89e9c196",
+   "destino_sha256": "e1cf2ec35c2518ded86aefeb93a35f30c12267934c52250ab7341780b214f9f0"
+  },
+  "CAL_F005_09_ISABEL_I": {
+   "input_sha256": "678978f96d93fb46e2bfffc7d390939c32a765b1dfd3057b4de6bd0a5ff67d93",
+   "desenlace_sha256": "b646593466489a02108252427e72b6ee70d6fdd9cbedf354a417c441d15778b5",
+   "destino_sha256": "b8fe109ab44ab1d51c6d281d9a0af8388588e509a6e4de30694d891e47ff92fa"
+  },
+  "CAL_F005_10_MELVILLE": {
+   "input_sha256": "14cf75067e7501339246be3c3391980411f819dc83df2b223fe57538fcd33ba1",
+   "desenlace_sha256": "e9c35bb8cfab8014e5a225344707c96fcc3c793fe42dcbf7ce9bd635567fc3b3",
+   "destino_sha256": "06c0f39738f0cfe4f4454f96d5e6c3f9c35f7b7cef2b71184be375888e37f764"
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "familias": [
+  "6_desastre",
+  "33_error_de_juicio",
+  "weber_01_autoridad_tradicional",
+  "cliodinamica_03_fase_crisis_colapso"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Nicholas_II_of_Russia",
+ "prohibidas_post_Z": [
+  "abdica",
+  "abdicación",
+  "abdicar",
+  "Revolución de Febrero",
+  "Gobierno Provisional",
+  "Ekaterimburgo",
+  "bolcheviques",
+  "fusilado",
+  "1917",
+  "1918",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

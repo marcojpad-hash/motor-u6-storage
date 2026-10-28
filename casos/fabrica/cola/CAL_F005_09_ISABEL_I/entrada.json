@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F005_09_ISABEL_I",
+ "question": "¿Qué trayectoria sigue Isabel Tudor después de su situación en octubre de 1558?",
+ "person": "Isabel Tudor (Isabel I de Inglaterra)",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1558-11-01",
+ "z_trabajo": "1558-11-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1558-10",
+ "cuts": [
+  {
+   "id": "C1_1536",
+   "corte": "C1_1536",
+   "cut_id": "C1_1536",
+   "date": "1536-05-19",
+   "fecha_corte": "1536-05-19",
+   "hecho": "Hija de Enrique VIII y Ana Bolena; a los dos años y ocho meses su madre es decapitada y ella es declarada ilegítima y apartada de la sucesión.",
+   "P": [
+    [
+     "resiliencia",
+     0.7
+    ],
+    [
+     "autocontrol",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "supervivencia",
+     0.74
+    ],
+    [
+     "discrecion",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "perdida_familiar",
+     0.8
+    ],
+    [
+     "identidad_impuesta",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Su madre, Ana Bolena, fue decapitada el 19 de mayo de 1536; Isabel fue declarada ilegítima y privada de su lugar en la sucesión.",
+     "source_url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+     "source_date": "2026-10-28",
+     "claim_date": "1536-05-19",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1554",
+   "corte": "C2_1554",
+   "cut_id": "C2_1554",
+   "date": "1554-05-22",
+   "fecha_corte": "1554-05-22",
+   "hecho": "Educada como protestante y de las mujeres más instruidas de su generación; bajo su media hermana María, católica, se la interroga por la rebelión de Wyatt y el 18 de marzo de 1554 es encerrada en la Torre de Londres; Renard y Gardiner buscan juzgarla, pero sin pruebas la pasan a arresto domiciliario en Woodstock, vitoreada por multitudes.",
+   "P": [
+    [
+     "prudencia",
+     0.8
+    ],
+    [
+     "autocontrol",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "discrecion",
+     0.78
+    ],
+    [
+     "evitacion_confrontacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "privacion_libertad",
+     0.8
+    ],
+    [
+     "persecucion",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Tras la rebelión de Wyatt (enero–febrero de 1554) fue interrogada y el 18 de marzo de 1554 encerrada en la Torre de Londres; Renard y Gardiner querían juzgarla; el 22 de mayo la trasladaron a Woodstock bajo arresto domiciliario, entre vítores de la multitud.",
+     "source_url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+     "source_date": "2026-10-28",
+     "claim_date": "1554-05-22",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Al terminar su educación formal en 1550 era una de las mujeres más instruidas de su generación.",
+     "source_url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+     "source_date": "2026-10-28",
+     "claim_date": "1550",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1558_10",
+   "corte": "C3_1558_10",
+   "cut_id": "C3_1558_10",
+   "date": "1558-10",
+   "fecha_corte": "1558-10",
+   "hecho": "El supuesto embarazo de María (1555) resulta falso y la sucesión de Isabel parece asegurada; Felipe de España la cultiva como aliada; en 1558 María enferma y Felipe envía al conde de Feria a consultar a Isabel en Hatfield; para octubre de 1558 Isabel ya hace planes de gobierno.",
+   "P": [
+    [
+     "ambicion",
+     0.7
+    ],
+    [
+     "prudencia",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "planificacion_activa",
+     0.8
+    ],
+    [
+     "alianza",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "legitimidad_percibida",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1555 quedó claro que María no estaba embarazada; nadie creía ya que pudiera tener un hijo y la sucesión de Isabel parecía asegurada; Felipe la cultivó como aliada.",
+     "source_url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+     "source_date": "2026-10-28",
+     "claim_date": "1555",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Cuando su esposa enfermó en 1558, Felipe envió al conde de Feria a consultar a Isabel en Hatfield; para octubre de 1558 Isabel ya hacía planes para su gobierno.",
+     "source_url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+     "source_date": "2026-10-28",
+     "claim_date": "1558-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta octubre de 1558."
+}

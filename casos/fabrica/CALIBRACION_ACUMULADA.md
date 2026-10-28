@@ -1,13 +1,13 @@
 # Calibración acumulada — fábrica de casos
 
-Casos en la tabla: 40 · evaluados (sellados): 37 · no sellados: 3
+Casos en la tabla: 50 · evaluados (sellados): 45 · no sellados: 5
 
-- Acierto H1: 9/37 (24 %; Laplace 0.26)
-- Acierto H2: 4/37 (11 %; Laplace 0.13)
-- Acierto set abierto (alguna hipótesis): 12/37 (32 %; Laplace 0.33)
-- Acierto apuesta (escenario principal): 9/37 (24 %; Laplace 0.26)
-- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 14/32 (Laplace 0.44)
-- Acierto destino por polaridad (arriba/igual vs abajo): 22/32 (Laplace 0.68)
+- Acierto H1: 9/45 (20 %; Laplace 0.21)
+- Acierto H2: 5/45 (11 %; Laplace 0.13)
+- Acierto set abierto (alguna hipótesis): 13/45 (29 %; Laplace 0.30)
+- Acierto apuesta (escenario principal): 10/45 (22 %; Laplace 0.23)
+- Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 15/40 (Laplace 0.38)
+- Acierto destino por polaridad (arriba/igual vs abajo): 27/40 (Laplace 0.67)
 
 
 
@@ -53,3 +53,13 @@ Casos en la tabla: 40 · evaluados (sellados): 37 · no sellados: 3
 | F004 | Ferdinand de Lesseps (1887-01-01) | empresario | 9_audaz_empresa | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |
 | F004 | Kenneth Lay (2001-08-01) | empresario | 31_conflicto_con_un_dios | 30_ambicion | CONTINUIDAD_ASCENDENTE | no | no | no | no | ruptura | ruptura | sí | True/True |
 | F004 | Luis II de Baviera (1886-01-01) | gobernante | 22_todo_sacrificado_por_una_pasion | strauss_howe_02_the_awakening | CONTINUIDAD_ASCENDENTE | no | no | no | no | caida | ruptura | no | True/True |
+| F005 | Gustave Courbet (1871-05-01) | artista | 30_ambicion | 20_sacrificio_por_un_ideal | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | ruptura | no | True/True |
+| F005 | Fritz Haber (1933-01-01) | cientifico | 30_ambicion | schwartz_07_logro | MESeta_O_ESTABILIZACION | no | no | no | no | caida | ruptura | no | True/True |
+| F005 | Albert Einstein (1905-01-01) | cientifico | mbti_factor_intuicion_n | schwartz_10_autodireccion | CONTINUIDAD_ASCENDENTE | no | sí | sí | sí | auge | auge | sí | True/True |
+| F005 | Herbert Hoover (1928-12-31) | politico | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | caida | no | True/True |
+| F005 | Benito Mussolini (1943-01-01) | politico | 30_ambicion | 31_conflicto_con_un_dios | MESeta_O_ESTABILIZACION | no | no | no | no | caida | ruptura | no | True/True |
+| F005 | Ivar Kreuger (1931-09-30) | empresario | 30_ambicion | 12_obtencion | MESeta_O_ESTABILIZACION | no | no | no | no | caida | ruptura | no | True/True |
+| F005 | Steve Jobs (1996-11-01) | empresario | NO_SELLADO |  |  | — | — | — | — | — | — | — | True/True |
+| F005 | Nicolás II de Rusia (1916-12-31) | gobernante | NO_SELLADO |  |  | — | — | — | — | — | — | — | True/True |
+| F005 | Isabel Tudor (Isabel I de Inglaterra) (1558-11-01) | gobernante | 30_ambicion | kwml_02_guerrero | MESeta_O_ESTABILIZACION | no | no | no | no | meseta | auge | no | True/True |
+| F005 | Herman Melville (1851-10-01) | artista | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | caida | no | True/True |

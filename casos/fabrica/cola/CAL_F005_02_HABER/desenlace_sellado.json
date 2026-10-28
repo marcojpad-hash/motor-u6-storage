@@ -1,0 +1,23 @@
+{
+ "familias": [
+  "5_persecucion",
+  "7_caer_victima",
+  "social_08_girard_mimesis_y_chivo_expiatorio",
+  "frye_mythos_tragedia"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Fritz_Haber",
+ "prohibidas_post_Z": [
+  "renuncia",
+  "dimisión",
+  "Rust",
+  "Basilea",
+  "Weizmann",
+  "Rehovot",
+  "exilio",
+  "1933",
+  "1934",
+  "muere",
+  "murió"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}

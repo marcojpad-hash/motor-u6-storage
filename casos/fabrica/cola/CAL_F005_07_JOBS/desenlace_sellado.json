@@ -1,0 +1,19 @@
+{
+ "familias": [
+  "35_recuperacion_de_lo_perdido",
+  "schwartz_07_logro",
+  "arquetipo_el_creador",
+  "monomito_12_regreso_con_el_elixir"
+ ],
+ "fuente": "https://en.wikipedia.org/wiki/Steve_Jobs",
+ "prohibidas_post_Z": [
+  "400 millones",
+  "Amelio",
+  "Be Inc",
+  "iMac",
+  "regreso a Apple",
+  "interino",
+  "1997"
+ ],
+ "custodio": "GrokBot-custodio-rutina-F005"
+}
