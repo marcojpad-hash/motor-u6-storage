@@ -5,7 +5,7 @@
 > - Lee primero [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md): qué hay en cada carpeta.
 > - Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
 > - Continuidad: [`INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md).
-> - **Antes de afirmar una ejecución o interpretar resultados, aplica [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md).** Lee el recibo de ejecución junto al JSON de salida; el código inspeccionado no demuestra que se ejecutó.
+> - **Antes de afirmar una ejecución o interpretar resultados, aplica [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md).** Lee el recibo junto al JSON de salida; el código inspeccionado no demuestra que se ejecutó.
 > - **No uses ZIP/zipball.** Lee archivo por archivo con la API de GitHub/conector o `git clone`.
 Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
 
@@ -31,4 +31,4 @@ Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo 
 
 ## Liviano
 
-Sin binarios ni archivos pesados en Git.
+Sin binarios, sin `_vendor_buscador`, sin salidas de corrida. Las dependencias del buscador se instalan con `pip install ddgs primp lxml click` si no están las bibliotecas empacadas (ver `motor/motor/SPEC_BUSCADOR_AGNOSTICO.md`).
