@@ -1,7 +1,7 @@
 # motor-u6-storage
 
 
-> **Entrada de sesión ChatGPT/Motor U6:** abre primero [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md); contiene la secuencia de carga obligatoria y el texto para instrucciones persistentes.
+> **Entrada de sesión ChatGPT/Motor U6:** abre primero [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md) y [`LLM_STARTUP_SIDECAR.md`](LLM_STARTUP_SIDECAR.md); contienen la secuencia de carga obligatoria y el contrato operativo para asistentes.
 > **Para modelos (ChatGPT, Claude, Grok Bot):**
 > - Lee primero [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md): qué hay en cada carpeta.
 > - Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
