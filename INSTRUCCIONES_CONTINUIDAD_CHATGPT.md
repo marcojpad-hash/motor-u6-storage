@@ -1,3 +1,4 @@
+> **Punto de entrada obligatorio:** comenzar por [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md) y seguir su secuencia antes de cada tarea sobre el motor.
 > **No ZIP:** lee este repo archivo por archivo (API GitHub/conector o `git clone`). Mapa de carpetas: [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md). Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
 > **OBLIGATORIO EN CADA TAREA SOBRE EL MOTOR:** leer [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md) y comprobar los artefactos reales. Código leído ≠ motor ejecutado. Para una corrida, leer el JSON y su `_RECIBO_EJECUCION.json`; no afirmar ejecución sin evidencia ligada a input y hashes. Preservar el campo completo: no descartar datos por estar fuera del top, en valle/meseta/descenso o por contradecir la hipótesis.
 
