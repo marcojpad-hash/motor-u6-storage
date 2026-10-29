@@ -1,0 +1,26 @@
+name: Traza Campo 244 V2 specs
+
+on:
+  push:
+    paths:
+      - "motor/traza_campo_244_v2.py"
+      - "tests/test_traza_campo_244_v2.py"
+      - ".github/workflows/traza-campo-244-v2.yml"
+  workflow_dispatch:
+
+jobs:
+  specs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile module
+        run: python -m py_compile motor/traza_campo_244_v2.py
+      - name: Run focused specs
+        run: python -m unittest discover -s tests -p "test_traza_campo_244_v2.py" -v
+      - name: Run module self-test
+        run: python motor/traza_campo_244_v2.py
