@@ -1,0 +1,42 @@
+# FEEDME actualizado — Motor U6 / ChatGPT
+
+Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobre Motor U6. Abrirlo al iniciar una tarea. El repositorio es la fuente de verdad; esta página dirige al protocolo, a las carpetas de seguimiento y a los registros.
+
+## Arranque obligatorio
+
+1. Leer [INICIO_SESION_CHATGPT.md](INICIO_SESION_CHATGPT.md) y [LLM_STARTUP_SIDECAR.md](LLM_STARTUP_SIDECAR.md).
+2. Leer [INSTRUCCIONES_CONTINUIDAD_CHATGPT.md](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md), [PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md) y [Playbook CEB](docs/CEB_INVESTIGAR_Y_RESOLVER.md).
+3. Revisar [el informe más reciente](informes/2026-10-25_CEB_cableado_y_smoke.md) y los avances recientes.
+4. Buscar en Seguimiento si ya existe una duda, fallo o decisión equivalente antes de abrir una nueva.
+5. Ejecutar la tarea con las herramientas disponibles; no limitarse a describir el plan.
+
+## Seguimiento: dudas, fallos y decisiones
+
+- [Dudas técnicas](seguimiento/dudas/README.md): preguntas que pueden resolverse inspeccionando código, contratos o evidencia.
+- [Bloqueos y fallos](seguimiento/bloqueos/README.md): piezas que no corren, errores, herramientas omitidas o resultados incompletos. Aplicar el playbook CEB y corregir la causa raíz permitida.
+- [Decisiones del creador](seguimiento/decisiones/README.md): solo preguntas que de verdad requieren una decisión del creador; no delegarle comprobaciones que el asistente pueda hacer.
+- [Resueltos](seguimiento/resueltos/README.md): cierre con evidencia, commit, pruebas y enlaces a la solución.
+
+Cada incidente debe tener un archivo propio fechado. Formato sugerido: `AAAA-MM-DD_<tipo>_<tema>.md`. No borrar ni reescribir registros cerrados: crear una entrada nueva que los corrija o los enlace.
+
+## Reglas que no se negocian
+
+- Código inspeccionado no significa ejecución confirmada.
+- Para una corrida, comprobar entrada, salida JSON y `_RECIBO_EJECUCION.json`, hashes, estado terminal, etapas y errores.
+- Si una pieza requerida no corre, investigar la causa raíz, arreglar el cableado permitido y volver a probar. No basta con marcar el fallo.
+- Preservar el campo completo y todos los datos, incluidas familias fuera del top y trayectorias en valle, meseta, ascenso o descenso.
+- Separar observación, salida de módulo, decisión del predictor e inferencia.
+- No modificar `motor/Engine_V5_CANONICO_SOLO.py` ni `motor/patterns_final_v14.json`.
+- Documentar cada cambio técnico en `avances/` según `avances/REGLAS.md`.
+- No afirmar resultados, pruebas ni persistencia que no se hayan verificado.
+
+## Qué debe entregar cada tarea
+
+1. Resultado concreto.
+2. Evidencia: rutas, recibos, hashes, commit y pruebas disponibles.
+3. Estado: confirmado, parcial, fallido o no verificado.
+4. Solo si hace falta: una pregunta breve al creador que no pueda resolverse con los artefactos.
+
+## Límite de auto-carga
+
+GitHub no inyecta por sí solo este archivo en cada chat. Este FeedMe sirve como punto de entrada común para cualquier asistente con acceso al repositorio. Al comenzar una sesión relacionada con el motor, recuperar este archivo explícitamente; no pedir al usuario que vuelva a pegar el contenido.
