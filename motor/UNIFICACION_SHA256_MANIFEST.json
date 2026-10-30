@@ -1,31 +1,6 @@
 {
   "files": [
     {
-      "path": ".pytest_cache/.gitignore",
-      "bytes": 37,
-      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
-    },
-    {
-      "path": ".pytest_cache/CACHEDIR.TAG",
-      "bytes": 191,
-      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-    },
-    {
-      "path": ".pytest_cache/README.md",
-      "bytes": 302,
-      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
-    },
-    {
-      "path": ".pytest_cache/v/cache/lastfailed",
-      "bytes": 2,
-      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-    },
-    {
-      "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 9852,
-      "sha256": "e5e99a66b9b01a60ca38b12f901d8545ff12bc7309262a9099514e875f7e7ca3"
-    },
-    {
       "path": "ACTIVE_ENGINE_SELECTION.json",
       "bytes": 930,
       "sha256": "8980e79507f6392955b10e9e662eef4c91870c0dd4519fed52db2e5a5ed5e43f"
@@ -49,6 +24,11 @@
       "path": "CONTRATO_ENTRADA_LLM_ADDENDUM_ESPECTRO_V2_20261019.txt",
       "bytes": 1387,
       "sha256": "506e5c734fcc0d6fc3629812d80206c5b5b5c28642155b558ac5d149207f6b54"
+    },
+    {
+      "path": "CONTRATO_ENTRADA_LLM_ADDENDUM_Z_TRABAJO_20261024.txt",
+      "bytes": 853,
+      "sha256": "b27f5f3a9b69a7e037a6a1451ae4066908aaf8d2861e072b7528f3d695bc34ea"
     },
     {
       "path": "CONTRATO_HIPOTESIS_ABIERTAS_GEOMETRIA_TRABAJO_20261020.md",
@@ -92,8 +72,8 @@
     },
     {
       "path": "LISTO_PARA_CALIBRAR.md",
-      "bytes": 6273,
-      "sha256": "ad005772347194103b535a2a6af729b7d5fc40350513938a9f16924367042c52"
+      "bytes": 6722,
+      "sha256": "8715fc96fc044287e3c4a6caec1ded3163e83ae7768909c4f3b680c24f04a68c"
     },
     {
       "path": "MAPA_NOMBRES.txt",
@@ -109,6 +89,16 @@
       "path": "MORTALITY_AUDIT/mortality_statistics_template.csv",
       "bytes": 149,
       "sha256": "d99a37ca9f7b6cdcdaa8fdac44a56ca1f70d699d66095c4d71122c6837c9f1af"
+    },
+    {
+      "path": "PARCHES/PATCH_022_APUESTA_DESTINO_PERSONAL.diff",
+      "bytes": 5682,
+      "sha256": "2da09b6a9fbddc16ac2d62804144180203849abbef2150b8b73fa3c35df7562b"
+    },
+    {
+      "path": "PARCHES/PATCH_022_APUESTA_DESTINO_PERSONAL.md",
+      "bytes": 2012,
+      "sha256": "3fc61f54617d1699d91a4d08383f48c6132ff35fa3a51d23cbc8b23f8e73a8cb"
     },
     {
       "path": "PARCHES/PATCH_SERIALIZACION_GEOMETRICA_V04.diff",
@@ -169,6 +159,11 @@
       "path": "REGISTRO_CORRIDAS.md",
       "bytes": 4728,
       "sha256": "ad1a79a7fdec29a2d5ac89d1e4f877322eeb2bf6c2e3792aed70c53c3af41f8b"
+    },
+    {
+      "path": "REGLAS.md",
+      "bytes": 1181,
+      "sha256": "7572ac69a3b8f8c320abcb25f4fc50c4f57aca42fc5230db5016711707bc839e"
     },
     {
       "path": "RESTAURADO_LINEA_A/BASE_ESTABLE_MANIFEST.json",
@@ -272,8 +267,13 @@
     },
     {
       "path": "calibracion/arnes_calibracion.py",
-      "bytes": 13596,
-      "sha256": "0bcf20289ecd5ae182cb29839096e501102531ddf6c9cf1dc6ff97182e390090"
+      "bytes": 13625,
+      "sha256": "fb4f6d4dddb1651c1fc6de6abf0358da3ef711c53e1993941566da7f4a5fe7de"
+    },
+    {
+      "path": "calibracion/gate_z90.py",
+      "bytes": 6677,
+      "sha256": "86e939f7ca23295e42d8494c5931d097f61f7aaca58d7b939d0d5caaca8ee698"
     },
     {
       "path": "capa_llm/FIXTURE_MOCK_CONSULTA_20261011.json",
@@ -306,26 +306,6 @@
       "sha256": "4ac577fa72b79ba494773fbc79a263eb9f0f7ba25e15048187b6f764ba49b6df"
     },
     {
-      "path": "evidencia_continuidad_tortugas/RESULT_TORTUGAS_CONTINUITY_FINAL.json",
-      "bytes": 4555180,
-      "sha256": "b020a331cff8dfb2fe73fc2de220d958aed85f4684c5a221d56c4d94b76f6211"
-    },
-    {
-      "path": "evidencia_continuidad_tortugas/RESULT_TORTUGAS_CONTINUITY_FINAL_RECIBO_EJECUCION.json",
-      "bytes": 19685,
-      "sha256": "bf8a799d0647c78fa1881a5eeedcc4ca5a3a6320c50d02ca7a1a6f43c92d04a7"
-    },
-    {
-      "path": "evidencia_continuidad_tortugas/SMOKE_FINAL_STDERR.txt",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "evidencia_continuidad_tortugas/SMOKE_FINAL_STDOUT.txt",
-      "bytes": 11174,
-      "sha256": "499b6ef0904813ee9a1cc36c95da384604085996df6ce0600c5052b2dcb8aaef"
-    },
-    {
       "path": "inputs/GIORDANO_BRUNO_PATCH19_COMPACTO.json",
       "bytes": 8852,
       "sha256": "56daf3601390af5115fe159f223516e03589247b59c44d9f2ff5ba90e52b64a3"
@@ -334,6 +314,36 @@
       "path": "inputs/THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json",
       "bytes": 7048,
       "sha256": "6067686f138e3a54760e0ae1406c0a7a1eb0dd441a04ac8d92aecb81ad8aed7c"
+    },
+    {
+      "path": "laterales/filogenia_mezcla/filogenia_mezcla.py",
+      "bytes": 22190,
+      "sha256": "d6026c0b99d1264609cbc11eb643d499e45065483afd9adefdb16c6b290a9928"
+    },
+    {
+      "path": "laterales/teoria_color/EQUIVALENCIAS.md",
+      "bytes": 2693,
+      "sha256": "d09b630d76633215ea805f986241c6ca42fadcd70e177a3fe00e8696cab7b37f"
+    },
+    {
+      "path": "laterales/teoria_color/SHA256SUMS_codigo.txt",
+      "bytes": 239,
+      "sha256": "3cba340536f5c1b7bb531f0f6811cc4385bcf5c331d097649fed9c59d2a42e97"
+    },
+    {
+      "path": "laterales/teoria_color/SPEC.md",
+      "bytes": 1355,
+      "sha256": "00813812a3ae44619b1bd956b8bf7d6e7a312aef835709f7792fa28eef7bec67"
+    },
+    {
+      "path": "laterales/teoria_color/equivalencias.py",
+      "bytes": 6603,
+      "sha256": "5d5ac40e4b2c9fff407f7ecbe891ba6b32b34dc6c87e60c991f5e177fd04c0e1"
+    },
+    {
+      "path": "laterales/teoria_color/teoria_color.py",
+      "bytes": 8391,
+      "sha256": "77ef05e16e4d607fa27403d60262d509978888a099ee9e953fe2b4398c95d42e"
     },
     {
       "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
@@ -397,8 +407,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 323051,
-      "sha256": "3b9eff00df3d8d76c979de95726f61eeab05f96ed36e2f58d6bb1134cb1e460d"
+      "bytes": 324143,
+      "sha256": "b3e4cf4a12abe27218bae96092406cf84bbd606e89135ab9dcaa2070265abca4"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -411,1244 +421,19 @@
       "sha256": "3cc9fd253d1d669f81663839ed46d47429db7467ecaadd49b6b41303f46adfbf"
     },
     {
-      "path": "motor/_vendor_buscador/bin/ddgs",
-      "bytes": 231,
-      "sha256": "f71010f9dad89d51273cfbe692fc8ecba7fde010d6c5d638beaa0cdba1ebeec8"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/__init__.py",
-      "bytes": 5145,
-      "sha256": "5abfc54d37d47cc788b7e7a05e9514787f8c5a0b7db429d0f24d748ac89964ca"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/_compat.py",
-      "bytes": 17939,
-      "sha256": "8db1da2965cf3e5dc66c6c53833cbc613ea1cd2440b9d0eb6aa8360eb46d4913"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/_termui_impl.py",
-      "bytes": 32805,
-      "sha256": "88b97d9b7a5b947b10a16d8ab269837bc84c7e55c28ba72ea5f2fb339112336a"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/_textwrap.py",
-      "bytes": 6270,
-      "sha256": "ed9d0ded59a7fbae933524d4c29e8e5c96dc5174666044fd87d736b9c0fca104"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/_utils.py",
-      "bytes": 996,
-      "sha256": "782642b7026db180f941892435627c318ffc001223cbc31cce030cc95637dab4"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/_winconsole.py",
-      "bytes": 8543,
-      "sha256": "292c5f35b3256116ba18e26e08b82c8363dbddd56480934fa8b24f69ef8f6b5d"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/core.py",
-      "bytes": 147845,
-      "sha256": "4c65a613c1c407dce907a4e123b12cec5fe0f62088a8b9f86fabd4b60c4b6d78"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/decorators.py",
-      "bytes": 21680,
-      "sha256": "16069357615691fcdfc9c794bb515f6009eb35aad6f7a76c017bdce06dae8d55"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/exceptions.py",
-      "bytes": 11862,
-      "sha256": "1ef498df81b86ae8ff6d8451f3e4fc094f09c2aff5f8e72c454e1ecdfa337849"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/formatting.py",
-      "bytes": 10444,
-      "sha256": "f125b628692f8dfcfd43535b7a88cc1ee64137471f9d0243b389aa0cfea85e6b"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/globals.py",
-      "bytes": 1923,
-      "sha256": "80cf8d87a0383341c1fd2824685e4ce2770618c0c773f7e51d7bbdfe88781845"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/parser.py",
-      "bytes": 19052,
-      "sha256": "a09f9f53fde6bf1ba022e36d1da0804d9e7a9601261d18208c9892a84818ae30"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/py.typed",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/shell_completion.py",
-      "bytes": 26172,
-      "sha256": "18522f75ddffe655e943978d1953255c447842867d3fd67fbdc1543d3df7da09"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/termui.py",
-      "bytes": 35370,
-      "sha256": "8ec8022b8e4528f873ec413194a5d1614e96da50b6c4a71f6260b326762a7e9c"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/testing.py",
-      "bytes": 27584,
-      "sha256": "76f4e649bc53000d667c8c0deff1591970fa034b0f085a207165839b2301019a"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/types.py",
-      "bytes": 46842,
-      "sha256": "1e988904a7a7f68abad630c7fb9c038a4345fa2e6701c976a6e51f10bdfb52dd"
-    },
-    {
-      "path": "motor/_vendor_buscador/click/utils.py",
-      "bytes": 21483,
-      "sha256": "f43d5743dc07240e612feefa0a69d2b1697b6900149f8f809ffcd97ecb482dbf"
-    },
-    {
-      "path": "motor/_vendor_buscador/click-8.5.0.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "motor/_vendor_buscador/click-8.5.0.dist-info/METADATA",
-      "bytes": 2567,
-      "sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501"
-    },
-    {
-      "path": "motor/_vendor_buscador/click-8.5.0.dist-info/RECORD",
-      "bytes": 2533,
-      "sha256": "a1b9c48c5e3a6f8574e990cef8f3f21cd9d81a9d74d7c31a63c29def36e47c7b"
-    },
-    {
-      "path": "motor/_vendor_buscador/click-8.5.0.dist-info/WHEEL",
-      "bytes": 82,
-      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
-    },
-    {
-      "path": "motor/_vendor_buscador/click-8.5.0.dist-info/licenses/LICENSE.txt",
-      "bytes": 1475,
-      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/__init__.py",
-      "bytes": 1570,
-      "sha256": "856cfd23cdce0af274bfbbc4b0dbaf8db50295b4f3bad0bdb2d52223baf3ad70"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/api_server/__init__.py",
-      "bytes": 277,
-      "sha256": "ae139e70d6223fce186aaed0f3982997e0c8f0a3cc7c78b4e06fdc28dae7e3a2"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/api_server/api.py",
-      "bytes": 16257,
-      "sha256": "69163b3cd49cf15dec8690ce64d78f22527fe205173c3e103e1fbb5d1a323ac2"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/api_server/mcp.py",
-      "bytes": 7201,
-      "sha256": "fff151f3efb14b7ac6bdee2436add322410de37a97ac173411a71128de9ee3c7"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/base.py",
-      "bytes": 4395,
-      "sha256": "429013e3fac08b17e9e832062de7d925e0b4e543dafdd3a3a59f3520e237405e"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/cli.py",
-      "bytes": 24469,
-      "sha256": "a3e21f5f2e2c49ba8e0b9e3354bb85c6cbe0583964995445effe88c0a6173e8f"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/ddgs.py",
-      "bytes": 10450,
-      "sha256": "225b774e9f2544fd25a0005ebb1871137d074eaa0a92f7ef003c70133eba00e1"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/__init__.py",
-      "bytes": 3132,
-      "sha256": "1dc5518a67cfaf8e642d5ec839d930774a7ac679ccab21d692de6d03ac38dda0"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/annasarchive.py",
-      "bytes": 1839,
-      "sha256": "03fc712ceef250d25f818ded5ac6403d83cd4b897a4f4f72200edaf4fae96ca8"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/bing.py",
-      "bytes": 2763,
-      "sha256": "82187e5bcc20ed4cd795d78d2c3d66f42fdee548296daabba6a1a280e6c0a73f"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/bing_images.py",
-      "bytes": 2344,
-      "sha256": "ecf39f76578d39f0ad393359f1a27249567a9620acdd819bc2ed5b9b07e70ad1"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/bing_news.py",
-      "bytes": 2903,
-      "sha256": "f234fc15235d682e6b07596e9cbba28f1d180f3da3da7bb40a0d7838b76c101a"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/brave.py",
-      "bytes": 1633,
-      "sha256": "ef97771fe4855ac20256caeea074ac1c31c4a22ae10e6eb8093bcbf3646e0a3d"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/duckduckgo.py",
-      "bytes": 1325,
-      "sha256": "91ff4d7443e229cab28c25732df8e046f5730f8d21fe5ee22421d3536bdf71bb"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/duckduckgo_images.py",
-      "bytes": 3353,
-      "sha256": "c7ea7e3beb0c3dacdd801cb7798512f342e4fb12764e9792cf8d9ac1de9b29a8"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/duckduckgo_news.py",
-      "bytes": 2185,
-      "sha256": "feafb694cffcc31cfcba738af5f3c43a5b68fd36bb1925db282cb8e313f495b0"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/duckduckgo_videos.py",
-      "bytes": 2886,
-      "sha256": "50922bac1cf5885b6047abaa91082276aaf1167a6340b9005fd9f69b155c1b39"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/google.py",
-      "bytes": 2925,
-      "sha256": "077265af8cd8cfc15e982f9e11c4400106a9da9ece15b3cea0aa708be958eac3"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/grokipedia.py",
-      "bytes": 1455,
-      "sha256": "3a24c086f1fbe6078afe27b16b4546bfe01a774b1510c9eaa3cc1df0c719bdb9"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/mojeek.py",
-      "bytes": 1573,
-      "sha256": "66005a4f7ef68a3da9da50b2d5ee12e0c37f43cee21725e12c39a4a89387d144"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/startpage.py",
-      "bytes": 2360,
-      "sha256": "31cb808c2a0e708df7b8de1633f162472f075bf6d5b025c370952d6608006d1d"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/wikipedia.py",
-      "bytes": 2067,
-      "sha256": "ab70cb8392181f449e55949e51281d8621a441f3bd1df77bb8b02db1c7045afb"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/yahoo.py",
-      "bytes": 2009,
-      "sha256": "4c7f75b736a2a767c77ea53370a16aaad65c56fb11c6fd73ba3624c9a5ec61c7"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/yahoo_news.py",
-      "bytes": 3194,
-      "sha256": "b3acd386a116ea3553b82eec86cddb0065db14141f39260d8cda0b1c62f8de94"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/engines/yandex.py",
-      "bytes": 1271,
-      "sha256": "d011b55c8d73f1a68c70f705fa1f6c9c06c45f16523588e1b03d5e30c879effe"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/exceptions.py",
-      "bytes": 308,
-      "sha256": "0b5b9f886c0adcda572916f70e5b1aa32d27ff19d29df9d80ea9bab5afb4c6fb"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/http_client.py",
-      "bytes": 2718,
-      "sha256": "f47f9b973dcfd7ee195f34e95bd78f76b8b7a9bced0f14095c66a906a4f3c5de"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/py.typed",
-      "bytes": 27,
-      "sha256": "6d67b0f661e0332f0ba8cbbb46ea905c55cb071876091c747546d2c7edf0138f"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/results.py",
-      "bytes": 4106,
-      "sha256": "65cbb4f6675d3e3c8f0e67262c9e51116cc24a7119804ce8cf8a18f0aad80c67"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/similarity.py",
-      "bytes": 2338,
-      "sha256": "f31ac6ef2524e3742de3776bdb20e106cf42ce2638987756c7b24e937c1408ab"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs/utils.py",
-      "bytes": 1985,
-      "sha256": "a229f353c7d79335b0d098a61dc1a3a606e475b5a7bdd7a9fb6251c8114f7a98"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/METADATA",
-      "bytes": 16636,
-      "sha256": "1fed2870c78704b2aaf24bb23728f4333cd754295cdf432d9d58c1b1d8e735e6"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/RECORD",
-      "bytes": 4734,
-      "sha256": "a1c00d84922d47162f483b1ca24e639361ecc9d9c65606f5f79d27b9efde460b"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/REQUESTED",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/WHEEL",
-      "bytes": 91,
-      "sha256": "98e75747d0b7c0c568bfb71263c3d8f970b3a374a6996087bc642be5cb09a1aa"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/entry_points.txt",
-      "bytes": 51,
-      "sha256": "eac26ea0ab51e775e6556d2fafaf70efec0c30ab8cb8846c1e1210381bd4c721"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/licenses/LICENSE.md",
-      "bytes": 1063,
-      "sha256": "767a763769d3c3dcd2b8947e4bdc57f04151f7ea4adbc0bf13e052c77e600427"
-    },
-    {
-      "path": "motor/_vendor_buscador/ddgs-9.16.1.dist-info/top_level.txt",
-      "bytes": 5,
-      "sha256": "72c7618272b9f96bfa3597b53a0c4007482037a012c5f2eb0f72b1fe20223f63"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/ElementInclude.py",
-      "bytes": 8560,
-      "sha256": "3d22de645bc26bbe961c9ba53cbc5c65726d088dbee1d2b60ada8f46260e0108"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/__init__.py",
-      "bytes": 574,
-      "sha256": "3d3a1a4be7ccd41ee912994fcd60ea4cced118a686bc4db9c3f07f90739fa6da"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/_elementpath.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 209192,
-      "sha256": "15ca8205b8b81335b4b53ae061df39beeff8d3d4008d505fc590d186f5bc3502"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/_elementpath.py",
-      "bytes": 10959,
-      "sha256": "6fcd213379dd0244ed457eafe78cdadcb92402a09c774ef4d016cc3d91e74c15"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/apihelpers.pxi",
-      "bytes": 64409,
-      "sha256": "829051192d986a136f2dfb506b1ce37f23e644097b3abbb4d945a9d83824b3b2"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/builder.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 120984,
-      "sha256": "62e9b9d50fc8cc88c35dc01530cf6b3afd3267b2b7199e5ced08c5fb7ef632b6"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/builder.py",
-      "bytes": 8487,
-      "sha256": "b0bee2293f0d5d59a93bfa76a769c74e34a18d93863052e017381b854165ebc8"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/classlookup.pxi",
-      "bytes": 22468,
-      "sha256": "784a435dfb05cc5b374b7a817d150ebb666aa8f1168b954a9168a70ad99089b4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/cleanup.pxi",
-      "bytes": 8454,
-      "sha256": "64d1296efeeac7f2023f3b3184268c50708e7e2ce73a867fbb78e56171c0ba1e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/cssselect.py",
-      "bytes": 3306,
-      "sha256": "ff065d5fe07da7931e2180019843486115849305f05feee33bc0e47fed6b5195"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/debug.pxi",
-      "bytes": 1125,
-      "sha256": "29372947cfac95462f9883db137e46a070cd4dbfa08d312f0fb6f0e8b96d3387"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/docloader.pxi",
-      "bytes": 5790,
-      "sha256": "7dca1577f9b04c56618c8b42bff4dfc17a6055e93b265bc539b49f471995aacd"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/doctestcompare.py",
-      "bytes": 17731,
-      "sha256": "e341039e4c2972f5bceaa35af3af7dd0e5c5e36c5d1daa2c499a2206c1239335"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/dtd.pxi",
-      "bytes": 15281,
-      "sha256": "2002a4980e19a02ebcb2a016713aa84bc8c419870f42b54c099827e222c1624a"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/etree.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 5252048,
-      "sha256": "053756324bbea21667e17477719a868210832d50bafa42e3c0def34a8fe99c1d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/etree.h",
-      "bytes": 9792,
-      "sha256": "713ea629cfb37a5317c9598224a61a264a9a3e969e2c3604e4d4fc961cfe6a9f"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/etree.pyx",
-      "bytes": 138294,
-      "sha256": "4e9b8f8af3a7c870ba25d45bc92f869e0b1be3526c1c0eecfb0d572106433ce9"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/etree_api.h",
-      "bytes": 17710,
-      "sha256": "482bcc7f0b411dcff7c32dac18b7cfcf197452e1d86e530be331f9f150061984"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/extensions.pxi",
-      "bytes": 32248,
-      "sha256": "b1ac71735999c80f167702082fdd01e2541bdf9d63f3e1bbb6d2cf23993ef07c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/ElementSoup.py",
-      "bytes": 320,
-      "sha256": "b3f74ba1b2ccb8a9f60e17b147e8835dd66b3058354632f2d5f787b08799329c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/__init__.py",
-      "bytes": 64425,
-      "sha256": "082e5676cbd2a6d661afd319c9ad6ab0be892956ef89876b1ce857ac68663918"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/_diffcommand.py",
-      "bytes": 2081,
-      "sha256": "933ffb10ff4f9985ae7339597068b0ef8feb1b47932af43696b3b4ae48b09581"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/_difflib.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 533496,
-      "sha256": "11f0993139c022d258e56f2321da9176b0ef0f99a8da0c8d15d6e339855943ae"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/_difflib.py",
-      "bytes": 85022,
-      "sha256": "e36558d7ecd70138d5bf27cdf284067ac8d05054a8ee29da80b8bc6468d52f94"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/_html5builder.py",
-      "bytes": 3230,
-      "sha256": "34b693f84bfe681809a5e425fba65b24284b64ae4657ece70e41ce243e55402e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/_setmixin.py",
-      "bytes": 1188,
-      "sha256": "f0814838b995cf41be5f3b03dad0849121563be7603c11e0bc7b9f0bc9e2ebbb"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/builder.py",
-      "bytes": 6187,
-      "sha256": "533debe6e8ae09da0dd143daee78282ccc0069d54886c9731af9513c68a063f3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/clean.py",
-      "bytes": 503,
-      "sha256": "594d0a7d70328c3167da88c4ed3d5d7e4e1c97f15db81bb965b1524dcf54a7fa"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/defs.py",
-      "bytes": 5398,
-      "sha256": "eb3e81d70b3fda5f73830dc32fb30beb6c300587ba9b9ade269ea6dee4caa6d4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/diff.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 361496,
-      "sha256": "f6dfe7c2dcc940f9eeaab118c21ce71269209754a5e35ffbd701257db5a53038"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/diff.py",
-      "bytes": 32989,
-      "sha256": "65ad01cbec9e6254048d4bbb9bbc4a076f3c90a8b2f15052e604f444f39a158d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/formfill.py",
-      "bytes": 9681,
-      "sha256": "ba6824d016e4008d56eaaf66bac15b2fe7039c8fda6a9d8db0b049aa4d149952"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/html5parser.py",
-      "bytes": 8634,
-      "sha256": "767c82e1ca87c72c23652ce4d26bb62fb4c74d98f1860e32178a67723bac6bfc"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/soupparser.py",
-      "bytes": 10197,
-      "sha256": "c68f15bcd78e11bf920a1b972ca09110287c27b1c18892c4f6c01b12c9285144"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/html/usedoctest.py",
-      "bytes": 249,
-      "sha256": "b4f966573e0a2b5191295e4324badd54409eaac4fd3e50f34aaa93a1d562e6cd"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/__init__.pxd",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/c14n.pxd",
-      "bytes": 1110,
-      "sha256": "0c141c389d1cfd84b6e39a2131bf1f9ae102d64172bf52eb358ffc31ffacc998"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/config.pxd",
-      "bytes": 96,
-      "sha256": "1fa32b97c22ddb5873448da1ccc21df56e3c42a918624a0b4f876788b366753c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/dtdvalid.pxd",
-      "bytes": 689,
-      "sha256": "36fd0eca48d87a1bf694ef998fefaaea34b74c00bf76f4153d280f32eb1ed4d3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/etree_defs.h",
-      "bytes": 14524,
-      "sha256": "87f52325398d52a3f228d36b581f61c66b7abf8085efff375d563c74e7f1a96d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/etreepublic.pxd",
-      "bytes": 10184,
-      "sha256": "067e1ddc99163ea5e9bad5ea23e789d3198faf03453d37c309aedac608c1ec53"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/extlibs/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/extlibs/libcharset.h",
-      "bytes": 1510,
-      "sha256": "180d05ba6adb348e150c6973ab795fe422da0b05e09f8ba7c369746ed1901702"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/extlibs/localcharset.h",
-      "bytes": 6338,
-      "sha256": "67f01a81a41eab468313b34fb153aa11fe273b829c529e3a820a3877438d20e4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/extlibs/zconf.h",
-      "bytes": 16921,
-      "sha256": "0718a11beb3295b345fb29a63b44b654b282d82c4cd0513f6225587f2b29b8bb"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/extlibs/zlib.h",
-      "bytes": 103848,
-      "sha256": "818667d6ab6a37fe7469cb06a7f0cb2c2cb2f2c948a03e5accf1a4a74bf3020a"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/htmlparser.pxd",
-      "bytes": 2802,
-      "sha256": "f6e01290fe5d53b384da508e2d3fb3d9ed35a926c5969e1e860c1da2cb45fea9"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libexslt/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libexslt/exslt.h",
-      "bytes": 3114,
-      "sha256": "7925b9b4c2407b049400d2ea93b00612253c6f605b08d4726ae1e77b3ee72925"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libexslt/exsltconfig.h",
-      "bytes": 1172,
-      "sha256": "407c7311b465bff87451206fa6bd19ae5d0cbb395cef5542aef811ea5aa72c46"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libexslt/exsltexports.h",
-      "bytes": 1077,
-      "sha256": "d499bd2935e6d8551424867a57af94c39e721b404c50b5f7fe0a32c437762cbf"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/HTMLparser.h",
-      "bytes": 9569,
-      "sha256": "b14e311aa8febc1b44bf39710378413d625ba227ef91ce05d61ca72979ac9779"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/HTMLtree.h",
-      "bytes": 3517,
-      "sha256": "43b5012856d0f1fc7877f74c9e647a6b2f0999f3a1a291640e9d81eb76242c35"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/SAX.h",
-      "bytes": 386,
-      "sha256": "4859c6dbb105ad819407d1c32ffc52206070127b39a65d3bac0a575938456453"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/SAX2.h",
-      "bytes": 4240,
-      "sha256": "45f14fe68de57be460f1b9c0d865bb2fb2fdfe97d70acdd389e38372fd434d66"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/c14n.h",
-      "bytes": 2742,
-      "sha256": "052057c3a9c866eb42f265af6d1acb2e6a168f0df046dfa733ddef8d718c0a6f"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/catalog.h",
-      "bytes": 4633,
-      "sha256": "1fdb2c4c26818ed0ea73e019a8293547b87c176883f6ccea2e32721e969ccd78"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/chvalid.h",
-      "bytes": 5087,
-      "sha256": "4d971c78da7a0b0d10958c08a8af46c7262a2f9522023a50ca3b7fcab6464d01"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/debugXML.h",
-      "bytes": 1667,
-      "sha256": "5d744d237f60256edb1910b84b313869df9227dd3a06c506cf70303ad90ab92e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/dict.h",
-      "bytes": 1770,
-      "sha256": "4b079a3c632d4d37f88dee9d35322813371f12fa6c013f7f3e147b142d0afab4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/encoding.h",
-      "bytes": 9623,
-      "sha256": "85a2fbadab70c36c242044469adc14a94d816d355ee76159154ecc9ab3a9b0f9"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/entities.h",
-      "bytes": 4419,
-      "sha256": "2c438203cdbafb47fc761449cc2ff686f515b121fb94a423ade6bd8524dd05ba"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/globals.h",
-      "bytes": 583,
-      "sha256": "347f33c912397172491a9e64d9a2f13a6fab7891063855fa2d83fcd860574656"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/hash.h",
-      "bytes": 7017,
-      "sha256": "2882290182817c6514df27568467a15327ee6ae673fcfb348326a66f3428feb7"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/list.h",
-      "bytes": 3128,
-      "sha256": "a21ee224d41a8d103f707b0d93d09c14f624696dac99fe09fcca5e74f3e30b89"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/nanoftp.h",
-      "bytes": 302,
-      "sha256": "db63c1b56849b9e60b16fc2e92de28168a1172dff1240f3785b96e1d104d5d43"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/nanohttp.h",
-      "bytes": 2124,
-      "sha256": "6cb6f362303200a98fdc2a2630e3c7e97694226bba6cd004485d47ad5b51bded"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/parser.h",
-      "bytes": 48498,
-      "sha256": "52aefe71ee7951402cbe8e27e8288194d4299a8c1ec2f5a13ac42d806335510f"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/parserInternals.h",
-      "bytes": 14539,
-      "sha256": "f3f5abe94811ce6f01467d513cbc72064c3a05a800743bd5a8c03f7b5f35fc42"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/relaxng.h",
-      "bytes": 5991,
-      "sha256": "55767be2be588dad3a2aaca97411dcf27783c0fc50d9a32bb161d2751b79a22e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/schemasInternals.h",
-      "bytes": 26233,
-      "sha256": "57c338227df37f6e045f9e58b7875c7f1c29ecda471985622a72cac2dcab3c9e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/schematron.h",
-      "bytes": 4255,
-      "sha256": "f0484f0e1bed94cc65f5ed02e6b49b12bb8ebf3252e410bf38e15babd4576676"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/threads.h",
-      "bytes": 1619,
-      "sha256": "993dc280ae255caefe3439d43855ea62e08ae9fc98ef44b706c1c5f939d3e399"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/tree.h",
-      "bytes": 36106,
-      "sha256": "cd344bb7a879c7a029c9e5e0b3dd02290652025da12a6edbe4dc6d3ca5101401"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/uri.h",
-      "bytes": 2855,
-      "sha256": "27db5e24799ee73f3cddce2dc05e6822611863e137c52be17521a9c9156dbc88"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/valid.h",
-      "bytes": 13226,
-      "sha256": "072eb521b3ef93f78bbb1edaf31d2639a972ee872515a48668513c6f6c597141"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xinclude.h",
-      "bytes": 3258,
-      "sha256": "2b72398e1c36cc0323dba2ee44d65cd79070bf6244da15b1c159f84c2aafd9be"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xlink.h",
-      "bytes": 5062,
-      "sha256": "4d52ce9084ab70a0de968f67fd7214c8f892b4361af0dc6e176773ef46811422"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlIO.h",
-      "bytes": 11948,
-      "sha256": "16f6ee3184f2d7e4b93d271a6c4d37c33d2858a7fadbaa665ef38f64db8b9bec"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlautomata.h",
-      "bytes": 4004,
-      "sha256": "ed27376203f3d592012821cf4b1b39a00c09119590d514f6932530f39a54b665"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlerror.h",
-      "bytes": 37561,
-      "sha256": "98c7e5b4cc54cdaea489205f3f641f9d8dd494c3ffac45ca7d7d30aee04b9780"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlexports.h",
-      "bytes": 2025,
-      "sha256": "23257700c79055b3a5d30923967357e01f16519fb918d2909b165cebe99a5945"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlmemory.h",
-      "bytes": 4658,
-      "sha256": "9bbc06bd5331373662b8e028def923c5a556b2d73c6902f36faa1b6e33ec79b1"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlmodule.h",
-      "bytes": 1198,
-      "sha256": "1115075260dd6519a1e8d8cb616529b1ee75acb591f2a3633c73ad7609a52c5d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlreader.h",
-      "bytes": 12387,
-      "sha256": "0401e29e548e4d75f70c46b1f419e268820f0172722c67f3ca6f51fb6ecb09c5"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlregexp.h",
-      "bytes": 2632,
-      "sha256": "feae82d57472f034b791298b6c42a9be42907224e08d326019cff3510ea6db63"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlsave.h",
-      "bytes": 2934,
-      "sha256": "cdc110afdb0ee42b05ae7a0e2ec86176ca8c12bf24e0078585b918c8d7cef45b"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlschemas.h",
-      "bytes": 7067,
-      "sha256": "e407cb9d851c7e6c47473834755a5d1e283efb8ba2d7e5c3c038292860ca0a25"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlschemastypes.h",
-      "bytes": 4583,
-      "sha256": "318c251a6a0a028de51d169a2a09c25e22e63d3f4a463771c8227b4c4c99ea33"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlstring.h",
-      "bytes": 5271,
-      "sha256": "7793e9ab13f5235b1f982507bd526d8e80bd87b84b1dc000439a24fd1b5fe742"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlunicode.h",
-      "bytes": 278,
-      "sha256": "f2cab7c045b6022c930ae73765c78e12471eee57eb23b5679117f011081cea95"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlversion.h",
-      "bytes": 5112,
-      "sha256": "a15a5a13fc5bb6d69e64d14a4ae49f70b39c796cfb2d080a3fbd59d66b1764da"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xmlwriter.h",
-      "bytes": 20688,
-      "sha256": "04453060d2b1df1ca60c4f6f7a992c10aef256af525d89b5776a509f394fcbdd"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xpath.h",
-      "bytes": 16156,
-      "sha256": "090bfa5ffa5186e5e8095a6aa035d807b15fbac2caec0b8fc4236283084d6000"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xpathInternals.h",
-      "bytes": 18504,
-      "sha256": "99cf41e6d7697ecb32cff34f533c30e9d2ae582b41c9b0620512644dee001385"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxml/xpointer.h",
-      "bytes": 1026,
-      "sha256": "0c0c4cb1f3e9d9249981716b3dbc4103ce11c133117f7e5083f2c16d4ccf4210"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/attributes.h",
-      "bytes": 957,
-      "sha256": "a8ac337c67fbafcf5eb0b0bae6cf7a898256440facf84cecb36fd5e8c9a8d619"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/documents.h",
-      "bytes": 2704,
-      "sha256": "9018a1807e69a91bc56a5866fdf3851ed2531614e905c9baf35c93e5dc60c1fc"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/extensions.h",
-      "bytes": 6899,
-      "sha256": "5b950cc89a943ffd73b7ab176749a07348002300c9ad9f208c1ca1cab5aabddf"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/extra.h",
-      "bytes": 1640,
-      "sha256": "e97dd6bb735d3edae5ab3f8aa28edd07eadc7279ecce2ea3df3839f7d8130728"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/functions.h",
-      "bytes": 1972,
-      "sha256": "7dce02663fbd29e047ccef7e59653f6cdaa6684640cf79fb34dc02948057935e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/imports.h",
-      "bytes": 1840,
-      "sha256": "d7c9088e81aa7455d1eb709edd9b73c6c4e2615dd718aa5c8586a43143c3b942"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/keys.h",
-      "bytes": 1155,
-      "sha256": "d7abf6e55125b92ee3621820ea0605c15c6018c9fed5cb67961856593e117016"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/namespaces.h",
-      "bytes": 1666,
-      "sha256": "5687d29f62a49fe6b927244a0a66378cfa7b6a6432de7d3dbf3cb429442de2ad"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/numbersInternals.h",
-      "bytes": 2019,
-      "sha256": "120e60619e69de1d3f7b9c3223ad52fb413afc0ad5273bf4cabeb78fa054d9f7"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/pattern.h",
-      "bytes": 2110,
-      "sha256": "b49f813dfb3d51882264c3284196e18a3de0ef1569a58abb4ebacebb6e5e47b4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/preproc.h",
-      "bytes": 896,
-      "sha256": "0ff2e311d1e1b1dc819c402f7e59f0160a11e211946fbda480485792498f46cc"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/security.h",
-      "bytes": 2652,
-      "sha256": "7d40f5732fd6c45093bd334017458e408538a7908d5a7d4b1c5c9925df85c795"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/templates.h",
-      "bytes": 2268,
-      "sha256": "6e7b7a26aba2e8a539a4d51d30d3db419919e5df954d6a82d1330690e955a08a"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/transform.h",
-      "bytes": 6311,
-      "sha256": "2024fb99e515d0e4c0c76ed668a56b2a3f9a52647d2d2a5335a38025dd944ad8"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/variables.h",
-      "bytes": 3143,
-      "sha256": "7100203dee1009c2b6b8a6d683b233fbda5e33dc561a6ee6dccea3426d2c8c80"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xslt.h",
-      "bytes": 1964,
-      "sha256": "c26171d90df53ddf08ab6a61010a58f49dd041ab5bf255a0de0001b6a285804c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xsltInternals.h",
-      "bytes": 57949,
-      "sha256": "d846c42989a7619ab41e31a750c025a6a9ea649bab457ce396093926cd5661a6"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xsltconfig.h",
-      "bytes": 2910,
-      "sha256": "715e6c71d44aeb198e1de3a0dce0b0ea105f710fe7aed36cfed29e7d7ebbdf4e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xsltexports.h",
-      "bytes": 1124,
-      "sha256": "d7e96e1fed1b0888010252805e157e76a1c17f038040d0da9a261bc489537f49"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xsltlocale.h",
-      "bytes": 942,
-      "sha256": "a69c4612625f648260c1143308cd3fefba7d58d7a4116ab536b75866b425e081"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/libxslt/xsltutils.h",
-      "bytes": 9085,
-      "sha256": "d5e82e62047dfa378d395941524b476e86aaf952d7e895eb68ef344df6c044a3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/lxml-version.h",
-      "bytes": 71,
-      "sha256": "d2b66a90c0892c41137b07a36ca7b877b8db8544c38384c8207de21ffd3cb4ad"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/relaxng.pxd",
-      "bytes": 2615,
-      "sha256": "1f31e543a98271ffed8ff259f4d015253540bfc49c0a413c21fab5e72ddb4b47"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/schematron.pxd",
-      "bytes": 1604,
-      "sha256": "1e86fbc61f8af8c2aaa7b5a21bcb6131a81fe44910ce681f8b876cd0417dd490"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/tree.pxd",
-      "bytes": 20179,
-      "sha256": "5c0a73311cbf2d2a82b50f8e4d2faf3525bb093fce5acb726df213d87f382ec0"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/uri.pxd",
-      "bytes": 145,
-      "sha256": "def397c3a01b48fc4033dba8ef54f5aa77f1fb077d7b35cb0d0b56b1bdb35f42"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xinclude.pxd",
-      "bytes": 804,
-      "sha256": "0ae3bf5d9341e84d892b5a975d69f5d403eb8c5415e6403a48cc9befb5999f40"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xmlerror.pxd",
-      "bytes": 58837,
-      "sha256": "390a9acb2b645743628003dbb1008272f9b2ee5b917b45e1573a537732633f78"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xmlparser.pxd",
-      "bytes": 13789,
-      "sha256": "408e2c84308ba62e70d93ac2a1fac6be81cbaed91ffb184db63094d0f05fd154"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xmlschema.pxd",
-      "bytes": 1702,
-      "sha256": "38b64f776583272a29897249ca8f9d032c981da79260588c008e2da888aff889"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xpath.pxd",
-      "bytes": 5603,
-      "sha256": "7bcf996146d11bb37598711302592727f42a02d78ea2cad82d18291fe3ac4e48"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/includes/xslt.pxd",
-      "bytes": 8241,
-      "sha256": "e32977a4ebbba40becc794dcf96e08582a01f3082d49247ad872358eabba8e4a"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/__init__.py",
-      "bytes": 13274,
-      "sha256": "b9ab9ead878a4e55850894aa89e207845e65eab615da6c9e109d0899dd4bcd17"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/rng/iso-schematron.rng",
-      "bytes": 18337,
-      "sha256": "56c5b13f28b78958890c36e3249c34c169041e42ebcfdce8080f3324ba2bf4de"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl",
-      "bytes": 3172,
-      "sha256": "39b79bb01f16b7e777b8803f539354f394e99d0dcfc4f5f7f1374e02aa2c31a7"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl",
-      "bytes": 4563,
-      "sha256": "430791ac820cfb315c820f7c19703609a59f21b8151345ca11e6127efbfaec0d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl",
-      "bytes": 11703,
-      "sha256": "c5267f124abf23eeb6669884e40a98607c055bfaa1f39e73b7d578feceeb6e46"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl",
-      "bytes": 39957,
-      "sha256": "c78d9027e771435c1a3f3c9db02a109e9d978f5e72e779d6e373bb06ea034479"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl",
-      "bytes": 2015,
-      "sha256": "4ebf419ceea9ce3556c21a897e6d74525bc0cbde4481f482cf688c96b5464fa4"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl",
-      "bytes": 71764,
-      "sha256": "b9ef2affcf17e1efe3b098b3a37d4644d07136177190413d7d8db4a2ad08ab09"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl",
-      "bytes": 20382,
-      "sha256": "04101db154a2e730337867a9b8dea04b5b1a408343a884d72a99669a3e1d4d68"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt",
-      "bytes": 3310,
-      "sha256": "3862e216cc2e2c9116e443d828e7a86aeb8224512d55aea3cb3044d4e70923df"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/iterparse.pxi",
-      "bytes": 16845,
-      "sha256": "ac446727d0f40af9fced80cc4aaf15f3cd03295d96b615ece415d2498d816a3e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/lxml.etree.h",
-      "bytes": 9792,
-      "sha256": "713ea629cfb37a5317c9598224a61a264a9a3e969e2c3604e4d4fc961cfe6a9f"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/lxml.etree_api.h",
-      "bytes": 17715,
-      "sha256": "04d3b125c8dbacce21fc2244904210609b52b47c91a9563e0d84ea48d4a16ad8"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/nsclasses.pxi",
-      "bytes": 9129,
-      "sha256": "e69ccd06106d96a39b3dd4e12fd408191b350f18f5aa7af43f25ee4c2511a938"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/objectify.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 2920952,
-      "sha256": "a07a2fddd30f00d74bb031ac2dbcf65a1db3e43ad7c37bc2b2b514ee2d1203d9"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/objectify.pyx",
-      "bytes": 75804,
-      "sha256": "1fad182fbaa8c2be9af1502af4bf626c77770675c0251e88c7908c61d64c01e3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/objectpath.pxi",
-      "bytes": 11450,
-      "sha256": "b394cd1b6f846da59628b140897df4dc1f79ccafd48bc6aeb01fffdd0bc5146c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/parser.pxi",
-      "bytes": 85911,
-      "sha256": "ab6ffae82fb181aeab314f04f08718a55f47fbc303b0aea92ecec4ba0c90a9b7"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/parsertarget.pxi",
-      "bytes": 6326,
-      "sha256": "bf53e277145a1b9822c177130e4a4123b3c3166b19b8e70ad32f4b76441a63c3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/proxy.pxi",
-      "bytes": 24015,
-      "sha256": "2e7aaa499554b09e4c9ee56b858acbc0c6c0296bafd5e3a7f9762c96eb7a08b3"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/public-api.pxi",
-      "bytes": 6756,
-      "sha256": "c953ee655d8bc0de4a8bbde60fce55f619d45f13ace5531e14c2ed40c35fd109"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/pyclasslookup.py",
-      "bytes": 92,
-      "sha256": "80b0f51ccd87b484d86221b38c439ec12c1b07b5e4571fcd66ffeab82b7bf4e7"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/readonlytree.pxi",
-      "bytes": 19008,
-      "sha256": "9f63118f3f351000d6057271d268a8b0df0f2788b9cb782e4094ff45917aa8a8"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/relaxng.pxi",
-      "bytes": 6339,
-      "sha256": "dce43e7d93333fe285e6f33a1d3a334fff5e7b72740c99e98fd45c1c2f0ba0cc"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/sax.cpython-313-x86_64-linux-gnu.so",
-      "bytes": 182200,
-      "sha256": "95a7b26b204d2d764de70360163d7d9f940c3791f23510bc5edc787b6da51a6e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/sax.py",
-      "bytes": 9708,
-      "sha256": "e6bc849ce30831e2e92de97e3c5a6cccc1eaf7d996366b271ab32f2d6226d543"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/saxparser.pxi",
-      "bytes": 33538,
-      "sha256": "c95ebb1560fad037e6162ee16d5fde2f224832eed7d8c39f5768385fdf62511e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/schematron.pxi",
-      "bytes": 6064,
-      "sha256": "176387299525e7bf9bc8193fc16b4f4e71d9d5fc258f416dc06dd5b86b46f946"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/serializer.pxi",
-      "bytes": 68063,
-      "sha256": "8885df79c8451dfbc5b36b1393bc0c232dec0c9c6668c3db34edf79a42cb0541"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/usedoctest.py",
-      "bytes": 230,
-      "sha256": "a9181929055c019725fb33740085d52673ac113517cf69cf5e4c6ececd651a09"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xinclude.pxi",
-      "bytes": 2456,
-      "sha256": "ede06b23f38ae3b9a6ac74348b16e2c5123ca4aa90d67c24315f8e98a515943e"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xmlerror.pxi",
-      "bytes": 50234,
-      "sha256": "30042ff7635716868c3b34fc59e78cd0bdd8ca4b05a28e3cb69cf72991d3a9c6"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xmlid.pxi",
-      "bytes": 6073,
-      "sha256": "e737fda11e9bb02b5abc688e9a294dc87a98c201bf6e7ac869b49dd92511b66d"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xmlschema.pxi",
-      "bytes": 8490,
-      "sha256": "9ae98da079e2e52dc140fb5c98e1d177ad4a45a556bb878e89edb041e0747ba1"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xpath.pxi",
-      "bytes": 19132,
-      "sha256": "6aa5b6e15f35edd531a6ce069dcf21ed39b74159484cabf1539ffd5a02542058"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xslt.pxi",
-      "bytes": 36482,
-      "sha256": "92c368de192bcd860a788733f2b4782e6f2cfe0d1717ea729cf4dd0b36081d10"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml/xsltext.pxi",
-      "bytes": 11088,
-      "sha256": "4c89838803e501ecc2d3b3fb458d4df580a103b02e2851fe1b9de15dd7a5f727"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/METADATA",
-      "bytes": 3279,
-      "sha256": "aad89f8107bc74045b86c9b7f7c0984196102520dd7faed5e4e45693b7c315ef"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/RECORD",
-      "bytes": 16721,
-      "sha256": "fba0fdb884855988877b32aa2c9c470506de2fb271ac277df063eb16e6ac741f"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/WHEEL",
-      "bytes": 152,
-      "sha256": "14fd72c649aab40454e034a232c58ae240af827e60e0c43aedc04bca4b3ffb5c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/licenses/LICENSE.txt",
-      "bytes": 1507,
-      "sha256": "8fc2b568133516e46845d2147917adeee1648e70ae9ab5ed6c5417afef4ce855"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/licenses/LICENSES.txt",
-      "bytes": 6221,
-      "sha256": "388fa99f3bde4447cd5a4cbb114037be026854db6cfe89e112691c1d8abdcf3c"
-    },
-    {
-      "path": "motor/_vendor_buscador/lxml-6.1.3.dist-info/top_level.txt",
-      "bytes": 5,
-      "sha256": "3630fdf3cc2a68aab9d769ec84d74bb7eb83c6c8e4a78061e759ba37e76152b9"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp/__init__.py",
-      "bytes": 103,
-      "sha256": "42e31a2eda72f776d431612ac5116a9f66259935906762a0bca6b133b4e67dca"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp/__init__.pyi",
-      "bytes": 29643,
-      "sha256": "1e084c099c59dd5622e40655af57f6c431ba18027d3caf67cf5d7a3ff412a60d"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp/primp.abi3.so",
-      "bytes": 15369632,
-      "sha256": "f326c9af8964b4a19cf2433f1bf1f034760bed46c6298d33553a93b0b2d2c42c"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp/py.typed",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp-2.0.1.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp-2.0.1.dist-info/METADATA",
-      "bytes": 3947,
-      "sha256": "50f4bb350b46e8a006206a7f26155a881956aae3f53f393eae0608bd6e8ee7d3"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp-2.0.1.dist-info/RECORD",
-      "bytes": 752,
-      "sha256": "3d82b5914708918d52b49dbba5301a131fcad9b768babc20e061072b6b3cb112"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp-2.0.1.dist-info/WHEEL",
-      "bytes": 145,
-      "sha256": "3e005108b72ca995d6499010b85d3f9c55b21a1a1b731b9118eb012029bfe0a9"
-    },
-    {
-      "path": "motor/_vendor_buscador/primp-2.0.1.dist-info/sboms/primp-python.cyclonedx.json",
-      "bytes": 292033,
-      "sha256": "106ce67da9e8136bd172ee894d11fc6410b7999954ea1f79f6ec23eefe30c5fb"
+      "path": "motor/SPEC_BUSCADOR_AGNOSTICO.md",
+      "bytes": 1465,
+      "sha256": "884047471cc0be693cf772129d4213babc7a4c5dc9ef86b5afc0070e79023c5a"
     },
     {
       "path": "motor/analogos_fase_v1.py",
       "bytes": 1019,
       "sha256": "d70be0fd85c4627c014b76dda49799837cc92f56465b3ff1f9088489d229ee8f"
+    },
+    {
+      "path": "motor/apuesta_destino_personal_022.py",
+      "bytes": 7428,
+      "sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302"
     },
     {
       "path": "motor/arcos_emocionales_laterales.json",
@@ -1732,8 +517,8 @@
     },
     {
       "path": "motor/ceb_runtime_v0_6_flow.py",
-      "bytes": 29001,
-      "sha256": "52ae4d57d8d336baa8b4d82e7841f668a4d937a296ca76bba1ac916ccc253ea5"
+      "bytes": 29108,
+      "sha256": "206d24c5e6cb2b900b6323904f80548717d08807299ebadddf5f3218dafd3c66"
     },
     {
       "path": "motor/coactivacion_escalas.py",
@@ -1866,6 +651,11 @@
       "sha256": "a69aa7bc1cf0988dcc22f26adda332f0f029ad92926fdcb55dfffee91e0287be"
     },
     {
+      "path": "motor/filtro_tokens_arquetipos_v1.py",
+      "bytes": 6880,
+      "sha256": "f9c20ce147f691181f46db159ef36f4580a755a84d00aa89322c77ad2976a95b"
+    },
+    {
       "path": "motor/forman_ricci_weighted_graph.py",
       "bytes": 2334,
       "sha256": "8a01c7fde5ad2d9849f686799cf05c61616e5e36cbda8b591d160c221e7229c8"
@@ -1911,6 +701,11 @@
       "sha256": "0101f666ecd70c9cd7aeaa3691f8c34e8d04e75a68594e61c2af3f481a12d519"
     },
     {
+      "path": "motor/guardian_pistas_llm_caldero_v1.py",
+      "bytes": 2369,
+      "sha256": "f54e5e1f1999bb33c79e4f58f1e3d612476eeda549d5d57d75ae41d8a52fd641"
+    },
+    {
       "path": "motor/guardian_tropos_beristain_v1.py",
       "bytes": 65554,
       "sha256": "1886af5e9247464a7f87f74a25863cf4a5eee46375c22d44668f80d81e8baf68"
@@ -1922,13 +717,13 @@
     },
     {
       "path": "motor/hipotesis_trayectoria_abierta_v1.py",
-      "bytes": 10174,
-      "sha256": "6072263ea9b44ed1b5602f63f209d9e603af69eac4ff94b8252b8e591f1e129a"
+      "bytes": 11242,
+      "sha256": "0199af0d65ebdaa1dfa10c1222cca871a1a3795d7e15d0f6f7d478be324fc4f7"
     },
     {
       "path": "motor/laterales_unico_v1.py",
-      "bytes": 89701,
-      "sha256": "3845fbccafdbf8cb5c36885abab4dffc4b945be4b5ee48833a13885a22a5aa20"
+      "bytes": 97272,
+      "sha256": "3ae6ffbf7a887c5219ca0db055240968d186c01136363ccc5e5181e7434c294b"
     },
     {
       "path": "motor/lectura_negativo_ricci_vs_billar_v0_1.py",
@@ -2292,8 +1087,8 @@
     },
     {
       "path": "motor/traza_campo_244.py",
-      "bytes": 5687,
-      "sha256": "7d1f397563b8f925349da22d7c4fea125bbe0eebd2a9fff44fa0da8de8d3097d"
+      "bytes": 1037,
+      "sha256": "4cf014fa0f60a9f65aedd6862dc6d3a5d322eaa0bcbfa1fdbb19aa32579d8e30"
     },
     {
       "path": "motor/tusi_par_indice_exploratorio_v0_1.py",
@@ -2521,9 +1316,19 @@
       "sha256": "277a7e5060830983b6ea6781afa00e89a8c0ca551d816d3cab0078a6f8574d14"
     },
     {
+      "path": "tests/test_filtro_tokens_arquetipos_v1.py",
+      "bytes": 1056,
+      "sha256": "177cf3551dd67580df1126ad3fc207e98f6fec3bb4b56eafd98aa26c74391c76"
+    },
+    {
       "path": "tests/test_focused_repairs.py",
       "bytes": 5246,
       "sha256": "40a60559c66d25e3b13e2e5ec0337655bc2004b3a39168be582e3995c80cb4a8"
+    },
+    {
+      "path": "tests/test_guardian_pistas_llm_caldero.py",
+      "bytes": 751,
+      "sha256": "d6c8fa0a4b2efbf6df23205c26d575d18c1b07451a59ca1a4a5eba07bccc3c32"
     },
     {
       "path": "tests/test_hipotesis_trayectoria_abierta.py",
@@ -2609,6 +1414,11 @@
       "path": "tests_integracion/test_pausa_reanudacion_tortugas.py",
       "bytes": 4170,
       "sha256": "bdd6635046227a05d145843ce5eb0b6672d9e85c616e3d1fbd94f2234ce2f91a"
+    },
+    {
+      "path": "traza_campo_244_v2.py",
+      "bytes": 7444,
+      "sha256": "14576719d6bf0fcc1f718d33db014b23952a3d50a6682fe75d73ae1ce30e442f"
     },
     {
       "path": "u5/jobs.txt",
@@ -2709,24 +1519,9 @@
       "path": "u7/confianza_apuesta_u7.py",
       "bytes": 7024,
       "sha256": "2f84e60a1ed246c20a5ca4eb80b5300dd41f3fca623e798ae550f5a226e04d48"
-    },
-    {
-      "path": "motor/apuesta_destino_personal_022.py",
-      "sha256": "4252fd4564877183fd8be86f579fdde59635eb547c139a04dd79acedc349b302",
-      "bytes": 7428
-    },
-    {
-      "path": "calibracion/gate_z90.py",
-      "sha256": "86e939f7ca23295e42d8494c5931d097f61f7aaca58d7b939d0d5caaca8ee698",
-      "bytes": 6677
-    },
-    {
-      "path": "CONTRATO_ENTRADA_LLM_ADDENDUM_Z_TRABAJO_20261024.txt",
-      "sha256": "b27f5f3a9b69a7e037a6a1451ae4066908aaf8d2861e072b7528f3d695bc34ea",
-      "bytes": 853
     }
   ],
-  "files_count": 542,
+  "files_count": 304,
   "hash_algorithm": "SHA-256",
   "schema": "UNIFICACION_SHA256_MANIFEST_V1",
   "excluidos_estado_mutable": [
@@ -2747,7 +1542,7 @@
   "seccion_vendor_declarada": {
     "prefijo": "motor/_vendor_buscador/",
     "incluido_en_files": true,
-    "archivos": 247,
+    "archivos": 0,
     "nota": "dependencias vendorizadas del buscador agnóstico (ddgs y deps); hasheadas archivo por archivo"
   },
   "note": "U6 motor de trabajo 2026-10-20: el manifiesto y los sumarios de hashes se excluyen entre sí para evitar ciclos. Deriva de archivos operativos = AVISO; Engine y patterns canónicos distintos = BLOQUEO."
