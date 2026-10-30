@@ -335,8 +335,14 @@ def _install_audit_hook():
             sys.addaudithook(_global_audit_hook)
             _AUDIT_HOOK_INSTALLED = True
 
+_ACTIVE_FLOW_TRACER = None
+
+
 class FlowTracer:
-    def __init__(self,ledger,parent=None): self.ledger=ledger; self.parent=parent; self.counts={}
+    def __init__(self,ledger,parent=None):
+        global _ACTIVE_FLOW_TRACER
+        self.ledger=ledger; self.parent=parent; self.counts={}
+        _ACTIVE_FLOW_TRACER = self
     def observable(self,mapping,name): return ObservableDict(mapping,ceb=self.ledger,name=name)
     def call(self,name,fn,*args,shared=None,terminal=False,**kwargs):
         base=str(name or getattr(fn,'__name__','anonymous')); self.counts[base]=self.counts.get(base,0)+1; sid=f'{base}#{self.counts[base]}'
