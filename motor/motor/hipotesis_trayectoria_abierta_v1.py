@@ -48,7 +48,7 @@ def _direction(feat: Dict[str, Any], n_cuts: int) -> Dict[str, Any]:
             "n_cortes_observados": n_cuts}
 
 
-def construir(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, Any] | None = None) -> Dict[str, Any]:
+def _construir_impl(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, Any] | None = None) -> Dict[str, Any]:
     pred = result.get("predictor") or {}
     candidates = [c for c in (pred.get("candidates") or []) if isinstance(c, dict) and c.get("family")]
     candidates.sort(key=lambda c: (-_num(c.get("rank_fusion")), str(c.get("family"))))
@@ -186,3 +186,24 @@ def construir(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, 
             "catalogo_244_modificado": False,
         },
     }
+
+
+def _ceb_from_result(result: Dict[str, Any]):
+    """Obtiene el verificador CEB del ObservableDict del núcleo, si esta corrida lo instrumenta."""
+    motor = result.get("motor") if isinstance(result, dict) else None
+    ceb = getattr(motor, "_ceb", None)
+    if ceb is not None and callable(getattr(ceb, "call", None)):
+        return ceb
+    return None
+
+
+def construir(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, Any] | None = None) -> Dict[str, Any]:
+    """Instrumenta la ejecución lateral en CEB sin alterar su cálculo ni su salida."""
+    ceb = _ceb_from_result(result)
+    if ceb is None:
+        return _construir_impl(result, case, patterns)
+    return ceb.call(
+        "hipotesis_trayectoria_abierta_v1",
+        lambda: _construir_impl(result, case, patterns),
+        shared=[result, case],
+    )
