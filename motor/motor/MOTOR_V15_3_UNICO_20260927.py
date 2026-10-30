@@ -1569,6 +1569,24 @@ def _registrar_latencia_por_frente(fused, histories, motor, info, gate_ctx, gate
                                 "latency_events_omitidos":_rep011}}
 
 
+def _candidate_history_for_cut(cut):
+    """Universo de candidatas del corte: unión PAC, con ejes de procedencia."""
+    by_family = {}
+    for axis, key in (("P", "P_candidatos_0a3"), ("A", "A_candidatos_0a3"), ("C", "C_candidatos_0a3")):
+        for item in (cut.get(key) or []):
+            if isinstance(item, dict) and item.get("familia"):
+                family = str(item["familia"])
+                row = by_family.setdefault(family, {"familia": family, "ejes": []})
+                if axis not in row["ejes"]:
+                    row["ejes"].append(axis)
+    return list(by_family.values())
+
+
+def _candidate_histories_from_cuts(cuts):
+    """Misma construcción PAC para corrida principal y contrafactuales."""
+    return [_candidate_history_for_cut(cut) for cut in (cuts or [])]
+
+
 def _predict(boards, histories, motor, features, gate_ctx=None, adversarial_exclude_dimensions=()):
     names=set()
     for h in histories: names.update(x["familia"] for x in h)
@@ -2518,17 +2536,8 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     boards=[]; histories=[]
     for c in motor.get("cuts") or []:
         boards.append({"P":dict(c.get("P_FULL_244") or {}),"A":dict(c.get("A_FULL_244") or {}),"C":dict(c.get("C_FULL_244") or {})})
-        # Universo de candidatas por corte = unión de los tres ejes PAC.
-        # Antes solo entraba P: una familia sustentada en A o C podía quedar
-        # fuera del predictor aunque figurara entre las primeras del tablero.
-        _hist_by_family = {}
-        for _axis, _key in (("P", "P_candidatos_0a3"), ("A", "A_candidatos_0a3"), ("C", "C_candidatos_0a3")):
-            for _item in (c.get(_key) or []):
-                if isinstance(_item, dict) and _item.get("familia"):
-                    _row = _hist_by_family.setdefault(str(_item["familia"]), {"familia": str(_item["familia"]), "ejes": []})
-                    if _axis not in _row["ejes"]:
-                        _row["ejes"].append(_axis)
-        histories.append(list(_hist_by_family.values()))
+        # Universo PAC compartido con las ablaciones adversariales.
+        histories.append(_candidate_history_for_cut(c))
     # Legacy CAMEO->244 adapter is audit-only; active path is CAMEO -> 703 -> lateral bus.
     cameo_adapter=_load("cameo_to_244_adapter_v1", "cameo_to_244_adapter_v1.py")
     cameo_244={"status":"AUDIT_ONLY","scores":{},"feeds_H":False,"can_decide_H":False,"mutates_canonical":False}
@@ -3032,7 +3041,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                     _cf_boards=[]; _cf_histories=[]
                     for _c in _cf_motor.get("cuts") or []:
                         _cf_boards.append({"P":dict(_c.get("P_FULL_244") or {}),"A":dict(_c.get("A_FULL_244") or {}),"C":dict(_c.get("C_FULL_244") or {})})
-                        _cf_histories.append(list(_c.get("P_candidatos_0a3") or []))
+                        _cf_histories.append(_candidate_history_for_cut(_c))
                     # Deliberately strip every lateral/sidecar output: this is the core-only, no-noise test.
                     _cf_features={"cuts":_cf_case["cuts"]}
                     _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None)
