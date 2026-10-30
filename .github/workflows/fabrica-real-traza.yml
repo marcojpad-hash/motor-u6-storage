@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      FABRICA_CORRIDAS: ${{ runner.temp }}/FABRICA_CORRIDAS
+      FABRICA_CORRIDAS: /tmp/FABRICA_CORRIDAS
       FABRICA_SYNC: "0"
       FABRICA_MODELO: "ChatGPT_CEB_smoke"
       CALDERO_BUSQUEDA_VIVA: "1"
@@ -58,6 +58,6 @@ jobs:
           name: F006_TRAZA_V2_EVIDENCIA
           path: |
             casos/fabrica/lotes/F006_TRAZA_V2_*.json
-            ${{ runner.temp }}/FABRICA_CORRIDAS/F006_TRAZA_V2/
+            /tmp/FABRICA_CORRIDAS/F006_TRAZA_V2/
           if-no-files-found: warn
           retention-days: 30
