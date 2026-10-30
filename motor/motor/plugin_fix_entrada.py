@@ -28,26 +28,16 @@ from typing import List, Sequence, Tuple
 from plugin_alias_reactivacion import traducir
 from plugin_embudo_clinico import etiquetar
 
-# "poder" y "escalada" son señales ambiguas: también aparecen en agencia política.
-# Solo cuentan como conquista inequívoca los marcadores de dominio/beneficio personal.
-CONQUISTA_FUERTE = {"sed_de_mando", "codicia", "maquiavelismo"}
-CONQUISTA_AMBIGUA = {"poder", "escalada"}
+CONQUISTA = {"poder", "sed_de_mando", "escalada", "codicia", "maquiavelismo"}
 AGENCIA = {"autonomia", "inconformismo", "desafio_autoridad", "humildad"}
-AGENCIA_CONTEXTUAL = {
-    "rebeldia", "idealismo", "insurreccion", "liderazgo",
-    "desafio_autoridad", "rechazo_ritual_autoritario",
-    "autoexpresion", "inconformismo",
-}
 
 
 def campo(tokens: Sequence[Tuple[str, float]]) -> dict:
     n = {t for t, v in tokens if v >= 0.5}
     return {
-        "conquista": len(n & CONQUISTA_FUERTE),
-        "conquista_ambigua": len(n & CONQUISTA_AMBIGUA),
-        "agencia": len(n & (AGENCIA | AGENCIA_CONTEXTUAL)),
+        "conquista": len(n & CONQUISTA),
+        "agencia": len(n & AGENCIA),
         "tiene_ambicion": "ambicion" in n,
-        "marcadores_agencia_contextual": sorted(n & AGENCIA_CONTEXTUAL),
     }
 
 
@@ -55,18 +45,9 @@ def remapeo_ambicion(
     tokens: Sequence[Tuple[str, float]],
 ) -> List[Tuple[str, float]]:
     c = campo(tokens)
-    agencia_politica = (
-        c["conquista"] == 0
-        and c["agencia"] >= 2
-        and bool(set(c["marcadores_agencia_contextual"]) & {
-            "rebeldia", "insurreccion", "desafio_autoridad", "rechazo_ritual_autoritario"
-        })
-    )
     out = []
     for t, v in tokens:
-        if t == "ambicion" and c["conquista"] == 0 and agencia_politica:
-            out.append(("rebeldia", v))
-        elif t == "ambicion" and c["conquista"] == 0 and c["conquista_ambigua"] == 0:
+        if t == "ambicion" and c["conquista"] == 0:
             out.append(("autonomia", v))
         else:
             out.append((t, v))
