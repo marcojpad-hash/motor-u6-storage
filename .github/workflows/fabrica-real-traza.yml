@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "motor/motor/traza_campo_244.py"
+      - "motor/motor/MOTOR_V15_3_UNICO_20260927.py"
+      - "motor/motor/plugin_fix_entrada.py"
       - "motor/motor/hipotesis_trayectoria_abierta_v1.py"
       - "motor/motor/ceb_runtime_v0_6_flow.py"
       - "motor/traza_campo_244_v2.py"
