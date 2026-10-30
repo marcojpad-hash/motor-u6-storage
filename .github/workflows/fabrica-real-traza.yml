@@ -6,6 +6,7 @@ on:
     paths:
       - "motor/motor/traza_campo_244.py"
       - "motor/motor/hipotesis_trayectoria_abierta_v1.py"
+      - "motor/motor/ceb_runtime_v0_6_flow.py"
       - "motor/traza_campo_244_v2.py"
       - "casos/fabrica/fabrica.py"
       - "motor/calibracion/arnes_calibracion.py"
@@ -33,12 +34,12 @@ jobs:
         run: python -m pip install --upgrade numpy ddgs primp lxml click
       - name: Ejecutar un caso real sellado por la fábrica
         run: |
-          python -B casos/fabrica/fabrica.py correr --lote F006_TRAZA_V2_R4 --rehacer CAL_F005_01_COURBET
+          python -B casos/fabrica/fabrica.py correr --lote F006_TRAZA_V2_R5 --rehacer CAL_F005_01_COURBET
       - name: Verificar recibos, salida y candados
         run: |
           python - <<'PY'
           import json, os, pathlib, sys
-          root=pathlib.Path("casos/fabrica/lotes/F006_TRAZA_V2_R4_RESUMEN.json")
+          root=pathlib.Path("casos/fabrica/lotes/F006_TRAZA_V2_R5_RESUMEN.json")
           assert root.is_file(), "FALTA_RESUMEN_FABRICA"
           r=json.loads(root.read_text())
           assert r["candados_antes"] and all(r["candados_antes"].values()), "CANDADO_ANTES"
@@ -48,7 +49,7 @@ jobs:
           assert len(r.get("filas",[]))==1, "CASO_NO_EJECUTADO"
           f=r["filas"][0]
           assert f.get("returncode")==0, "MOTOR_NO_COMPLETADO: "+str(f.get("returncode"))
-          case_dir=pathlib.Path(os.environ["FABRICA_CORRIDAS"])/"F006_TRAZA_V2_R4"/"corridas"
+          case_dir=pathlib.Path(os.environ["FABRICA_CORRIDAS"])/"F006_TRAZA_V2_R5"/"corridas"
           files=list(case_dir.glob("*.json"))
           assert files, "SIN_JSON_DE_CORRIDA"
           print(json.dumps({"case":f["case_id"],"subject":f["sujeto"],"returncode":f["returncode"],"engine_before_after":[f["engine_ok_antes"],f["engine_ok_despues"]],"ceb_caldero":r["compuerta_caldero"]["veredicto"],"ceb_piezas":r["compuerta_piezas"]["veredicto"],"run_json_files":[str(x) for x in files]},ensure_ascii=False,indent=2))
@@ -57,9 +58,9 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: F006_TRAZA_V2_R4_EVIDENCIA
+          name: F006_TRAZA_V2_R5_EVIDENCIA
           path: |
-            casos/fabrica/lotes/F006_TRAZA_V2_R4_*.json
-            /tmp/FABRICA_CORRIDAS/F006_TRAZA_V2_R4/
+            casos/fabrica/lotes/F006_TRAZA_V2_R5_*.json
+            /tmp/FABRICA_CORRIDAS/F006_TRAZA_V2_R5/
           if-no-files-found: warn
           retention-days: 30
