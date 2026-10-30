@@ -6,12 +6,11 @@ Se unificó la construcción del historial de candidatas PAC para que la predicc
 ## Antes → ahora (por archivo / función)
 - `motor/motor/MOTOR_V15_3_UNICO_20260927.py::_candidate_history_for_cut` — antes la corrida principal unía P/A/C dentro del bucle y la ablación `token_core` reconstruía el historial solo desde P; ahora ambas rutas usan el mismo helper PAC y conservan `ejes`.
 - `tests/test_traza_campo_244_v2.py` — antes cubría ocho condiciones de traza; ahora añade dos regresiones: candidata exclusiva de A/C no descartada y procedencia PAC deduplicada.
-- `tests/test_predictor_pac_history.py` — añade cuatro pruebas unitarias independientes del helper PAC.
 
 ## Commits
 - Motor: `04a00e0d13e012e317d548e0a8826842884f8e67`
-- Pruebas independientes: `5536e0c6959237e9431a5ac9aff0361fa9c31162`
-- Suite CI: `36f188e19e1e1f476eafc061cf8842e4d7cd4721`
+- Suite CI (corrección de importación sin NumPy): `9be120e6af166c8a41313f85c333b3f917a55b7b`
+- Documentación: `6663fd3bb1fb1d6dba3813c6b73e7a957e5a21d5`
 
 ## Hashes canónicos verificados
 Engine: `665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082`.
@@ -19,4 +18,4 @@ Catálogo 244: `d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1
 No se modificaron.
 
 ## Pruebas
-La ejecución CI fue activada por el commit de pruebas. Resultado pendiente de confirmación al momento de crear esta entrada; no se declara aprobada hasta leer el resultado de Actions.
+10 pruebas aprobadas, 0 fallidas. Workflow `Traza campo 244`: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41082009895. Workflow `Traza Campo 244 V2 specs`: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41082009804. La fábrica real también terminó correctamente tras el cambio del motor: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081591816. Artefacto: `12989457446` (SHA-256 `0ef1887f395e229e77f1ea6b37ae9025fc23d63c6e3789fedfa7489913871ffb`).
