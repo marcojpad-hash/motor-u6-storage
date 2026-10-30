@@ -407,8 +407,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 324143,
-      "sha256": "b3e4cf4a12abe27218bae96092406cf84bbd606e89135ab9dcaa2070265abca4"
+      "bytes": 325913,
+      "sha256": "780fa595a60d80ae1133c71c63066b4f52ea94f2d3c3e0b1bc9f84f28c4d4f33"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -862,8 +862,8 @@
     },
     {
       "path": "motor/plugin_fix_entrada.py",
-      "bytes": 2637,
-      "sha256": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd"
+      "bytes": 3573,
+      "sha256": "74390ad64d61568804348bb671e797fe69cebd7e92e1dbf02508ea7ffb924ff5"
     },
     {
       "path": "motor/plugin_guardia_no_cruce.py",
