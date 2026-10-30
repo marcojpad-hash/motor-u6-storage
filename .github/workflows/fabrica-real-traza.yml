@@ -31,12 +31,12 @@ jobs:
         run: python -m pip install --upgrade ddgs primp lxml click
       - name: Ejecutar un caso real sellado por la fábrica
         run: |
-          python -B casos/fabrica/fabrica.py correr --lote F006_TRAZA_V2 --rehacer CAL_F005_01_COURBET
+          python -B casos/fabrica/fabrica.py correr --lote F006_TRAZA_V2_R1 --rehacer CAL_F005_01_COURBET
       - name: Verificar recibos, salida y candados
         run: |
           python - <<'PY'
           import json, os, pathlib, sys
-          root=pathlib.Path("casos/fabrica/lotes/F006_TRAZA_V2_RESUMEN.json")
+          root=pathlib.Path("casos/fabrica/lotes/F006_TRAZA_V2_R1_RESUMEN.json")
           assert root.is_file(), "FALTA_RESUMEN_FABRICA"
           r=json.loads(root.read_text())
           assert r["candados_antes"] and all(r["candados_antes"].values()), "CANDADO_ANTES"
@@ -46,7 +46,7 @@ jobs:
           assert len(r.get("filas",[]))==1, "CASO_NO_EJECUTADO"
           f=r["filas"][0]
           assert f.get("returncode")==0, "MOTOR_NO_COMPLETADO: "+str(f.get("returncode"))
-          case_dir=pathlib.Path(os.environ["FABRICA_CORRIDAS"])/"F006_TRAZA_V2"/"corridas"
+          case_dir=pathlib.Path(os.environ["FABRICA_CORRIDAS"])/"F006_TRAZA_V2_R1"/"corridas"
           files=list(case_dir.glob("*.json"))
           assert files, "SIN_JSON_DE_CORRIDA"
           print(json.dumps({"case":f["case_id"],"subject":f["sujeto"],"returncode":f["returncode"],"engine_before_after":[f["engine_ok_antes"],f["engine_ok_despues"]],"ceb_caldero":r["compuerta_caldero"]["veredicto"],"ceb_piezas":r["compuerta_piezas"]["veredicto"],"run_json_files":[str(x) for x in files]},ensure_ascii=False,indent=2))
@@ -55,9 +55,9 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: F006_TRAZA_V2_EVIDENCIA
+          name: F006_TRAZA_V2_R1_EVIDENCIA
           path: |
-            casos/fabrica/lotes/F006_TRAZA_V2_*.json
-            /tmp/FABRICA_CORRIDAS/F006_TRAZA_V2/
+            casos/fabrica/lotes/F006_TRAZA_V2_R1_*.json
+            /tmp/FABRICA_CORRIDAS/F006_TRAZA_V2_R1/
           if-no-files-found: warn
           retention-days: 30
