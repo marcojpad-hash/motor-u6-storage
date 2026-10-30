@@ -118,7 +118,7 @@ def correr(carpeta: Path, salida: Path, pesos) -> int:
                                 cwd=str(ROOT), env=env, text=True, capture_output=True)
             # 0 = COMPLETED, 5 = COMPLETED_WITH_METADATA_GAP (sellable, se anota); 6 = PAUSADA (no sellable) y resto = error
             if pr.returncode not in (0, 5) or not out.is_file():
-                registro["errores"].append({"caso": p.name, "peso": w, "returncode": pr.returncode, "stderr": pr.stderr[-1500:]}); continue
+                registro["errores"].append({"caso": p.name, "peso": w, "returncode": pr.returncode, "stdout": pr.stdout[-4000:], "stderr": pr.stderr[-4000:]}); continue
             fila["por_peso"][f"{w:g}"] = {**extraer(json.loads(out.read_text(encoding="utf-8")), w), "returncode": pr.returncode}
         registro["casos"][cid] = fila
     registro["sha256_registro"] = _sha_obj({k: v for k, v in registro.items() if k != "sha256_registro"})
