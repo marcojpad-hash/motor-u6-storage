@@ -1,0 +1,63 @@
+name: Fabrica real - smoke CEB traza 244
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "motor/motor/traza_campo_244.py"
+      - "motor/traza_campo_244_v2.py"
+      - "casos/fabrica/fabrica.py"
+      - ".github/workflows/fabrica-real-traza.yml"
+permissions:
+  contents: read
+jobs:
+  fabrica-real:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FABRICA_CORRIDAS: ${{ runner.temp }}/FABRICA_CORRIDAS
+      FABRICA_SYNC: "0"
+      FABRICA_MODELO: "ChatGPT_CEB_smoke"
+      CALDERO_BUSQUEDA_VIVA: "1"
+      CALDERO_BUSCADOR: "auto"
+      FABRICA_CALDERO_REQUERIDO: "1"
+      FABRICA_PIEZAS_REQUERIDAS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias del buscador vivo
+        run: python -m pip install --upgrade ddgs primp lxml click
+      - name: Ejecutar un caso real sellado por la fábrica
+        run: |
+          python -B casos/fabrica/fabrica.py correr --lote F006_TRAZA_V2 --rehacer CAL_F005_01_COURBET
+      - name: Verificar recibos, salida y candados
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, sys
+          root=pathlib.Path("casos/fabrica/lotes/F006_TRAZA_V2_RESUMEN.json")
+          assert root.is_file(), "FALTA_RESUMEN_FABRICA"
+          r=json.loads(root.read_text())
+          assert r["candados_antes"] and all(r["candados_antes"].values()), "CANDADO_ANTES"
+          assert r["candados_despues"] and all(r["candados_despues"].values()), "CANDADO_DESPUES"
+          assert r["compuerta_caldero"]["veredicto"]=="OK", "CEB_CALDERO: "+str(r["compuerta_caldero"].get("incumplimientos"))
+          assert r["compuerta_piezas"]["veredicto"]=="OK", "CEB_PIEZAS: "+str(r["compuerta_piezas"].get("fallos_ejecucion"))+" / "+str(r["compuerta_piezas"].get("requiere_contrato"))
+          assert len(r.get("filas",[]))==1, "CASO_NO_EJECUTADO"
+          f=r["filas"][0]
+          assert f.get("returncode")==0, "MOTOR_NO_COMPLETADO: "+str(f.get("returncode"))
+          case_dir=pathlib.Path(os.environ["FABRICA_CORRIDAS"])/"F006_TRAZA_V2"/"corridas"
+          files=list(case_dir.glob("*.json"))
+          assert files, "SIN_JSON_DE_CORRIDA"
+          print(json.dumps({"case":f["case_id"],"subject":f["sujeto"],"returncode":f["returncode"],"engine_before_after":[f["engine_ok_antes"],f["engine_ok_despues"]],"ceb_caldero":r["compuerta_caldero"]["veredicto"],"ceb_piezas":r["compuerta_piezas"]["veredicto"],"run_json_files":[str(x) for x in files]},ensure_ascii=False,indent=2))
+          PY
+      - name: Guardar evidencia completa de la corrida
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: F006_TRAZA_V2_EVIDENCIA
+          path: |
+            casos/fabrica/lotes/F006_TRAZA_V2_*.json
+            ${{ runner.temp }}/FABRICA_CORRIDAS/F006_TRAZA_V2/
+          if-no-files-found: warn
+          retention-days: 30
