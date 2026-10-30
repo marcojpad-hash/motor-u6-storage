@@ -2543,7 +2543,17 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     boards=[]; histories=[]
     for c in motor.get("cuts") or []:
         boards.append({"P":dict(c.get("P_FULL_244") or {}),"A":dict(c.get("A_FULL_244") or {}),"C":dict(c.get("C_FULL_244") or {})})
-        histories.append(list(c.get("P_candidatos_0a3") or []))
+        # Universo de candidatas por corte = unión de los tres ejes PAC.
+        # Antes solo entraba P: una familia sustentada en A o C podía quedar
+        # fuera del predictor aunque figurara entre las primeras del tablero.
+        _hist_by_family = {}
+        for _axis, _key in (("P", "P_candidatos_0a3"), ("A", "A_candidatos_0a3"), ("C", "C_candidatos_0a3")):
+            for _item in (c.get(_key) or []):
+                if isinstance(_item, dict) and _item.get("familia"):
+                    _row = _hist_by_family.setdefault(str(_item["familia"]), {"familia": str(_item["familia"]), "ejes": []})
+                    if _axis not in _row["ejes"]:
+                        _row["ejes"].append(_axis)
+        histories.append(list(_hist_by_family.values()))
     # Legacy CAMEO->244 adapter is audit-only; active path is CAMEO -> 703 -> lateral bus.
     cameo_adapter=_load("cameo_to_244_adapter_v1", "cameo_to_244_adapter_v1.py")
     cameo_244={"status":"AUDIT_ONLY","scores":{},"feeds_H":False,"can_decide_H":False,"mutates_canonical":False}
