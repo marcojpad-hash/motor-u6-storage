@@ -1986,33 +1986,9 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             authorized=_artifacts)
         if not _integrity.get("ok"):
             raise RuntimeError("EXECUTION_INTEGRITY_FAILURE:"+json.dumps(_integrity.get("anomalies"),ensure_ascii=False,sort_keys=True))
-    # PATCH U6: resolver ambigüedad léxica por contexto de la misma ventana ANTES
-    # de Engine_V5. La entrada original permanece intacta para auditoría y trazabilidad.
-    _cuts_motor = json.loads(json.dumps(case["cuts"], ensure_ascii=False, default=str))
-    _entrada_semantica = {"status": "NO_APLICADO", "version": "FIX_ENTRADA_CONTEXTUAL_V2",
-                          "input_inalterado": True, "cambios": []}
-    _fix_entrada = _load("fix_entrada_contextual", "plugin_fix_entrada.py")
-    if _fix_entrada is not None and hasattr(_fix_entrada, "preparar_corte"):
-        for _c in _cuts_motor:
-            _pos = [(e, i, str(t[0]), float(t[1])) for e in ("P", "A", "C")
-                    for i, t in enumerate(_c.get(e) or [])]
-            _flat = [(t, w) for _, _, t, w in _pos]
-            _hecho = str(_c.get("hecho") or " ".join(
-                str(x.get("afirmacion") or "") for x in (_c.get("evidencia") or []) if isinstance(x, dict)))
-            _, _fixed = _fix_entrada.preparar_corte(str(_c.get("id") or _c.get("corte") or ""),
-                                                    _flat, hechos=_hecho)
-            for (_e, _i, _old, _w), (_new, _new_w) in zip(_pos, _fixed):
-                if _old != _new:
-                    _c[_e][_i] = [_new, _new_w]
-                    _entrada_semantica["cambios"].append({
-                        "corte": _c.get("id") or _c.get("corte"), "eje": _e,
-                        "de": _old, "a": _new, "peso": _w,
-                        "motivo": "contexto de agencia política de la misma ventana; sin datos posteriores"
-                    })
-        _entrada_semantica["status"] = "APLICADO" if _entrada_semantica["cambios"] else "SIN_CAMBIOS"
     def _native_call():
         try:
-            return native.correr_5x3(_cuts_motor,pregunta=case.get("question",case["case_id"]),
+            return native.correr_5x3(case["cuts"],pregunta=case.get("question",case["case_id"]),
                                      annex_traza=True,obstaculo=case.get("obstaculo"),texto_polaridad=case.get("texto_polaridad"),
                                      monte_carlo=monte_carlo,
                                      marcador_limite=case.get("marcador_limite_geometrico") or {"modo":"ESTIMADO_DESDE_PREFIJO"})
@@ -2022,7 +1998,6 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             close_all=getattr(native,"_close_all_engines",None)
             if callable(close_all): close_all()
     motor=ceb.call("native_core", _native_call, shared=[case]) if ceb else _native_call()
-    motor["entrada_semantica_contextual"] = _entrada_semantica
     if ceb:
         motor=ceb.observable(motor, "motor")
         _native_sid=ceb.latest_id("native_core")
