@@ -220,7 +220,7 @@
     {
       "path": "UNIFICACION_SHA256_MANIFEST.json",
       "bytes": 52853,
-      "sha256": "5441301707cd3fa6ed95a11b20f72930811c0865d4dc73ca60a54245f062635b"
+      "sha256": "c5da907ef943cf7a415e460ff18a0a73d76e1e2ae197e86ac747e5f377a217d3"
     },
     {
       "path": "audit/CORRIDA_REAL_HIPOTESIS_ABIERTAS_20261020.json",
@@ -414,8 +414,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 324846,
-      "sha256": "4068cca5fd2da5865484339d729a7b004470bebab9e993156411145dd9162f7a"
+      "bytes": 324987,
+      "sha256": "23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
