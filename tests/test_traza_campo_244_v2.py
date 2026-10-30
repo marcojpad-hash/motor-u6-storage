@@ -62,6 +62,25 @@ class TrazaCampo244RuntimeSpecs(unittest.TestCase):
             self.assertEqual(result["modulo"], "TRAZA_CAMPO_244_V2")
             self.assertEqual(result["integridad"]["n_valores_ausentes"], 1)
 
+    def test_predictor_candidate_history_unions_pac(self):
+        import importlib.util
+        module_path = pathlib.Path(__file__).resolve().parents[1] / "motor" / "motor" / "MOTOR_V15_3_UNICO_20260927.py"
+        spec = importlib.util.spec_from_file_location("motor_v153_pac_regression", module_path)
+        predictor = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(predictor)
+        cuts = [{"P_candidatos_0a3": [{"familia": "p_family"}], "A_candidatos_0a3": [{"familia": "a_only"}, {"familia": "shared"}], "C_candidatos_0a3": [{"familia": "c_only"}, {"familia": "shared"}]}]
+        histories = predictor._candidate_histories_from_cuts(cuts)
+        self.assertEqual({row["familia"] for row in histories[0]}, {"p_family", "a_only", "c_only", "shared"})
+
+    def test_predictor_candidate_history_preserves_axis_provenance(self):
+        import importlib.util
+        module_path = pathlib.Path(__file__).resolve().parents[1] / "motor" / "motor" / "MOTOR_V15_3_UNICO_20260927.py"
+        spec = importlib.util.spec_from_file_location("motor_v153_pac_provenance", module_path)
+        predictor = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(predictor)
+        cut = {"P_candidatos_0a3": [{"familia": "shared"}, {"familia": "shared"}], "A_candidatos_0a3": [{"familia": "shared"}], "C_candidatos_0a3": [{"familia": "shared"}]}
+        self.assertEqual(predictor._candidate_history_for_cut(cut), [{"familia": "shared", "ejes": ["P", "A", "C"]}])
+
     def test_empty_input_rejected(self):
         with self.assertRaises(ValueError):
             traza.analizar([])
