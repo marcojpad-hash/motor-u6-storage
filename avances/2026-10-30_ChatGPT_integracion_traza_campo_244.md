@@ -11,5 +11,5 @@ Se conectó la implementación lateral V2 al punto de entrada fijo que carga el 
 ## Hashes canónicos verificados
 No se modificaron `motor/Engine_V5_CANONICO_SOLO.py` ni `motor/patterns_final_v14.json`. Sus hashes protegidos permanecen como contrato del repositorio: Engine `665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082`; catálogo `d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1`.
 
-## Pruebas: pendientes de CI al momento de crear este commit
-La suite ahora importa el módulo mediante la ruta exacta que usa el runner y comprueba ausencia sin imputación, deltas/rangos, umbral renovable, entrada vacía, valores no finitos y corte único. El resultado de ejecución se registrará tras consultar GitHub Actions; no se considera aprobado antes de esa ejecución.
+## Pruebas: 7 passed, 0 skipped, 0 failed (sí)
+GitHub Actions ejecutó la suite sobre el commit `e1d68b6e9116e94096747caa1607b8e4e8cd52bc`: `Ran 7 tests in 0.001s` / `OK`. La prueba importa el adaptador desde `motor/motor/traza_campo_244.py`, exactamente la ruta que resuelve el runner, y valida ausencia sin imputación, deltas/rangos, umbral renovable, entrada vacía, valores no finitos y corte único. Ejecución: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019233762
