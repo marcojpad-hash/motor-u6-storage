@@ -1,18 +1,18 @@
 # Corrida real de fábrica — traza 244
 Fecha: 2026-10-30
-Lote: F006_TRAZA_V2_R6
+Lote: F006_TRAZA_V2_R7
 Caso sellado: CAL_F005_01_COURBET (Gustave Courbet)
-Commit probado: 37b6a6907eb5ae7b534cd52bcc62b4dacbbd9f68
+Commit probado: fbf09612c39f35e69d48f26f75c6f2ee94388db9
 
 ## Resultado
 La fábrica terminó el caso con código 0 y recibo COMPLETED. CEB terminó en VERIFIED_FLOW, sin anomalías. compuerta_caldero=OK y compuerta_piezas=OK. Los hashes del Engine canónico y del catálogo coincidieron antes y después.
 
 ## Evidencia
-Ejecución: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41020427712
+Ejecución: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41020723134
 Artefacto: https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41020427712/artifacts/12961710969
 Input SHA-256: a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c
-Resultado SHA-256: f83fbd6a62a16857e602616d562cba79f06b19283cbf0340be500031d1cb6e99
-Duración: 15.452 s. Monte Carlo: 6,310 simulaciones; 9/9 observaciones convergieron.
+Resultado SHA-256: bd1da1cad157add7fdd860ec4a7404f13bedb232de057ce1afea751620502f3c
+Duración: 14.069 s. Monte Carlo: 6,310 simulaciones; 9/9 observaciones convergieron.
 Traza ejecutada: TRAZA_CAMPO_244_V2; 244 hipótesis y 2 vectores.
 La pieza hipotesis_trayectoria_abierta_v1 quedó EXECUTED_AND_CONNECTED en CEB.
 
