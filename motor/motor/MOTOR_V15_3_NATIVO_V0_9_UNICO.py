@@ -844,6 +844,8 @@ def correr_5x3_v15_3(
                 "A_top5_ANEXO": _top(ba),
                 "C_top5_ANEXO": _top(bc),
                 "P_candidatos_0a3": _candidatos(bp),
+                "A_candidatos_0a3": _candidatos(ba),
+                "C_candidatos_0a3": _candidatos(bc),
                 "X_dim": int(xt.size),
                 # Geometry fix V0.4: serialize the EXACT boards used to build xt/R732.
                 # Do not regenerate them downstream with fresh Monte Carlo calls.
