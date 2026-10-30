@@ -402,13 +402,13 @@
     },
     {
       "path": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
-      "bytes": 41188,
-      "sha256": "1b5f8f56850eac2d4b7497e7ae0806fadb8fe24f6ecc4f3fcbf2b021899b6984"
+      "bytes": 41294,
+      "sha256": "dac5599921d2f5629bfc15f3468a23f2390b931204752dfe99417fe84482b841"
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 325913,
-      "sha256": "780fa595a60d80ae1133c71c63066b4f52ea94f2d3c3e0b1bc9f84f28c4d4f33"
+      "bytes": 326616,
+      "sha256": "22a51069812384d715e3b623923408792941ba00060cb1852c2fd02f35aaa419"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
