@@ -67,6 +67,8 @@ class TrazaCampo244RuntimeSpecs(unittest.TestCase):
         module_path = pathlib.Path(__file__).resolve().parents[1] / "motor" / "motor" / "MOTOR_V15_3_UNICO_20260927.py"
         spec = importlib.util.spec_from_file_location("motor_v153_pac_regression", module_path)
         predictor = importlib.util.module_from_spec(spec)
+        import sys
+        sys.modules[spec.name] = predictor
         spec.loader.exec_module(predictor)
         cuts = [{"P_candidatos_0a3": [{"familia": "p_family"}], "A_candidatos_0a3": [{"familia": "a_only"}, {"familia": "shared"}], "C_candidatos_0a3": [{"familia": "c_only"}, {"familia": "shared"}]}]
         histories = predictor._candidate_histories_from_cuts(cuts)
