@@ -1,5 +1,7 @@
 import importlib.util
 import pathlib
+import shutil
+import tempfile
 import unittest
 
 # Carga exactamente el punto de entrada que consume MOTOR_V15_3_NATIVO_V0_9_UNICO.
@@ -41,6 +43,24 @@ class TrazaCampo244RuntimeSpecs(unittest.TestCase):
                              for x in r["todas_las_cruces"]))
         self.assertTrue(any(x["h"] == "H1" and x["en"] == "C"
                             for x in r["todas_las_cruces"]))
+
+
+    def test_adapter_resolves_v2_after_runner_relocates_it(self):
+        source_root = pathlib.Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as td:
+            root = pathlib.Path(td)
+            runtime = root / "runs" / "ESTANDAR_CASE"
+            runtime.mkdir(parents=True)
+            shutil.copy2(source_root / "motor" / "motor" / "traza_campo_244.py",
+                         runtime / "traza_campo_244.py")
+            shutil.copy2(source_root / "motor" / "traza_campo_244_v2.py",
+                         root / "traza_campo_244_v2.py")
+            spec = importlib.util.spec_from_file_location("traza_relocated", runtime / "traza_campo_244.py")
+            relocated = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(relocated)
+            result = relocated.analizar(self.cortes)
+            self.assertEqual(result["modulo"], "TRAZA_CAMPO_244_V2")
+            self.assertEqual(result["integridad"]["n_valores_ausentes"], 1)
 
     def test_empty_input_rejected(self):
         with self.assertRaises(ValueError):
