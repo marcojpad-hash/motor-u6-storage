@@ -194,7 +194,10 @@ def _ceb_from_result(result: Dict[str, Any]):
     ceb = getattr(motor, "_ceb", None)
     if ceb is not None and callable(getattr(ceb, "call", None)):
         return ceb
-    return None
+    import sys
+    runtime = sys.modules.get("ceb_runtime_v03")
+    ceb = getattr(runtime, "_ACTIVE_FLOW_TRACER", None) if runtime is not None else None
+    return ceb if callable(getattr(ceb, "call", None)) else None
 
 
 def construir(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, Any] | None = None) -> Dict[str, Any]:
