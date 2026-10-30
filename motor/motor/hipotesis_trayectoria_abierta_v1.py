@@ -209,4 +209,5 @@ def construir(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict[str, 
         "hipotesis_trayectoria_abierta_v1",
         lambda: _construir_impl(result, case, patterns),
         shared=[result, case],
+        terminal=True,
     )
