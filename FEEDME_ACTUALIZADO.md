@@ -6,7 +6,7 @@ Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobr
 
 1. Leer [INICIO_SESION_CHATGPT.md](INICIO_SESION_CHATGPT.md) y [LLM_STARTUP_SIDECAR.md](LLM_STARTUP_SIDECAR.md).
 2. Leer [INSTRUCCIONES_CONTINUIDAD_CHATGPT.md](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md), [PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md) y [Playbook CEB](docs/CEB_INVESTIGAR_Y_RESOLVER.md).
-3. Revisar [el informe más reciente](informes/2026-10-25_CEB_cableado_y_smoke.md) y los avances recientes.
+3. Revisar [la auditoría de continuidad 2026-10-31](informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md), el [mapa de versiones](docs/MAPA_VERSIONES_Y_AUTORIDAD.md), el cierre de F006 R7 y las dudas abiertas.
 4. Buscar en Seguimiento si ya existe una duda, fallo o decisión equivalente antes de abrir una nueva.
 5. Ejecutar la tarea con las herramientas disponibles; no limitarse a describir el plan.
 
