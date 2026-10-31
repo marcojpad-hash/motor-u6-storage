@@ -22,5 +22,8 @@
   "ceb_ledger_lines": 23420,
   "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
   "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
-  "note": "F006 reevalúa CAL_F005_01_COURBET; no es un caso independiente y no incrementa n de calibración. Los archivos grandes y desenlaces sellados permanecen en el artifact de Actions; el repo conserva resumen, registro y hashes."
+  "note": "F006 reevalúa CAL_F005_01_COURBET; no es un caso independiente y no incrementa n de calibración. Los archivos grandes y desenlaces sellados permanecen en el artifact de Actions; el repo conserva resumen, registro y hashes.",
+  "runner_sha256": "4ac577fa72b79ba494773fbc79a263eb9f0f7ba25e15048187b6f764ba49b6df",
+  "runtime_motor_module_sha256": "23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19",
+  "native_module_sha256": "dac5599921d2f5629bfc15f3468a23f2390b931204752dfe99417fe84482b841"
 }
