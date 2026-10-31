@@ -14,3 +14,6 @@ _pendiente_subir/
 *.png
 *.b64
 *.gz
+
+# Datos de mortalidad públicos y versionados; los demás gzip siguen excluidos
+!motor/MORTALITY_AUDIT/mortality_statistics.jsonl.gz
