@@ -12,6 +12,7 @@ Fuentes originales:
 - [B-01](https://app.notion.com/p/0477c0c2d8784869a5c5de5014a870b0)
 - [N-02](https://app.notion.com/p/98a4600b9efe49d5bc893160590b028c)
 - [C-03](https://app.notion.com/p/93c77396c2d840238a481a164328a4b3)
+- [H-01](https://app.notion.com/p/baf1250fc9d6412395bdce8f52c57918)
 
 ## Reglas de custodia
 - Usar únicamente \`ENTRADA_CIEGA.md\` al formular hipótesis.
