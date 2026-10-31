@@ -4,7 +4,7 @@
 2. Todo lo nuevo es **lateral**: archivo o versión nueva (por ejemplo en `laterales/`), nunca reemplazo silencioso.
 3. Cada cambio va en un **commit nuevo con descripción** y una **entrada en `avances/`** (antes → después, sha antes/después, pruebas).
 4. Solo se suben versiones modificadas; nada de corridas, salidas, binarios ni `_vendor_buscador`.
-5. **Ningún número mayor a 1**; las probabilidades se recortan a **5–95 %**.
+5. **Unidades numéricas explícitas.** Solo los campos declarados como probabilidad normalizada deben estar en [0,1] (o expresarse como 5–95 % si la salida usa porcentaje). Esta regla no se aplica a conteos, IDs, años, timestamps, bytes, dimensiones, puntuaciones ni porcentajes de relleno. `peso_relativo`, `rank_fusion` y soporte estructural no son probabilidades; cada campo debe declarar su unidad y significado.
 6. La búsqueda del Caldero sigue **agnóstica**: sin LLM y sin claves obligatorias. Si faltan las bibliotecas empacadas: `pip install ddgs primp lxml click` (ver `motor/SPEC_BUSCADOR_AGNOSTICO.md`).
 7. **El motor decide** con la evidencia acumulada; **el LLM no decide**.
 8. Tras cambiar código de `motor/`, correr la suite y regenerar manifiestos (`python3 -B scripts/regenerar_manifestos_trabajo.py`).
