@@ -35,3 +35,7 @@ La fuente INED Bonneuil 1806-1906 es especialmente pertinente para mortalidad hi
 ## Google tokens
 
 La solicitud de tokens Google del paquete antiguo no es necesaria para descargar WPP 2024 ni para consultar los catálogos públicos citados. No solicitar ni almacenar claves de Google para esta ruta.
+
+## Archivo de tabla y carga en streaming
+
+La ruta canónica para una tabla grande es MORTALITY_AUDIT/mortality_statistics.jsonl.gz. El sidecar la procesa línea por línea y agrega por año/época sin cargar el conjunto completo en memoria. Para tablas pequeñas se mantiene compatibilidad con mortality_statistics.json. El formato JSONL conserva una fila por observación; cada línea debe cumplir el esquema 1.1.
