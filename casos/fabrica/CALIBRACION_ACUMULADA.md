@@ -63,3 +63,17 @@ Casos en la tabla: 50 · evaluados (sellados): 45 · no sellados: 5
 | F005 | Nicolás II de Rusia (1916-12-31) | gobernante | NO_SELLADO |  |  | — | — | — | — | — | — | — | True/True |
 | F005 | Isabel Tudor (Isabel I de Inglaterra) (1558-11-01) | gobernante | 30_ambicion | kwml_02_guerrero | MESeta_O_ESTABILIZACION | no | no | no | no | meseta | auge | no | True/True |
 | F005 | Herman Melville (1851-10-01) | artista | 30_ambicion | schwartz_07_logro | CONTINUIDAD_ASCENDENTE | no | no | no | no | auge | caida | no | True/True |
+
+
+## Reevaluaciones de casos existentes — no incrementan el tamaño muestral
+
+### F006_TRAZA_V2_R7 · 2026-10-30
+
+- Reevalúa **CAL_F005_01_COURBET**; el \`case_id\` y \`input_sha256\` coinciden con F005. No es un caso independiente.
+- H1 \`30_ambicion\`: fallo; H2 \`20_sacrificio_por_un_ideal\`: fallo.
+- Set abierto: acierto. Escenario principal \`CONTINUIDAD_ASCENDENTE\`: acierto.
+- Destino personal: predijo \`auge\`; desenlace sellado: \`ruptura\`. Destino exacto y polaridad: fallo.
+- La evaluación específica del peso 0 tiene n=1 y advierte explícitamente **MUESTRA_INSUFICIENTE (<10): no elegir peso con esto**. El peso no fue aplicado por el motor.
+- Los totales acumulados de esta tabla y el CSV permanecen sin cambios: F006 es una reevaluación del mismo caso, no una observación nueva.
+
+Evidencia compacta: \`casos/fabrica/lotes/F006_TRAZA_V2_R7_*\`. Manifiesto del artifact: \`F006_TRAZA_V2_R7_MANIFIESTO_ARTIFACTO.json\`. El artefacto original se verificó con SHA-256 \`0ef1887f395e229e77f1ea6b37ae9025fc23d63c6e3789fedfa7489913871ffb\`.
