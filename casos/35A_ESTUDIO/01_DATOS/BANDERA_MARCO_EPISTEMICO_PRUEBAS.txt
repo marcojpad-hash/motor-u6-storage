@@ -1,0 +1,28 @@
+BANDERA — marco epistémico → «pruebas» (2026-09-14)
+
+Qué pasó:
+El sujeto no proyecta «pruebas» a propósito.
+Procesa así: sin intencionalidad de resultado; todo = aprendizaje; todo dato es un dato.
+Desde ESA semántica, casi cualquier cosa que pase entra como «pruebas».
+
+Efecto en el tablero:
+Se enciende monomito_06_pruebas / Q2 no solo por hechos de etapa,
+sino porque el HABLAR/CODIFICAR del sujeto ya es vecindario de «prueba».
+
+Bandera (filtro / pregunta_detrás / segundo agente):
+  MARCO_EPISTEMICO_PRUEBAS
+  ≠ respuesta dirigida
+  ≠ destinación forzada
+  = el marco del hablante colorea el input hacia pruebas
+
+Afilar:
+- Separar: (A) hechos de corte que son bajada/prueba vivida
+         vs (B) estilo semántico «todo es dato/aprendizaje» que prende la misma familia
+- Si (B) domina sin (A) nuevo → no contar eso solo como HIT de apuesta Q2
+- Décimo hombre / esperar si el board solo refleja el marco y no un corte nuevo
+
+Para proyección 5–10 y chequeos 15d:
+Anotar si la luz «pruebas» viene del marco del hablante o de un hecho nuevo mapeable.
+No borrar la luz; ponerle la bandera.
+
+Ruteo: ver RUTEO_PERFIL_VS_PREDICTIBILIDAD.txt (estante amantes/ajedrez/perfiles; no HIT).

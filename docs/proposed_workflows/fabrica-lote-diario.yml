@@ -1,0 +1,72 @@
+name: Fabrica lote diario (Grok / dispatch)
+on:
+  workflow_dispatch:
+    inputs:
+      lote:
+        description: "ID de lote, ej. F007"
+        required: true
+        type: string
+      semillas:
+        description: "Path relativo al archivo de semillas (tras preparar-z ya en repo)"
+        required: true
+        default: "casos/fabrica/semillas_lote_F007.py"
+        type: string
+      destinos:
+        description: "Path relativo al archivo de destinos Z"
+        required: true
+        default: "casos/fabrica/destinos_lote_F007.py"
+        type: string
+      solo_correr:
+        description: "Si true, salta preparar-z y solo corre el lote ya preparado"
+        required: false
+        default: false
+        type: boolean
+permissions:
+  contents: write
+jobs:
+  fabrica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      FABRICA_CORRIDAS: /tmp/FABRICA_CORRIDAS
+      FABRICA_SYNC: "1"
+      FABRICA_MODELO: "Grok_principal"
+      CALDERO_BUSQUEDA_VIVA: "1"
+      CALDERO_BUSCADOR: "auto"
+      FABRICA_CALDERO_REQUERIDO: "1"
+      FABRICA_PIEZAS_REQUERIDAS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Dependencias buscador vivo
+        run: python -m pip install --upgrade numpy scipy ddgs primp lxml click
+      - name: Preparar-z
+        if: ${{ inputs.solo_correr != true && inputs.solo_correr != 'true' }}
+        run: |
+          python -B casos/fabrica/fabrica.py preparar-z "${{ inputs.semillas }}" "${{ inputs.destinos }}"
+      - name: Correr lote
+        run: |
+          python -B casos/fabrica/fabrica.py correr --lote "${{ inputs.lote }}"
+      - name: Commit resultados al repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add casos/fabrica/lotes casos/fabrica/calibracion_acumulada.csv casos/fabrica/CALIBRACION_ACUMULADA.md stinkbox avances 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios para commit"
+          else
+            git commit -m "fabrica: lote ${{ inputs.lote }} (Actions / Grok dispatch)"
+            git push origin HEAD:main
+          fi
+      - name: Artifact evidencia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lote-${{ inputs.lote }}-evidencia
+          path: |
+            casos/fabrica/lotes/${{ inputs.lote }}_*
+            /tmp/FABRICA_CORRIDAS/${{ inputs.lote }}/
+          if-no-files-found: warn
+          retention-days: 30

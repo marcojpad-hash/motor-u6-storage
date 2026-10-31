@@ -1,0 +1,821 @@
+{
+  "case": "Marco_35A_foto_viva",
+  "pregunta": "trayectoria_estructura_proximos_5_10_anos",
+  "Z_foto": "2026-09-14",
+  "Z_rule": "presente sellado; post-Z = proyección estructural (NO fortuna)",
+  "edad_aprox": 39,
+  "protocol": "foto viva; no inventar muerte; H1/H2 congela investigador no max(board)",
+  "nota_monomito": "e15 IAs vivo NO_CODIFICADO; no forzar Top1; tokens solo 244 (rutina/aprendizaje/llamado… no labels monomito_* sueltos)",
+  "mapping_status": "CANONICAL_VALIDATED",
+  "weight_semantics": "0.60–0.84 = fuerza de codificación; no probabilidad",
+  "apuesta_congelada_ref": "e14_mundo_ordinario → Q2_descenso_prueba (APUESTA_CONGELADA_e14_Q2.json)",
+  "cuts": {
+    "C1": {
+      "hecho": "Infancia Veracruz: kinder/ordinario; entorno familiar estable; rutina escolar; autonomía temprana sin ruptura violenta",
+      "P": [
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "rutina",
+          0.7
+        ],
+        [
+          "cotidiano",
+          0.68
+        ],
+        [
+          "autonomia_temprana",
+          0.66
+        ],
+        [
+          "conocimiento",
+          0.64
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.68
+        ],
+        [
+          "estancamiento",
+          0.62
+        ],
+        [
+          "dogmatismo",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "aburrimiento",
+          0.66
+        ],
+        [
+          "incertidumbre",
+          0.62
+        ],
+        [
+          "busqueda_identidad",
+          0.6
+        ]
+      ]
+    },
+    "C2": {
+      "hecho": "Fuga ~7 años: llamado temprano / salida del hogar; incidente detonante de autonomía; no violencia",
+      "P": [
+        [
+          "llamado",
+          0.78
+        ],
+        [
+          "llamado_aventura",
+          0.76
+        ],
+        [
+          "incidente_detonante",
+          0.74
+        ],
+        [
+          "autonomia",
+          0.72
+        ],
+        [
+          "partida",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.7
+        ],
+        [
+          "desafio_autoridad",
+          0.68
+        ],
+        [
+          "desconfianza_autoridad",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "desafio",
+          0.72
+        ],
+        [
+          "oportunidad",
+          0.68
+        ],
+        [
+          "invitacion",
+          0.64
+        ],
+        [
+          "incertidumbre",
+          0.62
+        ]
+      ]
+    },
+    "C3": {
+      "hecho": "Escuela católica salesiana + tránsito ateísmo→agnosticismo: duda religiosa; escepticismo; rechazo de ritual autoritario",
+      "P": [
+        [
+          "escepticismo",
+          0.78
+        ],
+        [
+          "busqueda_verdad",
+          0.76
+        ],
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "dilema_moral",
+          0.7
+        ],
+        [
+          "rebeldia",
+          0.66
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.74
+        ],
+        [
+          "dogmatismo",
+          0.72
+        ],
+        [
+          "desafio_autoridad",
+          0.7
+        ],
+        [
+          "rechazo_ritual_autoritario",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "huida_del_llamado",
+          0.66
+        ],
+        [
+          "evitacion_riesgo",
+          0.64
+        ],
+        [
+          "indecision",
+          0.62
+        ],
+        [
+          "incertidumbre",
+          0.6
+        ]
+      ]
+    },
+    "C4": {
+      "hecho": "Salida de media superior (rígida→menos rígida): cruce de umbral; ruptura con trayectoria esperada; partida formativa",
+      "P": [
+        [
+          "compromiso",
+          0.72
+        ],
+        [
+          "partida",
+          0.78
+        ],
+        [
+          "ruptura_pasado",
+          0.76
+        ],
+        [
+          "umbral_abierto",
+          0.74
+        ],
+        [
+          "viaje",
+          0.66
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.7
+        ],
+        [
+          "estancamiento",
+          0.68
+        ],
+        [
+          "desafio_autoridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "incertidumbre",
+          0.7
+        ],
+        [
+          "miedo_cambio",
+          0.64
+        ],
+        [
+          "ansiedad",
+          0.62
+        ]
+      ]
+    },
+    "C5": {
+      "hecho": "Filosofía / deserción universitaria: pruebas aliados-enemigos; aprendizaje vs obstáculo institucional; carrera inconclusa",
+      "P": [
+        [
+          "aprendizaje",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.74
+        ],
+        [
+          "formacion_literaria",
+          0.7
+        ],
+        [
+          "alianza",
+          0.66
+        ],
+        [
+          "conocimiento",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "obstaculo",
+          0.76
+        ],
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "hostilidad",
+          0.66
+        ],
+        [
+          "desafio_autoridad",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "prueba",
+          0.74
+        ],
+        [
+          "dilema_moral",
+          0.7
+        ],
+        [
+          "estancamiento",
+          0.68
+        ],
+        [
+          "tension_alta",
+          0.64
+        ]
+      ]
+    },
+    "C6": {
+      "hecho": "Creación literaria ~2008: cueva interior; aislamiento voluntario; formacion literaria creativa; ansiedad de antesala",
+      "P": [
+        [
+          "formacion_literaria_creativa",
+          0.82
+        ],
+        [
+          "aislamiento_voluntario",
+          0.78
+        ],
+        [
+          "conocimiento",
+          0.74
+        ],
+        [
+          "planificacion",
+          0.7
+        ],
+        [
+          "aprendizaje",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "estancamiento_generativo_personal",
+          0.66
+        ],
+        [
+          "evitacion",
+          0.64
+        ],
+        [
+          "desapego_emocional",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "ansiedad",
+          0.76
+        ],
+        [
+          "antesala",
+          0.74
+        ],
+        [
+          "tension_alta",
+          0.72
+        ],
+        [
+          "crisis_existencial",
+          0.66
+        ]
+      ]
+    },
+    "C7": {
+      "hecho": "Relación ~2y9m + bares Coyoacán: prueba suprema afectiva; compromiso afectivo; consumo sustancias sin pérdida de límite; lealtad pareja",
+      "P": [
+        [
+          "compromiso_afectivo",
+          0.8
+        ],
+        [
+          "lealtad_pareja",
+          0.76
+        ],
+        [
+          "prueba",
+          0.74
+        ],
+        [
+          "alianza",
+          0.7
+        ],
+        [
+          "busqueda_cercania",
+          0.66
+        ]
+      ],
+      "A": [
+        [
+          "consumo_sustancias",
+          0.72
+        ],
+        [
+          "obstaculo_amoroso",
+          0.68
+        ],
+        [
+          "hostilidad",
+          0.62
+        ],
+        [
+          "rivalidad",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "crisis_existencial",
+          0.72
+        ],
+        [
+          "confrontacion_directa",
+          0.7
+        ],
+        [
+          "catarsis",
+          0.66
+        ],
+        [
+          "tension_alta",
+          0.68
+        ],
+        [
+          "dilema_moral",
+          0.64
+        ]
+      ]
+    },
+    "C8": {
+      "hecho": "Muerte del tío oct-2012 + ruptura de relación: duelo/pérdida familiar; recompensa ambigua (alivio+pérdida); noticia de ruptura",
+      "P": [
+        [
+          "duelo",
+          0.8
+        ],
+        [
+          "perdida_familiar",
+          0.78
+        ],
+        [
+          "recompensa",
+          0.66
+        ],
+        [
+          "comprension_nueva",
+          0.7
+        ],
+        [
+          "alivio",
+          0.64
+        ]
+      ],
+      "A": [
+        [
+          "noticia_ruptura",
+          0.76
+        ],
+        [
+          "perdida",
+          0.74
+        ],
+        [
+          "desapego_emocional",
+          0.7
+        ],
+        [
+          "frialdad_ante_crisis",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "crisis_abrupta",
+          0.78
+        ],
+        [
+          "crisis_existencial",
+          0.74
+        ],
+        [
+          "catarsis",
+          0.7
+        ],
+        [
+          "ansiedad",
+          0.68
+        ]
+      ]
+    },
+    "C9": {
+      "hecho": "Maestro secundaria / malabares + primera novela/obra teatro ~25: camino de regreso laboral + transformación creativa / cambio de identidad",
+      "P": [
+        [
+          "retorno",
+          0.74
+        ],
+        [
+          "transformacion",
+          0.8
+        ],
+        [
+          "cambio_identidad",
+          0.78
+        ],
+        [
+          "reconocimiento",
+          0.72
+        ],
+        [
+          "formacion_literaria_creativa",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "guia",
+          0.72
+        ],
+        [
+          "consejo",
+          0.7
+        ],
+        [
+          "sabiduria",
+          0.68
+        ],
+        [
+          "herramienta_nueva",
+          0.66
+        ],
+        [
+          "responsabilidad",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.7
+        ],
+        [
+          "resolucion",
+          0.68
+        ],
+        [
+          "orgullo_superacion",
+          0.66
+        ],
+        [
+          "proposito_claro",
+          0.64
+        ],
+        [
+          "catarsis",
+          0.62
+        ]
+      ]
+    },
+    "C10": {
+      "hecho": "Regreso bares Zona Rosa / La Purísima + pandemia 2020 rol gerencial: nuevas pruebas + camino de regreso operativo; turno nocturno; pragmatismo",
+      "P": [
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "organizacion",
+          0.76
+        ],
+        [
+          "liderazgo",
+          0.74
+        ],
+        [
+          "compromiso_pragmatico",
+          0.78
+        ],
+        [
+          "retorno",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "obstaculo",
+          0.72
+        ],
+        [
+          "hostilidad",
+          0.66
+        ],
+        [
+          "alianza",
+          0.68
+        ],
+        [
+          "turno_atipico_nocturno",
+          0.74
+        ],
+        [
+          "pragmatismo_frio",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "prueba",
+          0.74
+        ],
+        [
+          "crisis_abrupta",
+          0.72
+        ],
+        [
+          "tension_alta",
+          0.7
+        ],
+        [
+          "ansiedad",
+          0.68
+        ],
+        [
+          "escalada",
+          0.64
+        ]
+      ]
+    },
+    "C11": {
+      "hecho": "Relación ~1.5 años hacia ~35: segunda prueba suprema afectiva; compromiso afectivo; desorientación relacional; eco de crisis previa",
+      "P": [
+        [
+          "compromiso_afectivo",
+          0.78
+        ],
+        [
+          "prueba",
+          0.76
+        ],
+        [
+          "lealtad_pareja",
+          0.72
+        ],
+        [
+          "vinculo_compartido",
+          0.7
+        ],
+        [
+          "busqueda_cercania",
+          0.66
+        ]
+      ],
+      "A": [
+        [
+          "desorientacion_relacional",
+          0.74
+        ],
+        [
+          "evitacion_intimidad",
+          0.7
+        ],
+        [
+          "obstaculo_amoroso",
+          0.68
+        ],
+        [
+          "conflicto_lealtad",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "crisis_existencial",
+          0.76
+        ],
+        [
+          "abandono_en_prueba",
+          0.72
+        ],
+        [
+          "tension_alta",
+          0.7
+        ],
+        [
+          "ansiedad",
+          0.68
+        ],
+        [
+          "catarsis",
+          0.64
+        ]
+      ]
+    },
+    "C12": {
+      "hecho": "Z=2026-09-14 presente sellado (~39): delivery Zona Rosa = mundo ordinario post-ciclo + IAs hiperfoco/proyecto (vivo; NO forzar Top1 monomito); piso delivery permite loop; deseo ex=sigma alta latencia",
+      "P": [
+        [
+          "conocimiento",
+          0.82
+        ],
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "busqueda_verdad",
+          0.78
+        ],
+        [
+          "rutina",
+          0.74
+        ],
+        [
+          "cotidiano",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "estancamiento",
+          0.68
+        ],
+        [
+          "pragmatismo_frio",
+          0.72
+        ],
+        [
+          "aislamiento_voluntario",
+          0.74
+        ],
+        [
+          "compromiso_pragmatico",
+          0.7
+        ],
+        [
+          "herramienta_nueva",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "llamado",
+          0.72
+        ],
+        [
+          "antesala",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "miedo_estancamiento",
+          0.66
+        ]
+      ]
+    }
+  },
+  "holes": {
+    "C1": {
+      "P": 0,
+      "A": 2,
+      "C": 2
+    },
+    "C2": {
+      "P": 0,
+      "A": 2,
+      "C": 1
+    },
+    "C3": {
+      "P": 0,
+      "A": 1,
+      "C": 1
+    },
+    "C4": {
+      "P": 0,
+      "A": 2,
+      "C": 1
+    },
+    "C5": {
+      "P": 0,
+      "A": 1,
+      "C": 1
+    },
+    "C6": {
+      "P": 0,
+      "A": 2,
+      "C": 1
+    },
+    "C7": {
+      "P": 0,
+      "A": 1,
+      "C": 0
+    },
+    "C8": {
+      "P": 0,
+      "A": 1,
+      "C": 1
+    },
+    "C9": {
+      "P": 0,
+      "A": 0,
+      "C": 0
+    },
+    "C10": {
+      "P": 0,
+      "A": 0,
+      "C": 0
+    },
+    "C11": {
+      "P": 0,
+      "A": 1,
+      "C": 0
+    },
+    "C12": {
+      "P": 0,
+      "A": 0,
+      "C": 0
+    }
+  },
+  "invalid_tokens": []
+}

@@ -1,0 +1,7 @@
+CALIBRACIÓN 2026-09-14 — sesgo de menú en e15
+
+Qué pasó: se ofrecieron 4 códigos cerrados (Llamado / Cueva / Pruebas / Aún no).
+Efecto: el menú mismo empuja a «Aún no»; gasta la respuesta; impide otra etiqueta.
+Post-menú el sujeto dice A y B más naturales que C; C «menos probable»; pero ya no es lectura limpia.
+Decisión: e15 = NO_CODIFICADO (dato vivo, código no fijado). No repetir menú de etapas.
+Seguir: hechos sutiles + apuesta e14→Q2 intacta. Hipótesis en multi-candidato, sin Top1 forzado.

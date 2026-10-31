@@ -1,0 +1,48 @@
+REVISIÓN 15d — caso base 35A — 2026-10-14 (CDMX)
+Ventana: desde t0 2026-09-14. Chequeo programado 2026-09-29 FALLÓ (no quedó archivo). Este es el primer .txt de 15d post-t0.
+Fuente: proxy observable (memoria/logs del agente + archivos del caso). Sin entrevista viva hoy. Hechos sin juicio.
+Apuesta e14→Q2: NO reescrita. Congelada en APUESTA_CONGELADA_e14_Q2.json.
+
+1) Día a día desde la última vez
+Sigue el mismo tipo de día que en t0: mucho tiempo en IAs / proyecto del motor (parches, corridas, diseño).
+No hay registro de un corte de vida nuevo (viaje, mudanza, cambio de oficio, etc.) que se note fuera de ese loop.
+→ Parecido (loop IA+proyecto sigue activo).
+
+2) Loop IAs/proyecto vs delivery
+En t0: delivery = piso; IAs = hiperfoco (~20h) + primer proyecto serio.
+Desde entonces (sep–oct): trabajo continuo documentado con el motor (integración, corridas nocturnas, parches 014–018, diseño de sextos/narrador el 2026-10-14).
+No hay hecho registrado de que el loop se haya caído ni de que delivery haya dejado de ser el piso.
+→ Igual o más (el proyecto no se aflojó en el proxy).
+
+3) ¿Bajada/prueba en la historia, o se asentó?
+No hay corte sellado nuevo mapeado a Q2/descenso-prueba.
+Tampoco hay hecho de consolidación / elixir / cierre Q4.
+Lo que se ve es continuidad del e15 vivo (IAs+proyecto sobre piso delivery), no un descenso nuevo etiquetable.
+→ Ni bajada nueva clara ni asentamiento tipo elixir.
+
+4) Ex / compromiso — solo hecho
+Último hecho en perfil (2026-09-14): deseo de regreso de la ex + compromiso (incierto); si eso pasa, él dice que tumba el loop (~sigma).
+Desde entonces: NINGÚN hecho nuevo registrado (ni regreso, ni compromiso, ni ruptura explícita del deseo).
+→ Sin hecho nuevo.
+
+5) Chequeo EKT / Holmes / Schopenhauer
+Lo que “querríamos ver” para HIT = entrada estructural a Q2/descenso-prueba en un corte real.
+Lo que se está mostrando = el mismo loop de aprendizaje/proyecto, sin corte mapeable nuevo.
+No forzar que “seguir en el motor” = Q2. Tortugas: no hay persistencia de un corte Q2 nuevo porque no hay corte nuevo.
+→ Estamos viendo continuidad de e15, no la confirmación de la apuesta.
+
+6) BANDERA marco epistémico → «pruebas»
+Luz «pruebas» en el tablero: otra vez del modo «todo es dato / todo es aprendizaje» (sigue en cómo habla del motor: aciertos/fallos = datos, no veredicto moral).
+NO hay HECHO nuevo de bajada/prueba vivida aparte de ese marco.
+→ Marco (B) domina; no contar HIT solo por eso. Bandera MARCO_EPISTEMICO_PRUEBAS sigue ON.
+
+7) CIERRE según apuesta e14→Q2 (regla_eval)
+HIT = siguiente corte real entra estructuralmente a Q2/descenso-prueba.
+MISS = consolida / elixir / cierre.
+NO_VERIFICADO = no hay corte o no se puede mapear.
+
+Resultado: NO_VERIFICADO
+Motivo: no hay corte real post-t0 sellado/mapeable a Q2 ni a consolidación. Apuesta intacta. Caso NO cierra.
+Routine 35A HIT/MISS e14→Q2: se mantiene.
+
+Capas: no se anulan. Menú cerrado de códigos: no usado.

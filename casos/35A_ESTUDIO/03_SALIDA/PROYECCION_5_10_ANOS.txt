@@ -1,0 +1,134 @@
+PROYECCIÓN ESTRUCTURAL 5–10 AÑOS — CASO BASE 35A (Marco / foto viva)
+================================================================
+Fecha Z_foto: 2026-09-14 (presente sellado). Edad ~39. NO inventar muerte.
+Pregunta (marco de la foto): trayectoria_estructura_proximos_5_10_anos
+= qué estructura se ilumina adelante. NO fortuna. NO probabilidad de futuro.
+
+APARATO
+- Motor: MOTOR_V15_1_10CORTES_LIMPIO (sidecar OFF; Engine_V5 + patterns_final_v14 intactos)
+- n_cuts: 12 (C1…C12; C12 = delivery + IAs hiperfoco — presente no saltado)
+- Markers: 02_CORRIDA/markers_35A_Z2026.json (solo tokens 244; invalid=0)
+- Circulo v2: 02_CORRIDA/circulo_monomito_v2_35A.json (lateral; no fusiona board)
+- Capas no se invalidan (METODO_CAPAS_NO_INVALIDAN). Multicadena OK.
+
+────────────────────────────────
+1) LECTURA R732 (tubo limpio)
+────────────────────────────────
+dX_norm (C1→C12): [0.869, 0.671, 0.396, 0.72, 0.718, 0.764, 0.576, 0.766, 0.701, 0.415, 0.634]
+persist_cos: [0.2, 0.082, -0.045, 0.169, 0.052, 0.039, 0.026, -0.035, -0.131, -0.069]
+kappa_dir: [0.98, 0.997, 0.999, 0.986, 0.999, 0.999, 1.0, 0.999, 0.991, 0.998]
+último persist_cos=-0.0687  último kappa_dir=0.9976
+TORTUGAS (lectura de resolución): SÍ —
+  persist cerca de 0 y kappa cerca de 1 en tramo final ⇒ la vectorización ya no afila;
+  no congelar certeza/%; conservar apuestas de investigador.
+
+Candidatos finales P (0–3, umbral≥0.65; anexo no veredicto):
+[
+  {
+    "familia": "arquetipo_el_sabio",
+    "p": 0.8028
+  },
+  {
+    "familia": "monomito_06_pruebas_aliados_y_enemigos",
+    "p": 0.7925
+  },
+  {
+    "familia": "utopia_mentalidad_liberal",
+    "p": 0.7924
+  }
+]
+Lectura: en el presente (C12) co-iluminan sabio + monomito_06_pruebas + mentalidad_liberal.
+  Eso NO es Top1-como-destino. Es campo: conocimiento/aprendizaje activos DENTRO de un
+  piso ordinario/prueba — compatible con e14 ordinario post-ciclo + e15 vivo sin código fijo.
+
+────────────────────────────────
+2) CÍRCULO / MULTICADENA (lateral)
+────────────────────────────────
+posicion_por_corte (co-ocurrencia; R1 candidatas):
+  C1 Q2 | C2 Q1+Q2 | C3 Q1 | C4 Q1+Q2 | C5 Q2 | C6 Q3 | C7 Q3 | C8 Q3
+  C9 Q2+Q4 | C10 Q3 | C11 Q3+Q4 | C12 Q2
+r4_nuevo_ciclo: false en todos.
+C12 (presente) prende Q2_Descenso — alineado con apuesta congelada e14→Q2, sin forzar
+etiqueta única de etapa en e15 (NO_CODIFICADO; menú contaminó).
+
+Hilos: desafío/formación tempranos; sombra_consumo en C7; vínculo/duelo en C8.
+Varias cadenas pueden reordenarse; roles equivalentes por vecinos (adversario↔sabio, etc.).
+
+────────────────────────────────
+3) ESCALETA + APUESTA CONGELADA (otra capa)
+────────────────────────────────
+e14 = mundo_ordinario / lectura Q4-asentado (piso post-ciclo, no elixir cerrado).
+Apuesta congelada 2026-09-14 (NO reescribir):
+  → siguiente corte real ≈ Q2_descenso_prueba
+  → NO consolidación / elixir / cierre Q4
+Caldero en e14: eligible=0 SIN VOTO (máquina no opina; apuesta humana sola).
+Sigma / ex: vínculo-ex = cadena de alta latencia; si se concreta puede reordenar el círculo
+sin ser forzada Top1 del board ni del monomito.
+
+────────────────────────────────
+4) PROYECCIÓN ESTRUCTURAL 5–10 AÑOS (post-Z)
+────────────────────────────────
+Qué se ilumina (estructura), no qué “pasará” (fortuna):
+
+A) Cadena dominante esperable (H1 estructural, investigador — no max board):
+   Los próximos años iluminan más Q2-ish (descenso/prueba: llamado interno, umbral,
+   pruebas/aliados-enemigos, ordeal corto) que Q4 elixir-cierre.
+   Encaje con: C12 ya en Q2 por círculo; candidatos P con monomito_06_pruebas;
+   delivery como PISO que sostiene loop IA/proyecto (= ordinaria+prueba, no botín).
+
+B) Cadena compatible de alta latencia (H2 — no Top1 forzado):
+   Vínculo/ex / deseo de compromiso = sigma: puede reordenar sin aparecer como
+   familia máxima del tablero. Si se concreta, puede empujar asentamiento/MISS;
+   si no, sigue como factor de latencia (capas no se anulan).
+
+C) Luces / no-luces a 5–10 años (grueso):
+   - Se ilumina: aprendizaje/conocimiento como incentivo; pruebas reiteradas
+     (históricamente ya hubo dos “pruebas” y dos “prueba_suprema”); trabajo
+     operativo (delivery/gerencial) como camino_regreso sin elixir.
+   - No se ilumina como cierre: retorno_con_elixir / paz_interior consolidada /
+     arco cerrado. (Apuesta: MISS sería eso.)
+   - e15 (IAs): multi-candidato (llamado / cueva / pruebas según vecinos); NO Top1.
+
+D) Tortugas: con persist≈0 el horizonte década NO se afila corte-a-corte desde
+   este tablero solo; la proyección queda en cuadrante/familia de movimiento,
+   no en fecha ni en persona concreta.
+
+────────────────────────────────
+5) HIT / MISS — horizonte década (grueso)
+────────────────────────────────
+Ancla: apuesta e14→Q2 (revisión fina cada 15d aparte).
+
+HIT (década, grueso):
+  - Aparecen cortes mapeables a descenso/prueba (Q2-ish) más que a elixir/cierre Q4.
+  - Loop IA/proyecto o análogos siguen funcionando como llamado/prueba dentro del piso,
+    o nuevas bajadas (vínculo, trabajo, creación) entran como prueba sin consolidar elixir.
+  - Criterio de sujeto (t0): “todo dato es dato”; HIT ≠ feeling de “estar a prueba”.
+
+MISS (década, grueso):
+  - Se consolida cierre tipo elixir/Q4 (asentamiento estable del arco; retorno_con_elixir
+    estructural; el sujeto nombra “ya se asentó / se cerró” con hechos de compromiso/ex
+    que rompen el loop y cierran).
+  - Señal fuerte que él mismo marcó como asentamiento: estar con la ex/compromiso
+    tumbando el loop ~20h (sigma) — si eso ocurre Y el cuadrante lee cierre, MISS.
+
+NO_VERIFICADO: no hay cortes nuevos mapeables; o contaminación de menú/código forzado.
+
+────────────────────────────────
+6) H1 / H2 CONGELADAS (investigador; motor dejó null)
+────────────────────────────────
+H1 estructural: próximos años iluminan Q2-ish descent/prueba más que Q4 elixir close
+  (consistente con APUESTA_CONGELADA_e14_Q2).
+H2 compatible: vínculo/ex como cadena high-latency / sigma que puede reordenar
+  sin ser forzada Top1.
+
+NO son probabilidad. NO son fortuna. Son apuestas estructurales falsables.
+
+────────────────────────────────
+7) BANDERA DE MARCO (feedback 2026-09-14)
+────────────────────────────────
+La co-iluminación monomito_06_pruebas / Q2 puede venir en parte del MARCO del hablante
+(«todo es aprendizaje / todo dato es un dato» → casi todo entra como pruebas),
+no solo de etapas vividas ni de proyección intencional.
+Flag: MARCO_EPISTEMICO_PRUEBAS. Afilar filtro semántico.
+HIT de apuesta Q2 exige hecho/corte mapeable, no solo el estilo de hablar.
+Ver 01_DATOS/BANDERA_MARCO_EPISTEMICO_PRUEBAS.txt

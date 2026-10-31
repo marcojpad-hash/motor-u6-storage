@@ -1,0 +1,52 @@
+RUTEO — perfilamiento vs predictibilidad (2026-09-14)
+
+Problema:
+El marco «todo es aprendizaje / todo dato es un dato» prende «pruebas» en el tablero.
+Eso NO es (solo) predictibilidad de etapa. Es dato de CÓMO perfila/procesa el hablante.
+
+Estante (mismo nicho que amantes / ajedrez / perfiles mentales-psicológicos):
+  → PERFILAMIENTO / nicho de grupos de perfil
+  → NO alimenta HIT/MISS de apuesta de cuadrante (Caldero/Q2/elixir)
+  → NO es Top1 de destino
+
+Precedente ya escrito en el pack:
+  NOTA_CLAUDE_FIX_ENTRADA_CAMPO_SEMANTICO.txt
+  «Perfil != prediccion de cierre»
+  etiquetas embudo: RUIDO_ALIAS / PERFIL_VENTANA / PERFIL_SOSTENIDO (no suben p)
+
+Regla operativa:
+1) Si la luz «pruebas» (u otra) nace del MARCO del hablante → tag PERFIL_MARCO
+   (familia: perfiles mentales / amantes / ajedrez — mismo estante de nicho).
+2) Esa luz PUEDE quedar visible en el board (capas no se anulan) pero
+   se DESACOPLA del contador de predictibilidad.
+3) HIT de apuesta estructural solo con HECHO/corte mapeable nuevo,
+   no con reincidencia del estilo de hablar.
+4) pregunta_detrás / segundo agente: marcar campo vs etiqueta vs MARCO_PERFIL.
+5) Embudo/clínico (si se usa): PERFIL_VENTANA o PERFIL_SOSTENIDO — highlight,
+   no subir p ni cerrar proyección.
+
+Caso 35A:
+  MARCO_EPISTEMICO_PRUEBAS → carpeta perfilamiento
+  Apuesta e14→Q2 → carpeta predictibilidad (aparte)
+  Amantes/ajedrez/perfiles psi → mismo estante que el marco; no mezclar métricas.
+
+En pendejo:
+  Cómo eres al mirar el mundo = perfil.
+  Qué etapa viene = otra cuenta.
+  No uses el «cómo miras» para decir «qué te va a pasar».
+
+────────────────────────────────
+SIDECARS (aparte del estante perfiles)
+────────────────────────────────
+Amantes = arquetipos amorosos: SIDECAR.
+Guerra (y análogos) = SIDECAR.
+Regla: se activan DESPUÉS de tokens principales; no son el 244 de entrada.
+No confundir con:
+  - nicho perfilamiento (amantes / ajedrez / perfiles mentales)
+  - marco epistémico del hablante (PERFIL_MARCO)
+  - predictibilidad HIT/MISS
+
+Orden: tokens principales → (si pican) sidecar amantes/guerra/etc.
+Sidecar OFF en limpio factory; ON solo en corridas que lo pidan.
+
+Nota 2026-09-14: «diamantes» fue error de dictado (TTV); lo correcto es amantes.

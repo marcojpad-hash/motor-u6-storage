@@ -143,3 +143,34 @@ Tras cada ítem cerrado: commit + avisar a Mj con link. Cuando 1–5 estén hech
 5. Prueba A1 o A5 una vez a mano antes de dejarlas solas.
 
 Handoff de contexto: `docs/HANDOFF_MOTOR_GROK.md`
+
+---
+
+## Parche 31-oct — sin box (Grok app)
+
+Grok **no tiene** el box de Puta 3. No uses `python3` local. Usa GitHub:
+
+### Write (verificar una vez)
+Crea o edita un archivo vía Contents API / UI, p.ej. `avances/PROBE_WRITE_GROK.md` con una línea y fecha. Si el commit aparece en `main`, write OK.
+
+### A1 — Fábrica sin box
+1. Escribe en el repo (Contents API o editor):
+   - `casos/fabrica/semillas_lote_F007.py`
+   - `casos/fabrica/destinos_lote_F007.py`
+   (plantillas: `PLANTILLA_semillas_z.py`, `PLANTILLA_destinos_z.py`, `PROMPT_SEMILLAS_Z.md`)
+2. Dispara Actions: workflow **«Fabrica lote diario (Grok / dispatch)»**
+   - `lote`: F007
+   - `semillas` / `destinos`: paths arriba
+   - o `solo_correr: true` si ya corriste preparar-z en un run previo
+3. Espera el run; lee el resumen en `casos/fabrica/lotes/` + artifact; reporta a Mj.
+
+API tip: `POST /repos/marcojpad-hash/motor-u6-storage/actions/workflows/fabrica-lote-diario.yml/dispatches` con `ref: main` e `inputs`.
+
+### A3 — 35A path en repo
+Raíz: `casos/35A_ESTUDIO/` (ya en motor-u6-storage). No busques en ChatGPT-migracion.
+
+### A4 — tests
+Dispara workflow **«Motor runner contract tests»** (`test-motor-contracts.yml`) con `workflow_dispatch` si existe; si no, lee el último run verde/rojo en Actions.
+
+### A5 — cableado
+Edita código con Contents API / commits en `main` o PR. El runner Python lo valida después vía Actions (A1/A4), no hace falta box.

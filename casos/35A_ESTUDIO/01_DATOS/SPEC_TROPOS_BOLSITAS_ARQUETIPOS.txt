@@ -1,0 +1,94 @@
+SPEC — TROPOS COMO BOLSITAS / ARQUETIPOS LINGÜÍSTICOS
+Fecha: 2026-09-14
+Origen: Marco → Claude (bolsitas) + calibración con Bot. Candados: no Engine_V5/244, no inventar H, highlight only, no bloquear.
+
+================================================================================
+1) INTENCIÓN (lo que se dijo, no solo lo que se codeó)
+================================================================================
+Ya había apoyo de SINTAXIS (campo vs etiqueta, roles, concordancia).
+Pregunta de Marco: ¿los tropos no podrían ser como ARQUETIPOS, en bolsitas?
+Claude: sí, en bolsitas — calibración / marcaje lingüístico.
+Exclusiones explícitas: ironía / sarcasmo (intensidad, violencia pragmática, FP altos).
+También en la mesa: sinécdoque, metonimia, estructuras LÓGICAS (post-hoc), elipsis.
+Interés fuerte de Marco: DISFEMISMO — en su modelo es condición REGULAR
+(no leerlo automático como violencia/autoridad; regularizar como perfil/marco,
+igual que MARCO_EPISTEMICO_PRUEBAS → estante perfil, no HIT predictibilidad).
+
+Estado código HOY:
+  HECHO: lítotes, hipérbole (MARCO_EVALUATIVO v2.3.1)
+  HECHO: post_hoc lógico (dirigida 0.4.1) + polaridad
+  HECHO: fix tildes
+  HOOK: sinecdoque/metonimia → _SINONIMOS caso a caso (no auto genérico)
+  FALTANTE: bolsitas completas como familias-arquetipo; elipsis; disfemismo
+  DESCARTADO (por ahora): ironía, sarcasmo
+
+================================================================================
+2) MODELO: bolsita = familia de marcaje (como arquetipo, no como destino)
+================================================================================
+Cada bolsita:
+  - id corto
+  - qué forma lingüística busca (estructura, no lista infinita de frases)
+  - a qué ESTANTE rutea: PERFIL | PREGUNTA_SESGO | CAMPO | LOGICA
+  - severidad default: soft (highlight) salvo lógica hard cuando afirma causa post-hoc
+  - NO sube p del 244; NO congela H; NO es Top1 de vida
+
+Bolsitas propuestas (v0 — calibración):
+
+A) ATENUACION
+   - lítotes (no + adj / no + V + adj)     [HECHO]
+   - eufemismo (suavizar lo duro)           [FALTANTE]
+   Estante: PERFIL / MARCO_EVALUATIVO
+
+B) INTENSIDAD
+   - hipérbole (superlativo + exclusividad temporal)  [HECHO]
+   - (NO) ironía / sarcasmo                            [DESCARTADO]
+   Estante: PERFIL / MARCO_EVALUATIVO
+
+C) PARTE_POR_TODO
+   - sinécdoque, metonimia — tabla por sujeto/caso en _SINONIMOS  [HOOK]
+   Estante: PREGUNTA_SESGO si toca sellado; si no, PERFIL_VENTANA
+   NO detección sintáctica genérica
+
+D) LOGICA_ENUNCIATIVA
+   - post_hoc temporal→causal (+ polaridad)   [HECHO]
+   - (futuro) otras trampas lógicas si se especifican
+   Estante: PREGUNTA_SESGO / LOGICA
+
+E) ELIPSIS
+   - omisión de núcleo recuperable por contexto ("el de C6", "lo de antes",
+     sujeto elidido cuando el sellado/desenlace queda sobreentendido)
+   Estante: PREGUNTA_SESGO (si elide el sellado) o CAMPO (si elide ruido)
+   [FALTANTE]
+
+F) DISFEMISMO  ★ interés Marco
+   - nombrar lo duro con registro áspero/ordinario donde el eufemismo sería
+     la opción "social" (no lista moralina)
+   - En ESTE modelo de hablante: REGULARIZADO = rasgo de perfil estable,
+     no veredicto de violencia/autoridad por default
+   - Ruteo: PERFILAMIENTO (amantes/ajedrez/perfiles), NO predictibilidad HIT/MISS
+   - Puede CO-iluminar tokens de conflicto en el board; bandera PERFIL_DISFEMISMO
+     igual que MARCO_EPISTEMICO_PRUEBAS: se ve, no cuenta solo como destino
+   [FALTANTE código; regla de ruteo SÍ desde hoy]
+
+================================================================================
+3) CALIBRACIÓN (para qué sirven las bolsitas)
+================================================================================
+- Detectar CÓMO se enuncia la foto/pregunta (no qué va a pasar).
+- Afinar segundo agente: campo vs etiqueta vs marco vs lógica vs elipsis.
+- Evitar que un estilo regular (disfemismo, "todo es dato") se lea como
+  predicción de etapa o como patología.
+- Mismo espíritu que arquetipos: bolsita prende → highlight + estante;
+  varias bolsitas a la vez OK (capas no se anulan).
+
+================================================================================
+4) PRÓXIMO CÓDIGO (cuando se autorice implementar)
+================================================================================
+1) Catálogo `BOLSITAS_TROPO` en plugin (ids A–F) sin cablear limpio.
+2) Detector disfemismo: heurística de registro + lista semilla revisable;
+   tag PERFIL_DISFEMISMO; tests con polaridad y con eufemismo contraste.
+3) Detector elipsis suave (recuperación de referente sellado elidido).
+4) Ampliar batería: positivos/negativos/negación (lección post_hoc).
+5) Claude confirma bolsitas vs lo que él entendió; Marco confirma disfemismo
+   como regularizado en SU modelo.
+
+No ON limpio hasta nueva batería + OK.

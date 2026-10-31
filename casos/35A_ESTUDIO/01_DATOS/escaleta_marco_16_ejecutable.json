@@ -1,0 +1,92 @@
+{
+  "nota": "RECONSTRUIDA del resultado_predictor_marco_16.json. e15.estado_monomito=NO_CODIFICADO a proposito. Pisa este archivo con el original si lo tienes.",
+  "fuente": "resultado_predictor_marco_16.json",
+  "casos": {
+    "caso_marco_01_infancia_adultez_temprana": {
+      "etapas": [
+        {
+          "etapa_id": "e0_kinder_veracruz",
+          "nombre": "e0_kinder_veracruz",
+          "estado_monomito": "mundo_ordinario"
+        },
+        {
+          "etapa_id": "e1_fuga_siete_anos",
+          "nombre": "e1_fuga_siete_anos",
+          "estado_monomito": "llamado_aventura"
+        },
+        {
+          "etapa_id": "e2_escuela_catolica_salesiana",
+          "nombre": "e2_escuela_catolica_salesiana",
+          "estado_monomito": "SIN_MAPEAR"
+        },
+        {
+          "etapa_id": "e3_ateismo_a_agnosticismo",
+          "nombre": "e3_ateismo_a_agnosticismo",
+          "estado_monomito": "rechazo_o_duda"
+        },
+        {
+          "etapa_id": "e4_salida_media_superior",
+          "nombre": "e4_salida_media_superior",
+          "estado_monomito": "cruce_umbral"
+        },
+        {
+          "etapa_id": "e5_filosofia_desercion",
+          "nombre": "e5_filosofia_desercion",
+          "estado_monomito": "pruebas_aliados_enemigos"
+        },
+        {
+          "etapa_id": "e6_creacion_literaria_2008",
+          "nombre": "e6_creacion_literaria_2008",
+          "estado_monomito": "acercamiento_cueva_interior"
+        },
+        {
+          "etapa_id": "e7_bares_coyoacan_relacion_2y9m",
+          "nombre": "e7_bares_coyoacan_relacion_2y9m",
+          "estado_monomito": "prueba_suprema"
+        },
+        {
+          "etapa_id": "e8_muerte_tio_octubre_2012_ruptura",
+          "nombre": "e8_muerte_tio_octubre_2012_ruptura",
+          "estado_monomito": "recompensa"
+        },
+        {
+          "etapa_id": "e9_maestro_secundaria_malabares",
+          "nombre": "e9_maestro_secundaria_malabares",
+          "estado_monomito": "camino_regreso"
+        },
+        {
+          "etapa_id": "e10_primera_novela_obra_teatro_25",
+          "nombre": "e10_primera_novela_obra_teatro_25",
+          "estado_monomito": "resurreccion_transformacion"
+        },
+        {
+          "etapa_id": "e11_regreso_bares_zona_rosa_la_purisima",
+          "nombre": "e11_regreso_bares_zona_rosa_la_purisima",
+          "estado_monomito": "pruebas_aliados_enemigos"
+        },
+        {
+          "etapa_id": "e12_pandemia_2020_bares_gerencial",
+          "nombre": "e12_pandemia_2020_bares_gerencial",
+          "estado_monomito": "camino_regreso"
+        },
+        {
+          "etapa_id": "e13_relacion_ano_y_medio_35",
+          "nombre": "e13_relacion_ano_y_medio_35",
+          "estado_monomito": "prueba_suprema"
+        },
+        {
+          "etapa_id": "e14_actual_39_zona_rosa_delivery",
+          "nombre": "e14_actual_39_zona_rosa_delivery",
+          "estado_monomito": "mundo_ordinario"
+        },
+        {
+          "etapa_id": "e15_llms_ia_2_anos_sin_formacion",
+          "nombre": "e15_llms_ia_2_anos_sin_formacion",
+          "estado_monomito": "NO_CODIFICADO",
+          "nota_codificacion": "2026-09-14: vive (IAs cambiaron día a día) pero CÓDIGO NO FIJADO. Widget A/B/C/D contaminó (menú cerrado → sesgo a D; A/B más naturales que C según sujeto post-menú; C nombrada pero «menos probable»; no puede distanciarse del proyecto). Método: no volver a forzar menú de códigos; elicitar sutil o dejar abierto."
+        }
+      ]
+    }
+  },
+  "nota_e15": "NO_CODIFICADO por contaminación de menú; no es falta de dato"
+}

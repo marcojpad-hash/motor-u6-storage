@@ -1,0 +1,1935 @@
+{
+  "caso": "caso_marco_01_infancia_adultez_temprana",
+  "n_votos_validos": 10,
+  "hits": 3,
+  "misses": 7,
+  "vacios": 4,
+  "hit_rate": 0.3,
+  "nota": "vacios = eligible=0 o e15 NO_CODIFICADO. No es el 64.46.",
+  "filas": [
+    {
+      "k": 1,
+      "visto": "e0_kinder_veracruz",
+      "prefijo_ultimo": "mundo_ordinario",
+      "eligible": 15,
+      "voto": "mentor",
+      "real_t1": "llamado_aventura",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": null
+    },
+    {
+      "k": 2,
+      "visto": "e1_fuga_siete_anos",
+      "prefijo_ultimo": "llamado_aventura",
+      "eligible": 15,
+      "voto": "rechazo_o_duda",
+      "real_t1": "SIN_MAPEAR",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 3,
+      "visto": "e2_escuela_catolica_salesiana",
+      "prefijo_ultimo": "SIN_MAPEAR",
+      "eligible": 15,
+      "voto": "rechazo_o_duda",
+      "real_t1": "rechazo_o_duda",
+      "hit": true,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 4,
+      "visto": "e3_ateismo_a_agnosticismo",
+      "prefijo_ultimo": "rechazo_o_duda",
+      "eligible": 15,
+      "voto": "cruce_umbral",
+      "real_t1": "cruce_umbral",
+      "hit": true,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 5,
+      "visto": "e4_salida_media_superior",
+      "prefijo_ultimo": "cruce_umbral",
+      "eligible": 15,
+      "voto": "pruebas_aliados_enemigos",
+      "real_t1": "pruebas_aliados_enemigos",
+      "hit": true,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 6,
+      "visto": "e5_filosofia_desercion",
+      "prefijo_ultimo": "pruebas_aliados_enemigos",
+      "eligible": 15,
+      "voto": "prueba_suprema",
+      "real_t1": "acercamiento_cueva_interior",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 7,
+      "visto": "e6_creacion_literaria_2008",
+      "prefijo_ultimo": "acercamiento_cueva_interior",
+      "eligible": 14,
+      "voto": "recompensa",
+      "real_t1": "prueba_suprema",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 8,
+      "visto": "e7_bares_coyoacan_relacion_2y9m",
+      "prefijo_ultimo": "prueba_suprema",
+      "eligible": 13,
+      "voto": "camino_regreso",
+      "real_t1": "recompensa",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 9,
+      "visto": "e8_muerte_tio_octubre_2012_ruptura",
+      "prefijo_ultimo": "recompensa",
+      "eligible": 11,
+      "voto": "resurreccion_transformacion",
+      "real_t1": "camino_regreso",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": 0.0
+    },
+    {
+      "k": 10,
+      "visto": "e9_maestro_secundaria_malabares",
+      "prefijo_ultimo": "camino_regreso",
+      "eligible": 6,
+      "voto": "retorno_con_elixir",
+      "real_t1": "resurreccion_transformacion",
+      "hit": false,
+      "peso": 0.0,
+      "margen_top1_top2": null
+    },
+    {
+      "k": 11,
+      "visto": "e10_primera_novela_obra_teatro_25",
+      "prefijo_ultimo": "resurreccion_transformacion",
+      "eligible": 2,
+      "voto": null,
+      "real_t1": "pruebas_aliados_enemigos",
+      "hit": null,
+      "peso": null,
+      "margen_top1_top2": 0
+    },
+    {
+      "k": 12,
+      "visto": "e11_regreso_bares_zona_rosa_la_purisima",
+      "prefijo_ultimo": "pruebas_aliados_enemigos",
+      "eligible": 0,
+      "voto": null,
+      "real_t1": "camino_regreso",
+      "hit": null,
+      "peso": null,
+      "margen_top1_top2": 0
+    },
+    {
+      "k": 13,
+      "visto": "e12_pandemia_2020_bares_gerencial",
+      "prefijo_ultimo": "camino_regreso",
+      "eligible": 0,
+      "voto": null,
+      "real_t1": "prueba_suprema",
+      "hit": null,
+      "peso": null,
+      "margen_top1_top2": 0
+    },
+    {
+      "k": 14,
+      "visto": "e13_relacion_ano_y_medio_35",
+      "prefijo_ultimo": "prueba_suprema",
+      "eligible": 0,
+      "voto": null,
+      "real_t1": "mundo_ordinario",
+      "hit": null,
+      "peso": null,
+      "margen_top1_top2": 0
+    }
+  ],
+  "corrida_cruda": {
+    "status": "ok",
+    "case_id": "caso_marco_01_infancia_adultez_temprana",
+    "input_file": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/plugins_laterales/CALDERO_2026-09-13/entrada/escaleta_marco_16_ejecutable.json",
+    "validated_stage_count": 16,
+    "current_index": 14,
+    "current_stage_id": "e14_actual_39_zona_rosa_delivery",
+    "current_stage_name": "e14_actual_39_zona_rosa_delivery",
+    "runs": [
+      {
+        "stage_current_id": "e0_kinder_veracruz",
+        "stage_current_name": "e0_kinder_veracruz",
+        "prefix_length": 1,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 1,
+          "prefix_length": 1,
+          "user_prefix": [
+            "mundo_ordinario"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "alejandro_magno",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 1,
+              "reference_prefix": [
+                "mundo_ordinario"
+              ],
+              "next_stage": "mentor",
+              "reference_length": 9
+            },
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 1,
+              "reference_prefix": [
+                "mundo_ordinario"
+              ],
+              "next_stage": "mentor",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 1,
+              "reference_prefix": [
+                "mundo_ordinario"
+              ],
+              "next_stage": "mentor",
+              "reference_length": 10
+            },
+            {
+              "name": "borges",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 1,
+              "reference_prefix": [
+                "mundo_ordinario"
+              ],
+              "next_stage": "mentor",
+              "reference_length": 9
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 1,
+              "reference_prefix": [
+                "mundo_ordinario"
+              ],
+              "next_stage": "mentor",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "mentor",
+              "raw_weight": 5.0,
+              "normalized_weight_within_selected_neighbors": 1.0,
+              "supporting_neighbors": [
+                "alejandro_magno",
+                "aquiles",
+                "beethoven",
+                "borges",
+                "cortazar"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e1_fuga_siete_anos",
+        "stage_current_name": "e1_fuga_siete_anos",
+        "prefix_length": 2,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 2,
+          "prefix_length": 2,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 2,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 8
+            },
+            {
+              "name": "hemingway",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 2,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 10
+            },
+            {
+              "name": "julio_cesar",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 2,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 9
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 2,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 10
+            },
+            {
+              "name": "rulfo",
+              "distance_normalized": 0.0,
+              "similarity": 1.0,
+              "prefix_length": 2,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 6
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "rechazo_o_duda",
+              "raw_weight": 3.0,
+              "normalized_weight_within_selected_neighbors": 0.6,
+              "supporting_neighbors": [
+                "freddie_mercury",
+                "hemingway",
+                "luis_eduardo_aute"
+              ]
+            },
+            {
+              "next_stage": "cruce_umbral",
+              "raw_weight": 2.0,
+              "normalized_weight_within_selected_neighbors": 0.4,
+              "supporting_neighbors": [
+                "julio_cesar",
+                "rulfo"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e2_escuela_catolica_salesiana",
+        "stage_current_name": "e2_escuela_catolica_salesiana",
+        "prefix_length": 3,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 3,
+          "prefix_length": 3,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "alejandro_magno",
+              "distance_normalized": 0.333333,
+              "similarity": 0.666667,
+              "prefix_length": 3,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 9
+            },
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.333333,
+              "similarity": 0.666667,
+              "prefix_length": 3,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.333333,
+              "similarity": 0.666667,
+              "prefix_length": 3,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 10
+            },
+            {
+              "name": "borges",
+              "distance_normalized": 0.333333,
+              "similarity": 0.666667,
+              "prefix_length": 3,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 9
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.333333,
+              "similarity": 0.666667,
+              "prefix_length": 3,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura"
+              ],
+              "next_stage": "rechazo_o_duda",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "rechazo_o_duda",
+              "raw_weight": 2.000001,
+              "normalized_weight_within_selected_neighbors": 0.6,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven",
+                "cortazar"
+              ]
+            },
+            {
+              "next_stage": "cruce_umbral",
+              "raw_weight": 1.333334,
+              "normalized_weight_within_selected_neighbors": 0.4,
+              "supporting_neighbors": [
+                "alejandro_magno",
+                "borges"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e3_ateismo_a_agnosticismo",
+        "stage_current_name": "e3_ateismo_a_agnosticismo",
+        "prefix_length": 4,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 4,
+          "prefix_length": 4,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 4,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 4,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 4,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 11
+            },
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 4,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral"
+              ],
+              "next_stage": "pruebas_aliados_enemigos",
+              "reference_length": 8
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 4,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda"
+              ],
+              "next_stage": "cruce_umbral",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "cruce_umbral",
+              "raw_weight": 3.0,
+              "normalized_weight_within_selected_neighbors": 0.8,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven",
+                "cortazar",
+                "garcia_marquez"
+              ]
+            },
+            {
+              "next_stage": "pruebas_aliados_enemigos",
+              "raw_weight": 0.75,
+              "normalized_weight_within_selected_neighbors": 0.2,
+              "supporting_neighbors": [
+                "freddie_mercury"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e4_salida_media_superior",
+        "stage_current_name": "e4_salida_media_superior",
+        "prefix_length": 5,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 5,
+          "prefix_length": 5,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 5,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral"
+              ],
+              "next_stage": "pruebas_aliados_enemigos",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 5,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral"
+              ],
+              "next_stage": "pruebas_aliados_enemigos",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 5,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral"
+              ],
+              "next_stage": "pruebas_aliados_enemigos",
+              "reference_length": 11
+            },
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 5,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos"
+              ],
+              "next_stage": "prueba_suprema",
+              "reference_length": 8
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 5,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral"
+              ],
+              "next_stage": "pruebas_aliados_enemigos",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "pruebas_aliados_enemigos",
+              "raw_weight": 3.2,
+              "normalized_weight_within_selected_neighbors": 0.8,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven",
+                "cortazar",
+                "garcia_marquez"
+              ]
+            },
+            {
+              "next_stage": "prueba_suprema",
+              "raw_weight": 0.8,
+              "normalized_weight_within_selected_neighbors": 0.2,
+              "supporting_neighbors": [
+                "freddie_mercury"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e5_filosofia_desercion",
+        "stage_current_name": "e5_filosofia_desercion",
+        "prefix_length": 6,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 6,
+          "prefix_length": 6,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos"
+          ],
+          "eligible_reference_count": 15,
+          "excluded_references": [],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.166667,
+              "similarity": 0.833333,
+              "prefix_length": 6,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos"
+              ],
+              "next_stage": "prueba_suprema",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.166667,
+              "similarity": 0.833333,
+              "prefix_length": 6,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos"
+              ],
+              "next_stage": "prueba_suprema",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.166667,
+              "similarity": 0.833333,
+              "prefix_length": 6,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos"
+              ],
+              "next_stage": "prueba_suprema",
+              "reference_length": 11
+            },
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.166667,
+              "similarity": 0.833333,
+              "prefix_length": 6,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema"
+              ],
+              "next_stage": "recompensa",
+              "reference_length": 8
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.166667,
+              "similarity": 0.833333,
+              "prefix_length": 6,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos"
+              ],
+              "next_stage": "prueba_suprema",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "prueba_suprema",
+              "raw_weight": 3.333332,
+              "normalized_weight_within_selected_neighbors": 0.8,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven",
+                "cortazar",
+                "garcia_marquez"
+              ]
+            },
+            {
+              "next_stage": "recompensa",
+              "raw_weight": 0.833333,
+              "normalized_weight_within_selected_neighbors": 0.2,
+              "supporting_neighbors": [
+                "freddie_mercury"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e6_creacion_literaria_2008",
+        "stage_current_name": "e6_creacion_literaria_2008",
+        "prefix_length": 7,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 7,
+          "prefix_length": 7,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior"
+          ],
+          "eligible_reference_count": 14,
+          "excluded_references": [
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            }
+          ],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.285714,
+              "similarity": 0.714286,
+              "prefix_length": 7,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema"
+              ],
+              "next_stage": "recompensa",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.285714,
+              "similarity": 0.714286,
+              "prefix_length": 7,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema"
+              ],
+              "next_stage": "recompensa",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.285714,
+              "similarity": 0.714286,
+              "prefix_length": 7,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema"
+              ],
+              "next_stage": "recompensa",
+              "reference_length": 11
+            },
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.285714,
+              "similarity": 0.714286,
+              "prefix_length": 7,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 8
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.285714,
+              "similarity": 0.714286,
+              "prefix_length": 7,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema"
+              ],
+              "next_stage": "recompensa",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "recompensa",
+              "raw_weight": 2.857144,
+              "normalized_weight_within_selected_neighbors": 0.8,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven",
+                "cortazar",
+                "garcia_marquez"
+              ]
+            },
+            {
+              "next_stage": "resurreccion_transformacion",
+              "raw_weight": 0.714286,
+              "normalized_weight_within_selected_neighbors": 0.2,
+              "supporting_neighbors": [
+                "freddie_mercury"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e7_bares_coyoacan_relacion_2y9m",
+        "stage_current_name": "e7_bares_coyoacan_relacion_2y9m",
+        "prefix_length": 8,
+        "result": {
+          "status": "partial",
+          "stage_current_index": 8,
+          "prefix_length": 8,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema"
+          ],
+          "eligible_reference_count": 13,
+          "excluded_references": [
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            }
+          ],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 8,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 8,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 8,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa"
+              ],
+              "next_stage": "camino_regreso",
+              "reference_length": 11
+            },
+            {
+              "name": "freddie_mercury",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 8,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": null,
+              "reference_length": 8
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.25,
+              "similarity": 0.75,
+              "prefix_length": 8,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa"
+              ],
+              "next_stage": "camino_regreso",
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "camino_regreso",
+              "raw_weight": 1.5,
+              "normalized_weight_within_selected_neighbors": 0.5,
+              "supporting_neighbors": [
+                "cortazar",
+                "garcia_marquez"
+              ]
+            },
+            {
+              "next_stage": "resurreccion_transformacion",
+              "raw_weight": 1.5,
+              "normalized_weight_within_selected_neighbors": 0.5,
+              "supporting_neighbors": [
+                "aquiles",
+                "beethoven"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e8_muerte_tio_octubre_2012_ruptura",
+        "stage_current_name": "e8_muerte_tio_octubre_2012_ruptura",
+        "prefix_length": 9,
+        "result": {
+          "status": "partial",
+          "stage_current_index": 9,
+          "prefix_length": 9,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa"
+          ],
+          "eligible_reference_count": 11,
+          "excluded_references": [
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            }
+          ],
+          "neighbors": [
+            {
+              "name": "aquiles",
+              "distance_normalized": 0.222222,
+              "similarity": 0.777778,
+              "prefix_length": 9,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": null,
+              "reference_length": 9
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.222222,
+              "similarity": 0.777778,
+              "prefix_length": 9,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": "retorno_con_elixir",
+              "reference_length": 10
+            },
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.222222,
+              "similarity": 0.777778,
+              "prefix_length": 9,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 11
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.222222,
+              "similarity": 0.777778,
+              "prefix_length": 9,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 11
+            },
+            {
+              "name": "hemingway",
+              "distance_normalized": 0.222222,
+              "similarity": 0.777778,
+              "prefix_length": 9,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "mentor",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso"
+              ],
+              "next_stage": "resurreccion_transformacion",
+              "reference_length": 10
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "resurreccion_transformacion",
+              "raw_weight": 2.333334,
+              "normalized_weight_within_selected_neighbors": 0.75,
+              "supporting_neighbors": [
+                "cortazar",
+                "garcia_marquez",
+                "hemingway"
+              ]
+            },
+            {
+              "next_stage": "retorno_con_elixir",
+              "raw_weight": 0.777778,
+              "normalized_weight_within_selected_neighbors": 0.25,
+              "supporting_neighbors": [
+                "beethoven"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e9_maestro_secundaria_malabares",
+        "stage_current_name": "e9_maestro_secundaria_malabares",
+        "prefix_length": 10,
+        "result": {
+          "status": "partial",
+          "stage_current_index": 10,
+          "prefix_length": 10,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa",
+            "camino_regreso"
+          ],
+          "eligible_reference_count": 6,
+          "excluded_references": [
+            {
+              "name": "aquiles",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "alejandro_magno",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "julio_cesar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "borges",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            },
+            {
+              "name": "paganini",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            }
+          ],
+          "neighbors": [
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 10,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": "retorno_con_elixir",
+              "reference_length": 11
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 10,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": "retorno_con_elixir",
+              "reference_length": 11
+            },
+            {
+              "name": "hemingway",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 10,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "mentor",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion"
+              ],
+              "next_stage": null,
+              "reference_length": 10
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "distance_normalized": 0.2,
+              "similarity": 0.8,
+              "prefix_length": 10,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion",
+                "retorno_con_elixir"
+              ],
+              "next_stage": null,
+              "reference_length": 10
+            },
+            {
+              "name": "beethoven",
+              "distance_normalized": 0.3,
+              "similarity": 0.7,
+              "prefix_length": 10,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "resurreccion_transformacion",
+                "retorno_con_elixir"
+              ],
+              "next_stage": null,
+              "reference_length": 10
+            }
+          ],
+          "transition_candidates": [
+            {
+              "next_stage": "retorno_con_elixir",
+              "raw_weight": 1.6,
+              "normalized_weight_within_selected_neighbors": 1.0,
+              "supporting_neighbors": [
+                "cortazar",
+                "garcia_marquez"
+              ]
+            }
+          ],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e10_primera_novela_obra_teatro_25",
+        "stage_current_name": "e10_primera_novela_obra_teatro_25",
+        "prefix_length": 11,
+        "result": {
+          "status": "partial",
+          "stage_current_index": 11,
+          "prefix_length": 11,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa",
+            "camino_regreso",
+            "resurreccion_transformacion"
+          ],
+          "eligible_reference_count": 2,
+          "excluded_references": [
+            {
+              "name": "aquiles",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "alejandro_magno",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "julio_cesar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "napoleon",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "borges",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "hemingway",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            },
+            {
+              "name": "paganini",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "beethoven",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            }
+          ],
+          "neighbors": [
+            {
+              "name": "cortazar",
+              "distance_normalized": 0.181818,
+              "similarity": 0.818182,
+              "prefix_length": 11,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion",
+                "retorno_con_elixir"
+              ],
+              "next_stage": null,
+              "reference_length": 11
+            },
+            {
+              "name": "garcia_marquez",
+              "distance_normalized": 0.181818,
+              "similarity": 0.818182,
+              "prefix_length": 11,
+              "reference_prefix": [
+                "mundo_ordinario",
+                "mentor",
+                "llamado_aventura",
+                "rechazo_o_duda",
+                "cruce_umbral",
+                "pruebas_aliados_enemigos",
+                "prueba_suprema",
+                "recompensa",
+                "camino_regreso",
+                "resurreccion_transformacion",
+                "retorno_con_elixir"
+              ],
+              "next_stage": null,
+              "reference_length": 11
+            }
+          ],
+          "transition_candidates": [],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e11_regreso_bares_zona_rosa_la_purisima",
+        "stage_current_name": "e11_regreso_bares_zona_rosa_la_purisima",
+        "prefix_length": 12,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 12,
+          "prefix_length": 12,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa",
+            "camino_regreso",
+            "resurreccion_transformacion",
+            "pruebas_aliados_enemigos"
+          ],
+          "eligible_reference_count": 0,
+          "excluded_references": [
+            {
+              "name": "aquiles",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "alejandro_magno",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "julio_cesar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "napoleon",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "garcia_marquez",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "cortazar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "borges",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "hemingway",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            },
+            {
+              "name": "paganini",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "beethoven",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            }
+          ],
+          "neighbors": [],
+          "transition_candidates": [],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e12_pandemia_2020_bares_gerencial",
+        "stage_current_name": "e12_pandemia_2020_bares_gerencial",
+        "prefix_length": 13,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 13,
+          "prefix_length": 13,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa",
+            "camino_regreso",
+            "resurreccion_transformacion",
+            "pruebas_aliados_enemigos",
+            "camino_regreso"
+          ],
+          "eligible_reference_count": 0,
+          "excluded_references": [
+            {
+              "name": "aquiles",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "alejandro_magno",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "julio_cesar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "napoleon",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "garcia_marquez",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "cortazar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "borges",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "hemingway",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            },
+            {
+              "name": "paganini",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "beethoven",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            }
+          ],
+          "neighbors": [],
+          "transition_candidates": [],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      },
+      {
+        "stage_current_id": "e13_relacion_ano_y_medio_35",
+        "stage_current_name": "e13_relacion_ano_y_medio_35",
+        "prefix_length": 14,
+        "result": {
+          "status": "ok",
+          "stage_current_index": 14,
+          "prefix_length": 14,
+          "user_prefix": [
+            "mundo_ordinario",
+            "llamado_aventura",
+            "SIN_MAPEAR",
+            "rechazo_o_duda",
+            "cruce_umbral",
+            "pruebas_aliados_enemigos",
+            "acercamiento_cueva_interior",
+            "prueba_suprema",
+            "recompensa",
+            "camino_regreso",
+            "resurreccion_transformacion",
+            "pruebas_aliados_enemigos",
+            "camino_regreso",
+            "prueba_suprema"
+          ],
+          "eligible_reference_count": 0,
+          "excluded_references": [
+            {
+              "name": "aquiles",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "alejandro_magno",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "julio_cesar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "genghis_khan",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "napoleon",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "rulfo",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 6
+            },
+            {
+              "name": "garcia_marquez",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "cortazar",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 11
+            },
+            {
+              "name": "borges",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "hemingway",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "freddie_mercury",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 8
+            },
+            {
+              "name": "mozart",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 7
+            },
+            {
+              "name": "paganini",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 9
+            },
+            {
+              "name": "luis_eduardo_aute",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            },
+            {
+              "name": "beethoven",
+              "reason": "referencia_mas_corta_que_el_prefijo",
+              "reference_length": 10
+            }
+          ],
+          "neighbors": [],
+          "transition_candidates": [],
+          "weight_function": "similarity = 1 - normalized_distance",
+          "weight_function_status": "provisional_unvalidated",
+          "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+        }
+      }
+    ],
+    "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "caso": "35A_marco_escaleta",
+  "e14_estado": "mundo_ordinario",
+  "apuesta_humana": "Q2_descenso_prueba",
+  "predict_next_e14": {
+    "elig": 0,
+    "status": "ok",
+    "reason": null,
+    "cands": [],
+    "excluded_n": 15,
+    "nota": "elig=0 en k=15: prefijo demasiado largo vs biografias de referencia → máquina sin voto t+1"
+  },
+  "sweep_elig_por_k": [
+    {
+      "k": 1,
+      "last": "mundo_ordinario",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "mentor",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 2,
+      "last": "llamado_aventura",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "rechazo_o_duda",
+          null
+        ],
+        [
+          "cruce_umbral",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 3,
+      "last": "SIN_MAPEAR",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "rechazo_o_duda",
+          null
+        ],
+        [
+          "cruce_umbral",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 4,
+      "last": "rechazo_o_duda",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "cruce_umbral",
+          null
+        ],
+        [
+          "pruebas_aliados_enemigos",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "last": "cruce_umbral",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "pruebas_aliados_enemigos",
+          null
+        ],
+        [
+          "prueba_suprema",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 6,
+      "last": "pruebas_aliados_enemigos",
+      "elig": 15,
+      "status": "ok",
+      "top": [
+        [
+          "prueba_suprema",
+          null
+        ],
+        [
+          "recompensa",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 7,
+      "last": "acercamiento_cueva_interior",
+      "elig": 14,
+      "status": "ok",
+      "top": [
+        [
+          "recompensa",
+          null
+        ],
+        [
+          "resurreccion_transformacion",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 8,
+      "last": "prueba_suprema",
+      "elig": 13,
+      "status": "partial",
+      "top": [
+        [
+          "camino_regreso",
+          null
+        ],
+        [
+          "resurreccion_transformacion",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 9,
+      "last": "recompensa",
+      "elig": 11,
+      "status": "partial",
+      "top": [
+        [
+          "resurreccion_transformacion",
+          null
+        ],
+        [
+          "retorno_con_elixir",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 10,
+      "last": "camino_regreso",
+      "elig": 6,
+      "status": "partial",
+      "top": [
+        [
+          "retorno_con_elixir",
+          null
+        ]
+      ]
+    },
+    {
+      "k": 11,
+      "last": "resurreccion_transformacion",
+      "elig": 2,
+      "status": "partial",
+      "top": []
+    },
+    {
+      "k": 12,
+      "last": "pruebas_aliados_enemigos",
+      "elig": 0,
+      "status": "ok",
+      "top": []
+    },
+    {
+      "k": 13,
+      "last": "camino_regreso",
+      "elig": 0,
+      "status": "ok",
+      "top": []
+    },
+    {
+      "k": 14,
+      "last": "prueba_suprema",
+      "elig": 0,
+      "status": "ok",
+      "top": []
+    },
+    {
+      "k": 15,
+      "last": "mundo_ordinario",
+      "elig": 0,
+      "status": "ok",
+      "top": []
+    }
+  ],
+  "ultimo_voto_util": {
+    "k": 10,
+    "last": "camino_regreso",
+    "elig": 6,
+    "status": "partial",
+    "top": [
+      [
+        "retorno_con_elixir",
+        null
+      ]
+    ]
+  }
+}

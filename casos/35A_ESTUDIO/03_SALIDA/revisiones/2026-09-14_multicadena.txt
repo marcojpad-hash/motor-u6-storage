@@ -1,0 +1,4 @@
+Calibración extra 2026-09-14:
+Vecinos semánticos; cuartos no línea; varias cadenas a la vez;
+roles intercambiables según contexto (adversario/sabio, héroe/mentor, etc.).
+e15 multi-cadena abierto. Apuesta e14→Q2 intacta (cuadrante, no rol único).

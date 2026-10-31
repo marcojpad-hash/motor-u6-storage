@@ -1,0 +1,266 @@
+{
+  "plugin": "PLUGIN_CIRCULO_MONOMITO",
+  "tipo": "lente_lateral_no_pattern",
+  "no_toca": [
+    "Engine_V5_CANONICO_SOLO.py",
+    "patterns_final_v14.json"
+  ],
+  "r1_corregida": "listas por cuadrante son estructuras semanticas candidatas",
+  "posicion_monomito_por_corte": [
+    {
+      "corte": "C1",
+      "pregunta_activa": "origen",
+      "cuadrante_activo": [
+        "Q2_Descenso_4_6"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C2",
+      "pregunta_activa": "origen",
+      "cuadrante_activo": [
+        "Q1_Separacion_1_3",
+        "Q2_Descenso_4_6"
+      ],
+      "hilos_presentes": [
+        "hilo_desafio"
+      ],
+      "estabilidad_hilo": {
+        "hilo_desafio": 1
+      },
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C3",
+      "pregunta_activa": "origen",
+      "cuadrante_activo": [
+        "Q1_Separacion_1_3"
+      ],
+      "hilos_presentes": [
+        "hilo_desafio"
+      ],
+      "estabilidad_hilo": {
+        "hilo_desafio": 2
+      },
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C4",
+      "pregunta_activa": "con_que_contra_quien",
+      "cuadrante_activo": [
+        "Q1_Separacion_1_3",
+        "Q2_Descenso_4_6"
+      ],
+      "hilos_presentes": [
+        "hilo_desafio"
+      ],
+      "estabilidad_hilo": {
+        "hilo_desafio": 3
+      },
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C5",
+      "pregunta_activa": "con_que_contra_quien",
+      "cuadrante_activo": [
+        "Q2_Descenso_4_6"
+      ],
+      "hilos_presentes": [
+        "hilo_formacion",
+        "hilo_desafio"
+      ],
+      "estabilidad_hilo": {
+        "hilo_formacion": 1,
+        "hilo_desafio": 2
+      },
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C6",
+      "pregunta_activa": "donde_se_rompe",
+      "cuadrante_activo": [
+        "Q3_Ordeal_7_9"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12"
+      ]
+    },
+    {
+      "corte": "C7",
+      "pregunta_activa": "donde_se_rompe",
+      "cuadrante_activo": [
+        "Q3_Ordeal_7_9"
+      ],
+      "hilos_presentes": [
+        "hilo_sombra_consumo"
+      ],
+      "estabilidad_hilo": {
+        "hilo_sombra_consumo": 1
+      },
+      "r3_sombra_mentor": "fue_mentor_demora_etiqueta",
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [
+        "hilo_sombra_consumo"
+      ],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12"
+      ]
+    },
+    {
+      "corte": "C8",
+      "pregunta_activa": "donde_se_rompe",
+      "cuadrante_activo": [
+        "Q3_Ordeal_7_9"
+      ],
+      "hilos_presentes": [
+        "hilo_vinculo"
+      ],
+      "estabilidad_hilo": {
+        "hilo_vinculo": 1
+      },
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [
+        "hilo_sombra_consumo"
+      ],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12"
+      ]
+    },
+    {
+      "corte": "C9",
+      "pregunta_activa": "que_queda",
+      "cuadrante_activo": [
+        "Q2_Descenso_4_6",
+        "Q4_Retorno_10_12"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [
+        {
+          "hilo": "hilo_sombra_consumo",
+          "origen": "C7",
+          "cierre_en": "C9",
+          "tipo": "catarsis_contextual_Q4"
+        }
+      ],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q1_Separacion_1_3",
+        "Q3_Ordeal_7_9"
+      ]
+    },
+    {
+      "corte": "C10",
+      "pregunta_activa": "con_que_contra_quien",
+      "cuadrante_activo": [
+        "Q3_Ordeal_7_9"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12"
+      ]
+    },
+    {
+      "corte": "C11",
+      "pregunta_activa": "donde_se_rompe",
+      "cuadrante_activo": [
+        "Q3_Ordeal_7_9",
+        "Q4_Retorno_10_12"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q2_Descenso_4_6",
+        "Q1_Separacion_1_3"
+      ]
+    },
+    {
+      "corte": "C12",
+      "pregunta_activa": "que_queda",
+      "cuadrante_activo": [
+        "Q2_Descenso_4_6"
+      ],
+      "hilos_presentes": [],
+      "estabilidad_hilo": {},
+      "r3_sombra_mentor": null,
+      "r4_nuevo_ciclo": false,
+      "catarsis_de_hilo": [],
+      "pendientes_consolidar_restantes": [],
+      "huecos": [
+        "Q1_Separacion_1_3",
+        "Q4_Retorno_10_12",
+        "Q3_Ordeal_7_9"
+      ]
+    }
+  ],
+  "linea_mas_avanzada_actual": null,
+  "nota_catarsis": "catarsis = cierre en Q4 por conexion contextual con otro hilo (anagnorisis/peripecia)"
+}

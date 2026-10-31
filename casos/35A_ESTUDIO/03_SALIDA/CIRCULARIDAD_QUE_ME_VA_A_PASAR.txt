@@ -1,0 +1,73 @@
+CASO BASE 35A — RESPUESTA EN SEMÁNTICA DE CIRCULARIDAD
+(Como si preguntaran: «¿qué me va a pasar?» — NO perfil de persona; solo estructura monomito.)
+
+────────────────────────────────────────
+1) DÓNDE ESTÁS EN EL CÍRCULO (foto sellada e14)
+────────────────────────────────────────
+Estado observado: mundo_ordinario (código de etapa) · cuadrante de lectura de apuesta: Q4-retorno-asentado.
+Pregunta activa del círculo en e14: «qué queda».
+Cuadrantes que el círculo marca activos en e14: Q1 (separación) + Q3 (ordeal) — no Q2 ni Q4 como «activos» en esa lente.
+Huecos declarados: Q2 (descenso) + Q4 (retorno/elixir).
+r4_nuevo_ciclo: false (aún no declara ciclo nuevo cerrado).
+Hilos presentes en e14: ninguno en la corrida.
+e15 (LLMs): NO_CODIFICADO = ranura abierta; no es voto todavía.
+
+Lectura en cristiano:
+Ya recorriste un ciclo completo (ordinario → llamado → umbral → pruebas → cueva → prueba → «recompensa»/duelo → regresos → otra prueba → otra vez ordinario).
+El «ordinario» de e14 no es el de e0: es ordinario DESPUÉS de haber vuelto. Eso en monomito suele ser piso, no cierre con elixir.
+
+────────────────────────────────────────
+2) CIRCULARIDAD DE ESTA ESCALETA (patrón interno)
+────────────────────────────────────────
+Secuencia de códigos (e0→e14):
+  mundo_ordinario → llamado → SIN_MAPEAR → rechazo → umbral → pruebas → cueva → prueba_suprema → recompensa → camino_regreso → resurrección → pruebas → camino_regreso → prueba_suprema → mundo_ordinario
+
+Circularidad visible:
+- Dos entradas a «pruebas» (e5, e11) y dos a «prueba_suprema» (e7, e13) → el descenso se repite; no es línea recta a elixir.
+- Dos «camino_regreso» (e9, e12) sin «retorno_con_elixir» codificado → el retorno aparece como trabajo/supervivencia, no como botín consolidado.
+- Cierre aparente en e14 = mismo código que e0 (mundo_ordinario) = forma de círculo, no de flecha.
+
+Por eso la pregunta «¿qué me va a pasar?» en esta semántica NO es fortuna: es «¿el siguiente corte reinicia descenso (Q2) o consolida elixir/cierre (Q4)?».
+
+────────────────────────────────────────
+3) RESPUESTA ESTRUCTURAL CONGELADA (apuesta)
+────────────────────────────────────────
+Apuesta humana congelada 2026-09-14 (NO reescribir):
+  → siguiente corte real ≈ Q2_descenso_prueba
+  → NO consolidación / elixir / cierre Q4
+
+Máquina (Caldero/vecinos) en e14: eligible=0 → SIN VOTO.
+Último sesgo de máquina cuando aún votaba (k=10): empujaba a retorno_con_elixir (Q4ish) — sesgo contrario a la apuesta humana.
+Histórico Caldero en esta escaleta: hit_rate 0.3 (3/10).
+
+Traducción tipo «qué me va a pasar» (solo estructura):
+  Lo que el caso base apuesta es que lo próximo mapeable no es «ya llegó el elixir / se cierra el arco», sino otra bajada a prueba (llamado/umbral/pruebas/ordeal corto — familia Q2-ish).
+  Eso NO dice qué persona, trabajo, pareja o IA te pasa: dice el CUADRANTE del siguiente corte.
+
+HIT = el próximo corte real cae en descenso/prueba (Q2-ish).
+MISS = consolida elixir/cierre Q4.
+NO_VERIFICADO = no hay corte nuevo o no se puede mapear.
+
+Chequeo: cada 15 días (primera ~2026-09-29 08:00).
+
+────────────────────────────────────────
+4) QUÉ NO RESPONDE ESTE APARATO
+────────────────────────────────────────
+- No perfila carácter, pareja, narcisismo, anhedonia, etc. (eso queda fuera; lo haces después con otra persona si quieres).
+- No es probabilidad de futuro.
+- Tubo 5×3 / R732: FALTANTE en este caso (trazabilidad bio aparte).
+- e15 abierto: si los LLMs ya son corte vivido, hay que codificarlos; si no, siguen fuera.
+
+────────────────────────────────────────
+5) PREGUNTAS EN PENDEJO (trazabilidad; pueden aportar o no)
+────────────────────────────────────────
+Perfilar = sí. Juzgar = no (el juicio mete sesgo).
+
+A. Lo de las IAs estos dos años: ¿ya te cambió la vida de a diario, o sigues en el mismo rollo de siempre?
+B. Desde que congelamos la apuesta: ¿pasó algo gordo que te empujara, o todo sigue igual de plano?
+C. En quince días, ¿qué tendría que pasar para decir «sí, bajó otra vez a prueba»? (una frase)
+D. ¿Y qué tendría que pasar para decir «no, esto ya se asentó / se cerró»? (una frase)
+E. ¿Quieres que también midamos el lado bio a ciegas, o solo esta historia por etapas?
+F. Cuando lo veas con tu pareja/expareja: ¿perfilamos hechos sin opinar si están bien o mal?
+
+Caso marcado: BASE 35A. Apuesta intacta. Routine cada 15d.

@@ -1,0 +1,33 @@
+NOTAS PARA AFINAR — cada 15 días (caso base 35A)
+Actualizado 2026-09-14. Preguntar EN PENDEJO. Perfilar sin juicio.
+
+Plugins = discriminadores (problema semántico vs falso problema).
+Protocolos + EKT/Holmes/Schopenhauer: ¿estamos viendo lo que queríamos ver,
+o lo que la trazabilidad está mostrando? No meter sesgo de confirmación.
+Feedback cierra cuando eso se contesta con hechos.
+
+=== LO QUE SE NOTÓ (sesión calibración) ===
+1) Menú cerrado de códigos ensucia el corte vivo → no repetir.
+2) Varias cadenas a la vez; roles cambian por vecinos (no una etiqueta).
+3) Capas (244, slides, sidecars, clodlings, laterales) no se anulan.
+4) Segundo agente: token sí/no pertenece. Décimo hombre: 50-50 → re-tirar → si sigue, ESPERAR.
+5) Token alta latencia cuenta; no forzar cierre.
+6) e15 vivo, código NO fijo (contaminación de menú).
+7) Día a día sí cambió (IAs/hiperfoco/proyecto); delivery = piso.
+8) «No me siento a prueba»: todo dato es dato. HIT ≠ feeling.
+9) Señal fuerte de «asentado» que él nombró: ex/compromiso tumba el loop (~sigma).
+10) Preguntas en ingeniero = rechazo. Siempre lenguaje llano.
+11) Apuesta congelada e14→Q2 intacta (cuadrante, no arquetipo).
+
+=== PREGUNTAS CADA 15 DÍAS (pendejo) ===
+A) Desde la última vez: ¿pasó algo que se note en el día a día, o sigue parecido?
+B) El loop IAs/proyecto vs delivery: ¿igual, más, menos?
+C) ¿Apareció algo tipo «bajada/prueba» en la historia, o más bien se asentó?
+D) Lo de la ex/compromiso: ¿hubo hecho nuevo? (solo hecho, sin moralina)
+E) Chequeo EKT: ¿esto que estamos leyendo es lo que queríamos ver, o lo que se está mostrando?
+F) HIT / MISS / NO_VERIFICADO según apuesta e14→Q2 (no reescribir apuesta).
+
+Anotar bajo 03_SALIDA/revisiones/YYYY-MM-DD.txt
+
+G) Bandera marco: ¿la luz «pruebas» de ahora viene de un HECHO nuevo, o otra vez del modo «todo es dato»?
+   (Si solo es el modo de hablar → no cuentes HIT solo por eso.)

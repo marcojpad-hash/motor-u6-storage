@@ -1,0 +1,20 @@
+MÉTODO — capas / factores (calibración 2026-09-14)
+
+Idea: varios factores a la vez. Ninguno invalida al otro.
+- 244 (patterns)
+- slides
+- sidecars
+- clodlings (pieza de capa nombrada por el usuario; no borrar ni fusionar a la fuerza)
+- círculo/cuartos, Caldero, tubo R732, etc. = aparatos en paralelo
+
+Reglas:
+1) Según contexto → subíndices (no un solo índice absoluto).
+2) Tokens se activan solo por semántica del input que llega.
+3) Segundo agente / filtro: «sí activa en este set» vs «este token no le corresponde»
+   (dirección de pregunta_detras / lente semántica — highlight, no reescribir board).
+4) Décimo hombre: si queda 50-50 → repetir tirada; si sigue 50-50 → clasificar y dejar ESPERANDO
+   (no forzar Top1; no confundir con Aquiles).
+5) Token de alta latencia: existe como factor; no apagarlo por impaciencia de cierre.
+6) Monomito multicadena + vecinos: cabe con esto (varias luces, roles equivalentes).
+
+Caso 35A: e15 multi-candidato; apuesta e14→Q2 es HIT/MISS de cuadrante, no anula otras capas.

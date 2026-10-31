@@ -1,0 +1,10 @@
+{
+  "fecha": "2026-09-14",
+  "tipo": "calibracion_metodo",
+  "hallazgo": "preguntas de opción cerrada (widget A/B/C/D) sesgan el código de etapa viva",
+  "efecto": "sujeto reporta que 3 opciones hacen decantar D; gasta el espacio mental; no puede imaginar otra; A/B más probables que C post-menú pero el menú ya ensució",
+  "decision": "e15 permanece NO_CODIFICADO; no usar menú de códigos monomito en cortes vivos del caso base",
+  "alternativa": "preguntas sutiles de hecho, o dejar multi-candidato abierto sin forzar Top1",
+  "e15_estado": "vivo_sin_codigo_fijo",
+  "apuesta_e14_Q2": "intacta"
+}

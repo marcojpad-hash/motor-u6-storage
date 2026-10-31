@@ -1,0 +1,138 @@
+INSTRUCCIONES / SPEC UNIFICADO PARA CORRER Y REVISAR
+Fecha: 2026-09-14
+Formato: SPEC (no código embebido). Candados de siempre: no tocar Engine_V5/244, no inventar H, highlight only, no bloquear tubo.
+
+Paquete en disco (TRANSFER_V15_1/):
+- plugin_pregunta_dirigida.py          PROPUESTA_0.4.0  sha256 fbe575f4646cc52ebe78c8f6e99ce64d8e21d662a1e3d63f3d60757ad02f7fac
+- plugin_pregunta_detras_v2.py /.txt   PROPUESTA_v2.3.0 sha256 85c4c8555577af9ec62fb414d17b4c4f44092bb615c089a56d4bfa41920b6784
+- test_post_hoc_tropos.py              (9/9 PASS local)
+- ENTREGA_POST_HOC_TROPOS_v040.txt
+- REGLA_RESPUESTA_FINAL_USUARIO.txt
+- RUTEO_PERFIL_VS_PREDICTIBILIDAD.txt
+- Este archivo: SPEC_UNIFICADO_LOGICA_POST_HOC_TROPOS.txt
+
+Cómo correr batería mínima:
+  cd TRANSFER_V15_1 && python3 test_post_hoc_tropos.py
+
+================================================================================
+BLOQUE 0 — LÓGICA DE RUTEO (obligatoria; no es motor)
+================================================================================
+
+0.1 Capas no se anulan
+- 244 + slides + sidecars + laterales + clodlings pueden prender a la vez.
+- Tokens solo por semántica del input.
+- Segundo agente: «sí activa en este set» vs «este token no le corresponde».
+- Décimo hombre: 50-50 → re-tirar; si sigue 50-50 → clasificar y dejar ESPERANDO.
+- Token de alta latencia cuenta; no forzar cierre.
+- Monomito = cuartos (Q1–Q4), no línea; varias cadenas a la vez; roles equivalentes por vecinos (adversario↔sabio, héroe↔mentor, etc.).
+- No menú cerrado de códigos monomito en cortes vivos (contamina).
+
+0.2 Perfilamiento vs predictibilidad (CRÍTICO)
+Problema: el marco del hablante «todo es aprendizaje / todo dato es un dato» prende «pruebas» en el tablero sin ser proyección dirigida ni solo hecho de etapa.
+
+Bandera: MARCO_EPISTEMICO_PRUEBAS
+- ≠ pregunta dirigida
+- ≠ destinación forzada
+- = el marco del hablante colorea el input hacia pruebas
+
+Ruteo:
+- MARCO_EPISTEMICO / estilo de hablar → estante PERFILAMIENTO
+  (nicho: amantes / ajedrez / perfiles mentales-psicológicos)
+- NO alimenta HIT/MISS de apuesta de cuadrante (Caldero / Q2 / elixir)
+- La luz PUEDE quedar visible (capas no se anulan) pero se DESACOPLA del contador de predictibilidad
+- HIT estructural solo con HECHO/corte mapeable nuevo, no con reincidencia del estilo
+- pregunta_detrás / segundo agente: marcar CAMPO vs ETIQUETA vs MARCO_PERFIL
+- Precedente pack: «Perfil != predicción de cierre»; embudo PERFIL_VENTANA / PERFIL_SOSTENIDO (no suben p)
+
+En pendejo: cómo miras el mundo = perfil. Qué etapa viene = otra cuenta.
+
+0.3 Sidecars (no confundir con estante perfiles)
+- Amantes = arquetipos amorosos: SIDECAR (se activa DESPUÉS de tokens principales)
+- Guerra (y análogos) = SIDECAR, misma regla
+- Nota: «diamantes» fue error de dictado (TTV); lo correcto es amantes
+- Sidecar OFF en limpio factory; ON solo si la corrida lo pide
+- Orden: tokens principales → (si pican) sidecar
+
+0.4 Respuesta final al usuario (auditoría / «qué me va a pasar» / aplicación)
+PROHIBIDO en el cierre user-facing:
+- «no sé»
+- «datos insuficientes» estilo Multivac
+- multi-candidato sin ranking
+
+OBLIGATORIO:
+- Comprometerse a 1 opción, o rankear 2–3 más probables según el campo
+- Capas internas pueden seguir multi-candidato; el cierre elige/rankea
+- «Faltan datos» solo si el siguiente paso inmediato es reunir evidencia ligera;
+  si no hay paso inmediato → definir igual
+- No inventar H; no tocar tubo. Es regla de enunciación, no de geometría.
+
+================================================================================
+BLOQUE 1 — `detectar_post_hoc` (extiende pregunta_dirigida) — YA IMPLEMENTADO 0.4.0
+================================================================================
+
+Qué detecta: usar el orden temporal (algo aparece antes en R732/κ/persist) como si fuera evidencia de causa o predicción validada, sin que el investigador lo haya puesto a prueba.
+
+Patrón sintáctico (estructura, no lista de frases):
+- Verbo/cue de secuencia temporal ("antes de", "ya en C_", "desde el corte") + verbo de causa/certeza ("por eso", "entonces", "esto explica", "esto predijo", "esto demuestra que") en la misma oración o contiguas.
+- Caso especial: κ_dir / persist / dX como sujeto de afirmación causal ("la caída de kappa en C6 causó…" / "el salto de dX predijo…") — confunde diagnóstico geométrico (solo describe) con explicación causal (no autorizado; kappa/dX no deciden H1/H2).
+
+Severidad:
+- hard si nombra explícitamente el desenlace sellado (o ruptura/desenlace claro) como lo "causado"
+- soft si solo estructura temporal-causal sin nombrar sellado
+
+Acción: bandera, no bloquea; pedir reformular como observación (quitar "por eso"/"esto predijo"; dejar secuencia); investigador decide si hay causa real o solo orden.
+
+Casos mínimos (deben pasar — ya pasan en test_post_hoc_tropos.py):
+- "κ cayó en C6, por eso ya sabíamos que iba a haber ruptura" → hard
+- "κ cayó en C6" (sola) → no dispara
+- "Como esto pasó antes, esto ya predecía el desenlace" → hard
+- "¿Qué papel tuvo la caída de kappa en C6?" → no dispara (FENOMENO_CAMPO)
+
+Sinecdoque/metonimia: NO en MARCO_EVALUATIVO. Extensión de _SINONIMOS / cotejo sellado_post_Z vía registrar_sinecdoque(canon, variantes) — tabla caso a caso, no auto genérico.
+
+================================================================================
+BLOQUE 2 — Tropos (extiende MARCO_EVALUATIVO) — YA IMPLEMENTADO v2.3.0
+================================================================================
+
+Reemplaza/amplía las 4 frases fijas (se mantienen + tropos estructurales):
+
+Lítotes: patrón `no + [adjetivo/adverbio negado]` que invierte a afirmación fuerte
+  ("no poco", "no fue ajeno a", "no menor", "no insignificante", "nada desdeñable").
+  → MARCO_EVALUATIVO / marco_litotes
+
+Hipérbole: superlativo absoluto + exclusividad temporal
+  ("el más ___ de la historia", "jamás visto", "sin precedentes", "nunca antes",
+   "el peor/mejor de todos los tiempos").
+  → MARCO_EVALUATIVO / marco_hiperbole
+
+NO incluir: ironía/sarcasmo (contexto pragmático; alto FP/FN).
+
+================================================================================
+BLOQUE 3 — Fix tildes `_rol_sintactico` — YA APLICADO (desde v2.2.2; verificado en v2.3.0)
+================================================================================
+
+Buscar siempre contra nq=_norm(q), no contra q con tilde (lex ya normalizado).
+Verificación: "¿Era médico?" → ETIQUETA_SUJETO + PREDICATIVO.
+Más urgente que las extensiones; confirmar en cada revisión.
+
+================================================================================
+BLOQUE 4 — Qué revisar / autorizar
+================================================================================
+
+1) Correr test_post_hoc_tropos.py (esperar 9/9).
+2) Meter batería propia de siempre (pregunta_dirigida + filtro semántico) encima.
+3) Confirmar tilde fix en casos con acentos (médico, ambición, etc.).
+4) Autorizar o tumbar cableado al limpio (sigue PROPUESTA / OFF por defecto).
+5) Aplicar BLOQUE 0 en lecturas de proyección: no contar MARCO_EPISTEMICO como HIT Q2;
+   sidecars amantes/guerra solo post-tokens; cierre user-facing con 1–3 opciones.
+
+================================================================================
+BLOQUE 5 — Caso base 35A (contexto, no bloquea el spec de plugins)
+================================================================================
+
+Apuesta congelada: e14 mundo_ordinario → Q2 (no elixir); chequeo cada 15d.
+e15 vivo, código NO fijo (menú contaminó).
+Proyección 5–10: H1 Q2-ish; H2 vínculo/ex alta latencia; TORTUGAS en R732 final.
+Bandera MARCO_EPISTEMICO_PRUEBAS activa en ese caso — rutea a perfil, no a HIT.
+
+Fin del SPEC.

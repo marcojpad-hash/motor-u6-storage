@@ -1,0 +1,38 @@
+CASO BASE 35A — predictibilidad + circularidad
+Apuesta congelada 2026-09-14: e14 mundo_ordinario → Q2 (no elixir). Chequeo cada 15d (~primera 2026-09-29).
+NO perfil. Ver CIRCULARIDAD_QUE_ME_VA_A_PASAR.txt
+
+CASO 35A — ESTUDIO predictibilidad (escaleta + perfil + apuesta)
+
+Apuesta congelada: e14 mundo_ordinario/Q4 → Q2 (descenso/prueba), NO elixir
+Revisión HIT/MISS: 2026-09-27 08:00
+
+Caldero histórico (prefijos): hit_rate=0.3 (3/10) — acierta medio (umbral/pruebas); falla retorno/elixir
+
+Máquina en e14 (k=15): eligible=0 → SIN VOTO
+  (= las bios de referencia son más cortas que tu prefijo; no hay vecinos)
+Último k con voto: k=10 last=camino_regreso elig=6 top=[('retorno_con_elixir', None)]
+  Top1=retorno_con_elixir zona≈Q4ish
+
+Lectura estudio:
+- La apuesta humana Q2 queda SOLA como predicción falsable (máquina ya no opina en e14).
+- Histórico: cuando el ciclo pedía retorno/elixir, la máquina erró hacia más retorno — útil como sesgo del lateral.
+- Perfil narrativo guardado; tubo 5x3/R732 FALTANTE hasta armar cortes.
+- e15 LLMs = NO_CODIFICADO (abierto).
+
+Sweep elig:
+  k= 1 mundo_ordinario                  elig=15 top=[('mentor', None)]
+  k= 2 llamado_aventura                 elig=15 top=[('rechazo_o_duda', None), ('cruce_umbral', None)]
+  k= 3 SIN_MAPEAR                       elig=15 top=[('rechazo_o_duda', None), ('cruce_umbral', None)]
+  k= 4 rechazo_o_duda                   elig=15 top=[('cruce_umbral', None), ('pruebas_aliados_enemigos', None)]
+  k= 5 cruce_umbral                     elig=15 top=[('pruebas_aliados_enemigos', None), ('prueba_suprema', None)]
+  k= 6 pruebas_aliados_enemigos         elig=15 top=[('prueba_suprema', None), ('recompensa', None)]
+  k= 7 acercamiento_cueva_interior      elig=14 top=[('recompensa', None), ('resurreccion_transformacion', None)]
+  k= 8 prueba_suprema                   elig=13 top=[('camino_regreso', None), ('resurreccion_transformacion', None)]
+  k= 9 recompensa                       elig=11 top=[('resurreccion_transformacion', None), ('retorno_con_elixir', None)]
+  k=10 camino_regreso                   elig=6 top=[('retorno_con_elixir', None)]
+  k=11 resurreccion_transformacion      elig=2 top=[]
+  k=12 pruebas_aliados_enemigos         elig=0 top=[]
+  k=13 camino_regreso                   elig=0 top=[]
+  k=14 prueba_suprema                   elig=0 top=[]
+  k=15 mundo_ordinario                  elig=0 top=[]

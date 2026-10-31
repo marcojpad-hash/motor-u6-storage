@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-09-14",
+  "sin_juicio": true,
+  "respuestas_t0": {
+    "q1_cambio_dia_a_dia": "SI — IAs cambiaron el día a día; hiperfoco; proyecto; reframe anhedonia→diferencia",
+    "q2_algo_gordo": "El propio loop LLM/proyecto empuja; delivery como piso que permite el loop",
+    "q3_hit_q2": "No usa 'me siento a prueba'. Evaluar lo que ocurre como dato. HIT = aparece estructura de bajada/prueba en cortes vividos (no feeling).",
+    "q4_miss_asentado": "Señal fuerte que él nombra: estar con la ex / compromiso → rompería ~20h loop. Él lo marca como sigma de impredictibilidad.",
+    "q5_bio_o_etapas": "ambos ok; preferir lo que ya conocemos mejor (escaleta primero; bio ciego opcional)",
+    "q6_preguntas": "OK preguntar hechos; aclarar hechos vs opiniones"
+  },
+  "e15_propuesta": {
+    "antes": "NO_CODIFICADO",
+    "propuesta": "llamado_aventura_o_acercamiento_cueva_interior",
+    "nota": "Día a día cambió → ya no es el mismo ordinario que e14. Hiperfoco+proyecto+aprender patrones = llamado interno / cueva de conocimiento. NO forzar código hasta OK del usuario.",
+    "alternativa": "pruebas_aliados_enemigos si se lee el mismatch ambición-social + delivery vs clavado como campo de prueba"
+  },
+  "apuesta_congelada": "intacta_e14_hacia_Q2",
+  "lectura_estructura_sin_juicio": "e14 ordinario post-ciclo + e15 vivo (IAs) = posible inicio de otro descenso/llamado DENTRO del piso delivery. Deseo de compromiso con ex = rival del loop (sigma). Apuesta Q2 sigue: lo próximo mapeable tiende a prueba/descenso, no a elixir cerrado — salvo que el vínculo con la ex se concrete y reordene el círculo."
+}

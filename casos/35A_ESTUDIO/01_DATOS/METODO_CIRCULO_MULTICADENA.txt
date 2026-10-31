@@ -1,0 +1,22 @@
+MÉTODO — círculo / monomito (caso base 35A)
+Fuente: calibración usuario 2026-09-14. Sin juicio.
+
+1) Calibrar por VECINOS: tokens/valores semánticos alrededor de lo dicho, no por menú cerrado.
+
+2) No es lineal Campbell → son CUARTOS (Q1–Q4). Cíclico.
+
+3) Pueden coexistir VARIAS CADENAS entrelazadas de ciclos distintos; se ilumina la que el contexto prende.
+
+4) En el mismo contexto, roles EQUIVALENTES según vecinos:
+   adversario ↔ viejo sabio
+   héroe ↔ mentor
+   ánima ↔ (otros polos del hilo)
+   y cierres tipo regreso-con-elixir según qué cadena esté activa
+   (= no fijar un solo arquetipo si el campo admite dos lecturas)
+
+5) e15 y cortes vivos: multi-candidato / multi-cadena OK.
+   NO forzar Top1 de etapa por widget.
+   Apuesta falsable (e14→Q2) es otra capa: HIT/MISS de movimiento de cuadrante, no de etiqueta única de rol.
+
+6) Círculo monomito = lente de hilos/cuadrantes; Caldero = voto t+1 por prefijo;
+   no mezclar métricas.

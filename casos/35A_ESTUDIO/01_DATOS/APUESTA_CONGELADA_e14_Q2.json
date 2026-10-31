@@ -1,0 +1,25 @@
+{
+  "caso": "caso_marco_01_infancia_adultez_temprana",
+  "estado_observado": {
+    "etapa": "e14",
+    "estado_monomito": "mundo_ordinario",
+    "cuadrante": "Q4"
+  },
+  "apuesta_congelada": {
+    "tipo": "estructural_falsable",
+    "hacia": "Q2_descenso_prueba",
+    "no_hacia": "consolidacion_elixir_Q4_cierre",
+    "regla_eval": "HIT si el siguiente corte real entra estructuralmente a Q2/descenso-prueba; MISS si consolida/elixir/cierre; NO_VERIFICADO si no hay corte o no se puede mapear"
+  },
+  "revision": {
+    "cada_dias": 15,
+    "primera": "2026-09-29T08:00:00-06:00",
+    "solo": "HIT/MISS",
+    "no_reescribir_apuesta": true,
+    "ancla": "2026-09-14 (congelada hoy; chequeo cada 15d)"
+  },
+  "nota": "No es probabilidad de futuro. Prediccion estructural falsable.",
+  "congelada_en": "2026-09-14T11:08:34.553948+00:00",
+  "caso_base": true,
+  "no_perfil": true
+}
