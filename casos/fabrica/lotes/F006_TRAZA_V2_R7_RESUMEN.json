@@ -1,0 +1,68 @@
+{
+  "lote": "F006_TRAZA_V2_R7",
+  "fecha_local": "2026-10-30T15:32:25",
+  "case_id": "CAL_F005_01_COURBET",
+  "sujeto": "Gustave Courbet",
+  "tipo": "artista",
+  "freeze": "1871-05-01",
+  "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+  "desenlace_sha256": "48f1f06e4731efef8243553f0a646eebcc3af6754f7c95a938896786b9ad84f4",
+  "destino_sha256": "e07c9f977a71b0dcc84663d7f798dc671d1a81a473b9e092ad541e027cf43d90",
+  "returncode": 0,
+  "estado": "COMPLETED",
+  "version_motor": "V15.3_UNICO_WORKING_OPEN_HYPOTHESES_20261020_R1",
+  "hash_candado": "48333cd11b9234f1",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": {
+    "enabled": true,
+    "observation_calls": 9,
+    "simulations": 6310,
+    "converged_calls": 9,
+    "nonconverged_calls": 0
+  },
+  "ceb": {
+    "caldero_gate": "OK",
+    "pieces_gate": "OK",
+    "ledger_lines": 23420
+  },
+  "unification_manifest": {
+    "files": 304,
+    "status": "MATCH",
+    "drift": [],
+    "missing": []
+  },
+  "plugin_lock": {
+    "verified": 108,
+    "failures": []
+  },
+  "H1": {"family": "30_ambicion", "peso_relativo": 0.22215, "porcentaje_relleno": 73.46},
+  "H2": {"family": "20_sacrificio_por_un_ideal", "peso_relativo": 0.182227, "porcentaje_relleno": 60.36},
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+    "soporte_estructural_agregado": 0.5024218,
+    "es_probabilidad": false,
+    "destino_personal": "auge"
+  },
+  "resultado": {
+    "acierto_H1": 0,
+    "acierto_H2": 0,
+    "acierto_set": 1,
+    "acierto_apuesta": 1,
+    "destino_real": "ruptura",
+    "destino_apostado": "auge",
+    "acierto_destino": 0,
+    "acierto_destino_polaridad": 0
+  },
+  "integridad": {
+    "candados_antes": true,
+    "candados_despues": true,
+    "sha256_registro_sellado": "60a93f19d1ec67444d296f59e65c24e43422bdaac0491e5f1788c8c5ba84136a"
+  },
+  "independencia_muestral": {
+    "es_re_evaluacion": true,
+    "caso_original": "F005 / CAL_F005_01_COURBET",
+    "contar_como_caso_nuevo": false
+  }
+}
