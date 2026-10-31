@@ -69,3 +69,27 @@ Se creó casos/ciegos/PLAN_20_CASOS_MOTOR.md y una plantilla Z final. Los cuatro
 ## Notion
 
 La actualización/creación de una página de aviso de vigencia en Notion fue rechazada por el límite de bloques gratuitos del workspace (entitlement_required; sin efectos laterales). Las páginas antiguas siguen intactas. GitHub queda como fuente de verdad; no se reintentó la operación.
+
+
+## Correcciones posteriores de integridad — 2026-10-31
+
+### Continuidad de corrida
+F006 R7 dejó continuidad_corrida ausente en el JSON principal cuando no se requería pausa, aunque el recibo de ejecución ya registraba el estado NO_PAUSADA. Se corrigió motor/correr_estandar.py: ahora el resultado principal y el recibo comparten el estado explícito NO_PAUSADA o PAUSADA_REANUDABLE. Se añadieron pruebas en motor/tests/test_runner_json_contract.py y workflow independiente .github/workflows/test-motor-contracts.yml. La primera ejecución de CI para el contrato del runner terminó PASS.
+
+### Matriz de mortalidad
+Se encontró una pérdida de información: el sidecar aceptaba rate_type q_x/m_x pero no conservaba el valor de tasa. Se actualizó el esquema a 1.1 y el código para:
+- exigir rate_value para q_x/m_x;
+- validar q_x en [0,1] y m_x >= 0;
+- preservar mx/qx de tablas de vida;
+- resumir tasas sin convertir q_x a m_x;
+- leer mortality_statistics.jsonl.gz en streaming, sin cargar el conjunto completo en memoria.
+
+La plantilla externa de preparación usaba un esquema distinto (indicator/value y source_file_sha256). Se añadió motor/scripts/normalizar_mortalidad_preparacion.py y pruebas con fixtures sintéticos, sin insertar datos ficticios en producción.
+
+### Fuentes y datos
+Se incorporó el registro de fuentes y licencias en motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SOURCE_MANIFEST.json. UN WPP 2024 (1950–2023) queda como fuente inicial pública CC BY 3.0 IGO, sin necesidad de tokens Google. Se añadió motor/scripts/import_wpp_life_table.py y workflow .github/workflows/update-mortality-wpp.yml para generar la tabla JSONL gzip y su manifiesto.
+
+La tabla estadística real todavía no se declara cargada: dos ejecuciones de bootstrap estaban en progreso al corte. INED Bonneuil 1806–1906 es pertinente para Francia histórica, pero su licencia de reutilización no está especificada en data.gouv.fr; se dejó en LICENSE_REVIEW_REQUIRED y no se redistribuyó. HMD requiere revisar condiciones de acceso; HLD tiene disponibilidad variable por país.
+
+### Límite funcional
+La matriz sigue con feeds_H=false y can_decide_H=false. Ninguna de estas correcciones alimenta H1/H2, modifica Engine V5, cambia patterns_final_v14.json ni altera el candado canónico.
