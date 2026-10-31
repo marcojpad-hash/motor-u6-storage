@@ -38,3 +38,45 @@ def test_canonical_locks_unchanged():
     patterns=ROOT/"motor"/"patterns_final_v14.json"
     assert hashlib.sha256(engine.read_bytes()).hexdigest()=="665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
     assert hashlib.sha256(patterns.read_bytes()).hexdigest()=="d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+
+
+def test_qx_and_mx_rate_values_are_preserved_without_fabricated_counts():
+    base={"population":"France","year":1816,"age_interval":"0-4",
+          "source_url":"https://example.org/life-table","retrieved_at":"2026-10-31",
+          "source_sha256":"b"*64,"historical_epoch":"1816-1820"}
+    qx={**base,"rate_type":"q_x","rate_value":0.4626}
+    mx={**base,"rate_type":"m_x","rate_value":0.1234}
+    accepted,rejected=mod._validate_stats([qx,mx])
+    assert rejected==[]
+    assert [x["rate_value"] for x in accepted]==[0.4626,0.1234]
+
+def test_qx_outside_probability_range_is_rejected():
+    row={"population":"France","year":1816,"age_interval":"0-4","rate_type":"q_x",
+         "rate_value":1.01,"source_url":"https://example.org/life-table",
+         "retrieved_at":"2026-10-31","source_sha256":"c"*64}
+    accepted,rejected=mod._validate_stats([row])
+    assert accepted==[]
+    assert rejected[0]["reason"]=="RATE_VALUE_OUT_OF_RANGE"
+
+def test_wpp_life_table_mx_qx_pair_is_preserved():
+    row={"population":"France","year":1950,"age_interval":"0-4",
+         "rate_type":"life_table_mx_qx","mx":0.15,"qx":0.52,
+         "deaths":52000,"exposure":350000,"source_url":"https://population.un.org/wpp/",
+         "retrieved_at":"2026-10-31","source_sha256":"d"*64,
+         "data_status":"MODELLED_PERIOD_LIFE_TABLE"}
+    accepted,rejected=mod._validate_stats([row])
+    assert rejected==[] and len(accepted)==1
+    assert accepted[0]["mx"]==0.15 and accepted[0]["qx"]==0.52
+
+def test_statistics_summary_keeps_life_table_rates():
+    base={"population":"France","year":1816,"age_interval":"0-4",
+          "source_url":"https://example.org/life-table","retrieved_at":"2026-10-31",
+          "source_sha256":"e"*64}
+    case={"mortality_statistics":[
+        {**base,"rate_type":"q_x","rate_value":0.4626},
+        {**base,"rate_type":"m_x","rate_value":0.1234}
+    ]}
+    result=mod.build_mortality_matrix(case,{},ROOT)
+    summary=result["statistics_by_year"]["1816"]
+    assert summary["qx_rate_value_mean"]==0.4626
+    assert summary["mx_rate_value_mean"]==0.1234
