@@ -1,1 +1,1 @@
-population,year,historical_epoch,age_interval,deaths,exposure,exposure_unit,rate_type,country,sex,cause,source_url,retrieved_at,source_sha256,notes
+population,year,age_interval,deaths,exposure,rate_type,rate_value,mx,qx,source_url,retrieved_at,source_sha256,historical_epoch,country,sex,cause,exposure_unit,data_status,source_organization,source_dataset,source_version_or_revision,population_id,subnational_area,period_type,year_start,year_end,age_start,age_end,indicator,value,unit,notes
