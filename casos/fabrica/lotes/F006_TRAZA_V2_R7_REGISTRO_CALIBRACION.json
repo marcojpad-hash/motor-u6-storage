@@ -1,0 +1,40 @@
+{
+  "version": "ARNES_CALIBRACION_GEOMETRIA_V1",
+  "sellado_utc": "2026-10-30T15:32:25.747251+00:00",
+  "pesos": [0.0],
+  "casos": {
+    "CAL_F005_01_COURBET": {
+      "input": "CAL_F005_01_COURBET.json",
+      "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+      "por_peso": {
+        "0": {
+          "peso": 0.0,
+          "H1": "30_ambicion",
+          "H2": "20_sacrificio_por_un_ideal",
+          "hipotesis": [
+            {"familia": "30_ambicion", "rank_fusion": 32.99089, "soporte_estructural_relativo": 0.30633572, "regimen": "CONTINUIDAD_ASCENDENTE", "aporte_geometria": null},
+            {"familia": "strauss_howe_02_the_awakening", "rank_fusion": 24.024139, "soporte_estructural_relativo": 0.22307528, "regimen": "MESeta_O_ESTABILIZACION", "aporte_geometria": null},
+            {"familia": "8_rebelion", "rank_fusion": 21.117532, "soporte_estructural_relativo": 0.19608608, "regimen": "CONTINUIDAD_ASCENDENTE", "aporte_geometria": null},
+            {"familia": "9_audaz_empresa", "rank_fusion": 15.395982, "soporte_estructural_relativo": 0.14295884, "regimen": "MESeta_O_ESTABILIZACION", "aporte_geometria": null},
+            {"familia": "24_rivalidad_de_superior_e_inferior", "rank_fusion": 14.166667, "soporte_estructural_relativo": 0.13154408, "regimen": "MESeta_O_ESTABILIZACION", "aporte_geometria": null}
+          ],
+          "apuesta_estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+          "escenarios": [
+            {"escenario": "CONTINUIDAD_ASCENDENTE", "hipotesis": ["30_ambicion", "8_rebelion"], "soporte": 0.5024218},
+            {"escenario": "MESeta_O_ESTABILIZACION", "hipotesis": ["strauss_howe_02_the_awakening", "9_audaz_empresa", "24_rivalidad_de_superior_e_inferior"], "soporte": 0.4975782}
+          ],
+          "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+          "apuesta_destino_personal": "auge",
+          "hipotesis_escenario_principal": ["30_ambicion", "8_rebelion"],
+          "nucleo_estable_sha256": null,
+          "huella_salida_sha256": "17903b69c9e6125d574518cfd1b4109b1d71a19d33ac89991406da83afd2fa8a",
+          "estado_ejecucion": "SIN_PAUSA",
+          "peso_aplicado_por_motor": false,
+          "returncode": 0
+        }
+      }
+    }
+  },
+  "errores": [],
+  "sha256_registro": "60a93f19d1ec67444d296f59e65c24e43422bdaac0491e5f1788c8c5ba84136a"
+}
