@@ -8,6 +8,16 @@ on:
       - "motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SOURCE_MANIFEST.json"
       - ".github/workflows/update-mortality-wpp.yml"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild even if the dataset already exists"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: mortality-wpp-\${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -21,9 +31,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Check whether dataset already exists
+        id: existing
+        run: |
+          if [ -s motor/MORTALITY_AUDIT/mortality_statistics.jsonl.gz ] && [ -s motor/MORTALITY_AUDIT/mortality_statistics_manifest.json ] && [ "\${{ inputs.force }}" != "true" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Verified dataset already exists; no download required."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Download and normalize official UN WPP life table
+        if: steps.existing.outputs.skip != 'true'
         run: python motor/scripts/import_wpp_life_table.py
       - name: Validate output structure
+        if: steps.existing.outputs.skip != 'true'
         run: |
           python - <<'PY'
           import gzip, json
@@ -40,6 +61,7 @@ jobs:
           print({"rows": count, "sha256": manifest["output_sha256"], "bytes": manifest["output_bytes"]})
           PY
       - name: Commit generated dataset
+        if: steps.existing.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
