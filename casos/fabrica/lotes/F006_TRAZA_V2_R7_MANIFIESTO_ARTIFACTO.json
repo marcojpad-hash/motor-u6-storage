@@ -1,0 +1,26 @@
+{
+  "lote": "F006_TRAZA_V2_R7",
+  "run_id": 41081591816,
+  "artifact_id": 12989457446,
+  "artifact_zip": "F006_TRAZA_V2_R7_EVIDENCIA.zip",
+  "artifact_zip_sha256": "0ef1887f395e229e77f1ea6b37ae9025fc23d63c6e3789fedfa7489913871ffb",
+  "source_artifact_member_sha256": {
+    "F006_TRAZA_V2_R7_COMPROMISO.json": "2bb7f472c8627faad2627b8b5529eec627b2a506ae628dec5747de4cd42887a3",
+    "F006_TRAZA_V2_R7_RESUMEN.json": "d3f38056e31ee522fbbbbb59930226ff449c52699d82213d3796a5e61daba61d",
+    "EVALUACION_CALIBRACION.json": "5cbc199e02d522651e4381dab998398bb6e3e2648e733ec1b56539fea3b7a264",
+    "REGISTRO_CALIBRACION.json": "09c91dceb9da03bce7ff5958e5ef1074a7d17d1504ad199d2d6495bfc1a4d1d3"
+  },
+  "raw_artifact_member_sha256_not_copied": {
+    "run_output": "929e8a36d98c7c62644ba0846bad7442fba68025267df20b08d98d9e73fdfe9f",
+    "execution_receipt": "2d09d276a51a7dea5dde383e1342ff7c9b9474877e36eff7d3728f23a8d29dee",
+    "ceb_ledger_manifest": "6f1fb97aaf477ac941bec4c54e0836d77c058bee8db9e592991328fc646d708d",
+    "ceb_ledger": "fb115d58f0a2d98683e7ff5bfe35761ca88b80ccbcefa68b4c7a95126e198e6e",
+    "desenlaces": "8aeb814eb10fcdd0c9116d1687ffbd96645b5e71a314e023331f12db714d6394"
+  },
+  "raw_run_output_bytes": 5389601,
+  "ceb_ledger_bytes": 11333713,
+  "ceb_ledger_lines": 23420,
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "note": "F006 reevalúa CAL_F005_01_COURBET; no es un caso independiente y no incrementa n de calibración. Los archivos grandes y desenlaces sellados permanecen en el artifact de Actions; el repo conserva resumen, registro y hashes."
+}
