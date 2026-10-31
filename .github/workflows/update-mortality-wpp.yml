@@ -1,0 +1,52 @@
+name: Build mortality matrix from UN WPP 2024
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "motor/scripts/import_wpp_life_table.py"
+      - "motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SOURCE_MANIFEST.json"
+      - ".github/workflows/update-mortality-wpp.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-mortality-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Download and normalize official UN WPP life table
+        run: python motor/scripts/import_wpp_life_table.py
+      - name: Validate output structure
+        run: |
+          python - <<'PY'
+          import gzip, json
+          path = "motor/MORTALITY_AUDIT/mortality_statistics.jsonl.gz"
+          manifest = json.load(open("motor/MORTALITY_AUDIT/mortality_statistics_manifest.json", encoding="utf-8"))
+          count = 0
+          with gzip.open(path, "rt", encoding="utf-8") as f:
+              for line in f:
+                  row = json.loads(line)
+                  assert row["rate_type"] == "life_table_mx_qx"
+                  assert 0 <= row["qx"] <= 1 and row["mx"] >= 0
+                  count += 1
+          assert count == manifest["records_written"] and count > 0
+          print({"rows": count, "sha256": manifest["output_sha256"], "bytes": manifest["output_bytes"]})
+          PY
+      - name: Commit generated dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motor/MORTALITY_AUDIT/mortality_statistics.jsonl.gz motor/MORTALITY_AUDIT/mortality_statistics_manifest.json
+          if git diff --cached --quiet; then
+            echo "No data change; nothing to commit."
+          else
+            git commit -m "Build verified UN WPP 2024 mortality table"
+            git push
+          fi
