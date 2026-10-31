@@ -58,3 +58,14 @@ El error de destino no se puede resolver con documentación ni con una sola reev
 - Corrida F006: evidencia de ejecución recuperada y persistida.
 - Nueva corrida durante esta auditoría: no ejecutada.
 - Notion: intento de insertar aviso de vigencia bloqueado por la herramienta; no se modificaron esas páginas. La vigencia se documenta aquí y en el repo.
+
+
+## Archivo histórico Notion y casos ciegos
+
+Se localizaron cuatro ejercicios históricos en Notion: B-01, N-02, C-03 y H-01. Se migraron a casos/ciegos/2026-09-20/ únicamente las entradas pre-Z y las predicciones congeladas de Grok/ChatGPT. Se excluyeron las secciones post-revelación, identidades y desenlaces. El inventario y las reglas de custodia están en casos/ciegos/README.md.
+
+Se creó casos/ciegos/PLAN_20_CASOS_MOTOR.md y una plantilla Z final. Los cuatro ejercicios migrados no son corridas del motor; el plan de 20 casos independientes sigue pendiente y no se fabricaron datos para completarlo.
+
+## Notion
+
+La actualización/creación de una página de aviso de vigencia en Notion fue rechazada por el límite de bloques gratuitos del workspace (entitlement_required; sin efectos laterales). Las páginas antiguas siguen intactas. GitHub queda como fuente de verdad; no se reintentó la operación.
