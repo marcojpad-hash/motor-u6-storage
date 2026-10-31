@@ -1,0 +1,15 @@
+{
+  "lote": "F006_TRAZA_V2_R7",
+  "fecha_local": "2026-10-30T15:32:25",
+  "candados_antes": {
+    "motor/Engine_V5_CANONICO_SOLO.py": true,
+    "motor/patterns_final_v14.json": true
+  },
+  "casos": {
+    "CAL_F005_01_COURBET": {
+      "input_sha256": "a81708648e0fe77f5a12ef24eb3a26553fa82cb427068de9b3530fe0dd638b5c",
+      "desenlace_sha256": "48f1f06e4731efef8243553f0a646eebcc3af6754f7c95a938896786b9ad84f4",
+      "destino_sha256": "e07c9f977a71b0dcc84663d7f798dc671d1a81a473b9e092ad541e027cf43d90"
+    }
+  }
+}
