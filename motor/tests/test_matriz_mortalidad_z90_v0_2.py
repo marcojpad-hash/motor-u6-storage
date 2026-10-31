@@ -80,3 +80,26 @@ def test_statistics_summary_keeps_life_table_rates():
     summary=result["statistics_by_year"]["1816"]
     assert summary["qx_rate_value_mean"]==0.4626
     assert summary["mx_rate_value_mean"]==0.1234
+
+
+def test_jsonl_gz_table_is_streamed_and_summarized(tmp_path):
+    import gzip, json
+    audit=tmp_path/"MORTALITY_AUDIT"
+    audit.mkdir()
+    rows=[
+        {"population":"France","year":1950,"age_interval":"0-4","rate_type":"life_table_mx_qx",
+         "mx":0.15,"qx":0.52,"source_url":"https://population.un.org/wpp/",
+         "retrieved_at":"2026-10-31","source_sha256":"f"*64,
+         "data_status":"MODELLED_PERIOD_LIFE_TABLE"}
+    ]
+    path=audit/"mortality_statistics.jsonl.gz"
+    with gzip.open(path,"wt",encoding="utf-8") as out:
+        for row in rows:
+            out.write(json.dumps(row)+"\n")
+    result=mod.build_mortality_matrix({}, {}, tmp_path)
+    assert result["status"]=="STATISTICAL_TABLE_LOADED"
+    assert result["accepted_statistical_rows"]==1
+    assert result["rejected_statistical_rows"]==0
+    assert result["data_table"]=="MORTALITY_AUDIT/mortality_statistics.jsonl.gz"
+    assert result["statistics_by_year"]["1950"]["life_table_qx_mean"]==0.52
+    assert result["statistics_by_year"]["1950"]["life_table_mx_mean"]==0.15
