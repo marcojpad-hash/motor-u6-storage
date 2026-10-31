@@ -101,7 +101,8 @@ def build(raw_path: Path, output_path: Path, manifest_path: Path, source_url: st
                     "year_end": year,
                     "age_interval": age,
                     "age_start": age_start,
-                    "age_end": None,
+                    "age_end": (int(age_start + float(row["AgeGrpSpan"]) - 1)
+                                if row.get("AgeGrpSpan") not in (None, "") and float(row["AgeGrpSpan"]) > 0 else None),
                     "sex": sex,
                     "rate_type": "life_table_mx_qx",
                     "mx": mx,
