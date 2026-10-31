@@ -6,7 +6,7 @@
 
 1. Leer `README.md`, `CONTRATO_CARPETAS.md` e `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`.
 2. Leer `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md` completo.
-3. Leer `informes/2026-10-25_CEB_cableado_y_smoke.md`, `avances/REGLAS.md`, las reglas de las carpetas afectadas y las entradas recientes de `avances/`.
+3. Leer `informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md`, `docs/MAPA_VERSIONES_Y_AUTORIDAD.md`, `avances/REGLAS.md`, las reglas de las carpetas afectadas y las entradas recientes de `avances/`.
 4. Revisar el CEB existente y sus contratos antes de proponer o crear mecanismos nuevos. Investigar `docs/CEB_INVESTIGAR_Y_RESOLVER.md` y los módulos/artefactos CEB reales que correspondan a la tarea. No duplicar recibos, registros ni validaciones ya implementados.
 5. Inspeccionar los archivos y commits reales que afectan la tarea. No basarse únicamente en recuerdos, resúmenes de chat ni fragmentos de búsqueda.
 6. Si la tarea incluye una corrida, identificar su entrada, runner, salida JSON y `_RECIBO_EJECUCION.json`. Comprobar hashes, estado terminal, etapas, errores, datos incompletos y cualquier pausa. La existencia del código o de un archivo de salida aislado no prueba que esa corrida se ejecutó correctamente.
