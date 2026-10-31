@@ -1,33 +1,74 @@
 {
-  "version": "MORTALITY_STATISTICS_SCHEMA_V1",
+  "schema_version": "1.1",
+  "description": "Validated mortality observations and life-table rates. This schema is a backward-compatible extension of V1.",
   "required_fields": [
     "population",
     "year",
     "age_interval",
-    "deaths",
-    "exposure",
     "rate_type",
     "source_url",
     "retrieved_at",
     "source_sha256"
   ],
+  "conditional_requirements": {
+    "deaths_per_100000_exposure": [
+      "deaths",
+      "exposure"
+    ],
+    "q_x": [
+      "rate_value"
+    ],
+    "m_x": [
+      "rate_value"
+    ],
+    "life_table_mx_qx": [
+      "mx",
+      "qx"
+    ]
+  },
   "optional_fields": [
+    "deaths",
+    "exposure",
+    "rate_value",
+    "mx",
+    "qx",
     "historical_epoch",
     "country",
     "sex",
     "cause",
     "exposure_unit",
+    "data_status",
+    "source_organization",
+    "source_dataset",
+    "source_version_or_revision",
+    "population_id",
+    "subnational_area",
+    "period_type",
+    "year_start",
+    "year_end",
+    "age_start",
+    "age_end",
+    "indicator",
+    "value",
+    "unit",
     "notes"
   ],
-  "rate_type_contract": {
-    "deaths_per_100000_exposure": "calculated_rate = deaths / exposure * 100000; exposure unit must be consistent and explicitly documented",
-    "q_x": "interval death probability; must be supplied by a life table source, not calculated as deaths/exposure",
-    "m_x": "central mortality rate; do not treat as equivalent to q_x"
+  "rate_contract": {
+    "deaths_per_100000_exposure": "calculated_rate = deaths / exposure * 100000; exposure_unit must be explicit",
+    "q_x": "rate_value is a probability in [0,1]",
+    "m_x": "rate_value is a central death rate per person-year and must be >=0",
+    "life_table_mx_qx": "mx >=0 and qx in [0,1]; preserve both source values"
   },
-  "prohibitions": [
-    "No inferir población, periodo, edad, exposición ni tasa sin fuente",
-    "No equiparar q_x y m_x",
-    "No alimentar H1/H2 hasta validar mapeo y eficacia"
+  "provenance_contract": [
+    "source_url must be HTTP(S)",
+    "retrieved_at must include date/time or date",
+    "source_sha256 must be 64 hex characters",
+    "data_status distinguishes observed, estimated, projected or modelled data"
   ],
-  "status": "SCHEMA_ONLY_NO_STATISTICAL_ROWS_FOUND_IN_ACTIVE_PACKAGE"
+  "non_inference_rules": [
+    "Do not convert q_x to m_x or vice versa without an explicit life-table method",
+    "Do not infer actual deaths/exposure from a probability-only source",
+    "Do not treat hypothetical life-table cohort counts as observed population counts",
+    "This sidecar does not feed H1/H2 or alter canonical patterns"
+  ]
 }
