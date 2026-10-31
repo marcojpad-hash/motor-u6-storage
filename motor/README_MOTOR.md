@@ -1,5 +1,7 @@
 # README_MOTOR — Motor V15.3 UNICO, estado U6 (+ herramienta U7)
-Generado 2026-10-13 desde `TRABAJO/packs/U6_correcciones` (solo lectura).
+Generado 2026-10-13 desde `TRABAJO/packs/U6_correcciones` (solo lectura). Snapshot histórico; estado operativo y autoridad de versiones actualizados al 2026-10-31 en [MAPA_VERSIONES_Y_AUTORIDAD.md](../docs/MAPA_VERSIONES_Y_AUTORIDAD.md) y [auditoría](../informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md).
+
+> Engine V5 es el componente canónico protegido; V15.3 es la capa de runner integrado. No son nombres intercambiables. El hash `48333cd11b9234f1` del runner no sustituye el SHA-256 `665c39a2...` del Engine V5.
 
 ## Integridad
 - `motor/Engine_V5_CANONICO_SOLO.py` sha256 `665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082` (= candado 665c39a2, coincide con UNIFICACION_SHA256_MANIFEST.json)
