@@ -51,3 +51,18 @@ def test_terminal_gate_allows_validated_operational_resolution():
     result = {"terminal_resolution": {"status": "RESUELTO_OPERACIONALMENTE", "tortugas_status": "EJECUTADO", "tortugas_ejecutado": True},
               "resolucion_operativa_final": {"estado_durante_corrida": "RESOLUCION_REQUERIDA"}}
     assert runner._terminal_continuity_gate(result) is None
+
+
+def test_continuity_state_is_explicit_when_no_pause_is_required():
+    assert runner._continuity_result_payload(None) == {
+        "status": "NO_PAUSADA",
+        "final_decision_authorized": True,
+    }
+
+def test_continuity_state_preserves_reanudable_pause_contract():
+    pause = {
+        "status": "PAUSADA_REANUDABLE",
+        "final_decision_authorized": False,
+        "required_next_action": "reanudar",
+    }
+    assert runner._continuity_result_payload(pause) == pause
