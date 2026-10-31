@@ -1,0 +1,78 @@
+{
+  "manifest_version": "2.0",
+  "status": "SOURCE_REGISTER_ONLY_NO_OBSERVATIONS",
+  "updated": "2026-10-31",
+  "rules": [
+    "No statistical rows are currently included.",
+    "Do not treat a source catalogue or empty template as a loaded mortality matrix.",
+    "Preserve the source's observed/estimated/projected/modelled status.",
+    "Do not convert q_x and m_x into one another without an explicit life-table method.",
+    "This sidecar does not feed H1/H2 and does not modify canonical patterns or Engine V5.",
+    "No Google API key is required for the public UN WPP or INED catalogue routes."
+  ],
+  "sources": [
+    {
+      "source_id": "UN_WPP_2024_LIFE_TABLE_ABRIDGED",
+      "organization": "United Nations, DESA, Population Division",
+      "dataset": "World Population Prospects 2024",
+      "catalogue_url": "https://population.un.org/wpp/assets/downloads.json",
+      "data_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Life_Table_Abridged_Medium_1950-2023.csv.gz",
+      "coverage": "Period life tables, medium variant, 1950-2023; includes mx, qx, dx, Lx, ex and age-group dimensions.",
+      "license": "CC BY 3.0 IGO",
+      "access": "Public download; no API token required",
+      "status": "READY_FOR_INGESTION",
+      "limits": "Period life-table values describe a hypothetical cohort; dx/Lx are not observed deaths and population exposure."
+    },
+    {
+      "source_id": "INED_BONNEUIL_FRANCE_1806_1906",
+      "organization": "Institut national d'études démographiques (INED)",
+      "dataset": "Life tables for France and départements, 1806-1906",
+      "url": "https://www.data.gouv.fr/datasets/table-mortalite",
+      "resource_url": "https://www.data.gouv.fr/api/1/datasets/r/0982c3a9-d05e-4d41-bd95-5a425a83c907",
+      "documentation_url": "https://table-mortalite-bonneuil.site.ined.fr/en/donnees",
+      "coverage": "Quinquennial periods 1806-1810 through 1901-1905; q(x) by five-year age group and département, with France total.",
+      "license": "Not specified on data.gouv.fr",
+      "access": "Public page; download endpoint redirects to INED",
+      "status": "LICENSE_REVIEW_REQUIRED",
+      "limits": "Do not redistribute or ingest the raw file until reuse terms are clarified. q(x) is a period probability, not m(x)."
+    },
+    {
+      "source_id": "CONAPO_MX_1950_2070",
+      "organization": "CONAPO, México",
+      "dataset": "Proyecciones de población / Defunciones 1950-2070",
+      "url": "https://www.datos.gob.mx/es/dataset/proyecciones-de-poblacion",
+      "resource_url": "https://www.datos.gob.mx/dataset/proyecciones-de-poblacion/resource/8d897529-57bf-44d3-99c9-1a63644bbcd2",
+      "coverage": "Estimated annual deaths by age and sex; national 1950-2070 and state-level 1970-2070 per dataset description.",
+      "license": "Verify on resource metadata before redistribution",
+      "status": "METADATA_CONFIRMED_DATA_NOT_DOWNLOADED",
+      "limits": "Separate estimates and projections; verify exposure denominator before calculating rates."
+    },
+    {
+      "source_id": "WHO_GHE_LIFE_TABLES",
+      "organization": "World Health Organization",
+      "dataset": "GHE life tables by country",
+      "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/gho-ghe-life-tables-by-country",
+      "coverage": "Country life-table indicators; verify metadata and status of each series.",
+      "license": "Verify dataset-specific reuse terms",
+      "status": "METADATA_REVIEW_REQUIRED"
+    },
+    {
+      "source_id": "HLD",
+      "organization": "Human Life-Table Database",
+      "dataset": "Historical and period life tables by country",
+      "url": "https://www.lifetable.de/Data/DataAvailability",
+      "coverage": "Country-specific historical and period tables; availability varies by country and period.",
+      "license": "Verify database-specific terms",
+      "status": "SOURCE_CATALOGUE_CONFIRMED"
+    },
+    {
+      "source_id": "HMD",
+      "organization": "Human Mortality Database",
+      "dataset": "Country-specific mortality and life-table series",
+      "url": "https://www.mortality.org/Project/Overview",
+      "coverage": "Varies by country; access conditions may apply.",
+      "license": "Verify terms and access conditions",
+      "status": "ACCESS_REVIEW_REQUIRED"
+    }
+  ]
+}
