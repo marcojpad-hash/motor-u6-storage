@@ -1,0 +1,22 @@
+{
+  "version": "ARNES_CALIBRACION_GEOMETRIA_V1",
+  "integridad_registro": "OK",
+  "n_casos_con_desenlace": 1,
+  "n_casos_sellados_sin_desenlace": 0,
+  "aviso_muestra": "MUESTRA_INSUFICIENTE (<10): no elegir peso con esto",
+  "probabilidades": "Laplace (k+1)/(n+2), recortadas a [0.05, 0.95]",
+  "nota": "brier_diagnostico_* trata soporte_estructural_relativo como pronóstico SOLO para comparar pesos; no lo convierte en probabilidad del motor",
+  "por_peso": {
+    "0": {
+      "n_casos": 1,
+      "H1": {"aciertos": 0, "tasa_cruda": 0.0, "tasa_laplace": 0.3333333333333333, "brier_loo_laplace": 0.25},
+      "set": {"aciertos": 1, "tasa_cruda": 1.0, "tasa_laplace": 0.6666666666666666, "brier_loo_laplace": 0.25},
+      "escenario": {"aciertos": 1, "tasa_cruda": 1.0, "tasa_laplace": 0.6666666666666666, "brier_loo_laplace": 0.25},
+      "destino": {"aciertos": 0, "tasa_cruda": 0.0, "tasa_laplace": 0.3333333333333333, "brier_loo_laplace": 0.25},
+      "destino_polaridad": {"aciertos": 0, "tasa_cruda": 0.0, "tasa_laplace": 0.3333333333333333, "brier_loo_laplace": 0.25},
+      "brier_diagnostico_soporte_hipotesis": 0.1655245639163911,
+      "brier_diagnostico_soporte_escenario": 0.24758406511523998,
+      "detalle": [{"caso": "CAL_F005_01_COURBET", "y_H1": 0, "y_set": 1, "y_escenario": 1, "y_destino": 0, "y_destino_polaridad": 0}]
+    }
+  }
+}
