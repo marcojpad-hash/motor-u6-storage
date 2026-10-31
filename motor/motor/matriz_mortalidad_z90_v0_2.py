@@ -114,6 +114,86 @@ def _validate_stats(rows):
             accepted.append(r)
     return accepted, rejected
 
+def _new_accumulator():
+    return {
+        "records": 0, "deaths_sum": 0.0, "deaths_count": 0,
+        "exposure_sum": 0.0, "exposure_count": 0,
+        "qx_sum": 0.0, "qx_count": 0, "mx_sum": 0.0, "mx_count": 0,
+        "life_qx_sum": 0.0, "life_qx_count": 0,
+        "life_mx_sum": 0.0, "life_mx_count": 0,
+        "rate_types": set(), "populations": set(), "age_intervals": set(),
+        "source_sha256": set()
+    }
+
+
+def _accumulate(acc, row):
+    acc["records"] += 1
+    if "deaths" in row:
+        acc["deaths_sum"] += row["deaths"]
+        acc["deaths_count"] += 1
+    if "exposure" in row:
+        acc["exposure_sum"] += row["exposure"]
+        acc["exposure_count"] += 1
+    if row.get("rate_type") == "q_x" and "rate_value" in row:
+        acc["qx_sum"] += row["rate_value"]; acc["qx_count"] += 1
+    if row.get("rate_type") == "m_x" and "rate_value" in row:
+        acc["mx_sum"] += row["rate_value"]; acc["mx_count"] += 1
+    if row.get("rate_type") == "life_table_mx_qx":
+        if "qx" in row:
+            acc["life_qx_sum"] += row["qx"]; acc["life_qx_count"] += 1
+        if "mx" in row:
+            acc["life_mx_sum"] += row["mx"]; acc["life_mx_count"] += 1
+    acc["rate_types"].add(str(row.get("rate_type")))
+    acc["populations"].add(str(row.get("population")))
+    acc["age_intervals"].add(str(row.get("age_interval")))
+    acc["source_sha256"].add(str(row.get("source_sha256")))
+
+
+def _finish_accumulator(acc):
+    return {
+        "records": acc["records"],
+        "deaths_sum": round(acc["deaths_sum"], 8) if acc["deaths_count"] else None,
+        "exposure_sum": round(acc["exposure_sum"], 8) if acc["exposure_count"] else None,
+        "calculated_rate_per_100000": round(acc["deaths_sum"] / acc["exposure_sum"] * 100000.0, 8)
+            if acc["deaths_count"] and acc["exposure_count"] and acc["exposure_sum"] > 0
+            and acc["rate_types"] == {"deaths_per_100000_exposure"} else None,
+        "qx_rate_value_mean": round(acc["qx_sum"] / acc["qx_count"], 8) if acc["qx_count"] else None,
+        "mx_rate_value_mean": round(acc["mx_sum"] / acc["mx_count"], 8) if acc["mx_count"] else None,
+        "life_table_qx_mean": round(acc["life_qx_sum"] / acc["life_qx_count"], 8) if acc["life_qx_count"] else None,
+        "life_table_mx_mean": round(acc["life_mx_sum"] / acc["life_mx_count"], 8) if acc["life_mx_count"] else None,
+        "rate_types": sorted(acc["rate_types"]),
+        "populations": sorted(acc["populations"]),
+        "age_intervals": sorted(acc["age_intervals"]),
+        "source_sha256": sorted(acc["source_sha256"])
+    }
+
+
+def _iter_stats_file(path):
+    if path.name.endswith(".jsonl.gz"):
+        with gzip.open(path, "rt", encoding="utf-8") as f:
+            for line_no, line in enumerate(f, 1):
+                if not line.strip():
+                    continue
+                try:
+                    yield json.loads(line)
+                except json.JSONDecodeError:
+                    yield {"_invalid_line": line_no}
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, dict):
+        data = data.get("records", [])
+    if isinstance(data, list):
+        yield from data
+
+
+def _sha256_file(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def build_mortality_matrix(case: dict, motor_result: dict | None, root: Path) -> dict[str, Any]:
     cuts = case.get("cuts") or []
     text_rows = _extract_text(cuts)
@@ -126,79 +206,77 @@ def build_mortality_matrix(case: dict, motor_result: dict | None, root: Path) ->
             events = classifier.classify_death(row["text"], case_subject=subject, z90_date=z90)
             if events:
                 classified.append({**row, "classification": events})
+
     stat_rows = case.get("mortality_statistics") or case.get("mortality_observations") or []
-    table_path = root / "MORTALITY_AUDIT" / "mortality_statistics.json"
+    table_path = root / "MORTALITY_AUDIT" / "mortality_statistics.jsonl.gz"
+    if not stat_rows and not table_path.is_file():
+        table_path = root / "MORTALITY_AUDIT" / "mortality_statistics.json"
     table_sha = None
-    if not stat_rows and table_path.is_file():
-        try:
-            loaded = json.loads(table_path.read_text(encoding="utf-8"))
-            stat_rows = loaded.get("records", []) if isinstance(loaded, dict) else loaded
-            table_sha = hashlib.sha256(table_path.read_bytes()).hexdigest()
-        except Exception as exc:
-            stat_rows = []
-            table_error = f"{type(exc).__name__}: {exc}"
-        else:
-            table_error = None
-    else:
-        table_error = None
-    # LISTO_CALIBRAR_20261024: huella de origen siempre explícita. Tabla real -> sha real;
-    # sin tabla -> ausencia DECLARADA (no metadato faltante, no hash fingido); error de lectura -> None (se reporta).
-    table_sha_motivo = None
-    if table_sha is None and stat_rows and table_error is None:
+    table_error = None
+    if stat_rows:
+        source_rows = stat_rows
         table_sha = hashlib.sha256(json.dumps(stat_rows, ensure_ascii=False, sort_keys=True, separators=(",", ":"), default=str).encode("utf-8")).hexdigest()
         table_sha_motivo = "sha256 de las filas estadísticas entregadas en el input (JSON canónico)"
-    elif table_sha is None and table_error is None:
+        data_table = "CASE_INPUT"
+    elif table_path.is_file():
+        source_rows = _iter_stats_file(table_path)
+        table_sha = _sha256_file(table_path)
+        table_sha_motivo = "sha256 del archivo estadístico original"
+        data_table = str(table_path.relative_to(root))
+    else:
+        source_rows = []
         table_sha = "NO_APLICA_SIN_TABLA"
-        table_sha_motivo = ("no existe MORTALITY_AUDIT/mortality_statistics.json ni filas mortality_statistics/"
-                            "mortality_observations en el input; no hay tabla que hashear (ausencia declarada, no hash inventado)")
-    elif table_sha is not None:
-        table_sha_motivo = "sha256 de MORTALITY_AUDIT/mortality_statistics.json"
-    valid, rejected = _validate_stats(stat_rows)
-    by_year = defaultdict(list)
-    by_epoch = defaultdict(list)
-    for row in valid:
-        by_year[str(row["year"])].append(row)
+        table_sha_motivo = ("no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas "
+                            "mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado")
+        data_table = "NO_APLICA_SIN_TABLA"
+
+    by_year = {}
+    by_epoch = {}
+    accepted_count = 0
+    rejected_count = 0
+    rejected_samples = []
+    for source_row in source_rows:
+        if isinstance(source_row, dict) and "_invalid_line" in source_row:
+            rejected_count += 1
+            if len(rejected_samples) < 20:
+                rejected_samples.append({"line": source_row["_invalid_line"], "reason": "INVALID_JSONL"})
+            continue
+        accepted, rejected = _validate_stats([source_row])
+        if rejected:
+            rejected_count += len(rejected)
+            if len(rejected_samples) < 20:
+                rejected_samples.extend(rejected[:20 - len(rejected_samples)])
+            continue
+        row = accepted[0]
+        accepted_count += 1
+        year_key = str(row["year"])
+        by_year.setdefault(year_key, _new_accumulator())
+        _accumulate(by_year[year_key], row)
         epoch = row.get("historical_epoch") or row.get("epoch")
         if epoch:
-            by_epoch[str(epoch)].append(row)
-    def summarize(group):
-        out = {}
-        for key, vals in sorted(group.items()):
-            deaths_vals = [v["deaths"] for v in vals if "deaths" in v]
-            exposure_vals = [v["exposure"] for v in vals if "exposure" in v]
-            qx_vals = [v["rate_value"] for v in vals if v.get("rate_type") == "q_x" and "rate_value" in v]
-            mx_vals = [v["rate_value"] for v in vals if v.get("rate_type") == "m_x" and "rate_value" in v]
-            life_qx = [v["qx"] for v in vals if v.get("rate_type") == "life_table_mx_qx" and "qx" in v]
-            life_mx = [v["mx"] for v in vals if v.get("rate_type") == "life_table_mx_qx" and "mx" in v]
-            out[key] = {
-                "records": len(vals),
-                "deaths_sum": round(sum(deaths_vals), 8) if deaths_vals else None,
-                "exposure_sum": round(sum(exposure_vals), 8) if exposure_vals else None,
-                "calculated_rate_per_100000": round(sum(deaths_vals) / sum(exposure_vals) * 100000, 8)
-                    if vals and all(v.get("rate_type") == "deaths_per_100000_exposure" for v in vals) and exposure_vals else None,
-                "qx_rate_value_mean": round(sum(qx_vals) / len(qx_vals), 8) if qx_vals else None,
-                "mx_rate_value_mean": round(sum(mx_vals) / len(mx_vals), 8) if mx_vals else None,
-                "life_table_qx_mean": round(sum(life_qx) / len(life_qx), 8) if life_qx else None,
-                "life_table_mx_mean": round(sum(life_mx) / len(life_mx), 8) if life_mx else None,
-                "rate_types": sorted({str(v["rate_type"]) for v in vals}),
-                "populations": sorted({str(v["population"]) for v in vals}),
-                "age_intervals": sorted({str(v["age_interval"]) for v in vals}),
-                "source_sha256": sorted({str(v["source_sha256"]) for v in vals})
-            }
-        return out
-    ready = bool(valid) and not rejected
+            epoch_key = str(epoch)
+            by_epoch.setdefault(epoch_key, _new_accumulator())
+            _accumulate(by_epoch[epoch_key], row)
+
+    stats_by_year = {k: _finish_accumulator(v) for k, v in sorted(by_year.items())}
+    stats_by_epoch = {k: _finish_accumulator(v) for k, v in sorted(by_epoch.items())}
+    ready = bool(accepted_count) and rejected_count == 0
+    status = "STATISTICAL_TABLE_LOADED" if ready else "WIRED_WAITING_VERIFIED_MORTALITY_DATA"
+    source_hashes = sorted({h for acc in by_year.values() for h in acc["source_sha256"]})
     return {
         "version": "MATRIZ_MORTALIDAD_Z90_V0_2",
-        "status": "STATISTICAL_TABLE_LOADED" if ready else "WIRED_WAITING_VERIFIED_MORTALITY_DATA",
+        "status": status,
         "wired_to_active_runner": True,
-        "data_table": str(table_path.relative_to(root)) if table_path.is_file() else "input.mortality_statistics|input.mortality_observations",
+        "data_table": data_table,
         "data_table_sha256": table_sha,
-        "data_table_sha256_motivo": table_sha_motivo if table_sha_motivo is not None else f"ERROR_LECTURA_TABLA: {table_error}",
-        "data_table_estado": ("DECLARADO_AUSENTE_SIN_TABLA" if table_sha == "NO_APLICA_SIN_TABLA" else ("ERROR_LECTURA_TABLA" if table_sha is None else "TABLA_HASHEADA")),
-        "accepted_statistical_rows": len(valid),
-        "rejected_statistical_rows": rejected,
-        "statistics_by_year": summarize(by_year),
-        "statistics_by_historical_epoch": summarize(by_epoch),
+        "data_table_sha256_motivo": table_sha_motivo,
+        "data_table_estado": ("DECLARADO_AUSENTE_SIN_TABLA" if table_sha == "NO_APLICA_SIN_TABLA"
+                              else ("ERROR_LECTURA_TABLA" if table_sha is None else "TABLA_HASHEADA")),
+        "accepted_statistical_rows": accepted_count,
+        "rejected_statistical_rows": rejected_count,
+        "rejected_statistical_row_samples": rejected_samples,
+        "statistics_by_year": stats_by_year,
+        "statistics_by_historical_epoch": stats_by_epoch,
         "narrative_text_fields_scanned": len(text_rows),
         "classified_mortality_events": classified,
         "unresolved_event_count": sum(1 for x in classified for e in x["classification"] if e.get("status") == "TORTUGAS"),
@@ -207,6 +285,6 @@ def build_mortality_matrix(case: dict, motor_result: dict | None, root: Path) ->
         "can_decide_H": False,
         "changes_canonical_patterns": False,
         "changes_canonical_engine": False,
-        "reason": ("Estadísticas agregadas por año/época solo desde filas con dimensiones, exposición, fuente, fecha y SHA-256 válidos. "
+        "reason": ("Estadísticas agregadas por año/época solo desde filas con dimensiones, tipo de tasa, fuente, fecha y SHA-256 válidos. "
                    "La clasificación textual es observacional y no altera H1/H2. No se generaron tasas ni datos faltantes.")
     }
