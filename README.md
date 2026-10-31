@@ -4,7 +4,8 @@
 > **FeedMe actualizado:** abre primero [`FEEDME_ACTUALIZADO.md`](FEEDME_ACTUALIZADO.md). Centraliza arranque, contratos, dudas, bloqueos, decisiones y resoluciones. Después sigue [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md) y [`LLM_STARTUP_SIDECAR.md`](LLM_STARTUP_SIDECAR.md).
 > **Para modelos (ChatGPT, Claude, Grok Bot):**
 > - Lee primero [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md): qué hay en cada carpeta.
-> - Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
+> - Última auditoría: [`informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md`](informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md).
+- Mapa de versiones y hashes: [`docs/MAPA_VERSIONES_Y_AUTORIDAD.md`](docs/MAPA_VERSIONES_Y_AUTORIDAD.md).
 > - Continuidad: [`INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md).
 > - **Antes de afirmar una ejecución o interpretar resultados, aplica [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md).** Lee el recibo junto al JSON de salida; el código inspeccionado no demuestra que se ejecutó.
 > - **No uses ZIP/zipball.** Lee archivo por archivo con la API de GitHub/conector o `git clone`.
