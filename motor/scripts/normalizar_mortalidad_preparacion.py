@@ -83,7 +83,9 @@ def normalize_rows(rows):
             "age_end": int(meta["age_end"]) if meta.get("age_end") not in (None, "") else None,
             "data_status": status or None, "source_organization": org or None,
             "source_dataset": dataset or None, "source_version_or_revision": version or None,
-            "exposure_unit": unit or None, "notes": notes or None
+            "unit": unit or None, "population_id": meta.get("population_id") or None,
+            "indicator": meta.get("indicator") or None, "value": _num(meta.get("value")),
+            "notes": notes or None
         }
         if "q_x" in values:
             records.append({**common, "rate_type": "q_x", "rate_value": values["q_x"]})
