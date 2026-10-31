@@ -36,8 +36,16 @@
     "verified": 108,
     "failures": []
   },
-  "H1": {"family": "30_ambicion", "peso_relativo": 0.22215, "porcentaje_relleno": 73.46},
-  "H2": {"family": "20_sacrificio_por_un_ideal", "peso_relativo": 0.182227, "porcentaje_relleno": 60.36},
+  "H1": {
+    "family": "30_ambicion",
+    "peso_relativo": 0.22215,
+    "porcentaje_relleno": 73.46
+  },
+  "H2": {
+    "family": "20_sacrificio_por_un_ideal",
+    "peso_relativo": 0.182227,
+    "porcentaje_relleno": 60.36
+  },
   "apuesta": {
     "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
     "escenario_principal": "CONTINUIDAD_ASCENDENTE",
@@ -58,7 +66,10 @@
   "integridad": {
     "candados_antes": true,
     "candados_despues": true,
-    "sha256_registro_sellado": "60a93f19d1ec67444d296f59e65c24e43422bdaac0491e5f1788c8c5ba84136a"
+    "sha256_registro_sellado": "60a93f19d1ec67444d296f59e65c24e43422bdaac0491e5f1788c8c5ba84136a",
+    "runner_sha256": "4ac577fa72b79ba494773fbc79a263eb9f0f7ba25e15048187b6f764ba49b6df",
+    "runtime_motor_module_sha256": "23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19",
+    "native_module_sha256": "dac5599921d2f5629bfc15f3468a23f2390b931204752dfe99417fe84482b841"
   },
   "independencia_muestral": {
     "es_re_evaluacion": true,
