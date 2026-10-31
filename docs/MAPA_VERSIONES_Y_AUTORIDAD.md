@@ -36,3 +36,12 @@ Corte: 2026-10-31. Fuente operativa: este repositorio en \`main\`.
 - \`motor/CANDADO_ENGINE.json\`
 - \`motor/REGLAS.md\`
 - Recibo de ejecución F006 R7 y \`F006_TRAZA_V2_R7_MANIFIESTO_ARTIFACTO.json\`
+
+
+## Contrato de continuidad de corrida
+
+En F006 R7 el recibo registró NO_PAUSADA, pero el JSON principal omitió continuidad_corrida cuando la compuerta no pedía reanudación. Se corrigió motor/correr_estandar.py para que ambos documentos compartan el mismo estado explícito:
+- PAUSADA_REANUDABLE y su objeto completo cuando la compuerta exige reanudación.
+- NO_PAUSADA con final_decision_authorized=true cuando no hay pausa.
+
+La corrección tiene pruebas unitarias en motor/tests/test_runner_json_contract.py y workflow separado de CI en .github/workflows/test-motor-contracts.yml. No modifica Engine V5 ni el catálogo de 244 patrones.
