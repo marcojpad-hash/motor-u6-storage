@@ -10,8 +10,8 @@ TEXT_KEYS = {
     "texto", "text", "descripcion", "description", "hecho", "evento", "evidencia",
     "narrativa", "observacion", "observation", "resumen", "biografia", "contexto_textual"
 }
-REQUIRED_STATS = {
-    "population", "year", "age_interval", "deaths", "exposure", "rate_type",
+BASE_REQUIRED_STATS = {
+    "population", "year", "age_interval", "rate_type",
     "source_url", "retrieved_at", "source_sha256"
 }
 
@@ -55,31 +55,63 @@ def _validate_stats(rows):
     for i, row in enumerate(rows or []):
         if not isinstance(row, dict):
             rejected.append({"index": i, "reason": "ROW_NOT_OBJECT"}); continue
-        missing = sorted(REQUIRED_STATS - set(row))
+        missing = sorted(BASE_REQUIRED_STATS - set(row))
         if missing:
             rejected.append({"index": i, "reason": "MISSING_REQUIRED_FIELDS", "fields": missing}); continue
+        rate_type = str(row.get("rate_type", "")).strip().lower()
         try:
             year = int(row["year"])
-            deaths = float(row["deaths"])
-            exposure = float(row["exposure"])
         except (TypeError, ValueError):
-            rejected.append({"index": i, "reason": "INVALID_NUMERIC_FIELD"}); continue
-        if not (1 <= year <= 2100) or deaths < 0 or exposure <= 0:
-            rejected.append({"index": i, "reason": "OUT_OF_RANGE"}); continue
+            rejected.append({"index": i, "reason": "INVALID_NUMERIC_FIELD", "field": "year"}); continue
+        if not (1 <= year <= 2100):
+            rejected.append({"index": i, "reason": "OUT_OF_RANGE", "field": "year"}); continue
         if not re.fullmatch(r"[0-9a-fA-F]{64}", str(row["source_sha256"])):
             rejected.append({"index": i, "reason": "INVALID_SOURCE_SHA256"}); continue
         if not str(row["source_url"]).startswith(("https://", "http://")):
             rejected.append({"index": i, "reason": "INVALID_SOURCE_URL"}); continue
-        if not str(row["population"]).strip() or not str(row["age_interval"]).strip() or not str(row["rate_type"]).strip():
+        if not str(row["population"]).strip() or not str(row["age_interval"]).strip():
             rejected.append({"index": i, "reason": "EMPTY_DIMENSION"}); continue
         r = dict(row)
         r["year"] = year
-        r["deaths"] = deaths
-        r["exposure"] = exposure
-        # Derived crude rate is explicitly a calculated rate; exposure unit must be declared.
-        if str(row["rate_type"]).lower() == "deaths_per_100000_exposure":
+        if rate_type == "deaths_per_100000_exposure":
+            try:
+                deaths = float(row["deaths"])
+                exposure = float(row["exposure"])
+            except (KeyError, TypeError, ValueError):
+                rejected.append({"index": i, "reason": "MISSING_OR_INVALID_DEATHS_EXPOSURE"}); continue
+            if deaths < 0 or exposure <= 0:
+                rejected.append({"index": i, "reason": "OUT_OF_RANGE", "field": "deaths_or_exposure"}); continue
+            r["deaths"] = deaths
+            r["exposure"] = exposure
             r["calculated_rate"] = round(deaths / exposure * 100000.0, 8)
-        accepted.append(r)
+        elif rate_type in {"q_x", "m_x"}:
+            try:
+                rate_value = float(row["rate_value"])
+            except (KeyError, TypeError, ValueError):
+                rejected.append({"index": i, "reason": "MISSING_OR_INVALID_RATE_VALUE"}); continue
+            if rate_value < 0 or (rate_type == "q_x" and rate_value > 1):
+                rejected.append({"index": i, "reason": "RATE_VALUE_OUT_OF_RANGE"}); continue
+            r["rate_value"] = rate_value
+        elif rate_type == "life_table_mx_qx":
+            try:
+                mx = float(row["mx"])
+                qx = float(row["qx"])
+            except (KeyError, TypeError, ValueError):
+                rejected.append({"index": i, "reason": "MISSING_OR_INVALID_LIFE_TABLE_RATES"}); continue
+            if mx < 0 or not 0 <= qx <= 1:
+                rejected.append({"index": i, "reason": "LIFE_TABLE_RATE_OUT_OF_RANGE"}); continue
+            r["mx"] = mx
+            r["qx"] = qx
+        else:
+            rejected.append({"index": i, "reason": "UNSUPPORTED_RATE_TYPE", "rate_type": rate_type}); continue
+        for field in ("deaths", "exposure"):
+            if field in r:
+                try:
+                    r[field] = float(r[field])
+                except (TypeError, ValueError):
+                    rejected.append({"index": i, "reason": "INVALID_NUMERIC_FIELD", "field": field}); break
+        else:
+            accepted.append(r)
     return accepted, rejected
 
 def build_mortality_matrix(case: dict, motor_result: dict | None, root: Path) -> dict[str, Any]:
@@ -132,12 +164,23 @@ def build_mortality_matrix(case: dict, motor_result: dict | None, root: Path) ->
     def summarize(group):
         out = {}
         for key, vals in sorted(group.items()):
+            deaths_vals = [v["deaths"] for v in vals if "deaths" in v]
+            exposure_vals = [v["exposure"] for v in vals if "exposure" in v]
+            qx_vals = [v["rate_value"] for v in vals if v.get("rate_type") == "q_x" and "rate_value" in v]
+            mx_vals = [v["rate_value"] for v in vals if v.get("rate_type") == "m_x" and "rate_value" in v]
+            life_qx = [v["qx"] for v in vals if v.get("rate_type") == "life_table_mx_qx" and "qx" in v]
+            life_mx = [v["mx"] for v in vals if v.get("rate_type") == "life_table_mx_qx" and "mx" in v]
             out[key] = {
                 "records": len(vals),
-                "deaths_sum": round(sum(v["deaths"] for v in vals), 8),
-                "exposure_sum": round(sum(v["exposure"] for v in vals), 8),
-                "calculated_rate_per_100000": round(sum(v["deaths"] for v in vals) / sum(v["exposure"] for v in vals) * 100000, 8)
-                    if vals and all(v.get("rate_type") == "deaths_per_100000_exposure" for v in vals) else None,
+                "deaths_sum": round(sum(deaths_vals), 8) if deaths_vals else None,
+                "exposure_sum": round(sum(exposure_vals), 8) if exposure_vals else None,
+                "calculated_rate_per_100000": round(sum(deaths_vals) / sum(exposure_vals) * 100000, 8)
+                    if vals and all(v.get("rate_type") == "deaths_per_100000_exposure" for v in vals) and exposure_vals else None,
+                "qx_rate_value_mean": round(sum(qx_vals) / len(qx_vals), 8) if qx_vals else None,
+                "mx_rate_value_mean": round(sum(mx_vals) / len(mx_vals), 8) if mx_vals else None,
+                "life_table_qx_mean": round(sum(life_qx) / len(life_qx), 8) if life_qx else None,
+                "life_table_mx_mean": round(sum(life_mx) / len(life_mx), 8) if life_mx else None,
+                "rate_types": sorted({str(v["rate_type"]) for v in vals}),
                 "populations": sorted({str(v["population"]) for v in vals}),
                 "age_intervals": sorted({str(v["age_interval"]) for v in vals}),
                 "source_sha256": sorted({str(v["source_sha256"]) for v in vals})
