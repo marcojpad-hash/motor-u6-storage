@@ -1,4 +1,7 @@
-# Fábrica de casos (calibración en muestra grande)
+# Fábrica de casos
+
+Estado al 2026-10-31: F006_TRAZA_V2_R7 está archivado como reevaluación del caso CAL_F005_01_COURBET, no como caso independiente. Ver `lotes/F006_TRAZA_V2_R7_RESUMEN.json`, `lotes/F006_TRAZA_V2_R7_MANIFIESTO_ARTIFACTO.json`, `CALIBRACION_ACUMULADA.md` y `PLAN_SIGUIENTE_LOTE_INDEPENDIENTE.md`.
+ (calibración en muestra grande)
 
 Arma, sella, corre y califica casos nuevos con el **mismo formato** de los lotes cerrados (CAL_LOTE01) y el arnés
 existente `motor/calibracion/arnes_calibracion.py`. No cambia el protocolo, no toca Engine ni catálogo, no usa LLM.
