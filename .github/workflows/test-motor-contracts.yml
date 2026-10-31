@@ -14,7 +14,10 @@ on:
       - "motor/MORTALITY_AUDIT/mortality_statistics_source_template.csv"
       - "motor/MORTALITY_AUDIT/README.md"
       - "motor/scripts/normalizar_mortalidad_preparacion.py"
-      - "motor/tests/test_normalizar_mortalidad_preparacion.py"
+      - "motor/tests/test_normalizar_mortalidad_preparacion.py motor/tests/test_import_wpp_life_table.py"
+      - "motor/scripts/import_wpp_life_table.py"
+      - "motor/tests/test_import_wpp_life_table.py"
+      - ".github/workflows/update-mortality-wpp.yml"
       - ".github/workflows/test-motor-contracts.yml"
   pull_request:
     paths:
