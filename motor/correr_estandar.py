@@ -55,6 +55,17 @@ def _sanitize_json_contract(obj):
     return cleaned, missing, nonfinite
 
 
+def _continuity_result_payload(continuity_pause):
+    """Always expose the run-continuity state in the main result JSON.
+
+    The execution receipt already used NO_PAUSADA as a fallback. Keeping the
+    same state in the result avoids a split contract between result and receipt.
+    """
+    if continuity_pause is not None:
+        return continuity_pause
+    return {"status": "NO_PAUSADA", "final_decision_authorized": True}
+
+
 def _receipt_status(search_required_failed, missing_paths, nonfinite_paths):
     """A serializable JSON is not necessarily a complete or resolved run."""
     if search_required_failed:
@@ -683,8 +694,8 @@ def main(argv) -> int:
     # A missing terminal justification pauses the execution for continuation; it is
     # never converted into a final hypothesis/decision by the serializer.
     _continuity_pause = _terminal_continuity_gate(result, case)
+    result["continuidad_corrida"] = _continuity_result_payload(_continuity_pause)
     if _continuity_pause is not None:
-        result["continuidad_corrida"] = _continuity_pause
         _apply_continuity_pause(result, _continuity_pause)
     # Final serialization is not epistemic resolution: missing data remain explicit
     # data-quality markers and are recorded in the receipt, never relabeled TORTUGAS.
