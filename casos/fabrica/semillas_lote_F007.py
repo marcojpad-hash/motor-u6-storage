@@ -135,7 +135,7 @@ SEMILLAS_Z = [
           "C": [("reconocimiento", .76), ("ascenso_reciente", .72)],
           "evidencia": [EV("En 1904 se instaló en París y entró en el período rosa.", WP+"Pablo_Picasso", CONSULTA, "1904", SEC)]},
          {"id": "C2_1906", "date": "1906",
-          "hecho": "Visita Gósol; empieza a simplificar formas y se acerca al cubismo.",
+          "hecho": "Visita Gósol; empieza a simplificar formas y reduce figuras a volúmenes geométricos.",
           "P": [("inconformismo", .76), ("idealismo", .74)], "A": [("creatividad", .80), ("audacia", .76)],
           "C": [("transformacion", .78), ("incertidumbre", .68)],
           "evidencia": [EV("En 1906 visitó Gósol y empezó a simplificar las formas.", WP+"Pablo_Picasso", CONSULTA, "1906", SEC)]},
