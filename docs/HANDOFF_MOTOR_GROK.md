@@ -78,3 +78,9 @@ Commit + link en el repo; aviso corto a Mj (o nota en `bandeja/` de ChatGPT-migr
 - **Mj:** decide Ricci, luces/branch, priorización intercapa, custodio ciegos.
 - **Puta 3 (bot):** motor U6 coordinación ligera / rutinas; no gastar tokens en cableado pesado.
 - **ChatGPT / Claude / Copilot:** pueden armar en repo si ya tienen acceso; Grok ahora también escribe.
+
+## Estado F007 (1-nov-2026, Puta 3)
+
+- Corregido en semillas: Picasso ya no menciona la palabra post-Z «cubismo» (R6); Gauguin C2 pasa de fecha «1888» a «1888-10» (R2/R3, el año suelo se leía posterior a Z 1888-12-31).
+- Con eso la compuerta Z_trabajo ya acepta las 8 entradas. Siguiente bloqueo: `destinos_lote_F007.py` no trae el campo `familias` (lista de familias del catálogo 244, ver `PLANTILLA_destinos_z.py`), y `preparar-z` truena con KeyError 'familias'.
+- Pendiente del custodio (Mj decide custodio de ciegos): añadir `familias` a los 8 destinos y relanzar `fabrica-lote-diario.yml` con lote=F007.
