@@ -37,6 +37,8 @@ jobs:
       FABRICA_PIEZAS_REQUERIDAS: "1"
     steps:
       - name: Registrar inicio de corrida
+        env:
+          LOTE: ${{ inputs.lote }}
         run: |
           python - <<'PY'
           import datetime, json, os
