@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Ejecutar prototipo sobre casos sellados F001-F005
-        run: python -B experiments/boolean_sidecar_v0_1.py
+        run: python -B motor/laterales/boolean_sidecar_v0_1.py
       - name: Verificar salida y candados
         run: |
           python - <<'PY'
