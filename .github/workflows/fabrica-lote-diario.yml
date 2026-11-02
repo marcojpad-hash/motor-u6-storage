@@ -36,6 +36,25 @@ jobs:
       FABRICA_CALDERO_REQUERIDO: "1"
       FABRICA_PIEZAS_REQUERIDAS: "1"
     steps:
+      - name: Registrar inicio de corrida
+        run: |
+          python - <<'PY'
+          import datetime, json, os
+          meta = {
+              "run_id": os.environ.get("GITHUB_RUN_ID"),
+              "run_number": os.environ.get("GITHUB_RUN_NUMBER"),
+              "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
+              "workflow": os.environ.get("GITHUB_WORKFLOW"),
+              "event_name": os.environ.get("GITHUB_EVENT_NAME"),
+              "ref": os.environ.get("GITHUB_REF"),
+              "sha": os.environ.get("GITHUB_SHA"),
+              "actor": os.environ.get("GITHUB_ACTOR"),
+              "lote": os.environ.get("LOTE"),
+              "started_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+          }
+          with open("RUN_METADATA.json", "w", encoding="utf-8") as f:
+              json.dump(meta, f, ensure_ascii=False, indent=2)
+          PY
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -60,12 +79,33 @@ jobs:
             git commit -m "fabrica: lote ${{ inputs.lote }} (Actions / Grok dispatch)"
             git push origin HEAD:main
           fi
+      - name: Registrar cierre de corrida
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          LOTE: ${{ inputs.lote }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os
+          path = "RUN_METADATA.json"
+          try:
+              with open(path, encoding="utf-8") as f:
+                  meta = json.load(f)
+          except Exception:
+              meta = {"metadata_start_missing": True}
+          meta["lote"] = os.environ.get("LOTE")
+          meta["job_status"] = os.environ.get("JOB_STATUS")
+          meta["finished_at_utc"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(meta, f, ensure_ascii=False, indent=2)
+          PY
       - name: Artifact evidencia
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lote-${{ inputs.lote }}-evidencia
           path: |
+            RUN_METADATA.json
             casos/fabrica/lotes/${{ inputs.lote }}_*
             /tmp/FABRICA_CORRIDAS/${{ inputs.lote }}/
           if-no-files-found: warn
