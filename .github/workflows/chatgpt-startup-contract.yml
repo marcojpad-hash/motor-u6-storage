@@ -1,0 +1,47 @@
+name: ChatGPT startup contract
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'FEEDME_ACTUALIZADO.md'
+      - 'INICIO_SESION_CHATGPT.md'
+      - 'INSTRUCCIONES_CONTINUIDAD_CHATGPT.md'
+      - 'LLM_STARTUP_SIDECAR.md'
+      - 'PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md'
+      - 'docs/CEB_INVESTIGAR_Y_RESOLVER.md'
+      - 'avances/REGLAS.md'
+      - '.github/workflows/chatgpt-startup-contract.yml'
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'FEEDME_ACTUALIZADO.md'
+      - 'INICIO_SESION_CHATGPT.md'
+      - 'INSTRUCCIONES_CONTINUIDAD_CHATGPT.md'
+      - 'LLM_STARTUP_SIDECAR.md'
+      - 'PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md'
+      - 'docs/CEB_INVESTIGAR_Y_RESOLVER.md'
+      - 'avances/REGLAS.md'
+      - '.github/workflows/chatgpt-startup-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  enforce-chatgpt-startup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required ChatGPT startup files
+        run: |
+          test -s AGENTS.md
+          test -s FEEDME_ACTUALIZADO.md
+          test -s INICIO_SESION_CHATGPT.md
+          test -s INSTRUCCIONES_CONTINUIDAD_CHATGPT.md
+          test -s LLM_STARTUP_SIDECAR.md
+          test -s PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md
+          test -s docs/CEB_INVESTIGAR_Y_RESOLVER.md
+          test -s avances/REGLAS.md
+          grep -q 'FEEDME_ACTUALIZADO.md' AGENTS.md
+          grep -q 'INICIO_SESION_CHATGPT.md' AGENTS.md
+          grep -q 'patterns_final_v14.json' INICIO_SESION_CHATGPT.md
+          grep -q 'Engine_V5_CANONICO_SOLO.py' INICIO_SESION_CHATGPT.md
