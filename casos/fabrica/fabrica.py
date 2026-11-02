@@ -191,8 +191,15 @@ def preparar_z(semillas: Path, destinos: Path) -> int:
                 if not (P_MIN <= w <= P_MAX): errores.append(f"{sid}: peso fuera de contrato {t}={w}")
             cs.append({"id": c["id"], "corte": c["id"], "cut_id": c["id"], "date": c["date"], "fecha_corte": c["date"], "hecho": c["hecho"],
                        "P": [list(x) for x in c["P"]], "A": [list(x) for x in c["A"]], "C": [list(x) for x in c["C"]], "evidencia": c["evidencia"]})
-        for f in dz.get("familias") or []:
-            if f not in FAM: errores.append(f"{sid}: familia de desenlace fuera del catálogo {f}")
+        familias = dz.get("familias")
+        if not isinstance(familias, list) or not familias:
+            errores.append(f"{sid}: falta 'familias' (lista no vacía de familias del catálogo 244); completar por el custodio antes de preparar-z")
+        elif len(familias) != len(set(familias)):
+            errores.append(f"{sid}: 'familias' contiene duplicados")
+        else:
+            for familia in familias:
+                if familia not in FAM:
+                    errores.append(f"{sid}: familia de desenlace fuera del catálogo {familia}")
         entrada = {"case_id": f"CAL_{sid}", "question": sm["question"], "person": sm["person"], "tipo_sujeto": sm["tipo"],
                    "freeze": sm["z_trabajo"], "z_trabajo": sm["z_trabajo"], "modo_z": sm["modo_z"], "gate_z": g.VERSION,
                    "preparacion_ciega": pc, "random_seed": 20261024, "z_work_kind": "CASE_CUTOFF", "z_work_date": cs[-1]["date"] if cs else "",
