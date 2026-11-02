@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "17 * * * *"
   workflow_run:
+    workflows:
+      - "Fabrica real - smoke CEB traza 244"
+      - "Fabrica lote diario (Grok / dispatch)"
+      - "Experimento lateral Booleano Motor U6"
     types: [completed]
   workflow_dispatch:
 
