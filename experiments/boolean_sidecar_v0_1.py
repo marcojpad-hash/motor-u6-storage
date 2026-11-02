@@ -5,7 +5,7 @@ No altera ni invoca el motor canónico. No produce ranking ni probabilidades.
 from __future__ import annotations
 import json, pathlib, collections, sys
 
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+ROOT = pathlib.Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "casos/fabrica/cola"
 CATALOG = ROOT / "motor/motor/patterns_final_v14.json"
 OUT = ROOT / "avances/boolean_sidecar/RESULTADOS.json"
