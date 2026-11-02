@@ -104,11 +104,19 @@ Se corrigió el validador en casos/fabrica/fabrica.py para rechazar antes de esc
 
 ## 7. Registro de horarios de corrida
 
-La evidencia histórica accesible para F006 R7 indica que el artefacto de GitHub Actions se creó el 2026-10-30 a las 15:32:54 UTC (09:32:54 America/Mexico_City). El conector disponible devolvió estado y pasos del job, pero no started_at ni completed_at; por tanto no se puede calcular la duración ni afirmar que esa sea la hora exacta de inicio de la corrida.
+La lectura de los logs completos del run 41081591816 permite precisar el horario:
+- inicio del runner: 2026-10-30 15:32:11.825 UTC = 09:32:11.825 CDMX;
+- cierre del job: 2026-10-30 15:32:55.375 UTC = 09:32:55.375 CDMX;
+- duración aproximada: 43.55 segundos;
+- el artefacto se creó a las 15:32:54 UTC = 09:32:54 CDMX.
 
-El workflow fabrica-lote-diario.yml solo declara workflow_dispatch: no tiene cron. Por tanto ese workflow no establece una hora diaria automática; se dispara manualmente o por dispatch externo.
+Importante: ese run ejecutó `fabrica.py correr --lote F006_TRAZA_V2_R7 --rehacer CAL_F005_01_COURBET`, con `FABRICA_MODELO=ChatGPT_CEB_smoke` y `FABRICA_SYNC=0`. Fue una reevaluación del mismo caso Courbet de F005, no un caso independiente nuevo ni una corrida de Grok. El propio registro de calibración lo marca como re-evaluación y prohíbe contarlo como caso nuevo.
 
-Se añadió instrumentación al workflow para que los siguientes artefactos incluyan RUN_METADATA.json con run_id, intento, workflow, evento, lote, SHA, actor, hora UTC de inicio y fin, y estado final. Convertir UTC a hora CDMX se hace al auditar, no modificando la marca original.
+El workflow `fabrica-lote-diario.yml` solo declara `workflow_dispatch`: no tiene cron. No establece una hora diaria fija; se dispara manualmente o por dispatch externo. No debe confundirse la hora de creación del artefacto con el inicio de la corrida.
+
+Se añadió instrumentación a `fabrica-lote-diario.yml` para que sus siguientes artefactos incluyan `RUN_METADATA.json` con run_id, intento, workflow, evento, lote, SHA, actor, hora UTC de inicio y fin, y estado final.
+
+Además se creó `auditar-corridas-actions.yml`: se activa al terminar cualquier workflow del repositorio y cada hora (minuto 17), consulta ejecuciones, jobs y artefactos de los últimos siete días, calcula horas/duraciones en America/Mexico_City y persiste un snapshot solo si hay cambios. La auditoría no reintenta ni altera corridas.
 
 ## 8. Candados
 
