@@ -3,6 +3,483 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41418833593,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "b17c2fe5aef5182cea824afbfde5a18b7359de48",
+      "created_at_utc": "2026-11-02T09:13:03Z",
+      "created_at_cdmx": "2026-11-02T03:13:03-06:00",
+      "started_at_utc": "2026-11-02T09:13:03Z",
+      "started_at_cdmx": "2026-11-02T03:13:03-06:00",
+      "finished_at_utc": "2026-11-02T09:13:30Z",
+      "finished_at_cdmx": "2026-11-02T03:13:30-06:00",
+      "duration_seconds": 27.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418833593",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:13:21Z",
+          "finished_at_utc": "2026-11-02T09:13:29Z",
+          "duration_seconds": 8.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:13:27Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
+      "run_id": 41418831619,
+      "run_attempt": 1,
+      "workflow": ".github/workflows/auditar-corridas-actions.yml",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "b17c2fe5aef5182cea824afbfde5a18b7359de48",
+      "created_at_utc": "2026-11-02T09:13:02Z",
+      "created_at_cdmx": "2026-11-02T03:13:02-06:00",
+      "started_at_utc": "2026-11-02T09:13:02Z",
+      "started_at_cdmx": "2026-11-02T03:13:02-06:00",
+      "finished_at_utc": "2026-11-02T09:13:02Z",
+      "finished_at_cdmx": "2026-11-02T03:13:02-06:00",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418831619",
+      "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418760906,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "8aceeeba63b120b2635efc04da1ee2ffe31d8c10",
+      "created_at_utc": "2026-11-02T09:12:30Z",
+      "created_at_cdmx": "2026-11-02T03:12:30-06:00",
+      "started_at_utc": "2026-11-02T09:12:30Z",
+      "started_at_cdmx": "2026-11-02T03:12:30-06:00",
+      "finished_at_utc": "2026-11-02T09:13:20Z",
+      "finished_at_cdmx": "2026-11-02T03:13:20-06:00",
+      "duration_seconds": 50.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418760906",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-02T09:12:33Z",
+          "finished_at_utc": "2026-11-02T09:13:19Z",
+          "duration_seconds": 46.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418728898,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "ccd0bb0cfa203b3b4bb5ac431fe318d4dc944ad7",
+      "created_at_utc": "2026-11-02T09:12:16Z",
+      "created_at_cdmx": "2026-11-02T03:12:16-06:00",
+      "started_at_utc": "2026-11-02T09:12:16Z",
+      "started_at_cdmx": "2026-11-02T03:12:16-06:00",
+      "finished_at_utc": "2026-11-02T09:12:28Z",
+      "finished_at_cdmx": "2026-11-02T03:12:28-06:00",
+      "duration_seconds": 12.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418728898",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:12:19Z",
+          "finished_at_utc": "2026-11-02T09:12:28Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:12:24Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
+      "run_id": 41418726981,
+      "run_attempt": 1,
+      "workflow": ".github/workflows/auditar-corridas-actions.yml",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "ccd0bb0cfa203b3b4bb5ac431fe318d4dc944ad7",
+      "created_at_utc": "2026-11-02T09:12:15Z",
+      "created_at_cdmx": "2026-11-02T03:12:15-06:00",
+      "started_at_utc": "2026-11-02T09:12:15Z",
+      "started_at_cdmx": "2026-11-02T03:12:15-06:00",
+      "finished_at_utc": "2026-11-02T09:12:15Z",
+      "finished_at_cdmx": "2026-11-02T03:12:15-06:00",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418726981",
+      "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418713071,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "8aceeeba63b120b2635efc04da1ee2ffe31d8c10",
+      "created_at_utc": "2026-11-02T09:12:09Z",
+      "created_at_cdmx": "2026-11-02T03:12:09-06:00",
+      "started_at_utc": "2026-11-02T09:12:09Z",
+      "started_at_cdmx": "2026-11-02T03:12:09-06:00",
+      "finished_at_utc": "2026-11-02T09:13:16Z",
+      "finished_at_cdmx": "2026-11-02T03:13:16-06:00",
+      "duration_seconds": 67.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418713071",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-02T09:12:22Z",
+          "finished_at_utc": "2026-11-02T09:13:15Z",
+          "duration_seconds": 53.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418710889,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "8aceeeba63b120b2635efc04da1ee2ffe31d8c10",
+      "created_at_utc": "2026-11-02T09:12:08Z",
+      "created_at_cdmx": "2026-11-02T03:12:08-06:00",
+      "started_at_utc": "2026-11-02T09:12:08Z",
+      "started_at_cdmx": "2026-11-02T03:12:08-06:00",
+      "finished_at_utc": "2026-11-02T09:12:59Z",
+      "finished_at_cdmx": "2026-11-02T03:12:59-06:00",
+      "duration_seconds": 51.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418710889",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-02T09:12:11Z",
+          "finished_at_utc": "2026-11-02T09:12:59Z",
+          "duration_seconds": 48.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418664719,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "4529fcea5a5d17a3f9569a50459f16492506a433",
+      "created_at_utc": "2026-11-02T09:11:46Z",
+      "created_at_cdmx": "2026-11-02T03:11:46-06:00",
+      "started_at_utc": "2026-11-02T09:11:46Z",
+      "started_at_cdmx": "2026-11-02T03:11:46-06:00",
+      "finished_at_utc": "2026-11-02T09:12:51Z",
+      "finished_at_cdmx": "2026-11-02T03:12:51-06:00",
+      "duration_seconds": 65.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418664719",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-02T09:11:59Z",
+          "finished_at_utc": "2026-11-02T09:12:50Z",
+          "duration_seconds": 51.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418660713,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "2d28f88cdd1c6b80476c930241021771379ed6d5",
+      "created_at_utc": "2026-11-02T09:11:44Z",
+      "created_at_cdmx": "2026-11-02T03:11:44-06:00",
+      "started_at_utc": "2026-11-02T09:11:44Z",
+      "started_at_cdmx": "2026-11-02T03:11:44-06:00",
+      "finished_at_utc": "2026-11-02T09:12:05Z",
+      "finished_at_cdmx": "2026-11-02T03:12:05-06:00",
+      "duration_seconds": 21.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418660713",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:11:58Z",
+          "finished_at_utc": "2026-11-02T09:12:04Z",
+          "duration_seconds": 6.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:12:02Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
+      "run_id": 41418658804,
+      "run_attempt": 1,
+      "workflow": ".github/workflows/auditar-corridas-actions.yml",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "2d28f88cdd1c6b80476c930241021771379ed6d5",
+      "created_at_utc": "2026-11-02T09:11:43Z",
+      "created_at_cdmx": "2026-11-02T03:11:43-06:00",
+      "started_at_utc": "2026-11-02T09:11:43Z",
+      "started_at_cdmx": "2026-11-02T03:11:43-06:00",
+      "finished_at_utc": "2026-11-02T09:11:43Z",
+      "finished_at_cdmx": "2026-11-02T03:11:43-06:00",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418658804",
+      "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418632088,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "83cdb8e429e4fce0e6b26c11ce5e47b6113f17f5",
+      "created_at_utc": "2026-11-02T09:11:31Z",
+      "created_at_cdmx": "2026-11-02T03:11:31-06:00",
+      "started_at_utc": "2026-11-02T09:11:31Z",
+      "started_at_cdmx": "2026-11-02T03:11:31-06:00",
+      "finished_at_utc": "2026-11-02T09:11:44Z",
+      "finished_at_cdmx": "2026-11-02T03:11:44-06:00",
+      "duration_seconds": 13.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418632088",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:11:34Z",
+          "finished_at_utc": "2026-11-02T09:11:43Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:11:41Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
+      "run_id": 41418630280,
+      "run_attempt": 1,
+      "workflow": ".github/workflows/auditar-corridas-actions.yml",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "83cdb8e429e4fce0e6b26c11ce5e47b6113f17f5",
+      "created_at_utc": "2026-11-02T09:11:30Z",
+      "created_at_cdmx": "2026-11-02T03:11:30-06:00",
+      "started_at_utc": "2026-11-02T09:11:30Z",
+      "started_at_cdmx": "2026-11-02T03:11:30-06:00",
+      "finished_at_utc": "2026-11-02T09:11:30Z",
+      "finished_at_cdmx": "2026-11-02T03:11:30-06:00",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418630280",
+      "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418624869,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "4529fcea5a5d17a3f9569a50459f16492506a433",
+      "created_at_utc": "2026-11-02T09:11:27Z",
+      "created_at_cdmx": "2026-11-02T03:11:27-06:00",
+      "started_at_utc": "2026-11-02T09:11:27Z",
+      "started_at_cdmx": "2026-11-02T03:11:27-06:00",
+      "finished_at_utc": "2026-11-02T09:12:16Z",
+      "finished_at_cdmx": "2026-11-02T03:12:16-06:00",
+      "duration_seconds": 49.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418624869",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-02T09:11:30Z",
+          "finished_at_utc": "2026-11-02T09:12:15Z",
+          "duration_seconds": 45.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418615537,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "7355110efd3e5d8a1f0edffc20695b0f788749c3",
+      "created_at_utc": "2026-11-02T09:11:23Z",
+      "created_at_cdmx": "2026-11-02T03:11:23-06:00",
+      "started_at_utc": "2026-11-02T09:11:23Z",
+      "started_at_cdmx": "2026-11-02T03:11:23-06:00",
+      "finished_at_utc": "2026-11-02T09:12:06Z",
+      "finished_at_cdmx": "2026-11-02T03:12:06-06:00",
+      "duration_seconds": 43.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418615537",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:11:33Z",
+          "finished_at_utc": "2026-11-02T09:12:05Z",
+          "duration_seconds": 32.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:11:39Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
+      "run_id": 41418613631,
+      "run_attempt": 1,
+      "workflow": ".github/workflows/auditar-corridas-actions.yml",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "7355110efd3e5d8a1f0edffc20695b0f788749c3",
+      "created_at_utc": "2026-11-02T09:11:22Z",
+      "created_at_cdmx": "2026-11-02T03:11:22-06:00",
+      "started_at_utc": "2026-11-02T09:11:22Z",
+      "started_at_cdmx": "2026-11-02T03:11:22-06:00",
+      "finished_at_utc": "2026-11-02T09:11:22Z",
+      "finished_at_cdmx": "2026-11-02T03:11:22-06:00",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418613631",
+      "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418589457,
+      "run_attempt": 1,
+      "workflow": "Experimento lateral Booleano Motor U6",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/boolean-sidecar-20261102",
+      "head_sha": "b3c80b928754f09416e70c00d45304f5c1cdee59",
+      "created_at_utc": "2026-11-02T09:11:10Z",
+      "created_at_cdmx": "2026-11-02T03:11:10-06:00",
+      "started_at_utc": "2026-11-02T09:11:10Z",
+      "started_at_cdmx": "2026-11-02T03:11:10-06:00",
+      "finished_at_utc": "2026-11-02T09:11:24Z",
+      "finished_at_cdmx": "2026-11-02T03:11:24-06:00",
+      "duration_seconds": 14.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418589457",
+      "jobs": [
+        {
+          "name": "experimento",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:11:14Z",
+          "finished_at_utc": "2026-11-02T09:11:23Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "boolean-sidecar-resultados",
+          "created_at_utc": "2026-11-02T09:11:19Z",
+          "expired": false,
+          "size_in_bytes": 10184
+        }
+      ]
+    },
+    {
       "run_id": 41418587829,
       "run_attempt": 1,
       "workflow": ".github/workflows/auditar-corridas-actions.yml",
@@ -21,6 +498,36 @@
       "conclusion": "failure",
       "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418587829",
       "jobs": [],
+      "artifacts": []
+    },
+    {
+      "run_id": 41418548836,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "workflow_run",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "4529fcea5a5d17a3f9569a50459f16492506a433",
+      "created_at_utc": "2026-11-02T09:10:52Z",
+      "created_at_cdmx": "2026-11-02T03:10:52-06:00",
+      "started_at_utc": "2026-11-02T09:10:52Z",
+      "started_at_cdmx": "2026-11-02T03:10:52-06:00",
+      "finished_at_utc": "2026-11-02T09:12:03Z",
+      "finished_at_cdmx": "2026-11-02T03:12:03-06:00",
+      "duration_seconds": 71.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418548836",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-02T09:10:56Z",
+          "finished_at_utc": "2026-11-02T09:12:02Z",
+          "duration_seconds": 66.0
+        }
+      ],
       "artifacts": []
     },
     {

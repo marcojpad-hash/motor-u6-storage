@@ -4,7 +4,24 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41418833593 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:13:03-06:00 | 2026-11-02T03:13:03-06:00 | 2026-11-02T03:13:30-06:00 | 27.0 | success |
+| 41418831619 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:13:02-06:00 | 2026-11-02T03:13:02-06:00 | 2026-11-02T03:13:02-06:00 | 0.0 | failure |
+| 41418760906 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:12:30-06:00 | 2026-11-02T03:12:30-06:00 | 2026-11-02T03:13:20-06:00 | 50.0 | failure |
+| 41418728898 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:12:16-06:00 | 2026-11-02T03:12:16-06:00 | 2026-11-02T03:12:28-06:00 | 12.0 | success |
+| 41418726981 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:12:15-06:00 | 2026-11-02T03:12:15-06:00 | 2026-11-02T03:12:15-06:00 | 0.0 | failure |
+| 41418713071 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:12:09-06:00 | 2026-11-02T03:12:09-06:00 | 2026-11-02T03:13:16-06:00 | 67.0 | failure |
+| 41418710889 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:12:08-06:00 | 2026-11-02T03:12:08-06:00 | 2026-11-02T03:12:59-06:00 | 51.0 | failure |
+| 41418664719 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:11:46-06:00 | 2026-11-02T03:11:46-06:00 | 2026-11-02T03:12:51-06:00 | 65.0 | failure |
+| 41418660713 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:44-06:00 | 2026-11-02T03:11:44-06:00 | 2026-11-02T03:12:05-06:00 | 21.0 | success |
+| 41418658804 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:43-06:00 | 2026-11-02T03:11:43-06:00 | 2026-11-02T03:11:43-06:00 | 0.0 | failure |
+| 41418632088 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:31-06:00 | 2026-11-02T03:11:31-06:00 | 2026-11-02T03:11:44-06:00 | 13.0 | success |
+| 41418630280 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:30-06:00 | 2026-11-02T03:11:30-06:00 | 2026-11-02T03:11:30-06:00 | 0.0 | failure |
+| 41418624869 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:11:27-06:00 | 2026-11-02T03:11:27-06:00 | 2026-11-02T03:12:16-06:00 | 49.0 | failure |
+| 41418615537 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:23-06:00 | 2026-11-02T03:11:23-06:00 | 2026-11-02T03:12:06-06:00 | 43.0 | success |
+| 41418613631 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:22-06:00 | 2026-11-02T03:11:22-06:00 | 2026-11-02T03:11:22-06:00 | 0.0 | failure |
+| 41418589457 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:10-06:00 | 2026-11-02T03:11:10-06:00 | 2026-11-02T03:11:24-06:00 | 14.0 | success |
 | 41418587829 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:10-06:00 | 2026-11-02T03:11:10-06:00 | 2026-11-02T03:11:10-06:00 | 0.0 | failure |
+| 41418548836 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:10:52-06:00 | 2026-11-02T03:10:52-06:00 | 2026-11-02T03:12:03-06:00 | 71.0 | success |
 | 41418489348 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:10:26-06:00 | 2026-11-02T03:10:26-06:00 | 2026-11-02T03:10:49-06:00 | 23.0 | success |
 | 41418487387 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:10:25-06:00 | 2026-11-02T03:10:25-06:00 | 2026-11-02T03:10:25-06:00 | 0.0 | failure |
 | 41418365509 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:09:30-06:00 | 2026-11-02T03:09:30-06:00 | 2026-11-02T03:09:51-06:00 | 21.0 | success |
@@ -71,6 +88,16 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 ## Fallos y cancelaciones
 
+- Run 41418831619 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418831619
+- Run 41418760906 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418760906
+- Run 41418726981 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418726981
+- Run 41418713071 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418713071
+- Run 41418710889 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418710889
+- Run 41418664719 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418664719
+- Run 41418658804 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418658804
+- Run 41418630280 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418630280
+- Run 41418624869 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418624869
+- Run 41418613631 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418613631
 - Run 41418587829 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418587829
 - Run 41418487387 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418487387
 - Run 41418364066 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418364066
