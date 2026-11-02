@@ -1,5 +1,3 @@
-> **Arranque obligatorio para agentes LLM:** leer [CONTRATO_OPERATIVO_LLM_LECTURA_Y_EVIDENCIA.md](CONTRATO_OPERATIVO_LLM_LECTURA_Y_EVIDENCIA.md) antes de interpretar o modificar el motor. No inferir estado desde memoria; verificar código, contrato, corrida y commit.
-
 # motor-u6-storage
 
 
