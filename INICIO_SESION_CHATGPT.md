@@ -2,18 +2,20 @@
 
 **Punto de entrada obligatorio para toda tarea relacionada con Motor U6.** No asumir que GitHub se carga automáticamente en una conversación: abrir y leer este archivo explícitamente antes de analizar o modificar el motor.
 
-## Secuencia de arranque
+## Secuencia de arranque (orden único y obligatorio)
 
-1. Leer `README.md`, `CONTRATO_CARPETAS.md` e `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`.
-2. Leer `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md` completo.
-3. Leer `informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md`, `docs/MAPA_VERSIONES_Y_AUTORIDAD.md`, `avances/REGLAS.md`, las reglas de las carpetas afectadas y las entradas recientes de `avances/`.
-4. Revisar el CEB existente y sus contratos antes de proponer o crear mecanismos nuevos. Investigar `docs/CEB_INVESTIGAR_Y_RESOLVER.md` y los módulos/artefactos CEB reales que correspondan a la tarea. No duplicar recibos, registros ni validaciones ya implementados.
-5. Inspeccionar los archivos y commits reales que afectan la tarea. No basarse únicamente en recuerdos, resúmenes de chat ni fragmentos de búsqueda.
-6. Si la tarea incluye una corrida, identificar su entrada, runner, salida JSON y `_RECIBO_EJECUCION.json`. Comprobar hashes, estado terminal, etapas, errores, datos incompletos y cualquier pausa. La existencia del código o de un archivo de salida aislado no prueba que esa corrida se ejecutó correctamente.
-7. Preservar el campo completo y todas las familias/datos relevantes. No filtrar por estar fuera del top, en valle, meseta, ascenso, descenso, por parecer irrelevante o por contradecir una hipótesis. Separar dato observado, salida de módulo, decisión del predictor e interpretación del analista.
-8. Antes de escribir, revisar contratos y estado actual. No modificar `Engine_V5_CANONICO_SOLO.py` ni `patterns_final_v14.json`. No sobrescribir evidencia ni inventar resultados. Registrar cambios en `avances/` conforme a sus reglas.
-9. Verificar cada cambio releyendo el archivo/commit y ejecutar pruebas solo cuando exista un entorno real disponible. Informar el estado exacto: inspeccionado, ejecución confirmada, fallida, no verificada o incompleta.
-10. Entregar primero el resultado y su evidencia; explicar únicamente los bloqueos reales. No pedir al usuario que repita el contexto ya documentado ni que haga manualmente trabajo que las herramientas permitan resolver.
+1. Leer `FEEDME_ACTUALIZADO.md`; revisar sus enlaces de seguimiento y la entrada reciente pertinente.
+2. Leer `README.md`, `CONTRATO_CARPETAS.md`, `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md` y `LLM_STARTUP_SIDECAR.md`.
+3. Leer completo `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`.
+4. Leer `informes/2026-10-31_AUDITORIA_CONTINUIDAD_Y_ESTADO.md`, `docs/MAPA_VERSIONES_Y_AUTORIDAD.md`, `docs/CEB_INVESTIGAR_Y_RESOLVER.md`, `avances/REGLAS.md` y las reglas de las carpetas afectadas.
+5. Revisar dudas, bloqueos, resueltos y avances recientes antes de proponer trabajo. Buscar primero si el componente, recibo, prueba o mecanismo ya existe.
+6. Identificar repo, rama y commit actuales; inspeccionar los archivos y símbolos reales que afectan la tarea. No basarse en memoria, resúmenes ni fragmentos de búsqueda cuando se necesita el archivo completo.
+7. Si hay corrida, vincular input, runner, revisión, salida JSON y `_RECIBO_EJECUCION.json`; comprobar hashes, estado terminal, etapas, errores, pausas y completitud. Código presente o cableado no demuestra ejecución.
+8. Preservar el campo completo y todas las familias/datos. No filtrar por rango, top, valle, meseta, ascenso, descenso, aparente irrelevancia o contradicción con una hipótesis. Separar observación, salida de módulo, decisión del predictor e inferencia.
+9. Antes de escribir, revisar contratos y estado. No modificar `Engine_V5_CANONICO_SOLO.py` ni `patterns_final_v14.json`. No crear otro contrato, recibo, registro o validador si ya existe uno que cubre la función. Si hay conflicto documental, resolverlo en los documentos vigentes y dejar una sola ruta de autoridad.
+10. Ejecutar las comprobaciones y reparaciones permitidas con las herramientas disponibles; no convertir el diagnóstico en una lista de tareas para el usuario. Si una herramienta o permiso impide una acción, identificar el bloqueo exacto y agotar las alternativas disponibles.
+11. Verificar cada cambio releyendo el archivo/commit; ejecutar pruebas cuando haya entorno real. Registrar el cambio en `avances/` según sus reglas. No afirmar prueba ni ejecución sin artefacto.
+12. Entregar primero el resultado y su evidencia. No pedir contexto ya documentado ni trasladar al usuario trabajo que el asistente pueda hacer.
 
 ## Instrucción persistente para ChatGPT
 
