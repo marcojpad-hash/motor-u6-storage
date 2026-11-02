@@ -30,3 +30,9 @@ jobs:
           PY
           test "$(sha256sum motor/motor/Engine_V5_CANONICO_SOLO.py | cut -d' ' -f1)" = "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
           test "$(sha256sum motor/motor/patterns_final_v14.json | cut -d' ' -f1)" = "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+      - name: Publicar resultados reproducibles
+        uses: actions/upload-artifact@v4
+        with:
+          name: boolean-sidecar-resultados
+          path: avances/boolean_sidecar/RESULTADOS.json
+          if-no-files-found: error
