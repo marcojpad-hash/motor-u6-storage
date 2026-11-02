@@ -15,6 +15,10 @@ permissions:
   actions: read
   contents: write
 
+concurrency:
+  group: motor-u6-auditoria-corridas-main
+  cancel-in-progress: true
+
 jobs:
   auditar:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.name != 'Auditoría de corridas Motor U6' }}
