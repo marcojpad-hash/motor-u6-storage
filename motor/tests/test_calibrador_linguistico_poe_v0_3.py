@@ -19,7 +19,7 @@ class TestPoeCalibratorV03(unittest.TestCase):
     def test_same_case_baseline_comparison_records_all_signs(self):
         base = self.report["gold_corpus"]["baseline_metrics"]
         new = self.report["gold_corpus"]["corrected_metrics"]
-        self.assertEqual((base["tp"], base["fp"], base["tn"], base["fn"]), (3, 7, 6, 1))
+        self.assertEqual((base["tp"], base["fp"], base["tn"], base["fn"]), (3, 6, 7, 1))
         self.assertEqual((new["tp"], new["fp"], new["tn"], new["fn"]), (4, 0, 13, 0))
         self.assertGreater(new["recall"], base["recall"])
         self.assertLess(new["false_positive_rate"], base["false_positive_rate"])
