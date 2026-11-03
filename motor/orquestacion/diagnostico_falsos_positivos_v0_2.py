@@ -66,6 +66,8 @@ def load_module(name: str, path: Path):
     if spec is None or spec.loader is None:
         raise RuntimeError(f"NO_SE_PUDO_CARGAR:{path}")
     module = importlib.util.module_from_spec(spec)
+    import sys
+    sys.modules[name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -128,7 +130,7 @@ def run():
             "causals": r.get("causales", []),
             "arguments": r.get("argumentos", []),
             "marks": r.get("marcas", []),
-            "ambiguous_atoms": r.get("glosario_atomos", {}).get("ambiguos", []),
+            "ambiguous_atoms": [m for m in r.get("marcas", []) if "AMBIGUO" in m.get("tipo", "")],
             "consistent": r.get("consistentes"),
         })
 
@@ -138,7 +140,7 @@ def run():
     for cid, gold, text in PROFILE_CASES:
         r = copi.analizar_texto([text])
         copi_profile.append({"id": cid, "gold": gold, "marks": r.get("marcas", []),
-                             "ambiguous_atoms": r.get("glosario_atomos", {}).get("ambiguos", [])})
+                             "ambiguous_atoms": [m for m in r.get("marcas", []) if "AMBIGUO" in m.get("tipo", "")]})
 
     report = {
         "protocol": "POE-U6_DIAGNOSTICO_LINGUISTICO_V0.2",
