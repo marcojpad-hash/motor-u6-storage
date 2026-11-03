@@ -135,7 +135,7 @@ def corrected_filter(text, baseline_module):
         ambiguities.append({"type": "REFERENTE_SUBORDINADA_ELIPTICA", "fragment": text,
                             "reason": "El sujeto omitido de la subordinada admite más de un antecedente."})
     # Aprobó X porque era rentable: el sujeto de "era" no queda resuelto por la forma superficial.
-    if re.search(r"\baprobo\b.*\bproyecto\b.*\bporque\s+era\s+rentable\b", normalized):
+    if re.search(r"\baprob[oó]\b.*\bproyecto\b.*\bporque\s+era\s+rentable\b", normalized):
         ambiguities.append({"type": "REFERENTE_CAUSAL_AMBIGUO", "fragment": text,
                             "reason": "No se decide si 'rentable' refiere al proyecto o al sujeto omitido."})
     removed_ids = {id(x["mark"]) for x in observations}
