@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41689278099,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "bd667d1dc0ec8f264320dd161ae29b7099186635",
+      "created_at_utc": "2026-11-03T17:58:06Z",
+      "created_at_cdmx": "2026-11-03T11:58:06-06:00",
+      "started_at_utc": "2026-11-03T17:58:06Z",
+      "started_at_cdmx": "2026-11-03T11:58:06-06:00",
+      "finished_at_utc": "2026-11-03T17:59:40Z",
+      "finished_at_cdmx": "2026-11-03T11:59:40-06:00",
+      "duration_seconds": 94.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41689278099",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T17:58:09Z",
+          "finished_at_utc": "2026-11-03T17:59:39Z",
+          "duration_seconds": 90.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 41681052226,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2958,43 +2988,6 @@
           "created_at_utc": "2026-10-30T11:46:27Z",
           "expired": false,
           "size_in_bytes": 1166472
-        }
-      ]
-    },
-    {
-      "run_id": 41050376918,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "79ff7602dfc2e98fc1f21f00368f822b1112c23c",
-      "created_at_utc": "2026-10-30T11:45:33Z",
-      "created_at_cdmx": "2026-10-30T05:45:33-06:00",
-      "started_at_utc": "2026-10-30T11:45:33Z",
-      "started_at_cdmx": "2026-10-30T05:45:33-06:00",
-      "finished_at_utc": "2026-10-30T11:46:19Z",
-      "finished_at_cdmx": "2026-10-30T05:46:19-06:00",
-      "duration_seconds": 46.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41050376918",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T11:45:36Z",
-          "finished_at_utc": "2026-10-30T11:46:18Z",
-          "duration_seconds": 42.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_R7_EVIDENCIA",
-          "created_at_utc": "2026-10-30T11:46:16Z",
-          "expired": false,
-          "size_in_bytes": 1167798
         }
       ]
     }
