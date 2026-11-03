@@ -3,6 +3,406 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41601620061,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "13634a928baa3a449e1881b51ae490e2f051818c",
+      "created_at_utc": "2026-11-03T08:12:54Z",
+      "created_at_cdmx": "2026-11-03T02:12:54-06:00",
+      "started_at_utc": "2026-11-03T08:12:54Z",
+      "started_at_cdmx": "2026-11-03T02:12:54-06:00",
+      "finished_at_utc": "2026-11-03T08:13:23Z",
+      "finished_at_cdmx": "2026-11-03T02:13:23-06:00",
+      "duration_seconds": 29.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601620061",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:13:05Z",
+          "finished_at_utc": "2026-11-03T08:13:23Z",
+          "duration_seconds": 18.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_CALIBRADOR_LINGUISTICO_V03",
+          "created_at_utc": "2026-11-03T08:13:20Z",
+          "expired": false,
+          "size_in_bytes": 11511
+        }
+      ]
+    },
+    {
+      "run_id": 41601599242,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "9b964845f3929cd06fb2f0d3bba585ac6648923c",
+      "created_at_utc": "2026-11-03T08:12:44Z",
+      "created_at_cdmx": "2026-11-03T02:12:44-06:00",
+      "started_at_utc": "2026-11-03T08:12:44Z",
+      "started_at_cdmx": "2026-11-03T02:12:44-06:00",
+      "finished_at_utc": "2026-11-03T08:13:02Z",
+      "finished_at_cdmx": "2026-11-03T02:13:02-06:00",
+      "duration_seconds": 18.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-03T08:12:52Z",
+          "finished_at_utc": "2026-11-03T08:13:01Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_CALIBRADOR_LINGUISTICO_V03",
+          "created_at_utc": "2026-11-03T08:12:58Z",
+          "expired": false,
+          "size_in_bytes": 11405
+        }
+      ]
+    },
+    {
+      "run_id": 41601534764,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "a57e11cef6a84b90573ad8b5b12690380ecb5b45",
+      "created_at_utc": "2026-11-03T08:12:13Z",
+      "created_at_cdmx": "2026-11-03T02:12:13-06:00",
+      "started_at_utc": "2026-11-03T08:12:13Z",
+      "started_at_cdmx": "2026-11-03T02:12:13-06:00",
+      "finished_at_utc": "2026-11-03T08:12:27Z",
+      "finished_at_cdmx": "2026-11-03T02:12:27-06:00",
+      "duration_seconds": 14.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601534764",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-03T08:12:17Z",
+          "finished_at_utc": "2026-11-03T08:12:27Z",
+          "duration_seconds": 10.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_CALIBRADOR_LINGUISTICO_V03",
+          "created_at_utc": "2026-11-03T08:12:23Z",
+          "expired": false,
+          "size_in_bytes": 11406
+        }
+      ]
+    },
+    {
+      "run_id": 41601513496,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "24790b56cf647f169926a228f875bf1ee9873e7c",
+      "created_at_utc": "2026-11-03T08:12:03Z",
+      "created_at_cdmx": "2026-11-03T02:12:03-06:00",
+      "started_at_utc": "2026-11-03T08:12:03Z",
+      "started_at_cdmx": "2026-11-03T02:12:03-06:00",
+      "finished_at_utc": "2026-11-03T08:12:15Z",
+      "finished_at_cdmx": "2026-11-03T02:12:15-06:00",
+      "duration_seconds": 12.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601513496",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:12:06Z",
+          "finished_at_utc": "2026-11-03T08:12:14Z",
+          "duration_seconds": 8.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:12:12Z",
+          "expired": false,
+          "size_in_bytes": 3955
+        }
+      ]
+    },
+    {
+      "run_id": 41601477874,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "53e5698bd9adec0f4304eca1179a810eba74672f",
+      "created_at_utc": "2026-11-03T08:11:45Z",
+      "created_at_cdmx": "2026-11-03T02:11:45-06:00",
+      "started_at_utc": "2026-11-03T08:11:45Z",
+      "started_at_cdmx": "2026-11-03T02:11:45-06:00",
+      "finished_at_utc": "2026-11-03T08:12:00Z",
+      "finished_at_cdmx": "2026-11-03T02:12:00-06:00",
+      "duration_seconds": 15.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601477874",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:11:49Z",
+          "finished_at_utc": "2026-11-03T08:11:59Z",
+          "duration_seconds": 10.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:11:56Z",
+          "expired": false,
+          "size_in_bytes": 3955
+        }
+      ]
+    },
+    {
+      "run_id": 41601358616,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "507b65353263641d90c50b16eef3425d5e86ae63",
+      "created_at_utc": "2026-11-03T08:10:45Z",
+      "created_at_cdmx": "2026-11-03T02:10:45-06:00",
+      "started_at_utc": "2026-11-03T08:10:45Z",
+      "started_at_cdmx": "2026-11-03T02:10:45-06:00",
+      "finished_at_utc": "2026-11-03T08:10:57Z",
+      "finished_at_cdmx": "2026-11-03T02:10:57-06:00",
+      "duration_seconds": 12.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601358616",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:10:48Z",
+          "finished_at_utc": "2026-11-03T08:10:56Z",
+          "duration_seconds": 8.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:10:53Z",
+          "expired": false,
+          "size_in_bytes": 3955
+        }
+      ]
+    },
+    {
+      "run_id": 41601341688,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "a9e6958df56000c6c75118ff1af4f43cc7a07bc0",
+      "created_at_utc": "2026-11-03T08:10:37Z",
+      "created_at_cdmx": "2026-11-03T02:10:37-06:00",
+      "started_at_utc": "2026-11-03T08:10:37Z",
+      "started_at_cdmx": "2026-11-03T02:10:37-06:00",
+      "finished_at_utc": "2026-11-03T08:10:50Z",
+      "finished_at_cdmx": "2026-11-03T02:10:50-06:00",
+      "duration_seconds": 13.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601341688",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:10:40Z",
+          "finished_at_utc": "2026-11-03T08:10:49Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:10:46Z",
+          "expired": false,
+          "size_in_bytes": 3957
+        }
+      ]
+    },
+    {
+      "run_id": 41601242042,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "124dc9935c751dbaa02ab03a76b9d7d2d58f6e88",
+      "created_at_utc": "2026-11-03T08:09:49Z",
+      "created_at_cdmx": "2026-11-03T02:09:49-06:00",
+      "started_at_utc": "2026-11-03T08:09:49Z",
+      "started_at_cdmx": "2026-11-03T02:09:49-06:00",
+      "finished_at_utc": "2026-11-03T08:10:06Z",
+      "finished_at_cdmx": "2026-11-03T02:10:06-06:00",
+      "duration_seconds": 17.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601242042",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:09:57Z",
+          "finished_at_utc": "2026-11-03T08:10:05Z",
+          "duration_seconds": 8.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:10:03Z",
+          "expired": false,
+          "size_in_bytes": 3955
+        }
+      ]
+    },
+    {
+      "run_id": 41601226013,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "96f821d3175c3c13ffb73415873101483d1ec88a",
+      "created_at_utc": "2026-11-03T08:09:41Z",
+      "created_at_cdmx": "2026-11-03T02:09:41-06:00",
+      "started_at_utc": "2026-11-03T08:09:41Z",
+      "started_at_cdmx": "2026-11-03T02:09:41-06:00",
+      "finished_at_utc": "2026-11-03T08:09:53Z",
+      "finished_at_cdmx": "2026-11-03T02:09:53-06:00",
+      "duration_seconds": 12.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601226013",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-03T08:09:44Z",
+          "finished_at_utc": "2026-11-03T08:09:52Z",
+          "duration_seconds": 8.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:09:49Z",
+          "expired": false,
+          "size_in_bytes": 3957
+        }
+      ]
+    },
+    {
+      "run_id": 41600980308,
+      "run_attempt": 1,
+      "workflow": "POE-U6 linguistic false-positive diagnostic",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
+      "head_sha": "e722a58fc6ce2bb8c297d38ad2b36bd2d793d5d9",
+      "created_at_utc": "2026-11-03T08:07:40Z",
+      "created_at_cdmx": "2026-11-03T02:07:40-06:00",
+      "started_at_utc": "2026-11-03T08:07:40Z",
+      "started_at_cdmx": "2026-11-03T02:07:40-06:00",
+      "finished_at_utc": "2026-11-03T08:07:53Z",
+      "finished_at_cdmx": "2026-11-03T02:07:53-06:00",
+      "duration_seconds": 13.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41600980308",
+      "jobs": [
+        {
+          "name": "linguistic-diagnostic",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T08:07:43Z",
+          "finished_at_utc": "2026-11-03T08:07:52Z",
+          "duration_seconds": 9.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
+          "created_at_utc": "2026-11-03T08:07:49Z",
+          "expired": false,
+          "size_in_bytes": 3520
+        }
+      ]
+    },
+    {
+      "run_id": 41596126194,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "3570803e79621d1f388def7905f435a127ddcd96",
+      "created_at_utc": "2026-11-03T07:24:35Z",
+      "created_at_cdmx": "2026-11-03T01:24:35-06:00",
+      "started_at_utc": "2026-11-03T07:24:35Z",
+      "started_at_cdmx": "2026-11-03T01:24:35-06:00",
+      "finished_at_utc": "2026-11-03T07:26:03Z",
+      "finished_at_cdmx": "2026-11-03T01:26:03-06:00",
+      "duration_seconds": 88.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41596126194",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-03T07:24:38Z",
+          "finished_at_utc": "2026-11-03T07:26:02Z",
+          "duration_seconds": 84.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 41587522035,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2653,362 +3053,6 @@
           "size_in_bytes": 1011568
         }
       ]
-    },
-    {
-      "run_id": 41019952941,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "f28ad713cadd01f27578b7676638534e6b7fd085",
-      "created_at_utc": "2026-10-30T07:25:01Z",
-      "created_at_cdmx": "2026-10-30T01:25:01-06:00",
-      "started_at_utc": "2026-10-30T07:25:01Z",
-      "started_at_cdmx": "2026-10-30T01:25:01-06:00",
-      "finished_at_utc": "2026-10-30T07:25:34Z",
-      "finished_at_cdmx": "2026-10-30T01:25:34-06:00",
-      "duration_seconds": 33.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019952941",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:25:03Z",
-          "finished_at_utc": "2026-10-30T07:25:33Z",
-          "duration_seconds": 30.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_R3_EVIDENCIA",
-          "created_at_utc": "2026-10-30T07:25:31Z",
-          "expired": false,
-          "size_in_bytes": 1010732
-        }
-      ]
-    },
-    {
-      "run_id": 41019886552,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "1afd3901b461bb47eeb17e5734eba6ac2323a6c6",
-      "created_at_utc": "2026-10-30T07:24:22Z",
-      "created_at_cdmx": "2026-10-30T01:24:22-06:00",
-      "started_at_utc": "2026-10-30T07:24:22Z",
-      "started_at_cdmx": "2026-10-30T01:24:22-06:00",
-      "finished_at_utc": "2026-10-30T07:24:34Z",
-      "finished_at_cdmx": "2026-10-30T01:24:34-06:00",
-      "duration_seconds": 12.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019886552",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-30T07:24:24Z",
-          "finished_at_utc": "2026-10-30T07:24:34Z",
-          "duration_seconds": 10.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_R2_EVIDENCIA",
-          "created_at_utc": "2026-10-30T07:24:32Z",
-          "expired": false,
-          "size_in_bytes": 3818
-        }
-      ]
-    },
-    {
-      "run_id": 41019805899,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "a3ccebb545140446fd3593321a04ebe9677ef900",
-      "created_at_utc": "2026-10-30T07:23:35Z",
-      "created_at_cdmx": "2026-10-30T01:23:35-06:00",
-      "started_at_utc": "2026-10-30T07:23:35Z",
-      "started_at_cdmx": "2026-10-30T01:23:35-06:00",
-      "finished_at_utc": "2026-10-30T07:23:48Z",
-      "finished_at_cdmx": "2026-10-30T01:23:48-06:00",
-      "duration_seconds": 13.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019805899",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-30T07:23:38Z",
-          "finished_at_utc": "2026-10-30T07:23:48Z",
-          "duration_seconds": 10.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_R1_EVIDENCIA",
-          "created_at_utc": "2026-10-30T07:23:46Z",
-          "expired": false,
-          "size_in_bytes": 3528
-        }
-      ]
-    },
-    {
-      "run_id": 41019795987,
-      "run_attempt": 1,
-      "workflow": "Traza campo 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "128439952315a99481fa41ebf77fd1270adf4bfe",
-      "created_at_utc": "2026-10-30T07:23:30Z",
-      "created_at_cdmx": "2026-10-30T01:23:30-06:00",
-      "started_at_utc": "2026-10-30T07:23:30Z",
-      "started_at_cdmx": "2026-10-30T01:23:30-06:00",
-      "finished_at_utc": "2026-10-30T07:23:39Z",
-      "finished_at_cdmx": "2026-10-30T01:23:39-06:00",
-      "duration_seconds": 9.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019795987",
-      "jobs": [
-        {
-          "name": "tests",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:23:33Z",
-          "finished_at_utc": "2026-10-30T07:23:39Z",
-          "duration_seconds": 6.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41019795924,
-      "run_attempt": 1,
-      "workflow": "Traza Campo 244 V2 specs",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "128439952315a99481fa41ebf77fd1270adf4bfe",
-      "created_at_utc": "2026-10-30T07:23:30Z",
-      "created_at_cdmx": "2026-10-30T01:23:30-06:00",
-      "started_at_utc": "2026-10-30T07:23:30Z",
-      "started_at_cdmx": "2026-10-30T01:23:30-06:00",
-      "finished_at_utc": "2026-10-30T07:23:41Z",
-      "finished_at_cdmx": "2026-10-30T01:23:41-06:00",
-      "duration_seconds": 11.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019795924",
-      "jobs": [
-        {
-          "name": "specs",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:23:33Z",
-          "finished_at_utc": "2026-10-30T07:23:40Z",
-          "duration_seconds": 7.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41019773537,
-      "run_attempt": 1,
-      "workflow": "Traza campo 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "13c70ed790468370f608f167a32a30a85cc16628",
-      "created_at_utc": "2026-10-30T07:23:17Z",
-      "created_at_cdmx": "2026-10-30T01:23:17-06:00",
-      "started_at_utc": "2026-10-30T07:23:17Z",
-      "started_at_cdmx": "2026-10-30T01:23:17-06:00",
-      "finished_at_utc": "2026-10-30T07:23:27Z",
-      "finished_at_cdmx": "2026-10-30T01:23:27-06:00",
-      "duration_seconds": 10.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019773537",
-      "jobs": [
-        {
-          "name": "tests",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:23:20Z",
-          "finished_at_utc": "2026-10-30T07:23:26Z",
-          "duration_seconds": 6.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41019773491,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "13c70ed790468370f608f167a32a30a85cc16628",
-      "created_at_utc": "2026-10-30T07:23:17Z",
-      "created_at_cdmx": "2026-10-30T01:23:17-06:00",
-      "started_at_utc": "2026-10-30T07:23:17Z",
-      "started_at_cdmx": "2026-10-30T01:23:17-06:00",
-      "finished_at_utc": "2026-10-30T07:23:32Z",
-      "finished_at_cdmx": "2026-10-30T01:23:32-06:00",
-      "duration_seconds": 15.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019773491",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-30T07:23:20Z",
-          "finished_at_utc": "2026-10-30T07:23:31Z",
-          "duration_seconds": 11.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_EVIDENCIA",
-          "created_at_utc": "2026-10-30T07:23:28Z",
-          "expired": false,
-          "size_in_bytes": 3490
-        }
-      ]
-    },
-    {
-      "run_id": 41019609422,
-      "run_attempt": 1,
-      "workflow": "Fabrica real - smoke CEB traza 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "ae6fa8ed08db592d7e1fa8f2b24302f268a5e508",
-      "created_at_utc": "2026-10-30T07:21:41Z",
-      "created_at_cdmx": "2026-10-30T01:21:41-06:00",
-      "started_at_utc": "2026-10-30T07:21:41Z",
-      "started_at_cdmx": "2026-10-30T01:21:41-06:00",
-      "finished_at_utc": "2026-10-30T07:21:58Z",
-      "finished_at_cdmx": "2026-10-30T01:21:58-06:00",
-      "duration_seconds": 17.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019609422",
-      "jobs": [
-        {
-          "name": "fabrica-real",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-30T07:21:44Z",
-          "finished_at_utc": "2026-10-30T07:21:57Z",
-          "duration_seconds": 13.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "F006_TRAZA_V2_EVIDENCIA",
-          "created_at_utc": "2026-10-30T07:21:55Z",
-          "expired": false,
-          "size_in_bytes": 3489
-        }
-      ]
-    },
-    {
-      "run_id": 41019561417,
-      "run_attempt": 1,
-      "workflow": ".github/workflows/fabrica-real-traza.yml",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "564cec8b516599053cbab34e25183f999232f17f",
-      "created_at_utc": "2026-10-30T07:21:13Z",
-      "created_at_cdmx": "2026-10-30T01:21:13-06:00",
-      "started_at_utc": "2026-10-30T07:21:13Z",
-      "started_at_cdmx": "2026-10-30T01:21:13-06:00",
-      "finished_at_utc": "2026-10-30T07:21:13Z",
-      "finished_at_cdmx": "2026-10-30T01:21:13-06:00",
-      "duration_seconds": 0.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019561417",
-      "jobs": [],
-      "artifacts": []
-    },
-    {
-      "run_id": 41019233762,
-      "run_attempt": 1,
-      "workflow": "Traza campo 244",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "e1d68b6e9116e94096747caa1607b8e4e8cd52bc",
-      "created_at_utc": "2026-10-30T07:18:00Z",
-      "created_at_cdmx": "2026-10-30T01:18:00-06:00",
-      "started_at_utc": "2026-10-30T07:18:00Z",
-      "started_at_cdmx": "2026-10-30T01:18:00-06:00",
-      "finished_at_utc": "2026-10-30T07:18:10Z",
-      "finished_at_cdmx": "2026-10-30T01:18:10-06:00",
-      "duration_seconds": 10.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019233762",
-      "jobs": [
-        {
-          "name": "tests",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:18:03Z",
-          "finished_at_utc": "2026-10-30T07:18:09Z",
-          "duration_seconds": 6.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41019229910,
-      "run_attempt": 1,
-      "workflow": "Traza Campo 244 V2 specs",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "72600519c5dc525e128c9525d283d2c3e7d6abe2",
-      "created_at_utc": "2026-10-30T07:17:58Z",
-      "created_at_cdmx": "2026-10-30T01:17:58-06:00",
-      "started_at_utc": "2026-10-30T07:17:58Z",
-      "started_at_cdmx": "2026-10-30T01:17:58-06:00",
-      "finished_at_utc": "2026-10-30T07:18:07Z",
-      "finished_at_cdmx": "2026-10-30T01:18:07-06:00",
-      "duration_seconds": 9.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019229910",
-      "jobs": [
-        {
-          "name": "specs",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-30T07:18:01Z",
-          "finished_at_utc": "2026-10-30T07:18:07Z",
-          "duration_seconds": 6.0
-        }
-      ],
-      "artifacts": []
     }
   ]
 }

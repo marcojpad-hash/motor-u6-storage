@@ -4,6 +4,17 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41601620061 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:54-06:00 | 2026-11-03T02:12:54-06:00 | 2026-11-03T02:13:23-06:00 | 29.0 | success |
+| 41601599242 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:44-06:00 | 2026-11-03T02:12:44-06:00 | 2026-11-03T02:13:02-06:00 | 18.0 | failure |
+| 41601534764 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:13-06:00 | 2026-11-03T02:12:13-06:00 | 2026-11-03T02:12:27-06:00 | 14.0 | failure |
+| 41601513496 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:03-06:00 | 2026-11-03T02:12:03-06:00 | 2026-11-03T02:12:15-06:00 | 12.0 | success |
+| 41601477874 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:11:45-06:00 | 2026-11-03T02:11:45-06:00 | 2026-11-03T02:12:00-06:00 | 15.0 | success |
+| 41601358616 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:10:45-06:00 | 2026-11-03T02:10:45-06:00 | 2026-11-03T02:10:57-06:00 | 12.0 | success |
+| 41601341688 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:10:37-06:00 | 2026-11-03T02:10:37-06:00 | 2026-11-03T02:10:50-06:00 | 13.0 | success |
+| 41601242042 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:09:49-06:00 | 2026-11-03T02:09:49-06:00 | 2026-11-03T02:10:06-06:00 | 17.0 | success |
+| 41601226013 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:09:41-06:00 | 2026-11-03T02:09:41-06:00 | 2026-11-03T02:09:53-06:00 | 12.0 | failure |
+| 41600980308 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:07:40-06:00 | 2026-11-03T02:07:40-06:00 | 2026-11-03T02:07:53-06:00 | 13.0 | success |
+| 41596126194 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T01:24:35-06:00 | 2026-11-03T01:24:35-06:00 | 2026-11-03T01:26:03-06:00 | 88.0 | success |
 | 41587522035 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T00:03:41-06:00 | 2026-11-03T00:03:41-06:00 | 2026-11-03T00:05:02-06:00 | 81.0 | success |
 | 41581729232 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:05:59-06:00 | 94.0 | success |
 | 41575664101 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:03:22-06:00 | 93.0 | success |
@@ -92,20 +103,12 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41020317680 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:28:37-06:00 | 2026-10-30T01:28:37-06:00 | 2026-10-30T01:29:05-06:00 | 28.0 | success |
 | 41020305421 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:28:30-06:00 | 2026-10-30T01:28:30-06:00 | 2026-10-30T01:29:11-06:00 | 41.0 | success |
 | 41020147269 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:26:55-06:00 | 2026-10-30T01:26:55-06:00 | 2026-10-30T01:27:28-06:00 | 33.0 | success |
-| 41019952941 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:25:01-06:00 | 2026-10-30T01:25:01-06:00 | 2026-10-30T01:25:34-06:00 | 33.0 | success |
-| 41019886552 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:24:22-06:00 | 2026-10-30T01:24:22-06:00 | 2026-10-30T01:24:34-06:00 | 12.0 | failure |
-| 41019805899 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:23:35-06:00 | 2026-10-30T01:23:35-06:00 | 2026-10-30T01:23:48-06:00 | 13.0 | failure |
-| 41019795987 | Traza campo 244 | push | 2026-10-30T01:23:30-06:00 | 2026-10-30T01:23:30-06:00 | 2026-10-30T01:23:39-06:00 | 9.0 | success |
-| 41019795924 | Traza Campo 244 V2 specs | push | 2026-10-30T01:23:30-06:00 | 2026-10-30T01:23:30-06:00 | 2026-10-30T01:23:41-06:00 | 11.0 | success |
-| 41019773537 | Traza campo 244 | push | 2026-10-30T01:23:17-06:00 | 2026-10-30T01:23:17-06:00 | 2026-10-30T01:23:27-06:00 | 10.0 | success |
-| 41019773491 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:23:17-06:00 | 2026-10-30T01:23:17-06:00 | 2026-10-30T01:23:32-06:00 | 15.0 | failure |
-| 41019609422 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:21:41-06:00 | 2026-10-30T01:21:41-06:00 | 2026-10-30T01:21:58-06:00 | 17.0 | failure |
-| 41019561417 | .github/workflows/fabrica-real-traza.yml | push | 2026-10-30T01:21:13-06:00 | 2026-10-30T01:21:13-06:00 | 2026-10-30T01:21:13-06:00 | 0.0 | failure |
-| 41019233762 | Traza campo 244 | push | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:10-06:00 | 10.0 | success |
-| 41019229910 | Traza Campo 244 V2 specs | push | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:18:07-06:00 | 9.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 41601599242 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242
+- Run 41601534764 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601534764
+- Run 41601226013 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601226013
 - Run 41418831619 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418831619
 - Run 41418760906 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418760906
 - Run 41418726981 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418726981
@@ -145,11 +148,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41081722454 (Traza campo 244): failure; jobs: tests=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081722454
 - Run 41081722428 (Traza Campo 244 V2 specs): failure; jobs: specs=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081722428
 - Run 41050571528 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41050571528
-- Run 41019886552 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019886552
-- Run 41019805899 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019805899
-- Run 41019773491 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019773491
-- Run 41019609422 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019609422
-- Run 41019561417 (.github/workflows/fabrica-real-traza.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019561417
 
 ## Límites
 
