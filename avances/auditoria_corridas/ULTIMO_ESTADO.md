@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41708477608 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T14:00:07-06:00 | 2026-11-03T14:00:07-06:00 | 2026-11-03T14:01:50-06:00 | 103.0 | success |
 | 41699977279 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:07:36-06:00 | 128.0 | success |
 | 41689278099 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:59:40-06:00 | 94.0 | success |
 | 41681052226 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T11:07:07-06:00 | 2026-11-03T11:07:07-06:00 | 2026-11-03T11:09:03-06:00 | 116.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41081722428 | Traza Campo 244 V2 specs | push | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:33:08-06:00 | 11.0 | failure |
 | 41081591816 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T09:32:06-06:00 | 2026-10-30T09:32:06-06:00 | 2026-10-30T09:32:58-06:00 | 52.0 | success |
 | 41050583740 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:47:17-06:00 | 2026-10-30T05:47:17-06:00 | 2026-10-30T05:48:07-06:00 | 50.0 | success |
-| 41050571528 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:47:11-06:00 | 2026-10-30T05:47:11-06:00 | 2026-10-30T05:47:22-06:00 | 11.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -148,7 +148,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41081865099 (Traza campo 244): failure; jobs: tests=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081865099
 - Run 41081722454 (Traza campo 244): failure; jobs: tests=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081722454
 - Run 41081722428 (Traza Campo 244 V2 specs): failure; jobs: specs=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081722428
-- Run 41050571528 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41050571528
 
 ## Límites
 
