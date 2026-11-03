@@ -18,7 +18,7 @@ class TestPoeLinguisticDiagnostic(unittest.TestCase):
 
     def test_gold_labels_are_separated_before_scoring(self):
         metrics = self.report["profile_detection"]
-        self.assertEqual(metrics["n_total"], 20)
+        self.assertEqual(metrics["n_total"], 22)
         self.assertEqual(metrics["n_negative"], 12)
         self.assertEqual(metrics["n_positive"], 5)
         self.assertEqual(metrics["n_ambiguous_excluded_from_binary_metrics"], 5)
