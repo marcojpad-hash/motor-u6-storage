@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41587522035 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T00:03:41-06:00 | 2026-11-03T00:03:41-06:00 | 2026-11-03T00:05:02-06:00 | 81.0 | success |
 | 41581729232 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:05:59-06:00 | 94.0 | success |
 | 41575664101 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:03:22-06:00 | 93.0 | success |
 | 41569471207 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T20:59:41-06:00 | 2026-11-02T20:59:41-06:00 | 2026-11-02T21:01:03-06:00 | 82.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41019561417 | .github/workflows/fabrica-real-traza.yml | push | 2026-10-30T01:21:13-06:00 | 2026-10-30T01:21:13-06:00 | 2026-10-30T01:21:13-06:00 | 0.0 | failure |
 | 41019233762 | Traza campo 244 | push | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:10-06:00 | 10.0 | success |
 | 41019229910 | Traza Campo 244 V2 specs | push | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:18:07-06:00 | 9.0 | success |
-| 40835787010 | Traza Campo 244 V2 specs | push | 2026-10-29T01:29:45-06:00 | 2026-10-29T01:29:45-06:00 | 2026-10-29T01:29:56-06:00 | 11.0 | success |
 
 ## Fallos y cancelaciones
 
