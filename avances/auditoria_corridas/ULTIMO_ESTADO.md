@@ -4,6 +4,8 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41669939876 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T10:01:52-06:00 | 2026-11-03T10:01:52-06:00 | 2026-11-03T10:03:04-06:00 | 72.0 | failure |
+| 41653772003 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T08:26:54-06:00 | 2026-11-03T08:26:54-06:00 | 2026-11-03T08:28:11-06:00 | 77.0 | success |
 | 41642964263 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T07:17:03-06:00 | 2026-11-03T07:17:03-06:00 | 2026-11-03T07:18:37-06:00 | 94.0 | success |
 | 41631626946 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T05:57:01-06:00 | 2026-11-03T05:57:01-06:00 | 2026-11-03T05:58:09-06:00 | 68.0 | success |
 | 41624430208 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T05:04:02-06:00 | 2026-11-03T05:04:02-06:00 | 2026-11-03T05:05:28-06:00 | 86.0 | success |
@@ -101,11 +103,10 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41050398526 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:45:44-06:00 | 2026-10-30T05:45:44-06:00 | 2026-10-30T05:46:31-06:00 | 47.0 | success |
 | 41050376918 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:45:33-06:00 | 2026-10-30T05:45:33-06:00 | 2026-10-30T05:46:19-06:00 | 46.0 | success |
 | 41050073967 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:43:03-06:00 | 2026-10-30T05:43:03-06:00 | 2026-10-30T05:43:37-06:00 | 34.0 | success |
-| 41022571198 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:50:39-06:00 | 2026-10-30T01:50:39-06:00 | 2026-10-30T01:51:18-06:00 | 39.0 | success |
-| 41020723134 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T01:32:37-06:00 | 2026-10-30T01:32:37-06:00 | 2026-10-30T01:33:16-06:00 | 39.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 41669939876 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41669939876
 - Run 41601599242 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242
 - Run 41601534764 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601534764
 - Run 41601226013 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601226013
