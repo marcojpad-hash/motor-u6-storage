@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41581729232 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:04:25-06:00 | 2026-11-02T23:05:59-06:00 | 94.0 | success |
 | 41575664101 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:01:49-06:00 | 2026-11-02T22:03:22-06:00 | 93.0 | success |
 | 41569471207 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T20:59:41-06:00 | 2026-11-02T20:59:41-06:00 | 2026-11-02T21:01:03-06:00 | 82.0 | success |
 | 41558734978 | Auditoría de corridas Motor U6 | schedule | 2026-11-02T19:17:13-06:00 | 2026-11-02T19:17:13-06:00 | 2026-11-02T19:18:36-06:00 | 83.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41019233762 | Traza campo 244 | push | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:00-06:00 | 2026-10-30T01:18:10-06:00 | 10.0 | success |
 | 41019229910 | Traza Campo 244 V2 specs | push | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:17:58-06:00 | 2026-10-30T01:18:07-06:00 | 9.0 | success |
 | 40835787010 | Traza Campo 244 V2 specs | push | 2026-10-29T01:29:45-06:00 | 2026-10-29T01:29:45-06:00 | 2026-10-29T01:29:56-06:00 | 11.0 | success |
-| 40835771333 | Traza Campo 244 V2 specs | push | 2026-10-29T01:29:36-06:00 | 2026-10-29T01:29:36-06:00 | 2026-10-29T01:29:48-06:00 | 12.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -150,7 +150,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41019773491 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019773491
 - Run 41019609422 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019609422
 - Run 41019561417 (.github/workflows/fabrica-real-traza.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41019561417
-- Run 40835771333 (Traza Campo 244 V2 specs): failure; jobs: specs=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/40835771333
 
 ## Límites
 
