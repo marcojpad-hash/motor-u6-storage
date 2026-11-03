@@ -33,7 +33,7 @@ PROFILE_CASES = [
     ("N12", "negativo", "El candidato fue elegido por mayoría simple."),
     ("P01", "positivo", "Era ambicioso y autoritario con sus colaboradores."),
     ("P02", "positivo", "Fue manipulador y egocéntrico durante el conflicto."),
-    ("P03", "positivo", "¿Era un hombre cruel o una persona compasiva?"),
+    ("N13", "negativo", "¿Era un hombre cruel o una persona compasiva?"),
     ("P04", "positivo", "Su conducta fue oportunista y arrogante."),
     ("P05", "positivo", "Se describía como visionario y obsesivo."),
     ("A01", "ambiguo", "Fue elegido como líder natural del movimiento."),
@@ -51,13 +51,13 @@ BIAS_PAIRS = [
 ]
 
 AMBIGUITY_CASES = [
-    ("T01", "Después de asumir el cargo, las ventas crecieron."),
-    ("T02", "Las ventas crecieron porque aumentó la demanda."),
-    ("T03", "Aprobó el proyecto porque era rentable."),
-    ("T04", "El director habló con el asesor cuando salió de la oficina."),
-    ("T05", "No fue poco importante para el desenlace."),
-    ("T06", "Si el equipo redujo costos, entonces mejoró el margen. El margen mejoró. Por tanto, el equipo redujo costos."),
-    ("T07", "La empresa cambió de director y después aumentaron las ventas."),
+    ("T01", "temporal_sin_causalidad", "Después de asumir el cargo, las ventas crecieron."),
+    ("T02", "causal_explicita", "Las ventas crecieron porque aumentó la demanda."),
+    ("T03", "causal_con_referente_ambiguo", "Aprobó el proyecto porque era rentable."),
+    ("T04", "referente_pronominal_ambiguo", "El director habló con el asesor cuando salió de la oficina."),
+    ("T05", "litotes_y_alcance_de_negacion", "No fue poco importante para el desenlace."),
+    ("T06", "afirmacion_del_consecuente", "Si el equipo redujo costos, entonces mejoró el margen. El margen mejoró. Por tanto, el equipo redujo costos."),
+    ("T07", "temporal_sin_causalidad", "La empresa cambió de director y después aumentaron las ventas."),
 ]
 
 
@@ -123,10 +123,14 @@ def run():
         })
 
     ambiguity_rows = []
-    for cid, text in AMBIGUITY_CASES:
+    for cid, gold_issue, text in AMBIGUITY_CASES:
         r = copi.analizar_texto([text])
+        profile = behind.filtrar(text)
         ambiguity_rows.append({
-            "id": cid, "text": text,
+            "id": cid, "gold_issue": gold_issue, "text": text,
+            "profile_flag": profile.get("bandera"),
+            "profile_marks": profile.get("marcajes", []),
+            "copi_ambiguity_marked": any("AMBIGUO" in m.get("tipo", "") for m in r.get("marcas", [])),
             "causals": r.get("causales", []),
             "arguments": r.get("argumentos", []),
             "marks": r.get("marcas", []),
