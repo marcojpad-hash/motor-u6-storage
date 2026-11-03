@@ -19,11 +19,11 @@ class TestPoeLinguisticDiagnostic(unittest.TestCase):
     def test_gold_labels_are_separated_before_scoring(self):
         metrics = self.report["profile_detection"]
         self.assertEqual(metrics["n_total"], 22)
-        self.assertEqual(metrics["n_negative"], 12)
-        self.assertEqual(metrics["n_positive"], 5)
+        self.assertEqual(metrics["n_negative"], 13)
+        self.assertEqual(metrics["n_positive"], 4)
         self.assertEqual(metrics["n_ambiguous_excluded_from_binary_metrics"], 5)
-        self.assertEqual(metrics["tp"] + metrics["fn"], 5)
-        self.assertEqual(metrics["fp"] + metrics["tn"], 12)
+        self.assertEqual(metrics["tp"] + metrics["fn"], 4)
+        self.assertEqual(metrics["fp"] + metrics["tn"], 13)
 
     def test_counterfactual_gender_pairs_are_reported(self):
         bias = self.report["gender_counterfactuals"]
@@ -34,7 +34,8 @@ class TestPoeLinguisticDiagnostic(unittest.TestCase):
     def test_ambiguity_cases_are_not_silently_dropped(self):
         cases = self.report["ambiguity_and_argumentation"]["cases"]
         self.assertEqual(len(cases), 7)
-        self.assertTrue(all("marks" in c and "causals" in c for c in cases))
+        self.assertTrue(all("marks" in c and "causals" in c and "gold_issue" in c for c in cases))
+        self.assertTrue(any(c["gold_issue"] == "referente_pronominal_ambiguo" and not c["copi_ambiguity_marked"] for c in cases))
 
     def test_real_guardian_wrapper_is_executed(self):
         block = self.report["actual_guardian_wrapper"]
