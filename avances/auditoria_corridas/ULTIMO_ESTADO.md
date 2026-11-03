@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41717314552 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T14:57:27-06:00 | 2026-11-03T14:57:27-06:00 | 2026-11-03T14:58:55-06:00 | 88.0 | success |
 | 41708477608 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T14:00:07-06:00 | 2026-11-03T14:00:07-06:00 | 2026-11-03T14:01:50-06:00 | 103.0 | success |
 | 41699977279 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:07:36-06:00 | 128.0 | success |
 | 41689278099 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:59:40-06:00 | 94.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41081722454 | Traza campo 244 | push | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:33:16-06:00 | 19.0 | failure |
 | 41081722428 | Traza Campo 244 V2 specs | push | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:33:08-06:00 | 11.0 | failure |
 | 41081591816 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T09:32:06-06:00 | 2026-10-30T09:32:06-06:00 | 2026-10-30T09:32:58-06:00 | 52.0 | success |
-| 41050583740 | Fabrica real - smoke CEB traza 244 | push | 2026-10-30T05:47:17-06:00 | 2026-10-30T05:47:17-06:00 | 2026-10-30T05:48:07-06:00 | 50.0 | success |
 
 ## Fallos y cancelaciones
 
