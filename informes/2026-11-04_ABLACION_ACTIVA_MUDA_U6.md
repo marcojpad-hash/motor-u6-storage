@@ -96,7 +96,7 @@ Los 41 recibos de replay fueron EXECUTED_FIXTURE. Las 41 corridas quedaron en EX
 | aquiles_ancla_estricto | confirmado | sin cambio | sin cambio | sin cambio |
 | sombrero_blanco_salida | confirmado | sin cambio | sin cambio | sin cambio |
 
-*t* La desactivación de resolucion se incluyó como control adicional: su estado crudo es RESUELTO_OPERACIONALMENTE y no debería contarse como ACTIVA_MUDA.
+La desactivación de resolucion se incluyó como control adicional: su estado crudo es RESUELTO_OPERACIONALMENTE y no debería contarse como ACTIVA_MUDA.
 
 ## Qué representan las 42 filas por caso
 
@@ -110,7 +110,7 @@ No son 42 componentes decisores independientes.
 
 ### Cuatro estados crudos mal clasificados
 
-El registro asignó ACTIVA_MUDA por el fallback de _MAPA_ESTADO a cuatro estados crudos que tienen otro significado:
+El registro asignó ACTIVA_MUDA por el fallback de _MAPA_ESTADO a cuatro estados crudos que tienen otro significado. Las 41 pruebas incluyen 39 targets de ACTIVA_MUDA (20 en Courbet y 19 en Haber) y dos controles adicionales de resolución:
 
 | Pieza | Estado crudo |
 |---|---|
@@ -119,7 +119,7 @@ El registro asignó ACTIVA_MUDA por el fallback de _MAPA_ESTADO a cuatro estados
 | matriz_clases | PRESENTE |
 | resolucion_operativa_terminal_017 | RESUELTO_OPERACIONALMENTE |
 
-Por tanto, las 42 filas por caso están infladas: cuatro no son ACTIVA_MUDA en sentido estricto. El mapa de estados pertenece al motor V15.3 protegido por el protocolo CEB; no se modificó. Se deja registrada la inconsistencia para una corrección autorizada.
+Por tanto, las 42 filas por caso están infladas: cuatro no son ACTIVA_MUDA en sentido estricto; quedarían 38 filas con ese estado por caso, aunque tampoco equivalen a 38 módulos independientes. El mapa de estados pertenece al motor V15.3 protegido por el protocolo CEB; no se modificó. Se deja registrada la inconsistencia para una corrección autorizada.
 
 ### Filas sin ablación independiente
 
