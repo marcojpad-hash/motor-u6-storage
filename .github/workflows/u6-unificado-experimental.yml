@@ -7,6 +7,7 @@ on:
     paths:
       - "motor/u6/U6_UNIFICADO_EXPERIMENTAL.py"
       - "motor/tests/test_u6_unificado_experimental.py"
+      - "motor/motor/INVENTARIO_COMPONENTES_UNICO.json"
       - ".github/workflows/u6-unificado-experimental.yml"
   workflow_dispatch:
 
