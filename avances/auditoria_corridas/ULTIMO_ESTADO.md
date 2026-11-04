@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41813005457 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T04:15:51-06:00 | 2026-11-04T04:15:51-06:00 | 2026-11-04T04:18:10-06:00 | 139.0 | success |
 | 41812300055 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:10:35-06:00 | 64.0 | success |
 | 41812073566 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:08:49-06:00 | 78.0 | success |
 | 41811921229 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:48-06:00 | 37.0 | failure |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41233237885 | Motor runner contract tests | push | 2026-10-31T13:14:05-06:00 | 2026-10-31T13:14:05-06:00 | 2026-10-31T13:14:17-06:00 | 12.0 | failure |
 | 41231884709 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-10-31T12:57:25-06:00 | 2026-10-31T12:57:25-06:00 | 2026-10-31T12:57:46-06:00 | 21.0 | failure |
 | 41182202085 | Build mortality matrix from UN WPP 2024 | push | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:51:01-06:00 | 11.0 | failure |
-| 41182202054 | Motor runner contract tests | push | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:51:04-06:00 | 14.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -140,7 +140,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41233237885 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41233237885
 - Run 41231884709 (Fabrica lote diario (Grok / dispatch)): failure; jobs: fabrica=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41231884709
 - Run 41182202085 (Build mortality matrix from UN WPP 2024): failure; jobs: build-mortality-data=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182202085
-- Run 41182202054 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182202054
 
 ## Límites
 
