@@ -130,3 +130,17 @@ Profundizar comparación formal, no por etiquetas. Para cada antecedente: objeto
 **Empieza leyendo este handoff y el informe técnico del 4 de noviembre. Después identifica qué pregunta nueva puede resolverse con el código, los datos y las herramientas disponibles, inspecciona el mecanismo específico y ejecuta la prueba cuando exista un entorno válido.**
 
 Si el siguiente modelo solo repite la descripción de U6, no ha continuado la investigación. La continuidad consiste en avanzar desde los hallazgos ya establecidos hacia pruebas que permitan entender qué representa U6, qué puede hacer, dónde falla y cuál es su relación real con las arquitecturas y disciplinas existentes.
+
+
+## 9. Prueba ejecutada el 4 de noviembre — ablación ACTIVA_MUDA
+
+Se ejecutaron 41 ablaciones individuales sobre Courbet y Haber, con búsqueda viva congelada como fixture por caso y stores/ledgers por ejecución.
+
+- 0 cambios en H1/H2, orden de candidatas o rank_fusion.
+- 41/41 switches confirmados; 0 errores críticos.
+- Suite: 159 passed, 2 skipped.
+- Informe: informes/2026-11-04_ABLACION_ACTIVA_MUDA_U6.md.
+- Duda de clasificación de cuatro estados crudos: seguimiento/dudas/2026-11-04_duda_clasificacion_estados_activa_muda.md.
+- Evidencia Actions: run 41881474178.
+
+No es una medición de precisión predictiva. Solo mide si esas desactivaciones alteraron las salidas de estos dos casos. La matriz no debe repetirse automáticamente en cada push; su paso quedó reservado para ejecución manual.
