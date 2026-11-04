@@ -84,6 +84,12 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
     for row in registry:
         state = str(row.get("estado") or "UNKNOWN")
         registry_states[state] = registry_states.get(state, 0) + 1
+    activa_muda_rows = [
+        {k: row.get(k) for k in ("pieza", "fuente", "archivo", "rol", "estado", "estado_crudo",
+                                  "motivo", "alimenta_predictor", "alimenta_H", "can_decide_H",
+                                  "feeds_predictor", "feeds_H", "declaracion_U6", "motivo_declaracion_U6")}
+        for row in registry if row.get("estado") == "ACTIVA_MUDA"
+    ]
     critical_errors = [
         {"component": x.get("component"), "status": x.get("status"), "error": x.get("error") or x.get("reason")}
         for x in statuses
@@ -117,6 +123,7 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
         "candidate_count": len(result.get("predictor", {}).get("candidates") or []),
         "component_status_counts": states,
         "registry_state_counts": registry_states,
+        "activa_muda_rows": activa_muda_rows,
         "component_inventory": {
             "total": len(inventory),
             "present": sum(bool(x.get("present")) for x in inventory),
