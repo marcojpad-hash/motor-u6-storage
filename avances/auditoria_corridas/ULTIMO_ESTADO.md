@@ -4,6 +4,12 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41881280132 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:52:25-06:00 | 2026-11-04T11:52:25-06:00 | 2026-11-04T11:53:36-06:00 | 71.0 | success |
+| 41880823239 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:39-06:00 | 2026-11-04T11:49:39-06:00 | 2026-11-04T11:50:49-06:00 | 70.0 | success |
+| 41880781087 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:24-06:00 | 2026-11-04T11:49:24-06:00 | 2026-11-04T11:50:48-06:00 | 84.0 | success |
+| 41880728523 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:02-06:00 | 2026-11-04T11:49:02-06:00 | 2026-11-04T11:50:38-06:00 | 96.0 | success |
+| 41880219510 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:45:31-06:00 | 2026-11-04T11:45:31-06:00 | 2026-11-04T11:50:31-06:00 | 300.0 | success |
+| 41874205164 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T11:06:06-06:00 | 2026-11-04T11:06:06-06:00 | 2026-11-04T11:07:50-06:00 | 104.0 | success |
 | 41863798194 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T10:03:51-06:00 | 2026-11-04T10:03:51-06:00 | 2026-11-04T10:21:06-06:00 | 1035.0 | success |
 | 41853324322 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T09:00:48-06:00 | 2026-11-04T09:00:48-06:00 | 2026-11-04T09:02:30-06:00 | 102.0 | success |
 | 41836790342 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T07:17:45-06:00 | 2026-11-04T07:17:45-06:00 | 2026-11-04T07:19:15-06:00 | 90.0 | success |
@@ -94,15 +100,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41418332995 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:09:15-06:00 | 2026-11-02T03:09:15-06:00 | 2026-11-02T03:09:15-06:00 | 0.0 | failure |
 | 41418300106 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:08:59-06:00 | 2026-11-02T03:08:59-06:00 | 2026-11-02T03:09:28-06:00 | 29.0 | failure |
 | 41418298309 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:08:58-06:00 | 2026-11-02T03:08:58-06:00 | 2026-11-02T03:08:58-06:00 | 0.0 | failure |
-| 41418286929 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:08:53-06:00 | 2026-11-02T03:08:53-06:00 | 2026-11-02T03:08:53-06:00 | 0.0 | failure |
-| 41418259648 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:08:40-06:00 | 2026-11-02T03:08:40-06:00 | 2026-11-02T03:08:40-06:00 | 0.0 | failure |
-| 41415529151 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T02:46:40-06:00 | 2026-11-02T02:46:40-06:00 | 2026-11-02T02:46:40-06:00 | 0.0 | failure |
-| 41415519297 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T02:46:35-06:00 | 2026-11-02T02:46:35-06:00 | 2026-11-02T02:46:35-06:00 | 0.0 | failure |
-| 41415504332 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T02:46:27-06:00 | 2026-11-02T02:46:27-06:00 | 2026-11-02T02:46:27-06:00 | 0.0 | failure |
-| 41415360959 | Fabrica real - smoke CEB traza 244 | push | 2026-11-02T02:45:19-06:00 | 2026-11-02T02:45:19-06:00 | 2026-11-02T02:45:40-06:00 | 21.0 | failure |
-| 41330978122 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-11-01T11:20:31-06:00 | 2026-11-01T11:20:31-06:00 | 2026-11-01T11:20:51-06:00 | 20.0 | failure |
-| 41330912787 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-11-01T11:19:50-06:00 | 2026-11-01T11:19:50-06:00 | 2026-11-01T11:20:07-06:00 | 17.0 | failure |
-| 41233581926 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-10-31T13:18:23-06:00 | 2026-10-31T13:18:23-06:00 | 2026-10-31T13:18:53-06:00 | 30.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -128,15 +125,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41418332995 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418332995
 - Run 41418300106 (Experimento lateral Booleano Motor U6): failure; jobs: experimento=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418300106
 - Run 41418298309 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418298309
-- Run 41418286929 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418286929
-- Run 41418259648 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418259648
-- Run 41415529151 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41415529151
-- Run 41415519297 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41415519297
-- Run 41415504332 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41415504332
-- Run 41415360959 (Fabrica real - smoke CEB traza 244): failure; jobs: fabrica-real=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41415360959
-- Run 41330978122 (Fabrica lote diario (Grok / dispatch)): failure; jobs: fabrica=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41330978122
-- Run 41330912787 (Fabrica lote diario (Grok / dispatch)): failure; jobs: fabrica=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41330912787
-- Run 41233581926 (Fabrica lote diario (Grok / dispatch)): failure; jobs: fabrica=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41233581926
 
 ## Límites
 
