@@ -17,7 +17,7 @@ permissions:
 jobs:
   smoke-first:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 60
     env:
       PYTHONPATH: ${{ github.workspace }}/motor/motor
       STINKBOX_STORAGE_ROOT: /tmp/u6_unificado_stinkbox
@@ -45,6 +45,12 @@ jobs:
           python -B motor/u6/U6_UNIFICADO_EXPERIMENTAL.py \
             --case casos/fabrica/cola/CAL_F005_02_HABER/entrada.json \
             --output /tmp/U6_UNIFICADO_HABER.json
+      - name: Matriz emparejada de ablación ACTIVA_MUDA
+        run: |
+          python -B motor/u6/ABLACION_ACTIVA_MUDA_U6_20261104.py \
+            --case casos/fabrica/cola/CAL_F005_01_COURBET/entrada.json \
+            --case casos/fabrica/cola/CAL_F005_02_HABER/entrada.json \
+            --output /tmp/U6_ACTIVA_MUDA_ABLATION_MATRIX.json
       - name: Ejecutar suite completa después de los smokes
         run: python -m pytest -q motor/tests tests
       - name: Publicar evidencia de la prueba experimental
