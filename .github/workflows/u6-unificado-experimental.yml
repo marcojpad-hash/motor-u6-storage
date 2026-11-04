@@ -1,0 +1,60 @@
+name: U6 unificado experimental — smoke y suite completa
+
+on:
+  push:
+    branches:
+      - experimental/u6-unificado-activo-20261104
+    paths:
+      - "motor/u6/U6_UNIFICADO_EXPERIMENTAL.py"
+      - "motor/tests/test_u6_unificado_experimental.py"
+      - ".github/workflows/u6-unificado-experimental.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-first:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: ${{ github.workspace }}/motor/motor
+      STINKBOX_STORAGE_ROOT: /tmp/u6_unificado_stinkbox
+      CEB_ROOT: /tmp/u6_unificado_ceb
+      CALDERO_BUSQUEDA_VIVA: "1"
+      CALDERO_BUSCADOR: auto
+      SEARCH_PROVIDER: auto
+      FAMILIAS_TOKENS: "1"
+      MODO_ESTRICTO: "0"
+      CONSOLIDADO_OFF: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias del motor y pruebas
+        run: python -m pip install --upgrade numpy scipy ddgs primp lxml click pytest
+      - name: SMOKE 1 — caso Courbet con búsqueda viva
+        run: |
+          python -B motor/u6/U6_UNIFICADO_EXPERIMENTAL.py \
+            --case casos/fabrica/cola/CAL_F005_01_COURBET/entrada.json \
+            --output /tmp/U6_UNIFICADO_COURBET.json
+      - name: SMOKE 2 — caso Haber con búsqueda viva
+        run: |
+          python -B motor/u6/U6_UNIFICADO_EXPERIMENTAL.py \
+            --case casos/fabrica/cola/CAL_F005_02_HABER/entrada.json \
+            --output /tmp/U6_UNIFICADO_HABER.json
+      - name: Ejecutar suite completa después de los smokes
+        run: python -m pytest -q motor/tests tests
+      - name: Publicar evidencia de la prueba experimental
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA
+          path: |
+            /tmp/U6_UNIFICADO_COURBET.json
+            /tmp/U6_UNIFICADO_HABER.json
+            /tmp/u6_unificado_ceb/
+            /tmp/u6_unificado_stinkbox/
+          if-no-files-found: warn
+          retention-days: 30
