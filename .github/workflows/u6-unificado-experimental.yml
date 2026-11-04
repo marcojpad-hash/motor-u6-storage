@@ -61,18 +61,10 @@ jobs:
           {
             echo "AFTER"
             sha256sum motor/u6/U6_UNIFICADO_EXPERIMENTAL.py motor/u6/ABLACION_ACTIVA_MUDA_U6_20261104.py .github/workflows/u6-unificado-experimental.yml motor/tests/test_u6_unificado_experimental.py
-            echo "BEFORE_RUNNER"
-            git show b2cbd858a4a19c24a8d0062985c203938ec69db8:motor/u6/U6_UNIFICADO_EXPERIMENTAL.py | sha256sum
-            echo "BEFORE_WORKFLOW"
-            git show 0a5f0931eff198ec99860acc4490a21c5b33cc6e:.github/workflows/u6-unificado-experimental.yml | sha256sum
-            echo "BEFORE_TEST"
-            git show 5d0eb2291ffe89b92137f0448e01454e2cfa08c7:motor/tests/test_u6_unificado_experimental.py | sha256sum
-            echo "BEFORE_ABLATION_SCRIPT"
-            if git cat-file -e b2cbd858a4a19c24a8d0062985c203938ec69db8:motor/u6/ABLACION_ACTIVA_MUDA_U6_20261104.py 2>/dev/null; then
-              git show b2cbd858a4a19c24a8d0062985c203938ec69db8:motor/u6/ABLACION_ACTIVA_MUDA_U6_20261104.py | sha256sum
-            else
-              echo "AUSENTE"
-            fi
+            echo "BEFORE_RUNNER d820d6cad7f9a3e57bdec7640194f136903cfb737ea7b6c249e462a8cfb80c5a"
+            echo "BEFORE_WORKFLOW 3771354f7d5e8f78ebafb1b4059982913c0e043b71aed35bc86205e1455e1633"
+            echo "BEFORE_TEST 1271e610b40821d085ab7c60edb57afdefd79f5d4a9da5f87697a9ef7e41e8c0"
+            echo "BEFORE_ABLATION_SCRIPT AUSENTE"
           } | tee /tmp/U6_ABLATION_SHA256.txt
       - name: Publicar evidencia de la prueba experimental
         if: always()
