@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41863798194 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T10:03:51-06:00 | 2026-11-04T10:03:51-06:00 | 2026-11-04T10:21:06-06:00 | 1035.0 | success |
 | 41853324322 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T09:00:48-06:00 | 2026-11-04T09:00:48-06:00 | 2026-11-04T09:02:30-06:00 | 102.0 | success |
 | 41836790342 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T07:17:45-06:00 | 2026-11-04T07:17:45-06:00 | 2026-11-04T07:19:15-06:00 | 90.0 | success |
 | 41821023014 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T05:27:32-06:00 | 2026-11-04T05:27:32-06:00 | 2026-11-04T05:29:25-06:00 | 113.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41330978122 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-11-01T11:20:31-06:00 | 2026-11-01T11:20:31-06:00 | 2026-11-01T11:20:51-06:00 | 20.0 | failure |
 | 41330912787 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-11-01T11:19:50-06:00 | 2026-11-01T11:19:50-06:00 | 2026-11-01T11:20:07-06:00 | 17.0 | failure |
 | 41233581926 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-10-31T13:18:23-06:00 | 2026-10-31T13:18:23-06:00 | 2026-10-31T13:18:53-06:00 | 30.0 | failure |
-| 41233374630 | Motor runner contract tests | push | 2026-10-31T13:15:48-06:00 | 2026-10-31T13:15:48-06:00 | 2026-10-31T13:15:58-06:00 | 10.0 | success |
 
 ## Fallos y cancelaciones
 
