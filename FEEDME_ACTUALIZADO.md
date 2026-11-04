@@ -11,6 +11,15 @@ Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobr
 5. Ejecutar la tarea con las herramientas disponibles; no limitarse a describir el plan.
 
 
+## Motor unificado experimental U6 — 2026-11-04
+
+- Rama: `experimental/u6-unificado-activo-20261104`.
+- Informe de ejecución y resultados: [U6 unificado experimental](informes/2026-11-04_U6_UNIFICADO_EXPERIMENTAL.md).
+- Runner: `motor/u6/U6_UNIFICADO_EXPERIMENTAL.py`.
+- Workflow: [U6 unificado experimental — smoke y suite completa](.github/workflows/u6-unificado-experimental.yml).
+- Resultado: 2/2 smokes con búsqueda viva; CEB 45,106 eventos; 159 pruebas pasadas, 2 omitidas; 0 errores críticos.
+- No se modificaron Engine V5 ni el catálogo 244. La variante sigue en rama experimental, sin promover a main.
+
 ## Continuidad de investigación U6 — 2026-11-04
 
 - **Antes de repetir el análisis**, leer [handoff de continuidad](docs/CONTINUIDAD_INVESTIGACION_U6_2026-11-04.md). Resume qué se inspeccionó, qué hallazgos quedaron establecidos y desde dónde debe continuar el siguiente modelo.
