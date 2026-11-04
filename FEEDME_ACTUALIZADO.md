@@ -10,6 +10,14 @@ Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobr
 4. Buscar en Seguimiento si ya existe una duda, fallo o decisión equivalente antes de abrir una nueva.
 5. Ejecutar la tarea con las herramientas disponibles; no limitarse a describir el plan.
 
+
+## Continuidad de investigación U6 — 2026-11-04
+
+- **Antes de repetir el análisis**, leer [handoff de continuidad](docs/CONTINUIDAD_INVESTIGACION_U6_2026-11-04.md). Resume qué se inspeccionó, qué hallazgos quedaron establecidos y desde dónde debe continuar el siguiente modelo.
+- Informe técnico de la reconstrucción: [RECONSTRUCCION_FUNCIONAL_U6](informes/2026-11-04_RECONSTRUCCION_FUNCIONAL_U6.md).
+- Registro de avance: [ChatGPT — reconstrucción funcional](avances/2026-11-04_ChatGPT_reconstruccion_funcional_U6.md).
+- No rehacer la descripción general: continuar con pruebas discriminantes y preguntas aún abiertas. El handoff no sustituye los contratos ni la inspección puntual del código requerido por una nueva tarea.
+
 ## Seguimiento: dudas, fallos y decisiones
 
 - [Dudas técnicas](seguimiento/dudas/README.md): preguntas que pueden resolverse inspeccionando código, contratos o evidencia.
