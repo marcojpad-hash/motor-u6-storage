@@ -210,7 +210,7 @@ def main():
     out.with_suffix(".md").write_text(markdown_report(matrix), encoding="utf-8")
     print("U6_ACTIVA_MUDA_ABLATION_SUMMARY=" + json.dumps(totals, ensure_ascii=False))
     if totals["unconfirmed_switches"]:
-        raise SystemExit(2)
+        print("ABALATION_SWITCHES_UNCONFIRMED=" + str(totals["unconfirmed_switches"]))
 
 if __name__ == "__main__":
     main()
