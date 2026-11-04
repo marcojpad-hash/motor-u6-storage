@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41836790342,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "b27ceac3cf66ff6ce2bbbf1f7b42e80fda4c6d4b",
+      "created_at_utc": "2026-11-04T13:17:45Z",
+      "created_at_cdmx": "2026-11-04T07:17:45-06:00",
+      "started_at_utc": "2026-11-04T13:17:45Z",
+      "started_at_cdmx": "2026-11-04T07:17:45-06:00",
+      "finished_at_utc": "2026-11-04T13:19:15Z",
+      "finished_at_cdmx": "2026-11-04T07:19:15-06:00",
+      "duration_seconds": 90.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41836790342",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T13:17:49Z",
+          "finished_at_utc": "2026-11-04T13:19:14Z",
+          "duration_seconds": 85.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 41821023014,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2971,36 +3001,6 @@
           "started_at_utc": "2026-10-31T19:14:08Z",
           "finished_at_utc": "2026-10-31T19:14:16Z",
           "duration_seconds": 8.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41231884709,
-      "run_attempt": 1,
-      "workflow": "Fabrica lote diario (Grok / dispatch)",
-      "event": "workflow_dispatch",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "29e77f6ab1814c65906b4992b82c4a7698bc0b90",
-      "created_at_utc": "2026-10-31T18:57:25Z",
-      "created_at_cdmx": "2026-10-31T12:57:25-06:00",
-      "started_at_utc": "2026-10-31T18:57:25Z",
-      "started_at_cdmx": "2026-10-31T12:57:25-06:00",
-      "finished_at_utc": "2026-10-31T18:57:46Z",
-      "finished_at_cdmx": "2026-10-31T12:57:46-06:00",
-      "duration_seconds": 21.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41231884709",
-      "jobs": [
-        {
-          "name": "fabrica",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T18:57:30Z",
-          "finished_at_utc": "2026-10-31T18:57:45Z",
-          "duration_seconds": 15.0
         }
       ],
       "artifacts": []
