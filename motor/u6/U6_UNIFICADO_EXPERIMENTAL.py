@@ -57,10 +57,14 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
     case.pop("_internal_analysis_no_external_search", None)
     tmp = Path(tempfile.gettempdir()) / "u6_unificado_experimental" / case["case_id"]
     tmp.mkdir(parents=True, exist_ok=True)
-    case["ceb_root"] = str(tmp / "ceb")
-    case["stinkbox_root"] = str(tmp / "stinkbox")
-    case["caldero_neighbor_store_root"] = str(tmp / "neighbors")
-    os.environ["STINKBOX_STORAGE_ROOT"] = str(tmp / "stinkbox")
+    case["ceb_root"] = str(Path(os.environ.get("CEB_ROOT", "/tmp/u6_unificado_ceb")) / case["case_id"])
+    case["ceb_run_id"] = case["case_id"]
+    case["stinkbox_root"] = str(Path(os.environ.get("STINKBOX_STORAGE_ROOT", "/tmp/u6_unificado_stinkbox")) / case["case_id"])
+    case["caldero_neighbor_store_root"] = str(Path(os.environ.get("CALDERO_NEIGHBOR_STORE_ROOT", "/tmp/u6_unificado_neighbors")) / case["case_id"])
+    Path(case["ceb_root"]).mkdir(parents=True, exist_ok=True)
+    Path(case["stinkbox_root"]).mkdir(parents=True, exist_ok=True)
+    Path(case["caldero_neighbor_store_root"]).mkdir(parents=True, exist_ok=True)
+    os.environ["STINKBOX_STORAGE_ROOT"] = case["stinkbox_root"]
     if live_search:
         os.environ["CALDERO_BUSQUEDA_VIVA"] = "1"
         os.environ["CALDERO_BUSCADOR"] = "auto"
@@ -91,6 +95,11 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
         if x.get("severidad") == "FALLO_EJECUCION" or x.get("estado") in {"NO_CORRE", "APAGADA_POR_FLAG"}
     )
     caldero = result.get("features", {}).get("external_archetype_search_receipt", {})
+    flow_ledger_path = Path(case["ceb_root"]) / f"{case['ceb_run_id']}.flow_ledger.jsonl"
+    flow_ledger_events = len(flow_ledger_path.read_text(encoding="utf-8").splitlines()) if flow_ledger_path.is_file() else 0
+    if not flow_ledger_path.is_file():
+        critical_errors.append({"component": "CEB FlowLedger", "status": "NO_LEDGER",
+                                "error": f"no se encontró {flow_ledger_path}"})
     if live_search and caldero.get("status") != "EXECUTED":
         critical_errors.append({"component": "sidecar_caldero_busqueda_arquetipos.py",
                                 "status": caldero.get("status", "NO_RECEIPT"),
@@ -116,7 +125,8 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
         "critical_errors": critical_errors,
         "activation": activar,
         "execution_identity": result.get("execution_identity"),
-        "flow_ledger": result.get("ceb", {}).get("ledger_path") if isinstance(result.get("ceb"), dict) else None,
+        "flow_ledger": str(flow_ledger_path) if flow_ledger_path.is_file() else None,
+        "flow_ledger_events": flow_ledger_events,
         "classification": "EXECUTION_CONFIRMED" if not critical_errors else "EXECUTION_PARTIAL_OR_FAILED"
     }
     return {"report": report, "result": result}
