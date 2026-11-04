@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41742072345 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:50:05-06:00 | 74.0 | success |
 | 41734994780 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T16:55:56-06:00 | 2026-11-03T16:55:56-06:00 | 2026-11-03T16:57:40-06:00 | 104.0 | success |
 | 41726240068 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T15:56:01-06:00 | 2026-11-03T15:56:01-06:00 | 2026-11-03T15:57:20-06:00 | 79.0 | success |
 | 41717314552 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T14:57:27-06:00 | 2026-11-03T14:57:27-06:00 | 2026-11-03T14:58:55-06:00 | 88.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41082009804 | Traza Campo 244 V2 specs | push | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:57-06:00 | 9.0 | success |
 | 41081865338 | Traza Campo 244 V2 specs | push | 2026-10-30T09:33:52-06:00 | 2026-10-30T09:33:52-06:00 | 2026-10-30T09:34:05-06:00 | 13.0 | failure |
 | 41081865099 | Traza campo 244 | push | 2026-10-30T09:33:52-06:00 | 2026-10-30T09:33:52-06:00 | 2026-10-30T09:34:01-06:00 | 9.0 | failure |
-| 41081722454 | Traza campo 244 | push | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:32:57-06:00 | 2026-10-30T09:33:16-06:00 | 19.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -146,7 +146,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41182048583 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182048583
 - Run 41081865338 (Traza Campo 244 V2 specs): failure; jobs: specs=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081865338
 - Run 41081865099 (Traza campo 244): failure; jobs: tests=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081865099
-- Run 41081722454 (Traza campo 244): failure; jobs: tests=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41081722454
 
 ## Límites
 
