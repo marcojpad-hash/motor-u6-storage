@@ -44,7 +44,7 @@ def cargar_motor():
     spec.loader.exec_module(mod)
     return mod
 
-def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") -> dict:
+def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP", ablation_kind: str | None = None, ablation_value: str | None = None, fixture_sources: list | None = None) -> dict:
     activar = activar_modo_unificado()
     if not all(p.is_file() for p in (CANON, PATTERNS)):
         raise FileNotFoundError("CANON_ENGINE_OR_PATTERNS_MISSING")
