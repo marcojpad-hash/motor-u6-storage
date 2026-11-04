@@ -3,6 +3,251 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41812300055,
+      "run_attempt": 1,
+      "workflow": "U6 unificado experimental — smoke y suite completa",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experimental/u6-unificado-activo-20261104",
+      "head_sha": "b2cbd858a4a19c24a8d0062985c203938ec69db8",
+      "created_at_utc": "2026-11-04T10:09:31Z",
+      "created_at_cdmx": "2026-11-04T04:09:31-06:00",
+      "started_at_utc": "2026-11-04T10:09:31Z",
+      "started_at_cdmx": "2026-11-04T04:09:31-06:00",
+      "finished_at_utc": "2026-11-04T10:10:35Z",
+      "finished_at_cdmx": "2026-11-04T04:10:35-06:00",
+      "duration_seconds": 64.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41812300055",
+      "jobs": [
+        {
+          "name": "smoke-first",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T10:09:35Z",
+          "finished_at_utc": "2026-11-04T10:10:34Z",
+          "duration_seconds": 59.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA",
+          "created_at_utc": "2026-11-04T10:10:33Z",
+          "expired": false,
+          "size_in_bytes": 1922422
+        }
+      ]
+    },
+    {
+      "run_id": 41812073566,
+      "run_attempt": 1,
+      "workflow": "U6 unificado experimental — smoke y suite completa",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experimental/u6-unificado-activo-20261104",
+      "head_sha": "0a5f0931eff198ec99860acc4490a21c5b33cc6e",
+      "created_at_utc": "2026-11-04T10:07:31Z",
+      "created_at_cdmx": "2026-11-04T04:07:31-06:00",
+      "started_at_utc": "2026-11-04T10:07:31Z",
+      "started_at_cdmx": "2026-11-04T04:07:31-06:00",
+      "finished_at_utc": "2026-11-04T10:08:49Z",
+      "finished_at_cdmx": "2026-11-04T04:08:49-06:00",
+      "duration_seconds": 78.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41812073566",
+      "jobs": [
+        {
+          "name": "smoke-first",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T10:07:35Z",
+          "finished_at_utc": "2026-11-04T10:08:48Z",
+          "duration_seconds": 73.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA",
+          "created_at_utc": "2026-11-04T10:08:38Z",
+          "expired": false,
+          "size_in_bytes": 8186
+        }
+      ]
+    },
+    {
+      "run_id": 41811921229,
+      "run_attempt": 1,
+      "workflow": "U6 unificado experimental — smoke y suite completa",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experimental/u6-unificado-activo-20261104",
+      "head_sha": "5d0eb2291ffe89b92137f0448e01454e2cfa08c7",
+      "created_at_utc": "2026-11-04T10:06:11Z",
+      "created_at_cdmx": "2026-11-04T04:06:11-06:00",
+      "started_at_utc": "2026-11-04T10:06:11Z",
+      "started_at_cdmx": "2026-11-04T04:06:11-06:00",
+      "finished_at_utc": "2026-11-04T10:06:48Z",
+      "finished_at_cdmx": "2026-11-04T04:06:48-06:00",
+      "duration_seconds": 37.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229",
+      "jobs": [
+        {
+          "name": "smoke-first",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-04T10:06:14Z",
+          "finished_at_utc": "2026-11-04T10:06:47Z",
+          "duration_seconds": 33.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA",
+          "created_at_utc": "2026-11-04T10:06:44Z",
+          "expired": false,
+          "size_in_bytes": 4213
+        }
+      ]
+    },
+    {
+      "run_id": 41811909006,
+      "run_attempt": 1,
+      "workflow": "U6 unificado experimental — smoke y suite completa",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experimental/u6-unificado-activo-20261104",
+      "head_sha": "cdb63c32c8c76fdc18f07b7aba2bafb601fa5298",
+      "created_at_utc": "2026-11-04T10:06:04Z",
+      "created_at_cdmx": "2026-11-04T04:06:04-06:00",
+      "started_at_utc": "2026-11-04T10:06:04Z",
+      "started_at_cdmx": "2026-11-04T04:06:04-06:00",
+      "finished_at_utc": "2026-11-04T10:06:44Z",
+      "finished_at_cdmx": "2026-11-04T04:06:44-06:00",
+      "duration_seconds": 40.0,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811909006",
+      "jobs": [
+        {
+          "name": "smoke-first",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at_utc": "2026-11-04T10:06:07Z",
+          "finished_at_utc": "2026-11-04T10:06:44Z",
+          "duration_seconds": 37.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA",
+          "created_at_utc": "2026-11-04T10:06:41Z",
+          "expired": false,
+          "size_in_bytes": 4458
+        }
+      ]
+    },
+    {
+      "run_id": 41811887085,
+      "run_attempt": 1,
+      "workflow": "U6 unificado experimental — smoke y suite completa",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "experimental/u6-unificado-activo-20261104",
+      "head_sha": "0cbb25dc43abea652d4dd3b4b3b3014f61f667a2",
+      "created_at_utc": "2026-11-04T10:05:53Z",
+      "created_at_cdmx": "2026-11-04T04:05:53-06:00",
+      "started_at_utc": "2026-11-04T10:05:53Z",
+      "started_at_cdmx": "2026-11-04T04:05:53-06:00",
+      "finished_at_utc": "2026-11-04T10:06:56Z",
+      "finished_at_cdmx": "2026-11-04T04:06:56-06:00",
+      "duration_seconds": 63.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811887085",
+      "jobs": [
+        {
+          "name": "smoke-first",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T10:05:56Z",
+          "finished_at_utc": "2026-11-04T10:06:55Z",
+          "duration_seconds": 59.0
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "U6_UNIFICADO_EXPERIMENTAL_EVIDENCIA",
+          "created_at_utc": "2026-11-04T10:06:53Z",
+          "expired": false,
+          "size_in_bytes": 8219
+        }
+      ]
+    },
+    {
+      "run_id": 41809714937,
+      "run_attempt": 1,
+      "workflow": "ChatGPT startup contract",
+      "event": "push",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "4fe70d9cb3350f8d196a50ff9524d12f0c3be8fd",
+      "created_at_utc": "2026-11-04T09:45:26Z",
+      "created_at_cdmx": "2026-11-04T03:45:26-06:00",
+      "started_at_utc": "2026-11-04T09:45:26Z",
+      "started_at_cdmx": "2026-11-04T03:45:26-06:00",
+      "finished_at_utc": "2026-11-04T09:45:36Z",
+      "finished_at_cdmx": "2026-11-04T03:45:36-06:00",
+      "duration_seconds": 10.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41809714937",
+      "jobs": [
+        {
+          "name": "enforce-chatgpt-startup",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T09:45:30Z",
+          "finished_at_utc": "2026-11-04T09:45:35Z",
+          "duration_seconds": 5.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 41804768897,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "1e23f7d57c09c9266cec0e363cb27e8ae6d6d3d4",
+      "created_at_utc": "2026-11-04T09:06:51Z",
+      "created_at_cdmx": "2026-11-04T03:06:51-06:00",
+      "started_at_utc": "2026-11-04T09:06:51Z",
+      "started_at_cdmx": "2026-11-04T03:06:51-06:00",
+      "finished_at_utc": "2026-11-04T09:08:16Z",
+      "finished_at_cdmx": "2026-11-04T03:08:16-06:00",
+      "duration_seconds": 85.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41804768897",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T09:06:54Z",
+          "finished_at_utc": "2026-11-04T09:08:16Z",
+          "duration_seconds": 82.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 41792628837,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2756,216 +3001,6 @@
           "started_at_utc": "2026-10-31T07:50:53Z",
           "finished_at_utc": "2026-10-31T07:51:03Z",
           "duration_seconds": 10.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182096772,
-      "run_attempt": 1,
-      "workflow": "Motor runner contract tests",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "880b5f0d0d4dac7696b5600590fcf01eb4c45c5b",
-      "created_at_utc": "2026-10-31T07:49:16Z",
-      "created_at_cdmx": "2026-10-31T01:49:16-06:00",
-      "started_at_utc": "2026-10-31T07:49:16Z",
-      "started_at_cdmx": "2026-10-31T01:49:16-06:00",
-      "finished_at_utc": "2026-10-31T07:49:29Z",
-      "finished_at_cdmx": "2026-10-31T01:49:29-06:00",
-      "duration_seconds": 13.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182096772",
-      "jobs": [
-        {
-          "name": "runner-contract",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:49:19Z",
-          "finished_at_utc": "2026-10-31T07:49:28Z",
-          "duration_seconds": 9.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182091275,
-      "run_attempt": 1,
-      "workflow": "Build mortality matrix from UN WPP 2024",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "36deedc8f0107c9b8b99196b390841531cdc7b1d",
-      "created_at_utc": "2026-10-31T07:49:11Z",
-      "created_at_cdmx": "2026-10-31T01:49:11-06:00",
-      "started_at_utc": "2026-10-31T07:49:11Z",
-      "started_at_cdmx": "2026-10-31T01:49:11-06:00",
-      "finished_at_utc": "2026-10-31T07:49:48Z",
-      "finished_at_cdmx": "2026-10-31T01:49:48-06:00",
-      "duration_seconds": 37.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182091275",
-      "jobs": [
-        {
-          "name": "build-mortality-data",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:49:14Z",
-          "finished_at_utc": "2026-10-31T07:49:47Z",
-          "duration_seconds": 33.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182078209,
-      "run_attempt": 1,
-      "workflow": "Build mortality matrix from UN WPP 2024",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "92941b314938cf010e78d3a858d6cb00cd0dd99a",
-      "created_at_utc": "2026-10-31T07:48:58Z",
-      "created_at_cdmx": "2026-10-31T01:48:58-06:00",
-      "started_at_utc": "2026-10-31T07:48:58Z",
-      "started_at_cdmx": "2026-10-31T01:48:58-06:00",
-      "finished_at_utc": "2026-10-31T07:49:53Z",
-      "finished_at_cdmx": "2026-10-31T01:49:53-06:00",
-      "duration_seconds": 55.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182078209",
-      "jobs": [
-        {
-          "name": "build-mortality-data",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:49:01Z",
-          "finished_at_utc": "2026-10-31T07:49:53Z",
-          "duration_seconds": 52.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182055791,
-      "run_attempt": 1,
-      "workflow": "Motor runner contract tests",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "344acfb33c6f25c84f2472d64fc2c5cba3e99908",
-      "created_at_utc": "2026-10-31T07:48:37Z",
-      "created_at_cdmx": "2026-10-31T01:48:37-06:00",
-      "started_at_utc": "2026-10-31T07:48:37Z",
-      "started_at_cdmx": "2026-10-31T01:48:37-06:00",
-      "finished_at_utc": "2026-10-31T07:48:49Z",
-      "finished_at_cdmx": "2026-10-31T01:48:49-06:00",
-      "duration_seconds": 12.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182055791",
-      "jobs": [
-        {
-          "name": "runner-contract",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:48:41Z",
-          "finished_at_utc": "2026-10-31T07:48:48Z",
-          "duration_seconds": 7.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182048583,
-      "run_attempt": 1,
-      "workflow": "Motor runner contract tests",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "52277022b826068d8df5fd3a5865a7158d18da02",
-      "created_at_utc": "2026-10-31T07:48:31Z",
-      "created_at_cdmx": "2026-10-31T01:48:31-06:00",
-      "started_at_utc": "2026-10-31T07:48:31Z",
-      "started_at_cdmx": "2026-10-31T01:48:31-06:00",
-      "finished_at_utc": "2026-10-31T07:48:42Z",
-      "finished_at_cdmx": "2026-10-31T01:48:42-06:00",
-      "duration_seconds": 11.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182048583",
-      "jobs": [
-        {
-          "name": "runner-contract",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:48:34Z",
-          "finished_at_utc": "2026-10-31T07:48:41Z",
-          "duration_seconds": 7.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182036773,
-      "run_attempt": 1,
-      "workflow": "Motor runner contract tests",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "356a13d780a158ddd6c78433f6028dfaefe76148",
-      "created_at_utc": "2026-10-31T07:48:21Z",
-      "created_at_cdmx": "2026-10-31T01:48:21-06:00",
-      "started_at_utc": "2026-10-31T07:48:21Z",
-      "started_at_cdmx": "2026-10-31T01:48:21-06:00",
-      "finished_at_utc": "2026-10-31T07:48:33Z",
-      "finished_at_cdmx": "2026-10-31T01:48:33-06:00",
-      "duration_seconds": 12.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182036773",
-      "jobs": [
-        {
-          "name": "runner-contract",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-31T07:48:24Z",
-          "finished_at_utc": "2026-10-31T07:48:32Z",
-          "duration_seconds": 8.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41181973935,
-      "run_attempt": 1,
-      "workflow": "Motor runner contract tests",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "d48183a8e8a1287d7f311a983fe3ee72c4346a62",
-      "created_at_utc": "2026-10-31T07:47:22Z",
-      "created_at_cdmx": "2026-10-31T01:47:22-06:00",
-      "started_at_utc": "2026-10-31T07:47:22Z",
-      "started_at_cdmx": "2026-10-31T01:47:22-06:00",
-      "finished_at_utc": "2026-10-31T07:47:35Z",
-      "finished_at_cdmx": "2026-10-31T01:47:35-06:00",
-      "duration_seconds": 13.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41181973935",
-      "jobs": [
-        {
-          "name": "runner-contract",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-10-31T07:47:25Z",
-          "finished_at_utc": "2026-10-31T07:47:34Z",
-          "duration_seconds": 9.0
         }
       ],
       "artifacts": []

@@ -4,6 +4,13 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41812300055 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:10:35-06:00 | 64.0 | success |
+| 41812073566 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:08:49-06:00 | 78.0 | success |
+| 41811921229 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:48-06:00 | 37.0 | failure |
+| 41811909006 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:04-06:00 | 2026-11-04T04:06:04-06:00 | 2026-11-04T04:06:44-06:00 | 40.0 | failure |
+| 41811887085 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:05:53-06:00 | 2026-11-04T04:05:53-06:00 | 2026-11-04T04:06:56-06:00 | 63.0 | success |
+| 41809714937 | ChatGPT startup contract | push | 2026-11-04T03:45:26-06:00 | 2026-11-04T03:45:26-06:00 | 2026-11-04T03:45:36-06:00 | 10.0 | success |
+| 41804768897 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T03:06:51-06:00 | 2026-11-04T03:06:51-06:00 | 2026-11-04T03:08:16-06:00 | 85.0 | success |
 | 41792628837 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:31:18-06:00 | 104.0 | success |
 | 41783699642 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:11:09-06:00 | 80.0 | success |
 | 41777437060 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:10:24-06:00 | 98.0 | success |
@@ -96,16 +103,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41231884709 | Fabrica lote diario (Grok / dispatch) | workflow_dispatch | 2026-10-31T12:57:25-06:00 | 2026-10-31T12:57:25-06:00 | 2026-10-31T12:57:46-06:00 | 21.0 | failure |
 | 41182202085 | Build mortality matrix from UN WPP 2024 | push | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:51:01-06:00 | 11.0 | failure |
 | 41182202054 | Motor runner contract tests | push | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:50:50-06:00 | 2026-10-31T01:51:04-06:00 | 14.0 | failure |
-| 41182096772 | Motor runner contract tests | push | 2026-10-31T01:49:16-06:00 | 2026-10-31T01:49:16-06:00 | 2026-10-31T01:49:29-06:00 | 13.0 | failure |
-| 41182091275 | Build mortality matrix from UN WPP 2024 | push | 2026-10-31T01:49:11-06:00 | 2026-10-31T01:49:11-06:00 | 2026-10-31T01:49:48-06:00 | 37.0 | failure |
-| 41182078209 | Build mortality matrix from UN WPP 2024 | push | 2026-10-31T01:48:58-06:00 | 2026-10-31T01:48:58-06:00 | 2026-10-31T01:49:53-06:00 | 55.0 | failure |
-| 41182055791 | Motor runner contract tests | push | 2026-10-31T01:48:37-06:00 | 2026-10-31T01:48:37-06:00 | 2026-10-31T01:48:49-06:00 | 12.0 | failure |
-| 41182048583 | Motor runner contract tests | push | 2026-10-31T01:48:31-06:00 | 2026-10-31T01:48:31-06:00 | 2026-10-31T01:48:42-06:00 | 11.0 | failure |
-| 41182036773 | Motor runner contract tests | push | 2026-10-31T01:48:21-06:00 | 2026-10-31T01:48:21-06:00 | 2026-10-31T01:48:33-06:00 | 12.0 | success |
-| 41181973935 | Motor runner contract tests | push | 2026-10-31T01:47:22-06:00 | 2026-10-31T01:47:22-06:00 | 2026-10-31T01:47:35-06:00 | 13.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 41811921229 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229
+- Run 41811909006 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811909006
 - Run 41669939876 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41669939876
 - Run 41601599242 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242
 - Run 41601534764 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601534764
@@ -139,11 +141,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41231884709 (Fabrica lote diario (Grok / dispatch)): failure; jobs: fabrica=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41231884709
 - Run 41182202085 (Build mortality matrix from UN WPP 2024): failure; jobs: build-mortality-data=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182202085
 - Run 41182202054 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182202054
-- Run 41182096772 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182096772
-- Run 41182091275 (Build mortality matrix from UN WPP 2024): failure; jobs: build-mortality-data=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182091275
-- Run 41182078209 (Build mortality matrix from UN WPP 2024): failure; jobs: build-mortality-data=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182078209
-- Run 41182055791 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182055791
-- Run 41182048583 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182048583
 
 ## Límites
 
