@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41770942050 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:05:41-06:00 | 80.0 | success |
 | 41764244679 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T20:59:35-06:00 | 2026-11-03T20:59:35-06:00 | 2026-11-03T21:00:54-06:00 | 79.0 | success |
 | 41752994313 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T19:17:14-06:00 | 2026-11-03T19:17:14-06:00 | 2026-11-03T19:18:35-06:00 | 81.0 | success |
 | 41742072345 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:50:05-06:00 | 74.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41181905689 | Motor runner contract tests | push | 2026-10-31T01:46:18-06:00 | 2026-10-31T01:46:18-06:00 | 2026-10-31T01:46:28-06:00 | 10.0 | success |
 | 41181635915 | Motor runner contract tests | push | 2026-10-31T01:42:07-06:00 | 2026-10-31T01:42:07-06:00 | 2026-10-31T01:42:18-06:00 | 11.0 | success |
 | 41082009895 | Traza campo 244 | push | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:59-06:00 | 11.0 | success |
-| 41082009804 | Traza Campo 244 V2 specs | push | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:48-06:00 | 2026-10-30T09:34:57-06:00 | 9.0 | success |
 
 ## Fallos y cancelaciones
 
