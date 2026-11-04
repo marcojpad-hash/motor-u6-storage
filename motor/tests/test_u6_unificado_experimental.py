@@ -29,3 +29,5 @@ def test_canonical_artifacts_exist_and_are_not_replaced():
     assert mod.ENGINE.is_file()
     assert mod.CANON.is_file()
     assert mod.PATTERNS.is_file()
+
+# Trigger the paired ACTIVA_MUDA diagnostic workflow.
