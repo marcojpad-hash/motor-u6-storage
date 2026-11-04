@@ -6,6 +6,7 @@ on:
       - experimental/u6-unificado-activo-20261104
     paths:
       - "motor/u6/U6_UNIFICADO_EXPERIMENTAL.py"
+      - "motor/u6/ABLACION_ACTIVA_MUDA_U6_20261104.py"
       - "motor/tests/test_u6_unificado_experimental.py"
       - "motor/motor/INVENTARIO_COMPONENTES_UNICO.json"
       - ".github/workflows/u6-unificado-experimental.yml"
@@ -61,6 +62,8 @@ jobs:
           path: |
             /tmp/U6_UNIFICADO_COURBET.json
             /tmp/U6_UNIFICADO_HABER.json
+            /tmp/U6_ACTIVA_MUDA_ABLATION_MATRIX.json
+            /tmp/U6_ACTIVA_MUDA_ABLATION_MATRIX.md
             /tmp/u6_unificado_ceb/
             /tmp/u6_unificado_stinkbox/
           if-no-files-found: warn
