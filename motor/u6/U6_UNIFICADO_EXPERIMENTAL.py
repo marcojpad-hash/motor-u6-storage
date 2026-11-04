@@ -72,7 +72,7 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP", 
         os.environ["CALDERO_BUSQUEDA_VIVA"] = "1"
         os.environ["CALDERO_BUSCADOR"] = "auto"
         os.environ["SEARCH_PROVIDER"] = "auto"
-    else:
+    elif fixture_sources is None:
         case["_internal_analysis_no_external_search"] = True
     core = cargar_motor()
     result = core.run(case, monte_carlo=False)
