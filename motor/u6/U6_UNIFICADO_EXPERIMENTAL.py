@@ -83,9 +83,18 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP") 
     critical_errors = [
         {"component": x.get("component"), "status": x.get("status"), "error": x.get("error") or x.get("reason")}
         for x in statuses
-        if x.get("status") in {"ERROR", "REQUIRED_STAGE_FAILED", "NO_CORRE", "APAGADO_ABLACION"}
+        if x.get("status") in {"ERROR", "REQUIRED_STAGE_FAILED", "NO_CORRE", "APAGADO_ABLACION", "PLUGIN_SALTADO"}
     ]
+    critical_errors.extend(
+        {"component": x.get("pieza"), "status": x.get("estado"), "error": x.get("motivo")}
+        for x in registry
+        if x.get("severidad") == "FALLO_EJECUCION" or x.get("estado") in {"NO_CORRE", "APAGADA_POR_FLAG"}
+    )
     caldero = result.get("features", {}).get("external_archetype_search_receipt", {})
+    if live_search and caldero.get("status") != "EXECUTED":
+        critical_errors.append({"component": "sidecar_caldero_busqueda_arquetipos.py",
+                                "status": caldero.get("status", "NO_RECEIPT"),
+                                "error": "la búsqueda viva no quedó confirmada"})
     report = {
         "case_id": case["case_id"],
         "source_input": str(input_path.relative_to(ROOT)),
