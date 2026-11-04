@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41912174959 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T15:01:48-06:00 | 2026-11-04T15:01:48-06:00 | 2026-11-04T15:03:33-06:00 | 105.0 | success |
 | 41903421010 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T14:06:38-06:00 | 2026-11-04T14:06:38-06:00 | 2026-11-04T14:08:13-06:00 | 95.0 | success |
 | 41894345975 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T13:10:20-06:00 | 2026-11-04T13:10:20-06:00 | 2026-11-04T13:12:09-06:00 | 109.0 | success |
 | 41885012941 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T12:13:37-06:00 | 2026-11-04T12:13:37-06:00 | 2026-11-04T12:15:11-06:00 | 94.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41418548836 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:10:52-06:00 | 2026-11-02T03:10:52-06:00 | 2026-11-02T03:12:03-06:00 | 71.0 | success |
 | 41418489348 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:10:26-06:00 | 2026-11-02T03:10:26-06:00 | 2026-11-02T03:10:49-06:00 | 23.0 | success |
 | 41418487387 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:10:25-06:00 | 2026-11-02T03:10:25-06:00 | 2026-11-02T03:10:25-06:00 | 0.0 | failure |
-| 41418365509 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:09:30-06:00 | 2026-11-02T03:09:30-06:00 | 2026-11-02T03:09:51-06:00 | 21.0 | success |
 
 ## Fallos y cancelaciones
 
