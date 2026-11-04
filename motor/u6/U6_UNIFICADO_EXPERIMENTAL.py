@@ -53,8 +53,11 @@ def ejecutar_caso(input_path: Path, live_search: bool = True, tag: str = "EXP", 
         raise ValueError(f"INPUT_CUTS_INVALID:{input_path}")
     original_id = str(case.get("case_id") or input_path.stem)
     case["case_id"] = f"{original_id}_{tag}"
-    case["consolidado_off"] = []
+    case["consolidado_off"] = [ablation_value] if ablation_kind == "consolidado_off" and ablation_value else []
     case.pop("_internal_analysis_no_external_search", None)
+    if fixture_sources is not None:
+        case["allow_static_search_fixture"] = True
+        case["caldero_search_fixture"] = fixture_sources
     tmp = Path(tempfile.gettempdir()) / "u6_unificado_experimental" / case["case_id"]
     tmp.mkdir(parents=True, exist_ok=True)
     case["ceb_root"] = str(Path(os.environ.get("CEB_ROOT", "/tmp/u6_unificado_ceb")) / case["case_id"])
