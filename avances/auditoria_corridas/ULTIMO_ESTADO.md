@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41792628837 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:31:18-06:00 | 104.0 | success |
 | 41783699642 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:11:09-06:00 | 80.0 | success |
 | 41777437060 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:10:24-06:00 | 98.0 | success |
 | 41770942050 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:05:41-06:00 | 80.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41182048583 | Motor runner contract tests | push | 2026-10-31T01:48:31-06:00 | 2026-10-31T01:48:31-06:00 | 2026-10-31T01:48:42-06:00 | 11.0 | failure |
 | 41182036773 | Motor runner contract tests | push | 2026-10-31T01:48:21-06:00 | 2026-10-31T01:48:21-06:00 | 2026-10-31T01:48:33-06:00 | 12.0 | success |
 | 41181973935 | Motor runner contract tests | push | 2026-10-31T01:47:22-06:00 | 2026-10-31T01:47:22-06:00 | 2026-10-31T01:47:35-06:00 | 13.0 | success |
-| 41181905689 | Motor runner contract tests | push | 2026-10-31T01:46:18-06:00 | 2026-10-31T01:46:18-06:00 | 2026-10-31T01:46:28-06:00 | 10.0 | success |
 
 ## Fallos y cancelaciones
 
