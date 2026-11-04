@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 41821023014,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "ec035e79fa529ca2b1249c1783600fee1e8ac525",
+      "created_at_utc": "2026-11-04T11:27:32Z",
+      "created_at_cdmx": "2026-11-04T05:27:32-06:00",
+      "started_at_utc": "2026-11-04T11:27:32Z",
+      "started_at_cdmx": "2026-11-04T05:27:32-06:00",
+      "finished_at_utc": "2026-11-04T11:29:25Z",
+      "finished_at_cdmx": "2026-11-04T05:29:25-06:00",
+      "duration_seconds": 113.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41821023014",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-04T11:27:36Z",
+          "finished_at_utc": "2026-11-04T11:29:25Z",
+          "duration_seconds": 109.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 41813005457,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2971,36 +3001,6 @@
           "started_at_utc": "2026-10-31T18:57:30Z",
           "finished_at_utc": "2026-10-31T18:57:45Z",
           "duration_seconds": 15.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 41182202085,
-      "run_attempt": 1,
-      "workflow": "Build mortality matrix from UN WPP 2024",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "bc338eecaf0b9910ab0da1db7f3bdb75e6d14d4a",
-      "created_at_utc": "2026-10-31T07:50:50Z",
-      "created_at_cdmx": "2026-10-31T01:50:50-06:00",
-      "started_at_utc": "2026-10-31T07:50:50Z",
-      "started_at_cdmx": "2026-10-31T01:50:50-06:00",
-      "finished_at_utc": "2026-10-31T07:51:01Z",
-      "finished_at_cdmx": "2026-10-31T01:51:01-06:00",
-      "duration_seconds": 11.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41182202085",
-      "jobs": [
-        {
-          "name": "build-mortality-data",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-10-31T07:50:54Z",
-          "finished_at_utc": "2026-10-31T07:51:00Z",
-          "duration_seconds": 6.0
         }
       ],
       "artifacts": []
