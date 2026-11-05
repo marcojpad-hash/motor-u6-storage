@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42108378405 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T14:58:57-06:00 | 2026-11-05T14:58:57-06:00 | 2026-11-05T15:00:42-06:00 | 105.0 | success |
 | 42099595742 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T14:02:27-06:00 | 2026-11-05T14:02:27-06:00 | 2026-11-05T14:03:32-06:00 | 65.0 | success |
 | 42090992107 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T13:08:20-06:00 | 2026-11-05T13:08:20-06:00 | 2026-11-05T13:09:59-06:00 | 99.0 | success |
 | 42074784204 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T11:27:23-06:00 | 2026-11-05T11:27:23-06:00 | 2026-11-05T11:28:41-06:00 | 78.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41423482337 | ChatGPT startup contract | push | 2026-11-02T03:47:13-06:00 | 2026-11-02T03:47:13-06:00 | 2026-11-02T03:47:24-06:00 | 11.0 | success |
 | 41418897070 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-02T03:13:32-06:00 | 2026-11-02T03:13:32-06:00 | 2026-11-02T03:14:48-06:00 | 76.0 | success |
 | 41418833593 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:13:03-06:00 | 2026-11-02T03:13:03-06:00 | 2026-11-02T03:13:30-06:00 | 27.0 | success |
-| 41418831619 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:13:02-06:00 | 2026-11-02T03:13:02-06:00 | 2026-11-02T03:13:02-06:00 | 0.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -112,7 +112,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41601599242 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242
 - Run 41601534764 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601534764
 - Run 41601226013 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601226013
-- Run 41418831619 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418831619
 
 ## Límites
 
