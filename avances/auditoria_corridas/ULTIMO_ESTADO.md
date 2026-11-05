@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 41987753279 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T01:30:53-06:00 | 2026-11-05T01:30:53-06:00 | 2026-11-05T01:32:13-06:00 | 80.0 | success |
 | 41978771778 | Auditoría de corridas Motor U6 | schedule | 2026-11-05T00:11:34-06:00 | 2026-11-05T00:11:34-06:00 | 2026-11-05T00:12:54-06:00 | 80.0 | success |
 | 41972323053 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T23:10:33-06:00 | 2026-11-04T23:10:33-06:00 | 2026-11-04T23:12:02-06:00 | 89.0 | success |
 | 41965526855 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T22:04:47-06:00 | 2026-11-04T22:04:47-06:00 | 2026-11-04T22:06:24-06:00 | 97.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41418660713 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:44-06:00 | 2026-11-02T03:11:44-06:00 | 2026-11-02T03:12:05-06:00 | 21.0 | success |
 | 41418658804 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:43-06:00 | 2026-11-02T03:11:43-06:00 | 2026-11-02T03:11:43-06:00 | 0.0 | failure |
 | 41418632088 | Experimento lateral Booleano Motor U6 | push | 2026-11-02T03:11:31-06:00 | 2026-11-02T03:11:31-06:00 | 2026-11-02T03:11:44-06:00 | 13.0 | success |
-| 41418630280 | .github/workflows/auditar-corridas-actions.yml | push | 2026-11-02T03:11:30-06:00 | 2026-11-02T03:11:30-06:00 | 2026-11-02T03:11:30-06:00 | 0.0 | failure |
 
 ## Fallos y cancelaciones
 
@@ -119,7 +119,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 - Run 41418710889 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418710889
 - Run 41418664719 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418664719
 - Run 41418658804 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418658804
-- Run 41418630280 (.github/workflows/auditar-corridas-actions.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41418630280
 
 ## Límites
 
