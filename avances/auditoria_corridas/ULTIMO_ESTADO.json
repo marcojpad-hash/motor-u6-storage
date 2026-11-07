@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 42336417932,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "4383b671531e969ad3bbfc83104b6f9e5040fb94",
+      "created_at_utc": "2026-11-07T03:59:30Z",
+      "created_at_cdmx": "2026-11-06T21:59:30-06:00",
+      "started_at_utc": "2026-11-07T03:59:30Z",
+      "started_at_cdmx": "2026-11-06T21:59:30-06:00",
+      "finished_at_utc": "2026-11-07T04:00:46Z",
+      "finished_at_cdmx": "2026-11-06T22:00:46-06:00",
+      "duration_seconds": 76.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42336417932",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-07T03:59:34Z",
+          "finished_at_utc": "2026-11-07T04:00:45Z",
+          "duration_seconds": 71.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 42331799156,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -3070,43 +3100,6 @@
         {
           "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
           "created_at_utc": "2026-11-03T08:12:12Z",
-          "expired": false,
-          "size_in_bytes": 3955
-        }
-      ]
-    },
-    {
-      "run_id": 41601477874,
-      "run_attempt": 1,
-      "workflow": "POE-U6 linguistic false-positive diagnostic",
-      "event": "pull_request",
-      "actor": "marcojpad-hash",
-      "branch": "experiment/protocolo-orquestacion-epistemica-v0.1",
-      "head_sha": "53e5698bd9adec0f4304eca1179a810eba74672f",
-      "created_at_utc": "2026-11-03T08:11:45Z",
-      "created_at_cdmx": "2026-11-03T02:11:45-06:00",
-      "started_at_utc": "2026-11-03T08:11:45Z",
-      "started_at_cdmx": "2026-11-03T02:11:45-06:00",
-      "finished_at_utc": "2026-11-03T08:12:00Z",
-      "finished_at_cdmx": "2026-11-03T02:12:00-06:00",
-      "duration_seconds": 15.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601477874",
-      "jobs": [
-        {
-          "name": "linguistic-diagnostic",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-03T08:11:49Z",
-          "finished_at_utc": "2026-11-03T08:11:59Z",
-          "duration_seconds": 10.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "POE_U6_DIAGNOSTICO_LINGUISTICO_V02",
-          "created_at_utc": "2026-11-03T08:11:56Z",
           "expired": false,
           "size_in_bytes": 3955
         }
