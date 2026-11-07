@@ -58,7 +58,7 @@ jobs:
               json.dump(meta, f, ensure_ascii=False, indent=2)
           PY
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
       - name: Dependencias buscador vivo
