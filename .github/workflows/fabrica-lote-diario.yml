@@ -103,7 +103,7 @@ jobs:
           PY
       - name: Artifact evidencia
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lote-${{ inputs.lote }}-evidencia
           path: |
