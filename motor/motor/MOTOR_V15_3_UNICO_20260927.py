@@ -994,6 +994,112 @@ def _identity_terms(case):
                 terms.update(w for w in re.split(r"\W+",s) if len(w)>=4)
     return terms
 
+def _normalizar_fecha_corte(valor):
+    """A5_20261107: normaliza una fecha de corte a YYYY-MM-DD (o None).
+
+    Acepta YYYY-MM-DD, YYYY-MM-DDTHH:MM..., YYYY-MM y YYYY (parcial -> día 1).
+    Las fechas parciales se marcan con fecha_parcial en el filtro que las usa.
+    """
+    if valor is None:
+        return None
+    s = str(valor).strip()
+    if not s:
+        return None
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.match(r"^(\d{4})-(\d{2})$", s)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-01"
+    m = re.match(r"^(\d{4})$", s)
+    if m:
+        return f"{m.group(1)}-01-01"
+    return None
+
+
+def _resolver_z_corte(case):
+    """A5_20261107: Z del caso para el corte temporal del Caldero.
+
+    Z := case["freeze"] (equivale a case["z_trabajo"]), con fallback z90_date.
+    NUNCA z_work_date sin normalizar: en entradas viejas es el id de un corte
+    ("C3_1895B"), no una fecha. Sin Z (LIVE_PRESENT) devuelve None: sin corte.
+    """
+    fr = case.get("freeze")
+    if isinstance(fr, dict):
+        fr = fr.get("z_work") or fr.get("z_trabajo") or fr.get("freeze")
+    return _normalizar_fecha_corte(fr) or _normalizar_fecha_corte(case.get("z_trabajo")) or _normalizar_fecha_corte(case.get("z90_date"))
+
+
+def _cargar_filtro_017():
+    """A5_20261107: carga filtro_entrada_dirigida_017 por ruta explícita.
+
+    La capa LLM vive en motor/capa_llm/, fuera del motor. En la corrida estándar
+    el runner corre desde runs/ESTANDAR__<nombre>/ (copia plana de motor/motor/),
+    así que capa_llm está en BASE.parent.parent/capa_llm; en uso directo desde
+    el repo está en BASE.parent/capa_llm. CAPA_LLM_DIR la fija explícitamente.
+    Devuelve el módulo o None si no está en el pack.
+    """
+    import os as _os_f017
+    cands = []
+    env = _os_f017.environ.get("CAPA_LLM_DIR")
+    if env:
+        cands.append(Path(env))
+    cands.append(BASE.parent.parent / "capa_llm")
+    cands.append(BASE.parent / "capa_llm")
+    for d in cands:
+        fp = Path(d) / "filtro_entrada_dirigida_017.py"
+        if fp.is_file():
+            spec = importlib.util.spec_from_file_location("filtro_entrada_dirigida_017", str(fp))
+            if spec is None or spec.loader is None:
+                return None
+            mod = importlib.util.module_from_spec(spec)
+            try:
+                spec.loader.exec_module(mod)
+            except Exception:
+                return None
+            return mod
+    return None
+
+
+def _aplicar_filtro_017(case):
+    """A5_20261107: compuerta 017 al entrar a run(). Devuelve (caso_a_usar, traza).
+
+    Modo por env FILTRO_017: traza (defecto, analiza sin modificar el caso),
+    activo (neutraliza identidad/obra/calendario en el payload), off (apagado).
+    El catálogo se pasa explícito: el fallback del filtro apunta a una ruta que
+    no existe en el pack y devolvería un catálogo vacío en silencio.
+    Si el módulo no está en el pack o la compuerta falla, la traza dice
+    NO_DISPONIBLE/ERROR y la corrida sigue con el caso crudo (la capa LLM es
+    opcional; no es compuerta de decisión). La consulta_dirigida NO se cablea
+    aquí: ya vive en correr_estandar.py y duplicarla aplicaría sus preguntas
+    dos veces en la corrida estándar; el filtro 017 sí va en run() porque es
+    una compuerta pura de entrada, idempotente, y debe cubrir también las
+    llamadas directas a run().
+    """
+    import os as _os_f017
+    modo = (_os_f017.environ.get("FILTRO_017", "traza") or "traza").strip().lower()
+    _base = {"version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007", "contrato": "CONTRATO_TRADUCCION_LLM_017",
+             "modo": modo, "status": "NO_CONFIGURADO", "n_aplicadas": 0}
+    if modo == "off":
+        return case, {**_base, "nota": "FILTRO_017=off"}
+    mod = _cargar_filtro_017()
+    if mod is None:
+        return case, {**_base, "status": "NO_DISPONIBLE",
+                      "nota": "capa_llm/filtro_entrada_dirigida_017.py no está en el pack; corrida con caso crudo"}
+    try:
+        cat = json.loads((BASE / "patterns_final_v14.json").read_text(encoding="utf-8"))
+    except Exception:
+        cat = {}
+    try:
+        payload, traza = mod.compuerta(case, modo, cat)
+    except Exception as exc:
+        return case, {**_base, "status": "ERROR", "error": f"{type(exc).__name__}:{exc}",
+                      "nota": "la compuerta falló; corrida con caso crudo"}
+    traza = dict(traza or {})
+    traza["payload_aplicado"] = bool(modo == "activo")
+    return payload, traza
+
+
 def _build_pre_h_blind_input(case: Dict[str,Any], motor: Dict[str,Any], features: Dict[str,Any]) -> Dict[str,Any]:
     """PATCH13: semilla ciega estable construida solo desde los cortes congelados.
 
@@ -1035,6 +1141,11 @@ def _run_pre_h_analogical_search(case: Dict[str,Any], motor: Dict[str,Any], feat
     if not (blind.tokens or blind.patterns or blind.families):
         return {**base,"status":"NOT_ACTIVATED","activated":False,"reason":"no_observable_seed"}
     ident=_identity_terms(case)
+    # A5_20261107: corte temporal del Caldero (vecinos <= Z) también en pre-H.
+    _z_corte=_resolver_z_corte(case)
+    import os as _os_pre
+    _corte_modo=_os_pre.environ.get("CALDERO_CORTE_TEMPORAL","leniente").strip().lower()
+    if _corte_modo not in ("leniente","estricto","off"): _corte_modo="leniente"
     future_keys=[k for k in ("future_outcome","outcome","resultado_futuro","t1_resultado") if k in case]
     # Un solo bus de búsqueda: el resultado externo ya obtenido por la capa
     # Caldero (`caldero_search_sources`) es reutilizable aquí. La ruta antigua
@@ -1091,7 +1202,7 @@ def _run_pre_h_analogical_search(case: Dict[str,Any], motor: Dict[str,Any], feat
                               "query_sha256":expected_hash,"submitted_query_sha256":hashlib.sha256(submitted_query.encode("utf-8")).hexdigest(),
                               "bridge_id":str(bridge.get("bridge_id") or ""),"tool_name":str(bridge.get("tool_name") or "connected_search_tool"),
                               "origin":"connected_tool_call","reused_bridge":True}
-        result=mod.CalderoArchetypeSearchSidecar(adapter,mod.SelfMatchFilter(identity)).run(blind)
+        result=mod.CalderoArchetypeSearchSidecar(adapter,mod.SelfMatchFilter(identity)).run(blind,cutoff_date=_z_corte,corte_modo=_corte_modo)
         cal=result.get("caldero_input") or {}; audit=result.get("audit") or {}
         return {**base,"status":"EXECUTED","activated":True,"reason":"pre_h_orientation_reused_connected_bridge",
                 "phase":"PRE_H_ORIENTATION","query_blind":True,"identity_exposed":False,"future_outcome_exposed":False,
@@ -1114,12 +1225,15 @@ def _run_pre_h_analogical_search(case: Dict[str,Any], motor: Dict[str,Any], feat
                 "query_terms":list(blind.tokens)+list(blind.families),"raw_source_count":0,"discarded_self_match_count":0,
                 "analog_token_count":0,"adapter":"caldero_search_sources/analogical_search_sources absent; search provider not injected"}
     sources=[mod.SearchSource.from_mapping(x) if isinstance(x,dict) and hasattr(mod.SearchSource,"from_mapping") else (mod.SearchSource(**x) if isinstance(x,dict) else x) for x in supplied]
-    result=mod.CalderoArchetypeSearchSidecar(mod.StaticSearchAdapter(sources),mod.SelfMatchFilter(identity)).run(blind)
+    result=mod.CalderoArchetypeSearchSidecar(mod.StaticSearchAdapter(sources),mod.SelfMatchFilter(identity)).run(blind,cutoff_date=_z_corte,corte_modo=_corte_modo)
     cal=result.get("caldero_input") or {}
     query=result.get("audit",{}).get("query_exact","")
     exposed=any(t in query.casefold() for t in ident)
     return {**base,
-        "status":"EXECUTED","activated":True,"reason":"pre_h_orientation_required","phase":"PRE_H_ORIENTATION",
+        # A5_20261107: fuente estática explícita (fixture) != búsqueda ejecutada.
+        # Antes decía EXECUTED y la fila de componente mentía; el estado honesto
+        # solo vivía en el CEB. Ahora EXECUTED_FIXTURE (=> SIMULADO_FIXTURE en CEB).
+        "status":"EXECUTED_FIXTURE","provider":"provided_fixture","activated":True,"reason":"pre_h_orientation_required","phase":"PRE_H_ORIENTATION",
         "query_blind":not exposed,"identity_exposed":exposed,"future_outcome_exposed":False,
         "future_keys_present_not_read":future_keys,
         "query":query,
@@ -1952,6 +2066,8 @@ def _run_geometria_multicapa_working(result: Dict[str, Any], case: Dict[str, Any
 def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     catalog_integrity = _verify_patterns_contract()
     _validate_case(case)
+    # A5_20261107: filtro 017 cableado al runner único (ver _aplicar_filtro_017).
+    case, _f017_traza = _aplicar_filtro_017(case)
     _orden0=_protocolo_orden0(case)
     _RUN_CTX.clear(); _RUN_CTX["case_off"]=list(case.get("consolidado_off") or [])
     # PATCH 011: huella del input congelado (sin rutas del runner) para procedencia e idempotencia de stores.
@@ -2175,19 +2291,31 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             else:
                 adapter=caldero_mod.create_search_adapter()
                 _caldero_provider=getattr(adapter,"last_receipt",{}).get("provider") or type(adapter).__name__.replace("SearchAdapter", "").casefold()
+            # A5_20261107: corte temporal del Caldero (vecinos <= Z). Z := freeze
+            # (equivale a z_trabajo), nunca z_work_date sin normalizar. Modo por env
+            # CALDERO_CORTE_TEMPORAL: leniente (defecto; descarta solo fuentes con
+            # fecha conocida > Z, conserva sin fecha con marca) o estricto
+            # (descarta también las sin fecha). Ver sidecar TemporalCutoffFilter.
+            _z_corte=_resolver_z_corte(case)
+            _corte_modo=_os_ag.environ.get("CALDERO_CORTE_TEMPORAL","leniente").strip().lower()
+            if _corte_modo not in ("leniente","estricto","off"): _corte_modo="leniente"
             def _do_caldero():
                 # GUARDIAN_PISTAS_LLM_20261025: las pistas LLM pasan por guardián (identidad/futuro/calendario) ANTES del sidecar;
                 # antes entraban crudas (las fuentes web sí pasaban SelfMatchFilter).
                 _hints=case.get("caldero_llm_neighbor_hints"); _gpl=_load("guardian_pistas_llm_caldero","guardian_pistas_llm_caldero_v1.py")
                 if _gpl is None and _hints: raise RuntimeError("GUARDIAN_PISTAS_LLM_AUSENTE")
                 _hints,_gpl_audit=(_gpl.filtrar(_hints,_identity_terms(case)) if _gpl is not None else ([],{"guardian":"ausente","entrada":0}))
-                out=caldero_mod.CalderoArchetypeSearchSidecar(adapter,caldero_mod.SelfMatchFilter(identity)).run(active,llm_neighbor_hints=_hints)
+                # A5_20261107: las pistas aceptadas quedan en la auditoría para que el
+                # cierre operativo (llm_hint_scores) use SOLO las que pasaron el guardián
+                # y no vuelva a leer el caso crudo.
+                _gpl_audit["aceptadas_detalle"]=_hints
+                out=caldero_mod.CalderoArchetypeSearchSidecar(adapter,caldero_mod.SelfMatchFilter(identity)).run(active,llm_neighbor_hints=_hints,cutoff_date=_z_corte,corte_modo=_corte_modo)
                 out.setdefault("audit",{})["guardian_pistas_llm"]=_gpl_audit
                 features["caldero_busqueda_arquetipos"]=out
                 return out
             caldero_search=_ceb_stage("sidecar_caldero_busqueda_arquetipos",_do_caldero)
             _provider_receipt=(caldero_search.get("audit") or {}).get("provider_receipt") or getattr(adapter,"last_receipt",{}) or {}
-            _caldero_attempt={"required":True,"status":"EXECUTED" if (_provider_receipt.get("status")=="EXECUTED" and _provider_receipt.get("provider") not in ("static_fixture","provided_fixture")) else "EXECUTED_FIXTURE","provider":_provider_receipt.get("provider") or _caldero_provider,"query_count":int(_provider_receipt.get("query_count",1)),"result_count":int(_provider_receipt.get("result_count",len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []))),"query_sha256":_provider_receipt.get("query_sha256"),"raw_sources":len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []),"self_match_discarded":len((caldero_search.get("audit") or {}).get("discarded_by_self_match") or []),"tokens_after_filter":len(((caldero_search.get("caldero_input") or {}).get("tokens_neighbors") or []))}
+            _caldero_attempt={"required":True,"status":"EXECUTED" if (_provider_receipt.get("status")=="EXECUTED" and _provider_receipt.get("provider") not in ("static_fixture","provided_fixture")) else "EXECUTED_FIXTURE","provider":_provider_receipt.get("provider") or _caldero_provider,"query_count":int(_provider_receipt.get("query_count",1)),"result_count":int(_provider_receipt.get("result_count",len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []))),"query_sha256":_provider_receipt.get("query_sha256"),"raw_sources":len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []),"self_match_discarded":len((caldero_search.get("audit") or {}).get("discarded_by_self_match") or []),"tokens_after_filter":len(((caldero_search.get("caldero_input") or {}).get("tokens_neighbors") or [])),"z_corte":_z_corte,"corte_temporal":((caldero_search.get("audit") or {}).get("corte_temporal") or {})}
             if _bridge_ignorado is not None: _caldero_attempt["bridge_grabado_ignorado"]=_bridge_ignorado
             for _trace_key in ("bridge_id","tool_name","origin","submitted_query_sha256","provenance_note","query","urls","consultado_utc","selector","attempts","llm"):
                 if _provider_receipt.get(_trace_key) is not None: _caldero_attempt[_trace_key]=_provider_receipt.get(_trace_key)
@@ -2204,7 +2332,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                     _tok=str(_tokrow.get("token") or "").strip().casefold()
                     if len(_tok)>2 and _tok not in _memory_stopwords and not re.fullmatch(r"\d+|(?:19|20)\d{2}",_tok): _tn011.append({**_tokrow,"token":_tok})
                 _prev011=_ae011.evento_vecinos_ya_registrado(store_root,str(case["case_id"]),_RUN_CTX.get("input_sha_011"),_q011,_tn011) if _ae011 is not None else None
-                _meta011={"raw_sources":_caldero_attempt["raw_sources"],"discarded_self_match":_caldero_attempt["self_match_discarded"],"final_neighbors":len(_tn011),"identity_exposed_to_caldero":False,"provider_receipt":_provider_receipt}
+                _meta011={"raw_sources":_caldero_attempt["raw_sources"],"discarded_self_match":_caldero_attempt["self_match_discarded"],"final_neighbors":len(_tn011),"identity_exposed_to_caldero":False,"provider_receipt":_provider_receipt,"z_corte":_z_corte,"corte_temporal":((caldero_search.get("audit") or {}).get("corte_temporal") or {})}
                 if _RUN_CTX.get("input_sha_011"): _meta011["input_sha_011"]=_RUN_CTX.get("input_sha_011")
                 if _s014 is not None: _meta011["sujeto_014"]=_s014.sujeto_de_caso(case)[0]
                 persist=_ceb_stage("vecinos_caldero/neighbor_store.py",lambda:({"event_id":_prev011.get("event_id"),"tokens_added_or_updated":[],"store":str(store_root),"idempotencia_011":"YA_REGISTRADO:"+str(_prev011.get("criterio"))} if _prev011 else store.append(case_id=str(case["case_id"]),query=_q011,tokens_neighbors=_tn011,audit_meta=_meta011)),shared=[caldero_search])
@@ -2214,7 +2342,10 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             except Exception as exc:
                 caldero_search["persistence"]={"status":"PERSISTENCE_ERROR","error":str(exc)}
                 status.append({"component":"vecinos_caldero/neighbor_store.py","status":"ERROR","error":str(exc)})
-            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":"EXECUTED","required":True,"feeds_predictor":True,"feeds_H":True,"can_decide_H":False,"contributes_to_H":True,"contributes_to_apuesta":True,"role":"lateral_evidence_context","external_search_receipt":_caldero_attempt})
+            # A5_20261107: el status de la fila es el del recibo (_caldero_attempt).
+            # Antes decía EXECUTED siempre, incluso con fixture (EXECUTED_FIXTURE en
+            # el recibo); el estado honesto solo vivía en el CEB.
+            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":_caldero_attempt["status"],"required":True,"feeds_predictor":True,"feeds_H":True,"can_decide_H":False,"contributes_to_H":True,"contributes_to_apuesta":True,"role":"lateral_evidence_context","external_search_receipt":_caldero_attempt})
         except Exception as exc:
             _failed_provider_receipt=dict(getattr(locals().get("adapter"),"last_receipt",{}) or {})
             _caldero_attempt={"required":True,"status":"FAILED","provider":_failed_provider_receipt.get("provider") or _os.environ.get("SEARCH_PROVIDER","auto"),"query_count":int(_failed_provider_receipt.get("query_count",0) or 0),"result_count":int(_failed_provider_receipt.get("result_count",0) or 0),"attempts":_failed_provider_receipt.get("attempts",[]),"error":f"{type(exc).__name__}:{exc}"}
@@ -2798,6 +2929,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         "predictor_igual":snap_antes==snap_despues,"H1_H2_igual":h_antes==h_despues,
         "patterns_sha256_antes":pat_antes,"patterns_sha256_despues":pat_despues,"patterns_igual":pat_antes==pat_despues,"catalogo_es_default_v14":pat_antes==PATTERNS_SHA_DEFAULT}
     result["guardianes"]=guard_out
+    result["filtro_entrada_dirigida_017"]=_f017_traza
     status.append({"component":"guardianes_control_v1.py","status":guard_out.get("status"),"feeds_predictor":False,"feeds_H":False,
                    "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on",
                    "banderas":guard_out.get("banderas"),"H_intacto":guard_out["verificacion_H_intacto"]["predictor_igual"]})
@@ -3490,7 +3622,15 @@ def _resolver_cierre_operativo_017(result,pred,boards,histories,features,motor,r
                 sim_votes[fam2]["similar_cases"]+=1; sim_votes[fam2]["runner_up"]+=1
                 sim_votes[fam2]["best_similarity"]=max(sim_votes[fam2]["best_similarity"],sim)
     llm_hint_scores={}
-    for hint in (case.get("caldero_llm_neighbor_hints") or []):
+    # A5_20261107: solo las pistas que pasaron el guardián alimentan el desempate.
+    # Antes se leían crudas del caso: una pista con identidad/futuro/calendario
+    # podía colarse en apoyo_busqueda_llm_arquetipos aunque el guardián la hubiera
+    # descartado para el sidecar. La lista aceptada vive en la auditoría del Caldero;
+    # si no existe (salidas viejas), se usa el caso crudo como antes.
+    _hints_audit=((cal.get("audit") or {}).get("guardian_pistas_llm") or {})
+    _hints_aceptadas=_hints_audit.get("aceptadas_detalle")
+    _hints_origen=_hints_aceptadas if isinstance(_hints_aceptadas,list) else (case.get("caldero_llm_neighbor_hints") or [])
+    for hint in _hints_origen:
         if not isinstance(hint,dict): continue
         fam=str(hint.get("family") or hint.get("familia") or hint.get("archetype") or hint.get("arquetipo") or "").strip()
         if not fam: continue

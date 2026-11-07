@@ -667,7 +667,9 @@ def compuerta(case: Mapping[str, Any], modo: str = "activo", catalogo: Optional[
         payload, inf = aplicar(case, set(TIPOS_ACTIVOS_EN_VIVO), catalogo)
         rep = inf["reporte"]; aplicadas = inf["aplicadas"]
     fl = rep["banderas"]
-    tr = {"version": VERSION, "contrato": CONTRATO, "modo": modo, "status": "EXECUTED",
+    # A5_20261107: en modo traza no se ejecuta nada (solo se analiza): el status
+    # no puede decir EXECUTED. Antes mentía igual que el recibo del Caldero.
+    tr = {"version": VERSION, "contrato": CONTRATO, "modo": modo, "status": ("EXECUTED" if modo == "activo" else "TRAZA_SIN_MODIFICACION"),
           "activos_en_vivo": sorted(TIPOS_ACTIVOS_EN_VIVO) if modo == "activo" else [],
           "resumen": rep["resumen"], "n_aplicadas": len(aplicadas),
           "aplicadas": [{k: v for k, v in a.items() if k not in ("quitados",)} | ({"n_quitados": len(a["quitados"])} if "quitados" in a else {}) for a in aplicadas],

@@ -17,6 +17,7 @@ Z_trabajo es el corte donde se para el caso. No es un año biográfico tipo "90 
 > 6. En modo histórico, las secundarias solo se aceptan con preparación ciega declarada.
 > 7. Usa fechas completas (AAAA-MM-DD) cuando puedas. Una fecha parcial cuenta como el ÚLTIMO día de su periodo.
 > 8. Tokens: solo del vocabulario de los 244, con pesos de 0,60 a 0,84.
+9. Pistas LLM del Caldero (opcional, A5 2026-11-07): en cada sujeto puedes añadir `pistas_llm`: lista de `{"token": "...", "family": "<familia del catálogo 244>", "relevance": 0..1}`. Son arquetipos que propones como vecinos; el motor NO decide con ellas, solo las usa como traza y desempate, y pasan por el guardián. Prohibido: nombres o alias del sujeto, palabras de desenlace o futuro, años. Si una pista no pasa el guardián, la fábrica la descarta y lo deja en la auditoría de la entrada; la familia fuera del catálogo rechaza el lote.
 
 ## Comando
 `python3 casos/fabrica/fabrica.py preparar-z semillas_lote_X.py destinos_lote_X.py`

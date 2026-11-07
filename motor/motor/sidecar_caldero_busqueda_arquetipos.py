@@ -19,6 +19,7 @@ Flujo:
         -> construcción de query
         -> búsqueda externa (adapter)
         -> filtro externo de self-match
+        -> corte temporal (vecinos <= Z; A5 2026-11-07)
         -> extracción tokenizada
         -> salida lateral
 
@@ -704,6 +705,109 @@ def tokenize_sources(
     return rows
 
 
+class TemporalCutoffFilter:
+    """A5_20261107: corte temporal del Caldero (vecinos <= Z).
+
+    Segundo filtro del sidecar, tras SelfMatchFilter y antes de tokenizar.
+    Es el único punto de estrangulamiento: por él pasan la vía viva, el
+    puente, el fixture y el pre-H.
+
+    - Fuente con fecha de publicación conocida > Z: se descarta (post_z).
+    - Fuente sin fecha: en modo estricto se descarta; en modo leniente
+      (defecto) se conserva con marca fecha_no_verificada y se cuenta aparte.
+    - La fecha de publicación NO es la fecha de consulta: consultado_utc
+      nunca se usa como fecha de la fuente.
+    - Fechas parciales (YYYY, YYYY-MM) se normalizan al día 1 con marca
+      fecha_parcial. Solo se compara la parte de fecha (YYYY-MM-DD).
+
+    Consecuencia honesta, documentada: en modo estricto, con la cadena auto
+    actual, casi todas las fuentes caen (DDG/Bing/Wiki/Google/Brave/Tavily/
+    OpenAI/OpenRouter no entregan fecha; solo sobreviven Exa/Searx/Serper).
+    Por eso el defecto es leniente: el corte descarta lo que se sabe post-Z
+    sin vaciar el Caldero, y la auditoría deja visible la parte no verificada.
+    """
+
+    _CLAVES_FECHA = ("publishedDate", "published_date", "date", "fecha_publicacion")
+
+    @staticmethod
+    def _fecha_fuente(source: SearchSource) -> str | None:
+        meta = source.metadata if isinstance(source.metadata, Mapping) else {}
+        for k in TemporalCutoffFilter._CLAVES_FECHA:
+            v = meta.get(k)
+            if v:
+                return str(v)
+        for k in ("publishedDate", "published_date", "date"):
+            v = getattr(source, k, None)
+            if v:
+                return str(v)
+        return None
+
+    @staticmethod
+    def _normalizar(fecha: Any) -> tuple[str | None, bool]:
+        """Normaliza a YYYY-MM-DD. Devuelve (fecha, es_parcial)."""
+        s = str(fecha or "").strip()
+        if not s:
+            return None, False
+        m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s)
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-{m.group(3)}", False
+        m = re.match(r"^(\d{4})-(\d{2})$", s)
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-01", True
+        m = re.match(r"^(\d{4})$", s)
+        if m:
+            return f"{m.group(1)}-01-01", True
+        return None, False
+
+    @staticmethod
+    def filtrar(
+        sources: Sequence[SearchSource], z_corte: str | None, modo: str = "leniente"
+    ) -> dict[str, Any]:
+        modo = (modo or "leniente").strip().lower()
+        if modo not in ("leniente", "estricto", "off"):
+            modo = "leniente"
+        z, _ = TemporalCutoffFilter._normalizar(z_corte) if z_corte else (None, False)
+        auditoria: dict[str, Any] = {
+            "aplicado": False,
+            "z_corte": z,
+            "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+            "modo": modo,
+            "raw_n": len(sources),
+            "con_fecha_n": 0,
+            "sin_fecha_n": 0,
+            "descartadas_post_z": [],
+            "descartadas_sin_fecha": [],
+            "conservadas_sin_fecha_n": 0,
+            "tokens_antes_corte": None,
+            "tokens_despues_corte": None,
+        }
+        if not z or modo == "off":
+            auditoria["motivo"] = "sin_z_corte" if not z else "modo_off"
+            return {"conservadas": list(sources), "auditoria": auditoria}
+        auditoria["aplicado"] = True
+        conservadas: list[SearchSource] = []
+        for s in sources:
+            f = TemporalCutoffFilter._fecha_fuente(s)
+            fn, parcial = TemporalCutoffFilter._normalizar(f)
+            if fn is None:
+                auditoria["sin_fecha_n"] += 1
+                if modo == "estricto":
+                    auditoria["descartadas_sin_fecha"].append({"url": s.url})
+                else:
+                    auditoria["conservadas_sin_fecha_n"] += 1
+                    conservadas.append(s)
+                continue
+            auditoria["con_fecha_n"] += 1
+            if fn > z:
+                d: dict[str, Any] = {"url": s.url, "publishedDate": fn, "reason": "post_z"}
+                if parcial:
+                    d["fecha_parcial"] = True
+                auditoria["descartadas_post_z"].append(d)
+            else:
+                conservadas.append(s)
+        return {"conservadas": conservadas, "auditoria": auditoria}
+
+
 class CalderoArchetypeSearchSidecar:
     """
     Orquestador aislado.
@@ -723,7 +827,7 @@ class CalderoArchetypeSearchSidecar:
         self.search_adapter = search_adapter
         self.self_match_filter = self_match_filter
 
-    def run(self, archetype: ArchetypeInput, llm_neighbor_hints: Any = None, **_extra) -> dict[str, Any]:
+    def run(self, archetype: ArchetypeInput, llm_neighbor_hints: Any = None, cutoff_date: str | None = None, corte_modo: str = "leniente", **_extra) -> dict[str, Any]:
         try:
             query = build_blind_query(archetype)
         except ValueError:
@@ -736,7 +840,15 @@ class CalderoArchetypeSearchSidecar:
         if not provider_receipt:
             provider_receipt = {"provider": "static_fixture", "status": "EXECUTED", "query_count": 1, "result_count": len(raw_sources)}
 
+        # A5_20261107: corte temporal (vecinos <= Z) tras self-match y antes de
+        # tokenizar. Sin Z o modo off: sin corte (comportamiento actual).
+        corte = TemporalCutoffFilter.filtrar(kept, cutoff_date, corte_modo)
+        corte_aud = corte["auditoria"]
+        corte_aud["tokens_antes_corte"] = len(tokenize_sources(kept))
+        kept = corte["conservadas"]
+
         token_rows = tokenize_sources(kept)
+        corte_aud["tokens_despues_corte"] = len(token_rows)
         hints = []
         for h in llm_neighbor_hints or []:
             if isinstance(h, Mapping) and h.get("token"):
@@ -755,6 +867,7 @@ class CalderoArchetypeSearchSidecar:
                 "freeze_read_only": True,
                 "query_blind": True,
                 "self_match_filtered": True,
+                "corte_temporal_aplicado": bool(corte_aud["aplicado"]),
                 "raw_sources_exposed": False,
                 "identity_exposed": False,
             },
@@ -765,6 +878,7 @@ class CalderoArchetypeSearchSidecar:
                     s.as_dict() for s in raw_sources
                 ],
                 "discarded_by_self_match": discarded,
+                "corte_temporal": corte_aud,
                 "final_tokens_neighbors": token_rows,
                 "llm_neighbor_hints_n": len(hints),
             },
@@ -877,7 +991,10 @@ def test_audit_keeps_raw_sources_and_discard_reason():
             SearchSource(
                 url="https://example.org/otro",
                 title="Otro",
-                snippet="x y",
+                # A5_20261107: el fixture original ("x y") no tokenizaba nada
+                # ("otro" es stopword de extract_tokens; "x"/"y" miden <3) y el
+                # autotest fallaba ya en HEAD 9de8612a. Se deja un token real.
+                snippet="audaz empresa",
             ),
         ]
     )
@@ -888,6 +1005,51 @@ def test_audit_keeps_raw_sources_and_discard_reason():
     assert len(result["audit"]["raw_sources_before_self_match"]) == 2
     assert len(result["audit"]["discarded_by_self_match"]) == 1
     assert len(result["audit"]["final_tokens_neighbors"]) >= 1
+
+
+def test_corte_temporal_vecinos_le_z():
+    # A5_20261107: Z = freeze de Courbet (1871-05-01). Fuente pre-Z se conserva,
+    # fuente post-Z se descarta con su fecha, fuente en Z exacto se conserva
+    # (<= inclusivo), fuente sin fecha cae en estricto y se conserva con marca
+    # en leniente. La auditoría no pierde lo descartado.
+    identity = SelfMatchIdentity(
+        name="Caso Ejemplo",
+        birth_date="1971-06-28",
+        death_date="2026-01-01",
+        unique_facts=("hecho irrepetible",),
+    )
+    arch = ArchetypeInput(tokens=("ambicion",), patterns=("audaz_empresa",), families=("obtencion",))
+    pre = SearchSource(url="https://ejemplo.test/pre", title="naufragio tormenta", snippet="fragata motin", metadata={"publishedDate": "1870-06-01"})
+    post = SearchSource(url="https://ejemplo.test/post", title="cohete satelite", snippet="orbita cohete", metadata={"publishedDate": "2026-10-28"})
+    exacta = SearchSource(url="https://ejemplo.test/exacta", title="naufragio fragata", snippet="tormenta motin", metadata={"publishedDate": "1871-05-01"})
+    sin_fecha = SearchSource(url="https://ejemplo.test/sin-fecha", title="vela aparejo", snippet="marinero vela", metadata={"provider": "ddg"})
+    fuentes = [pre, post, exacta, sin_fecha]
+
+    out = CalderoArchetypeSearchSidecar(StaticSearchAdapter(list(fuentes)), SelfMatchFilter(identity)).run(
+        arch, cutoff_date="1871-05-01", corte_modo="estricto")
+    toks = {r["token"] for r in out["caldero_input"]["tokens_neighbors"]}
+    aud = out["audit"]["corte_temporal"]
+    assert "naufragio" in toks and "fragata" in toks
+    assert "cohete" not in toks and "satelite" not in toks and "orbita" not in toks
+    assert aud["aplicado"] is True and aud["z_corte"] == "1871-05-01" and aud["modo"] == "estricto"
+    assert [d["url"] for d in aud["descartadas_post_z"]] == ["https://ejemplo.test/post"]
+    assert aud["descartadas_post_z"][0]["publishedDate"] == "2026-10-28"
+    assert [d["url"] for d in aud["descartadas_sin_fecha"]] == ["https://ejemplo.test/sin-fecha"]
+    assert aud["tokens_antes_corte"] > aud["tokens_despues_corte"]
+    assert len(out["audit"]["raw_sources_before_self_match"]) == 4
+
+    out_l = CalderoArchetypeSearchSidecar(StaticSearchAdapter(list(fuentes)), SelfMatchFilter(identity)).run(
+        arch, cutoff_date="1871-05-01", corte_modo="leniente")
+    toks_l = {r["token"] for r in out_l["caldero_input"]["tokens_neighbors"]}
+    assert "cohete" not in toks_l  # post-Z cae también en leniente
+    assert "vela" in toks_l and "aparejo" in toks_l  # sin fecha se conserva con marca en leniente
+    assert out_l["audit"]["corte_temporal"]["conservadas_sin_fecha_n"] == 1
+    assert out_l["audit"]["corte_temporal"]["descartadas_sin_fecha"] == []
+
+    # Sin Z: comportamiento actual sin cambios.
+    out_sin = CalderoArchetypeSearchSidecar(StaticSearchAdapter(list(fuentes)), SelfMatchFilter(identity)).run(arch)
+    assert out_sin["audit"]["corte_temporal"]["aplicado"] is False
+    assert "cohete" in {r["token"] for r in out_sin["caldero_input"]["tokens_neighbors"]}
 
 
 def test_no_canonical_modification_flags():
@@ -912,6 +1074,7 @@ def run_self_tests() -> dict[str, Any]:
         test_identity_never_enters_query_or_caldero_output,
         test_audit_keeps_raw_sources_and_discard_reason,
         test_no_canonical_modification_flags,
+        test_corte_temporal_vecinos_le_z,
     ]
     for test in tests:
         test()

@@ -173,6 +173,13 @@ def _gate():
     g = importlib.util.module_from_spec(spec); spec.loader.exec_module(g); return g
 
 
+def _validar_pistas_llm(pistas, persona, familias):
+    """A5_20261107: carga casos/fabrica/pistas_llm_caldero_v1.py (mismo patrón que _gate())."""
+    spec = importlib.util.spec_from_file_location("pistas_llm_caldero_v1", AQUI / "pistas_llm_caldero_v1.py")
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    return m.validar_pistas_llm(pistas, persona, familias, MOTOR_REPO)
+
+
 def preparar_z(semillas: Path, destinos: Path) -> int:
     """COMPUERTA Z_TRABAJO + preparación ciega. Dos archivos SEPARADOS:
        semillas (SEMILLAS_Z, lo escribe quien NO conoce el final) y destinos (DESTINOS, lo escribe el custodio).
@@ -204,6 +211,13 @@ def preparar_z(semillas: Path, destinos: Path) -> int:
                    "freeze": sm["z_trabajo"], "z_trabajo": sm["z_trabajo"], "modo_z": sm["modo_z"], "gate_z": g.VERSION,
                    "preparacion_ciega": pc, "random_seed": 20261024, "z_work_kind": "CASE_CUTOFF", "z_work_date": cs[-1]["date"] if cs else "",
                    "cuts": cs, "source_notes": sm.get("source_notes", "")}
+        # A5_20261107: la fábrica llena caldero_llm_neighbor_hints desde `pistas_llm`
+        # de la semilla (opcional). Sin pistas, el campo queda [] y el guardián del
+        # runner no tiene nada que filtrar; con pistas, solo entran las validadas.
+        _pistas, _aud_pistas, _err_pistas = _validar_pistas_llm(sm.get("pistas_llm"), sm["person"], FAM)
+        errores += [f"{sid}: {x}" for x in _err_pistas]
+        entrada["caldero_llm_neighbor_hints"] = _pistas
+        entrada["caldero_llm_neighbor_hints_audit"] = _aud_pistas
         if _tiene(entrada): errores.append(f"{sid}: la entrada trae campo de desenlace")
         errores += [f"{sid}: {x}" for x in g.validar_entrada(entrada, dz.get("prohibidas_post_Z"))]
         listos.append((sid, entrada, dz))
