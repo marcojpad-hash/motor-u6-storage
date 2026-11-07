@@ -84,13 +84,28 @@
     },
     {
       "path": "MORTALITY_AUDIT/MORTALITY_STATISTICS_SCHEMA_V1.json",
-      "bytes": 976,
-      "sha256": "5825f19700a0fa76304c988a4a3c7faa42a15603555d8693aeac665bb5e4f81c"
+      "bytes": 1964,
+      "sha256": "1844e122db53f48231144753b9945d24757f3d7e467df0aa33deabd5a9e09f34"
+    },
+    {
+      "path": "MORTALITY_AUDIT/MORTALITY_STATISTICS_SOURCE_MANIFEST.json",
+      "bytes": 4346,
+      "sha256": "ed9711050a173630e0f53e37ecd6449758e646490f8c5ef447959dbf255cbdf6"
+    },
+    {
+      "path": "MORTALITY_AUDIT/README.md",
+      "bytes": 2768,
+      "sha256": "61e3a3e898ca9917616f819fe15a7d7c323a0a858bc636c5e2e289337e630ab7"
+    },
+    {
+      "path": "MORTALITY_AUDIT/mortality_statistics_source_template.csv",
+      "bytes": 247,
+      "sha256": "0a395d2259adc1964ebd2f3e1bb026b34c1794a919169e298179c3094a036859"
     },
     {
       "path": "MORTALITY_AUDIT/mortality_statistics_template.csv",
-      "bytes": 149,
-      "sha256": "d99a37ca9f7b6cdcdaa8fdac44a56ca1f70d699d66095c4d71122c6837c9f1af"
+      "bytes": 341,
+      "sha256": "c888deb3cab8506889a0fa647ee5b8b81b9a0e0597e97bc8fc7b88ab9f657200"
     },
     {
       "path": "PARCHES/PATCH_022_APUESTA_DESTINO_PERSONAL.diff",
@@ -149,8 +164,8 @@
     },
     {
       "path": "README_MOTOR.md",
-      "bytes": 26319,
-      "sha256": "9127977d50317cea08165beb8c19e61fc28ce08f7e6459cb7e7cee5d026750cf"
+      "bytes": 26769,
+      "sha256": "41d8586da0473beaf4bc07468b777e9088daaeab6bde6b3b6d81a1f06c117805"
     },
     {
       "path": "README_MOTOR_TRABAJO_ABIERTO.md",
@@ -164,8 +179,8 @@
     },
     {
       "path": "REGLAS.md",
-      "bytes": 1181,
-      "sha256": "7572ac69a3b8f8c320abcb25f4fc50c4f57aca42fc5230db5016711707bc839e"
+      "bytes": 1521,
+      "sha256": "e5739dea4470cfd529d33739840e88247fc3891f462894e81d093e5875dac5e5"
     },
     {
       "path": "RESTAURADO_LINEA_A/BASE_ESTABLE_MANIFEST.json",
@@ -219,8 +234,8 @@
     },
     {
       "path": "UNIFICACION_SHA256_MANIFEST.json",
-      "bytes": 52853,
-      "sha256": "c5da907ef943cf7a415e460ff18a0a73d76e1e2ae197e86ac747e5f377a217d3"
+      "bytes": 54603,
+      "sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b"
     },
     {
       "path": "audit/CORRIDA_REAL_HIPOTESIS_ABIERTAS_20261020.json",
@@ -294,8 +309,8 @@
     },
     {
       "path": "capa_llm/filtro_entrada_dirigida_017.py",
-      "bytes": 46133,
-      "sha256": "533d68e042f0d5305fa3e84712f08e6ff6cb628e308028f29314740e36a85705"
+      "bytes": 46344,
+      "sha256": "282b9284abd17bb9a735f026260ae0723828a4fe9a7dda820e1fb993b19c90d7"
     },
     {
       "path": "capa_llm/traduccion_contextual_021.py",
@@ -309,8 +324,8 @@
     },
     {
       "path": "correr_estandar.py",
-      "bytes": 48965,
-      "sha256": "4ac577fa72b79ba494773fbc79a263eb9f0f7ba25e15048187b6f764ba49b6df"
+      "bytes": 51464,
+      "sha256": "19b5585c26b092c8ec6f4d17973f1fd6835f00475f956648da4865b8e1f45c33"
     },
     {
       "path": "inputs/GIORDANO_BRUNO_PATCH19_COMPACTO.json",
@@ -414,8 +429,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 324987,
-      "sha256": "23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19"
+      "bytes": 332475,
+      "sha256": "6818261d3ebffdba3296d05531e86059e2110917a9a3a5d0af8a9ca9076e977d"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -663,6 +678,11 @@
       "sha256": "f9c20ce147f691181f46db159ef36f4580a755a84d00aa89322c77ad2976a95b"
     },
     {
+      "path": "motor/filtro_tokens_arquetipos_v2.py",
+      "bytes": 5840,
+      "sha256": "5c9813d443ab4579ec454a7a134e0d8ebfa205398c38a4dc2862be1fe6b4d36c"
+    },
+    {
       "path": "motor/forman_ricci_weighted_graph.py",
       "bytes": 2334,
       "sha256": "8a01c7fde5ad2d9849f686799cf05c61616e5e36cbda8b591d160c221e7229c8"
@@ -769,8 +789,8 @@
     },
     {
       "path": "motor/matriz_mortalidad_z90_v0_2.py",
-      "bytes": 9201,
-      "sha256": "89c41e02cb77c7295564762edc669ac63801891ead47c43e4fb9b95b90014f9b"
+      "bytes": 14040,
+      "sha256": "3971009c4b46811c402dc707a3ba597278582395e9b123fb7d94070c1fd430aa"
     },
     {
       "path": "motor/metacognition_v0_1.py",
@@ -1014,8 +1034,8 @@
     },
     {
       "path": "motor/sidecar_caldero_busqueda_arquetipos.py",
-      "bytes": 44465,
-      "sha256": "0abdbdafe277e8426e3632c75d9caa2ec7a493354eb51cd0675e2c269e71d4fc"
+      "bytes": 52836,
+      "sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9"
     },
     {
       "path": "motor/sidecar_corte_memento.py",
@@ -1183,6 +1203,16 @@
       "sha256": "1b6a6ab87aa9e2e507de4566b6b43434e7077f9890f2903ffa4b18db151478bf"
     },
     {
+      "path": "scripts/import_wpp_life_table.py",
+      "bytes": 7288,
+      "sha256": "d3f708b83620cd82e64e0264558d4567a146bb77aac9d7e832720df07db7042e"
+    },
+    {
+      "path": "scripts/normalizar_mortalidad_preparacion.py",
+      "bytes": 5810,
+      "sha256": "9e4432ca0985a162951aaa2b50f75b9d9a6ca72f2c8db2f23635d083f54723a5"
+    },
+    {
       "path": "scripts/orquestador_unico.py",
       "bytes": 4881,
       "sha256": "d59af986d01b812e7cf2fd93485398e9bf0ff32ef74f938aea9568d92046262b"
@@ -1278,6 +1308,11 @@
       "sha256": "3ac2c06f23699f303ad19c5160fbe0b00aebd0639ab822ddefe2abd1c6165d24"
     },
     {
+      "path": "tests/test_cableado_017.py",
+      "bytes": 4815,
+      "sha256": "d64c1bad4261e8be60453550518accfc339755f154054b85d6391a8e607e9fcf"
+    },
+    {
       "path": "tests/test_caldero_buscadores_offline.py",
       "bytes": 3084,
       "sha256": "fd478be0c0a3735fad2f923e87c7998b559fd97474772d3bc28a6fd0d543e797"
@@ -1328,6 +1363,11 @@
       "sha256": "177cf3551dd67580df1126ad3fc207e98f6fec3bb4b56eafd98aa26c74391c76"
     },
     {
+      "path": "tests/test_filtro_tokens_arquetipos_v2.py",
+      "bytes": 2583,
+      "sha256": "2fc568994d249fb17d17cc9002371940584efa9c3fb89617118a7221de0240b2"
+    },
+    {
       "path": "tests/test_focused_repairs.py",
       "bytes": 5246,
       "sha256": "40a60559c66d25e3b13e2e5ec0337655bc2004b3a39168be582e3995c80cb4a8"
@@ -1343,14 +1383,19 @@
       "sha256": "a5e33f6e254138149c617e49186597982142ca4d47e15fde5819573ee1ffec2a"
     },
     {
+      "path": "tests/test_import_wpp_life_table.py",
+      "bytes": 1675,
+      "sha256": "b0267369dcf69cafe28af2590456cba4a9d967b678fc63230772317266b1a6f0"
+    },
+    {
       "path": "tests/test_marcador_limite_geometrico_v0_1.py",
       "bytes": 3689,
       "sha256": "bbddc48a968c45807ce7e53dd1bdfc3478d42b94b630bb8c326166dbde2c0cc8"
     },
     {
       "path": "tests/test_matriz_mortalidad_z90_v0_2.py",
-      "bytes": 2202,
-      "sha256": "5cb4add83398ec3d4bf8465378b74769e246f84f5b5f1667b376b5caff48525d"
+      "bytes": 5336,
+      "sha256": "c5a50f86978bf47b6b6eb6f82dfff0ccd600ca0fe8f2b603df84fbb4c78d3292"
     },
     {
       "path": "tests/test_mc_required_search_provenance.py",
@@ -1361,6 +1406,11 @@
       "path": "tests/test_mortalidad_lateral_v0_1.py",
       "bytes": 3357,
       "sha256": "aae98085265065b695de5b8ef28a0f57375cfb13e1dc8eb58e2c7938616aa7f4"
+    },
+    {
+      "path": "tests/test_normalizar_mortalidad_preparacion.py",
+      "bytes": 2757,
+      "sha256": "1d83226c040b2902f443496245e7f6a13f3b2ddb9570ae820062ee6ad998baa5"
     },
     {
       "path": "tests/test_nuevos_guardianes_UNICO.py",
@@ -1379,8 +1429,8 @@
     },
     {
       "path": "tests/test_runner_json_contract.py",
-      "bytes": 3202,
-      "sha256": "68bae5b0ca02ea75646e7eeb7d4fabe6249b81584cfb7615968b853ee83d58b2"
+      "bytes": 3683,
+      "sha256": "fda0e0151068be02aea57dbe9e050c15f578f65b3936062103780bd8ff86987b"
     },
     {
       "path": "tests/test_runner_no_mc_output_path.py",
