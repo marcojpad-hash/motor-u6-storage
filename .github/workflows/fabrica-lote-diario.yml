@@ -57,7 +57,7 @@ jobs:
           with open("RUN_METADATA.json", "w", encoding="utf-8") as f:
               json.dump(meta, f, ensure_ascii=False, indent=2)
           PY
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
