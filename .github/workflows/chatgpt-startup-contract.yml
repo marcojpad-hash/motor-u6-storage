@@ -30,7 +30,7 @@ jobs:
   enforce-chatgpt-startup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check required ChatGPT startup files
         run: |
           test -s AGENTS.md
