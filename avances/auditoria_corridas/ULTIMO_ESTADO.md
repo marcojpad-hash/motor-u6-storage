@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42397918973 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T11:46:02-06:00 | 2026-11-07T11:46:02-06:00 | 2026-11-07T11:47:18-06:00 | 76.0 | success |
 | 42396031027 | Traza campo 244 | pull_request | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:23:11-06:00 | 16.0 | success |
 | 42396030991 | Motor runner contract tests | pull_request | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:23:11-06:00 | 16.0 | success |
 | 42396024002 | ChatGPT startup contract | pull_request | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:23:01-06:00 | 10.0 | success |
@@ -102,13 +103,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41813005457 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T04:15:51-06:00 | 2026-11-04T04:15:51-06:00 | 2026-11-04T04:18:10-06:00 | 139.0 | success |
 | 41812300055 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:10:35-06:00 | 64.0 | success |
 | 41812073566 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:08:49-06:00 | 78.0 | success |
-| 41811921229 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:48-06:00 | 37.0 | failure |
 
 ## Fallos y cancelaciones
 
 - Run 42395977255 (pip in /. - Update #1686815933): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395977255
 - Run 42395973009 (pip in /. - Update #1686815654): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395973009
-- Run 41811921229 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229
 
 ## Límites
 
