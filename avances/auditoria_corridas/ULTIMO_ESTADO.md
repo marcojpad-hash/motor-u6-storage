@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42350288900 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T01:12:24-06:00 | 2026-11-07T01:12:24-06:00 | 2026-11-07T01:13:33-06:00 | 69.0 | success |
 | 42344820400 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T23:56:36-06:00 | 2026-11-06T23:56:36-06:00 | 2026-11-06T23:58:01-06:00 | 85.0 | success |
 | 42340805612 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T22:59:56-06:00 | 2026-11-06T22:59:56-06:00 | 2026-11-06T23:01:33-06:00 | 97.0 | success |
 | 42336417932 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T21:59:30-06:00 | 2026-11-06T21:59:30-06:00 | 2026-11-06T22:00:46-06:00 | 76.0 | success |
@@ -102,14 +103,12 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41616122178 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T04:04:01-06:00 | 2026-11-03T04:04:01-06:00 | 2026-11-03T04:05:09-06:00 | 68.0 | success |
 | 41607728971 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T03:01:59-06:00 | 2026-11-03T03:01:59-06:00 | 2026-11-03T03:03:26-06:00 | 87.0 | success |
 | 41601620061 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:54-06:00 | 2026-11-03T02:12:54-06:00 | 2026-11-03T02:13:23-06:00 | 29.0 | success |
-| 41601599242 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:44-06:00 | 2026-11-03T02:12:44-06:00 | 2026-11-03T02:13:02-06:00 | 18.0 | failure |
 
 ## Fallos y cancelaciones
 
 - Run 41811921229 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229
 - Run 41811909006 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811909006
 - Run 41669939876 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41669939876
-- Run 41601599242 (POE-U6 linguistic false-positive diagnostic): failure; jobs: linguistic-diagnostic=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41601599242
 
 ## Límites
 
