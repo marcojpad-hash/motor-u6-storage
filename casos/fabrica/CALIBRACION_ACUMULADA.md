@@ -9,6 +9,32 @@ Casos en la tabla: 50 · evaluados (sellados): 45 · no sellados: 5
 - Acierto apuesta de destino personal (PATCH 022, exacta auge/meseta/caida/ruptura): 15/40 (Laplace 0.38)
 - Acierto destino por polaridad (arriba/igual vs abajo): 27/40 (Laplace 0.67)
 
+## Sesgo de continuidad (acumulado) — A5 2026-11-07
+
+El escenario principal (y H1) tiende a la continuidad ascendente aunque el
+desenlace real sea caída o ruptura. Por lote (sellados):
+
+| Lote | Sellados | Escenario principal CONTINUIDAD_ASCENDENTE | Destinos reales caída/ruptura | H1 en caídas/rupturas |
+|---|---|---|---|---|
+| F002 | 8 | 7/8 | 4 de esos 7 terminaron en caída o ruptura | — |
+| F003 | 9 | 9/9 (incluidas las 6 caídas/rupturas) | 6 | — |
+| F004 | 10 | 9/10 | 6 | 0/6 |
+| F005 | 8 | 4/8 (los otros 4, MESETA; ningún escenario de bajada) | 6 (2 caídas + 4 rupturas) | 0/8 |
+
+F005 en detalle: H1 = `30_ambicion` en 7 de 8 sellados; H1 0/8. Ningún caso dio
+un escenario de bajada aunque 6 de los 8 sellados cayeron o se rompieron.
+La regla 022 nunca apostó ruptura: las 3 rupturas leídas a la baja salieron
+como caída (Haber, Mussolini, Kreuger); Courbet-ruptura salió como auge.
+
+Matiz: el sesgo es del escenario principal/H1, no de la apuesta 022. La 022
+sí lee la bajada en polaridad (F005 5/8; acumulado 27/40) pero confunde caída
+con ruptura y nunca apuesta ruptura. H1 solo acierta en auges de logro
+(Dickens, Carnegie, Pasteur, Rockefeller, Wagner, Chanel, Mendel).
+
+Acumulado (45 sellados): H1 9/45 (20 %), H2 5/45, set 13/45, apuesta 10/45;
+destino exacto 15/40, polaridad 27/40. F005: 2 NO_SELLADO (Jobs, Nicolás II).
+
+
 
 
 | Lote | Caso | Tipo | H1 | H2 | Escenario | H1 | H2 | Set | Apuesta | Destino apostado | Destino real | Destino | Engine OK |

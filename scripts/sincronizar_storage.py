@@ -111,15 +111,22 @@ def resumen_corrida(d: Path) -> dict:
     }
 
 def _filtro_tok(t):
-    """Filtro de ruido (filtro_tokens_arquetipos_v1). Si el módulo no carga, no filtra (no rompe la sync)."""
+    """Filtro de ruido (filtro_tokens_arquetipos_v2, A5 2026-11-07).
+
+    Fail-closed: si el módulo no carga, NO se admite ningún token (antes era
+    fail-open y la basura entraba al StinkBox en silencio). Se avisa por stderr.
+    """
     global _FILTRO
     try: _FILTRO
     except NameError:
         try:
             sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'motor' / 'motor'))
-            import filtro_tokens_arquetipos_v1 as _m; _FILTRO = _m.conservar
-        except Exception: _FILTRO = None
-    return True if _FILTRO is None else _FILTRO(t)
+            import filtro_tokens_arquetipos_v2 as _m; _FILTRO = _m.conservar
+        except Exception as _exc:
+            print(f"AVISO STINKBOX: filtro_tokens_arquetipos_v2 no cargó ({_exc}); no se admiten tokens", file=sys.stderr)
+            _FILTRO = None
+    if _FILTRO is None: return False
+    return _FILTRO(t)
 
 def _stinkbox_root(explicit=None):
     for c in (explicit, os.environ.get('STINKBOX_STORAGE_ROOT'), os.environ.get('STINKBOX_STORAGE'),

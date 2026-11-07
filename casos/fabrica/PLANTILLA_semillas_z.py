@@ -7,6 +7,11 @@ SEMILLAS_Z = [
   "z_trabajo": "AAAA-MM-DD", "modo_z": "historico",   # o "vivo" (Z = hoy)
   "preparacion_ciega": {"preparador_entrada": "ChatGPT-conversacion-A", "custodio_destino": "Mj", "vio_destino": False},
   "source_notes": "fuentes generales, solo hasta Z",
+  # Opcional (A5 2026-11-07): "pistas_llm": [{"token": "...", "family": "<familia del catálogo 244>", "relevance": 0.8}]
+  # Arquetipos que el preparador propone como vecinos del Caldero. Solo familias
+  # del 244, sin nombres/alias del sujeto, sin futuro ni desenlace, sin años.
+  # La fábrica valida con el guardián y descarta lo que no pasa (queda en la
+  # auditoría de la entrada); la familia fuera de catálogo rechaza el lote.
   "cuts": [
     {"id": "C1_AAAA", "date": "AAAA-MM-DD", "hecho": "Hecho atestiguado en pasado, sin futuro.",
      "P": [("token", .80)], "A": [("token", .75)], "C": [("token", .70)],

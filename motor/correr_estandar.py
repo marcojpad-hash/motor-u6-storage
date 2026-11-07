@@ -566,6 +566,23 @@ def main(argv) -> int:
     if sha(eng) != ENGINE_SHA:
         print("AVISO: Engine no coincide con el canónico autorizado de este pack", file=sys.stderr)
 
+    # A5_20261107 — filtro 017 (filtro_entrada_dirigida) en la entrada estándar.
+    # FILTRO_017=traza (defecto): analiza y deja traza sin modificar el caso.
+    # activo: neutraliza identidad/obra/calendario en el payload. off: apagado.
+    # Se aplica ANTES de escribir _INPUT.json para que el input sellado sea el
+    # que el motor consume (el runner lo vuelve a aplicar dentro de run() como
+    # red de seguridad para llamadas directas; es idempotente). La consulta
+    # dirigida NO se duplica en run(): ya vive aquí y duplicarla preguntaría dos veces.
+    _f017_traza = None
+    _f017_modo = os.environ.get("FILTRO_017", "traza").strip().lower()
+    if _f017_modo in ("activo", "traza"):
+        import importlib.util as _iuf017
+        _f017p = ROOT / "capa_llm" / "filtro_entrada_dirigida_017.py"
+        _f017s = _iuf017.spec_from_file_location("filtro_entrada_dirigida_017", str(_f017p))
+        _f017 = _iuf017.module_from_spec(_f017s); _f017s.loader.exec_module(_f017)
+        _f017_cat = json.loads((MOTOR / "patterns_final_v14.json").read_text(encoding="utf-8"))
+        case, _f017_traza = _f017.compuerta(case, _f017_modo, _f017_cat)
+
     # UNIFICADO_20261011 — capa LLM de CONSULTAS DIRIGIDAS (fuera del motor). CONSULTA_DIRIGIDA=off (defecto) no toca nada.
     #   on|offline: adaptador OFFLINE (sin respuestas, sin red)   mock: respuestas fijas de prueba (CONSULTA_FIXTURE, CONSULTA_CASE_KEY)
     _cd_traza = None
@@ -691,6 +708,10 @@ def main(argv) -> int:
                 result["ceb"]["ledger_path_kind"] = "PRESERVED_COPY"
     if _cd_traza is not None:
         result["consulta_dirigida"] = _cd_traza  # traza sin contenido original (ids, estados, motivos, huellas)
+    # A5_20261107: la traza del filtro 017 ya viene en result si run() la puso;
+    # aquí solo se registra la de la entrada estándar si run() no la dejó.
+    if _f017_traza is not None and "filtro_entrada_dirigida_017" not in result:
+        result["filtro_entrada_dirigida_017"] = _f017_traza  # traza sin contenido original (solo huellas)
     # A missing terminal justification pauses the execution for continuation; it is
     # never converted into a final hypothesis/decision by the serializer.
     _continuity_pause = _terminal_continuity_gate(result, case)
@@ -748,6 +769,8 @@ def main(argv) -> int:
             {"stage": "monte_carlo_diagnostics", **((result.get("motor") or {}).get("monte_carlo_audit") or {"status":"NO_METRICS_RETURNED"})},
             {"stage": "terminal_resolution", "status": terminal.get("status", result.get("estado_final", "OUTPUT_WRITTEN")), "method": terminal.get("method", terminal.get("metodo")), "H1": (result.get("salida_interpretable") or {}).get("H1"), "H2": (result.get("salida_interpretable") or {}).get("H2")},
             {"stage": "external_archetype_search", "status": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_REQUIRED_STAGE" if search_required_failed else "NOT_VERIFIED"), "required": True, "provider": search_receipt.get("provider"), "query_count": search_receipt.get("query_count", 0), "result_count": search_receipt.get("result_count", 0), **({"error": search_receipt.get("error")} if search_receipt.get("error") is not None else {}), **({"query_sha256": search_receipt.get("query_sha256")} if search_receipt.get("query_sha256") is not None else {})},
+            {"stage": "filtro_entrada_dirigida_017", "status": (_f017_traza or {}).get("status", "NO_CONFIGURADO"), "modo": (_f017_traza or {}).get("modo", "off"), "n_aplicadas": (_f017_traza or {}).get("n_aplicadas", 0)},
+            {"stage": "consulta_dirigida", "status": "COMPLETED" if _cd_traza is not None else "NO_CONFIGURADO", "modo": _cd_modo, "adaptador": (_cd_traza or {}).get("adaptador"), "n_preguntas": (_cd_traza or {}).get("n_preguntas", 0), "verificacion_no_escribe_H": (_cd_traza or {}).get("verificacion_no_escribe_H")},
             {"stage": "result_json_written", "status": "COMPLETED", "sha256": sha(out)},
             man_check,
             candado_check,
