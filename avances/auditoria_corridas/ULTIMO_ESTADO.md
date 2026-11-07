@@ -4,6 +4,18 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42396031027 | Traza campo 244 | pull_request | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:23:11-06:00 | 16.0 | success |
+| 42396030991 | Motor runner contract tests | pull_request | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:22:55-06:00 | 2026-11-07T11:23:11-06:00 | 16.0 | success |
+| 42396024002 | ChatGPT startup contract | pull_request | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:23:01-06:00 | 10.0 | success |
+| 42396023936 | Motor runner contract tests | pull_request | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:23:08-06:00 | 17.0 | success |
+| 42396023926 | Traza campo 244 | pull_request | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:23:02-06:00 | 11.0 | success |
+| 42396023764 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:23:01-06:00 | 11.0 | success |
+| 42396015343 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:54-06:00 | 10.0 | success |
+| 42395977255 | pip in /. - Update #1686815933 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:57-06:00 | 40.0 | failure |
+| 42395977144 | github_actions in /. - Update #1686815916 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:50-06:00 | 33.0 | success |
+| 42395973013 | github_actions in /. - Update #1686815627 | dynamic | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:57-06:00 | 43.0 | success |
+| 42395973009 | pip in /. - Update #1686815654 | dynamic | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:55-06:00 | 41.0 | failure |
+| 42393310297 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T10:50:32-06:00 | 2026-11-07T10:50:32-06:00 | 2026-11-07T10:51:46-06:00 | 74.0 | success |
 | 42388226904 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T09:49:21-06:00 | 2026-11-07T09:49:21-06:00 | 2026-11-07T09:50:32-06:00 | 71.0 | success |
 | 42383558695 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T08:51:32-06:00 | 2026-11-07T08:51:32-06:00 | 2026-11-07T08:52:36-06:00 | 64.0 | success |
 | 42382452582 | Motor runner contract tests | push | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:29-06:00 | 15.0 | success |
@@ -91,23 +103,12 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41812300055 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:09:31-06:00 | 2026-11-04T04:10:35-06:00 | 64.0 | success |
 | 41812073566 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:07:31-06:00 | 2026-11-04T04:08:49-06:00 | 78.0 | success |
 | 41811921229 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:11-06:00 | 2026-11-04T04:06:48-06:00 | 37.0 | failure |
-| 41811909006 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:06:04-06:00 | 2026-11-04T04:06:04-06:00 | 2026-11-04T04:06:44-06:00 | 40.0 | failure |
-| 41811887085 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T04:05:53-06:00 | 2026-11-04T04:05:53-06:00 | 2026-11-04T04:06:56-06:00 | 63.0 | success |
-| 41809714937 | ChatGPT startup contract | push | 2026-11-04T03:45:26-06:00 | 2026-11-04T03:45:26-06:00 | 2026-11-04T03:45:36-06:00 | 10.0 | success |
-| 41804768897 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T03:06:51-06:00 | 2026-11-04T03:06:51-06:00 | 2026-11-04T03:08:16-06:00 | 85.0 | success |
-| 41792628837 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:29:34-06:00 | 2026-11-04T01:31:18-06:00 | 104.0 | success |
-| 41783699642 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:09:49-06:00 | 2026-11-04T00:11:09-06:00 | 80.0 | success |
-| 41777437060 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:08:46-06:00 | 2026-11-03T23:10:24-06:00 | 98.0 | success |
-| 41770942050 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:04:21-06:00 | 2026-11-03T22:05:41-06:00 | 80.0 | success |
-| 41764244679 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T20:59:35-06:00 | 2026-11-03T20:59:35-06:00 | 2026-11-03T21:00:54-06:00 | 79.0 | success |
-| 41752994313 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T19:17:14-06:00 | 2026-11-03T19:17:14-06:00 | 2026-11-03T19:18:35-06:00 | 81.0 | success |
-| 41742072345 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:48:51-06:00 | 2026-11-03T17:50:05-06:00 | 74.0 | success |
-| 41734994780 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T16:55:56-06:00 | 2026-11-03T16:55:56-06:00 | 2026-11-03T16:57:40-06:00 | 104.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 42395977255 (pip in /. - Update #1686815933): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395977255
+- Run 42395973009 (pip in /. - Update #1686815654): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395973009
 - Run 41811921229 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229
-- Run 41811909006 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811909006
 
 ## Límites
 
