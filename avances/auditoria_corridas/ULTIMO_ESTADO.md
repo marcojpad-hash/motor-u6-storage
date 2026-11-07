@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42365810384 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T04:53:00-06:00 | 2026-11-07T04:53:00-06:00 | 2026-11-07T04:54:18-06:00 | 78.0 | success |
 | 42361805988 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T03:56:19-06:00 | 2026-11-07T03:56:19-06:00 | 2026-11-07T03:57:40-06:00 | 81.0 | success |
 | 42359302256 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-07T03:20:16-06:00 | 2026-11-07T03:20:16-06:00 | 2026-11-07T03:21:42-06:00 | 86.0 | success |
 | 42359245993 | Fabrica real - smoke CEB traza 244 | push | 2026-11-07T03:19:29-06:00 | 2026-11-07T03:19:29-06:00 | 2026-11-07T03:20:14-06:00 | 45.0 | success |
@@ -102,13 +103,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41699977279 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:05:28-06:00 | 2026-11-03T13:07:36-06:00 | 128.0 | success |
 | 41689278099 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:58:06-06:00 | 2026-11-03T11:59:40-06:00 | 94.0 | success |
 | 41681052226 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T11:07:07-06:00 | 2026-11-03T11:07:07-06:00 | 2026-11-03T11:09:03-06:00 | 116.0 | success |
-| 41669939876 | Auditoría de corridas Motor U6 | schedule | 2026-11-03T10:01:52-06:00 | 2026-11-03T10:01:52-06:00 | 2026-11-03T10:03:04-06:00 | 72.0 | failure |
 
 ## Fallos y cancelaciones
 
 - Run 41811921229 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811921229
 - Run 41811909006 (U6 unificado experimental — smoke y suite completa): failure; jobs: smoke-first=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41811909006
-- Run 41669939876 (Auditoría de corridas Motor U6): failure; jobs: auditar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/41669939876
 
 ## Límites
 
