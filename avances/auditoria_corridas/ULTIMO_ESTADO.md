@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42327666951 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T20:07:55-06:00 | 2026-11-06T20:07:55-06:00 | 2026-11-06T20:09:13-06:00 | 78.0 | success |
 | 42322892329 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T19:13:38-06:00 | 2026-11-06T19:13:38-06:00 | 2026-11-06T19:14:52-06:00 | 74.0 | success |
 | 42314204551 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T17:47:49-06:00 | 2026-11-06T17:47:49-06:00 | 2026-11-06T17:49:17-06:00 | 88.0 | success |
 | 42307875354 | Auditoría de corridas Motor U6 | schedule | 2026-11-06T16:52:08-06:00 | 2026-11-06T16:52:08-06:00 | 2026-11-06T16:53:33-06:00 | 85.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41601513496 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:12:03-06:00 | 2026-11-03T02:12:03-06:00 | 2026-11-03T02:12:15-06:00 | 12.0 | success |
 | 41601477874 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:11:45-06:00 | 2026-11-03T02:11:45-06:00 | 2026-11-03T02:12:00-06:00 | 15.0 | success |
 | 41601358616 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:10:45-06:00 | 2026-11-03T02:10:45-06:00 | 2026-11-03T02:10:57-06:00 | 12.0 | success |
-| 41601341688 | POE-U6 linguistic false-positive diagnostic | pull_request | 2026-11-03T02:10:37-06:00 | 2026-11-03T02:10:37-06:00 | 2026-11-03T02:10:50-06:00 | 13.0 | success |
 
 ## Fallos y cancelaciones
 
