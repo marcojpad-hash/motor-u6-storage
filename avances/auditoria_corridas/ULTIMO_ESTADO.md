@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42465494798 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T03:03:00-06:00 | 2026-11-08T03:03:00-06:00 | 2026-11-08T03:04:11-06:00 | 71.0 | success |
 | 42462058484 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T02:14:16-06:00 | 2026-11-08T02:14:16-06:00 | 2026-11-08T02:15:25-06:00 | 69.0 | success |
 | 42457993045 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T01:14:48-06:00 | 2026-11-08T01:14:48-06:00 | 2026-11-08T01:16:21-06:00 | 93.0 | success |
 | 42452774455 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T23:57:39-06:00 | 2026-11-07T23:57:39-06:00 | 2026-11-07T23:58:52-06:00 | 73.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41884499537 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T12:10:37-06:00 | 2026-11-04T12:10:37-06:00 | 2026-11-04T12:11:38-06:00 | 61.0 | success |
 | 41882546797 | Auditoría de corridas Motor U6 | schedule | 2026-11-04T11:59:47-06:00 | 2026-11-04T11:59:47-06:00 | 2026-11-04T12:00:56-06:00 | 69.0 | success |
 | 41881573762 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:54:10-06:00 | 2026-11-04T11:54:10-06:00 | 2026-11-04T12:13:29-06:00 | 1159.0 | success |
-| 41881474178 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:53:34-06:00 | 2026-11-04T11:53:34-06:00 | 2026-11-04T12:06:44-06:00 | 790.0 | success |
 
 ## Fallos y cancelaciones
 
