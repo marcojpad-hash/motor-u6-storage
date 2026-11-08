@@ -17,5 +17,13 @@ Referencias documentales del MAPA_VERSIONES_Y_AUTORIDAD.md; no se recalcularon e
 - Engine V5: 665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082.
 - Catálogo 244: d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1.
 
-## Pruebas: 0 passed, 0 skipped, 0 failed (¿pasaron? no; no ejecutadas)
-Estado: PREPARADO_NO_EJECUTADO. No se modificó Engine/244, secretos, permisos del repositorio ni workflows preexistentes.
+## Pruebas locales controladas — 2026-11-08
+
+Entorno real disponible: contenedor Linux (systemd-detect-virt = container-other), no una VM dedicada acreditada. Se ejecutó el runner localmente con los archivos del branch y el SHA de rama, sin dispatch.
+
+- Intento 1: BLOQUEADO por incompatibilidad entre el schema estricto y dos propiedades de metadata incluidas en execution-plan.json (activation_status, execution_authorized). Se corrigió el plan en el branch eliminando esas propiedades ajenas al contrato.
+- Intento 2: schemas y plan pasaron validación; resultado esperado BLOCKED porque protected-paths.json conserva complete=false. Exit code 2. Reporte: status=BLOCKED, reason=protected-path inventory incomplete; fail closed.
+- Engine invocado: false. LLM llamado: false. Dispatch realizado: false.
+- No se ejecutó smoke ni código del motor.
+
+Esto prueba el comportamiento de bloqueo del preflight, no acredita ejecución de motor ni aislamiento VM. Estado: PREPARACIÓN + PREFLIGHT LOCAL EJECUTADO Y BLOQUEADO POR DISEÑO. No se modificó Engine/244, secretos, permisos del repositorio ni workflows preexistentes.
