@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sandbox-job-v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "source",
+    "execution_kind",
+    "steps"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "commit_sha"
+      ],
+      "properties": {
+        "repository": {
+          "const": "marcojpad-hash/motor-u6-storage"
+        },
+        "ref": {
+          "const": "sandbox-testing"
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "execution_kind": {
+      "enum": [
+        "INFRASTRUCTURE_FIXTURE",
+        "MOTOR_READ_ONLY"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    }
+  },
+  "$defs": {
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "adapter_id",
+        "required",
+        "timeout_seconds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9_]{2,64}$"
+        },
+        "type": {
+          "enum": [
+            "VALIDATE",
+            "VERIFY_PROTECTED_PATHS",
+            "MOTOR_SMOKE"
+          ]
+        },
+        "adapter_id": {
+          "enum": [
+            "validate_contracts_v1",
+            "verify_protected_paths_v1",
+            "motor_smoke_readonly_v1"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 120
+        }
+      }
+    }
+  }
+}

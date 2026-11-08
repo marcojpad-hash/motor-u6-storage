@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "llm-bridge-response-v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "request_id",
+    "status",
+    "result",
+    "needs",
+    "reason",
+    "verified"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "NEEDS_ACTION",
+        "REJECTED",
+        "UNABLE"
+      ]
+    },
+    "result": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16000
+    },
+    "needs": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "query_or_test_id"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "SEARCH",
+              "SANDBOX_TEST"
+            ]
+          },
+          "query_or_test_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        }
+      }
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000
+    },
+    "verified": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "PROPOSED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "result": {
+            "type": "string",
+            "minLength": 1
+          },
+          "needs": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "NEEDS_ACTION"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "result": {
+            "type": "null"
+          },
+          "needs": {
+            "minItems": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "REJECTED",
+              "UNABLE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "result": {
+            "type": "null"
+          },
+          "needs": {
+            "maxItems": 0
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}
