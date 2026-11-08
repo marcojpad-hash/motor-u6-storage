@@ -1,3 +1,5 @@
+> **Contrato transversal obligatorio:** leer [Contrato de trabajo multi-modelo](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CONTRATO_TRABAJO_MULTI_MODELO.md) y revisar [capacidades verificadas](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CAPACIDADES_MODELOS.md) antes de iniciar. Después aplicar íntegramente las reglas específicas U6 que siguen.
+
 # AGENTS.md — instrucciones obligatorias para ChatGPT Codex en Motor U6
 
 Este archivo es la instrucción de repositorio para el agente de código de ChatGPT (Codex). Tiene prioridad operativa sobre resúmenes de conversación y memoria del modelo. No reemplaza los contratos técnicos: los activa.
