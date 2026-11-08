@@ -19,17 +19,12 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Checkout trusted workflow revision
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.sha }}
-          persist-credentials: false
-          path: control
       - name: Checkout selected sandbox revision
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: ${{ github.repository }}
           ref: ${{ inputs.sandbox_sha }}
+          fetch-depth: 0
           persist-credentials: false
           path: sandbox
       - name: Verify selected revision belongs to sandbox-testing
@@ -39,7 +34,8 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$SELECTED_SHA"
-          git merge-base --is-ancestor "$SELECTED_SHA" "origin/sandbox-testing"
+          git fetch --no-tags origin sandbox-testing
+          git merge-base --is-ancestor "$SELECTED_SHA" FETCH_HEAD
       - name: Install schema validator
         run: python -m pip install --disable-pip-version-check 'jsonschema==4.23.0'
       - name: Run fail-closed preflight
@@ -47,11 +43,11 @@ jobs:
         env:
           GITHUB_SHA: ${{ inputs.sandbox_sha }}
         run: python sandbox_runtime/runner_main.py --expected-sha "$GITHUB_SHA"
-      - name: Preserve preflight evidence
+      - name: Preserve preflight report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: u6-sandbox-preflight-${{ github.run_id }}-${{ github.run_attempt }}
-          path: sandbox/
+          path: sandbox/sandbox-report.json
           if-no-files-found: warn
           retention-days: 14
