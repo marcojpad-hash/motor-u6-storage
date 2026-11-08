@@ -1,6 +1,7 @@
 # motor-u6-storage
 
 
+ > **Contrato transversal obligatorio para todos los modelos:** [Contrato de trabajo multi-modelo](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CONTRATO_TRABAJO_MULTI_MODELO.md). Declarar capacidades reales antes de asumir permisos o ejecución.
 > **FeedMe actualizado:** abre primero [`FEEDME_ACTUALIZADO.md`](FEEDME_ACTUALIZADO.md). Centraliza arranque, contratos, dudas, bloqueos, decisiones y resoluciones. Después sigue [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md) y [`LLM_STARTUP_SIDECAR.md`](LLM_STARTUP_SIDECAR.md).
 > **Para modelos (ChatGPT, Claude, Grok Bot):**
 > - Lee primero [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md): qué hay en cada carpeta.
