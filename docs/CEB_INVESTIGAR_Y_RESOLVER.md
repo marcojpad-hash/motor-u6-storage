@@ -4,6 +4,32 @@ Ninguna pieza del motor está de adorno. Vale para TODAS las piezas, no solo par
 El CEB sirve para encontrar **dónde** falló algo, para que el modelo averigüe **por qué** no corrió y **lo arregle**.
 No basta con decir "aquí hay un problema".
 
+## Regla operativa: convertir la intención en una vía implementable
+
+La primera formulación de una solución no es la única forma de alcanzar el objetivo. Si el método, herramienta, proveedor, formato o ruta inicialmente elegidos no funcionan, **no se debe concluir de inmediato que el objetivo no se puede realizar**. La obligación es averiguar cómo hacerlo con los recursos, capacidades y permisos realmente disponibles.
+
+Principio rector: **no confundir «esta vía no funcionó» con «esto no se puede hacer». La pregunta siguiente es «¿cómo lo hacemos?»**.
+
+Ante una propuesta o tarea que encuentre una limitación, el agente debe:
+
+1. **Conservar la intención y precisar el resultado:** identificar qué resultado busca Mj y qué condiciones son invariantes. Separar el objetivo de la primera herramienta, formato, proveedor o procedimiento sugerido.
+2. **Tipar el obstáculo real:** distinguir entre falta de conocimiento, error de formulación, dependencia ausente, incompatibilidad, límite técnico, falta de datos, falta de capacidad del agente, permiso/autorización inexistente, restricción contractual, riesgo de seguridad o límite material de recursos. No agruparlos bajo un «no se puede» genérico.
+3. **Buscar una transformación viable:** revisar componentes ya disponibles y probados, analogías funcionales, rutas alternativas, herramientas compatibles, cambios de formato, descomposición en subtareas, adaptadores o una implementación incremental. Cambiar el medio o la secuencia cuando sea necesario, preservando el resultado y las invariantes.
+4. **Proponer y ejecutar el siguiente experimento útil:** elegir la alternativa que mejor conserve la intención y respete los contratos; probar primero la unidad mínima que permita distinguir si funciona. No quedarse en enumerar posibilidades cuando el agente tiene herramientas y autorización para comprobarlas.
+5. **Verificar el resultado:** aportar evidencia de ejecución y comprobar que la alternativa satisface el objetivo. Una explicación convincente, un archivo escrito, un fixture o una prueba que no mide esa propiedad no demuestran implementación real.
+6. **Iterar con aprendizaje:** si la alternativa falla, registrar qué se aprendió, descartar la vía fallida cuando corresponda y elegir otra estrategia. Repetir lo mismo sin evidencia nueva no cuenta como progreso.
+7. **Informar el estado con precisión:** distinguir entre implementado, ejecutado, verificado, pendiente por dependencia, bloqueado por autorización y no viable bajo las condiciones actuales. Explicar qué condición concreta falta y qué vía queda por explorar.
+
+### Límites de esta obligación
+
+- Esta regla **no autoriza** a ignorar contratos, candados canónicos, permisos, límites de seguridad, propiedad de datos ni instrucciones expresas de Mj.
+- No se deben inventar capacidades, credenciales, resultados, evidencia ni una viabilidad que no se haya comprobado.
+- La falta de permiso no se resuelve eludiendo controles: se identifica el permiso exacto y se prepara el camino autorizado.
+- Un presupuesto agotado, una herramienta no disponible o el fallo de un proveedor describen el estado de esa ejecución; por sí solos no demuestran que el objetivo sea imposible.
+- Si ninguna alternativa puede ejecutarse en las condiciones presentes, se declara **NO_RESUELTO_BAJO_CONDICIONES_ACTUALES**, con causa, evidencia, alternativas examinadas y condición necesaria para reabrir. No se convierte esa etiqueta en una afirmación universal de imposibilidad.
+
+Esta regla complementa la obligación de búsqueda y resolución descrita en `docs/BRUJULA_OBLIGACION_BUSQUEDA_RESOLUCION.md`: el agente no debe limitarse a explicar el obstáculo; debe transformar la intención en un plan comprobable y recorrerlo hasta resolver o documentar con precisión el límite real.
+
 ## Qué significa cada severidad
 | severidad | qué quiere decir | qué se hace |
 |---|---|---|
