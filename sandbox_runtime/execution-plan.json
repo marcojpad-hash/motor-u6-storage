@@ -22,7 +22,5 @@
       "required": true,
       "timeout_seconds": 30
     }
-  ],
-  "activation_status": "TEMPLATE_ONLY_SHA_MUST_BE_SUPPLIED_AT_DISPATCH",
-  "execution_authorized": false
+  ]
 }
