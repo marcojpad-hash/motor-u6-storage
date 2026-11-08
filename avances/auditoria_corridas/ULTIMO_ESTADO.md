@@ -4,6 +4,8 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42446963925 | ChatGPT startup contract | push | 2026-11-07T22:28:36-06:00 | 2026-11-07T22:28:36-06:00 | 2026-11-07T22:28:47-06:00 | 11.0 | success |
+| 42445109851 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T22:01:43-06:00 | 2026-11-07T22:01:43-06:00 | 2026-11-07T22:02:42-06:00 | 59.0 | success |
 | 42440793559 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T20:59:32-06:00 | 2026-11-07T20:59:32-06:00 | 2026-11-07T21:00:35-06:00 | 63.0 | success |
 | 42433667549 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T19:18:18-06:00 | 2026-11-07T19:18:18-06:00 | 2026-11-07T19:19:34-06:00 | 76.0 | success |
 | 42426647942 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T17:45:05-06:00 | 2026-11-07T17:45:05-06:00 | 2026-11-07T17:46:17-06:00 | 72.0 | success |
@@ -101,8 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 41881280132 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:52:25-06:00 | 2026-11-04T11:52:25-06:00 | 2026-11-04T11:53:36-06:00 | 71.0 | success |
 | 41880823239 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:39-06:00 | 2026-11-04T11:49:39-06:00 | 2026-11-04T11:50:49-06:00 | 70.0 | success |
 | 41880781087 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:24-06:00 | 2026-11-04T11:49:24-06:00 | 2026-11-04T11:50:48-06:00 | 84.0 | success |
-| 41880728523 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:49:02-06:00 | 2026-11-04T11:49:02-06:00 | 2026-11-04T11:50:38-06:00 | 96.0 | success |
-| 41880219510 | U6 unificado experimental — smoke y suite completa | push | 2026-11-04T11:45:31-06:00 | 2026-11-04T11:45:31-06:00 | 2026-11-04T11:50:31-06:00 | 300.0 | success |
 
 ## Fallos y cancelaciones
 
