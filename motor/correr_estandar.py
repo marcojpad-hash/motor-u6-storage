@@ -30,6 +30,35 @@ def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
+def _ceb_root_tmpfs() -> Path | None:
+    """Default CEB ledger dir on tmpfs (RAM) when CEB_ROOT is not set.
+
+    The CEB audit ledger writes ~12 MB per run in thousands of small appends.
+    On a slow disk (btrfs with writeback) that stalls the motor for minutes:
+    observed >300 s timeout with the process in D-state on writeback, while the
+    same run finishes in ~14 s with the ledger on tmpfs. The ledger is still
+    preserved: preservar_ledger_ceb() copies it next to the RESULT file on disk,
+    so the tmpfs copy is disposable. Returns None when no writable tmpfs/tmp
+    dir is available, in which case the motor falls back to BASE/ceb_runs.
+    An explicit CEB_ROOT (env) or case["ceb_root"] always wins over this.
+    """
+    candidates = ["/dev/shm", "/tmp"]
+    tmpdir = os.environ.get("TMPDIR")
+    if tmpdir:
+        candidates.append(tmpdir)
+    for cand in candidates:
+        p = Path(cand) / "ceb_runs"
+        try:
+            p.mkdir(parents=True, exist_ok=True)
+            probe = p / ".ceb_write_probe"
+            probe.write_text("ok", encoding="utf-8")
+            probe.unlink()
+            return p
+        except Exception:
+            continue
+    return None
+
+
 def _sanitize_json_contract(obj):
     """Serialize safely without mislabeling absent data as epistemic TORTUGAS.
 
@@ -233,8 +262,13 @@ def _run_internal_case_isolated(case: dict, run_dir: Path, label: str, timeout_s
         "open(sys.argv[2],'w',encoding='utf-8').write(json.dumps(out,ensure_ascii=False,indent=1,default=str))"
     )
     try:
+        env = os.environ.copy()
+        if "CEB_ROOT" not in env:
+            tmpfs_root = _ceb_root_tmpfs()
+            if tmpfs_root is not None:
+                env["CEB_ROOT"] = str(tmpfs_root)
         proc = subprocess.run([sys.executable, "-c", code, str(in_path), str(out_path)], cwd=str(run_dir),
-                              text=True, capture_output=True, timeout=timeout_seconds, env=os.environ.copy())
+                              text=True, capture_output=True, timeout=timeout_seconds, env=env)
     except subprocess.TimeoutExpired as exc:
         return {"_internal_run_status":"TIMEOUT", "label":label, "timeout_seconds":timeout_seconds,
                 "stdout_tail":str(exc.stdout or "")[-2000:], "stderr_tail":str(exc.stderr or "")[-2000:]}

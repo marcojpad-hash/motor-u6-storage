@@ -1,0 +1,5 @@
+# Dependencias del Motor U6 (motor/motor/MOTOR_V15_3_UNICO_20260927.py y runner).
+# El motor solo usa stdlib + numpy. pytest es para la suite de tests.
+# Instalar con:  pip install -r requirements.txt
+numpy>=1.26,<2
+pytest>=8
