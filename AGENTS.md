@@ -1,3 +1,13 @@
+# MEMORIA COMPARTIDA — GATE OBLIGATORIO
+
+**ANTES DE CUALQUIER TAREA**, incluso solo lectura, análisis, respuesta, investigación, ejecución o escritura:
+1. Leer [el protocolo obligatorio](https://github.com/marcojpad-hash/memoria-compartida/blob/main/PROTOCOLO_MEMORIA_COMPARTIDA_OBLIGATORIA.md).
+2. Leer [memoria-compartida/INDICE.md](https://github.com/marcojpad-hash/memoria-compartida/blob/main/INDICE.md).
+3. Consultar los hechos pertinentes en `memoria-compartida/hechos/` (proyectos y decisiones como mínimo; estado, correcciones, tokens y personas según la tarea).
+4. Solo entonces leer README, FeedMe, AGENTS y contratos locales de este repositorio.
+
+**No empieces desde tu memoria conversacional.** Si no puedes leer la memoria compartida, informa el archivo/error exactos y no inventes su contenido. Al cerrar, sincroniza hechos durables verificados con fecha y fuente; los artefactos permanecen en el repositorio especializado.
+
 > **Contrato transversal obligatorio:** leer [Contrato de trabajo multi-modelo](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CONTRATO_TRABAJO_MULTI_MODELO.md) y revisar [capacidades verificadas](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CAPACIDADES_MODELOS.md) antes de iniciar. Después aplicar íntegramente las reglas específicas U6 que siguen.
 
 # AGENTS.md — instrucciones obligatorias para ChatGPT Codex en Motor U6
