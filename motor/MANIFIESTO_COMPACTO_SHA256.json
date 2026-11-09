@@ -13,6 +13,11 @@
       "sha256": "40066336b6a7c836563cd61297796b1f9f01a640159c99b28f9ac6902de04ea0"
     },
     {
+      "path": "COMO_CORRER.md",
+      "bytes": 11318,
+      "sha256": "995ef45ac4ddada888236f134c3ae8f406c92caa72c1c1016541cf31a69ecf16"
+    },
+    {
       "path": "CONTRATO_ENTRADA_LLM.txt",
       "bytes": 1437,
       "sha256": "ab4aaf95926020eb8e3420ca70aac2bdae83b8357cccbe90d85aa4c7da0e6815"
@@ -234,8 +239,8 @@
     },
     {
       "path": "UNIFICACION_SHA256_MANIFEST.json",
-      "bytes": 54603,
-      "sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b"
+      "bytes": 55049,
+      "sha256": "e0ca30df4ff375405c1c0574cd80bec427ae0d04dca2c3509580297382a8ba22"
     },
     {
       "path": "audit/CORRIDA_REAL_HIPOTESIS_ABIERTAS_20261020.json",
@@ -324,8 +329,8 @@
     },
     {
       "path": "correr_estandar.py",
-      "bytes": 51464,
-      "sha256": "19b5585c26b092c8ec6f4d17973f1fd6835f00475f956648da4865b8e1f45c33"
+      "bytes": 54673,
+      "sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226"
     },
     {
       "path": "inputs/GIORDANO_BRUNO_PATCH19_COMPACTO.json",
@@ -366,6 +371,11 @@
       "path": "laterales/teoria_color/teoria_color.py",
       "bytes": 8391,
       "sha256": "77ef05e16e4d607fa27403d60262d509978888a099ee9e953fe2b4398c95d42e"
+    },
+    {
+      "path": "logger_u6.py",
+      "bytes": 4654,
+      "sha256": "fa824b15206aca6990fd8262ed4ee39fab26a43e22cabe78601d4b786353a32c"
     },
     {
       "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
@@ -429,8 +439,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 332475,
-      "sha256": "6818261d3ebffdba3296d05531e86059e2110917a9a3a5d0af8a9ca9076e977d"
+      "bytes": 332838,
+      "sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -1576,6 +1586,11 @@
       "path": "u7/confianza_apuesta_u7.py",
       "bytes": 7024,
       "sha256": "2f84e60a1ed246c20a5ca4eb80b5300dd41f3fca623e798ae550f5a226e04d48"
+    },
+    {
+      "path": "watchdog_u6.py",
+      "bytes": 6366,
+      "sha256": "32eb6bcef966a1ab7573cb14cd22bce4807202506bea9c493222e140045e6c71"
     }
   ]
 }
