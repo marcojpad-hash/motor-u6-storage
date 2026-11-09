@@ -1,0 +1,13 @@
+{
+  "case_id": "C10",
+  "slot": "C10",
+  "version": "LOTE_20_CIEGO_V1",
+  "fecha_freeze_Z": "0800-12-25",
+  "entrada_sha256": "cbd75d94450c0014acef322c312ea08a8cea0026ab5c5e1f1487509d8da37906",
+  "identidad_sha256": "e18c6428b6e899774e87915c63dda28c785891bf869c8d0ba19190372d9225c6",
+  "desenlace_sha256": "312350328c000285129cb5ddc5b3fcb3229e82f485c594d946e9d31c0d7b7bcf",
+  "destino_sha256": "b9951de1e37d6ac9365fc4067744d826dff0945ebcd81d54fd79b71a4936610a",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "regla": "CIEGO: el motor no recibe nombre ni dato que identifique al sujeto; la identidad y el desenlace se revelan solo al verificar."
+}

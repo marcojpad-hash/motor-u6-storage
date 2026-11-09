@@ -1,0 +1,126 @@
+{
+  "case_id": "C06",
+  "question": "¿Qué ocurre con el sujeto tras publicar la primera parte de su novela principal?",
+  "tipo_sujeto": "artista",
+  "freeze": "1605-01-16",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1605",
+  "cuts": [
+    {
+      "id": "C1_1571",
+      "corte": "C1_1571",
+      "cut_id": "C1_1571",
+      "date": "1571-10-07",
+      "fecha_corte": "1571-10-07",
+      "hecho": "Combate en Lepanto; pierde el uso de la mano izquierda.",
+      "P": [
+        [
+          "patriotismo",
+          0.78
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "resiliencia",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "terreno_hostil",
+          0.75
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1580",
+      "corte": "C2_1580",
+      "cut_id": "C2_1580",
+      "date": "1580-09-19",
+      "fecha_corte": "1580-09-19",
+      "hecho": "Liberado tras cinco años cautivo en Argel; regresa a España arruinado y busca empleo.",
+      "P": [
+        [
+          "supervivencia",
+          0.82
+        ],
+        [
+          "busqueda_seguridad",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "resiliencia",
+          0.8
+        ],
+        [
+          "flexibilidad_adaptativa",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "escasez",
+          0.78
+        ],
+        [
+          "frustracion",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C3_1605",
+      "corte": "C3_1605",
+      "cut_id": "C3_1605",
+      "date": "1605-01-16",
+      "fecha_corte": "1605-01-16",
+      "hecho": "Publica la primera parte de Don Quijote de la Mancha; éxito inmediato en España y Europa.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "reconocimiento_previo",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "autoexpresion",
+          0.82
+        ],
+        [
+          "generacion_ideas",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "prosperidad",
+          0.72
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "C02",
+  "sujeto_alias": "SUJETO_C02",
+  "person": "Charles Darwin",
+  "fuente": "https://en.wikipedia.org/wiki/Charles_Darwin ; El origen de las especies 1859, El origen del hombre 1871, muere 1882 reconocido",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

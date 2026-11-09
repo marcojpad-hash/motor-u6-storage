@@ -1,0 +1,7 @@
+{
+  "case_id": "C11",
+  "sujeto_alias": "SUJETO_C11",
+  "person": "Suleimán el Magnífico",
+  "fuente": "https://en.wikipedia.org/wiki/Suleiman_the_Magnificent ; accede 1520, apogeo otomano, muere 1566",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

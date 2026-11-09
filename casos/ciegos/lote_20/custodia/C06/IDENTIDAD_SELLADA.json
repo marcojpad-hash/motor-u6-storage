@@ -1,0 +1,7 @@
+{
+  "case_id": "C06",
+  "sujeto_alias": "SUJETO_C06",
+  "person": "Miguel de Cervantes",
+  "fuente": "https://en.wikipedia.org/wiki/Miguel_de_Cervantes ; Quijote I 1605, Quijote II 1615, muere 1616",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

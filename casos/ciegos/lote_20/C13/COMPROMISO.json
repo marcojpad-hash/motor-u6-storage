@@ -1,0 +1,13 @@
+{
+  "case_id": "C13",
+  "slot": "C13",
+  "version": "LOTE_20_CIEGO_V1",
+  "fecha_freeze_Z": "1206-01-01",
+  "entrada_sha256": "58e13aa87788645b98c1e005519be1c02df0db63ae479e1994bc8e79189956ce",
+  "identidad_sha256": "e9370e4f0a22033d8b37b5448760782538e4d9a34f0ce6eefa26b64c6ea7c0df",
+  "desenlace_sha256": "10296912b8c56a8db052ea346fc7101584268c9a4fca5de48f03c5406596f46d",
+  "destino_sha256": "7f1bff0f74b7f60f1af76b12fd8e14bd917c8707ca97450b7870fc065556a27e",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "regla": "CIEGO: el motor no recibe nombre ni dato que identifique al sujeto; la identidad y el desenlace se revelan solo al verificar."
+}

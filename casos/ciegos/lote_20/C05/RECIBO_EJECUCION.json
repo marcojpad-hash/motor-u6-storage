@@ -1,0 +1,697 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "C05",
+  "started_epoch": 1794183508.173991,
+  "finished_epoch": 1794183521.750587,
+  "duration_seconds": 13.577,
+  "input_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/casos/ciegos/lote_20/C05/entrada.json",
+  "input_sha256": "064f64f29dd09ce9c1f207f2da8fa00c1319ea58a98129a7a2f7f9cacf751439",
+  "normalized_input_sha256": "24bdb40fb276b6964ef2b2acf3e0845e1f9764410bf9f8251b8cb3f3f68cc7b8",
+  "output_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C05.json",
+  "output_sha256": "96053461b860e9ce90ca54897d2308d816a4dc5179469b6576e98e5a8a368103",
+  "runner_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/correr_estandar.py",
+  "runner_sha256": "28a287eb15c281a7bb599293bf4178aaaa15625ef5ade4e0ceff558adedb9918",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 5209,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1590_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1590_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 625,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1590_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 784,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1594_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1594_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 625,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1594_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1599_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1599_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1599_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "arquetipo_el_gobernante",
+        "porcentaje_relleno": 70.57,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 85.7143,
+          "booker": 59.5238,
+          "dynamis": 57.1429,
+          "estructura": 100.0,
+          "frye": 50.0,
+          "geometria_inercia": 100.0,
+          "greimas": 71.4286,
+          "otras_dimensiones": 90.4762,
+          "puente_lateral": 3.4497,
+          "resolucion": 100.0,
+          "trayectoria_estado": 58.5714
+        },
+        "peso_relativo": 0.15618,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 55.42
+      },
+      "H2": {
+        "familia": "schwartz_10_autodireccion",
+        "porcentaje_relleno": 51.98,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 71.4286,
+          "booker": 57.1429,
+          "dynamis": 28.5714,
+          "estructura": 0.0,
+          "frye": 50.0,
+          "geometria_inercia": 78.5714,
+          "greimas": 42.8571,
+          "otras_dimensiones": 69.0476,
+          "puente_lateral": 78.3989,
+          "resolucion": 42.8571,
+          "trayectoria_estado": 52.8571
+        },
+        "peso_relativo": 0.155268,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 55.13
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "FAILED_OPTIONAL_STAGE",
+      "required": false,
+      "provider": "offline",
+      "query_count": 0,
+      "result_count": 0,
+      "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "96053461b860e9ce90ca54897d2308d816a4dc5179469b6576e98e5a8a368103"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "28a287eb15c2"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 109,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C05_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C05_CEB_LEDGER_1.jsonl",
+          "sha256": "2cb2f33863fb1ec02633ba7b5701815e403ce2ec9245356f64efcfc2810af0eb",
+          "lineas": 23721
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "FAILED",
+    "provider": "offline",
+    "query_count": 0,
+    "result_count": 0,
+    "attempts": [],
+    "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "arquetipo_el_gobernante",
+    "H2": "schwartz_10_autodireccion",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "FRAGIL",
+    "estado_durante_corrida": "RESOLUCION_REQUERIDA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "OPTIONAL_STAGE_FAILED",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 5,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "arquetipo_el_gobernante",
+      "porcentaje_relleno": 70.57,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 85.7143,
+        "booker": 59.5238,
+        "dynamis": 57.1429,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 100.0,
+        "greimas": 71.4286,
+        "otras_dimensiones": 90.4762,
+        "puente_lateral": 3.4497,
+        "resolucion": 100.0,
+        "trayectoria_estado": 58.5714
+      },
+      "peso_relativo": 0.15618,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.42
+    },
+    "H2": {
+      "familia": "schwartz_10_autodireccion",
+      "porcentaje_relleno": 51.98,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 71.4286,
+        "booker": 57.1429,
+        "dynamis": 28.5714,
+        "estructura": 0.0,
+        "frye": 50.0,
+        "geometria_inercia": 78.5714,
+        "greimas": 42.8571,
+        "otras_dimensiones": 69.0476,
+        "puente_lateral": 78.3989,
+        "resolucion": 42.8571,
+        "trayectoria_estado": 52.8571
+      },
+      "peso_relativo": 0.155268,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.13
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.1709,
+      "techo_pct": 92.8291,
+      "pp_por_punto_de_rank_fusion": 1.903518,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "eje",
+        "peso_en_set": 0.174369,
+        "predictibilidad_estructural_pct": 55.42,
+        "cobertura_unica_frac": 0.1056
+      },
+      {
+        "familia": "schwartz_10_autodireccion",
+        "rol": "componente",
+        "peso_en_set": 0.173351,
+        "predictibilidad_estructural_pct": 55.13,
+        "cobertura_unica_frac": 0.0
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.164656,
+        "predictibilidad_estructural_pct": 52.73,
+        "cobertura_unica_frac": 0.1127
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.160831,
+        "predictibilidad_estructural_pct": 51.67,
+        "cobertura_unica_frac": 0.1099
+      },
+      {
+        "familia": "eterno_retorno_02_cosmizacion_fundacion",
+        "rol": "componente",
+        "peso_en_set": 0.116466,
+        "predictibilidad_estructural_pct": 39.39,
+        "cobertura_unica_frac": 0.1056
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.110569,
+        "predictibilidad_estructural_pct": 37.76,
+        "cobertura_unica_frac": 0.1099
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.099758,
+        "predictibilidad_estructural_pct": 34.77,
+        "cobertura_unica_frac": 0.2225
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "MEZCLA_H1_H2_SIN_SEPARACION",
+      "lectura_texto": "arquetipo_el_gobernante y schwartz_10_autodireccion en mezcla: diferencia top1-top2 0.147935 < banda 0.285714 (indistinguibles a la resolución del motor)",
+      "peso_H1": 0.15618,
+      "peso_H2": 0.155268,
+      "peso_H1_en_par": 0.501464,
+      "peso_H2_en_par": 0.498536
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "eje",
+          "rank_fusion": 25.344967,
+          "soporte_estructural_relativo": 0.17436914,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.30326,
+            "micro": 0.72141,
+            "meso": 0.61674,
+            "macro": 0.61674,
+            "aceleracion": 0.72141,
+            "divergencia_entre_escala": 0.10467,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.197032,
+          "soporte_estructural_relativo": 0.17335137,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.055296,
+            "micro": 0.491467,
+            "meso": 0.545738,
+            "macro": 0.545738,
+            "aceleracion": 0.392885,
+            "divergencia_entre_escala": 0.054271,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.933187,
+          "soporte_estructural_relativo": 0.16465633,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.078452,
+            "micro": 0.480809,
+            "meso": 0.568434,
+            "macro": 0.568434,
+            "aceleracion": 0.330808,
+            "divergencia_entre_escala": 0.087625,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.377179,
+          "soporte_estructural_relativo": 0.16083109,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.026216,
+            "micro": 0.487736,
+            "meso": 0.48647,
+            "macro": 0.48647,
+            "aceleracion": 0.502533,
+            "divergencia_entre_escala": 0.001266,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "eterno_retorno_02_cosmizacion_fundacion",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.928571,
+          "soporte_estructural_relativo": 0.11646574,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.141754,
+            "micro": 0.490401,
+            "meso": 0.611115,
+            "macro": 0.611115,
+            "aceleracion": 0.272733,
+            "divergencia_entre_escala": 0.120713,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.071429,
+          "soporte_estructural_relativo": 0.11056875,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.166049,
+            "micro": 0.488802,
+            "meso": 0.630136,
+            "macro": 0.630136,
+            "aceleracion": 0.239541,
+            "divergencia_entre_escala": 0.141334,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.5,
+          "soporte_estructural_relativo": 0.09975758,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.132338,
+            "micro": 0.484405,
+            "meso": 0.607051,
+            "macro": 0.607051,
+            "aceleracion": 0.269991,
+            "divergencia_entre_escala": 0.122646,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_gobernante",
+            "eterno_retorno_02_cosmizacion_fundacion",
+            "candidato_trayectoria_arte_prestigio",
+            "social_04_rogers_difusion_innovaciones"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.50116121,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "schwartz_10_autodireccion",
+            "arquetipo_el_creador",
+            "30_ambicion"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.49883879,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_gobernante",
+          "eterno_retorno_02_cosmizacion_fundacion",
+          "candidato_trayectoria_arte_prestigio",
+          "social_04_rogers_difusion_innovaciones"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.50116121,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C05",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C05",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 141
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 25,
+          "new_event_records": 79,
+          "new_token_strings": 2,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 143
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C05",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C05",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 143
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 26,
+          "new_event_records": 144,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 143
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

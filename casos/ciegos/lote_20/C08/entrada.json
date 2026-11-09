@@ -1,0 +1,126 @@
+{
+  "case_id": "C08",
+  "question": "¿Qué ocurre con el sujeto tras llegar al hospital de campaña con un equipo de enfermeras?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "1854-11-04",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1854",
+  "cuts": [
+    {
+      "id": "C1_1850",
+      "corte": "C1_1850",
+      "cut_id": "C1_1850",
+      "date": "1850-01-01",
+      "fecha_corte": "1850-01-01",
+      "hecho": "Estudia enfermería en Kaiserswerth (Alemania); rechaza el papel tradicional asignado a las mujeres de su época.",
+      "P": [
+        [
+          "devocion",
+          0.82
+        ],
+        [
+          "altruismo",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "desafio_autoridad",
+          0.75
+        ],
+        [
+          "oposicion",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1853",
+      "corte": "C2_1853",
+      "cut_id": "C2_1853",
+      "date": "1853-08-12",
+      "fecha_corte": "1853-08-12",
+      "hecho": "Dirige el Instituto para el Cuidado de Damas Enfermas en Londres; reforma su gestión y sus registros.",
+      "P": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "organizacion",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "metodicidad",
+          0.8
+        ],
+        [
+          "planificacion_activa",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento_previo",
+          0.72
+        ],
+        [
+          "legitimidad_percibida",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C3_1854",
+      "corte": "C3_1854",
+      "cut_id": "C3_1854",
+      "date": "1854-11-04",
+      "fecha_corte": "1854-11-04",
+      "hecho": "Llega a Scutari (Crimea) con 38 enfermeras; encuentra un hospital con mortalidad altísima y condiciones insalubres.",
+      "P": [
+        [
+          "deber",
+          0.84
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.84
+        ],
+        [
+          "analisis",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "crisis_abrupta",
+          0.8
+        ],
+        [
+          "terreno_hostil",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

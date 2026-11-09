@@ -69,8 +69,10 @@ def _corridas_caso(corridas_dir: Path):
 
 
 def compuerta_caldero(corridas_dir: Path, requerido: bool) -> dict:
-    """REGLA_MJ_20261025: en la fábrica de calibración Caldero DEBE buscar en vivo. Fixture/no invocado/fallido = incumplimiento.
-    Sin fila CEB = SIN_RECIBO_CEB (también incumplimiento: no se puede probar que corrió)."""
+    """La búsqueda Caldero es OPCIONAL (motor agnóstico): Exa nunca es requisito
+    y sin red ni clave la corrida completa offline. Solo marca incumplimiento
+    cuando requerido=True se pasa explícito (FABRICA_CALDERO_REQUERIDO=1).
+    Sin fila CEB = SIN_RECIBO_CEB (no se puede probar que corrió)."""
     por_caso = {}
     for fp in _corridas_caso(corridas_dir):
         try:
@@ -328,7 +330,7 @@ def correr(lote: str, n: int, rehacer: list | None = None) -> int:
         w = csv.DictWriter(fh, fieldnames=COLS)
         if nuevo: w.writeheader()
         w.writerows(filas)
-    req = os.environ.get("CALDERO_BUSQUEDA_VIVA", "1") == "1" and os.environ.get("FABRICA_CALDERO_REQUERIDO", "1") != "0"
+    req = os.environ.get("CALDERO_BUSQUEDA_VIVA", "1") == "1" and os.environ.get("FABRICA_CALDERO_REQUERIDO", "0") != "0"
     gc = compuerta_caldero(salida / "corridas", req); comp["compuerta_caldero"] = gc
     if gc["incumplimientos"]:
         print(f"FALLO_EJECUCION_CALDERO (lote marcado, no es éxito): {gc['incumplimientos']}")

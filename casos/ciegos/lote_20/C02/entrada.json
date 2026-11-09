@@ -1,0 +1,126 @@
+{
+  "case_id": "C02",
+  "question": "¿Qué ocurre con el sujeto tras publicar su obra principal sobre el origen de las especies?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "1859-11-24",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1859",
+  "cuts": [
+    {
+      "id": "C1_1836",
+      "corte": "C1_1836",
+      "cut_id": "C1_1836",
+      "date": "1836-10-02",
+      "fecha_corte": "1836-10-02",
+      "hecho": "Regresa del viaje del Beagle (1831-1836) con observaciones y especímenes de Galápagos y Sudamérica.",
+      "P": [
+        [
+          "curiosidad_abstracta",
+          0.84
+        ],
+        [
+          "busqueda_verdad",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.78
+        ],
+        [
+          "verificacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "hallazgo",
+          0.8
+        ],
+        [
+          "oportunidad",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C2_1844",
+      "corte": "C2_1844",
+      "cut_id": "C2_1844",
+      "date": "1844-07-01",
+      "fecha_corte": "1844-07-01",
+      "hecho": "Escribe el 'Ensayo de 1844' con su teoría de selección natural; lo guarda sin publicar por temor a la reacción.",
+      "P": [
+        [
+          "cautela",
+          0.8
+        ],
+        [
+          "teorizacion",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "prudencia",
+          0.78
+        ],
+        [
+          "secreto_protegido",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "presion_social",
+          0.72
+        ],
+        [
+          "incertidumbre",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C3_1859",
+      "corte": "C3_1859",
+      "cut_id": "C3_1859",
+      "date": "1859-11-24",
+      "fecha_corte": "1859-11-24",
+      "hecho": "Publica El origen de las especies; la primera edición se agota el día de su salida.",
+      "P": [
+        [
+          "vision",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "honestidad",
+          0.78
+        ],
+        [
+          "desafio_autoridad",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "confrontacion_directa",
+          0.7
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

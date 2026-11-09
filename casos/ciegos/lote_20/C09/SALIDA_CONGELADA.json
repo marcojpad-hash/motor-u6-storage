@@ -1,0 +1,260 @@
+{
+  "case_id": "C09",
+  "freeze": {
+    "status": "FROZEN",
+    "z_work": "C3_1429",
+    "z_work_kind": "CASE_CUTOFF",
+    "future_accessed_during_freeze": false,
+    "information_boundary": "all input facts/cuts through Z de trabajo only",
+    "z90_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "congelado_utc": "2026-11-09T00:21:25Z",
+  "H1": {
+    "familia": "9_audaz_empresa",
+    "grado": null,
+    "porcentaje_relleno": 74.27,
+    "peso_relativo": 0.20968914,
+    "predictibilidad_estructural_pct": 66.03
+  },
+  "H2": {
+    "familia": "frye_mythos_romance",
+    "grado": null,
+    "porcentaje_relleno": 66.88,
+    "peso_relativo": 0.18287536,
+    "predictibilidad_estructural_pct": 58.49
+  },
+  "set": [
+    "9_audaz_empresa",
+    "frye_mythos_romance",
+    "kwml_01_rey",
+    "tainter_01_inversion_complejidad_productiva",
+    "monomito_08_la_odisea_o_prueba_suprema"
+  ],
+  "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenarios": [
+      {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "frye_mythos_romance",
+          "tainter_01_inversion_complejidad_productiva",
+          "monomito_08_la_odisea_o_prueba_suprema"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.78684688,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "kwml_01_rey"
+        ],
+        "n_hipotesis": 1,
+        "soporte_estructural_agregado": 0.21315313,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      }
+    ],
+    "apuesta_principal": {
+      "escenario": "CONTINUIDAD_ASCENDENTE",
+      "hipotesis_que_convergen": [
+        "9_audaz_empresa",
+        "frye_mythos_romance",
+        "tainter_01_inversion_complejidad_productiva",
+        "monomito_08_la_odisea_o_prueba_suprema"
+      ],
+      "n_hipotesis": 4,
+      "soporte_estructural_agregado": 0.78684688,
+      "es_probabilidad": false,
+      "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+  },
+  "destino_predicho": {
+    "version": "APUESTA_DESTINO_PERSONAL_022_20261024",
+    "can_decide_H": false,
+    "toca_H1_H2": false,
+    "toca_apuesta_tematica": false,
+    "etiquetas_posibles": [
+      "auge",
+      "meseta",
+      "caida",
+      "ruptura"
+    ],
+    "es_probabilidad": false,
+    "fuente_series": "movimiento_de_fondo.series_familias",
+    "umbrales": {
+      "EPS": 0.01,
+      "GRANDE": 0.0605,
+      "NETO_ASC": 0.03,
+      "NETO_DESC": 0.03
+    },
+    "estado": "EJECUTADO",
+    "apuesta": "auge",
+    "porque": "el balance mejora y lo favorable domina en Z",
+    "cortes": [
+      "C1_1428",
+      "C2_1429",
+      "C3_1429"
+    ],
+    "series": {
+      "favorable_auge": [
+        0.079,
+        0.3349,
+        0.4719
+      ],
+      "adverso_caida": [
+        0.0222,
+        0.0215,
+        0.0205
+      ],
+      "adverso_ruptura": [
+        0.0201,
+        0.0126,
+        0.0115
+      ],
+      "adverso_total": [
+        0.0423,
+        0.0341,
+        0.032
+      ],
+      "balance": [
+        0.0367,
+        0.3008,
+        0.4399
+      ],
+      "eje": [
+        0.0503,
+        0.1172,
+        0.1737
+      ]
+    },
+    "senales": {
+      "net_balance_ultimo_tramo": 0.1391,
+      "salto_ruptura": -0.0011,
+      "salto_adverso": -0.0021,
+      "eje": "9_audaz_empresa",
+      "caida_eje_vs_max_previo": 0.0565
+    },
+    "familias_activas_en_Z": {
+      "ruptura": [
+        [
+          "strauss_howe_04_the_crisis",
+          0.0323
+        ]
+      ],
+      "caida": [
+        [
+          "strauss_howe_03_the_unraveling",
+          0.0205
+        ]
+      ],
+      "auge": [
+        [
+          "9_audaz_empresa",
+          0.1737
+        ],
+        [
+          "frye_mythos_romance",
+          0.0605
+        ],
+        [
+          "eterno_retorno_02_cosmizacion_fundacion",
+          0.0573
+        ],
+        [
+          "tainter_01_inversion_complejidad_productiva",
+          0.0573
+        ],
+        [
+          "schwartz_07_logro",
+          0.0527
+        ],
+        [
+          "social_04_rogers_difusion_innovaciones",
+          0.0377
+        ]
+      ]
+    },
+    "H_y_apuesta_tematica_intactos": true
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "engine_observation_calls": 9,
+    "engine_observation_calls_with_mc_metrics": 9,
+    "total_simulations": 4772,
+    "converged_calls": 9,
+    "nonconverged_calls": 0,
+    "calls": [
+      {
+        "observation_id": "C1_1428_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1428_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1428_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1429_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1429_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1429_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 529,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1429_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1429_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1429_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 575,
+        "converged": true
+      }
+    ]
+  },
+  "result_sha256": "f9e29b48ba0cac931b259f7eeddf21e858276f5a25e19ff7d181254196378082",
+  "recibo_status": "COMPLETED",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

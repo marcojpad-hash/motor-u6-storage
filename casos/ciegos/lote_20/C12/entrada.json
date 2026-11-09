@@ -1,0 +1,126 @@
+{
+  "case_id": "C12",
+  "question": "¿Qué trayectoria sigue el sujeto tras ser coronado zar?",
+  "tipo_sujeto": "gobernante",
+  "freeze": "1547-01-16",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1547",
+  "cuts": [
+    {
+      "id": "C1_1533",
+      "corte": "C1_1533",
+      "cut_id": "C1_1533",
+      "date": "1533-12-03",
+      "fecha_corte": "1533-12-03",
+      "hecho": "Accede al trono con tres años; el poder queda en manos de regentes y facciones de boyardos.",
+      "P": [
+        [
+          "vulnerabilidad",
+          0.8
+        ],
+        [
+          "dependencia",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "supervivencia",
+          0.78
+        ],
+        [
+          "resiliencia",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "fragmentacion",
+          0.78
+        ],
+        [
+          "rivalidad_poder",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C2_1545",
+      "corte": "C2_1545",
+      "cut_id": "C2_1545",
+      "date": "1545-01-01",
+      "fecha_corte": "1545-01-01",
+      "hecho": "Toma el poder personal a los 15 años; impone su autoridad sobre los boyardos.",
+      "P": [
+        [
+          "autoridad",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "confrontacion_directa",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "hostilidad",
+          0.75
+        ],
+        [
+          "desconfianza",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C3_1547",
+      "corte": "C3_1547",
+      "cut_id": "C3_1547",
+      "date": "1547-01-16",
+      "fecha_corte": "1547-01-16",
+      "hecho": "Coronado primer zar en Moscú; inicia conquistas (Kazán 1552, Astracán 1556).",
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "poder",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "escalada_status",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

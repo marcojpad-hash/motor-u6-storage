@@ -1,0 +1,126 @@
+{
+  "case_id": "C01",
+  "question": "¿Qué trayectoria sigue el sujeto tras romper con su superior eclesiástico y establecerse en la capital como profesional independiente?",
+  "tipo_sujeto": "artista",
+  "freeze": "1781-03-16",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1781",
+  "cuts": [
+    {
+      "id": "C1_1756",
+      "corte": "C1_1756",
+      "cut_id": "C1_1756",
+      "date": "1756-01-27",
+      "fecha_corte": "1756-01-27",
+      "hecho": "Nace en Salzburgo; niño prodigio, gira por las cortes de Europa con su padre.",
+      "P": [
+        [
+          "creatividad",
+          0.8
+        ],
+        [
+          "reconocimiento_previo",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "aprendizaje",
+          0.82
+        ],
+        [
+          "mentoria_activa",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "jerarquia",
+          0.65
+        ]
+      ]
+    },
+    {
+      "id": "C2_1777",
+      "corte": "C2_1777",
+      "cut_id": "C2_1777",
+      "date": "1777-09-23",
+      "fecha_corte": "1777-09-23",
+      "hecho": "Viaja a París con su madre (muere en 1778); busca un empleo estable sin conseguirlo.",
+      "P": [
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "busqueda_seguridad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "viaje",
+          0.78
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "frustracion",
+          0.72
+        ],
+        [
+          "escasez",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "C3_1781",
+      "corte": "C3_1781",
+      "cut_id": "C3_1781",
+      "date": "1781-03-16",
+      "fecha_corte": "1781-03-16",
+      "hecho": "Rompe con el arzobispo de Salzburgo; se establece en Viena como músico independiente.",
+      "P": [
+        [
+          "independencia",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "rebeldia",
+          0.78
+        ],
+        [
+          "autoexpresion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.75
+        ],
+        [
+          "oportunidad",
+          0.8
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

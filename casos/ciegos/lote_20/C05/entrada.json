@@ -1,0 +1,126 @@
+{
+  "case_id": "C05",
+  "question": "¿Qué trayectoria sigue el sujeto tras la construcción del teatro del que es copropietario?",
+  "tipo_sujeto": "artista",
+  "freeze": "1599-01-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1599",
+  "cuts": [
+    {
+      "id": "C1_1590",
+      "corte": "C1_1590",
+      "cut_id": "C1_1590",
+      "date": "1590-01-01",
+      "fecha_corte": "1590-01-01",
+      "hecho": "Llega a Londres; escribe sus primeras obras y se hace un nombre en el teatro.",
+      "P": [
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "autoexpresion",
+          0.8
+        ],
+        [
+          "aprendizaje",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "reconocimiento_previo",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1594",
+      "corte": "C2_1594",
+      "cut_id": "C2_1594",
+      "date": "1594-01-01",
+      "fecha_corte": "1594-01-01",
+      "hecho": "Se une a los Lord Chamberlain's Men; escribe Romeo y Julieta y El sueño de una noche de verano.",
+      "P": [
+        [
+          "reconocimiento_previo",
+          0.8
+        ],
+        [
+          "creatividad",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.75
+        ],
+        [
+          "generacion_ideas",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "prosperidad",
+          0.75
+        ],
+        [
+          "redes_prestigio",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C3_1599",
+      "corte": "C3_1599",
+      "cut_id": "C3_1599",
+      "date": "1599-01-01",
+      "fecha_corte": "1599-01-01",
+      "hecho": "Se construye el Globe Theatre; el sujeto es copropietario y dramaturgo principal de la compañía.",
+      "P": [
+        [
+          "estatus_social",
+          0.8
+        ],
+        [
+          "logro_personal",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "planificacion_activa",
+          0.78
+        ],
+        [
+          "liderazgo",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "prosperidad",
+          0.8
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "C05",
+  "sujeto_alias": "SUJETO_C05",
+  "person": "William Shakespeare",
+  "fuente": "https://en.wikipedia.org/wiki/William_Shakespeare ; Globe 1599, Hamlet c. 1600, Rey Lear c. 1605, muere 1616",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

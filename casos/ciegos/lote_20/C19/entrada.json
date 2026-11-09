@@ -1,0 +1,126 @@
+{
+  "case_id": "C19",
+  "question": "¿Qué trayectoria sigue el sujeto tras terminar su gran cuadro de la milicia?",
+  "tipo_sujeto": "artista",
+  "freeze": "1642-01-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1642",
+  "cuts": [
+    {
+      "id": "C1_1631",
+      "corte": "C1_1631",
+      "cut_id": "C1_1631",
+      "date": "1631-01-01",
+      "fecha_corte": "1631-01-01",
+      "hecho": "Se traslada a Ámsterdam; se convierte en el retratista más solicitado de la burguesía.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.78
+        ],
+        [
+          "planificacion_activa",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "prosperidad",
+          0.8
+        ],
+        [
+          "reconocimiento",
+          0.82
+        ]
+      ]
+    },
+    {
+      "id": "C2_1634",
+      "corte": "C2_1634",
+      "cut_id": "C2_1634",
+      "date": "1634-06-22",
+      "fecha_corte": "1634-06-22",
+      "hecho": "Se casa en 1634; compra una casa grande y colecciona arte y objetos.",
+      "P": [
+        [
+          "compromiso_afectivo",
+          0.8
+        ],
+        [
+          "prosperidad",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.78
+        ],
+        [
+          "acumulacion_capital",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "estatus_social",
+          0.8
+        ],
+        [
+          "escalada_status",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C3_1642",
+      "corte": "C3_1642",
+      "cut_id": "C3_1642",
+      "date": "1642-01-01",
+      "fecha_corte": "1642-01-01",
+      "hecho": "Termina La ronda de noche; su esposa Saskia muere ese año y su fortuna empieza a declinar.",
+      "P": [
+        [
+          "perdida",
+          0.82
+        ],
+        [
+          "duelo",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "resiliencia",
+          0.78
+        ],
+        [
+          "creatividad",
+          0.84
+        ]
+      ],
+      "C": [
+        [
+          "perdida_familiar",
+          0.82
+        ],
+        [
+          "vulnerabilidad_financiera_inmediata",
+          0.75
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

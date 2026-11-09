@@ -21,8 +21,8 @@ Salida en `motor/`:
 
 | Código | Significado |
 |---|---|
-| 0 | Artefacto limpio y completo. |
-| 3 | Motor corrió y el resultado está completo, pero la **búsqueda externa (Caldero) falló** (etapa requerida). Es el código normal sin red o sin clave Exa. |
+| 0 | Artefacto limpio y completo. La búsqueda externa es opcional: si no hay red ni clave, la corrida completa offline con exit 0. |
+| 3 | Fallo duro: falta Engine o patterns, o falló el subprocesso primario del motor. **Ya no se usa para la búsqueda** (antes: exit 3 por búsqueda faltante). |
 | 4 | Salida con datos incompletos / no finitos. |
 | 5 | Completado con hueco de metadatos. |
 | 6 | Corrida pausada reanudable (checkpoint `_CHECKPOINT_REANUDABLE.json`). |
@@ -55,15 +55,38 @@ varios minutos y subir el timeout del runner.
 (la copia junto al `RESULT_*.json` es la que se conserva). Limpiar
 `/dev/shm/ceb_runs` y `/tmp/ceb_runs` de vez en cuando si se corren muchos casos.
 
+## El motor es AGNÓSTICO: no depende de Exa ni de ningún proveedor
+
+**Regla (Marco, 2026-11-08): el motor no puede irse a una sola cosa ni depender
+de un solo proveedor ni estar viciado por él.** La búsqueda externa de
+arquetipos (Caldero) es una etapa **opcional** de evidencia lateral: nunca
+escribe H1/H2 y nunca es puerta de la corrida.
+
+- **Orden de proveedores** (`motor/motor/caldero_buscadores.py`, `ORDEN_AUTO`):
+  libres primero — ddgs, ddg, bing, searx, wiki, google — y solo después, si
+  hay clave, exa, brave, serper, tavily. **Exa es un proveedor opcional más,
+  nunca un requisito.** Se usa el primer motor libre que responda.
+- **Sin red ni clave**: la corrida corre en modo offline y **completa con
+  exit 0**. El recibo registra la búsqueda como `FAILED_OPTIONAL_STAGE`
+  (`required: false`), sin marcar la corrida como incompleta. Antes de este
+  arreglo la búsqueda se marcaba como etapa requerida y el recibo quedaba en
+  `INCOMPLETE_REQUIRED_EXTERNAL_SEARCH` con exit 3; eso estaba mal y se corrigió
+  en el motor (`MOTOR_V15_3_UNICO_20260927.py`: `required: False` en el intento
+  Caldero) y en el runner (`correr_estandar.py`: la búsqueda nunca es puerta).
+- **Con clave Exa** (opcional): `EXA_API_KEY=...` (el sidecar prueba
+  Exa/OpenAI/OpenRouter/Tavily/web; timeouts 20–60 s por proveedor). No es
+  necesaria para que el motor corra ni para que la corrida complete.
+
 ## Búsqueda externa (Caldero)
 
-La búsqueda de arquetipos es una etapa **requerida**. Sin red o sin clave,
-el recibo queda en `INCOMPLETE_REQUIRED_EXTERNAL_SEARCH` y el exit es 3,
-pero el resultado del motor (H1/H2, Monte Carlo, apuesta) está completo.
+La búsqueda de arquetipos es una etapa **opcional** (ver la sección
+agnóstica arriba). Sin red o sin clave, la corrida completa con exit 0 y
+el resultado del motor (H1/H2, Monte Carlo, apuesta) está completo; el
+recibo solo registra la búsqueda como `FAILED_OPTIONAL_STAGE`.
 
 - Sin red/clave: `CALDERO_BUSCADOR=offline SEARCH_PROVIDER=offline` (falla rápido).
-- Con clave Exa: `EXA_API_KEY=...` (el sidecar prueba Exa/OpenAI/OpenRouter/
-  Tavily/web; timeouts 20–60 s por proveedor).
+- Con clave Exa (opcional, nunca requisito): `EXA_API_KEY=...` (el sidecar
+  prueba Exa/OpenAI/OpenRouter/Tavily/web; timeouts 20–60 s por proveedor).
 
 ## Tests
 
@@ -86,25 +109,79 @@ Para re-correr casos ya evaluados: `--rehacer CAL_F001_01_NAPOLEON,...`
 (agrega filas duplicadas al CSV; preferir el runner directo para
 re-verificar sin tocar la calibración).
 
-La fábrica exige búsqueda viva por defecto (`FABRICA_CALDERO_REQUERIDO=1`);
-sin ella el lote queda `FALLO_EJECUCION_CALDERO`. Para correr sin red:
-`FABRICA_CALDERO_REQUERIDO=0`. La fábrica sincroniza a StinkBox por
-defecto (`FABRICA_SYNC=1`); para no sincronizar: `FABRICA_SYNC=0`.
+La fábrica ya no exige búsqueda viva por defecto
+(`FABRICA_CALDERO_REQUERIDO=0`; el motor es agnóstico y la búsqueda es
+opcional). Para exigirla explícitamente: `FABRICA_CALDERO_REQUERIDO=1`.
+Sin ella el lote queda `FALLO_EJECUCION_CALDERO` solo si se pide explícita.
+La fábrica sincroniza a StinkBox por defecto (`FABRICA_SYNC=1`); para no
+sincronizar: `FABRICA_SYNC=0`.
 Su `CORRIDAS` por defecto es `/workspace/FABRICA_CORRIDAS` (no existe fuera
 del box original); fijar `FABRICA_CORRIDAS=<dir>` fuera del repo.
 
 ## Logger / runtime / watchdog: qué hay de verdad
 
-- **No existe ningún archivo llamado `logger` ni `watchdog` en el repo.**
-  Lo que hay:
-  - **Registro**: el recibo JSON del runner (`*_RECIBO_EJECUCION.json`) con
-    hashes, stages, duración y status. Es la constancia de ejecución.
+Lo que hace un motor es: correr casos, Monte Carlo, recibo y hashes. El
+logger y el watchdog sirven a eso, nada más. No meten capacidades que no
+son del motor ni reescriben el runner ni el Engine; envuelven la ejecución.
+
+### Logger estructurado — `motor/logger_u6.py`
+
+Módulo propio. Cada evento es un paso de una corrida: inicio (`run_start`,
+con los hashes del Engine, del catálogo y del input), etapa (`stage`) y fin
+(`run_end`, con exit, duración, H1/H2 y status del recibo). Niveles
+DEBUG/INFO/WARNING/ERROR y timestamp UTC en cada registro.
+
+- Escribe a **archivo** (`motor/logs/u6_<AAAA-MM-DD>.log`, una línea JSON por
+  evento) y a **consola** (línea legible, por stderr; el JSON del resultado
+  sale por stdout y no se toca).
+- El runner lo usa: `correr_estandar.py` registra `run_start` al leer el
+  input y `run_end` al terminar. La importación es opcional: si el logger
+  no se puede importar, la corrida sigue exactamente igual.
+- Uso directo:
+
+```python
+from logger_u6 import get_logger
+log = get_logger("C01")
+log.run_start(engine_sha="...", patterns_sha="...", input_sha="...")
+log.stage("motor_run", "COMPLETED", monte_carlo=True)
+log.run_end(returncode=0, seconds=14.5, h1="31_conflicto_con_un_dios",
+            h2="30_ambicion", receipt_status="COMPLETED")
+```
+
+Variables: `U6_LOG_LEVEL` (DEBUG|INFO|WARNING|ERROR, defecto INFO),
+`U6_LOG_DIR` (defecto `motor/logs/`), `U6_LOG_CONSOLE=0` para no escribir
+a consola.
+
+### Watchdog / supervisor — `motor/watchdog_u6.py`
+
+Vigila una corrida: corre el runner como subproceso, detecta que el proceso
+murió o se atoró por timeout, lo registra con el logger y, si es seguro, lo
+reintenta **una vez** con backoff de 10 s.
+
+```bash
+cd motor
+python3 watchdog_u6.py ../casos/fabrica/cola/CAL_F001_01_NAPOLEON/entrada.json NAPOLEON
+python3 watchdog_u6.py ../casos/ciegos/lote_20/C01/entrada.json C01 --timeout 300
+```
+
+- **Se reintenta** (una vez) si el proceso murió o se atoró (timeout) **sin
+  dejar recibo**: es un fallo transitorio, el runner se cayó antes de
+  completar.
+- **No se reintenta** si hay recibo (la corrida completó; un exit distinto
+  de 0 es un resultado, no un cuelgue) ni si el fallo es duro (hashes del
+  Engine/catálogo distintos del manifiesto, preflight, entrada inválida).
+  Un reintento no arregla un fallo duro.
+- Al terminar verifica: exit 0, existen `RESULT_<NOMBRE>.json` y
+  `RESULT_<NOMBRE>_RECIBO_EJECUCION.json`, y los hashes del Engine/catálogo
+  coinciden con el manifiesto. Devuelve el exit del runner (0 si la corrida
+  completó, aunque haya sido en el reintento).
+
+Lo que sigue sin haber (y no es del motor):
   - **Runtime**: `motor/motor/ceb_runtime_v0_6_flow.py` (CEB v0.6.3) — ledger
     de auditoría por corrida y hook de auditoría de I/O. No es un
     demonio ni un supervisor; es un registro que corre dentro del motor.
   - **Auditoría horaria**: `.github/workflows/auditar-corridas-actions.yml`
-    (revisa corridas en Actions). No hay un watchdog local que vigile
-    procesos ni reinicie nada.
+    (revisa corridas en Actions).
 - **Falta para correr solo a diario**: un cron/workflow que ejecute el runner
   (o la fábrica) y avise si algo falla; hoy el lote diario es manual.
   Ver `~/workspace/motor-piezas-faltantes.md` (P0) para la lista completa.
@@ -136,6 +213,13 @@ Nota: en NAPOLEON el H2 salió `30_ambicion` y el CSV dice
 `arquetipo_el_gobernante` (margen pequeño, 24.55 vs 23.41 en rank_fusion);
 la búsqueda externa —que aquí falló— alimenta ese ranking. H1 coincide en
 los 4 casos.
+
+Verificación agnóstica (2026-11-08, tras el arreglo): NAPOLEON en offline
+(`CALDERO_BUSCADOR=offline SEARCH_PROVIDER=offline`) completa con
+**exit 0**, H1 `31_conflicto_con_un_dios` 66.07% (igual que el CSV),
+Monte Carlo 9/9 convergido, recibo **COMPLETED** y etapa de búsqueda
+`FAILED_OPTIONAL_STAGE` con `required: false`. La tabla de arriba es de
+antes del arreglo (cuando la búsqueda se marcaba como requerida).
 
 ## No tocar
 

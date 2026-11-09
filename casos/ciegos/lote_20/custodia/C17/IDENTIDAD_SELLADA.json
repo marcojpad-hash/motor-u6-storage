@@ -1,0 +1,7 @@
+{
+  "case_id": "C17",
+  "sujeto_alias": "SUJETO_C17",
+  "person": "Dante Alighieri",
+  "fuente": "https://en.wikipedia.org/wiki/Dante_Alighieri ; exilio 1302, Divina Comedia, muere 1321",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

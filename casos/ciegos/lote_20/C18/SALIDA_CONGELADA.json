@@ -1,0 +1,257 @@
+{
+  "case_id": "C18",
+  "freeze": {
+    "status": "FROZEN",
+    "z_work": "C3_1508",
+    "z_work_kind": "CASE_CUTOFF",
+    "future_accessed_during_freeze": false,
+    "information_boundary": "all input facts/cuts through Z de trabajo only",
+    "z90_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "congelado_utc": "2026-11-09T00:24:29Z",
+  "H1": {
+    "familia": "9_audaz_empresa",
+    "grado": null,
+    "porcentaje_relleno": 49.02,
+    "peso_relativo": 0.161578,
+    "predictibilidad_estructural_pct": 52.06
+  },
+  "H2": {
+    "familia": "24_rivalidad_de_superior_e_inferior",
+    "grado": null,
+    "porcentaje_relleno": 60.25,
+    "peso_relativo": 0.154163,
+    "predictibilidad_estructural_pct": 50.01
+  },
+  "set": [
+    "9_audaz_empresa",
+    "schwartz_07_logro",
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "social_01_asch_conformidad",
+    "cliodinamica_02_fase_estanflacion_presion"
+  ],
+  "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenarios": [
+      {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "arquetipo_el_creador",
+          "social_01_asch_conformidad",
+          "cliodinamica_02_fase_estanflacion_presion"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.65037097,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "30_ambicion"
+        ],
+        "n_hipotesis": 2,
+        "soporte_estructural_agregado": 0.34962903,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      }
+    ],
+    "apuesta_principal": {
+      "escenario": "CONTINUIDAD_ASCENDENTE",
+      "hipotesis_que_convergen": [
+        "9_audaz_empresa",
+        "arquetipo_el_creador",
+        "social_01_asch_conformidad",
+        "cliodinamica_02_fase_estanflacion_presion"
+      ],
+      "n_hipotesis": 4,
+      "soporte_estructural_agregado": 0.65037097,
+      "es_probabilidad": false,
+      "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+  },
+  "destino_predicho": {
+    "version": "APUESTA_DESTINO_PERSONAL_022_20261024",
+    "can_decide_H": false,
+    "toca_H1_H2": false,
+    "toca_apuesta_tematica": false,
+    "etiquetas_posibles": [
+      "auge",
+      "meseta",
+      "caida",
+      "ruptura"
+    ],
+    "es_probabilidad": false,
+    "fuente_series": "movimiento_de_fondo.series_familias",
+    "umbrales": {
+      "EPS": 0.01,
+      "GRANDE": 0.05,
+      "NETO_ASC": 0.03,
+      "NETO_DESC": 0.03
+    },
+    "estado": "EJECUTADO",
+    "apuesta": "meseta",
+    "porque": "sin cambio neto suficiente del balance",
+    "cortes": [
+      "C1_1501",
+      "C2_1505",
+      "C3_1508"
+    ],
+    "series": {
+      "favorable_auge": [
+        0.2012,
+        0.1893,
+        0.2568
+      ],
+      "adverso_caida": [
+        0.0,
+        0.0575,
+        0.129
+      ],
+      "adverso_ruptura": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adverso_total": [
+        0.0,
+        0.0575,
+        0.129
+      ],
+      "balance": [
+        0.2012,
+        0.1318,
+        0.1278
+      ],
+      "eje": [
+        0.0503,
+        0.0471,
+        0.0953
+      ]
+    },
+    "senales": {
+      "net_balance_ultimo_tramo": -0.004,
+      "salto_ruptura": 0.0,
+      "salto_adverso": 0.0715,
+      "eje": "9_audaz_empresa",
+      "caida_eje_vs_max_previo": 0.045
+    },
+    "familias_activas_en_Z": {
+      "ruptura": [],
+      "caida": [
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          0.068
+        ],
+        [
+          "cliodinamica_02_fase_estanflacion_presion",
+          0.0554
+        ],
+        [
+          "sistema_domiciano_maiestas",
+          0.0056
+        ]
+      ],
+      "auge": [
+        [
+          "9_audaz_empresa",
+          0.0953
+        ],
+        [
+          "schwartz_07_logro",
+          0.09
+        ],
+        [
+          "12_obtencion",
+          0.0364
+        ],
+        [
+          "social_04_rogers_difusion_innovaciones",
+          0.0351
+        ]
+      ]
+    },
+    "H_y_apuesta_tematica_intactos": true
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "engine_observation_calls": 9,
+    "engine_observation_calls_with_mc_metrics": 9,
+    "total_simulations": 5119,
+    "converged_calls": 9,
+    "nonconverged_calls": 0,
+    "calls": [
+      {
+        "observation_id": "C1_1501_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 575,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1501_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1501_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 529,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1505_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1505_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 529,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1505_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 784,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1508_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1508_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 575,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1508_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 676,
+        "converged": true
+      }
+    ]
+  },
+  "result_sha256": "c76f0062dc3d5dca121d9a56a37613aa7c367739b210456cb32d5d179185764c",
+  "recibo_status": "COMPLETED",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

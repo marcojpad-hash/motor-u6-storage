@@ -1,0 +1,256 @@
+{
+  "case_id": "C07",
+  "freeze": {
+    "status": "FROZEN",
+    "z_work": "C3_1609",
+    "z_work_kind": "CASE_CUTOFF",
+    "future_accessed_during_freeze": false,
+    "information_boundary": "all input facts/cuts through Z de trabajo only",
+    "z90_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "congelado_utc": "2026-11-09T00:20:45Z",
+  "H1": {
+    "familia": "spengler_02_verano_otono_racionalizacion",
+    "grado": null,
+    "porcentaje_relleno": 69.15,
+    "peso_relativo": 0.214929,
+    "predictibilidad_estructural_pct": 56.38
+  },
+  "H2": {
+    "familia": "30_ambicion",
+    "grado": null,
+    "porcentaje_relleno": 51.63,
+    "peso_relativo": 0.213453,
+    "predictibilidad_estructural_pct": 56.05
+  },
+  "set": [
+    "spengler_02_verano_otono_racionalizacion",
+    "30_ambicion",
+    "arquetipo_el_sabio",
+    "9_audaz_empresa",
+    "social_01_asch_conformidad",
+    "bbk_03_individualista"
+  ],
+  "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenarios": [
+      {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "spengler_02_verano_otono_racionalizacion",
+          "30_ambicion",
+          "social_01_asch_conformidad"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.55799703,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_sabio",
+          "9_audaz_empresa",
+          "bbk_03_individualista"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.44200296,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      }
+    ],
+    "apuesta_principal": {
+      "escenario": "CONTINUIDAD_ASCENDENTE",
+      "hipotesis_que_convergen": [
+        "spengler_02_verano_otono_racionalizacion",
+        "30_ambicion",
+        "social_01_asch_conformidad"
+      ],
+      "n_hipotesis": 3,
+      "soporte_estructural_agregado": 0.55799703,
+      "es_probabilidad": false,
+      "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+  },
+  "destino_predicho": {
+    "version": "APUESTA_DESTINO_PERSONAL_022_20261024",
+    "can_decide_H": false,
+    "toca_H1_H2": false,
+    "toca_apuesta_tematica": false,
+    "etiquetas_posibles": [
+      "auge",
+      "meseta",
+      "caida",
+      "ruptura"
+    ],
+    "es_probabilidad": false,
+    "fuente_series": "movimiento_de_fondo.series_familias",
+    "umbrales": {
+      "EPS": 0.01,
+      "GRANDE": 0.0601,
+      "NETO_ASC": 0.03,
+      "NETO_DESC": 0.03
+    },
+    "estado": "EJECUTADO",
+    "apuesta": "caida",
+    "porque": "el balance favorable-adverso empeora / lo adverso domina y sube / el eje del sujeto se apaga",
+    "cortes": [
+      "C1_1600",
+      "C2_1601",
+      "C3_1609"
+    ],
+    "series": {
+      "favorable_auge": [
+        0.0383,
+        0.2171,
+        0.2085
+      ],
+      "adverso_caida": [
+        -0.0575,
+        -0.0554,
+        0.0245
+      ],
+      "adverso_ruptura": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adverso_total": [
+        -0.0575,
+        -0.0554,
+        0.0245
+      ],
+      "balance": [
+        0.0958,
+        0.2725,
+        0.184
+      ],
+      "eje": [
+        0.0678,
+        0.0855,
+        0.11
+      ]
+    },
+    "senales": {
+      "net_balance_ultimo_tramo": -0.0885,
+      "salto_ruptura": 0.0,
+      "salto_adverso": 0.0799,
+      "eje": "spengler_02_verano_otono_racionalizacion",
+      "caida_eje_vs_max_previo": 0.0245
+    },
+    "familias_activas_en_Z": {
+      "ruptura": [],
+      "caida": [
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          0.0189
+        ],
+        [
+          "sistema_domiciano_maiestas",
+          0.0056
+        ]
+      ],
+      "auge": [
+        [
+          "schwartz_07_logro",
+          0.0683
+        ],
+        [
+          "9_audaz_empresa",
+          0.0477
+        ],
+        [
+          "12_obtencion",
+          0.0383
+        ],
+        [
+          "social_04_rogers_difusion_innovaciones",
+          0.0351
+        ],
+        [
+          "cliodinamica_04_fase_depresion_reconstruccion",
+          0.0191
+        ]
+      ]
+    },
+    "H_y_apuesta_tematica_intactos": true
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "engine_observation_calls": 9,
+    "engine_observation_calls_with_mc_metrics": 9,
+    "total_simulations": 5372,
+    "converged_calls": 9,
+    "nonconverged_calls": 0,
+    "calls": [
+      {
+        "observation_id": "C1_1600_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1600_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 728,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1600_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 784,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1601_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1601_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1601_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1609_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1609_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1609_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 676,
+        "converged": true
+      }
+    ]
+  },
+  "result_sha256": "83daee83c41ddbe92d671f51f17ecca132c7d8c2e2e4f0178a4c5d2307e8418c",
+  "recibo_status": "COMPLETED",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

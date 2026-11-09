@@ -1,0 +1,262 @@
+{
+  "case_id": "C20",
+  "freeze": {
+    "status": "FROZEN",
+    "z_work": "C3_1514",
+    "z_work_kind": "CASE_CUTOFF",
+    "future_accessed_during_freeze": false,
+    "information_boundary": "all input facts/cuts through Z de trabajo only",
+    "z90_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "congelado_utc": "2026-11-09T00:25:09Z",
+  "H1": {
+    "familia": "spengler_02_verano_otono_racionalizacion",
+    "grado": null,
+    "porcentaje_relleno": 67.55,
+    "peso_relativo": 0.172655,
+    "predictibilidad_estructural_pct": 65.87
+  },
+  "H2": {
+    "familia": "mbti_factor_intuicion_n",
+    "grado": null,
+    "porcentaje_relleno": 61.38,
+    "peso_relativo": 0.149549,
+    "predictibilidad_estructural_pct": 58.05
+  },
+  "set": [
+    "spengler_02_verano_otono_racionalizacion",
+    "mbti_factor_intuicion_n",
+    "social_01_asch_conformidad",
+    "arquetipo_el_sabio",
+    "mbti_factor_juicio_j",
+    "eterno_retorno_01_caos_primordial"
+  ],
+  "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenarios": [
+      {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "spengler_02_verano_otono_racionalizacion",
+          "mbti_factor_intuicion_n",
+          "social_01_asch_conformidad",
+          "arquetipo_el_sabio",
+          "eterno_retorno_01_caos_primordial"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 0.87655857,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "mbti_factor_juicio_j"
+        ],
+        "n_hipotesis": 1,
+        "soporte_estructural_agregado": 0.12344142,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      }
+    ],
+    "apuesta_principal": {
+      "escenario": "CONTINUIDAD_ASCENDENTE",
+      "hipotesis_que_convergen": [
+        "spengler_02_verano_otono_racionalizacion",
+        "mbti_factor_intuicion_n",
+        "social_01_asch_conformidad",
+        "arquetipo_el_sabio",
+        "eterno_retorno_01_caos_primordial"
+      ],
+      "n_hipotesis": 5,
+      "soporte_estructural_agregado": 0.87655857,
+      "es_probabilidad": false,
+      "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+  },
+  "destino_predicho": {
+    "version": "APUESTA_DESTINO_PERSONAL_022_20261024",
+    "can_decide_H": false,
+    "toca_H1_H2": false,
+    "toca_apuesta_tematica": false,
+    "etiquetas_posibles": [
+      "auge",
+      "meseta",
+      "caida",
+      "ruptura"
+    ],
+    "es_probabilidad": false,
+    "fuente_series": "movimiento_de_fondo.series_familias",
+    "umbrales": {
+      "EPS": 0.01,
+      "GRANDE": 0.0743,
+      "NETO_ASC": 0.03,
+      "NETO_DESC": 0.03
+    },
+    "estado": "EJECUTADO",
+    "apuesta": "caida",
+    "porque": "el balance favorable-adverso empeora / lo adverso domina y sube / el eje del sujeto se apaga",
+    "cortes": [
+      "C1_1503",
+      "C2_1510",
+      "C3_1514"
+    ],
+    "series": {
+      "favorable_auge": [
+        0.1728,
+        0.1641,
+        0.1575
+      ],
+      "adverso_caida": [
+        -0.0583,
+        0.0058,
+        0.0826
+      ],
+      "adverso_ruptura": [
+        -0.1033,
+        -0.0389,
+        -0.0388
+      ],
+      "adverso_total": [
+        -0.1616,
+        -0.0331,
+        0.0438
+      ],
+      "balance": [
+        0.3344,
+        0.1972,
+        0.1137
+      ],
+      "eje": [
+        0.0227,
+        0.088,
+        0.1153
+      ]
+    },
+    "senales": {
+      "net_balance_ultimo_tramo": -0.0835,
+      "salto_ruptura": 0.0001,
+      "salto_adverso": 0.0769,
+      "eje": "spengler_02_verano_otono_racionalizacion",
+      "caida_eje_vs_max_previo": 0.0273
+    },
+    "familias_activas_en_Z": {
+      "ruptura": [],
+      "caida": [
+        [
+          "tainter_03_vulnerabilidad_sistemica",
+          0.037
+        ],
+        [
+          "strauss_howe_03_the_unraveling",
+          0.0211
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          0.0189
+        ],
+        [
+          "sistema_domiciano_maiestas",
+          0.0056
+        ]
+      ],
+      "auge": [
+        [
+          "eterno_retorno_02_cosmizacion_fundacion",
+          0.0542
+        ],
+        [
+          "tainter_01_inversion_complejidad_productiva",
+          0.0542
+        ],
+        [
+          "strauss_howe_01_the_high",
+          0.031
+        ],
+        [
+          "cliodinamica_04_fase_depresion_reconstruccion",
+          0.0181
+        ]
+      ]
+    },
+    "H_y_apuesta_tematica_intactos": true
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "engine_observation_calls": 9,
+    "engine_observation_calls_with_mc_metrics": 9,
+    "total_simulations": 4824,
+    "converged_calls": 9,
+    "nonconverged_calls": 0,
+    "calls": [
+      {
+        "observation_id": "C1_1503_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1503_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 529,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1503_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 676,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1510_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1510_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 575,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1510_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1514_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1514_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1514_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      }
+    ]
+  },
+  "result_sha256": "f3e3d81a48ada39eaa23a97079a00a0015f0290cd0badb0e8ffa17fe0c904960",
+  "recibo_status": "COMPLETED",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

@@ -1,0 +1,161 @@
+{
+  "lote": "LOTE_20_CIEGO",
+  "casos": [
+    {
+      "slot": "C01",
+      "estado": "YA_CONGELADO"
+    },
+    {
+      "slot": "C02",
+      "estado": "YA_CONGELADO"
+    },
+    {
+      "slot": "C03",
+      "estado": "YA_CONGELADO"
+    },
+    {
+      "slot": "C04",
+      "estado": "YA_CONGELADO"
+    },
+    {
+      "slot": "C05",
+      "estado": "YA_CONGELADO"
+    },
+    {
+      "slot": "C06",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 15.5,
+      "H1": "arquetipo_el_creador",
+      "H2": "9_audaz_empresa",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C07",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 20.3,
+      "H1": "spengler_02_verano_otono_racionalizacion",
+      "H2": "30_ambicion",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C08",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 20.8,
+      "H1": "tainter_01_inversion_complejidad_productiva",
+      "H2": "eterno_retorno_02_cosmizacion_fundacion",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C09",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 19.1,
+      "H1": "9_audaz_empresa",
+      "H2": "frye_mythos_romance",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C10",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 20.9,
+      "H1": "arquetipo_el_gobernante",
+      "H2": "12_obtencion",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C11",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 20.6,
+      "H1": "30_ambicion",
+      "H2": "arquetipo_el_gobernante",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C12",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 23.3,
+      "H1": "arquetipo_el_gobernante",
+      "H2": "30_ambicion",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C13",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 23.2,
+      "H1": "frye_mythos_romance",
+      "H2": "arquetipo_el_gobernante",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C14",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 21.8,
+      "H1": "9_audaz_empresa",
+      "H2": "social_14_overton_ventana",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C15",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 16.3,
+      "H1": "9_audaz_empresa",
+      "H2": "kwml_01_rey",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C16",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 16.8,
+      "H1": "30_ambicion",
+      "H2": "berlin_02_zorro",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C17",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 18.2,
+      "H1": "7_caer_victima",
+      "H2": "9_audaz_empresa",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C18",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 21.5,
+      "H1": "9_audaz_empresa",
+      "H2": "24_rivalidad_de_superior_e_inferior",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C19",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 19.2,
+      "H1": "36_perdida_de_los_seres_queridos",
+      "H2": "arquetipo_el_creador",
+      "recibo": "COMPLETED"
+    },
+    {
+      "slot": "C20",
+      "estado": "OK",
+      "exit": 0,
+      "segundos": 21.0,
+      "H1": "spengler_02_verano_otono_racionalizacion",
+      "H2": "mbti_factor_intuicion_n",
+      "recibo": "COMPLETED"
+    }
+  ],
+  "generado_utc": "2026-11-09T00:25:09Z"
+}

@@ -1,0 +1,126 @@
+{
+  "case_id": "C11",
+  "question": "¿Qué trayectoria sigue el sujeto tras acceder al trono del imperio?",
+  "tipo_sujeto": "gobernante",
+  "freeze": "1520-09-30",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1520",
+  "cuts": [
+    {
+      "id": "C1_1512",
+      "corte": "C1_1512",
+      "cut_id": "C1_1512",
+      "date": "1512-01-01",
+      "fecha_corte": "1512-01-01",
+      "hecho": "Gobierna como príncipe en Manisa; se forma en administración, leyes y estrategia militar.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "metodicidad",
+          0.78
+        ],
+        [
+          "planificacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C2_1514",
+      "corte": "C2_1514",
+      "cut_id": "C2_1514",
+      "date": "1514-08-23",
+      "fecha_corte": "1514-08-23",
+      "hecho": "Participa en la campaña de Chaldiran contra Persia; el imperio se expande hacia el este.",
+      "P": [
+        [
+          "conquista",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "audacia",
+          0.78
+        ],
+        [
+          "organizacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "terreno_hostil",
+          0.72
+        ],
+        [
+          "escalada",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C3_1520",
+      "corte": "C3_1520",
+      "cut_id": "C3_1520",
+      "date": "1520-09-30",
+      "fecha_corte": "1520-09-30",
+      "hecho": "Accede al trono tras la muerte de su padre; hereda un imperio en expansión y un ejército temido.",
+      "P": [
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "autoridad",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "escalada_status",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

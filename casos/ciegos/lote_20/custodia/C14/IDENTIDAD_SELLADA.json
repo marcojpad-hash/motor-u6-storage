@@ -1,0 +1,7 @@
+{
+  "case_id": "C14",
+  "sujeto_alias": "SUJETO_C14",
+  "person": "Cristóbal Colón",
+  "fuente": "https://en.wikipedia.org/wiki/Christopher_Columbus ; primer viaje 1492, arrestado 1500, muere 1506",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

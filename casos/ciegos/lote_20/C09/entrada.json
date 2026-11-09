@@ -1,0 +1,126 @@
+{
+  "case_id": "C09",
+  "question": "¿Qué ocurre con el sujeto tras lograr la coronación del heredero en Reims?",
+  "tipo_sujeto": "gobernante",
+  "freeze": "1429-07-17",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1429",
+  "cuts": [
+    {
+      "id": "C1_1428",
+      "corte": "C1_1428",
+      "cut_id": "C1_1428",
+      "date": "1428-05-01",
+      "fecha_corte": "1428-05-01",
+      "hecho": "Llega a Chinon y convence al delfín de que es enviada a liberar el reino.",
+      "P": [
+        [
+          "devocion",
+          0.84
+        ],
+        [
+          "vision",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "persuasion",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.75
+        ],
+        [
+          "escepticismo",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1429",
+      "corte": "C2_1429",
+      "cut_id": "C2_1429",
+      "date": "1429-04-01",
+      "fecha_corte": "1429-04-01",
+      "hecho": "Recibe el mando de un ejército y marcha a Orléans con estandarte propio.",
+      "P": [
+        [
+          "liderazgo",
+          0.84
+        ],
+        [
+          "audacia",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "carisma",
+          0.8
+        ],
+        [
+          "organizacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "confrontacion_directa",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C3_1429",
+      "corte": "C3_1429",
+      "cut_id": "C3_1429",
+      "date": "1429-07-17",
+      "fecha_corte": "1429-07-17",
+      "hecho": "Libera Orléans en nueve días; el delfín es coronado rey en Reims con el sujeto a su lado con el estandarte.",
+      "P": [
+        [
+          "triunfo",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "audacia",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "escalada_status",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

@@ -1,0 +1,677 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "C13",
+  "started_epoch": 1794183752.173024,
+  "finished_epoch": 1794183766.849171,
+  "duration_seconds": 14.676,
+  "input_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/casos/ciegos/lote_20/C13/entrada.json",
+  "input_sha256": "58e13aa87788645b98c1e005519be1c02df0db63ae479e1994bc8e79189956ce",
+  "normalized_input_sha256": "16fb14d6b7023816ea23e72505456a09e692bf8b67f15439890e1f3452535788",
+  "output_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C13.json",
+  "output_sha256": "28e2360c1feb8d74f6de0da5b0c641b70dd78eb9336d5e3617bebfd81d719f42",
+  "runner_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/correr_estandar.py",
+  "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 4192,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1189_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1189_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1189_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1203_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1203_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1203_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1206_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1206_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1206_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "frye_mythos_romance",
+        "porcentaje_relleno": 65.96,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 88.8889,
+          "booker": 61.1111,
+          "dynamis": 45.5556,
+          "estructura": 88.8889,
+          "frye": 51.8519,
+          "geometria_inercia": 50.0,
+          "greimas": 66.6667,
+          "otras_dimensiones": 66.6667,
+          "puente_lateral": 51.4468,
+          "resolucion": 100.0,
+          "trayectoria_estado": 54.4444
+        },
+        "peso_relativo": 0.128868,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 58.36
+      },
+      "H2": {
+        "familia": "arquetipo_el_gobernante",
+        "porcentaje_relleno": 57.01,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 37.037,
+          "dynamis": 54.4444,
+          "estructura": 88.8889,
+          "frye": 38.8889,
+          "geometria_inercia": 50.0,
+          "greimas": 66.6667,
+          "otras_dimensiones": 68.5185,
+          "puente_lateral": 61.5945,
+          "resolucion": 83.3333,
+          "trayectoria_estado": 77.7778
+        },
+        "peso_relativo": 0.128442,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 58.19
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "FAILED_OPTIONAL_STAGE",
+      "required": false,
+      "provider": "offline",
+      "query_count": 0,
+      "result_count": 0,
+      "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "28e2360c1feb8d74f6de0da5b0c641b70dd78eb9336d5e3617bebfd81d719f42"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "3a0d88a99ba2"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 109,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C13_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C13_CEB_LEDGER_1.jsonl",
+          "sha256": "4fe8056a8506e4f3ee94c5d1db95cafda64fde91ecf63c70712f371f0364125b",
+          "lineas": 25816
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "FAILED",
+    "provider": "offline",
+    "query_count": 0,
+    "result_count": 0,
+    "attempts": [],
+    "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "frye_mythos_romance",
+    "H2": "arquetipo_el_gobernante",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "FRAGIL",
+    "estado_durante_corrida": "RESOLUCION_REQUERIDA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "OPTIONAL_STAGE_FAILED",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 16,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "frye_mythos_romance",
+      "porcentaje_relleno": 65.96,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 88.8889,
+        "booker": 61.1111,
+        "dynamis": 45.5556,
+        "estructura": 88.8889,
+        "frye": 51.8519,
+        "geometria_inercia": 50.0,
+        "greimas": 66.6667,
+        "otras_dimensiones": 66.6667,
+        "puente_lateral": 51.4468,
+        "resolucion": 100.0,
+        "trayectoria_estado": 54.4444
+      },
+      "peso_relativo": 0.128868,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.36
+    },
+    "H2": {
+      "familia": "arquetipo_el_gobernante",
+      "porcentaje_relleno": 57.01,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 37.037,
+        "dynamis": 54.4444,
+        "estructura": 88.8889,
+        "frye": 38.8889,
+        "geometria_inercia": 50.0,
+        "greimas": 66.6667,
+        "otras_dimensiones": 68.5185,
+        "puente_lateral": 61.5945,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 77.7778
+      },
+      "peso_relativo": 0.128442,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.19
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 6.6334,
+      "techo_pct": 93.3666,
+      "pp_por_punto_de_rank_fusion": 1.971211,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "frye_mythos_romance",
+        "rol": "eje",
+        "peso_en_set": 0.229703,
+        "predictibilidad_estructural_pct": 58.36,
+        "cobertura_unica_frac": 0.0939
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.228944,
+        "predictibilidad_estructural_pct": 58.19,
+        "cobertura_unica_frac": 0.3687
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.215735,
+        "predictibilidad_estructural_pct": 55.22,
+        "cobertura_unica_frac": 0.1754
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.196262,
+        "predictibilidad_estructural_pct": 50.83,
+        "cobertura_unica_frac": 0.181
+      },
+      {
+        "familia": "eterno_retorno_02_cosmizacion_fundacion",
+        "rol": "componente",
+        "peso_en_set": 0.129357,
+        "predictibilidad_estructural_pct": 35.76,
+        "cobertura_unica_frac": 0.0916
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "MEZCLA_H1_H2_SIN_SEPARACION",
+      "lectura_texto": "frye_mythos_romance y arquetipo_el_gobernante en mezcla: diferencia top1-top2 0.086707 < banda 0.25 (indistinguibles a la resolución del motor)",
+      "peso_H1": 0.128868,
+      "peso_H2": 0.128442,
+      "peso_H1_en_par": 0.500828,
+      "peso_H2_en_par": 0.499172
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "frye_mythos_romance",
+          "rol_en_set": "eje",
+          "rank_fusion": 26.24132,
+          "soporte_estructural_relativo": 0.16771525,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.311933,
+            "micro": 0.727373,
+            "meso": 0.620263,
+            "macro": 0.620263,
+            "aceleracion": 0.727373,
+            "divergencia_entre_escala": 0.107109,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.154613,
+          "soporte_estructural_relativo": 0.16716109,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.472934,
+            "micro": 0.835859,
+            "meso": 0.686771,
+            "macro": 0.686771,
+            "aceleracion": 0.843609,
+            "divergencia_entre_escala": 0.149088,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "12_obtencion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 24.723152,
+          "soporte_estructural_relativo": 0.15801224,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.16802,
+            "micro": 0.48667,
+            "meso": 0.63268,
+            "macro": 0.63268,
+            "aceleracion": 0.232521,
+            "divergencia_entre_escala": 0.146011,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.645673,
+          "soporte_estructural_relativo": 0.15751705,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.212128,
+            "micro": 0.484538,
+            "meso": 0.666827,
+            "macro": 0.666827,
+            "aceleracion": 0.180722,
+            "divergencia_entre_escala": 0.182288,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.42099,
+          "soporte_estructural_relativo": 0.14329851,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.272836,
+            "micro": 0.477216,
+            "meso": 0.716019,
+            "macro": 0.716019,
+            "aceleracion": 0.115884,
+            "divergencia_entre_escala": 0.238803,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "anacyclosis_01_monarquia",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 17.5,
+          "soporte_estructural_relativo": 0.11184715,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.240697,
+            "micro": 0.681932,
+            "meso": 0.589557,
+            "macro": 0.589557,
+            "aceleracion": 0.690203,
+            "divergencia_entre_escala": 0.092376,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "eterno_retorno_02_cosmizacion_fundacion",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.777778,
+          "soporte_estructural_relativo": 0.09444871,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.14322,
+            "micro": 0.488802,
+            "meso": 0.613014,
+            "macro": 0.613014,
+            "aceleracion": 0.267058,
+            "divergencia_entre_escala": 0.124212,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "frye_mythos_romance",
+            "arquetipo_el_gobernante",
+            "12_obtencion",
+            "social_04_rogers_difusion_innovaciones",
+            "9_audaz_empresa",
+            "anacyclosis_01_monarquia",
+            "eterno_retorno_02_cosmizacion_fundacion"
+          ],
+          "n_hipotesis": 7,
+          "soporte_estructural_agregado": 1.0,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "frye_mythos_romance",
+          "arquetipo_el_gobernante",
+          "12_obtencion",
+          "social_04_rogers_difusion_innovaciones",
+          "9_audaz_empresa",
+          "anacyclosis_01_monarquia",
+          "eterno_retorno_02_cosmizacion_fundacion"
+        ],
+        "n_hipotesis": 7,
+        "soporte_estructural_agregado": 1.0,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C13",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C13",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 160
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 49,
+          "new_event_records": 81,
+          "new_token_strings": 1,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 161
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C13",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C13",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 161
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 50,
+          "new_event_records": 146,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 161
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

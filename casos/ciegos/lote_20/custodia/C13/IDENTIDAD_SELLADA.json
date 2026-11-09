@@ -1,0 +1,7 @@
+{
+  "case_id": "C13",
+  "sujeto_alias": "SUJETO_C13",
+  "person": "Gengis Kan",
+  "fuente": "https://en.wikipedia.org/wiki/Genghis_Khan ; unificación 1206, conquistas, muere 1227",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

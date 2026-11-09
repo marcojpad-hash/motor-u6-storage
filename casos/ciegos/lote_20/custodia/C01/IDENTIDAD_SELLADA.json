@@ -1,0 +1,7 @@
+{
+  "case_id": "C01",
+  "sujeto_alias": "SUJETO_C01",
+  "person": "Wolfgang Amadeus Mozart",
+  "fuente": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart ; muere 5-dic-1791 en Viena, endeudado, Réquiem inconcluso; auge vienés 1781-1787 y declive de encargos después",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "C03",
+  "sujeto_alias": "SUJETO_C03",
+  "person": "Isaac Newton",
+  "fuente": "https://en.wikipedia.org/wiki/Isaac_Newton ; Principia 1687, director de la Casa de la Moneda 1699, presidente Royal Society 1703, muere 1727",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

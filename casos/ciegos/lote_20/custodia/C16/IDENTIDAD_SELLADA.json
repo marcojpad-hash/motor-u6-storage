@@ -1,0 +1,7 @@
+{
+  "case_id": "C16",
+  "sujeto_alias": "SUJETO_C16",
+  "person": "Marco Polo",
+  "fuente": "https://en.wikipedia.org/wiki/Marco_Polo ; llega a China c. 1275, regresa 1295, Il Milione, muere 1324",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

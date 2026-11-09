@@ -1,0 +1,640 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "C01",
+  "started_epoch": 1794183428.950754,
+  "finished_epoch": 1794183442.272592,
+  "duration_seconds": 13.322,
+  "input_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/casos/ciegos/lote_20/C01/entrada.json",
+  "input_sha256": "767c9710672e48f2d93e9816795f54d58d1a02d5fed09ea862f418dbdc835cd0",
+  "normalized_input_sha256": "c27386bcaca5defc6812e8ba273faf9aec118c6037297ffe2185a36dbaca6913",
+  "output_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C01.json",
+  "output_sha256": "7bc61ead0b1204d46f459d85562dea23922ae71764b3fd936a95692bb456ef2a",
+  "runner_path": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/correr_estandar.py",
+  "runner_sha256": "28a287eb15c281a7bb599293bf4178aaaa15625ef5ade4e0ceff558adedb9918",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 6507,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1756_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 900,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1756_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1756_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1089,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1777_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 900,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1777_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 784,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1777_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1781_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1781_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1781_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 625,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "schwartz_07_logro",
+        "porcentaje_relleno": 59.03,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 33.3333,
+          "booker": 47.2222,
+          "dynamis": 83.3333,
+          "estructura": 83.3333,
+          "frye": 50.0,
+          "geometria_inercia": 50.0,
+          "greimas": 83.3333,
+          "otras_dimensiones": 61.1111,
+          "puente_lateral": 60.9492,
+          "resolucion": 41.6667,
+          "trayectoria_estado": 55.0
+        },
+        "peso_relativo": 0.183599,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 59.32
+      },
+      "H2": {
+        "familia": "30_ambicion",
+        "porcentaje_relleno": 54.93,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 16.6667,
+          "booker": 52.7778,
+          "dynamis": 90.0,
+          "estructura": 100.0,
+          "frye": 50.0,
+          "geometria_inercia": 16.6667,
+          "greimas": 77.7778,
+          "otras_dimensiones": 30.5556,
+          "puente_lateral": 71.4201,
+          "resolucion": 41.6667,
+          "trayectoria_estado": 56.6667
+        },
+        "peso_relativo": 0.17693,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 57.43
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "FAILED_OPTIONAL_STAGE",
+      "required": false,
+      "provider": "offline",
+      "query_count": 0,
+      "result_count": 0,
+      "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "7bc61ead0b1204d46f459d85562dea23922ae71764b3fd936a95692bb456ef2a"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "28a287eb15c2"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 109,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C01_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/RESULT_C01_CEB_LEDGER_1.jsonl",
+          "sha256": "376e02b2532622f1e5ffcd59f4d7a49308bbfda8bc67e4399c4dc14f659e5be7",
+          "lineas": 22028
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "FAILED",
+    "provider": "offline",
+    "query_count": 0,
+    "result_count": 0,
+    "attempts": [],
+    "error": "RuntimeError:SEARCH_PROVIDER=offline: búsqueda externa deshabilitada (pruebas sin red)"
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "schwartz_07_logro",
+    "H2": "30_ambicion",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "FRAGIL",
+    "estado_durante_corrida": "RESOLUCION_REQUERIDA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "OPTIONAL_STAGE_FAILED",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 59.03,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 33.3333,
+        "booker": 47.2222,
+        "dynamis": 83.3333,
+        "estructura": 83.3333,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 83.3333,
+        "otras_dimensiones": 61.1111,
+        "puente_lateral": 60.9492,
+        "resolucion": 41.6667,
+        "trayectoria_estado": 55.0
+      },
+      "peso_relativo": 0.183599,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 59.32
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 54.93,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 16.6667,
+        "booker": 52.7778,
+        "dynamis": 90.0,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 16.6667,
+        "greimas": 77.7778,
+        "otras_dimensiones": 30.5556,
+        "puente_lateral": 71.4201,
+        "resolucion": 41.6667,
+        "trayectoria_estado": 56.6667
+      },
+      "peso_relativo": 0.17693,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 57.43
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.4541,
+      "techo_pct": 92.5458,
+      "pp_por_punto_de_rank_fusion": 1.933902,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "eje",
+        "peso_en_set": 0.333831,
+        "predictibilidad_estructural_pct": 59.32,
+        "cobertura_unica_frac": 0.2893
+      },
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "componente",
+        "peso_en_set": 0.246879,
+        "predictibilidad_estructural_pct": 45.81,
+        "cobertura_unica_frac": 0.1356
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.214722,
+        "predictibilidad_estructural_pct": 40.81,
+        "cobertura_unica_frac": 0.2857
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.204568,
+        "predictibilidad_estructural_pct": 39.24,
+        "cobertura_unica_frac": 0.2893
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "schwartz_07_logro con componentes de 30_ambicion (margen 0.844158 < GATE_SEPARATION 1.0; afinidad 0.554006 >= 0.5)",
+      "peso_H1": 0.183599,
+      "peso_H2": 0.17693,
+      "peso_H1_en_par": 0.509249,
+      "peso_H2_en_par": 0.490751
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "eje",
+          "rank_fusion": 26.818763,
+          "soporte_estructural_relativo": 0.25257626,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.291618,
+            "micro": 0.640146,
+            "meso": 0.64864,
+            "macro": 0.64864,
+            "aceleracion": 0.481475,
+            "divergencia_entre_escala": 0.008494,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 25.844476,
+          "soporte_estructural_relativo": 0.24340053,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.346099,
+            "micro": 0.618629,
+            "meso": 0.700259,
+            "macro": 0.700259,
+            "aceleracion": 0.325283,
+            "divergencia_entre_escala": 0.08163,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.833333,
+          "soporte_estructural_relativo": 0.18678823,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.300613,
+            "micro": 0.719584,
+            "meso": 0.615668,
+            "macro": 0.615668,
+            "aceleracion": 0.719584,
+            "divergencia_entre_escala": 0.103916,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.25,
+          "soporte_estructural_relativo": 0.16245867,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.172315,
+            "micro": 0.62802,
+            "meso": 0.565226,
+            "macro": 0.565226,
+            "aceleracion": 0.627771,
+            "divergencia_entre_escala": 0.062794,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.43428,
+          "soporte_estructural_relativo": 0.15477631,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.098063,
+            "micro": 0.578934,
+            "meso": 0.53408,
+            "macro": 0.53408,
+            "aceleracion": 0.589944,
+            "divergencia_entre_escala": 0.044854,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "schwartz_07_logro",
+            "30_ambicion",
+            "eterno_retorno_01_caos_primordial",
+            "social_04_rogers_difusion_innovaciones"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.84522369,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_creador"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.15477631,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "30_ambicion",
+          "eterno_retorno_01_caos_primordial",
+          "social_04_rogers_difusion_innovaciones"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.84522369,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C01",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C01",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 110
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 13,
+          "new_event_records": 80,
+          "new_token_strings": 11,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 121
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C01",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/cbm-repos/motor-u6-storage/motor/runs/ESTANDAR__C01",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 121
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 14,
+          "new_event_records": 146,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 121
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

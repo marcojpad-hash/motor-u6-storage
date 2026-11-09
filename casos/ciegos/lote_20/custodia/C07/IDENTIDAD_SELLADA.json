@@ -1,0 +1,7 @@
+{
+  "case_id": "C07",
+  "sujeto_alias": "SUJETO_C07",
+  "person": "Johannes Kepler",
+  "fuente": "https://en.wikipedia.org/wiki/Johannes_Kepler ; Astronomia Nova 1609, Tablas rudolfinas 1627, muere 1630",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

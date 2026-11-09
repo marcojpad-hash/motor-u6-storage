@@ -1,0 +1,7 @@
+{
+  "case_id": "C04",
+  "sujeto_alias": "SUJETO_C04",
+  "person": "Thomas Edison",
+  "fuente": "https://en.wikipedia.org/wiki/Thomas_Edison ; bombilla 1879, General Electric 1892, muere 1931",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

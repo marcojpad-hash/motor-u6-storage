@@ -1,0 +1,126 @@
+{
+  "case_id": "C07",
+  "question": "¿Qué trayectoria sigue el sujeto tras publicar su obra principal de astronomía nueva?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "1609-01-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1609",
+  "cuts": [
+    {
+      "id": "C1_1600",
+      "corte": "C1_1600",
+      "cut_id": "C1_1600",
+      "date": "1600-01-01",
+      "fecha_corte": "1600-01-01",
+      "hecho": "Llega a Praga como asistente de Tycho Brahe; hereda sus observaciones planetarias precisas.",
+      "P": [
+        [
+          "busqueda_verdad",
+          0.82
+        ],
+        [
+          "conocimiento",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.82
+        ],
+        [
+          "mentoria_activa",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "jerarquia",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1601",
+      "corte": "C2_1601",
+      "cut_id": "C2_1601",
+      "date": "1601-10-24",
+      "fecha_corte": "1601-10-24",
+      "hecho": "Muere Tycho Brahe; el sujeto lo sucede como matemático imperial de Rodolfo II.",
+      "P": [
+        [
+          "responsabilidad",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.75
+        ]
+      ],
+      "A": [
+        [
+          "metodicidad",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.75
+        ],
+        [
+          "presion_social",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C3_1609",
+      "corte": "C3_1609",
+      "cut_id": "C3_1609",
+      "date": "1609-01-01",
+      "fecha_corte": "1609-01-01",
+      "hecho": "Publica Astronomia Nova con las dos primeras leyes del movimiento planetario (órbitas elípticas).",
+      "P": [
+        [
+          "vision",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "teorizacion",
+          0.82
+        ],
+        [
+          "verificacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "desafio_autoridad",
+          0.72
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

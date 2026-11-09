@@ -1,0 +1,126 @@
+{
+  "case_id": "C14",
+  "question": "¿Qué trayectoria sigue el sujeto tras zarpar hacia el oeste buscando una ruta a las Indias?",
+  "tipo_sujeto": "empresario",
+  "freeze": "1492-08-03",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1492",
+  "cuts": [
+    {
+      "id": "C1_1484",
+      "corte": "C1_1484",
+      "cut_id": "C1_1484",
+      "date": "1484-01-01",
+      "fecha_corte": "1484-01-01",
+      "hecho": "Presenta su proyecto a la corte de Portugal; es rechazado y se traslada a Castilla.",
+      "P": [
+        [
+          "vision",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "persuasion",
+          0.78
+        ],
+        [
+          "planificacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "frustracion",
+          0.75
+        ],
+        [
+          "escasez",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1491",
+      "corte": "C2_1491",
+      "cut_id": "C2_1491",
+      "date": "1491-01-01",
+      "fecha_corte": "1491-01-01",
+      "hecho": "Tras años de espera, los Reyes Católicos aceptan financiar la expedición (Capitulaciones de Santa Fe, abr-1492).",
+      "P": [
+        [
+          "persuasion",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.8
+        ],
+        [
+          "reconocimiento",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C3_1492",
+      "corte": "C3_1492",
+      "cut_id": "C3_1492",
+      "date": "1492-08-03",
+      "fecha_corte": "1492-08-03",
+      "hecho": "Zarpa de Palos con tres naves hacia el oeste, buscando una ruta marítima a las Indias.",
+      "P": [
+        [
+          "audacia",
+          0.84
+        ],
+        [
+          "apuesta_extrema",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "vision",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.8
+        ],
+        [
+          "oportunidad",
+          0.82
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

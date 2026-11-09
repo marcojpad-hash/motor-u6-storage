@@ -1,0 +1,7 @@
+{
+  "case_id": "C10",
+  "sujeto_alias": "SUJETO_C10",
+  "person": "Carlomagno",
+  "fuente": "https://en.wikipedia.org/wiki/Charlemagne ; coronado emperador 800, renacimiento carolingio, muere 814",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

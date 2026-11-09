@@ -1,0 +1,126 @@
+{
+  "case_id": "C03",
+  "question": "¿Qué trayectoria sigue el sujeto tras publicar su obra principal de filosofía natural?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "1687-07-05",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1687",
+  "cuts": [
+    {
+      "id": "C1_1665",
+      "corte": "C1_1665",
+      "cut_id": "C1_1665",
+      "date": "1665-08-01",
+      "fecha_corte": "1665-08-01",
+      "hecho": "Annus mirabilis durante la peste: cálculo, óptica y gravitación en Woolsthorpe.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "curiosidad_abstracta",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.84
+        ],
+        [
+          "teorizacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "aislamiento_voluntario",
+          0.7
+        ],
+        [
+          "oportunidad",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C2_1672",
+      "corte": "C2_1672",
+      "cut_id": "C2_1672",
+      "date": "1672-01-11",
+      "fecha_corte": "1672-01-11",
+      "hecho": "Elegido miembro de la Royal Society; presenta su telescopio reflector y su teoría de la luz y el color.",
+      "P": [
+        [
+          "reconocimiento_previo",
+          0.78
+        ],
+        [
+          "conocimiento",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "verificacion",
+          0.8
+        ],
+        [
+          "planificacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.75
+        ],
+        [
+          "rivalidad_profesional",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C3_1687",
+      "corte": "C3_1687",
+      "cut_id": "C3_1687",
+      "date": "1687-07-05",
+      "fecha_corte": "1687-07-05",
+      "hecho": "Publica Philosophiæ Naturalis Principia Mathematica con las leyes del movimiento y la gravitación universal.",
+      "P": [
+        [
+          "vision",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "metodicidad",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "legitimidad_percibida",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

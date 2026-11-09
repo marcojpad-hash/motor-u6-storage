@@ -1,0 +1,7 @@
+{
+  "case_id": "C19",
+  "sujeto_alias": "SUJETO_C19",
+  "person": "Rembrandt van Rijn",
+  "fuente": "https://en.wikipedia.org/wiki/Rembrandt ; Ronda de noche 1642, bancarrota 1656, muere 1669",
+  "nota": "SELLADO. Se revela solo al verificar, después de congelar la salida y el recibo. Nunca va al entrada.json ni lo lee el motor."
+}

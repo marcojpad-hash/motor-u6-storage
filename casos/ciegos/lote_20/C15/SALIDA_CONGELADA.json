@@ -1,0 +1,241 @@
+{
+  "case_id": "C15",
+  "freeze": {
+    "status": "FROZEN",
+    "z_work": "C3_1519",
+    "z_work_kind": "CASE_CUTOFF",
+    "future_accessed_during_freeze": false,
+    "information_boundary": "all input facts/cuts through Z de trabajo only",
+    "z90_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "congelado_utc": "2026-11-09T00:23:32Z",
+  "H1": {
+    "familia": "9_audaz_empresa",
+    "grado": null,
+    "porcentaje_relleno": 63.33,
+    "peso_relativo": 0.304171,
+    "predictibilidad_estructural_pct": 64.8
+  },
+  "H2": {
+    "familia": "kwml_01_rey",
+    "grado": null,
+    "porcentaje_relleno": 59.78,
+    "peso_relativo": 0.237565,
+    "predictibilidad_estructural_pct": 52.09
+  },
+  "set": [
+    "9_audaz_empresa",
+    "kwml_01_rey",
+    "eterno_retorno_01_caos_primordial",
+    "camaleon"
+  ],
+  "escenario_principal": "CONTINUIDAD_ASCENDENTE",
+  "apuesta": {
+    "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+    "escenarios": [
+      {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "kwml_01_rey",
+          "eterno_retorno_01_caos_primordial",
+          "camaleon"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 1.0,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      }
+    ],
+    "apuesta_principal": {
+      "escenario": "CONTINUIDAD_ASCENDENTE",
+      "hipotesis_que_convergen": [
+        "9_audaz_empresa",
+        "kwml_01_rey",
+        "eterno_retorno_01_caos_primordial",
+        "camaleon"
+      ],
+      "n_hipotesis": 4,
+      "soporte_estructural_agregado": 1.0,
+      "es_probabilidad": false,
+      "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+  },
+  "destino_predicho": {
+    "version": "APUESTA_DESTINO_PERSONAL_022_20261024",
+    "can_decide_H": false,
+    "toca_H1_H2": false,
+    "toca_apuesta_tematica": false,
+    "etiquetas_posibles": [
+      "auge",
+      "meseta",
+      "caida",
+      "ruptura"
+    ],
+    "es_probabilidad": false,
+    "fuente_series": "movimiento_de_fondo.series_familias",
+    "umbrales": {
+      "EPS": 0.01,
+      "GRANDE": 0.0592,
+      "NETO_ASC": 0.03,
+      "NETO_DESC": 0.03
+    },
+    "estado": "EJECUTADO",
+    "apuesta": "caida",
+    "porque": "el balance favorable-adverso empeora / lo adverso domina y sube / el eje del sujeto se apaga",
+    "cortes": [
+      "C1_1505",
+      "C2_1517",
+      "C3_1519"
+    ],
+    "series": {
+      "favorable_auge": [
+        0.0395,
+        0.1165,
+        0.1715
+      ],
+      "adverso_caida": [
+        0.0,
+        0.0,
+        0.0401
+      ],
+      "adverso_ruptura": [
+        0.0,
+        0.02,
+        0.0795
+      ],
+      "adverso_total": [
+        0.0,
+        0.02,
+        0.1196
+      ],
+      "balance": [
+        0.0395,
+        0.0965,
+        0.0519
+      ],
+      "eje": [
+        0.0,
+        0.0503,
+        0.1079
+      ]
+    },
+    "senales": {
+      "net_balance_ultimo_tramo": -0.0446,
+      "salto_ruptura": 0.0595,
+      "salto_adverso": 0.0996,
+      "eje": "9_audaz_empresa",
+      "caida_eje_vs_max_previo": 0.0576
+    },
+    "familias_activas_en_Z": {
+      "ruptura": [
+        [
+          "eterno_retorno_01_caos_primordial",
+          0.0601
+        ],
+        [
+          "anacyclosis_06_oclocracia",
+          0.0194
+        ]
+      ],
+      "caida": [
+        [
+          "tainter_03_vulnerabilidad_sistemica",
+          0.0401
+        ]
+      ],
+      "auge": [
+        [
+          "9_audaz_empresa",
+          0.1079
+        ],
+        [
+          "social_04_rogers_difusion_innovaciones",
+          0.0362
+        ],
+        [
+          "schwartz_07_logro",
+          0.0274
+        ]
+      ]
+    },
+    "H_y_apuesta_tematica_intactos": true
+  },
+  "monte_carlo": {
+    "status": "EXECUTED",
+    "engine_observation_calls": 9,
+    "engine_observation_calls_with_mc_metrics": 9,
+    "total_simulations": 4457,
+    "converged_calls": 9,
+    "nonconverged_calls": 0,
+    "calls": [
+      {
+        "observation_id": "C1_1505_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1505_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 625,
+        "converged": true
+      },
+      {
+        "observation_id": "C1_1505_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1517_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 483,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1517_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C2_1517_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 529,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1519_P",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1519_A",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 400,
+        "converged": true
+      },
+      {
+        "observation_id": "C3_1519_C",
+        "enabled_requested": true,
+        "status": "EXECUTED",
+        "simulations": 484,
+        "converged": true
+      }
+    ]
+  },
+  "result_sha256": "e64c4b6f9f75ffb2a4b53e00ff4ec65c6672446bf8901f3a6a01627e73fb26d0",
+  "recibo_status": "COMPLETED",
+  "engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

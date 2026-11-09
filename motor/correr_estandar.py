@@ -25,6 +25,22 @@ MOTOR = ROOT / "motor"
 ENGINE_SHA = "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082"
 PAT_SHA = "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
 
+# Logger estructurado (motor/logger_u6.py). Opcional: si no se puede importar,
+# la corrida sigue exactamente igual (el log nunca rompe el recibo ni el resultado).
+try:
+    from logger_u6 import get_logger as _get_u6_logger
+except Exception:
+    _get_u6_logger = None
+
+
+def _u6_logger(case_id):
+    if _get_u6_logger is None:
+        return None
+    try:
+        return _get_u6_logger(case_id)
+    except Exception:
+        return None
+
 
 def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -568,6 +584,14 @@ def main(argv) -> int:
     case = _envolver(raw, nombre)
     if "random_seed" not in case:
         case["random_seed"] = 0
+    # Logger: inicio de corrida (Engine, catalogo, input). No cambia nada del
+    # comportamiento; si el logger falla, la corrida sigue igual.
+    try:
+        _log = _u6_logger(nombre)
+        if _log is not None:
+            _log.run_start(engine_sha=ENGINE_SHA, patterns_sha=PAT_SHA, input_sha=sha(src))
+    except Exception:
+        pass
 
     # Mandatory package-integrity gate: never run a reconstructed pack with
     # duplicate critical artifacts carrying different bytes.
@@ -651,9 +675,10 @@ def main(argv) -> int:
         for eje in ("P","A","C"):
             for row in c.get(eje) or []:
                 toks.append(row[0] if isinstance(row,(list,tuple)) else row)
-    # PATCH10: no se fabrican fuentes ni recibos de búsqueda. Si el input no trae
-    # fixtures verificables, el motor debe llamar Exa mediante EXA_API_KEY y marcar
-    # el fallo como etapa obligatoria cuando el proveedor no esté configurado.
+    # PATCH10: no se fabrican fuentes ni recibos de búsqueda. La búsqueda de
+    # arquetipos es OPCIONAL y agnóstica (proveedores libres primero; Exa solo
+    # si hay clave, nunca requisito). Sin red ni clave la corrida completa
+    # offline (exit 0); el fallo de búsqueda no es etapa obligatoria.
     result = _run_internal_case_isolated(case, rd, "PRIMARY", timeout_seconds=90)
     if result.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
         print(json.dumps({"ok": False, "stage": "primary_motor_subprocess", "error": result}, ensure_ascii=False))
@@ -775,7 +800,12 @@ def main(argv) -> int:
                             search_receipt.get("provider") not in (None, "provided_fixture", "static_fixture") and
                             int(search_receipt.get("query_count", 0)) >= 1 and
                             int(search_receipt.get("result_count", 0)) >= 1)
-    search_required_failed = bool(search_receipt.get("required") and not search_performed)
+    # La busqueda de arquetipos es OPCIONAL (evidencia lateral): nunca es puerta
+    # de la corrida. El motor es agnostico; Exa es un proveedor opcional mas,
+    # nunca un requisito. Sin red ni clave la corrida completa (exit 0) y el
+    # recibo registra la busqueda como no ejecutada, sin marcar incompleto.
+    search_required_failed = False
+    search_optional_failed = bool(not search_performed and search_receipt.get("status") == "FAILED")
     terminal = result.get("terminal_resolution") or result.get("resolucion_operativa_final") or result.get("resolucion_operativa_terminal_017") or (result.get("prediccion") or {}).get("terminal_resolution") or {}
     receipt = {
         "receipt_version": "EXECUTION_RECEIPT_V1",
@@ -802,7 +832,7 @@ def main(argv) -> int:
             {"stage": "motor_run", "status": "COMPLETED", "monte_carlo": True},
             {"stage": "monte_carlo_diagnostics", **((result.get("motor") or {}).get("monte_carlo_audit") or {"status":"NO_METRICS_RETURNED"})},
             {"stage": "terminal_resolution", "status": terminal.get("status", result.get("estado_final", "OUTPUT_WRITTEN")), "method": terminal.get("method", terminal.get("metodo")), "H1": (result.get("salida_interpretable") or {}).get("H1"), "H2": (result.get("salida_interpretable") or {}).get("H2")},
-            {"stage": "external_archetype_search", "status": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_REQUIRED_STAGE" if search_required_failed else "NOT_VERIFIED"), "required": True, "provider": search_receipt.get("provider"), "query_count": search_receipt.get("query_count", 0), "result_count": search_receipt.get("result_count", 0), **({"error": search_receipt.get("error")} if search_receipt.get("error") is not None else {}), **({"query_sha256": search_receipt.get("query_sha256")} if search_receipt.get("query_sha256") is not None else {})},
+            {"stage": "external_archetype_search", "status": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_OPTIONAL_STAGE" if search_optional_failed else "NOT_VERIFIED"), "required": False, "provider": search_receipt.get("provider"), "query_count": search_receipt.get("query_count", 0), "result_count": search_receipt.get("result_count", 0), **({"error": search_receipt.get("error")} if search_receipt.get("error") is not None else {}), **({"query_sha256": search_receipt.get("query_sha256")} if search_receipt.get("query_sha256") is not None else {})},
             {"stage": "filtro_entrada_dirigida_017", "status": (_f017_traza or {}).get("status", "NO_CONFIGURADO"), "modo": (_f017_traza or {}).get("modo", "off"), "n_aplicadas": (_f017_traza or {}).get("n_aplicadas", 0)},
             {"stage": "consulta_dirigida", "status": "COMPLETED" if _cd_traza is not None else "NO_CONFIGURADO", "modo": _cd_modo, "adaptador": (_cd_traza or {}).get("adaptador"), "n_preguntas": (_cd_traza or {}).get("n_preguntas", 0), "verificacion_no_escribe_H": (_cd_traza or {}).get("verificacion_no_escribe_H")},
             {"stage": "result_json_written", "status": "COMPLETED", "sha256": sha(out)},
@@ -856,7 +886,7 @@ def main(argv) -> int:
         "seconds": round(dt, 3),
         "output": str(out),
         "execution_receipt": str(receipt_path),
-        "archetype_search": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_REQUIRED_STAGE" if search_required_failed else "NOT_VERIFIED"),
+        "archetype_search": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_OPTIONAL_STAGE" if search_optional_failed else "NOT_VERIFIED"),
         "result_missing_paths": _result_missing_paths,
         "result_nonfinite_paths": _result_nonfinite_paths,
         "predictive_validation": result.get("predictive_validation"),
@@ -877,7 +907,21 @@ def main(argv) -> int:
             "resume_contract": "Reabrir input_path, conservar result_path y continuar desde continuidad_corrida.last_valid_cut; ejecutar TORTUGAS/vectorizacion y seguimiento antes de autorizar apuesta final.",
             "result_snapshot": result}, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
         return 6
-    return 3 if search_required_failed else (4 if final_status in ("INCOMPLETE_OUTPUT_DATA", "INCOMPLETE_NONFINITE_OUTPUT") else 5 if final_status == "COMPLETED_WITH_METADATA_GAP" else 0)
+    # La busqueda es opcional: nunca devuelve exit 3. El 3 queda para los
+    # fallos duros (falta Engine/patterns, subprocesso primario fallido).
+    _rc = 4 if final_status in ("INCOMPLETE_OUTPUT_DATA", "INCOMPLETE_NONFINITE_OUTPUT") else 5 if final_status == "COMPLETED_WITH_METADATA_GAP" else 0
+    # Logger: fin de corrida (exit, duracion, H1/H2, recibo). No cambia el exit.
+    try:
+        _log = _u6_logger(nombre)
+        if _log is not None:
+            _si = result.get("salida_interpretable") or {}
+            _log.run_end(returncode=_rc, seconds=round(dt, 3),
+                         h1=(_si.get("H1") or {}).get("familia"),
+                         h2=(_si.get("H2") or {}).get("familia"),
+                         receipt_status=receipt.get("status"))
+    except Exception:
+        pass
+    return _rc
 
 
 if __name__ == "__main__":

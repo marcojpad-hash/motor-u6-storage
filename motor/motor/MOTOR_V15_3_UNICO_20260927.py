@@ -2219,10 +2219,14 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                    "discriminates":cameo703_discriminates})
     transversal=_ceb_stage("plugin_guardia_no_cruce.absorbed", lambda: _run_transversal_guards(case,motor,features), shared=[motor,features])
 
-    # CALDERO SEARCH: mandatory external-search stage; lateral evidence/context only, never writes H1/H2.
+    # CALDERO SEARCH: OPTIONAL external-search stage; lateral evidence/context only, never writes H1/H2.
+    # El motor es AGNOSTICO: la busqueda usa proveedores libres primero (ORDEN_AUTO de
+    # caldero_buscadores: ddgs, ddg, bing, searx, wiki, google; Exa/Brave/Serper/Tavily
+    # solo si hay clave) y nunca es puerta de la corrida. Sin red ni clave corre offline
+    # y la corrida completa (exit 0). Exa es un proveedor opcional mas, nunca un requisito.
     caldero_mod=_load("caldero_search", "sidecar_caldero_busqueda_arquetipos.py")
-    _neighbor_persistence_010b={"status":"SEARCH_NOT_EXECUTED","required":True,"reason":"no result yet"}
-    _caldero_attempt={"required":True,"status":"NOT_RUN","provider":"auto","query_count":0,"result_count":0}
+    _neighbor_persistence_010b={"status":"SEARCH_NOT_EXECUTED","required":False,"reason":"no result yet"}
+    _caldero_attempt={"required":False,"status":"NOT_RUN","provider":"auto","query_count":0,"result_count":0}
     if case.get("_internal_analysis_no_external_search"):
         _caldero_attempt={"required":False,"status":"SKIPPED_INTERNAL_ANALYSIS","provider":"none","query_count":0,"result_count":0,
                           "reason":"subcorrida_interna_para_comparacion_de_corte; la búsqueda externa pertenece a la corrida primaria"}
@@ -2231,7 +2235,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                        "reason":"internal_cut_comparison","feeds_predictor":False,"feeds_H":False,"can_decide_H":False})
     elif caldero_mod is None:
         _caldero_attempt.update({"status":"FAILED","error":"sidecar_missing"})
-        status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":"REQUIRED_STAGE_FAILED","required":True,"reason":"sidecar_missing","feeds_predictor":False,"feeds_H":False,"can_decide_H":False})
+        status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":"OPTIONAL_STAGE_FAILED","required":False,"reason":"sidecar_missing","feeds_predictor":False,"feeds_H":False,"can_decide_H":False})
     else:
         try:
             identity=caldero_mod.SelfMatchIdentity.from_mapping(_case_identity(case))
@@ -2315,7 +2319,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                 return out
             caldero_search=_ceb_stage("sidecar_caldero_busqueda_arquetipos",_do_caldero)
             _provider_receipt=(caldero_search.get("audit") or {}).get("provider_receipt") or getattr(adapter,"last_receipt",{}) or {}
-            _caldero_attempt={"required":True,"status":"EXECUTED" if (_provider_receipt.get("status")=="EXECUTED" and _provider_receipt.get("provider") not in ("static_fixture","provided_fixture")) else "EXECUTED_FIXTURE","provider":_provider_receipt.get("provider") or _caldero_provider,"query_count":int(_provider_receipt.get("query_count",1)),"result_count":int(_provider_receipt.get("result_count",len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []))),"query_sha256":_provider_receipt.get("query_sha256"),"raw_sources":len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []),"self_match_discarded":len((caldero_search.get("audit") or {}).get("discarded_by_self_match") or []),"tokens_after_filter":len(((caldero_search.get("caldero_input") or {}).get("tokens_neighbors") or [])),"z_corte":_z_corte,"corte_temporal":((caldero_search.get("audit") or {}).get("corte_temporal") or {})}
+            _caldero_attempt={"required":False,"status":"EXECUTED" if (_provider_receipt.get("status")=="EXECUTED" and _provider_receipt.get("provider") not in ("static_fixture","provided_fixture")) else "EXECUTED_FIXTURE","provider":_provider_receipt.get("provider") or _caldero_provider,"query_count":int(_provider_receipt.get("query_count",1)),"result_count":int(_provider_receipt.get("result_count",len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []))),"query_sha256":_provider_receipt.get("query_sha256"),"raw_sources":len((caldero_search.get("audit") or {}).get("raw_sources_before_self_match") or []),"self_match_discarded":len((caldero_search.get("audit") or {}).get("discarded_by_self_match") or []),"tokens_after_filter":len(((caldero_search.get("caldero_input") or {}).get("tokens_neighbors") or [])),"z_corte":_z_corte,"corte_temporal":((caldero_search.get("audit") or {}).get("corte_temporal") or {})}
             if _bridge_ignorado is not None: _caldero_attempt["bridge_grabado_ignorado"]=_bridge_ignorado
             for _trace_key in ("bridge_id","tool_name","origin","submitted_query_sha256","provenance_note","query","urls","consultado_utc","selector","attempts","llm"):
                 if _provider_receipt.get(_trace_key) is not None: _caldero_attempt[_trace_key]=_provider_receipt.get(_trace_key)
@@ -2345,12 +2349,12 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             # A5_20261107: el status de la fila es el del recibo (_caldero_attempt).
             # Antes decía EXECUTED siempre, incluso con fixture (EXECUTED_FIXTURE en
             # el recibo); el estado honesto solo vivía en el CEB.
-            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":_caldero_attempt["status"],"required":True,"feeds_predictor":True,"feeds_H":True,"can_decide_H":False,"contributes_to_H":True,"contributes_to_apuesta":True,"role":"lateral_evidence_context","external_search_receipt":_caldero_attempt})
+            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":_caldero_attempt["status"],"required":False,"feeds_predictor":True,"feeds_H":True,"can_decide_H":False,"contributes_to_H":True,"contributes_to_apuesta":True,"role":"lateral_evidence_context","external_search_receipt":_caldero_attempt})
         except Exception as exc:
             _failed_provider_receipt=dict(getattr(locals().get("adapter"),"last_receipt",{}) or {})
-            _caldero_attempt={"required":True,"status":"FAILED","provider":_failed_provider_receipt.get("provider") or _os.environ.get("SEARCH_PROVIDER","auto"),"query_count":int(_failed_provider_receipt.get("query_count",0) or 0),"result_count":int(_failed_provider_receipt.get("result_count",0) or 0),"attempts":_failed_provider_receipt.get("attempts",[]),"error":f"{type(exc).__name__}:{exc}"}
-            features["caldero_busqueda_arquetipos"]={"status":"REQUIRED_STAGE_FAILED","error":_caldero_attempt["error"],"required":True,"can_decide_H":False}
-            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":"REQUIRED_STAGE_FAILED","required":True,"error":_caldero_attempt["error"],"feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"contributes_to_H":False,"contributes_to_apuesta":False})
+            _caldero_attempt={"required":False,"status":"FAILED","provider":_failed_provider_receipt.get("provider") or _os.environ.get("SEARCH_PROVIDER","auto"),"query_count":int(_failed_provider_receipt.get("query_count",0) or 0),"result_count":int(_failed_provider_receipt.get("result_count",0) or 0),"attempts":_failed_provider_receipt.get("attempts",[]),"error":f"{type(exc).__name__}:{exc}"}
+            features["caldero_busqueda_arquetipos"]={"status":"OPTIONAL_STAGE_FAILED","error":_caldero_attempt["error"],"required":False,"can_decide_H":False}
+            status.append({"component":"sidecar_caldero_busqueda_arquetipos.py","status":"OPTIONAL_STAGE_FAILED","required":False,"error":_caldero_attempt["error"],"feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"contributes_to_H":False,"contributes_to_apuesta":False})
     features["external_archetype_search_receipt"]=_caldero_attempt
 
     # MONOMITO + CALDERO: puente lateral explícito.
