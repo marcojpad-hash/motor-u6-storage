@@ -18,6 +18,12 @@ Construir 20 casos independientes que ejecuten el motor bajo el protocolo Z fina
 - Predictibilidad estructural previa.
 - Integridad del freeze y hashes del motor/patrones.
 
+## Qué significa CIEGO (definición, 2026-11-08)
+
+**Ciego significa que el motor NO recibe ningún dato que pueda decirle QUIÉN es el sujeto.** Nada de nombre, nada que identifique a la persona. La identidad va sellada aparte junto con el desenlace y se revela solo al verificar.
+
+Esto NO es el Z90 ni el freeze: el Z90 y el trabajo Z son la metodología (cómo se corta y se congela), no la ceguera. La ceguera es solo la identidad oculta.
+
 ## Reglas de independencia
 
 1. Un case_id único por sujeto/entrada.
