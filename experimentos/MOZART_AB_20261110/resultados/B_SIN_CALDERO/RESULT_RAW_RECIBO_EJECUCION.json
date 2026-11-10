@@ -1,0 +1,735 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
+  "started_epoch": 1794354136.356246,
+  "finished_epoch": 1794354157.077064,
+  "duration_seconds": 20.721,
+  "input_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/input_efectivo.json",
+  "input_sha256": "27b130ae9089a44b004afeeee42339fa0f9e909824a60627584d64b501e4e3a9",
+  "normalized_input_sha256": "58074722cd3d2a24a44fe8c1c3c532be00b0d80f67d6d6b0cb6368ae1b28d661",
+  "output_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/RESULT_RAW.json",
+  "output_sha256": "c2f72ef5f2c4aab1b7ad7542c0790a01fd90f3d12d3760b593fb352d85fdf414",
+  "runner_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/correr_estandar.py",
+  "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 30,
+      "engine_observation_calls_with_mc_metrics": 30,
+      "total_simulations": 18174,
+      "converged_calls": 30,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 887,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 943,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1039,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 946,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1065,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1045,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 848,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1231,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 969,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C10_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1201,
+          "converged": true
+        },
+        {
+          "observation_id": "C10_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        },
+        {
+          "observation_id": "C10_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 400,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "schwartz_10_autodireccion",
+        "porcentaje_relleno": 66.52,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 100.0,
+          "booker": 72.2222,
+          "dynamis": 46.6667,
+          "estructura": 100.0,
+          "frye": 50.0,
+          "geometria_inercia": 41.6667,
+          "greimas": 55.5556,
+          "otras_dimensiones": 60.6061,
+          "puente_lateral": 84.9957,
+          "resolucion": 66.6667,
+          "trayectoria_estado": 53.3333
+        },
+        "peso_relativo": 0.306459,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 61.02
+      },
+      "H2": {
+        "familia": "utopia_mentalidad_liberal",
+        "porcentaje_relleno": 47.88,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 27.7778,
+          "dynamis": 33.3333,
+          "estructura": 0.0,
+          "frye": 50.0,
+          "geometria_inercia": 100.0,
+          "greimas": 55.5556,
+          "otras_dimensiones": 65.1515,
+          "puente_lateral": 51.5013,
+          "resolucion": 83.3333,
+          "trayectoria_estado": 60.0
+        },
+        "peso_relativo": 0.250863,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 51.83
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "duckduckgo_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "50945d16325ada8e03cb572474cdaa0cdb70dacba11df83436f58df44121a9fe"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "c2f72ef5f2c4aab1b7ad7542c0790a01fd90f3d12d3760b593fb352d85fdf414"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "e0ca30df4ff375405c1c0574cd80bec427ae0d04dca2c3509580297382a8ba22",
+      "manifest_files": 317,
+      "deriva": [],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "MATCH"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 109,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/RESULT_RAW_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/RESULT_RAW_CEB_LEDGER_1.jsonl",
+          "sha256": "b5fc3c3b36544a6910d7e9bc2e3d9e305e2b72361c5ddd91039beb39830897eb",
+          "lineas": 20894
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/runner/STINKBOX_PERSISTENTE",
+      "storage": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/runner/STINKBOX_PERSISTENTE",
+      "storage": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "duckduckgo_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "50945d16325ada8e03cb572474cdaa0cdb70dacba11df83436f58df44121a9fe",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 188,
+    "z_corte": "1788-05-04",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1788-05-04",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 188,
+      "tokens_despues_corte": 188
+    },
+    "query": "creatividad aprendizaje conocimiento viaje reconocimiento exploracion_permitida competencia independencia rebeldia audacia desafio_autoridad ambicion logro_personal",
+    "urls": [
+      "https://www.educacionfpydeportes.gob.es/biblioteca-central/blog/2024/mayo/aprendizaje-creativo.html",
+      "https://ocw.uca.es/mod/book/view.php?id=4885&chapterid=62&lang=es",
+      "https://www.wikilibre.org/articulo/creatividad-en-el-aprendizaje",
+      "https://innovacioneducativa.upm.es/sites/default/files/apoyo_profesorado/DESARROLLO-Y-EVALUACION-DE-COMPETENCIAS_creatividad.pdf",
+      "https://educacionbasica.sep.gob.mx/manual-de-creatividad/",
+      "https://www.unesco.org/es/articles/cuando-la-creatividad-transforma-el-aprendizaje-experiencias-de-educacion-cultural-y-artistica-para",
+      "https://www.redalyc.org/journal/1341/134175018009/html/",
+      "https://educacionparacompartir.org/wp-content/uploads/2025/10/UNICEF-Manual-de-creatividad.pdf.pdf"
+    ],
+    "consultado_utc": "2026-11-10T23:42:17+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-10T23:42:17+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-10T23:42:17+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "schwartz_10_autodireccion",
+    "H2": "utopia_mentalidad_liberal",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": false,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_10_autodireccion",
+      "porcentaje_relleno": 66.52,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 100.0,
+        "booker": 72.2222,
+        "dynamis": 46.6667,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 41.6667,
+        "greimas": 55.5556,
+        "otras_dimensiones": 60.6061,
+        "puente_lateral": 84.9957,
+        "resolucion": 66.6667,
+        "trayectoria_estado": 53.3333
+      },
+      "peso_relativo": 0.306459,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.02
+    },
+    "H2": {
+      "familia": "utopia_mentalidad_liberal",
+      "porcentaje_relleno": 47.88,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 27.7778,
+        "dynamis": 33.3333,
+        "estructura": 0.0,
+        "frye": 50.0,
+        "geometria_inercia": 100.0,
+        "greimas": 55.5556,
+        "otras_dimensiones": 65.1515,
+        "puente_lateral": 51.5013,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.250863,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 51.83
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 10.4061,
+      "techo_pct": 89.594,
+      "pp_por_punto_de_rank_fusion": 1.61608,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_10_autodireccion",
+        "rol": "eje",
+        "peso_en_set": 0.400852,
+        "predictibilidad_estructural_pct": 61.02,
+        "cobertura_unica_frac": 0.0
+      },
+      {
+        "familia": "utopia_mentalidad_liberal",
+        "rol": "componente",
+        "peso_en_set": 0.328132,
+        "predictibilidad_estructural_pct": 51.83,
+        "cobertura_unica_frac": 0.2153
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.271016,
+        "predictibilidad_estructural_pct": 44.62,
+        "cobertura_unica_frac": 0.1922
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "schwartz_10_autodireccion con componentes de utopia_mentalidad_liberal (afinidad 0.716073 >= 0.5)",
+      "peso_H1": 0.306459,
+      "peso_H2": 0.250863,
+      "peso_H1_en_par": 0.549878,
+      "peso_H2_en_par": 0.450122
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 3,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "eje",
+          "rank_fusion": 31.316281,
+          "soporte_estructural_relativo": 0.40085169,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.00775,
+            "micro": 0.487736,
+            "meso": 0.495973,
+            "macro": 0.527915,
+            "aceleracion": 0.479212,
+            "divergencia_entre_escala": 0.040179,
+            "n_cortes_observados": 10
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "utopia_mentalidad_liberal",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.635121,
+          "soporte_estructural_relativo": 0.32813225,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.00429,
+            "micro": 0.490401,
+            "meso": 0.496707,
+            "macro": 0.519328,
+            "aceleracion": 0.481342,
+            "divergencia_entre_escala": 0.028927,
+            "n_cortes_observados": 10
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.172956,
+          "soporte_estructural_relativo": 0.27101606,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.076875,
+            "micro": 0.487736,
+            "meso": 0.576071,
+            "macro": 0.551505,
+            "aceleracion": 0.462736,
+            "divergencia_entre_escala": 0.088336,
+            "n_cortes_observados": 10
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "schwartz_10_autodireccion",
+            "utopia_mentalidad_liberal",
+            "30_ambicion"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 1.0,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "schwartz_10_autodireccion",
+          "utopia_mentalidad_liberal",
+          "30_ambicion"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 1.0,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/runner/STINKBOX_PERSISTENTE",
+    "storage": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 170
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 3,
+          "new_event_records": 809,
+          "new_token_strings": 154,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 324
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/runner/STINKBOX_PERSISTENTE",
+    "storage": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 324
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 5,
+          "new_event_records": 644,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 324
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

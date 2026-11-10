@@ -1,0 +1,269 @@
+{
+  "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
+  "question": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
+  "z90_date": "1788-05-04",
+  "protocol": "BIOGRAFIA_Z90_NUEVO_EJERCICIO_WEB_FRESH",
+  "random_seed": 20260930,
+  "provenance": "RECUPERADO_DE_RESULTADO_HISTORICO.features.cuts; no se localizó el input original independiente; diez cortes P/A/C copiados sin reescritura",
+  "cuts": [
+    {
+      "id": "C1",
+      "date": "1759-04-20",
+      "P": [
+        [
+          "creatividad",
+          0.8
+        ],
+        [
+          "aprendizaje",
+          0.74
+        ],
+        [
+          "conocimiento",
+          0.68
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C2",
+      "date": "1762-07-11",
+      "P": [
+        [
+          "viaje",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.8
+        ],
+        [
+          "aprendizaje",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.68
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C3",
+      "date": "1765-10-02",
+      "P": [
+        [
+          "viaje",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "exploracion_permitida",
+          0.66
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C4",
+      "date": "1768-12-23",
+      "P": [
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "viaje",
+          0.72
+        ],
+        [
+          "reconocimiento",
+          0.68
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C5",
+      "date": "1772-03-16",
+      "P": [
+        [
+          "creatividad",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "competencia",
+          0.68
+        ],
+        [
+          "independencia",
+          0.64
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C6",
+      "date": "1775-06-08",
+      "P": [
+        [
+          "viaje",
+          0.8
+        ],
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "independencia",
+          0.76
+        ],
+        [
+          "rebeldia",
+          0.66
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C7",
+      "date": "1778-08-29",
+      "P": [
+        [
+          "viaje",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "independencia",
+          0.8
+        ],
+        [
+          "rebeldia",
+          0.76
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C8",
+      "date": "1781-11-20",
+      "P": [
+        [
+          "rebeldia",
+          0.84
+        ],
+        [
+          "desafio_autoridad",
+          0.8
+        ],
+        [
+          "independencia",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.64
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C9",
+      "date": "1785-02-10",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "independencia",
+          0.82
+        ],
+        [
+          "logro_personal",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.68
+        ]
+      ],
+      "A": [],
+      "C": []
+    },
+    {
+      "id": "C10",
+      "date": "1788-05-04",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ],
+        [
+          "independencia",
+          0.82
+        ],
+        [
+          "rebeldia",
+          0.7
+        ],
+        [
+          "ambicion",
+          0.66
+        ]
+      ],
+      "A": [],
+      "C": []
+    }
+  ],
+  "consolidado_off": [
+    "caldero_memoria"
+  ]
+}
