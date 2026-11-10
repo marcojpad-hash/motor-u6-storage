@@ -73,7 +73,7 @@ def build_without_caldero(rd):
     original_build(rd)
     names=("plugin_circulo_monomito_v2.py","sidecar_caldero_busqueda_arquetipos.py",
            "caldero_II_runner_generico.py","caldero_buscadores.py",
-           "caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py")
+           "caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py","sidecar_polti_caldero.py")
     for name in names:
         for candidate in (Path(rd)/name,Path(rd)/"plugins"/name):
             if candidate.is_file(): candidate.unlink()
@@ -104,7 +104,7 @@ raise SystemExit(runner.main(args))
   "n_cuts":len(case.get("cuts") or []),"z90_date":case.get("z90_date"),
   "random_seed":case.get("random_seed"),"monte_carlo":(raw.get("execution") or {}).get("monte_carlo"),
   "caldero":"ON" if with_caldero else "OFF","caldero_generic_runner_seconds":dt,"engine_seconds":secs,
-  "ablation_removed_files":[] if with_caldero else ["plugin_circulo_monomito_v2.py","sidecar_caldero_busqueda_arquetipos.py","caldero_II_runner_generico.py","caldero_buscadores.py","caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py"],
+  "ablation_removed_files":[] if with_caldero else ["plugin_circulo_monomito_v2.py","sidecar_caldero_busqueda_arquetipos.py","caldero_II_runner_generico.py","caldero_buscadores.py","caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py","sidecar_polti_caldero.py"],
   "python":platform.python_version(),"entrypoint":"motor/correr_estandar.py",
   "motor_sha256":sha(MOTOR/"MOTOR_V15_3_UNICO_20260927.py"),
   "engine_sha256":sha(MOTOR/"Engine_V5_CANONICO_SOLO.py"),
@@ -155,7 +155,7 @@ def main():
  "# Mozart — comparación A/B","",
  "- A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.",
  "- B: mismos cortes, motor y semilla; Caldero II OFF. Se desactivan búsqueda, runner genérico, memoria de vecinos, cuadrantes Monomito y zoom-out Caldero solo en la copia aislada de B.",
- "- Las demás capas y plugins permanecen; sidecar Polti-Caldero se conserva como lente independiente del Caldero II objeto de esta ablación.",
+ "- B desactiva también Polti-Caldero: la ablación excluye todo el conjunto de componentes Caldero, no solo el runner genérico.",
  "- Monte Carlo: ON en ambas.",
  "- Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.",
  "- Z90: 1788-05-04.",
