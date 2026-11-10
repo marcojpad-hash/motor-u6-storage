@@ -56,7 +56,33 @@ def run_variant(label,with_caldero):
  case_file=outdir/"input_efectivo.json"; dump(case_file,case)
  raw_path=outdir/"RESULT_RAW.json"
  env=os.environ.copy(); env["PYTHONHASHSEED"]="0"
- cp,secs=run_cmd([sys.executable,str(ENTRY),str(case_file),label,str(raw_path)],env)
+ if with_caldero:
+  cmd=[sys.executable,str(ENTRY),str(case_file),label,str(raw_path)]
+ else:
+  helper=r"""
+import importlib.util, sys
+from pathlib import Path
+runner_path=sys.argv[1]
+spec=importlib.util.spec_from_file_location("mozart_correr_estandar",runner_path)
+runner=importlib.util.module_from_spec(spec)
+sys.modules[spec.name]=runner
+spec.loader.exec_module(runner)
+original_build=runner._build
+def build_without_caldero(rd):
+    original_build(rd)
+    names=("plugin_circulo_monomito_v2.py","sidecar_caldero_busqueda_arquetipos.py",
+           "caldero_II_runner_generico.py","caldero_buscadores.py",
+           "caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py")
+    for name in names:
+        for candidate in (Path(rd)/name,Path(rd)/"plugins"/name):
+            if candidate.is_file(): candidate.unlink()
+runner._build=build_without_caldero
+args=[runner_path,*sys.argv[2:]]
+sys.argv=args
+raise SystemExit(runner.main(args))
+"""
+  cmd=[sys.executable,"-c",helper,str(ENTRY),str(case_file),label,str(raw_path)]
+ cp,secs=run_cmd(cmd,env)
  (outdir/"stdout.log").write_text(cp.stdout,encoding="utf-8")
  (outdir/"stderr.log").write_text(cp.stderr,encoding="utf-8")
  if cp.returncode!=0 or not raw_path.is_file():
@@ -77,6 +103,7 @@ def run_variant(label,with_caldero):
   "n_cuts":len(case.get("cuts") or []),"z90_date":case.get("z90_date"),
   "random_seed":case.get("random_seed"),"monte_carlo":(raw.get("execution") or {}).get("monte_carlo"),
   "caldero":"ON" if with_caldero else "OFF","caldero_generic_runner_seconds":dt,"engine_seconds":secs,
+  "ablation_removed_files":[] if with_caldero else ["plugin_circulo_monomito_v2.py","sidecar_caldero_busqueda_arquetipos.py","caldero_II_runner_generico.py","caldero_buscadores.py","caldero_zoomout_acero_v0_1.py","vecinos_caldero_neighbor_store.py"],
   "python":platform.python_version(),"entrypoint":"motor/correr_estandar.py",
   "motor_sha256":sha(MOTOR/"MOTOR_V15_3_UNICO_20260927.py"),
   "engine_sha256":sha(MOTOR/"Engine_V5_CANONICO_SOLO.py"),
@@ -126,8 +153,8 @@ def main():
  md=[
  "# Mozart — comparación A/B","",
  "- A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.",
- "- B: mismos cortes, motor y semilla; runner, búsqueda y memoria de vecinos Caldero OFF mediante _internal_analysis_no_external_search y stores aislados.",
- "- El plugin Monomito/Q1-Q4 permanece en ambas como plugin separado que lee los cortes; en B no recibe vecinos de Caldero.",
+ "- B: mismos cortes, motor y semilla; Caldero II OFF. Se desactivan búsqueda, runner genérico, memoria de vecinos, cuadrantes Monomito y zoom-out Caldero solo en la copia aislada de B.",
+ "- Las demás capas y plugins permanecen; sidecar Polti-Caldero se conserva como lente independiente del Caldero II objeto de esta ablación.",
  "- Monte Carlo: ON en ambas.",
  "- Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.",
  "- Z90: 1788-05-04.",
