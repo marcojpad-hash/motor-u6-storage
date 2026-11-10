@@ -3,9 +3,9 @@
  "run_dir": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__A_CON_CALDERO",
  "ledgers": [
   {
-   "original": "/dev/shm/ceb_runs/MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO_1794354586501.flow_ledger.jsonl",
+   "original": "/dev/shm/ceb_runs/MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO_1794354691924.flow_ledger.jsonl",
    "copia": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/RESULT_RAW_CEB_LEDGER_1.jsonl",
-   "sha256": "a9437b0d16edadfefcf984f4e87b61d5ad843c34ea4fa242931c9bad122610a3",
+   "sha256": "dd177153b8aea3bb549a66fa4f4e86805087e3de49399db21c028717e685eae0",
    "bytes": 10137535,
    "lineas": 19861
   }

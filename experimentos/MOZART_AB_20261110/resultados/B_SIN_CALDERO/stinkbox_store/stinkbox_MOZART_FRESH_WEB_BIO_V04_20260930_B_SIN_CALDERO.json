@@ -11,10 +11,10 @@
     "integration_point": "post_freeze_pre_predictor",
     "mutates_canon": false
   },
-  "created_at": 1794354619.6777728,
+  "created_at": 1794354718.8516932,
   "entradas_registradas_011": {
     "585b34a81ee25abba6a7e4b7c89dfa02554845c690bb04bcd61ccccc51113f6e": {
-      "primera_utc": "2026-11-10T23:50:19Z"
+      "primera_utc": "2026-11-10T23:51:58Z"
     }
   },
   "formula10_contradictions": [],
@@ -31,7 +31,7 @@
       "front_id": "utopia_mentalidad_liberal",
       "reason": "H2_separado_gap>=discard_gap",
       "state": "SEPARADO",
-      "timestamp": 1794354620.1587799
+      "timestamp": 1794354719.2456932
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
@@ -44,7 +44,7 @@
       "front_id": null,
       "reason": "informacion_resuelta",
       "state": "DETERMINADO",
-      "timestamp": 1794354620.1587882
+      "timestamp": 1794354719.2457013
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
@@ -67,7 +67,7 @@
       "front_id": null,
       "reason": "cierre_no_resuelto_por_guardianes",
       "state": "LATENTE",
-      "timestamp": 1794354620.268241
+      "timestamp": 1794354719.3440874
     }
   ],
   "pendientes_vivos": [],
@@ -137,7 +137,7 @@
       "kappa_dir": 0.870893506,
       "persist_cos": 0.491471771,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6790211
+      "timestamp": 1794354718.8533645
     },
     {
       "billard_executed": false,
@@ -146,7 +146,7 @@
       "kappa_dir": 0.792944657,
       "persist_cos": 0.609293665,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.679851
+      "timestamp": 1794354718.8544726
     },
     {
       "billard_executed": false,
@@ -155,7 +155,7 @@
       "kappa_dir": 0.986547855,
       "persist_cos": 0.163472719,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6805906
+      "timestamp": 1794354718.8553824
     },
     {
       "billard_executed": false,
@@ -164,7 +164,7 @@
       "kappa_dir": 0.999976181,
       "persist_cos": -0.006901969,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6812966
+      "timestamp": 1794354718.8563802
     },
     {
       "billard_executed": false,
@@ -173,7 +173,7 @@
       "kappa_dir": 0.872015019,
       "persist_cos": 0.489479118,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6819217
+      "timestamp": 1794354718.8573134
     },
     {
       "billard_executed": false,
@@ -182,7 +182,7 @@
       "kappa_dir": 0.998698161,
       "persist_cos": 0.051009637,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6826348
+      "timestamp": 1794354718.858218
     },
     {
       "billard_executed": false,
@@ -191,7 +191,7 @@
       "kappa_dir": 0.898478353,
       "persist_cos": 0.439017824,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.683315
+      "timestamp": 1794354718.8591025
     },
     {
       "billard_executed": false,
@@ -200,8 +200,8 @@
       "kappa_dir": 0.620208336,
       "persist_cos": 0.784437136,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354619.6841536
+      "timestamp": 1794354718.8601024
     }
   ],
-  "updated_at": 1794354620.6708956
+  "updated_at": 1794354719.6694694
 }

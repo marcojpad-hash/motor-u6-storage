@@ -11,10 +11,10 @@
     "integration_point": "post_freeze_pre_predictor",
     "mutates_canon": false
   },
-  "created_at": 1794354631.0435197,
+  "created_at": 1794354727.980365,
   "entradas_registradas_011": {
     "018dbdd0a7f1a1ecb439e247a4aa695e6d95580e7da14220ecae4ac8a9c3fb6e": {
-      "primera_utc": "2026-11-10T23:50:31Z"
+      "primera_utc": "2026-11-10T23:52:07Z"
     }
   },
   "formula10_contradictions": [],
@@ -22,16 +22,16 @@
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
       "detail": {
-        "gap_to_top": 2.563775,
+        "gap_to_top": 2.842648,
         "latest_dX_norm": 0.251976,
-        "rank_fusion": 24.07659,
+        "rank_fusion": 23.797717,
         "rank_pos": 2,
         "seen": 1
       },
       "front_id": "30_ambicion",
       "reason": "H2_separado_gap>=discard_gap",
       "state": "SEPARADO",
-      "timestamp": 1794354631.3919673
+      "timestamp": 1794354728.2634146
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
@@ -39,12 +39,12 @@
         "compuerta": "CIERRE_PERMITIDO",
         "pendientes_bloqueantes": [],
         "top1": "schwartz_10_autodireccion",
-        "top_margin": 2.563775
+        "top_margin": 2.842648
       },
       "front_id": null,
       "reason": "informacion_resuelta",
       "state": "DETERMINADO",
-      "timestamp": 1794354631.3919759
+      "timestamp": 1794354728.2634227
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
@@ -67,7 +67,7 @@
       "front_id": null,
       "reason": "cierre_no_resuelto_por_guardianes",
       "state": "LATENTE",
-      "timestamp": 1794354631.472274
+      "timestamp": 1794354728.3358026
     }
   ],
   "pendientes_vivos": [],
@@ -106,7 +106,7 @@
       "estado": "RESUELTO_OPERACIONALMENTE",
       "front_id": "30_ambicion",
       "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
-      "rank_fusion_observado": 24.07659,
+      "rank_fusion_observado": 23.797717,
       "tokens_signature": [
         "ambicion",
         "aprendizaje",
@@ -137,7 +137,7 @@
       "kappa_dir": 0.870893506,
       "persist_cos": 0.491471771,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0445821
+      "timestamp": 1794354727.9815667
     },
     {
       "billard_executed": false,
@@ -146,7 +146,7 @@
       "kappa_dir": 0.792944657,
       "persist_cos": 0.609293665,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0453107
+      "timestamp": 1794354727.982506
     },
     {
       "billard_executed": false,
@@ -155,7 +155,7 @@
       "kappa_dir": 0.986547855,
       "persist_cos": 0.163472719,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0459847
+      "timestamp": 1794354727.9834576
     },
     {
       "billard_executed": false,
@@ -164,7 +164,7 @@
       "kappa_dir": 0.999976181,
       "persist_cos": -0.006901969,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0466068
+      "timestamp": 1794354727.984312
     },
     {
       "billard_executed": false,
@@ -173,7 +173,7 @@
       "kappa_dir": 0.872015019,
       "persist_cos": 0.489479118,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0472994
+      "timestamp": 1794354727.9853148
     },
     {
       "billard_executed": false,
@@ -182,7 +182,7 @@
       "kappa_dir": 0.998698161,
       "persist_cos": 0.051009637,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0482144
+      "timestamp": 1794354727.9862275
     },
     {
       "billard_executed": false,
@@ -191,8 +191,8 @@
       "kappa_dir": 0.898478353,
       "persist_cos": 0.439017824,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354631.0490255
+      "timestamp": 1794354727.9870443
     }
   ],
-  "updated_at": 1794354631.8198223
+  "updated_at": 1794354728.6135821
 }

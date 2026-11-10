@@ -2,14 +2,14 @@
   "receipt_version": "EXECUTION_RECEIPT_V1",
   "status": "COMPLETED",
   "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
-  "started_epoch": 1794354618.591909,
-  "finished_epoch": 1794354630.178485,
-  "duration_seconds": 11.587,
+  "started_epoch": 1794354717.902099,
+  "finished_epoch": 1794354727.210394,
+  "duration_seconds": 9.308,
   "input_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/input_efectivo.json",
   "input_sha256": "d408a8ddd08cb9fcce0adda7df67b862a931a31afefae812393c6b04f8729365",
   "normalized_input_sha256": "98c23cd06b26e171d468d72a003f5d5efb455cc0aa9ccb8a984a1033084105ba",
   "output_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/RESULT_RAW.json",
-  "output_sha256": "18eb8a709555c54088f6dfb2cb198dc1acbde6a1ad7781934fa4141e347c8227",
+  "output_sha256": "dcb775d6a119a7a26f388ef2ac52caa6cdff71d4174e2101ff8257f7c006d26f",
   "runner_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/correr_estandar.py",
   "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
   "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
@@ -263,7 +263,7 @@
       "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
       "H1": {
         "familia": "schwartz_10_autodireccion",
-        "porcentaje_relleno": 65.01,
+        "porcentaje_relleno": 66.09,
         "desglose_relleno_por_grupo_pct": {
           "acoplamiento": 100.0,
           "booker": 72.2222,
@@ -273,17 +273,17 @@
           "geometria_inercia": 41.6667,
           "greimas": 55.5556,
           "otras_dimensiones": 45.8333,
-          "puente_lateral": 83.1202,
+          "puente_lateral": 94.9945,
           "resolucion": 66.6667,
           "trayectoria_estado": 53.3333
         },
-        "peso_relativo": 0.291135,
+        "peso_relativo": 0.29539,
         "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-        "predictibilidad_estructural_pct": 58.48
+        "predictibilidad_estructural_pct": 59.57
       },
       "H2": {
         "familia": "utopia_mentalidad_liberal",
-        "porcentaje_relleno": 48.7,
+        "porcentaje_relleno": 49.41,
         "desglose_relleno_por_grupo_pct": {
           "acoplamiento": 0.0,
           "booker": 27.7778,
@@ -293,13 +293,13 @@
           "geometria_inercia": 100.0,
           "greimas": 55.5556,
           "otras_dimensiones": 70.8333,
-          "puente_lateral": 54.8675,
+          "puente_lateral": 62.7057,
           "resolucion": 83.3333,
           "trayectoria_estado": 60.0
         },
-        "peso_relativo": 0.254612,
+        "peso_relativo": 0.258333,
         "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-        "predictibilidad_estructural_pct": 52.44
+        "predictibilidad_estructural_pct": 53.4
       }
     },
     {
@@ -327,7 +327,7 @@
     {
       "stage": "result_json_written",
       "status": "COMPLETED",
-      "sha256": "18eb8a709555c54088f6dfb2cb198dc1acbde6a1ad7781934fa4141e347c8227"
+      "sha256": "dcb775d6a119a7a26f388ef2ac52caa6cdff71d4174e2101ff8257f7c006d26f"
     },
     {
       "stage": "unification_manifest_check",
@@ -420,7 +420,7 @@
     },
     "H1": {
       "familia": "schwartz_10_autodireccion",
-      "porcentaje_relleno": 65.01,
+      "porcentaje_relleno": 66.09,
       "desglose_relleno_por_grupo_pct": {
         "acoplamiento": 100.0,
         "booker": 72.2222,
@@ -430,17 +430,17 @@
         "geometria_inercia": 41.6667,
         "greimas": 55.5556,
         "otras_dimensiones": 45.8333,
-        "puente_lateral": 83.1202,
+        "puente_lateral": 94.9945,
         "resolucion": 66.6667,
         "trayectoria_estado": 53.3333
       },
-      "peso_relativo": 0.291135,
+      "peso_relativo": 0.29539,
       "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-      "predictibilidad_estructural_pct": 58.48
+      "predictibilidad_estructural_pct": 59.57
     },
     "H2": {
       "familia": "utopia_mentalidad_liberal",
-      "porcentaje_relleno": 48.7,
+      "porcentaje_relleno": 49.41,
       "desglose_relleno_por_grupo_pct": {
         "acoplamiento": 0.0,
         "booker": 27.7778,
@@ -450,42 +450,42 @@
         "geometria_inercia": 100.0,
         "greimas": 55.5556,
         "otras_dimensiones": 70.8333,
-        "puente_lateral": 54.8675,
+        "puente_lateral": 62.7057,
         "resolucion": 83.3333,
         "trayectoria_estado": 60.0
       },
-      "peso_relativo": 0.254612,
+      "peso_relativo": 0.258333,
       "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-      "predictibilidad_estructural_pct": 52.44
+      "predictibilidad_estructural_pct": 53.4
     },
     "escala_predictibilidad": {
       "nombre": "predictibilidad estructural (soporte interno)",
       "es_probabilidad_calibrada": false,
       "base_pct": 10.4061,
       "techo_pct": 89.594,
-      "pp_por_punto_de_rank_fusion": 1.759731,
+      "pp_por_punto_de_rank_fusion": 1.799725,
       "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
     },
     "hipotesis_necesarias_suficientes": [
       {
         "familia": "schwartz_10_autodireccion",
         "rol": "eje",
-        "peso_en_set": 0.382149,
-        "predictibilidad_estructural_pct": 58.48,
+        "peso_en_set": 0.384038,
+        "predictibilidad_estructural_pct": 59.57,
         "cobertura_unica_frac": 0.0
       },
       {
         "familia": "utopia_mentalidad_liberal",
         "rol": "componente",
-        "peso_en_set": 0.334208,
-        "predictibilidad_estructural_pct": 52.44,
+        "peso_en_set": 0.335859,
+        "predictibilidad_estructural_pct": 53.4,
         "cobertura_unica_frac": 0.2153
       },
       {
         "familia": "30_ambicion",
         "rol": "componente",
-        "peso_en_set": 0.283643,
-        "predictibilidad_estructural_pct": 46.08,
+        "peso_en_set": 0.280103,
+        "predictibilidad_estructural_pct": 46.26,
         "cobertura_unica_frac": 0.1922
       }
     ],
@@ -493,10 +493,10 @@
     "mezcla": {
       "lectura": "H1_CON_COMPONENTES_DE_H2",
       "lectura_texto": "schwartz_10_autodireccion con componentes de utopia_mentalidad_liberal (afinidad 0.716073 >= 0.5)",
-      "peso_H1": 0.291135,
-      "peso_H2": 0.254612,
-      "peso_H1_en_par": 0.533461,
-      "peso_H2_en_par": 0.466539
+      "peso_H1": 0.29539,
+      "peso_H2": 0.258333,
+      "peso_H1_en_par": 0.533462,
+      "peso_H2_en_par": 0.466538
     },
     "grado": "AJUSTADA",
     "conjunto_hipotesis_abiertas": {
@@ -508,7 +508,7 @@
           "familia": "schwartz_10_autodireccion",
           "rol_en_set": "eje",
           "rank_fusion": 27.316281,
-          "soporte_estructural_relativo": 0.38214928,
+          "soporte_estructural_relativo": 0.38403766,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.00775,
@@ -525,7 +525,7 @@
           "familia": "utopia_mentalidad_liberal",
           "rol_en_set": "componente",
           "rank_fusion": 23.889397,
-          "soporte_estructural_relativo": 0.33420786,
+          "soporte_estructural_relativo": 0.33585934,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.00429,
@@ -541,8 +541,8 @@
           "id": "H_003",
           "familia": "30_ambicion",
           "rol_en_set": "componente",
-          "rank_fusion": 20.274977,
-          "soporte_estructural_relativo": 0.28364285,
+          "rank_fusion": 19.923495,
+          "soporte_estructural_relativo": 0.280103,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.076875,
@@ -568,7 +568,7 @@
             "30_ambicion"
           ],
           "n_hipotesis": 3,
-          "soporte_estructural_agregado": 0.99999999,
+          "soporte_estructural_agregado": 1.0,
           "es_probabilidad": false,
           "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
         }
@@ -581,7 +581,7 @@
           "30_ambicion"
         ],
         "n_hipotesis": 3,
-        "soporte_estructural_agregado": 0.99999999,
+        "soporte_estructural_agregado": 1.0,
         "es_probabilidad": false,
         "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
       },

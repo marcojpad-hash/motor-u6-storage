@@ -1,6 +1,6 @@
 {
   "run_id": "B_SIN_CALDERO",
-  "timestamp_utc": "2026-11-10T23:50:42Z",
+  "timestamp_utc": "2026-11-10T23:52:16Z",
   "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
   "input_case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
   "input_provenance": "RECUPERADO_DE_RESULTADO_HISTORICO.features.cuts; no se localizó el input original independiente; diez cortes P/A/C copiados sin reescritura",
@@ -10,14 +10,15 @@
   "monte_carlo": true,
   "caldero": "OFF",
   "caldero_generic_runner_seconds": 0.0,
-  "engine_seconds": 24.746,
+  "engine_seconds": 19.433,
   "ablation_removed_files": [
     "plugin_circulo_monomito_v2.py",
     "sidecar_caldero_busqueda_arquetipos.py",
     "caldero_II_runner_generico.py",
     "caldero_buscadores.py",
     "caldero_zoomout_acero_v0_1.py",
-    "vecinos_caldero_neighbor_store.py"
+    "vecinos_caldero_neighbor_store.py",
+    "sidecar_polti_caldero.py"
   ],
   "python": "3.11.18",
   "entrypoint": "motor/correr_estandar.py",
@@ -28,9 +29,9 @@
   "caldero_runner_sha256": "14c0a8130f3951c1fd0e8139bbba8d7a572b4ddebe1e1083767da2b7a4c8f9f7",
   "caldero_sidecar_sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
   "input_sha256": "d408a8ddd08cb9fcce0adda7df67b862a931a31afefae812393c6b04f8729365",
-  "raw_sha256": "18eb8a709555c54088f6dfb2cb198dc1acbde6a1ad7781934fa4141e347c8227",
-  "trace_core_sha256": "f75616d51edde00dde053d3dc3cd32156c2cdc516e2d5753c1e172d5bca5ffa0",
-  "trace_plugins_sha256": "73b54b0a71a857790166a57d7f6b55365f5c662ecd56f7e18250dc5bd283c505",
+  "raw_sha256": "dcb775d6a119a7a26f388ef2ac52caa6cdff71d4174e2101ff8257f7c006d26f",
+  "trace_core_sha256": "0f8761de9b89c95ed41971be938343f4a68a06a4f8b766aeabe3541b3c02fbf4",
+  "trace_plugins_sha256": "1612002ac5ed969bbc09d0db20256ce3961e74f47bd60a9ae29f0643ac367b06",
   "component_status": [
     {
       "component": "geometria",
@@ -41,17 +42,6 @@
       "feeds_predictor_declarado": false,
       "llega_verificado": [],
       "reason": "su salida no nombra ningún candidato del top: el puente no llega"
-    },
-    {
-      "component": "polti_caldero",
-      "status": "EXECUTED",
-      "feeds_predictor": true,
-      "feeds_predictor_declarado": true,
-      "llega_verificado": [
-        "H(rank_fusion:señal_lateral)"
-      ],
-      "declaracion_U6": "ACTIVA",
-      "reason": "llega a H"
     },
     {
       "component": "traza_campo_244",
@@ -546,8 +536,8 @@
     },
     {
       "component": "hub:marco_7783_geometria",
-      "status": "HUB_ACTIVA",
-      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+      "status": "HUB_ACTIVA_MUDA",
+      "reason": "PATCH009: sin variación de zona, sin cuadrante/Polti y sin intersecciones en este caso; PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 0/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -821,7 +811,7 @@
       "rewrites_apuesta": false,
       "role": "adversarial_iterative_review_mayeutica_dialectica",
       "n_attacks": 8,
-      "n_real_counterfactual_rankings": 47,
+      "n_real_counterfactual_rankings": 46,
       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
       "decision_de_proceso": "CONCLUSION_OPERACIONAL_CERRADA_CON_TRAZABILIDAD"
     },
@@ -920,13 +910,13 @@
   },
   "status_counts": {
     "ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1,
-    "EXECUTED": 47,
+    "EXECUTED": 46,
     "EXECUTED_DIAGNOSTIC": 1,
     "EXECUTED_SIN_HALLAZGOS": 1,
     "EXECUTED_SIN_SENAL": 3,
     "EXECUTED_WITH_CONCLUSION": 1,
-    "HUB_ACTIVA": 3,
-    "HUB_ACTIVA_MUDA": 3,
+    "HUB_ACTIVA": 2,
+    "HUB_ACTIVA_MUDA": 4,
     "NOT_APPLICABLE": 1,
     "NOT_AVAILABLE": 1,
     "PLUGIN_SALTADO": 3,
@@ -940,8 +930,8 @@
     "grado": "AJUSTADA",
     "metodo_cierre": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
     "fuente_020": "orden del motor (rank_fusion); tortugas/casos semejantes desempatan solo en banda",
-    "peso_relativo": 0.291135,
-    "porcentaje_relleno": 65.01,
+    "peso_relativo": 0.29539,
+    "porcentaje_relleno": 66.09,
     "porcentaje_relleno_estado": "MEDIDO",
     "unidad_porcentaje": "% de relleno estructural equilibrado; TORTUGAS indica medida no disponible",
     "desglose_relleno_por_grupo_pct": {
@@ -953,7 +943,7 @@
       "geometria_inercia": 41.6667,
       "greimas": 55.5556,
       "otras_dimensiones": 45.8333,
-      "puente_lateral": 83.1202,
+      "puente_lateral": 94.9945,
       "resolucion": 66.6667,
       "trayectoria_estado": 53.3333
     },
@@ -968,8 +958,8 @@
     "grado": "AJUSTADA",
     "metodo_cierre": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
     "fuente_020": "orden del motor (rank_fusion); tortugas/casos semejantes desempatan solo en banda",
-    "peso_relativo": 0.254612,
-    "porcentaje_relleno": 48.7,
+    "peso_relativo": 0.258333,
+    "porcentaje_relleno": 49.41,
     "porcentaje_relleno_estado": "MEDIDO",
     "unidad_porcentaje": "% de relleno estructural equilibrado; TORTUGAS indica medida no disponible",
     "desglose_relleno_por_grupo_pct": {
@@ -981,7 +971,7 @@
       "geometria_inercia": 100.0,
       "greimas": 55.5556,
       "otras_dimensiones": 70.8333,
-      "puente_lateral": 54.8675,
+      "puente_lateral": 62.7057,
       "resolucion": 83.3333,
       "trayectoria_estado": 60.0
     },

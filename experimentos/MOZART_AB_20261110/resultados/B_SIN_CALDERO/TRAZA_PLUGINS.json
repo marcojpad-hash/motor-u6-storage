@@ -11,17 +11,6 @@
       "reason": "su salida no nombra ningún candidato del top: el puente no llega"
     },
     {
-      "component": "polti_caldero",
-      "status": "EXECUTED",
-      "feeds_predictor": true,
-      "feeds_predictor_declarado": true,
-      "llega_verificado": [
-        "H(rank_fusion:señal_lateral)"
-      ],
-      "declaracion_U6": "ACTIVA",
-      "reason": "llega a H"
-    },
-    {
       "component": "traza_campo_244",
       "status": "EXECUTED",
       "feeds_predictor": true,
@@ -514,8 +503,8 @@
     },
     {
       "component": "hub:marco_7783_geometria",
-      "status": "HUB_ACTIVA",
-      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+      "status": "HUB_ACTIVA_MUDA",
+      "reason": "PATCH009: sin variación de zona, sin cuadrante/Polti y sin intersecciones en este caso; PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 0/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -789,7 +778,7 @@
       "rewrites_apuesta": false,
       "role": "adversarial_iterative_review_mayeutica_dialectica",
       "n_attacks": 8,
-      "n_real_counterfactual_rankings": 47,
+      "n_real_counterfactual_rankings": 46,
       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
       "decision_de_proceso": "CONCLUSION_OPERACIONAL_CERRADA_CON_TRAZABILIDAD"
     },
@@ -873,10 +862,10 @@
     },
     {
       "component": "sidecar_polti_caldero.py",
-      "present": true,
-      "sha256": "f72dbdaa37fe91f789de71e5317035a51bc2ca7accf663ca9bfb7d21b38ff4ff",
+      "present": false,
       "role": "core_or_executable",
-      "location": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/sidecar_polti_caldero.py"
+      "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+      "location_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
     },
     {
       "component": "plugin_otto_numinoso.py",
@@ -1224,13 +1213,13 @@
         0.1796738990504742
       ],
       "persist_cos": [
-        0.49147177107715917,
+        0.4914717710771592,
         0.6092936652624409,
-        0.16347271871301808,
-        -0.006901968610675169,
-        0.48947911838861036,
+        0.1634727187130181,
+        -0.006901968610675172,
+        0.4894791183886104,
         0.051009636778204324,
-        0.4390178241138929,
+        0.439017824113893,
         0.784437135621273
       ],
       "kappa_dir": [
@@ -1240,7 +1229,7 @@
         0.9999761811309793,
         0.8720150185985954,
         0.9986981610855983,
-        0.8984783526108479,
+        0.8984783526108477,
         0.620208336172848
       ],
       "aceleracion_dX": [
@@ -1257,872 +1246,6 @@
       "persist_ultima": 0.784437135621273,
       "kappa_ultimo": 0.620208336172848,
       "lectura": "Hay trayectoria medible."
-    },
-    "polti_caldero": {
-      "sidecar": "polti_caldero",
-      "entrada": "motor_out.cuts + R732",
-      "dataset_hardcode": false,
-      "Alimenta_H": "NO",
-      "escribe_H": false,
-      "polti_por_corte": [
-        {
-          "corte": "C1",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C2",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C3",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C4",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C5",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C6",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C7",
-          "P": [],
-          "A": [],
-          "C": [],
-          "union": []
-        },
-        {
-          "corte": "C8",
-          "P": [
-            [
-              "30_ambicion",
-              0.7796
-            ]
-          ],
-          "A": [],
-          "C": [],
-          "union": [
-            [
-              "30_ambicion",
-              0.7796
-            ]
-          ]
-        },
-        {
-          "corte": "C9",
-          "P": [
-            [
-              "30_ambicion",
-              0.7984
-            ]
-          ],
-          "A": [],
-          "C": [],
-          "union": [
-            [
-              "30_ambicion",
-              0.7984
-            ]
-          ]
-        },
-        {
-          "corte": "C10",
-          "P": [
-            [
-              "30_ambicion",
-              0.7892
-            ]
-          ],
-          "A": [],
-          "C": [],
-          "union": [
-            [
-              "30_ambicion",
-              0.7892
-            ]
-          ]
-        }
-      ],
-      "arquetipos_por_corte": [
-        {
-          "corte": "C1",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.6705
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.5569
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.6705
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.5569
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C2",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7845
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7845
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C3",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7915
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7915
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C4",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7931
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.6541
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7931
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.6541
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C5",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7845
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.688
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7845
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.688
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C6",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7921
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7921
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C7",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.8014
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.8014
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C8",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.792
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.792
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C9",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7984
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7984
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        },
-        {
-          "corte": "C10",
-          "P": [
-            [
-              "arquetipo_el_creador",
-              0.7892
-            ]
-          ],
-          "A": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "C": [
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ],
-          "union": [
-            [
-              "arquetipo_el_creador",
-              0.7892
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ],
-            [
-              "arquetipo_heroe",
-              0.5
-            ]
-          ]
-        }
-      ],
-      "transicion": [
-        {
-          "tramo": "C1→C2",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_sabio",
-                "p_de": 0.5569,
-                "p_a": 0.0,
-                "d": -0.5569
-              },
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.6705,
-                "p_a": 0.7845,
-                "d": 0.114
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_creador"
-            ],
-            "baja": [
-              "arquetipo_el_sabio"
-            ]
-          }
-        },
-        {
-          "tramo": "C2→C3",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7845,
-                "p_a": 0.7915,
-                "d": 0.007
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_creador"
-            ],
-            "baja": []
-          }
-        },
-        {
-          "tramo": "C3→C4",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_explorador",
-                "p_de": 0.0,
-                "p_a": 0.6541,
-                "d": 0.6541
-              },
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7915,
-                "p_a": 0.7931,
-                "d": 0.0016
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_explorador",
-              "arquetipo_el_creador"
-            ],
-            "baja": []
-          }
-        },
-        {
-          "tramo": "C4→C5",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_sabio",
-                "p_de": 0.0,
-                "p_a": 0.688,
-                "d": 0.688
-              },
-              {
-                "h": "arquetipo_el_explorador",
-                "p_de": 0.6541,
-                "p_a": 0.0,
-                "d": -0.6541
-              },
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7931,
-                "p_a": 0.7845,
-                "d": -0.0086
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_sabio"
-            ],
-            "baja": [
-              "arquetipo_el_explorador",
-              "arquetipo_el_creador"
-            ]
-          }
-        },
-        {
-          "tramo": "C5→C6",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_sabio",
-                "p_de": 0.688,
-                "p_a": 0.0,
-                "d": -0.688
-              },
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7845,
-                "p_a": 0.7921,
-                "d": 0.0076
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_creador"
-            ],
-            "baja": [
-              "arquetipo_el_sabio"
-            ]
-          }
-        },
-        {
-          "tramo": "C6→C7",
-          "polti": {
-            "movimiento": [],
-            "sube": [],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7921,
-                "p_a": 0.8014,
-                "d": 0.0093
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_creador"
-            ],
-            "baja": []
-          }
-        },
-        {
-          "tramo": "C7→C8",
-          "polti": {
-            "movimiento": [
-              {
-                "h": "30_ambicion",
-                "p_de": 0.0,
-                "p_a": 0.7796,
-                "d": 0.7796
-              }
-            ],
-            "sube": [
-              "30_ambicion"
-            ],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.8014,
-                "p_a": 0.792,
-                "d": -0.0094
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [],
-            "baja": [
-              "arquetipo_el_creador"
-            ]
-          }
-        },
-        {
-          "tramo": "C8→C9",
-          "polti": {
-            "movimiento": [
-              {
-                "h": "30_ambicion",
-                "p_de": 0.7796,
-                "p_a": 0.7984,
-                "d": 0.0188
-              }
-            ],
-            "sube": [
-              "30_ambicion"
-            ],
-            "baja": []
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.792,
-                "p_a": 0.7984,
-                "d": 0.0064
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [
-              "arquetipo_el_creador"
-            ],
-            "baja": []
-          }
-        },
-        {
-          "tramo": "C9→C10",
-          "polti": {
-            "movimiento": [
-              {
-                "h": "30_ambicion",
-                "p_de": 0.7984,
-                "p_a": 0.7892,
-                "d": -0.0092
-              }
-            ],
-            "sube": [],
-            "baja": [
-              "30_ambicion"
-            ]
-          },
-          "arquetipos": {
-            "movimiento": [
-              {
-                "h": "arquetipo_el_creador",
-                "p_de": 0.7984,
-                "p_a": 0.7892,
-                "d": -0.0092
-              },
-              {
-                "h": "arquetipo_heroe",
-                "p_de": 0.5,
-                "p_a": 0.5,
-                "d": 0.0
-              }
-            ],
-            "sube": [],
-            "baja": [
-              "arquetipo_el_creador"
-            ]
-          }
-        }
-      ],
-      "proyeccion": {
-        "nota": "Proyección = inercia del último tablero Polti/arquetipo. No es H.",
-        "polti_persistentes": [
-          "30_ambicion"
-        ],
-        "arquetipos_persistentes": [
-          "arquetipo_el_creador",
-          "arquetipo_heroe",
-          "arquetipo_heroe"
-        ],
-        "dX_norm": [
-          0.23064127991320196,
-          0.18354816806495242,
-          0.16036099899913323,
-          0.16953536504222352,
-          0.18424483710541253,
-          0.3209190084741008,
-          0.4561873737840626,
-          0.25197555436986346,
-          0.1796738990504742
-        ],
-        "persist_cos": [
-          0.49147177107715917,
-          0.6092936652624409,
-          0.16347271871301808,
-          -0.006901968610675169,
-          0.48947911838861036,
-          0.051009636778204324,
-          0.4390178241138929,
-          0.784437135621273
-        ],
-        "kappa_dir": [
-          0.8708935056792423,
-          0.792944657256142,
-          0.9865478550159513,
-          0.9999761811309793,
-          0.8720150185985954,
-          0.9986981610855983,
-          0.8984783526108479,
-          0.620208336172848
-        ],
-        "n_cuts": 10
-      },
-      "convergencia": {
-        "en_tubo_y_polti": [
-          "30_ambicion"
-        ],
-        "en_tubo_y_arquetipo": [
-          "arquetipo_el_creador",
-          "arquetipo_heroe",
-          "arquetipo_heroe"
-        ],
-        "solo_polti_visible": [
-          "30_ambicion"
-        ],
-        "solo_arquetipo_visible": [
-          "arquetipo_el_creador",
-          "arquetipo_heroe",
-          "arquetipo_heroe"
-        ]
-      },
-      "uso": "Señales para formular H. No son H."
     },
     "traza_campo_244": {
       "modulo": "TRAZA_CAMPO_244_V2",
@@ -42962,19 +42085,19 @@
           0.1796738990504742
         ],
         "persistence_cosine": [
-          0.4914717710887686,
+          0.49147177108876866,
           0.6092936652831412,
-          0.163472718719031,
-          -0.00690196861089613,
-          0.4894791183968887,
+          0.16347271871903102,
+          -0.006901968610896134,
+          0.48947911839688873,
           0.051009636778552754,
-          0.4390178241177122,
+          0.4390178241177123,
           0.7844371356385997
         ],
         "kappa_dir": [
           0.8708935056726907,
           0.7929446572402361,
-          0.986547855014955,
+          0.9865478550149549,
           0.9999761811309779,
           0.8720150185939486,
           0.9986981610855805,
@@ -42984,12 +42107,12 @@
         "kappa_ext": [
           3.0049761357722264,
           3.774344362410555,
-          6.504006342092243,
+          6.504006342092244,
           6.410093596183172,
           8.243824783037336,
           4.423709785100559,
-          1.0878762752607405,
-          1.7551157879722177
+          1.0878762752607407,
+          1.7551157879722181
         ],
         "zero_velocity_count": 0
       },
@@ -43026,7 +42149,7 @@
       "matrices_sha16": {
         "pattern_pairwise_distance": "520c51326eb34ca7",
         "pattern_velocity_cosine": "d7b8d8f4186fbc09",
-        "P_delta_correlation": "fec0e6079fd2acb7"
+        "P_delta_correlation": "f889178bf4db6c3b"
       },
       "prospective_baselines": {
         "PERSISTENCE": {
@@ -44260,7 +43383,7 @@
           ],
           "n_desempates": 0,
           "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-          "actualizado_ts": 1794354619.6012924,
+          "actualizado_ts": 1794354718.7846537,
           "Alimenta_H": "NO"
         },
         "candados": {
@@ -53393,7 +52516,7 @@
               ],
               "n_desempates": 0,
               "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-              "actualizado_ts": 1794354619.9128296,
+              "actualizado_ts": 1794354719.0466223,
               "Alimenta_H": "NO"
             }
           },
@@ -53554,7 +52677,7 @@
                 ],
                 "n_desempates": 0,
                 "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-                "actualizado_ts": 1794354619.9232774,
+                "actualizado_ts": 1794354719.0563464,
                 "Alimenta_H": "NO"
               },
               "interpretacion": "La etiqueta del corte no es sentencia. Si queda ~50%/litote → LATENCIA y se sigue tomando datos; décimo hombre si empata; si no se desempató → almacenar."
@@ -53880,7 +53003,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -53929,7 +53051,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C2",
@@ -53972,7 +53095,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54021,7 +53143,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C3",
@@ -54064,7 +53187,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54113,7 +53235,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C4",
@@ -54156,7 +53279,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54205,7 +53327,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C5",
@@ -54248,7 +53371,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54297,7 +53419,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C6",
@@ -54340,7 +53463,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54389,7 +53511,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C7",
@@ -54432,7 +53555,6 @@
               "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
               "vector": [
                 0,
                 0,
@@ -54481,7 +53603,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C8",
@@ -54522,16 +53645,8 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "polti_activas": [
-                [
-                  "30_ambicion",
-                  0.7796
-                ]
-              ],
-              "polti_idx": [
-                30
-              ],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
+              "polti_activas": [],
+              "polti_idx": [],
               "vector": [
                 0,
                 0,
@@ -54572,7 +53687,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -54580,7 +53695,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C9",
@@ -54621,16 +53737,8 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "polti_activas": [
-                [
-                  "30_ambicion",
-                  0.7984
-                ]
-              ],
-              "polti_idx": [
-                30
-              ],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
+              "polti_activas": [],
+              "polti_idx": [],
               "vector": [
                 0,
                 0,
@@ -54671,7 +53779,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -54679,7 +53787,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C10",
@@ -54720,16 +53829,8 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "polti_activas": [
-                [
-                  "30_ambicion",
-                  0.7892
-                ]
-              ],
-              "polti_idx": [
-                30
-              ],
-              "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
+              "polti_activas": [],
+              "polti_idx": [],
               "vector": [
                 0,
                 0,
@@ -54770,7 +53871,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -54778,7 +53879,8 @@
                 0,
                 0
               ],
-              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+              "polti_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             }
           ],
           "deltas": [
@@ -55241,9 +54343,7 @@
               "revisita_zona": false,
               "cuadrante_entra": [],
               "cuadrante_sale": [],
-              "polti_entra": [
-                "30_ambicion"
-              ],
+              "polti_entra": [],
               "polti_sale": [],
               "delta_vector": [
                 0,
@@ -55285,7 +54385,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55293,7 +54393,7 @@
                 0,
                 0
               ],
-              "delta_L1": 1
+              "delta_L1": 0
             },
             {
               "de": "C8",
@@ -55487,8 +54587,8 @@
             ],
             "pares_en_cumulo_conteo": {},
             "cortes_con_cuadrante": 0,
-            "cortes_con_polti": 3,
-            "delta_L1_medio": 0.1111,
+            "cortes_con_polti": 0,
+            "delta_L1_medio": 0.0,
             "calor_en_caso": {
               "0": 10
             }
@@ -55769,18 +54869,18 @@
               {
                 "corte": "C8",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
                   "caldero": false,
-                  "polti": true,
+                  "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
                   "caldero": 0.0,
-                  "polti": 1.0,
+                  "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
@@ -55789,11 +54889,8 @@
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "polti": [
-                    0.34202,
-                    -0.939693
-                  ],
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "intersecciones": {},
@@ -55807,31 +54904,28 @@
               {
                 "corte": "C9",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
                   "caldero": false,
-                  "polti": true,
+                  "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
                   "caldero": 0.0,
-                  "polti": 1.0,
+                  "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "polti": 0.0,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "polti": [
-                    0.34202,
-                    -0.939693
-                  ],
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "intersecciones": {},
@@ -55845,31 +54939,28 @@
               {
                 "corte": "C10",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
                   "caldero": false,
-                  "polti": true,
+                  "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
                   "caldero": 0.0,
-                  "polti": 1.0,
+                  "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "polti": 0.0,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "polti": [
-                    0.34202,
-                    -0.939693
-                  ],
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "intersecciones": {},
@@ -55891,11 +54982,11 @@
                 "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               "polti": {
-                "omega_media": 0.0,
-                "omega_abs_media": 0.0,
-                "pasos_quietos": 2,
+                "pasos_quietos": 0,
                 "pasos_con_giro": 0,
-                "cortes_con_dato": 3,
+                "cortes_con_dato": 0,
+                "omega_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "omega_abs_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               "souriau": {
@@ -56006,12 +55097,8 @@
                   "z_indice": 7,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "polti": [
-                      0.34202,
-                      -0.939693,
-                      0.0
-                    ],
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -56021,12 +55108,8 @@
                   "z_indice": 8,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "polti": [
-                      0.34202,
-                      -0.939693,
-                      0.0
-                    ],
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -56036,12 +55119,8 @@
                   "z_indice": 9,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "polti": [
-                      0.34202,
-                      -0.939693,
-                      0.0
-                    ],
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -56130,21 +55209,21 @@
                   },
                   {
                     "cut_id": "C8",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C9",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C10",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
@@ -56158,7 +55237,7 @@
             "lector": "billar_circular_convergencia_v0_2.convergencias_v2 (sin editar; adaptador de trayectorias en el hub)",
             "n_convergencias": 0,
             "diag": {
-              "excluded_both_empty_convergences": 24,
+              "excluded_both_empty_convergences": 30,
               "one_empty_counted": 0,
               "both_present_vivo": 0
             },
@@ -56173,8 +55252,8 @@
           "fuentes": {
             "funciones": "marco_funciones_souriau.distribuir(cuts) modo=personajes_016",
             "zona": "marco_7783.zona_de",
-            "polti": "features.polti_caldero",
-            "cuadrante_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+            "cuadrante_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+            "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
           },
           "destinos": [
             "laterales_unico.sensores_pre.marco_7783_geometria (detalle)",
@@ -56746,12 +55825,10 @@
                   0
                 ],
                 "cuadrantes": [],
-                "polti_idx": [
-                  30
-                ],
+                "polti_idx": [],
                 "fase_anillos": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -56775,12 +55852,10 @@
                   0
                 ],
                 "cuadrantes": [],
-                "polti_idx": [
-                  30
-                ],
+                "polti_idx": [],
                 "fase_anillos": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -56804,12 +55879,10 @@
                   0
                 ],
                 "cuadrantes": [],
-                "polti_idx": [
-                  30
-                ],
+                "polti_idx": [],
                 "fase_anillos": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -56929,11 +56002,9 @@
                 "revisita": false,
                 "cuadrante_entra": [],
                 "cuadrante_sale": [],
-                "polti_entra": [
-                  "30_ambicion"
-                ],
+                "polti_entra": [],
                 "polti_sale": [],
-                "delta_L1": 1
+                "delta_L1": 0
               },
               {
                 "de": "C8",
@@ -57013,8 +56084,8 @@
               ],
               "pares_en_cumulo_conteo": {},
               "cortes_con_cuadrante": 0,
-              "cortes_con_polti": 3,
-              "delta_L1_medio": 0.1111,
+              "cortes_con_polti": 0,
+              "delta_L1_medio": 0.0,
               "calor_en_caso": {
                 "0": 10
               }
@@ -57157,8 +56228,8 @@
                 {
                   "corte": "C8",
                   "fase": {
-                    "polti": 5.061455,
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
@@ -57176,13 +56247,13 @@
                 {
                   "corte": "C9",
                   "fase": {
-                    "polti": 5.061455,
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "polti": 0.0,
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "vector_interseccion": [
@@ -57195,13 +56266,13 @@
                 {
                   "corte": "C10",
                   "fase": {
-                    "polti": 5.061455,
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "polti": 0.0,
                     "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "vector_interseccion": [
@@ -57222,11 +56293,11 @@
                   "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "polti": {
-                  "omega_media": 0.0,
-                  "omega_abs_media": 0.0,
-                  "pasos_quietos": 2,
+                  "pasos_quietos": 0,
                   "pasos_con_giro": 0,
-                  "cortes_con_dato": 3,
+                  "cortes_con_dato": 0,
+                  "omega_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "omega_abs_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "souriau": {
@@ -60695,21 +59766,21 @@
               },
               {
                 "cut_id": "C8",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C9",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C10",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
@@ -61170,8 +60241,8 @@
               {
                 "corte": "C8",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
@@ -61189,13 +60260,13 @@
               {
                 "corte": "C9",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "polti": 0.0,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -61208,13 +60279,13 @@
               {
                 "corte": "C10",
                 "fase": {
-                  "polti": 5.061455,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "polti": 0.0,
                   "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -61487,15 +60558,13 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q?|P30",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
-            "polti_activas": [
-              "30_ambicion"
-            ],
+            "polti_activas": [],
             "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
-              "polti": 1,
+              "polti": 0,
               "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
@@ -61503,24 +60572,14 @@
             },
             "sistemas_vacios": [
               "souriau",
+              "polti",
               "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "ambicion"
-              ],
-              "polti": [
-                "ambicion"
-              ]
-            },
-            "regiones_no_vacias": {
-              "polti": [
-                "ambicion"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -61530,15 +60589,13 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q?|P30",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
-            "polti_activas": [
-              "30_ambicion"
-            ],
+            "polti_activas": [],
             "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
-              "polti": 1,
+              "polti": 0,
               "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
@@ -61546,24 +60603,14 @@
             },
             "sistemas_vacios": [
               "souriau",
+              "polti",
               "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "ambicion"
-              ],
-              "polti": [
-                "ambicion"
-              ]
-            },
-            "regiones_no_vacias": {
-              "polti": [
-                "ambicion"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -61573,15 +60620,13 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q?|P30",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
-            "polti_activas": [
-              "30_ambicion"
-            ],
+            "polti_activas": [],
             "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
-              "polti": 1,
+              "polti": 0,
               "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
@@ -61589,24 +60634,14 @@
             },
             "sistemas_vacios": [
               "souriau",
+              "polti",
               "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "ambicion"
-              ],
-              "polti": [
-                "ambicion"
-              ]
-            },
-            "regiones_no_vacias": {
-              "polti": [
-                "ambicion"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           }
@@ -61678,6 +60713,7 @@
         ],
         "sistemas_vacios_en_todo_el_caso": [
           "souriau",
+          "polti",
           "caldero_Q",
           "cameo",
           "memoria_caldero",
@@ -61689,8 +60725,8 @@
           "area_tokens": "ningún token de familias del área en el corte"
         },
         "interrelation_engine": {
-          "n_luces": 3,
-          "n_activaciones": 3,
+          "n_luces": 0,
+          "n_activaciones": 0,
           "failures": []
         }
       },
@@ -61738,7 +60774,6 @@
           "plugin_pregunta_dirigida",
           "plugin_reporte_3d",
           "plugin_sesgo_lectura.py",
-          "polti_caldero",
           "pre_h_analogical_search",
           "ricci_forman_v0_1",
           "semiotica_deriva",

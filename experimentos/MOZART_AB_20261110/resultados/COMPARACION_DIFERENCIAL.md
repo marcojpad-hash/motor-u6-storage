@@ -2,7 +2,7 @@
 
 - A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.
 - B: mismos cortes, motor y semilla; Caldero II OFF. Se desactivan búsqueda, runner genérico, memoria de vecinos, cuadrantes Monomito y zoom-out Caldero solo en la copia aislada de B.
-- Las demás capas y plugins permanecen; sidecar Polti-Caldero se conserva como lente independiente del Caldero II objeto de esta ablación.
+- B desactiva también Polti-Caldero: la ablación excluye todo el conjunto de componentes Caldero, no solo el runner genérico.
 - Monte Carlo: ON en ambas.
 - Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.
 - Z90: 1788-05-04.
@@ -24,5 +24,5 @@
 
 ## Estados de componentes
 - A: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "ERROR": 1, "EXECUTED": 50, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_FIXTURE": 2, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 4, "HUB_ACTIVA_MUDA": 2, "NOT_APPLICABLE": 1, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SUPERADA": 1}
-- B: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "EXECUTED": 47, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 3, "HUB_ACTIVA_MUDA": 3, "NOT_APPLICABLE": 1, "NOT_AVAILABLE": 1, "PLUGIN_SALTADO": 3, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SKIPPED_INTERNAL_ANALYSIS": 2}
+- B: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "EXECUTED": 46, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 2, "HUB_ACTIVA_MUDA": 4, "NOT_APPLICABLE": 1, "NOT_AVAILABLE": 1, "PLUGIN_SALTADO": 3, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SKIPPED_INTERNAL_ANALYSIS": 2}
 Los componentes omitidos, ausentes o con error permanecen etiquetados así en TRAZA_PLUGINS.json.
