@@ -63,6 +63,7 @@ def run_variant(label,with_caldero):
 import importlib.util, sys
 from pathlib import Path
 runner_path=sys.argv[1]
+sys.path.insert(0,str(Path(runner_path).parent))
 spec=importlib.util.spec_from_file_location("mozart_correr_estandar",runner_path)
 runner=importlib.util.module_from_spec(spec)
 sys.modules[spec.name]=runner
