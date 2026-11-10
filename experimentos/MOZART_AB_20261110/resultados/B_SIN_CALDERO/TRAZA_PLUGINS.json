@@ -128,15 +128,10 @@
       "reason": "el puente llega a candidatos pero no discrimina (mismo valor para todos)"
     },
     {
-      "component": "acero_zoomout",
-      "status": "EXECUTED",
-      "feeds_predictor": true,
-      "feeds_predictor_declarado": true,
-      "llega_verificado": [
-        "H(rank_fusion:señal_lateral)"
-      ],
-      "declaracion_U6": "ACTIVA",
-      "reason": "llega a H"
+      "component": "caldero_zoomout_acero_v0_1.py",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_traza_no_disponible",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "capa2_antecedentes",
@@ -239,12 +234,9 @@
     },
     {
       "component": "caldero_run.py",
-      "status": "SUPERADA",
-      "superada_por": "plugin_circulo_monomito_v2.py",
-      "reason": "escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monomito_v2.py",
-      "effect": "sin_ejecucion_propia",
-      "feeds_H": false,
-      "can_decide_H": false
+      "status": "PLUGIN_SALTADO",
+      "reason": "ni caldero_run.py ni plugin_circulo_monomito_v2.py disponibles",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "predictor_vecinos_prefijo_v1.py",
@@ -314,21 +306,14 @@
     },
     {
       "component": "plugin_circulo_monomito_v2.py",
-      "status": "EXECUTED",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_API_no_disponible",
+      "effect": "sin_resolucion_Q1_Q4",
       "feeds_predictor": false,
-      "feeds_H": false,
-      "can_decide_H": false,
-      "caldero_bridge": true,
-      "current_caldero_neighbors": 0,
-      "question_forwarded": true,
-      "role": "lateral_quadrant_resolution",
-      "feeds_predictor_declarado": false,
-      "feeds_H_declarado": false,
       "llega_verificado": [],
       "declaracion_U6": "TRAZA_SOLO",
       "motivo_declaracion_U6": "posición/cuadrante por corte en tokens, sin nombres de candidata; recibe vecinos Caldero",
-      "feeds_predictor_declarado_original": true,
-      "reason": "su salida no nombra ningún candidato del top: el puente no llega"
+      "feeds_predictor_declarado_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
     },
     {
       "component": "motor_interrelacion_extensible_v0_1.py",
@@ -400,8 +385,8 @@
     },
     {
       "component": "pre_h_analogical_search(V0.18)",
-      "status": "API_PENDING",
-      "reason": "caldero_search_sources/analogical_search_sources absent; search provider not injected",
+      "status": "NOT_AVAILABLE",
+      "reason": "sidecar_missing",
       "phase": "PRE_H_ORIENTATION",
       "feeds_predictor": false,
       "feeds_H": false,
@@ -530,7 +515,7 @@
     {
       "component": "hub:marco_7783_geometria",
       "status": "HUB_ACTIVA",
-      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 7/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -539,8 +524,8 @@
     },
     {
       "component": "hub:caldero_ii_cuadrantes",
-      "status": "HUB_ACTIVA",
-      "reason": "Q1-Q4 derivados de tokens del corte: 7/10 cortes con cuadrante; puente Caldero=False",
+      "status": "HUB_ACTIVA_MUDA",
+      "reason": "circulo_monomito_v2 sin salida en este run",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -633,7 +618,7 @@
       "can_decide_H": false,
       "can_rewrite_H": false,
       "can_rewrite_apuesta": false,
-      "post_H_status": "EXECUTED",
+      "post_H_status": "NO_ANALOGS",
       "retrospective_status": "WAITING_FOR_FUTURE",
       "feeds_predictor_declarado": false,
       "feeds_H_declarado": false,
@@ -793,7 +778,7 @@
       "grado": "AJUSTADA",
       "H1": "schwartz_10_autodireccion",
       "H2": "utopia_mentalidad_liberal",
-      "margen": 4.18116
+      "margen": 3.426884
     },
     {
       "component": "decimo_hombre_esteroides_mayeutica_v1.py",
@@ -804,7 +789,7 @@
       "rewrites_apuesta": false,
       "role": "adversarial_iterative_review_mayeutica_dialectica",
       "n_attacks": 8,
-      "n_real_counterfactual_rankings": 48,
+      "n_real_counterfactual_rankings": 47,
       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
       "decision_de_proceso": "CONCLUSION_OPERACIONAL_CERRADA_CON_TRAZABILIDAD"
     },
@@ -958,10 +943,10 @@
     },
     {
       "component": "sidecar_caldero_busqueda_arquetipos.py",
-      "present": true,
-      "sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
+      "present": false,
       "role": "core_or_executable",
-      "location": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/sidecar_caldero_busqueda_arquetipos.py"
+      "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+      "location_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
     },
     {
       "component": "metacognition_v0_1.py",
@@ -1056,10 +1041,10 @@
     },
     {
       "component": "plugin_circulo_monomito_v2.py",
-      "present": true,
-      "sha256": "9a6d858200f80e0cda09e46bc1cd487a885c6d36787c959417e4a2242e3c8a0f",
+      "present": false,
       "role": "optional_or_lateral",
-      "location": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/plugin_circulo_monomito_v2.py"
+      "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+      "location_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
     },
     {
       "component": "plugin_pregunta_dirigida.py",
@@ -1070,10 +1055,10 @@
     },
     {
       "component": "sidecar_caldero_busqueda_arquetipos.py",
-      "present": true,
-      "sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
+      "present": false,
       "role": "core_or_executable",
-      "location": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/sidecar_caldero_busqueda_arquetipos.py"
+      "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+      "location_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
     },
     {
       "component": "predictor_vecinos_prefijo_v1.py",
@@ -1084,10 +1069,10 @@
     },
     {
       "component": "caldero_zoomout_acero_v0_1.py",
-      "present": true,
-      "sha256": "aef329444ca2bac0c9e0d7d2c56e3a7cdfa959a8ec855008a3940cadb2e66ed4",
+      "present": false,
       "role": "optional_or_lateral",
-      "location": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/caldero_zoomout_acero_v0_1.py"
+      "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+      "location_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
     },
     {
       "component": "catalogo_capa2_familias_semilla.json",
@@ -1239,13 +1224,13 @@
         0.1796738990504742
       ],
       "persist_cos": [
-        0.4914717710771592,
+        0.49147177107715917,
         0.6092936652624409,
-        0.1634727187130181,
-        -0.006901968610675172,
-        0.4894791183886104,
+        0.16347271871301808,
+        -0.006901968610675169,
+        0.48947911838861036,
         0.051009636778204324,
-        0.439017824113893,
+        0.4390178241138929,
         0.784437135621273
       ],
       "kappa_dir": [
@@ -1255,7 +1240,7 @@
         0.9999761811309793,
         0.8720150185985954,
         0.9986981610855983,
-        0.8984783526108477,
+        0.8984783526108479,
         0.620208336172848
       ],
       "aceleracion_dX": [
@@ -2098,13 +2083,13 @@
           0.1796738990504742
         ],
         "persist_cos": [
-          0.4914717710771592,
+          0.49147177107715917,
           0.6092936652624409,
-          0.1634727187130181,
-          -0.006901968610675172,
-          0.4894791183886104,
+          0.16347271871301808,
+          -0.006901968610675169,
+          0.48947911838861036,
           0.051009636778204324,
-          0.439017824113893,
+          0.4390178241138929,
           0.784437135621273
         ],
         "kappa_dir": [
@@ -2114,7 +2099,7 @@
           0.9999761811309793,
           0.8720150185985954,
           0.9986981610855983,
-          0.8984783526108477,
+          0.8984783526108479,
           0.620208336172848
         ],
         "n_cuts": 10
@@ -42977,19 +42962,19 @@
           0.1796738990504742
         ],
         "persistence_cosine": [
-          0.49147177108876866,
+          0.4914717710887686,
           0.6092936652831412,
-          0.16347271871903102,
-          -0.006901968610896134,
-          0.48947911839688873,
+          0.163472718719031,
+          -0.00690196861089613,
+          0.4894791183968887,
           0.051009636778552754,
-          0.4390178241177123,
+          0.4390178241177122,
           0.7844371356385997
         ],
         "kappa_dir": [
           0.8708935056726907,
           0.7929446572402361,
-          0.9865478550149549,
+          0.986547855014955,
           0.9999761811309779,
           0.8720150185939486,
           0.9986981610855805,
@@ -42999,12 +42984,12 @@
         "kappa_ext": [
           3.0049761357722264,
           3.774344362410555,
-          6.504006342092244,
+          6.504006342092243,
           6.410093596183172,
           8.243824783037336,
           4.423709785100559,
-          1.0878762752607407,
-          1.7551157879722181
+          1.0878762752607405,
+          1.7551157879722177
         ],
         "zero_velocity_count": 0
       },
@@ -43041,7 +43026,7 @@
       "matrices_sha16": {
         "pattern_pairwise_distance": "520c51326eb34ca7",
         "pattern_velocity_cosine": "d7b8d8f4186fbc09",
-        "P_delta_correlation": "f889178bf4db6c3b"
+        "P_delta_correlation": "fec0e6079fd2acb7"
       },
       "prospective_baselines": {
         "PERSISTENCE": {
@@ -43081,633 +43066,6 @@
           "score": 0.1
         }
       }
-    },
-    "acero_zoomout": {
-      "schema": "caldero_zoomout_acero_v0_1",
-      "status": "EXPERIMENTAL_LATERAL",
-      "source": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/MOTOR_V15_3_NATIVO_V0_9.py",
-      "source_sha256": "cfbb3b0974a7e241dc4c20cb5353d17cc610cedfd1621ef4d0cd46fdf135c4b3",
-      "canonical_modified": false,
-      "engine_modified": false,
-      "patterns_modified": false,
-      "feeds_H": false,
-      "freeze_modified": false,
-      "caldero_status": "PROXY_FROM_V153_TRAZA_P_NOT_CALDERO_II_EXECUTION",
-      "purpose": "test zoom-out from local transition vectorization into a situation-level trajectory and repeated strong ACERO boundaries",
-      "acero_rule_v0_1": "name = strongest cumulative positive coordinate; survivor region = cumulative positive coordinates >=20% of strongest",
-      "moves": [
-        {
-          "transition": "C1→C2",
-          "caldero_proxy": true,
-          "speed_l2": 0.23064127991320202,
-          "direction_top5": [
-            [
-              "arquetipo_el_creador",
-              0.114
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.0712
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.0568
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.0568
-            ],
-            [
-              "monomito_06_pruebas_aliados_y_enemigos",
-              0.0518
-            ]
-          ],
-          "zoom_out_cumulative_top5": [
-            [
-              "arquetipo_el_creador",
-              0.114
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.0712
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.0568
-            ]
-          ],
-          "acero_name": "arquetipo_el_creador",
-          "acero_survivor_region": [
-            "arquetipo_el_creador",
-            "schwartz_10_autodireccion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_autonomia_atenas"
-          ],
-          "acero_region_size": 6,
-          "interpretation": "LOCAL_TRANSITION",
-          "persistence_vs_previous_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
-        },
-        {
-          "transition": "C2→C3",
-          "caldero_proxy": true,
-          "speed_l2": 0.18354816806495236,
-          "direction_top5": [
-            [
-              "utopia_mentalidad_liberal",
-              0.0962
-            ],
-            [
-              "erikson_02_autonomia_vs_verguenza",
-              0.0561
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.0561
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.0511
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.0507
-            ]
-          ],
-          "persistence_vs_previous": 0.49147177108876827,
-          "zoom_out_cumulative_top5": [
-            [
-              "schwartz_10_autodireccion",
-              0.1273
-            ],
-            [
-              "arquetipo_el_creador",
-              0.12100000000000001
-            ],
-            [
-              "utopia_mentalidad_liberal",
-              0.1139
-            ]
-          ],
-          "acero_name": "schwartz_10_autodireccion",
-          "acero_survivor_region": [
-            "schwartz_10_autodireccion",
-            "arquetipo_el_creador",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_autonomia_atenas",
-            "erikson_02_autonomia_vs_verguenza",
-            "arquetipo_el_sabio"
-          ],
-          "acero_region_size": 9,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C3→C4",
-          "caldero_proxy": true,
-          "speed_l2": 0.1603609989991332,
-          "direction_top5": [
-            [
-              "arquetipo_el_sabio",
-              0.0468
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.0468
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.0466
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.0466
-            ],
-            [
-              "utopia_mentalidad_liberal",
-              0.0398
-            ]
-          ],
-          "persistence_vs_previous": 0.6092936652831411,
-          "zoom_out_cumulative_top5": [
-            [
-              "schwartz_10_autodireccion",
-              0.1741
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.15410000000000001
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.15410000000000001
-            ]
-          ],
-          "acero_name": "schwartz_10_autodireccion",
-          "acero_survivor_region": [
-            "schwartz_10_autodireccion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_creador",
-            "arquetipo_el_sabio",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_autonomia_atenas",
-            "erikson_02_autonomia_vs_verguenza"
-          ],
-          "acero_region_size": 9,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C4→C5",
-          "caldero_proxy": true,
-          "speed_l2": 0.16953536504222358,
-          "direction_top5": [
-            [
-              "30_ambicion",
-              0.1113
-            ],
-            [
-              "utopia_autonomia_atenas",
-              0.0741
-            ],
-            [
-              "utopia_principio_mercado",
-              0.0636
-            ],
-            [
-              "arquetipo_el_sabio",
-              0.0362
-            ],
-            [
-              "dumezil_desequilibrio_f3_come_al_resto",
-              0.0318
-            ]
-          ],
-          "persistence_vs_previous": 0.16347271871903066,
-          "zoom_out_cumulative_top5": [
-            [
-              "schwartz_10_autodireccion",
-              0.2026
-            ],
-            [
-              "utopia_autonomia_atenas",
-              0.1582
-            ],
-            [
-              "utopia_mentalidad_liberal",
-              0.1451
-            ]
-          ],
-          "acero_name": "schwartz_10_autodireccion",
-          "acero_survivor_region": [
-            "schwartz_10_autodireccion",
-            "utopia_autonomia_atenas",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "arquetipo_el_sabio",
-            "arquetipo_el_creador",
-            "30_ambicion",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_principio_mercado",
-            "erikson_02_autonomia_vs_verguenza",
-            "utopia_principio_libertades"
-          ],
-          "acero_region_size": 12,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C5→C6",
-          "caldero_proxy": true,
-          "speed_l2": 0.1842448371054125,
-          "direction_top5": [
-            [
-              "arquetipo_el_explorador",
-              0.0414
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.0414
-            ],
-            [
-              "utopia_autonomia_atenas",
-              0.0168
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.0083
-            ],
-            [
-              "19_asesinato_de_un_pariente_no_reconocido",
-              0.0077
-            ]
-          ],
-          "persistence_vs_previous": -0.0069019686108965665,
-          "zoom_out_cumulative_top5": [
-            [
-              "schwartz_10_autodireccion",
-              0.2109
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.1852
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.1852
-            ]
-          ],
-          "acero_name": "schwartz_10_autodireccion",
-          "acero_survivor_region": [
-            "schwartz_10_autodireccion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "utopia_autonomia_atenas",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_sabio",
-            "arquetipo_el_creador",
-            "30_ambicion",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_principio_mercado",
-            "erikson_02_autonomia_vs_verguenza"
-          ],
-          "acero_region_size": 11,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C6→C7",
-          "caldero_proxy": true,
-          "speed_l2": 0.3209190084741008,
-          "direction_top5": [
-            [
-              "9_audaz_empresa",
-              0.2012
-            ],
-            [
-              "bbk_01_aventurero",
-              0.115
-            ],
-            [
-              "dumezil_f2_fuerza",
-              0.115
-            ],
-            [
-              "schwartz_09_estimulacion",
-              0.0821
-            ],
-            [
-              "arquetipo_el_explorador",
-              0.0387
-            ]
-          ],
-          "persistence_vs_previous": 0.4894791183968888,
-          "zoom_out_cumulative_top5": [
-            [
-              "arquetipo_el_explorador",
-              0.2239
-            ],
-            [
-              "monomito_05_cruce_del_primer_umbral",
-              0.2239
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.2202
-            ]
-          ],
-          "acero_name": "arquetipo_el_explorador",
-          "acero_survivor_region": [
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "schwartz_10_autodireccion",
-            "9_audaz_empresa",
-            "utopia_autonomia_atenas",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_creador",
-            "arquetipo_el_sabio",
-            "bbk_01_aventurero",
-            "dumezil_f2_fuerza",
-            "30_ambicion",
-            "schwartz_09_estimulacion",
-            "monomito_06_pruebas_aliados_y_enemigos",
-            "utopia_principio_mercado",
-            "erikson_02_autonomia_vs_verguenza"
-          ],
-          "acero_region_size": 15,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C7→C8",
-          "caldero_proxy": true,
-          "speed_l2": 0.4561873737840614,
-          "direction_top5": [
-            [
-              "24_rivalidad_de_superior_e_inferior",
-              0.1943
-            ],
-            [
-              "30_ambicion",
-              0.1758
-            ],
-            [
-              "schwartz_07_logro",
-              0.119
-            ],
-            [
-              "12_obtencion",
-              0.1111
-            ],
-            [
-              "utopia_mentalidad_milenarista",
-              0.1111
-            ]
-          ],
-          "persistence_vs_previous": 0.051009636778552796,
-          "zoom_out_cumulative_top5": [
-            [
-              "30_ambicion",
-              0.2796
-            ],
-            [
-              "utopia_autonomia_atenas",
-              0.2169
-            ],
-            [
-              "schwartz_10_autodireccion",
-              0.21080000000000002
-            ]
-          ],
-          "acero_name": "30_ambicion",
-          "acero_survivor_region": [
-            "30_ambicion",
-            "utopia_autonomia_atenas",
-            "schwartz_10_autodireccion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "24_rivalidad_de_superior_e_inferior",
-            "9_audaz_empresa",
-            "utopia_mentalidad_liberal",
-            "dumezil_f2_fuerza",
-            "utopia_principio_mercado",
-            "arquetipo_el_creador",
-            "schwartz_07_logro",
-            "12_obtencion",
-            "utopia_mentalidad_milenarista",
-            "bbk_01_aventurero",
-            "arquetipo_el_sabio",
-            "dumezil_desequilibrio_f2_come_al_resto",
-            "dumezil_desequilibrio_f3_come_al_resto",
-            "situacion_dramatica_ambicion",
-            "predictivo_02_mdp_politica_optima",
-            "schwartz_09_estimulacion",
-            "monomito_06_pruebas_aliados_y_enemigos"
-          ],
-          "acero_region_size": 22,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C8→C9",
-          "caldero_proxy": true,
-          "speed_l2": 0.2519755543698614,
-          "direction_top5": [
-            [
-              "schwartz_07_logro",
-              0.0998
-            ],
-            [
-              "12_obtencion",
-              0.0952
-            ],
-            [
-              "predictivo_02_mdp_politica_optima",
-              0.0731
-            ],
-            [
-              "utopia_principio_mercado",
-              0.0653
-            ],
-            [
-              "dumezil_desequilibrio_f3_come_al_resto",
-              0.0574
-            ]
-          ],
-          "persistence_vs_previous": 0.4390178241177101,
-          "zoom_out_cumulative_top5": [
-            [
-              "30_ambicion",
-              0.2984
-            ],
-            [
-              "utopia_autonomia_atenas",
-              0.22990000000000002
-            ],
-            [
-              "schwartz_07_logro",
-              0.2188
-            ]
-          ],
-          "acero_name": "30_ambicion",
-          "acero_survivor_region": [
-            "30_ambicion",
-            "utopia_autonomia_atenas",
-            "schwartz_07_logro",
-            "schwartz_10_autodireccion",
-            "12_obtencion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "utopia_principio_mercado",
-            "24_rivalidad_de_superior_e_inferior",
-            "9_audaz_empresa",
-            "predictivo_02_mdp_politica_optima",
-            "utopia_mentalidad_liberal",
-            "dumezil_desequilibrio_f3_come_al_resto",
-            "situacion_dramatica_ambicion",
-            "arquetipo_el_creador",
-            "dumezil_f2_fuerza",
-            "dumezil_f3_fecundidad",
-            "utopia_mentalidad_milenarista",
-            "bbk_01_aventurero",
-            "arquetipo_el_sabio",
-            "dumezil_desequilibrio_f2_come_al_resto",
-            "schwartz_09_estimulacion"
-          ],
-          "acero_region_size": 22,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        },
-        {
-          "transition": "C9→C10",
-          "caldero_proxy": true,
-          "speed_l2": 0.17967389905047415,
-          "direction_top5": [
-            [
-              "schwartz_07_logro",
-              0.0599
-            ],
-            [
-              "12_obtencion",
-              0.0597
-            ],
-            [
-              "predictivo_02_mdp_politica_optima",
-              0.0533
-            ],
-            [
-              "utopia_principio_mercado",
-              0.043
-            ],
-            [
-              "dumezil_desequilibrio_f3_come_al_resto",
-              0.0421
-            ]
-          ],
-          "persistence_vs_previous": 0.7844371356385993,
-          "zoom_out_cumulative_top5": [
-            [
-              "30_ambicion",
-              0.2892
-            ],
-            [
-              "schwartz_07_logro",
-              0.2787
-            ],
-            [
-              "12_obtencion",
-              0.266
-            ]
-          ],
-          "acero_name": "30_ambicion",
-          "acero_survivor_region": [
-            "30_ambicion",
-            "schwartz_07_logro",
-            "12_obtencion",
-            "utopia_principio_mercado",
-            "utopia_autonomia_atenas",
-            "schwartz_10_autodireccion",
-            "predictivo_02_mdp_politica_optima",
-            "dumezil_desequilibrio_f3_come_al_resto",
-            "situacion_dramatica_ambicion",
-            "arquetipo_el_explorador",
-            "monomito_05_cruce_del_primer_umbral",
-            "24_rivalidad_de_superior_e_inferior",
-            "9_audaz_empresa",
-            "dumezil_f3_fecundidad",
-            "utopia_mentalidad_liberal",
-            "arquetipo_el_creador",
-            "dumezil_f2_fuerza",
-            "utopia_mentalidad_milenarista",
-            "bbk_01_aventurero",
-            "arquetipo_el_sabio",
-            "dumezil_desequilibrio_f2_come_al_resto",
-            "minsky_02_especulativa",
-            "schwartz_09_estimulacion"
-          ],
-          "acero_region_size": 23,
-          "interpretation": "LOCAL_PLUS_ZOOM_OUT"
-        }
-      ],
-      "global_profile": {
-        "n_transitions": 9,
-        "cumulative_top10": [
-          [
-            "30_ambicion",
-            0.2892
-          ],
-          [
-            "schwartz_07_logro",
-            0.2787
-          ],
-          [
-            "12_obtencion",
-            0.266
-          ],
-          [
-            "utopia_principio_mercado",
-            0.2385
-          ],
-          [
-            "utopia_autonomia_atenas",
-            0.2295
-          ],
-          [
-            "schwartz_10_autodireccion",
-            0.20800000000000002
-          ],
-          [
-            "predictivo_02_mdp_politica_optima",
-            0.20579999999999998
-          ],
-          [
-            "dumezil_desequilibrio_f3_come_al_resto",
-            0.1892
-          ],
-          [
-            "situacion_dramatica_ambicion",
-            0.1892
-          ],
-          [
-            "arquetipo_el_explorador",
-            0.185
-          ]
-        ],
-        "acero_name_sequence": [
-          "arquetipo_el_creador",
-          "schwartz_10_autodireccion",
-          "schwartz_10_autodireccion",
-          "schwartz_10_autodireccion",
-          "schwartz_10_autodireccion",
-          "arquetipo_el_explorador",
-          "30_ambicion",
-          "30_ambicion",
-          "30_ambicion"
-        ],
-        "final_acero_name": "30_ambicion",
-        "final_region_size": 23
-      },
-      "limits": "No claim of predictive validity. This run tests whether repeated local vectors plus strong boundary labels produce a stable/constricting situation-level region."
     },
     "capa2_antecedentes": {
       "plugin": "PLUGIN_CAPA2_ANTECEDENTES_ARQUETIPOS",
@@ -44902,7 +44260,7 @@
           ],
           "n_desempates": 0,
           "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-          "actualizado_ts": 1794354390.920201,
+          "actualizado_ts": 1794354619.6012924,
           "Alimenta_H": "NO"
         },
         "candados": {
@@ -48245,360 +47603,6 @@
       "result_count": 0,
       "reason": "subcorrida_interna_para_comparacion_de_corte; la búsqueda externa pertenece a la corrida primaria"
     },
-    "plugin_circulo_monomito": {
-      "plugin": "PLUGIN_CIRCULO_MONOMITO",
-      "tipo": "lente_lateral_no_pattern",
-      "no_toca": [
-        "Engine_V5_CANONICO_SOLO.py",
-        "patterns_final_v14.json"
-      ],
-      "r1_corregida": "listas por cuadrante son estructuras semanticas candidatas",
-      "posicion_monomito_por_corte": [
-        {
-          "corte": "C1",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "creatividad",
-            "aprendizaje",
-            "conocimiento"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "creatividad",
-            "aprendizaje",
-            "conocimiento"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q2_Descenso_4_6"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C2",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "viaje",
-            "creatividad",
-            "aprendizaje",
-            "reconocimiento"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "viaje",
-            "creatividad",
-            "aprendizaje",
-            "reconocimiento"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q2_Descenso_4_6"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C3",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "viaje",
-            "creatividad",
-            "conocimiento",
-            "aprendizaje",
-            "exploracion_permitida"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "viaje",
-            "creatividad",
-            "conocimiento",
-            "aprendizaje",
-            "exploracion_permitida"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q2_Descenso_4_6"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C4",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "creatividad",
-            "conocimiento",
-            "viaje",
-            "reconocimiento"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "creatividad",
-            "conocimiento",
-            "viaje",
-            "reconocimiento"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C5",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "creatividad",
-            "conocimiento",
-            "competencia",
-            "independencia"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "creatividad",
-            "conocimiento",
-            "competencia",
-            "independencia"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C6",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "viaje",
-            "creatividad",
-            "independencia",
-            "rebeldia"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "viaje",
-            "creatividad",
-            "independencia",
-            "rebeldia"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q1_Separacion_1_3"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C7",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "viaje",
-            "creatividad",
-            "independencia",
-            "rebeldia",
-            "audacia"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "viaje",
-            "creatividad",
-            "independencia",
-            "rebeldia",
-            "audacia"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q1_Separacion_1_3"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C8",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "rebeldia",
-            "desafio_autoridad",
-            "independencia",
-            "creatividad",
-            "ambicion"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "rebeldia",
-            "desafio_autoridad",
-            "independencia",
-            "creatividad",
-            "ambicion"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q1_Separacion_1_3",
-            "Q2_Descenso_4_6"
-          ],
-          "hilos_presentes": [
-            "hilo_desafio"
-          ],
-          "estabilidad_hilo": {
-            "hilo_desafio": 1
-          },
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C9",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "creatividad",
-            "reconocimiento",
-            "independencia",
-            "logro_personal",
-            "ambicion"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "creatividad",
-            "reconocimiento",
-            "independencia",
-            "logro_personal",
-            "ambicion"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q1_Separacion_1_3",
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        },
-        {
-          "corte": "C10",
-          "pregunta_activa": "¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
-          "tokens_corte": [
-            "creatividad",
-            "logro_personal",
-            "independencia",
-            "rebeldia",
-            "ambicion"
-          ],
-          "caldero_neighbors_actuales": [],
-          "tokens_resolucion_monomito": [
-            "creatividad",
-            "logro_personal",
-            "independencia",
-            "rebeldia",
-            "ambicion"
-          ],
-          "caldero_inyectado_en_resolucion": false,
-          "cuadrante_activo": [
-            "Q1_Separacion_1_3"
-          ],
-          "hilos_presentes": [],
-          "estabilidad_hilo": {},
-          "r4_nuevo_ciclo": false,
-          "catarsis_de_hilo": [],
-          "pendientes_consolidar_restantes": [],
-          "huecos": [
-            "Q2_Descenso_4_6",
-            "Q3_Ordeal_7_9",
-            "Q4_Retorno_10_12"
-          ],
-          "r3_sombra_mentor_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-        }
-      ],
-      "nota_catarsis": "catarsis = cierre en Q4 por conexion contextual con otro hilo (anagnorisis/peripecia)",
-      "caldero_contract": "solo vecinos Caldero del run actual; memoria persistente no se convierte sola en evidencia corriente",
-      "feeds_H": false,
-      "can_decide_H": false,
-      "caldero_bridge": {
-        "wired": true,
-        "current_neighbors": [],
-        "raw_current_neighbors": 0,
-        "ignored_unmapped_neighbors": [],
-        "historical_memory_used_as_current": false,
-        "mapping": "exact_existing_monomito_vocab_only",
-        "injected_cut_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-      },
-      "linea_mas_avanzada_actual_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
-    },
     "interrelation": {
       "hyperrelations": [],
       "trajectories": {},
@@ -48803,32 +47807,9 @@
       "can_decide_H": false,
       "writes_canonical": false,
       "writes_H": false,
-      "status": "API_PENDING",
-      "activated": true,
-      "reason": "pre_h_orientation_required",
-      "query_blind": true,
-      "identity_exposed": false,
-      "future_outcome_exposed": false,
-      "future_keys_present_not_read": [],
-      "query_terms": [
-        "creatividad",
-        "aprendizaje",
-        "conocimiento",
-        "viaje",
-        "reconocimiento",
-        "exploracion_permitida",
-        "competencia",
-        "independencia",
-        "rebeldia",
-        "audacia",
-        "desafio_autoridad",
-        "ambicion",
-        "logro_personal"
-      ],
-      "raw_source_count": 0,
-      "discarded_self_match_count": 0,
-      "analog_token_count": 0,
-      "adapter": "caldero_search_sources/analogical_search_sources absent; search provider not injected"
+      "status": "NOT_AVAILABLE",
+      "activated": false,
+      "reason": "sidecar_missing"
     },
     "stinkbox_transport": {
       "schema": "STINKBOX_TRANSPORT_V0.2",
@@ -54412,7 +53393,7 @@
               ],
               "n_desempates": 0,
               "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-              "actualizado_ts": 1794354391.2169223,
+              "actualizado_ts": 1794354619.9128296,
               "Alimenta_H": "NO"
             }
           },
@@ -54573,7 +53554,7 @@
                 ],
                 "n_desempates": 0,
                 "nota": "Tokens suficientes y p fuera de banda 50%. Liberar latencia (solo marca).",
-                "actualizado_ts": 1794354391.2271602,
+                "actualizado_ts": 1794354619.9232774,
                 "Alimenta_H": "NO"
               },
               "interpretacion": "La etiqueta del corte no es sentencia. Si queda ~50%/litote → LATENCIA y se sigue tomando datos; décimo hombre si empata; si no se desempató → almacenar."
@@ -54896,10 +53877,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q2_Descenso_4_6"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -54911,7 +53889,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -54950,7 +53928,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C2",
@@ -54990,10 +53969,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q2_Descenso_4_6"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55005,7 +53981,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55044,7 +54020,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C3",
@@ -55084,10 +54061,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q2_Descenso_4_6"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55099,7 +54073,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55138,7 +54112,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C4",
@@ -55179,7 +54154,6 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55230,7 +54204,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C5",
@@ -55271,7 +54246,6 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55322,7 +54296,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C6",
@@ -55362,10 +54337,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q1_Separacion_1_3"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55376,7 +54348,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55416,7 +54388,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C7",
@@ -55456,10 +54429,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q1_Separacion_1_3"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [],
               "polti_idx": [],
               "polti_fuente": "sidecar_polti_caldero.polti_por_corte.union",
@@ -55470,7 +54440,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55510,7 +54480,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C8",
@@ -55550,11 +54521,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [
                 [
                   "30_ambicion",
@@ -55572,8 +54539,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -55612,7 +54579,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C9",
@@ -55653,7 +54621,6 @@
                 "pares_distintos": 0
               },
               "cuadrantes_caldero": [],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
               "polti_activas": [
                 [
                   "30_ambicion",
@@ -55711,7 +54678,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             },
             {
               "corte": "C10",
@@ -55751,10 +54719,7 @@
                 "suma": 0,
                 "pares_distintos": 0
               },
-              "cuadrantes_caldero": [
-                "Q1_Separacion_1_3"
-              ],
-              "cuadrante_fuente": "plugin_circulo_monomito_v2.posicion_monomito_por_corte",
+              "cuadrantes_caldero": [],
               "polti_activas": [
                 [
                   "30_ambicion",
@@ -55772,7 +54737,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -55812,7 +54777,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "cuadrante_fuente_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
             }
           ],
           "deltas": [
@@ -55982,9 +54948,7 @@
               "transicion_zona": false,
               "revisita_zona": false,
               "cuadrante_entra": [],
-              "cuadrante_sale": [
-                "Q2_Descenso_4_6"
-              ],
+              "cuadrante_sale": [],
               "polti_entra": [],
               "polti_sale": [],
               "delta_vector": [
@@ -55995,7 +54959,7 @@
                 0,
                 0,
                 0,
-                -1,
+                0,
                 0,
                 0,
                 0,
@@ -56035,7 +54999,7 @@
                 0,
                 0
               ],
-              "delta_L1": 1
+              "delta_L1": 0
             },
             {
               "de": "C4",
@@ -56129,9 +55093,7 @@
               ],
               "transicion_zona": false,
               "revisita_zona": false,
-              "cuadrante_entra": [
-                "Q1_Separacion_1_3"
-              ],
+              "cuadrante_entra": [],
               "cuadrante_sale": [],
               "polti_entra": [],
               "polti_sale": [],
@@ -56142,7 +55104,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -56183,7 +55145,7 @@
                 0,
                 0
               ],
-              "delta_L1": 1
+              "delta_L1": 0
             },
             {
               "de": "C6",
@@ -56277,9 +55239,7 @@
               ],
               "transicion_zona": false,
               "revisita_zona": false,
-              "cuadrante_entra": [
-                "Q2_Descenso_4_6"
-              ],
+              "cuadrante_entra": [],
               "cuadrante_sale": [],
               "polti_entra": [
                 "30_ambicion"
@@ -56293,7 +55253,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -56333,7 +55293,7 @@
                 0,
                 0
               ],
-              "delta_L1": 2
+              "delta_L1": 1
             },
             {
               "de": "C8",
@@ -56355,10 +55315,7 @@
               "transicion_zona": false,
               "revisita_zona": false,
               "cuadrante_entra": [],
-              "cuadrante_sale": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6"
-              ],
+              "cuadrante_sale": [],
               "polti_entra": [],
               "polti_sale": [],
               "delta_vector": [
@@ -56368,8 +55325,8 @@
                 0,
                 0,
                 0,
-                -1,
-                -1,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -56409,7 +55366,7 @@
                 0,
                 0
               ],
-              "delta_L1": 2
+              "delta_L1": 0
             },
             {
               "de": "C9",
@@ -56430,9 +55387,7 @@
               ],
               "transicion_zona": false,
               "revisita_zona": false,
-              "cuadrante_entra": [
-                "Q1_Separacion_1_3"
-              ],
+              "cuadrante_entra": [],
               "cuadrante_sale": [],
               "polti_entra": [],
               "polti_sale": [],
@@ -56443,7 +55398,7 @@
                 0,
                 0,
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -56484,7 +55439,7 @@
                 0,
                 0
               ],
-              "delta_L1": 1
+              "delta_L1": 0
             }
           ],
           "resumen": {
@@ -56531,9 +55486,9 @@
               0
             ],
             "pares_en_cumulo_conteo": {},
-            "cortes_con_cuadrante": 7,
+            "cortes_con_cuadrante": 0,
             "cortes_con_polti": 3,
-            "delta_L1_medio": 0.7778,
+            "delta_L1_medio": 0.1111,
             "calor_en_caso": {
               "0": 10
             }
@@ -56569,17 +55524,17 @@
               {
                 "corte": "C1",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 0.0,
                   "souriau": 0.0
                 },
@@ -56589,10 +55544,7 @@
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    -0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56607,30 +55559,27 @@
               {
                 "corte": "C2",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    -0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56645,30 +55594,27 @@
               {
                 "corte": "C3",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    -0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56683,7 +55629,7 @@
               {
                 "corte": "C4",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56698,15 +55644,12 @@
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    -0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56721,7 +55664,7 @@
               {
                 "corte": "C5",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56736,15 +55679,12 @@
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    -0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56759,30 +55699,27 @@
               {
                 "corte": "C6",
                 "fase": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": -1.570796,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56797,30 +55734,27 @@
               {
                 "corte": "C7",
                 "fase": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": false,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 0.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    0.707107,
-                    0.707107
-                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -56835,49 +55769,8 @@
               {
                 "corte": "C8",
                 "fase": {
-                  "caldero": 1.570796,
                   "polti": 5.061455,
-                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
-                },
-                "fase_con_dato": {
-                  "caldero": true,
-                  "polti": true,
-                  "souriau": false
-                },
-                "coherencia": {
-                  "caldero": 0.7071,
-                  "polti": 1.0,
-                  "souriau": 0.0
-                },
-                "omega": {
-                  "caldero": 0.785398,
-                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
-                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
-                },
-                "z": {
-                  "caldero": [
-                    0.0,
-                    1.0
-                  ],
-                  "polti": [
-                    0.34202,
-                    -0.939693
-                  ],
-                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
-                },
-                "intersecciones": {},
-                "vector_interseccion": [
-                  0,
-                  0,
-                  0,
-                  0
-                ]
-              },
-              {
-                "corte": "C9",
-                "fase": {
-                  "caldero": 1.570796,
-                  "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
@@ -56891,19 +55784,54 @@
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": 0.0,
-                  "polti": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    0.0,
-                    1.0
-                  ],
                   "polti": [
                     0.34202,
                     -0.939693
                   ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
+                },
+                "intersecciones": {},
+                "vector_interseccion": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "corte": "C9",
+                "fase": {
+                  "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
+                },
+                "fase_con_dato": {
+                  "caldero": false,
+                  "polti": true,
+                  "souriau": false
+                },
+                "coherencia": {
+                  "caldero": 0.0,
+                  "polti": 1.0,
+                  "souriau": 0.0
+                },
+                "omega": {
+                  "polti": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
+                },
+                "z": {
+                  "polti": [
+                    0.34202,
+                    -0.939693
+                  ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "intersecciones": {},
@@ -56917,34 +55845,31 @@
               {
                 "corte": "C10",
                 "fase": {
-                  "caldero": 0.785398,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "fase_con_dato": {
-                  "caldero": true,
+                  "caldero": false,
                   "polti": true,
                   "souriau": false
                 },
                 "coherencia": {
-                  "caldero": 1.0,
+                  "caldero": 0.0,
                   "polti": 1.0,
                   "souriau": 0.0
                 },
                 "omega": {
-                  "caldero": -0.785398,
                   "polti": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "z": {
-                  "caldero": [
-                    0.707107,
-                    0.707107
-                  ],
                   "polti": [
                     0.34202,
                     -0.939693
                   ],
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "intersecciones": {},
@@ -56958,12 +55883,12 @@
             ],
             "inercia": {
               "caldero": {
-                "omega_media": -0.174533,
-                "omega_abs_media": 0.349066,
-                "pasos_quietos": 6,
-                "pasos_con_giro": 3,
-                "persistencia_signo": 0.0,
-                "cortes_con_dato": 7
+                "pasos_quietos": 0,
+                "pasos_con_giro": 0,
+                "cortes_con_dato": 0,
+                "omega_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "omega_abs_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               "polti": {
                 "omega_media": 0.0,
@@ -57004,11 +55929,7 @@
                   "z_indice": 0,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      -0.707107,
-                      0.707107,
-                      0.0
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57019,11 +55940,7 @@
                   "z_indice": 1,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      -0.707107,
-                      0.707107,
-                      0.0
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57034,11 +55951,7 @@
                   "z_indice": 2,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      -0.707107,
-                      0.707107,
-                      0.0
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57049,11 +55962,7 @@
                   "z_indice": 3,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      -0.707107,
-                      0.707107,
-                      0.0
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57064,11 +55973,7 @@
                   "z_indice": 4,
                   "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      -0.707107,
-                      0.707107,
-                      0.0
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57077,13 +55982,9 @@
                 {
                   "corte": "C6",
                   "z_indice": 5,
-                  "z_inercia": 1.570796,
+                  "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      0.707107,
-                      0.707107,
-                      1.570796
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57092,13 +55993,9 @@
                 {
                   "corte": "C7",
                   "z_indice": 6,
-                  "z_inercia": 1.570796,
+                  "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      0.707107,
-                      0.707107,
-                      1.570796
-                    ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -57107,18 +56004,14 @@
                 {
                   "corte": "C8",
                   "z_indice": 7,
-                  "z_inercia": 2.356194,
+                  "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      0.0,
-                      1.0,
-                      2.356194
-                    ],
                     "polti": [
                       0.34202,
                       -0.939693,
-                      2.356194
+                      0.0
                     ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -57126,18 +56019,14 @@
                 {
                   "corte": "C9",
                   "z_indice": 8,
-                  "z_inercia": 2.356194,
+                  "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      0.0,
-                      1.0,
-                      2.356194
-                    ],
                     "polti": [
                       0.34202,
                       -0.939693,
-                      2.356194
+                      0.0
                     ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -57145,18 +56034,14 @@
                 {
                   "corte": "C10",
                   "z_indice": 9,
-                  "z_inercia": 2.748893,
+                  "z_inercia": 0.0,
                   "xyz": {
-                    "caldero": [
-                      0.707107,
-                      0.707107,
-                      2.748893
-                    ],
                     "polti": [
                       0.34202,
                       -0.939693,
-                      2.748893
+                      0.0
                     ],
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "alineaciones": {}
@@ -57169,7 +56054,7 @@
                     "caldero",
                     "polti"
                   ],
-                  "n_pasos_vivos": 1,
+                  "n_pasos_vivos": 0,
                   "tusi_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 {
@@ -57196,79 +56081,73 @@
                 "por_corte": [
                   {
                     "cut_id": "C1",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C2",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C3",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C4",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C5",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C6",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C7",
-                    "n_layers": 1,
+                    "n_layers": 0,
                     "nota": "<2 anillos con fase",
                     "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C8",
-                    "n_layers": 2,
-                    "mean_distance": 1.969616,
-                    "mean_cosine": 0.703938,
-                    "pairwise_distance": {
-                      "caldero~polti": 1.969616
-                    }
+                    "n_layers": 1,
+                    "nota": "<2 anillos con fase",
+                    "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C9",
-                    "n_layers": 2,
-                    "mean_distance": 1.969616,
-                    "mean_cosine": 0.703938,
-                    "pairwise_distance": {
-                      "caldero~polti": 1.969616
-                    }
+                    "n_layers": 1,
+                    "nota": "<2 anillos con fase",
+                    "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
                     "cut_id": "C10",
-                    "n_layers": 2,
-                    "mean_distance": 1.686784,
-                    "mean_cosine": 0.833736,
-                    "pairwise_distance": {
-                      "caldero~polti": 1.686784
-                    }
+                    "n_layers": 1,
+                    "nota": "<2 anillos con fase",
+                    "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                    "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   }
                 ]
               },
@@ -57279,7 +56158,7 @@
             "lector": "billar_circular_convergencia_v0_2.convergencias_v2 (sin editar; adaptador de trayectorias en el hub)",
             "n_convergencias": 0,
             "diag": {
-              "excluded_both_empty_convergences": 7,
+              "excluded_both_empty_convergences": 24,
               "one_empty_counted": 0,
               "both_present_vivo": 0
             },
@@ -57294,8 +56173,8 @@
           "fuentes": {
             "funciones": "marco_funciones_souriau.distribuir(cuts) modo=personajes_016",
             "zona": "marco_7783.zona_de",
-            "cuadrante": "features.plugin_circulo_monomito",
-            "polti": "features.polti_caldero"
+            "polti": "features.polti_caldero",
+            "cuadrante_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
           },
           "destinos": [
             "laterales_unico.sensores_pre.marco_7783_geometria (detalle)",
@@ -57677,12 +56556,10 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57706,12 +56583,10 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57735,12 +56610,10 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57767,7 +56640,7 @@
                 "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57794,7 +56667,7 @@
                 "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57818,12 +56691,10 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q1_Separacion_1_3"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57847,12 +56718,10 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q1_Separacion_1_3"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [],
                 "fase_anillos": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -57876,16 +56745,13 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q1_Separacion_1_3",
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [
                   30
                 ],
                 "fase_anillos": {
-                  "caldero": 1.570796,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -57913,8 +56779,8 @@
                   30
                 ],
                 "fase_anillos": {
-                  "caldero": 1.570796,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -57937,15 +56803,13 @@
                   0,
                   0
                 ],
-                "cuadrantes": [
-                  "Q1_Separacion_1_3"
-                ],
+                "cuadrantes": [],
                 "polti_idx": [
                   30
                 ],
                 "fase_anillos": {
-                  "caldero": 0.785398,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -58000,12 +56864,10 @@
                 ],
                 "revisita": false,
                 "cuadrante_entra": [],
-                "cuadrante_sale": [
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrante_sale": [],
                 "polti_entra": [],
                 "polti_sale": [],
-                "delta_L1": 1
+                "delta_L1": 0
               },
               {
                 "de": "C4",
@@ -58033,13 +56895,11 @@
                   0
                 ],
                 "revisita": false,
-                "cuadrante_entra": [
-                  "Q1_Separacion_1_3"
-                ],
+                "cuadrante_entra": [],
                 "cuadrante_sale": [],
                 "polti_entra": [],
                 "polti_sale": [],
-                "delta_L1": 1
+                "delta_L1": 0
               },
               {
                 "de": "C6",
@@ -58067,15 +56927,13 @@
                   0
                 ],
                 "revisita": false,
-                "cuadrante_entra": [
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrante_entra": [],
                 "cuadrante_sale": [],
                 "polti_entra": [
                   "30_ambicion"
                 ],
                 "polti_sale": [],
-                "delta_L1": 2
+                "delta_L1": 1
               },
               {
                 "de": "C8",
@@ -58088,13 +56946,10 @@
                 ],
                 "revisita": false,
                 "cuadrante_entra": [],
-                "cuadrante_sale": [
-                  "Q1_Separacion_1_3",
-                  "Q2_Descenso_4_6"
-                ],
+                "cuadrante_sale": [],
                 "polti_entra": [],
                 "polti_sale": [],
-                "delta_L1": 2
+                "delta_L1": 0
               },
               {
                 "de": "C9",
@@ -58106,13 +56961,11 @@
                   0
                 ],
                 "revisita": false,
-                "cuadrante_entra": [
-                  "Q1_Separacion_1_3"
-                ],
+                "cuadrante_entra": [],
                 "cuadrante_sale": [],
                 "polti_entra": [],
                 "polti_sale": [],
-                "delta_L1": 1
+                "delta_L1": 0
               }
             ],
             "resumen": {
@@ -58159,9 +57012,9 @@
                 0
               ],
               "pares_en_cumulo_conteo": {},
-              "cortes_con_cuadrante": 7,
+              "cortes_con_cuadrante": 0,
               "cortes_con_polti": 3,
-              "delta_L1_medio": 0.7778,
+              "delta_L1_medio": 0.1111,
               "calor_en_caso": {
                 "0": 10
               }
@@ -58171,7 +57024,7 @@
                 {
                   "corte": "C1",
                   "fase": {
-                    "caldero": 2.356194,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58190,12 +57043,12 @@
                 {
                   "corte": "C2",
                   "fase": {
-                    "caldero": 2.356194,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58209,12 +57062,12 @@
                 {
                   "corte": "C3",
                   "fase": {
-                    "caldero": 2.356194,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58228,12 +57081,12 @@
                 {
                   "corte": "C4",
                   "fase": {
-                    "caldero": 2.356194,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58247,12 +57100,12 @@
                 {
                   "corte": "C5",
                   "fase": {
-                    "caldero": 2.356194,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58266,12 +57119,12 @@
                 {
                   "corte": "C6",
                   "fase": {
-                    "caldero": 0.785398,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": -1.570796,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58285,12 +57138,12 @@
                 {
                   "corte": "C7",
                   "fase": {
-                    "caldero": 0.785398,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58304,12 +57157,12 @@
                 {
                   "corte": "C8",
                   "fase": {
-                    "caldero": 1.570796,
                     "polti": 5.061455,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.785398,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
@@ -58323,13 +57176,13 @@
                 {
                   "corte": "C9",
                   "fase": {
-                    "caldero": 1.570796,
                     "polti": 5.061455,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": 0.0,
                     "polti": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "vector_interseccion": [
@@ -58342,13 +57195,13 @@
                 {
                   "corte": "C10",
                   "fase": {
-                    "caldero": 0.785398,
                     "polti": 5.061455,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "omega": {
-                    "caldero": -0.785398,
                     "polti": 0.0,
+                    "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                     "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   "vector_interseccion": [
@@ -58361,12 +57214,12 @@
               ],
               "inercia": {
                 "caldero": {
-                  "omega_media": -0.174533,
-                  "omega_abs_media": 0.349066,
-                  "pasos_quietos": 6,
-                  "pasos_con_giro": 3,
-                  "persistencia_signo": 0.0,
-                  "cortes_con_dato": 7
+                  "pasos_quietos": 0,
+                  "pasos_con_giro": 0,
+                  "cortes_con_dato": 0,
+                  "omega_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "omega_abs_media_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                  "persistencia_signo_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "polti": {
                   "omega_media": 0.0,
@@ -58406,11 +57259,11 @@
                   0.0,
                   0.0,
                   0.0,
-                  1.570796,
-                  1.570796,
-                  2.356194,
-                  2.356194,
-                  2.748893
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
                 ],
                 "alineaciones_en_helice": [],
                 "tusi_anillos": [
@@ -58419,7 +57272,7 @@
                       "caldero",
                       "polti"
                     ],
-                    "n_pasos_vivos": 1,
+                    "n_pasos_vivos": 0,
                     "tusi_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                   },
                   {
@@ -61793,79 +60646,73 @@
             "por_corte": [
               {
                 "cut_id": "C1",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C2",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C3",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C4",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C5",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C6",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C7",
-                "n_layers": 1,
+                "n_layers": 0,
                 "nota": "<2 anillos con fase",
                 "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                 "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C8",
-                "n_layers": 2,
-                "mean_distance": 1.969616,
-                "mean_cosine": 0.703938,
-                "pairwise_distance": {
-                  "caldero~polti": 1.969616
-                }
+                "n_layers": 1,
+                "nota": "<2 anillos con fase",
+                "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C9",
-                "n_layers": 2,
-                "mean_distance": 1.969616,
-                "mean_cosine": 0.703938,
-                "pairwise_distance": {
-                  "caldero~polti": 1.969616
-                }
+                "n_layers": 1,
+                "nota": "<2 anillos con fase",
+                "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               },
               {
                 "cut_id": "C10",
-                "n_layers": 2,
-                "mean_distance": 1.686784,
-                "mean_cosine": 0.833736,
-                "pairwise_distance": {
-                  "caldero~polti": 1.686784
-                }
+                "n_layers": 1,
+                "nota": "<2 anillos con fase",
+                "mean_distance_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
+                "mean_cosine_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
               }
             ]
           }
@@ -61970,7 +60817,7 @@
                 "caldero",
                 "polti"
               ],
-              "n_pasos_vivos": 1,
+              "n_pasos_vivos": 0,
               "tusi_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
             },
             {
@@ -62190,7 +61037,7 @@
               {
                 "corte": "C1",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62209,12 +61056,12 @@
               {
                 "corte": "C2",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62228,12 +61075,12 @@
               {
                 "corte": "C3",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62247,12 +61094,12 @@
               {
                 "corte": "C4",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62266,12 +61113,12 @@
               {
                 "corte": "C5",
                 "fase": {
-                  "caldero": 2.356194,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62285,12 +61132,12 @@
               {
                 "corte": "C6",
                 "fase": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": -1.570796,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62304,12 +61151,12 @@
               {
                 "corte": "C7",
                 "fase": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62323,12 +61170,12 @@
               {
                 "corte": "C8",
                 "fase": {
-                  "caldero": 1.570796,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.785398,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "polti_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
@@ -62342,13 +61189,13 @@
               {
                 "corte": "C9",
                 "fase": {
-                  "caldero": 1.570796,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": 0.0,
                   "polti": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -62361,13 +61208,13 @@
               {
                 "corte": "C10",
                 "fase": {
-                  "caldero": 0.785398,
                   "polti": 5.061455,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "omega": {
-                  "caldero": -0.785398,
                   "polti": 0.0,
+                  "caldero_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
                   "souriau_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
                 },
                 "vector_interseccion": [
@@ -62381,138 +61228,6 @@
             "consumido": false,
             "motivo": "schrodinger_transport_esqueleto_v0_1: costo/sinkhorn NotImplemented (pendiente Mj SPEC §5)"
           }
-        },
-        "caldero_ii_cuadrantes": {
-          "cuadrantes_por_corte": [
-            {
-              "corte": "C1",
-              "cuadrante_activo": [
-                "Q2_Descenso_4_6"
-              ],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C2",
-              "cuadrante_activo": [
-                "Q2_Descenso_4_6"
-              ],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C3",
-              "cuadrante_activo": [
-                "Q2_Descenso_4_6"
-              ],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C4",
-              "cuadrante_activo": [],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C5",
-              "cuadrante_activo": [],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C6",
-              "cuadrante_activo": [
-                "Q1_Separacion_1_3"
-              ],
-              "huecos": [
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C7",
-              "cuadrante_activo": [
-                "Q1_Separacion_1_3"
-              ],
-              "huecos": [
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C8",
-              "cuadrante_activo": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6"
-              ],
-              "huecos": [
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C9",
-              "cuadrante_activo": [],
-              "huecos": [
-                "Q1_Separacion_1_3",
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            },
-            {
-              "corte": "C10",
-              "cuadrante_activo": [
-                "Q1_Separacion_1_3"
-              ],
-              "huecos": [
-                "Q2_Descenso_4_6",
-                "Q3_Ordeal_7_9",
-                "Q4_Retorno_10_12"
-              ],
-              "r4_nuevo_ciclo": false
-            }
-          ],
-          "caldero_bridge": {
-            "wired": true,
-            "current_neighbors": [],
-            "raw_current_neighbors": 0,
-            "ignored_unmapped_neighbors": [],
-            "historical_memory_used_as_current": false,
-            "mapping": "exact_existing_monomito_vocab_only",
-            "injected_cut_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
-          },
-          "falta": "apuesta t+1 de MOVIMIENTO de cuadrante (HIT/MISS Q→Q) no implementada en ningún archivo en disco",
-          "linea_mas_avanzada_actual_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
         },
         "predictor_vecinos_prefijo": {
           "prefijo_detalle": [
@@ -62539,6 +61254,7 @@
         "protocolo_orden0": {
           "clasificacion": "typo_ruta"
         },
+        "caldero_ii_cuadrantes_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
         "filtro_identidad_estado": "MEDIDA_O_ESTADO_NO_EMITIDO",
         "arquetipos_dinamicos_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
       },
@@ -62554,16 +61270,14 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q2|P?",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
             "polti_activas": [],
-            "cuadrantes_activos": [
-              "Q2_Descenso_4_6"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 0,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
@@ -62571,23 +61285,13 @@
             "sistemas_vacios": [
               "souriau",
               "polti",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "aprendizaje"
-              ],
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
-            "regiones_no_vacias": {
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -62597,16 +61301,14 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q2|P?",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
             "polti_activas": [],
-            "cuadrantes_activos": [
-              "Q2_Descenso_4_6"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 0,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
@@ -62614,23 +61316,13 @@
             "sistemas_vacios": [
               "souriau",
               "polti",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "aprendizaje"
-              ],
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
-            "regiones_no_vacias": {
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -62640,16 +61332,14 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q2|P?",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
             "polti_activas": [],
-            "cuadrantes_activos": [
-              "Q2_Descenso_4_6"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 0,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
@@ -62657,23 +61347,13 @@
             "sistemas_vacios": [
               "souriau",
               "polti",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "aprendizaje"
-              ],
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
-            "regiones_no_vacias": {
-              "caldero_Q": [
-                "aprendizaje"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -62745,16 +61425,14 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q1|P?",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
             "polti_activas": [],
-            "cuadrantes_activos": [
-              "Q1_Separacion_1_3"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 0,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
@@ -62762,23 +61440,13 @@
             "sistemas_vacios": [
               "souriau",
               "polti",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "rebeldia"
-              ],
-              "caldero_Q": [
-                "rebeldia"
-              ]
-            },
-            "regiones_no_vacias": {
-              "caldero_Q": [
-                "rebeldia"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -62788,16 +61456,14 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q1|P?",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P?",
             "sigla_flags": [],
             "polti_activas": [],
-            "cuadrantes_activos": [
-              "Q1_Separacion_1_3"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 0,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
@@ -62805,23 +61471,13 @@
             "sistemas_vacios": [
               "souriau",
               "polti",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
-            "venn_sets_motor_interrelacion": {
-              "branch:venn_evidencia": [
-                "rebeldia"
-              ],
-              "caldero_Q": [
-                "rebeldia"
-              ]
-            },
-            "regiones_no_vacias": {
-              "caldero_Q": [
-                "rebeldia"
-              ]
-            },
+            "venn_sets_motor_interrelacion": {},
+            "regiones_no_vacias": {},
             "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
@@ -62831,62 +61487,41 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q1+Q2|P30",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P30",
             "sigla_flags": [],
             "polti_activas": [
               "30_ambicion"
             ],
-            "cuadrantes_activos": [
-              "Q1_Separacion_1_3",
-              "Q2_Descenso_4_6"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 1,
-              "caldero_Q": 2,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
             },
             "sistemas_vacios": [
               "souriau",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
             "venn_sets_motor_interrelacion": {
               "branch:venn_evidencia": [
-                "ambicion",
-                "desafio_autoridad",
-                "rebeldia"
-              ],
-              "caldero_Q": [
-                "desafio_autoridad",
-                "rebeldia"
+                "ambicion"
               ],
               "polti": [
                 "ambicion"
               ]
             },
             "regiones_no_vacias": {
-              "caldero_Q": [
-                "desafio_autoridad",
-                "rebeldia"
-              ],
               "polti": [
                 "ambicion"
               ]
             },
-            "intersecciones_por_par": [
-              {
-                "par": [
-                  "polti",
-                  "caldero_Q"
-                ],
-                "interseccion": [],
-                "jaccard": 0.0
-              }
-            ],
+            "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           },
           {
@@ -62938,58 +61573,41 @@
               "regiones_funciones": {},
               "agentes_en_varias_funciones": []
             },
-            "sigla_souriau": "S0:/LSTMBU|Q1|P30",
+            "sigla_souriau": "S0:/LSTMBU|Q?|P30",
             "sigla_flags": [],
             "polti_activas": [
               "30_ambicion"
             ],
-            "cuadrantes_activos": [
-              "Q1_Separacion_1_3"
-            ],
+            "cuadrantes_activos": [],
             "tamanos": {
               "souriau": 0,
               "polti": 1,
-              "caldero_Q": 1,
+              "caldero_Q": 0,
               "cameo": 0,
               "memoria_caldero": 0,
               "area_tokens": 0
             },
             "sistemas_vacios": [
               "souriau",
+              "caldero_Q",
               "cameo",
               "memoria_caldero",
               "area_tokens"
             ],
             "venn_sets_motor_interrelacion": {
               "branch:venn_evidencia": [
-                "ambicion",
-                "rebeldia"
-              ],
-              "caldero_Q": [
-                "rebeldia"
+                "ambicion"
               ],
               "polti": [
                 "ambicion"
               ]
             },
             "regiones_no_vacias": {
-              "caldero_Q": [
-                "rebeldia"
-              ],
               "polti": [
                 "ambicion"
               ]
             },
-            "intersecciones_por_par": [
-              {
-                "par": [
-                  "polti",
-                  "caldero_Q"
-                ],
-                "interseccion": [],
-                "jaccard": 0.0
-              }
-            ],
+            "intersecciones_por_par": [],
             "nucleo_3_o_mas_sistemas": []
           }
         ],
@@ -63060,6 +61678,7 @@
         ],
         "sistemas_vacios_en_todo_el_caso": [
           "souriau",
+          "caldero_Q",
           "cameo",
           "memoria_caldero",
           "area_tokens"
@@ -63070,8 +61689,8 @@
           "area_tokens": "ningún token de familias del área en el corte"
         },
         "interrelation_engine": {
-          "n_luces": 11,
-          "n_activaciones": 11,
+          "n_luces": 3,
+          "n_activaciones": 3,
           "failures": []
         }
       },
@@ -63092,7 +61711,6 @@
       },
       "_foto_estado_010": {
         "features_presentes": [
-          "acero_zoomout",
           "aquiles_h",
           "arcos_emocionales_laterales",
           "billar_circular_v0_2",
@@ -63114,7 +61732,6 @@
           "otto_numinoso",
           "plugin_arco_field_snyder_mckee.py",
           "plugin_arquetipos_dinamicos",
-          "plugin_circulo_monomito",
           "plugin_metodo_rigor",
           "plugin_picos_mesetas.py",
           "plugin_pregunta_detras",
@@ -63142,11 +61759,11 @@
           "error_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
         },
         "pre_h": {
-          "status": "API_PENDING",
-          "adapter": "caldero_search_sources/analogical_search_sources absent; search provider not injected",
-          "reason": "pre_h_orientation_required",
-          "raw_source_count": 0,
-          "tokens_neighbors_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+          "status": "NOT_AVAILABLE",
+          "reason": "sidecar_missing",
+          "adapter_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+          "tokens_neighbors_estado": "CAMPO_OPCIONAL_NO_EMITIDO",
+          "raw_source_count_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
         },
         "cameo_lateral": {
           "status": "EXECUTED",
@@ -63686,72 +62303,57 @@
         "apuesta_estado": "NO_OBSERVADO_EN_ENTRADA_O_SALIDA_DEL_SENSOR"
       },
       "pre_H": {
-        "status": "API_PENDING",
+        "status": "NOT_AVAILABLE",
         "phase": "PRE_H_ORIENTATION",
         "can_decide_H": false
       },
       "post_H": {
-        "status": "EXECUTED",
+        "status": "NO_ANALOGS",
         "phase": "POST_H_CONTRAST",
         "input_source": "PRE_H_BLIND_ANALOGICAL_ARC",
-        "analog_count": 13,
+        "analog_count": 0,
         "H1": {
           "family": "schwartz_10_autodireccion",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "creatividad"
-          ],
-          "support_count": 1,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         },
         "H2": {
           "family": "utopia_mentalidad_liberal",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "conocimiento",
-            "creatividad"
-          ],
-          "support_count": 2,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         },
         "top10": [
           {
             "family": "schwartz_10_autodireccion",
             "analog_family_match": [],
-            "analog_token_overlap": [
-              "creatividad"
-            ],
-            "support_count": 1,
-            "contrast": "ALINEA"
+            "analog_token_overlap": [],
+            "support_count": 0,
+            "contrast": "SIN_ALINEACION_DIRECTA"
           },
           {
             "family": "utopia_mentalidad_liberal",
             "analog_family_match": [],
-            "analog_token_overlap": [
-              "conocimiento",
-              "creatividad"
-            ],
-            "support_count": 2,
-            "contrast": "ALINEA"
+            "analog_token_overlap": [],
+            "support_count": 0,
+            "contrast": "SIN_ALINEACION_DIRECTA"
           },
           {
             "family": "arquetipo_el_creador",
             "analog_family_match": [],
-            "analog_token_overlap": [
-              "creatividad"
-            ],
-            "support_count": 1,
-            "contrast": "ALINEA"
+            "analog_token_overlap": [],
+            "support_count": 0,
+            "contrast": "SIN_ALINEACION_DIRECTA"
           },
           {
             "family": "30_ambicion",
             "analog_family_match": [],
-            "analog_token_overlap": [
-              "ambicion",
-              "competencia"
-            ],
-            "support_count": 2,
-            "contrast": "ALINEA"
+            "analog_token_overlap": [],
+            "support_count": 0,
+            "contrast": "SIN_ALINEACION_DIRECTA"
           }
         ],
         "can_rewrite_H": false,
@@ -63776,70 +62378,55 @@
         "future_used_before_H": false
       },
       "calibration_role": "aprendizaje_sobre_caso_y_experiencia_sin_reescribir_la_corrida_congelada",
-      "fingerprint": "761f306419e828ef9d08f13ddb1a2cbbc89d02f1db4e152a796a826cb19bc509"
+      "fingerprint": "96f303433fce01950743944a0925741cfde78790a36285f0fd52aa3775f6153d"
     },
     "post_h_analogical_contrast": {
-      "status": "EXECUTED",
+      "status": "NO_ANALOGS",
       "phase": "POST_H_CONTRAST",
       "input_source": "PRE_H_BLIND_ANALOGICAL_ARC",
-      "analog_count": 13,
+      "analog_count": 0,
       "H1": {
         "family": "schwartz_10_autodireccion",
         "analog_family_match": [],
-        "analog_token_overlap": [
-          "creatividad"
-        ],
-        "support_count": 1,
-        "contrast": "ALINEA"
+        "analog_token_overlap": [],
+        "support_count": 0,
+        "contrast": "SIN_ALINEACION_DIRECTA"
       },
       "H2": {
         "family": "utopia_mentalidad_liberal",
         "analog_family_match": [],
-        "analog_token_overlap": [
-          "conocimiento",
-          "creatividad"
-        ],
-        "support_count": 2,
-        "contrast": "ALINEA"
+        "analog_token_overlap": [],
+        "support_count": 0,
+        "contrast": "SIN_ALINEACION_DIRECTA"
       },
       "top10": [
         {
           "family": "schwartz_10_autodireccion",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "creatividad"
-          ],
-          "support_count": 1,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         },
         {
           "family": "utopia_mentalidad_liberal",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "conocimiento",
-            "creatividad"
-          ],
-          "support_count": 2,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         },
         {
           "family": "arquetipo_el_creador",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "creatividad"
-          ],
-          "support_count": 1,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         },
         {
           "family": "30_ambicion",
           "analog_family_match": [],
-          "analog_token_overlap": [
-            "ambicion",
-            "competencia"
-          ],
-          "support_count": 2,
-          "contrast": "ALINEA"
+          "analog_token_overlap": [],
+          "support_count": 0,
+          "contrast": "SIN_ALINEACION_DIRECTA"
         }
       ],
       "can_rewrite_H": false,

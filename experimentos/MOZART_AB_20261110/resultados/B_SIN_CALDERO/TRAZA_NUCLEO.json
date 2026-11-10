@@ -8894,13 +8894,13 @@
       0.1796738990504742
     ],
     "persist_cos": [
-      0.4914717710771592,
+      0.49147177107715917,
       0.6092936652624409,
-      0.1634727187130181,
-      -0.006901968610675172,
-      0.4894791183886104,
+      0.16347271871301808,
+      -0.006901968610675169,
+      0.48947911838861036,
       0.051009636778204324,
-      0.439017824113893,
+      0.4390178241138929,
       0.784437135621273
     ],
     "kappa_dir": [
@@ -8910,7 +8910,7 @@
       0.9999761811309793,
       0.8720150185985954,
       0.9986981610855983,
-      0.8984783526108477,
+      0.8984783526108479,
       0.620208336172848
     ],
     "nota": "dX/persist_cos/kappa_dir alimentan las dimensiones geometricas del predictor que ordena H1/H2; no determinan H por si solos. Tortugas nativas remiden si borroso.",
@@ -49734,7 +49734,7 @@
         ],
         "n_desempates": 0,
         "nota": "Señal con <3 tokens: no atorar ni cerrar. Seguir leyendo trayectoria.",
-        "actualizado_ts": 1794354390.5156364,
+        "actualizado_ts": 1794354619.1650841,
         "Alimenta_H": "NO"
       },
       "candados": {
@@ -49841,7 +49841,7 @@
     },
     "bitacora": [
       {
-        "ts": 1794354390.1876583,
+        "ts": 1794354618.8067715,
         "piedra": "arranque",
         "tipo": "arranque",
         "pieza_usada": "MOTOR_V15_3_NATIVO",
@@ -49851,7 +49851,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.1903403,
+        "ts": 1794354618.8096716,
         "piedra": "hash /home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/control_flujo_soluciones.py esp=None",
         "tipo": "hash_no_identico",
         "pieza_usada": "BYPASS_HASH_CAMBIO",
@@ -49861,7 +49861,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.190696,
+        "ts": 1794354618.81004,
         "piedra": "hash /home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/control_latencia_decimo_hombre.py esp=None",
         "tipo": "hash_no_identico",
         "pieza_usada": "BYPASS_HASH_CAMBIO",
@@ -49871,7 +49871,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.190998,
+        "ts": 1794354618.8104174,
         "piedra": "hash /home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/plugin_polaridad_causal.py esp=None",
         "tipo": "hash_no_identico",
         "pieza_usada": "BYPASS_HASH_CAMBIO",
@@ -49881,7 +49881,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.1912732,
+        "ts": 1794354618.8107474,
         "piedra": "hash /home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO/candado_plugins.py esp=None",
         "tipo": "hash_no_identico",
         "pieza_usada": "BYPASS_HASH_CAMBIO",
@@ -49891,7 +49891,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.5160363,
+        "ts": 1794354619.165503,
         "piedra": "v153::¿Qué configuración dinámica se perfila en Mozart hasta Z90, usando únicamente la biografía disponible hasta ese punto?",
         "tipo": "latencia",
         "pieza_usada": "latencia_decimo_hombre",
@@ -49901,7 +49901,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.51856,
+        "ts": 1794354619.1683054,
         "piedra": "",
         "tipo": "polaridad",
         "pieza_usada": "polaridad_causal",
@@ -49911,7 +49911,7 @@
         "ok_protocolo": true
       },
       {
-        "ts": 1794354390.518589,
+        "ts": 1794354619.1683316,
         "piedra": "kappa_borroso",
         "tipo": "borroso_sin_fuerza",
         "pieza_usada": "tortugas",

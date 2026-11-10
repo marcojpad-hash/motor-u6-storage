@@ -1,6 +1,6 @@
 {
   "run_id": "B_SIN_CALDERO",
-  "timestamp_utc": "2026-11-10T23:46:49Z",
+  "timestamp_utc": "2026-11-10T23:50:42Z",
   "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
   "input_case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
   "input_provenance": "RECUPERADO_DE_RESULTADO_HISTORICO.features.cuts; no se localizó el input original independiente; diez cortes P/A/C copiados sin reescritura",
@@ -10,7 +10,15 @@
   "monte_carlo": true,
   "caldero": "OFF",
   "caldero_generic_runner_seconds": 0.0,
-  "engine_seconds": 20.379,
+  "engine_seconds": 24.746,
+  "ablation_removed_files": [
+    "plugin_circulo_monomito_v2.py",
+    "sidecar_caldero_busqueda_arquetipos.py",
+    "caldero_II_runner_generico.py",
+    "caldero_buscadores.py",
+    "caldero_zoomout_acero_v0_1.py",
+    "vecinos_caldero_neighbor_store.py"
+  ],
   "python": "3.11.18",
   "entrypoint": "motor/correr_estandar.py",
   "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
@@ -20,9 +28,9 @@
   "caldero_runner_sha256": "14c0a8130f3951c1fd0e8139bbba8d7a572b4ddebe1e1083767da2b7a4c8f9f7",
   "caldero_sidecar_sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
   "input_sha256": "d408a8ddd08cb9fcce0adda7df67b862a931a31afefae812393c6b04f8729365",
-  "raw_sha256": "004fa618ed5fd553f8ec68f278046555190d2cabbdbbb0085a1dc5e817af5b68",
-  "trace_core_sha256": "dc083811e8b453b3ffa9873260c02282aa4a81d2994abe1618a3d0d0a66f8de7",
-  "trace_plugins_sha256": "0c218b39d27029e7c7de2f3a72ce0241794fc0c5f23cf3dc5d597c1f3325636a",
+  "raw_sha256": "18eb8a709555c54088f6dfb2cb198dc1acbde6a1ad7781934fa4141e347c8227",
+  "trace_core_sha256": "f75616d51edde00dde053d3dc3cd32156c2cdc516e2d5753c1e172d5bca5ffa0",
+  "trace_plugins_sha256": "73b54b0a71a857790166a57d7f6b55365f5c662ecd56f7e18250dc5bd283c505",
   "component_status": [
     {
       "component": "geometria",
@@ -152,15 +160,10 @@
       "reason": "el puente llega a candidatos pero no discrimina (mismo valor para todos)"
     },
     {
-      "component": "acero_zoomout",
-      "status": "EXECUTED",
-      "feeds_predictor": true,
-      "feeds_predictor_declarado": true,
-      "llega_verificado": [
-        "H(rank_fusion:señal_lateral)"
-      ],
-      "declaracion_U6": "ACTIVA",
-      "reason": "llega a H"
+      "component": "caldero_zoomout_acero_v0_1.py",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_traza_no_disponible",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "capa2_antecedentes",
@@ -263,12 +266,9 @@
     },
     {
       "component": "caldero_run.py",
-      "status": "SUPERADA",
-      "superada_por": "plugin_circulo_monomito_v2.py",
-      "reason": "escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monomito_v2.py",
-      "effect": "sin_ejecucion_propia",
-      "feeds_H": false,
-      "can_decide_H": false
+      "status": "PLUGIN_SALTADO",
+      "reason": "ni caldero_run.py ni plugin_circulo_monomito_v2.py disponibles",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "predictor_vecinos_prefijo_v1.py",
@@ -338,21 +338,14 @@
     },
     {
       "component": "plugin_circulo_monomito_v2.py",
-      "status": "EXECUTED",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_API_no_disponible",
+      "effect": "sin_resolucion_Q1_Q4",
       "feeds_predictor": false,
-      "feeds_H": false,
-      "can_decide_H": false,
-      "caldero_bridge": true,
-      "current_caldero_neighbors": 0,
-      "question_forwarded": true,
-      "role": "lateral_quadrant_resolution",
-      "feeds_predictor_declarado": false,
-      "feeds_H_declarado": false,
       "llega_verificado": [],
       "declaracion_U6": "TRAZA_SOLO",
       "motivo_declaracion_U6": "posición/cuadrante por corte en tokens, sin nombres de candidata; recibe vecinos Caldero",
-      "feeds_predictor_declarado_original": true,
-      "reason": "su salida no nombra ningún candidato del top: el puente no llega"
+      "feeds_predictor_declarado_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
     },
     {
       "component": "motor_interrelacion_extensible_v0_1.py",
@@ -424,8 +417,8 @@
     },
     {
       "component": "pre_h_analogical_search(V0.18)",
-      "status": "API_PENDING",
-      "reason": "caldero_search_sources/analogical_search_sources absent; search provider not injected",
+      "status": "NOT_AVAILABLE",
+      "reason": "sidecar_missing",
       "phase": "PRE_H_ORIENTATION",
       "feeds_predictor": false,
       "feeds_H": false,
@@ -554,7 +547,7 @@
     {
       "component": "hub:marco_7783_geometria",
       "status": "HUB_ACTIVA",
-      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 7/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -563,8 +556,8 @@
     },
     {
       "component": "hub:caldero_ii_cuadrantes",
-      "status": "HUB_ACTIVA",
-      "reason": "Q1-Q4 derivados de tokens del corte: 7/10 cortes con cuadrante; puente Caldero=False",
+      "status": "HUB_ACTIVA_MUDA",
+      "reason": "circulo_monomito_v2 sin salida en este run",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -657,7 +650,7 @@
       "can_decide_H": false,
       "can_rewrite_H": false,
       "can_rewrite_apuesta": false,
-      "post_H_status": "EXECUTED",
+      "post_H_status": "NO_ANALOGS",
       "retrospective_status": "WAITING_FOR_FUTURE",
       "feeds_predictor_declarado": false,
       "feeds_H_declarado": false,
@@ -817,7 +810,7 @@
       "grado": "AJUSTADA",
       "H1": "schwartz_10_autodireccion",
       "H2": "utopia_mentalidad_liberal",
-      "margen": 4.18116
+      "margen": 3.426884
     },
     {
       "component": "decimo_hombre_esteroides_mayeutica_v1.py",
@@ -828,7 +821,7 @@
       "rewrites_apuesta": false,
       "role": "adversarial_iterative_review_mayeutica_dialectica",
       "n_attacks": 8,
-      "n_real_counterfactual_rankings": 48,
+      "n_real_counterfactual_rankings": 47,
       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
       "decision_de_proceso": "CONCLUSION_OPERACIONAL_CERRADA_CON_TRAZABILIDAD"
     },
@@ -927,28 +920,28 @@
   },
   "status_counts": {
     "ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1,
-    "API_PENDING": 1,
-    "EXECUTED": 49,
+    "EXECUTED": 47,
     "EXECUTED_DIAGNOSTIC": 1,
     "EXECUTED_SIN_HALLAZGOS": 1,
     "EXECUTED_SIN_SENAL": 3,
     "EXECUTED_WITH_CONCLUSION": 1,
-    "HUB_ACTIVA": 4,
-    "HUB_ACTIVA_MUDA": 2,
+    "HUB_ACTIVA": 3,
+    "HUB_ACTIVA_MUDA": 3,
     "NOT_APPLICABLE": 1,
+    "NOT_AVAILABLE": 1,
+    "PLUGIN_SALTADO": 3,
     "PRESENTE": 1,
     "RESUELTO_OPERACIONALMENTE": 1,
     "SIN_PREFIJO_EN_INPUT": 1,
-    "SKIPPED_INTERNAL_ANALYSIS": 2,
-    "SUPERADA": 1
+    "SKIPPED_INTERNAL_ANALYSIS": 2
   },
   "H1": {
     "family": "schwartz_10_autodireccion",
     "grado": "AJUSTADA",
     "metodo_cierre": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
     "fuente_020": "orden del motor (rank_fusion); tortugas/casos semejantes desempatan solo en banda",
-    "peso_relativo": 0.294386,
-    "porcentaje_relleno": 65.18,
+    "peso_relativo": 0.291135,
+    "porcentaje_relleno": 65.01,
     "porcentaje_relleno_estado": "MEDIDO",
     "unidad_porcentaje": "% de relleno estructural equilibrado; TORTUGAS indica medida no disponible",
     "desglose_relleno_por_grupo_pct": {
@@ -960,14 +953,14 @@
       "geometria_inercia": 41.6667,
       "greimas": 55.5556,
       "otras_dimensiones": 45.8333,
-      "puente_lateral": 84.9957,
+      "puente_lateral": 83.1202,
       "resolucion": 66.6667,
       "trayectoria_estado": 53.3333
     },
     "interpretacion": "relleno relativo al máximo estructural definido; no es probabilidad ni confianza de acierto",
     "diagnostico_tecnico_interno": {
-      "rank_fusion": 28.316281,
-      "margen_rank_fusion": 4.18116
+      "rank_fusion": 27.316281,
+      "margen_rank_fusion": 3.426884
     }
   },
   "H2": {
@@ -975,8 +968,8 @@
     "grado": "AJUSTADA",
     "metodo_cierre": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
     "fuente_020": "orden del motor (rank_fusion); tortugas/casos semejantes desempatan solo en banda",
-    "peso_relativo": 0.250917,
-    "porcentaje_relleno": 48.39,
+    "peso_relativo": 0.254612,
+    "porcentaje_relleno": 48.7,
     "porcentaje_relleno_estado": "MEDIDO",
     "unidad_porcentaje": "% de relleno estructural equilibrado; TORTUGAS indica medida no disponible",
     "desglose_relleno_por_grupo_pct": {
@@ -988,14 +981,14 @@
       "geometria_inercia": 100.0,
       "greimas": 55.5556,
       "otras_dimensiones": 70.8333,
-      "puente_lateral": 51.5013,
+      "puente_lateral": 54.8675,
       "resolucion": 83.3333,
       "trayectoria_estado": 60.0
     },
     "interpretacion": "relleno relativo al máximo estructural definido; no es probabilidad ni confianza de acierto",
     "diagnostico_tecnico_interno": {
-      "rank_fusion": 24.135121,
-      "margen_rank_fusion": 4.18116
+      "rank_fusion": 23.889397,
+      "margen_rank_fusion": 3.426884
     }
   }
 }

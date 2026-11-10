@@ -4017,10 +4017,10 @@
     "integration_point": "post_freeze_pre_predictor",
     "mutates_canon": false
   },
-  "created_at": 1794354379.0041654,
+  "created_at": 1794354606.091879,
   "entradas_registradas_011": {
     "15cc37be4f60362a999098da3aede48eae0126cc6f197e4f5c49b3dc0dd424a9": {
-      "primera_utc": "2026-11-10T23:46:19Z"
+      "primera_utc": "2026-11-10T23:50:06Z"
     }
   },
   "formula10_contradictions": [],
@@ -4037,7 +4037,7 @@
       "front_id": "30_ambicion",
       "reason": "H2_separado_gap>=discard_gap",
       "state": "SEPARADO",
-      "timestamp": 1794354379.3260133
+      "timestamp": 1794354606.4628813
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO_SIN_ULTIMO::C9",
@@ -4050,7 +4050,7 @@
       "front_id": null,
       "reason": "informacion_resuelta",
       "state": "DETERMINADO",
-      "timestamp": 1794354379.3260214
+      "timestamp": 1794354606.46289
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO_SIN_ULTIMO::C9",
@@ -4073,7 +4073,7 @@
       "front_id": null,
       "reason": "cierre_no_resuelto_por_guardianes",
       "state": "LATENTE",
-      "timestamp": 1794354379.4591484
+      "timestamp": 1794354606.6039293
     }
   ],
   "pendientes_vivos": [],
@@ -5220,630 +5220,630 @@
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263329,
+      "timestamp": 1794354606.1048417,
       "token": "actuó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026337,
+      "timestamp": 1794354606.1048448,
       "token": "alcanzó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263388,
+      "timestamp": 1794354606.1048465,
       "token": "alemania"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263402,
+      "timestamp": 1794354606.104848,
       "token": "allí"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263414,
+      "timestamp": 1794354606.1048489,
       "token": "aptitud"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263433,
+      "timestamp": 1794354606.1048508,
       "token": "artista"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263455,
+      "timestamp": 1794354606.1048524,
       "token": "años"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263493,
+      "timestamp": 1794354606.104856,
       "token": "bajos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026352,
+      "timestamp": 1794354606.1048582,
       "token": "buscó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263534,
+      "timestamp": 1794354606.1048596,
       "token": "carrera"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263543,
+      "timestamp": 1794354606.104861,
       "token": "casó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263557,
+      "timestamp": 1794354606.1048622,
       "token": "comienzos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263567,
+      "timestamp": 1794354606.104863,
       "token": "compositor"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263572,
+      "timestamp": 1794354606.1048636,
       "token": "compuesto"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263584,
+      "timestamp": 1794354606.1048648,
       "token": "compuso"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263588,
+      "timestamp": 1794354606.1048653,
       "token": "conciertos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263596,
+      "timestamp": 1794354606.1048658,
       "token": "constanze"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.02636,
+      "timestamp": 1794354606.1048665,
       "token": "continuó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263608,
+      "timestamp": 1794354606.104867,
       "token": "corte"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263612,
+      "timestamp": 1794354606.104868,
       "token": "cortes"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263624,
+      "timestamp": 1794354606.104869,
       "token": "culminante"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026363,
+      "timestamp": 1794354606.1048696,
       "token": "desarrollando"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263643,
+      "timestamp": 1794354606.1048715,
       "token": "digital"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026365,
+      "timestamp": 1794354606.1048722,
       "token": "dme"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263658,
+      "timestamp": 1794354606.104873,
       "token": "doce"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0263662,
+      "timestamp": 1794354606.1048737,
       "token": "don"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264168,
+      "timestamp": 1794354606.104913,
       "token": "edition"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264177,
+      "timestamp": 1794354606.1049137,
       "token": "enero"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264182,
+      "timestamp": 1794354606.1049144,
       "token": "entró"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026419,
+      "timestamp": 1794354606.1049151,
       "token": "estancia"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264194,
+      "timestamp": 1794354606.1049156,
       "token": "estrenado"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.02642,
+      "timestamp": 1794354606.1049168,
       "token": "europeas"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264213,
+      "timestamp": 1794354606.1049175,
       "token": "europeos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026422,
+      "timestamp": 1794354606.1049182,
       "token": "excepcional"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264227,
+      "timestamp": 1794354606.104919,
       "token": "experiencia"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264232,
+      "timestamp": 1794354606.10492,
       "token": "figaro"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264242,
+      "timestamp": 1794354606.1049204,
       "token": "finales"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026425,
+      "timestamp": 1794354606.104921,
       "token": "francia"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264256,
+      "timestamp": 1794354606.104922,
       "token": "fuerte"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264266,
+      "timestamp": 1794354606.1049228,
       "token": "giovanni"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026427,
+      "timestamp": 1794354606.1049235,
       "token": "giras"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026428,
+      "timestamp": 1794354606.1049242,
       "token": "hijos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264287,
+      "timestamp": 1794354606.1049247,
       "token": "idomeneo"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264304,
+      "timestamp": 1794354606.1049263,
       "token": "incluye"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264313,
+      "timestamp": 1794354606.1049273,
       "token": "independiente"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026432,
+      "timestamp": 1794354606.1049278,
       "token": "info"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264325,
+      "timestamp": 1794354606.1049283,
       "token": "italia"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026433,
+      "timestamp": 1794354606.104929,
       "token": "italiana"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264335,
+      "timestamp": 1794354606.1049294,
       "token": "leopold"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264337,
+      "timestamp": 1794354606.1049302,
       "token": "llevó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264344,
+      "timestamp": 1794354606.1049306,
       "token": "londres"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026435,
+      "timestamp": 1794354606.104931,
       "token": "madre"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264354,
+      "timestamp": 1794354606.1049316,
       "token": "maestro"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264359,
+      "timestamp": 1794354606.1049323,
       "token": "mannheim"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264363,
+      "timestamp": 1794354606.104933,
       "token": "mostró"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264366,
+      "timestamp": 1794354606.1049333,
       "token": "mozart"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264373,
+      "timestamp": 1794354606.1049342,
       "token": "mozarteum"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264375,
+      "timestamp": 1794354606.104935,
       "token": "musical"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264382,
+      "timestamp": 1794354606.1049354,
       "token": "new"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264387,
+      "timestamp": 1794354606.1049361,
       "token": "octubre"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264392,
+      "timestamp": 1794354606.1049366,
       "token": "organista"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264397,
+      "timestamp": 1794354606.1049373,
       "token": "parís"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264404,
+      "timestamp": 1794354606.104938,
       "token": "países"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026441,
+      "timestamp": 1794354606.1049385,
       "token": "piano"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264418,
+      "timestamp": 1794354606.104939,
       "token": "posteriores"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264428,
+      "timestamp": 1794354606.10494,
       "token": "praga"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264432,
+      "timestamp": 1794354606.1049407,
       "token": "príncipe-arzobispo"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026444,
+      "timestamp": 1794354606.1049411,
       "token": "punto"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264444,
+      "timestamp": 1794354606.1049416,
       "token": "públicos"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264454,
+      "timestamp": 1794354606.104942,
       "token": "realizó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264456,
+      "timestamp": 1794354606.1049428,
       "token": "recepción"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026446,
+      "timestamp": 1794354606.1049433,
       "token": "rompió"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264466,
+      "timestamp": 1794354606.104944,
       "token": "salzburg"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026447,
+      "timestamp": 1794354606.1049445,
       "token": "salzburgo"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264475,
+      "timestamp": 1794354606.104945,
       "token": "src1"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026448,
+      "timestamp": 1794354606.1049457,
       "token": "src2"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264487,
+      "timestamp": 1794354606.1049461,
       "token": "src3"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264494,
+      "timestamp": 1794354606.1049469,
       "token": "src4"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.02645,
+      "timestamp": 1794354606.1049478,
       "token": "src5"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264504,
+      "timestamp": 1794354606.1049483,
       "token": "src6"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264509,
+      "timestamp": 1794354606.1049488,
       "token": "src7"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264513,
+      "timestamp": 1794354606.1049492,
       "token": "suiza"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026452,
+      "timestamp": 1794354606.1049497,
       "token": "talento"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264528,
+      "timestamp": 1794354606.1049511,
       "token": "trasladó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264537,
+      "timestamp": 1794354606.1049519,
       "token": "tuvo"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264542,
+      "timestamp": 1794354606.1049523,
       "token": "viajes"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.026457,
+      "timestamp": 1794354606.104955,
       "token": "viajó"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264578,
+      "timestamp": 1794354606.1049557,
       "token": "viena"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264587,
+      "timestamp": 1794354606.1049566,
       "token": "volvió"
     },
     {
       "cut_id": "Z_TRABAJO",
       "kind": "external",
       "source": "lateral_features",
-      "timestamp": 1794354379.0264592,
+      "timestamp": 1794354606.1049573,
       "token": "óperas"
     }
   ],
@@ -6219,7 +6219,7 @@
       "kappa_dir": 0.870893506,
       "persist_cos": 0.491471771,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0149844
+      "timestamp": 1794354606.0954242
     },
     {
       "billard_executed": false,
@@ -6228,7 +6228,7 @@
       "kappa_dir": 0.792944657,
       "persist_cos": 0.609293665,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0171115
+      "timestamp": 1794354606.0966456
     },
     {
       "billard_executed": false,
@@ -6237,7 +6237,7 @@
       "kappa_dir": 0.986547855,
       "persist_cos": 0.163472719,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0184906
+      "timestamp": 1794354606.0978937
     },
     {
       "billard_executed": false,
@@ -6246,7 +6246,7 @@
       "kappa_dir": 0.999976181,
       "persist_cos": -0.006901969,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0201476
+      "timestamp": 1794354606.09917
     },
     {
       "billard_executed": false,
@@ -6255,7 +6255,7 @@
       "kappa_dir": 0.872015019,
       "persist_cos": 0.489479118,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0218294
+      "timestamp": 1794354606.10036
     },
     {
       "billard_executed": false,
@@ -6264,7 +6264,7 @@
       "kappa_dir": 0.998698161,
       "persist_cos": 0.051009637,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.023264
+      "timestamp": 1794354606.1017175
     },
     {
       "billard_executed": false,
@@ -6273,8 +6273,8 @@
       "kappa_dir": 0.898478353,
       "persist_cos": 0.439017824,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354379.0247483
+      "timestamp": 1794354606.1032033
     }
   ],
-  "updated_at": 1794354379.7867703
+  "updated_at": 1794354606.9848738
 }

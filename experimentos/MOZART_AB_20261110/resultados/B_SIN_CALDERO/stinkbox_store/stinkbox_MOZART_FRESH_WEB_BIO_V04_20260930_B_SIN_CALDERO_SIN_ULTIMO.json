@@ -11,10 +11,10 @@
     "integration_point": "post_freeze_pre_predictor",
     "mutates_canon": false
   },
-  "created_at": 1794354400.4319096,
+  "created_at": 1794354631.0435197,
   "entradas_registradas_011": {
     "018dbdd0a7f1a1ecb439e247a4aa695e6d95580e7da14220ecae4ac8a9c3fb6e": {
-      "primera_utc": "2026-11-10T23:46:40Z"
+      "primera_utc": "2026-11-10T23:50:31Z"
     }
   },
   "formula10_contradictions": [],
@@ -22,16 +22,16 @@
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
       "detail": {
-        "gap_to_top": 2.844099,
+        "gap_to_top": 2.563775,
         "latest_dX_norm": 0.251976,
-        "rank_fusion": 24.796266,
+        "rank_fusion": 24.07659,
         "rank_pos": 2,
         "seen": 1
       },
       "front_id": "30_ambicion",
       "reason": "H2_separado_gap>=discard_gap",
       "state": "SEPARADO",
-      "timestamp": 1794354400.739358
+      "timestamp": 1794354631.3919673
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
@@ -39,12 +39,12 @@
         "compuerta": "CIERRE_PERMITIDO",
         "pendientes_bloqueantes": [],
         "top1": "schwartz_10_autodireccion",
-        "top_margin": 2.844099
+        "top_margin": 2.563775
       },
       "front_id": null,
       "reason": "informacion_resuelta",
       "state": "DETERMINADO",
-      "timestamp": 1794354400.7393658
+      "timestamp": 1794354631.3919759
     },
     {
       "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
@@ -67,7 +67,7 @@
       "front_id": null,
       "reason": "cierre_no_resuelto_por_guardianes",
       "state": "LATENTE",
-      "timestamp": 1794354400.8144484
+      "timestamp": 1794354631.472274
     }
   ],
   "pendientes_vivos": [],
@@ -82,7 +82,7 @@
       "estado": "RESUELTO_OPERACIONALMENTE",
       "front_id": "schwartz_10_autodireccion",
       "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
-      "rank_fusion_observado": 27.640365,
+      "rank_fusion_observado": 26.640365,
       "tokens_signature": [
         "ambicion",
         "aprendizaje",
@@ -106,7 +106,7 @@
       "estado": "RESUELTO_OPERACIONALMENTE",
       "front_id": "30_ambicion",
       "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
-      "rank_fusion_observado": 24.796266,
+      "rank_fusion_observado": 24.07659,
       "tokens_signature": [
         "ambicion",
         "aprendizaje",
@@ -137,7 +137,7 @@
       "kappa_dir": 0.870893506,
       "persist_cos": 0.491471771,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.4425905
+      "timestamp": 1794354631.0445821
     },
     {
       "billard_executed": false,
@@ -146,7 +146,7 @@
       "kappa_dir": 0.792944657,
       "persist_cos": 0.609293665,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.4436812
+      "timestamp": 1794354631.0453107
     },
     {
       "billard_executed": false,
@@ -155,7 +155,7 @@
       "kappa_dir": 0.986547855,
       "persist_cos": 0.163472719,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.445714
+      "timestamp": 1794354631.0459847
     },
     {
       "billard_executed": false,
@@ -164,7 +164,7 @@
       "kappa_dir": 0.999976181,
       "persist_cos": -0.006901969,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.4486952
+      "timestamp": 1794354631.0466068
     },
     {
       "billard_executed": false,
@@ -173,7 +173,7 @@
       "kappa_dir": 0.872015019,
       "persist_cos": 0.489479118,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.4496264
+      "timestamp": 1794354631.0472994
     },
     {
       "billard_executed": false,
@@ -182,7 +182,7 @@
       "kappa_dir": 0.998698161,
       "persist_cos": 0.051009637,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.452941
+      "timestamp": 1794354631.0482144
     },
     {
       "billard_executed": false,
@@ -191,8 +191,8 @@
       "kappa_dir": 0.898478353,
       "persist_cos": 0.439017824,
       "source_semantics": "R732_TRAJECTORY_METRIC",
-      "timestamp": 1794354400.4556673
+      "timestamp": 1794354631.0490255
     }
   ],
-  "updated_at": 1794354401.1037273
+  "updated_at": 1794354631.8198223
 }

@@ -2,7 +2,7 @@
   "schema": "caldero_neighbor_store_v1",
   "neighbors": {
     "actuó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -12,7 +12,7 @@
       ]
     },
     "alcanzó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -22,7 +22,7 @@
       ]
     },
     "alemania": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -32,7 +32,7 @@
       ]
     },
     "allí": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -42,7 +42,7 @@
       ]
     },
     "aptitud": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -52,7 +52,7 @@
       ]
     },
     "artista": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -62,7 +62,7 @@
       ]
     },
     "años": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -72,7 +72,7 @@
       ]
     },
     "bajos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -82,7 +82,7 @@
       ]
     },
     "buscó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -92,7 +92,7 @@
       ]
     },
     "carrera": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 2,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -103,7 +103,7 @@
       ]
     },
     "casó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -113,7 +113,7 @@
       ]
     },
     "comienzos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -123,7 +123,7 @@
       ]
     },
     "compositor": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -133,7 +133,7 @@
       ]
     },
     "compuesto": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -143,7 +143,7 @@
       ]
     },
     "compuso": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 2,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -154,7 +154,7 @@
       ]
     },
     "conciertos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -164,7 +164,7 @@
       ]
     },
     "constanze": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -174,7 +174,7 @@
       ]
     },
     "continuó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -184,7 +184,7 @@
       ]
     },
     "corte": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -194,7 +194,7 @@
       ]
     },
     "cortes": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -204,7 +204,7 @@
       ]
     },
     "culminante": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -214,7 +214,7 @@
       ]
     },
     "desarrollando": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -224,7 +224,7 @@
       ]
     },
     "digital": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -234,7 +234,7 @@
       ]
     },
     "dme": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -244,7 +244,7 @@
       ]
     },
     "doce": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -254,7 +254,7 @@
       ]
     },
     "don": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -264,7 +264,7 @@
       ]
     },
     "edition": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -274,7 +274,7 @@
       ]
     },
     "enero": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -284,7 +284,7 @@
       ]
     },
     "entró": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -294,7 +294,7 @@
       ]
     },
     "estancia": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -304,7 +304,7 @@
       ]
     },
     "estrenado": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -314,7 +314,7 @@
       ]
     },
     "europeas": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -324,7 +324,7 @@
       ]
     },
     "europeos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -334,7 +334,7 @@
       ]
     },
     "excepcional": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -344,7 +344,7 @@
       ]
     },
     "experiencia": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -354,7 +354,7 @@
       ]
     },
     "figaro": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -364,7 +364,7 @@
       ]
     },
     "finales": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -374,7 +374,7 @@
       ]
     },
     "francia": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -384,7 +384,7 @@
       ]
     },
     "fuerte": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -394,7 +394,7 @@
       ]
     },
     "giovanni": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -404,7 +404,7 @@
       ]
     },
     "giras": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -414,7 +414,7 @@
       ]
     },
     "hijos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -424,7 +424,7 @@
       ]
     },
     "idomeneo": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -434,7 +434,7 @@
       ]
     },
     "incluye": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -444,7 +444,7 @@
       ]
     },
     "independiente": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -454,7 +454,7 @@
       ]
     },
     "info": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -464,7 +464,7 @@
       ]
     },
     "italia": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -474,7 +474,7 @@
       ]
     },
     "italiana": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -484,7 +484,7 @@
       ]
     },
     "leopold": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -494,7 +494,7 @@
       ]
     },
     "llevó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -504,7 +504,7 @@
       ]
     },
     "londres": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -514,7 +514,7 @@
       ]
     },
     "madre": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -524,7 +524,7 @@
       ]
     },
     "maestro": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -534,7 +534,7 @@
       ]
     },
     "mannheim": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -544,7 +544,7 @@
       ]
     },
     "mostró": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -554,7 +554,7 @@
       ]
     },
     "mozart": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 3,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -566,7 +566,7 @@
       ]
     },
     "mozarteum": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 2,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -577,7 +577,7 @@
       ]
     },
     "musical": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -587,7 +587,7 @@
       ]
     },
     "new": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -597,7 +597,7 @@
       ]
     },
     "octubre": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -607,7 +607,7 @@
       ]
     },
     "organista": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -617,7 +617,7 @@
       ]
     },
     "parís": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -627,7 +627,7 @@
       ]
     },
     "países": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -637,7 +637,7 @@
       ]
     },
     "piano": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -647,7 +647,7 @@
       ]
     },
     "posteriores": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -657,7 +657,7 @@
       ]
     },
     "praga": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -667,7 +667,7 @@
       ]
     },
     "príncipe-arzobispo": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -677,7 +677,7 @@
       ]
     },
     "punto": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -687,7 +687,7 @@
       ]
     },
     "públicos": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -697,7 +697,7 @@
       ]
     },
     "realizó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -707,7 +707,7 @@
       ]
     },
     "recepción": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -717,7 +717,7 @@
       ]
     },
     "rompió": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -727,7 +727,7 @@
       ]
     },
     "salzburg": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -737,7 +737,7 @@
       ]
     },
     "salzburgo": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -747,7 +747,7 @@
       ]
     },
     "src1": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -757,7 +757,7 @@
       ]
     },
     "src2": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -767,7 +767,7 @@
       ]
     },
     "src3": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -777,7 +777,7 @@
       ]
     },
     "src4": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -787,7 +787,7 @@
       ]
     },
     "src5": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -797,7 +797,7 @@
       ]
     },
     "src6": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -807,7 +807,7 @@
       ]
     },
     "src7": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -817,7 +817,7 @@
       ]
     },
     "suiza": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -827,7 +827,7 @@
       ]
     },
     "talento": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -837,7 +837,7 @@
       ]
     },
     "trasladó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -847,7 +847,7 @@
       ]
     },
     "tuvo": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -857,7 +857,7 @@
       ]
     },
     "viajes": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 3,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -869,7 +869,7 @@
       ]
     },
     "viajó": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -879,7 +879,7 @@
       ]
     },
     "viena": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -889,7 +889,7 @@
       ]
     },
     "volvió": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -899,7 +899,7 @@
       ]
     },
     "óperas": {
-      "first_seen_utc": "2026-11-10T23:46:01.818186+00:00",
+      "first_seen_utc": "2026-11-10T23:49:45.166586+00:00",
       "observations": 1,
       "cases": [
         "MOZART_FRESH_WEB_BIO_V04_20260930"
@@ -909,5 +909,5 @@
       ]
     }
   },
-  "updated_utc": "2026-11-10T23:46:01.818186+00:00"
+  "updated_utc": "2026-11-10T23:49:45.166586+00:00"
 }

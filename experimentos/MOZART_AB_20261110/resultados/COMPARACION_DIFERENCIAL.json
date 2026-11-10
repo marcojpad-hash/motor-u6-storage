@@ -1033,7 +1033,7 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.49597342038247755,
+          "trajectory_meso_support": 0.49597342038247816,
           "trajectory_macro_support": 0.5279151839041396,
           "trajectory_acceleration_support": 0.47921199024946337,
           "trajectory_multiscale_convergence": 0.9598206098754507,
@@ -1211,7 +1211,7 @@
           "own_pattern_evidence": 0.71,
           "lateral_shared_evidence": 0.42696629213483145,
           "lateral_candidate_specific": 0.5150133976875758,
-          "lateral_contribution": 0.32106162841244656,
+          "lateral_contribution": 0.3210616284124465,
           "cameo_activity": 0.9342105263157895,
           "cameo_profile_activity": 0.5,
           "geometric_inertia_alignment": 0.4837840571549225,
@@ -1220,10 +1220,10 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.4904011794740793,
-          "trajectory_meso_support": 0.4967067142920258,
-          "trajectory_macro_support": 0.5193277382995523,
+          "trajectory_meso_support": 0.4967067142920262,
+          "trajectory_macro_support": 0.5193277382995521,
           "trajectory_acceleration_support": 0.48134200089616436,
-          "trajectory_multiscale_convergence": 0.971073441174527,
+          "trajectory_multiscale_convergence": 0.9710734411745272,
           "trajectory_inertia_alignment": 0.49480531116914833,
           "trajectory_curvature_response": 0.4929138474766688,
           "propp_signal": 0.5,
@@ -1234,7 +1234,7 @@
           "frye_ironic": 0.3109333333333335,
           "propp_transgression": 0.0,
           "propp_damage": 0.0,
-          "booker_tragedy": 0.43311444444444447,
+          "booker_tragedy": 0.4331144444444445,
           "booker_voyage_return": 0.625,
           "greimas_opponent_friction": 0.0,
           "greimas_subject_density": 0.5945333333333332,
@@ -1244,7 +1244,7 @@
           "frye_high_mimetic": 0.9690666666666665,
           "frye_low_mimetic": 0.8109333333333335,
           "frye_iron_atrition": 0.2736213333333335,
-          "coupling_iron_tragedy": 0.134669717925926,
+          "coupling_iron_tragedy": 0.13466971792592602,
           "coupling_opponent": 0.0,
           "structural_shared_evidence": 0.6099719623370805,
           "structural_contribution": 0.24030281039036247,
@@ -1260,9 +1260,9 @@
           "dynamis_guardian_attenuation": 0.0,
           "dynamis_skeptical_guardrails": 0.0,
           "dynamis_sigma_balance": 0.0,
-          "dynamis_acceleration": 0.5145030303030304,
+          "dynamis_acceleration": 0.5145030303030302,
           "dynamis_containment": 0.0,
-          "dynamis_structural_contribution": 0.22645030303030303,
+          "dynamis_structural_contribution": 0.226450303030303,
           "dynamis_tokens_active": [
             "creatividad"
           ],
@@ -1407,7 +1407,7 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.49597342038247755,
+          "trajectory_meso_support": 0.49597342038247816,
           "trajectory_macro_support": 0.5097006007834061,
           "trajectory_acceleration_support": 0.47921199024946337,
           "trajectory_multiscale_convergence": 0.9780351929961841,
@@ -1594,10 +1594,10 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.5760714244567119,
+          "trajectory_meso_support": 0.5760714244567122,
           "trajectory_macro_support": 0.5515047406716015,
           "trajectory_acceleration_support": 0.46273589145689864,
-          "trajectory_multiscale_convergence": 0.9116643693228783,
+          "trajectory_multiscale_convergence": 0.9116643693228781,
           "trajectory_inertia_alignment": 0.4933628579781876,
           "trajectory_curvature_response": 0.4858474022153799,
           "propp_signal": 0.5,
@@ -2002,7 +2002,7 @@
         "geometric_turn_context": 0.620208336172848,
         "geometric_latest_movement": 0.1796738990504742,
         "trajectory_micro_support": 0.48773579377959025,
-        "trajectory_meso_support": 0.49597342038247755,
+        "trajectory_meso_support": 0.49597342038247816,
         "trajectory_macro_support": 0.5279151839041396,
         "trajectory_acceleration_support": 0.47921199024946337,
         "trajectory_multiscale_convergence": 0.9598206098754507,
@@ -2168,7 +2168,7 @@
         "own_pattern_evidence": 0.71,
         "lateral_shared_evidence": 0.42696629213483145,
         "lateral_candidate_specific": 0.5150133976875758,
-        "lateral_contribution": 0.32106162841244656,
+        "lateral_contribution": 0.3210616284124465,
         "cameo_activity": 0.9342105263157895,
         "cameo_profile_activity": 0.5,
         "geometric_inertia_alignment": 0.4837840571549225,
@@ -2177,10 +2177,10 @@
         "geometric_turn_context": 0.620208336172848,
         "geometric_latest_movement": 0.1796738990504742,
         "trajectory_micro_support": 0.4904011794740793,
-        "trajectory_meso_support": 0.4967067142920258,
-        "trajectory_macro_support": 0.5193277382995523,
+        "trajectory_meso_support": 0.4967067142920262,
+        "trajectory_macro_support": 0.5193277382995521,
         "trajectory_acceleration_support": 0.48134200089616436,
-        "trajectory_multiscale_convergence": 0.971073441174527,
+        "trajectory_multiscale_convergence": 0.9710734411745272,
         "trajectory_inertia_alignment": 0.49480531116914833,
         "trajectory_curvature_response": 0.4929138474766688,
         "propp_signal": 0.5,
@@ -2191,7 +2191,7 @@
         "frye_ironic": 0.3109333333333335,
         "propp_transgression": 0.0,
         "propp_damage": 0.0,
-        "booker_tragedy": 0.43311444444444447,
+        "booker_tragedy": 0.4331144444444445,
         "booker_voyage_return": 0.625,
         "greimas_opponent_friction": 0.0,
         "greimas_subject_density": 0.5945333333333332,
@@ -2201,7 +2201,7 @@
         "frye_high_mimetic": 0.9690666666666665,
         "frye_low_mimetic": 0.8109333333333335,
         "frye_iron_atrition": 0.2736213333333335,
-        "coupling_iron_tragedy": 0.134669717925926,
+        "coupling_iron_tragedy": 0.13466971792592602,
         "coupling_opponent": 0.0,
         "structural_shared_evidence": 0.6099719623370805,
         "structural_contribution": 0.24030281039036247,
@@ -2217,9 +2217,9 @@
         "dynamis_guardian_attenuation": 0.0,
         "dynamis_skeptical_guardrails": 0.0,
         "dynamis_sigma_balance": 0.0,
-        "dynamis_acceleration": 0.5145030303030304,
+        "dynamis_acceleration": 0.5145030303030302,
         "dynamis_containment": 0.0,
-        "dynamis_structural_contribution": 0.22645030303030303,
+        "dynamis_structural_contribution": 0.226450303030303,
         "dynamis_tokens_active": [
           "creatividad"
         ],
@@ -2642,17 +2642,6 @@
           "reaches_candidates": true,
           "discriminates": false
         },
-        "acero_zoomout": {
-          "exact": 25,
-          "alias": 0,
-          "family_not_candidate": 57,
-          "unmatched": 0,
-          "ambiguous": 0,
-          "unmatched_sample": [],
-          "alias_examples": [],
-          "reaches_candidates": true,
-          "discriminates": true
-        },
         "capa2_antecedentes": {
           "exact": 0,
           "alias": 0,
@@ -2820,17 +2809,6 @@
           "reaches_candidates": false,
           "discriminates": false
         },
-        "plugin_circulo_monomito": {
-          "exact": 0,
-          "alias": 0,
-          "family_not_candidate": 0,
-          "unmatched": 0,
-          "ambiguous": 0,
-          "unmatched_sample": [],
-          "alias_examples": [],
-          "reaches_candidates": false,
-          "discriminates": false
-        },
         "interrelation": {
           "exact": 0,
           "alias": 0,
@@ -2937,7 +2915,6 @@
         "plugin_reporte_3d",
         "billar_circular_v0_2",
         "ricci_forman_v0_1",
-        "acero_zoomout",
         "plugin_picos_mesetas.py",
         "negativo_ricci_vs_billar",
         "familias_tokens_puente"
@@ -3006,19 +2983,6 @@
           "utopia_mentalidad_liberal": 1.0
         },
         "range": 0.180209,
-        "rank_eligible": true,
-        "can_decide_H": false
-      },
-      {
-        "signal": "acero_zoomout",
-        "discriminates": true,
-        "candidate_values": {
-          "30_ambicion": 0.8979782270606533,
-          "arquetipo_el_creador": 0.21710730948678075,
-          "schwartz_10_autodireccion": 1.0,
-          "utopia_mentalidad_liberal": 0.24572317262830484
-        },
-        "range": 1.2585,
         "rank_eligible": true,
         "can_decide_H": false
       },
@@ -3195,7 +3159,7 @@
     "resolution": {
       "status": "RESOLVED_INPUT_RESCAN",
       "trigger": true,
-      "initial_margin": 4.514494,
+      "initial_margin": 3.760217,
       "native_blur": true,
       "levels": [
         {
@@ -3357,12 +3321,12 @@
         "estructura": 2,
         "dynamis": 5,
         "resolucion": 2,
-        "puente_lateral": 9
+        "puente_lateral": 8
       },
       "entropia": {
-        "entropia_normalizada_0_1": 0.99100957,
-        "entropia_relativa_pct": 99.100957,
-        "concentracion_complementaria_pct": 0.899043,
+        "entropia_normalizada_0_1": 0.99113605,
+        "entropia_relativa_pct": 99.113605,
+        "concentracion_complementaria_pct": 0.886395,
         "entropia_maxima_nats": 1.38629436,
         "n_candidatos": 4,
         "distribucion_indices_no_probabilistica": true
@@ -3372,15 +3336,15 @@
     "candidates": [
       {
         "family": "schwartz_10_autodireccion",
-        "rank_fusion": 28.316281,
-        "indice_fusion_relativo_0_1": 0.615571,
-        "indice_fusion_relativo_pct": 61.557133,
+        "rank_fusion": 27.316281,
+        "indice_fusion_relativo_0_1": 0.607028,
+        "indice_fusion_relativo_pct": 60.702847,
         "features": {
           "state": 0.5964,
           "continuity": 0.9,
           "recency": 1.0,
           "delta": 0.49693333333333334,
-          "lateral_breadth": 0.8888888888888888,
+          "lateral_breadth": 0.875,
           "axis_convergence": 0.4546792503489345,
           "relational_activity": 0.0,
           "relational_alignment": 0.5,
@@ -3390,8 +3354,8 @@
           "stinkbox_support": 0.5,
           "own_pattern_evidence": 0.71,
           "lateral_shared_evidence": 0.25,
-          "lateral_candidate_specific": 0.8499571562833389,
-          "lateral_contribution": 0.39602829749200197,
+          "lateral_candidate_specific": 0.8312018008187563,
+          "lateral_contribution": 0.39014127418596056,
           "cameo_activity": 0.9342105263157895,
           "cameo_profile_activity": 0.5,
           "geometric_inertia_alignment": 0.47929532005555825,
@@ -3400,7 +3364,7 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.49597342038247755,
+          "trajectory_meso_support": 0.49597342038247816,
           "trajectory_macro_support": 0.5279151839041396,
           "trajectory_acceleration_support": 0.47921199024946337,
           "trajectory_multiscale_convergence": 0.9598206098754507,
@@ -3453,17 +3417,16 @@
             "plugin_reporte_3d": 0.90884945068212,
             "billar_circular_v0_2": 1.0,
             "ricci_forman_v0_1": 1.0,
-            "acero_zoomout": 1.0,
             "plugin_picos_mesetas.py": 1.0,
             "negativo_ricci_vs_billar": 1.0,
             "familias_tokens_puente": 1.0
           },
-          "rank_fusion": 28.316281073216715,
+          "rank_fusion": 27.316281073216715,
           "resolution_micro": 0.48015107095546045,
           "resolution_meso": 0.15,
           "resolution_macro": 0.5677811616161617,
-          "indice_potencial_equilibrado_0_1": 0.65176378,
-          "indice_potencial_equilibrado_pct": 65.176378,
+          "indice_potencial_equilibrado_0_1": 0.65005875,
+          "indice_potencial_equilibrado_pct": 65.005875,
           "grupos": {
             "acoplamiento": {
               "aporte": 1.0,
@@ -3522,11 +3485,11 @@
               "n_componentes": 8
             },
             "puente_lateral": {
-              "aporte": 7.649614,
-              "maximo": 9.0,
-              "fraccion_0_1": 0.849957,
-              "porcentaje_del_maximo": 84.9957,
-              "n_componentes": 9
+              "aporte": 6.649614,
+              "maximo": 8.0,
+              "fraccion_0_1": 0.831202,
+              "porcentaje_del_maximo": 83.1202,
+              "n_componentes": 8
             },
             "resolucion": {
               "aporte": 1.333333,
@@ -3543,8 +3506,8 @@
               "n_componentes": 5
             }
           },
-          "entropia_relativa_candidatos_pct": 99.100957,
-          "concentracion_complementaria_candidatos_pct": 0.899043
+          "entropia_relativa_candidatos_pct": 99.113605,
+          "concentracion_complementaria_candidatos_pct": 0.886395
         },
         "apoyo_tortugas_votos": 0,
         "apoyo_tortugas_media": 0.0,
@@ -3558,15 +3521,15 @@
       },
       {
         "family": "utopia_mentalidad_liberal",
-        "rank_fusion": 24.135121,
-        "indice_fusion_relativo_0_1": 0.524677,
-        "indice_fusion_relativo_pct": 52.467653,
+        "rank_fusion": 23.889397,
+        "indice_fusion_relativo_0_1": 0.530875,
+        "indice_fusion_relativo_pct": 53.08755,
         "features": {
           "state": 0.5945333333333332,
           "continuity": 0.7,
           "recency": 0.3333333333333333,
           "delta": 0.49759999999999993,
-          "lateral_breadth": 0.7777777777777778,
+          "lateral_breadth": 0.75,
           "axis_convergence": 0.4652387116146537,
           "relational_activity": 0.0,
           "relational_alignment": 0.5,
@@ -3576,8 +3539,8 @@
           "stinkbox_support": 0.5,
           "own_pattern_evidence": 0.71,
           "lateral_shared_evidence": 0.25,
-          "lateral_candidate_specific": 0.5150133976875758,
-          "lateral_contribution": 0.2763535303439655,
+          "lateral_candidate_specific": 0.5486746758199847,
+          "lateral_contribution": 0.2859310804503548,
           "cameo_activity": 0.9342105263157895,
           "cameo_profile_activity": 0.5,
           "geometric_inertia_alignment": 0.4837840571549225,
@@ -3586,10 +3549,10 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.4904011794740793,
-          "trajectory_meso_support": 0.4967067142920258,
-          "trajectory_macro_support": 0.5193277382995523,
+          "trajectory_meso_support": 0.4967067142920262,
+          "trajectory_macro_support": 0.5193277382995521,
           "trajectory_acceleration_support": 0.48134200089616436,
-          "trajectory_multiscale_convergence": 0.971073441174527,
+          "trajectory_multiscale_convergence": 0.9710734411745272,
           "trajectory_inertia_alignment": 0.49480531116914833,
           "trajectory_curvature_response": 0.4929138474766688,
           "propp_signal": 0.5,
@@ -3600,7 +3563,7 @@
           "frye_ironic": 0.3109333333333335,
           "propp_transgression": 0.0,
           "propp_damage": 0.0,
-          "booker_tragedy": 0.43311444444444447,
+          "booker_tragedy": 0.4331144444444445,
           "booker_voyage_return": 0.625,
           "greimas_opponent_friction": 0.0,
           "greimas_subject_density": 0.5945333333333332,
@@ -3610,7 +3573,7 @@
           "frye_high_mimetic": 0.9690666666666665,
           "frye_low_mimetic": 0.8109333333333335,
           "frye_iron_atrition": 0.2736213333333335,
-          "coupling_iron_tragedy": 0.134669717925926,
+          "coupling_iron_tragedy": 0.13466971792592602,
           "coupling_opponent": 0.0,
           "structural_shared_evidence": 0.6099719623370805,
           "structural_contribution": 0.24030281039036247,
@@ -3626,9 +3589,9 @@
           "dynamis_guardian_attenuation": 0.0,
           "dynamis_skeptical_guardrails": 0.0,
           "dynamis_sigma_balance": 0.0,
-          "dynamis_acceleration": 0.5145030303030304,
+          "dynamis_acceleration": 0.5145030303030302,
           "dynamis_containment": 0.0,
-          "dynamis_structural_contribution": 0.22645030303030303,
+          "dynamis_structural_contribution": 0.226450303030303,
           "dynamis_tokens_active": [
             "creatividad"
           ],
@@ -3639,17 +3602,16 @@
             "plugin_reporte_3d": 1.0,
             "billar_circular_v0_2": 0.0,
             "ricci_forman_v0_1": 1.0,
-            "acero_zoomout": 0.24572317262830484,
             "plugin_picos_mesetas.py": 0.33333333333333337,
             "negativo_ricci_vs_billar": 0.5,
             "familias_tokens_puente": 1.0
           },
-          "rank_fusion": 24.13512057918818,
+          "rank_fusion": 23.889397406559873,
           "resolution_micro": 0.48471354906512876,
           "resolution_meso": 0.15,
           "resolution_macro": 0.5417934343434343,
-          "indice_potencial_equilibrado_0_1": 0.48394061,
-          "indice_potencial_equilibrado_pct": 48.394061,
+          "indice_potencial_equilibrado_0_1": 0.48700073,
+          "indice_potencial_equilibrado_pct": 48.700073,
           "grupos": {
             "acoplamiento": {
               "aporte": 0.0,
@@ -3708,11 +3670,11 @@
               "n_componentes": 8
             },
             "puente_lateral": {
-              "aporte": 4.635121,
-              "maximo": 9.0,
-              "fraccion_0_1": 0.515013,
-              "porcentaje_del_maximo": 51.5013,
-              "n_componentes": 9
+              "aporte": 4.389397,
+              "maximo": 8.0,
+              "fraccion_0_1": 0.548675,
+              "porcentaje_del_maximo": 54.8675,
+              "n_componentes": 8
             },
             "resolucion": {
               "aporte": 1.666667,
@@ -3729,8 +3691,8 @@
               "n_componentes": 5
             }
           },
-          "entropia_relativa_candidatos_pct": 99.100957,
-          "concentracion_complementaria_candidatos_pct": 0.899043
+          "entropia_relativa_candidatos_pct": 99.113605,
+          "concentracion_complementaria_candidatos_pct": 0.886395
         },
         "apoyo_tortugas_votos": 0,
         "apoyo_tortugas_media": 0.0,
@@ -3744,9 +3706,9 @@
       },
       {
         "family": "arquetipo_el_creador",
-        "rank_fusion": 22.563198,
-        "indice_fusion_relativo_0_1": 0.490504,
-        "indice_fusion_relativo_pct": 49.05043,
+        "rank_fusion": 22.34609,
+        "indice_fusion_relativo_0_1": 0.49658,
+        "indice_fusion_relativo_pct": 49.657979,
         "features": {
           "state": 0.5964,
           "continuity": 1.0,
@@ -3762,8 +3724,8 @@
           "stinkbox_support": 0.5,
           "own_pattern_evidence": 0.71,
           "lateral_shared_evidence": 0.25,
-          "lateral_candidate_specific": 0.6181330722439257,
-          "lateral_contribution": 0.3295546538960113,
+          "lateral_candidate_specific": 0.6682612925885687,
+          "lateral_contribution": 0.34459311999940423,
           "cameo_activity": 0.9342105263157895,
           "cameo_profile_activity": 0.5,
           "geometric_inertia_alignment": 0.47929532005555825,
@@ -3772,7 +3734,7 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.49597342038247755,
+          "trajectory_meso_support": 0.49597342038247816,
           "trajectory_macro_support": 0.5097006007834061,
           "trajectory_acceleration_support": 0.47921199024946337,
           "trajectory_multiscale_convergence": 0.9780351929961841,
@@ -3825,17 +3787,16 @@
             "plugin_reporte_3d": 0.3483037546782567,
             "billar_circular_v0_2": 0.1875,
             "ricci_forman_v0_1": 1.0,
-            "acero_zoomout": 0.21710730948678075,
             "plugin_picos_mesetas.py": 0.33333333333333337,
             "negativo_ricci_vs_billar": 1.0,
             "familias_tokens_puente": 1.0
           },
-          "rank_fusion": 22.563197650195328,
+          "rank_fusion": 22.346090340708546,
           "resolution_micro": 0.48015107095546045,
           "resolution_meso": 0.15,
           "resolution_macro": 0.5375778787878788,
-          "indice_potencial_equilibrado_0_1": 0.4609919,
-          "indice_potencial_equilibrado_pct": 46.09919,
+          "indice_potencial_equilibrado_0_1": 0.46554901,
+          "indice_potencial_equilibrado_pct": 46.554901,
           "grupos": {
             "acoplamiento": {
               "aporte": 0.333333,
@@ -3894,11 +3855,11 @@
               "n_componentes": 8
             },
             "puente_lateral": {
-              "aporte": 5.563198,
-              "maximo": 9.0,
-              "fraccion_0_1": 0.618133,
-              "porcentaje_del_maximo": 61.8133,
-              "n_componentes": 9
+              "aporte": 5.34609,
+              "maximo": 8.0,
+              "fraccion_0_1": 0.668261,
+              "porcentaje_del_maximo": 66.8261,
+              "n_componentes": 8
             },
             "resolucion": {
               "aporte": 0.666667,
@@ -3915,8 +3876,8 @@
               "n_componentes": 5
             }
           },
-          "entropia_relativa_candidatos_pct": 99.100957,
-          "concentracion_complementaria_candidatos_pct": 0.899043
+          "entropia_relativa_candidatos_pct": 99.113605,
+          "concentracion_complementaria_candidatos_pct": 0.886395
         },
         "apoyo_tortugas_votos": 0,
         "apoyo_tortugas_media": 0.0,
@@ -3930,15 +3891,15 @@
       },
       {
         "family": "30_ambicion",
-        "rank_fusion": 21.172956,
-        "indice_fusion_relativo_0_1": 0.460282,
-        "indice_fusion_relativo_pct": 46.028165,
+        "rank_fusion": 20.274977,
+        "indice_fusion_relativo_0_1": 0.450555,
+        "indice_fusion_relativo_pct": 45.055505,
         "features": {
           "state": 0.5964,
           "continuity": 0.2,
           "recency": 0.6666666666666666,
           "delta": 0.49693333333333334,
-          "lateral_breadth": 0.8888888888888888,
+          "lateral_breadth": 0.875,
           "axis_convergence": 0.4546792503489345,
           "relational_activity": 0.0,
           "relational_alignment": 0.5,
@@ -3948,8 +3909,8 @@
           "stinkbox_support": 0.5,
           "own_pattern_evidence": 0.665,
           "lateral_shared_evidence": 0.25,
-          "lateral_candidate_specific": 0.4821802630893875,
-          "lateral_contribution": 0.30296861092993327,
+          "lateral_candidate_specific": 0.4302055175929793,
+          "lateral_contribution": 0.2871157706143441,
           "cameo_activity": 0.9342105263157895,
           "cameo_profile_activity": 0.5,
           "geometric_inertia_alignment": 0.47929532005555825,
@@ -3958,10 +3919,10 @@
           "geometric_turn_context": 0.620208336172848,
           "geometric_latest_movement": 0.1796738990504742,
           "trajectory_micro_support": 0.48773579377959025,
-          "trajectory_meso_support": 0.5760714244567119,
+          "trajectory_meso_support": 0.5760714244567122,
           "trajectory_macro_support": 0.5515047406716015,
           "trajectory_acceleration_support": 0.46273589145689864,
-          "trajectory_multiscale_convergence": 0.9116643693228783,
+          "trajectory_multiscale_convergence": 0.9116643693228781,
           "trajectory_inertia_alignment": 0.4933628579781876,
           "trajectory_curvature_response": 0.4858474022153799,
           "propp_signal": 0.5,
@@ -4011,17 +3972,16 @@
             "plugin_reporte_3d": 0.34537332762613454,
             "billar_circular_v0_2": 0.3125,
             "ricci_forman_v0_1": 0.09895499999999999,
-            "acero_zoomout": 0.8979782270606533,
             "plugin_picos_mesetas.py": 0.33333333333333337,
             "negativo_ricci_vs_billar": 1.0,
             "familias_tokens_puente": 0.0
           },
-          "rank_fusion": 21.17295570113782,
+          "rank_fusion": 20.274977474077165,
           "resolution_micro": 0.48015107095546045,
           "resolution_meso": 0.15,
           "resolution_macro": 0.489280202020202,
-          "indice_potencial_equilibrado_0_1": 0.44560225,
-          "indice_potencial_equilibrado_pct": 44.560225,
+          "indice_potencial_equilibrado_0_1": 0.44087727,
+          "indice_potencial_equilibrado_pct": 44.087727,
           "grupos": {
             "acoplamiento": {
               "aporte": 0.666667,
@@ -4080,11 +4040,11 @@
               "n_componentes": 8
             },
             "puente_lateral": {
-              "aporte": 4.339622,
-              "maximo": 9.0,
-              "fraccion_0_1": 0.48218,
-              "porcentaje_del_maximo": 48.218,
-              "n_componentes": 9
+              "aporte": 3.441644,
+              "maximo": 8.0,
+              "fraccion_0_1": 0.430206,
+              "porcentaje_del_maximo": 43.0206,
+              "n_componentes": 8
             },
             "resolucion": {
               "aporte": 0.333333,
@@ -4101,8 +4061,8 @@
               "n_componentes": 5
             }
           },
-          "entropia_relativa_candidatos_pct": 99.100957,
-          "concentracion_complementaria_candidatos_pct": 0.899043
+          "entropia_relativa_candidatos_pct": 99.113605,
+          "concentracion_complementaria_candidatos_pct": 0.886395
         },
         "apoyo_tortugas_votos": 0,
         "apoyo_tortugas_media": 0.0,
@@ -4115,7 +4075,7 @@
         "operational_rank": 4
       }
     ],
-    "techo_rank": 46,
+    "techo_rank": 45,
     "aporte_por_dimension_021": {
       "schwartz_10_autodireccion": {
         "state": 0.6666666666666667,
@@ -4278,7 +4238,7 @@
       "state": "DETERMINADO",
       "reason": "informacion_resuelta",
       "evidence_sufficient": true,
-      "top_margin": 4.18116,
+      "top_margin": 3.426884,
       "top_neighbor_support": 9,
       "latest_dX_norm": 0.179674,
       "new_vector_signal": true,
@@ -4345,7 +4305,7 @@
         "continuity": 0.9,
         "recency": 1.0,
         "delta": 0.49693333333333334,
-        "lateral_breadth": 0.8888888888888888,
+        "lateral_breadth": 0.875,
         "axis_convergence": 0.4546792503489345,
         "relational_activity": 0.0,
         "relational_alignment": 0.5,
@@ -4355,8 +4315,8 @@
         "stinkbox_support": 0.5,
         "own_pattern_evidence": 0.71,
         "lateral_shared_evidence": 0.25,
-        "lateral_candidate_specific": 0.8499571562833389,
-        "lateral_contribution": 0.39602829749200197,
+        "lateral_candidate_specific": 0.8312018008187563,
+        "lateral_contribution": 0.39014127418596056,
         "cameo_activity": 0.9342105263157895,
         "cameo_profile_activity": 0.5,
         "geometric_inertia_alignment": 0.47929532005555825,
@@ -4365,7 +4325,7 @@
         "geometric_turn_context": 0.620208336172848,
         "geometric_latest_movement": 0.1796738990504742,
         "trajectory_micro_support": 0.48773579377959025,
-        "trajectory_meso_support": 0.49597342038247755,
+        "trajectory_meso_support": 0.49597342038247816,
         "trajectory_macro_support": 0.5279151839041396,
         "trajectory_acceleration_support": 0.47921199024946337,
         "trajectory_multiscale_convergence": 0.9598206098754507,
@@ -4418,17 +4378,16 @@
           "plugin_reporte_3d": 0.90884945068212,
           "billar_circular_v0_2": 1.0,
           "ricci_forman_v0_1": 1.0,
-          "acero_zoomout": 1.0,
           "plugin_picos_mesetas.py": 1.0,
           "negativo_ricci_vs_billar": 1.0,
           "familias_tokens_puente": 1.0
         },
-        "rank_fusion": 28.316281073216715,
+        "rank_fusion": 27.316281073216715,
         "resolution_micro": 0.48015107095546045,
         "resolution_meso": 0.15,
         "resolution_macro": 0.5677811616161617,
-        "indice_potencial_equilibrado_0_1": 0.65176378,
-        "indice_potencial_equilibrado_pct": 65.176378,
+        "indice_potencial_equilibrado_0_1": 0.65005875,
+        "indice_potencial_equilibrado_pct": 65.005875,
         "grupos": {
           "acoplamiento": {
             "aporte": 1.0,
@@ -4487,11 +4446,11 @@
             "n_componentes": 8
           },
           "puente_lateral": {
-            "aporte": 7.649614,
-            "maximo": 9.0,
-            "fraccion_0_1": 0.849957,
-            "porcentaje_del_maximo": 84.9957,
-            "n_componentes": 9
+            "aporte": 6.649614,
+            "maximo": 8.0,
+            "fraccion_0_1": 0.831202,
+            "porcentaje_del_maximo": 83.1202,
+            "n_componentes": 8
           },
           "resolucion": {
             "aporte": 1.333333,
@@ -4508,8 +4467,8 @@
             "n_componentes": 5
           }
         },
-        "entropia_relativa_candidatos_pct": 99.100957,
-        "concentracion_complementaria_candidatos_pct": 0.899043
+        "entropia_relativa_candidatos_pct": 99.113605,
+        "concentracion_complementaria_candidatos_pct": 0.886395
       }
     },
     "H2": {
@@ -4519,7 +4478,7 @@
         "continuity": 0.7,
         "recency": 0.3333333333333333,
         "delta": 0.49759999999999993,
-        "lateral_breadth": 0.7777777777777778,
+        "lateral_breadth": 0.75,
         "axis_convergence": 0.4652387116146537,
         "relational_activity": 0.0,
         "relational_alignment": 0.5,
@@ -4529,8 +4488,8 @@
         "stinkbox_support": 0.5,
         "own_pattern_evidence": 0.71,
         "lateral_shared_evidence": 0.25,
-        "lateral_candidate_specific": 0.5150133976875758,
-        "lateral_contribution": 0.2763535303439655,
+        "lateral_candidate_specific": 0.5486746758199847,
+        "lateral_contribution": 0.2859310804503548,
         "cameo_activity": 0.9342105263157895,
         "cameo_profile_activity": 0.5,
         "geometric_inertia_alignment": 0.4837840571549225,
@@ -4539,10 +4498,10 @@
         "geometric_turn_context": 0.620208336172848,
         "geometric_latest_movement": 0.1796738990504742,
         "trajectory_micro_support": 0.4904011794740793,
-        "trajectory_meso_support": 0.4967067142920258,
-        "trajectory_macro_support": 0.5193277382995523,
+        "trajectory_meso_support": 0.4967067142920262,
+        "trajectory_macro_support": 0.5193277382995521,
         "trajectory_acceleration_support": 0.48134200089616436,
-        "trajectory_multiscale_convergence": 0.971073441174527,
+        "trajectory_multiscale_convergence": 0.9710734411745272,
         "trajectory_inertia_alignment": 0.49480531116914833,
         "trajectory_curvature_response": 0.4929138474766688,
         "propp_signal": 0.5,
@@ -4553,7 +4512,7 @@
         "frye_ironic": 0.3109333333333335,
         "propp_transgression": 0.0,
         "propp_damage": 0.0,
-        "booker_tragedy": 0.43311444444444447,
+        "booker_tragedy": 0.4331144444444445,
         "booker_voyage_return": 0.625,
         "greimas_opponent_friction": 0.0,
         "greimas_subject_density": 0.5945333333333332,
@@ -4563,7 +4522,7 @@
         "frye_high_mimetic": 0.9690666666666665,
         "frye_low_mimetic": 0.8109333333333335,
         "frye_iron_atrition": 0.2736213333333335,
-        "coupling_iron_tragedy": 0.134669717925926,
+        "coupling_iron_tragedy": 0.13466971792592602,
         "coupling_opponent": 0.0,
         "structural_shared_evidence": 0.6099719623370805,
         "structural_contribution": 0.24030281039036247,
@@ -4579,9 +4538,9 @@
         "dynamis_guardian_attenuation": 0.0,
         "dynamis_skeptical_guardrails": 0.0,
         "dynamis_sigma_balance": 0.0,
-        "dynamis_acceleration": 0.5145030303030304,
+        "dynamis_acceleration": 0.5145030303030302,
         "dynamis_containment": 0.0,
-        "dynamis_structural_contribution": 0.22645030303030303,
+        "dynamis_structural_contribution": 0.226450303030303,
         "dynamis_tokens_active": [
           "creatividad"
         ],
@@ -4592,17 +4551,16 @@
           "plugin_reporte_3d": 1.0,
           "billar_circular_v0_2": 0.0,
           "ricci_forman_v0_1": 1.0,
-          "acero_zoomout": 0.24572317262830484,
           "plugin_picos_mesetas.py": 0.33333333333333337,
           "negativo_ricci_vs_billar": 0.5,
           "familias_tokens_puente": 1.0
         },
-        "rank_fusion": 24.13512057918818,
+        "rank_fusion": 23.889397406559873,
         "resolution_micro": 0.48471354906512876,
         "resolution_meso": 0.15,
         "resolution_macro": 0.5417934343434343,
-        "indice_potencial_equilibrado_0_1": 0.48394061,
-        "indice_potencial_equilibrado_pct": 48.394061,
+        "indice_potencial_equilibrado_0_1": 0.48700073,
+        "indice_potencial_equilibrado_pct": 48.700073,
         "grupos": {
           "acoplamiento": {
             "aporte": 0.0,
@@ -4661,11 +4619,11 @@
             "n_componentes": 8
           },
           "puente_lateral": {
-            "aporte": 4.635121,
-            "maximo": 9.0,
-            "fraccion_0_1": 0.515013,
-            "porcentaje_del_maximo": 51.5013,
-            "n_componentes": 9
+            "aporte": 4.389397,
+            "maximo": 8.0,
+            "fraccion_0_1": 0.548675,
+            "porcentaje_del_maximo": 54.8675,
+            "n_componentes": 8
           },
           "resolucion": {
             "aporte": 1.666667,
@@ -4682,8 +4640,8 @@
             "n_componentes": 5
           }
         },
-        "entropia_relativa_candidatos_pct": 99.100957,
-        "concentracion_complementaria_candidatos_pct": 0.899043
+        "entropia_relativa_candidatos_pct": 99.113605,
+        "concentracion_complementaria_candidatos_pct": 0.886395
       }
     },
     "hipotesis_abiertas_contract": {
@@ -4717,7 +4675,7 @@
         "regla": "delta = min(GATE_SEPARATION, max(EPS_ACERO, 2/(N-1))); grupo = candidatas a menos de delta de la primera del grupo (orden rank_fusion)",
         "grupos_casi_igualdad": [],
         "hay_casi_igualdad": false,
-        "margen_rank_fusion_H1_H2": 4.18116,
+        "margen_rank_fusion_H1_H2": 3.426884,
         "requiere_medicion_tortugas": false,
         "tortugas_ejecutado": false,
         "tortugas_aplicado_al_orden": false,
@@ -5060,7 +5018,7 @@
       "persistence": {
         "status": "PERSISTED",
         "store": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/engine_neighbor_store",
-        "event_id": "a625b6e27c488acdd3e7a05e018f23108e0eb9dfd9729e14c43879bcc835b7cd",
+        "event_id": "7962b31de3842b36f0a8e02553d8e9843b3cc029cd3ce90a0a60ed082fbf5d98",
         "tokens_added_or_updated": [
           "actuó",
           "alcanzó",
@@ -5865,15 +5823,10 @@
       "reason": "el puente llega a candidatos pero no discrimina (mismo valor para todos)"
     },
     {
-      "component": "acero_zoomout",
-      "status": "EXECUTED",
-      "feeds_predictor": true,
-      "feeds_predictor_declarado": true,
-      "llega_verificado": [
-        "H(rank_fusion:señal_lateral)"
-      ],
-      "declaracion_U6": "ACTIVA",
-      "reason": "llega a H"
+      "component": "caldero_zoomout_acero_v0_1.py",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_traza_no_disponible",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "capa2_antecedentes",
@@ -5976,12 +5929,9 @@
     },
     {
       "component": "caldero_run.py",
-      "status": "SUPERADA",
-      "superada_por": "plugin_circulo_monomito_v2.py",
-      "reason": "escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monomito_v2.py",
-      "effect": "sin_ejecucion_propia",
-      "feeds_H": false,
-      "can_decide_H": false
+      "status": "PLUGIN_SALTADO",
+      "reason": "ni caldero_run.py ni plugin_circulo_monomito_v2.py disponibles",
+      "effect": "sin_ejecucion"
     },
     {
       "component": "predictor_vecinos_prefijo_v1.py",
@@ -6051,21 +6001,14 @@
     },
     {
       "component": "plugin_circulo_monomito_v2.py",
-      "status": "EXECUTED",
+      "status": "PLUGIN_SALTADO",
+      "reason": "archivo_o_API_no_disponible",
+      "effect": "sin_resolucion_Q1_Q4",
       "feeds_predictor": false,
-      "feeds_H": false,
-      "can_decide_H": false,
-      "caldero_bridge": true,
-      "current_caldero_neighbors": 0,
-      "question_forwarded": true,
-      "role": "lateral_quadrant_resolution",
-      "feeds_predictor_declarado": false,
-      "feeds_H_declarado": false,
       "llega_verificado": [],
       "declaracion_U6": "TRAZA_SOLO",
       "motivo_declaracion_U6": "posición/cuadrante por corte en tokens, sin nombres de candidata; recibe vecinos Caldero",
-      "feeds_predictor_declarado_original": true,
-      "reason": "su salida no nombra ningún candidato del top: el puente no llega"
+      "feeds_predictor_declarado_estado": "MEDIDA_O_ESTADO_NO_EMITIDO"
     },
     {
       "component": "motor_interrelacion_extensible_v0_1.py",
@@ -6137,8 +6080,8 @@
     },
     {
       "component": "pre_h_analogical_search(V0.18)",
-      "status": "API_PENDING",
-      "reason": "caldero_search_sources/analogical_search_sources absent; search provider not injected",
+      "status": "NOT_AVAILABLE",
+      "reason": "sidecar_missing",
       "phase": "PRE_H_ORIENTATION",
       "feeds_predictor": false,
       "feeds_H": false,
@@ -6267,7 +6210,7 @@
     {
       "component": "hub:marco_7783_geometria",
       "status": "HUB_ACTIVA",
-      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 7/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+      "reason": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 0/10; Polti en 3/10; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -6276,8 +6219,8 @@
     },
     {
       "component": "hub:caldero_ii_cuadrantes",
-      "status": "HUB_ACTIVA",
-      "reason": "Q1-Q4 derivados de tokens del corte: 7/10 cortes con cuadrante; puente Caldero=False",
+      "status": "HUB_ACTIVA_MUDA",
+      "reason": "circulo_monomito_v2 sin salida en este run",
       "feeds_predictor": false,
       "feeds_H": false,
       "can_decide_H": false,
@@ -6370,7 +6313,7 @@
       "can_decide_H": false,
       "can_rewrite_H": false,
       "can_rewrite_apuesta": false,
-      "post_H_status": "EXECUTED",
+      "post_H_status": "NO_ANALOGS",
       "retrospective_status": "WAITING_FOR_FUTURE",
       "feeds_predictor_declarado": false,
       "feeds_H_declarado": false,
@@ -6530,7 +6473,7 @@
       "grado": "AJUSTADA",
       "H1": "schwartz_10_autodireccion",
       "H2": "utopia_mentalidad_liberal",
-      "margen": 4.18116
+      "margen": 3.426884
     },
     {
       "component": "decimo_hombre_esteroides_mayeutica_v1.py",
@@ -6541,7 +6484,7 @@
       "rewrites_apuesta": false,
       "role": "adversarial_iterative_review_mayeutica_dialectica",
       "n_attacks": 8,
-      "n_real_counterfactual_rankings": 48,
+      "n_real_counterfactual_rankings": 47,
       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
       "decision_de_proceso": "CONCLUSION_OPERACIONAL_CERRADA_CON_TRAZABILIDAD"
     },

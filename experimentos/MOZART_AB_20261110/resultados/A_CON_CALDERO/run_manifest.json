@@ -1,6 +1,6 @@
 {
   "run_id": "A_CON_CALDERO",
-  "timestamp_utc": "2026-11-10T23:46:29Z",
+  "timestamp_utc": "2026-11-10T23:50:17Z",
   "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO",
   "input_case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO",
   "input_provenance": "RECUPERADO_DE_RESULTADO_HISTORICO.features.cuts; no se localizó el input original independiente; diez cortes P/A/C copiados sin reescritura",
@@ -9,8 +9,9 @@
   "random_seed": 20260930,
   "monte_carlo": true,
   "caldero": "ON",
-  "caldero_generic_runner_seconds": 0.122,
-  "engine_seconds": 27.111,
+  "caldero_generic_runner_seconds": 0.089,
+  "engine_seconds": 32.248,
+  "ablation_removed_files": [],
   "python": "3.11.18",
   "entrypoint": "motor/correr_estandar.py",
   "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
@@ -20,9 +21,9 @@
   "caldero_runner_sha256": "14c0a8130f3951c1fd0e8139bbba8d7a572b4ddebe1e1083767da2b7a4c8f9f7",
   "caldero_sidecar_sha256": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
   "input_sha256": "e30f97e241f25d2f89fcb7c18f2409c5654459cd9043f35b599e3bb43b5265d8",
-  "raw_sha256": "514d10bb5340644d6909687403845cbb35b10f4803cc6105f577aba1c4699025",
-  "trace_core_sha256": "b35639e231782772abd8170ed5d81138b3e6d230ad24f2e0b922557914914205",
-  "trace_plugins_sha256": "d4f69f8cfbe671bd30a8ecdaf3adc019d263f51e1b831239b50ce736831207be",
+  "raw_sha256": "567becb701e8f7b28fad3bc8970ee6399d3a956393b072ae278883ff5ee6652c",
+  "trace_core_sha256": "4a6a7661bc74f7213e90f90d108484ac657d0d773fb69a132afcb16e9c6dfdd1",
+  "trace_plugins_sha256": "e045dc904ab8611ba06bd905eba91ed1f213e6f2e1e322536c84ee96d87cfef6",
   "component_status": [
     {
       "component": "geometria",
@@ -340,7 +341,7 @@
       "persistence": {
         "status": "PERSISTED",
         "store": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/engine_neighbor_store",
-        "event_id": "a625b6e27c488acdd3e7a05e018f23108e0eb9dfd9729e14c43879bcc835b7cd",
+        "event_id": "7962b31de3842b36f0a8e02553d8e9843b3cc029cd3ce90a0a60ed082fbf5d98",
         "tokens_added_or_updated": [
           "actuó",
           "alcanzó",
@@ -1140,6 +1141,6 @@
       "margen_rank_fusion": 4.18116
     }
   },
-  "caldero_generic_raw_sha256": "d6ddf900c0f68e7752867231c6c8d21432c3faaa80bd7732057c80994df14b46",
+  "caldero_generic_raw_sha256": "946172d6ca7295537af97c60be96b1110ac1d67c32b8440e3bd4421c524dec0f",
   "caldero_generic_status": "PERSISTED"
 }
