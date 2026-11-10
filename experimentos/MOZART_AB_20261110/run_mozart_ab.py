@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import hashlib, json, os, platform, subprocess, sys, time
+import hashlib, json, os, platform, shutil, subprocess, sys, time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 BASE=Path(__file__).resolve().parent
@@ -31,7 +31,11 @@ def run_variant(label,with_caldero):
   case["caldero_identity"]={}
   case["caldero_archetype_input"]={"tokens":cal["archetype"]["tokens"],"patterns":[],"families":[]}
   case["caldero_search_sources"]=cal["search_sources"]
+  case["caldero_search_fixture"]=cal["search_sources"]
+  case["allow_static_search_fixture"]=True
   case["caldero_llm_neighbor_hints"]=[]
+  case["caldero_neighbor_store_root"]=str(outdir/"engine_neighbor_store")
+  case["stinkbox_root"]=str(outdir/"stinkbox_store")
   generic_out=outdir/"CALDERO_II_RAW.json"
   generic_store=outdir/"caldero_generic_neighbor_store"
   env=os.environ.copy(); env["PYTHONHASHSEED"]="0"
@@ -43,7 +47,10 @@ def run_variant(label,with_caldero):
    raise RuntimeError(f"CALDERO_II_RUNNER_FAILED rc={cp.returncode}: {cp.stderr[-3000:]}")
   generic=json.loads(generic_out.read_text(encoding="utf-8"))
  else:
-  for k in ("caldero_identity","caldero_archetype_input","caldero_search_sources","caldero_llm_neighbor_hints"): case.pop(k,None)
+  for k in ("caldero_identity","caldero_archetype_input","caldero_search_sources","caldero_search_fixture","allow_static_search_fixture","caldero_llm_neighbor_hints"): case.pop(k,None)
+  case["_internal_analysis_no_external_search"]=True
+  case["caldero_neighbor_store_root"]=str(outdir/"empty_caldero_store")
+  case["stinkbox_root"]=str(outdir/"stinkbox_store")
   generic=None; dt=0.0
   dump(outdir/"CALDERO_II_ESTADO.json",{"status":"OFF","reason":"ablacion solicitada; no se ejecuta runner ni sidecar Caldero"})
  case_file=outdir/"input_efectivo.json"; dump(case_file,case)
@@ -91,6 +98,7 @@ def run_variant(label,with_caldero):
  return raw,manifest
 def family(x): return (x or {}).get("family") if isinstance(x,dict) else x
 def main():
+ shutil.rmtree(RESULTS,ignore_errors=True)
  RESULTS.mkdir(parents=True,exist_ok=True)
  case=json.loads(CASE_PATH.read_text(encoding="utf-8"))
  if len(case.get("cuts") or [])!=10: raise SystemExit("INPUT_REQUIRES_10_CUTS")
@@ -117,8 +125,9 @@ def main():
  dump(RESULTS/"COMPARACION_DIFERENCIAL.json",diff)
  md=[
  "# Mozart — comparación A/B","",
- "- A: plugins disponibles + Caldero II 2.0.",
- "- B: mismos cortes, motor, semilla y configuración; Caldero y memoria Caldero OFF.",
+ "- A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.",
+ "- B: mismos cortes, motor y semilla; runner, búsqueda y memoria de vecinos Caldero OFF mediante _internal_analysis_no_external_search y stores aislados.",
+ "- El plugin Monomito/Q1-Q4 permanece en ambas como plugin separado que lee los cortes; en B no recibe vecinos de Caldero.
  "- Monte Carlo: ON en ambas.",
  "- Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.",
  "- Z90: 1788-05-04.",
