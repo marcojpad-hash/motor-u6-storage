@@ -1,0 +1,56 @@
+name: Mozart A/B — V15.3 con Caldero y sin Caldero
+on:
+  push:
+    branches:
+      - work/mozart-ab-20261110
+    paths:
+      - ".github/workflows/mozart-ab-20261110.yml"
+      - "experimentos/MOZART_AB_20261110/input_mozart_z90.json"
+      - "experimentos/MOZART_AB_20261110/caldero_II_input.json"
+      - "experimentos/MOZART_AB_20261110/run_mozart_ab.py"
+permissions:
+  contents: write
+  actions: read
+jobs:
+  mozart-ab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/mozart-ab-20261110
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias
+        run: python -m pip install --upgrade numpy scipy
+      - name: Verificar piezas e input
+        run: |
+          test -f motor/correr_estandar.py
+          test -f motor/motor/MOTOR_V15_3_UNICO_20260927.py
+          test -f motor/motor/patterns_final_v14.json
+          test -f motor/motor/caldero_II_runner_generico.py
+          python - <<'PY'
+          import json
+          d=json.load(open('experimentos/MOZART_AB_20261110/input_mozart_z90.json',encoding='utf-8'))
+          assert len(d['cuts'])==10 and d['z90_date']=='1788-05-04'
+          print('Mozart Z90 input OK:',d['case_id'],len(d['cuts']))
+          PY
+      - name: Ejecutar A/B
+        run: python -B experimentos/MOZART_AB_20261110/run_mozart_ab.py
+      - name: Subir evidencia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MOZART_AB_20261110_EVIDENCIA
+          path: experimentos/MOZART_AB_20261110/resultados/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Guardar resultados en rama
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experimentos/MOZART_AB_20261110/resultados/
+          git commit -m "results: Mozart V15.3 A/B Caldero"
+          git push origin HEAD:work/mozart-ab-20261110
