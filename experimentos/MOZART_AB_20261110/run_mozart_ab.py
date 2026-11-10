@@ -127,7 +127,7 @@ def main():
  "# Mozart — comparación A/B","",
  "- A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.",
  "- B: mismos cortes, motor y semilla; runner, búsqueda y memoria de vecinos Caldero OFF mediante _internal_analysis_no_external_search y stores aislados.",
- "- El plugin Monomito/Q1-Q4 permanece en ambas como plugin separado que lee los cortes; en B no recibe vecinos de Caldero.
+ "- El plugin Monomito/Q1-Q4 permanece en ambas como plugin separado que lee los cortes; en B no recibe vecinos de Caldero.",
  "- Monte Carlo: ON en ambas.",
  "- Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.",
  "- Z90: 1788-05-04.",
