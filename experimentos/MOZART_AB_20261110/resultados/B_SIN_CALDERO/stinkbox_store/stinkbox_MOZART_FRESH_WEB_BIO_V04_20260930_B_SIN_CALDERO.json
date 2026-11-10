@@ -1,0 +1,207 @@
+{
+  "architecture_layer": "STINKBOX_CONTAINMENT_VAULT",
+  "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
+  "coactivation": {},
+  "contract": {
+    "billard_source_execution": "NOT_IMPLEMENTED_HERE",
+    "crosses_FREEZE": false,
+    "feeds_H": false,
+    "feeds_predictor": true,
+    "formula10_recording": "ONLY_IF_EXPLICITLY_SUPPLIED",
+    "integration_point": "post_freeze_pre_predictor",
+    "mutates_canon": false
+  },
+  "created_at": 1794354391.0059497,
+  "entradas_registradas_011": {
+    "585b34a81ee25abba6a7e4b7c89dfa02554845c690bb04bcd61ccccc51113f6e": {
+      "primera_utc": "2026-11-10T23:46:31Z"
+    }
+  },
+  "formula10_contradictions": [],
+  "latency_events": [
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
+      "detail": {
+        "gap_to_top": 4.18116,
+        "latest_dX_norm": 0.179674,
+        "rank_fusion": 24.135121,
+        "rank_pos": 2,
+        "seen": 7
+      },
+      "front_id": "utopia_mentalidad_liberal",
+      "reason": "H2_separado_gap>=discard_gap",
+      "state": "SEPARADO",
+      "timestamp": 1794354391.4280355
+    },
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
+      "detail": {
+        "compuerta": "CIERRE_PERMITIDO",
+        "pendientes_bloqueantes": [],
+        "top1": "schwartz_10_autodireccion",
+        "top_margin": 4.18116
+      },
+      "front_id": null,
+      "reason": "informacion_resuelta",
+      "state": "DETERMINADO",
+      "timestamp": 1794354391.4280438
+    },
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
+      "detail": {
+        "guardianes": [
+          "LOGICA_COPI"
+        ],
+        "motivos": [
+          {
+            "corte": null,
+            "fragmento": "{\"top1\": \"schwartz_10_autodireccion\"}",
+            "guardian": "LOGICA_COPI",
+            "tipo": "NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE"
+          }
+        ],
+        "n_motivos": 1,
+        "top1": "schwartz_10_autodireccion",
+        "tortugas": "TORTUGAS_NO_SEPARA_TOP1"
+      },
+      "front_id": null,
+      "reason": "cierre_no_resuelto_por_guardianes",
+      "state": "LATENTE",
+      "timestamp": 1794354391.529167
+    }
+  ],
+  "pendientes_vivos": [],
+  "persistent_neighbor_activation_events": [],
+  "persistent_neighbor_lights": [],
+  "persistent_neighbor_tokens": [],
+  "resolved_front_history": [
+    {
+      "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
+      "decision": "SELECCIONADO",
+      "estado": "RESUELTO_OPERACIONALMENTE",
+      "front_id": "schwartz_10_autodireccion",
+      "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "rank_fusion_observado": 28.316281,
+      "tokens_signature": [
+        "ambicion",
+        "aprendizaje",
+        "audacia",
+        "competencia",
+        "conocimiento",
+        "creatividad",
+        "desafio_autoridad",
+        "exploracion_permitida",
+        "independencia",
+        "logro_personal",
+        "rebeldia",
+        "reconocimiento",
+        "viaje"
+      ]
+    },
+    {
+      "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO",
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO::C10",
+      "decision": "RIVAL_RETENIDO_EN_H2",
+      "estado": "RESUELTO_OPERACIONALMENTE",
+      "front_id": "utopia_mentalidad_liberal",
+      "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "rank_fusion_observado": 24.135121,
+      "tokens_signature": [
+        "ambicion",
+        "aprendizaje",
+        "audacia",
+        "competencia",
+        "conocimiento",
+        "creatividad",
+        "desafio_autoridad",
+        "exploracion_permitida",
+        "independencia",
+        "logro_personal",
+        "rebeldia",
+        "reconocimiento",
+        "viaje"
+      ]
+    }
+  ],
+  "schema": "STINKBOX_TRANSPORT_V0.2",
+  "token_cuts": {},
+  "token_events": [],
+  "token_frequency": {},
+  "token_sources": {},
+  "trajectory_events": [
+    {
+      "billard_executed": false,
+      "cut_id": "C2",
+      "dX_norm": 0.183548168,
+      "kappa_dir": 0.870893506,
+      "persist_cos": 0.491471771,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.019956
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C3",
+      "dX_norm": 0.160360999,
+      "kappa_dir": 0.792944657,
+      "persist_cos": 0.609293665,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.0211244
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C4",
+      "dX_norm": 0.169535365,
+      "kappa_dir": 0.986547855,
+      "persist_cos": 0.163472719,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.0222867
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C5",
+      "dX_norm": 0.184244837,
+      "kappa_dir": 0.999976181,
+      "persist_cos": -0.006901969,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.023277
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C6",
+      "dX_norm": 0.320919008,
+      "kappa_dir": 0.872015019,
+      "persist_cos": 0.489479118,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.024257
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C7",
+      "dX_norm": 0.456187374,
+      "kappa_dir": 0.998698161,
+      "persist_cos": 0.051009637,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.0251787
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C8",
+      "dX_norm": 0.251975554,
+      "kappa_dir": 0.898478353,
+      "persist_cos": 0.439017824,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.0261188
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C9",
+      "dX_norm": 0.179673899,
+      "kappa_dir": 0.620208336,
+      "persist_cos": 0.784437136,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354391.0270298
+    }
+  ],
+  "updated_at": 1794354391.8655503
+}

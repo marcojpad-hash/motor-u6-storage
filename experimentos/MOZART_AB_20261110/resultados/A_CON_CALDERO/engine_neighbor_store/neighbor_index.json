@@ -1,0 +1,913 @@
+{
+  "schema": "caldero_neighbor_store_v1",
+  "neighbors": {
+    "actuó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "alcanzó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "alemania": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "allí": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "aptitud": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "artista": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "años": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "bajos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "buscó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "carrera": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 2,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme",
+        "web_salzb_info"
+      ]
+    },
+    "casó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "comienzos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "compositor": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "compuesto": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "compuso": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 2,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme",
+        "web_mozarteum"
+      ]
+    },
+    "conciertos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "constanze": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "continuó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "corte": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "cortes": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "culminante": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "desarrollando": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "digital": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "dme": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "doce": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "don": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "edition": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "enero": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "entró": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "estancia": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "estrenado": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "europeas": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "europeos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "excepcional": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "experiencia": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "figaro": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "finales": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "francia": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "fuerte": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "giovanni": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "giras": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "hijos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "idomeneo": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "incluye": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "independiente": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "info": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "italia": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "italiana": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "leopold": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "llevó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "londres": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "madre": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "maestro": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "mannheim": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "mostró": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "mozart": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 3,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme",
+        "web_mozarteum",
+        "web_salzb_info"
+      ]
+    },
+    "mozarteum": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 2,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme",
+        "web_mozarteum"
+      ]
+    },
+    "musical": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "new": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "octubre": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "organista": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "parís": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "países": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "piano": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "posteriores": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "praga": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "príncipe-arzobispo": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "punto": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "públicos": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "realizó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "recepción": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "rompió": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "salzburg": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "salzburgo": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "src1": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "src2": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "src3": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "src4": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "src5": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "src6": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "src7": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "suiza": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "talento": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_mozarteum"
+      ]
+    },
+    "trasladó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "tuvo": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "viajes": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 3,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme",
+        "web_mozarteum",
+        "web_salzb_info"
+      ]
+    },
+    "viajó": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "viena": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    },
+    "volvió": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_dme"
+      ]
+    },
+    "óperas": {
+      "first_seen_utc": "2026-11-10T23:46:03.931669+00:00",
+      "observations": 1,
+      "cases": [
+        "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO"
+      ],
+      "sources": [
+        "web_salzb_info"
+      ]
+    }
+  },
+  "updated_utc": "2026-11-10T23:46:03.931669+00:00"
+}

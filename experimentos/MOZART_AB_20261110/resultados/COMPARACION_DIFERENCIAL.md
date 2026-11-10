@@ -1,7 +1,8 @@
 # Mozart — comparación A/B
 
-- A: plugins disponibles + Caldero II 2.0.
-- B: mismos cortes, motor, semilla y configuración; Caldero y memoria Caldero OFF.
+- A: plugins disponibles + Caldero II 2.0; búsqueda estática explícita con fuentes históricas pre-Z90, ejecutada también por caldero_II_runner_generico.py.
+- B: mismos cortes, motor y semilla; runner, búsqueda y memoria de vecinos Caldero OFF mediante _internal_analysis_no_external_search y stores aislados.
+- El plugin Monomito/Q1-Q4 permanece en ambas como plugin separado que lee los cortes; en B no recibe vecinos de Caldero.
 - Monte Carlo: ON en ambas.
 - Input: diez cortes recuperados de RESULT histórico; el input fuente independiente no apareció en Library/paquete.
 - Z90: 1788-05-04.
@@ -22,6 +23,6 @@
 - Mismo motor/Engine/patterns A/B: True
 
 ## Estados de componentes
-- A: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "ERROR": 1, "EXECUTED": 52, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 4, "HUB_ACTIVA_MUDA": 2, "NOT_APPLICABLE": 1, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SUPERADA": 1}
-- B: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "ERROR": 1, "EXECUTED": 52, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 4, "HUB_ACTIVA_MUDA": 2, "NOT_APPLICABLE": 1, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SUPERADA": 1}
+- A: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "ERROR": 1, "EXECUTED": 50, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_FIXTURE": 2, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 4, "HUB_ACTIVA_MUDA": 2, "NOT_APPLICABLE": 1, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SUPERADA": 1}
+- B: {"ABSORBIDO_EN_GUARDIA_TRANSVERSAL": 1, "API_PENDING": 1, "EXECUTED": 49, "EXECUTED_DIAGNOSTIC": 1, "EXECUTED_SIN_HALLAZGOS": 1, "EXECUTED_SIN_SENAL": 3, "EXECUTED_WITH_CONCLUSION": 1, "HUB_ACTIVA": 4, "HUB_ACTIVA_MUDA": 2, "NOT_APPLICABLE": 1, "PRESENTE": 1, "RESUELTO_OPERACIONALMENTE": 1, "SIN_PREFIJO_EN_INPUT": 1, "SKIPPED_INTERNAL_ANALYSIS": 2, "SUPERADA": 1}
 Los componentes omitidos, ausentes o con error permanecen etiquetados así en TRAZA_PLUGINS.json.

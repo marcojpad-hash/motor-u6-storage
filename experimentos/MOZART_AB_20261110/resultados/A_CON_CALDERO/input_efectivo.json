@@ -328,5 +328,52 @@
       "metadata": null
     }
   ],
-  "caldero_llm_neighbor_hints": []
+  "caldero_search_fixture": [
+    {
+      "url": "web_mozarteum",
+      "title": "src1",
+      "snippet": "Mozarteum: Mozart mostró talento excepcional desde los 5–6 años; viajes europeos 1763–1766 por Alemania, Francia, Londres, Países Bajos y Suiza; compuso y actuó durante esas giras.",
+      "metadata": null
+    },
+    {
+      "url": "web_salzb_info",
+      "title": "src2",
+      "snippet": "Salzburg.info: desde 1762 Leopold llevó a sus hijos a cortes europeas; Mozart continuó desarrollando su aptitud musical y realizó viajes a Italia.",
+      "metadata": null
+    },
+    {
+      "url": "web_dme",
+      "title": "src3",
+      "snippet": "Mozarteum Digital: 1773–1779 incluye estancia en Salzburgo, experiencia italiana y viajes posteriores a Mannheim y París; en 1777 viajó con su madre a París y en 1779 volvió a Salzburgo.",
+      "metadata": null
+    },
+    {
+      "url": "web_salzb_info",
+      "title": "src4",
+      "snippet": "Salzburg.info: en 1779 Mozart entró como organista de la corte; tras Idomeneo en 1781 rompió con el príncipe-arzobispo y se trasladó a Viena.",
+      "metadata": null
+    },
+    {
+      "url": "web_salzb_info",
+      "title": "src5",
+      "snippet": "Salzburg.info: en Viena buscó una carrera independiente como artista, compositor de óperas y maestro; se casó con Constanze en 1782.",
+      "metadata": null
+    },
+    {
+      "url": "web_dme",
+      "title": "src6",
+      "snippet": "DME New Mozart Edition: entre comienzos de 1784 y finales de 1786 compuso doce conciertos para piano y su carrera de conciertos públicos alcanzó un punto culminante.",
+      "metadata": null
+    },
+    {
+      "url": "web_dme",
+      "title": "src7",
+      "snippet": "DME New Mozart Edition: Figaro tuvo fuerte recepción en Praga; Mozart viajó allí en enero de 1787 y Don Giovanni fue compuesto en 1787 y estrenado en Praga el 29 de octubre de 1787.",
+      "metadata": null
+    }
+  ],
+  "allow_static_search_fixture": true,
+  "caldero_llm_neighbor_hints": [],
+  "caldero_neighbor_store_root": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/engine_neighbor_store",
+  "stinkbox_root": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/stinkbox_store"
 }

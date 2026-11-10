@@ -1,13 +1,5 @@
 {
  "version": "CEB_LEDGER_PRESERVADO_U6",
  "run_dir": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/runs/ESTANDAR__B_SIN_CALDERO",
- "ledgers": [
-  {
-   "original": "/dev/shm/ceb_runs/MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_1794354136568.flow_ledger.jsonl",
-   "copia": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/RESULT_RAW_CEB_LEDGER_1.jsonl",
-   "sha256": "b5fc3c3b36544a6910d7e9bc2e3d9e305e2b72361c5ddd91039beb39830897eb",
-   "bytes": 10668511,
-   "lineas": 20894
-  }
- ]
+ "ledgers": []
 }

@@ -1,0 +1,198 @@
+{
+  "architecture_layer": "STINKBOX_CONTAINMENT_VAULT",
+  "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO",
+  "coactivation": {},
+  "contract": {
+    "billard_source_execution": "NOT_IMPLEMENTED_HERE",
+    "crosses_FREEZE": false,
+    "feeds_H": false,
+    "feeds_predictor": true,
+    "formula10_recording": "ONLY_IF_EXPLICITLY_SUPPLIED",
+    "integration_point": "post_freeze_pre_predictor",
+    "mutates_canon": false
+  },
+  "created_at": 1794354400.4319096,
+  "entradas_registradas_011": {
+    "018dbdd0a7f1a1ecb439e247a4aa695e6d95580e7da14220ecae4ac8a9c3fb6e": {
+      "primera_utc": "2026-11-10T23:46:40Z"
+    }
+  },
+  "formula10_contradictions": [],
+  "latency_events": [
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
+      "detail": {
+        "gap_to_top": 2.844099,
+        "latest_dX_norm": 0.251976,
+        "rank_fusion": 24.796266,
+        "rank_pos": 2,
+        "seen": 1
+      },
+      "front_id": "30_ambicion",
+      "reason": "H2_separado_gap>=discard_gap",
+      "state": "SEPARADO",
+      "timestamp": 1794354400.739358
+    },
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
+      "detail": {
+        "compuerta": "CIERRE_PERMITIDO",
+        "pendientes_bloqueantes": [],
+        "top1": "schwartz_10_autodireccion",
+        "top_margin": 2.844099
+      },
+      "front_id": null,
+      "reason": "informacion_resuelta",
+      "state": "DETERMINADO",
+      "timestamp": 1794354400.7393658
+    },
+    {
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
+      "detail": {
+        "guardianes": [
+          "LOGICA_COPI"
+        ],
+        "motivos": [
+          {
+            "corte": null,
+            "fragmento": "{\"top1\": \"schwartz_10_autodireccion\"}",
+            "guardian": "LOGICA_COPI",
+            "tipo": "NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE"
+          }
+        ],
+        "n_motivos": 1,
+        "top1": "schwartz_10_autodireccion",
+        "tortugas": "TORTUGAS_NO_SEPARA_TOP1"
+      },
+      "front_id": null,
+      "reason": "cierre_no_resuelto_por_guardianes",
+      "state": "LATENTE",
+      "timestamp": 1794354400.8144484
+    }
+  ],
+  "pendientes_vivos": [],
+  "persistent_neighbor_activation_events": [],
+  "persistent_neighbor_lights": [],
+  "persistent_neighbor_tokens": [],
+  "resolved_front_history": [
+    {
+      "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO",
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
+      "decision": "SELECCIONADO",
+      "estado": "RESUELTO_OPERACIONALMENTE",
+      "front_id": "schwartz_10_autodireccion",
+      "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "rank_fusion_observado": 27.640365,
+      "tokens_signature": [
+        "ambicion",
+        "aprendizaje",
+        "audacia",
+        "competencia",
+        "conocimiento",
+        "creatividad",
+        "desafio_autoridad",
+        "exploracion_permitida",
+        "independencia",
+        "logro_personal",
+        "rebeldia",
+        "reconocimiento",
+        "viaje"
+      ]
+    },
+    {
+      "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO",
+      "cut_id": "MOZART_FRESH_WEB_BIO_V04_20260930_B_SIN_CALDERO_SIN_ULTIMO::C9",
+      "decision": "RIVAL_RETENIDO_EN_H2",
+      "estado": "RESUELTO_OPERACIONALMENTE",
+      "front_id": "30_ambicion",
+      "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "rank_fusion_observado": 24.796266,
+      "tokens_signature": [
+        "ambicion",
+        "aprendizaje",
+        "audacia",
+        "competencia",
+        "conocimiento",
+        "creatividad",
+        "desafio_autoridad",
+        "exploracion_permitida",
+        "independencia",
+        "logro_personal",
+        "rebeldia",
+        "reconocimiento",
+        "viaje"
+      ]
+    }
+  ],
+  "schema": "STINKBOX_TRANSPORT_V0.2",
+  "token_cuts": {},
+  "token_events": [],
+  "token_frequency": {},
+  "token_sources": {},
+  "trajectory_events": [
+    {
+      "billard_executed": false,
+      "cut_id": "C2",
+      "dX_norm": 0.183548168,
+      "kappa_dir": 0.870893506,
+      "persist_cos": 0.491471771,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.4425905
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C3",
+      "dX_norm": 0.160360999,
+      "kappa_dir": 0.792944657,
+      "persist_cos": 0.609293665,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.4436812
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C4",
+      "dX_norm": 0.169535365,
+      "kappa_dir": 0.986547855,
+      "persist_cos": 0.163472719,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.445714
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C5",
+      "dX_norm": 0.184244837,
+      "kappa_dir": 0.999976181,
+      "persist_cos": -0.006901969,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.4486952
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C6",
+      "dX_norm": 0.320919008,
+      "kappa_dir": 0.872015019,
+      "persist_cos": 0.489479118,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.4496264
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C7",
+      "dX_norm": 0.456187374,
+      "kappa_dir": 0.998698161,
+      "persist_cos": 0.051009637,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.452941
+    },
+    {
+      "billard_executed": false,
+      "cut_id": "C8",
+      "dX_norm": 0.251975554,
+      "kappa_dir": 0.898478353,
+      "persist_cos": 0.439017824,
+      "source_semantics": "R732_TRAJECTORY_METRIC",
+      "timestamp": 1794354400.4556673
+    }
+  ],
+  "updated_at": 1794354401.1037273
+}

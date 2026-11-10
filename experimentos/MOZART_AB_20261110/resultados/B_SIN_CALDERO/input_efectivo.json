@@ -265,5 +265,8 @@
   ],
   "consolidado_off": [
     "caldero_memoria"
-  ]
+  ],
+  "_internal_analysis_no_external_search": true,
+  "caldero_neighbor_store_root": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/empty_caldero_store",
+  "stinkbox_root": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/B_SIN_CALDERO/stinkbox_store"
 }

@@ -2,14 +2,14 @@
   "receipt_version": "EXECUTION_RECEIPT_V1",
   "status": "COMPLETED",
   "case_id": "MOZART_FRESH_WEB_BIO_V04_20260930_A_CON_CALDERO",
-  "started_epoch": 1794354100.677542,
-  "finished_epoch": 1794354122.547962,
-  "duration_seconds": 21.87,
+  "started_epoch": 1794354362.780053,
+  "finished_epoch": 1794354378.193855,
+  "duration_seconds": 15.414,
   "input_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/input_efectivo.json",
-  "input_sha256": "55285f14b0f64bcc99e001b51738f2804a1fced670944b2aec9a700bfaa2c9b3",
-  "normalized_input_sha256": "0dc64754e1855bca11a0fcefdcccab2535cda348c1c3456dc2357422a7a25e7f",
+  "input_sha256": "e30f97e241f25d2f89fcb7c18f2409c5654459cd9043f35b599e3bb43b5265d8",
+  "normalized_input_sha256": "62ff0a5d318a8c44e2ae465c838e8478165592c973a3a04efba3dca0043437ef",
   "output_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/RESULT_RAW.json",
-  "output_sha256": "498942b2293b4154e1658cf43e24934b6feebeb747c2043dcb172bea9b167043",
+  "output_sha256": "514d10bb5340644d6909687403845cbb35b10f4803cc6105f577aba1c4699025",
   "runner_path": "/home/runner/work/motor-u6-storage/motor-u6-storage/motor/correr_estandar.py",
   "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
   "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
@@ -263,7 +263,7 @@
       "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
       "H1": {
         "familia": "schwartz_10_autodireccion",
-        "porcentaje_relleno": 66.52,
+        "porcentaje_relleno": 65.18,
         "desglose_relleno_por_grupo_pct": {
           "acoplamiento": 100.0,
           "booker": 72.2222,
@@ -272,18 +272,18 @@
           "frye": 50.0,
           "geometria_inercia": 41.6667,
           "greimas": 55.5556,
-          "otras_dimensiones": 60.6061,
+          "otras_dimensiones": 45.8333,
           "puente_lateral": 84.9957,
           "resolucion": 66.6667,
           "trayectoria_estado": 53.3333
         },
-        "peso_relativo": 0.306459,
+        "peso_relativo": 0.294386,
         "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-        "predictibilidad_estructural_pct": 61.02
+        "predictibilidad_estructural_pct": 59.15
       },
       "H2": {
         "familia": "utopia_mentalidad_liberal",
-        "porcentaje_relleno": 47.88,
+        "porcentaje_relleno": 48.39,
         "desglose_relleno_por_grupo_pct": {
           "acoplamiento": 0.0,
           "booker": 27.7778,
@@ -292,24 +292,23 @@
           "frye": 50.0,
           "geometria_inercia": 100.0,
           "greimas": 55.5556,
-          "otras_dimensiones": 65.1515,
+          "otras_dimensiones": 70.8333,
           "puente_lateral": 51.5013,
           "resolucion": 83.3333,
           "trayectoria_estado": 60.0
         },
-        "peso_relativo": 0.250863,
+        "peso_relativo": 0.250917,
         "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-        "predictibilidad_estructural_pct": 51.83
+        "predictibilidad_estructural_pct": 51.95
       }
     },
     {
       "stage": "external_archetype_search",
-      "status": "EXECUTED_WITH_RESULTS",
+      "status": "NOT_VERIFIED",
       "required": false,
-      "provider": "duckduckgo_html",
+      "provider": "static_fixture",
       "query_count": 1,
-      "result_count": 8,
-      "query_sha256": "c83be5c6c8719ec041571e2ec1cf730c61346e0406d06420c43f732882e235e5"
+      "result_count": 7
     },
     {
       "stage": "filtro_entrada_dirigida_017",
@@ -328,7 +327,7 @@
     {
       "stage": "result_json_written",
       "status": "COMPLETED",
-      "sha256": "498942b2293b4154e1658cf43e24934b6feebeb747c2043dcb172bea9b167043"
+      "sha256": "514d10bb5340644d6909687403845cbb35b10f4803cc6105f577aba1c4699025"
     },
     {
       "stage": "unification_manifest_check",
@@ -356,8 +355,8 @@
       "ledgers": [
         {
           "copia": "/home/runner/work/motor-u6-storage/motor-u6-storage/experimentos/MOZART_AB_20261110/resultados/A_CON_CALDERO/RESULT_RAW_CEB_LEDGER_1.jsonl",
-          "sha256": "cdc1a48ce471b3caafaccb2596f818c111a7738b4cfd0aaab0c4a9642b64c03c",
-          "lineas": 20855
+          "sha256": "a5a1c000ebc3709f50e22d116a0e85c333b8490e6cd2780afdaafcc67c892470",
+          "lineas": 19861
         }
       ]
     },
@@ -376,56 +375,29 @@
   ],
   "archetype_search_receipt": {
     "required": false,
-    "status": "EXECUTED",
-    "provider": "duckduckgo_html",
+    "status": "EXECUTED_FIXTURE",
+    "provider": "static_fixture",
     "query_count": 1,
-    "result_count": 8,
-    "query_sha256": "c83be5c6c8719ec041571e2ec1cf730c61346e0406d06420c43f732882e235e5",
-    "raw_sources": 8,
+    "result_count": 7,
+    "raw_sources": 7,
     "self_match_discarded": 0,
-    "tokens_after_filter": 159,
+    "tokens_after_filter": 90,
     "z_corte": "1788-05-04",
     "corte_temporal": {
       "aplicado": true,
       "z_corte": "1788-05-04",
       "z_fuente": "freeze/z_trabajo (fallback z90_date)",
       "modo": "leniente",
-      "raw_n": 8,
+      "raw_n": 7,
       "con_fecha_n": 0,
-      "sin_fecha_n": 8,
+      "sin_fecha_n": 7,
       "descartadas_post_z": [],
       "descartadas_sin_fecha": [],
-      "conservadas_sin_fecha_n": 8,
-      "tokens_antes_corte": 159,
-      "tokens_despues_corte": 159
+      "conservadas_sin_fecha_n": 7,
+      "tokens_antes_corte": 90,
+      "tokens_despues_corte": 90
     },
-    "query": "ambicion aprendizaje audacia competencia conocimiento creatividad desafio_autoridad exploracion_permitida independencia logro_personal rebeldia reconocimiento viaje",
-    "urls": [
-      "https://repository.usergioarboleda.edu.co/bitstream/handle/11232/1265/Aprendizaje%20competencias.pdf?sequence=1",
-      "https://www.anep.edu.uy/documentos-curriculares/competencias-y-progresiones-de-aprendizaje/competencias",
-      "https://www.anep.edu.uy/sites/default/files/images/Archivos/publicaciones/Marco-Curricular-Nacional-2022/procesos-cognitivos/Los%20procesos%20cognitivos%20en%20el%20desarrollo%20de%20competencias%202023%20v3%20%281%29.pdf",
-      "https://drea.mep.go.cr/sites/default/files/publicaciones-anexos-2023/guia_de_competencias_orientaciones_generales.pdf",
-      "https://innovacioneducativa.upm.es/sites/default/files/apoyo_profesorado/DESARROLLO-Y-EVALUACION-DE-COMPETENCIAS_creatividad.pdf",
-      "https://es.scribd.com/document/380814510/Competencias-Del-Siglo-XXI-Guia-Practica-Para-Promover-Su-Aprendizaje-y-Evaluacion",
-      "https://www.researchgate.net/publication/385580897_Competencias_en_el_ambito_educativo",
-      "https://auladelfuturo.intef.es/kit-aula-del-futuro/kit-de-herramientas-3/herramienta-3-2-competencias-transversales/"
-    ],
-    "consultado_utc": "2026-11-10T23:41:41+00:00",
-    "selector": "auto",
-    "attempts": [
-      {
-        "provider": "ddgs",
-        "status": "FAILED",
-        "consultado_utc": "2026-11-10T23:41:41+00:00",
-        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
-      },
-      {
-        "provider": "duckduckgo_html",
-        "status": "EXECUTED",
-        "consultado_utc": "2026-11-10T23:41:41+00:00"
-      }
-    ],
-    "llm": false
+    "query_sha256_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
   },
   "terminal_resolution": {
     "status": "RESUELTO_OPERACIONALMENTE",
@@ -472,7 +444,7 @@
     },
     "H1": {
       "familia": "schwartz_10_autodireccion",
-      "porcentaje_relleno": 66.52,
+      "porcentaje_relleno": 65.18,
       "desglose_relleno_por_grupo_pct": {
         "acoplamiento": 100.0,
         "booker": 72.2222,
@@ -481,18 +453,18 @@
         "frye": 50.0,
         "geometria_inercia": 41.6667,
         "greimas": 55.5556,
-        "otras_dimensiones": 60.6061,
+        "otras_dimensiones": 45.8333,
         "puente_lateral": 84.9957,
         "resolucion": 66.6667,
         "trayectoria_estado": 53.3333
       },
-      "peso_relativo": 0.306459,
+      "peso_relativo": 0.294386,
       "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-      "predictibilidad_estructural_pct": 61.02
+      "predictibilidad_estructural_pct": 59.15
     },
     "H2": {
       "familia": "utopia_mentalidad_liberal",
-      "porcentaje_relleno": 47.88,
+      "porcentaje_relleno": 48.39,
       "desglose_relleno_por_grupo_pct": {
         "acoplamiento": 0.0,
         "booker": 27.7778,
@@ -501,43 +473,43 @@
         "frye": 50.0,
         "geometria_inercia": 100.0,
         "greimas": 55.5556,
-        "otras_dimensiones": 65.1515,
+        "otras_dimensiones": 70.8333,
         "puente_lateral": 51.5013,
         "resolucion": 83.3333,
         "trayectoria_estado": 60.0
       },
-      "peso_relativo": 0.250863,
+      "peso_relativo": 0.250917,
       "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
-      "predictibilidad_estructural_pct": 51.83
+      "predictibilidad_estructural_pct": 51.95
     },
     "escala_predictibilidad": {
       "nombre": "predictibilidad estructural (soporte interno)",
       "es_probabilidad_calibrada": false,
       "base_pct": 10.4061,
       "techo_pct": 89.594,
-      "pp_por_punto_de_rank_fusion": 1.61608,
+      "pp_por_punto_de_rank_fusion": 1.721476,
       "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
     },
     "hipotesis_necesarias_suficientes": [
       {
         "familia": "schwartz_10_autodireccion",
         "rol": "eje",
-        "peso_en_set": 0.400852,
-        "predictibilidad_estructural_pct": 61.02,
+        "peso_en_set": 0.384605,
+        "predictibilidad_estructural_pct": 59.15,
         "cobertura_unica_frac": 0.0
       },
       {
         "familia": "utopia_mentalidad_liberal",
         "rol": "componente",
-        "peso_en_set": 0.328132,
-        "predictibilidad_estructural_pct": 51.83,
+        "peso_en_set": 0.327814,
+        "predictibilidad_estructural_pct": 51.95,
         "cobertura_unica_frac": 0.2153
       },
       {
         "familia": "30_ambicion",
         "rol": "componente",
-        "peso_en_set": 0.271016,
-        "predictibilidad_estructural_pct": 44.62,
+        "peso_en_set": 0.287581,
+        "predictibilidad_estructural_pct": 46.85,
         "cobertura_unica_frac": 0.1922
       }
     ],
@@ -545,10 +517,10 @@
     "mezcla": {
       "lectura": "H1_CON_COMPONENTES_DE_H2",
       "lectura_texto": "schwartz_10_autodireccion con componentes de utopia_mentalidad_liberal (afinidad 0.716073 >= 0.5)",
-      "peso_H1": 0.306459,
-      "peso_H2": 0.250863,
-      "peso_H1_en_par": 0.549878,
-      "peso_H2_en_par": 0.450122
+      "peso_H1": 0.294386,
+      "peso_H2": 0.250917,
+      "peso_H1_en_par": 0.539858,
+      "peso_H2_en_par": 0.460142
     },
     "grado": "AJUSTADA",
     "conjunto_hipotesis_abiertas": {
@@ -559,8 +531,8 @@
           "id": "H_001",
           "familia": "schwartz_10_autodireccion",
           "rol_en_set": "eje",
-          "rank_fusion": 31.316281,
-          "soporte_estructural_relativo": 0.40085169,
+          "rank_fusion": 28.316281,
+          "soporte_estructural_relativo": 0.38460479,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.00775,
@@ -576,8 +548,8 @@
           "id": "H_002",
           "familia": "utopia_mentalidad_liberal",
           "rol_en_set": "componente",
-          "rank_fusion": 25.635121,
-          "soporte_estructural_relativo": 0.32813225,
+          "rank_fusion": 24.135121,
+          "soporte_estructural_relativo": 0.32781435,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.00429,
@@ -594,7 +566,7 @@
           "familia": "30_ambicion",
           "rol_en_set": "componente",
           "rank_fusion": 21.172956,
-          "soporte_estructural_relativo": 0.27101606,
+          "soporte_estructural_relativo": 0.28758086,
           "trazabilidad_geometrica": {
             "regimen": "MESeta_O_ESTABILIZACION",
             "senal_multiescala": 0.076875,
@@ -684,12 +656,12 @@
         "detail": {
           "status": "OK",
           "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
-          "artifacts_imported": 2,
+          "artifacts_imported": 0,
           "artifacts_skipped_same_sha": 0,
-          "new_event_records": 597,
-          "new_token_strings": 166,
+          "new_event_records": 0,
+          "new_token_strings": 0,
           "explicit_review_observations": 0,
-          "unique_tokens_total": 167
+          "unique_tokens_total": 1
         },
         "stderr": ""
       }
@@ -711,7 +683,7 @@
           "new_event_records": 0,
           "new_token_strings": 0,
           "explicit_review_observations": 0,
-          "unique_tokens_total": 167
+          "unique_tokens_total": 1
         },
         "stderr": ""
       },
@@ -721,12 +693,12 @@
         "detail": {
           "status": "OK",
           "source": "/home/runner/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
-          "artifacts_imported": 2,
-          "artifacts_skipped_same_sha": 2,
-          "new_event_records": 336,
-          "new_token_strings": 3,
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 5,
+          "new_token_strings": 5,
           "explicit_review_observations": 0,
-          "unique_tokens_total": 170
+          "unique_tokens_total": 6
         },
         "stderr": ""
       }
