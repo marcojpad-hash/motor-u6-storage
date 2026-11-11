@@ -4,6 +4,8 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42983059551 | ChatGPT startup contract | push | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:48-06:00 | 8.0 | success |
+| 42979722205 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:29:41-06:00 | 86.0 | success |
 | 42970636108 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T00:11:03-06:00 | 2026-11-11T00:11:03-06:00 | 2026-11-11T00:12:35-06:00 | 92.0 | success |
 | 42964151612 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T23:11:54-06:00 | 2026-11-10T23:11:54-06:00 | 2026-11-10T23:13:02-06:00 | 68.0 | success |
 | 42957162050 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T22:07:29-06:00 | 2026-11-10T22:07:29-06:00 | 2026-11-10T22:09:12-06:00 | 103.0 | success |
@@ -101,15 +103,12 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42395977255 | pip in /. - Update #1686815933 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:57-06:00 | 40.0 | failure |
 | 42395977144 | github_actions in /. - Update #1686815916 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:50-06:00 | 33.0 | success |
 | 42395973013 | github_actions in /. - Update #1686815627 | dynamic | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:57-06:00 | 43.0 | success |
-| 42395973009 | pip in /. - Update #1686815654 | dynamic | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:14-06:00 | 2026-11-07T11:22:55-06:00 | 41.0 | failure |
-| 42393310297 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T10:50:32-06:00 | 2026-11-07T10:50:32-06:00 | 2026-11-07T10:51:46-06:00 | 74.0 | success |
 
 ## Fallos y cancelaciones
 
 - Run 42926338824 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42926338824
 - Run 42925925154 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925925154
 - Run 42395977255 (pip in /. - Update #1686815933): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395977255
-- Run 42395973009 (pip in /. - Update #1686815654): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395973009
 
 ## Límites
 
