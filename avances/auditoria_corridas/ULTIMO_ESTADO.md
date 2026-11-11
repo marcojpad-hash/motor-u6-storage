@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42937976762 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T19:18:23-06:00 | 2026-11-10T19:18:23-06:00 | 2026-11-10T19:19:42-06:00 | 79.0 | success |
 | 42926720289 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:52:26-06:00 | 71.0 | success |
 | 42926488297 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:50:51-06:00 | 82.0 | success |
 | 42926338824 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:49:13-06:00 | 53.0 | failure |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42383558695 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T08:51:32-06:00 | 2026-11-07T08:51:32-06:00 | 2026-11-07T08:52:36-06:00 | 64.0 | success |
 | 42382452582 | Motor runner contract tests | push | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:29-06:00 | 15.0 | success |
 | 42379327045 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T07:57:42-06:00 | 2026-11-07T07:57:42-06:00 | 2026-11-07T07:59:05-06:00 | 83.0 | success |
-| 42375177549 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T07:03:14-06:00 | 2026-11-07T07:03:14-06:00 | 2026-11-07T07:04:31-06:00 | 77.0 | success |
 
 ## Fallos y cancelaciones
 
