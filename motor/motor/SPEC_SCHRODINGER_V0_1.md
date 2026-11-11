@@ -188,10 +188,14 @@ recibido.
   queda **ACTIVA_MUDA** con el motivo, sin romper el resto de laterales.
 - La salida del puente (`salida()`) lleva `Alimenta_H=NO`, `writes_H=False`.
 
-**Verificación (esta V0_1):** `probar_puente_schrodinger.py` (Mozart y Napoleón,
-RESULT + CSV). Además, corrida completa del motor (Napoleón Z90 10 cortes) con
-el sensor cableado: el RESULT trae el sensor `schrodinger` en ACTIVA con la
-trayectoria regularizada. (Ver el recibo de la corrida en el repo.)
+**Verificación (esta V0_1):** `probar_puente_schrodinger.py` (en el área de trabajo,
+`~/workspace/u6-alterno/mozart/`, Mozart y Napoleón, RESULT + CSV) y el test
+sintético `motor/tests/test_schrodinger_v0_1.py` (en el repo, PASS). Además,
+corrida completa del motor (Napoleón Z90 10 cortes) con el sensor cableado: el
+RESULT trae el sensor `schrodinger` en ACTIVA con la trayectoria regularizada.
+(Ese RESULT vive en la copia alterna de trabajo,
+`~/workspace/u6-alterno/motor-cameo/motor/RESULT_NAPOLEON_SCHRODINGER_V01.json`,
+no en el repo: es un artefacto de corrida, no un archivo fuente.)
 
 ---
 
