@@ -159,11 +159,14 @@ class StinkBox:
         })
         self._touch(); self._save()
 
-    def register_persistent_neighbor_lights(self, *, tokens: Iterable[str], source: str, cut_id: str = "Z_TRABAJO") -> int:
-        """Register persisted Caldero neighbors as reusable light vocabulary.
+    def register_persistent_neighbor_lights(self, *, tokens: Iterable[str], source: str, cut_id: str = "Z_TRABAJO", branch: str = "caldero_memory", stereotype: str = "caldero_neighbor") -> int:
+        """Register persisted neighbors as reusable light vocabulary.
 
         Registration is persistent and does not itself activate a light. Activation
         is allowed only when the same token is observed again in the current run.
+        branch/stereotype permiten registrar tambien tokens descubiertos de
+        StinkBox (branch stinkbox_discovered) con la misma regla: se registran,
+        no se activan solos.
         """
         unique = sorted({str(t).strip().casefold() for t in tokens if str(t).strip()})
         if not unique:
@@ -173,8 +176,8 @@ class StinkBox:
         for token in unique:
             existing.add(token)
             if not any(isinstance(x, dict) and x.get("token") == token for x in lights):
-                lights.append({"token": token, "branch": "caldero_memory",
-                               "stereotype": "caldero_neighbor", "axes": [],
+                lights.append({"token": token, "branch": str(branch),
+                               "stereotype": str(stereotype), "axes": [],
                                "source": str(source), "persistent": True})
         self.data["persistent_neighbor_tokens"] = sorted(existing)
         self._touch(); self._save()
@@ -195,9 +198,16 @@ class StinkBox:
         if save:
             self._touch(); self._save()
 
-    def transport(self, patterns_path: str | Path) -> Dict[str, Any]:
-        """Read persisted lateral evidence and turn it into predictor features."""
+    def transport(self, patterns_path: str | Path, extra_tokens: Iterable[str] = ()) -> Dict[str, Any]:
+        """Read persisted lateral evidence and turn it into predictor features.
+
+        extra_tokens: tokens persistentes de StinkBox (otros vaults + descubiertos)
+        que alimentan el soporte de esta corrida. Solo se leen: no se escriben en
+        este vault, no se les inventa equivalente y no mutan el canon.
+        """
         tokens = set(self.data.get("token_frequency", {}))
+        extra = {str(t).strip().casefold() for t in (extra_tokens or ()) if str(t).strip()}
+        tokens = tokens | extra
         token_sources = self.data.get("token_sources", {})
         token_cuts = self.data.get("token_cuts", {})
         source_diversity = sum(1 for t in tokens if len(token_sources.get(t, [])) >= 2)
@@ -312,6 +322,59 @@ class StinkBox:
         return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
 
 
+def _load_persistent_stinkbox_tokens(*, root: str | Path, exclude_case_ids: Iterable[str]) -> Dict[str, Any]:
+    """Tokens persistentes de StinkBox que alimentan la siguiente corrida.
+
+    Fuentes (solo lectura, nunca se escribe en ellas):
+    - otros vaults stinkbox_<caso>.json bajo root. Se excluye el vault del caso
+      actual (sus tokens ya estan en el vault que se esta transportando) y los
+      *_RETENIDO / *_SIN_ULTIMO (estados alternos del mismo caso, no evidencia
+      nueva).
+    - stinkbox_tokens_descubiertos.json junto a este modulo: tokens descubiertos
+      fuera de catalogo. Se cargan como evidencia; NUNCA se les inventa un
+      equivalente ni entran al canon (equivalente null queda null, entra_a_canon
+      false queda false). Solo cuentan en el solape favor/contra de cada patron,
+      igual que cualquier otro token lateral.
+    """
+    excluded = {str(c).strip() for c in (exclude_case_ids or ()) if str(c).strip()}
+    tokens: set = set()
+    vaults: Dict[str, int] = {}
+    root_path = Path(root)
+    for path in sorted(root_path.glob("stinkbox_*.json")):
+        stem = path.name[len("stinkbox_"):-len(".json")]
+        if stem in excluded or stem.endswith("_RETENIDO") or stem.endswith("_SIN_ULTIMO"):
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        keys = {str(k).strip().casefold() for k in (data.get("token_frequency") or {}).keys() if str(k).strip()}
+        if keys:
+            vaults[path.name] = len(keys)
+            tokens |= keys
+    discovered_path = Path(__file__).resolve().parent / "stinkbox_tokens_descubiertos.json"
+    discovered = []
+    if discovered_path.is_file():
+        try:
+            d = json.loads(discovered_path.read_text(encoding="utf-8"))
+            for row in (d.get("tokens") or []):
+                if isinstance(row, dict) and str(row.get("token") or "").strip():
+                    discovered.append({
+                        "token": str(row["token"]).strip().casefold(),
+                        "case_id": row.get("case_id"),
+                        "corte": row.get("corte"),
+                        "eje": row.get("eje"),
+                        "estado": row.get("estado"),
+                        "equivalente": row.get("equivalente"),
+                        "entra_a_canon": bool(row.get("entra_a_canon")),
+                    })
+        except Exception:
+            discovered = []
+    for row in discovered:
+        tokens.add(row["token"])
+    return {"tokens": sorted(tokens), "vaults": vaults, "discovered": discovered}
+
+
 def capture_and_transport(*, case_id: str, root: str | Path, motor_output: Mapping[str, Any], lateral_features: Mapping[str, Any], patterns_path: str | Path, external_lights: Iterable[Mapping[str, Any]] = (), pending_case_id: str | None = None, caldero_neighbor_store_root: str | Path | None = None, input_sha: str | None = None, **_extra) -> Dict[str, Any]:
     box = StinkBox(pending_case_id or case_id, root)
     # PATCH 011: idempotencia por input sha. Si este input ya se registró en el vault, no se vuelven a
@@ -333,6 +396,18 @@ def capture_and_transport(*, case_id: str, root: str | Path, motor_output: Mappi
             box.register_persistent_neighbor_lights(tokens=persistent_tokens, source="vecinos_caldero/neighbor_index.json")
         except Exception:
             persistent_tokens = []
+
+    # Cable StinkBox persistente: los tokens de otros vaults y los descubiertos
+    # alimentan esta corrida como evidencia. Solo lectura: no se escribe en sus
+    # fuentes, no se inventan equivalentes, no se toca el canon. El vault del
+    # caso actual se excluye: sus tokens ya estan en box.data.
+    persistent = _load_persistent_stinkbox_tokens(
+        root=box.root, exclude_case_ids={str(pending_case_id or case_id), str(case_id)})
+    discovered_tokens = [r["token"] for r in persistent["discovered"]]
+    if discovered_tokens:
+        box.register_persistent_neighbor_lights(
+            tokens=discovered_tokens, source="stinkbox_tokens_descubiertos.json",
+            branch="stinkbox_discovered", stereotype="stinkbox_discovered_token")
 
     cuts = list(motor_output.get("cuts") or [])
     for i, c in enumerate(cuts):
@@ -374,7 +449,7 @@ def capture_and_transport(*, case_id: str, root: str | Path, motor_output: Mappi
     pred_state = (motor_output.get("predictor") or {}).get("information_state") or {}
     if pred_state and not repeticion:
         box.record_latency(state=pred_state.get("state", "UNKNOWN"), reason=pred_state.get("reason", ""))
-    transported = box.transport(patterns_path)
+    transported = box.transport(patterns_path, extra_tokens=persistent["tokens"])
     transported["vault_path"] = str(box.path)
     transported["persistent_neighbor_tokens"] = list(box.data.get("persistent_neighbor_tokens") or [])
     transported["persistent_neighbor_lights"] = list(box.data.get("persistent_neighbor_lights") or [])
@@ -383,6 +458,14 @@ def capture_and_transport(*, case_id: str, root: str | Path, motor_output: Mappi
     transported["idempotencia_011"] = {"input_sha": input_sha, "repeticion": bool(repeticion),
                                        "escrituras_omitidas": (["trajectory_events", "token_events/token_frequency/coactivation", "formula10", "latency_events"] if repeticion else []),
                                        "regla": "mismo input sha => no se vuelven a sumar contadores"}
+    transported["persistent_input"] = {
+        "version": "STINKBOX_PERSISTENT_INPUT_V0.1",
+        "tokens_loaded": len(persistent["tokens"]),
+        "tokens": persistent["tokens"],
+        "vaults": persistent["vaults"],
+        "discovered": persistent["discovered"],
+        "rule": "solo lectura; sin equivalentes inventados; sin escritura en fuentes; sin mutacion del canon",
+    }
     token_occurrences = sum(len(v) for v in by_cut.values())
     token_unique = sorted({str(t).strip().casefold() for vals in by_cut.values() for t in vals if str(t).strip()})
     token_events_total = len(box.data.get("token_events") or [])
