@@ -2,11 +2,11 @@
 
 **Marco Juárez (Mj)** — autor del motor U6. Análisis asistido por dos modelos de IA: *Grok Bot* y un *modelo externo*.
 
-Fecha del intercambio: 11 de noviembre de 2026. Repositorio: <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma> (commits `084554c`, `c94a1c7`, `1346dcc`, `0cffcc8`).
+Fecha del intercambio: 11 de noviembre de 2026. Repositorio: <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma>. Revisión del manuscrito: 11 de noviembre de 2026. Esta revisión queda en un commit exclusivo de `paper/paper.md`; no modifica scripts, resultados ni archivos del experimento CAMEO `cameo-pesos`. Aunque el archivo vive en la rama `alterno/cameo-pesos`, el cambio del manuscrito queda separado a nivel de commit.
 
 ## Resumen
 
-Se documenta un intercambio de verificación cruzada entre dos modelos de IA sobre una capa descriptiva propuesta para el motor U6: la geometría de la trayectoria de la traza P (crudo_P) a lo largo de cortes biográficos acumulativos. El autor del motor actuó solo como mensajero entre ambos modelos. Un modelo externo proyectó las trazas de Mozart y Napoleón sobre PC1/PC2 rotadas (“eje Tusi”) y leyó como posible señal un giro de fase de ~2/3 de vuelta (222.4° y 236.5°), una contracción exponencial del radio y un salto de fase tardío. Grok Bot reprodujo el resultado de Mozart con error menor a 0.00005° y extendió el método a seis casos; la “forma” apareció en cinco de seis. Al buscar la causa, Grok Bot encontró que la transformación impone por construcción que la coordenada transversal sea igual en el primer y el último corte, y que la rotación fuerza un giro base cercano a 180°; el modelo externo lo confirmó en sus propias tablas y en 200 trazas falsas. Giro, cresta compartida y forma en U del radio resultaron atribuibles al método. El único candidato restante, el salto de fase, no superó controles nulos con corrección de Holm en ningún caso. La conclusión es negativa y modesta: con siete casos no hay señal común robusta en esta capa. El valor principal del ejercicio es metodológico: dos modelos que se corrigen mutuamente sobre datos y código compartidos detectaron un artefacto que cada uno, por separado, había leído o estaba a punto de leer como hallazgo.
+Se documenta un intercambio de verificación cruzada entre dos modelos de IA sobre una capa descriptiva del motor U6: la geometría de la trayectoria de crudo_P a lo largo de cortes biográficos acumulativos. El modelo externo proyectó Mozart y Napoleón sobre PC1/PC2 rotadas (“eje Tusi”); Grok Bot reprodujo Mozart y extendió el procedimiento a otros casos. La revisión identificó como artefactos del marco el giro cercano a 180° impuesto por la rotación, la igualdad de la coordenada transversal en los extremos y la forma en U del radio. El análisis local del arco residual se ejecutó con 1000 nulos por tipo, condicionamiento a R² de fase y corrección de Holm. En los cinco casos con crudo_P incluidos en esa corrida, ningún máximo por caso superó Holm. Napoleón se había tratado entonces como geometría 2D externa; un RESULT fresco entregado el 11 de noviembre confirma ahora su crudo_P de 244 familias × 10 cortes y reproduce las coordenadas del CSV al redondeo. Se añade su análisis de familias, pero ese caso todavía no forma parte del nulo familiar de la Tabla 2. La conclusión, por tanto, es que los controles ejecutados no acreditan una señal geométrica común robusta; no demuestran que toda estructura posible esté ausente. El valor metodológico es la reproducción, la detección de artefactos y la corrección cruzada entre modelos.
 
 ## 1. Introducción
 
@@ -75,7 +75,13 @@ A primera vista, cinco de seis casos comparten la forma y todos los giros caen e
 
 ### 3.4 Hipótesis del rubro dominante
 
-Mj propuso que la forma dependiera de la familia narrativa dominante (en Mozart y Napoleón, ambición). En Mozart, ambición encabeza PC1 y rivalidad es el mayor aumento en el salto. Pero el patrón no se repite: en Galileo dominan sabio/rebelión, en Hawking intuición/racionalización, en Che aventura/complejidad y en MLK mentor/sacrificio. Napoleón no tenía crudo_P disponible (solo geometría 2D), por lo que no pudo evaluarse. La hipótesis no se sostiene con estos datos.
+Mj propuso que la forma dependiera de la familia narrativa dominante. Para evitar mezclar conceptos, se aplicó el mismo criterio descriptivo de `analizar_familias.py`: loadings PC1/PC2 ordenados por magnitud absoluta (conservando signo), máximo de crudo_P por corte con todos los empates, familia con mayor media temporal y mayores incrementos positivos en el paso de salto señalado por `shape_ordered`.
+
+En Mozart, `30_ambicion` es el mayor loading absoluto de PC1 (+0.3363); el dominante por media temporal es `arquetipo_el_creador`. En el salto geométrico C8→C9, `24_rivalidad_de_superior_e_inferior` presenta el mayor incremento (+0.1962). Estos resultados coinciden con el análisis histórico de familias de Mozart.
+
+Napoleón sí dispone de crudo_P: el RESULT fresco `NAPOLEON_FRESH_Z90_U6_20261111` contiene 244 familias × 10 cortes. La proyección calculada desde ese crudo reproduce las diez coordenadas x/y del CSV externo a la precisión publicada (cuatro decimales). Con el mismo criterio, `30_ambicion` tiene la mayor media temporal (0.7939); el mayor loading absoluto de PC1 es `schwartz_01_universalismo` (−0.3102), y el de PC2 es `9_audaz_empresa` (+0.2852). El salto geométrico detectado es C4→C5; allí `24_rivalidad_de_superior_e_inferior` registra el mayor incremento positivo (+0.2061).
+
+La comparación es más precisa que la formulación anterior: la rivalidad es el mayor incremento del salto en ambos casos; la familia que encabeza PC1 no coincide; y la familia dominante por media tampoco coincide (Mozart: creador; Napoleón: ambición). Son descripciones de la traza, no causas ni evidencia predictiva. La antigua exclusión de Napoleón por falta de crudo_P queda retirada.
 
 ### 3.5 El artefacto: y_inicio = y_fin
 
@@ -93,23 +99,27 @@ Quedaba el salto. El modelo externo observó que el Brumario de Napoleón (76.4�
 
 Grok Bot repitió el control con 1000 nulos por tipo, condicionados a R² de fase ≥ real:
 
-| Caso | Paso con máximo arco | Arco residual | Percentil (nulo condicionado) | N aceptado |
-|---|---|---|---|---|
-| Mozart | C9→C10 | −0.6157 | 100 | 64 |
-| Galileo | C7→C8 | +0.2898 | 100 | 711 |
-| Hawking | C5→C6 | −0.3911 | 92.3 | 272 |
-| Che | C1→C3 | −0.4681 | 15.7 | 559 |
-| MLK | C1→C2 | −1.1207 | 97.7 | 88 |
+| Caso | Paso que maximiza | A firmado | Percentil del mismo paso (RW condicionado) | N aceptado | p del máximo de pasos | p Holm (15 máximos) |
+|---|---|---:|---:|---:|---:|---:|
+| Mozart | C9→C10 | −0.6157 | 100.0 | 64 | 0.0154 | 0.2308 |
+| Galileo | C7→C8 | +0.2898 | 100.0 | 711 | 0.0506 | 0.6573 |
+| Hawking | C5→C6 | −0.3911 | 92.3 | 272 | 0.0806 | 0.9670 |
+| Che | C1→C3 | −0.4681 | 15.7 | 559 | 0.8482 | 1.0000 |
+| MLK | C1→C2 | −1.1207 | 97.7 | 88 | 0.0337 | 0.4719 |
 
-*Tabla 2. Máximo arco residual |r̄·(Δφ − ωΔt)| por caso.*
+*Tabla 2. En las cinco filas se muestra el nulo de caminata gaussiana condicionado a R² de fase ≥ R² real. A es el arco residual firmado; el paso se selecciona por su magnitud absoluta. El percentil compara el mismo slot real con el mismo slot de las réplicas aceptadas. En cambio, p y p Holm se calculan con el máximo de todos los pasos de cada réplica; Holm abarca los 15 máximos (5 casos × 3 tipos de nulo).*
 
-Ninguno pasa la corrección de Holm. El mejor es el paso final de Mozart: p = 0.0154 sin ajustar, 0.2308 con Holm. En Mozart, C8→C9 da +0.1922 frente a +0.0673 en C5→C6 (es decir, al pesar por radio el salto “grande” de C5→C6 se desinfla), pero globalmente p ≈ 0.969. El Brumario tiene residual de +50.54° y arco +0.2001; el nulo condicionado acepta solo 8 falsas, demasiado pocas para concluir. Che C7→C8 destaca por distancia euclidiana frente a la caminata aleatoria (Holm ≈ 0.015), pero no frente a permutación ni iid, de modo que depende del nulo elegido. Conclusión: **no hay señal común robusta**. Nota adicional: en esta versión, el C10 de Mozart cae en 1788.34 = Z90, por lo que el estancamiento final es anterior a Z y no viola el sellado.
+El resultado se reproduce en `control_nulo_v1/SENALES_POR_PASO.json`; los SHA-256 del script `senales_por_paso.py` y de `METODO_SENALES_POR_PASO.md` coinciden con los declarados por el resultado. El log de ejecución conserva los tamaños aceptados. El percentil 100 no significa p=0: significa que ninguna réplica aceptada de ese slot superó el valor real. Ninguno de los cinco máximos pasa Holm15. El menor p sin ajustar es Mozart (0.0154), pero queda en 0.2308 tras Holm. En Mozart, C8→C9 da A=+0.1922 frente a +0.0673 en C5→C6; al permitir que la falsa elija cualquier paso, C8→C9 deja de ser excepcional (p≈0.969). Che C7→C8 destaca por distancia euclidiana frente a caminata aleatoria (Holm≈0.015), pero no frente a permutación ni iid; depende del nulo elegido.
+
+El Brumario de Napoleón conserva residual +50.54° y A=+0.2001 en el CSV externo. El nulo condicionado original acepta solo 8 permutaciones geométricas 2D: es BAJA_MUESTRA y no constituye un control familiar. El nuevo crudo_P permite análisis de familias, pero no fue incorporado retrospectivamente a esta Tabla 2 ni a sus 15 comparaciones. Para extender el contraste inferencial a Napoleón hace falta una corrida nueva con su matriz de 244 familias, sin mezclarla con el resultado 2D anterior. Conclusión acotada: **no hay señal común robusta acreditada en los controles ejecutados**. En esta versión, el C10 de Mozart cae en 1788.34 = Z90, por lo que el estancamiento final es anterior a Z y no viola el sellado.
 
 ![Figura 5. Percentiles del arco residual por paso frente a cada nulo. La línea punteada (95) es descriptiva, no el umbral corregido.](SENALES_POR_PASO.png)
 
 ### 3.7 Auditoría de datos
 
 En Che, C3 (1953) aparece antes que C2 (1954). No era un error: el original no traía fechas; C2 corresponde a estudios 1948–1953 y C3 al viaje de 1951–1952. Los cierres están ordenados y los tokens intactos. Las fechas usadas son, por tanto, reconstruidas.
+
+En Napoleón, el campo `motor.annex.traza_P.crudo_P` del RESULT fresco contiene 244 familias con diez valores cada una. El subconjunto suministrado coincide con el campo del RESULT completo. Al proyectar ese crudo con `proyeccion_tusi_modelo_externo.py`, las diez coordenadas x/y reproducen el CSV externo a cuatro decimales. Por tanto, Napoleón sí es evaluable en familias dominantes; lo que sigue pendiente es rehacer su control nulo familiar, no obtener el crudo.
 
 ## 4. Verificación cruzada como valor metodológico
 
@@ -129,11 +139,11 @@ Ninguno de los dos modelos llegó solo a la conclusión final. La lectura positi
 **Artefactos de normalización.** La enseñanza central es que una proyección con normalización geométrica (centrado + rotación a un eje definido por los extremos) impone estructura: un giro base, una coordenada transversal igual en los extremos y un radio en U. Cualquier “forma” sobre esa proyección debe compararse con nulos sometidos a la misma transformación, no con una expectativa ingenua. Además, los nulos deben parecerse a los datos en las propiedades que la métrica explota (aquí, la linealidad de la fase); de lo contrario son demasiado sueltos.
 
 **Límites.**
-- *Siete casos* (seis con crudo_P). Con esa muestra, incluso una señal real moderada difícilmente sobreviviría a la corrección por comparaciones múltiples.
+- *Siete trayectorias geométricas*: seis tienen crudo_P disponible tras esta revisión; sin embargo, la Tabla 2 se ejecutó originalmente sobre cinco casos con crudo_P. Napoleón fue añadido al análisis descriptivo de familias, pero todavía no al control nulo familiar. Hawking de siete cortes continúa como CSV externo/proxy.
 - *PCA por caso*: los ejes no son comparables en valor entre casos; solo cantidades internas.
 - *Fechas reconstruidas* (p. ej., Che) que afectan ω y los residuales de fase.
 - *Mozart no fiel*: la corrida de 10 cortes usada aquí no coincide con la original de septiembre.
-- *Napoleón sin crudo_P*: solo geometría 2D, por lo que no entra en el análisis de familias y su nulo condicionado es muy pequeño (N = 8).
+- *Napoleón*: el control original fue geométrico 2D, condicionado con N=8; no es un nulo familiar y no debe usarse para afirmar ausencia de señal en crudo_P. El nuevo análisis familiar es descriptivo; falta añadir Napoleón a una corrida de nulos de 244 familias.
 - *Etiqueta “forma”*: definida a partir de los dos primeros casos, por lo que es circular respecto a ellos.
 
 **Sobre los ~220°.** Mj relacionó la cifra de ~220° con el sistema de situaciones dramáticas de Étienne Souriau (6 funciones dramáticas; 210,141 situaciones; 7,780 configuraciones según el libro frente a 7,783 en una reconstrucción propia no demostrada; Odanaka ha cuestionado cómo se obtuvo la cifra original) y con un fondo de modelos dinámicos (Markov, SINDy, Laplace, cliodinámica). La discusión concluyó que el número de grados es propiedad del método y no puede vincularse a Souriau; lo que sí tiene sentido es comparar *espacios de configuraciones admisibles*. Se empezó a calcular el límite teórico del giro bajo el método, pero Mj lo apartó: con siete casos no hay datos para calibrarlo y la prioridad es aumentar los casos.
@@ -148,8 +158,8 @@ Ninguno de los dos modelos llegó solo a la conclusión final. La lectura positi
 
 ## 7. Conclusión
 
-La pregunta del título tiene, por ahora, una respuesta clara para casi todo lo observado: el giro de ~2/3 de vuelta, la cresta compartida y la U del radio son forma del método, no de la vida. El único candidato que podía no serlo —el salto de fase— no sobrevive a controles nulos razonables con siete casos. No hay evidencia de una forma de vida común en esta capa, y tampoco evidencia de que no exista; hay una muestra demasiado pequeña y una proyección que impone su propia geometría. Lo que sí deja el ejercicio es un procedimiento: reproducción exacta como compuerta, nulos sometidos a la misma transformación y verificación cruzada entre dos modelos con un humano que fija las restricciones y no altera los números. La capa sigue fuera de H, del ranking y de la apuesta del motor.
+La pregunta del título tiene una respuesta provisional. El giro cercano a 180°, la igualdad de la coordenada transversal en los extremos y la U del radio son consecuencias del método de proyección, no evidencia de una forma de vida. El arco residual no supera Holm15 en los cinco casos con crudo_P incluidos en la corrida original. Napoleón sí tiene crudo_P y su análisis de familias ya fue corregido: la rivalidad encabeza el incremento del salto, mientras que PC1 y la familia dominante por media difieren de Mozart. Como el nulo familiar de Napoleón aún no se ha ejecutado, la conclusión negativa no debe extenderse a ese contraste pendiente. No hay evidencia actual de una forma de vida común en esta capa, pero tampoco evidencia de que no exista; la muestra y los controles disponibles no permiten afirmarlo. La capa sigue fuera de H, del ranking y de la apuesta del motor.
 
 ---
 
-*Materiales: scripts, tablas, resultados JSON, registros de prueba y figuras en* <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma> *(commits `084554c`, `c94a1c7`, `1346dcc`, `0cffcc8`).*
+*Materiales: scripts, tablas, resultados JSON, registros de prueba y figuras en* <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma>. *La revisión de este manuscrito se guarda en un commit aislado que modifica únicamente `paper/paper.md`; el experimento y los archivos CAMEO no se modifican.*
