@@ -1,0 +1,681 @@
+{
+  "schema": "MOZART_CUT_EVIDENCE_LEDGER_V1",
+  "case_id": "MOZART_FRESH_Z90_U6_20261014",
+  "z90_date": "1788-05-04",
+  "source_of_facts": "caldero_search_sources already present in frozen input; this ledger does not independently verify webpage contents",
+  "token_intensity_rule": "NOT_RECORDED_IN_INPUT; weights preserved unchanged and not reverse-engineered",
+  "token_fact_linkage": "PARTIAL: token list is linked to cut-level source summaries, but individual token-to-fact justifications were not supplied in the frozen input",
+  "cuts": [
+    {
+      "cut_id": "C1",
+      "date": "1761-12-31",
+      "source_ids": [
+        "src2"
+      ],
+      "source_records": [
+        {
+          "id": "src2",
+          "url": "https://www.mozartportal.com/es/timeline",
+          "summary": "The Mozart Portal timeline: primeras composiciones K.1a/K.1b en 1761; primer viaje a Múnich en 1762 y actuaciones en Viena."
+        }
+      ],
+      "source_fact_summary": "Primeras composiciones K.1a/K.1b en 1761.",
+      "tokens": [
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "aprendizaje",
+          "axis": "P",
+          "weight": 0.74,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "conocimiento",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 3,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C2",
+      "date": "1762-10-13",
+      "source_ids": [
+        "src2"
+      ],
+      "source_records": [
+        {
+          "id": "src2",
+          "url": "https://www.mozartportal.com/es/timeline",
+          "summary": "The Mozart Portal timeline: primeras composiciones K.1a/K.1b en 1761; primer viaje a Múnich en 1762 y actuaciones en Viena."
+        }
+      ],
+      "source_fact_summary": "Primer viaje a Múnich en 1762 y actuaciones en Viena.",
+      "tokens": [
+        {
+          "token": "viaje",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "reconocimiento",
+          "axis": "P",
+          "weight": 0.7,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.8,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "aprendizaje",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src2"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 4,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C3",
+      "date": "1763-06-01",
+      "source_ids": [
+        "src1"
+      ],
+      "source_records": [
+        {
+          "id": "src1",
+          "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
+          "summary": "Mozarteum Foundation: Mozart compuso primeras piezas desde los cinco años; viaje familiar europeo entre junio de 1763 y diciembre de 1766, con París, Londres, La Haya, Alemania y Suiza."
+        }
+      ],
+      "source_fact_summary": "Viaje familiar europeo entre junio de 1763 y diciembre de 1766; la fuente resume el intervalo, no un día exacto del corte.",
+      "tokens": [
+        {
+          "token": "viaje",
+          "axis": "P",
+          "weight": 0.84,
+          "source_ids": [
+            "src1"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src1"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "aprendizaje",
+          "axis": "P",
+          "weight": 0.74,
+          "source_ids": [
+            "src1"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "conocimiento",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src1"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "exploracion_permitida",
+          "axis": "P",
+          "weight": 0.66,
+          "source_ids": [
+            "src1"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 5,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C4",
+      "date": "1769-12-11",
+      "source_ids": [
+        "src3"
+      ],
+      "source_records": [
+        {
+          "id": "src3",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: nombramiento como Konzertmeister en 1769; viajes a Italia 1769–1771; retorno a Salzburgo en 1771 y actividad compositiva posterior."
+        }
+      ],
+      "source_fact_summary": "Nombramiento como Konzertmeister en 1769 y viajes a Italia 1769–1771.",
+      "tokens": [
+        {
+          "token": "viaje",
+          "axis": "P",
+          "weight": 0.8,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "competencia",
+          "axis": "P",
+          "weight": 0.74,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "conocimiento",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "reconocimiento",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 5,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C5",
+      "date": "1773-03-13",
+      "source_ids": [
+        "src3"
+      ],
+      "source_records": [
+        {
+          "id": "src3",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: nombramiento como Konzertmeister en 1769; viajes a Italia 1769–1771; retorno a Salzburgo en 1771 y actividad compositiva posterior."
+        }
+      ],
+      "source_fact_summary": "La fuente resume retorno a Salzburgo en 1771 y actividad compositiva posterior; no individualiza un acontecimiento el 13-03-1773.",
+      "tokens": [
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.8,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "conocimiento",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "competencia",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "independencia",
+          "axis": "P",
+          "weight": 0.64,
+          "source_ids": [
+            "src3"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 4,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C6",
+      "date": "1777-09-23",
+      "source_ids": [
+        "src4"
+      ],
+      "source_records": [
+        {
+          "id": "src4",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: viaje con su madre en 1777, estancia en París y muerte de Anna Maria en 1778; regreso a Salzburgo en 1779 y puesto de organista de corte."
+        }
+      ],
+      "source_fact_summary": "Viaje con su madre en 1777.",
+      "tokens": [
+        {
+          "token": "viaje",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "independencia",
+          "axis": "P",
+          "weight": 0.78,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "ambicion",
+          "axis": "P",
+          "weight": 0.7,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "exploracion_permitida",
+          "axis": "P",
+          "weight": 0.66,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 4,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C7",
+      "date": "1778-07-03",
+      "source_ids": [
+        "src4"
+      ],
+      "source_records": [
+        {
+          "id": "src4",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: viaje con su madre en 1777, estancia en París y muerte de Anna Maria en 1778; regreso a Salzburgo en 1779 y puesto de organista de corte."
+        }
+      ],
+      "source_fact_summary": "La fuente resume la estancia en París y muerte de Anna Maria en 1778; la ficha global no detalla el día exacto.",
+      "tokens": [
+        {
+          "token": "viaje",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "independencia",
+          "axis": "P",
+          "weight": 0.8,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.8,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "rebeldia",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 4,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C8",
+      "date": "1779-01-17",
+      "source_ids": [
+        "src4"
+      ],
+      "source_records": [
+        {
+          "id": "src4",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: viaje con su madre en 1777, estancia en París y muerte de Anna Maria en 1778; regreso a Salzburgo en 1779 y puesto de organista de corte."
+        }
+      ],
+      "source_fact_summary": "Regreso a Salzburgo en 1779 y puesto de organista de corte.",
+      "tokens": [
+        {
+          "token": "competencia",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "conocimiento",
+          "axis": "P",
+          "weight": 0.76,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "reconocimiento",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src4"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 4,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C9",
+      "date": "1781-06-08",
+      "source_ids": [
+        "src5"
+      ],
+      "source_records": [
+        {
+          "id": "src5",
+          "url": "https://www.mozarteumuruguay.org/bio.php",
+          "summary": "Fundación Mozarteum del Uruguay: en 1781 termina la relación laboral con el príncipe-arzobispo y Mozart decide establecerse en Viena; se casa con Constanze en 1782."
+        }
+      ],
+      "source_fact_summary": "Fin de la relación laboral con el príncipe-arzobispo en 1781 y decisión de establecerse en Viena.",
+      "tokens": [
+        {
+          "token": "rebeldia",
+          "axis": "P",
+          "weight": 0.84,
+          "source_ids": [
+            "src5"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "desafio_autoridad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src5"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "independencia",
+          "axis": "P",
+          "weight": 0.84,
+          "source_ids": [
+            "src5"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src5"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "ambicion",
+          "axis": "P",
+          "weight": 0.66,
+          "source_ids": [
+            "src5"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 5,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    },
+    {
+      "cut_id": "C10",
+      "date": "1788-05-04",
+      "source_ids": [
+        "src6",
+        "src7"
+      ],
+      "source_records": [
+        {
+          "id": "src6",
+          "url": "https://www.mozartdocuments.org/documents/7-april-1786/",
+          "summary": "Mozart Documents: documentos de conciertos y actividad pública en Viena en 1786; el informe de 7 de abril identifica una academia de Mozart en el Kärntnertortheater. Solo se usan hechos hasta 1786."
+        },
+        {
+          "id": "src7",
+          "url": "https://www.mozartdocuments.org/documents/7-may-1786/",
+          "summary": "Mozart Documents: informe fechado el 7 de mayo de 1786 sobre el estreno de Le nozze di Figaro la noche del 1 de mayo de 1786."
+        }
+      ],
+      "source_fact_summary": "Corte de frontera: evidencia documental citada hasta 1786 (academia en abril y estreno de Le nozze di Figaro en mayo). No hay evento de 1788 documentado en la ficha de entrada; no se incorpora información posterior a 1786.",
+      "tokens": [
+        {
+          "token": "creatividad",
+          "axis": "P",
+          "weight": 0.84,
+          "source_ids": [
+            "src6",
+            "src7"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "logro_personal",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src6",
+            "src7"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "independencia",
+          "axis": "P",
+          "weight": 0.82,
+          "source_ids": [
+            "src6",
+            "src7"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "reconocimiento",
+          "axis": "P",
+          "weight": 0.78,
+          "source_ids": [
+            "src6",
+            "src7"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        },
+        {
+          "token": "ambicion",
+          "axis": "P",
+          "weight": 0.68,
+          "source_ids": [
+            "src6",
+            "src7"
+          ],
+          "mapping_basis": "interpretive_mapping_to_cut_source_summary_not_independent_fact_proof",
+          "weight_rationale": "NOT_RECORDED_IN_INPUT"
+        }
+      ],
+      "axis_counts": {
+        "P": 5,
+        "A": 0,
+        "C": 0
+      },
+      "traceability_status": "PARTIAL_SOURCE_LINKED_TOKEN_WEIGHT_RATIONALE_MISSING"
+    }
+  ]
+}
