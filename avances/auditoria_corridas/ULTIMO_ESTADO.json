@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 42992461361,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "498fbc44d626b85a0b732f2067fbea8442b403f6",
+      "created_at_utc": "2026-11-11T09:07:09Z",
+      "created_at_cdmx": "2026-11-11T03:07:09-06:00",
+      "started_at_utc": "2026-11-11T09:07:09Z",
+      "started_at_cdmx": "2026-11-11T03:07:09-06:00",
+      "finished_at_utc": "2026-11-11T09:08:25Z",
+      "finished_at_cdmx": "2026-11-11T03:08:25-06:00",
+      "duration_seconds": 76.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42992461361",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-11T09:07:12Z",
+          "finished_at_utc": "2026-11-11T09:08:24Z",
+          "duration_seconds": 72.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 42983059551,
       "run_attempt": 1,
       "workflow": "ChatGPT startup contract",
@@ -2987,36 +3017,6 @@
           "started_at_utc": "2026-11-07T17:22:21Z",
           "finished_at_utc": "2026-11-07T17:22:50Z",
           "duration_seconds": 29.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 42395973013,
-      "run_attempt": 1,
-      "workflow": "github_actions in /. - Update #1686815627",
-      "event": "dynamic",
-      "actor": "dependabot[bot]",
-      "branch": "main",
-      "head_sha": "1e889391fd1b9452854d72645b2915efa0d2afaa",
-      "created_at_utc": "2026-11-07T17:22:14Z",
-      "created_at_cdmx": "2026-11-07T11:22:14-06:00",
-      "started_at_utc": "2026-11-07T17:22:14Z",
-      "started_at_cdmx": "2026-11-07T11:22:14-06:00",
-      "finished_at_utc": "2026-11-07T17:22:57Z",
-      "finished_at_cdmx": "2026-11-07T11:22:57-06:00",
-      "duration_seconds": 43.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395973013",
-      "jobs": [
-        {
-          "name": "Dependabot",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-07T17:22:18Z",
-          "finished_at_utc": "2026-11-07T17:22:56Z",
-          "duration_seconds": 38.0
         }
       ],
       "artifacts": []
