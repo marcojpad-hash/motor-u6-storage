@@ -1,0 +1,424 @@
+{
+  "V1_INPUT": {
+    "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+    "contrato": "CONTRATO_TRADUCCION_LLM_017",
+    "case_id": "TEXTO_V1",
+    "banderas": [
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Ahora",
+        "inicio": 972,
+        "fin": 977,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Con",
+        "inicio": 1020,
+        "fin": 1023,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      }
+    ],
+    "resumen": {
+      "n": 2,
+      "por_tipo": {
+        "IDENTIDAD_NOMBRE": 2
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 2
+      }
+    },
+    "mapa_nombres_sellado": {},
+    "can_decide_H": false
+  },
+  "V2_INPUT": {
+    "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+    "contrato": "CONTRATO_TRADUCCION_LLM_017",
+    "case_id": "TEXTO_V2",
+    "banderas": [
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C1",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C2",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C2",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 826,
+        "fin": 828,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 826,
+        "fin": 828,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "FUTURO_MUERTE_NO_FINAL",
+        "regla": "R_FUT_MUERTE",
+        "motivo": "muerte del protagonista anunciada antes del último corte",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "muerte",
+        "inicio": 1528,
+        "fin": 1534,
+        "accion": "warn",
+        "accion_en_vivo": "warn",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 826,
+        "fin": 828,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Ahora",
+        "inicio": 1730,
+        "fin": 1735,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Con",
+        "inicio": 1778,
+        "fin": 1781,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      }
+    ],
+    "resumen": {
+      "n": 10,
+      "por_tipo": {
+        "FUTURO_MUERTE_NO_FINAL": 1,
+        "IDENTIDAD_NOMBRE": 9
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 9,
+        "warn": 1
+      }
+    },
+    "mapa_nombres_sellado": {},
+    "can_decide_H": false
+  },
+  "V3_INPUT": {
+    "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+    "contrato": "CONTRATO_TRADUCCION_LLM_017",
+    "case_id": "TEXTO_V3",
+    "banderas": [
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C1",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C2",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C2",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 875,
+        "fin": 877,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 875,
+        "fin": 877,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2012,
+        "fin": 2015,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2040,
+        "fin": 2043,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2068,
+        "fin": 2071,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "FUTURO_MUERTE_NO_FINAL",
+        "regla": "R_FUT_MUERTE",
+        "motivo": "muerte del protagonista anunciada antes del último corte",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "muerte",
+        "inicio": 1643,
+        "fin": 1649,
+        "accion": "warn",
+        "accion_en_vivo": "warn",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Me",
+        "inicio": 254,
+        "fin": 256,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "La",
+        "inicio": 875,
+        "fin": 877,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2012,
+        "fin": 2015,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2040,
+        "fin": 2043,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Era",
+        "inicio": 2068,
+        "fin": 2071,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Ahora",
+        "inicio": 2213,
+        "fin": 2218,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      },
+      {
+        "tipo": "IDENTIDAD_NOMBRE",
+        "regla": "R_NOMBRE_MAYUSCULA",
+        "motivo": "nombre propio (persona/lugar/institución)",
+        "corte": "C4",
+        "campo": "hecho",
+        "span": "Con",
+        "inicio": 2261,
+        "fin": 2264,
+        "accion": "neutralize",
+        "accion_en_vivo": "neutralize",
+        "severidad": "ALTA"
+      }
+    ],
+    "resumen": {
+      "n": 16,
+      "por_tipo": {
+        "FUTURO_MUERTE_NO_FINAL": 1,
+        "IDENTIDAD_NOMBRE": 15
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 15,
+        "warn": 1
+      }
+    },
+    "mapa_nombres_sellado": {},
+    "can_decide_H": false
+  }
+}

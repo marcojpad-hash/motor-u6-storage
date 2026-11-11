@@ -1,0 +1,157 @@
+{
+  "nota": "Checks de correspondencia y comparación; NO convierten V2/V3 incompletas en OK ni corrigen las anomalías del CEB.",
+  "passed": 30,
+  "failed": 0,
+  "checks": [
+    {
+      "variant": 1,
+      "check": "input_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "output_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "engine_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "catalog_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "MC12_calls",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "SB_all_texts_admitted",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "SB_zero_token_rejections",
+      "pass": true
+    },
+    {
+      "variant": 1,
+      "check": "FICTION_NO_Z",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "input_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "output_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "engine_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "catalog_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "MC12_calls",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "SB_all_texts_admitted",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "SB_zero_token_rejections",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "FICTION_NO_Z",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "input_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "output_hash_matches_receipt",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "engine_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "catalog_hash_match",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "MC12_calls",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "SB_all_texts_admitted",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "SB_zero_token_rejections",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "FICTION_NO_Z",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "PAC_igual_V1",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "traza_P_igual_V1",
+      "pass": true
+    },
+    {
+      "variant": 2,
+      "check": "familias_candidatas_mismo_conjunto",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "PAC_igual_V1",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "traza_P_igual_V1",
+      "pass": true
+    },
+    {
+      "variant": 3,
+      "check": "familias_candidatas_mismo_conjunto",
+      "pass": true
+    }
+  ]
+}

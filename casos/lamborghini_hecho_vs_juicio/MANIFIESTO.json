@@ -1,0 +1,169 @@
+{
+  "repo_branch": "alterno/cameo-pesos",
+  "code_commit": "ae27fe138c5fa085aa85eefac7b1adbaa5224109",
+  "raw_storage": "local solamente; no versionar resultados/ledgers según casos/REGLAS.md",
+  "files": [
+    {
+      "path": "FILTRO_FALSOS_POSITIVOS_INICIALES.json",
+      "sha256": "7733501794e4c08fb66d98ce1b66c7407119e4cdbf061608905c26cde7ce0838",
+      "bytes": 11710,
+      "raw_local_only": false
+    },
+    {
+      "path": "FILTRO_PREFLIGHT.json",
+      "sha256": "295bde7da120e67d2b9364c9e87c395448321b32bd33e51e7ade1dfc301a51ed",
+      "bytes": 4182,
+      "raw_local_only": false
+    },
+    {
+      "path": "METODO.json",
+      "sha256": "a5b25f09f8ba5cb4cfb068e87acf3a683f9594e975f388c6f01e6488f0c68507",
+      "bytes": 1111,
+      "raw_local_only": false
+    },
+    {
+      "path": "NUMEROS.json",
+      "sha256": "167923eebe14233cf334c6225fc020f2bed0a0e4ddc550d504396a562cd6509d",
+      "bytes": 35446,
+      "raw_local_only": false
+    },
+    {
+      "path": "RESUMEN.md",
+      "sha256": "ef080ce4af38ca446145f5aafe7c1e3bc98ff1d05cc950b94a3016aca9bc42e7",
+      "bytes": 8437,
+      "raw_local_only": false
+    },
+    {
+      "path": "V1_INPUT.json",
+      "sha256": "56a705f341d64f06d7751ef42ce2c84fd3ac29e836923b16182f16e6342a64c4",
+      "bytes": 6586,
+      "raw_local_only": false
+    },
+    {
+      "path": "V1_RESULT.json",
+      "sha256": "a3bd4669b2fd72ce11764e98d45e807467c642ef92fb62c6047f54638713830e",
+      "bytes": 7464543,
+      "raw_local_only": true
+    },
+    {
+      "path": "V1_RESULT_CEB_LEDGER_1.jsonl",
+      "sha256": "07d8dd1c89e1aeffdee907ee2780136ebeef048d2b04155d76f9a4a7f2385379",
+      "bytes": 14116812,
+      "raw_local_only": true
+    },
+    {
+      "path": "V1_RESULT_CEB_LEDGER_MANIFIESTO.json",
+      "sha256": "eba3dae52b91456f540c64ae95ec7a6a7861e5bb8f3155e6c0704f434620f963",
+      "bytes": 432,
+      "raw_local_only": true
+    },
+    {
+      "path": "V1_RESULT_RECIBO_EJECUCION.json",
+      "sha256": "6c7d1dffc83e1ce9d4f9f91ef1d8c1c789e9de16f62804ef79f8fe09c2fd37c6",
+      "bytes": 27496,
+      "raw_local_only": true
+    },
+    {
+      "path": "V1_exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2,
+      "raw_local_only": true
+    },
+    {
+      "path": "V1_run.log",
+      "sha256": "9f5885dc17b40685ce21320b72e1e2d9420ece0610534a1514562e094de4cedc",
+      "bytes": 14626,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_INPUT.json",
+      "sha256": "20287536784744b40c312ce2b9ebbb0eca1e3f0f4985b221c1e6a7c5d6950f24",
+      "bytes": 9045,
+      "raw_local_only": false
+    },
+    {
+      "path": "V2_RESULT.json",
+      "sha256": "d25853e0f471b95b5d93d720881eef0730eedeed2060f6a70a0e311cca42af41",
+      "bytes": 6293661,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_RESULT_CEB_LEDGER_1.jsonl",
+      "sha256": "93a87f82090e9b1f7328f63c9d40367c911247851fd99bcaa25473ef31f13a9f",
+      "bytes": 12231105,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_RESULT_CEB_LEDGER_MANIFIESTO.json",
+      "sha256": "d0b68f79fe39edb93d454051f7bd79dc133845f71f369ec570a454171d004567",
+      "bytes": 432,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_RESULT_RECIBO_EJECUCION.json",
+      "sha256": "a852cc3eb25314ca2f4b108febd238352b17737c59b742cdc965647fd6f7a5ba",
+      "bytes": 31176,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_exit.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "bytes": 2,
+      "raw_local_only": true
+    },
+    {
+      "path": "V2_run.log",
+      "sha256": "10c0733a0cad4d7a4f5e448755370df1180c66cbbfc1cbfbddc3d1eab8b36a4d",
+      "bytes": 14761,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_INPUT.json",
+      "sha256": "9facb50d194edd77af0b8cfcef28d7905905a7befd3e2de72f1d61205aaa2243",
+      "bytes": 10268,
+      "raw_local_only": false
+    },
+    {
+      "path": "V3_RESULT.json",
+      "sha256": "0fce21c110edb3fd9a957a68b8ef8ee1a7fb24eb305ff4d1afa9db1acb95d2bf",
+      "bytes": 7543790,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_RESULT_CEB_LEDGER_1.jsonl",
+      "sha256": "acdecc8d6a48496b650bc0861656947bb2219037d323774e75766b6cf27b0957",
+      "bytes": 14115546,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_RESULT_CEB_LEDGER_MANIFIESTO.json",
+      "sha256": "64379e6330db15049df37268921da24e66ccd3e13d40342a6c1e1ff6aae0f885",
+      "bytes": 432,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_RESULT_RECIBO_EJECUCION.json",
+      "sha256": "2c6614381ebbcbc63dc50acefcfc19c4e3cebc8cf9c12b1f04b7fb86ebdf46f9",
+      "bytes": 27760,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_exit.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "bytes": 2,
+      "raw_local_only": true
+    },
+    {
+      "path": "V3_run.log",
+      "sha256": "0bffc347e69021743f1505e06307ed3ff2cad54e9a7438b970ce64171bf5376d",
+      "bytes": 14759,
+      "raw_local_only": true
+    },
+    {
+      "path": "VALIDACION.json",
+      "sha256": "16b328a63a06debe92eff85e5089682e1d749e5c04a93dfa10371d38aebb8d23",
+      "bytes": 2900,
+      "raw_local_only": false
+    }
+  ]
+}

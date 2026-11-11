@@ -1,0 +1,249 @@
+{
+  "case_id": "TEXTO_V2",
+  "question": "¿Qué configuraciones presenta la secuencia observada?",
+  "case_kind": "FICTION",
+  "z_work_kind": "FICTION_NO_Z",
+  "random_seed": 0,
+  "cuts": [
+    {
+      "id": "C1",
+      "hecho": "ADULTA_ESCUELA llama a VICTIMA con un apodo y lo lleva a rodillazos a la dirección cuando no entiende sus explicaciones. NARRADOR y sus compañeros se ríen. VICTIMA vende periódicos y lleva un pantalón sostenido por un tirante de trapo. NARRADOR afirma: «me congratulo por eso de no ser obrero, de no haber nacido en un hogar proletario». Describe de manera genérica a un padre borracho que golpea con una cadena y a una madre que se prostituye para conservar el fiado. Afirma que un hombre proletario contrae sífilis y la transmite a sus descendientes. Son afirmaciones de NARRADOR, no observaciones independientes de la familia de VICTIMA.",
+      "P": [
+        [
+          "burla",
+          0.72
+        ],
+        [
+          "participacion_colectiva",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "abuso_sufrido",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.72
+        ],
+        [
+          "escasez",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C2",
+      "hecho": "ADULTA_ESCUELA llama a VICTIMA con un apodo y lo lleva a rodillazos a la dirección cuando no entiende sus explicaciones. NARRADOR y sus compañeros se ríen. VICTIMA vende periódicos y lleva un pantalón sostenido por un tirante de trapo. NARRADOR afirma: «me congratulo por eso de no ser obrero, de no haber nacido en un hogar proletario». Describe de manera genérica a un padre borracho que golpea con una cadena y a una madre que se prostituye para conservar el fiado. Afirma que un hombre proletario contrae sífilis y la transmite a sus descendientes. Son afirmaciones de NARRADOR, no observaciones independientes de la familia de VICTIMA.\nVICTIMA camina por la banqueta hacia ACTOR_A, ACTOR_B y NARRADOR. ACTOR_A ocupa el paso con su bicicleta azul. Los tres queman los periódicos y le quitan las monedas. NARRADOR afirma: «la execración de los obreros también nosotros la llevamos en la sangre».",
+      "P": [
+        [
+          "burla",
+          0.72
+        ],
+        [
+          "participacion_colectiva",
+          0.72
+        ],
+        [
+          "bloqueo",
+          0.72
+        ],
+        [
+          "botin",
+          0.72
+        ],
+        [
+          "destruccion",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "abuso_sufrido",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.72
+        ],
+        [
+          "perdida",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.72
+        ],
+        [
+          "escasez",
+          0.72
+        ],
+        [
+          "asimetria",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C3",
+      "hecho": "ADULTA_ESCUELA llama a VICTIMA con un apodo y lo lleva a rodillazos a la dirección cuando no entiende sus explicaciones. NARRADOR y sus compañeros se ríen. VICTIMA vende periódicos y lleva un pantalón sostenido por un tirante de trapo. NARRADOR afirma: «me congratulo por eso de no ser obrero, de no haber nacido en un hogar proletario». Describe de manera genérica a un padre borracho que golpea con una cadena y a una madre que se prostituye para conservar el fiado. Afirma que un hombre proletario contrae sífilis y la transmite a sus descendientes. Son afirmaciones de NARRADOR, no observaciones independientes de la familia de VICTIMA.\nVICTIMA camina por la banqueta hacia ACTOR_A, ACTOR_B y NARRADOR. ACTOR_A ocupa el paso con su bicicleta azul. Los tres queman los periódicos y le quitan las monedas. NARRADOR afirma: «la execración de los obreros también nosotros la llevamos en la sangre».\nLos tres empujan y patean a VICTIMA hasta una zanja con poca agua y entran en ella. ACTOR_B entrega un vidrio triangular y ACTOR_A corta la cara de VICTIMA. ACTOR_B le arranca el pantalón y el tirante. ACTOR_A y ACTOR_B cometen agresión sexual por turnos y NARRADOR comete después otra agresión sexual. ACTOR_A mantiene la cara de VICTIMA contra el barro. NARRADOR hiere y mutila a VICTIMA con un punzón y hace un intento de estrangulación con una corbata roja. NARRADOR entrega a ACTOR_A un pañuelo bordado con la imagen de su madre para que se limpie. NARRADOR afirma que ACTOR_A los lideró en la edad adulta. Dice que ninguna muerte logró afectarlo, que contempló a los jornaleros desde una torre de vidrio y que «la muerte de un niño proletario es un hecho perfectamente lógico y natural. Es un hecho perfecto».",
+      "P": [
+        [
+          "burla",
+          0.72
+        ],
+        [
+          "participacion_colectiva",
+          0.72
+        ],
+        [
+          "bloqueo",
+          0.72
+        ],
+        [
+          "botin",
+          0.72
+        ],
+        [
+          "destruccion",
+          0.72
+        ],
+        [
+          "control",
+          0.72
+        ],
+        [
+          "privacion_libertad",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "abuso_sufrido",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.72
+        ],
+        [
+          "perdida",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.72
+        ],
+        [
+          "escasez",
+          0.72
+        ],
+        [
+          "asimetria",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C4",
+      "hecho": "ADULTA_ESCUELA llama a VICTIMA con un apodo y lo lleva a rodillazos a la dirección cuando no entiende sus explicaciones. NARRADOR y sus compañeros se ríen. VICTIMA vende periódicos y lleva un pantalón sostenido por un tirante de trapo. NARRADOR afirma: «me congratulo por eso de no ser obrero, de no haber nacido en un hogar proletario». Describe de manera genérica a un padre borracho que golpea con una cadena y a una madre que se prostituye para conservar el fiado. Afirma que un hombre proletario contrae sífilis y la transmite a sus descendientes. Son afirmaciones de NARRADOR, no observaciones independientes de la familia de VICTIMA.\nVICTIMA camina por la banqueta hacia ACTOR_A, ACTOR_B y NARRADOR. ACTOR_A ocupa el paso con su bicicleta azul. Los tres queman los periódicos y le quitan las monedas. NARRADOR afirma: «la execración de los obreros también nosotros la llevamos en la sangre».\nLos tres empujan y patean a VICTIMA hasta una zanja con poca agua y entran en ella. ACTOR_B entrega un vidrio triangular y ACTOR_A corta la cara de VICTIMA. ACTOR_B le arranca el pantalón y el tirante. ACTOR_A y ACTOR_B cometen agresión sexual por turnos y NARRADOR comete después otra agresión sexual. ACTOR_A mantiene la cara de VICTIMA contra el barro. NARRADOR hiere y mutila a VICTIMA con un punzón y hace un intento de estrangulación con una corbata roja. NARRADOR entrega a ACTOR_A un pañuelo bordado con la imagen de su madre para que se limpie. NARRADOR afirma que ACTOR_A los lideró en la edad adulta. Dice que ninguna muerte logró afectarlo, que contempló a los jornaleros desde una torre de vidrio y que «la muerte de un niño proletario es un hecho perfectamente lógico y natural. Es un hecho perfecto».\nACTOR_A dice: «ahora hay que ahorcarlo rápido». ACTOR_B dice: «con un alambre». NARRADOR dice: «y adiós VICTIMA, vamos». Los tres trasladan el cuerpo de VICTIMA a una calle de tierra al borde del barrio de los desocupados. Se proveen de un alambre. ACTOR_A lo ahorca tirando de sus extremos, de noche.",
+      "P": [
+        [
+          "burla",
+          0.72
+        ],
+        [
+          "participacion_colectiva",
+          0.72
+        ],
+        [
+          "bloqueo",
+          0.72
+        ],
+        [
+          "botin",
+          0.72
+        ],
+        [
+          "destruccion",
+          0.72
+        ],
+        [
+          "control",
+          0.72
+        ],
+        [
+          "privacion_libertad",
+          0.72
+        ],
+        [
+          "intencion_declarada",
+          0.72
+        ],
+        [
+          "accion_inmediata",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "abuso_sufrido",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.72
+        ],
+        [
+          "perdida",
+          0.72
+        ],
+        [
+          "perdida_definitiva",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.72
+        ],
+        [
+          "escasez",
+          0.72
+        ],
+        [
+          "asimetria",
+          0.72
+        ]
+      ]
+    }
+  ]
+}

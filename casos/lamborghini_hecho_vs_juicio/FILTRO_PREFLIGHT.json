@@ -1,0 +1,153 @@
+{
+  "V1_INPUT": {
+    "payload_intacto": true,
+    "traza": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 0,
+        "por_tipo": {},
+        "por_accion_en_vivo": {}
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor"
+    },
+    "detalle_banderas": []
+  },
+  "V2_INPUT": {
+    "payload_intacto": true,
+    "traza": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 1,
+        "por_tipo": {
+          "FUTURO_MUERTE_NO_FINAL": 1
+        },
+        "por_accion_en_vivo": {
+          "warn": 1
+        }
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [
+        {
+          "tipo": "FUTURO_MUERTE_NO_FINAL",
+          "regla": "R_FUT_MUERTE",
+          "motivo": "muerte del protagonista anunciada antes del último corte",
+          "corte": "C3",
+          "campo": "hecho",
+          "inicio": 1528,
+          "fin": 1534,
+          "accion": "warn",
+          "accion_en_vivo": "warn",
+          "severidad": "ALTA",
+          "huella_span": "cc0d36cf"
+        }
+      ],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor"
+    },
+    "detalle_banderas": [
+      {
+        "tipo": "FUTURO_MUERTE_NO_FINAL",
+        "regla": "R_FUT_MUERTE",
+        "motivo": "muerte del protagonista anunciada antes del último corte",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "muerte",
+        "inicio": 1528,
+        "fin": 1534,
+        "accion": "warn",
+        "accion_en_vivo": "warn",
+        "severidad": "ALTA"
+      }
+    ]
+  },
+  "V3_INPUT": {
+    "payload_intacto": true,
+    "traza": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 1,
+        "por_tipo": {
+          "FUTURO_MUERTE_NO_FINAL": 1
+        },
+        "por_accion_en_vivo": {
+          "warn": 1
+        }
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [
+        {
+          "tipo": "FUTURO_MUERTE_NO_FINAL",
+          "regla": "R_FUT_MUERTE",
+          "motivo": "muerte del protagonista anunciada antes del último corte",
+          "corte": "C3",
+          "campo": "hecho",
+          "inicio": 1643,
+          "fin": 1649,
+          "accion": "warn",
+          "accion_en_vivo": "warn",
+          "severidad": "ALTA",
+          "huella_span": "cc0d36cf"
+        }
+      ],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor"
+    },
+    "detalle_banderas": [
+      {
+        "tipo": "FUTURO_MUERTE_NO_FINAL",
+        "regla": "R_FUT_MUERTE",
+        "motivo": "muerte del protagonista anunciada antes del último corte",
+        "corte": "C3",
+        "campo": "hecho",
+        "span": "muerte",
+        "inicio": 1643,
+        "fin": 1649,
+        "accion": "warn",
+        "accion_en_vivo": "warn",
+        "severidad": "ALTA"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "base_commit": "ae27fe1",
+  "fuente_url": "http://depoliticaehistoria.blogspot.com/2020/04/el-nino-proletario.html",
+  "extraccion": "síntesis no gráfica contrastada con el texto; no transcripción completa",
+  "diseno": "Tres narraciones; misma pregunta, semilla, cuatro cortes acumulativos, PAC idénticos y pesos .72. Aísla canales de texto, no variabilidad de re-tokenización. V2 registra juicios como dichos, V3 agrega figuras para probar si el guardián las separa.",
+  "P": "NARRADOR/grupo",
+  "A": "VICTIMA como contraparte, no antagonista moral",
+  "C": "contexto",
+  "z": "Ficción sin fechas de vida ni Z; z_work_kind=FICTION_NO_Z",
+  "memoria": "STINKBOX_HOME separado por variante, vacío al inicio; demás módulos/defaults intactos",
+  "normalizacion": "Minúscula inicial en citas: 017 confundía Ahora, Con, Me, La y Era con nombres propios. No se han quitado nombres reales para eludir un veto. Falsos positivos originales preservados.",
+  "restriccion_repo": "Crudos conservados solo local; REGLAS de casos/ prohíbe versionar corridas completas. Resumen/manifiestos versionables."
+}

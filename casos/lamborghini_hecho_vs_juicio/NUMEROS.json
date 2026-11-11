@@ -1,0 +1,1046 @@
+{
+  "V1": {
+    "exit": 0,
+    "receipt_status": "COMPLETED",
+    "duration_seconds": 12.811,
+    "started_local": "2026-11-11T11:34:24.174986-06:00 CDMX",
+    "H1": {
+      "familia": "guardian_del_umbral",
+      "porcentaje_relleno": 52.69,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 0.0,
+        "dynamis": 69.1667,
+        "estructura": 91.6667,
+        "geometria_inercia": 33.3333,
+        "greimas": 83.3333,
+        "otras_dimensiones": 40.9722,
+        "puente_lateral": 75.0887,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.100141,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.86
+    },
+    "H2": {
+      "familia": "anacyclosis_05_democracia",
+      "porcentaje_relleno": 53.53,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 29.1667,
+        "booker": 29.1667,
+        "dynamis": 57.5,
+        "estructura": 62.5,
+        "geometria_inercia": 58.3333,
+        "greimas": 59.7222,
+        "otras_dimensiones": 48.9583,
+        "puente_lateral": 58.0107,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 48.6111
+      },
+      "peso_relativo": 0.095326,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.51
+    },
+    "candidatas": [
+      {
+        "family": "guardian_del_umbral",
+        "rank_fusion": 23.299651,
+        "indice_fusion_relativo_0_1": 0.568284,
+        "operational_rank": 1
+      },
+      {
+        "family": "anacyclosis_05_democracia",
+        "rank_fusion": 22.179292,
+        "indice_fusion_relativo_0_1": 0.540958,
+        "operational_rank": 2
+      },
+      {
+        "family": "sombra",
+        "rank_fusion": 21.886614,
+        "indice_fusion_relativo_0_1": 0.53382,
+        "operational_rank": 3
+      },
+      {
+        "family": "1_suplica",
+        "rank_fusion": 20.683135,
+        "indice_fusion_relativo_0_1": 0.504467,
+        "operational_rank": 4
+      },
+      {
+        "family": "arquetipo_el_gobernante",
+        "rank_fusion": 19.308135,
+        "indice_fusion_relativo_0_1": 0.47093,
+        "operational_rank": 5
+      },
+      {
+        "family": "picar_trickster",
+        "rank_fusion": 18.810913,
+        "indice_fusion_relativo_0_1": 0.458803,
+        "operational_rank": 6
+      },
+      {
+        "family": "tainter_03_vulnerabilidad_sistemica",
+        "rank_fusion": 18.208333,
+        "indice_fusion_relativo_0_1": 0.444106,
+        "operational_rank": 7
+      },
+      {
+        "family": "cliodinamica_02_fase_estanflacion_presion",
+        "rank_fusion": 16.958333,
+        "indice_fusion_relativo_0_1": 0.413618,
+        "operational_rank": 8
+      },
+      {
+        "family": "7_caer_victima",
+        "rank_fusion": 15.208333,
+        "indice_fusion_relativo_0_1": 0.370935,
+        "operational_rank": 9
+      },
+      {
+        "family": "schwartz_06_poder",
+        "rank_fusion": 14.833333,
+        "indice_fusion_relativo_0_1": 0.361789,
+        "operational_rank": 10
+      },
+      {
+        "family": "social_02_milgram_obediencia",
+        "rank_fusion": 14.208333,
+        "indice_fusion_relativo_0_1": 0.346545,
+        "operational_rank": 11
+      },
+      {
+        "family": "dumezil_f1_soberania_juridica",
+        "rank_fusion": 13.583333,
+        "indice_fusion_relativo_0_1": 0.331301,
+        "operational_rank": 12
+      },
+      {
+        "family": "sistema_domiciano",
+        "rank_fusion": 13.5,
+        "indice_fusion_relativo_0_1": 0.329268,
+        "operational_rank": 13
+      }
+    ],
+    "techo_rank": 41,
+    "estado_escala_rank_fusion": "FALLO_ESCALA (valor crudo >0.999; no corregido)",
+    "sombrero": {
+      "n_admitidos": 4,
+      "n_excluidos": 0,
+      "fuera_catalogo": [],
+      "tokens_entrada_fuera_vocabulario": [],
+      "ruido_protocolo": [],
+      "campos_prohibidos": [],
+      "salida_limpia": true,
+      "estado_registro": "ACTIVA_MUDA"
+    },
+    "filtro_017": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 0,
+        "por_tipo": {},
+        "por_accion_en_vivo": {}
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor",
+      "payload_aplicado": true
+    },
+    "ceb": {
+      "status": "VERIFIED_FLOW_WITH_ANOMALIES",
+      "anomalies": [
+        {
+          "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1"
+        }
+      ],
+      "stages_con_error": {},
+      "wiring_diagnostics": [
+        {
+          "type": "WIRING_DECLARED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1",
+          "diagnosis": "declared_executed_but_no_runtime_stage"
+        }
+      ]
+    },
+    "caldero": {
+      "required": false,
+      "status": "EXECUTED",
+      "provider": "duckduckgo_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "e0b99c371dfb909e11b2ce656c522e413a2e1f2ae614e8ef03feaf9b06fb9757",
+      "raw_sources": 8,
+      "self_match_discarded": 0,
+      "tokens_after_filter": 165,
+      "corte_temporal": {
+        "aplicado": false,
+        "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+        "modo": "leniente",
+        "raw_n": 8,
+        "con_fecha_n": 0,
+        "sin_fecha_n": 0,
+        "descartadas_post_z": [],
+        "descartadas_sin_fecha": [],
+        "conservadas_sin_fecha_n": 0,
+        "tokens_antes_corte": 165,
+        "tokens_despues_corte": 165,
+        "motivo": "sin_z_corte",
+        "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+      },
+      "query": "burla participacion_colectiva abuso_sufrido vulnerabilidad autoridad jerarquia escasez bloqueo botin destruccion perdida asimetria control privacion_libertad intencion_declarada accion_inmediata perdida_definitiva",
+      "urls": [
+        "https://archivos.juridicas.unam.mx/www/bjv/libros/10/4872/5.pdf",
+        "https://archivos.juridicas.unam.mx/www/bjv/libros/9/4242/4.pdf",
+        "https://www.cndh.org.mx/sites/default/files/documentos/2019-05/Justicia-Victimas-Delito[1].pdf",
+        "https://www.ohchr.org/es/instruments-mechanisms/instruments/declaration-basic-principles-justice-victims-crime-and-abuse",
+        "https://www.researchgate.net/publication/368499701_Vulnerabilidad_Grupos_Vulnerables_e_Interseccionalidad",
+        "https://www.clacso.org/wp-content/uploads/2024/12/V1_Violencias-colectivas_N5.pdf",
+        "https://www.cndh.org.mx/sites/default/files/documentos/2024-10/Vulneracion_Social_DESCA.pdf",
+        "https://eapc-rcdp.blog.gencat.cat/2024/12/18/vulnerabilidad-y-colectivos-vulnerables-en-el-derecho-quienes-son-y-como-se-definen-lorenzo-cotino/"
+      ],
+      "consultado_utc": "2026-11-11T17:34:24+00:00",
+      "selector": "auto",
+      "attempts": [
+        {
+          "provider": "ddgs",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:24+00:00",
+          "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+        },
+        {
+          "provider": "duckduckgo_html",
+          "status": "EXECUTED",
+          "consultado_utc": "2026-11-11T17:34:24+00:00"
+        }
+      ],
+      "llm": false,
+      "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+    },
+    "pre_h_analogical": {
+      "status": "EXECUTED",
+      "reason": "pre_h_orientation_reused_caldero_search",
+      "raw_source_count": 8,
+      "analog_token_count": 165
+    },
+    "mc": {
+      "status": "EXECUTED",
+      "engine_observation_calls": 12,
+      "total_simulations": 4800,
+      "converged_calls": 12,
+      "nonconverged_calls": 0
+    },
+    "auditoria_json": {
+      "contrato": "SIN_NULL_SIN_NAN_SIN_NAPIC",
+      "faltantes_detectados": 0,
+      "no_finitos_detectados": 0,
+      "rutas_faltantes": [],
+      "rutas_no_finitas": [],
+      "estado": "LIMPIO"
+    },
+    "mortality_events": [],
+    "trace_P_sha256_canonical_json": "908fe8c38ca351a47a611ac86c74610aca3a819843807480ff14865fb35418e9",
+    "r732_numeric": {
+      "X_shape": [
+        4,
+        732
+      ],
+      "dX_norm": [
+        0.618257826476948,
+        0.4004537426470129,
+        0.2816661676524179
+      ],
+      "persist_cos": [
+        0.9333615534285142,
+        0.6111148144320943
+      ],
+      "kappa_dir": [
+        0.35893761377363437,
+        0.7915419657741635
+      ]
+    },
+    "souriau_marker_current": {
+      "corte": "C4",
+      "movement_norm": 0.281666168,
+      "prior_movement_median": 0.509355785,
+      "movement_ratio_to_prior": 0.552985116,
+      "movement_trend_per_step": -0.168295829,
+      "directional_persistence_cos": 0.611114814,
+      "directional_curvature": 0.791541966,
+      "quiescence_index_heuristic": 0.447014884,
+      "regime": "CONVERGENCIA_CANDIDATA",
+      "funciones_activas": [
+        "luna"
+      ],
+      "n_funciones_activas": 1,
+      "asignaciones_funcionales_n": 1,
+      "turnover_funcional_desde_corte_anterior": 0.0,
+      "cambios_de_funcion_reportados": 0,
+      "transiciones_leon_a_marte": 0,
+      "quieto_segun_inercia_souriau": true,
+      "asignacion_funcional_observada": true,
+      "firma_funcional_recurrente": true,
+      "repite_firma_de_corte": "C3",
+      "periodo_de_recurrencia": 1
+    }
+  },
+  "V2": {
+    "exit": 4,
+    "receipt_status": "INCOMPLETE_OUTPUT_DATA",
+    "duration_seconds": 21.061,
+    "started_local": "2026-11-11T11:34:30.982496-06:00 CDMX",
+    "H1": {
+      "familia": "guardian_del_umbral",
+      "porcentaje_relleno": 52.81,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 0.0,
+        "dynamis": 69.1667,
+        "estructura": 91.6667,
+        "geometria_inercia": 33.3333,
+        "greimas": 83.3333,
+        "otras_dimensiones": 42.1296,
+        "puente_lateral": 75.0887,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.104024,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 57.17
+    },
+    "H2": {
+      "familia": "anacyclosis_05_democracia",
+      "porcentaje_relleno": 53.91,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 29.1667,
+        "booker": 29.1667,
+        "dynamis": 57.5,
+        "estructura": 62.5,
+        "geometria_inercia": 58.3333,
+        "greimas": 59.7222,
+        "otras_dimensiones": 52.7778,
+        "puente_lateral": 58.0107,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 48.6111
+      },
+      "peso_relativo": 0.098769,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.64
+    },
+    "candidatas": [
+      {
+        "family": "guardian_del_umbral",
+        "rank_fusion": 22.174651,
+        "indice_fusion_relativo_0_1": 0.583543,
+        "operational_rank": 1
+      },
+      {
+        "family": "anacyclosis_05_democracia",
+        "rank_fusion": 21.054292,
+        "indice_fusion_relativo_0_1": 0.55406,
+        "operational_rank": 2
+      },
+      {
+        "family": "sombra",
+        "rank_fusion": 20.761614,
+        "indice_fusion_relativo_0_1": 0.546358,
+        "operational_rank": 3
+      },
+      {
+        "family": "1_suplica",
+        "rank_fusion": 17.891469,
+        "indice_fusion_relativo_0_1": 0.470828,
+        "operational_rank": 4
+      },
+      {
+        "family": "picar_trickster",
+        "rank_fusion": 17.685913,
+        "indice_fusion_relativo_0_1": 0.465419,
+        "operational_rank": 5
+      },
+      {
+        "family": "arquetipo_el_gobernante",
+        "rank_fusion": 16.808135,
+        "indice_fusion_relativo_0_1": 0.442319,
+        "operational_rank": 6
+      },
+      {
+        "family": "cliodinamica_02_fase_estanflacion_presion",
+        "rank_fusion": 15.833333,
+        "indice_fusion_relativo_0_1": 0.416667,
+        "operational_rank": 7
+      },
+      {
+        "family": "tainter_03_vulnerabilidad_sistemica",
+        "rank_fusion": 15.25,
+        "indice_fusion_relativo_0_1": 0.401316,
+        "operational_rank": 8
+      },
+      {
+        "family": "7_caer_victima",
+        "rank_fusion": 14.083333,
+        "indice_fusion_relativo_0_1": 0.370614,
+        "operational_rank": 9
+      },
+      {
+        "family": "schwartz_06_poder",
+        "rank_fusion": 13.708333,
+        "indice_fusion_relativo_0_1": 0.360746,
+        "operational_rank": 10
+      },
+      {
+        "family": "social_02_milgram_obediencia",
+        "rank_fusion": 13.083333,
+        "indice_fusion_relativo_0_1": 0.344298,
+        "operational_rank": 11
+      },
+      {
+        "family": "dumezil_f1_soberania_juridica",
+        "rank_fusion": 12.458333,
+        "indice_fusion_relativo_0_1": 0.327851,
+        "operational_rank": 12
+      },
+      {
+        "family": "sistema_domiciano",
+        "rank_fusion": 12.375,
+        "indice_fusion_relativo_0_1": 0.325658,
+        "operational_rank": 13
+      }
+    ],
+    "techo_rank": 38,
+    "estado_escala_rank_fusion": "FALLO_ESCALA (valor crudo >0.999; no corregido)",
+    "sombrero": {
+      "n_admitidos": 4,
+      "n_excluidos": 0,
+      "fuera_catalogo": [],
+      "tokens_entrada_fuera_vocabulario": [],
+      "ruido_protocolo": [],
+      "campos_prohibidos": [],
+      "salida_limpia": true,
+      "estado_registro": "ACTIVA_MUDA"
+    },
+    "filtro_017": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 1,
+        "por_tipo": {
+          "FUTURO_MUERTE_NO_FINAL": 1
+        },
+        "por_accion_en_vivo": {
+          "warn": 1
+        }
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [
+        {
+          "tipo": "FUTURO_MUERTE_NO_FINAL",
+          "regla": "R_FUT_MUERTE",
+          "motivo": "muerte del protagonista anunciada antes del último corte",
+          "corte": "C3",
+          "campo": "hecho",
+          "inicio": 1528,
+          "fin": 1534,
+          "accion": "warn",
+          "accion_en_vivo": "warn",
+          "severidad": "ALTA",
+          "huella_span": "cc0d36cf"
+        }
+      ],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor",
+      "payload_aplicado": true
+    },
+    "ceb": {
+      "status": "INCOMPLETE",
+      "anomalies": [
+        {
+          "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1"
+        }
+      ],
+      "stages_con_error": {
+        "sidecar_caldero_busqueda_arquetipos#1": {
+          "name": "sidecar_caldero_busqueda_arquetipos",
+          "registered": true,
+          "started": 1,
+          "ended": 1,
+          "output": 0,
+          "output_empty": 0,
+          "error": 1,
+          "warnings": 0,
+          "reads": 8,
+          "writes": 0,
+          "io_access": [
+            "/workspace/alt_cameo/motor/runs/ESTANDAR__TEXTO_V2/__pycache__/guardian_pistas_llm_caldero_v1.cpython-313.pyc",
+            "/workspace/alt_cameo/motor/runs/ESTANDAR__TEXTO_V2/guardian_pistas_llm_caldero_v1.py",
+            "/workspace/alt_cameo/motor/runs/ESTANDAR__TEXTO_V2/__pycache__/guardian_pistas_llm_caldero_v1.cpython-313.pyc.140321179052880",
+            "3",
+            "/usr/lib/python3.13/encodings/__pycache__/idna.cpython-313.pyc",
+            "/usr/lib/python3.13/__pycache__/stringprep.cpython-313.pyc"
+          ],
+          "io_writes": 1,
+          "consumers": [],
+          "terminal": false,
+          "status": "FAILED"
+        }
+      },
+      "wiring_diagnostics": [
+        {
+          "type": "WIRING_DECLARED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1",
+          "diagnosis": "declared_executed_but_no_runtime_stage"
+        }
+      ]
+    },
+    "caldero": {
+      "required": false,
+      "status": "FAILED",
+      "provider": "caldero_buscador_auto",
+      "query_count": 11,
+      "result_count": 0,
+      "attempts": [
+        {
+          "provider": "ddgs",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:31+00:00",
+          "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+        },
+        {
+          "provider": "duckduckgo_html",
+          "status": "FAILED_NO_RESULTS",
+          "consultado_utc": "2026-11-11T17:34:31+00:00",
+          "error": "buscador duckduckgo_html sin resultados URL verificables"
+        },
+        {
+          "provider": "duckduckgo_lite",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:31+00:00",
+          "error": "buscador duckduckgo_lite fallido: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>"
+        },
+        {
+          "provider": "bing_html",
+          "status": "FAILED_NO_RESULTS",
+          "consultado_utc": "2026-11-11T17:34:39+00:00",
+          "error": "buscador bing_html sin resultados URL verificables"
+        },
+        {
+          "provider": "searxng",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:39+00:00",
+          "error": "buscador searxng fallido: instancias SearXNG sin respuesta: https://searx.be:JSONDecodeError; https://search.inetol.net:JSONDecodeError; https://priv.au:HTTPError; https://searx.tiekoetter.com:HTTPError; https://search.sapti.me:HTTPError"
+        },
+        {
+          "provider": "wikipedia_api",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:42+00:00",
+          "error": "buscador wikipedia_api fallido: HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "google_html",
+          "status": "FAILED_NO_RESULTS",
+          "consultado_utc": "2026-11-11T17:34:42+00:00",
+          "error": "buscador google_html sin resultados URL verificables"
+        },
+        {
+          "provider": "exa",
+          "status": "SALTADO_SIN_CLAVE"
+        },
+        {
+          "provider": "brave",
+          "status": "SALTADO_SIN_CLAVE"
+        },
+        {
+          "provider": "serper",
+          "status": "SALTADO_SIN_CLAVE"
+        },
+        {
+          "provider": "tavily",
+          "status": "SALTADO_SIN_CLAVE"
+        }
+      ],
+      "error": "RuntimeError:Ningún buscador respondió: [{\"provider\": \"ddgs\", \"status\": \"FAILED\", \"consultado_utc\": \"2026-11-11T17:34:31+00:00\", \"error\": \"buscador ddgs fallido: No module named 'duckduckgo_search'\"}, {\"provider\": \"duckduckgo_html\", \"status\": \"FAILED_NO_RESULTS\", \"consultado_utc\": \"2026-11-11T17:34:31+00:00\", \"error\": \"buscador duckduckgo_html sin resultados URL verificables\"}, {\"provider\": \"duckduckgo_lite\", \"status\": \"FAILED\", \"consultado_utc\": \"2026-11-11T17:34:31+00:00\", \"error\": \"buscador duckduckgo_lite fallido: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>\"}, {\"provider\": \"bing_html\", \"status\": \"FAILED_NO_RESULTS\", \"consultado_utc\": \"2026-11-11T17:34:39+00:00\", \"error\": \"buscador bing_html sin resultados URL verificables\"}, {\"provider\": \"searxng\", \"status\": \"FAILED\", \"consultado_utc\": \"2026-11-11T17:34:39+00:00\", \"error\": \"buscador searxng fallido: instancias SearXNG sin respuesta: https://searx.be:JSONDecodeError; https://search.inetol.net:JSONDecodeError; https://priv.au:HTTPError; https://searx.tiekoetter.com:HTTPError; https://search.sapti.me:HTTPError\"}, {\"provider\": \"wikipedia_api\", \"status\": \"FAILED\", \"consultado_utc\": \"2026-11-11T17:34:42+00:00\", \"error\": \"buscador wikipedia_api fallido: HTTP Error 429: Too Many Requests\"}, {\"provider\": \"google_html\", \"status\": \"FAILED_NO_RESULTS\", \"consultado_utc\": \"2026-11-11T17:34:42+00:00\", \"error\": \"buscador google_html sin resultados URL verificables\"}, {\"provider\": \"exa\", \"status\": \"SALTADO_SIN_CLAVE\"}, {\"provider\": \"brave\", \"status\": \"SALTADO_SIN_CLAVE\"}, {\"provider\": \"serper\", \"status\": \"SALTADO_SIN_CLAVE\"}, {\"provider\": \"tavily\", \"status\": \"SALTADO_SIN_CLAVE\"}]"
+    },
+    "pre_h_analogical": {
+      "status": "API_PENDING",
+      "reason": "pre_h_orientation_required",
+      "raw_source_count": 0,
+      "analog_token_count": 0
+    },
+    "mc": {
+      "status": "EXECUTED",
+      "engine_observation_calls": 12,
+      "total_simulations": 4800,
+      "converged_calls": 12,
+      "nonconverged_calls": 0
+    },
+    "auditoria_json": {
+      "contrato": "SIN_NULL_SIN_NAN_SIN_NAPIC",
+      "faltantes_detectados": 2,
+      "no_finitos_detectados": 0,
+      "rutas_faltantes": [
+        "$.matriz_mortalidad_z90.classified_mortality_events[0].date",
+        "$.matriz_mortalidad_z90.classified_mortality_events[1].date"
+      ],
+      "rutas_no_finitas": [],
+      "estado": "REQUIERE_CLASIFICACION_O_REMEDICION"
+    },
+    "mortality_events": [
+      {
+        "cut_id": "C3",
+        "date": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+        "classification": [
+          {
+            "token": "mort_evento_ajeno_vinculo_cercano",
+            "owner_axis": "A",
+            "status": "CLASSIFIED",
+            "match": "muerte",
+            "en_vocabulario_244": false
+          }
+        ]
+      },
+      {
+        "cut_id": "C4",
+        "date": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+        "classification": [
+          {
+            "token": "mort_evento_ajeno_vinculo_cercano",
+            "owner_axis": "A",
+            "status": "CLASSIFIED",
+            "match": "muerte",
+            "en_vocabulario_244": false
+          }
+        ]
+      }
+    ],
+    "trace_P_sha256_canonical_json": "908fe8c38ca351a47a611ac86c74610aca3a819843807480ff14865fb35418e9",
+    "r732_numeric": {
+      "X_shape": [
+        4,
+        732
+      ],
+      "dX_norm": [
+        0.618257826476948,
+        0.4004537426470129,
+        0.2816661676524179
+      ],
+      "persist_cos": [
+        0.9333615534285142,
+        0.6111148144320943
+      ],
+      "kappa_dir": [
+        0.35893761377363437,
+        0.7915419657741635
+      ]
+    },
+    "souriau_marker_current": {
+      "corte": "C4",
+      "movement_norm": 0.281666168,
+      "prior_movement_median": 0.509355785,
+      "movement_ratio_to_prior": 0.552985116,
+      "movement_trend_per_step": -0.168295829,
+      "directional_persistence_cos": 0.611114814,
+      "directional_curvature": 0.791541966,
+      "quiescence_index_heuristic": 0.447014884,
+      "regime": "CONVERGENCIA_CANDIDATA",
+      "funciones_activas": [
+        "leon",
+        "luna",
+        "marte",
+        "tierra"
+      ],
+      "n_funciones_activas": 4,
+      "asignaciones_funcionales_n": 4,
+      "turnover_funcional_desde_corte_anterior": 0.0,
+      "cambios_de_funcion_reportados": 0,
+      "transiciones_leon_a_marte": 0,
+      "quieto_segun_inercia_souriau": true,
+      "asignacion_funcional_observada": true,
+      "firma_funcional_recurrente": true,
+      "repite_firma_de_corte": "C3",
+      "periodo_de_recurrencia": 1
+    }
+  },
+  "V3": {
+    "exit": 4,
+    "receipt_status": "INCOMPLETE_OUTPUT_DATA",
+    "duration_seconds": 12.993,
+    "started_local": "2026-11-11T11:34:30.995426-06:00 CDMX",
+    "H1": {
+      "familia": "guardian_del_umbral",
+      "porcentaje_relleno": 52.79,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 0.0,
+        "dynamis": 69.1667,
+        "estructura": 91.6667,
+        "geometria_inercia": 33.3333,
+        "greimas": 83.3333,
+        "otras_dimensiones": 42.0139,
+        "puente_lateral": 75.0887,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.100679,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.12
+    },
+    "H2": {
+      "familia": "anacyclosis_05_democracia",
+      "porcentaje_relleno": 53.63,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 29.1667,
+        "booker": 29.1667,
+        "dynamis": 57.5,
+        "estructura": 62.5,
+        "geometria_inercia": 58.3333,
+        "greimas": 59.7222,
+        "otras_dimensiones": 50.0,
+        "puente_lateral": 58.0107,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 48.6111
+      },
+      "peso_relativo": 0.095863,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.78
+    },
+    "candidatas": [
+      {
+        "family": "guardian_del_umbral",
+        "rank_fusion": 23.424651,
+        "indice_fusion_relativo_0_1": 0.571333,
+        "operational_rank": 1
+      },
+      {
+        "family": "anacyclosis_05_democracia",
+        "rank_fusion": 22.304292,
+        "indice_fusion_relativo_0_1": 0.544007,
+        "operational_rank": 2
+      },
+      {
+        "family": "sombra",
+        "rank_fusion": 22.011614,
+        "indice_fusion_relativo_0_1": 0.536869,
+        "operational_rank": 3
+      },
+      {
+        "family": "1_suplica",
+        "rank_fusion": 20.683135,
+        "indice_fusion_relativo_0_1": 0.504467,
+        "operational_rank": 4
+      },
+      {
+        "family": "picar_trickster",
+        "rank_fusion": 18.935913,
+        "indice_fusion_relativo_0_1": 0.461852,
+        "operational_rank": 5
+      },
+      {
+        "family": "arquetipo_el_gobernante",
+        "rank_fusion": 18.058135,
+        "indice_fusion_relativo_0_1": 0.440442,
+        "operational_rank": 6
+      },
+      {
+        "family": "tainter_03_vulnerabilidad_sistemica",
+        "rank_fusion": 18.208333,
+        "indice_fusion_relativo_0_1": 0.444106,
+        "operational_rank": 7
+      },
+      {
+        "family": "cliodinamica_02_fase_estanflacion_presion",
+        "rank_fusion": 17.083333,
+        "indice_fusion_relativo_0_1": 0.416667,
+        "operational_rank": 8
+      },
+      {
+        "family": "7_caer_victima",
+        "rank_fusion": 15.333333,
+        "indice_fusion_relativo_0_1": 0.373984,
+        "operational_rank": 9
+      },
+      {
+        "family": "schwartz_06_poder",
+        "rank_fusion": 14.958333,
+        "indice_fusion_relativo_0_1": 0.364837,
+        "operational_rank": 10
+      },
+      {
+        "family": "social_02_milgram_obediencia",
+        "rank_fusion": 14.333333,
+        "indice_fusion_relativo_0_1": 0.349593,
+        "operational_rank": 11
+      },
+      {
+        "family": "dumezil_f1_soberania_juridica",
+        "rank_fusion": 13.708333,
+        "indice_fusion_relativo_0_1": 0.33435,
+        "operational_rank": 12
+      },
+      {
+        "family": "sistema_domiciano",
+        "rank_fusion": 13.625,
+        "indice_fusion_relativo_0_1": 0.332317,
+        "operational_rank": 13
+      }
+    ],
+    "techo_rank": 41,
+    "estado_escala_rank_fusion": "FALLO_ESCALA (valor crudo >0.999; no corregido)",
+    "sombrero": {
+      "n_admitidos": 4,
+      "n_excluidos": 0,
+      "fuera_catalogo": [],
+      "tokens_entrada_fuera_vocabulario": [],
+      "ruido_protocolo": [],
+      "campos_prohibidos": [],
+      "salida_limpia": true,
+      "estado_registro": "ACTIVA_MUDA"
+    },
+    "filtro_017": {
+      "version": "FILTRO_ENTRADA_DIRIGIDA_017_20261007",
+      "contrato": "CONTRATO_TRADUCCION_LLM_017",
+      "modo": "activo",
+      "status": "EXECUTED",
+      "activos_en_vivo": [
+        "CALENDARIO",
+        "IDENTIDAD_NOMBRE",
+        "IDENTIDAD_OBRA"
+      ],
+      "resumen": {
+        "n": 1,
+        "por_tipo": {
+          "FUTURO_MUERTE_NO_FINAL": 1
+        },
+        "por_accion_en_vivo": {
+          "warn": 1
+        }
+      },
+      "n_aplicadas": 0,
+      "aplicadas": [],
+      "banderas": [
+        {
+          "tipo": "FUTURO_MUERTE_NO_FINAL",
+          "regla": "R_FUT_MUERTE",
+          "motivo": "muerte del protagonista anunciada antes del último corte",
+          "corte": "C3",
+          "campo": "hecho",
+          "inicio": 1643,
+          "fin": 1649,
+          "accion": "warn",
+          "accion_en_vivo": "warn",
+          "severidad": "ALTA",
+          "huella_span": "cc0d36cf"
+        }
+      ],
+      "can_decide_H": false,
+      "escribe_H": false,
+      "reordena": false,
+      "feeds_predictor": false,
+      "llamadas_llm": 0,
+      "nota": "solo huellas sha256[:8] de los spans; el mapa nombre->rol queda en la capa LLM (sidecar sellado), nunca en el motor",
+      "payload_aplicado": true
+    },
+    "ceb": {
+      "status": "VERIFIED_FLOW_WITH_ANOMALIES",
+      "anomalies": [
+        {
+          "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1"
+        }
+      ],
+      "stages_con_error": {},
+      "wiring_diagnostics": [
+        {
+          "type": "WIRING_DECLARED_EXECUTED_NOT_OBSERVED",
+          "component": "geometria_multicapa_integrada_working_v1",
+          "diagnosis": "declared_executed_but_no_runtime_stage"
+        }
+      ]
+    },
+    "caldero": {
+      "required": false,
+      "status": "EXECUTED",
+      "provider": "duckduckgo_lite",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "e0b99c371dfb909e11b2ce656c522e413a2e1f2ae614e8ef03feaf9b06fb9757",
+      "raw_sources": 8,
+      "self_match_discarded": 0,
+      "tokens_after_filter": 182,
+      "corte_temporal": {
+        "aplicado": false,
+        "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+        "modo": "leniente",
+        "raw_n": 8,
+        "con_fecha_n": 0,
+        "sin_fecha_n": 0,
+        "descartadas_post_z": [],
+        "descartadas_sin_fecha": [],
+        "conservadas_sin_fecha_n": 0,
+        "tokens_antes_corte": 182,
+        "tokens_despues_corte": 182,
+        "motivo": "sin_z_corte",
+        "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+      },
+      "query": "burla participacion_colectiva abuso_sufrido vulnerabilidad autoridad jerarquia escasez bloqueo botin destruccion perdida asimetria control privacion_libertad intencion_declarada accion_inmediata perdida_definitiva",
+      "urls": [
+        "https://archivos.juridicas.unam.mx/www/bjv/libros/10/4872/5.pdf",
+        "https://archivos.juridicas.unam.mx/www/bjv/libros/9/4242/4.pdf",
+        "https://www.researchgate.net/publication/368499701_Vulnerabilidad_Grupos_Vulnerables_e_Interseccionalidad",
+        "https://www.pensamientopenal.com.ar/index.php/system/files/RDUCSC.2024.no_.45_05.pdf",
+        "https://www.cndh.org.mx/sites/default/files/documentos/2024-10/Vulneracion_Social_DESCA.pdf",
+        "https://www.gaceta.unam.mx/la-violencia-colectiva-esa-herida-abierta-en-la-sociedad/",
+        "https://biblioteca.ciencialatina.org/wp-content/uploads/2025/04/Intervencion-Social-en-Contextos-de-Vulnerabilidad.pdf",
+        "https://www.redalyc.org/journal/537/53765168006/"
+      ],
+      "consultado_utc": "2026-11-11T17:34:31+00:00",
+      "selector": "auto",
+      "attempts": [
+        {
+          "provider": "ddgs",
+          "status": "FAILED",
+          "consultado_utc": "2026-11-11T17:34:31+00:00",
+          "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+        },
+        {
+          "provider": "duckduckgo_html",
+          "status": "FAILED_NO_RESULTS",
+          "consultado_utc": "2026-11-11T17:34:31+00:00",
+          "error": "buscador duckduckgo_html sin resultados URL verificables"
+        },
+        {
+          "provider": "duckduckgo_lite",
+          "status": "EXECUTED",
+          "consultado_utc": "2026-11-11T17:34:31+00:00"
+        }
+      ],
+      "llm": false,
+      "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+    },
+    "pre_h_analogical": {
+      "status": "EXECUTED",
+      "reason": "pre_h_orientation_reused_caldero_search",
+      "raw_source_count": 8,
+      "analog_token_count": 182
+    },
+    "mc": {
+      "status": "EXECUTED",
+      "engine_observation_calls": 12,
+      "total_simulations": 4800,
+      "converged_calls": 12,
+      "nonconverged_calls": 0
+    },
+    "auditoria_json": {
+      "contrato": "SIN_NULL_SIN_NAN_SIN_NAPIC",
+      "faltantes_detectados": 2,
+      "no_finitos_detectados": 0,
+      "rutas_faltantes": [
+        "$.matriz_mortalidad_z90.classified_mortality_events[0].date",
+        "$.matriz_mortalidad_z90.classified_mortality_events[1].date"
+      ],
+      "rutas_no_finitas": [],
+      "estado": "REQUIERE_CLASIFICACION_O_REMEDICION"
+    },
+    "mortality_events": [
+      {
+        "cut_id": "C3",
+        "date": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+        "classification": [
+          {
+            "token": "mort_evento_ajeno_vinculo_cercano",
+            "owner_axis": "A",
+            "status": "CLASSIFIED",
+            "match": "muerte",
+            "en_vocabulario_244": false
+          }
+        ]
+      },
+      {
+        "cut_id": "C4",
+        "date": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+        "classification": [
+          {
+            "token": "mort_evento_ajeno_vinculo_cercano",
+            "owner_axis": "A",
+            "status": "CLASSIFIED",
+            "match": "muerte",
+            "en_vocabulario_244": false
+          }
+        ]
+      }
+    ],
+    "trace_P_sha256_canonical_json": "908fe8c38ca351a47a611ac86c74610aca3a819843807480ff14865fb35418e9",
+    "r732_numeric": {
+      "X_shape": [
+        4,
+        732
+      ],
+      "dX_norm": [
+        0.618257826476948,
+        0.4004537426470129,
+        0.2816661676524179
+      ],
+      "persist_cos": [
+        0.9333615534285142,
+        0.6111148144320943
+      ],
+      "kappa_dir": [
+        0.35893761377363437,
+        0.7915419657741635
+      ]
+    },
+    "souriau_marker_current": {
+      "corte": "C4",
+      "movement_norm": 0.281666168,
+      "prior_movement_median": 0.509355785,
+      "movement_ratio_to_prior": 0.552985116,
+      "movement_trend_per_step": -0.168295829,
+      "directional_persistence_cos": 0.611114814,
+      "directional_curvature": 0.791541966,
+      "quiescence_index_heuristic": 0.447014884,
+      "regime": "CONVERGENCIA_CANDIDATA",
+      "funciones_activas": [
+        "leon",
+        "luna",
+        "marte",
+        "tierra"
+      ],
+      "n_funciones_activas": 4,
+      "asignaciones_funcionales_n": 4,
+      "turnover_funcional_desde_corte_anterior": 0.0,
+      "cambios_de_funcion_reportados": 0,
+      "transiciones_leon_a_marte": 0,
+      "quieto_segun_inercia_souriau": true,
+      "asignacion_funcional_observada": true,
+      "firma_funcional_recurrente": true,
+      "repite_firma_de_corte": "C3",
+      "periodo_de_recurrencia": 1
+    }
+  }
+}
