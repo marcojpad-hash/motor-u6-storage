@@ -1,0 +1,227 @@
+{
+  "estado": "FALLO_REPRODUCCION_PROYECCION_ORIGINAL_NO_LOCALIZADA",
+  "modo": "TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA",
+  "can_decide_H": false,
+  "alimenta_motor": false,
+  "alimenta_ranking": false,
+  "alimenta_apuesta": false,
+  "fuente_mozart_10": "/workspace/UNIFICADO_20261011/TRABAJO/results/U10/MOZART/RESULT_MOZART_run1_u10.json",
+  "fuente_sha256": "bd3385601cbcb79fbc07850b61fc1c6f94f408331974a799d204cfb04b30a53c",
+  "extracto_sha256": "5a05efcd053217a97129beac5931971589f9a90d5a6702e79a3ac7def93d6177",
+  "proyeccion_candidata": "adaptador_convergencia_real_v1.pca3(P_FULL_244) + v153_convergencia_multinivel_v0_3.helix_diagnostics(eje PCA); no se afirma equivalencia Tusi",
+  "codigo_sha256": {
+    "adaptador_convergencia_real_v1.py": "0cbfacf280bf420005afbb1f77ad6869689d9408fc3298b6c836a4386d63e5e2",
+    "v153_convergencia_multinivel_v0_3.py": "6db9d614dcf16640340f7856c6261ac06d0fa5e0e8f8b506a2fb2ac1b1b86313"
+  },
+  "referencia_no_verificada": {
+    "giro_abs_grados": 222.5,
+    "R0": 0.448,
+    "b_por_anio": 0.0759,
+    "radio_R2": 0.929,
+    "omega_grados_por_anio": 8.44,
+    "seno_R2": 0.83
+  },
+  "tolerancia_giro_grados": 2.0,
+  "mozart_observado": {
+    "n_cortes": 10,
+    "giro_firmado_grados": -94.35457185387531,
+    "giro_abs_grados": 94.35457185387531,
+    "PCA_varianza": [
+      0.8672,
+      0.052,
+      0.0372
+    ],
+    "diagnostico_existente": {
+      "helix_like": false,
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_source": "pca_estimate",
+      "center": [
+        3.3306690738754695e-17,
+        7.632783294297951e-17,
+        -8.326672684688674e-18
+      ],
+      "radius_mean": 0.09579133172970711,
+      "radius_cv": 0.46827212023753384,
+      "phase_total_turns": -0.26209603292743144,
+      "phase_direction_consistency": 0.6666666666666666,
+      "axial_displacement": 0.8149563151838739,
+      "pitch_per_turn_median": 0.2109639065959188,
+      "phase_increment_median_abs": 0.9276680218301039,
+      "n_points": 10,
+      "low_n_warning": true,
+      "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+    },
+    "radio": [
+      0.16153063212582322,
+      0.04720928806638923,
+      0.15224677794641775,
+      0.03187424330267488,
+      0.14374504494359344,
+      0.0939712460293353,
+      0.11623903775007213,
+      0.04039495508824066,
+      0.07644163174794241,
+      0.0942604602965821
+    ],
+    "fase_radianes": [
+      -2.3519461076049298e-17,
+      1.6274721122511295,
+      3.7620933247007926,
+      4.148202153547749,
+      2.5097792498085356,
+      1.5821112279784317,
+      0.8810392608693445,
+      -0.8352864031159084,
+      -1.502745608529325,
+      -1.6467979431596942
+    ]
+  },
+  "R0_b_omega_seno": "NO_AJUSTADOS: gate angular falla y no hay marco Tusi original",
+  "imagenes_referencia": "FALLO_ARCHIVO_NO_EXISTE en las tres rutas suministradas",
+  "comparacion_detenida": true,
+  "casos": [
+    {
+      "caso": "MOZART_ORIGINAL_20260915",
+      "n_cortes_traza": 7,
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "z90": "1788-05-04",
+      "result_sha256": "d901e8a4354066e75ed50529e896a8c671f336f5f691f0e62b06e41fe42b7b7c",
+      "estado": "NO_COMPARADO_GATE_MOZART_FALLIDO",
+      "giro": null,
+      "R0": null,
+      "b": null,
+      "R2": null,
+      "omega": null,
+      "seno_pct": null,
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "forma": null
+    },
+    {
+      "caso": "GALILEO_20260924",
+      "n_cortes_traza": 10,
+      "cortes": [
+        "G_C1",
+        "G_C2",
+        "G_C3",
+        "G_C4",
+        "G_C5",
+        "G_C6",
+        "G_C7",
+        "G_C8",
+        "G_C9",
+        "G_C10_Z90"
+      ],
+      "z90": "1634-03-26",
+      "result_sha256": "2c5bece9bae7e2099ed78e6b2c42f108ae672e9b7dbdc335ec74a22f01f51c33",
+      "estado": "NO_COMPARADO_GATE_MOZART_FALLIDO",
+      "giro": null,
+      "R0": null,
+      "b": null,
+      "R2": null,
+      "omega": null,
+      "seno_pct": null,
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "forma": null
+    },
+    {
+      "caso": "HAWKING",
+      "n_cortes_traza": 6,
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "z90": "2010-08-01",
+      "result_sha256": "148301fb674f637a620232b7672944670a9290aa5fd9858cf40ecda4ee3bbcf6",
+      "estado": "NO_COMPARADO_GATE_MOZART_FALLIDO",
+      "giro": null,
+      "R0": null,
+      "b": null,
+      "R2": null,
+      "omega": null,
+      "seno_pct": null,
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "forma": null
+    },
+    {
+      "caso": "CHE",
+      "n_cortes_traza": 9,
+      "cortes": [
+        "C1",
+        "C3",
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "z90": "1963-11-03",
+      "result_sha256": "3def4390bb13e7e485b11762fda0fbd2d516d2a894863f04dadf16c130b8e2d7",
+      "estado": "NO_COMPARADO_GATE_MOZART_FALLIDO",
+      "giro": null,
+      "R0": null,
+      "b": null,
+      "R2": null,
+      "omega": null,
+      "seno_pct": null,
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "forma": null
+    },
+    {
+      "caso": "MLK",
+      "n_cortes_traza": 8,
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "z90": "1964-05-03",
+      "result_sha256": "0c3d333f1008fa0fe5152c7fc2ec8df88d19eb4d5c46fe774fd78f51239b4e66",
+      "estado": "NO_COMPARADO_GATE_MOZART_FALLIDO",
+      "giro": null,
+      "R0": null,
+      "b": null,
+      "R2": null,
+      "omega": null,
+      "seno_pct": null,
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "forma": null
+    }
+  ],
+  "pngs": [
+    "MOZART_10_CORTES_DIAGNOSTICO_PCA_NO_TUSI.png",
+    "MOZART_7_CORTES_CALIBRACION_DIAGNOSTICO_PCA_NO_TUSI.png"
+  ],
+  "integridad": {
+    "archivos_protegidos_comprobados": 133,
+    "intactos": true
+  },
+  "limites": "Fallo de reproducción, no refutación de los números originales ni prueba de que la forma no se repita. Origen de fase, ejes, tiempo y traza de referencia no identificados."
+}
