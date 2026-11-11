@@ -4,6 +4,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 42926720289 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:52:26-06:00 | 71.0 | success |
+| 42926488297 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:50:51-06:00 | 82.0 | success |
+| 42926338824 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:49:13-06:00 | 53.0 | failure |
+| 42926059925 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T17:46:13-06:00 | 2026-11-10T17:46:13-06:00 | 2026-11-10T17:47:32-06:00 | 79.0 | success |
+| 42925995918 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:45:44-06:00 | 2026-11-10T17:45:44-06:00 | 2026-11-10T17:46:57-06:00 | 73.0 | success |
 | 42925925154 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:45:13-06:00 | 2026-11-10T17:45:13-06:00 | 2026-11-10T17:45:33-06:00 | 20.0 | failure |
 | 42925418016 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:41:23-06:00 | 2026-11-10T17:41:23-06:00 | 2026-11-10T17:42:58-06:00 | 95.0 | success |
 | 42918655935 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T16:53:37-06:00 | 2026-11-10T16:53:37-06:00 | 2026-11-10T16:55:21-06:00 | 104.0 | success |
@@ -98,13 +103,10 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42382452582 | Motor runner contract tests | push | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:14-06:00 | 2026-11-07T08:37:29-06:00 | 15.0 | success |
 | 42379327045 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T07:57:42-06:00 | 2026-11-07T07:57:42-06:00 | 2026-11-07T07:59:05-06:00 | 83.0 | success |
 | 42375177549 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T07:03:14-06:00 | 2026-11-07T07:03:14-06:00 | 2026-11-07T07:04:31-06:00 | 77.0 | success |
-| 42369821355 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T05:49:50-06:00 | 2026-11-07T05:49:50-06:00 | 2026-11-07T05:51:03-06:00 | 73.0 | success |
-| 42365810384 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T04:53:00-06:00 | 2026-11-07T04:53:00-06:00 | 2026-11-07T04:54:18-06:00 | 78.0 | success |
-| 42361805988 | Auditoría de corridas Motor U6 | schedule | 2026-11-07T03:56:19-06:00 | 2026-11-07T03:56:19-06:00 | 2026-11-07T03:57:40-06:00 | 81.0 | success |
-| 42359302256 | Auditoría de corridas Motor U6 | workflow_run | 2026-11-07T03:20:16-06:00 | 2026-11-07T03:20:16-06:00 | 2026-11-07T03:21:42-06:00 | 86.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 42926338824 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42926338824
 - Run 42925925154 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925925154
 - Run 42395977255 (pip in /. - Update #1686815933): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395977255
 - Run 42395973009 (pip in /. - Update #1686815654): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395973009
