@@ -741,6 +741,25 @@ def sensores_pre(base, case, motor, features, reg, ctx=None):
         sal["salida"] = m.salida(str(case.get("case_id")), tr)
         sal["trayectoria"] = {"cruda": tr.get("trayectoria_cruda"), "regularizada": tr.get("trayectoria_regularizada"),
                               "oscilacion": tr.get("oscilacion"), "estado": tr.get("estado")}
+        # V0_2 (SPEC §9): el puente no balanceado (marginales suaves). Corre
+        # AMBOS (decisión de Mj: V0_1 estabiliza, V0_2 transforma). Si el V0_2
+        # no está o no corre, se reporta y se queda el V0_1, sin romper.
+        sal["v02"] = None
+        try:
+            m2, _ = _load(base, "schrodinger_transport_v0_2.py", "lu_schro2")
+            if m2 is not None and hasattr(m2, "transportar_trayectoria_v02"):
+                tr2 = m2.transportar_trayectoria_v02(mcuts)
+                sal["v02"] = {"salida": m2.salida(str(case.get("case_id")), tr2),
+                              "trayectoria": {"cruda": tr2.get("trayectoria_cruda"),
+                                              "transformada": tr2.get("trayectoria_transformada"),
+                                              "oscilacion": tr2.get("oscilacion"),
+                                              "desplazamiento_media": tr2.get("desplazamiento_media"),
+                                              "costo_transformacion": tr2.get("costo_transformacion"),
+                                              "estado": tr2.get("estado")}}
+            else:
+                sal["v02"] = {"estado": "SIN_MODULO", "nota": "falta schrodinger_transport_v0_2.py"}
+        except Exception as e:
+            sal["v02"] = {"estado": "ERROR", "error": f"{type(e).__name__}: {str(e)[:200]}"}
         # memento_inversa (SPEC §6): orden de recuperación P->A->C aplicado al
         # estado del último corte (nº de familias activas por componente).
         ult = mcuts[-1] if mcuts else {}
@@ -756,9 +775,15 @@ def sensores_pre(base, case, motor, features, reg, ctx=None):
             osc = tr.get("oscilacion") or {}
             ta = (osc.get("transversal_antes") or {}).get("variacion_total")
             td = (osc.get("transversal_despues") or {}).get("variacion_total")
-            return "ACTIVA", f"puente V0_1: trayectoria regularizada; TV transversal {ta} -> {td}", sal
+            motivo = f"puente V0_1: trayectoria regularizada; TV transversal {ta} -> {td}"
+            v02 = sal.get("v02") or {}
+            osc2 = ((v02.get("trayectoria") or {}).get("oscilacion") or {})
+            td2 = (osc2.get("transversal_despues") or {}).get("variacion_total")
+            if td2 is not None:
+                motivo += f"; V0_2: TV -> {td2}"
+            return "ACTIVA", motivo, sal
         return "ACTIVA_MUDA", f"μ_t calculado; transporte sin trayectoria ({tr.get('estado')}: {str(tr.get('nota', ''))[:100]})", sal
-    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_v0_1.py", "SENSOR (puente Schrödinger V0_1; regulariza la trayectoria)", schro, base, reg)
+    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_v0_1.py", "SENSOR (puente Schrödinger V0_1+V0_2; regulariza y transforma la trayectoria)", schro, base, reg)
 
     def caldero_cuadrantes():
         # PATCH 006: Caldero II sin escaleta lineal externa = cuadrantes circulares Q1-Q4 (plugin_circulo_monomito_v2,
