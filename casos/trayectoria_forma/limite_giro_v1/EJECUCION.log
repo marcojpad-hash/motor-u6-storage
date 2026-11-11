@@ -1,0 +1,40 @@
+N 3 medianas {'iid': 240.15, 'RW': 216.65, 'RW_suavizada': 216.59, 'LF1': 212.06, 'LF2': 196.42}
+N 4 medianas {'iid': 242.32, 'RW': 224.66, 'RW_suavizada': 224.27, 'LF1': 221.78, 'LF2': 201.68}
+N 5 medianas {'iid': 239.99, 'RW': 227.81, 'RW_suavizada': 226.56, 'LF1': 225.77, 'LF2': 204.09}
+N 6 medianas {'iid': 222.35, 'RW': 229.44, 'RW_suavizada': 226.37, 'LF1': 227.95, 'LF2': 205.15}
+N 7 medianas {'iid': 223.35, 'RW': 230.86, 'RW_suavizada': 226.4, 'LF1': 229.89, 'LF2': 206.18}
+N 8 medianas {'iid': 230.06, 'RW': 231.09, 'RW_suavizada': 226.39, 'LF1': 230.23, 'LF2': 206.41}
+N 9 medianas {'iid': 238.39, 'RW': 231.36, 'RW_suavizada': 226.54, 'LF1': 230.72, 'LF2': 206.89}
+N 10 medianas {'iid': 221.05, 'RW': 231.8, 'RW_suavizada': 226.95, 'LF1': 231.46, 'LF2': 206.91}
+N 11 medianas {'iid': 246.79, 'RW': 232.21, 'RW_suavizada': 226.96, 'LF1': 231.48, 'LF2': 207.2}
+N 12 medianas {'iid': 255.71, 'RW': 232.16, 'RW_suavizada': 227.09, 'LF1': 232.09, 'LF2': 207.46}
+N 13 medianas {'iid': 259.0, 'RW': 232.27, 'RW_suavizada': 227.41, 'LF1': 232.0, 'LF2': 207.31}
+N 14 medianas {'iid': 277.09, 'RW': 232.17, 'RW_suavizada': 227.09, 'LF1': 232.21, 'LF2': 207.36}
+N 15 medianas {'iid': 272.12, 'RW': 232.48, 'RW_suavizada': 227.65, 'LF1': 232.21, 'LF2': 207.76}
+N 16 medianas {'iid': 297.33, 'RW': 232.66, 'RW_suavizada': 227.21, 'LF1': 232.38, 'LF2': 207.53}
+N 17 medianas {'iid': 315.51, 'RW': 232.77, 'RW_suavizada': 227.39, 'LF1': 232.34, 'LF2': 207.68}
+N 18 medianas {'iid': 290.57, 'RW': 233.07, 'RW_suavizada': 227.83, 'LF1': 232.53, 'LF2': 207.68}
+N 19 medianas {'iid': 318.62, 'RW': 232.87, 'RW_suavizada': 227.92, 'LF1': 232.61, 'LF2': 207.67}
+N 20 medianas {'iid': 333.48, 'RW': 232.47, 'RW_suavizada': 227.88, 'LF1': 232.56, 'LF2': 207.75}
+N 21 medianas {'iid': 333.31, 'RW': 232.92, 'RW_suavizada': 227.77, 'LF1': 232.53, 'LF2': 207.61}
+N 22 medianas {'iid': 329.34, 'RW': 232.77, 'RW_suavizada': 228.14, 'LF1': 232.83, 'LF2': 207.75}
+N 23 medianas {'iid': 317.85, 'RW': 232.91, 'RW_suavizada': 228.17, 'LF1': 232.73, 'LF2': 207.77}
+N 24 medianas {'iid': 337.97, 'RW': 232.66, 'RW_suavizada': 228.01, 'LF1': 233.06, 'LF2': 207.71}
+N 25 medianas {'iid': 344.34, 'RW': 233.23, 'RW_suavizada': 228.14, 'LF1': 232.73, 'LF2': 207.8}
+N 26 medianas {'iid': 351.35, 'RW': 232.77, 'RW_suavizada': 228.07, 'LF1': 232.52, 'LF2': 207.87}
+N 27 medianas {'iid': 386.11, 'RW': 232.31, 'RW_suavizada': 228.15, 'LF1': 232.73, 'LF2': 208.07}
+N 28 medianas {'iid': 415.95, 'RW': 232.29, 'RW_suavizada': 228.04, 'LF1': 232.91, 'LF2': 207.91}
+N 29 medianas {'iid': 371.13, 'RW': 232.81, 'RW_suavizada': 228.08, 'LF1': 232.96, 'LF2': 207.98}
+N 30 medianas {'iid': 387.92, 'RW': 232.65, 'RW_suavizada': 228.27, 'LF1': 232.94, 'LF2': 207.8}
+ASINT IID 2 30
+ASINT IID 2 60
+ASINT IID 2 120
+ASINT IID 2 240
+ASINT IID 2 480
+ASINT IID 2 960
+ASINT IID 2 1920
+ASINT IID 244 30
+ASINT IID 244 60
+ASINT IID 244 120
+ASINT IID 244 240
+FIN {'n_trazas': 7, 'n_personas': 6, 'rho_giro_correlacion_Pearson': 0.8487142579618531, 'formula_cos_n_MAE_grados': 3.652458363285441, 'formula_cos_n_RMSE_grados': 4.2419488258447675, 'formula_cos_n_R2_descriptivo': 0.7377196239204529, 'no_es_ley': 'Mismo rho y misma nube pueden producir otro winding; datos seleccionados y dos versiones Hawking no independientes.'} segundos 19.063220500946045

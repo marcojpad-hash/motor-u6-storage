@@ -1,0 +1,12 @@
+test_brownian_population_formula (test_limite_giro.LimitTests.test_brownian_population_formula) ... ok
+test_curvature_identity_and_polar_integral (test_limite_giro.LimitTests.test_curvature_identity_and_polar_integral) ... ok
+test_general_upper_bound_approached (test_limite_giro.LimitTests.test_general_upper_bound_approached) ... ok
+test_no_positive_general_lower_bound (test_limite_giro.LimitTests.test_no_positive_general_lower_bound) ... ok
+test_oracle_matches_exact_svd (test_limite_giro.LimitTests.test_oracle_matches_exact_svd) ... ok
+test_restricted_formulas (test_limite_giro.LimitTests.test_restricted_formulas) ... ok
+test_same_covariance_different_smooth_winding (test_limite_giro.LimitTests.test_same_covariance_different_smooth_winding) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.052s
+
+OK

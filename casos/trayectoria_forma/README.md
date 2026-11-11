@@ -1,5 +1,15 @@
 # Trayectoria descriptiva — informe vigente
 
+## Estado: apartado, en espera de más casos
+
+Por instrucción de Mj, la investigación de trayectoria/límite queda **apartada y no concluyente**, pendiente de calibración con más casos.
+
+- Giro, misma cresta y radio en U: **artefactos de la proyección; no señal**.
+- Salto residual: **sin señal robusta acreditada** frente a los controles y multiplicidad; [detalle de controles](control_nulo_v1/SENALES_POR_PASO.md).
+- **Límite, SINDy, Markov, Laplace y cliodinámica: pendientes.** No se presentan como modelos calibrados o validados.
+- Lo generado antes de la pausa se conserva en [limite_giro_v1/](limite_giro_v1/README.md), marcado **APARTADO EN ESPERA — calibrar cuando haya más casos; no concluyente**. No reanudar automáticamente.
+- Nada entra al motor, H, ranking ni apuesta. Commit local, **sin push**. Los informes siguientes se preservan como historial, no como autorización para interpretar el giro como señal.
+
 Ver [tusi_pc12_v1/README.md](tusi_pc12_v1/README.md): seis casos en PC1/PC2 rotadas, gate geométrico Mozart reproducido, familias e hipótesis de Mj. Sin push.
 
 Los diagnósticos siguientes y `geometria_existente_v1/` se conservan como HISTÓRICOS; no son el plano de las coordenadas externas.
