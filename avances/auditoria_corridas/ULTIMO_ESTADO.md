@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 43009772157 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T05:10:46-06:00 | 2026-11-11T05:10:46-06:00 | 2026-11-11T05:12:28-06:00 | 102.0 | success |
 | 43001349545 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:11:48-06:00 | 86.0 | success |
 | 42992461361 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:08:25-06:00 | 76.0 | success |
 | 42983059551 | ChatGPT startup contract | push | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:48-06:00 | 8.0 | success |
@@ -102,13 +103,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42396023926 | Traza campo 244 | pull_request | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:22:51-06:00 | 2026-11-07T11:23:02-06:00 | 11.0 | success |
 | 42396023764 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:23:01-06:00 | 11.0 | success |
 | 42396015343 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:54-06:00 | 10.0 | success |
-| 42395977255 | pip in /. - Update #1686815933 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:57-06:00 | 40.0 | failure |
 
 ## Fallos y cancelaciones
 
 - Run 42926338824 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42926338824
 - Run 42925925154 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925925154
-- Run 42395977255 (pip in /. - Update #1686815933): failure; jobs: Dependabot=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42395977255
 
 ## Límites
 
