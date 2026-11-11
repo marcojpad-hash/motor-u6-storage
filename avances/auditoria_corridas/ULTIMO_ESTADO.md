@@ -4,6 +4,7 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 43001349545 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:11:48-06:00 | 86.0 | success |
 | 42992461361 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:08:25-06:00 | 76.0 | success |
 | 42983059551 | ChatGPT startup contract | push | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:48-06:00 | 8.0 | success |
 | 42979722205 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:29:41-06:00 | 86.0 | success |
@@ -102,7 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42396023764 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:22:50-06:00 | 2026-11-07T11:23:01-06:00 | 11.0 | success |
 | 42396015343 | Traza Campo 244 V2 specs | push | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:44-06:00 | 2026-11-07T11:22:54-06:00 | 10.0 | success |
 | 42395977255 | pip in /. - Update #1686815933 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:57-06:00 | 40.0 | failure |
-| 42395977144 | github_actions in /. - Update #1686815916 | dynamic | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:17-06:00 | 2026-11-07T11:22:50-06:00 | 33.0 | success |
 
 ## Fallos y cancelaciones
 
