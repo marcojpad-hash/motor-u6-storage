@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__TRAY_TUSI_GATE_MOZART_20261111",
+ "ledgers": [
+  {
+   "original": "/dev/shm/trayectoria_tusi_mozart_20261111/MOZART_FRESH_Z90_U6_20261014_1794394240520.flow_ledger.jsonl",
+   "copia": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/result_CEB_LEDGER_1.jsonl",
+   "sha256": "5538efc6bab389d46303df91c82f65f7b5e05e2de108b4478619dfeeea7d7bf0",
+   "bytes": 11766753,
+   "lineas": 23856
+  }
+ ]
+}

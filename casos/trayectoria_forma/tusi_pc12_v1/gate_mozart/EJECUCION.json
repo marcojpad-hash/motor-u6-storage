@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/entrada.json",
+    "TRAY_TUSI_GATE_MOZART_20261111",
+    "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/result.json"
+  ],
+  "inicio": "2026-11-11T04:50:39.141793-06:00",
+  "fin": "2026-11-11T04:51:11.508481-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 4,
+  "input_sha256": "a2e2158bab9d5cbeaf58d4e8ab2ce409743a29bb404925cbb62970cb8a200ecc",
+  "input_copia_exacta": true,
+  "MC_solicitado": true,
+  "archivos_protegidos_intactos": true,
+  "n_archivos_protegidos": 133,
+  "environment_explicit": {
+    "PYTHONHASHSEED": "0",
+    "STINKBOX_HOME": "/workspace/trayectoria_tusi_runtime/mozart_gate/stinkbox",
+    "STINKBOX_STORAGE_ROOT": "/workspace/trayectoria_tusi_runtime/mozart_gate/storage",
+    "STINKBOX_STORAGE": "/workspace/trayectoria_tusi_runtime/mozart_gate/storage",
+    "CEB_ROOT": "/dev/shm/trayectoria_tusi_mozart_20261111"
+  },
+  "result_sha256": "9a42b0af5e0585672ca8871e0bb9f603f924398d6c55c01415c24975a777e85f"
+}

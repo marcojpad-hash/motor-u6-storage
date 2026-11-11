@@ -1,64 +1,40 @@
 {
-  "estado": "GATE_BLOQUEADO_INSUMOS_NO_DISPONIBLES",
-  "transformacion": "P crudo centrado -> PC1/PC2 SVD -> rotación C1→Cn horizontal",
-  "script_local": "proyeccion_tusi_modelo_externo.py",
-  "origen_script_local": "RECONSTRUIDO_DE_DESCRIPCION; no copia del adjunto, no equivalencia verificada",
-  "script_sha256": "b889f2cb95f61b9d868473346bc012bed0d1fead9dd1866b84ee0d6cb183cedc",
-  "esperado_giro_abs_grados": {
-    "Mozart": 222.4,
-    "Napoleon": 236.5
+  "estado": "GATE_MOZART_PASA_AL_REDONDEO_CSV",
+  "gate_mozart": {
+    "passed": true,
+    "tolerance_by_serialized_precision": {
+      "ano": 0.0050000001,
+      "x_tusi": 5.00001e-05,
+      "y_transversal": 5.00001e-05,
+      "radio": 5.00001e-05,
+      "fase_grados": 0.050000000100000004
+    },
+    "max_abs_error": {
+      "ano": 0.004469541410117017,
+      "x_tusi": 4.853546392806496e-05,
+      "y_transversal": 4.477738072120041e-05,
+      "radio": 4.9518170866791333e-05,
+      "fase_grados": 0.04884779664882899
+    },
+    "ids_equal": true,
+    "giro_reproducido": 222.45249997614937,
+    "giro_csv_por_extremos": 222.4,
+    "diferencia_giro_grados": 0.05249997614936319,
+    "runner_exit_code": 4,
+    "runner_receipt_status": "INCOMPLETE_OUTPUT_DATA",
+    "input_sha256": "a2e2158bab9d5cbeaf58d4e8ab2ce409743a29bb404925cbb62970cb8a200ecc",
+    "no_calibracion_predictiva": true,
+    "receipt_missing_paths": [
+      "$.efectividad_corte_retenido.previo_error"
+    ],
+    "nota_gate": "Tolerancias derivadas de la serialización explícita del script original: año .2f, coordenadas/radio .4f, fase .1f; no iguales unidades.",
+    "forma_reproducida": {
+      "completa": true,
+      "salto_desde": "C8",
+      "salto_hasta": "C9"
+    }
   },
-  "archivos": [
-    {
-      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/1ccd6adb25bc88f74627e1f5749cf15ba27ec28134897193c11f7d122431e050.csv",
-      "exists": false
-    },
-    {
-      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/75cbc2c846e73e7b5b778942c4f14fd21ffadf40186d61a953f4ab9e35df3a7b.csv",
-      "exists": false
-    },
-    {
-      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/6ed3c3509f7f87761f78eb000129e3729f0589fae478886ae68c5516aa854353.py",
-      "exists": false
-    },
-    {
-      "path": "casos/precedentes/NAPOLEON_10_CORTES/entrada.json",
-      "exists": false
-    }
-  ],
-  "resultados_exactos_buscados_y_no_localizados": [
-    "RESULT_MOZART_Z90_PRECEDENTE.json",
-    "RESULT_NAPOLEON_Z90_10CORTES.json"
-  ],
-  "busqueda": "git pull --ff-only: Already up to date. Búsqueda por nombre en rama y /workspace sin coincidencias; no se sustituyen por otros casos de igual nombre.",
-  "gate_ambos_csv": "NO_EJECUTADO_POR_FALTANTES",
-  "aplicada_a_los_otros_cuatro": false,
-  "pruebas_sinteticas": "OK: n variable, alineación del extremo, radio y centrado; NO sustituyen gate real",
-  "crudo_P_disponible": {
-    "MLK": {
-      "presente": true,
-      "n_familias": 244,
-      "n_cortes": 8
-    },
-    "HAWKING": {
-      "presente": true,
-      "n_familias": 244,
-      "n_cortes": 6
-    },
-    "MOZART_ORIGINAL_20260915": {
-      "presente": true,
-      "n_familias": 244,
-      "n_cortes": 7
-    },
-    "CHE": {
-      "presente": true,
-      "n_familias": 244,
-      "n_cortes": 9
-    },
-    "GALILEO_20260924": {
-      "presente": true,
-      "n_familias": 244,
-      "n_cortes": 10
-    }
-  }
+  "napoleon": "SOLO_CSV_NO_GATE_DE_RESULT_NI_FAMILIAS",
+  "nota": "La instrucción posterior autorizó aplicar la transformación fiel a los otros cuatro tras reproducir Mozart; no requiere ya el RESULT ausente de Napoleón. No confundir gate geométrico con la corrida estándar exit4 incompleta.",
+  "informe_vigente": "tusi_pc12_v1/README.md"
 }

@@ -1,3 +1,5 @@
+> **HISTÓRICO — geometría radial distinta.** Informe vigente y disponibilidad actual de insumos: [../tusi_pc12_v1/README.md](../tusi_pc12_v1/README.md). Los avisos de adjuntos ausentes debajo describen un estado anterior, ya superado.
+
 # Trayectorias con la geometría existente del motor
 
 **EJECUTADO:** Mozart histórico de diez cortes, Galileo, Hawking, Che y MLK. Ejercicio retrospectivo, descriptivo, sin decidir H, ranking ni apuesta. No se exige reproducir los 222.5° del otro modelo.

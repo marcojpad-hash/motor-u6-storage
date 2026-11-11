@@ -1,8 +1,9 @@
 {
-  "estado": "FALLO_ARCHIVOS_NO_EXISTEN",
-  "solicitados": [
-    "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/1ccd6adb25bc88f74627e1f5749cf15ba27ec28134897193c11f7d122431e050.csv",
-    "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/75cbc2c846e73e7b5b778942c4f14fd21ffadf40186d61a953f4ab9e35df3a7b.csv"
-  ],
-  "motivo": "Read devolvió File not found para ambos; no se inventan coordenadas ni transformación."
+  "estado": "INSUMOS_DISPONIBLES_COPIADOS_POR_PADRE",
+  "files": {
+    "casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_mozart.csv": "022cd96f65bbb4e31c3946b00c4f80fe04b6eb4f4508b60991846a24e405fc25",
+    "casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_napoleon.csv": "6f126cc284b44903917530672fdd2ce0ce9c66efb076ebbdf449a0b617fc6fc5",
+    "casos/trayectoria_forma/coordenadas_modelo_externo/proyeccion_tusi_modelo_externo.py": "e622e9af2170a8fb7f06afeb821d93c13ba46907b690c807349d5f0b7a3c5ac6"
+  },
+  "nota": "CSV y script original fiel preservados; su disponibilidad reemplaza el diagnóstico inicial File not found."
 }

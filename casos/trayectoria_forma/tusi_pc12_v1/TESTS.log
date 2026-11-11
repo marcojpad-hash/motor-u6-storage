@@ -1,0 +1,19 @@
+test_csv_externo_reutilizable (test_medir_trayectorias.TrayectoriaTests.test_csv_externo_reutilizable) ... ok
+test_equivalencia_script_fiel_real (test_medir_trayectorias.TrayectoriaTests.test_equivalencia_script_fiel_real) ... ok
+test_exponencial_propia (test_medir_trayectorias.TrayectoriaTests.test_exponencial_propia) ... ok
+test_fase_lineal (test_medir_trayectorias.TrayectoriaTests.test_fase_lineal) ... ok
+test_fechas_duplicadas_no_inventan_velocidad (test_medir_trayectorias.TrayectoriaTests.test_fechas_duplicadas_no_inventan_velocidad) ... ok
+test_forma_operacional (test_medir_trayectorias.TrayectoriaTests.test_forma_operacional) ... ok
+test_forma_pc12_ordenada (test_medir_trayectorias.TrayectoriaTests.test_forma_pc12_ordenada) ... ok
+test_no_muta_vectores (test_medir_trayectorias.TrayectoriaTests.test_no_muta_vectores) ... ok
+test_prefijo_no_creciente_fijado (test_medir_trayectorias.TrayectoriaTests.test_prefijo_no_creciente_fijado) ... ok
+test_regla_radio_maximo_final_conservada (test_medir_trayectorias.TrayectoriaTests.test_regla_radio_maximo_final_conservada) ... ok
+test_seno_dentro_de_muestra (test_medir_trayectorias.TrayectoriaTests.test_seno_dentro_de_muestra) ... ok
+test_tramo_dos_puntos_no_se_fuerza (test_medir_trayectorias.TrayectoriaTests.test_tramo_dos_puntos_no_se_fuerza) ... ok
+test_transformacion_reconstruida_n_variable (test_medir_trayectorias.TrayectoriaTests.test_transformacion_reconstruida_n_variable) ... ok
+test_z90_control (test_medir_trayectorias.TrayectoriaTests.test_z90_control) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.269s
+
+OK

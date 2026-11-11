@@ -16,6 +16,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from auditar_reproduccion import frame
+from proyeccion_tusi_modelo_externo import project_crudo, year_decimal
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
@@ -36,12 +37,19 @@ def r_squared(y,pred):
     ss = float(np.sum((np.asarray(y)-np.mean(y))**2))
     return None if ss<=EPS else float(1-np.sum((y-pred)**2)/ss)
 
-def fit_radius(t,r):
-    # Regla fijada: primer máximo global -> primer mínimo global posterior.
+def fit_radius(t,r,rule="max_to_min"):
+    # Regla explícita por manifiesto: máximo→mínimo o prefijo inicial no creciente.
     t,r = np.asarray(t,float),np.asarray(r,float)
-    s = int(np.argmax(r))
-    if s>=len(r)-1: return {"estado":"SIN_CORTES_POSTERIORES_AL_MAXIMO","start":s,"end":None}
-    e = s+1+int(np.argmin(r[s+1:]))
+    if rule=="initial_nonincreasing_prefix":
+        s,e=0,0
+        for k in range(1,len(r)):
+            if r[k]>r[k-1]+EPS:break
+            e=k
+    elif rule=="max_to_min":
+        s = int(np.argmax(r))
+        if s>=len(r)-1: return {"estado":"SIN_CORTES_POSTERIORES_AL_MAXIMO","start":s,"end":None}
+        e = s+1+int(np.argmin(r[s+1:]))
+    else:raise ValueError("Regla radio desconocida: "+rule)
     base = {"start":s,"end":e,"n_fit":e-s+1,"R0":None,"b":None,"R2":None,"R2_log":None,"pred":None,"residual":None,"regime":None}
     if e-s+1<3 or np.any(r[s:e+1]<=EPS) or np.ptp(t[s:e+1])<=EPS:
         return dict(base,estado="TRAMO_INSUFICIENTE_MINIMO_3_CORTES_RADIO_POSITIVO")
@@ -98,6 +106,22 @@ def shape(x,y):
     rise=bool(len(suffix)>=2 and y[-1]>y[j+1]+EPS and rise_fit and rise_fit[0][1]>0)
     return {"coincide":bool(pairs and jump and rise),"cresta":crest,"valle":trough,"salto_inicio":j,"salto_fin":j+1,"salto_largo":bool(steps[j]>=threshold),"salto_cruza_eje":crossing,"subida":rise,"salto_umbral":None if not np.isfinite(threshold) else threshold,"pasos":steps,"advertencia":"Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."}
 
+def shape_ordered(x,y):
+    x,y=np.asarray(x,float),np.asarray(y,float);n=len(y)
+    steps=np.hypot(np.diff(x),np.diff(y));positive=steps[steps>EPS]
+    threshold=1.5*float(np.median(positive)) if len(positive) else float("inf")
+    valley=int(np.argmin(y));crest=int(np.argmax(y[:valley])) if valley>0 else None
+    crest_ok=bool(crest is not None and y[crest]>y[valley]+EPS)
+    candidates=[]
+    for k in range(valley,n-1):
+        cross_x=abs(x[k])>EPS and abs(x[k+1])>EPS and x[k]*x[k+1]<0
+        cross_y=abs(y[k])>EPS and abs(y[k+1])>EPS and y[k]*y[k+1]<0
+        if steps[k]>=threshold and (cross_x or cross_y):candidates.append((k,bool(cross_x),bool(cross_y)))
+    if candidates:
+        j,cx,cy=candidates[0];suffix=np.arange(j+1,n);rise_fit=ols(suffix,y[j+1:]);rise=bool(len(suffix)>=2 and y[-1]>y[j+1]+EPS and rise_fit and rise_fit[0][1]>0)
+    else:j,cx,cy,rise=None,False,False,False
+    return {"coincide":bool(crest_ok and candidates and rise),"cresta":crest,"valle":valley,"salto_inicio":j,"salto_fin":None if j is None else j+1,"salto_largo":bool(candidates),"salto_cruza_eje":bool(cx or cy),"cruza_x_0":cx,"cruza_y_0":cy,"subida":rise,"salto_umbral":None if not np.isfinite(threshold) else threshold,"pasos":steps,"todos_saltos_candidatos":[k for k,a,b in candidates],"advertencia":"Criterio exploratorio PC12 dependiente del marco, no validación independiente."}
+
 def decimal_year(date):
     d=dt.date.fromisoformat(date);start=dt.date(d.year,1,1)
     return d.year+(d-start).days/((dt.date(d.year+1,1,1)-start).days)
@@ -113,10 +137,11 @@ def load_case(spec,parent):
         # Para futuras coordenadas externas: los encabezados tienen contrato explícito.
         with p.open(newline="",encoding="utf-8-sig") as handle:
             rows=list(csv.DictReader(handle))
-        required={"corte","año","x_tusi","y_transversal","radio","fase_grados"}
+        year_key="ano" if rows and "ano" in rows[0] else "año"
+        required={"corte",year_key,"x_tusi","y_transversal","radio","fase_grados"}
         if not rows or not required<=rows[0].keys():raise ValueError("CSV requiere columnas: "+",".join(sorted(required)))
-        d={"case_id":spec["case_id"],"geometry":"COORDENADAS_EXTERNAS_TRANSFORMACION_NO_DISPONIBLE","points":rows,"z90":spec["z90"],"source":str(p),"source_sha256":sha(p),"date_warnings":[],"notes":["No se infiere transformación desde CSV sin pares de trazas verificables."]}
-        ids=[q["corte"] for q in rows];years=np.array([float(q["año"]) for q in rows]);t=years-years[0]
+        d={"case_id":spec["case_id"],"geometry":"COORDENADAS_EXTERNAS_PC12_RESULT_FUENTE_NO_DISPONIBLE","points":rows,"z90":spec["z90"],"source":str(p),"source_sha256":sha(p),"date_warnings":[],"notes":["No se infiere transformación desde CSV sin pares de trazas verificables."]}
+        ids=[q["corte"] for q in rows];years=np.array([float(q[year_key]) for q in rows]);t=years-years[0]
         x=np.array([float(q["x_tusi"]) for q in rows]);y=np.array([float(q["y_transversal"]) for q in rows]);r=np.array([float(q["radio"]) for q in rows]);phi=np.deg2rad([float(q["fase_grados"]) for q in rows]);pca=None;h=None
         d["consistencia_radio_max_error"]=float(np.max(np.abs(r-np.hypot(x,y))))
         angular_error=np.angle(np.exp(1j*(phi-np.arctan2(y,x))))
@@ -125,10 +150,17 @@ def load_case(spec,parent):
         d=json.loads(p.read_text());rows=d["points"];ids=[q["corte"] for q in rows]
         dates=[dt.date.fromisoformat(q["date"]) for q in rows];t=np.array([(q-dates[0]).days/365.2425 for q in dates]);years=np.array([decimal_year(q["date"]) for q in rows])
         if np.any(np.diff(t)<-EPS):raise ValueError("No se reordenan silenciosamente cortes con tiempo decreciente")
-        fams=sorted(rows[0]["P_FULL_244"])
-        if len(fams)!=244 or any(sorted(q["P_FULL_244"])!=fams for q in rows):raise ValueError("P_FULL_244 incompatible")
-        P=np.array([[float(q["P_FULL_244"][f]) for f in fams] for q in rows]);x,y,r,phi,pca,h=frame(P)
-    z=decimal_year(d["z90"]) if isinstance(d["z90"],str) else float(d["z90"])
+        if d["geometry"]=="TUSI_PC12_ROTADO_CRUDO_P":
+            q=project_crudo(d["crudo_P"])
+            if len(q["radio"])!=len(ids):raise ValueError("crudo_P y controles no sincronizados")
+            x,y,r,phi=[np.array(q[k]) for k in ("x_tusi","y_transversal","radio","fase_grados")]
+            phi=np.deg2rad(phi);years=np.array([year_decimal(row["date"]) for row in rows]);t=years-years[0]
+            pca=q["PCA_varianza_2"];h={"transformacion":q["estado"],"rotation_radians":q["rotation_radians"]}
+        else:
+            fams=sorted(rows[0]["P_FULL_244"])
+            if len(fams)!=244 or any(sorted(q["P_FULL_244"])!=fams for q in rows):raise ValueError("P_FULL_244 incompatible")
+            P=np.array([[float(q["P_FULL_244"][f]) for f in fams] for q in rows]);x,y,r,phi,pca,h=frame(P)
+    z=(year_decimal(d["z90"]) if d["geometry"]=="TUSI_PC12_ROTADO_CRUDO_P" else decimal_year(d["z90"])) if isinstance(d["z90"],str) else float(d["z90"])
     return d,ids,t,years,x,y,r,phi,pca,h,z,p
 
 def clean(x):
@@ -141,11 +173,11 @@ def clean(x):
 
 def plot_case(outdir,label,ids,years,x,y,r,phi,rad,pha,sine,z,geometry):
     external=geometry.startswith("COORDENADAS_EXTERNAS")
-    tag="coordenadas externas (transformación no disponible)" if external else "PCA3(P) + helix_diagnostics, eje PCA (NO Tusi externo)"
+    tag="CSV externo: PC1/PC2 rotadas; RESULT fuente ausente" if external else ("crudo_P → PCA PC1/PC2 + rotación C1→Cn horizontal" if geometry=="TUSI_PC12_ROTADO_CRUDO_P" else "PCA3(P) + helix_diagnostics, eje PCA (NO Tusi externo)")
     fig=plt.figure(figsize=(15,12),layout="constrained")
     ax=fig.add_subplot(221,projection="3d");ax.plot(x,y,years,"o-")
     for a,b,c,lab in zip(x,y,years,ids):ax.text(a,b,c,lab,fontsize=7)
-    ax.set(xlabel="x radial" if not external else "x_tusi externo",ylabel="y transversal",zlabel="año de cierre (control)",title="Trayectoria observada")
+    ax.set(xlabel="x eje PC12 rotado" if geometry=="TUSI_PC12_ROTADO_CRUDO_P" else ("x_tusi externo" if external else "x radial"),ylabel="y transversal",zlabel="año de cierre (control)",title="Trayectoria observada")
     ax=fig.add_subplot(222);ax.plot(years,r,"o-",label="radio")
     if rad.get("pred") is not None:
         ax.plot(years,rad["pred"],"--",label="exponencial, parámetros propios")
@@ -175,9 +207,9 @@ def execute(manifest_path,outdir):
     results=[]
     for spec in manifest["cases"]:
         d,ids,t,years,x,y,r,phi,pca,h,z,p=load_case(spec,manifest_path.parent)
-        rad,pha,sine=fit_radius(t,r),fit_phase(t,phi),fit_sine(t,y)
-        sh=shape(x,y)
-        obs={"caso":d["case_id"],"geometria":d["geometry"],"source":d["source"],"source_sha256":d["source_sha256"],"fixture_sha256":sha(p),"cortes":ids,"n":len(ids),"z90":d["z90"],"date_warnings":d.get("date_warnings",[]),"notes":d.get("notes",[]),"PCA_varianza":pca,"diagnostico_existente":h,
+        rad,pha,sine=fit_radius(t,r,manifest.get("radio_rule","max_to_min")),fit_phase(t,phi),fit_sine(t,y)
+        sh=shape_ordered(x,y) if manifest.get("shape_rule")=="ordered_post_valley_axis_crossing_v2" else shape(x,y)
+        obs={"caso":d["case_id"],"geometria":d["geometry"],"source":d["source"],"source_sha256":d["source_sha256"],"fixture_sha256":sha(p),"cortes":ids,"n":len(ids),"z90":d["z90"],"date_warnings":d.get("date_warnings",[]),"notes":d.get("notes",[]),"controles_coordenadas_externas":{k:v for k,v in d.items() if k.startswith("consistencia_")},"PCA_varianza":pca,"diagnostico_existente":h,
              "giro_neto_grados":float(np.rad2deg(phi[-1]-phi[0])),"giro_neto_absoluto_grados":float(abs(np.rad2deg(phi[-1]-phi[0]))),"recorrido_angular_absoluto_grados":float(np.rad2deg(np.sum(np.abs(np.diff(phi))))),
              "radio":rad,"fase":pha,"seno_transversal":sine,"forma":sh,
              "cambio_regimen":event(rad.get("regime"),ids,years,z),"ruptura_fase":event(pha.get("rupture"),ids,years,z),
@@ -185,7 +217,7 @@ def execute(manifest_path,outdir):
              "tabla_por_corte":[{"corte":ids[k],"year":years[k],"t_years":t[k],"x":x[k],"y":y[k],"r":r[k],"fase_grados":float(np.rad2deg(phi[k])),"frente_z90":event(k,ids,years,z)["frente_z90"]} for k in range(len(ids))]}
         obs["png"]=plot_case(outdir,d["case_id"],ids,years,x,y,r,phi,rad,pha,sine,z,d["geometry"])
         results.append(clean(obs))
-    return {"modo":"TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA","estado":"EJECUTADO_CON_LIMITES","can_decide_H":False,"alimenta_motor":False,"alimenta_ranking":False,"alimenta_apuesta":False,"metodo_sha256":sha(manifest_path.parent/"METODO_PREDECLARADO.md"),"script_sha256":sha(Path(__file__)),"numpy":np.__version__,"matplotlib":matplotlib.__version__,"coordenadas_externas":manifest.get("coordenadas_externas"),"casos":results}
+    return {"modo":"TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA","estado":"EJECUTADO_CON_LIMITES","can_decide_H":False,"alimenta_motor":False,"alimenta_ranking":False,"alimenta_apuesta":False,"metodo_sha256":sha(manifest_path.parent/"METODO_PREDECLARADO.md"),"script_sha256":sha(Path(__file__)),"shape_rule":manifest.get("shape_rule","original_radial_v1"),"radio_rule":manifest.get("radio_rule","max_to_min"),"proyeccion_pc12_sha256":sha(HERE/"proyeccion_tusi_modelo_externo.py"),"numpy":np.__version__,"matplotlib":matplotlib.__version__,"coordenadas_externas":manifest.get("coordenadas_externas"),"casos":results}
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--manifest",type=Path,default=DEFAULT);ap.add_argument("--outdir",type=Path);args=ap.parse_args()

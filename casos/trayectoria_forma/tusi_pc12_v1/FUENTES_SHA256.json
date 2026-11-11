@@ -1,0 +1,13 @@
+{
+  "casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_mozart.csv": "022cd96f65bbb4e31c3946b00c4f80fe04b6eb4f4508b60991846a24e405fc25",
+  "casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_napoleon.csv": "6f126cc284b44903917530672fdd2ce0ce9c66efb076ebbdf449a0b617fc6fc5",
+  "casos/trayectoria_forma/coordenadas_modelo_externo/proyeccion_tusi_modelo_externo.py": "e622e9af2170a8fb7f06afeb821d93c13ba46907b690c807349d5f0b7a3c5ac6",
+  "casos/trayectoria_forma/proyeccion_tusi_modelo_externo.py": "d67e9dbb6cd3bf1abc2c63d6e2c87413d2795aa05fdd45dac3d2991ae32bdec3",
+  "casos/trayectoria_forma/tusi_pc12_v1/MANIFIESTO.json": "a7170bebda055bbc28260013eb8efa03498eb99291c81535363e15620b8039ff",
+  "casos/trayectoria_forma/tusi_pc12_v1/METODO_PREDECLARADO.md": "ad4312c7aad784f4b5a3faaa136f5cfb1ec73f5c131e6f44c59bde4cbc933845",
+  "casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/entrada.json": "a2e2158bab9d5cbeaf58d4e8ab2ce409743a29bb404925cbb62970cb8a200ecc",
+  "casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/result.json.gz": "acd797939421e0959b4cdfc9e965b1884cb12985d2593bb709078cb6b7d04322",
+  "casos/trayectoria_forma/medir_trayectorias.py": "b50e526b496358f3fd5e9ac04bd7cb0d079843f3e4578273c7a56383beb36777",
+  "casos/trayectoria_forma/analizar_familias.py": "fb03ab7eb83df701bb4792705c34180932c4f0a68e455b4f8845041509e0ec99",
+  "casos/trayectoria_forma/test_medir_trayectorias.py": "ecef62c988159f677c9dcd0ec111b93ebcb16e8265bf90e45ce555c12bdde8c3"
+}

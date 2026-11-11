@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "tolerance_by_serialized_precision": {
+    "ano": 0.0050000001,
+    "x_tusi": 5.00001e-05,
+    "y_transversal": 5.00001e-05,
+    "radio": 5.00001e-05,
+    "fase_grados": 0.050000000100000004
+  },
+  "max_abs_error": {
+    "ano": 0.004469541410117017,
+    "x_tusi": 4.853546392806496e-05,
+    "y_transversal": 4.477738072120041e-05,
+    "radio": 4.9518170866791333e-05,
+    "fase_grados": 0.04884779664882899
+  },
+  "ids_equal": true,
+  "giro_reproducido": 222.45249997614937,
+  "giro_csv_por_extremos": 222.4,
+  "diferencia_giro_grados": 0.05249997614936319,
+  "runner_exit_code": 4,
+  "runner_receipt_status": "INCOMPLETE_OUTPUT_DATA",
+  "input_sha256": "a2e2158bab9d5cbeaf58d4e8ab2ce409743a29bb404925cbb62970cb8a200ecc",
+  "no_calibracion_predictiva": true,
+  "receipt_missing_paths": [
+    "$.efectividad_corte_retenido.previo_error"
+  ],
+  "nota_gate": "Tolerancias derivadas de la serialización explícita del script original: año .2f, coordenadas/radio .4f, fase .1f; no iguales unidades.",
+  "forma_reproducida": {
+    "completa": true,
+    "salto_desde": "C8",
+    "salto_hasta": "C9"
+  }
+}

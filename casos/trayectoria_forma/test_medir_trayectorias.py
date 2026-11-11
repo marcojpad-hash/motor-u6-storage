@@ -4,9 +4,10 @@ sys.dont_write_bytecode = True
 import unittest
 from pathlib import Path
 import tempfile
+import json,gzip,importlib.util,warnings
 import numpy as np
-from medir_trayectorias import fit_radius, fit_phase, fit_sine, shape, frame, event, load_case
-from proyeccion_tusi_modelo_externo import project_crudo
+from medir_trayectorias import fit_radius, fit_phase, fit_sine, shape, shape_ordered, frame, event, load_case
+from proyeccion_tusi_modelo_externo import project_crudo,project_result,compare_csv
 
 class TrayectoriaTests(unittest.TestCase):
     def test_exponencial_propia(self):
@@ -47,12 +48,37 @@ class TrayectoriaTests(unittest.TestCase):
             self.assertAlmostEqual(q["y_transversal"][-1]-q["y_transversal"][0],0,places=10)
             np.testing.assert_allclose(np.hypot(q["x_tusi"],q["y_transversal"]),q["radio"],atol=1e-12)
             self.assertAlmostEqual(np.mean(q["x_tusi"]),0,places=10)
+    def test_forma_pc12_ordenada(self):
+        q=shape_ordered([0,.1,.2,.3,2,2.1,2.2],[.2,.1,-.1,-.05,.03,.1,.2])
+        self.assertTrue(q["coincide"])
+    def test_prefijo_no_creciente_fijado(self):
+        q=fit_radius(np.arange(5.),np.array([.5,.3,.2,.25,.1]),"initial_nonincreasing_prefix")
+        self.assertEqual(q["end"],2)
+        self.assertEqual(q["n_fit"],3)
+    def test_regla_radio_maximo_final_conservada(self):
+        q=fit_radius(np.arange(5.),np.array([.5,.3,.1,.4,.6]))
+        self.assertEqual(q["estado"],"SIN_CORTES_POSTERIORES_AL_MAXIMO")
+    def test_equivalencia_script_fiel_real(self):
+        root=Path(__file__).resolve().parent
+        source=root/"coordenadas_modelo_externo/proyeccion_tusi_modelo_externo.py"
+        sp=importlib.util.spec_from_file_location("original_externo_fiel",source);mod=importlib.util.module_from_spec(sp);sp.loader.exec_module(mod)
+        fixture=root/"tusi_pc12_v1/gate_mozart"
+        d=json.loads(gzip.decompress((fixture/"result.json.gz").read_bytes()));inp=json.loads((fixture/"entrada.json").read_text());q=project_result(d,inp)
+        with tempfile.TemporaryDirectory() as tmp:
+            rp=Path(tmp)/"r.json";rp.write_text(json.dumps(d))
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore",ResourceWarning)
+                actual=mod.load(rp,fixture/"entrada.json")
+        for expected,key in zip(actual,["x_tusi","y_transversal","radio","fase_grados","year"]):
+            np.testing.assert_allclose(expected,q[key],atol=1e-12)
+        check=compare_csv(q,root/"coordenadas_modelo_externo/tabla_coordenadas_mozart.csv")
+        self.assertTrue(check["passed"])
     def test_csv_externo_reutilizable(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"ejemplo.csv"
             p.write_text("corte,año,x_tusi,y_transversal,radio,fase_grados\nC1,2000,1,0,1,0\nC2,2001,0,1,1,90\nC3,2002,-1,0,1,180\n")
             data,*_=load_case({"file":p.name,"case_id":"EJEMPLO_SINTETICO","z90":2001.5},Path(d))
             self.assertEqual(data["consistencia_radio_max_error"],0)
-            self.assertEqual(data["geometry"],"COORDENADAS_EXTERNAS_TRANSFORMACION_NO_DISPONIBLE")
+            self.assertEqual(data["geometry"],"COORDENADAS_EXTERNAS_PC12_RESULT_FUENTE_NO_DISPONIBLE")
 
 if __name__=="__main__":unittest.main()

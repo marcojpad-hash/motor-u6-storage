@@ -1,0 +1,53 @@
+{
+  "nota": "El centrado fija media y=0; rotar C1→Cn a horizontal iguala y1 e yn. Si ambos extremos y son positivos, forzosamente existe un punto y negativo intermedio. La forma cresta/valle/subida y giros similares pueden estar inducidos por la proyección; esto no prueba asociación con una familia ni capacidad predictiva. Falta control nulo independiente.",
+  "casos": [
+    {
+      "caso": "MOZART_EXTERNO",
+      "media_x": -9.99999999999751e-06,
+      "media_y": 0.0,
+      "y_ultimo_menos_primero": 0.0,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 222.40000000000003
+    },
+    {
+      "caso": "NAPOLEON_EXTERNO",
+      "media_x": 5.551115123125783e-18,
+      "media_y": 2.000000000000541e-05,
+      "y_ultimo_menos_primero": 0.0,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 236.50000000000006
+    },
+    {
+      "caso": "GALILEO",
+      "media_x": -9.992007221626409e-17,
+      "media_y": -7.840950111415169e-17,
+      "y_ultimo_menos_primero": 0.0,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 240.74462212301142
+    },
+    {
+      "caso": "HAWKING",
+      "media_x": -2.312964634635743e-17,
+      "media_y": 6.071532165918825e-17,
+      "y_ultimo_menos_primero": 0.0,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 221.41124044604894
+    },
+    {
+      "caso": "CHE",
+      "media_x": 4.0091387000352874e-17,
+      "media_y": 1.0022846750088219e-17,
+      "y_ultimo_menos_primero": 5.551115123125783e-17,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 225.75431896447867
+    },
+    {
+      "caso": "MLK",
+      "media_x": -2.2551405187698492e-17,
+      "media_y": -1.214306433183765e-17,
+      "y_ultimo_menos_primero": 0.0,
+      "y_extremos_positivos": true,
+      "giro_neto_abs_grados": 215.61231839190938
+    }
+  ]
+}

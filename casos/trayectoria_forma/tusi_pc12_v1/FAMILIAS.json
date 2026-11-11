@@ -1,0 +1,1426 @@
+{
+  "script_sha256": "fb03ab7eb83df701bb4792705c34180932c4f0a68e455b4f8845041509e0ec99",
+  "hipotesis_Mj": "La forma ~2/3 vuelta y cresta→valle→salto podría depender del rubro/familia dominante de P, p.ej. ambición/rivalidad.",
+  "criterio_dominancia": "Máximo de crudo_P por corte (todos los empates); global máximo de la media temporal crudo_P. Loadings por magnitud absoluta, con signo.",
+  "casos": [
+    {
+      "caso": "MOZART_EXTERNO",
+      "forma_completa": true,
+      "estado": "CRUDO_DISPONIBLE",
+      "PC_loadings_top3_abs": {
+        "PC1": [
+          {
+            "familia": "30_ambicion",
+            "loading": 0.33626673396098505,
+            "abs_loading": 0.33626673396098505
+          },
+          {
+            "familia": "utopia_principio_mercado",
+            "loading": 0.29920782806093194,
+            "abs_loading": 0.29920782806093194
+          },
+          {
+            "familia": "schwartz_07_logro",
+            "loading": 0.25764333188411864,
+            "abs_loading": 0.25764333188411864
+          }
+        ],
+        "PC2": [
+          {
+            "familia": "24_rivalidad_de_superior_e_inferior",
+            "loading": 0.30223403498510115,
+            "abs_loading": 0.30223403498510115
+          },
+          {
+            "familia": "social_02_milgram_obediencia",
+            "loading": -0.3022340349851011,
+            "abs_loading": 0.3022340349851011
+          },
+          {
+            "familia": "30_ambicion",
+            "loading": -0.26220984238977874,
+            "abs_loading": 0.26220984238977874
+          }
+        ]
+      },
+      "PCA_varianza_2": [
+        0.7883327879187734,
+        0.13908512063690243
+      ],
+      "dominantes_por_corte": [
+        {
+          "corte": "C1",
+          "max_crudo_P": 0.6689,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C2",
+          "max_crudo_P": 0.7875,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C3",
+          "max_crudo_P": 0.792,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C4",
+          "max_crudo_P": 0.7967,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C5",
+          "max_crudo_P": 0.7845,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C6",
+          "max_crudo_P": 0.788,
+          "familias_dominantes_empatadas": [
+            "30_ambicion"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C7",
+          "max_crudo_P": 0.7969,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "schwartz_10_autodireccion"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C8",
+          "max_crudo_P": 0.7955,
+          "familias_dominantes_empatadas": [
+            "30_ambicion",
+            "arquetipo_el_creador",
+            "schwartz_10_autodireccion",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C9",
+          "max_crudo_P": 0.7958,
+          "familias_dominantes_empatadas": [
+            "30_ambicion",
+            "arquetipo_el_creador",
+            "schwartz_10_autodireccion",
+            "utopia_autonomia_atenas"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C10",
+          "max_crudo_P": 0.7985,
+          "familias_dominantes_empatadas": [
+            "30_ambicion",
+            "arquetipo_el_creador",
+            "schwartz_10_autodireccion",
+            "utopia_autonomia_atenas"
+          ],
+          "maximo_unico": false
+        }
+      ],
+      "familias_dominantes_por_media": [
+        "arquetipo_el_creador"
+      ],
+      "media_max": 0.7787599999999999,
+      "conteo_maximos_unicos": {
+        "arquetipo_el_creador": 3,
+        "30_ambicion": 1
+      },
+      "dominante_por_frecuencia_maximos_unicos": "arquetipo_el_creador",
+      "salto": {
+        "desde": "C8",
+        "hasta": "C9",
+        "familias_que_suben": [
+          {
+            "familia": "24_rivalidad_de_superior_e_inferior",
+            "delta_crudo_P": 0.19620000000000004,
+            "antes": 0.5,
+            "despues": 0.6962
+          },
+          {
+            "familia": "utopia_mentalidad_milenarista",
+            "delta_crudo_P": 0.11209999999999998,
+            "antes": 0.5,
+            "despues": 0.6121
+          },
+          {
+            "familia": "schwartz_07_logro",
+            "delta_crudo_P": 0.09689999999999999,
+            "antes": 0.6102,
+            "despues": 0.7071
+          },
+          {
+            "familia": "12_obtencion",
+            "delta_crudo_P": 0.09230000000000005,
+            "antes": 0.6028,
+            "despues": 0.6951
+          },
+          {
+            "familia": "predictivo_02_mdp_politica_optima",
+            "delta_crudo_P": 0.07030000000000003,
+            "antes": 0.5735,
+            "despues": 0.6438
+          },
+          {
+            "familia": "dumezil_desequilibrio_f2_come_al_resto",
+            "delta_crudo_P": 0.06410000000000005,
+            "antes": 0.5,
+            "despues": 0.5641
+          },
+          {
+            "familia": "utopia_mentalidad_socialista",
+            "delta_crudo_P": 0.05610000000000004,
+            "antes": 0.5,
+            "despues": 0.5561
+          },
+          {
+            "familia": "dumezil_f3_fecundidad",
+            "delta_crudo_P": 0.051000000000000045,
+            "antes": 0.5514,
+            "despues": 0.6024
+          },
+          {
+            "familia": "dumezil_desequilibrio_f3_come_al_resto",
+            "delta_crudo_P": 0.04530000000000001,
+            "antes": 0.6398,
+            "despues": 0.6851
+          },
+          {
+            "familia": "situacion_dramatica_ambicion",
+            "delta_crudo_P": 0.04530000000000001,
+            "antes": 0.6398,
+            "despues": 0.6851
+          },
+          {
+            "familia": "utopia_principio_mercado",
+            "delta_crudo_P": 0.039100000000000024,
+            "antes": 0.7202,
+            "despues": 0.7593
+          },
+          {
+            "familia": "dumezil_f2_fuerza",
+            "delta_crudo_P": 0.028000000000000025,
+            "antes": 0.5,
+            "despues": 0.528
+          },
+          {
+            "familia": "minsky_02_especulativa",
+            "delta_crudo_P": 0.026100000000000012,
+            "antes": 0.5257,
+            "despues": 0.5518
+          },
+          {
+            "familia": "19_asesinato_de_un_pariente_no_reconocido",
+            "delta_crudo_P": 0.01620000000000002,
+            "antes": 0.2497,
+            "despues": 0.2659
+          },
+          {
+            "familia": "sistema_domiciano_maiestas",
+            "delta_crudo_P": 0.016000000000000014,
+            "antes": 0.5,
+            "despues": 0.516
+          },
+          {
+            "familia": "utopia_abundancia_sybaris",
+            "delta_crudo_P": 0.014999999999999902,
+            "antes": 0.5147,
+            "despues": 0.5297
+          },
+          {
+            "familia": "dumezil_f1_soberania_magica",
+            "delta_crudo_P": 0.013600000000000001,
+            "antes": 0.29,
+            "despues": 0.3036
+          },
+          {
+            "familia": "utopia_autonomia_atenas",
+            "delta_crudo_P": 0.010699999999999932,
+            "antes": 0.7851,
+            "despues": 0.7958
+          },
+          {
+            "familia": "crisis_vocacional",
+            "delta_crudo_P": 0.007800000000000029,
+            "antes": 0.3792,
+            "despues": 0.387
+          },
+          {
+            "familia": "30_ambicion",
+            "delta_crudo_P": 0.00029999999999996696,
+            "antes": 0.7955,
+            "despues": 0.7958
+          },
+          {
+            "familia": "arquetipo_el_creador",
+            "delta_crudo_P": 0.00029999999999996696,
+            "antes": 0.7955,
+            "despues": 0.7958
+          },
+          {
+            "familia": "schwartz_10_autodireccion",
+            "delta_crudo_P": 0.00029999999999996696,
+            "antes": 0.7955,
+            "despues": 0.7958
+          }
+        ],
+        "nota": "Variación en familia, no nuevo peso. Solo aumentos positivos, sin atribuir causa."
+      },
+      "ambicion_o_rivalidad_en_dominantes_media": false,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/result.json.gz",
+      "source_sha256": "acd797939421e0959b4cdfc9e965b1884cb12985d2593bb709078cb6b7d04322",
+      "nota": "Vínculo al rerun por gate de coordenadas al redondeo; corrida estándar INCOMPLETE_OUTPUT_DATA por previo_error, no calibración predictiva aprobada."
+    },
+    {
+      "caso": "NAPOLEON_EXTERNO",
+      "forma_completa": true,
+      "estado": "NO_DISPONIBLE_CSV_SIN_RESULT_NI_CRUDO_P",
+      "PC_loadings_top3_abs": null,
+      "dominantes_por_corte": null,
+      "familias_dominantes_por_media": null,
+      "salto": null,
+      "ambicion_o_rivalidad_en_dominantes_media": null
+    },
+    {
+      "caso": "GALILEO",
+      "forma_completa": true,
+      "estado": "CRUDO_DISPONIBLE",
+      "PC_loadings_top3_abs": {
+        "PC1": [
+          {
+            "familia": "8_rebelion",
+            "loading": 0.3197093132360436,
+            "abs_loading": 0.3197093132360436
+          },
+          {
+            "familia": "schwartz_10_autodireccion",
+            "loading": 0.2904383070858143,
+            "abs_loading": 0.2904383070858143
+          },
+          {
+            "familia": "strauss_howe_02_the_awakening",
+            "loading": 0.2779460137396002,
+            "abs_loading": 0.2779460137396002
+          }
+        ],
+        "PC2": [
+          {
+            "familia": "8_rebelion",
+            "loading": 0.3903898971922633,
+            "abs_loading": 0.3903898971922633
+          },
+          {
+            "familia": "social_01_asch_conformidad",
+            "loading": -0.35446295850592496,
+            "abs_loading": 0.35446295850592496
+          },
+          {
+            "familia": "anacyclosis_05_democracia",
+            "loading": 0.3242853910004082,
+            "abs_loading": 0.3242853910004082
+          }
+        ]
+      },
+      "PCA_varianza_2": [
+        0.6703076951880917,
+        0.2875277930646055
+      ],
+      "dominantes_por_corte": [
+        {
+          "corte": "G_C1",
+          "max_crudo_P": 0.7559,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_sabio"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "G_C2",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_sabio"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "G_C3",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C4",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "bbk_03_individualista",
+            "mbti_factor_pensamiento_t",
+            "spengler_02_verano_otono_racionalizacion",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C5",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "bbk_03_individualista",
+            "mbti_factor_pensamiento_t",
+            "spengler_02_verano_otono_racionalizacion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C6",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "bbk_03_individualista",
+            "mbti_factor_pensamiento_t",
+            "schwartz_10_autodireccion",
+            "spengler_02_verano_otono_racionalizacion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C7",
+          "max_crudo_P": 0.782,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "bbk_03_individualista",
+            "mbti_factor_pensamiento_t",
+            "schwartz_10_autodireccion",
+            "spengler_02_verano_otono_racionalizacion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C8",
+          "max_crudo_P": 0.7803,
+          "familias_dominantes_empatadas": [
+            "8_rebelion",
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "schwartz_10_autodireccion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C9",
+          "max_crudo_P": 0.7803,
+          "familias_dominantes_empatadas": [
+            "8_rebelion",
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "schwartz_10_autodireccion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "G_C10_Z90",
+          "max_crudo_P": 0.7803,
+          "familias_dominantes_empatadas": [
+            "8_rebelion",
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "schwartz_10_autodireccion",
+            "strauss_howe_02_the_awakening",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        }
+      ],
+      "familias_dominantes_por_media": [
+        "arquetipo_el_sabio"
+      ],
+      "media_max": 0.77888,
+      "conteo_maximos_unicos": {
+        "arquetipo_el_sabio": 2
+      },
+      "dominante_por_frecuencia_maximos_unicos": "arquetipo_el_sabio",
+      "salto": {
+        "desde": "G_C7",
+        "hasta": "G_C8",
+        "familias_que_suben": [
+          {
+            "familia": "8_rebelion",
+            "delta_crudo_P": 0.2803,
+            "antes": 0.5,
+            "despues": 0.7803
+          },
+          {
+            "familia": "anacyclosis_05_democracia",
+            "delta_crudo_P": 0.11409999999999998,
+            "antes": 0.5,
+            "despues": 0.6141
+          },
+          {
+            "familia": "utopia_autonomia_atenas",
+            "delta_crudo_P": 0.018900000000000028,
+            "antes": 0.6626,
+            "despues": 0.6815
+          },
+          {
+            "familia": "mbti_introvertido",
+            "delta_crudo_P": 0.016700000000000048,
+            "antes": 0.6816,
+            "despues": 0.6983
+          },
+          {
+            "familia": "spengler_01_primavera_nacimiento_mistico",
+            "delta_crudo_P": 0.014300000000000007,
+            "antes": 0.218,
+            "despues": 0.2323
+          },
+          {
+            "familia": "bbk_02_celebridad",
+            "delta_crudo_P": 0.013999999999999985,
+            "antes": 0.224,
+            "despues": 0.238
+          },
+          {
+            "familia": "dumezil_f1_soberania_magica",
+            "delta_crudo_P": 0.013999999999999985,
+            "antes": 0.224,
+            "despues": 0.238
+          },
+          {
+            "familia": "utopia_principio_libertades",
+            "delta_crudo_P": 0.010399999999999965,
+            "antes": 0.5964,
+            "despues": 0.6068
+          },
+          {
+            "familia": "social_07_noelle_neumann_espiral_silencio",
+            "delta_crudo_P": 0.001700000000000007,
+            "antes": 0.218,
+            "despues": 0.2197
+          },
+          {
+            "familia": "tainter_02_rendimientos_decrecientes",
+            "delta_crudo_P": 0.001700000000000007,
+            "antes": 0.218,
+            "despues": 0.2197
+          }
+        ],
+        "nota": "Variación en familia, no nuevo peso. Solo aumentos positivos, sin atribuir causa."
+      },
+      "ambicion_o_rivalidad_en_dominantes_media": false,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/GALILEO.json",
+      "source_sha256": "ee097c53173dbf07275c39c25bc336ce87624be2aa6cb594c48c09cf0e888750"
+    },
+    {
+      "caso": "HAWKING",
+      "forma_completa": true,
+      "estado": "CRUDO_DISPONIBLE",
+      "PC_loadings_top3_abs": {
+        "PC1": [
+          {
+            "familia": "spengler_02_verano_otono_racionalizacion",
+            "loading": 0.33760274326138145,
+            "abs_loading": 0.33760274326138145
+          },
+          {
+            "familia": "arquetipo_el_creador",
+            "loading": 0.281449362585554,
+            "abs_loading": 0.281449362585554
+          },
+          {
+            "familia": "mentor",
+            "loading": 0.27168715954624656,
+            "abs_loading": 0.27168715954624656
+          }
+        ],
+        "PC2": [
+          {
+            "familia": "mentor",
+            "loading": 0.4151498714693771,
+            "abs_loading": 0.4151498714693771
+          },
+          {
+            "familia": "kwml_01_rey",
+            "loading": 0.28017538431111916,
+            "abs_loading": 0.28017538431111916
+          },
+          {
+            "familia": "ttm_04_accion",
+            "loading": -0.27456290381752824,
+            "abs_loading": 0.27456290381752824
+          }
+        ]
+      },
+      "PCA_varianza_2": [
+        0.7428760395410627,
+        0.16464036556696426
+      ],
+      "dominantes_por_corte": [
+        {
+          "corte": "C1",
+          "max_crudo_P": 0.6131,
+          "familias_dominantes_empatadas": [
+            "monomito_01_mundo_ordinario",
+            "utopia_mentalidad_liberal"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C2",
+          "max_crudo_P": 0.6628,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_sabio"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C3",
+          "max_crudo_P": 0.7137,
+          "familias_dominantes_empatadas": [
+            "ttm_04_accion"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C4",
+          "max_crudo_P": 0.8054,
+          "familias_dominantes_empatadas": [
+            "spengler_02_verano_otono_racionalizacion"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C5",
+          "max_crudo_P": 0.8018,
+          "familias_dominantes_empatadas": [
+            "mbti_factor_intuicion_n",
+            "spengler_02_verano_otono_racionalizacion"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C6",
+          "max_crudo_P": 0.7999,
+          "familias_dominantes_empatadas": [
+            "mbti_factor_intuicion_n",
+            "mentor",
+            "spengler_02_verano_otono_racionalizacion"
+          ],
+          "maximo_unico": false
+        }
+      ],
+      "familias_dominantes_por_media": [
+        "mbti_factor_intuicion_n"
+      ],
+      "media_max": 0.7107000000000001,
+      "conteo_maximos_unicos": {
+        "arquetipo_el_sabio": 1,
+        "ttm_04_accion": 1,
+        "spengler_02_verano_otono_racionalizacion": 1
+      },
+      "dominante_por_frecuencia_maximos_unicos": "arquetipo_el_sabio",
+      "salto": {
+        "desde": "C4",
+        "hasta": "C5",
+        "familias_que_suben": [
+          {
+            "familia": "arquetipo_el_gobernante",
+            "delta_crudo_P": 0.17300000000000004,
+            "antes": 0.5,
+            "despues": 0.673
+          },
+          {
+            "familia": "monomito_12_regreso_con_el_elixir",
+            "delta_crudo_P": 0.17300000000000004,
+            "antes": 0.5,
+            "despues": 0.673
+          },
+          {
+            "familia": "kwml_01_rey",
+            "delta_crudo_P": 0.1441,
+            "antes": 0.5,
+            "despues": 0.6441
+          },
+          {
+            "familia": "mentor",
+            "delta_crudo_P": 0.1441,
+            "antes": 0.5,
+            "despues": 0.6441
+          },
+          {
+            "familia": "anacyclosis_01_monarquia",
+            "delta_crudo_P": 0.11529999999999996,
+            "antes": 0.5,
+            "despues": 0.6153
+          },
+          {
+            "familia": "strauss_howe_02_the_awakening",
+            "delta_crudo_P": 0.0988,
+            "antes": 0.5,
+            "despues": 0.5988
+          },
+          {
+            "familia": "anacyclosis_03_aristocracia",
+            "delta_crudo_P": 0.057599999999999985,
+            "antes": 0.5,
+            "despues": 0.5576
+          },
+          {
+            "familia": "weber_01_autoridad_tradicional",
+            "delta_crudo_P": 0.057599999999999985,
+            "antes": 0.5,
+            "despues": 0.5576
+          },
+          {
+            "familia": "weber_02_autoridad_carismatica",
+            "delta_crudo_P": 0.057599999999999985,
+            "antes": 0.5,
+            "despues": 0.5576
+          },
+          {
+            "familia": "mbti_factor_intuicion_n",
+            "delta_crudo_P": 0.036599999999999966,
+            "antes": 0.7652,
+            "despues": 0.8018
+          },
+          {
+            "familia": "arquetipo_el_creador",
+            "delta_crudo_P": 0.035700000000000065,
+            "antes": 0.6745,
+            "despues": 0.7102
+          },
+          {
+            "familia": "eterno_retorno_03_desgaste_y_reinicio",
+            "delta_crudo_P": 0.0116,
+            "antes": 0.3005,
+            "despues": 0.3121
+          },
+          {
+            "familia": "spengler_01_primavera_nacimiento_mistico",
+            "delta_crudo_P": 0.010599999999999998,
+            "antes": 0.3196,
+            "despues": 0.3302
+          },
+          {
+            "familia": "6_desastre",
+            "delta_crudo_P": 0.008099999999999996,
+            "antes": 0.3618,
+            "despues": 0.3699
+          },
+          {
+            "familia": "predictivo_03_cox_survival_riesgo",
+            "delta_crudo_P": 0.007300000000000029,
+            "antes": 0.3737,
+            "despues": 0.381
+          },
+          {
+            "familia": "tainter_02_rendimientos_decrecientes",
+            "delta_crudo_P": 0.006800000000000028,
+            "antes": 0.3836,
+            "despues": 0.3904
+          },
+          {
+            "familia": "predictivo_04_caos_bifurcacion_critica",
+            "delta_crudo_P": 0.006599999999999995,
+            "antes": 0.386,
+            "despues": 0.3926
+          },
+          {
+            "familia": "bbk_02_celebridad",
+            "delta_crudo_P": 0.006400000000000017,
+            "antes": 0.3912,
+            "despues": 0.3976
+          },
+          {
+            "familia": "strauss_howe_04_the_crisis",
+            "delta_crudo_P": 0.0050000000000000044,
+            "antes": 0.4145,
+            "despues": 0.4195
+          },
+          {
+            "familia": "social_12_zimbardo_prision_stanford",
+            "delta_crudo_P": 0.003699999999999981,
+            "antes": 0.4368,
+            "despues": 0.4405
+          },
+          {
+            "familia": "dumezil_f1_soberania_magica",
+            "delta_crudo_P": 0.0029000000000000137,
+            "antes": 0.4501,
+            "despues": 0.453
+          },
+          {
+            "familia": "schwartz_09_estimulacion",
+            "delta_crudo_P": 0.0020000000000000018,
+            "antes": 0.4644,
+            "despues": 0.4664
+          },
+          {
+            "familia": "dumezil_desequilibrio_f1_come_al_resto",
+            "delta_crudo_P": 0.0019000000000000128,
+            "antes": 0.4668,
+            "despues": 0.4687
+          }
+        ],
+        "nota": "Variación en familia, no nuevo peso. Solo aumentos positivos, sin atribuir causa."
+      },
+      "ambicion_o_rivalidad_en_dominantes_media": false,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/HAWKING.json",
+      "source_sha256": "cb48560d1c66ccb85c402bdd3ca6be8cb71e3a3153c8f8d3608ddcaca25f3609"
+    },
+    {
+      "caso": "CHE",
+      "forma_completa": true,
+      "estado": "CRUDO_DISPONIBLE",
+      "PC_loadings_top3_abs": {
+        "PC1": [
+          {
+            "familia": "tainter_04_colapso_por_simplificacion_forzada",
+            "loading": -0.3129636244192498,
+            "abs_loading": 0.3129636244192498
+          },
+          {
+            "familia": "arquetipo_el_gobernante",
+            "loading": 0.23473482157998526,
+            "abs_loading": 0.23473482157998526
+          },
+          {
+            "familia": "eterno_retorno_02_cosmizacion_fundacion",
+            "loading": 0.20435327480686158,
+            "abs_loading": 0.20435327480686158
+          }
+        ],
+        "PC2": [
+          {
+            "familia": "monomito_05_cruce_del_primer_umbral",
+            "loading": -0.25792659589877187,
+            "abs_loading": 0.25792659589877187
+          },
+          {
+            "familia": "tainter_04_colapso_por_simplificacion_forzada",
+            "loading": -0.25785410566207523,
+            "abs_loading": 0.25785410566207523
+          },
+          {
+            "familia": "monomito_04_encuentro_con_el_mentor",
+            "loading": -0.2357968129016809,
+            "abs_loading": 0.2357968129016809
+          }
+        ]
+      },
+      "PCA_varianza_2": [
+        0.6599521403096619,
+        0.17314214779070938
+      ],
+      "dominantes_por_corte": [
+        {
+          "corte": "C1",
+          "max_crudo_P": 0.7126,
+          "familias_dominantes_empatadas": [
+            "monomito_01_mundo_ordinario"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C3",
+          "max_crudo_P": 0.7584,
+          "familias_dominantes_empatadas": [
+            "monomito_02_llamado_a_la_aventura"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C2",
+          "max_crudo_P": 0.745,
+          "familias_dominantes_empatadas": [
+            "monomito_02_llamado_a_la_aventura"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C4",
+          "max_crudo_P": 0.7366,
+          "familias_dominantes_empatadas": [
+            "monomito_02_llamado_a_la_aventura"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C5",
+          "max_crudo_P": 0.8092,
+          "familias_dominantes_empatadas": [
+            "monomito_05_cruce_del_primer_umbral"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C6",
+          "max_crudo_P": 0.7878,
+          "familias_dominantes_empatadas": [
+            "monomito_05_cruce_del_primer_umbral"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C7",
+          "max_crudo_P": 0.7907,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_gobernante"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C8",
+          "max_crudo_P": 0.8042,
+          "familias_dominantes_empatadas": [
+            "arquetipo_el_gobernante"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C9",
+          "max_crudo_P": 0.8027,
+          "familias_dominantes_empatadas": [
+            "20_sacrificio_por_un_ideal",
+            "9_audaz_empresa",
+            "dumezil_f2_fuerza",
+            "eterno_retorno_02_cosmizacion_fundacion"
+          ],
+          "maximo_unico": false
+        }
+      ],
+      "familias_dominantes_por_media": [
+        "monomito_02_llamado_a_la_aventura"
+      ],
+      "media_max": 0.6947777777777778,
+      "conteo_maximos_unicos": {
+        "monomito_01_mundo_ordinario": 1,
+        "monomito_02_llamado_a_la_aventura": 3,
+        "monomito_05_cruce_del_primer_umbral": 2,
+        "arquetipo_el_gobernante": 2
+      },
+      "dominante_por_frecuencia_maximos_unicos": "monomito_02_llamado_a_la_aventura",
+      "salto": {
+        "desde": "C7",
+        "hasta": "C8",
+        "familias_que_suben": [
+          {
+            "familia": "eterno_retorno_02_cosmizacion_fundacion",
+            "delta_crudo_P": 0.2984,
+            "antes": 0.5,
+            "despues": 0.7984
+          },
+          {
+            "familia": "tainter_01_inversion_complejidad_productiva",
+            "delta_crudo_P": 0.2984,
+            "antes": 0.5,
+            "despues": 0.7984
+          },
+          {
+            "familia": "utopia_oficio_roma",
+            "delta_crudo_P": 0.21799999999999997,
+            "antes": 0.5,
+            "despues": 0.718
+          },
+          {
+            "familia": "dumezil_f1_soberania_juridica",
+            "delta_crudo_P": 0.19269999999999998,
+            "antes": 0.5,
+            "despues": 0.6927
+          },
+          {
+            "familia": "mbti_factor_juicio_j",
+            "delta_crudo_P": 0.1896,
+            "antes": 0.5,
+            "despues": 0.6896
+          },
+          {
+            "familia": "20_sacrificio_por_un_ideal",
+            "delta_crudo_P": 0.1755,
+            "antes": 0.5,
+            "despues": 0.6755
+          },
+          {
+            "familia": "jaldun_02_institucionalizacion_y_sedentarismo",
+            "delta_crudo_P": 0.1225,
+            "antes": 0.3898,
+            "despues": 0.5123
+          },
+          {
+            "familia": "distopia_tecnica_herramienta_manda",
+            "delta_crudo_P": 0.12210000000000004,
+            "antes": 0.436,
+            "despues": 0.5581
+          },
+          {
+            "familia": "utopia_principio_estado",
+            "delta_crudo_P": 0.11880000000000002,
+            "antes": 0.4615,
+            "despues": 0.5803
+          },
+          {
+            "familia": "monomito_07_aproximacion_a_la_caverna_mas_profunda",
+            "delta_crudo_P": 0.11699999999999999,
+            "antes": 0.5,
+            "despues": 0.617
+          },
+          {
+            "familia": "predictivo_02_mdp_politica_optima",
+            "delta_crudo_P": 0.11699999999999999,
+            "antes": 0.5,
+            "despues": 0.617
+          },
+          {
+            "familia": "strauss_howe_01_the_high",
+            "delta_crudo_P": 0.10029999999999994,
+            "antes": 0.5,
+            "despues": 0.6003
+          },
+          {
+            "familia": "dumezil_f3_fecundidad",
+            "delta_crudo_P": 0.08689999999999998,
+            "antes": 0.5,
+            "despues": 0.5869
+          },
+          {
+            "familia": "utopia_mentalidad_liberal",
+            "delta_crudo_P": 0.08340000000000003,
+            "antes": 0.5426,
+            "despues": 0.626
+          },
+          {
+            "familia": "utopia_mentalidad_socialista",
+            "delta_crudo_P": 0.08250000000000002,
+            "antes": 0.5497,
+            "despues": 0.6322
+          },
+          {
+            "familia": "spengler_01_primavera_nacimiento_mistico",
+            "delta_crudo_P": 0.06689999999999996,
+            "antes": 0.5,
+            "despues": 0.5669
+          },
+          {
+            "familia": "strauss_howe_02_the_awakening",
+            "delta_crudo_P": 0.06689999999999996,
+            "antes": 0.5,
+            "despues": 0.5669
+          },
+          {
+            "familia": "minsky_01_cobertura",
+            "delta_crudo_P": 0.06090000000000001,
+            "antes": 0.4449,
+            "despues": 0.5058
+          },
+          {
+            "familia": "anacyclosis_03_aristocracia",
+            "delta_crudo_P": 0.04810000000000003,
+            "antes": 0.6111,
+            "despues": 0.6592
+          },
+          {
+            "familia": "utopia_mentalidad_conservadora",
+            "delta_crudo_P": 0.031899999999999984,
+            "antes": 0.4254,
+            "despues": 0.4573
+          },
+          {
+            "familia": "arquetipo_el_gobernante",
+            "delta_crudo_P": 0.013500000000000068,
+            "antes": 0.7907,
+            "despues": 0.8042
+          },
+          {
+            "familia": "social_02_milgram_obediencia",
+            "delta_crudo_P": 0.007299999999999973,
+            "antes": 0.3259,
+            "despues": 0.3332
+          },
+          {
+            "familia": "eterno_retorno_03_desgaste_y_reinicio",
+            "delta_crudo_P": 0.007199999999999984,
+            "antes": 0.3294,
+            "despues": 0.3366
+          },
+          {
+            "familia": "monomito_03_rechazo_del_llamado",
+            "delta_crudo_P": 0.006900000000000017,
+            "antes": 0.3347,
+            "despues": 0.3416
+          },
+          {
+            "familia": "1_suplica",
+            "delta_crudo_P": 0.006300000000000028,
+            "antes": 0.35,
+            "despues": 0.3563
+          },
+          {
+            "familia": "bbk_04_guardian",
+            "delta_crudo_P": 0.005599999999999994,
+            "antes": 0.3662,
+            "despues": 0.3718
+          },
+          {
+            "familia": "social_08_girard_mimesis_y_chivo_expiatorio",
+            "delta_crudo_P": 0.005500000000000005,
+            "antes": 0.3691,
+            "despues": 0.3746
+          },
+          {
+            "familia": "arquetipo_el_inocente",
+            "delta_crudo_P": 0.005200000000000038,
+            "antes": 0.3757,
+            "despues": 0.3809
+          },
+          {
+            "familia": "7_caer_victima",
+            "delta_crudo_P": 0.0049000000000000155,
+            "antes": 0.384,
+            "despues": 0.3889
+          },
+          {
+            "familia": "sistema_domiciano",
+            "delta_crudo_P": 0.004500000000000004,
+            "antes": 0.3917,
+            "despues": 0.3962
+          },
+          {
+            "familia": "distopia_coercion_total",
+            "delta_crudo_P": 0.0044999999999999485,
+            "antes": 0.3934,
+            "despues": 0.3979
+          },
+          {
+            "familia": "ttm_01_precontemplacion",
+            "delta_crudo_P": 0.003999999999999948,
+            "antes": 0.4055,
+            "despues": 0.4095
+          },
+          {
+            "familia": "predictivo_01_markov_estado_absorbente",
+            "delta_crudo_P": 0.003599999999999992,
+            "antes": 0.4147,
+            "despues": 0.4183
+          },
+          {
+            "familia": "utopia_orden_sparte",
+            "delta_crudo_P": 0.003599999999999992,
+            "antes": 0.4147,
+            "despues": 0.4183
+          },
+          {
+            "familia": "strauss_howe_04_the_crisis",
+            "delta_crudo_P": 0.0030999999999999917,
+            "antes": 0.4269,
+            "despues": 0.43
+          },
+          {
+            "familia": "schwartz_04_conformidad",
+            "delta_crudo_P": 0.0029000000000000137,
+            "antes": 0.429,
+            "despues": 0.4319
+          },
+          {
+            "familia": "schwartz_03_tradicion",
+            "delta_crudo_P": 0.00269999999999998,
+            "antes": 0.4359,
+            "despues": 0.4386
+          },
+          {
+            "familia": "apego_02_ansioso",
+            "delta_crudo_P": 0.0025000000000000022,
+            "antes": 0.4391,
+            "despues": 0.4416
+          },
+          {
+            "familia": "crisis_vocacional",
+            "delta_crudo_P": 0.0025000000000000022,
+            "antes": 0.4402,
+            "despues": 0.4427
+          },
+          {
+            "familia": "frye_mythos_ironia_satira",
+            "delta_crudo_P": 0.0024000000000000132,
+            "antes": 0.442,
+            "despues": 0.4444
+          },
+          {
+            "familia": "frye_mythos_tragedia",
+            "delta_crudo_P": 0.0024000000000000132,
+            "antes": 0.442,
+            "despues": 0.4444
+          },
+          {
+            "familia": "bbk_05_flecha_recta",
+            "delta_crudo_P": 0.0022999999999999687,
+            "antes": 0.4449,
+            "despues": 0.4472
+          },
+          {
+            "familia": "bbk_02_celebridad",
+            "delta_crudo_P": 0.0017000000000000348,
+            "antes": 0.4574,
+            "despues": 0.4591
+          },
+          {
+            "familia": "schwartz_05_seguridad",
+            "delta_crudo_P": 0.0016999999999999793,
+            "antes": 0.4606,
+            "despues": 0.4623
+          },
+          {
+            "familia": "dumezil_desequilibrio_f1_come_al_resto",
+            "delta_crudo_P": 0.0010999999999999899,
+            "antes": 0.4756,
+            "despues": 0.4767
+          },
+          {
+            "familia": "weber_03_autoridad_legal_racional",
+            "delta_crudo_P": 0.0010999999999999899,
+            "antes": 0.4751,
+            "despues": 0.4762
+          },
+          {
+            "familia": "dumezil_f1_soberania_magica",
+            "delta_crudo_P": 0.0009000000000000119,
+            "antes": 0.4787,
+            "despues": 0.4796
+          },
+          {
+            "familia": "sistema_domiciano_delacion",
+            "delta_crudo_P": 0.0005000000000000004,
+            "antes": 0.4878,
+            "despues": 0.4883
+          },
+          {
+            "familia": "utopia_principio_identidad_grupo",
+            "delta_crudo_P": 0.0005000000000000004,
+            "antes": 0.4878,
+            "despues": 0.4883
+          }
+        ],
+        "nota": "Variación en familia, no nuevo peso. Solo aumentos positivos, sin atribuir causa."
+      },
+      "ambicion_o_rivalidad_en_dominantes_media": false,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/CHE.json",
+      "source_sha256": "0904c8433c7e76d69d34c19c4572f6f7de3c1fa7a0a1f3e0d9bf2c37e9d1d6e7"
+    },
+    {
+      "caso": "MLK",
+      "forma_completa": false,
+      "estado": "CRUDO_DISPONIBLE",
+      "PC_loadings_top3_abs": {
+        "PC1": [
+          {
+            "familia": "20_sacrificio_por_un_ideal",
+            "loading": 0.2251884105410421,
+            "abs_loading": 0.2251884105410421
+          },
+          {
+            "familia": "eterno_retorno_01_caos_primordial",
+            "loading": -0.22057100543488714,
+            "abs_loading": 0.22057100543488714
+          },
+          {
+            "familia": "tainter_04_colapso_por_simplificacion_forzada",
+            "loading": -0.22057100543488714,
+            "abs_loading": 0.22057100543488714
+          }
+        ],
+        "PC2": [
+          {
+            "familia": "monomito_02_llamado_a_la_aventura",
+            "loading": -0.27535768638683195,
+            "abs_loading": 0.27535768638683195
+          },
+          {
+            "familia": "arquetipo_el_cuidador",
+            "loading": 0.26081340208570153,
+            "abs_loading": 0.26081340208570153
+          },
+          {
+            "familia": "20_sacrificio_por_un_ideal",
+            "loading": 0.2526882112074164,
+            "abs_loading": 0.2526882112074164
+          }
+        ]
+      },
+      "PCA_varianza_2": [
+        0.7748502749134033,
+        0.09275733667392762
+      ],
+      "dominantes_por_corte": [
+        {
+          "corte": "C1",
+          "max_crudo_P": 0.715,
+          "familias_dominantes_empatadas": [
+            "monomito_01_mundo_ordinario"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C2",
+          "max_crudo_P": 0.797,
+          "familias_dominantes_empatadas": [
+            "mentor",
+            "monomito_04_encuentro_con_el_mentor"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C3",
+          "max_crudo_P": 0.7867,
+          "familias_dominantes_empatadas": [
+            "mentor",
+            "monomito_04_encuentro_con_el_mentor"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C4",
+          "max_crudo_P": 0.7984,
+          "familias_dominantes_empatadas": [
+            "eterno_retorno_02_cosmizacion_fundacion",
+            "tainter_01_inversion_complejidad_productiva"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C5",
+          "max_crudo_P": 0.8048,
+          "familias_dominantes_empatadas": [
+            "20_sacrificio_por_un_ideal",
+            "jaldun_01_asabiyyah_alta_cohesion"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C6",
+          "max_crudo_P": 0.8063,
+          "familias_dominantes_empatadas": [
+            "weber_02_autoridad_carismatica"
+          ],
+          "maximo_unico": true
+        },
+        {
+          "corte": "C7",
+          "max_crudo_P": 0.8085,
+          "familias_dominantes_empatadas": [
+            "20_sacrificio_por_un_ideal",
+            "eterno_retorno_02_cosmizacion_fundacion",
+            "tainter_01_inversion_complejidad_productiva"
+          ],
+          "maximo_unico": false
+        },
+        {
+          "corte": "C8",
+          "max_crudo_P": 0.8048,
+          "familias_dominantes_empatadas": [
+            "20_sacrificio_por_un_ideal",
+            "arquetipo_el_cuidador",
+            "arquetipo_el_heroe",
+            "jaldun_01_asabiyyah_alta_cohesion"
+          ],
+          "maximo_unico": false
+        }
+      ],
+      "familias_dominantes_por_media": [
+        "mentor",
+        "monomito_04_encuentro_con_el_mentor"
+      ],
+      "media_max": 0.725625,
+      "conteo_maximos_unicos": {
+        "monomito_01_mundo_ordinario": 1,
+        "weber_02_autoridad_carismatica": 1
+      },
+      "dominante_por_frecuencia_maximos_unicos": "monomito_01_mundo_ordinario",
+      "salto": null,
+      "ambicion_o_rivalidad_en_dominantes_media": false,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/MLK.json",
+      "source_sha256": "76570a8c418aca4e4254bc50dd6d0792abbe34d1fa24d175bdf3272e6e99f963"
+    }
+  ],
+  "comparacion_descriptiva": {
+    "True": [
+      {
+        "caso": "MOZART_EXTERNO",
+        "dominantes_media": [
+          "arquetipo_el_creador"
+        ],
+        "ambicion_rivalidad": false
+      },
+      {
+        "caso": "GALILEO",
+        "dominantes_media": [
+          "arquetipo_el_sabio"
+        ],
+        "ambicion_rivalidad": false
+      },
+      {
+        "caso": "HAWKING",
+        "dominantes_media": [
+          "mbti_factor_intuicion_n"
+        ],
+        "ambicion_rivalidad": false
+      },
+      {
+        "caso": "CHE",
+        "dominantes_media": [
+          "monomito_02_llamado_a_la_aventura"
+        ],
+        "ambicion_rivalidad": false
+      }
+    ],
+    "False": [
+      {
+        "caso": "MLK",
+        "dominantes_media": [
+          "mentor",
+          "monomito_04_encuentro_con_el_mentor"
+        ],
+        "ambicion_rivalidad": false
+      }
+    ]
+  },
+  "advertencia": "Napoleón no tiene crudo, muestra pequeña, PCA y alineación por caso pueden inducir semejanzas. Asociación no prueba causalidad ni patrón predictivo; no pesos nuevos."
+}

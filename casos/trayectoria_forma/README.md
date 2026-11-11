@@ -1,3 +1,11 @@
+# Trayectoria descriptiva — informe vigente
+
+Ver [tusi_pc12_v1/README.md](tusi_pc12_v1/README.md): seis casos en PC1/PC2 rotadas, gate geométrico Mozart reproducido, familias e hipótesis de Mj. Sin push.
+
+Los diagnósticos siguientes y `geometria_existente_v1/` se conservan como HISTÓRICOS; no son el plano de las coordenadas externas.
+
+---
+
 # Trayectoria descriptiva — gate de reproducción FALLIDO
 
 > **Instrucción posterior PC1/PC2 rotada:** gate real bloqueado por adjuntos y RESULT exactos ausentes. Ver [GATE_TRANSFORMACION_EXTERNA.json](GATE_TRANSFORMACION_EXTERNA.json). El script `proyeccion_tusi_modelo_externo.py` es reconstruido, NO copia verificada del adjunto. No se aplicó esa nueva transformación a los cuatro casos.

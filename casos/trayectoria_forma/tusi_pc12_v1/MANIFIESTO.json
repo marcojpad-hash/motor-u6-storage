@@ -1,0 +1,36 @@
+{
+  "modo": "TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA",
+  "shape_rule": "ordered_post_valley_axis_crossing_v2",
+  "cases": [
+    {
+      "file": "../coordenadas_modelo_externo/tabla_coordenadas_mozart.csv",
+      "case_id": "MOZART_EXTERNO",
+      "z90": 1788.34
+    },
+    {
+      "file": "../coordenadas_modelo_externo/tabla_coordenadas_napoleon.csv",
+      "case_id": "NAPOLEON_EXTERNO",
+      "z90": 1816.17
+    },
+    {
+      "file": "entradas/GALILEO.json"
+    },
+    {
+      "file": "entradas/HAWKING.json"
+    },
+    {
+      "file": "entradas/CHE.json"
+    },
+    {
+      "file": "entradas/MLK.json"
+    }
+  ],
+  "coordenadas_externas": {
+    "estado": "DISPONIBLES",
+    "transformacion": "script fiel preservado y generalizado a n cortes",
+    "Mozart_gate": "gate_mozart/COMPARACION_CSV.json",
+    "Napoleon_gate": "NO_EJECUTADO_RESULT_ORIGINAL_AUSENTE",
+    "z90_csvs": "Z90 redondeada a dos decimales para ser comparable al eje temporal de los CSV; endpoints coinciden con esa resolución."
+  },
+  "radio_rule": "initial_nonincreasing_prefix"
+}

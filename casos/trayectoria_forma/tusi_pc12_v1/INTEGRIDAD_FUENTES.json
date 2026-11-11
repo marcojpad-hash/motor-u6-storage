@@ -1,0 +1,29 @@
+{
+  "cuatro_result_originales_solo_lectura": [
+    {
+      "case_id": "CHE",
+      "source_sha_coincide": true,
+      "crudo_P_identico": true,
+      "orden_cortes_identico": true
+    },
+    {
+      "case_id": "MLK",
+      "source_sha_coincide": true,
+      "crudo_P_identico": true,
+      "orden_cortes_identico": true
+    },
+    {
+      "case_id": "HAWKING",
+      "source_sha_coincide": true,
+      "crudo_P_identico": true,
+      "orden_cortes_identico": true
+    },
+    {
+      "case_id": "GALILEO",
+      "source_sha_coincide": true,
+      "crudo_P_identico": true,
+      "orden_cortes_identico": true
+    }
+  ],
+  "input_mozart_precedente_identico": true
+}

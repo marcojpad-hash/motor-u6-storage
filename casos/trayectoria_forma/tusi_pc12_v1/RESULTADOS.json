@@ -1,0 +1,1947 @@
+{
+  "modo": "TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA",
+  "estado": "EJECUTADO_CON_LIMITES",
+  "can_decide_H": false,
+  "alimenta_motor": false,
+  "alimenta_ranking": false,
+  "alimenta_apuesta": false,
+  "metodo_sha256": "ad4312c7aad784f4b5a3faaa136f5cfb1ec73f5c131e6f44c59bde4cbc933845",
+  "script_sha256": "b50e526b496358f3fd5e9ac04bd7cb0d079843f3e4578273c7a56383beb36777",
+  "shape_rule": "ordered_post_valley_axis_crossing_v2",
+  "radio_rule": "initial_nonincreasing_prefix",
+  "proyeccion_pc12_sha256": "d67e9dbb6cd3bf1abc2c63d6e2c87413d2795aa05fdd45dac3d2991ae32bdec3",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "coordenadas_externas": {
+    "estado": "DISPONIBLES",
+    "transformacion": "script fiel preservado y generalizado a n cortes",
+    "Mozart_gate": "gate_mozart/COMPARACION_CSV.json",
+    "Napoleon_gate": "NO_EJECUTADO_RESULT_ORIGINAL_AUSENTE",
+    "z90_csvs": "Z90 redondeada a dos decimales para ser comparable al eje temporal de los CSV; endpoints coinciden con esa resolución."
+  },
+  "casos": [
+    {
+      "caso": "MOZART_EXTERNO",
+      "geometria": "COORDENADAS_EXTERNAS_PC12_RESULT_FUENTE_NO_DISPONIBLE",
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_mozart.csv",
+      "source_sha256": "022cd96f65bbb4e31c3946b00c4f80fe04b6eb4f4508b60991846a24e405fc25",
+      "fixture_sha256": "022cd96f65bbb4e31c3946b00c4f80fe04b6eb4f4508b60991846a24e405fc25",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10"
+      ],
+      "n": 10,
+      "z90": 1788.34,
+      "date_warnings": [],
+      "notes": [
+        "No se infiere transformación desde CSV sin pares de trazas verificables."
+      ],
+      "controles_coordenadas_externas": {
+        "consistencia_radio_max_error": 7.978325316546075e-05,
+        "consistencia_fase_modulo_360_max_error_grados": 0.05933952670931
+      },
+      "PCA_varianza": null,
+      "diagnostico_existente": null,
+      "giro_neto_grados": 222.40000000000003,
+      "giro_neto_absoluto_grados": 222.40000000000003,
+      "recorrido_angular_absoluto_grados": 223.00000000000009,
+      "radio": {
+        "start": 0,
+        "end": 5,
+        "n_fit": 6,
+        "R0": 0.44767393244318154,
+        "b": 0.07588640360317316,
+        "R2": 0.8716132420105954,
+        "R2_log": 0.9283642327473464,
+        "pred": [
+          0.44767393244318154,
+          0.42194448077661445,
+          0.4022465901805144,
+          0.24506588516701072,
+          0.19150162260753323,
+          0.1356898829287439,
+          0.1279883800063477,
+          0.12284959725971734,
+          0.10247227928906767,
+          0.06065592165488973
+        ],
+        "residual": [
+          0.1033260675568185,
+          0.002755519223385572,
+          -0.0629465901805144,
+          -0.029065885167010724,
+          0.0023983773924667606,
+          0.009810117071256091,
+          0.0594116199936523,
+          0.14425040274028267,
+          0.38872772071093237,
+          0.5528440783451103
+        ],
+        "regime": 6,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.038876002238266816,
+        "regime_flags": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 2.7904105418313567,
+        "omega": 9.39594816468287,
+        "R2": 0.9537170019523185,
+        "pred": [
+          2.7904105418313567,
+          2.9183229226512912,
+          3.021636768698183,
+          4.0924929824856155,
+          4.625461235902027,
+          5.369976888366795,
+          5.4962493668685255,
+          5.584804092051554,
+          5.97674074610241,
+          7.109913247981588
+        ],
+        "residual": [
+          -0.03977164068829353,
+          -0.003623071820761048,
+          0.14613582367152533,
+          -0.2667312621140452,
+          -0.37383917804384037,
+          0.021345171043688715,
+          0.22493992116888695,
+          0.13114920822987486,
+          0.6380571189560991,
+          -0.47766209040313523
+        ],
+        "innovation": [
+          0.036148568867532566,
+          0.1497588954922864,
+          -0.4128670857855705,
+          -0.10710791592979552,
+          0.39518434908752986,
+          0.2035947501251975,
+          -0.09379071293901221,
+          0.5069079107262249,
+          -1.1157192093592345
+        ],
+        "threshold_grados": 23.330239826388812,
+        "rupture": 3,
+        "rupture_flags": [
+          3,
+          8,
+          9
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 82.87408344821604,
+        "frequency_por_anio": 0.032364088494238795,
+        "periodo_anios": 30.898444743098892,
+        "offset": 0.011001667396542073,
+        "A_sin": -0.17570330844442353,
+        "B_cos": 0.12402000548947414,
+        "amplitud": 0.2150642098535352,
+        "pred": [
+          0.13502167288601621,
+          0.10571283205317032,
+          0.08026793182632916,
+          -0.1699633789784804,
+          -0.2031912575767763,
+          -0.102789735339755,
+          -0.07293949886281774,
+          -0.05073476938204478,
+          0.05264199244574194,
+          0.2259742109286161
+        ],
+        "residual": [
+          0.0750783271139838,
+          -0.010412832053170326,
+          -0.08896793182632916,
+          0.033463378978480396,
+          0.029591257576776303,
+          -0.010510264660245003,
+          -0.02686050113718226,
+          -0.09276523061795522,
+          0.10725800755425804,
+          -0.0158742109286161
+        ],
+        "n": 10,
+        "grados_libertad_nominales": 6,
+        "grid_n": 2048,
+        "f_min": 0.018982536066818587,
+        "f_max": 0.20920502092049334
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 4,
+        "salto_inicio": 7,
+        "salto_fin": 8,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "cruza_x_0": false,
+        "cruza_y_0": true,
+        "subida": true,
+        "salto_umbral": 0.19198335865381666,
+        "pasos": [
+          0.14932946795592622,
+          0.1279889057692111,
+          0.2142018907479577,
+          0.08900123594647436,
+          0.18765228482488566,
+          0.06864065850499977,
+          0.07965707752610562,
+          0.38635242978399914,
+          0.1227356508924771
+        ],
+        "todos_saltos_candidatos": [
+          7
+        ],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "C7",
+        "year_aproximado": 1778.5,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C4",
+        "year_aproximado": 1769.94,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C7",
+          "year_aproximado": 1778.5,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year_aproximado": 1779.04,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year_aproximado": 1781.43,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year_aproximado": 1788.34,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C4",
+          "year_aproximado": 1769.94,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year_aproximado": 1781.43,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year_aproximado": 1788.34,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1762.0,
+          "t_years": 0.0,
+          "x": -0.5093,
+          "y": 0.2101,
+          "r": 0.551,
+          "fase_grados": 157.6,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1762.78,
+          "t_years": 0.7799999999999727,
+          "x": -0.4138,
+          "y": 0.0953,
+          "r": 0.4247,
+          "fase_grados": 167.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1763.41,
+          "t_years": 1.4100000000000819,
+          "x": -0.3392,
+          "y": -0.0087,
+          "r": 0.3393,
+          "fase_grados": 181.5,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1769.94,
+          "t_years": 7.940000000000055,
+          "x": -0.1673,
+          "y": -0.1365,
+          "r": 0.216,
+          "fase_grados": 219.20000000000002,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1773.19,
+          "t_years": 11.190000000000055,
+          "x": -0.0864,
+          "y": -0.1736,
+          "r": 0.1939,
+          "fase_grados": 243.60000000000002,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1777.73,
+          "t_years": 15.730000000000018,
+          "x": 0.0913,
+          "y": -0.1133,
+          "r": 0.1455,
+          "fase_grados": 308.9,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1778.5,
+          "t_years": 16.5,
+          "x": 0.1586,
+          "y": -0.0998,
+          "r": 0.1874,
+          "fase_grados": 327.8,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1779.04,
+          "t_years": 17.039999999999964,
+          "x": 0.2252,
+          "y": -0.1435,
+          "r": 0.2671,
+          "fase_grados": 327.5,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year": 1781.43,
+          "t_years": 19.430000000000064,
+          "x": 0.4644,
+          "y": 0.1599,
+          "r": 0.4912,
+          "fase_grados": 379.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year": 1788.34,
+          "t_years": 26.339999999999918,
+          "x": 0.5764,
+          "y": 0.2101,
+          "r": 0.6135,
+          "fase_grados": 380.0,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "MOZART_EXTERNO_TRAYECTORIA.png"
+    },
+    {
+      "caso": "NAPOLEON_EXTERNO",
+      "geometria": "COORDENADAS_EXTERNAS_PC12_RESULT_FUENTE_NO_DISPONIBLE",
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_napoleon.csv",
+      "source_sha256": "6f126cc284b44903917530672fdd2ce0ce9c66efb076ebbdf449a0b617fc6fc5",
+      "fixture_sha256": "6f126cc284b44903917530672fdd2ce0ce9c66efb076ebbdf449a0b617fc6fc5",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10"
+      ],
+      "n": 10,
+      "z90": 1816.17,
+      "date_warnings": [],
+      "notes": [
+        "No se infiere transformación desde CSV sin pares de trazas verificables."
+      ],
+      "controles_coordenadas_externas": {
+        "consistencia_radio_max_error": 7.641291358845281e-05,
+        "consistencia_fase_modulo_360_max_error_grados": 0.050168838762459575
+      },
+      "PCA_varianza": null,
+      "diagnostico_existente": null,
+      "giro_neto_grados": 236.50000000000006,
+      "giro_neto_absoluto_grados": 236.50000000000006,
+      "recorrido_angular_absoluto_grados": 240.7000000000001,
+      "radio": {
+        "start": 0,
+        "end": 4,
+        "n_fit": 5,
+        "R0": 0.8316052459342472,
+        "b": 0.07163768843507928,
+        "R2": 0.9726710560346261,
+        "R2_log": 0.9327764497559918,
+        "pred": [
+          0.8316052459342472,
+          0.5269079097027582,
+          0.2924120652760687,
+          0.2476371457470239,
+          0.19175490211467336,
+          0.1333550239307883,
+          0.12413593761840476,
+          0.11077191989493022,
+          0.07758964675020506,
+          0.05956635670029056
+        ],
+        "residual": [
+          -0.029705245934247282,
+          -0.021507909702758288,
+          0.03368793472393128,
+          0.0528628542529761,
+          -0.038554902114673356,
+          0.0647449760692117,
+          0.14996406238159526,
+          0.16702808010506975,
+          0.3888103532497949,
+          0.3827336432997095
+        ],
+        "regime": 6,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.06737586944786256,
+        "regime_flags": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 2.5229955244936955,
+        "omega": 7.24474842763141,
+        "R2": 0.9481533259299474,
+        "pred": [
+          2.5229955244936955,
+          3.3284483497489266,
+          4.367823895054719,
+          4.661175630469483,
+          5.112583257810311,
+          5.753657955462442,
+          5.880102669003293,
+          6.081149763533234,
+          6.709579989831263,
+          7.176160982797008
+        ],
+        "residual": [
+          0.28000325420919747,
+          -0.19034635466312189,
+          -0.5856954059830071,
+          -0.2856351957196992,
+          0.5963887254631413,
+          0.2904172441939217,
+          0.12732061636118974,
+          -0.035329234624876804,
+          0.04833487389078073,
+          -0.24545852312752459
+        ],
+        "innovation": [
+          -0.47034960887231925,
+          -0.3953490513198854,
+          0.3000602102633075,
+          0.882023921182841,
+          -0.3059714812692197,
+          -0.16309662783273154,
+          -0.1626498509860669,
+          0.08366410851565742,
+          -0.29379339701830487
+        ],
+        "threshold_grados": 34.38436729579117,
+        "rupture": 4,
+        "rupture_flags": [
+          4
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 91.93631285235338,
+        "frequency_por_anio": 0.017696430628204536,
+        "periodo_anios": 56.50857062701684,
+        "offset": 0.12034568236311483,
+        "A_sin": -0.3029325624576505,
+        "B_cos": 0.12043167034847051,
+        "amplitud": 0.325993749357378,
+        "pred": [
+          0.24077735271158535,
+          0.014745114346344006,
+          -0.18838107728398895,
+          -0.20487304072510706,
+          -0.18827106685054057,
+          -0.08440469897351019,
+          -0.05499268293561513,
+          -0.003925639785316869,
+          0.17276890338299458,
+          0.29675683611315545
+        ],
+        "residual": [
+          0.02622264728841467,
+          -0.013045114346344006,
+          -0.0065189227160110386,
+          -0.07882695927489294,
+          0.10517106685054058,
+          0.03750469897351019,
+          -0.019807317064384877,
+          -0.061274360214683125,
+          0.04033109661700543,
+          -0.029756836113155438
+        ],
+        "n": 10,
+        "grados_libertad_nominales": 6,
+        "grid_n": 2048,
+        "f_min": 0.013586956521739064,
+        "f_max": 0.13550135501354812
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 3,
+        "salto_inicio": 3,
+        "salto_fin": 4,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "cruza_x_0": true,
+        "cruza_y_0": false,
+        "subida": true,
+        "salto_umbral": 0.2772438682820596,
+        "pasos": [
+          0.36501312305176103,
+          0.31334894287359577,
+          0.1848292455213731,
+          0.30368463905834947,
+          0.07326752350120752,
+          0.0765643520184165,
+          0.011482595525402806,
+          0.3137163209015431,
+          0.08230461712443596
+        ],
+        "todos_saltos_candidatos": [
+          3,
+          7
+        ],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "C7",
+        "year_aproximado": 1805.92,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C5",
+        "year_aproximado": 1799.85,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C7",
+          "year_aproximado": 1805.92,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year_aproximado": 1807.51,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year_aproximado": 1812.48,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year_aproximado": 1816.17,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C5",
+          "year_aproximado": 1799.85,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1779.37,
+          "t_years": 0.0,
+          "x": -0.7561,
+          "y": 0.267,
+          "r": 0.8019,
+          "fase_grados": 160.6,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1785.74,
+          "t_years": 6.370000000000118,
+          "x": -0.5054,
+          "y": 0.0017,
+          "r": 0.5054,
+          "fase_grados": 179.8,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1793.96,
+          "t_years": 14.590000000000146,
+          "x": -0.2614,
+          "y": -0.1949,
+          "r": 0.3261,
+          "fase_grados": 216.7,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1796.28,
+          "t_years": 16.910000000000082,
+          "x": -0.0993,
+          "y": -0.2837,
+          "r": 0.3005,
+          "fase_grados": 250.7,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1799.85,
+          "t_years": 20.480000000000018,
+          "x": 0.1287,
+          "y": -0.0831,
+          "r": 0.1532,
+          "fase_grados": 327.1,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1804.92,
+          "t_years": 25.550000000000182,
+          "x": 0.1924,
+          "y": -0.0469,
+          "r": 0.1981,
+          "fase_grados": 346.3,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1805.92,
+          "t_years": 26.550000000000182,
+          "x": 0.2637,
+          "y": -0.0748,
+          "r": 0.2741,
+          "fase_grados": 344.2,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1807.51,
+          "t_years": 28.1400000000001,
+          "x": 0.27,
+          "y": -0.0652,
+          "r": 0.2778,
+          "fase_grados": 346.4,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year": 1812.48,
+          "t_years": 33.11000000000013,
+          "x": 0.4148,
+          "y": 0.2131,
+          "r": 0.4664,
+          "fase_grados": 387.2,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year": 1816.17,
+          "t_years": 36.80000000000018,
+          "x": 0.3526,
+          "y": 0.267,
+          "r": 0.4423,
+          "fase_grados": 397.1,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "NAPOLEON_EXTERNO_TRAYECTORIA.png"
+    },
+    {
+      "caso": "GALILEO",
+      "geometria": "TUSI_PC12_ROTADO_CRUDO_P",
+      "source": "casos/calibracion_z90/GALILEO_20260924/result.json.gz",
+      "source_sha256": "2c5bece9bae7e2099ed78e6b2c42f108ae672e9b7dbdc335ec74a22f01f51c33",
+      "fixture_sha256": "ee097c53173dbf07275c39c25bc336ce87624be2aa6cb594c48c09cf0e888750",
+      "cortes": [
+        "G_C1",
+        "G_C2",
+        "G_C3",
+        "G_C4",
+        "G_C5",
+        "G_C6",
+        "G_C7",
+        "G_C8",
+        "G_C9",
+        "G_C10_Z90"
+      ],
+      "n": 10,
+      "z90": "1634-03-26",
+      "date_warnings": [
+        "FALLO_ULTIMO_CORTE_NO_TERMINA_EN_Z90",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [
+        "PCA por caso. Solo forma, no valores de ejes, comparable entre casos."
+      ],
+      "controles_coordenadas_externas": {},
+      "PCA_varianza": [
+        0.6703076951880917,
+        0.2875277930646055
+      ],
+      "diagnostico_existente": {
+        "transformacion": "TRANSFORMACION_GENERALIZADA_DEL_SCRIPT_FIEL",
+        "rotation_radians": -0.005851698998853758
+      },
+      "giro_neto_grados": 240.74462212301142,
+      "giro_neto_absoluto_grados": 240.74462212301142,
+      "recorrido_angular_absoluto_grados": 240.74462212301148,
+      "radio": {
+        "start": 0,
+        "end": 3,
+        "n_fit": 4,
+        "R0": 0.5691466954916189,
+        "b": 0.04996500619150104,
+        "R2": 0.8782581689814928,
+        "R2_log": 0.8662182983244021,
+        "pred": [
+          0.5691466954916189,
+          0.4011691546368714,
+          0.24340655434012184,
+          0.14768520962026455,
+          0.08960695902257503,
+          0.054368390212662765,
+          0.04234955408467142,
+          0.032987637194245904,
+          0.029850537560832193,
+          0.026706813158076343
+        ],
+        "residual": [
+          0.11931666982436329,
+          -0.0472018820973274,
+          -0.05638646894642815,
+          0.03240447122501927,
+          0.11054989744807585,
+          0.16303480715988564,
+          0.1883598187360316,
+          0.24302561741907824,
+          0.38062321874999416,
+          0.48303971332340756
+        ],
+        "regime": 4,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.10358835104375555,
+        "regime_flags": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 2.5486826889097096,
+        "omega": 3.6631610059925186,
+        "R2": 0.9181083029834634,
+        "pred": [
+          2.5486826889097096,
+          2.9962222330063697,
+          3.635564438858742,
+          4.2749066447111135,
+          4.914248850563485,
+          5.553591056415857,
+          5.873262159342042,
+          6.1929332622682285,
+          6.320801703438703,
+          6.463198660169951
+        ],
+        "residual": [
+          0.1500023238043635,
+          -0.014212358662519353,
+          0.08388044272408335,
+          0.16226424265682748,
+          -0.14618735086060575,
+          -0.6178518227489773,
+          -0.8344195884474246,
+          0.309331887242954,
+          0.4699195592310419,
+          0.4372726650602532
+        ],
+        "innovation": [
+          -0.16421468246688303,
+          0.09809280138660303,
+          0.07838379993274402,
+          -0.30845159351743334,
+          -0.4716644718883717,
+          -0.21656776569844777,
+          1.143751475690379,
+          0.1605876719880882,
+          -0.03264689417078917
+        ],
+        "threshold_grados": 18.81761647886671,
+        "rupture": 5,
+        "rupture_flags": [
+          5,
+          7
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 82.9889620546222,
+        "frequency_por_anio": 0.00816629962103005,
+        "periodo_anios": 122.45448323066374,
+        "offset": 0.24319633150238207,
+        "A_sin": -0.5140874853090934,
+        "B_cos": 0.055039898029485404,
+        "amplitud": 0.5170254664197147,
+        "pred": [
+          0.29823622953186746,
+          0.11402239043310984,
+          -0.11509386373402897,
+          -0.25193257284149745,
+          -0.2612509635355907,
+          -0.1406490867566074,
+          -0.04019366767448969,
+          0.07881207601531369,
+          0.12989302508902434,
+          0.18815643347289684
+        ],
+        "residual": [
+          -0.003182618439331264,
+          -0.05777476046177027,
+          0.012938603804831444,
+          0.07862039564454068,
+          0.06140421298007864,
+          -0.07135399984674437,
+          -0.17833092370896447,
+          -0.018825687210953186,
+          0.06960759961867469,
+          0.10689717761963935
+        ],
+        "n": 10,
+        "grados_libertad_nominales": 6,
+        "grid_n": 2048,
+        "f_min": 0.00816629962103005,
+        "f_max": 0.07142857142857142
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 6,
+        "salto_inicio": 6,
+        "salto_fin": 7,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "cruza_x_0": false,
+        "cruza_y_0": true,
+        "subida": true,
+        "salto_umbral": 0.19364364858720245,
+        "pasos": [
+          0.36237981473047337,
+          0.24953743483827176,
+          0.12909576572480164,
+          0.06567693259160721,
+          0.03896184221366681,
+          0.026641425200123327,
+          0.34023744697865116,
+          0.16565467107234616,
+          0.11123325340241269
+        ],
+        "todos_saltos_candidatos": [
+          6
+        ],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "G_C5",
+        "year_aproximado": 1610.0,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "G_C6",
+        "year_aproximado": 1620.0,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "G_C5",
+          "year_aproximado": 1610.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C6",
+          "year_aproximado": 1620.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C7",
+          "year_aproximado": 1625.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C8",
+          "year_aproximado": 1630.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C9",
+          "year_aproximado": 1632.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C10_Z90",
+          "year_aproximado": 1634.2272416153319,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "G_C6",
+          "year_aproximado": 1620.0,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C8",
+          "year_aproximado": 1630.0,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "G_C1",
+          "year": 1573.0,
+          "t_years": 0.0,
+          "x": -0.6220330955531723,
+          "y": 0.2950536110925362,
+          "r": 0.6884633653159822,
+          "fase_grados": 154.6232614637253,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C2",
+          "year": 1580.0,
+          "t_years": 7.0,
+          "x": -0.34946964696764593,
+          "y": 0.05624762997133957,
+          "r": 0.353967272539544,
+          "fase_grados": 170.85658026623958,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C3",
+          "year": 1590.0,
+          "t_years": 17.0,
+          "x": -0.15665508357363503,
+          "y": -0.10215525992919752,
+          "r": 0.1870200853936937,
+          "fase_grados": 213.10849384623214,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C4",
+          "year": 1600.0,
+          "t_years": 27.0,
+          "x": -0.048940600550124495,
+          "y": -0.17331217719695677,
+          "r": 0.18008968084528382,
+          "fase_grados": 254.23116482450138,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C5",
+          "year": 1610.0,
+          "t_years": 37.0,
+          "x": 0.011137481071395061,
+          "y": -0.19984675055551204,
+          "r": 0.20015685647065087,
+          "fase_grados": 273.1898003917928,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C6",
+          "year": 1620.0,
+          "t_years": 47.0,
+          "x": 0.04815435077393287,
+          "y": -0.21200308660335176,
+          "r": 0.2174031973725484,
+          "fase_grados": 282.79702686624745,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C7",
+          "year": 1625.0,
+          "t_years": 52.0,
+          "x": 0.07398525304421502,
+          "y": -0.21852459138345418,
+          "r": 0.23070937282070303,
+          "fase_grados": 288.70441294311087,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C8",
+          "year": 1630.0,
+          "t_years": 57.0,
+          "x": 0.2694159421423532,
+          "y": 0.0599863888043605,
+          "r": 0.27601325461332415,
+          "fase_grados": 372.552350341992,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C9",
+          "year": 1632.0,
+          "t_years": 59.0,
+          "x": 0.358731383295576,
+          "y": 0.19950062470769903,
+          "r": 0.41047375631082633,
+          "fase_grados": 389.0796682007257,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C10_Z90",
+          "year": 1634.2272416153319,
+          "t_years": 61.22724161533188,
+          "x": 0.4156740163171046,
+          "y": 0.2950536110925362,
+          "r": 0.5097465264814839,
+          "fase_grados": 395.36788358673675,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "png": "GALILEO_TRAYECTORIA.png"
+    },
+    {
+      "caso": "HAWKING",
+      "geometria": "TUSI_PC12_ROTADO_CRUDO_P",
+      "source": "casos/calibracion_z90/HAWKING/result.json.gz",
+      "source_sha256": "148301fb674f637a620232b7672944670a9290aa5fd9858cf40ecda4ee3bbcf6",
+      "fixture_sha256": "cb48560d1c66ccb85c402bdd3ca6be8cb71e3a3153c8f8d3608ddcaca25f3609",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "n": 6,
+      "z90": "2010-08-01",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "FALLO_ULTIMO_CORTE_NO_TERMINA_EN_Z90",
+        "FALLO_HAWKING_C7_2010_2011_CRUZA_Z90_NO_TRUNCADO_SELLADO_COMPLETO",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [
+        "PCA por caso. Solo forma, no valores de ejes, comparable entre casos."
+      ],
+      "controles_coordenadas_externas": {},
+      "PCA_varianza": [
+        0.7428760395410627,
+        0.16464036556696426
+      ],
+      "diagnostico_existente": {
+        "transformacion": "TRANSFORMACION_GENERALIZADA_DEL_SCRIPT_FIEL",
+        "rotation_radians": 0.00932729718564848
+      },
+      "giro_neto_grados": 221.41124044604894,
+      "giro_neto_absoluto_grados": 221.41124044604894,
+      "recorrido_angular_absoluto_grados": 221.41124044604894,
+      "radio": {
+        "start": 0,
+        "end": 2,
+        "n_fit": 3,
+        "R0": 0.47236154228679195,
+        "b": 0.12418353546491169,
+        "R2": 0.9752792514912834,
+        "R2_log": 0.977181651430803,
+        "pred": [
+          0.47236154228679195,
+          0.3254451916357924,
+          0.1980381964671618,
+          0.07333160137711324,
+          0.01288523583911098,
+          0.0029033920380093273
+        ],
+        "residual": [
+          0.021161356857930302,
+          -0.02402627787249384,
+          0.0066173621551355866,
+          0.21260953475737393,
+          0.34968896833794394,
+          0.4439498275901496
+        ],
+        "regime": 3,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.042322713715860605,
+        "regime_flags": [
+          3,
+          4,
+          5
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 3.1203658566756625,
+        "omega": 5.687705872200818,
+        "R2": 0.9247119419210851,
+        "pred": [
+          3.1203658566756625,
+          3.4181734397404226,
+          3.815250217160103,
+          4.609403771999464,
+          5.999444277210241,
+          7.190674609469283
+        ],
+        "residual": [
+          -0.3213979488839045,
+          -0.3131207184109912,
+          0.12649056524027547,
+          0.5964589993429845,
+          0.4389206576807778,
+          -0.5273515549691323
+        ],
+        "innovation": [
+          0.008277230472913233,
+          0.4396112836512667,
+          0.46996843410270916,
+          -0.15753834166220715,
+          -0.9662722126499095
+        ],
+        "threshold_grados": 50.37574235909214,
+        "rupture": 5,
+        "rupture_flags": [
+          5
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 97.23925973479648,
+        "frequency_por_anio": 0.02322862903309659,
+        "periodo_anios": 43.0503237438241,
+        "offset": -0.030334960587158254,
+        "A_sin": -0.19246923809721053,
+        "B_cos": 0.15249096061677772,
+        "amplitud": 0.24555630858022845,
+        "pred": [
+          0.12215600002961946,
+          0.026165313681350957,
+          -0.11491110344599659,
+          -0.2755648166208372,
+          0.07009133818968694,
+          0.17206326816617687
+        ],
+        "residual": [
+          0.043648166320776643,
+          -0.015153937709183534,
+          -0.031920927389164994,
+          0.02373855046015305,
+          -0.014052749866800468,
+          -0.006259101815780765
+        ],
+        "n": 6,
+        "grados_libertad_nominales": 2,
+        "grid_n": 2048,
+        "f_min": 0.012194307653785178,
+        "f_max": 0.0625
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 3,
+        "salto_inicio": 3,
+        "salto_fin": 4,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "cruza_x_0": false,
+        "cruza_y_0": true,
+        "subida": true,
+        "salto_umbral": 0.3378572021717585,
+        "pasos": [
+          0.22523813478117236,
+          0.22379859470068228,
+          0.2971756775500596,
+          0.38000983640861036,
+          0.12356178224319984
+        ],
+        "todos_saltos_candidatos": [
+          3
+        ],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "C4",
+        "year_aproximado": 1974.996577686516,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C6",
+        "year_aproximado": 2000.9993155373031,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C4",
+          "year_aproximado": 1974.996577686516,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year_aproximado": 1988.9993155373031,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year_aproximado": 2000.9993155373031,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C6",
+          "year_aproximado": 2000.9993155373031,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1959.996577686516,
+          "t_years": 0.0,
+          "x": -0.4648374236236384,
+          "y": 0.1658041663503961,
+          "r": 0.49352289914472225,
+          "fase_grados": 160.3690481090299,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1962.996577686516,
+          "t_years": 3.0,
+          "x": -0.3012177139104644,
+          "y": 0.011011375972167423,
+          "r": 0.30141891376329855,
+          "fase_grados": 177.90641609778734,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1966.996577686516,
+          "t_years": 7.0,
+          "x": -0.14256315230741345,
+          "y": -0.14683203083516158,
+          "r": 0.2046555586222974,
+          "fase_grados": 225.84511076613668,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1974.996577686516,
+          "t_years": 15.0,
+          "x": 0.13544690843813897,
+          "y": -0.25182626616068415,
+          "r": 0.2859411361344872,
+          "fase_grados": 298.2739655222006,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1988.9993155373031,
+          "t_years": 29.00273785078707,
+          "x": 0.358217434184048,
+          "y": 0.05603858832288647,
+          "r": 0.36257420417705494,
+          "fase_grados": 368.8911377342764,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 2000.9993155373031,
+          "t_years": 41.00273785078707,
+          "x": 0.41495394721932916,
+          "y": 0.1658041663503961,
+          "r": 0.44685321962815894,
+          "fase_grados": 381.7802885550788,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "png": "HAWKING_TRAYECTORIA.png"
+    },
+    {
+      "caso": "CHE",
+      "geometria": "TUSI_PC12_ROTADO_CRUDO_P",
+      "source": "casos/calibracion_z90/CHE/result.json.gz",
+      "source_sha256": "3def4390bb13e7e485b11762fda0fbd2d516d2a894863f04dadf16c130b8e2d7",
+      "fixture_sha256": "0904c8433c7e76d69d34c19c4572f6f7de3c1fa7a0a1f3e0d9bf2c37e9d1d6e7",
+      "cortes": [
+        "C1",
+        "C3",
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "n": 9,
+      "z90": "1963-11-03",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "ORDEN_CRONOLOGICO_RECONSTRUIDO_CHE_C3_ANTES_C2",
+        "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [
+        "PCA por caso. Solo forma, no valores de ejes, comparable entre casos."
+      ],
+      "controles_coordenadas_externas": {},
+      "PCA_varianza": [
+        0.6599521403096619,
+        0.17314214779070938
+      ],
+      "diagnostico_existente": {
+        "transformacion": "TRANSFORMACION_GENERALIZADA_DEL_SCRIPT_FIEL",
+        "rotation_radians": -0.05196325798576031
+      },
+      "giro_neto_grados": 225.75431896447867,
+      "giro_neto_absoluto_grados": 225.75431896447867,
+      "recorrido_angular_absoluto_grados": 225.75431896447867,
+      "radio": {
+        "start": 0,
+        "end": 4,
+        "n_fit": 5,
+        "R0": 0.6533992792884386,
+        "b": 0.09319571802897018,
+        "R2": 0.951808404494616,
+        "R2_log": 0.9498783698649617,
+        "pred": [
+          0.6533992792884386,
+          0.4939064299014893,
+          0.4500710791839477,
+          0.41002158555356005,
+          0.340210047620093,
+          0.2824289272246667,
+          0.25729704018488975,
+          0.19454121866678278,
+          0.17987234232940005
+        ],
+        "residual": [
+          -0.019792160014448612,
+          0.019224065481705355,
+          0.032009764825808695,
+          -0.028378438651360638,
+          -0.001496102293207846,
+          0.16619345194023583,
+          0.2411831173569347,
+          0.6609296275400479,
+          0.8055060635743175
+        ],
+        "regime": 5,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.039584320028897224,
+        "regime_flags": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 1.9488506633177443,
+        "omega": 18.93640739979908,
+        "R2": 0.9474926481459335,
+        "pred": [
+          1.9488506633177443,
+          2.9412635031555894,
+          3.2708612938197925,
+          3.601363951445305,
+          4.263274133657638,
+          4.923374581947353,
+          5.253877239572866,
+          6.245385212449402,
+          6.523405586317865
+        ],
+        "residual": [
+          0.7020356927752125,
+          -0.11440630462194923,
+          -0.36490281721619766,
+          -0.31044276293769135,
+          -0.4299206134235827,
+          0.09200209266663961,
+          0.017396009402159684,
+          0.3406017670526751,
+          0.06763693630272005
+        ],
+        "innovation": [
+          -0.816441997397162,
+          -0.25049651259424843,
+          0.05446005427850653,
+          -0.11947785048589155,
+          0.5219227060902225,
+          -0.0746060832644797,
+          0.3232057576505152,
+          -0.27296483074995526
+        ],
+        "threshold_grados": 29.992125711871378,
+        "rupture": 1,
+        "rupture_flags": [
+          1
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 92.99589601454782,
+        "frequency_por_anio": 0.07144197733381943,
+        "periodo_anios": 13.997372935625856,
+        "offset": -0.026559321729343836,
+        "A_sin": 0.21719151293563765,
+        "B_cos": 0.3196418989484039,
+        "amplitud": 0.3864493457810647,
+        "pred": [
+          0.29308257721906006,
+          0.2559233289346295,
+          0.11393844521304781,
+          -0.056207902949568594,
+          -0.3465956758667475,
+          -0.3955730496311606,
+          -0.3092105228046373,
+          0.1675582359385149,
+          0.2770845639468619
+        ],
+        "residual": [
+          0.005504118927717072,
+          -0.09707612201662819,
+          -0.0013920032922092734,
+          -0.000570740834096882,
+          0.1305319956943562,
+          -0.032614267297192356,
+          -0.1134245052850602,
+          0.08753939190319823,
+          0.021502132199915314
+        ],
+        "n": 9,
+        "grados_libertad_nominales": 5,
+        "grid_n": 2048,
+        "f_min": 0.036124023340915454,
+        "f_max": 0.333637816853156
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 5,
+        "salto_inicio": 6,
+        "salto_fin": 7,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "cruza_x_0": false,
+        "cruza_y_0": true,
+        "subida": true,
+        "salto_umbral": 0.26182941844093305,
+        "pasos": [
+          0.1567046326711133,
+          0.050110612316794284,
+          0.19240125858346413,
+          0.1973683637506454,
+          0.4480974337475148,
+          0.1305756301602758,
+          0.8742350033678856,
+          0.1299904569236207
+        ],
+        "todos_saltos_candidatos": [
+          6
+        ],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "C6",
+        "year_aproximado": 1958.996577686516,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C3",
+        "year_aproximado": 1952.9993155373031,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C6",
+          "year_aproximado": 1958.996577686516,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year_aproximado": 1959.996577686516,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year_aproximado": 1962.996577686516,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year_aproximado": 1963.8377823408625,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C3",
+          "year_aproximado": 1952.9993155373031,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1949.996577686516,
+          "t_years": 0.0,
+          "x": -0.5588416291569878,
+          "y": 0.29858669614677713,
+          "r": 0.6336071192739899,
+          "fase_grados": 151.88460017294028,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1952.9993155373031,
+          "t_years": 3.002737850787071,
+          "x": -0.4879246562191262,
+          "y": 0.1588472069180013,
+          "r": 0.5131304953831947,
+          "fase_grados": 161.96698676215303,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1953.996577686516,
+          "t_years": 4.0,
+          "x": -0.46875925438557303,
+          "y": 0.11254644192083854,
+          "r": 0.48208084400975637,
+          "fase_grados": 166.49915614965218,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1954.996577686516,
+          "t_years": 5.0,
+          "x": -0.37739591570060926,
+          "y": -0.056778643783665476,
+          "r": 0.3816431469021994,
+          "fase_grados": 188.55589481166305,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1956.9993155373031,
+          "t_years": 7.002737850787071,
+          "x": -0.2608517258314898,
+          "y": -0.2160636801723913,
+          "r": 0.33871394532688515,
+          "fase_grados": 219.6349780910284,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1958.996577686516,
+          "t_years": 9.0,
+          "x": 0.1338568665002877,
+          "y": -0.42818731692835293,
+          "r": 0.44862237916490255,
+          "fase_grados": 287.35991612373937,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1959.996577686516,
+          "t_years": 10.0,
+          "x": 0.2643143970625564,
+          "y": -0.4226350280896975,
+          "r": 0.49848015754182445,
+          "fase_grados": 302.02170982648215,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1962.996577686516,
+          "t_years": 13.0,
+          "x": 0.8165510204386263,
+          "y": 0.25509762784171314,
+          "r": 0.8554708462068307,
+          "fase_grados": 377.349257853582,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year": 1963.8377823408625,
+          "t_years": 13.841204654346484,
+          "x": 0.9390508972923161,
+          "y": 0.2985866961467772,
+          "r": 0.9853784059037176,
+          "fase_grados": 377.63891913741895,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "CHE_TRAYECTORIA.png"
+    },
+    {
+      "caso": "MLK",
+      "geometria": "TUSI_PC12_ROTADO_CRUDO_P",
+      "source": "casos/calibracion_z90/MLK/result.json.gz",
+      "source_sha256": "0c3d333f1008fa0fe5152c7fc2ec8df88d19eb4d5c46fe774fd78f51239b4e66",
+      "fixture_sha256": "76570a8c418aca4e4254bc50dd6d0792abbe34d1fa24d175bdf3272e6e99f963",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "n": 8,
+      "z90": "1964-05-03",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [
+        "PCA por caso. Solo forma, no valores de ejes, comparable entre casos."
+      ],
+      "controles_coordenadas_externas": {},
+      "PCA_varianza": [
+        0.7748502749134033,
+        0.09275733667392762
+      ],
+      "diagnostico_existente": {
+        "transformacion": "TRANSFORMACION_GENERALIZADA_DEL_SCRIPT_FIEL",
+        "rotation_radians": 0.007765301818974091
+      },
+      "giro_neto_grados": 215.61231839190938,
+      "giro_neto_absoluto_grados": 215.61231839190938,
+      "recorrido_angular_absoluto_grados": 215.61231839190938,
+      "radio": {
+        "start": 0,
+        "end": 4,
+        "n_fit": 5,
+        "R0": 0.9155224803220419,
+        "b": 0.06379561088155222,
+        "R2": 0.7898545026985354,
+        "R2_log": 0.7907625315911615,
+        "pred": [
+          0.9155224803220419,
+          0.6654855100997802,
+          0.585666772379263,
+          0.5495666353971238,
+          0.38906025138091777,
+          0.3828584107307284,
+          0.3667404972280036,
+          0.3667404972280036
+        ],
+        "residual": [
+          -0.031912759048463024,
+          0.16055962267135337,
+          -0.012516927741951567,
+          -0.10958877836878234,
+          0.02544702849064201,
+          0.09824772430116269,
+          0.2809127243146534,
+          0.3219831787361893
+        ],
+        "regime": 5,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.06382551809692605,
+        "regime_flags": [
+          5,
+          6,
+          7
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 2.1866422556659386,
+        "omega": 16.741186070275266,
+        "R2": 0.9117663651800373,
+        "pred": [
+          2.1866422556659386,
+          3.6475863437425096,
+          4.2327639483574195,
+          4.524152796588452,
+          6.106092254040271,
+          6.179689437395817,
+          6.376681898279523,
+          6.376681898279523
+        ],
+        "residual": [
+          0.6839630163486872,
+          -0.6270732851250838,
+          -0.7899784057860386,
+          0.26845853730506963,
+          0.10411868316353345,
+          0.06933745578163197,
+          0.03410576077996197,
+          0.2570682375322466
+        ],
+        "innovation": [
+          -1.311036301473771,
+          -0.16290512066095464,
+          1.058436943091108,
+          -0.16433985414153596,
+          -0.03478122738190216,
+          -0.03523169500166912,
+          0.22296247675228464
+        ],
+        "threshold_grados": 18.749755923047683,
+        "rupture": 1,
+        "rupture_flags": [
+          1,
+          3
+        ],
+        "saltos_sin_duracion": [
+          7
+        ]
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 93.72523288696966,
+        "frequency_por_anio": 0.06709034583225967,
+        "periodo_anios": 14.905274188036168,
+        "offset": -0.04034828523329502,
+        "A_sin": 0.367992563501542,
+        "B_cos": 0.27650502298309404,
+        "amplitud": 0.4602972458393791,
+        "pred": [
+          0.236156737749799,
+          0.13443797086930367,
+          -0.24252304634333718,
+          -0.39368317152530957,
+          -0.03307711708612108,
+          0.015657840092820747,
+          0.14151539312142214,
+          0.14151539312142214
+        ],
+        "residual": [
+          0.00037048916925974673,
+          -0.034664961549384476,
+          0.07249263896632327,
+          -0.044879678150187396,
+          0.0028555491055467924,
+          -0.032088466995496986,
+          -0.059097404343697535,
+          0.09501183379763661
+        ],
+        "n": 8,
+        "grados_libertad_nominales": 4,
+        "grid_n": 2048,
+        "f_min": 0.03486707078421078,
+        "f_max": 0.3333333333333333
+      },
+      "forma": {
+        "coincide": false,
+        "cresta": 0,
+        "valle": 3,
+        "salto_inicio": null,
+        "salto_fin": null,
+        "salto_largo": false,
+        "salto_cruza_eje": false,
+        "cruza_x_0": false,
+        "cruza_y_0": false,
+        "subida": false,
+        "salto_umbral": 0.2841041233472658,
+        "pasos": [
+          0.1403053311232892,
+          0.3835770474105763,
+          0.6415140530822874,
+          0.5565401217627403,
+          0.06881740045760916,
+          0.1894027488981772,
+          0.15417338712245457
+        ],
+        "todos_saltos_candidatos": [],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "cambio_regimen": {
+        "corte": "C6",
+        "year_aproximado": 1963.662559890486,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C2",
+        "year_aproximado": 1954.996577686516,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C6",
+          "year_aproximado": 1963.662559890486,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year_aproximado": 1964.3367556468172,
+          "frente_z90": "EN_Z90"
+        },
+        {
+          "corte": "C8",
+          "year_aproximado": 1964.3367556468172,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C2",
+          "year_aproximado": 1954.996577686516,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year_aproximado": 1957.996577686516,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1949.996577686516,
+          "t_years": 0.0,
+          "x": -0.8513642055284869,
+          "y": 0.23652722691905875,
+          "r": 0.8836097212735788,
+          "fase_grados": 164.4735667344417,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1954.996577686516,
+          "t_years": 5.0,
+          "x": -0.8199975048657935,
+          "y": 0.0997730093199192,
+          "r": 0.8260451327711336,
+          "fase_grados": 173.06265022292993,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1956.9993155373031,
+          "t_years": 7.002737850787071,
+          "x": -0.5473485224013863,
+          "y": -0.17003040737701391,
+          "r": 0.5731498446373114,
+          "fase_grados": 197.25708135799735,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1957.996577686516,
+          "t_years": 8.0,
+          "x": 0.03525821265689959,
+          "y": -0.43856284967549697,
+          "r": 0.43997785702834147,
+          "fase_grados": 274.5964022786626,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1963.4106776180697,
+          "t_years": 13.414099931553665,
+          "x": 0.4134040903224291,
+          "y": -0.030221567980574286,
+          "r": 0.4145072798715598,
+          "fase_grados": 355.8188765877615,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1963.662559890486,
+          "t_years": 13.665982203969861,
+          "x": 0.4808254856649232,
+          "y": -0.016430626902676236,
+          "r": 0.4811061350318911,
+          "fase_grados": 358.04286704281697,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1964.3367556468172,
+          "t_years": 14.340177960301162,
+          "x": 0.6423877104213754,
+          "y": 0.0824179887777246,
+          "r": 0.647653221542657,
+          "fase_grados": 367.3110762186614,
+          "frente_z90": "EN_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1964.3367556468172,
+          "t_years": 14.340177960301162,
+          "x": 0.6468347337300392,
+          "y": 0.23652722691905875,
+          "r": 0.6887236759641929,
+          "fase_grados": 380.08588512635106,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "MLK_TRAYECTORIA.png"
+    }
+  ],
+  "integridad": {
+    "archivos_protegidos": 135,
+    "intactos": true
+  }
+}
