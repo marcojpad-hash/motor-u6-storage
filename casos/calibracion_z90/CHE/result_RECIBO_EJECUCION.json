@@ -1,0 +1,1276 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "CAL_Z90_CHE",
+  "started_epoch": 1794389030.130739,
+  "finished_epoch": 1794389058.932928,
+  "duration_seconds": 28.802,
+  "input_path": "/workspace/alt_cameo/casos/calibracion_z90/CHE/entrada.json",
+  "input_sha256": "8a5c663053a4a5626dab595f89c22192c549f0d420c620d20909f597b344f78f",
+  "normalized_input_sha256": "4ee4254c6ea8eb0a2c460d95eea7a6acb1458a4d7e2d5d6aaa534023ceb9932e",
+  "output_path": "/workspace/alt_cameo/casos/calibracion_z90/CHE/result.json",
+  "output_sha256": "bc3d29b750e196dda9a0bf9170e7d07418e9343cdc02da5f947bd108d57675e9",
+  "runner_path": "/workspace/alt_cameo/motor/correr_estandar.py",
+  "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 27,
+      "engine_observation_calls_with_mc_metrics": 27,
+      "total_simulations": 18619,
+      "converged_calls": 27,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 671,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 751,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 718,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 887,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 692,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 848,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 703,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 579,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 755,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 751,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 751,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 722,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 751,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 898,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 766,
+          "converged": true
+        },
+        {
+          "observation_id": "C8_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 722,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 722,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C9_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 579,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "dumezil_f2_fuerza",
+        "porcentaje_relleno": 60.19,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 38.172,
+          "dynamis": 78.4274,
+          "estructura": 96.7742,
+          "frye": 34.4086,
+          "geometria_inercia": 51.6129,
+          "greimas": 75.8065,
+          "otras_dimensiones": 74.5161,
+          "puente_lateral": 51.6787,
+          "resolucion": 77.4194,
+          "trayectoria_estado": 83.2258
+        },
+        "peso_relativo": 0.044135,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 61.5
+      },
+      "H2": {
+        "familia": "monomito_02_llamado_a_la_aventura",
+        "porcentaje_relleno": 59.48,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 9.6774,
+          "booker": 38.172,
+          "dynamis": 52.0161,
+          "estructura": 93.5484,
+          "frye": 39.7849,
+          "geometria_inercia": 50.0,
+          "greimas": 82.2581,
+          "otras_dimensiones": 65.3226,
+          "puente_lateral": 67.0836,
+          "resolucion": 70.9677,
+          "trayectoria_estado": 85.4839
+        },
+        "peso_relativo": 0.042925,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 60.04
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "bing_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "aefd6eb47aac748dbe758e598153108912f5839feafdabc436c072d08c78dfdf"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "bc3d29b750e196dda9a0bf9170e7d07418e9343cdc02da5f947bd108d57675e9"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "e0ca30df4ff375405c1c0574cd80bec427ae0d04dca2c3509580297382a8ba22",
+      "manifest_files": 317,
+      "deriva": [
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 109,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/workspace/alt_cameo/casos/calibracion_z90/CHE/result_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/workspace/alt_cameo/casos/calibracion_z90/CHE/result_CEB_LEDGER_1.jsonl",
+          "sha256": "7a7f3cbcce290328f38f9eda8e6b98523f308e740d470b63addfded3b21da90c",
+          "lineas": 67250
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/workspace/calibracion_z90_runtime/CHE/stinkbox",
+      "storage": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/workspace/calibracion_z90_runtime/CHE/stinkbox",
+      "storage": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "bing_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "aefd6eb47aac748dbe758e598153108912f5839feafdabc436c072d08c78dfdf",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 81,
+    "z_corte": "1963-11-03",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1963-11-03",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 81,
+      "tokens_despues_corte": 81
+    },
+    "query": "aprendizaje rutina cotidiano autonomia autoridad estancamiento incertidumbre aburrimiento viaje incidente_detonante desafio comprension_nueva busqueda_libertad opresion injusticia abuso_poder conciencia_problema obligacion_moral formacion_literaria_creativa busqueda_identidad dilema_moral rebeldia desafio_autoridad ruptura_pasado hostilidad represalia persecucion crisis_abrupta amenaza_central guia consejo alianza compromiso partida rivalidad_poder oportunidad invitacion busqueda_riesgo secreto audacia",
+    "urls": [
+      "https://zoom.earth/",
+      "https://mapy.com/",
+      "https://mapper.acme.com/",
+      "https://www.windy.com/",
+      "https://www.pinnacle.com/en/",
+      "https://en.wikipedia.org/wiki/Paul_McCartney",
+      "https://www.nba.com/games",
+      "https://en.wikipedia.org/wiki/Osama_bin_Laden"
+    ],
+    "consultado_utc": "2026-11-11T09:23:51+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-11T09:23:51+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-11T09:23:51+00:00",
+        "error": "buscador duckduckgo_html sin resultados URL verificables"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-11T09:23:51+00:00",
+        "error": "buscador duckduckgo_lite sin resultados URL verificables"
+      },
+      {
+        "provider": "bing_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-11T09:23:51+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "dumezil_f2_fuerza",
+    "H2": "monomito_02_llamado_a_la_aventura",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "FRAGIL",
+    "estado_durante_corrida": "RESOLUCION_REQUERIDA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "dumezil_f2_fuerza",
+      "porcentaje_relleno": 60.19,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 38.172,
+        "dynamis": 78.4274,
+        "estructura": 96.7742,
+        "frye": 34.4086,
+        "geometria_inercia": 51.6129,
+        "greimas": 75.8065,
+        "otras_dimensiones": 74.5161,
+        "puente_lateral": 51.6787,
+        "resolucion": 77.4194,
+        "trayectoria_estado": 83.2258
+      },
+      "peso_relativo": 0.044135,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.5
+    },
+    "H2": {
+      "familia": "monomito_02_llamado_a_la_aventura",
+      "porcentaje_relleno": 59.48,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 9.6774,
+        "booker": 38.172,
+        "dynamis": 52.0161,
+        "estructura": 93.5484,
+        "frye": 39.7849,
+        "geometria_inercia": 50.0,
+        "greimas": 82.2581,
+        "otras_dimensiones": 65.3226,
+        "puente_lateral": 67.0836,
+        "resolucion": 70.9677,
+        "trayectoria_estado": 85.4839
+      },
+      "peso_relativo": 0.042925,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 60.04
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.3311,
+      "techo_pct": 91.6689,
+      "pp_por_punto_de_rank_fusion": 1.572411,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "dumezil_f2_fuerza",
+        "rol": "eje",
+        "peso_en_set": 0.100222,
+        "predictibilidad_estructural_pct": 61.5,
+        "cobertura_unica_frac": 0.1402
+      },
+      {
+        "familia": "monomito_02_llamado_a_la_aventura",
+        "rol": "componente",
+        "peso_en_set": 0.097474,
+        "predictibilidad_estructural_pct": 60.04,
+        "cobertura_unica_frac": 0.0359
+      },
+      {
+        "familia": "eterno_retorno_02_cosmizacion_fundacion",
+        "rol": "componente",
+        "peso_en_set": 0.084994,
+        "predictibilidad_estructural_pct": 53.42,
+        "cobertura_unica_frac": 0.0581
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.084889,
+        "predictibilidad_estructural_pct": 53.36,
+        "cobertura_unica_frac": 0.0619
+      },
+      {
+        "familia": "monomito_09_la_recompensa",
+        "rol": "componente",
+        "peso_en_set": 0.084349,
+        "predictibilidad_estructural_pct": 53.08,
+        "cobertura_unica_frac": 0.0594
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.076132,
+        "predictibilidad_estructural_pct": 48.72,
+        "cobertura_unica_frac": 0.1043
+      },
+      {
+        "familia": "monomito_05_cruce_del_primer_umbral",
+        "rol": "componente",
+        "peso_en_set": 0.072171,
+        "predictibilidad_estructural_pct": 46.62,
+        "cobertura_unica_frac": 0.0497
+      },
+      {
+        "familia": "8_rebelion",
+        "rol": "componente",
+        "peso_en_set": 0.070768,
+        "predictibilidad_estructural_pct": 45.87,
+        "cobertura_unica_frac": 0.0382
+      },
+      {
+        "familia": "monomito_04_encuentro_con_el_mentor",
+        "rol": "componente",
+        "peso_en_set": 0.071403,
+        "predictibilidad_estructural_pct": 46.21,
+        "cobertura_unica_frac": 0.0244
+      },
+      {
+        "familia": "monomito_06_pruebas_aliados_y_enemigos",
+        "rol": "componente",
+        "peso_en_set": 0.070383,
+        "predictibilidad_estructural_pct": 45.67,
+        "cobertura_unica_frac": 0.1065
+      },
+      {
+        "familia": "tainter_03_vulnerabilidad_sistemica",
+        "rol": "componente",
+        "peso_en_set": 0.069272,
+        "predictibilidad_estructural_pct": 45.08,
+        "cobertura_unica_frac": 0.0879
+      },
+      {
+        "familia": "monomito_01_mundo_ordinario",
+        "rol": "componente",
+        "peso_en_set": 0.06747,
+        "predictibilidad_estructural_pct": 44.12,
+        "cobertura_unica_frac": 0.0408
+      },
+      {
+        "familia": "social_12_zimbardo_prision_stanford",
+        "rol": "componente",
+        "peso_en_set": 0.050475,
+        "predictibilidad_estructural_pct": 35.11,
+        "cobertura_unica_frac": 0.0587
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "dumezil_f2_fuerza con componentes de monomito_02_llamado_a_la_aventura (margen 0.927253 < GATE_SEPARATION 1.0)",
+      "peso_H1": 0.044135,
+      "peso_H2": 0.042925,
+      "peso_H1_en_par": 0.506949,
+      "peso_H2_en_par": 0.493051
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 27,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "dumezil_f2_fuerza",
+          "rol_en_set": "eje",
+          "rank_fusion": 33.81303,
+          "soporte_estructural_relativo": 0.05069324,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.155976,
+            "micro": 0.593937,
+            "meso": 0.51674,
+            "macro": 0.623286,
+            "aceleracion": 0.628269,
+            "divergencia_entre_escala": 0.106546,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "monomito_02_llamado_a_la_aventura",
+          "rol_en_set": "componente",
+          "rank_fusion": 32.885777,
+          "soporte_estructural_relativo": 0.04930308,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.131284,
+            "micro": 0.612824,
+            "meso": 0.512184,
+            "macro": 0.571918,
+            "aceleracion": 0.641006,
+            "divergencia_entre_escala": 0.10064,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "24_rivalidad_de_superior_e_inferior",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 31.894913,
+          "soporte_estructural_relativo": 0.04781756,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.063535,
+            "micro": 0.514396,
+            "meso": 0.485298,
+            "macro": 0.595608,
+            "aceleracion": 0.53859,
+            "divergencia_entre_escala": 0.110311,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "eterno_retorno_02_cosmizacion_fundacion",
+          "rol_en_set": "componente",
+          "rank_fusion": 28.675429,
+          "soporte_estructural_relativo": 0.04299084,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.373461,
+            "micro": 0.719154,
+            "meso": 0.761827,
+            "macro": 0.579212,
+            "aceleracion": 0.220744,
+            "divergencia_entre_escala": 0.182615,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 28.639933,
+          "soporte_estructural_relativo": 0.04293762,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.393607,
+            "micro": 0.834021,
+            "meso": 0.702393,
+            "macro": 0.553995,
+            "aceleracion": 0.663382,
+            "divergencia_entre_escala": 0.280026,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "dumezil_desequilibrio_f2_come_al_resto",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 28.627615,
+          "soporte_estructural_relativo": 0.04291915,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.143097,
+            "micro": 0.60864,
+            "meso": 0.520934,
+            "macro": 0.585071,
+            "aceleracion": 0.667774,
+            "divergencia_entre_escala": 0.087706,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "monomito_09_la_recompensa",
+          "rol_en_set": "componente",
+          "rank_fusion": 28.457723,
+          "soporte_estructural_relativo": 0.04266445,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.118779,
+            "micro": 0.471232,
+            "meso": 0.627634,
+            "macro": 0.579303,
+            "aceleracion": 0.509999,
+            "divergencia_entre_escala": 0.156402,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 27.832701,
+          "soporte_estructural_relativo": 0.0417274,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.162066,
+            "micro": 0.652217,
+            "meso": 0.538762,
+            "macro": 0.552119,
+            "aceleracion": 0.661951,
+            "divergencia_entre_escala": 0.113455,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "arquetipo_el_explorador",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 27.491453,
+          "soporte_estructural_relativo": 0.04121579,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.010313,
+            "micro": 0.487736,
+            "meso": 0.489015,
+            "macro": 0.507779,
+            "aceleracion": 0.4972,
+            "divergencia_entre_escala": 0.020044,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_010",
+          "familia": "tainter_01_inversion_complejidad_productiva",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 27.078462,
+          "soporte_estructural_relativo": 0.04059663,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.326166,
+            "micro": 0.70394,
+            "meso": 0.715542,
+            "macro": 0.569766,
+            "aceleracion": 0.320734,
+            "divergencia_entre_escala": 0.145775,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_011",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.685365,
+          "soporte_estructural_relativo": 0.03850807,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.077872,
+            "micro": 0.465389,
+            "meso": 0.558057,
+            "macro": 0.593363,
+            "aceleracion": 0.44397,
+            "divergencia_entre_escala": 0.127974,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_012",
+          "familia": "monomito_05_cruce_del_primer_umbral",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.349191,
+          "soporte_estructural_relativo": 0.03650484,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.007104,
+            "micro": 0.48041,
+            "meso": 0.482314,
+            "macro": 0.547932,
+            "aceleracion": 0.495733,
+            "divergencia_entre_escala": 0.067522,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_013",
+          "familia": "monomito_04_encuentro_con_el_mentor",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.089861,
+          "soporte_estructural_relativo": 0.03611605,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.011715,
+            "micro": 0.483206,
+            "meso": 0.484858,
+            "macro": 0.549508,
+            "aceleracion": 0.496267,
+            "divergencia_entre_escala": 0.066302,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_014",
+          "familia": "8_rebelion",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.875711,
+          "soporte_estructural_relativo": 0.03579499,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.030198,
+            "micro": 0.484272,
+            "meso": 0.472521,
+            "macro": 0.588505,
+            "aceleracion": 0.517326,
+            "divergencia_entre_escala": 0.115983,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_015",
+          "familia": "monomito_06_pruebas_aliados_y_enemigos",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.745867,
+          "soporte_estructural_relativo": 0.03560033,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.04086,
+            "micro": 0.471232,
+            "meso": 0.499507,
+            "macro": 0.590552,
+            "aceleracion": 0.498933,
+            "divergencia_entre_escala": 0.11932,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_016",
+          "familia": "monomito_07_aproximacion_a_la_caverna_mas_profunda",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.471553,
+          "soporte_estructural_relativo": 0.03518907,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.133602,
+            "micro": 0.503467,
+            "meso": 0.62291,
+            "macro": 0.574025,
+            "aceleracion": 0.220744,
+            "divergencia_entre_escala": 0.119444,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_017",
+          "familia": "tainter_03_vulnerabilidad_sistemica",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.370968,
+          "soporte_estructural_relativo": 0.03503827,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.022617,
+            "micro": 0.512264,
+            "meso": 0.498667,
+            "macro": 0.522995,
+            "aceleracion": 0.511598,
+            "divergencia_entre_escala": 0.024328,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_018",
+          "familia": "monomito_01_mundo_ordinario",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.763034,
+          "soporte_estructural_relativo": 0.03412684,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.040562,
+            "micro": 0.491201,
+            "meso": 0.494574,
+            "macro": 0.453382,
+            "aceleracion": 0.491867,
+            "divergencia_entre_escala": 0.041191,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_019",
+          "familia": "sistema_domiciano_maiestas",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 22.30927,
+          "soporte_estructural_relativo": 0.03344655,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.022191,
+            "micro": 0.4988,
+            "meso": 0.503333,
+            "macro": 0.531153,
+            "aceleracion": 0.467513,
+            "divergencia_entre_escala": 0.032353,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_020",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 22.129032,
+          "soporte_estructural_relativo": 0.03317633,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.020094,
+            "micro": 0.489601,
+            "meso": 0.481355,
+            "macro": 0.559183,
+            "aceleracion": 0.515329,
+            "divergencia_entre_escala": 0.077828,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_021",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 21.435699,
+          "soporte_estructural_relativo": 0.03213687,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.017004,
+            "micro": 0.491334,
+            "meso": 0.492121,
+            "macro": 0.491039,
+            "aceleracion": 0.498133,
+            "divergencia_entre_escala": 0.001082,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_022",
+          "familia": "schwartz_06_poder",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 20.725806,
+          "soporte_estructural_relativo": 0.03107259,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.03241,
+            "micro": 0.485071,
+            "meso": 0.534678,
+            "macro": 0.528866,
+            "aceleracion": 0.449902,
+            "divergencia_entre_escala": 0.049606,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_023",
+          "familia": "sistema_domiciano",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 20.036259,
+          "soporte_estructural_relativo": 0.0300388,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.004448,
+            "micro": 0.472029,
+            "meso": 0.510985,
+            "macro": 0.523658,
+            "aceleracion": 0.40838,
+            "divergencia_entre_escala": 0.051629,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_024",
+          "familia": "dumezil_f1_soberania_juridica",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 19.561287,
+          "soporte_estructural_relativo": 0.02932671,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.135499,
+            "micro": 0.512664,
+            "meso": 0.630347,
+            "macro": 0.560237,
+            "aceleracion": 0.211085,
+            "divergencia_entre_escala": 0.117683,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_025",
+          "familia": "tainter_04_colapso_por_simplificacion_forzada",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 19.202203,
+          "soporte_estructural_relativo": 0.02878837,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_DESCENDENTE",
+            "senal_multiescala": -0.424323,
+            "micro": 0.239249,
+            "meso": 0.217623,
+            "macro": 0.406644,
+            "aceleracion": 0.759097,
+            "divergencia_entre_escala": 0.189021,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_026",
+          "familia": "dialectica_01_tesis_estabilidad_hegemonica",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 17.835271,
+          "soporte_estructural_relativo": 0.02673903,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.028375,
+            "micro": 0.484671,
+            "meso": 0.529472,
+            "macro": 0.528418,
+            "aceleracion": 0.382252,
+            "divergencia_entre_escala": 0.044801,
+            "n_cortes_observados": 9
+          }
+        },
+        {
+          "id": "H_027",
+          "familia": "social_12_zimbardo_prision_stanford",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.029172,
+          "soporte_estructural_relativo": 0.02553051,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.103552,
+            "micro": 0.381874,
+            "meso": 0.450971,
+            "macro": 0.511827,
+            "aceleracion": 0.393903,
+            "divergencia_entre_escala": 0.129952,
+            "n_cortes_observados": 9
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "24_rivalidad_de_superior_e_inferior",
+            "monomito_09_la_recompensa",
+            "arquetipo_el_explorador",
+            "arquetipo_el_gobernante",
+            "monomito_05_cruce_del_primer_umbral",
+            "monomito_04_encuentro_con_el_mentor",
+            "8_rebelion",
+            "monomito_06_pruebas_aliados_y_enemigos",
+            "tainter_03_vulnerabilidad_sistemica",
+            "monomito_01_mundo_ordinario",
+            "sistema_domiciano_maiestas",
+            "monomito_08_la_odisea_o_prueba_suprema",
+            "schwartz_10_autodireccion",
+            "schwartz_06_poder",
+            "sistema_domiciano",
+            "dialectica_01_tesis_estabilidad_hegemonica",
+            "social_12_zimbardo_prision_stanford"
+          ],
+          "n_hipotesis": 17,
+          "soporte_estructural_agregado": 0.59552787,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "dumezil_f2_fuerza",
+            "monomito_02_llamado_a_la_aventura",
+            "eterno_retorno_02_cosmizacion_fundacion",
+            "20_sacrificio_por_un_ideal",
+            "dumezil_desequilibrio_f2_come_al_resto",
+            "9_audaz_empresa",
+            "tainter_01_inversion_complejidad_productiva",
+            "monomito_07_aproximacion_a_la_caverna_mas_profunda",
+            "dumezil_f1_soberania_juridica"
+          ],
+          "n_hipotesis": 9,
+          "soporte_estructural_agregado": 0.37568374,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_DESCENDENTE",
+          "hipotesis_que_convergen": [
+            "tainter_04_colapso_por_simplificacion_forzada"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.02878837,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "24_rivalidad_de_superior_e_inferior",
+          "monomito_09_la_recompensa",
+          "arquetipo_el_explorador",
+          "arquetipo_el_gobernante",
+          "monomito_05_cruce_del_primer_umbral",
+          "monomito_04_encuentro_con_el_mentor",
+          "8_rebelion",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          "tainter_03_vulnerabilidad_sistemica",
+          "monomito_01_mundo_ordinario",
+          "sistema_domiciano_maiestas",
+          "monomito_08_la_odisea_o_prueba_suprema",
+          "schwartz_10_autodireccion",
+          "schwartz_06_poder",
+          "sistema_domiciano",
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          "social_12_zimbardo_prision_stanford"
+        ],
+        "n_hipotesis": 17,
+        "soporte_estructural_agregado": 0.59552787,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/workspace/calibracion_z90_runtime/CHE/stinkbox",
+    "storage": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_CHE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_CHE",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 2,
+          "new_token_strings": 1,
+          "explicit_review_observations": 2,
+          "unique_tokens_total": 1
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 362,
+          "new_token_strings": 143,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 144
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/workspace/calibracion_z90_runtime/CHE/stinkbox",
+    "storage": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_CHE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_CHE",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 144
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/calibracion_z90_runtime/CHE/stinkbox/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 2,
+          "new_event_records": 243,
+          "new_token_strings": 9,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 153
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

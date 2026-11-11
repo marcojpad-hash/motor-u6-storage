@@ -1,0 +1,103 @@
+{
+  "caso": "CHE",
+  "persona": "Ernesto Che Guevara",
+  "source": "casos/originales_z90/inputs/001_Ernesto_Che_Guevara_9f3baec1110e/_cuts_che_run.json",
+  "source_sha256": "9f3baec1110ea3b8c4971697ea985597e9b04701bc79603fc2e2e129309fc12a",
+  "source_markers": "casos/originales_z90/inputs/001_Ernesto_Che_Guevara_9f3baec1110e/markers_che_Z1963.json",
+  "source_markers_sha256": "02305b0ac1a5c16ee5dfeb99a6ca5feb794c737181d7eb3dc6b0f994aacbd0a4",
+  "nacimiento": "1928-06-14",
+  "muerte": "1967-10-09",
+  "fechas_fuente": "marker original (died o died_SEALED incluido)",
+  "z90": "1963-11-03",
+  "z90_metodo": "nacimiento + redondeo al día más próximo de 0.9*(muerte-nacimiento); no se afirma precisión subdiaria",
+  "z90_dias_exactos": 12924.9,
+  "z90_original": "1963-11-03",
+  "cortes_pre": 9,
+  "cortes_post_apartados": 0,
+  "ultimo_corte_pre": "1963-11-03",
+  "fechas_reconstruidas": [
+    {
+      "id": "C1",
+      "date": "1949-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C2",
+      "date": "1953-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C3",
+      "date": "1952-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C4",
+      "date": "1954-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C5",
+      "date": "1956-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C6",
+      "date": "1958-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C7",
+      "date": "1959-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C8",
+      "date": "1962-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C9",
+      "date": "1963-11-03",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    }
+  ],
+  "orden_original_pre": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "orden_ejecucion_pre": [
+    "C1",
+    "C3",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "hechos_tokens_pesos_intactos": true,
+  "FALLO_TOKEN": [],
+  "observaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "ORDEN_CRONOLOGICO_RECONSTRUIDO_CHE_C3_ANTES_C2",
+    "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+  ],
+  "estado_protocolo": "DIAGNOSTICO_NO_CERTIFICA_CALIBRACION_CONFORME",
+  "input_sha256": "8a5c663053a4a5626dab595f89c22192c549f0d420c620d20909f597b344f78f",
+  "futuro_sha256": "a224004f1d269dd56c0e203840a7f795706bf8faa4ccc4609751f5a405fb792f",
+  "freeze_registrado": "2026-11-11T03:23:37.894465-06:00",
+  "zona": "America/Mexico_City",
+  "git_base": "3cf21d59e65f77d65e71e627fc2c0cd188c1442b",
+  "Engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

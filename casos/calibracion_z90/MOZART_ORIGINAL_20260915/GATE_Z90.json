@@ -1,0 +1,17 @@
+{
+  "caso": "MOZART_ORIGINAL_20260915",
+  "gate": "GATE_Z_TRABAJO_20261024",
+  "z_trabajo_asignado_para_prueba": "1788-05-04",
+  "modo_z_asignado_para_prueba": "historico",
+  "estado": "RECHAZO",
+  "errores": [
+    "R3 C1: sin 'evidencia'",
+    "R3 C2: sin 'evidencia'",
+    "R3 C3: sin 'evidencia'",
+    "R3 C4: sin 'evidencia'",
+    "R3 C5: sin 'evidencia'",
+    "R3 C6: sin 'evidencia'",
+    "R3 C7: sin 'evidencia'"
+  ],
+  "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+}

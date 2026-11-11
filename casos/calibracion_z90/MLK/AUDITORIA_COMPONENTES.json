@@ -1,0 +1,1497 @@
+{
+  "caso": "MLK",
+  "ceb_status": "VERIFIED_FLOW_WITH_ANOMALIES",
+  "anomalies": [
+    {
+      "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+      "component": "geometria_multicapa_integrada_working_v1"
+    }
+  ],
+  "wiring_diagnostics": [
+    {
+      "type": "WIRING_DECLARED_EXECUTED_NOT_OBSERVED",
+      "component": "geometria_multicapa_integrada_working_v1",
+      "diagnosis": "declared_executed_but_no_runtime_stage"
+    }
+  ],
+  "componentes_estado": {
+    "ACTIVA": 83,
+    "ACTIVA_MUDA": 36,
+    "SUPERADA": 11,
+    "MARCAJE": 1,
+    "GUARDIAN_FILTRO": 1,
+    "NO_CORRE": 1,
+    "FUERA_DEL_MOTOR": 2,
+    "PROHIBIDA": 1,
+    "ACTIVA_DIAGNOSTICA": 1
+  },
+  "registro_componentes": {
+    "conteo": 137,
+    "filas": [
+      {
+        "pieza": "geometria",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "polti_caldero",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "traza_campo_244",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_reporte_3d",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "otto_numinoso",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "embudo_clinico",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "trayectoria_hosteleria",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "EXECUTED_SIN_SENAL",
+        "motivo": "verificado por hub (trayectoria_hosteleria): ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, desgaste_cambaceo_itinerante, aislamiento_social) en P/A/C ni por alias en textos admitidos; otras familias de oficio/sustancias activas: ninguna",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "estabilidad_vectorial",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "aquiles_h",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "billar_circular_v0_2",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "ricci_forman_v0_1",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "lateral_metrics_v1_1",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "acero_zoomout",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "capa2_antecedentes",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_picos_mesetas.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_arco_field_snyder_mckee.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_sesgo_lectura.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_pregunta_detras",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_metodo_rigor",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "EXECUTED_SIN_SENAL",
+        "motivo": "verificado por hub (plugin_metodo_rigor (alimentado)): cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOPENHAUER requieren hipótesis/inverso (post-H, guardianes)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "semiotica_deriva",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "plugin_arquetipos_dinamicos",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_guardia_no_cruce.py",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "ABSORBIDO_EN_GUARDIA_TRANSVERSAL",
+        "motivo": "absorbido: la lógica corre en GuardiaNoCruce dentro de _run_transversal_guards (protocol_controls); el archivo no se invoca como API",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_pregunta_dirigida",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "EXECUTED_SIN_HALLAZGOS",
+        "motivo": "pregunta es un identificador (sin lenguaje natural)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "caldero_run.py",
+        "fuente": "motor",
+        "estado": "SUPERADA",
+        "estado_crudo": "SUPERADA",
+        "motivo": "escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monomito_v2.py",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "predictor_vecinos_prefijo_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "SIN_PREFIJO_EN_INPUT",
+        "motivo": "ningún corte inicial trae estado monomítico (clave estado_monomito/monomito/etapa_monomito o token exacto del vocabulario de las 15 biografías); no se rellena",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_cameo_institucional.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['cameo_activity', 'cameo_profile_activity'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "cameo_to_703_lateral_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "vecinos_caldero/neighbor_store.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "sidecar_caldero_busqueda_arquetipos.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "EJECUTADO: provider=duckduckgo_html intento=EXECUTED resultados=8 consultas=1; 162 tokens vecinos; su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_circulo_monomito_v2.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "motor_interrelacion_extensible_v0_1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['relational_activity', 'relational_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "sujetos_014.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "plugin_arcos_emocionales_laterales.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "su salida no nombra ningún candidato del top: el puente no llega",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "dynamis_dramatica_sistemica",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "corre en UNICO (l.~1703) y sus dims dynamis_* entran al vector de candidato",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "pre_h_analogical_search(V0.18)",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "pre_h_orientation_reused_caldero_search",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "stinkbox_transport_v0_2.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "llega a H",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "filtro_relleno_013.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": true,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "stinkbox_to_light_bus_v1",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "dimensiones ['relational_activity', 'relational_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "protocolo_transversal_absorbido",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "laterales_unico_v1.py(pre)",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "votos del hub que llegan al rank: negativo_ricci_vs_billar, familias_tokens_puente; los sensores del hub no alimentan al predictor",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:sombrero_blanco_entrada",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "HUB_ACTIVA_MUDA",
+        "motivo": "entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:negativo_ricci_vs_billar",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "HUB_ACTIVA",
+        "motivo": "18 familias leídas; cuadrantes {'SOLO_BILLAR': 17, 'NINGUNO': 1}; lentes bajo nulo: []",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:familias_tokens_puente",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "HUB_ACTIVA",
+        "motivo": "EXPERIMENTAL; 6 candidatos con señal; voto varía; coactivación indep 6, trivial 2",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:marco_7783_geometria",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "HUB_ACTIVA",
+        "motivo": "PATCH009: zonas [0, 1, 243, 540, 541] (6 transiciones, 2 revisitas); discrepancia media 1.2857; cúmulos 2; cuadrante en 7/8; Polti en 5/8; intersecciones de anillos 1 en ['C8']; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:caldero_ii_cuadrantes",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "HUB_ACTIVA",
+        "motivo": "Q1-Q4 derivados de tokens del corte: 7/8 cortes con cuadrante; puente Caldero=True",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "hub:guardian_entrada_autoevidencia",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "HUB_ACTIVA_MUDA",
+        "motivo": "bandera=False autoevidencia=0 familias=[]",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "cameo_to_244_adapter_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "NOT_APPLICABLE",
+        "motivo": "adaptador devuelve NOT_APPLICABLE: APPROVED_MAPPING_FILE_ABSENT; no alimenta H por diseño",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "funciones_souriau",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "marcador_limite_geometrico_v0_1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED_DIAGNOSTIC",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "matriz_clases",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "PRESENTE",
+        "motivo": "registro de PRESENCIA de MATRIZ/PUENTE/familias_tokens (inventario; no depende del caso); sin nombres de candidato -> no entra al ranking",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "marco_7783",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "figura_pac",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "asigna_foco_no_intercambia_sujeto",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "metacognition_v0_1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "motivo": "'metacognition' no lo recorre el puente de nombres (excluido o ausente en features)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "compuerta_cierre_latencia_v0_16_4",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "proyeccion_longitudinal",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "plugin_sombrero_blanco_token.py",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "EXECUTED_SIN_SENAL",
+        "motivo": "verificado por hub (plugin_sombrero_blanco_token (declaración)): n_esta_corrida=0; feeds_predictor VERIFICADO=False (la fila UNICO declara True; corrige 010b)",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_entrega_luces",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "plugin_resolucion_autonoma_consistencia.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "plugin_verificador_consistencia_adversarial.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "guardianes_control_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "ruta_cierre_latente_guardianes",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "modo_estricto_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "laterales_unico_v1.py(post)",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "autoevidencia_stores_011.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "resolucion_operativa_terminal_017",
+        "fuente": "motor",
+        "estado": "ACTIVA_MUDA",
+        "estado_crudo": "RESUELTO_OPERACIONALMENTE",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "cierre_final_016",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "decimo_hombre_esteroides_mayeutica_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED_WITH_CONCLUSION",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "predictibilidad_set_021.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "movimiento_de_fondo_u4.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": false,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "geometria_multicapa_integrada_working_v1",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": false,
+        "alimenta_H": true,
+        "can_decide_H": false,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "hipotesis_trayectoria_abierta_v1.py",
+        "fuente": "motor",
+        "estado": "ACTIVA",
+        "estado_crudo": "EXECUTED",
+        "alimenta_predictor": true,
+        "alimenta_H": true,
+        "can_decide_H": true,
+        "motivo_estado": "SIN_MOTIVO_REGISTRADO"
+      },
+      {
+        "pieza": "traza_campo_244_dedupe",
+        "archivo": "traza_campo_244.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "CONTROL de doble conteo (PATCH 010a)",
+        "motivo": "sin doble copia en features (nada que deduplicar)",
+        "can_decide_H": false,
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "sombrero_blanco_entrada",
+        "archivo": "sidecar_sombrero_blanco_filtro_v1.py",
+        "sha256": "6c9d907cc0b4a4ec8c7bc517b81c55716d9551fe372cabbbea93558334855df2",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "GUARDIAN/FILTRO de entrada (antes del predictor)",
+        "motivo": "entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "negativo_ricci_vs_billar",
+        "archivo": "lectura_negativo_ricci_vs_billar_v0_1.py",
+        "sha256": "76cd1a1fb2e5db822d18484e5d8255467836d9cf7d0298e6cafa6701a115ddda",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "VOTO lateral (convergencia/ranking; no gatea cierre)",
+        "motivo": "18 familias leídas; cuadrantes {'SOLO_BILLAR': 17, 'NINGUNO': 1}; lentes bajo nulo: []",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "familias_tokens_puente",
+        "archivo": "PUENTE_244_FAMILIAS.json",
+        "sha256": "3cc9fd253d1d669f81663839ed46d47429db7467ecaadd49b6b41303f46adfbf",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "VOTO lateral EXPERIMENTAL (1 voto por candidato)",
+        "motivo": "EXPERIMENTAL; 6 candidatos con señal; voto varía; coactivación indep 6, trivial 2",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "area_tokens",
+        "archivo": "sidecar_area_tokens_v1.py",
+        "sha256": "0568dce427a907a323429477e79fc63f3cbf2a3fed6ad303e141329fecf3d448",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "AREA DE TOKENS (registro taxonomy-ready + coactivación; no decide)",
+        "motivo": "30 familias registradas; activas: arquetipos_dinamicos.jung_trickster_atipico@['C3', 'C4', 'C7']:['incidente_detonante', 'planificacion']; arquetipos_dinamicos.propp_01_villano_agresor@['C3', 'C5', 'C7']:['persecucion']",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "memento",
+        "archivo": "sidecar_corte_memento.py",
+        "sha256": "e56f5fb140484fe5ecaedece3871112d64cd1fd4067f68c40064d6dfca1f52d9",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR Bus Capa 2 (PRE, antes de H)",
+        "motivo": "proto-H ['opresion', 'hostilidad']; se sostiene: None",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "matriz_corrida",
+        "archivo": "matriz_corrida.py",
+        "sha256": "9cf60a5404ba876615f27efbfaf584aa2e5a2b9af4192c1d1671d769f0875cd3",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "CONTROL checkpoint 20 (kernel+flujo+latencia+capa2)",
+        "motivo": "claves: ['Alimenta_H', 'capa2', 'cierre_lectura_permitido', 'control', 'flujo_soluciones', 'kernel_protocolo', 'matriz', 'nota']",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "luces_gemini_packs",
+        "archivo": "sidecar_luces_gemini_packs.py",
+        "sha256": "493c434b44c064c2111978d95fc95162ea0218cabbe182276365784dc23518ec",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR (bus Capa 2)",
+        "motivo": "luces activas: 0",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "amantes_arquetipos",
+        "archivo": "sidecar_amantes_arquetipos.py",
+        "sha256": "7923d49cde131871186358ab078590da4d21a3f842a5ce268016c731c2c46ca9",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR (bus Capa 2, solo con gatillo)",
+        "motivo": "gatillo: None",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "marco_7783_geometria",
+        "archivo": "puente_souriau_caldero_polti_v1.py",
+        "sha256": "2a5d23962d60232e16ac152ac0ee443fb9bc4f261f6274dbd9934266eaa31338",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "LATERAL GEOMÉTRICO de trazabilidad (marco_7783 + Caldero Q1-Q4 + Polti; no escribe H)",
+        "motivo": "PATCH009: zonas [0, 1, 243, 540, 541] (6 transiciones, 2 revisitas); discrepancia media 1.2857; cúmulos 2; cuadrante en 7/8; Polti en 5/8; intersecciones de anillos 1 en ['C8']; mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "trazabilidad_temporal",
+        "archivo": "sidecar_trazabilidad_temporal.py",
+        "sha256": "881898fbf26bacb9cf9fb8900803ee45189dc1c4a8f1feb1b738577396b19d98",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR",
+        "motivo": "PATCH004 lee P/A/C: 67 tokens trazados; estados {'ON': 14, 'PARPADEO': 23, 'NO_APARECIDO_AUN': 0, 'OFF': 30}; PATCH009 capa geométrica Souriau/Caldero/Polti adjunta",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "integracion_semantica",
+        "archivo": "capa_integracion_semantica_v1_2.py",
+        "sha256": "4de3ddef696e8686a8ff272ca02c6d9e84cd8b9c540221d63c6f46bd213a6f2c",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR",
+        "motivo": "8 configuraciones",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "interrelacion_tokens",
+        "archivo": "capa_interrelacion_tokens.py",
+        "sha256": "c7491981db4e46d23ec29b7df82d326dc3be9a445321d83f2ab41e7e4a0bfe05",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR",
+        "motivo": "relación por corte entre familias activas (top5 P) y contexto",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "cuerpo_arco",
+        "archivo": "sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py",
+        "sha256": "cf153eeb6d8fb80823eecb71f0aac3d37d3999015977a55e5b1c2b01bdd103bd",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "FAMILIA DE TOKENS cuerpo/muerte (área de tokens; EXPERIMENTAL)",
+        "motivo": "sin tokens de cuerpo/salud en P/A/C ni en textos admitidos (ninguna enfermedad/herida/agonía/muerte en el input)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "alias_reactivacion",
+        "archivo": "plugin_alias_reactivacion.py",
+        "sha256": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR (dry-run sobre el input)",
+        "motivo": "alias propuestos 0; faltaron []",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "fix_entrada",
+        "archivo": "plugin_fix_entrada.py",
+        "sha256": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR (dry-run; no cambia el input)",
+        "motivo": "remapeo propuesto (no aplicado)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "familias_gloria_sacro",
+        "archivo": "plugin_familias_gloria_sacro.py",
+        "sha256": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR sin mapeo al catálogo",
+        "motivo": "familias fuera del catálogo cargado (fusionar() escribiría patterns: prohibido); solo se reportan tokens observados",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "lente_souriau",
+        "archivo": "sidecar_lente_souriau.py",
+        "sha256": "2fb351df37b4466c6923b22c22cea9ef4429f6c3d5c6e824ea5ea47e22eb7191",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR",
+        "motivo": "focos con valor: 4",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "souriau_v1_4",
+        "archivo": "plugin_souriau_210141.py",
+        "sha256": "2129f5d66230458745c3659b90c6ecd39704fbd04d90acb88d4f02186cc3a7af",
+        "fuente": "laterales_unico_v1",
+        "estado": "MARCAJE",
+        "rol": "MARCAJE (marcador; no trazabilidad)",
+        "motivo": "MARCAJE — decisión Mj 2026-10-06: aritmética Souriau 210141 = marcaje, no trazabilidad | PATCH007: 8 situaciones por corte, 6 relaciones entre funciones; funciones DERIVADAS (no declaradas)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "zri_v0_1_v0_2",
+        "archivo": "zri_coupling_v0_2.py",
+        "sha256": "38aaeb5dcaded0e7c15ab3d5613de84baad2aefd3ed053611e2f4edce89efe61",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR (Z-RI v0.1 sellos + v0.2 acople)",
+        "motivo": "v0.1: 8 sellos; v0.2: acople P/A/C en 8 cortes; E_n no se calcula (no hay resultado liberado); PATCH009 + acople de anillos",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "tusi_par",
+        "archivo": "tusi_par_indice_exploratorio_v0_1.py",
+        "sha256": "290d1bb32bb86766593557bf5d139991cf708ac7b4b568412761f4e98b0f86f8",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR EXPLORATORIO",
+        "motivo": "2 pares con índice de Tusi",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "schrodinger_transport",
+        "archivo": "schrodinger_transport_esqueleto_v0_1.py",
+        "sha256": "e88cd66f1fbe4aead9a36c231d6f727d2cbdb8f0d138412215d448d1af68f599",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR (esqueleto)",
+        "motivo": "esqueleto: μ_t por corte calculado; costo y Sinkhorn NO_VERIFICADO (NotImplemented por diseño)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "caldero_ii_cuadrantes",
+        "archivo": "plugin_circulo_monomito_v2.py",
+        "sha256": "9a6d858200f80e0cda09e46bc1cd487a885c6d36787c959417e4a2242e3c8a0f",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR (Caldero II circular; sustituye escaleta)",
+        "motivo": "Q1-Q4 derivados de tokens del corte: 7/8 cortes con cuadrante; puente Caldero=True",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "caldero_run.py",
+        "archivo": "caldero_run.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "SUPERADA",
+        "rol": "Caldero II escaleta lineal (histórico)",
+        "motivo": "PATCH 006: escaleta lineal sustituida por cuadrantes circulares (caldero_ii_cuadrantes / plugin_circulo_monomito_v2)",
+        "can_decide_H": false,
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "predictor_vecinos_prefijo",
+        "archivo": "predictor_vecinos_prefijo_v1.py",
+        "sha256": "903d4a5bbd0a6d91d8d6b7df0ed3ec2568a2fa39161ef061d62853b73fb9d257",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR",
+        "motivo": "PATCH005 intentado: ningún corte inicial trae estado monomítico exacto (sin prefijo; no se rellena)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "filtro_identidad_zoom",
+        "archivo": "filtro_identidad_zoom_out_zoom_in.py",
+        "sha256": "1d00fb10f02f0e0f68863654d67d5d368a66c3e3b7b1ec4accb319e1430f48be",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR (identidad de fuentes)",
+        "motivo": "sin fuentes de búsqueda verificables (caldero_search_sources o puente conectado ausentes): nada que filtrar",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "venn_sistemas",
+        "archivo": "sidecar_venn_sistemas_v1.py",
+        "sha256": "1d0401fdc509b4c91f58aad99087c6d66166fc744447e2f9115974bd901a03b6",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "INTERRELACION/VENN por corte (alimenta motor_interrelacion_extensible.venn; no decide)",
+        "motivo": "8 cortes; 3 con intersección entre sistemas; núcleo ≥3 sistemas en []; vacíos en todo el caso: ['cameo', 'memoria_caldero']",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "trayectoria_hosteleria",
+        "archivo": "plugin_trayectoria_hosteleria.py",
+        "sha256": "06b368ff5ce1cc41ce401224d105e0020421993aed6566852c34757c662b1433",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "FAMILIA DE TOKENS ocupacional (área de tokens)",
+        "motivo": "ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, desgaste_cambaceo_itinerante, aislamiento_social) en P/A/C ni por alias en textos admitidos; otras familias de oficio/sustancias activas: ninguna",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_arquetipos_dinamicos",
+        "archivo": "plugin_arquetipos_dinamicos.py",
+        "sha256": "529e79afb7dfabd605da3dc220949d1325e786700e59b58b1fde3e11b23f2d79",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "FAMILIA DE TOKENS arquetipos (área de tokens)",
+        "motivo": "arquetipos dinámicos con tokens observados: {'arquetipos_dinamicos.jung_trickster_atipico': {'cortes': ['C3', 'C4', 'C7'], 'tokens': ['incidente_detonante', 'planificacion']}, 'arquetipos_dinamicos.propp_01_villano_agresor': {'cortes': ['C3', 'C5', 'C7'], 'tokens': ['persecucion']}}",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_metodo_rigor (alimentado)",
+        "archivo": "plugin_metodo_rigor.py",
+        "sha256": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "CONTROL de rigor PRE (cadena top1 real)",
+        "motivo": "cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOPENHAUER requieren hipótesis/inverso (post-H, guardianes)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_pregunta_dirigida (verificado)",
+        "archivo": "plugin_pregunta_dirigida.py",
+        "sha256": "b9dc7533cd83047654f666ca40e6e961ebfe8fd01082d703b9ba08a7dc404ca8",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "GUARDIAN de pregunta (entrada)",
+        "motivo": "la pregunta es un identificador (sin lenguaje natural): nada que analizar",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "protocolo_orden0 (verificado)",
+        "archivo": "protocolo_kernel_motor.py",
+        "sha256": "e95f180246e5fad23615eedf74efd2464777cb6ffb2931a653f0888868209d99",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "CONTROL de arranque (orden 0)",
+        "motivo": "constante por diseño: arranque_matriz es un contrato fijo y clasificar_para_protocolo clasifica OBSTÁCULOS de ejecución (aquí 'typo_ruta' por defecto); el input no trae obstáculo -> no es un sensor del caso",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "guardian_entrada_autoevidencia",
+        "archivo": "guardian_entrada_autoevidencia_v1.py",
+        "sha256": "42dd6c1c08a8a35287c8f903fc67edba8a4671b033dd81ac2444e2ff8d5d3011",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "GUARDIAN (solo bandera; can_decide_H=False)",
+        "motivo": "bandera=False autoevidencia=0 familias=[]",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "aquiles_bootstrap",
+        "archivo": "plugin_aquiles_h.py",
+        "sha256": "3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR (C4 del modo estricto; claves p_H/n correctas)",
+        "motivo": "estado PARA_DE_EMPUJAR_H N_min 256; ganador remuestreo arquetipo_el_gobernante ≠ top1",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "aquiles_ancla_estricto",
+        "archivo": "plugin_aquiles_ancla_estricto.py",
+        "sha256": "16b793d38ce72c74c6925b42e4b69435e983db05fe6a1956c8de318926ae8640",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "SENSOR",
+        "motivo": "llamada real: estado_H=NO_VERIFICADO motivo='no hay eje_candidato; prohibido fabricarlo por bigrama' (sin eje_candidato con cita en el input; prohibido fabricarlo)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "perfil_narrador",
+        "archivo": "sensor_perfil_narrador_v0_1.py",
+        "sha256": "bacdd4a4cc145e48ef333504682a3c753d6a8d84ac7dc7cb23f6ec2873eea2a7",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR siempre-on fuera de H",
+        "motivo": "6 puntos ciegos (0 ALTO); 6 preguntas",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "formular_h_apuesta",
+        "archivo": "formular_h_apuesta.py",
+        "sha256": "0319a42b8ef011ab09f48dfc9a973a553f5e7280d1266881998c61444c97ff27",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "SENSOR de contraste (línea contrato organic)",
+        "motivo": "línea contrato propone H1=None (contraste; el motor NO lo usa)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "sombrero_blanco_salida",
+        "archivo": "sidecar_sombrero_blanco_filtro_v1.py",
+        "sha256": "6c9d907cc0b4a4ec8c7bc517b81c55716d9551fe372cabbbea93558334855df2",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "GUARDIAN/FILTRO de salida (después del predictor)",
+        "motivo": "salida limpia: 10 candidatos del catálogo, evidencia solo con vocabulario del catálogo, sin ruido de protocolo (nada que filtrar)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "plugin_sombrero_blanco_token (declaración)",
+        "archivo": "plugin_sombrero_blanco_token.py",
+        "sha256": "52cd7d13aef7d7f5769622b24a604428d50e7fe286364ff3671bb23fa3cee9c5",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "GUARDIAN/FILTRO (StinkBox de tokens fuera de catálogo; post-apuesta en UNICO)",
+        "motivo": "n_esta_corrida=0; feeds_predictor VERIFICADO=False (la fila UNICO declara True; corrige 010b)",
+        "can_decide_H": false
+      },
+      {
+        "pieza": "n_piezas (verificado)",
+        "archivo": "laterales_unico_v1.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "CONTROL de registro",
+        "motivo": "control de conteo (constante por diseño entre casos): pre=33 + post=6 (+esta fila) = 40; el n_piezas de component_status es solo el PRE",
+        "can_decide_H": false,
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:familias_tokens_puente (voto hub)",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:negativo_ricci_vs_billar (voto hub)",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:dynamis_dramatica_sistemica",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=(sin fila en component_status) | llega=['H(dim:dynamis_shared_evidence)', 'H(dim:dynamis_load_shift_loop)', 'H(dim:dynamis_diversion)', 'H(dim:dynamis_emotional_oscillation)', 'H(dim:dynamis_guardian_attenuation)', 'H(dim:dynamis_acceleration)', 'H(dim:dynamis_containment)', 'H(dim:dynamis_structural_contribution)'] | corre en UNICO (l.~1703) y sus dims dynamis_* entran al vector de candidato",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:matriz_clases",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=PRESENTE | llega=no | registro de PRESENCIA de MATRIZ_EQUIVALENCIAS_ESCALA.json / PUENTE_244_FAMILIAS.json / familias_tokens (inventario; no depende del caso). Su salida no trae nombres de candidato: no entra al ranking (presentes: ['MATRIZ_EQUIVALENCIAS_ESCALA.json', 'PUENTE_244_FAMILIAS.json'])",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:plugin_guardia_no_cruce.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=ABSORBIDO_EN_GUARDIA_TRANSVERSAL | llega=no | absorbido: la lógica corre en GuardiaNoCruce dentro de _run_transversal_guards (protocol_controls); el archivo se carga como artefacto, no como API",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:cameo_to_244_adapter_v1.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=NOT_APPLICABLE | llega=no | el adaptador CAMEO->244 (legado, solo auditoría) devuelve NOT_APPLICABLE porque falta el mapping aprobado cameo_to_244.json; UNICO sobrescribe su salida a AUDIT_ONLY antes de guardarla (por eso features dice AUDIT_ONLY y la fila NOT_APPLICABLE). No alimenta H por diseño (cameo_to_244.json presente en el pack: False)",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:protocolo_orden0",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=(sin fila) | llega=no | constante por diseño (contrato de arranque + clasificación de obstáculos de ejecución)",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:plugin_sombrero_blanco_token.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "GUARDIAN_FILTRO",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=EXECUTED feeds_predictor=True | llega=no | GUARDIAN/FILTRO post-apuesta (tokens fuera de catálogo -> StinkBox). No alimenta al predictor",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:pre_h_analogical_search(V0.18)",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=EXECUTED | llega=no | status=EXECUTED; fuentes=8; tokens analógicos=[{'token': '-espiritualidad', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'abordar', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'abuso', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'actividades', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'adultos', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'alcanzado', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'antídoto', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'apoyo', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'aprendizaje', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'arrogancia', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'asumimos', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'autocontrol', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'autoridad', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'ayudan', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'base', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'cabo', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'camino', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'cierto', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'civismo', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'clave', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'colectivos', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'competencia', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'comunidad', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'condiciones', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'conexión', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'consecuencias', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'contraste', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'cosas', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'cotidiana', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'cotidianidad', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'cotidiano', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'crecimiento', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'credibilidad', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'creer', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'crucial', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'cuenta', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'cuestión', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'cultivando', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'cultivarla', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'cómo', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'daña', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'debilidad', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'demás', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'des-de', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'desarrollo', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'descubre', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'dinámicas', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'dios', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'divino', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'diálogo', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'dos', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'educar', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'ego', 'coactivation_frequency': 2, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/', 'https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'ejerce', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'empatía', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'enfocada', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'enseguida', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'enseñar', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'entender', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'esperanza', 'coactivation_frequency': 2, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf', 'https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'esto', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'estresados', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'estudiantes', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'están', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'exalta', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'existencia', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'explora', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'forjando', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'forma', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'forman', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'fortaleza', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'gente', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'grandeza', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'habitada', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'hacia', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'halla', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'han', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'humildad', 'coactivation_frequency': 7, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/', 'https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf', 'https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1', 'https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/', 'https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/', 'https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa', 'https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'humillarse', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'identidad', 'coactivation_frequency': 2, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida', 'https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'implica', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'importante', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'inigualables', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'instituciones', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'interior', 'coactivation_frequency': 3, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/', 'https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf', 'https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'lección', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'liderar', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'llamamiento', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'lleva', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'mal', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'malinterpretada', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'martín', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'mayor', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'mejor', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'menudo', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'motivar', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'mundo', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'necesario', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'necesitaba', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'niños', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'nuestra', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'orden', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'orientar', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'parte', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'paz', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'pdf', 'coactivation_frequency': 2, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf', 'https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'personal', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'personas', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'pervirtiendo', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'poder', 'coactivation_frequency': 2, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1', 'https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'poderosa', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'ponemos', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'porres', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'precio', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'probablemente', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'problema', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'procesos', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'profunda', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'profundiza', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'propias', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'propon-dremos', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'práctica', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'psicología', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'quienes', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'quizá', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'razón', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'realidad', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'recordar', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'rela-ción', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'religiosa', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'religión', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'respetar', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'respeto', 'coactivation_frequency': 1, 'source_refs': ['https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/']}, {'token': 'rutina', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'sabiduría', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'san', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'serenidad', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'sesion', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'sesión', 'coactivation_frequency': 1, 'source_refs': ['https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'significado', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'social', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'solo', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'sostener', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'sufre', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'tanto', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'tenía', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'tenían', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'teologuia', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'teología', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'tiempos', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'transforma', 'coactivation_frequency': 1, 'source_refs': ['https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/']}, {'token': 'trasladado', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'uso', 'coactivation_frequency': 1, 'source_refs': ['https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1']}, {'token': 'valor', 'coactivation_frequency': 2, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/', 'https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'valores', 'coactivation_frequency': 3, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/', 'https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida', 'https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298']}, {'token': 'vamos', 'coactivation_frequency': 1, 'source_refs': ['https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'verdadero', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'verdades', 'coactivation_frequency': 1, 'source_refs': ['https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa']}, {'token': 'vida', 'coactivation_frequency': 4, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf', 'https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/', 'https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/', 'https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida']}, {'token': 'virtud', 'coactivation_frequency': 1, 'source_refs': ['https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/']}, {'token': 'ámbito', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}, {'token': 'ética', 'coactivation_frequency': 1, 'source_refs': ['https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf']}] (alimentan StinkBox y analog_alignment); dimensiones ['analog_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:sidecar_caldero_busqueda_arquetipos.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=EJECUTADO | llega=['H(dim:caldero_neighbor_alignment)'] | EJECUTADO: provider=duckduckgo_html intento=EXECUTED resultados=8 consultas=1; 162 tokens vecinos; su salida no nombra ningún candidato del top: el puente no llega",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:vecinos_caldero/neighbor_store.py",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=EJECUTADO feeds_H=True | llega=['H(dim:caldero_neighbor_alignment)'] | ",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "verificado:plugin_cameo_institucional.py (coherencia feeds_H)",
+        "fuente": "laterales_unico_v1",
+        "estado": "ACTIVA_MUDA",
+        "rol": "ESTADO VERIFICADO (PATCH 010a)",
+        "motivo": "declarado=fila feeds_H=False / salida feeds_H=False | llega=no | su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['cameo_activity', 'cameo_profile_activity'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+        "can_decide_H": false,
+        "archivo_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO",
+        "sha256_estado": "NO_DECLARADO_EN_PAQUETE_O_INVENTARIO"
+      },
+      {
+        "pieza": "B9_V0_9_TORTUGA.py",
+        "sha8": "c66faf03",
+        "estado": "SUPERADA",
+        "motivo": "motor alterno V0.9 viejo; las tortugas nativas y la ruta de tortugas de guardianes ya corren en este motor",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "stinkbox v0.1",
+        "sha8": "77ef3486",
+        "estado": "SUPERADA",
+        "motivo": "contenida en StinkBox v0.2 (86b791d6, activa con compuerta de pendientes)",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "caldero_run.py (Caldero II 2.0)",
+        "sha8": "f670b872",
+        "estado": "NO_CORRE",
+        "motivo": "necesita lib/ propia y una escaleta/fixture externo; los 7 casos no la traen",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "montecarlo_predictibilidad_semantica_v1",
+        "estado": "FUERA_DEL_MOTOR",
+        "motivo": "análisis específico del caso Jobs; no es pieza de corrida general",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "sofista.py",
+        "estado": "FUERA_DEL_MOTOR",
+        "motivo": "laboratorio de red team; no se ejecuta en corridas",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "v153_lateral_metrics (versiones previas)",
+        "estado": "SUPERADA",
+        "motivo": "activa lente_lateral_metrics_v1_1_galileo (con dimensión = 3×len(catálogo))",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "tracing_engine / V11 / V15.1 / V15.2",
+        "estado": "SUPERADA",
+        "motivo": "versiones anteriores del motor",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "sidecar_latencia_decimo_hombre",
+        "sha8": "e37e319d",
+        "estado": "SUPERADA",
+        "motivo": "alias contenido en control_latencia_decimo_hombre (activo)",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "plugin_pregunta_dirigida 0.4.1",
+        "estado": "SUPERADA",
+        "motivo": "reemplazada por 0.5.1 (8aa9fc79)",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "plugin_circulo_monomito v1",
+        "estado": "SUPERADA",
+        "motivo": "el motor carga primero monomito_v2 (8cd81bc1); v1 queda como respaldo si falta v2",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "plugin_pregunta_detras_v2 2.3.2",
+        "sha8": "f0b1a92b",
+        "estado": "SUPERADA",
+        "motivo": "falso positivo 'esta' demostrativo corregido en 2.3.3; original en rescate/",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "guardianes_control_v1 V1.1",
+        "sha8": "f26f8c56",
+        "estado": "SUPERADA",
+        "motivo": "V1.2 espera detrás 2.3.3; original en rescate/",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "Engine falso",
+        "sha8": "665c39a2",
+        "estado": "PROHIBIDA",
+        "motivo": "candado: nunca se copia ni se carga; el orquestador lo verifica en cada run dir",
+        "fuente": "inventario_estatico"
+      },
+      {
+        "pieza": "matriz_mortalidad_z90_v0_2",
+        "fuente": "motor",
+        "estado": "ACTIVA_DIAGNOSTICA",
+        "estado_crudo": "WIRED_WAITING_VERIFIED_MORTALITY_DATA",
+        "alimenta_predictor": false,
+        "can_decide_H": false,
+        "motivo": "Cableada en runner; estadísticas solo con filas verificadas; no escribe H1/H2."
+      }
+    ]
+  },
+  "rank_fusion_min": 18.200966,
+  "rank_fusion_max": 34.61638,
+  "FALLO_ESCALA": true,
+  "busqueda_arquetipos_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "duckduckgo_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "2bb9a5852503713c7681e0d0eb83c74874ad4407214b7c492eb235afc64328bc",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 162,
+    "z_corte": "1964-05-03",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1964-05-03",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 162,
+      "tokens_despues_corte": 162
+    },
+    "query": "aprendizaje rutina cotidiano humildad_religiosa opresion autoridad injusticia abuso_poder identidad_impuesta incertidumbre estancamiento guia consejo sabiduria herramienta_nueva oportunidad busqueda_identidad lealtad_pareja proposito_claro incidente_detonante desafio liderazgo valentia compromiso hostilidad represalia persecucion justicia_social crisis_abrupta organizacion planificacion alianza oratoria carisma obstaculo rivalidad resistencia_cambio solidaridad_horizontal igualdad justicia",
+    "urls": [
+      "https://ojopelaomagazine.co/wp-content/uploads/2025/12/ALEJANDRO-RUTTO.pdf",
+      "https://repositorio.comillas.edu/xmlui/bitstream/handle/11531/107779/20251216112857440_Humildad%20Perez-Medina.pdf?sequence=1",
+      "https://revistaliterariaelcandelabro.blog/2025/08/autoridad-humildad-vs-arrogancia-leccion-poderosa/",
+      "https://aprendizaje.diaonia.com/dinamicas-para-ensenar-el-valor-de-la-humildad/",
+      "https://teologuia.org/humillarse-ante-dios-una-leccion-de-esperanza-y-sabiduria/",
+      "https://www.studocu.com/pe/document/universidad-nacional-del-altiplano-de-puno/antropologia-del-pluralismo-religioso/sesion-de-aprendizaje-no-01-religion-valor-de-la-humildad-san-martin-de/141852298",
+      "https://www.churchofjesuschrist.org/study/liahona/2024/07/young-adults/16-the-two-truths-that-help-me-understand-humility?lang=spa",
+      "https://www.estepre.com/post/una-rutina-habitada-espiritualidad-en-lo-cotidiano-de-la-vida"
+    ],
+    "consultado_utc": "2026-11-11T09:24:37+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-11T09:24:37+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-11T09:24:37+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "filtro_017_resumen": {
+    "modo": "traza",
+    "status": "TRAZA_SIN_MODIFICACION",
+    "n_aplicadas": 0,
+    "resumen": {
+      "n": 35,
+      "por_tipo": {
+        "CALENDARIO": 9,
+        "CALENDARIO_EN_SOBRE": 11,
+        "DIRIGIDO_TOKEN_AUTOETIQUETA": 4,
+        "IDENTIDAD_EN_SOBRE": 1,
+        "IDENTIDAD_NOMBRE": 9,
+        "SESGO_CONSULTOR": 1
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 18,
+        "warn": 17
+      }
+    }
+  },
+  "efectividad_corte_retenido": {
+    "t_plus_1_abierto": true,
+    "H_intacta": true,
+    "hipotesis_selladas": [
+      "20_sacrificio_por_un_ideal",
+      "monomito_08_la_odisea_o_prueba_suprema",
+      "monomito_07_aproximacion_a_la_caverna_mas_profunda",
+      "monomito_04_encuentro_con_el_mentor",
+      "monomito_06_pruebas_aliados_y_enemigos",
+      "jaldun_01_asabiyyah_alta_cohesion",
+      "arquetipo_el_gobernante",
+      "monomito_02_llamado_a_la_aventura",
+      "weber_02_autoridad_carismatica",
+      "5_persecucion",
+      "monomito_01_mundo_ordinario",
+      "monomito_09_la_recompensa",
+      "7_caer_victima",
+      "social_12_zimbardo_prision_stanford"
+    ],
+    "hipotesis_con_evidencia_t1": [
+      "20_sacrificio_por_un_ideal",
+      "jaldun_01_asabiyyah_alta_cohesion",
+      "7_caer_victima",
+      "social_12_zimbardo_prision_stanford"
+    ],
+    "evaluacion_primaria": "SET_ABIERTO_DE_HIPOTESIS",
+    "H1_sellada_compatibilidad": "20_sacrificio_por_un_ideal",
+    "H2_sellada_compatibilidad": "monomito_08_la_odisea_o_prueba_suprema",
+    "tops_t1": [
+      "24_rivalidad_de_superior_e_inferior",
+      "arquetipo_el_cuidador",
+      "20_sacrificio_por_un_ideal",
+      "7_caer_victima",
+      "social_08_girard_mimesis_y_chivo_expiatorio",
+      "schwartz_01_universalismo",
+      "heroe",
+      "arquetipo_el_heroe",
+      "jaldun_01_asabiyyah_alta_cohesion",
+      "8_rebelion"
+    ],
+    "tops_t1_con_evidencia_predictiva": [
+      "24_rivalidad_de_superior_e_inferior",
+      "arquetipo_el_cuidador",
+      "20_sacrificio_por_un_ideal",
+      "7_caer_victima",
+      "social_08_girard_mimesis_y_chivo_expiatorio",
+      "schwartz_01_universalismo",
+      "heroe",
+      "arquetipo_el_heroe",
+      "jaldun_01_asabiyyah_alta_cohesion",
+      "8_rebelion"
+    ],
+    "candidatos_recuperados_no_contados_como_prediccion": [],
+    "hit_H": "HIT_HIPOTESIS_SET",
+    "n_cuts_t1": 1,
+    "fuente_tops_t1": "anexo T+1/candidatos no recuperados",
+    "internal_runs_isolated": true
+  },
+  "receipt_integrity_stage": {
+    "stage": "canonical_engine_and_patterns_hash_check",
+    "status": "MATCH",
+    "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+    "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+  }
+}

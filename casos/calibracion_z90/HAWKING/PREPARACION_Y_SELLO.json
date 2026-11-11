@@ -1,0 +1,87 @@
+{
+  "caso": "HAWKING",
+  "persona": "Stephen Hawking",
+  "source": "casos/originales_z90/inputs/005_Stephen_Hawking_7083daa2c46f/_cuts_hawking_Z90_run.json",
+  "source_sha256": "7083daa2c46ff1c41704ec9e3ed209b20a8c1cf0b42bde2f3a7af8e054d319d2",
+  "source_markers": "casos/originales_z90/inputs/005_Stephen_Hawking_7083daa2c46f/markers_hawking_Z90.json",
+  "source_markers_sha256": "fc0e8505c9f284b04db23ac0a5d210b20bf09887dd378638f5163ca616040eb7",
+  "nacimiento": "1942-01-08",
+  "muerte": "2018-03-14",
+  "fechas_fuente": "marker original (died o died_SEALED incluido)",
+  "z90": "2010-08-01",
+  "z90_metodo": "nacimiento + redondeo al día más próximo de 0.9*(muerte-nacimiento); no se afirma precisión subdiaria",
+  "z90_dias_exactos": 25041.600000000002,
+  "z90_original": "~2010-2011",
+  "cortes_pre": 6,
+  "cortes_post_apartados": 1,
+  "ultimo_corte_pre": "2000-12-31",
+  "fechas_reconstruidas": [
+    {
+      "id": "C1",
+      "date": "1959-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C2",
+      "date": "1962-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C3",
+      "date": "1966-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C4",
+      "date": "1974-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C5",
+      "date": "1988-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C6",
+      "date": "2000-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C7",
+      "date": "2011-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    }
+  ],
+  "orden_original_pre": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "orden_ejecucion_pre": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "hechos_tokens_pesos_intactos": true,
+  "FALLO_TOKEN": [],
+  "observaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "FALLO_ULTIMO_CORTE_NO_TERMINA_EN_Z90",
+    "FALLO_HAWKING_C7_2010_2011_CRUZA_Z90_NO_TRUNCADO_SELLADO_COMPLETO",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+  ],
+  "estado_protocolo": "DIAGNOSTICO_NO_CERTIFICA_CALIBRACION_CONFORME",
+  "input_sha256": "791843e20ad3510c3546a425980b48d790d2bd6a29d171d29c635d31e3d3d878",
+  "futuro_sha256": "0e0a48ac182f6002192f23157eac6e040ac51684144611b3cdb9f344d691835b",
+  "freeze_registrado": "2026-11-11T03:23:37.901403-06:00",
+  "zona": "America/Mexico_City",
+  "git_base": "3cf21d59e65f77d65e71e627fc2c0cd188c1442b",
+  "Engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

@@ -1,0 +1,64 @@
+{
+  "fecha": "2026-11-11T03:29:24.005315-06:00",
+  "zona": "America/Mexico_City",
+  "Engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "checks": [
+    {
+      "caso": "CHE",
+      "verificacion_de_integridad": "PASS",
+      "calibracion_conforme": "FALLO",
+      "recibo_result_ledger_verificados": true,
+      "original_sin_cambios": true,
+      "hechos_tokens_pesos_intactos": true,
+      "futuro_sellado_antes_corrida": true,
+      "futuro_fuera_entrada": true,
+      "MC_ejecutado": true
+    },
+    {
+      "caso": "GALILEO_20260924",
+      "verificacion_de_integridad": "PASS",
+      "calibracion_conforme": "FALLO",
+      "recibo_result_ledger_verificados": true,
+      "original_sin_cambios": true,
+      "hechos_tokens_pesos_intactos": true,
+      "futuro_sellado_antes_corrida": true,
+      "futuro_fuera_entrada": true,
+      "MC_ejecutado": true
+    },
+    {
+      "caso": "HAWKING",
+      "verificacion_de_integridad": "PASS",
+      "calibracion_conforme": "FALLO",
+      "recibo_result_ledger_verificados": true,
+      "original_sin_cambios": true,
+      "hechos_tokens_pesos_intactos": true,
+      "futuro_sellado_antes_corrida": true,
+      "futuro_fuera_entrada": true,
+      "MC_ejecutado": true
+    },
+    {
+      "caso": "MLK",
+      "verificacion_de_integridad": "PASS",
+      "calibracion_conforme": "FALLO",
+      "recibo_result_ledger_verificados": true,
+      "original_sin_cambios": true,
+      "hechos_tokens_pesos_intactos": true,
+      "futuro_sellado_antes_corrida": true,
+      "futuro_fuera_entrada": true,
+      "MC_ejecutado": true
+    },
+    {
+      "caso": "MOZART_ORIGINAL_20260915",
+      "verificacion_de_integridad": "PASS",
+      "calibracion_conforme": "FALLO",
+      "recibo_result_ledger_verificados": true,
+      "original_sin_cambios": true,
+      "hechos_tokens_pesos_intactos": true,
+      "futuro_sellado_antes_corrida": true,
+      "futuro_fuera_entrada": true,
+      "MC_ejecutado": true
+    }
+  ],
+  "nota": "PASS de integridad no es PASS de calibración ni gate temporal."
+}

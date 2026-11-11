@@ -1,0 +1,27 @@
+{
+  "comando": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/calibracion_z90/CHE/entrada.json",
+    "CAL_Z90_CHE",
+    "/workspace/alt_cameo/casos/calibracion_z90/CHE/result.json"
+  ],
+  "inicio": "2026-11-11T03:23:49.436280-06:00",
+  "fin": "2026-11-11T03:24:35.593216-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 0,
+  "error": null,
+  "MC_solicitado": true,
+  "no_mc_no_usado": true,
+  "entorno_explicitado": {
+    "STINKBOX_HOME": "/workspace/calibracion_z90_runtime/CHE/stinkbox",
+    "CEB_ROOT": "/dev/shm/cal_z90_20261111/CHE",
+    "PYTHONHASHSEED": "0"
+  },
+  "input_sha256": "8a5c663053a4a5626dab595f89c22192c549f0d420c620d20909f597b344f78f",
+  "futuro_sha256_verificado_antes_run": "a224004f1d269dd56c0e203840a7f795706bf8faa4ccc4609751f5a405fb792f",
+  "futuro_sha256_despues_run": "a224004f1d269dd56c0e203840a7f795706bf8faa4ccc4609751f5a405fb792f",
+  "result_sha256": "bc3d29b750e196dda9a0bf9170e7d07418e9343cdc02da5f947bd108d57675e9",
+  "recibo_runner_existe": true,
+  "nota": "Recibo del proceso orquestador, no sustituye recibo del motor ni ledger CEB. FALLO si falta cualquiera."
+}

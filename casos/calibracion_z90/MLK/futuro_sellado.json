@@ -1,0 +1,8 @@
+{
+  "case_id": "CAL_Z90_MLK",
+  "status": "SELLADO_ANTES_DE_EJECUCION",
+  "cuts": [],
+  "origen": "input original; no se agregan desenlaces externos antes del freeze",
+  "source_input_sha256": "7e42cc4c7c7c08b2639f63d88144b0c5c7e22cb8a2f1c996bf4178251b973361",
+  "nota": "Cortes indivisibles cuyo cierre es > Z90. No se truncan ni se introducen en la entrada. Puede contener un intervalo que cruce Z90."
+}

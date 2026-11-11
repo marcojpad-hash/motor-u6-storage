@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/alt_cameo/motor/correr_estandar.py", line 928, in <module>
+    raise SystemExit(main(sys.argv))
+                     ~~~~^^^^^^^^^^
+  File "/workspace/alt_cameo/motor/correr_estandar.py", line 572, in main
+    print(json.dumps({"ok": True, **{k: score[k] for k in ("hit_H", "H1_sellada", "H2_sellada")}, "stinkbox_persistent_registry": score["stinkbox_persistent_registry"]}, ensure_ascii=False))
+                                        ~~~~~^^^
+KeyError: 'H1_sellada'

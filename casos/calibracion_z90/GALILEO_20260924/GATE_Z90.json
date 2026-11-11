@@ -1,0 +1,20 @@
+{
+  "caso": "GALILEO_20260924",
+  "gate": "GATE_Z_TRABAJO_20261024",
+  "z_trabajo_asignado_para_prueba": "1634-03-26",
+  "modo_z_asignado_para_prueba": "historico",
+  "estado": "RECHAZO",
+  "errores": [
+    "R3 G_C1: sin 'evidencia'",
+    "R3 G_C2: sin 'evidencia'",
+    "R3 G_C3: sin 'evidencia'",
+    "R3 G_C4: sin 'evidencia'",
+    "R3 G_C5: sin 'evidencia'",
+    "R3 G_C6: sin 'evidencia'",
+    "R3 G_C7: sin 'evidencia'",
+    "R3 G_C8: sin 'evidencia'",
+    "R3 G_C9: sin 'evidencia'",
+    "R3 G_C10_Z90: sin 'evidencia'"
+  ],
+  "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+}

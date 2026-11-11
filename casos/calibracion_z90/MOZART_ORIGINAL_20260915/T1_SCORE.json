@@ -1,0 +1,129 @@
+{
+  "t_plus_1_abierto": true,
+  "H_intacta": true,
+  "hipotesis_selladas": [
+    "schwartz_10_autodireccion",
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "utopia_mentalidad_liberal",
+    "24_rivalidad_de_superior_e_inferior",
+    "arquetipo_el_explorador",
+    "arquetipo_el_gobernante",
+    "36_perdida_de_los_seres_queridos"
+  ],
+  "hipotesis_con_evidencia_t1": [
+    "schwartz_10_autodireccion",
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "arquetipo_el_gobernante"
+  ],
+  "evaluacion_primaria": "SET_ABIERTO_DE_HIPOTESIS",
+  "H1_sellada_compatibilidad": "schwartz_10_autodireccion",
+  "H2_sellada_compatibilidad": "30_ambicion",
+  "tops_t1": [
+    "social_04_rogers_difusion_innovaciones",
+    "trayectoria_sedentarismo_cardiovascular",
+    "schwartz_10_autodireccion",
+    "arquetipo_el_gobernante",
+    "arquetipo_el_creador",
+    "kwml_01_rey",
+    "social_14_overton_ventana",
+    "cliodinamica_02_fase_estanflacion_presion",
+    "mbti_factor_percepcion_p",
+    "30_ambicion"
+  ],
+  "tops_t1_con_evidencia_predictiva": [
+    "social_04_rogers_difusion_innovaciones",
+    "trayectoria_sedentarismo_cardiovascular",
+    "schwartz_10_autodireccion",
+    "arquetipo_el_gobernante",
+    "arquetipo_el_creador",
+    "kwml_01_rey",
+    "social_14_overton_ventana",
+    "cliodinamica_02_fase_estanflacion_presion",
+    "mbti_factor_percepcion_p",
+    "30_ambicion"
+  ],
+  "candidatos_recuperados_no_contados_como_prediccion": [],
+  "hit_H": "HIT_HIPOTESIS_SET",
+  "n_cuts_t1": 3,
+  "fuente_tops_t1": "anexo T+1/candidatos no recuperados",
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1",
+    "storage": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MOZART_ORIGINAL_20260915_t1",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MOZART_ORIGINAL_20260915_t1",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 2,
+          "new_token_strings": 1,
+          "explicit_review_observations": 2,
+          "unique_tokens_total": 1
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 331,
+          "new_token_strings": 90,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 91
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "motor_t1_H1": "social_04_rogers_difusion_innovaciones",
+  "nota": "H del sello no se reescribe. motor_t1_H1 es solo contraste.",
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1",
+    "storage": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MOZART_ORIGINAL_20260915_t1",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MOZART_ORIGINAL_20260915_t1",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 91
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox_t1/STINKBOX_STORAGE",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 2,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 91
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

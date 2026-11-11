@@ -1,0 +1,9 @@
+{
+  "case_id": "CAL_Z90_GALILEO_20260924",
+  "result_sha256": "bda76fe150d4af27de9a6b3db22ae99da37e0349783cdd7bead96e78e38e53c3",
+  "recibo_sha256": "0a5558d7d41a40966cbc883dd54a67036ed1d7352fff475e807a2b0f89bfff63",
+  "futuro_sha256": "0293410c8bbe84aecd0f680ff57ad99e3568a28e706b0d5cb90fa8fe25ee9aa4",
+  "sellado_antes_validacion": "2026-11-11T03:25:27.769383-06:00",
+  "zona": "America/Mexico_City",
+  "retrospectivo_no_doble_ciego": true
+}

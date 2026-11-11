@@ -1,0 +1,201 @@
+{
+  "R732": {
+    "X_shape": [
+      6,
+      732
+    ],
+    "dX_norm": [
+      0.6243424460982931,
+      0.48464824357465697,
+      0.5847998204514088,
+      0.567461135233066,
+      0.3019951324111036
+    ],
+    "persist_cos": [
+      0.27771099623222417,
+      0.06653638851292851,
+      0.13042958384085926,
+      0.19893085371138858
+    ],
+    "kappa_dir": [
+      0.9606646670778027,
+      0.9977839991719935,
+      0.991457575319842,
+      0.9800135281931868
+    ]
+  },
+  "movimiento_de_fondo_cortes": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "H1": {
+    "familia": "arquetipo_el_sabio",
+    "serie_activacion": [
+      0.0188,
+      0.0543,
+      0.053,
+      0.0805,
+      0.0758,
+      0.085
+    ],
+    "serie_rango": [
+      22,
+      6,
+      15,
+      5,
+      8,
+      10
+    ],
+    "presente_por_evidencia": [
+      true,
+      true,
+      false,
+      true,
+      false,
+      true
+    ],
+    "masa_favor_por_corte": [
+      0.7,
+      0.68,
+      0.0,
+      0.74,
+      0.0,
+      0.74
+    ],
+    "clase": "LATENTE_DORMIDO",
+    "rasgos": [
+      "LATENTE_DORMIDO"
+    ],
+    "neto": 0.0662,
+    "pasos_que_suben": 2,
+    "n_pasos": 5,
+    "temprano": true,
+    "primera_aparicion": "C1",
+    "pendiente_activacion_por_corte": 0.01208,
+    "pendiente_rango_por_corte_(+sube)": 1.8286,
+    "rango_al_aparecer": 22,
+    "rango_en_Z": 10,
+    "rango_en_Z_tablero_cuello": 10,
+    "en_top5_020": true,
+    "en_set_021": true,
+    "emergente_desde_abajo": false,
+    "donde_esta_abajo": "NO_EMERGENTE"
+  },
+  "H2": {
+    "familia": "mentor",
+    "serie_activacion": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.048,
+      0.1
+    ],
+    "serie_rango": [
+      "NO_APLICA",
+      "NO_APLICA",
+      "NO_APLICA",
+      "NO_APLICA",
+      28,
+      7
+    ],
+    "presente_por_evidencia": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ],
+    "masa_favor_por_corte": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.84,
+      1.56
+    ],
+    "clase": "PICO",
+    "rasgos": [
+      "PICO"
+    ],
+    "neto": 0.0519,
+    "pasos_que_suben": 1,
+    "n_pasos": 1,
+    "temprano": false,
+    "primera_aparicion": "C5",
+    "pendiente_activacion_por_corte": 0.05193,
+    "pendiente_rango_por_corte_(+sube)": 21.0,
+    "rango_al_aparecer": 28,
+    "rango_en_Z": 7,
+    "rango_en_Z_tablero_cuello": 7,
+    "en_top5_020": true,
+    "en_set_021": true,
+    "emergente_desde_abajo": false,
+    "donde_esta_abajo": "NO_EMERGENTE"
+  },
+  "series_destino_022": {
+    "favorable_auge": [
+      0.0379,
+      0.2261,
+      0.3899,
+      0.5474,
+      0.6866,
+      0.7003
+    ],
+    "adverso_caida": [
+      0.033,
+      0.0697,
+      0.066,
+      0.1168,
+      0.1123,
+      0.1474
+    ],
+    "adverso_ruptura": [
+      0.0,
+      0.0576,
+      0.0545,
+      0.0504,
+      0.0485,
+      0.0457
+    ],
+    "adverso_total": [
+      0.033,
+      0.1273,
+      0.1205,
+      0.1672,
+      0.1608,
+      0.1931
+    ],
+    "balance": [
+      0.0049,
+      0.0988,
+      0.2694,
+      0.3802,
+      0.5258,
+      0.5072
+    ],
+    "eje": [
+      0.0188,
+      0.0543,
+      0.053,
+      0.0805,
+      0.0758,
+      0.085
+    ]
+  },
+  "umbrales_destino_022": {
+    "EPS": 0.01,
+    "GRANDE": 0.05,
+    "NETO_ASC": 0.03,
+    "NETO_DESC": 0.03
+  },
+  "familias_con_serie_no_constante": 86,
+  "hay_movimiento_descriptivo": true,
+  "no_prueba_acierto_predictivo": true,
+  "nota": "dX_norm y cosenos son magnitudes geométricas, no probabilidades. No se normalizan ni se cambian aquí."
+}

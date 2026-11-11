@@ -1,0 +1,8 @@
+{
+  "case_id": "CAL_Z90_GALILEO_20260924",
+  "status": "SELLADO_ANTES_DE_EJECUCION",
+  "cuts": [],
+  "origen": "input original; no se agregan desenlaces externos antes del freeze",
+  "source_input_sha256": "878f8a6d3088dbad3744e4fe85aa6ad9f74b3935f8169afdabf71852f3b305ca",
+  "nota": "Cortes indivisibles cuyo cierre es > Z90. No se truncan ni se introducen en la entrada. Puede contener un intervalo que cruce Z90."
+}

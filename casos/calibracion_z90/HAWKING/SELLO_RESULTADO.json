@@ -1,0 +1,9 @@
+{
+  "case_id": "CAL_Z90_HAWKING",
+  "result_sha256": "bbe428a63358ffbf4ab3548bc42d442354e9e50fcad087c20b69426534589939",
+  "recibo_sha256": "a0c2b652d86cd8702631bb3c2b6118da7b0efe98c0125b4c854f9db68c86bc7d",
+  "futuro_sha256": "0e0a48ac182f6002192f23157eac6e040ac51684144611b3cdb9f344d691835b",
+  "sellado_antes_validacion": "2026-11-11T03:25:27.828846-06:00",
+  "zona": "America/Mexico_City",
+  "retrospectivo_no_doble_ciego": true
+}

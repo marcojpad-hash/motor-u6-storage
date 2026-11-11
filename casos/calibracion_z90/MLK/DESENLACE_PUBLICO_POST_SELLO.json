@@ -1,0 +1,15 @@
+{
+  "case_id": "CAL_Z90_MLK",
+  "origen": "fuente pública",
+  "consultada_despues_del_sello_resultado": true,
+  "registro": "2026-11-11T03:28:28.052173-06:00",
+  "zona": "America/Mexico_City",
+  "url": "https://www.nobelprize.org/prizes/peace/1964/king/biographical/",
+  "fuente": "Nobel Prize, Biography de Martin Luther King Jr.",
+  "hechos_post_Z": [
+    "Recibió el Nobel de la Paz en 1964, después de la Z90 de mayo.",
+    "Continuó su actividad por derechos civiles; sufrió detenciones y ataques.",
+    "Fue asesinado en Memphis el 4 de abril de 1968, donde iba a apoyar una huelga."
+  ],
+  "nota": "El período mezcla reconocimiento/auge y violencia terminal; una sola etiqueta caída no describe todo el tramo."
+}

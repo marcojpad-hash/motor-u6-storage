@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_GALILEO_20260924",
+ "ledgers": [
+  {
+   "original": "/dev/shm/cal_z90_20261111/GALILEO_20260924/CAL_Z90_GALILEO_20260924_1794389056450.flow_ledger.jsonl",
+   "copia": "/workspace/alt_cameo/casos/calibracion_z90/GALILEO_20260924/result_CEB_LEDGER_1.jsonl",
+   "sha256": "b266459adcfb1435d679cd5686b33ba7d4107f72cc287ac56a8e2da020bbd2aa",
+   "bytes": 14791915,
+   "lineas": 29987
+  }
+ ]
+}

@@ -1,0 +1,130 @@
+{
+  "case_id": "CAL_Z90_MOZART_ORIGINAL_20260915",
+  "status": "SELLADO_ANTES_DE_EJECUCION",
+  "cuts": [
+    {
+      "id": "C8",
+      "hecho": "1788-1789: tras el punto Z90 continúa componiendo; trabaja en la producción vienesa de Don Giovanni y realiza nuevas obras; Figaro vuelve a representarse en Viena en 1789.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "independencia",
+          0.74
+        ],
+        [
+          "generacion_ideas",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "rivalidad_profesional",
+          0.62
+        ],
+        [
+          "trabajo_sedentario",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.72
+        ]
+      ],
+      "date": "1789-12-31"
+    },
+    {
+      "id": "C9",
+      "hecho": "1790: compone Così fan tutte; mantiene actividad compositiva y teatral en Viena.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "generacion_ideas",
+          0.8
+        ],
+        [
+          "independencia",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "competencia",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.76
+        ],
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "liderazgo",
+          0.66
+        ]
+      ],
+      "date": "1790-12-31"
+    },
+    {
+      "id": "C10",
+      "hecho": "1791: compone y estrena La clemenza di Tito y Die Zauberflöte; continúa trabajando hasta enfermar gravemente a mediados de noviembre; muere el 5 de diciembre de 1791 en Viena.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "trabajo_sedentario",
+          0.66
+        ],
+        [
+          "generacion_ideas",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "crisis_abrupta",
+          0.78
+        ],
+        [
+          "perdida_definitiva",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "oportunidad",
+          0.7
+        ],
+        [
+          "liderazgo",
+          0.62
+        ]
+      ],
+      "date": "1791-12-31"
+    }
+  ],
+  "origen": "input original; no se agregan desenlaces externos antes del freeze",
+  "source_input_sha256": "a86ab3e48c235e2d50d9da4cde305ae3eb2b2b105f5122e71ad24443d9b44858",
+  "nota": "Cortes indivisibles cuyo cierre es > Z90. No se truncan ni se introducen en la entrada. Puede contener un intervalo que cruce Z90."
+}

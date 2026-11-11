@@ -1,0 +1,102 @@
+{
+  "caso": "MOZART_ORIGINAL_20260915",
+  "persona": "Wolfgang Amadeus Mozart",
+  "source": "casos/originales_z90/inputs/009_Wolfgang_Amadeus_Mozart_a86ab3e48c23/mozart_cuts_full.json",
+  "source_sha256": "a86ab3e48c235e2d50d9da4cde305ae3eb2b2b105f5122e71ad24443d9b44858",
+  "source_markers": null,
+  "source_markers_sha256": null,
+  "nacimiento": "1756-01-27",
+  "muerte": "1791-12-05",
+  "fechas_fuente": "https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart",
+  "z90": "1788-05-04",
+  "z90_metodo": "nacimiento + redondeo al día más próximo de 0.9*(muerte-nacimiento); no se afirma precisión subdiaria",
+  "z90_dias_exactos": 11786.4,
+  "z90_original": null,
+  "cortes_pre": 7,
+  "cortes_post_apartados": 3,
+  "ultimo_corte_pre": "1788-05-04",
+  "fechas_reconstruidas": [
+    {
+      "id": "C1",
+      "date": "1762-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C2",
+      "date": "1766-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C3",
+      "date": "1772-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C4",
+      "date": "1777-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C5",
+      "date": "1778-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C6",
+      "date": "1781-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C7",
+      "date": "1788-05-04",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C8",
+      "date": "1789-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C9",
+      "date": "1790-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C10",
+      "date": "1791-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    }
+  ],
+  "orden_original_pre": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+  ],
+  "orden_ejecucion_pre": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+  ],
+  "hechos_tokens_pesos_intactos": true,
+  "FALLO_TOKEN": [],
+  "observaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+  ],
+  "estado_protocolo": "DIAGNOSTICO_NO_CERTIFICA_CALIBRACION_CONFORME",
+  "input_sha256": "31e66bfe76a38b41391dfac26925e18d49fcb5453f26308ea8e4f703c464c192",
+  "futuro_sha256": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d",
+  "freeze_registrado": "2026-11-11T03:23:37.903292-06:00",
+  "zona": "America/Mexico_City",
+  "git_base": "3cf21d59e65f77d65e71e627fc2c0cd188c1442b",
+  "Engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "catalogo_244_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+}

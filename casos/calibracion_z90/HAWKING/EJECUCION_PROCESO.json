@@ -1,0 +1,27 @@
+{
+  "comando": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/calibracion_z90/HAWKING/entrada.json",
+    "CAL_Z90_HAWKING",
+    "/workspace/alt_cameo/casos/calibracion_z90/HAWKING/result.json"
+  ],
+  "inicio": "2026-11-11T03:24:41.758747-06:00",
+  "fin": "2026-11-11T03:25:15.877925-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 0,
+  "error": null,
+  "MC_solicitado": true,
+  "no_mc_no_usado": true,
+  "entorno_explicitado": {
+    "STINKBOX_HOME": "/workspace/calibracion_z90_runtime/HAWKING/stinkbox",
+    "CEB_ROOT": "/dev/shm/cal_z90_20261111/HAWKING",
+    "PYTHONHASHSEED": "0"
+  },
+  "input_sha256": "791843e20ad3510c3546a425980b48d790d2bd6a29d171d29c635d31e3d3d878",
+  "futuro_sha256_verificado_antes_run": "0e0a48ac182f6002192f23157eac6e040ac51684144611b3cdb9f344d691835b",
+  "futuro_sha256_despues_run": "0e0a48ac182f6002192f23157eac6e040ac51684144611b3cdb9f344d691835b",
+  "result_sha256": "bbe428a63358ffbf4ab3548bc42d442354e9e50fcad087c20b69426534589939",
+  "recibo_runner_existe": true,
+  "nota": "Recibo del proceso orquestador, no sustituye recibo del motor ni ledger CEB. FALLO si falta cualquiera."
+}

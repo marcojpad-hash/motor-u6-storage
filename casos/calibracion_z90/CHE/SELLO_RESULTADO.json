@@ -1,0 +1,9 @@
+{
+  "case_id": "CAL_Z90_CHE",
+  "result_sha256": "bc3d29b750e196dda9a0bf9170e7d07418e9343cdc02da5f947bd108d57675e9",
+  "recibo_sha256": "49acf652d7df0206dfdaf5e4974439e92cda54aee02c37a195e02d617ebd1c6a",
+  "futuro_sha256": "a224004f1d269dd56c0e203840a7f795706bf8faa4ccc4609751f5a405fb792f",
+  "sellado_antes_validacion": "2026-11-11T03:25:27.703344-06:00",
+  "zona": "America/Mexico_City",
+  "retrospectivo_no_doble_ciego": true
+}

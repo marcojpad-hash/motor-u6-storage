@@ -1,0 +1,15 @@
+{
+  "case_id": "CAL_Z90_HAWKING",
+  "origen": "fuente pública",
+  "consultada_despues_del_sello_resultado": true,
+  "registro": "2026-11-11T03:28:28.052173-06:00",
+  "zona": "America/Mexico_City",
+  "url": "https://www.hawking.org.uk/biography",
+  "fuente": "Stephen Hawking Estate",
+  "hechos_post_Z": [
+    "Abrió los Juegos Paralímpicos de Londres en 2012.",
+    "Obtuvo un Breakthrough Prize en 2013 y continuó publicando e investigando.",
+    "Su trabajo final con Hertog recibió revisiones el 4 de marzo de 2018; murió el 14 de marzo de 2018."
+  ],
+  "nota": "No es calibración en Z90: el input original C7 cruza Z90 y fue apartado íntegro; la corrida diagnóstica termina en 2000."
+}

@@ -1,0 +1,119 @@
+{
+  "runner_llama_gate_z90": false,
+  "control_fechas_real": "solo _validate_case: compara corte.date con z90_date si ambos existen; no exige birth/death/date ni calcula Z90",
+  "pruebas": [
+    {
+      "prueba": "biografia_sin_birth_death",
+      "metodo": "_validate_case invocada por run del runner; sin ejecutar Engine",
+      "resultado": "ACEPTADO"
+    },
+    {
+      "prueba": "sin_z90_ni_fechas_biograficas",
+      "metodo": "_validate_case invocada por run del runner; sin ejecutar Engine",
+      "resultado": "ACEPTADO"
+    },
+    {
+      "prueba": "corte_sin_date",
+      "metodo": "_validate_case invocada por run del runner; sin ejecutar Engine",
+      "resultado": "ACEPTADO"
+    },
+    {
+      "prueba": "corte_post_z90",
+      "metodo": "_validate_case invocada por run del runner; sin ejecutar Engine",
+      "resultado": "RECHAZADO ValueError: POST_Z90_EN_INPUT: C7"
+    }
+  ],
+  "gate_externo": [
+    {
+      "caso": "CHE",
+      "gate": "GATE_Z_TRABAJO_20261024",
+      "z_trabajo_asignado_para_prueba": "1963-11-03",
+      "modo_z_asignado_para_prueba": "historico",
+      "estado": "RECHAZO",
+      "errores": [
+        "R3 C1: sin 'evidencia'",
+        "R3 C3: sin 'evidencia'",
+        "R3 C2: sin 'evidencia'",
+        "R3 C4: sin 'evidencia'",
+        "R3 C5: sin 'evidencia'",
+        "R3 C6: sin 'evidencia'",
+        "R3 C7: sin 'evidencia'",
+        "R3 C8: sin 'evidencia'",
+        "R3 C9: sin 'evidencia'"
+      ],
+      "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+    },
+    {
+      "caso": "GALILEO_20260924",
+      "gate": "GATE_Z_TRABAJO_20261024",
+      "z_trabajo_asignado_para_prueba": "1634-03-26",
+      "modo_z_asignado_para_prueba": "historico",
+      "estado": "RECHAZO",
+      "errores": [
+        "R3 G_C1: sin 'evidencia'",
+        "R3 G_C2: sin 'evidencia'",
+        "R3 G_C3: sin 'evidencia'",
+        "R3 G_C4: sin 'evidencia'",
+        "R3 G_C5: sin 'evidencia'",
+        "R3 G_C6: sin 'evidencia'",
+        "R3 G_C7: sin 'evidencia'",
+        "R3 G_C8: sin 'evidencia'",
+        "R3 G_C9: sin 'evidencia'",
+        "R3 G_C10_Z90: sin 'evidencia'"
+      ],
+      "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+    },
+    {
+      "caso": "HAWKING",
+      "gate": "GATE_Z_TRABAJO_20261024",
+      "z_trabajo_asignado_para_prueba": "2010-08-01",
+      "modo_z_asignado_para_prueba": "historico",
+      "estado": "RECHAZO",
+      "errores": [
+        "R3 C1: sin 'evidencia'",
+        "R3 C2: sin 'evidencia'",
+        "R3 C3: sin 'evidencia'",
+        "R3 C4: sin 'evidencia'",
+        "R3 C5: sin 'evidencia'",
+        "R3 C6: sin 'evidencia'",
+        "R7 C2.hecho: lenguaje de futuro/predicción 'mas tarde'"
+      ],
+      "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+    },
+    {
+      "caso": "MLK",
+      "gate": "GATE_Z_TRABAJO_20261024",
+      "z_trabajo_asignado_para_prueba": "1964-05-03",
+      "modo_z_asignado_para_prueba": "historico",
+      "estado": "RECHAZO",
+      "errores": [
+        "R3 C1: sin 'evidencia'",
+        "R3 C2: sin 'evidencia'",
+        "R3 C3: sin 'evidencia'",
+        "R3 C4: sin 'evidencia'",
+        "R3 C5: sin 'evidencia'",
+        "R3 C6: sin 'evidencia'",
+        "R3 C7: sin 'evidencia'",
+        "R3 C8: sin 'evidencia'"
+      ],
+      "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+    },
+    {
+      "caso": "MOZART_ORIGINAL_20260915",
+      "gate": "GATE_Z_TRABAJO_20261024",
+      "z_trabajo_asignado_para_prueba": "1788-05-04",
+      "modo_z_asignado_para_prueba": "historico",
+      "estado": "RECHAZO",
+      "errores": [
+        "R3 C1: sin 'evidencia'",
+        "R3 C2: sin 'evidencia'",
+        "R3 C3: sin 'evidencia'",
+        "R3 C4: sin 'evidencia'",
+        "R3 C5: sin 'evidencia'",
+        "R3 C6: sin 'evidencia'",
+        "R3 C7: sin 'evidencia'"
+      ],
+      "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+    }
+  ]
+}

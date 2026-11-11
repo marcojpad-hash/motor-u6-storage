@@ -1,0 +1,27 @@
+{
+  "comando": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/calibracion_z90/GALILEO_20260924/entrada.json",
+    "CAL_Z90_GALILEO_20260924",
+    "/workspace/alt_cameo/casos/calibracion_z90/GALILEO_20260924/result.json"
+  ],
+  "inicio": "2026-11-11T03:24:15.688767-06:00",
+  "fin": "2026-11-11T03:24:41.747609-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 0,
+  "error": null,
+  "MC_solicitado": true,
+  "no_mc_no_usado": true,
+  "entorno_explicitado": {
+    "STINKBOX_HOME": "/workspace/calibracion_z90_runtime/GALILEO_20260924/stinkbox",
+    "CEB_ROOT": "/dev/shm/cal_z90_20261111/GALILEO_20260924",
+    "PYTHONHASHSEED": "0"
+  },
+  "input_sha256": "68ca6127f1512c78efcbdfa8d0459dc01f50af6f7a828fa34860e640392d6b60",
+  "futuro_sha256_verificado_antes_run": "0293410c8bbe84aecd0f680ff57ad99e3568a28e706b0d5cb90fa8fe25ee9aa4",
+  "futuro_sha256_despues_run": "0293410c8bbe84aecd0f680ff57ad99e3568a28e706b0d5cb90fa8fe25ee9aa4",
+  "result_sha256": "bda76fe150d4af27de9a6b3db22ae99da37e0349783cdd7bead96e78e38e53c3",
+  "recibo_runner_existe": true,
+  "nota": "Recibo del proceso orquestador, no sustituye recibo del motor ni ledger CEB. FALLO si falta cualquiera."
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "CAL_Z90_MLK",
+  "result_sha256": "56e2163c7f2b723251e5286031863d8adf3297fadb882a7339cea7645422b799",
+  "recibo_sha256": "6e067f9cdb42249ba946233ee8e4d868822f165e9a86ae81a55442bd7125c2e9",
+  "futuro_sha256": "ad9d2d503b7367f084f6de2932adae052c41c22cfd85148c4a90e304917bacfa",
+  "sellado_antes_validacion": "2026-11-11T03:25:27.936282-06:00",
+  "zona": "America/Mexico_City",
+  "retrospectivo_no_doble_ciego": true
+}

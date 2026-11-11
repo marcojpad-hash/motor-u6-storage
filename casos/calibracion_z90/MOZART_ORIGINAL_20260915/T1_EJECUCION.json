@@ -1,0 +1,26 @@
+{
+  "comando": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/result.json",
+    "--t1",
+    "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/futuro_sellado.json",
+    "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/T1_SCORE.json"
+  ],
+  "inicio": "2026-11-11T03:26:01.573665-06:00",
+  "fin": "2026-11-11T03:26:10.993983-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 1,
+  "sello_original_sha256_antes": "818b7be01b89e352b0610cfa6b763c9c06bd16a41331cbfe2fa062d8e7b67bf4",
+  "sello_original_sha256_despues": "818b7be01b89e352b0610cfa6b763c9c06bd16a41331cbfe2fa062d8e7b67bf4",
+  "futuro_sha256": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d",
+  "score_escrito": true,
+  "ledgers": [
+    {
+      "archivo": "T1_CEB_LEDGER_1.jsonl",
+      "sha256": "cc3d9fc94cff8e5ee6d327d75fe8510087bb5a8b6828074089a859dec963cc50",
+      "preservado_por": "orquestador, no runner T1"
+    }
+  ],
+  "estado": "FALLO_T1"
+}

@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MLK",
+ "ledgers": [
+  {
+   "original": "/dev/shm/cal_z90_20261111/MLK/CAL_Z90_MLK_1794389076384.flow_ledger.jsonl",
+   "copia": "/workspace/alt_cameo/casos/calibracion_z90/MLK/result_CEB_LEDGER_1.jsonl",
+   "sha256": "5aef1c615f9f7f3a4f507ac776f77fee53800c9902dfaf91e208f36fe3e5f753",
+   "bytes": 34857518,
+   "lineas": 71953
+  }
+ ]
+}

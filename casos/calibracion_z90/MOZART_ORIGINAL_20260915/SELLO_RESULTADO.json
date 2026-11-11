@@ -1,0 +1,9 @@
+{
+  "case_id": "CAL_Z90_MOZART_ORIGINAL_20260915",
+  "result_sha256": "818b7be01b89e352b0610cfa6b763c9c06bd16a41331cbfe2fa062d8e7b67bf4",
+  "recibo_sha256": "ab53cb93ae1e5b81a363c69072b69b866c67e0904127259333862a6de4dd6061",
+  "futuro_sha256": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d",
+  "sellado_antes_validacion": "2026-11-11T03:25:27.998481-06:00",
+  "zona": "America/Mexico_City",
+  "retrospectivo_no_doble_ciego": true
+}

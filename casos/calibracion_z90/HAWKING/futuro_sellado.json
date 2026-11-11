@@ -1,0 +1,80 @@
+{
+  "case_id": "CAL_Z90_HAWKING",
+  "status": "SELLADO_ANTES_DE_EJECUCION",
+  "cuts": [
+    {
+      "id": "C7",
+      "hecho": "~2010-2011: Z_foto STOP. Ultimo ~10% de vida sellado. Estado observable: sigue activo como cientifico e intelectual publico; discapacidad severa; prestigio internacional; futuro post-Z no entra",
+      "P": [
+        [
+          "continuidad_identidad",
+          0.8
+        ],
+        [
+          "transmision_saber",
+          0.78
+        ],
+        [
+          "teorizacion",
+          0.76
+        ],
+        [
+          "resiliencia",
+          0.74
+        ],
+        [
+          "sabiduria",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "dependencia",
+          0.82
+        ],
+        [
+          "obstaculo",
+          0.78
+        ],
+        [
+          "fatiga_cronica",
+          0.7
+        ],
+        [
+          "mortalidad_actuarial",
+          0.68
+        ],
+        [
+          "incertidumbre",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "redes_prestigio",
+          0.8
+        ],
+        [
+          "popularidad",
+          0.78
+        ],
+        [
+          "proposito_claro",
+          0.7
+        ],
+        [
+          "umbral_abierto",
+          0.66
+        ]
+      ],
+      "date": "2011-12-31"
+    }
+  ],
+  "origen": "input original; no se agregan desenlaces externos antes del freeze",
+  "source_input_sha256": "7083daa2c46ff1c41704ec9e3ed209b20a8c1cf0b42bde2f3a7af8e054d319d2",
+  "nota": "Cortes indivisibles cuyo cierre es > Z90. No se truncan ni se introducen en la entrada. Puede contener un intervalo que cruce Z90."
+}

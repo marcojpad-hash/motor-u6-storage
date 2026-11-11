@@ -1,0 +1,273 @@
+{
+  "R732": {
+    "X_shape": [
+      10,
+      732
+    ],
+    "dX_norm": [
+      0.6933991274871927,
+      0.5383879177693348,
+      0.4628493599433837,
+      0.24050505192199195,
+      0.39076353463443847,
+      0.27952168073335565,
+      0.4505158154826532,
+      0.41753741149746093,
+      0.39597032717111513
+    ],
+    "persist_cos": [
+      0.5711099765695977,
+      0.5674597277894077,
+      0.7625332640407079,
+      0.17763292909564568,
+      0.5254739494075809,
+      0.2309210295529511,
+      0.31675819768989544,
+      0.21790383770512745
+    ],
+    "kappa_dir": [
+      0.8208735558310266,
+      0.823401152134955,
+      0.6469490097615299,
+      0.9840968156136374,
+      0.8508096899389422,
+      0.9729724960707806,
+      0.9485063226970335,
+      0.9759702441741641
+    ]
+  },
+  "movimiento_de_fondo_cortes": [
+    "G_C1",
+    "G_C2",
+    "G_C3",
+    "G_C4",
+    "G_C5",
+    "G_C6",
+    "G_C7",
+    "G_C8",
+    "G_C9",
+    "G_C10_Z90"
+  ],
+  "H1": {
+    "familia": "arquetipo_el_creador",
+    "serie_activacion": [
+      0.0,
+      0.1452,
+      0.2606,
+      0.2829,
+      0.2829,
+      0.2827,
+      0.2829,
+      0.2823,
+      0.2823,
+      0.2822
+    ],
+    "serie_rango": [
+      "NO_APLICA",
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "presente_por_evidencia": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "masa_favor_por_corte": [
+      0.0,
+      2.42,
+      3.63,
+      3.63,
+      3.63,
+      3.63,
+      3.63,
+      3.63,
+      3.63,
+      3.63
+    ],
+    "clase": "PICO",
+    "rasgos": [
+      "PICO"
+    ],
+    "neto": 0.137,
+    "pasos_que_suben": 2,
+    "n_pasos": 8,
+    "temprano": true,
+    "primera_aparicion": "G_C2",
+    "pendiente_activacion_por_corte": 0.0102,
+    "pendiente_rango_por_corte_(+sube)": 0.1333,
+    "rango_al_aparecer": 3,
+    "rango_en_Z": 1,
+    "rango_en_Z_tablero_cuello": 1,
+    "en_top5_020": true,
+    "en_set_021": true,
+    "emergente_desde_abajo": false,
+    "donde_esta_abajo": "NO_EMERGENTE"
+  },
+  "H2": {
+    "familia": "utopia_mentalidad_liberal",
+    "serie_activacion": [
+      0.0389,
+      0.1245,
+      0.1888,
+      0.2155,
+      0.2234,
+      0.2304,
+      0.237,
+      0.2424,
+      0.2478,
+      0.2525
+    ],
+    "serie_rango": [
+      5,
+      4,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "presente_por_evidencia": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "masa_favor_por_corte": [
+      0.64,
+      2.5,
+      3.11,
+      3.11,
+      3.11,
+      3.11,
+      3.11,
+      2.47,
+      2.47,
+      2.47
+    ],
+    "clase": "PICO",
+    "rasgos": [
+      "PICO"
+    ],
+    "neto": 0.2136,
+    "pasos_que_suben": 3,
+    "n_pasos": 9,
+    "temprano": true,
+    "primera_aparicion": "G_C1",
+    "pendiente_activacion_por_corte": 0.01894,
+    "pendiente_rango_por_corte_(+sube)": -0.0242,
+    "rango_al_aparecer": 5,
+    "rango_en_Z": 4,
+    "rango_en_Z_tablero_cuello": 4,
+    "en_top5_020": true,
+    "en_set_021": false,
+    "emergente_desde_abajo": false,
+    "donde_esta_abajo": "NO_EMERGENTE"
+  },
+  "series_destino_022": {
+    "favorable_auge": [
+      0.0947,
+      0.0899,
+      0.0947,
+      0.2165,
+      0.2533,
+      0.2393,
+      0.2275,
+      0.2162,
+      0.2054,
+      0.2335
+    ],
+    "adverso_caida": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0166,
+      -0.032,
+      0.0058,
+      0.0477,
+      0.0163
+    ],
+    "adverso_ruptura": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0582,
+      0.0553,
+      0.0526,
+      0.0498
+    ],
+    "adverso_total": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0166,
+      0.0262,
+      0.0611,
+      0.1003,
+      0.0661
+    ],
+    "balance": [
+      0.0947,
+      0.0899,
+      0.0947,
+      0.2165,
+      0.2533,
+      0.2559,
+      0.2013,
+      0.1551,
+      0.1051,
+      0.1674
+    ],
+    "eje": [
+      0.0,
+      0.1452,
+      0.2606,
+      0.2829,
+      0.2829,
+      0.2827,
+      0.2829,
+      0.2823,
+      0.2823,
+      0.2822
+    ]
+  },
+  "umbrales_destino_022": {
+    "EPS": 0.01,
+    "GRANDE": 0.0755,
+    "NETO_ASC": 0.03,
+    "NETO_DESC": 0.03
+  },
+  "familias_con_serie_no_constante": 39,
+  "hay_movimiento_descriptivo": true,
+  "no_prueba_acierto_predictivo": true,
+  "nota": "dX_norm y cosenos son magnitudes geométricas, no probabilidades. No se normalizan ni se cambian aquí."
+}

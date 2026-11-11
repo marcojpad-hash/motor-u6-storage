@@ -1,0 +1,113 @@
+{
+  "caso": "MOZART_ORIGINAL_20260915",
+  "clasificacion_global": "FALLO_CALIBRACION_CONFORME; EJERCICIO_DIAGNOSTICO_EJECUTADO",
+  "recibo_motor": "COMPLETED",
+  "exit_code_motor": 0,
+  "MC": "EXECUTED",
+  "H1": "schwartz_10_autodireccion",
+  "H2": "30_ambicion",
+  "apuesta_tematica": "MESeta_O_ESTABILIZACION",
+  "destino_022": "caida",
+  "GRANDE_022": 0.0548,
+  "cotejo_historico_cualitativo": {
+    "H1": {
+      "etiqueta": "HIT",
+      "motivo": "C8–C10 originales muestran actividad compositiva independiente posterior a Z90; también coincide la familia en el T1 escrito."
+    },
+    "H2": {
+      "etiqueta": "HIT",
+      "motivo": "La familia 30_ambicion figura entre las candidatas predictivas del T1; no equivale a predecir una obra o muerte específica."
+    },
+    "apuesta_tematica": {
+      "etiqueta": "PARCIAL",
+      "motivo": "Continuó la composición hasta 1791, pero la enfermedad/muerte terminal rompe una meseta personal uniforme; la apuesta es temática."
+    },
+    "destino_022": {
+      "etiqueta": "PARCIAL",
+      "motivo": "La caída concuerda con la crisis terminal de C10, no con todo el período, que incluye nuevas óperas y actividad creadora."
+    }
+  },
+  "origen_desenlace": {
+    "origen": "cortes originales C8–C10 en futuro_sellado.json",
+    "source_sha256": "a86ab3e48c235e2d50d9da4cde305ae3eb2b2b105f5122e71ad24443d9b44858"
+  },
+  "alcance_evaluacion": "Compatibilidad temática retrospectiva en Z90→Z100, NO acierto calibrado ni doble ciego. Los criterios no fueron pre-registrados antes de conocer la historia. No se inventan tokens de futuro para obtener un HIT. El horizonte nativo es siguiente_corte; salvo Mozart no existe T1 tokenizado original válido, por lo que NO se equipara este cotejo al T1 mecánico.",
+  "fallos_y_limitaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS",
+    "FALLO_GATE_Z90_EXTERNO_RECHAZA_POR_EVIDENCIA_AUSENTE",
+    "FALLO_BLANCO_FILTRO_017_SOLO_TRAZA",
+    "FALLO_TRAZABILIDAD_CEB_REPORTED_EXECUTED_NOT_OBSERVED",
+    "FALLO_ESCALA_RANK_FUSION_FUERA_0_01_0_999",
+    "FALLO_GARANTIA_TEMPORAL_BUSQUEDA_LENIENTE_CONSERVA_8_SIN_FECHA",
+    "FALLO_T1_KEYERROR_H1_sellada"
+  ],
+  "tokens_invalidos": [],
+  "ceb_anomalies": [
+    {
+      "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+      "component": "geometria_multicapa_integrada_working_v1"
+    }
+  ],
+  "busqueda_arquetipos": {
+    "status": "EXECUTED",
+    "provider": "duckduckgo_lite",
+    "result_count": 8,
+    "self_match_discarded": 0,
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1788-05-04",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 160,
+      "tokens_despues_corte": 160
+    },
+    "nota": "No se demuestra filtrado de fecha de las fuentes conservadas. No se afirma que contengan desenlace del sujeto, pero la garantía no queda acreditada."
+  },
+  "filtro_017": {
+    "modo": "traza",
+    "status": "TRAZA_SIN_MODIFICACION",
+    "n_aplicadas": 0,
+    "resumen": {
+      "n": 54,
+      "por_tipo": {
+        "CALENDARIO": 8,
+        "CALENDARIO_EN_SOBRE": 10,
+        "DIRIGIDO_TOKEN_AUTOETIQUETA": 6,
+        "FUTURO_DESENLACE": 1,
+        "FUTURO_MARCADOR": 1,
+        "IDENTIDAD_EN_SOBRE": 2,
+        "IDENTIDAD_NOMBRE": 22,
+        "IDENTIDAD_OBRA": 2,
+        "META_PROTOCOLO": 1,
+        "RETRO_FAMA": 1
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 32,
+        "warn": 22
+      }
+    }
+  },
+  "movimiento": {
+    "hay_movimiento_descriptivo": true,
+    "familias_con_serie_no_constante": 55
+  },
+  "sellos_intactos": {
+    "result": true,
+    "futuro": true
+  },
+  "T1_tecnico": {
+    "exit_code": 1,
+    "estado": "FALLO_T1_KEYERROR_H1_sellada",
+    "score_producido_antes_del_fallo": "HIT_HIPOTESIS_SET",
+    "H1_en_evidencia_T1": true,
+    "H2_en_evidencia_T1": true,
+    "resultado_no_es_OK": true
+  }
+}

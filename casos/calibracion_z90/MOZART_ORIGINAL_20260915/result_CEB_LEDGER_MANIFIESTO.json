@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_MOZART_ORIGINAL_20260915",
+ "ledgers": [
+  {
+   "original": "/dev/shm/cal_z90_20261111/MOZART_ORIGINAL_20260915/CAL_Z90_MOZART_ORIGINAL_20260915_1794389030450.flow_ledger.jsonl",
+   "copia": "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/result_CEB_LEDGER_1.jsonl",
+   "sha256": "77aa14b5578d87062a2cacbe9869a297825bedbe82b8d8306c44fc7d9dd47643",
+   "bytes": 19793172,
+   "lineas": 39326
+  }
+ ]
+}

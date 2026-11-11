@@ -1,0 +1,116 @@
+{
+  "caso": "MLK",
+  "clasificacion_global": "FALLO_CALIBRACION_CONFORME; EJERCICIO_DIAGNOSTICO_EJECUTADO",
+  "recibo_motor": "COMPLETED",
+  "exit_code_motor": 0,
+  "MC": "EXECUTED",
+  "H1": "eterno_retorno_02_cosmizacion_fundacion",
+  "H2": "24_rivalidad_de_superior_e_inferior",
+  "apuesta_tematica": "MESeta_O_ESTABILIZACION",
+  "destino_022": "caida",
+  "GRANDE_022": 0.0592,
+  "cotejo_historico_cualitativo": {
+    "H1": {
+      "etiqueta": "PARCIAL",
+      "motivo": "Continuó la acción fundacional del movimiento, pero el rótulo cosmización/fundación es amplio."
+    },
+    "H2": {
+      "etiqueta": "HIT",
+      "motivo": "La confrontación entre el movimiento y poderes superiores continuó con detenciones y ataques."
+    },
+    "apuesta_tematica": {
+      "etiqueta": "PARCIAL",
+      "motivo": "Se sostuvo la trayectoria del movimiento, pero el Nobel y el asesinato impiden resumir todo el período como meseta."
+    },
+    "destino_022": {
+      "etiqueta": "PARCIAL",
+      "motivo": "La violencia terminal es compatible con caída, pero el Nobel posterior a Z90 y la actividad sostenida impiden un HIT de todo el tramo."
+    }
+  },
+  "origen_desenlace": {
+    "case_id": "CAL_Z90_MLK",
+    "origen": "fuente pública",
+    "consultada_despues_del_sello_resultado": true,
+    "registro": "2026-11-11T03:28:28.052173-06:00",
+    "zona": "America/Mexico_City",
+    "url": "https://www.nobelprize.org/prizes/peace/1964/king/biographical/",
+    "fuente": "Nobel Prize, Biography de Martin Luther King Jr.",
+    "hechos_post_Z": [
+      "Recibió el Nobel de la Paz en 1964, después de la Z90 de mayo.",
+      "Continuó su actividad por derechos civiles; sufrió detenciones y ataques.",
+      "Fue asesinado en Memphis el 4 de abril de 1968, donde iba a apoyar una huelga."
+    ],
+    "nota": "El período mezcla reconocimiento/auge y violencia terminal; una sola etiqueta caída no describe todo el tramo."
+  },
+  "alcance_evaluacion": "Compatibilidad temática retrospectiva en Z90→Z100, NO acierto calibrado ni doble ciego. Los criterios no fueron pre-registrados antes de conocer la historia. No se inventan tokens de futuro para obtener un HIT. El horizonte nativo es siguiente_corte; salvo Mozart no existe T1 tokenizado original válido, por lo que NO se equipara este cotejo al T1 mecánico.",
+  "fallos_y_limitaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS",
+    "FALLO_GATE_Z90_EXTERNO_RECHAZA_POR_EVIDENCIA_AUSENTE",
+    "FALLO_BLANCO_FILTRO_017_SOLO_TRAZA",
+    "FALLO_TRAZABILIDAD_CEB_REPORTED_EXECUTED_NOT_OBSERVED",
+    "FALLO_ESCALA_RANK_FUSION_FUERA_0_01_0_999",
+    "FALLO_GARANTIA_TEMPORAL_BUSQUEDA_LENIENTE_CONSERVA_8_SIN_FECHA"
+  ],
+  "tokens_invalidos": [],
+  "ceb_anomalies": [
+    {
+      "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+      "component": "geometria_multicapa_integrada_working_v1"
+    }
+  ],
+  "busqueda_arquetipos": {
+    "status": "EXECUTED",
+    "provider": "duckduckgo_html",
+    "result_count": 8,
+    "self_match_discarded": 0,
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1964-05-03",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 162,
+      "tokens_despues_corte": 162
+    },
+    "nota": "No se demuestra filtrado de fecha de las fuentes conservadas. No se afirma que contengan desenlace del sujeto, pero la garantía no queda acreditada."
+  },
+  "filtro_017": {
+    "modo": "traza",
+    "status": "TRAZA_SIN_MODIFICACION",
+    "n_aplicadas": 0,
+    "resumen": {
+      "n": 35,
+      "por_tipo": {
+        "CALENDARIO": 9,
+        "CALENDARIO_EN_SOBRE": 11,
+        "DIRIGIDO_TOKEN_AUTOETIQUETA": 4,
+        "IDENTIDAD_EN_SOBRE": 1,
+        "IDENTIDAD_NOMBRE": 9,
+        "SESGO_CONSULTOR": 1
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 18,
+        "warn": 17
+      }
+    }
+  },
+  "movimiento": {
+    "hay_movimiento_descriptivo": true,
+    "familias_con_serie_no_constante": 100
+  },
+  "sellos_intactos": {
+    "result": true,
+    "futuro": true
+  },
+  "T1_tecnico": {
+    "estado": "NO_EJECUTADO_SIN_CORTES_POST_Z_ORIGINALES_VALIDOS",
+    "no_inventados": true
+  }
+}

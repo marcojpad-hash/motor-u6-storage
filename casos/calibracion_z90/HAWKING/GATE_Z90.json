@@ -1,0 +1,17 @@
+{
+  "caso": "HAWKING",
+  "gate": "GATE_Z_TRABAJO_20261024",
+  "z_trabajo_asignado_para_prueba": "2010-08-01",
+  "modo_z_asignado_para_prueba": "historico",
+  "estado": "RECHAZO",
+  "errores": [
+    "R3 C1: sin 'evidencia'",
+    "R3 C2: sin 'evidencia'",
+    "R3 C3: sin 'evidencia'",
+    "R3 C4: sin 'evidencia'",
+    "R3 C5: sin 'evidencia'",
+    "R3 C6: sin 'evidencia'",
+    "R7 C2.hecho: lenguaje de futuro/predicción 'mas tarde'"
+  ],
+  "nota": "Compuerta disponible en calibracion/gate_z90.py pero NO llamada por correr_estandar.py. No se fabricó evidencia, preparación ciega ni fuentes contemporáneas. Las corridas son diagnósticas, no gate-PASS."
+}

@@ -1,0 +1,27 @@
+{
+  "comando": [
+    "python3",
+    "/workspace/alt_cameo/motor/correr_estandar.py",
+    "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/entrada.json",
+    "CAL_Z90_MOZART_ORIGINAL_20260915",
+    "/workspace/alt_cameo/casos/calibracion_z90/MOZART_ORIGINAL_20260915/result.json"
+  ],
+  "inicio": "2026-11-11T03:23:49.435595-06:00",
+  "fin": "2026-11-11T03:24:15.677067-06:00",
+  "zona": "America/Mexico_City",
+  "exit_code": 0,
+  "error": null,
+  "MC_solicitado": true,
+  "no_mc_no_usado": true,
+  "entorno_explicitado": {
+    "STINKBOX_HOME": "/workspace/calibracion_z90_runtime/MOZART_ORIGINAL_20260915/stinkbox",
+    "CEB_ROOT": "/dev/shm/cal_z90_20261111/MOZART_ORIGINAL_20260915",
+    "PYTHONHASHSEED": "0"
+  },
+  "input_sha256": "31e66bfe76a38b41391dfac26925e18d49fcb5453f26308ea8e4f703c464c192",
+  "futuro_sha256_verificado_antes_run": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d",
+  "futuro_sha256_despues_run": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d",
+  "result_sha256": "818b7be01b89e352b0610cfa6b763c9c06bd16a41331cbfe2fa062d8e7b67bf4",
+  "recibo_runner_existe": true,
+  "nota": "Recibo del proceso orquestador, no sustituye recibo del motor ni ledger CEB. FALLO si falta cualquiera."
+}

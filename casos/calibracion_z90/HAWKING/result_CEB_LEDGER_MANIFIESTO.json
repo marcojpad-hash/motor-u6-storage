@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__CAL_Z90_HAWKING",
+ "ledgers": [
+  {
+   "original": "/dev/shm/cal_z90_20261111/HAWKING/CAL_Z90_HAWKING_1794389082534.flow_ledger.jsonl",
+   "copia": "/workspace/alt_cameo/casos/calibracion_z90/HAWKING/result_CEB_LEDGER_1.jsonl",
+   "sha256": "65df9afabffd1ca70eea1c366868c0248e0cd405d89b297b46a952b7c9d8295d",
+   "bytes": 20496146,
+   "lineas": 42140
+  }
+ ]
+}

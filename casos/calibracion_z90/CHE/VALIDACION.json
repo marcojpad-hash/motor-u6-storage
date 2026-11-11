@@ -1,0 +1,117 @@
+{
+  "caso": "CHE",
+  "clasificacion_global": "FALLO_CALIBRACION_CONFORME; EJERCICIO_DIAGNOSTICO_EJECUTADO",
+  "recibo_motor": "COMPLETED",
+  "exit_code_motor": 0,
+  "MC": "EXECUTED",
+  "H1": "dumezil_f2_fuerza",
+  "H2": "monomito_02_llamado_a_la_aventura",
+  "apuesta_tematica": "MESeta_O_ESTABILIZACION",
+  "destino_022": "auge",
+  "GRANDE_022": 0.0676,
+  "cotejo_historico_cualitativo": {
+    "H1": {
+      "etiqueta": "HIT",
+      "motivo": "La lucha armada siguió siendo central hasta Bolivia."
+    },
+    "H2": {
+      "etiqueta": "PARCIAL",
+      "motivo": "La nueva campaña es compatible con aventura/partida, pero el rótulo no fija un desenlace concreto."
+    },
+    "apuesta_tematica": {
+      "etiqueta": "MISS",
+      "motivo": "La campaña terminó en derrota y captura, no estabilización del curso personal; juicio histórico, no T1 mecánico."
+    },
+    "destino_022": {
+      "etiqueta": "MISS",
+      "motivo": "El auge personal no se confirmó: derrota, captura y ejecución en Bolivia."
+    }
+  },
+  "origen_desenlace": {
+    "case_id": "CAL_Z90_CHE",
+    "origen": "fuente pública",
+    "consultada_despues_del_sello_resultado": true,
+    "registro": "2026-11-11T03:28:28.052173-06:00",
+    "zona": "America/Mexico_City",
+    "url": "https://www.britannica.com/biography/Che-Guevara",
+    "fuente": "Encyclopaedia Britannica",
+    "hechos_post_Z": [
+      "En octubre de 1967 el grupo guerrillero que dirigía en Bolivia fue casi aniquilado.",
+      "Guevara fue herido, capturado y ejecutado el 9 de octubre de 1967."
+    ],
+    "nota": "Un tema de fuerza/lucha puede continuar y, a la vez, el destino personal terminar en fracaso; no se confunden H temática y destino 022."
+  },
+  "alcance_evaluacion": "Compatibilidad temática retrospectiva en Z90→Z100, NO acierto calibrado ni doble ciego. Los criterios no fueron pre-registrados antes de conocer la historia. No se inventan tokens de futuro para obtener un HIT. El horizonte nativo es siguiente_corte; salvo Mozart no existe T1 tokenizado original válido, por lo que NO se equipara este cotejo al T1 mecánico.",
+  "fallos_y_limitaciones": [
+    "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+    "ORDEN_CRONOLOGICO_RECONSTRUIDO_CHE_C3_ANTES_C2",
+    "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+    "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS",
+    "FALLO_GATE_Z90_EXTERNO_RECHAZA_POR_EVIDENCIA_AUSENTE",
+    "FALLO_BLANCO_FILTRO_017_SOLO_TRAZA",
+    "FALLO_TRAZABILIDAD_CEB_REPORTED_EXECUTED_NOT_OBSERVED",
+    "FALLO_ESCALA_RANK_FUSION_FUERA_0_01_0_999",
+    "FALLO_GARANTIA_TEMPORAL_BUSQUEDA_LENIENTE_CONSERVA_8_SIN_FECHA"
+  ],
+  "tokens_invalidos": [],
+  "ceb_anomalies": [
+    {
+      "type": "REPORTED_EXECUTED_NOT_OBSERVED",
+      "component": "geometria_multicapa_integrada_working_v1"
+    }
+  ],
+  "busqueda_arquetipos": {
+    "status": "EXECUTED",
+    "provider": "bing_html",
+    "result_count": 8,
+    "self_match_discarded": 0,
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1963-11-03",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 81,
+      "tokens_despues_corte": 81
+    },
+    "nota": "No se demuestra filtrado de fecha de las fuentes conservadas. No se afirma que contengan desenlace del sujeto, pero la garantía no queda acreditada."
+  },
+  "filtro_017": {
+    "modo": "traza",
+    "status": "TRAZA_SIN_MODIFICACION",
+    "n_aplicadas": 0,
+    "resumen": {
+      "n": 47,
+      "por_tipo": {
+        "CALENDARIO": 9,
+        "CALENDARIO_EN_SOBRE": 12,
+        "DIRIGIDO_ETIQUETA_TEXTO": 2,
+        "DIRIGIDO_TOKEN_AUTOETIQUETA": 4,
+        "FUTURO_DESENLACE": 1,
+        "IDENTIDAD_EN_SOBRE": 2,
+        "IDENTIDAD_NOMBRE": 17
+      },
+      "por_accion_en_vivo": {
+        "neutralize": 26,
+        "warn": 21
+      }
+    }
+  },
+  "movimiento": {
+    "hay_movimiento_descriptivo": true,
+    "familias_con_serie_no_constante": 116
+  },
+  "sellos_intactos": {
+    "result": true,
+    "futuro": true
+  },
+  "T1_tecnico": {
+    "estado": "NO_EJECUTADO_SIN_CORTES_POST_Z_ORIGINALES_VALIDOS",
+    "no_inventados": true
+  }
+}

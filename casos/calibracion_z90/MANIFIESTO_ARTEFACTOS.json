@@ -1,0 +1,492 @@
+{
+  "zona": "America/Mexico_City",
+  "generado": "2026-11-11T03:29:24.327117-06:00",
+  "artifacts": [
+    {
+      "path": "CHE/AUDITORIA_COMPONENTES.json",
+      "bytes": 69356,
+      "sha256": "a83ae25f37eb9782b536bd01c62bb91344505a66074f07f9f09fa7567bd75ef6"
+    },
+    {
+      "path": "CHE/DESENLACE_PUBLICO_POST_SELLO.json",
+      "bytes": 637,
+      "sha256": "77b79fc93fc6b09efeba7637565ae85d980c0eaf095a1f475b8d96f50f3b940f"
+    },
+    {
+      "path": "CHE/EJECUCION_PROCESO.json",
+      "bytes": 1162,
+      "sha256": "db99d41cdc330911c00b63a2f96db48d4e6a3e8913ba8120d2fa8ac95d59b348"
+    },
+    {
+      "path": "CHE/GATE_Z90.json",
+      "bytes": 685,
+      "sha256": "2ab00992d348195b11456e02c9fb4c5c36d92964509cf5071b488f4c3174c3e5"
+    },
+    {
+      "path": "CHE/MOVIMIENTO.json",
+      "bytes": 4416,
+      "sha256": "aa0199347dc142f1f205360200cc518f6713ae0040328fabb6beac68136c52bd"
+    },
+    {
+      "path": "CHE/MOVIMIENTO_H1_H2.svg",
+      "bytes": 2772,
+      "sha256": "6fd4cdd03fd60b50ff4f061dfa50004991d08d4f84b40e602435d709c94d6366"
+    },
+    {
+      "path": "CHE/PREPARACION_Y_SELLO.json",
+      "bytes": 3740,
+      "sha256": "f18305fd178ee35a1f107548bbb38278ec64182d4ad71c4f5e731e00b4e97c8e"
+    },
+    {
+      "path": "CHE/SELLO_RESULTADO.json",
+      "bytes": 431,
+      "sha256": "d41202eba47b3002a3a6eebc1f7c7761790406cc1a010781b7a16989660277aa"
+    },
+    {
+      "path": "CHE/VALIDACION.json",
+      "bytes": 4342,
+      "sha256": "f606f40edcd4a0e1f1117955420837780b37912b919427cb2a89c441de93bd0d"
+    },
+    {
+      "path": "CHE/entrada.json",
+      "bytes": 9192,
+      "sha256": "8a5c663053a4a5626dab595f89c22192c549f0d420c620d20909f597b344f78f"
+    },
+    {
+      "path": "CHE/futuro_sellado.json",
+      "bytes": 406,
+      "sha256": "a224004f1d269dd56c0e203840a7f795706bf8faa4ccc4609751f5a405fb792f"
+    },
+    {
+      "path": "CHE/futuro_sellado.sha256",
+      "bytes": 86,
+      "sha256": "eaa715b385bc5761f5d3e58d60175a76dd5104d26977e0d975642dea546c0e0a"
+    },
+    {
+      "path": "CHE/result.json.gz",
+      "bytes": 723624,
+      "sha256": "3def4390bb13e7e485b11762fda0fbd2d516d2a894863f04dadf16c130b8e2d7",
+      "uncompressed_sha256": "bc3d29b750e196dda9a0bf9170e7d07418e9343cdc02da5f947bd108d57675e9"
+    },
+    {
+      "path": "CHE/result_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 2354581,
+      "sha256": "33a9b675735400961ee63ef7ef52543d81f447e5ca9b3130107f8246fcbde6d0",
+      "uncompressed_sha256": "7a7f3cbcce290328f38f9eda8e6b98523f308e740d470b63addfded3b21da90c"
+    },
+    {
+      "path": "CHE/result_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 439,
+      "sha256": "c28441823b2c2db7ad16e905c5455ba692801de5579eeefa3bf9fce08e122c7f"
+    },
+    {
+      "path": "CHE/result_RECIBO_EJECUCION.json",
+      "bytes": 44385,
+      "sha256": "49acf652d7df0206dfdaf5e4974439e92cda54aee02c37a195e02d617ebd1c6a"
+    },
+    {
+      "path": "CHE/run.log",
+      "bytes": 26548,
+      "sha256": "749ef23d018b5ae1c4bee0a568ef8069a1f5d5acf062298182f78aedb65dd361"
+    },
+    {
+      "path": "FECHAS_BIOGRAFICAS_FUENTES.json",
+      "bytes": 1473,
+      "sha256": "c4d75ddb9092b715cf4774831049df35a1d5ed28acfd8bbd8e79764586ff1fc5"
+    },
+    {
+      "path": "GALILEO_20260924/AUDITORIA_COMPONENTES.json",
+      "bytes": 89278,
+      "sha256": "de3b7fe76a84cf2153b4cc8bbe314e353274e66b7bc4c6a16efa48397344da75"
+    },
+    {
+      "path": "GALILEO_20260924/DESENLACE_PUBLICO_POST_SELLO.json",
+      "bytes": 808,
+      "sha256": "18285b97a0b50b945c18ba6174a56a3ac22684d13ecdfae0b4ace7a550e4a7b3"
+    },
+    {
+      "path": "GALILEO_20260924/EJECUCION_PROCESO.json",
+      "bytes": 1227,
+      "sha256": "2b48eb97ec79edb6bd368e031432dcf5ac31740b7cd83a9af3d7e3a6e925e029"
+    },
+    {
+      "path": "GALILEO_20260924/GATE_Z90.json",
+      "bytes": 753,
+      "sha256": "f83bf835b81e5a5493a49256330ed1acdbf5f5a78b9e39d4436a422663828cbb"
+    },
+    {
+      "path": "GALILEO_20260924/MOVIMIENTO.json",
+      "bytes": 4578,
+      "sha256": "10bd5b94a7dccbd9350919cac11e0cf5f628d7d1a228a8c4442ee3b383b7ce07"
+    },
+    {
+      "path": "GALILEO_20260924/MOVIMIENTO_H1_H2.svg",
+      "bytes": 3006,
+      "sha256": "8e975aa7e41a0f6cce0721e5c5b551fe8a67f00d0ce16d48a8763c7f1fe1eb83"
+    },
+    {
+      "path": "GALILEO_20260924/PREPARACION_Y_SELLO.json",
+      "bytes": 1884,
+      "sha256": "83dec0a09f15c6f012a5de2d993cdf37d96953d899ed21b29e13fc67237dca91"
+    },
+    {
+      "path": "GALILEO_20260924/SELLO_RESULTADO.json",
+      "bytes": 444,
+      "sha256": "902fdf12db6b0bca7ced42dca04a2e2396b0f3ce2991ff592099561ebbd3c5a4"
+    },
+    {
+      "path": "GALILEO_20260924/VALIDACION.json",
+      "bytes": 4483,
+      "sha256": "6f8006f6fc1b80a29cf6fb5aa90817d3585fb5ef5d96b906d0dd29f1776b5196"
+    },
+    {
+      "path": "GALILEO_20260924/entrada.json",
+      "bytes": 9859,
+      "sha256": "68ca6127f1512c78efcbdfa8d0459dc01f50af6f7a828fa34860e640392d6b60"
+    },
+    {
+      "path": "GALILEO_20260924/futuro_sellado.json",
+      "bytes": 419,
+      "sha256": "0293410c8bbe84aecd0f680ff57ad99e3568a28e706b0d5cb90fa8fe25ee9aa4"
+    },
+    {
+      "path": "GALILEO_20260924/futuro_sellado.sha256",
+      "bytes": 86,
+      "sha256": "157dfaf8232b7b120e9185840b593d170f4c3effb7d160fb04cf51de7c261b9a"
+    },
+    {
+      "path": "GALILEO_20260924/result.json.gz",
+      "bytes": 494943,
+      "sha256": "2c5bece9bae7e2099ed78e6b2c42f108ae672e9b7dbdc335ec74a22f01f51c33",
+      "uncompressed_sha256": "bda76fe150d4af27de9a6b3db22ae99da37e0349783cdd7bead96e78e38e53c3"
+    },
+    {
+      "path": "GALILEO_20260924/result_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 1134250,
+      "sha256": "471ae9b1871f98fc8b7fc254812e6c804b9cc427036c3911d4f16056b55e1ad8",
+      "uncompressed_sha256": "b266459adcfb1435d679cd5686b33ba7d4107f72cc287ac56a8e2da020bbd2aa"
+    },
+    {
+      "path": "GALILEO_20260924/result_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 491,
+      "sha256": "2f5f3645ebab5e15af37deb617c5b4e18393d909a5fd2476504349dd9e5c59f2"
+    },
+    {
+      "path": "GALILEO_20260924/result_RECIBO_EJECUCION.json",
+      "bytes": 30326,
+      "sha256": "0a5558d7d41a40966cbc883dd54a67036ed1d7352fff475e807a2b0f89bfff63"
+    },
+    {
+      "path": "GALILEO_20260924/run.log",
+      "bytes": 16514,
+      "sha256": "a731814469c90e625c71c4e44347a8a2d86f52da5acb13e09e7ba438e07db362"
+    },
+    {
+      "path": "HAWKING/AUDITORIA_COMPONENTES.json",
+      "bytes": 75870,
+      "sha256": "66db435fbac1ee644b6e2a39d928ac161d602d09d6723acaa94e762741d14888"
+    },
+    {
+      "path": "HAWKING/DESENLACE_PUBLICO_POST_SELLO.json",
+      "bytes": 699,
+      "sha256": "a8a9913fc9526213bac562c0795f0540b6821a4f0b8e7acbe5f21e46690d7375"
+    },
+    {
+      "path": "HAWKING/EJECUCION_PROCESO.json",
+      "bytes": 1182,
+      "sha256": "5e971b61449b47218f1e84febae4712823bef5834a0d12c0876b0f3293d63ffe"
+    },
+    {
+      "path": "HAWKING/GATE_Z90.json",
+      "bytes": 662,
+      "sha256": "19b7d86b8530ac05f1a1af519bb59dd559dbb3149f58ad2e46cdc73ba826b9ad"
+    },
+    {
+      "path": "HAWKING/MOVIMIENTO.json",
+      "bytes": 3543,
+      "sha256": "a236f5add25000c033fc7548b8da8ec5f5b2b0589c0850e2398530c66f42c57f"
+    },
+    {
+      "path": "HAWKING/MOVIMIENTO_H1_H2.svg",
+      "bytes": 2407,
+      "sha256": "6cc683b3f1af8693813864e153047886a4f18c89961cdf26efff5f6847983f29"
+    },
+    {
+      "path": "HAWKING/PREPARACION_Y_SELLO.json",
+      "bytes": 3304,
+      "sha256": "f5b6e3442fb8a397b81a08c0e24652242056f1eb203c3c7ccc0aca08c4921181"
+    },
+    {
+      "path": "HAWKING/SELLO_RESULTADO.json",
+      "bytes": 435,
+      "sha256": "4b1bc858b3b4af4afbc0bc1198647c527c609072637b82e1f72210a56bd12a6c"
+    },
+    {
+      "path": "HAWKING/VALIDACION.json",
+      "bytes": 4323,
+      "sha256": "aca8c4ada8979a25e78e1cb500626998cc3983e85d11112c17d2011fb7464cb5"
+    },
+    {
+      "path": "HAWKING/entrada.json",
+      "bytes": 7359,
+      "sha256": "791843e20ad3510c3546a425980b48d790d2bd6a29d171d29c635d31e3d3d878"
+    },
+    {
+      "path": "HAWKING/futuro_sellado.json",
+      "bytes": 1695,
+      "sha256": "0e0a48ac182f6002192f23157eac6e040ac51684144611b3cdb9f344d691835b"
+    },
+    {
+      "path": "HAWKING/futuro_sellado.sha256",
+      "bytes": 86,
+      "sha256": "9bd0d140d816f5b7303ce5cb375440d37a6f8c708ff96519407fb0fe9b283fd2"
+    },
+    {
+      "path": "HAWKING/result.json.gz",
+      "bytes": 499901,
+      "sha256": "148301fb674f637a620232b7672944670a9290aa5fd9858cf40ecda4ee3bbcf6",
+      "uncompressed_sha256": "bbe428a63358ffbf4ab3548bc42d442354e9e50fcad087c20b69426534589939"
+    },
+    {
+      "path": "HAWKING/result_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 1531281,
+      "sha256": "187d1f766f455d23b47d7cf0929f564d32cab99c9e22f95d190d7b78df962d7d",
+      "uncompressed_sha256": "65df9afabffd1ca70eea1c366868c0248e0cd405d89b297b46a952b7c9d8295d"
+    },
+    {
+      "path": "HAWKING/result_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 455,
+      "sha256": "4c93bbcda7bacb3f4a1c150f8fdd03a7802c0098b41c5550d777de7b9cfba0c6"
+    },
+    {
+      "path": "HAWKING/result_RECIBO_EJECUCION.json",
+      "bytes": 33495,
+      "sha256": "a0c2b652d86cd8702631bb3c2b6118da7b0efe98c0125b4c854f9db68c86bc7d"
+    },
+    {
+      "path": "HAWKING/run.log",
+      "bytes": 18222,
+      "sha256": "243976e4e3c2f4d7573a634c73e918fb5dabb230825a595725cbd76bad39d778"
+    },
+    {
+      "path": "MLK/AUDITORIA_COMPONENTES.json",
+      "bytes": 90988,
+      "sha256": "fb001c890fe0da4d24916c7550f084f2618a96a697b4580b89c9419322518d94"
+    },
+    {
+      "path": "MLK/DESENLACE_PUBLICO_POST_SELLO.json",
+      "bytes": 727,
+      "sha256": "886a39825bf0b0c88c0579475b55860f1150030137f42d27861b0748d3657d89"
+    },
+    {
+      "path": "MLK/EJECUCION_PROCESO.json",
+      "bytes": 1162,
+      "sha256": "6a6146a097af069700e510c861f070788350f89e8f328131d67d9cd5f8a9526c"
+    },
+    {
+      "path": "MLK/GATE_Z90.json",
+      "bytes": 655,
+      "sha256": "67aeedf31a7246aaa19f0f20e423355fa20501a0d17de5068073a883b7fec429"
+    },
+    {
+      "path": "MLK/MOVIMIENTO.json",
+      "bytes": 4175,
+      "sha256": "00010fd1d94e4f4a00c1b588ef78f183fe063d63d7a101242a46b3f6f2baf306"
+    },
+    {
+      "path": "MLK/MOVIMIENTO_H1_H2.svg",
+      "bytes": 2753,
+      "sha256": "50fef1d80046d6fffac7c038c17c0c5dfc56483a373038177b5b8aa578ec1f27"
+    },
+    {
+      "path": "MLK/PREPARACION_Y_SELLO.json",
+      "bytes": 3487,
+      "sha256": "5de978f99bbf35538f83133f75755b268fa8f7704baf9cb6880c0b630a3d222c"
+    },
+    {
+      "path": "MLK/SELLO_RESULTADO.json",
+      "bytes": 431,
+      "sha256": "d9201d3f8cd1e0dc13a48ebbcdcb9f5719f30ff2d95e8ae38d2b56c1256d4426"
+    },
+    {
+      "path": "MLK/VALIDACION.json",
+      "bytes": 4479,
+      "sha256": "3c23b5563079addb99b588e779d98f65228083115f108e15ae31d3bdfcff8544"
+    },
+    {
+      "path": "MLK/entrada.json",
+      "bytes": 8790,
+      "sha256": "3d8bf99bca6424cf064bb43aa906af6d14369ea1db862d522860716822921c54"
+    },
+    {
+      "path": "MLK/futuro_sellado.json",
+      "bytes": 406,
+      "sha256": "ad9d2d503b7367f084f6de2932adae052c41c22cfd85148c4a90e304917bacfa"
+    },
+    {
+      "path": "MLK/futuro_sellado.sha256",
+      "bytes": 86,
+      "sha256": "90f56724b8a50f6d168e705b146ff11110f647d54b47d876a664a8393692c227"
+    },
+    {
+      "path": "MLK/result.json.gz",
+      "bytes": 712941,
+      "sha256": "0c3d333f1008fa0fe5152c7fc2ec8df88d19eb4d5c46fe774fd78f51239b4e66",
+      "uncompressed_sha256": "56e2163c7f2b723251e5286031863d8adf3297fadb882a7339cea7645422b799"
+    },
+    {
+      "path": "MLK/result_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 2519200,
+      "sha256": "6b03e442defe885c2262c85b2093bd72ae2ec0dc9d5673b46fac8bcc76f8b3a4",
+      "uncompressed_sha256": "5aef1c615f9f7f3a4f507ac776f77fee53800c9902dfaf91e208f36fe3e5f753"
+    },
+    {
+      "path": "MLK/result_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 439,
+      "sha256": "afc3247d001e1c804f046d20181218d28e3fe67f79c1e660b6d455e809d37b07"
+    },
+    {
+      "path": "MLK/result_RECIBO_EJECUCION.json",
+      "bytes": 42909,
+      "sha256": "6e067f9cdb42249ba946233ee8e4d868822f165e9a86ae81a55442bd7125c2e9"
+    },
+    {
+      "path": "MLK/run.log",
+      "bytes": 25397,
+      "sha256": "4c1815750f1e05d9b0c27b0665e13ecd445087a7551b16bb62025d698bc7a07e"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/AUDITORIA_COMPONENTES.json",
+      "bytes": 84426,
+      "sha256": "c61e6680571a35733c0f23c5124a82edf9d230f9945926feeafd9c10098cc783"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/EJECUCION_PROCESO.json",
+      "bytes": 1267,
+      "sha256": "1f97b9a781640871cb0e6f319bc73c5a919fec16826f505ff52496aa80c073ba"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/GATE_Z90.json",
+      "bytes": 646,
+      "sha256": "42018f7b94a90ff218abf7028282eedbc43ca6da6941fd9102b64fc2d01a4047"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/MOVIMIENTO.json",
+      "bytes": 3822,
+      "sha256": "3c89ba98ca1c94549eb7c30480d08003e1a37ee8114950b5a22f1a7fa25beaa7"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/MOVIMIENTO_H1_H2.svg",
+      "bytes": 2598,
+      "sha256": "b1070b1fdd2a9c26a76bc2329cf3fd7612f1015dc518f11869250159eec930eb"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/PREPARACION_Y_SELLO.json",
+      "bytes": 3645,
+      "sha256": "9b5aa1df06b86f7e36da382fc812bdeb1cb23732646e2baf6f9b3d72f79899c8"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/SELLO_RESULTADO.json",
+      "bytes": 452,
+      "sha256": "2addcbe1ffcbcdde1efa153ead7d710dd3273883cde8e735328ee090d3b068e8"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/T1_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 899422,
+      "sha256": "6ef2dd00706f011b5179a0fab92c241c6b45434547fc9c89895355f693aed378",
+      "uncompressed_sha256": "cc3d9fc94cff8e5ee6d327d75fe8510087bb5a8b6828074089a859dec963cc50"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/T1_EJECUCION.json",
+      "bytes": 1067,
+      "sha256": "0beb78b05f1a41279574bbacffa06698f056d08a48fb06e47b7474778cbdf325"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/T1_SCORE.json",
+      "bytes": 4584,
+      "sha256": "8f8bf177b3c516ca627da9e46f71be44de01ce0e7c4577497673d27b8fee5bbd"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/VALIDACION.json",
+      "bytes": 4126,
+      "sha256": "eda82c6f85a8ffe3ea732f572436aa10b00e3eab6ea1be0594e53560e07b4ca4"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/entrada.json",
+      "bytes": 5873,
+      "sha256": "31e66bfe76a38b41391dfac26925e18d49fcb5453f26308ea8e4f703c464c192"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/futuro_sellado.json",
+      "bytes": 2677,
+      "sha256": "dd4356851be80eb6a7f56c2dab4aef953fc8e50b5a3c70753cc24d5b15adb12d"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/futuro_sellado.sha256",
+      "bytes": 86,
+      "sha256": "085745d9ffaa4e55a20100f3809b3cc9c27a182c14b44baeefb41953cbf97624"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/result.json.gz",
+      "bytes": 498868,
+      "sha256": "d901e8a4354066e75ed50529e896a8c671f336f5f691f0e62b06e41fe42b7b7c",
+      "uncompressed_sha256": "818b7be01b89e352b0610cfa6b763c9c06bd16a41331cbfe2fa062d8e7b67bf4"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/result_CEB_LEDGER_1.jsonl.gz",
+      "bytes": 1452111,
+      "sha256": "884e686ccdb429219f417e5054e608f95f3948009625917071c238866b1c1fd1",
+      "uncompressed_sha256": "77aa14b5578d87062a2cacbe9869a297825bedbe82b8d8306c44fc7d9dd47643"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/result_CEB_LEDGER_MANIFIESTO.json",
+      "bytes": 523,
+      "sha256": "f5bf7ba584daa8147acde7fce0ee80791cfc2cd68d1c16eaada86ccaa84bd21d"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/result_RECIBO_EJECUCION.json",
+      "bytes": 29601,
+      "sha256": "ab53cb93ae1e5b81a363c69072b69b866c67e0904127259333862a6de4dd6061"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/run.log",
+      "bytes": 16146,
+      "sha256": "805e582aaf19accb7a334956b82ba96ac89cd53eb00ebd505542aea872d21090"
+    },
+    {
+      "path": "MOZART_ORIGINAL_20260915/t1_run.log",
+      "bytes": 523,
+      "sha256": "7439e064b7227f00658028f100b943a462df2832badbb79381c29eb514fe9612"
+    },
+    {
+      "path": "PREPARACION_LOTE.json",
+      "bytes": 16956,
+      "sha256": "86b9e7a828f5de422dab71542efe54e294597ce1591799cea2477ed9d22b48fd"
+    },
+    {
+      "path": "PRUEBAS_GATE.json",
+      "bytes": 4691,
+      "sha256": "2c4f03b2a7c41c6b642280e096dab7f8ffce22b6222da833afccad2d83321f9b"
+    },
+    {
+      "path": "RESUMEN.json",
+      "bytes": 5794,
+      "sha256": "06196e3de673f76a338db4a0b4037f74853f4aace82b70c9d3b74d9e5483e9a7"
+    },
+    {
+      "path": "RESUMEN.md",
+      "bytes": 10375,
+      "sha256": "f7fda0f055097f90d5fcdac7185792210a56656a8ddab2d533230c4f4b26bb72"
+    },
+    {
+      "path": "SALIDAS_EXTRACTO.json",
+      "bytes": 244481,
+      "sha256": "0542769d0ffa57122a77482a5fab37a34727b2342be6d2e9e5c3a2c322ebee60"
+    },
+    {
+      "path": "VERIFICACION_INTEGRIDAD.json",
+      "bytes": 2156,
+      "sha256": "971291eaf796cf58626b16fb3982ff1552b2b900a38226e32033b6fb00450520"
+    }
+  ]
+}
