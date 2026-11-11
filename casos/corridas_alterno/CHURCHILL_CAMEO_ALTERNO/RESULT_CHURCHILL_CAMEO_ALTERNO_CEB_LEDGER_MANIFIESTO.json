@@ -1,0 +1,13 @@
+{
+ "version": "CEB_LEDGER_PRESERVADO_U6",
+ "run_dir": "/workspace/alt_cameo/motor/runs/ESTANDAR__CHURCHILL_CAMEO_ALTERNO",
+ "ledgers": [
+  {
+   "original": "/dev/shm/churchill_cameo_ceb/CAL_LOTE01_02_CHURCHILL_1794382637362.flow_ledger.jsonl",
+   "copia": "/workspace/churchill_cameo_run/RESULT_CHURCHILL_CAMEO_ALTERNO_CEB_LEDGER_1.jsonl",
+   "sha256": "087b3136ceeeddfd8b07581e440093cb84773f4c85ab04d06b8dc24aa2a1da4c",
+   "bytes": 15777916,
+   "lineas": 32017
+  }
+ ]
+}

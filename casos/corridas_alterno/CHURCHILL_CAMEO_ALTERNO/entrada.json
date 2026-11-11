@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_02_CHURCHILL",
+ "question": "¿Qué trayectoria sigue Churchill al reingresar al gabinete al estallar la Segunda Guerra Mundial?",
+ "person": "Winston Churchill",
+ "tipo_sujeto": "politico",
+ "freeze": "1939-09-03",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1939",
+ "cuts": [
+  {
+   "id": "C1_1915",
+   "corte": "C1_1915",
+   "cut_id": "C1_1915",
+   "date": "1915-05-25",
+   "fecha_corte": "1915-05-25",
+   "hecho": "Desastre de Gallípoli; deja el Almirantazgo.",
+   "P": [
+    [
+     "ambicion",
+     0.77
+    ],
+    [
+     "audacia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.7
+    ],
+    [
+     "busqueda_riesgo",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.77
+    ],
+    [
+     "caida",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C2_1933",
+   "corte": "C2_1933",
+   "cut_id": "C2_1933",
+   "date": "1933-06-01",
+   "fecha_corte": "1933-06-01",
+   "hecho": "'Años del desierto': fuera del gobierno, advierte contra el rearme alemán.",
+   "P": [
+    [
+     "vision",
+     0.77
+    ],
+    [
+     "determinacion",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "oratoria",
+     0.77
+    ],
+    [
+     "oposicion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "aislamiento_social",
+     0.7
+    ],
+    [
+     "escepticismo",
+     0.67
+    ]
+   ]
+  },
+  {
+   "id": "C3_1939",
+   "corte": "C3_1939",
+   "cut_id": "C3_1939",
+   "date": "1939-09-03",
+   "fecha_corte": "1939-09-03",
+   "hecho": "Gran Bretaña declara la guerra; Churchill vuelve como Primer Lord del Almirantazgo.",
+   "P": [
+    [
+     "patriotismo",
+     0.81
+    ],
+    [
+     "proposito_claro",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.81
+    ],
+    [
+     "valentia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "amenaza_central",
+     0.77
+    ],
+    [
+     "catastrofe",
+     0.63
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia/Britannica 'Winston Churchill' (hechos hasta sep-1939)"
+}
