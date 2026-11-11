@@ -1,0 +1,28 @@
+{
+  "modo": "TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA",
+  "cases": [
+    {
+      "file": "entradas/MOZART_10.json"
+    },
+    {
+      "file": "entradas/GALILEO.json"
+    },
+    {
+      "file": "entradas/HAWKING.json"
+    },
+    {
+      "file": "entradas/CHE.json"
+    },
+    {
+      "file": "entradas/MLK.json"
+    }
+  ],
+  "coordenadas_externas": {
+    "estado": "FALLO_ARCHIVOS_NO_EXISTEN",
+    "solicitados": [
+      "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/1ccd6adb25bc88f74627e1f5749cf15ba27ec28134897193c11f7d122431e050.csv",
+      "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/75cbc2c846e73e7b5b778942c4f14fd21ffadf40186d61a953f4ab9e35df3a7b.csv"
+    ],
+    "motivo": "Read devolvió File not found para ambos; no se inventan coordenadas ni transformación."
+  }
+}

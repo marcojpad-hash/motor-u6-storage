@@ -1,0 +1,64 @@
+{
+  "estado": "GATE_BLOQUEADO_INSUMOS_NO_DISPONIBLES",
+  "transformacion": "P crudo centrado -> PC1/PC2 SVD -> rotación C1→Cn horizontal",
+  "script_local": "proyeccion_tusi_modelo_externo.py",
+  "origen_script_local": "RECONSTRUIDO_DE_DESCRIPCION; no copia del adjunto, no equivalencia verificada",
+  "script_sha256": "b889f2cb95f61b9d868473346bc012bed0d1fead9dd1866b84ee0d6cb183cedc",
+  "esperado_giro_abs_grados": {
+    "Mozart": 222.4,
+    "Napoleon": 236.5
+  },
+  "archivos": [
+    {
+      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/1ccd6adb25bc88f74627e1f5749cf15ba27ec28134897193c11f7d122431e050.csv",
+      "exists": false
+    },
+    {
+      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/75cbc2c846e73e7b5b778942c4f14fd21ffadf40186d61a953f4ab9e35df3a7b.csv",
+      "exists": false
+    },
+    {
+      "path": "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/6ed3c3509f7f87761f78eb000129e3729f0589fae478886ae68c5516aa854353.py",
+      "exists": false
+    },
+    {
+      "path": "casos/precedentes/NAPOLEON_10_CORTES/entrada.json",
+      "exists": false
+    }
+  ],
+  "resultados_exactos_buscados_y_no_localizados": [
+    "RESULT_MOZART_Z90_PRECEDENTE.json",
+    "RESULT_NAPOLEON_Z90_10CORTES.json"
+  ],
+  "busqueda": "git pull --ff-only: Already up to date. Búsqueda por nombre en rama y /workspace sin coincidencias; no se sustituyen por otros casos de igual nombre.",
+  "gate_ambos_csv": "NO_EJECUTADO_POR_FALTANTES",
+  "aplicada_a_los_otros_cuatro": false,
+  "pruebas_sinteticas": "OK: n variable, alineación del extremo, radio y centrado; NO sustituyen gate real",
+  "crudo_P_disponible": {
+    "MLK": {
+      "presente": true,
+      "n_familias": 244,
+      "n_cortes": 8
+    },
+    "HAWKING": {
+      "presente": true,
+      "n_familias": 244,
+      "n_cortes": 6
+    },
+    "MOZART_ORIGINAL_20260915": {
+      "presente": true,
+      "n_familias": 244,
+      "n_cortes": 7
+    },
+    "CHE": {
+      "presente": true,
+      "n_familias": 244,
+      "n_cortes": 9
+    },
+    "GALILEO_20260924": {
+      "presente": true,
+      "n_familias": 244,
+      "n_cortes": 10
+    }
+  }
+}

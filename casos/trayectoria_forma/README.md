@@ -1,5 +1,11 @@
 # Trayectoria descriptiva — gate de reproducción FALLIDO
 
+> **Instrucción posterior PC1/PC2 rotada:** gate real bloqueado por adjuntos y RESULT exactos ausentes. Ver [GATE_TRANSFORMACION_EXTERNA.json](GATE_TRANSFORMACION_EXTERNA.json). El script `proyeccion_tusi_modelo_externo.py` es reconstruido, NO copia verificada del adjunto. No se aplicó esa nueva transformación a los cuatro casos.
+
+
+> **Actualización:** el diagnóstico inicial se conserva como antecedente. Por la nueva instrucción se ejecutaron los cinco sujetos con la geometría existente, sin exigir 222.5°; ver [geometria_existente_v1/README.md](geometria_existente_v1/README.md).
+
+
 **No es predicción. No entra al motor, H, ranking ni apuesta. No se compararon los demás sujetos.**
 
 ## Resultado

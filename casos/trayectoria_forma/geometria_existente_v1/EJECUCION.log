@@ -1,0 +1,6 @@
+MOZART_10 giro 94.355 R0 0.12664101591041774 b 0.06685042102887384 R2 0.17218196868406832 omega -5.789538976215975 seno% 60.251789174272865 forma False regime {'corte': 'C5', 'year_aproximado': 1778.9972602739726, 'frente_z90': 'ANTES_Z90'} phase {'corte': 'C2', 'year_aproximado': 1766.9972602739726, 'frente_z90': 'ANTES_Z90'}
+GALILEO giro 380.962 R0 0.18521188783110687 b 0.0038837884889218847 R2 -0.008747250138188889 omega -5.283161263649839 seno% 79.26587786054637 forma False regime {'corte': 'G_C10_Z90', 'year_aproximado': 1634.227397260274, 'frente_z90': 'ANTES_Z90'} phase {'corte': 'G_C8', 'year_aproximado': 1630.0, 'frente_z90': 'ANTES_Z90'}
+HAWKING giro 27.442 R0 None b None R2 None omega 2.5906265846586414 seno% 75.94027202325672 forma False regime None phase {'corte': 'C3', 'year_aproximado': 1966.9972602739726, 'frente_z90': 'ANTES_Z90'}
+CHE giro 401.442 R0 None b None R2 None omega -32.24903387396702 seno% 75.84788798777102 forma True regime None phase None
+MLK giro 37.958 R0 None b None R2 None omega 3.214890072621249 seno% 65.75148767044936 forma False regime None phase None
+integridad {'archivos_protegidos': 133, 'intactos': True}

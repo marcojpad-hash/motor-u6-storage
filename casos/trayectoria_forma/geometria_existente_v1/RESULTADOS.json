@@ -1,0 +1,1465 @@
+{
+  "modo": "TRAYECTORIA_DESCRIPTIVA_NO_PREDICTIVA",
+  "estado": "EJECUTADO_CON_LIMITES",
+  "can_decide_H": false,
+  "alimenta_motor": false,
+  "alimenta_ranking": false,
+  "alimenta_apuesta": false,
+  "metodo_sha256": "a65123e6e1e6d16c649d717719e96025e3c7a05184607e5c39927ecc7c3a824a",
+  "script_sha256": "71ab14fa8d37248e58194ab60b3343cda47729ecc11fae039eb39831acea3443",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "coordenadas_externas": {
+    "estado": "FALLO_ARCHIVOS_NO_EXISTEN",
+    "solicitados": [
+      "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/1ccd6adb25bc88f74627e1f5749cf15ba27ec28134897193c11f7d122431e050.csv",
+      "/home/box/agent-data/agents/56d9fab0-f92f-4850-a04b-6f55ff03e508/attachments/75cbc2c846e73e7b5b778942c4f14fd21ffadf40186d61a953f4ab9e35df3a7b.csv"
+    ],
+    "motivo": "Read devolvió File not found para ambos; no se inventan coordenadas ni transformación."
+  },
+  "casos": [
+    {
+      "caso": "MOZART_10",
+      "geometria": "motor_PCA3_HELIX_EXISTENTE",
+      "source": "/workspace/UNIFICADO_20261011/TRABAJO/results/U10/MOZART/RESULT_MOZART_run1_u10.json",
+      "source_sha256": "bd3385601cbcb79fbc07850b61fc1c6f94f408331974a799d204cfb04b30a53c",
+      "fixture_sha256": "dc074dfe521bf65df137f43e284abbbef1c1bda9af553e5b868911a1516f2b6a",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10"
+      ],
+      "n": 10,
+      "z90": "1788-05-04",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [
+        "TRAZA_HISTORICA_NO_IDENTIFICADA_COMO_LA_DEL_MODELO_EXTERNO",
+        "Fechas emparejadas por corte desde preparación vigente, reconstruidas. C10=1791-12-31 es cierre convencional posterior a muerte: los parámetros por año son aproximaciones, no precisión biográfica.",
+        "No se mezclan los años 1762–1788.34 declarados para el CSV externo ausente con esta traza histórica."
+      ],
+      "PCA_varianza": [
+        0.8672,
+        0.052,
+        0.0372
+      ],
+      "diagnostico_existente": {
+        "helix_like": false,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_source": "pca_estimate",
+        "center": [
+          3.3306690738754695e-17,
+          7.632783294297951e-17,
+          -8.326672684688674e-18
+        ],
+        "radius_mean": 0.09579133172970711,
+        "radius_cv": 0.46827212023753384,
+        "phase_total_turns": -0.26209603292743144,
+        "phase_direction_consistency": 0.6666666666666666,
+        "axial_displacement": 0.8149563151838739,
+        "pitch_per_turn_median": 0.2109639065959188,
+        "phase_increment_median_abs": 0.9276680218301039,
+        "n_points": 10,
+        "low_n_warning": true,
+        "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+      },
+      "giro_neto_grados": -94.35457185387531,
+      "giro_neto_absoluto_grados": 94.35457185387531,
+      "recorrido_angular_absoluto_grados": 569.7035237846056,
+      "radio": {
+        "start": 0,
+        "end": 3,
+        "n_fit": 4,
+        "R0": 0.12664101591041774,
+        "b": 0.06685042102887384,
+        "R2": 0.17218196868406832,
+        "R2_log": 0.2878600899416893,
+        "pred": [
+          0.12664101591041774,
+          0.09692614168583952,
+          0.06489346886989604,
+          0.04645730755092264,
+          0.0434550789836664,
+          0.035556628645561354,
+          0.023271479888957,
+          0.020828291871322503,
+          0.019482297104090367,
+          0.018223285077671028
+        ],
+        "residual": [
+          0.03488961621540548,
+          -0.04971685361945029,
+          0.08735330907652171,
+          -0.014583064248247755,
+          0.10028996595992704,
+          0.05841461738377395,
+          0.09296755786111513,
+          0.01956666321691816,
+          0.05695933464385204,
+          0.07603717521891107
+        ],
+        "regime": 4,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.08460646983485577,
+        "regime_flags": [
+          4,
+          6
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 2.8042063317615367,
+        "omega": -5.789538976215975,
+        "R2": 0.25394148497660396,
+        "pred": [
+          2.8042063317615367,
+          2.400011962852462,
+          1.7935820815049657,
+          1.2884082843605642,
+          1.1874288561252377,
+          0.8842139154514896,
+          0.24347869410075873,
+          0.07582517763334007,
+          -0.02515425060198684,
+          -0.1261336788373133
+        ],
+        "residual": [
+          -2.8042063317615367,
+          -0.7725398506013323,
+          1.968511243195827,
+          2.859793869187185,
+          1.3223503936832979,
+          0.6978973125269421,
+          0.6375605667685857,
+          -0.9111115807492485,
+          -1.477591357927338,
+          -1.5206642643223809
+        ],
+        "innovation": [
+          2.031666481160204,
+          2.7410510937971595,
+          0.891282625991358,
+          -1.5374434755038868,
+          -0.6244530811563558,
+          -0.06033674575835657,
+          -1.548672147517834,
+          -0.5664797771780897,
+          -0.043072906395042826
+        ],
+        "threshold_grados": 102.13346564528372,
+        "rupture": 1,
+        "rupture_flags": [
+          1,
+          2
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 60.251789174272865,
+        "frequency_por_anio": 0.04519160017858115,
+        "periodo_anios": 22.12800600218526,
+        "offset": 0.0024399683902846248,
+        "A_sin": -0.04086137391291858,
+        "B_cos": 0.08176373895757783,
+        "amplitud": 0.09140547514440409,
+        "pred": [
+          0.08420370734786245,
+          -0.00016134004899707004,
+          -0.0877720433960312,
+          0.0034040829285015926,
+          0.028954527943992163,
+          0.08573512653894573,
+          0.020126682196503924,
+          -0.022503300827433924,
+          -0.04612499223347732,
+          -0.06586245044986645
+        ],
+        "residual": [
+          -0.08420370734786245,
+          0.04729482687776335,
+          -0.0007507149233842159,
+          -0.03033857415892245,
+          0.05594259916551574,
+          0.00823010412664231,
+          0.06954018461594344,
+          -0.0074491022589821335,
+          -0.030139711022351932,
+          -0.028125905074361593
+        ],
+        "n": 10,
+        "grados_libertad_nominales": 6,
+        "grid_n": 2048,
+        "f_min": 0.01724143221299094,
+        "f_max": 0.1666252281021898
+      },
+      "forma": {
+        "coincide": false,
+        "cresta": 1,
+        "valle": null,
+        "salto_inicio": 1,
+        "salto_fin": 2,
+        "salto_largo": false,
+        "salto_cruza_eje": true,
+        "subida": false,
+        "salto_umbral": 0.18495706939235557,
+        "pasos": [
+          0.1708355630891449,
+          0.18190681043448784,
+          0.12330471292823704,
+          0.14932458335460513,
+          0.11529011339753002,
+          0.07515496086885678,
+          0.12847219487047762,
+          0.051231726120937474,
+          0.021604919643791715
+        ],
+        "advertencia": "Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."
+      },
+      "cambio_regimen": {
+        "corte": "C5",
+        "year_aproximado": 1778.9972602739726,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "C2",
+        "year_aproximado": 1766.9972602739726,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "C5",
+          "year_aproximado": 1778.9972602739726,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year_aproximado": 1788.3387978142077,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "C2",
+          "year_aproximado": 1766.9972602739726,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year_aproximado": 1772.9972677595629,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1762.9972602739726,
+          "t_years": 0.0,
+          "x": 0.1615306321258232,
+          "y": -3.799113414872937e-18,
+          "r": 0.16153063212582322,
+          "fase_grados": -1.3475658560798426e-15,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1766.9972602739726,
+          "t_years": 4.000082137210209,
+          "x": -0.0026741912970827753,
+          "y": 0.04713348682876628,
+          "r": 0.04720928806638923,
+          "fase_grados": 93.24728330723109,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1772.9972677595629,
+          "t_years": 10.001574296529018,
+          "x": -0.12386606740577716,
+          "y": -0.08852275831941542,
+          "r": 0.15224677794641775,
+          "fase_grados": 215.55206963969545,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1777.9972602739726,
+          "t_years": 15.000992491290033,
+          "x": -0.01704407721981584,
+          "y": -0.02693449123042086,
+          "r": 0.03187424330267488,
+          "fase_grados": 237.6744759653651,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1778.9972602739726,
+          "t_years": 16.000328548840837,
+          "x": -0.11599618853381925,
+          "y": 0.0848971271095079,
+          "r": 0.14374504494359344,
+          "fase_grados": 143.79975852353903,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1781.9972602739726,
+          "t_years": 19.00107462850024,
+          "x": -0.0010632526750692709,
+          "y": 0.09396523066558804,
+          "r": 0.0939712460293353,
+          "fase_grados": 90.64829608342414,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1788.3387978142077,
+          "t_years": 25.342067256685628,
+          "x": 0.07396868859920011,
+          "y": 0.08966686681244737,
+          "r": 0.11623903775007213,
+          "fase_grados": 50.47983123313898,
+          "frente_z90": "EN_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1789.9972602739726,
+          "t_years": 27.00123890292066,
+          "x": 0.027103614997413896,
+          "y": -0.029952403086416057,
+          "r": 0.04039495508824066,
+          "fase_grados": -47.85838558320469,
+          "frente_z90": "DESPUES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year": 1790.9972602739726,
+          "t_years": 28.000574960471468,
+          "x": 0.005197893955893312,
+          "y": -0.07626470325582925,
+          "r": 0.07644163174794241,
+          "fase_grados": -86.10098105054892,
+          "frente_z90": "DESPUES_Z90"
+        },
+        {
+          "corte": "C10",
+          "year": 1791.9972602739726,
+          "t_years": 28.99991101802227,
+          "x": -0.007157052546766234,
+          "y": -0.09398835552422805,
+          "r": 0.0942604602965821,
+          "fase_grados": -94.35457185387531,
+          "frente_z90": "DESPUES_Z90"
+        }
+      ],
+      "png": "MOZART_10_TRAYECTORIA.png"
+    },
+    {
+      "caso": "GALILEO",
+      "geometria": "motor_PCA3_HELIX_EXISTENTE",
+      "source": "casos/calibracion_z90/GALILEO_20260924/result.json.gz",
+      "source_sha256": "2c5bece9bae7e2099ed78e6b2c42f108ae672e9b7dbdc335ec74a22f01f51c33",
+      "fixture_sha256": "23444a7fef3b9b5cd88f2eceb660d561ff4bd215e1e2d95e66dac0796a623407",
+      "cortes": [
+        "G_C1",
+        "G_C2",
+        "G_C3",
+        "G_C4",
+        "G_C5",
+        "G_C6",
+        "G_C7",
+        "G_C8",
+        "G_C9",
+        "G_C10_Z90"
+      ],
+      "n": 10,
+      "z90": "1634-03-26",
+      "date_warnings": [
+        "FALLO_ULTIMO_CORTE_NO_TERMINA_EN_Z90",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [],
+      "PCA_varianza": [
+        0.6703,
+        0.2875,
+        0.0266
+      ],
+      "diagnostico_existente": {
+        "helix_like": false,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_source": "pca_estimate",
+        "center": [
+          -9.992007221626409e-17,
+          -1.1102230246251566e-17,
+          1.394717674685353e-16
+        ],
+        "radius_mean": 0.19405088182357266,
+        "radius_cv": 0.3772138735002266,
+        "phase_total_turns": -1.058228265177917,
+        "phase_direction_consistency": 1.0,
+        "axial_displacement": 1.0376893451397398,
+        "pitch_per_turn_median": -1.2005875885715749,
+        "phase_increment_median_abs": 0.5315471015462867,
+        "n_points": 10,
+        "low_n_warning": true,
+        "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+      },
+      "giro_neto_grados": -380.96217546405006,
+      "giro_neto_absoluto_grados": 380.96217546405006,
+      "recorrido_angular_absoluto_grados": 380.96217546405006,
+      "radio": {
+        "start": 0,
+        "end": 7,
+        "n_fit": 8,
+        "R0": 0.18521188783110687,
+        "b": 0.0038837884889218847,
+        "R2": -0.008747250138188889,
+        "R2_log": 0.027939600518880003,
+        "pred": [
+          0.18521188783110687,
+          0.18024578770584812,
+          0.17337855924428988,
+          0.16677474038543436,
+          0.16042074865879896,
+          0.1543104800652526,
+          0.1513415738788662,
+          0.14843136724875688,
+          0.14728364100102606,
+          0.14601430969963883
+        ],
+        "residual": [
+          0.1232729542651469,
+          -0.08992003021086599,
+          -0.027227446539359185,
+          0.012954746996264227,
+          0.039644230617408766,
+          0.06389456158489124,
+          0.08241929545164328,
+          -0.07656511961699376,
+          0.05013678114239767,
+          0.14848574882617474
+        ],
+        "regime": 9,
+        "estado": "AJUSTADO_CONTRACCION",
+        "threshold": 0.140459681201885,
+        "regime_flags": [
+          9
+        ],
+        "regime_status": "BANDERA_DESCRIPTIVA"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": -0.3174068563093879,
+        "omega": -5.283161263649839,
+        "R2": 0.887431793495305,
+        "pred": [
+          -0.3174068563093879,
+          -0.9626906792853491,
+          -1.8849214325448116,
+          -2.806899727344581,
+          -3.7291304806040437,
+          -4.651108775403813,
+          -5.112350381263391,
+          -5.573339528663276,
+          -5.757634204239352,
+          -5.963135390429661
+        ],
+        "residual": [
+          0.3174068563093879,
+          -0.1593144519735119,
+          -0.7037703577243921,
+          -0.31333916447090937,
+          0.29529542879225534,
+          1.0232822620864384,
+          1.3602332506740198,
+          -0.34058421148464735,
+          -0.7933007152302682,
+          -0.6859088969783684
+        ],
+        "innovation": [
+          -0.4767213082828998,
+          -0.5444559057508801,
+          0.39043119325348263,
+          0.6086345932631649,
+          0.7279868332941828,
+          0.3369509885875813,
+          -1.700817462158667,
+          -0.45271650374562117,
+          0.10739181825190047
+        ],
+        "threshold_grados": 54.62823793713035,
+        "rupture": 7,
+        "rupture_flags": [
+          7
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 79.26587786054637,
+        "frequency_por_anio": 0.017564210234629625,
+        "periodo_anios": 56.933957555825565,
+        "offset": 0.0033201336535646016,
+        "A_sin": -0.11722025213216519,
+        "B_cos": 9.468290440935971e-05,
+        "amplitud": 0.1172202903715085,
+        "pred": [
+          0.0034148165579739615,
+          -0.07840682919353181,
+          -0.10850889529136384,
+          -0.015686980370643904,
+          0.09804436450854404,
+          0.10764010677540352,
+          0.0641090429177649,
+          0.002554187988045837,
+          -0.02307305775781033,
+          -0.050086756134382286
+        ],
+        "residual": [
+          -0.003414816557973961,
+          -0.002974170200982215,
+          0.031756457060713686,
+          0.011849371376294516,
+          -0.040405590214985285,
+          -0.0056729848404967614,
+          0.06990542479325568,
+          0.023384271985487825,
+          -0.02915686519903516,
+          -0.055271098202278345
+        ],
+        "n": 10,
+        "grados_libertad_nominales": 6,
+        "grid_n": 2048,
+        "f_min": 0.00816622322586415,
+        "f_max": 0.07144806338028169
+      },
+      "forma": {
+        "coincide": false,
+        "cresta": 0,
+        "valle": null,
+        "salto_inicio": 0,
+        "salto_fin": 1,
+        "salto_largo": true,
+        "salto_cruza_eje": false,
+        "subida": false,
+        "salto_umbral": 0.14987720281547146,
+        "pasos": [
+          0.2813226730833916,
+          0.16363100526746874,
+          0.0915211760304795,
+          0.06261634985037094,
+          0.04434837326888928,
+          0.032077194890115394,
+          0.28023256469069585,
+          0.14604445098335597,
+          0.0999181352103143
+        ],
+        "advertencia": "Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."
+      },
+      "cambio_regimen": {
+        "corte": "G_C10_Z90",
+        "year_aproximado": 1634.227397260274,
+        "frente_z90": "ANTES_Z90"
+      },
+      "ruptura_fase": {
+        "corte": "G_C8",
+        "year_aproximado": 1630.0,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [
+        {
+          "corte": "G_C10_Z90",
+          "year_aproximado": 1634.227397260274,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "eventos_fase": [
+        {
+          "corte": "G_C8",
+          "year_aproximado": 1630.0,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "G_C1",
+          "year": 1573.0,
+          "t_years": 0.0,
+          "x": 0.30848484209625376,
+          "y": 2.6954174662887305e-19,
+          "r": 0.30848484209625376,
+          "fase_grados": 5.0062766064856695e-17,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C2",
+          "year": 1580.0,
+          "t_years": 6.998090309862626,
+          "x": 0.03919024629393367,
+          "y": -0.08138099939451403,
+          "r": 0.09032575749498213,
+          "fase_grados": -64.2861586131547,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C3",
+          "year": 1590.0,
+          "t_years": 16.999664606391644,
+          "x": -0.12437528279577018,
+          "y": -0.07675243823065016,
+          "r": 0.1461511127049307,
+          "fase_grados": -148.32111404259064,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C4",
+          "year": 1600.0,
+          "t_years": 26.998500995913673,
+          "x": -0.17968851213056056,
+          "y": -0.003837608994349388,
+          "r": 0.17972948738169858,
+          "fase_grados": -178.77651957360467,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C5",
+          "year": 1610.0,
+          "t_years": 37.000075292442695,
+          "x": -0.1915822737904501,
+          "y": 0.05763877429355875,
+          "r": 0.20006497927620773,
+          "fase_grados": -196.74425601290184,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C6",
+          "year": 1620.0,
+          "t_years": 46.99891168196472,
+          "x": -0.19291486787138018,
+          "y": 0.10196712193490676,
+          "r": 0.21820504165014384,
+          "fase_grados": -207.8591480187465,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C7",
+          "year": 1625.0,
+          "t_years": 52.00106778373272,
+          "x": -0.19153137203667558,
+          "y": 0.13401446771102057,
+          "r": 0.2337608693305095,
+          "fase_grados": -214.98047582150772,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C8",
+          "year": 1630.0,
+          "t_years": 57.00048597849374,
+          "x": 0.06702203997842757,
+          "y": 0.02593845997353366,
+          "r": 0.07186624763176312,
+          "fase_grados": -338.84287067269855,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C9",
+          "year": 1632.0,
+          "t_years": 58.99915809359535,
+          "x": 0.1903860767682452,
+          "y": -0.05222992295684549,
+          "r": 0.19742042214342373,
+          "fase_grados": -375.34092275048306,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "G_C10_Z90",
+          "year": 1634.227397260274,
+          "t_years": 61.22781439728399,
+          "x": 0.2750091034879762,
+          "y": -0.10535785433666063,
+          "r": 0.29450005852581357,
+          "fase_grados": -380.96217546405006,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "png": "GALILEO_TRAYECTORIA.png"
+    },
+    {
+      "caso": "HAWKING",
+      "geometria": "motor_PCA3_HELIX_EXISTENTE",
+      "source": "casos/calibracion_z90/HAWKING/result.json.gz",
+      "source_sha256": "148301fb674f637a620232b7672944670a9290aa5fd9858cf40ecda4ee3bbcf6",
+      "fixture_sha256": "7e071f304f2e41be2851fee5758c7aacd884529c1b8b2ad53f966b098856b505",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "n": 6,
+      "z90": "2010-08-01",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "FALLO_ULTIMO_CORTE_NO_TERMINA_EN_Z90",
+        "FALLO_HAWKING_C7_2010_2011_CRUZA_Z90_NO_TRUNCADO_SELLADO_COMPLETO",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [],
+      "PCA_varianza": [
+        0.7429,
+        0.1646,
+        0.0464
+      ],
+      "diagnostico_existente": {
+        "helix_like": false,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_source": "pca_estimate",
+        "center": [
+          -9.251858538542972e-17,
+          8.789265611615822e-17,
+          -9.25185853854297e-18
+        ],
+        "radius_mean": 0.1539663300409263,
+        "radius_cv": 0.5386246826936849,
+        "phase_total_turns": 0.07622837125030316,
+        "phase_direction_consistency": 0.6,
+        "axial_displacement": 0.8797531008676029,
+        "pitch_per_turn_median": 0.579838660871445,
+        "phase_increment_median_abs": 1.2058208035914721,
+        "n_points": 6,
+        "low_n_warning": true,
+        "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+      },
+      "giro_neto_grados": 27.442213650109135,
+      "giro_neto_absoluto_grados": 27.442213650109135,
+      "recorrido_angular_absoluto_grados": 452.1737365317041,
+      "radio": {
+        "start": 3,
+        "end": 4,
+        "n_fit": 2,
+        "R0": null,
+        "b": null,
+        "R2": null,
+        "R2_log": null,
+        "pred": null,
+        "residual": null,
+        "regime": null,
+        "estado": "TRAMO_INSUFICIENTE_MINIMO_3_CORTES_RADIO_POSITIVO"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": -1.865583150990548,
+        "omega": 2.5906265846586414,
+        "R2": 0.19833205463517412,
+        "pred": [
+          -1.865583150990548,
+          -1.7299045262499446,
+          -1.5490409580510198,
+          -1.18731382165317,
+          -0.5542294357741138,
+          -0.011638731177339157
+        ],
+        "residual": [
+          1.865583150990548,
+          0.6782994806546851,
+          -2.1574407975957133,
+          -1.3133471304020907,
+          0.436309582945099,
+          0.4905957134074747
+        ],
+        "innovation": [
+          -1.187283670335863,
+          -2.835740278250398,
+          0.8440936671936226,
+          1.7496567133471896,
+          0.05428613046237574
+        ],
+        "threshold_grados": 136.05268679009345,
+        "rupture": 2,
+        "rupture_flags": [
+          2
+        ],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 75.94027202325672,
+        "frequency_por_anio": 0.05411873645024455,
+        "periodo_anios": 18.477888908573757,
+        "offset": -0.015195925312906543,
+        "A_sin": 0.09846036723643242,
+        "B_cos": -0.05252690268827806,
+        "amplitud": 0.11159533781640238,
+        "pred": [
+          -0.0677228280011846,
+          0.041247566779375494,
+          0.09074561857212449,
+          -0.12621630011119134,
+          -0.009301147404849167,
+          0.0712470901657251
+        ],
+        "residual": [
+          0.0677228280011846,
+          -0.06858276534257757,
+          0.025576563536458402,
+          -0.0354501840471802,
+          0.0017980937927106581,
+          0.00893546405940411
+        ],
+        "n": 6,
+        "grados_libertad_nominales": 2,
+        "grid_n": 2048,
+        "f_min": 0.012194260817307692,
+        "f_max": 0.06249871663244354
+      },
+      "forma": {
+        "coincide": false,
+        "cresta": 0,
+        "valle": 1,
+        "salto_inicio": 3,
+        "salto_fin": 4,
+        "salto_largo": false,
+        "salto_cruza_eje": false,
+        "subida": true,
+        "salto_umbral": 0.36834563123445624,
+        "pasos": [
+          0.153713948976472,
+          0.24556375415630416,
+          0.27996137250182346,
+          0.3196753447376124,
+          0.12642631762308276
+        ],
+        "advertencia": "Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."
+      },
+      "cambio_regimen": null,
+      "ruptura_fase": {
+        "corte": "C3",
+        "year_aproximado": 1966.9972602739726,
+        "frente_z90": "ANTES_Z90"
+      },
+      "eventos_radio": [],
+      "eventos_fase": [
+        {
+          "corte": "C3",
+          "year_aproximado": 1966.9972602739726,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1959.9972602739726,
+          "t_years": 0.0,
+          "x": 0.1668856433262061,
+          "y": -1.008580125272033e-19,
+          "r": 0.1668856433262061,
+          "fase_grados": -3.4626935743003476e-17,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1962.9972602739726,
+          "t_years": 3.0007460796594043,
+          "x": 0.015621751304839173,
+          "y": -0.027335198563202073,
+          "r": 0.03148415783090638,
+          "fase_grados": -60.25253082727087,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1966.9972602739726,
+          "t_years": 7.000828216869614,
+          "x": -0.1835367642897988,
+          "y": 0.11632218210858289,
+          "r": 0.2172937962678607,
+          "fase_grados": -212.36576144079748,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1974.9972602739726,
+          "t_years": 15.000992491290033,
+          "x": -0.2167131341970775,
+          "y": -0.16166648415837154,
+          "r": 0.27037129032813706,
+          "fase_grados": -143.27731854593276,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1988.9972677595629,
+          "t_years": 29.00264892502926,
+          "x": 0.06333322395693972,
+          "y": -0.007503053612138509,
+          "r": 0.06377611677020341,
+          "fase_grados": -6.756309887906348,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 2000.9972677595629,
+          "t_years": 41.00289533665989,
+          "x": 0.15440927989889133,
+          "y": 0.08018255422512921,
+          "r": 0.17398697572224425,
+          "fase_grados": 27.442213650109135,
+          "frente_z90": "ANTES_Z90"
+        }
+      ],
+      "png": "HAWKING_TRAYECTORIA.png"
+    },
+    {
+      "caso": "CHE",
+      "geometria": "motor_PCA3_HELIX_EXISTENTE",
+      "source": "casos/calibracion_z90/CHE/result.json.gz",
+      "source_sha256": "3def4390bb13e7e485b11762fda0fbd2d516d2a894863f04dadf16c130b8e2d7",
+      "fixture_sha256": "6c487e90b27faca65979dc75fe3f8e85b504da979bbf8f3f6b07ff4081754f59",
+      "cortes": [
+        "C1",
+        "C3",
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "n": 9,
+      "z90": "1963-11-03",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "ORDEN_CRONOLOGICO_RECONSTRUIDO_CHE_C3_ANTES_C2",
+        "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [],
+      "PCA_varianza": [
+        0.66,
+        0.1731,
+        0.066
+      ],
+      "diagnostico_existente": {
+        "helix_like": false,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_source": "pca_estimate",
+        "center": [
+          1.1102230246251565e-16,
+          -1.5419764230904953e-17,
+          6.861795082752704e-17
+        ],
+        "radius_mean": 0.3028886905802515,
+        "radius_cv": 0.38842113275765755,
+        "phase_total_turns": -1.115115603677997,
+        "phase_direction_consistency": 0.875,
+        "axial_displacement": 1.495870691597717,
+        "pitch_per_turn_median": -1.095017926991369,
+        "phase_increment_median_abs": 0.42813961739924555,
+        "n_points": 9,
+        "low_n_warning": true,
+        "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+      },
+      "giro_neto_grados": -401.44161732407895,
+      "giro_neto_absoluto_grados": 401.44161732407895,
+      "recorrido_angular_absoluto_grados": 431.87884588785624,
+      "radio": {
+        "start": 6,
+        "end": 7,
+        "n_fit": 2,
+        "R0": null,
+        "b": null,
+        "R2": null,
+        "R2_log": null,
+        "pred": null,
+        "residual": null,
+        "regime": null,
+        "estado": "TRAMO_INSUFICIENTE_MINIMO_3_CORTES_RADIO_POSITIVO"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 0.8292546496903208,
+        "omega": -32.24903387396702,
+        "R2": 0.9571661261338493,
+        "pred": [
+          0.8292546496903208,
+          -0.8597207476688189,
+          -1.4221988681397004,
+          -1.9846769886105817,
+          -3.1111742654988404,
+          -4.236130506440603,
+          -4.798608626911484,
+          -6.487584024270624,
+          -6.960682059844763
+        ],
+        "residual": [
+          -0.8292546496903208,
+          0.44536712205453466,
+          0.6177042373347157,
+          -0.41549378856365626,
+          0.2690778791403954,
+          0.2100482455369388,
+          0.5328557505545479,
+          -0.7845088793756512,
+          -0.045795916991522745
+        ],
+        "innovation": [
+          1.2746217717448556,
+          0.1723371152801808,
+          -1.0331980258983717,
+          0.6845716677040516,
+          -0.05902963360345659,
+          0.32280750501760924,
+          -1.317364629930199,
+          0.738712962384128
+        ],
+        "threshold_grados": 81.54820234989127,
+        "rupture": null,
+        "rupture_flags": [],
+        "saltos_sin_duracion": []
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 75.84788798777102,
+        "frequency_por_anio": 0.12446891003274993,
+        "periodo_anios": 8.034134787047485,
+        "offset": 0.027645529790474445,
+        "A_sin": 0.23456328155958162,
+        "B_cos": 0.10564516744723709,
+        "amplitud": 0.25725635941790503,
+        "pred": [
+          0.13329069723771153,
+          0.12106819149606342,
+          -0.07487458500568292,
+          -0.21132047891951228,
+          -0.06895276905789989,
+          0.26532499335902193,
+          0.26569175179042614,
+          -0.208705450320212,
+          -0.22152235057991587
+        ],
+        "residual": [
+          -0.13329069723771156,
+          -0.19747486576561774,
+          -0.024648304105238328,
+          0.06057152664317467,
+          -0.03536016634137082,
+          0.07931333596401463,
+          0.17333223170313455,
+          0.02141444221260788,
+          0.05614249692700665
+        ],
+        "n": 9,
+        "grados_libertad_nominales": 5,
+        "grid_n": 2048,
+        "f_min": 0.03612685459940653,
+        "f_max": 0.33355479452054787
+      },
+      "forma": {
+        "coincide": true,
+        "cresta": 0,
+        "valle": 3,
+        "salto_inicio": 6,
+        "salto_fin": 7,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "subida": true,
+        "salto_umbral": 0.32427121502382156,
+        "pasos": [
+          0.2530533745818644,
+          0.08128728881369082,
+          0.26540997984109516,
+          0.1793082454498977,
+          0.4523698510268055,
+          0.1187457181224804,
+          0.7095569995768856,
+          0.06774034953818316
+        ],
+        "advertencia": "Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."
+      },
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "eventos_radio": [],
+      "eventos_fase": [],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1949.9972602739726,
+          "t_years": 0.0,
+          "x": 0.4149664281724008,
+          "y": -1.5176188409194873e-17,
+          "r": 0.4149664281724008,
+          "fase_grados": -2.0954262463395514e-15,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1952.9972677595629,
+          "t_years": 3.0007460796594043,
+          "x": 0.173723748461004,
+          "y": -0.0764066742695543,
+          "r": 0.18978387879977485,
+          "fase_grados": -23.74071397364229,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1953.9972602739726,
+          "t_years": 4.000082137210209,
+          "x": 0.09579259978418703,
+          "y": -0.09952288911092125,
+          "r": 0.13813409293298295,
+          "fase_grados": -46.09414698606097,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1954.9972602739726,
+          "t_years": 4.999418194761015,
+          "x": -0.16462696140856073,
+          "y": -0.1507489522763376,
+          "r": 0.2232202567758462,
+          "fase_grados": -137.5196556427186,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1956.9972677595629,
+          "t_years": 7.000828216869614,
+          "x": -0.33781802129016525,
+          "y": -0.10431293539927071,
+          "r": 0.35355650750627793,
+          "fase_grados": -162.8401279077215,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1958.9972602739726,
+          "t_years": 8.999500331971225,
+          "x": -0.2823090668570745,
+          "y": 0.34463832932303656,
+          "r": 0.4455041944454884,
+          "fase_grados": -230.67752152226834,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1959.9972602739726,
+          "t_years": 9.99883638952203,
+          "x": -0.2102542692428574,
+          "y": 0.4390239834935607,
+          "r": 0.4867739884358939,
+          "fase_grados": -244.40963626104374,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1962.9972602739726,
+          "t_years": 12.999582469181433,
+          "x": 0.1232133707826559,
+          "y": -0.18729100810760413,
+          "r": 0.22418620933870362,
+          "fase_grados": -416.66023160596757,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C9",
+          "year": 1963.8383561643836,
+          "t_years": 13.840119920326906,
+          "x": 0.18731217159841013,
+          "y": -0.16537985365290922,
+          "r": 0.2498726588148944,
+          "fase_grados": -401.44161732407895,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "CHE_TRAYECTORIA.png"
+    },
+    {
+      "caso": "MLK",
+      "geometria": "motor_PCA3_HELIX_EXISTENTE",
+      "source": "casos/calibracion_z90/MLK/result.json.gz",
+      "source_sha256": "0c3d333f1008fa0fe5152c7fc2ec8df88d19eb4d5c46fe774fd78f51239b4e66",
+      "fixture_sha256": "93df786f1ce57f4129c6475ad88c90038c2c2e20e63118f07523f6be578d8d46",
+      "cortes": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "n": 8,
+      "z90": "1964-05-03",
+      "date_warnings": [
+        "FECHAS_CORTES_RECONSTRUIDAS_NO_DOCUMENTADAS_DIA_EXACTO",
+        "RIESGO_FUGA_METANOTAS_MENCIONAN_DESTINO_SELLADO_SE_CONSERVAN_SIN_CAMBIOS",
+        "ACUMULACION_NO_ACREDITADA_EN_ORIGINAL_NO_SE_REESCRIBEN_TOKENS"
+      ],
+      "notes": [],
+      "PCA_varianza": [
+        0.7749,
+        0.0928,
+        0.0608
+      ],
+      "diagnostico_existente": {
+        "helix_like": false,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_source": "pca_estimate",
+        "center": [
+          -6.938893903907228e-17,
+          2.7755575615628914e-17,
+          8.283304597789254e-17
+        ],
+        "radius_mean": 0.2198058853252414,
+        "radius_cv": 0.7095291362412002,
+        "phase_total_turns": 0.10543877621378242,
+        "phase_direction_consistency": 0.5714285714285714,
+        "axial_displacement": 1.4981537688531554,
+        "pitch_per_turn_median": 0.04064187001707214,
+        "phase_increment_median_abs": 1.4496150740383391,
+        "n_points": 8,
+        "low_n_warning": true,
+        "warning": "Descriptive fit only; axis and pitch depend on sampled interval and coordinate scaling. With few points (<20) phase unwrap is ambiguous and a PCA axis tends to align with the overall drift, biasing toward a spurious axial component."
+      },
+      "giro_neto_grados": 37.95795943696167,
+      "giro_neto_absoluto_grados": 37.95795943696167,
+      "recorrido_angular_absoluto_grados": 509.48175227620493,
+      "radio": {
+        "start": 3,
+        "end": 4,
+        "n_fit": 2,
+        "R0": null,
+        "b": null,
+        "R2": null,
+        "R2_log": null,
+        "pred": null,
+        "residual": null,
+        "regime": null,
+        "estado": "TRAMO_INSUFICIENTE_MINIMO_3_CORTES_RADIO_POSITIVO"
+      },
+      "fase": {
+        "estado": "AJUSTADO",
+        "phi0": 1.1105529759001382,
+        "omega": 3.214890072621249,
+        "R2": 0.03537199469033259,
+        "pred": [
+          1.1105529759001382,
+          1.3910724148502513,
+          1.503372365492383,
+          1.5594455282617101,
+          1.8631623578369418,
+          1.877295867356882,
+          1.9150876428123738,
+          1.9150876428123738
+        ],
+        "residual": [
+          -1.1105529759001385,
+          -1.161115209711498,
+          1.1385210901215446,
+          2.7153906263060605,
+          0.9620587226924897,
+          0.46336685130331157,
+          -1.7550728315128308,
+          -1.2525962732989397
+        ],
+        "innovation": [
+          -0.050562233811359686,
+          2.2996362998330424,
+          1.5768695361845162,
+          -1.753331903613571,
+          -0.4986918713891779,
+          -2.2184396828161423,
+          0.5024765582138911
+        ],
+        "threshold_grados": 190.8064874288205,
+        "rupture": null,
+        "rupture_flags": [],
+        "saltos_sin_duracion": [
+          7
+        ]
+      },
+      "seno_transversal": {
+        "estado": "AJUSTADO_EN_MUESTRA",
+        "pct": 65.75148767044936,
+        "frequency_por_anio": 0.13632316013748197,
+        "periodo_anios": 7.335510701127377,
+        "offset": -0.3343783003968393,
+        "A_sin": -0.42100551622763227,
+        "B_cos": 0.2713983685668859,
+        "amplitud": 0.500901905720933,
+        "pred": [
+          -0.06297993182995343,
+          -0.06490809030544596,
+          0.044987957793400375,
+          -0.3327276007569633,
+          0.16494753831539502,
+          0.16187093121679144,
+          0.04440459778338915,
+          0.04440459778338915
+        ],
+        "residual": [
+          0.0629799318299534,
+          0.087941116054362,
+          0.1471616342625121,
+          -0.12258462255022612,
+          -0.15074026644955293,
+          -0.10019578341767121,
+          -0.028851193290314617,
+          0.10428918356093497
+        ],
+        "n": 8,
+        "grados_libertad_nominales": 4,
+        "grid_n": 2048,
+        "f_min": 0.034871348100057285,
+        "f_max": 0.3332504562043796
+      },
+      "forma": {
+        "coincide": false,
+        "cresta": 2,
+        "valle": null,
+        "salto_inicio": 2,
+        "salto_fin": 3,
+        "salto_largo": true,
+        "salto_cruza_eje": true,
+        "subida": true,
+        "salto_umbral": 0.278751620195902,
+        "pasos": [
+          0.18583441346393467,
+          0.48107494843392057,
+          0.6622114965951453,
+          0.49921003976878014,
+          0.05021780212866885,
+          0.16282595808098088,
+          0.1631174224615624
+        ],
+        "advertencia": "Criterio operacional dependiente del marco; no invariante a rotación/reflexión PCA."
+      },
+      "cambio_regimen": null,
+      "ruptura_fase": null,
+      "eventos_radio": [],
+      "eventos_fase": [],
+      "tabla_por_corte": [
+        {
+          "corte": "C1",
+          "year": 1949.9972602739726,
+          "t_years": 0.0,
+          "x": 0.2827919229373076,
+          "y": -3.256130896328912e-17,
+          "r": 0.28279192293730754,
+          "fase_grados": -6.597167131366608e-15,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C2",
+          "year": 1954.9972602739726,
+          "t_years": 4.999418194761015,
+          "x": 0.09839043446084657,
+          "y": 0.023033025748916046,
+          "r": 0.10105047188680234,
+          "fase_grados": 13.175577323074645,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C3",
+          "year": 1956.9972677595629,
+          "t_years": 7.000828216869614,
+          "x": -0.35197907273433493,
+          "y": 0.19214959205591248,
+          "r": 0.40101213618823267,
+          "fase_grados": 151.36934492991074,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C4",
+          "year": 1957.9972602739726,
+          "t_years": 8.000164274420419,
+          "x": -0.21299251270244304,
+          "y": -0.4553122233071894,
+          "r": 0.5026679133987477,
+          "fase_grados": 244.93006976666769,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C5",
+          "year": 1963.4109589041095,
+          "t_years": 13.413006427236699,
+          "x": -0.043398563935369595,
+          "y": 0.014207271865842086,
+          "r": 0.0456648872277455,
+          "fase_grados": 161.8732441057265,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C6",
+          "year": 1963.66301369863,
+          "t_years": 13.664893871879642,
+          "x": -0.05978845121433071,
+          "y": 0.06167514779912023,
+          "r": 0.08589809517480196,
+          "fase_grados": 134.1100950428463,
+          "frente_z90": "ANTES_Z90"
+        },
+        {
+          "corte": "C7",
+          "year": 1964.3360655737704,
+          "t_years": 14.338418995598815,
+          "x": 0.09636876898185673,
+          "y": 0.015553404493074534,
+          "r": 0.09761581852550408,
+          "fase_grados": 9.168173347046084,
+          "frente_z90": "EN_Z90"
+        },
+        {
+          "corte": "C8",
+          "year": 1964.3360655737704,
+          "t_years": 14.338418995598815,
+          "x": 0.19060747420646745,
+          "y": 0.14869378134432412,
+          "r": 0.24174583726278936,
+          "fase_grados": 37.957959436961666,
+          "frente_z90": "EN_Z90"
+        }
+      ],
+      "png": "MLK_TRAYECTORIA.png"
+    }
+  ],
+  "integridad": {
+    "archivos_protegidos": 133,
+    "intactos": true
+  }
+}
