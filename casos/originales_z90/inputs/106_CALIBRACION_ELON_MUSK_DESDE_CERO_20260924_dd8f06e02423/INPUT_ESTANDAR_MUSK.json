@@ -1,0 +1,364 @@
+{
+  "question": "¿Qué configuración dinámica se perfila en Elon Musk hasta el corte congelado?",
+  "random_seed": 20260924,
+  "source_basis": "fresh_external_biography_reconstruction_20260924",
+  "future_data_excluded_from_input": true,
+  "case_id": "CALIBRACION_ELON_MUSK_DESDE_CERO_20260924",
+  "protocol": "BIOGRAFIA_VIVA_Z_ACTUAL",
+  "person": "Elon Musk",
+  "birth_date": "1971-06-28",
+  "death_date": null,
+  "z90_date": "2026-09-24",
+  "cuts": [
+    {
+      "id": "C01",
+      "date": "1984-01-01",
+      "P": [
+        [
+          "intuicion_alta",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "busqueda_libertad",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "early computing interest / migration to Canada"
+    },
+    {
+      "id": "C02",
+      "date": "1995-01-01",
+      "P": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Zip2 founded"
+    },
+    {
+      "id": "C03",
+      "date": "1999-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "analisis",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "recuperacion",
+          0.68
+        ],
+        [
+          "obtencion",
+          0.7
+        ]
+      ],
+      "source_note": "Zip2 acquisition and next venture"
+    },
+    {
+      "id": "C04",
+      "date": "2002-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "SpaceX founded; PayPal/eBay transition"
+    },
+    {
+      "id": "C05",
+      "date": "2008-01-01",
+      "P": [
+        [
+          "competitividad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "desastre",
+          0.7
+        ]
+      ],
+      "source_note": "Falcon 1 orbit and Tesla CEO"
+    },
+    {
+      "id": "C06",
+      "date": "2012-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "competitividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Model S and Dragon milestones"
+    },
+    {
+      "id": "C07",
+      "date": "2015-01-01",
+      "P": [
+        [
+          "busqueda_libertad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "Model X / reusable-space trajectory"
+    },
+    {
+      "id": "C08",
+      "date": "2020-01-01",
+      "P": [
+        [
+          "competitividad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Crew Dragon / Tesla expansion"
+    },
+    {
+      "id": "C09",
+      "date": "2022-01-01",
+      "P": [
+        [
+          "disrupcion",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "autoridad",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "rebelion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Twitter/X acquisition and multiple ventures"
+    },
+    {
+      "id": "C10",
+      "date": "2026-09-24",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "current boundary; SpaceX/xAI/Tesla/Neuralink documented"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F003_01_CARAVAGGIO",
+ "question": "¿Qué trayectoria sigue Caravaggio tras otro año de pleitos y riñas en Roma mientras sus mecenas siguen encargándole cuadros?",
+ "person": "Michelangelo Merisi da Caravaggio",
+ "tipo_sujeto": "artista",
+ "freeze": "1605-12-31",
+ "z_trabajo": "1605-12-31",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1605-08",
+ "cuts": [
+  {
+   "id": "C1_1600",
+   "corte": "C1_1600",
+   "cut_id": "C1_1600",
+   "date": "1600",
+   "fecha_corte": "1600",
+   "hecho": "Con el apoyo del cardenal Francesco Maria del Monte, entregó en 1600 los dos lienzos de San Mateo para la capilla Contarelli de San Luigi dei Francesi; fueron una sensación inmediata y desde entonces no le faltaron encargos ni mecenas.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "autoexpresion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "audacia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Hacia 1599, se supone que por influencia de del Monte, recibió el encargo de la capilla Contarelli; los dos cuadros de San Mateo se entregaron en 1600 y fueron una sensación inmediata, y desde entonces no le faltaron encargos ni mecenas.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1600",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El cardenal Francesco Maria del Monte, uno de los principales conocedores de Roma, compró sus primeros cuadros y se volvió su mecenas.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1600",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1603",
+   "corte": "C2_1603",
+   "cut_id": "C2_1603",
+   "date": "1603",
+   "fecha_corte": "1603",
+   "hecho": "El 28 de noviembre de 1600 golpeó con un garrote al noble Girolamo Stampa, huésped de del Monte, y las riñas se hicieron frecuentes; en 1603 fue arrestado por difamar al pintor Giovanni Baglione con versos ofensivos y, tras un mes en la cárcel de Tor di Nona, pasó a arresto domiciliario por intervención del embajador de Francia.",
+   "P": [
+    [
+     "orgullo",
+     0.78
+    ],
+    [
+     "impulsividad",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.8
+    ],
+    [
+     "burla",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_profesional",
+     0.78
+    ],
+    [
+     "privacion_libertad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 28 de noviembre de 1600 golpeó con un garrote a Girolamo Stampa da Montepulciano, huésped del cardenal del Monte; las riñas se hicieron cada vez más frecuentes y a menudo fue encarcelado en Tor di Nona.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1600-11-28",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1603 fue arrestado por difamar a Giovanni Baglione, que lo demandó junto con Orazio Gentileschi y Onorio Longhi por versos ofensivos; intervino el embajador de Francia y pasó a arresto domiciliario tras un mes en Tor di Nona.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1603",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1605",
+   "corte": "C3_1605",
+   "cut_id": "C3_1605",
+   "date": "1605-08",
+   "fecha_corte": "1605-08",
+   "hecho": "Entre mayo y octubre de 1604 fue arrestado varias veces por portar armas ilegales e insultar a los guardias, y un mesero lo demandó por arrojarle un plato de alcachofas; el 29 de julio de 1605 hirió gravemente con espada al notario Mariano Pasqualone en una disputa por Lena, su modelo, huyó tres semanas a Génova y sus mecenas lograron encubrir el incidente.",
+   "P": [
+    [
+     "impulsividad",
+     0.82
+    ],
+    [
+     "pasion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.82
+    ],
+    [
+     "evasion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "impunidad",
+     0.76
+    ],
+    [
+     "soporte",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Entre mayo y octubre de 1604 fue arrestado varias veces por posesión de armas ilegales y por insultar a los guardias de la ciudad; un mesero lo demandó por arrojarle un plato de alcachofas a la cara.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1604-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1605 tuvo que huir a Génova tres semanas tras herir gravemente al notario Mariano Pasqualone por Lena; el notario denunció el ataque con espada del 29 de julio y los mecenas intervinieron para encubrir el incidente.",
+     "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+     "source_date": "2026-10-26",
+     "claim_date": "1605-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta finales de 1605."
+}

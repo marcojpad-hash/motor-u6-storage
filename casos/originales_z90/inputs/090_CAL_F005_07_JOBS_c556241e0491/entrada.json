@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F005_07_JOBS",
+ "question": "¿Qué trayectoria sigue Steve Jobs después de su situación en octubre de 1996?",
+ "person": "Steve Jobs",
+ "tipo_sujeto": "empresario",
+ "freeze": "1996-11-01",
+ "z_trabajo": "1996-11-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1996-10",
+ "cuts": [
+  {
+   "id": "C1_1984",
+   "corte": "C1_1984",
+   "cut_id": "C1_1984",
+   "date": "1984",
+   "fecha_corte": "1984",
+   "hecho": "Cofundador de Apple (1976); tras el poco exitoso Lisa (1983) lanza el Macintosh 128K (1984), primer ordenador con interfaz gráfica de producción masiva; en 1983 había traído a John Sculley de Pepsi como director ejecutivo.",
+   "P": [
+    [
+     "vision",
+     0.82
+    ],
+    [
+     "perfeccionismo",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "persuasion",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.74
+    ],
+    [
+     "rivalidad_poder",
+     0.62
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Tras el poco exitoso Apple Lisa en 1983 llegó el Macintosh 128K en 1984, el primer ordenador con interfaz gráfica producido en masa.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1984",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1983 Jobs atrajo a John Sculley desde Pepsi-Cola para ser director ejecutivo de Apple.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1983",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1985",
+   "corte": "C2_1985",
+   "cut_id": "C2_1985",
+   "date": "1985",
+   "fecha_corte": "1985",
+   "hecho": "Sale de Apple tras una larga lucha de poder con el consejo y con Sculley; ese mismo año funda NeXT con empleados de Apple y en 1986 compra la división gráfica de Lucasfilm, que se convierte en Pixar.",
+   "P": [
+    [
+     "orgullo",
+     0.74
+    ],
+    [
+     "determinacion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.6
+    ],
+    [
+     "empresa",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "caida",
+     0.76
+    ],
+    [
+     "ruptura_pasado",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1985 dejó Apple tras una larga lucha de poder con el consejo y con Sculley; ese año fundó NeXT con empleados de Apple; en 1986 compró la división gráfica de Lucasfilm, que se independizó como Pixar.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1986",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1996",
+   "corte": "C3_1996",
+   "cut_id": "C3_1996",
+   "date": "1996-10",
+   "fecha_corte": "1996-10",
+   "hecho": "NeXT vende solo 50 000 máquinas y en 1993 abandona el hardware para hacer software; da su primera ganancia anual en 1994 y lanza WebObjects en 1996. Pixar estrena Toy Story (1995) con éxito comercial y de crítica. Apple atraviesa dificultades en 1996 y su supervivencia depende de terminar su próximo sistema operativo.",
+   "P": [
+    [
+     "resiliencia",
+     0.78
+    ],
+    [
+     "vision",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "flexibilidad_adaptativa",
+     0.76
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "recuperacion_gradual",
+     0.76
+    ],
+    [
+     "oportunidad",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1993, tras vender solo 50 000 máquinas, NeXT pasó por completo al software; reportó su primera ganancia anual en 1994 y en 1996 lanzó WebObjects.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1996-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Toy Story (1995), primera película de Pixar con Disney y con Jobs como productor ejecutivo, dio éxito financiero y de crítica al estudio.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1995",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1996 Apple pasaba dificultades y su supervivencia dependía de completar su próximo sistema operativo.",
+     "source_url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+     "source_date": "2026-10-28",
+     "claim_date": "1996-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta octubre de 1996."
+}

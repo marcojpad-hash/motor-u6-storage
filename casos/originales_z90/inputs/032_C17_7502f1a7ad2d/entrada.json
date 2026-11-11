@@ -1,0 +1,126 @@
+{
+  "case_id": "C17",
+  "question": "¿Qué trayectoria sigue el sujeto tras ser condenado al exilio de su ciudad?",
+  "tipo_sujeto": "artista",
+  "freeze": "1302-01-27",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1302",
+  "cuts": [
+    {
+      "id": "C1_1295",
+      "corte": "C1_1295",
+      "cut_id": "C1_1295",
+      "date": "1295-01-01",
+      "fecha_corte": "1295-01-01",
+      "hecho": "Entra en la política florentina; se alinea con los güelfos blancos en la lucha de facciones.",
+      "P": [
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "patriotismo",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "oratoria",
+          0.8
+        ],
+        [
+          "organizacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "rivalidad_poder",
+          0.78
+        ],
+        [
+          "fragmentacion",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C2_1301",
+      "corte": "C2_1301",
+      "cut_id": "C2_1301",
+      "date": "1301-11-01",
+      "fecha_corte": "1301-11-01",
+      "hecho": "Los güelfos negros toman Florencia con ayuda papal; el sujeto está fuera de la ciudad en misión diplomática.",
+      "P": [
+        [
+          "perdida",
+          0.8
+        ],
+        [
+          "injusticia",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "supervivencia",
+          0.78
+        ],
+        [
+          "resiliencia",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "crisis_abrupta",
+          0.82
+        ],
+        [
+          "distancia_forzada",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C3_1302",
+      "corte": "C3_1302",
+      "cut_id": "C3_1302",
+      "date": "1302-01-27",
+      "fecha_corte": "1302-01-27",
+      "hecho": "Condenado al exilio y a muerte si regresa; pierde sus bienes y su posición en Florencia.",
+      "P": [
+        [
+          "perdida",
+          0.84
+        ],
+        [
+          "injusticia",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "resiliencia",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "aislamiento_social",
+          0.8
+        ],
+        [
+          "escasez",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

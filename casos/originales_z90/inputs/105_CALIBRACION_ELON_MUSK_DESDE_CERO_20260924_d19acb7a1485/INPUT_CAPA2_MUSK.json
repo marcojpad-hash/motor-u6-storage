@@ -1,0 +1,571 @@
+{
+  "question": "¿Qué configuración dinámica se perfila en Elon Musk hasta el corte congelado?",
+  "random_seed": 20260924,
+  "source_basis": "fresh_external_biography_reconstruction_20260924",
+  "future_data_excluded_from_input": true,
+  "case_id": "CALIBRACION_ELON_MUSK_DESDE_CERO_20260924",
+  "protocol": "BIOGRAFIA_VIVA_Z_ACTUAL",
+  "person": "Elon Musk",
+  "birth_date": "1971-06-28",
+  "death_date": null,
+  "z90_date": "2026-09-24",
+  "cuts": [
+    {
+      "id": "C01",
+      "date": "1984-01-01",
+      "P": [
+        [
+          "intuicion_alta",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "busqueda_libertad",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "early computing interest / migration to Canada"
+    },
+    {
+      "id": "C02",
+      "date": "1995-01-01",
+      "P": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Zip2 founded"
+    },
+    {
+      "id": "C03",
+      "date": "1999-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "analisis",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "recuperacion",
+          0.68
+        ],
+        [
+          "obtencion",
+          0.7
+        ]
+      ],
+      "source_note": "Zip2 acquisition and next venture"
+    },
+    {
+      "id": "C04",
+      "date": "2002-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "SpaceX founded; PayPal/eBay transition"
+    },
+    {
+      "id": "C05",
+      "date": "2008-01-01",
+      "P": [
+        [
+          "competitividad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "desastre",
+          0.7
+        ]
+      ],
+      "source_note": "Falcon 1 orbit and Tesla CEO"
+    },
+    {
+      "id": "C06",
+      "date": "2012-01-01",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "competitividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Model S and Dragon milestones"
+    },
+    {
+      "id": "C07",
+      "date": "2015-01-01",
+      "P": [
+        [
+          "busqueda_libertad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "Model X / reusable-space trajectory"
+    },
+    {
+      "id": "C08",
+      "date": "2020-01-01",
+      "P": [
+        [
+          "competitividad",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "obtencion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Crew Dragon / Tesla expansion"
+    },
+    {
+      "id": "C09",
+      "date": "2022-01-01",
+      "P": [
+        [
+          "disrupcion",
+          0.68
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autonomia",
+          0.68
+        ],
+        [
+          "autoridad",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "rebelion",
+          0.68
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "source_note": "Twitter/X acquisition and multiple ventures"
+    },
+    {
+      "id": "C10",
+      "date": "2026-09-24",
+      "P": [
+        [
+          "creatividad",
+          0.68
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "ambicion",
+          0.68
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "audacia",
+          0.68
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "source_note": "current boundary; SpaceX/xAI/Tesla/Neuralink documented"
+    }
+  ],
+  "caldero_identity": {
+    "nombre_o_alias": "Elon Musk",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "creatividad",
+      "audacia",
+      "ambicion",
+      "autonomia",
+      "busqueda_libertad",
+      "competitividad"
+    ]
+  },
+  "caldero_search_sources": [
+    {
+      "id": "src_bio_1",
+      "texto": "Infancia en Pretoria con acoso escolar y lectura voraz; emigra joven; abandona posgrado para fundar empresa propia (Zip2).",
+      "origen": "llm_capa2_bio_publica"
+    },
+    {
+      "id": "src_bio_2",
+      "texto": "Reinvierte ganancias de X.com/PayPal en cohetes y autos eléctricos; 2008 al borde de la quiebra en ambas; patrón de apuesta total y riesgo extremo.",
+      "origen": "llm_capa2_bio_publica"
+    },
+    {
+      "id": "src_bio_3",
+      "texto": "2018-2025: choques con reguladores, compra de Twitter (2022), papel en gobierno de EE.UU. en 2025 y ruptura pública posterior; alta conflictividad e impulsividad comunicativa.",
+      "origen": "llm_capa2_bio_publica"
+    }
+  ],
+  "external_lights": [
+    {
+      "token": "soledad",
+      "peso": 0.66,
+      "cut": "C01",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "aislamiento_social",
+      "peso": 0.64,
+      "cut": "C01",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "busqueda_riesgo",
+      "peso": 0.74,
+      "cut": "C02",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "independencia",
+      "peso": 0.72,
+      "cut": "C02",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "visionario",
+      "peso": 0.78,
+      "cut": "C03",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "busqueda_riesgo",
+      "peso": 0.8,
+      "cut": "C04",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "vision",
+      "peso": 0.78,
+      "cut": "C04",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "vulnerabilidad_financiera_inmediata",
+      "peso": 0.8,
+      "cut": "C05",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "sacrificio",
+      "peso": 0.76,
+      "cut": "C05",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "obsesion",
+      "peso": 0.72,
+      "cut": "C05",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "impulsividad",
+      "peso": 0.7,
+      "cut": "C08",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "desafio_autoridad",
+      "peso": 0.72,
+      "cut": "C08",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "desafio_autoridad",
+      "peso": 0.78,
+      "cut": "C09",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "conflictividad",
+      "peso": 0.76,
+      "cut": "C09",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "poder",
+      "peso": 0.74,
+      "cut": "C09",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "impulsividad",
+      "peso": 0.72,
+      "cut": "C09",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "conflictividad",
+      "peso": 0.74,
+      "cut": "C10",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "alianza",
+      "peso": 0.66,
+      "cut": "C10",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    },
+    {
+      "token": "traicion",
+      "peso": 0.62,
+      "cut": "C10",
+      "fuente": "capa2_llm",
+      "branch": "capa2_busqueda_llm",
+      "stereotype": null,
+      "axes": []
+    }
+  ],
+  "nota_capa2": "Capa 2 armada por LLM desde biografía pública hasta Z=2026-09-24; luces post-FREEZE (no deciden H).",
+  "stinkbox_root": "/workspace/CORRIDA_NOCTURNA_20261005/CORRIDA_0547_20261006/vault_capa2/stinkbox_vault",
+  "caldero_neighbor_store_root": "/workspace/CORRIDA_NOCTURNA_20261005/CORRIDA_0547_20261006/vault_capa2/vecinos_caldero"
+}

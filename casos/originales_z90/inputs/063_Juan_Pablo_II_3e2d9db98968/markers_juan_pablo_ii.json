@@ -1,0 +1,88 @@
+{
+  "case": "Juan Pablo II",
+  "protocol": "V15.1 / 5x3 / 10 cortes / no ciego",
+  "engine_executed": false,
+  "top5_executed": false,
+  "H1": null,
+  "H2": null,
+  "weight_semantics": "0.60-0.84 = fuerza de codificación; no probabilidad",
+  "notas_candado": [
+    "Papa no implica arquetipo_el_gobernante",
+    "sin token cuerpo/violencia/mística: hueco, no alias",
+    "C10 no reescribe H de C1-C9"
+  ],
+  "cuts": {
+    "C1": {
+      "hecho": "Wadowice; muerte de Emilia (1929) y Edmund",
+      "P": [["duelo", 0.74], ["perdida_familiar", 0.76], ["aprendizaje", 0.62]],
+      "A": [["crisis_abrupta", 0.70], ["aislamiento_social", 0.60]],
+      "C": [["incertidumbre", 0.68], ["duelo", 0.70]]
+    },
+    "C2": {
+      "hecho": "Ocupación nazi; cantera/fábrica; teatro rapsódico clandestino",
+      "P": [["resiliencia", 0.78], ["formacion_literaria_creativa", 0.70], ["autonomia", 0.66], ["lucha", 0.64]],
+      "A": [["opresion", 0.80], ["autoridad", 0.74], ["privacion_libertad", 0.68], ["persecucion", 0.66]],
+      "C": [["injusticia", 0.76], ["incertidumbre", 0.72], ["aislamiento_social", 0.64]]
+    },
+    "C3": {
+      "hecho": "Seminario clandestino; ordenación 1946",
+      "P": [["transformacion", 0.80], ["aprendizaje", 0.76], ["responsabilidad", 0.70], ["humildad", 0.64]],
+      "A": [["opresion", 0.72], ["autoridad", 0.68], ["persecucion", 0.62]],
+      "C": [["crisis_existencial", 0.66], ["incertidumbre", 0.64]]
+    },
+    "C4": {
+      "hecho": "Cátedra; Amor y responsabilidad; Vaticano II",
+      "P": [["aprendizaje", 0.80], ["formacion_literaria_creativa", 0.74], ["responsabilidad", 0.70]],
+      "A": [["autoridad", 0.62]],
+      "C": [["transformacion", 0.68], ["alianza", 0.60]]
+    },
+    "C5": {
+      "hecho": "Arzobispo/cardenal de Cracovia frente al Estado",
+      "P": [["liderazgo", 0.78], ["responsabilidad", 0.76], ["lucha", 0.70], ["justicia_social", 0.68]],
+      "A": [["autoridad", 0.80], ["opresion", 0.74], ["rivalidad_poder", 0.70], ["abuso_poder", 0.64]],
+      "C": [["poder", 0.72], ["conflicto_lealtad", 0.62], ["incertidumbre", 0.60]]
+    },
+    "C6": {
+      "hecho": "Cónclave 1978; primer papa eslavo",
+      "P": [["liderazgo", 0.80], ["responsabilidad", 0.74], ["cambio_identidad", 0.70]],
+      "A": [["rivalidad_poder", 0.66], ["autoridad", 0.64]],
+      "C": [["incertidumbre", 0.78], ["transformacion", 0.74], ["poder", 0.70], ["alianza", 0.62]]
+    },
+    "C7": {
+      "hecho": "Viaje 1979 a Polonia; atentado 1981",
+      "P": [["liderazgo", 0.82], ["resiliencia", 0.80], ["lucha", 0.72], ["perdon", 0.70]],
+      "A": [["persecucion", 0.76], ["autoridad", 0.62]],
+      "C": [["crisis_abrupta", 0.78], ["incertidumbre", 0.74], ["alianza", 0.68]]
+    },
+    "C8": {
+      "hecho": "Solidaridad; desmonte del bloque 1989",
+      "P": [["liderazgo", 0.80], ["justicia_social", 0.76], ["reconciliacion", 0.68]],
+      "A": [["autoridad", 0.70], ["opresion", 0.68], ["rivalidad_poder", 0.66]],
+      "C": [["transformacion", 0.78], ["alianza", 0.74], ["poder", 0.66]]
+    },
+    "C9": {
+      "hecho": "Parkinson; papado tardío visible",
+      "P": [["resiliencia", 0.82], ["responsabilidad", 0.78], ["humildad", 0.70], ["sacrificio", 0.68]],
+      "A": [["crisis_abrupta", 0.74], ["aislamiento_social", 0.58]],
+      "C": [["incertidumbre", 0.70], ["poder", 0.64], ["duelo", 0.62]]
+    },
+    "C10": {
+      "hecho": "Muerte 2 abr 2005; funeral público",
+      "P": [["transformacion", 0.72], ["liderazgo", 0.66]],
+      "A": [["duelo", 0.70]],
+      "C": [["duelo", 0.76], ["alianza", 0.68], ["transformacion", 0.70]]
+    }
+  },
+  "holes": {
+    "C1": {"P": 2, "A": 3, "C": 3, "nota": "fe doméstica sin token"},
+    "C2": {"P": 1, "A": 1, "C": 2},
+    "C3": {"P": 1, "A": 2, "C": 3},
+    "C4": {"P": 2, "A": 4, "C": 3, "nota": "A casi vacío a propósito"},
+    "C5": {"P": 1, "A": 1, "C": 2},
+    "C6": {"P": 2, "A": 3, "C": 1},
+    "C7": {"P": 1, "A": 3, "C": 2, "nota": "atentado sin token violencia"},
+    "C8": {"P": 2, "A": 2, "C": 2},
+    "C9": {"P": 1, "A": 3, "C": 2, "nota": "sin token cuerpo"},
+    "C10": {"P": 3, "A": 4, "C": 2, "nota": "no usar perdida_familiar por analogía"}
+  }
+}

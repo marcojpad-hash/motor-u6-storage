@@ -1,0 +1,484 @@
+{
+ "case_id": "CASANOVA_INTERIOR_20261014",
+ "question": "¿Qué configuración dinámica se perfila en Giacomo Casanova hasta el corte Z90, leído desde su autobiografía?",
+ "random_seed": 0,
+ "person": "Giacomo Casanova",
+ "birth_date": "1725-04-02",
+ "death_date": "1798-06-04",
+ "z90_date": "1791-12-31",
+ "protocol": "EJERCICIO_BLANCO_HISTORICO_Z90_SELLADO",
+ "source_basis": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988; Histoire de ma vie (autobiografía; lectura interior: lo que él dice sentir/pensar es auto-declaración, no hecho verificado)",
+ "future_data_excluded_from_input": true,
+ "provenance_note": "GENERADO 2026-10-14 CT por Grok Bot según spec/contrato_entrada.md, mismo formato que INPUT_ESTANDAR_MOZART/PAPA_PIO y corte final sellado como IN_Z90_NOETHER. No había input Casanova en disco ni en stores (única mención: lista de antonomasias en guardian_tropos_beristain_v1.py). Tokens del vocabulario canónico del catálogo 244; pesos 0.60-0.84. Los estados internos son auto-declaración del autor (Histoire de ma vie, autobiografía que Britannica advierte 'quizá exagera'): marcados como tal en source_note. Post-Z (1792-1798) no entra.",
+ "caldero_identity": {
+  "nombre_o_alias": "Giacomo Casanova",
+  "prohibido_self_match": true
+ },
+ "caldero_search_sources": [
+  {
+   "id": "src_brit",
+   "texto": "Eclesiástico, escritor, soldado, espía y diplomático; violinista; Piombi 1755; fuga 1756; lotería París 1757; Seingalt; espía veneciano 1774-1782; bibliotecario en Dux 1785-98.",
+   "origen": "web_public_bio_britannica"
+  },
+  {
+   "id": "src_wiki",
+   "texto": "Laurea en derecho en Padua 1742; órdenes menores; escribano de Acquaviva; violinista San Samuele; protegido de Bragadin; expulsado de Venecia 1783; últimos años dedicados a Histoire de ma vie.",
+   "origen": "web_public_bio_wikipedia"
+  }
+ ],
+ "external_lights": [],
+ "cuts": [
+  {
+   "id": "C1",
+   "date": "1725-04-02",
+   "hecho": "1725-1734: nace en Venecia, hijo de actores; niño enfermizo; a los nueve años lo envían a una pensión en Padua; en su autobiografía recuerda el descuido de sus padres como un recuerdo amargo y se siente desechado.",
+   "P": [
+    [
+     "busqueda_identidad",
+     0.72
+    ],
+    [
+     "curiosidad_abstracta",
+     0.7
+    ],
+    [
+     "vulnerabilidad",
+     0.68
+    ]
+   ],
+   "A": [
+    [
+     "negligencia_temprana",
+     0.78
+    ],
+    [
+     "abandono_familiar",
+     0.74
+    ],
+    [
+     "miedo_abandono",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "dependencia",
+     0.66
+    ],
+    [
+     "formacion_literaria",
+     0.62
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (internado en Padua a los 9; 'So they got rid of me' en Histoire de ma vie (autobiografía; lectura interior: lo que él dice sentir/pensar es auto-declaración, no hecho verificado))"
+  },
+  {
+   "id": "C2",
+   "date": "1737-01-01",
+   "hecho": "1737-1742: entra a la Universidad de Padua a los 12 y se gradúa en derecho a los 17; luego dirá que no tenía vocación por el derecho; recibe órdenes menores con vistas a carrera eclesiástica; se cuenta a sí mismo como apetito de saber y mente inquieta.",
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "logro_escolar",
+     0.78
+    ],
+    [
+     "curiosidad_abstracta",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "identidad_impuesta",
+     0.72
+    ],
+    [
+     "jerarquia",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.72
+    ],
+    [
+     "reconocimiento",
+     0.66
+    ],
+    [
+     "ambivalencia",
+     0.64
+    ]
+   ],
+   "source_note": "Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (laurea en derecho 1742; 'aversión' al derecho declarada por él en Histoire de ma vie (autobiografía; lectura interior: lo que él dice sentir/pensar es auto-declaración, no hecho verificado))"
+  },
+  {
+   "id": "C3",
+   "date": "1743-01-01",
+   "hecho": "1743-1745: expulsado del seminario de San Cipriano por conducta escandalosa; escribano del cardenal Acquaviva en Roma; despedido tras cargar con un escándalo ajeno, lo que cierra su carrera eclesiástica.",
+   "P": [
+    [
+     "ambicion",
+     0.74
+    ],
+    [
+     "busqueda_placer",
+     0.72
+    ],
+    [
+     "audacia",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "autoridad",
+     0.74
+    ],
+    [
+     "castigo_del_culpable",
+     0.68
+    ],
+    [
+     "falsa_acusacion",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "perdida",
+     0.7
+    ],
+    [
+     "caida",
+     0.68
+    ],
+    [
+     "oportunidad",
+     0.62
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (expulsión del seminario; servicio a un cardenal); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (despido por Acquaviva)"
+  },
+  {
+   "id": "C4",
+   "date": "1746-01-01",
+   "hecho": "1746: violinista de oficio en el teatro San Samuele, insatisfecho con su suerte; salva la vida del senador Bragadin tras un ataque en una góndola; Bragadin lo adopta como protegido y 'hijo'.",
+   "P": [
+    [
+     "insatisfaccion",
+     0.74
+    ],
+    [
+     "astucia",
+     0.72
+    ],
+    [
+     "oportunidad",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "escasez",
+     0.68
+    ],
+    [
+     "estatus_social",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "vinculo_sustituto",
+     0.78
+    ],
+    [
+     "proteccion",
+     0.74
+    ],
+    [
+     "ascenso_reciente",
+     0.7
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (violinista en Venecia); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (San Samuele; rescate de Bragadin)"
+  },
+  {
+   "id": "C5",
+   "date": "1750-01-01",
+   "hecho": "1750-1755: viaja; se hace masón en Lyon; París, Dresde, Praga, Viena; vuelve a Venecia; en 1755 es denunciado como mago y condenado a cinco años en los Plomos por ofensa a la religión.",
+   "P": [
+    [
+     "viaje",
+     0.76
+    ],
+    [
+     "busqueda_libertad",
+     0.72
+    ],
+    [
+     "romper_reglas",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "persecucion",
+     0.8
+    ],
+    [
+     "privacion_libertad",
+     0.82
+    ],
+    [
+     "blasfemia",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "desastre",
+     0.72
+    ],
+    [
+     "injusticia",
+     0.66
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (masonería 1750 en Lyon; denuncia 1755; Piombi)"
+  },
+  {
+   "id": "C6",
+   "date": "1756-10-31",
+   "hecho": "1756: tras meses de encierro, que en su relato vive con desesperación y planes obsesivos, logra una fuga espectacular de los Plomos el 31 de octubre y huye a París.",
+   "P": [
+    [
+     "determinacion",
+     0.82
+    ],
+    [
+     "astucia",
+     0.8
+    ],
+    [
+     "valentia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "privacion_libertad",
+     0.8
+    ],
+    [
+     "vigilancia_relacional",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "liberacion",
+     0.84
+    ],
+    [
+     "fugitivo",
+     0.76
+    ],
+    [
+     "triunfo",
+     0.72
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (fuga 31 oct 1756); estados internos según Histoire de ma vie (autobiografía; lectura interior: lo que él dice sentir/pensar es auto-declaración, no hecho verificado) y su Histoire de ma fuite"
+  },
+  {
+   "id": "C7",
+   "date": "1757-01-01",
+   "hecho": "1757-1759: en París ayuda a crear la lotería estatal y es uno de sus administradores; gana fortuna y nombre ante la aristocracia; vive de su encanto, el juego y la intriga.",
+   "P": [
+    [
+     "carisma",
+     0.8
+    ],
+    [
+     "persuasion",
+     0.76
+    ],
+    [
+     "busqueda_placer",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "competencia",
+     0.64
+    ],
+    [
+     "engano",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "prosperidad",
+     0.78
+    ],
+    [
+     "redes_prestigio",
+     0.76
+    ],
+    [
+     "escalada_status",
+     0.72
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (lotería 1757); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (administrador de la lotería)"
+  },
+  {
+   "id": "C8",
+   "date": "1760-01-01",
+   "hecho": "1760-1774: huye de acreedores, adopta el nombre de Caballero de Seingalt; recorre Suiza (conoce a Voltaire), Italia, Londres, Berlín, Rusia y Polonia intentando vender su proyecto de lotería; un duelo en Varsovia lo obliga a huir; refugio en España.",
+   "P": [
+    [
+     "viaje",
+     0.82
+    ],
+    [
+     "cambio_identidad",
+     0.74
+    ],
+    [
+     "apuesta_extrema",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.76
+    ],
+    [
+     "rechazo_ritual_autoritario",
+     0.62
+    ],
+    [
+     "confrontacion_directa",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "fugitivo",
+     0.72
+    ],
+    [
+     "desgaste_cambaceo_itinerante",
+     0.66
+    ],
+    [
+     "fragmentacion",
+     0.68
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (Seingalt, Voltaire, Berlín 1764, Riga, San Petersburgo, Varsovia, duelo, España); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (rechazos a la lotería)"
+  },
+  {
+   "id": "C9",
+   "date": "1774-01-01",
+   "hecho": "1774-1785: se le permite volver a Venecia y trabaja como informante de los inquisidores de Estado; sus empresas fracasan por falta de capital; en 1783 vuelve a ser expulsado tras una sátira contra la nobleza; desde 1785 bibliotecario del conde Waldstein en Dux, Bohemia.",
+   "P": [
+    [
+     "retorno",
+     0.74
+    ],
+    [
+     "pragmatismo_frio",
+     0.68
+    ],
+    [
+     "formacion_literaria_creativa",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "lealtad_al_regimen",
+     0.66
+    ],
+    [
+     "ruina",
+     0.72
+    ],
+    [
+     "distancia_forzada",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "aislamiento_social",
+     0.72
+    ],
+    [
+     "dependencia",
+     0.7
+    ],
+    [
+     "estancamiento",
+     0.66
+    ]
+   ],
+   "source_note": "Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (retorno 1774-1782, espía; Dux 1785); Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 (expulsión 1783 por sátira; fracaso por falta de capital)"
+  },
+  {
+   "id": "C10",
+   "date": "1791-01-01",
+   "hecho": "~1789-1791: Z_foto STOP. Último 10% de vida sellado. Estado observable: en Dux, aislado, se dedica a escribir sus memorias; el texto narra su vida desde dentro, con lo que dice haber sentido; futuro post-Z no entra.",
+   "P": [
+    [
+     "introspeccion",
+     0.8
+    ],
+    [
+     "autoconfesion",
+     0.78
+    ],
+    [
+     "formacion_literaria_creativa",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "soledad",
+     0.72
+    ],
+    [
+     "aislamiento_permanente",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "coherencia_narrativa",
+     0.7
+    ],
+    [
+     "umbral_abierto",
+     0.66
+    ],
+    [
+     "reflexion",
+     0.68
+    ]
+   ],
+   "source_note": "Wikipedia en 'Giacomo Casanova' (versión consultada 2026-10-14), que cita Histoire de ma vie ed. Lahouati/Luna (Gallimard 2013), Masters 1969, Childs 1988 ('In his last years, Casanova focused without distractions on his Histoire de ma vie'); Britannica 'Giacomo Casanova' (britannica.com/biography/Giacomo-Casanova, consultado 2026-10-14) (Dux 1785-98)"
+  }
+ ]
+}

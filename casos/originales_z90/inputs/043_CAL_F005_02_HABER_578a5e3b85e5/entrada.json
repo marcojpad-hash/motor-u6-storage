@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F005_02_HABER",
+ "question": "¿Qué trayectoria sigue Fritz Haber después de su situación a finales de 1932?",
+ "person": "Fritz Haber",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1933-01-01",
+ "z_trabajo": "1933-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1932",
+ "cuts": [
+  {
+   "id": "C1_1909",
+   "corte": "C1_1909",
+   "cut_id": "C1_1909",
+   "date": "1909",
+   "fecha_corte": "1909",
+   "hecho": "Es el primer químico en sintetizar amoníaco; con Carl Bosch en BASF el proceso se escala a producción industrial. Converso del judaísmo al luteranismo desde su etapa en Jena.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "determinacion",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "solucion_problemas",
+     0.8
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "hallazgo",
+     0.8
+    ],
+    [
+     "reconocimiento",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1909 Haber fue el primer químico en crear amoníaco por síntesis; con Carl Bosch en BASF el proceso se escaló a cantidades comerciales.",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1909",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Durante su tiempo en Jena (1892–1894) se convirtió del judaísmo al luteranismo.",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1894",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1915",
+   "corte": "C2_1915",
+   "cut_id": "C2_1915",
+   "date": "1915-05-02",
+   "fecha_corte": "1915-05-02",
+   "hecho": "Nacionalista, dirige el desarrollo del cloro como arma y está presente en su primer uso en la segunda batalla de Ypres; días después su esposa Clara Immerwahr se quita la vida con el revólver de servicio de él tras una discusión.",
+   "P": [
+    [
+     "patriotismo",
+     0.8
+    ],
+    [
+     "lealtad_al_regimen",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "calculo_frio",
+     0.76
+    ],
+    [
+     "organizacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "perdida_familiar",
+     0.78
+    ],
+    [
+     "dilema_moral",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Haber dirigió los equipos que desarrollaron el cloro y otros gases y estuvo presente cuando el ejército alemán lo liberó por primera vez en la segunda batalla de Ypres (22 de abril a 25 de mayo de 1915).",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1915-04-22",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 2 de mayo de 1915, tras una discusión con Haber, Clara Immerwahr se disparó con el revólver de servicio de él.",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1915-05-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1932",
+   "corte": "C3_1932",
+   "cut_id": "C3_1932",
+   "date": "1932",
+   "fecha_corte": "1932",
+   "hecho": "Premio Nobel de Química (1918), director del Instituto Kaiser Wilhelm de Fisicoquímica en Berlín-Dahlem; su búsqueda de oro en el agua de mar resulta antieconómica; desde 1931 le preocupa cada vez más el ascenso del nacionalsocialismo y la seguridad de amigos, colegas y familia.",
+   "P": [
+    [
+     "reconocimiento_previo",
+     0.78
+    ],
+    [
+     "ansiedad",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "busqueda_seguridad",
+     0.7
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "amenaza_central",
+     0.78
+    ],
+    [
+     "incertidumbre",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Recibió el Premio Nobel de Química de 1918; gran parte de su trabajo entre 1911 y la década de 1930 se hizo en el Instituto Kaiser Wilhelm de Fisicoquímica y Electroquímica en Berlín-Dahlem.",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1918",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En los años veinte buscó extraer oro del agua de mar y concluyó que era antieconómico; hacia 1931 le preocupaba cada vez más el ascenso del nacionalsocialismo y la seguridad de sus amigos, colegas y familia.",
+     "source_url": "https://en.wikipedia.org/wiki/Fritz_Haber",
+     "source_date": "2026-10-28",
+     "claim_date": "1931",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1932."
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_05_VANGOGH",
+ "question": "¿Qué ocurre con Van Gogh tras la crisis de Arlés con Gauguin?",
+ "person": "Vincent van Gogh",
+ "tipo_sujeto": "artista",
+ "freeze": "1888-12-24",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1888B",
+ "cuts": [
+  {
+   "id": "C1_1880",
+   "corte": "C1_1880",
+   "cut_id": "C1_1880",
+   "date": "1880-08-01",
+   "fecha_corte": "1880-08-01",
+   "hecho": "Tras fracasar como predicador decide ser artista; depende de su hermano Theo.",
+   "P": [
+    [
+     "proposito_claro",
+     0.74
+    ],
+    [
+     "idealismo",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.74
+    ],
+    [
+     "sacrificio",
+     0.63
+    ]
+   ],
+   "C": [
+    [
+     "escasez",
+     0.77
+    ],
+    [
+     "dependencia",
+     0.74
+    ]
+   ]
+  },
+  {
+   "id": "C2_1888A",
+   "corte": "C2_1888A",
+   "cut_id": "C2_1888A",
+   "date": "1888-02-20",
+   "fecha_corte": "1888-02-20",
+   "hecho": "Se muda a Arlés; producción intensa; sueña con un taller del sur.",
+   "P": [
+    [
+     "vision",
+     0.77
+    ],
+    [
+     "autoexpresion",
+     0.81
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "obsesion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "aislamiento_social",
+     0.7
+    ],
+    [
+     "escasez",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1888B",
+   "corte": "C3_1888B",
+   "cut_id": "C3_1888B",
+   "date": "1888-12-24",
+   "fecha_corte": "1888-12-24",
+   "hecho": "Tras disputa con Gauguin se corta la oreja y es hospitalizado.",
+   "P": [
+    [
+     "autoexpresion",
+     0.74
+    ],
+    [
+     "conexion_emocional",
+     0.63
+    ]
+   ],
+   "A": [
+    [
+     "impulsividad",
+     0.77
+    ],
+    [
+     "autodestruccion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "ruptura_realidad",
+     0.74
+    ],
+    [
+     "soledad",
+     0.77
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Vincent van Gogh'; Van Gogh Museum cartas (hasta dic-1888)"
+}

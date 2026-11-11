@@ -1,0 +1,126 @@
+{
+  "case_id": "C15",
+  "question": "¿Qué trayectoria sigue el sujeto tras zarpar a buscar un paso marítimo hacia las islas de las especias?",
+  "tipo_sujeto": "empresario",
+  "freeze": "1519-09-20",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1519",
+  "cuts": [
+    {
+      "id": "C1_1505",
+      "corte": "C1_1505",
+      "cut_id": "C1_1505",
+      "date": "1505-01-01",
+      "fecha_corte": "1505-01-01",
+      "hecho": "Sirve a Portugal en la India y Malaca; aprende navegación oceánica y rutas de especias.",
+      "P": [
+        [
+          "conocimiento",
+          0.8
+        ],
+        [
+          "curiosidad_abstracta",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "analisis",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C2_1517",
+      "corte": "C2_1517",
+      "cut_id": "C2_1517",
+      "date": "1517-01-01",
+      "fecha_corte": "1517-01-01",
+      "hecho": "Rechazado por el rey de Portugal, ofrece su proyecto a Castilla; Carlos I lo acepta.",
+      "P": [
+        [
+          "vision",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "persuasion",
+          0.8
+        ],
+        [
+          "negociacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "frustracion",
+          0.72
+        ],
+        [
+          "cambio_lealtad",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C3_1519",
+      "corte": "C3_1519",
+      "cut_id": "C3_1519",
+      "date": "1519-09-20",
+      "fecha_corte": "1519-09-20",
+      "hecho": "Zarpa de Sanlúcar con cinco naves hacia el oeste, buscando un paso por el sur del nuevo continente.",
+      "P": [
+        [
+          "audacia",
+          0.84
+        ],
+        [
+          "apuesta_extrema",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "vision",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.8
+        ],
+        [
+          "terreno_hostil",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

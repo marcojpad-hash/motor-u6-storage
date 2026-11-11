@@ -1,0 +1,126 @@
+{
+  "case_id": "C13",
+  "question": "¿Qué trayectoria sigue el sujeto tras unificar las tribus bajo su mando?",
+  "tipo_sujeto": "gobernante",
+  "freeze": "1206-01-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1206",
+  "cuts": [
+    {
+      "id": "C1_1189",
+      "corte": "C1_1189",
+      "cut_id": "C1_1189",
+      "date": "1189-01-01",
+      "fecha_corte": "1189-01-01",
+      "hecho": "Elegido kan de una confederación de clanes; sobrevive a traiciones y derrotas tempranas.",
+      "P": [
+        [
+          "supervivencia",
+          0.84
+        ],
+        [
+          "resiliencia",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "astucia",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "rivalidad_poder",
+          0.78
+        ],
+        [
+          "terreno_hostil",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C2_1203",
+      "corte": "C2_1203",
+      "cut_id": "C2_1203",
+      "date": "1203-01-01",
+      "fecha_corte": "1203-01-01",
+      "hecho": "Derrota a sus rivales (Jamukha y los naimanes); incorpora sus guerreros y su organización.",
+      "P": [
+        [
+          "conquista",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.82
+        ],
+        [
+          "audacia",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "escalada",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C3_1206",
+      "corte": "C3_1206",
+      "cut_id": "C3_1206",
+      "date": "1206-01-01",
+      "fecha_corte": "1206-01-01",
+      "hecho": "Proclamado gobernante universal en el kuriltai; unifica las tribus mongolas.",
+      "P": [
+        [
+          "triunfo",
+          0.84
+        ],
+        [
+          "poder",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.84
+        ],
+        [
+          "autoridad",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "escalada_status",
+          0.8
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

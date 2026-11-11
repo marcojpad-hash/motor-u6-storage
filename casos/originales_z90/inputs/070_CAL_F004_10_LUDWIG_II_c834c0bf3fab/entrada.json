@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F004_10_LUDWIG_II",
+ "question": "¿Qué trayectoria sigue Luis II de Baviera después de 1885?",
+ "person": "Luis II de Baviera",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1886-01-01",
+ "z_trabajo": "1886-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1885",
+ "cuts": [
+  {
+   "id": "C1_1864",
+   "corte": "C1_1864",
+   "cut_id": "C1_1864",
+   "date": "1864",
+   "fecha_corte": "1864",
+   "hecho": "Sube al trono de Baviera con 18 años, sin preparación pero muy popular; sus intereses reales son el arte, la música y la arquitectura; coloca la primera piedra de un nuevo teatro de la corte.",
+   "P": [
+    [
+     "autoexpresion",
+     0.8
+    ],
+    [
+     "idealismo",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.74
+    ],
+    [
+     "introversion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.8
+    ],
+    [
+     "poder",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Ludwig subió al trono en su decimonoveno año, tras morir su padre; sin preparación, su juventud lo hizo popular; sus intereses eran el arte, la música y la arquitectura; en 1864 colocó la primera piedra del nuevo teatro de la corte.",
+     "source_url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+     "source_date": "2026-10-27",
+     "claim_date": "1864",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1871",
+   "corte": "C2_1871",
+   "cut_id": "C2_1871",
+   "date": "1871-01-18",
+   "fecha_corte": "1871-01-18",
+   "hecho": "Baviera pierde con Austria en 1866 y queda atada a Prusia; él se retira de la vida pública; en 1870 Bismarck le compra con concesiones financieras la Kaiserbrief; lamenta la pérdida de independencia y no asiste a la proclamación del emperador.",
+   "P": [
+    [
+     "orgullo",
+     0.76
+    ],
+    [
+     "evitacion_conflicto",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "aislamiento_voluntario",
+     0.78
+    ],
+    [
+     "sumision",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.76
+    ],
+    [
+     "dependencia",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En la guerra de 1866 Austria y Baviera fueron derrotadas; Ludwig dejó la política bélica a sus ministros y se retiró de la vida pública.",
+     "source_url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+     "source_date": "2026-10-27",
+     "claim_date": "1866",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En diciembre de 1870 Bismarck usó concesiones financieras para inducir a Ludwig a escribir la Kaiserbrief; Ludwig lamentó la pérdida de independencia y no asistió a la proclamación del 18 de enero en Versalles.",
+     "source_url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+     "source_date": "2026-10-27",
+     "claim_date": "1871-01-18",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1885",
+   "corte": "C3_1885",
+   "cut_id": "C3_1885",
+   "date": "1885",
+   "fecha_corte": "1885",
+   "hecho": "Vive casi aislado en sus castillos (último desfile en 1875, último banquete en 1876); en 1885 debe 14 millones de marcos, ha pedido mucho prestado a su familia, ignora a sus ministros de finanzas, exige préstamos a las casas reales de Europa y piensa destituir a todo el gabinete.",
+   "P": [
+    [
+     "obsesion",
+     0.8
+    ],
+    [
+     "excentricidad",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "aislamiento_voluntario",
+     0.8
+    ],
+    [
+     "desafio_autoridad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.82
+    ],
+    [
+     "rivalidad_poder",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Ludwig inspeccionó su último desfile militar el 22 de agosto de 1875 y dio su último banquete de corte el 10 de febrero de 1876; se retiró cada vez más a sus castillos.",
+     "source_url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+     "source_date": "2026-10-27",
+     "claim_date": "1876-02-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Hacia 1885 tenía deudas de 14 millones de marcos y había pedido mucho prestado a su familia; en lugar de economizar, planeaba más diseños, exigía préstamos a la realeza europea y pensaba destituir a todo el gabinete.",
+     "source_url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+     "source_date": "2026-10-27",
+     "claim_date": "1885",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1885."
+}

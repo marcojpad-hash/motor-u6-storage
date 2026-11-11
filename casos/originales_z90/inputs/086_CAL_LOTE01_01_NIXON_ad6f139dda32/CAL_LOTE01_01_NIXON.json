@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_01_NIXON",
+ "question": "¿Cómo evoluciona la presidencia de Nixon ante el escándalo Watergate tras las audiencias del Senado?",
+ "person": "Richard Nixon",
+ "tipo_sujeto": "politico",
+ "freeze": "1973-06-30",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1973",
+ "cuts": [
+  {
+   "id": "C1_1968",
+   "corte": "C1_1968",
+   "cut_id": "C1_1968",
+   "date": "1968-11-05",
+   "fecha_corte": "1968-11-05",
+   "hecho": "Gana la elección presidencial de 1968 tras derrotas en 1960 y 1962.",
+   "P": [
+    [
+     "ambicion",
+     0.81
+    ],
+    [
+     "poder",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.7
+    ],
+    [
+     "planificacion",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "competencia",
+     0.77
+    ],
+    [
+     "rivalidad_poder",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C2_1972",
+   "corte": "C2_1972",
+   "cut_id": "C2_1972",
+   "date": "1972-11-07",
+   "fecha_corte": "1972-11-07",
+   "hecho": "Reelección aplastante; en junio de 1972 ocurre el allanamiento del Watergate y su campaña lo encubre.",
+   "P": [
+    [
+     "poder",
+     0.81
+    ],
+    [
+     "control",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "secreto",
+     0.77
+    ],
+    [
+     "manipulacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.74
+    ],
+    [
+     "paranoia",
+     0.67
+    ]
+   ]
+  },
+  {
+   "id": "C3_1973",
+   "corte": "C3_1973",
+   "cut_id": "C3_1973",
+   "date": "1973-06-30",
+   "fecha_corte": "1973-06-30",
+   "hecho": "Audiencias del Senado; renuncian Haldeman y Ehrlichman (abril); John Dean testifica contra el presidente (junio).",
+   "P": [
+    [
+     "control",
+     0.77
+    ],
+    [
+     "negacion_problema",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "secreto",
+     0.81
+    ],
+    [
+     "confrontacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "revelacion",
+     0.74
+    ],
+    [
+     "hostilidad",
+     0.7
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Watergate scandal'; Britannica 'Richard Nixon' (solo hechos hasta jun-1973)"
+}

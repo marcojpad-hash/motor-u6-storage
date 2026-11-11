@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_F001_03_WILDE",
+ "question": "¿Qué ocurre con Oscar Wilde al denunciar por difamación al marqués de Queensberry?",
+ "person": "Oscar Wilde",
+ "tipo_sujeto": "artista",
+ "freeze": "1895-03-01",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1895B",
+ "cuts": [
+  {
+   "id": "C1_1891",
+   "corte": "C1_1891",
+   "cut_id": "C1_1891",
+   "date": "1891-06-01",
+   "fecha_corte": "1891-06-01",
+   "hecho": "Publica El retrato de Dorian Gray en libro y conoce a Lord Alfred Douglas.",
+   "P": [
+    [
+     "autoexpresion",
+     0.84
+    ],
+    [
+     "busqueda_placer",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "carisma",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.7
+    ],
+    [
+     "atraccion_prohibida",
+     0.72
+    ]
+   ]
+  },
+  {
+   "id": "C2_1895A",
+   "corte": "C2_1895A",
+   "cut_id": "C2_1895A",
+   "date": "1895-02-14",
+   "fecha_corte": "1895-02-14",
+   "hecho": "Estreno triunfal de La importancia de llamarse Ernesto en Londres.",
+   "P": [
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "orgullo",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "humor",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.82
+    ],
+    [
+     "popularidad",
+     0.8
+    ]
+   ]
+  },
+  {
+   "id": "C3_1895B",
+   "corte": "C3_1895B",
+   "cut_id": "C3_1895B",
+   "date": "1895-03-01",
+   "fecha_corte": "1895-03-01",
+   "hecho": "Queensberry le deja una tarjeta insultante en su club; Wilde obtiene orden de arresto contra él por difamación.",
+   "P": [
+    [
+     "orgullo_hubris",
+     0.8
+    ],
+    [
+     "justicia",
+     0.65
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.8
+    ],
+    [
+     "impulsividad",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.75
+    ],
+    [
+     "secreto",
+     0.72
+    ]
+   ]
+  }
+ ],
+ "source_notes": "https://en.wikipedia.org/wiki/Oscar_Wilde (solo hechos hasta 1-mar-1895)"
+}

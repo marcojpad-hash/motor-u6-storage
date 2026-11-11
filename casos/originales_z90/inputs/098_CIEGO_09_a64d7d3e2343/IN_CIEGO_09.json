@@ -1,0 +1,341 @@
+{
+  "case_id": "CIEGO_09",
+  "question": "caso_ciego_antecedentes",
+  "random_seed": 0,
+  "z90_date": null,
+  "modo_ciego": true,
+  "nota_pac": "Asignación P/A/C provisoria por round-robin peso-desc desde MARKERS planos (mismo formato flat que ciegos 09/10). Trazable; no inventa tokens.",
+  "cuts": [
+    {
+      "id": "A",
+      "P": [
+        [
+          "participacion_colectiva",
+          0.84
+        ],
+        [
+          "estatus_social",
+          0.78
+        ],
+        [
+          "responsabilidad",
+          0.7
+        ],
+        [
+          "legalidad",
+          0.65
+        ]
+      ],
+      "A": [
+        [
+          "apego_normas",
+          0.82
+        ],
+        [
+          "consenso",
+          0.75
+        ],
+        [
+          "organizacion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "reputacion_institucional",
+          0.8
+        ],
+        [
+          "jerarquia",
+          0.72
+        ],
+        [
+          "autoridad",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "P": [
+        [
+          "conquista",
+          0.84
+        ],
+        [
+          "asimetria",
+          0.8
+        ],
+        [
+          "escalada_status",
+          0.74
+        ],
+        [
+          "redes_prestigio",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "escalada",
+          0.84
+        ],
+        [
+          "acumulacion_capital",
+          0.78
+        ],
+        [
+          "botin",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "prosperidad",
+          0.82
+        ],
+        [
+          "obligacion_moral",
+          0.75
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "P": [
+        [
+          "lucha",
+          0.84
+        ],
+        [
+          "lealtad",
+          0.82
+        ],
+        [
+          "sed_de_mando",
+          0.72
+        ],
+        [
+          "materialismo",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "conflicto_lealtad",
+          0.84
+        ],
+        [
+          "desgaste_psicosocial",
+          0.8
+        ],
+        [
+          "victoria",
+          0.72
+        ],
+        [
+          "reputacion_institucional",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "liderazgo",
+          0.84
+        ],
+        [
+          "carisma",
+          0.78
+        ],
+        [
+          "cambio_lealtad",
+          0.7
+        ],
+        [
+          "codicia",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "D",
+      "P": [
+        [
+          "rivalidad_poder",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "popularidad",
+          0.8
+        ],
+        [
+          "confrontacion",
+          0.8
+        ],
+        [
+          "inversion_de_reglas",
+          0.75
+        ],
+        [
+          "orgullo_hubris",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "rivalidad",
+          0.84
+        ],
+        [
+          "competencia",
+          0.82
+        ],
+        [
+          "mensaje_de_cambio",
+          0.8
+        ],
+        [
+          "maquiavelismo",
+          0.78
+        ],
+        [
+          "redes_prestigio",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "romper_reglas",
+          0.82
+        ],
+        [
+          "discordia",
+          0.8
+        ],
+        [
+          "tradicionalismo",
+          0.75
+        ],
+        [
+          "abuso_poder",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "E",
+      "P": [
+        [
+          "tension_alta",
+          0.84
+        ],
+        [
+          "desafio_autoridad",
+          0.84
+        ],
+        [
+          "caos",
+          0.82
+        ],
+        [
+          "fragmentacion",
+          0.8
+        ],
+        [
+          "desconfianza_autoridad",
+          0.75
+        ],
+        [
+          "excepcion_trayectoria",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "escalada_autoritaria_rapida",
+          0.84
+        ],
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "abuso_poder",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "desastre",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "ira_institucional",
+          0.84
+        ],
+        [
+          "escalada",
+          0.84
+        ],
+        [
+          "usurpacion",
+          0.8
+        ],
+        [
+          "insurreccion",
+          0.75
+        ],
+        [
+          "opresion",
+          0.72
+        ]
+      ]
+    }
+  ],
+  "caldero_identity": {
+    "nombre_o_alias": "ciego_09_sellado",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "participacion_colectiva",
+      "estatus_social",
+      "responsabilidad",
+      "legalidad",
+      "apego_normas",
+      "consenso",
+      "organizacion",
+      "reputacion_institucional",
+      "jerarquia",
+      "autoridad",
+      "conquista",
+      "asimetria",
+      "escalada_status",
+      "redes_prestigio",
+      "escalada",
+      "acumulacion_capital",
+      "botin",
+      "prosperidad",
+      "obligacion_moral",
+      "oportunidad"
+    ]
+  },
+  "caldero_search_sources": [],
+  "external_lights": []
+}

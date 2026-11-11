@@ -1,0 +1,173 @@
+{
+ "case_id": "CAL_F005_04_HOOVER",
+ "question": "¿Qué trayectoria sigue Herbert Hoover después de su situación a finales de 1928?",
+ "person": "Herbert Hoover",
+ "tipo_sujeto": "politico",
+ "freeze": "1928-12-31",
+ "z_trabajo": "1928-12-31",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1928-11",
+ "cuts": [
+  {
+   "id": "C1_1917",
+   "corte": "C1_1917",
+   "cut_id": "C1_1917",
+   "date": "1917",
+   "fecha_corte": "1917",
+   "hecho": "Ingeniero de minas enriquecido; en 1914 organiza y dirige la Comisión de Ayuda a Bélgica; en 1917 Wilson lo pone al frente de la Administración de Alimentos de EE. UU. y se hace famoso como 'dictador de la comida'.",
+   "P": [
+    [
+     "altruismo",
+     0.74
+    ],
+    [
+     "eficiencia",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "organizacion",
+     0.82
+    ],
+    [
+     "liderazgo",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "ascenso_reciente",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1914 organizó y encabezó la Comisión de Ayuda a Bélgica; en 1917 Woodrow Wilson lo nombró al frente de la Administración de Alimentos de Estados Unidos y se volvió famoso como 'dictador de la comida'.",
+     "source_url": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+     "source_date": "2026-10-28",
+     "claim_date": "1917",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1927",
+   "corte": "C2_1927",
+   "cut_id": "C2_1927",
+   "date": "1927",
+   "fecha_corte": "1927",
+   "hecho": "Tras buscar sin éxito la candidatura republicana en 1920, es secretario de Comercio con Harding y Coolidge (1921–1928), muy activo y visible; dirige la respuesta federal a la Gran Inundación del Misisipi de 1927.",
+   "P": [
+    [
+     "ambicion",
+     0.74
+    ],
+    [
+     "eficiencia",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "planificacion_activa",
+     0.76
+    ],
+    [
+     "organizacion",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.74
+    ],
+    [
+     "escalada_status",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Buscó sin éxito la candidatura republicana en 1920; fue secretario de Comercio con Harding y Coolidge, conocido como 'secretario de Comercio y subsecretario de todos los demás departamentos'.",
+     "source_url": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+     "source_date": "2026-10-28",
+     "claim_date": "1921",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Dirigió la respuesta federal a la Gran Inundación del Misisipi de 1927.",
+     "source_url": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+     "source_date": "2026-10-28",
+     "claim_date": "1927",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1928",
+   "corte": "C3_1928",
+   "cut_id": "C3_1928",
+   "date": "1928-11",
+   "fecha_corte": "1928-11",
+   "hecho": "Gana la candidatura republicana y vence a Al Smith por amplio margen en la elección presidencial de 1928, apoyado en su reputación nacional y en la economía en auge.",
+   "P": [
+    [
+     "confianza_propia",
+     0.76
+    ],
+    [
+     "ambicion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.76
+    ],
+    [
+     "planificacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.8
+    ],
+    [
+     "prosperidad",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Ganó la candidatura republicana en 1928 y derrotó al demócrata Al Smith por amplio margen; su reputación nacional y la economía en auge, junto a divisiones demócratas, garantizaron la victoria.",
+     "source_url": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+     "source_date": "2026-10-28",
+     "claim_date": "1928-11",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1928."
+}

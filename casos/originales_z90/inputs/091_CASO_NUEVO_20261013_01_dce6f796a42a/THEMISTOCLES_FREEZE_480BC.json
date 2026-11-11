@@ -1,0 +1,35 @@
+{
+  "case_id": "CASO_NUEVO_20261013_01",
+  "question": "Trayectoria política y estratégica de un dirigente ateniense durante las guerras contra Persia; evaluar evolución de poder, estrategia naval y relación con las instituciones de su ciudad usando únicamente los cortes entregados.",
+  "person": "Themistocles",
+  "random_seed": 0,
+  "cuts": [
+    {
+      "cut_id": "C1_490BC",
+      "fecha_corte": "490 a. C.",
+      "hecho": "Tras la batalla de Maratón, el conflicto con Persia sigue siendo una amenaza estratégica para las ciudades griegas.",
+      "P": [["amenaza_externa", 0.80], ["defensa_colectiva", 0.72]],
+      "A": [["estrategia_militar", 0.78], ["liderazgo_politico", 0.70]],
+      "C": [["conflicto_geopolitico", 0.80], ["movilizacion_recursos", 0.68]],
+      "id": "C1_490BC"
+    },
+    {
+      "cut_id": "C2_483BC",
+      "fecha_corte": "483 a. C.",
+      "hecho": "La política ateniense impulsa una expansión naval; se aprueba construir una gran flota y se intensifica la rivalidad política interna.",
+      "P": [["amenaza_externa", 0.80], ["ambicion_politica", 0.76], ["rivalidad_interna", 0.72]],
+      "A": [["estrategia_naval", 0.84], ["persuasion_politica", 0.78], ["planificacion_largo_plazo", 0.80]],
+      "C": [["expansion_militar", 0.80], ["institucionalizacion", 0.68], ["competencia_por_el_poder", 0.74]],
+      "id": "C2_483BC"
+    },
+    {
+      "cut_id": "C3_480BC",
+      "fecha_corte": "480 a. C.",
+      "hecho": "Durante la invasión persa, el dirigente persuade a los aliados para combatir en el estrecho de Salamina; la flota griega obtiene una victoria decisiva.",
+      "P": [["amenaza_externa", 0.82], ["liderazgo_en_crisis", 0.82], ["rivalidad_interna", 0.72]],
+      "A": [["estrategia_naval", 0.84], ["engaño_estratégico", 0.76], ["coalicion", 0.72], ["toma_decisiones_bajo_presion", 0.80]],
+      "C": [["victoria_militar", 0.82], ["prestigio_publico", 0.78], ["concentracion_de_poder", 0.70]],
+      "id": "C3_480BC"
+    }
+  ]
+}

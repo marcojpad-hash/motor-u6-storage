@@ -1,0 +1,235 @@
+{
+  "case_id": "CASO_NUEVO_20261013_01_CATALOG_REPAIR_R2",
+  "question": "Caso ciego de liderazgo estratégico ante amenaza externa, rivalidad interna, reforma de capacidades, persuasión política y coalición. Corte de información: C3_480BC.",
+  "person": "Themistocles",
+  "random_seed": 20261014,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_480BC",
+  "caldero_search_families": [
+    "historical_analogy",
+    "academic_historical_sources",
+    "naval_strategy",
+    "political_leadership",
+    "democratic_assembly",
+    "strategic_deception",
+    "coalition_management"
+  ],
+  "cuts": [
+    {
+      "corte": "C1_490BC",
+      "P": [
+        [
+          "amenaza_central",
+          0.8
+        ],
+        [
+          "defensa_debil",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.78
+        ],
+        [
+          "planificacion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "poder",
+          0.8
+        ],
+        [
+          "participacion_colectiva",
+          0.68
+        ]
+      ],
+      "facts": [
+        "amenaza externa",
+        "defensa colectiva",
+        "liderazgo político"
+      ],
+      "id": "C1_490BC",
+      "cut_id": "C1_490BC",
+      "fecha_corte": "490 a. C.",
+      "hecho": "Tras la batalla de Maratón, el conflicto con Persia sigue siendo una amenaza estratégica para las ciudades griegas."
+    },
+    {
+      "corte": "C2_483BC",
+      "P": [
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "rivalidad",
+          0.76
+        ],
+        [
+          "amenaza_central",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "persuasion",
+          0.84
+        ],
+        [
+          "planificacion",
+          0.78
+        ],
+        [
+          "liderazgo",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "control",
+          0.8
+        ],
+        [
+          "poder",
+          0.68
+        ],
+        [
+          "competencia",
+          0.74
+        ]
+      ],
+      "facts": [
+        "rivalidad interna",
+        "estrategia naval",
+        "persuasión política",
+        "planificación de largo plazo"
+      ],
+      "id": "C2_483BC",
+      "cut_id": "C2_483BC",
+      "fecha_corte": "483 a. C.",
+      "hecho": "La política ateniense impulsa una expansión naval; se aprueba construir una gran flota y se intensifica la rivalidad política interna."
+    },
+    {
+      "corte": "C3_480BC",
+      "P": [
+        [
+          "amenaza_central",
+          0.82
+        ],
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "rivalidad",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "persuasion",
+          0.84
+        ],
+        [
+          "planificacion",
+          0.76
+        ],
+        [
+          "autoridad",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "victoria",
+          0.82
+        ],
+        [
+          "sacrificio",
+          0.78
+        ],
+        [
+          "poder",
+          0.7
+        ]
+      ],
+      "facts": [
+        "liderazgo en crisis",
+        "coalición",
+        "decisión bajo presión",
+        "prestigio público",
+        "concentración de poder"
+      ],
+      "id": "C3_480BC",
+      "cut_id": "C3_480BC",
+      "fecha_corte": "480 a. C.",
+      "hecho": "Durante la invasión persa, el dirigente persuade a los aliados para combatir en el estrecho de Salamina; la flota griega obtiene una victoria decisiva."
+    }
+  ],
+  "mapping_contract": {
+    "source": "THEMISTOCLES_FREEZE_480BC.json",
+    "kind": "SYNTHETIC_CATALOG_VOCABULARY_REPAIR",
+    "canonical_tokens_only": true,
+    "mapping_file": "audit_lifecycle/THEMISTOCLES_TOKEN_MAPPING_R2.json",
+    "not_a_historical_outcome_or_validation": true
+  },
+  "caldero_search_bridge": {
+    "status": "EXECUTED",
+    "origin": "connected_tool_call",
+    "provider": "exa",
+    "bridge_id": "exa_blind_20261014_themistocles_catalog_repair_r2",
+    "tool_name": "mcp__Exa__web_search_exa",
+    "submitted_query": "amenaza_central defensa_debil liderazgo planificacion poder participacion_colectiva ambicion rivalidad persuasion control competencia autoridad victoria sacrificio historical_analogy academic_historical_sources naval_strategy political_leadership democratic_assembly strategic_deception coalition_management",
+    "blind_query_sha256": "db10e942e5fe3b4b72004534edd8d46eae316ace82ecb608e06c8d27644f4c50",
+    "query_count": 1,
+    "results": [
+      {
+        "url": "https://digital-commons.usnwc.edu/cgi/viewcontent.cgi?article=1007&context=nwc-review",
+        "title": "Sea Power in the Peloponnesian War",
+        "snippet": "Estudio histórico-académico de la estrategia marítima durante la guerra entre Atenas y Esparta. Analiza control del mar, proyección de poder, protección de suministros, coerción diplomática y cómo la capacidad naval afecta la cohesión de alianzas. Caso distinto del sujeto evaluado.",
+        "metadata": {
+          "provider": "exa",
+          "result_type": "scholarly_article",
+          "analogy_dimensions": [
+            "estrategia_naval",
+            "coalicion",
+            "movilizacion_de_recursos",
+            "amenaza_externa"
+          ]
+        }
+      },
+      {
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/01495930600956195",
+        "title": "Thucydides and Strategy: Formations of Grand Strategy in the History of the Second Peloponnesian War (431–404 B.C.)",
+        "snippet": "Análisis académico de gran estrategia que compara alternativas políticas, económicas, militares y diplomáticas durante una guerra entre ciudades-estado. Útil como contraste de planificación, rivalidad y coordinación estratégica en un caso histórico distinto.",
+        "metadata": {
+          "provider": "exa",
+          "result_type": "scholarly_article",
+          "analogy_dimensions": [
+            "planificacion",
+            "rivalidad",
+            "estrategia_militar"
+          ]
+        }
+      },
+      {
+        "url": "https://exa.ai/library/publication/dqf9qnxc3zm",
+        "title": "Tucídides, sobre la mentira: los artificios de la deliberación democrática",
+        "snippet": "Estudio académico sobre persuasión política, liderazgo ante una asamblea, rivalidad entre dirigentes y el efecto de la retórica sobre decisiones colectivas. Se utiliza solo como analogía externa, sin importar desenlaces del sujeto evaluado.",
+        "metadata": {
+          "provider": "exa",
+          "result_type": "academic_article",
+          "analogy_dimensions": [
+            "persuasion_politica",
+            "rivalidad_interna",
+            "decision_colectiva"
+          ]
+        }
+      }
+    ],
+    "provenance_note": "Tres fuentes elegidas de los resultados de la búsqueda conectada con la consulta ciega exacta. Se excluyeron los resultados que nombraban directamente al sujeto. Los resúmenes son paráfrasis de los fragmentos devueltos por la búsqueda; no son citas literales."
+  }
+}

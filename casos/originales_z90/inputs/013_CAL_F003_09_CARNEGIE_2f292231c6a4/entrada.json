@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F003_09_CARNEGIE",
+ "question": "¿Qué trayectoria sigue Andrew Carnegie tras volver de Europa con planes para montar su propia planta de acero con el proceso Bessemer?",
+ "person": "Andrew Carnegie",
+ "tipo_sujeto": "empresario",
+ "freeze": "1873-01-01",
+ "z_trabajo": "1873-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1872",
+ "cuts": [
+  {
+   "id": "C1_1859",
+   "corte": "C1_1859",
+   "cut_id": "C1_1859",
+   "date": "1859-12-01",
+   "fecha_corte": "1859-12-01",
+   "hecho": "Hijo de un tejedor escocés empobrecido que emigró a Pittsburgh en 1848, empezó como bobinador de algodón por 1.20 dólares semanales y luego como mensajero de telégrafo; desde 1853 fue secretario y telegrafista de Thomas A. Scott en el Ferrocarril de Pensilvania y el 1 de diciembre de 1859 llegó a superintendente de la División Oeste.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "anhelo_seguridad",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.8
+    ],
+    [
+     "aprendizaje",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "ascenso_reciente",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Su familia llegó a Allegheny en septiembre de 1848; su primer empleo fue de bobinador en una fábrica de algodón por 1.20 dólares a la semana; en 1849 se hizo mensajero de telégrafo.",
+     "source_url": "https://en.wikipedia.org/wiki/Andrew_Carnegie",
+     "source_date": "2026-10-26",
+     "claim_date": "1849",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Desde 1853 Thomas A. Scott, del Ferrocarril de Pensilvania, lo empleó como secretario y telegrafista; el 1 de diciembre de 1859 fue nombrado superintendente de la División Oeste.",
+     "source_url": "https://en.wikipedia.org/wiki/Andrew_Carnegie",
+     "source_date": "2026-10-26",
+     "claim_date": "1859-12-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1865",
+   "corte": "C2_1865",
+   "cut_id": "C2_1865",
+   "date": "1865",
+   "fecha_corte": "1865",
+   "hecho": "Con ayuda de Scott hizo sus primeras inversiones; en 1864 invirtió en la Columbia Oil Company, que en un año pagó más de un millón de dólares en dividendos; en 1865 fundó la Keystone Bridge Company y dejó el ferrocarril para dedicarse al hierro, usando sus contactos con Scott y J. Edgar Thomson para conseguir contratos.",
+   "P": [
+    [
+     "vision",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "acumulacion_capital",
+     0.8
+    ],
+    [
+     "diversificacion",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "redes_prestigio",
+     0.8
+    ],
+    [
+     "prosperidad",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1864 fue uno de los primeros inversionistas de la Columbia Oil Company, que en un año pagó más de un millón de dólares en dividendos; tras la guerra dejó los ferrocarriles por la siderurgia y usó sus contactos con Scott y Thomson para obtener contratos.",
+     "source_url": "https://en.wikipedia.org/wiki/Andrew_Carnegie",
+     "source_date": "2026-10-26",
+     "claim_date": "1865",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La Keystone Bridge Company fue fundada en 1865 por Andrew Carnegie.",
+     "source_url": "https://en.wikipedia.org/wiki/Keystone_Bridge_Company",
+     "source_date": "2026-10-26",
+     "claim_date": "1865",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1872",
+   "corte": "C3_1872",
+   "cut_id": "C3_1872",
+   "date": "1872",
+   "fecha_corte": "1872",
+   "hecho": "En 1868, a los 33 años, escribió un memorando proponiéndose limitar su ingreso a 50,000 dólares anuales y retirarse de los negocios; en el verano de 1872, en Europa, conoció el proceso Bessemer y volvió a Pittsburgh con planes para construir su propia planta Bessemer junto a socios como Henry Phipps y su hermano Thomas.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "vision",
+     0.82
+    ]
+   ],
+   "A": [
+    [
+     "herramienta_nueva",
+     0.8
+    ],
+    [
+     "planificacion",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.82
+    ],
+    [
+     "alianza",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1868, a los 33 años, escribió que se proponía no tomar un ingreso mayor de 50,000 dólares al año y dejar los negocios.",
+     "source_url": "https://en.wikipedia.org/wiki/Andrew_Carnegie",
+     "source_date": "2026-10-26",
+     "claim_date": "1868",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En el verano de 1872, estando en Europa, conoció el proceso Bessemer y volvió a Pittsburgh con planes para construir su propia planta Bessemer; entre sus socios estaban Henry Phipps Jr. y Thomas M. Carnegie.",
+     "source_url": "https://en.wikipedia.org/wiki/Edgar_Thomson_Steel_Works",
+     "source_date": "2026-10-26",
+     "claim_date": "1872",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1872."
+}

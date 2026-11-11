@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F005_03_EINSTEIN",
+ "question": "¿Qué trayectoria sigue Albert Einstein después de su situación a finales de 1904?",
+ "person": "Albert Einstein",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1905-01-01",
+ "z_trabajo": "1905-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1904-05",
+ "cuts": [
+  {
+   "id": "C1_1901",
+   "corte": "C1_1901",
+   "cut_id": "C1_1901",
+   "date": "1901",
+   "fecha_corte": "1901",
+   "hecho": "Se gradúa en el Politécnico de Zúrich (1900) como profesor de matemáticas y física, pero durante casi dos años ninguna escuela suiza le da puesto; obtiene la ciudadanía suiza en febrero de 1901 y publica un primer artículo sobre capilaridad.",
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.8
+    ],
+    [
+     "independencia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "teorizacion",
+     0.76
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "obstaculo",
+     0.76
+    ],
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Se graduó del politécnico federal en 1900; obtuvo la ciudadanía suiza en febrero de 1901; las escuelas suizas no le ofrecieron un puesto de profesor pese a casi dos años de solicitudes.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1901-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Su primer artículo, sobre fenómenos de capilaridad, se publicó en Annalen der Physik en 1901.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1901",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1902",
+   "corte": "C2_1902",
+   "cut_id": "C2_1902",
+   "date": "1902",
+   "fecha_corte": "1902",
+   "hecho": "Con ayuda del padre de Marcel Grossmann entra a la Oficina de Patentes de Berna como examinador asistente de tercera clase; con Habicht y Solovine forma la 'Academia Olimpia' para discutir ciencia y filosofía (Poincaré, Mach, Hume).",
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.78
+    ],
+    [
+     "autonomia",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "analisis",
+     0.74
+    ],
+    [
+     "generacion_ideas",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "estabilidad_ingreso_formal",
+     0.7
+    ],
+    [
+     "vinculo_compartido",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Con ayuda del padre de Marcel Grossmann obtuvo un puesto en Berna en la Oficina Suiza de Patentes como examinador asistente de nivel III (1902).",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1902",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1902 formó con Conrad Habicht y Maurice Solovine la Academia Olimpia, donde leían a Poincaré, Mach y Hume.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1902",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1904",
+   "corte": "C3_1904",
+   "cut_id": "C3_1904",
+   "date": "1904-05",
+   "fecha_corte": "1904-05",
+   "hecho": "Su puesto en la oficina se vuelve permanente (1903), sin ascenso hasta 'dominar la tecnología de máquinas'; se casa con Mileva Marić (enero de 1903) y nace su hijo Hans Albert (mayo de 1904); publica artículos de termodinámica estadística (1902–1903) e investiga la difusión.",
+   "P": [
+    [
+     "determinacion",
+     0.74
+    ],
+    [
+     "curiosidad_abstracta",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "teorizacion",
+     0.8
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "estabilidad_ocupacional",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Sus empleadores hicieron permanente su puesto en 1903, aunque no lo ascenderían hasta que dominara la tecnología de máquinas.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1903",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Einstein y Marić se casaron en enero de 1903; en mayo de 1904 nació en Berna su hijo Hans Albert.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1904-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Dos artículos de 1902–1903 sobre termodinámica intentaron interpretar fenómenos atómicos desde un punto de vista estadístico; su investigación de 1903 y 1904 trató sobre todo el efecto del tamaño atómico en la difusión.",
+     "source_url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+     "source_date": "2026-10-28",
+     "claim_date": "1904",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1904."
+}

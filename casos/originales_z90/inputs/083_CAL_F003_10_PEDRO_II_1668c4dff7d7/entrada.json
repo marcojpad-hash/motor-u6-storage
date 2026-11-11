@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F003_10_PEDRO_II",
+ "question": "¿Qué trayectoria sigue el emperador Pedro II de Brasil tras volver de Europa enfermo y ser recibido con entusiasmo después de la abolición de la esclavitud?",
+ "person": "Pedro II de Brasil",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1888-09-01",
+ "z_trabajo": "1888-09-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1888-08",
+ "cuts": [
+  {
+   "id": "C1_1840",
+   "corte": "C1_1840",
+   "cut_id": "C1_1840",
+   "date": "1840-07-23",
+   "fecha_corte": "1840-07-23",
+   "hecho": "Emperador desde los cinco años por la abdicación de su padre en 1831, tras una regencia inestable la Asamblea General lo declaró mayor de edad a los 14 años el 23 de julio de 1840; los políticos lo aceptaban como autoridad indispensable para el país.",
+   "P": [
+    [
+     "deber",
+     0.82
+    ],
+    [
+     "responsabilidad",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "aprendizaje",
+     0.76
+    ],
+    [
+     "autocontrol",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.82
+    ],
+    [
+     "autoridad",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "La abdicación de su padre en 1831 lo dejó emperador a los cinco años; el 23 de julio de 1840 la Asamblea General lo declaró mayor de edad a los 14 años, y los políticos lo aceptaban como figura de autoridad indispensable.",
+     "source_url": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil",
+     "source_date": "2026-10-26",
+     "claim_date": "1840-07-23",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1871",
+   "corte": "C2_1871",
+   "cut_id": "C2_1871",
+   "date": "1871-09-28",
+   "fecha_corte": "1871-09-28",
+   "hecho": "Dirigió con tenacidad la guerra contra Paraguay hasta la victoria del 1 de marzo de 1870 y rechazó una estatua ecuestre para construir escuelas; en 1867 pidió en el discurso del trono la abolición gradual de la esclavitud, fue muy criticado, y el 28 de septiembre de 1871 se aprobó la Ley del Vientre Libre.",
+   "P": [
+    [
+     "deber",
+     0.8
+    ],
+    [
+     "justicia_social",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "determinacion",
+     0.82
+    ],
+    [
+     "negociacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.78
+    ],
+    [
+     "presion_social",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Su negativa a aceptar menos que la victoria total fue decisiva; la guerra terminó con la muerte de López el 1 de marzo de 1870 y él rechazó una estatua ecuestre para construir escuelas.",
+     "source_url": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil",
+     "source_date": "2026-10-26",
+     "claim_date": "1870-03-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En el discurso del trono de 1867 pidió la erradicación gradual de la esclavitud y fue muy criticado; la Ley del Vientre Libre se promulgó el 28 de septiembre de 1871.",
+     "source_url": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil",
+     "source_date": "2026-10-26",
+     "claim_date": "1871-09-28",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1888",
+   "corte": "C3_1888",
+   "cut_id": "C3_1888",
+   "date": "1888-08",
+   "fecha_corte": "1888-08",
+   "hecho": "Con la salud muy deteriorada desde junio de 1887, viajó a Europa y en Milán pasó dos semanas entre la vida y la muerte; el 13 de mayo de 1888 su hija Isabel, como regente, firmó la Lei Áurea que abolió la esclavitud; él volvió a Río de Janeiro en agosto de 1888 y fue recibido con un entusiasmo nunca visto.",
+   "P": [
+    [
+     "deber",
+     0.76
+    ],
+    [
+     "vulnerabilidad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "confianza",
+     0.7
+    ],
+    [
+     "moderacion",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.82
+    ],
+    [
+     "crisis_abrupta",
+     0.64
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En junio de 1887 su salud había empeorado mucho y fue a Europa a tratarse; en Milán pasó dos semanas entre la vida y la muerte; el 22 de mayo de 1888 recibió la noticia de la abolición y volvió a Río de Janeiro en agosto de 1888, donde todo el país lo recibió con un entusiasmo nunca visto.",
+     "source_url": "https://en.wikipedia.org/wiki/Pedro_II_of_Brazil",
+     "source_date": "2026-10-26",
+     "claim_date": "1888-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La Lei Áurea, ley 3,353 del 13 de mayo de 1888, abolió la esclavitud en Brasil y fue firmada por la princesa imperial Isabel como regente.",
+     "source_url": "https://en.wikipedia.org/wiki/Lei_%C3%81urea",
+     "source_date": "2026-10-26",
+     "claim_date": "1888-05-13",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta agosto de 1888."
+}

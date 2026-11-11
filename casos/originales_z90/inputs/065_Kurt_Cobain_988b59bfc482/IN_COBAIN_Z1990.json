@@ -1,0 +1,396 @@
+[
+  {
+    "id": "C1",
+    "hecho": "Aberdeen; infancia con Wendy y Don; entorno rough working-class",
+    "P": [
+      [
+        "aprendizaje",
+        0.7
+      ],
+      [
+        "autonomia_temprana",
+        0.66
+      ],
+      [
+        "creatividad",
+        0.64
+      ]
+    ],
+    "A": [
+      [
+        "autoridad",
+        0.68
+      ],
+      [
+        "opresion",
+        0.62
+      ]
+    ],
+    "C": [
+      [
+        "incertidumbre",
+        0.7
+      ],
+      [
+        "aislamiento_social",
+        0.66
+      ]
+    ]
+  },
+  {
+    "id": "C2",
+    "hecho": "Divorcio de los padres (c.1979); Kurt shuttled; sentimiento de abandono",
+    "P": [
+      [
+        "duelo",
+        0.74
+      ],
+      [
+        "perdida_familiar",
+        0.78
+      ],
+      [
+        "abandono_familiar",
+        0.76
+      ]
+    ],
+    "A": [
+      [
+        "rivalidad_familiar",
+        0.7
+      ],
+      [
+        "crisis_abrupta",
+        0.72
+      ]
+    ],
+    "C": [
+      [
+        "incertidumbre",
+        0.74
+      ],
+      [
+        "aislamiento_social",
+        0.7
+      ],
+      [
+        "injusticia",
+        0.64
+      ]
+    ]
+  },
+  {
+    "id": "C3",
+    "hecho": "Adolescencia; rechazo escolar; arte/dibujo; isolation",
+    "P": [
+      [
+        "rebeldia",
+        0.76
+      ],
+      [
+        "formacion_literaria_creativa",
+        0.72
+      ],
+      [
+        "autonomia",
+        0.68
+      ],
+      [
+        "creatividad",
+        0.74
+      ]
+    ],
+    "A": [
+      [
+        "autoridad",
+        0.74
+      ],
+      [
+        "desafio_autoridad",
+        0.72
+      ],
+      [
+        "opresion",
+        0.66
+      ]
+    ],
+    "C": [
+      [
+        "aislamiento_social",
+        0.76
+      ],
+      [
+        "crisis_existencial",
+        0.7
+      ],
+      [
+        "incertidumbre",
+        0.68
+      ]
+    ]
+  },
+  {
+    "id": "C4",
+    "hecho": "Primera bandas / Fecal Matter; guitarra como escape",
+    "P": [
+      [
+        "creatividad",
+        0.8
+      ],
+      [
+        "formacion_literaria_creativa",
+        0.74
+      ],
+      [
+        "autonomia",
+        0.7
+      ],
+      [
+        "rebeldia",
+        0.68
+      ]
+    ],
+    "A": [
+      [
+        "autoridad",
+        0.64
+      ]
+    ],
+    "C": [
+      [
+        "transformacion",
+        0.66
+      ],
+      [
+        "aislamiento_social",
+        0.64
+      ]
+    ]
+  },
+  {
+    "id": "C5",
+    "hecho": "Inestabilidad de vivienda; periodos sin casa fija; amigos/sofás",
+    "P": [
+      [
+        "resiliencia",
+        0.72
+      ],
+      [
+        "autonomia",
+        0.74
+      ],
+      [
+        "abandono",
+        0.68
+      ]
+    ],
+    "A": [
+      [
+        "privacion_libertad",
+        0.6
+      ],
+      [
+        "crisis_abrupta",
+        0.68
+      ]
+    ],
+    "C": [
+      [
+        "incertidumbre",
+        0.78
+      ],
+      [
+        "aislamiento_social",
+        0.72
+      ],
+      [
+        "injusticia",
+        0.66
+      ]
+    ]
+  },
+  {
+    "id": "C6",
+    "hecho": "Forma Nirvana con Krist; escena Olympia/Aberdeen-Tacoma",
+    "P": [
+      [
+        "creatividad",
+        0.78
+      ],
+      [
+        "alianza",
+        0.74
+      ],
+      [
+        "liderazgo",
+        0.66
+      ],
+      [
+        "rebeldia",
+        0.7
+      ]
+    ],
+    "A": [
+      [
+        "rivalidad",
+        0.62
+      ]
+    ],
+    "C": [
+      [
+        "alianza",
+        0.72
+      ],
+      [
+        "transformacion",
+        0.7
+      ],
+      [
+        "incertidumbre",
+        0.64
+      ]
+    ]
+  },
+  {
+    "id": "C7",
+    "hecho": "Bleach (1989) Sub Pop; gira underground; identidad de banda",
+    "P": [
+      [
+        "creatividad",
+        0.82
+      ],
+      [
+        "formacion_literaria_creativa",
+        0.76
+      ],
+      [
+        "liderazgo",
+        0.68
+      ],
+      [
+        "rebeldia",
+        0.72
+      ]
+    ],
+    "A": [
+      [
+        "rivalidad_profesional",
+        0.66
+      ],
+      [
+        "autoridad",
+        0.62
+      ]
+    ],
+    "C": [
+      [
+        "transformacion",
+        0.74
+      ],
+      [
+        "alianza",
+        0.7
+      ],
+      [
+        "poder",
+        0.6
+      ]
+    ]
+  },
+  {
+    "id": "C8",
+    "hecho": "1989-90: ritmo de gira indie; tension creativa; cuerpo/habitos ya frágiles (sin diagnosticar fama global)",
+    "P": [
+      [
+        "creatividad",
+        0.8
+      ],
+      [
+        "perfeccionismo",
+        0.7
+      ],
+      [
+        "resiliencia",
+        0.66
+      ],
+      [
+        "autodestruccion",
+        0.64
+      ]
+    ],
+    "A": [
+      [
+        "crisis_abrupta",
+        0.66
+      ],
+      [
+        "opresion",
+        0.6
+      ]
+    ],
+    "C": [
+      [
+        "crisis_existencial",
+        0.72
+      ],
+      [
+        "incertidumbre",
+        0.74
+      ],
+      [
+        "aislamiento_social",
+        0.68
+      ]
+    ]
+  },
+  {
+    "id": "C9",
+    "hecho": "Z=1990: banda consolidada en circuito indie; al borde de un salto mayor aún no ocurrido en la foto",
+    "P": [
+      [
+        "creatividad",
+        0.82
+      ],
+      [
+        "liderazgo",
+        0.7
+      ],
+      [
+        "rebeldia",
+        0.72
+      ],
+      [
+        "cambio_identidad",
+        0.68
+      ]
+    ],
+    "A": [
+      [
+        "rivalidad_profesional",
+        0.68
+      ],
+      [
+        "autoridad",
+        0.64
+      ]
+    ],
+    "C": [
+      [
+        "incertidumbre",
+        0.8
+      ],
+      [
+        "transformacion",
+        0.76
+      ],
+      [
+        "poder",
+        0.66
+      ],
+      [
+        "alianza",
+        0.62
+      ]
+    ]
+  }
+]

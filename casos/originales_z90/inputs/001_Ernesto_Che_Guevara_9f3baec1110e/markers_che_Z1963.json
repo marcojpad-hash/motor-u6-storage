@@ -1,0 +1,523 @@
+{
+  "case": "Che Guevara",
+  "pregunta": "Che_Guevara_oficio_ideal_vs_fuerza",
+  "Z_foto": "1963-11-03",
+  "Z_rule": "90% lifespan (NOT 10y before death)",
+  "born": "1928-06-14",
+  "died_SEALED": "1967-10-09",
+  "protocol": "foto ciega; post-Z sellado (Bolivia/muerte no entran)",
+  "nota_monomito": "Campbell stages monomito_* en 244; NO monumento/gloria_sacro",
+  "mapping_status": "CANONICAL_VALIDATED",
+  "weight_semantics": "0.60–0.84 = fuerza de codificación; no probabilidad",
+  "cuts": {
+    "C1": {
+      "hecho": "1928-1940s Rosario/Córdoba: infancia clase media, asma, entorno familiar estable; rutina de estudios previos a medicina",
+      "P": [
+        [
+          "aprendizaje",
+          0.7
+        ],
+        [
+          "rutina",
+          0.66
+        ],
+        [
+          "cotidiano",
+          0.64
+        ],
+        [
+          "autonomia",
+          0.62
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.68
+        ],
+        [
+          "estancamiento",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.66
+        ],
+        [
+          "aburrimiento",
+          0.62
+        ]
+      ]
+    },
+    "C2": {
+      "hecho": "c.1948-1953 Córdoba: estudios de medicina; conciencia social creciente; aún no salto político armado",
+      "P": [
+        [
+          "aprendizaje",
+          0.74
+        ],
+        [
+          "formacion_literaria_creativa",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.72
+        ],
+        [
+          "busqueda_identidad",
+          0.66
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.66
+        ],
+        [
+          "opresion",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "injusticia",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.66
+        ],
+        [
+          "dilema_moral",
+          0.64
+        ]
+      ]
+    },
+    "C3": {
+      "hecho": "1951-1952 viaje en motocicleta por América del Sur: contacto con pobreza e injusticia; incidente detonante de vocación política",
+      "P": [
+        [
+          "viaje",
+          0.8
+        ],
+        [
+          "incidente_detonante",
+          0.78
+        ],
+        [
+          "desafio",
+          0.74
+        ],
+        [
+          "comprension_nueva",
+          0.72
+        ],
+        [
+          "busqueda_libertad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "opresion",
+          0.76
+        ],
+        [
+          "injusticia",
+          0.74
+        ],
+        [
+          "abuso_poder",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "conciencia_problema",
+          0.78
+        ],
+        [
+          "obligacion_moral",
+          0.72
+        ],
+        [
+          "incertidumbre",
+          0.66
+        ]
+      ]
+    },
+    "C4": {
+      "hecho": "1954 Guatemala: caída de Árbenz / intervención; radicalización; hostilidad del orden regional",
+      "P": [
+        [
+          "rebeldia",
+          0.76
+        ],
+        [
+          "desafio_autoridad",
+          0.74
+        ],
+        [
+          "aprendizaje",
+          0.7
+        ],
+        [
+          "ruptura_pasado",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "opresion",
+          0.8
+        ],
+        [
+          "abuso_poder",
+          0.78
+        ],
+        [
+          "hostilidad",
+          0.74
+        ],
+        [
+          "represalia",
+          0.7
+        ],
+        [
+          "persecucion",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "injusticia",
+          0.78
+        ],
+        [
+          "crisis_abrupta",
+          0.74
+        ],
+        [
+          "amenaza_central",
+          0.7
+        ]
+      ]
+    },
+    "C5": {
+      "hecho": "1955-1956 México: encuentro con Castro (mentor); compromiso con Granma; partida hacia Cuba",
+      "P": [
+        [
+          "guia",
+          0.78
+        ],
+        [
+          "consejo",
+          0.74
+        ],
+        [
+          "alianza",
+          0.76
+        ],
+        [
+          "compromiso",
+          0.8
+        ],
+        [
+          "partida",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.7
+        ],
+        [
+          "desafio",
+          0.72
+        ],
+        [
+          "rivalidad_poder",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "invitacion",
+          0.72
+        ],
+        [
+          "busqueda_riesgo",
+          0.76
+        ],
+        [
+          "secreto",
+          0.66
+        ]
+      ]
+    },
+    "C6": {
+      "hecho": "1956-1958 Granma/Sierra Maestra: guerra de guerrillas; pruebas, aliados y enemigos; audacia y riesgo",
+      "P": [
+        [
+          "audacia",
+          0.82
+        ],
+        [
+          "busqueda_riesgo",
+          0.8
+        ],
+        [
+          "valentia",
+          0.76
+        ],
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "liderazgo",
+          0.74
+        ]
+      ],
+      "A": [
+        [
+          "hostilidad",
+          0.82
+        ],
+        [
+          "confrontacion",
+          0.8
+        ],
+        [
+          "obstaculo",
+          0.76
+        ],
+        [
+          "rivalidad_poder",
+          0.74
+        ],
+        [
+          "desafio_autoridad",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "insurreccion",
+          0.8
+        ],
+        [
+          "rebelion",
+          0.78
+        ],
+        [
+          "confrontacion_directa",
+          0.76
+        ],
+        [
+          "tension_alta",
+          0.74
+        ],
+        [
+          "crisis_existencial",
+          0.7
+        ]
+      ]
+    },
+    "C7": {
+      "hecho": "1959 triunfo revolucionario / entrada a La Habana: victoria colectiva; celebración; nuevo poder",
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "victoria",
+          0.8
+        ],
+        [
+          "celebracion",
+          0.78
+        ],
+        [
+          "orgullo_superacion",
+          0.74
+        ],
+        [
+          "liderazgo",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "poder",
+          0.78
+        ],
+        [
+          "alianza",
+          0.7
+        ],
+        [
+          "rivalidad_poder",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "alivio",
+          0.74
+        ],
+        [
+          "comprension_nueva",
+          0.72
+        ],
+        [
+          "cambio_identidad",
+          0.7
+        ],
+        [
+          "escalada",
+          0.68
+        ]
+      ]
+    },
+    "C8": {
+      "hecho": "1959-1962 cargos ministeriales / industria / diplomacia revolucionaria: organización del Estado; tensión ideal vs pragmatismo",
+      "P": [
+        [
+          "organizacion",
+          0.78
+        ],
+        [
+          "planificacion",
+          0.76
+        ],
+        [
+          "responsabilidad",
+          0.74
+        ],
+        [
+          "idealismo",
+          0.8
+        ],
+        [
+          "compromiso_firme",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "poder",
+          0.76
+        ],
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "rivalidad",
+          0.68
+        ],
+        [
+          "control",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "dilema_moral",
+          0.74
+        ],
+        [
+          "conflicto_lealtad",
+          0.7
+        ],
+        [
+          "ansiedad",
+          0.68
+        ],
+        [
+          "tension_alta",
+          0.66
+        ],
+        [
+          "antesala",
+          0.64
+        ]
+      ]
+    },
+    "C9": {
+      "hecho": "Z≈1963-11 (90% vida): aún vivo en órbita cubana; idealismo internacionalista alto; inquietud de nueva lucha; Bolivia/muerte sellados",
+      "P": [
+        [
+          "idealismo",
+          0.82
+        ],
+        [
+          "altruismo",
+          0.78
+        ],
+        [
+          "sacrificio",
+          0.76
+        ],
+        [
+          "proposito_claro",
+          0.74
+        ],
+        [
+          "audacia",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "desafio",
+          0.74
+        ],
+        [
+          "busqueda_riesgo",
+          0.72
+        ],
+        [
+          "rivalidad_poder",
+          0.7
+        ],
+        [
+          "desafio_autoridad",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "martirio",
+          0.7
+        ],
+        [
+          "obligacion_moral",
+          0.74
+        ],
+        [
+          "ansiedad",
+          0.72
+        ],
+        [
+          "tension_alta",
+          0.7
+        ],
+        [
+          "planificacion",
+          0.68
+        ]
+      ]
+    }
+  }
+}

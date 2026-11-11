@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_08_HOLMES",
+ "question": "¿Qué ocurre con Theranos y Elizabeth Holmes tras la investigación del Wall Street Journal?",
+ "person": "Elizabeth Holmes",
+ "tipo_sujeto": "empresaria",
+ "freeze": "2015-10-16",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_2015",
+ "cuts": [
+  {
+   "id": "C1_2004",
+   "corte": "C1_2004",
+   "cut_id": "C1_2004",
+   "date": "2004-03-01",
+   "fecha_corte": "2004-03-01",
+   "hecho": "Deja Stanford para fundar Theranos con promesa de análisis con gota de sangre.",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "visionario",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.81
+    ],
+    [
+     "busqueda_riesgo",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ],
+    [
+     "incertidumbre",
+     0.74
+    ]
+   ]
+  },
+  {
+   "id": "C2_2014",
+   "corte": "C2_2014",
+   "cut_id": "C2_2014",
+   "date": "2014-06-12",
+   "fecha_corte": "2014-06-12",
+   "hecho": "Valuación de 9 mil millones; alianza con Walgreens; portada de Forbes.",
+   "P": [
+    [
+     "poder",
+     0.77
+    ],
+    [
+     "reconocimiento",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "carisma",
+     0.81
+    ],
+    [
+     "secreto",
+     0.77
+    ]
+   ],
+   "C": [
+    [
+     "prosperidad",
+     0.77
+    ],
+    [
+     "idealizacion",
+     0.74
+    ]
+   ]
+  },
+  {
+   "id": "C3_2015",
+   "corte": "C3_2015",
+   "cut_id": "C3_2015",
+   "date": "2015-10-16",
+   "fecha_corte": "2015-10-16",
+   "hecho": "WSJ (Carreyrou) revela que la tecnología Edison no funciona como se dice; la empresa lo niega.",
+   "P": [
+    [
+     "control",
+     0.81
+    ],
+    [
+     "negacion_problema",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "engano",
+     0.74
+    ],
+    [
+     "confrontacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "revelacion",
+     0.77
+    ],
+    [
+     "evidencia",
+     0.7
+    ]
+   ]
+  }
+ ],
+ "source_notes": "WSJ 15-oct-2015; Wikipedia 'Theranos' (hasta oct-2015)"
+}

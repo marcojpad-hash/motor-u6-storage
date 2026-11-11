@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_06_BEETHOVEN",
+ "question": "¿Qué hace Beethoven tras admitir su sordera progresiva en el Testamento de Heiligenstadt?",
+ "person": "Ludwig van Beethoven",
+ "tipo_sujeto": "artista",
+ "freeze": "1802-10-10",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1802",
+ "cuts": [
+  {
+   "id": "C1_1792",
+   "corte": "C1_1792",
+   "cut_id": "C1_1792",
+   "date": "1792-11-01",
+   "fecha_corte": "1792-11-01",
+   "hecho": "Llega a Viena a estudiar con Haydn.",
+   "P": [
+    [
+     "ambicion",
+     0.77
+    ],
+    [
+     "autoexpresion",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.81
+    ],
+    [
+     "competitividad",
+     0.67
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.77
+    ],
+    [
+     "jerarquia",
+     0.63
+    ]
+   ]
+  },
+  {
+   "id": "C2_1800",
+   "corte": "C2_1800",
+   "cut_id": "C2_1800",
+   "date": "1800-04-02",
+   "fecha_corte": "1800-04-02",
+   "hecho": "Primera sinfonía; reconocimiento como pianista; oculta problemas de audición.",
+   "P": [
+    [
+     "reconocimiento",
+     0.74
+    ],
+    [
+     "orgullo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.81
+    ],
+    [
+     "secreto",
+     0.67
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.7
+    ],
+    [
+     "vulnerabilidad",
+     0.63
+    ]
+   ]
+  },
+  {
+   "id": "C3_1802",
+   "corte": "C3_1802",
+   "cut_id": "C3_1802",
+   "date": "1802-10-10",
+   "fecha_corte": "1802-10-10",
+   "hecho": "Testamento de Heiligenstadt: desesperación por la sordera, renuncia al suicidio por su arte.",
+   "P": [
+    [
+     "proposito_claro",
+     0.77
+    ],
+    [
+     "resiliencia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "determinacion",
+     0.77
+    ],
+    [
+     "aislamiento_voluntario",
+     0.67
+    ]
+   ],
+   "C": [
+    [
+     "fatalismo",
+     0.63
+    ],
+    [
+     "desolacion",
+     0.7
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Heiligenstadt Testament' y 'Ludwig van Beethoven' (hasta oct-1802)"
+}

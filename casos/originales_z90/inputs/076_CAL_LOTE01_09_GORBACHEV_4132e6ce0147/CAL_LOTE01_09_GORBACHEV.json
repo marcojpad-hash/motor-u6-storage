@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_09_GORBACHEV",
+ "question": "¿Qué ocurre con Gorbachov y la URSS al profundizar la perestroika y la glásnost?",
+ "person": "Mijaíl Gorbachov",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1988-06-28",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1988",
+ "cuts": [
+  {
+   "id": "C1_1985",
+   "corte": "C1_1985",
+   "cut_id": "C1_1985",
+   "date": "1985-03-11",
+   "fecha_corte": "1985-03-11",
+   "hecho": "Elegido secretario general del PCUS en una economía estancada.",
+   "P": [
+    [
+     "transformacion",
+     0.77
+    ],
+    [
+     "vision",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.77
+    ],
+    [
+     "persuasion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "estancamiento",
+     0.81
+    ],
+    [
+     "jerarquia",
+     0.74
+    ]
+   ]
+  },
+  {
+   "id": "C2_1986",
+   "corte": "C2_1986",
+   "cut_id": "C2_1986",
+   "date": "1986-04-26",
+   "fecha_corte": "1986-04-26",
+   "hecho": "Chernóbil; impulsa glásnost.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.74
+    ],
+    [
+     "transformacion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "disrupcion",
+     0.7
+    ],
+    [
+     "negociacion",
+     0.67
+    ]
+   ],
+   "C": [
+    [
+     "catastrofe",
+     0.77
+    ],
+    [
+     "desconfianza",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1988",
+   "corte": "C3_1988",
+   "cut_id": "C3_1988",
+   "date": "1988-06-28",
+   "fecha_corte": "1988-06-28",
+   "hecho": "XIX Conferencia del Partido: reforma política; tensiones nacionalistas (Karabaj, Bálticos).",
+   "P": [
+    [
+     "transformacion",
+     0.81
+    ],
+    [
+     "idealismo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "cambio_repentino",
+     0.7
+    ],
+    [
+     "negociacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "caos",
+     0.67
+    ],
+    [
+     "insurreccion",
+     0.63
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Mikhail Gorbachev' y '19th Party Conference' (hasta jun-1988)"
+}

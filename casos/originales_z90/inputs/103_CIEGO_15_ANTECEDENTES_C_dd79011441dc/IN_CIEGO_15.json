@@ -1,0 +1,364 @@
+{
+  "case_id": "CIEGO_15_ANTECEDENTES_C",
+  "question": "caso_ciego_antecedentes_c",
+  "random_seed": 0,
+  "z90_date": null,
+  "modo_ciego": true,
+  "nota_pac": "Asignación P/A/C provisoria por round-robin peso-desc desde MARKERS planos (mismo formato flat que ciegos 09/10). Trazable; no inventa tokens.",
+  "fases": {
+    "A": "orden institucional prolongado; rangos y cargos formales; estabilidad aparente",
+    "B": "apertura a comercio/recursos externos; asimetría y dependencia crecientes",
+    "C": "presión externa + fisura interna; lealtades partidas; oposición plural",
+    "D": "remedios extraordinarios y bandos armados/políticos; mando de excepción se vuelve hábito",
+    "E": "reconfiguración del mando: se desplaza el centro de autoridad bajo nueva legalidad",
+    "F": "nuevo arreglo centralizado; tradición reescrita como fundamento del orden nuevo"
+  },
+  "cuts": [
+    {
+      "id": "A",
+      "P": [
+        [
+          "estabilidad",
+          0.84
+        ],
+        [
+          "orden_social",
+          0.84
+        ],
+        [
+          "autoridad",
+          0.8
+        ],
+        [
+          "consenso",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "apego_normas",
+          0.84
+        ],
+        [
+          "tradicion",
+          0.82
+        ],
+        [
+          "legalidad",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "jerarquia",
+          0.84
+        ],
+        [
+          "reputacion_institucional",
+          0.8
+        ],
+        [
+          "estatus_social",
+          0.76
+        ]
+      ],
+      "narracion": "Durante generaciones la vida política se organiza alrededor de cargos reconocidos, rangos heredados y normas que todos entienden aunque no todos las amen. Hay consejos, oficinas, rutas de ascenso y castigos previstos. El centro no gobierna cada aldea a diario, pero sí sostiene un arreglo: las lealtades locales se encadenan hacia arriba y, a cambio, el orden cotidiano rara vez se rompe. Las disputas se resuelven más por procedimiento y prestigio que por una competencia abierta por el mando. Quien mira desde fuera ve instituciones; quien mira desde dentro ve continuidad: las mismas familias, los mismos oficios de poder, la misma idea de qué cuenta como autoridad legítima. La estabilidad no es paz perfecta; es la costumbre de que el conflicto quepa dentro de cauces conocidos."
+    },
+    {
+      "id": "B",
+      "P": [
+        [
+          "asimetria",
+          0.84
+        ],
+        [
+          "acumulacion_capital",
+          0.8
+        ],
+        [
+          "redes_prestigio",
+          0.76
+        ],
+        [
+          "conquista",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "prosperidad",
+          0.82
+        ],
+        [
+          "control",
+          0.79
+        ],
+        [
+          "oportunidad",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "dependencia",
+          0.81
+        ],
+        [
+          "escalada",
+          0.78
+        ],
+        [
+          "materialismo",
+          0.7
+        ]
+      ],
+      "narracion": "Ese orden se encuentra de pronto con potencias y mercados que no cabían en su mapa mental. Llegan barcos, tratados, técnicas, deudas y precios nuevos. Algunas regiones y casas se enriquecen intermediando el contacto; otras descubren que su oficio antiguo vale menos y que su autonomía se estrecha. El centro necesita recursos y obediencia para negociar con el exterior, y para obtenerlos aprieta donde antes aflojaba. Crece la asimetría: hay quien acumula y hay quien queda dependiente. El lenguaje oficial sigue hablando de costumbre y rango, pero en la práctica el poder empieza a medirse también en plata, en acceso a armas nuevas y en capacidad de firmar o romper tratos con foráneos. Lo que parecía un arreglo eterno se revela frágil frente a una presión que no inventó la sociedad, pero que ya no puede ignorar."
+    },
+    {
+      "id": "C",
+      "P": [
+        [
+          "tension_alta",
+          0.84
+        ],
+        [
+          "fragmentacion",
+          0.83
+        ],
+        [
+          "resistencia_cambio",
+          0.77
+        ],
+        [
+          "ambicion",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "desafio_autoridad",
+          0.84
+        ],
+        [
+          "oposicion",
+          0.8
+        ],
+        [
+          "miedo_caos",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "conflicto_lealtad",
+          0.84
+        ],
+        [
+          "miedo_cambio",
+          0.78
+        ],
+        [
+          "negociacion",
+          0.74
+        ]
+      ],
+      "narracion": "La presión externa se vuelve fisura interna. Las lealtades se parten: unos quieren cerrar la puerta y restaurar el orden tal como era; otros quieren reformar lo justo para sobrevivir; otros más quieren recentralizar el mando y liquidar intermediarios. Aparecen bandos con nombres distintos y enemigos cruzados. Circulan panfletos, rumores y juramentos. Hay miedo al caos —al colapso del arreglo que daba de comer— y miedo al cambio —a perder rango, tierra o sentido—. La oposición no es una sola columna: es un tejido de agravios que a veces se enlazan y a veces se traicionan. El centro intenta negociar y castigar a la vez, y cada gesto alimenta la sospecha de que las reglas ordinarias ya no alcanzan. Quien antes resolvía por prestigio ahora necesita coaliciones."
+    },
+    {
+      "id": "D",
+      "P": [
+        [
+          "escalada_autoritaria_rapida",
+          0.84
+        ],
+        [
+          "mensaje_de_cambio",
+          0.83
+        ],
+        [
+          "ira_institucional",
+          0.78
+        ],
+        [
+          "usurpacion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "sed_de_mando",
+          0.84
+        ],
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "carisma",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "rivalidad_poder",
+          0.84
+        ],
+        [
+          "poder",
+          0.8
+        ],
+        [
+          "insurreccion",
+          0.72
+        ]
+      ],
+      "narracion": "Empiezan los remedios extraordinarios. Se crean mandos de crisis, alianzas de excepción, decretos que saltan el ritmo ordinario de los cargos. Lo que se presenta como temporal dura más de lo anunciado. Las coaliciones arman gente, recaudan por fuera del cauce viejo y usan las normas a golpes: invocan la tradición cuando conviene y la reescriben cuando estorba. Compiten figuras con prestigio militar o moral, con plata y con capacidad de coacción. Cada victoria parcial enseña la misma lección: quien controla el estado de excepción controla el mañana. El hábito se instala sin ceremonia: la política cotidiana ya no es el procedimiento; es la gestión continua de la emergencia. El conflicto deja de ser un episodio y se vuelve el medio en el que se decide quién manda."
+    },
+    {
+      "id": "E",
+      "P": [
+        [
+          "reorganizacion",
+          0.84
+        ],
+        [
+          "control",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "escalada_status",
+          0.74
+        ]
+      ],
+      "A": [
+        [
+          "centralizacion",
+          0.84
+        ],
+        [
+          "organizacion",
+          0.82
+        ],
+        [
+          "responsabilidad",
+          0.76
+        ],
+        [
+          "arquetipo_el_gobernante",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "mensaje_de_cambio",
+          0.84
+        ],
+        [
+          "legalidad",
+          0.8
+        ],
+        [
+          "30_ambicion",
+          0.75
+        ],
+        [
+          "continuidad_sin_aviso",
+          0.7
+        ]
+      ],
+      "narracion": "En ese punto el nudo ya no es ganar una escaramuza. Es reubicar el centro de autoridad. Un arreglo nuevo empieza a desplazarse sobre el viejo: oficinas que concentran lo que antes estaba repartido, lealtades que se redirigen, títulos que cambian de dueño o de sentido. Quienes pierden el mando antiguo no siempre desaparecen; a veces se reconvierten, a veces resisten, a veces negocian un lugar menor bajo la legalidad emergente. El lenguaje del cambio habla de restauración o de renovación, pero en la práctica lo que se discute es dónde queda el vértice del poder y quién puede usarlo sin pedir permiso a la red intermedia. La sociedad sigue teniendo cargos e instituciones; lo que muda es qué institución manda de verdad."
+    },
+    {
+      "id": "F",
+      "P": [
+        [
+          "centralizacion",
+          0.84
+        ],
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "mensaje_de_cambio",
+          0.8
+        ],
+        [
+          "escalada",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "reorganizacion",
+          0.84
+        ],
+        [
+          "control",
+          0.84
+        ],
+        [
+          "reputacion_institucional",
+          0.78
+        ],
+        [
+          "12_obtencion",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "legalidad",
+          0.84
+        ],
+        [
+          "orden_social",
+          0.82
+        ],
+        [
+          "30_ambicion",
+          0.77
+        ],
+        [
+          "tradicion",
+          0.68
+        ]
+      ],
+      "narracion": "Al cerrar la transición, el orden que queda se presenta como recuperación de lo esencial y, al mismo tiempo, como fundación. Se recentraliza el mando. Se reescriben rangos, deberes y relatos de origen para que el arreglo nuevo parezca el único natural. Parte de la élite antigua sobrevive dentro del diseño; otra queda fuera. Las vías ordinarias de disputa vuelven a existir, pero bajo un techo distinto: la excepción ha enseñado al sistema que puede concentrar autoridad cuando hace falta, y esa memoria no se borra. La pregunta que queda abierta para cualquier observador externo no es el apellido del país, sino si el centro nuevo estabiliza la fisura o solo aplaza el próximo ciclo de remedios extraordinarios."
+    }
+  ],
+  "caldero_identity": {
+    "nombre_o_alias": "ciego_15_sellado",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "estabilidad",
+      "orden_social",
+      "autoridad",
+      "consenso",
+      "apego_normas",
+      "tradicion",
+      "legalidad",
+      "jerarquia",
+      "reputacion_institucional",
+      "estatus_social",
+      "asimetria",
+      "acumulacion_capital",
+      "redes_prestigio",
+      "conquista",
+      "prosperidad",
+      "control",
+      "oportunidad",
+      "dependencia",
+      "escalada",
+      "materialismo"
+    ]
+  },
+  "caldero_search_sources": [],
+  "external_lights": []
+}

@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F004_09_LAY",
+ "question": "¿Qué trayectoria sigue Kenneth Lay después de julio de 2001?",
+ "person": "Kenneth Lay",
+ "tipo_sujeto": "empresario",
+ "freeze": "2001-08-01",
+ "z_trabajo": "2001-08-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "2001-07",
+ "cuts": [
+  {
+   "id": "C1_1985",
+   "corte": "C1_1985",
+   "cut_id": "C1_1985",
+   "date": "1985",
+   "fecha_corte": "1985",
+   "hecho": "Hijo de un predicador bautista, crecido en la pobreza tras el fracaso de la tienda familiar; doctor en economía; preside Houston Natural Gas, que se fusiona con InterNorth y pasa a llamarse Enron, aprovechando la desregulación.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "verguenza_infantil",
+     0.62
+    ]
+   ],
+   "A": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "acumulacion_capital",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "escalada_status",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Lay creció en la pobreza después de que fracasara la tienda de su familia; obtuvo un doctorado en economía en 1970.",
+     "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+     "source_date": "2026-10-27",
+     "claim_date": "1970",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1984 era presidente y director general de Houston Natural Gas; InterNorth la compró y en 1985 la empresa pasó a llamarse Enron, aprovechando la desregulación energética.",
+     "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+     "source_date": "2026-10-27",
+     "claim_date": "1985",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_2000",
+   "corte": "C2_2000",
+   "cut_id": "C2_2000",
+   "date": "2000-12",
+   "fecha_corte": "2000-12",
+   "hecho": "Los ingresos de Enron pasan de 13 300 a 100 700 millones de dólares (1996–2000); la acción cierra 2000 en 83,13 dólares con capitalización de más de 60 000 millones; Lay, amigo de la familia Bush, suena para secretario de Energía o del Tesoro.",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "orgullo",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "escalada",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "prosperidad",
+     0.82
+    ],
+    [
+     "poder",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Entre 1996 y 2000 los ingresos de Enron subieron de 13 300 a 100 700 millones de dólares; al 31 de diciembre de 2000 la acción valía 83,13 dólares y la capitalización superaba 60 000 millones.",
+     "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+     "source_date": "2026-10-27",
+     "claim_date": "2000-12-31",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En diciembre de 2000 Lay fue mencionado como posible secretario de Energía o del Tesoro con George W. Bush.",
+     "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+     "source_date": "2026-10-27",
+     "claim_date": "2000-12",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_2001_07",
+   "corte": "C3_2001_07",
+   "cut_id": "C3_2001_07",
+   "date": "2001-07",
+   "fecha_corte": "2001-07",
+   "hecho": "Lay preside el consejo y Skilling es director general; un artículo de Fortune (marzo) pregunta si Enron está sobrevalorada y no explica cómo gana dinero; Skilling insulta a un analista que pide el balance (abril); en julio reporta ingresos récord, pero la acción cae más de 30 % frente al mismo trimestre de 2000.",
+   "P": [
+    [
+     "confianza_ciega",
+     0.78
+    ],
+    [
+     "orgullo_hubris",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "evasion",
+     0.72
+    ],
+    [
+     "complacencia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "escepticismo",
+     0.78
+    ],
+    [
+     "aviso_ignorado",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Lay era presidente del consejo de Enron y aprobaba las acciones de Skilling y Fastow sin preguntar siempre por los detalles; Skilling impulsaba la contabilidad a valor de mercado.",
+     "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+     "source_date": "2026-10-27",
+     "claim_date": "2001-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 5 de marzo de 2001 el artículo de Bethany McLean en Fortune, 'Is Enron Overpriced?', cuestionó cómo Enron mantenía su alto valor; el 17 de abril de 2001 el director general Skilling insultó al analista Richard Grubman en una llamada.",
+     "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+     "source_date": "2026-10-27",
+     "claim_date": "2001-04-17",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "A mediados de julio de 2001 Enron reportó ingresos de 50 100 millones de dólares, pero su acción había bajado más de 30 % respecto al mismo trimestre de 2000.",
+     "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+     "source_date": "2026-10-27",
+     "claim_date": "2001-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta julio de 2001."
+}

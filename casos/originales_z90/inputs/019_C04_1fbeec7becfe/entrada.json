@@ -1,0 +1,126 @@
+{
+  "case_id": "C04",
+  "question": "¿Qué ocurre con el sujeto tras lograr una bombilla incandescente práctica?",
+  "tipo_sujeto": "empresario",
+  "freeze": "1879-10-21",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1879",
+  "cuts": [
+    {
+      "id": "C1_1877",
+      "corte": "C1_1877",
+      "cut_id": "C1_1877",
+      "date": "1877-11-21",
+      "fecha_corte": "1877-11-21",
+      "hecho": "Presenta el fonógrafo, su primera gran invención; lo apodan 'el mago de Menlo Park'.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "generacion_ideas",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.78
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C2_1878",
+      "corte": "C2_1878",
+      "cut_id": "C2_1878",
+      "date": "1878-09-01",
+      "fecha_corte": "1878-09-01",
+      "hecho": "Funda una compañía de luz eléctrica para desarrollar la iluminación; compite por financiación.",
+      "P": [
+        [
+          "ambicion",
+          0.82
+        ],
+        [
+          "empresa",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.78
+        ],
+        [
+          "planificacion_activa",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "competencia",
+          0.75
+        ],
+        [
+          "escasez",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "C3_1879",
+      "corte": "C3_1879",
+      "cut_id": "C3_1879",
+      "date": "1879-10-21",
+      "fecha_corte": "1879-10-21",
+      "hecho": "Logra una bombilla incandescente que dura 13,5 horas; patenta el sistema de luz eléctrica.",
+      "P": [
+        [
+          "logro_personal",
+          0.84
+        ],
+        [
+          "vision",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "determinacion",
+          0.82
+        ],
+        [
+          "eficiencia",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "prosperidad",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

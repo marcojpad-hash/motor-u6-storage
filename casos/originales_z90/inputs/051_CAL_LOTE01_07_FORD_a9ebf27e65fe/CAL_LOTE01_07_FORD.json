@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_07_FORD",
+ "question": "¿Qué trayectoria tiene Henry Ford al fundar Ford Motor Company tras dos empresas fallidas?",
+ "person": "Henry Ford",
+ "tipo_sujeto": "empresario",
+ "freeze": "1903-06-16",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1903",
+ "cuts": [
+  {
+   "id": "C1_1896",
+   "corte": "C1_1896",
+   "cut_id": "C1_1896",
+   "date": "1896-06-04",
+   "fecha_corte": "1896-06-04",
+   "hecho": "Construye el Quadricycle mientras trabaja en Edison Illuminating Company.",
+   "P": [
+    [
+     "visionario",
+     0.77
+    ],
+    [
+     "curiosidad_abstracta",
+     0.63
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.77
+    ],
+    [
+     "planificacion",
+     0.67
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ],
+    [
+     "estabilidad_ocupacional",
+     0.63
+    ]
+   ]
+  },
+  {
+   "id": "C2_1901",
+   "corte": "C2_1901",
+   "cut_id": "C2_1901",
+   "date": "1901-11-30",
+   "fecha_corte": "1901-11-30",
+   "hecho": "Detroit Automobile Co. fracasa; deja Henry Ford Company por choques con inversores.",
+   "P": [
+    [
+     "autonomia",
+     0.77
+    ],
+    [
+     "ambicion",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "desafio_autoridad",
+     0.7
+    ],
+    [
+     "busqueda_riesgo",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.77
+    ],
+    [
+     "conflictividad",
+     0.67
+    ]
+   ]
+  },
+  {
+   "id": "C3_1903",
+   "corte": "C3_1903",
+   "cut_id": "C3_1903",
+   "date": "1903-06-16",
+   "fecha_corte": "1903-06-16",
+   "hecho": "Funda Ford Motor Company con Malcomson y otros inversores.",
+   "P": [
+    [
+     "vision",
+     0.81
+    ],
+    [
+     "ambicion",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.74
+    ],
+    [
+     "empresa",
+     0.77
+    ]
+   ],
+   "C": [
+    [
+     "competencia",
+     0.77
+    ],
+    [
+     "oportunidad",
+     0.74
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Henry Ford' (hasta jun-1903)"
+}

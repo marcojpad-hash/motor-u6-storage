@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F002_03_ARBUCKLE",
+ "question": "¿Qué trayectoria sigue Roscoe 'Fatty' Arbuckle tras firmar con Paramount un contrato de un millón de dólares al año y pasar de los cortos cómicos a los largometrajes?",
+ "person": "Roscoe 'Fatty' Arbuckle",
+ "tipo_sujeto": "artista",
+ "freeze": "1921-08-31",
+ "z_trabajo": "1921-08-31",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1920",
+ "cuts": [
+  {
+   "id": "C1_1913",
+   "corte": "C1_1913",
+   "cut_id": "C1_1913",
+   "date": "1913-06",
+   "fecha_corte": "1913-06",
+   "hecho": "Tras empezar en el cine con Selig Polyscope en julio de 1909, entró en 1913 en Keystone, el estudio de Mack Sennett, donde se volvió figura de la comedia; en junio de 1913 se estrenó A Noise from the Deep, con el pastelazo en la cara más antiguo que se conoce en el cine.",
+   "P": [
+    [
+     "autoexpresion",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "humor",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.78
+    ],
+    [
+     "popularidad",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Empezó en el cine con Selig Polyscope en julio de 1909 y en 1913 entró en Keystone con Mack Sennett.",
+     "source_url": "https://en.wikipedia.org/wiki/Roscoe_Arbuckle",
+     "source_date": "2026-10-25",
+     "claim_date": "1913",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "A Noise from the Deep (junio de 1913) contiene el primer pastelazo en la cara conocido del cine.",
+     "source_url": "https://en.wikipedia.org/wiki/A_Noise_from_the_Deep",
+     "source_date": "2026-10-25",
+     "claim_date": "1913-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1917",
+   "corte": "C2_1917",
+   "cut_id": "C2_1917",
+   "date": "1917-04-23",
+   "fecha_corte": "1917-04-23",
+   "hecho": "Fundó con Joseph Schenck la productora Comique, con control creativo propio; su primer corto ahí, The Butcher Boy, estrenado el 23 de abril de 1917, que escribió, dirigió y protagonizó, marcó el debut en el cine de Buster Keaton y fue reseñado por Variety.",
+   "P": [
+    [
+     "autonomia",
+     0.8
+    ],
+    [
+     "logro_personal",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "mentoria_activa",
+     0.75
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "alianza",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Arbuckle fundó Comique en sociedad con Joseph Schenck.",
+     "source_url": "https://en.wikipedia.org/wiki/Roscoe_Arbuckle",
+     "source_date": "2026-10-25",
+     "claim_date": "1917",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "The Butcher Boy, escrita, dirigida y protagonizada por Arbuckle, primera de la serie de Comique y debut de Buster Keaton, se estrenó el 23 de abril de 1917.",
+     "source_url": "https://en.wikipedia.org/wiki/The_Butcher_Boy_(1917_film)",
+     "source_date": "2026-10-25",
+     "claim_date": "1917-04-23",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Variety de abril de 1917 reseñó The Butcher Boy.",
+     "source_url": "https://archive.org/details/variety46-1917-04",
+     "source_date": "1917-04",
+     "claim_date": "1917-04",
+     "tipo_fuente": "primaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1920",
+   "corte": "C3_1920",
+   "cut_id": "C3_1920",
+   "date": "1920",
+   "fecha_corte": "1920",
+   "hecho": "En 1918 cedió a Keaton su participación en Comique y aceptó la oferta de Paramount de 3 millones de dólares por hasta 18 largometrajes en tres años; en 1920 firmó con Paramount un contrato de un millón de dólares al año y pasó de los cortos a los largometrajes.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "estatus_social",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "humor",
+     0.8
+    ],
+    [
+     "audacia",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.84
+    ],
+    [
+     "prosperidad",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1918 transfirió su parte de Comique a Keaton y aceptó la oferta de Paramount de 3 millones de dólares por hasta 18 largometrajes en tres años.",
+     "source_url": "https://en.wikipedia.org/wiki/Roscoe_Arbuckle",
+     "source_date": "2026-10-25",
+     "claim_date": "1918",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1920 firmó con Paramount un contrato de un millón de dólares al año.",
+     "source_url": "https://en.wikipedia.org/wiki/Roscoe_Arbuckle",
+     "source_date": "2026-10-25",
+     "claim_date": "1920",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (biografía y fichas de películas) y Variety de abril de 1917 en archive.org (fuente primaria)."
+}

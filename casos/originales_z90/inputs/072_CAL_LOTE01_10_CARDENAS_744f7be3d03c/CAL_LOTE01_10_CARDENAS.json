@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_10_CARDENAS",
+ "question": "¿Qué trayectoria sigue Cárdenas tras expulsar a Calles del país?",
+ "person": "Lázaro Cárdenas",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1936-04-10",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1936",
+ "cuts": [
+  {
+   "id": "C1_1934",
+   "corte": "C1_1934",
+   "cut_id": "C1_1934",
+   "date": "1934-12-01",
+   "fecha_corte": "1934-12-01",
+   "hecho": "Asume la presidencia como candidato de Calles (Maximato).",
+   "P": [
+    [
+     "lealtad",
+     0.63
+    ],
+    [
+     "sentido_comunitario",
+     0.77
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.7
+    ],
+    [
+     "discrecion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "jerarquia",
+     0.81
+    ],
+    [
+     "control",
+     0.74
+    ]
+   ]
+  },
+  {
+   "id": "C2_1935",
+   "corte": "C2_1935",
+   "cut_id": "C2_1935",
+   "date": "1935-06-15",
+   "fecha_corte": "1935-06-15",
+   "hecho": "Ruptura con Calles tras sus críticas; Cárdenas remueve callistas del gabinete.",
+   "P": [
+    [
+     "autonomia",
+     0.77
+    ],
+    [
+     "justicia",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "desafio_autoridad",
+     0.77
+    ],
+    [
+     "alianza",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.81
+    ],
+    [
+     "conflictividad",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1936",
+   "corte": "C3_1936",
+   "cut_id": "C3_1936",
+   "date": "1936-04-10",
+   "fecha_corte": "1936-04-10",
+   "hecho": "Calles es expulsado a EE. UU.; reparto agrario y apoyo obrero crecen.",
+   "P": [
+    [
+     "orden_justo",
+     0.77
+    ],
+    [
+     "poder",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.81
+    ],
+    [
+     "cooperacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.77
+    ],
+    [
+     "empoderamiento",
+     0.74
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Lázaro Cárdenas' y 'Maximato' (hasta abr-1936)"
+}

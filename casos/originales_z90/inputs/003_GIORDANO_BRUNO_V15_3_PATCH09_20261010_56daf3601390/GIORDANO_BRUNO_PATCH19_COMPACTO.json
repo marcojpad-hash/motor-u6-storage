@@ -1,0 +1,398 @@
+{
+  "case_id": "GIORDANO_BRUNO_V15_3_PATCH09_20261010",
+  "question": "Determinar qué trayectoria estructural emerge en los cortes biográficos hasta Z90; no usar información posterior al corte.",
+  "protocol": "BIOGRAFIA_Z90_SOLO_INFO_HASTA_CORTE",
+  "z90_date": "1594-12-31",
+  "freeze": "1594-12-31",
+  "random_seed": 20261010,
+  "stinkbox_root": "../../STINKBOX_STORAGE",
+  "stinkbox_pending_case_id": "GIORDANO_BRUNO_V15_3_PATCH09_20261010",
+  "stinkbox_cut_id": "GIORDANO_BRUNO_V15_3_PATCH09_20261010::C8",
+  "caldero_identity": {
+    "nombre_o_alias": "Giordano Bruno",
+    "prohibido_self_match": true
+  },
+  "cuts": [
+    {
+      "id": "C1",
+      "date": "1565-01-01",
+      "P": [
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "conocimiento",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "obediencia",
+          0.65
+        ],
+        [
+          "reflexion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.64
+        ],
+        [
+          "control",
+          0.6
+        ]
+      ]
+    },
+    {
+      "id": "C2",
+      "date": "1575-07-01",
+      "P": [
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "analisis",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "control",
+          0.62
+        ],
+        [
+          "oposicion",
+          0.6
+        ]
+      ]
+    },
+    {
+      "id": "C3",
+      "date": "1576-10-01",
+      "P": [
+        [
+          "independencia",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "viaje",
+          0.68
+        ],
+        [
+          "desafio_autoridad",
+          0.75
+        ],
+        [
+          "romper_reglas",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "persecucion",
+          0.74
+        ],
+        [
+          "incertidumbre",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C4",
+      "date": "1579-09-01",
+      "P": [
+        [
+          "conocimiento",
+          0.72
+        ],
+        [
+          "analisis",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "confrontacion",
+          0.7
+        ],
+        [
+          "desafio_autoridad",
+          0.74
+        ],
+        [
+          "busqueda_verdad",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "oposicion",
+          0.72
+        ],
+        [
+          "persecucion",
+          0.66
+        ],
+        [
+          "autoridad",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "C5",
+      "date": "1582-12-01",
+      "P": [
+        [
+          "creatividad",
+          0.78
+        ],
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.65
+        ]
+      ],
+      "A": [
+        [
+          "autoexpresion",
+          0.68
+        ],
+        [
+          "liderazgo",
+          0.62
+        ],
+        [
+          "aprendizaje",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.66
+        ],
+        [
+          "logro_personal",
+          0.62
+        ],
+        [
+          "conocimiento",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C6",
+      "date": "1585-12-01",
+      "P": [
+        [
+          "creatividad",
+          0.8
+        ],
+        [
+          "busqueda_verdad",
+          0.8
+        ],
+        [
+          "independencia",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "desafio_autoridad",
+          0.76
+        ],
+        [
+          "disrupcion",
+          0.72
+        ],
+        [
+          "confrontacion",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "oposicion",
+          0.72
+        ],
+        [
+          "reconocimiento",
+          0.68
+        ],
+        [
+          "conocimiento",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C7",
+      "date": "1588-12-01",
+      "P": [
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "creatividad",
+          0.76
+        ],
+        [
+          "independencia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "busqueda_verdad",
+          0.8
+        ],
+        [
+          "autoexpresion",
+          0.68
+        ],
+        [
+          "analisis",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.66
+        ],
+        [
+          "oposicion",
+          0.68
+        ],
+        [
+          "incertidumbre",
+          0.64
+        ]
+      ]
+    },
+    {
+      "id": "C8",
+      "date": "1594-12-01",
+      "P": [
+        [
+          "busqueda_verdad",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "independencia",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "viaje",
+          0.68
+        ],
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "romper_reglas",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "persecucion",
+          0.8
+        ],
+        [
+          "control",
+          0.72
+        ],
+        [
+          "autoridad",
+          0.76
+        ],
+        [
+          "incertidumbre",
+          0.7
+        ]
+      ]
+    }
+  ],
+  "source_notes": [
+    "1565: ingreso en la orden dominicana en Nápoles; etapa de estudios.",
+    "1572-1575: ordenación sacerdotal y estudios teológicos; investigación por opiniones consideradas heréticas.",
+    "1576: huida y abandono de la vida conventual; comienza peregrinación por ciudades italianas.",
+    "1579: estancia en Ginebra, conflicto con Antoine de La Faye y posterior salida; enseñanza en Toulouse hasta 1581.",
+    "1581-1582: París, conferencias, apoyo de Enrique III y publicaciones De umbris idearum y Candelaio.",
+    "1583-1585: Inglaterra, estancia en Londres y disputas/enseñanza en Oxford; publicaciones cosmológicas de 1584 y De gli eroici furori en 1585.",
+    "1586-1588: estancia y enseñanza en Wittenberg; paso por Praga en 1588.",
+    "1590-1594: publicaciones en Frankfurt; regreso a Italia en 1591, arresto en Venecia en 1592 y traslado a Roma en 1593. No se introduce desenlace posterior a Z90."
+  ],
+  "caldero_search_bridge": {
+    "status": "EXECUTED",
+    "origin": "connected_tool_call",
+    "provider": "chatgpt_connected_tool",
+    "tool_name": "mcp__Exa__web_search_exa",
+    "bridge_id": "b1887ea4ceca288289d9",
+    "blind_query_sha256": "9f12259115cc589ad9a9eaf6095c862f8986b25d36bf9d105a1ac4924c062857",
+    "submitted_query": "Historical cases of intellectuals who pursued knowledge, challenged authority, confronted institutional opposition, moved between cities and patronage networks, and developed unconventional philosophical ideas. Focus on Renaissance and early modern Europe; exclude named target-person searches.",
+    "submitted_query_sha256": "e95f64050a3a530451e24e61fadfb3b02d48f656d95c6fe1f4a803459c6b68c1",
+    "query_count": 1,
+    "result_count": 3,
+    "results": [
+      {
+        "title": "John Dee: the patronage of a natural philosopher in Tudor England",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0039368111001142",
+        "snippet": "Study of John Dee’s patronage relations, efforts to secure institutional office, and how networks and religious affiliations shaped his opportunities. It describes the constraints faced by speculative natural philosophers seeking court support."
+      },
+      {
+        "title": "John Dee and the sciences: early modern networks of knowledge",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3778877/",
+        "snippet": "Scholarly review of John Dee’s intellectual development through his life, library, annotations, patronage, commerce, learned expertise, and transnational networks. It traces how political, religious, and social contexts shaped the dissemination of knowledge."
+      },
+      {
+        "title": "Science and Patronage in England, 1570–1625: A Preliminary Study",
+        "url": "https://journals.sagepub.com/doi/10.1177/007327530404200201",
+        "snippet": "Historical study of patronage in early modern natural knowledge, including how institutional inertia, court influence, personal networks, and patronage shaped opportunities for scholars and practitioners."
+      }
+    ],
+    "executed_at_utc": "2026-10-10T09:00:00Z",
+    "provenance_note": "Resultados recibidos de una llamada de herramienta conectada del host; no son una petición HTTP hecha por el proceso local."
+  }
+}

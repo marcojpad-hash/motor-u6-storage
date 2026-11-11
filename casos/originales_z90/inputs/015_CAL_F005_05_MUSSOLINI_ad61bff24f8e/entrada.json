@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F005_05_MUSSOLINI",
+ "question": "¿Qué trayectoria sigue Benito Mussolini después de su situación a finales de 1942?",
+ "person": "Benito Mussolini",
+ "tipo_sujeto": "politico",
+ "freeze": "1943-01-01",
+ "z_trabajo": "1943-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1942-11-08",
+ "cuts": [
+  {
+   "id": "C1_1922",
+   "corte": "C1_1922",
+   "cut_id": "C1_1922",
+   "date": "1922-10-31",
+   "fecha_corte": "1922-10-31",
+   "hecho": "Con la Marcha sobre Roma (28–31 de octubre de 1922), en la que participan casi 30 000 fascistas, llega al poder.",
+   "P": [
+    [
+     "sed_de_mando",
+     0.82
+    ],
+    [
+     "ambicion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.78
+    ],
+    [
+     "carisma",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "poder",
+     0.8
+    ],
+    [
+     "ascenso_reciente",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Del 28 al 31 de octubre de 1922 Mussolini intentó un golpe, la Marcha sobre Roma, con casi 30 000 fascistas, que lo llevó al poder.",
+     "source_url": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+     "source_date": "2026-10-28",
+     "claim_date": "1922-10-31",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1936",
+   "corte": "C2_1936",
+   "cut_id": "C2_1936",
+   "date": "1936",
+   "fecha_corte": "1936",
+   "hecho": "Declara la guerra a Etiopía (octubre de 1935) y proclama el imperio en mayo de 1936, en la cima de su popularidad; la condena de la Sociedad de Naciones lo aísla y lo acerca a Hitler (Eje Roma-Berlín, 1936).",
+   "P": [
+    [
+     "orgullo_hubris",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "conquista",
+     0.8
+    ],
+    [
+     "escalada",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.78
+    ],
+    [
+     "aislamiento_social",
+     0.64
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 2 de octubre de 1935 anunció la guerra a Etiopía; en mayo de 1936 estaba en la cima de su popularidad con la proclamación del imperio italiano.",
+     "source_url": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+     "source_date": "2026-10-28",
+     "claim_date": "1936-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La invasión de Etiopía provocó condenas de la Sociedad de Naciones que aislaron a Italia y la empujaron hacia Hitler, con la formación del Eje Roma-Berlín en 1936.",
+     "source_url": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+     "source_date": "2026-10-28",
+     "claim_date": "1936",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1942",
+   "corte": "C3_1942",
+   "cut_id": "C3_1942",
+   "date": "1942-11-08",
+   "fecha_corte": "1942-11-08",
+   "hecho": "Entra a la guerra en junio de 1940 creyendo inminente la victoria alemana, sin planes de largo plazo; la guerra con Grecia es un desastre; en 1942 el avance sobre Egipto se detiene en El Alamein, las fuerzas del Eje son derrotadas allí en octubre y el 8 de noviembre los angloamericanos desembarcan en Marruecos y Argelia.",
+   "P": [
+    [
+     "orgullo",
+     0.74
+    ],
+    [
+     "negacion_problema",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "decision_mal_informada",
+     0.78
+    ],
+    [
+     "apuesta_extrema",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.8
+    ],
+    [
+     "amenaza_central",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Italia declaró la guerra a Gran Bretaña y Francia el 10 de junio de 1940; Mussolini no tenía planes de largo plazo; la guerra greco-italiana terminó en desastre para los italianos.",
+     "source_url": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+     "source_date": "2026-10-28",
+     "claim_date": "1940-06-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La ofensiva sobre Egipto se detuvo en El Alamein en el verano de 1942; en octubre de 1942 las fuerzas italianas y alemanas fueron derrotadas en la segunda batalla de El Alamein; el 8 de noviembre de 1942 tropas angloamericanas desembarcaron en Marruecos y Argelia (Operación Torch).",
+     "source_url": "https://en.wikipedia.org/wiki/Benito_Mussolini",
+     "source_date": "2026-10-28",
+     "claim_date": "1942-11-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta diciembre de 1942."
+}

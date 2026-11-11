@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F004_08_LESSEPS",
+ "question": "¿Qué trayectoria sigue Ferdinand de Lesseps después de 1886?",
+ "person": "Ferdinand de Lesseps",
+ "tipo_sujeto": "empresario",
+ "freeze": "1887-01-01",
+ "z_trabajo": "1887-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1886",
+ "cuts": [
+  {
+   "id": "C1_1869",
+   "corte": "C1_1869",
+   "cut_id": "C1_1869",
+   "date": "1869-11-17",
+   "fecha_corte": "1869-11-17",
+   "hecho": "Obtiene la concesión de Suez (1854), reúne capital con suscripciones patrióticas francesas, resiste la oposición británica sin escuchar críticas y el canal se inaugura el 17 de noviembre de 1869.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "determinacion",
+     0.82
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.78
+    ],
+    [
+     "audacia",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.82
+    ],
+    [
+     "obstaculo",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 30 de noviembre de 1854 Said Pasha firmó la concesión; Lesseps no escuchaba críticas adversas ni retrocedía ante obstáculos, y reunió con suscripciones francesas más de la mitad del capital.",
+     "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+     "source_date": "2026-10-27",
+     "claim_date": "1858",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El canal fue inaugurado oficialmente el 17 de noviembre de 1869 pese a la resistencia del gobierno británico.",
+     "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+     "source_date": "2026-10-27",
+     "claim_date": "1869-11-17",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1880",
+   "corte": "C2_1880",
+   "cut_id": "C2_1880",
+   "date": "1880",
+   "fecha_corte": "1880",
+   "hecho": "Un congreso en París vota un canal de Panamá a nivel del mar, sin esclusas, como Suez; con 74 años lo nombran presidente de la compañía y Gambetta lo llama 'Le Grand Français'; recorre Estados Unidos buscando dinero y estima 658 millones de francos y ocho años de obra.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "orgullo_hubris",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.8
+    ],
+    [
+     "apuesta_extrema",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "redes_prestigio",
+     0.8
+    ],
+    [
+     "popularidad",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En mayo de 1879 un congreso de 136 delegados en París votó un canal de Panamá sin esclusas; Lesseps, de 74 años, fue nombrado presidente de la compañía y Gambetta lo llamó 'Le Grand Français'.",
+     "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+     "source_date": "2026-10-27",
+     "claim_date": "1879-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En febrero de 1880 fue a Nueva York a reunir dinero; en 1880 estimó que el proyecto costaría 658 millones de francos y ocho años.",
+     "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+     "source_date": "2026-10-27",
+     "claim_date": "1880",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1886",
+   "corte": "C3_1886",
+   "cut_id": "C3_1886",
+   "date": "1886",
+   "fecha_corte": "1886",
+   "hecho": "La obra empezó en 1882; las dificultades técnicas del trópico húmedo la acosan: deslizamientos recurrentes de cerros saturados dentro de las excavaciones y muertes por malaria y fiebre amarilla.",
+   "P": [
+    [
+     "determinacion",
+     0.78
+    ],
+    [
+     "confianza_ciega",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.72
+    ],
+    [
+     "negacion_problema",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "terreno_hostil",
+     0.82
+    ],
+    [
+     "aviso_ignorado",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Tras dos años de estudios, la obra del canal comenzó en 1882; las dificultades técnicas del trópico húmedo, los deslizamientos recurrentes y la mortalidad por malaria y fiebre amarilla acosaron el proyecto.",
+     "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+     "source_date": "2026-10-27",
+     "claim_date": "1886",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1886."
+}

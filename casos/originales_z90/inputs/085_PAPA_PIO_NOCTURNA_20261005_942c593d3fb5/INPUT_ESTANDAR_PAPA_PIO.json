@@ -1,0 +1,513 @@
+{
+  "case_id": "PAPA_PIO_NOCTURNA_20261005",
+  "question": "¿Qué configuración dinámica se perfila en Pío II (Enea Silvio Piccolomini) hasta el corte final de vida?",
+  "random_seed": 0,
+  "person": "Pío II / Enea Silvio Piccolomini",
+  "birth_date": "1405-10-18",
+  "death_date": "1464-08-14",
+  "z90_date": "1464-08-14",
+  "protocol": "EJERCICIO_BLANCO_HISTORICO_Z_FINAL",
+  "source_basis": "notion_ejercicios_blancos_Pio_II + public_bio_Britannica_Vatican_CatholicHierarchy_style_timeline",
+  "future_data_excluded_from_input": true,
+  "provenance_note": "GENERADO 2026-10-05 CT por LLM según CONTRATO_ENTRADA_LLM.txt. Identidad del caso: Notion TRASPASO 2026-09-20 nombra 'Ejercicios blancos: Pío II, Mozart' (no hay JSON ESTÁNDAR previo en disco/TRANSFER). Se eligió Pío II (no Pío XII) por esa mención explícita; se buscó también Pius XII en web/disk sin input pack. Cuts P/A/C armados desde biografía pública (nacimiento Corsignano 1405 → Basilea → Félix V/Federico III → reconciliación Roma → obispados → cardenalato → papado 1458 → Mantua → cruzada → muerte Ancona 1464). Tokens reutilizan vocabulario ya usado en INPUT_ESTANDAR_MOZART/MUSK/CIEGO_15 (y palabras_244 del puente). Pesos 0.60–0.84. Z=fecha de muerte (vida cerrada; ejercicio blanco). No inventa post-Z ni catalog tokens nuevos. | FIX: external_lights=[] (lights sin branch rompen motor_interrelacion; caldero_search_sources se conservan).",
+  "caldero_identity": {
+    "nombre_o_alias": "Pio II Piccolomini",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "liderazgo",
+      "autoridad",
+      "negociacion",
+      "ambicion",
+      "sacrificio"
+    ]
+  },
+  "caldero_search_sources": [
+    {
+      "id": "src_notion",
+      "texto": "Ejercicios blancos: Pío II, Mozart (palo se sostiene; muerte = ruido si cuerpo VACÍO).",
+      "origen": "notion_TRASPASO_20260920"
+    },
+    {
+      "id": "src_brit",
+      "texto": "Humanista/diplomático: Basilea, Félix V, Federico III, reconciliación con Roma, papa 1458, cruzada, muerte Ancona 1464.",
+      "origen": "web_public_bio"
+    }
+  ],
+  "external_lights": [],
+  "cuts": [
+    {
+      "id": "C1",
+      "date": "1420-01-01",
+      "hecho": "1405-1429: nace en Corsignano (Siena) en familia noble empobrecida; estudios en Siena y Florencia; formación humanista y jurídica temprana.",
+      "P": [
+        [
+          "aprendizaje",
+          0.84
+        ],
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "ambicion",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "tradicion",
+          0.7
+        ],
+        [
+          "autoridad",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "reconocimiento",
+          0.66
+        ]
+      ],
+      "source_note": "birth/studies — Britannica/Vatican bio Pius II"
+    },
+    {
+      "id": "C2",
+      "date": "1432-01-01",
+      "hecho": "1431-1436: entra al servicio diplomático en el Concilio de Basilea; oratoria y secretariado conciliar; exposición internacional.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "viaje",
+          0.78
+        ],
+        [
+          "generacion_ideas",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.68
+        ],
+        [
+          "negociacion",
+          0.72
+        ],
+        [
+          "oposicion",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.74
+        ],
+        [
+          "competencia",
+          0.66
+        ]
+      ],
+      "source_note": "Council of Basel diplomacy"
+    },
+    {
+      "id": "C3",
+      "date": "1440-01-01",
+      "hecho": "1439-1442: secretario del antipapa Félix V; luego pasa a la corte del emperador Federico III; cambio de lealtad institucional.",
+      "P": [
+        [
+          "ambicion",
+          0.74
+        ],
+        [
+          "analisis",
+          0.7
+        ],
+        [
+          "audacia",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "conflicto_lealtad",
+          0.78
+        ],
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "rivalidad_poder",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "poder",
+          0.7
+        ],
+        [
+          "reconocimiento",
+          0.68
+        ]
+      ],
+      "source_note": "Felix V then Frederick III"
+    },
+    {
+      "id": "C4",
+      "date": "1446-01-01",
+      "hecho": "1445-1447: reconciliación con Roma; toma órdenes; obispo de Trieste bajo Nicolás V; mediación entre estados alemanes y la Santa Sede.",
+      "P": [
+        [
+          "responsabilidad",
+          0.78
+        ],
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "organizacion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.76
+        ],
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "apego_normas",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.76
+        ],
+        [
+          "legalidad",
+          0.7
+        ]
+      ],
+      "source_note": "reconciliation + Trieste bishopric"
+    },
+    {
+      "id": "C5",
+      "date": "1450-01-01",
+      "hecho": "1450-1455: obispo de Siena; continúa mediación imperial-papal; consolidación eclesiástica y diplomática.",
+      "P": [
+        [
+          "liderazgo",
+          0.74
+        ],
+        [
+          "organizacion",
+          0.72
+        ],
+        [
+          "responsabilidad",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.78
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "negociacion",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "estatus_social",
+          0.72
+        ],
+        [
+          "poder",
+          0.68
+        ]
+      ],
+      "source_note": "Bishop of Siena"
+    },
+    {
+      "id": "C6",
+      "date": "1456-12-01",
+      "hecho": "1456-1457: creado cardenal; titular Santa Sabina; adquiere Warmia; presión por cruzada antiturca tras 1453.",
+      "P": [
+        [
+          "ambicion",
+          0.76
+        ],
+        [
+          "liderazgo",
+          0.74
+        ],
+        [
+          "audacia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.8
+        ],
+        [
+          "rivalidad_poder",
+          0.68
+        ],
+        [
+          "jerarquia",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "poder",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.74
+        ]
+      ],
+      "source_note": "cardinalate 1456"
+    },
+    {
+      "id": "C7",
+      "date": "1458-08-19",
+      "hecho": "1458: elegido papa (Pío II) tras Calixtus III; coronación; prioridad diplomática y recuperación de autoridad papal.",
+      "P": [
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "responsabilidad",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.84
+        ],
+        [
+          "centralizacion",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "obtencion",
+          0.76
+        ]
+      ],
+      "source_note": "election 19 Aug 1458"
+    },
+    {
+      "id": "C8",
+      "date": "1459-01-01",
+      "hecho": "1459-1460: Congreso de Mantua para coalición antiturca; respuesta limitada de príncipes; fricción diplomática.",
+      "P": [
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "liderazgo",
+          0.76
+        ],
+        [
+          "analisis",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "oposicion",
+          0.74
+        ],
+        [
+          "resistencia_cambio",
+          0.7
+        ],
+        [
+          "fragmentacion",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "escalada",
+          0.68
+        ],
+        [
+          "oportunidad",
+          0.66
+        ],
+        [
+          "tension_alta",
+          0.72
+        ]
+      ],
+      "source_note": "Congress of Mantua"
+    },
+    {
+      "id": "C9",
+      "date": "1462-01-01",
+      "hecho": "1461-1463: presión sobre Francia (Pragmática Sanción); proclama cruzada (1463); movilización papal pese a adhesión incompleta.",
+      "P": [
+        [
+          "audacia",
+          0.78
+        ],
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "sacrificio",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.82
+        ],
+        [
+          "desafio_autoridad",
+          0.66
+        ],
+        [
+          "oposicion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "escalada",
+          0.74
+        ],
+        [
+          "poder",
+          0.76
+        ],
+        [
+          "rivalidad",
+          0.68
+        ]
+      ],
+      "source_note": "crusade proclamation 1463"
+    },
+    {
+      "id": "C10",
+      "date": "1464-08-01",
+      "hecho": "1464: viaja a Ancona para embarcar la cruzada; enfermedad; muerte el 14 ago 1464; la empresa se desvanece.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "responsabilidad",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "dependencia",
+          0.68
+        ],
+        [
+          "fragmentacion",
+          0.72
+        ],
+        [
+          "miedo_caos",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "desastre",
+          0.74
+        ],
+        [
+          "perdida_definitiva",
+          0.76
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ]
+      ],
+      "source_note": "death Ancona 1464-08-14 — Z = fin de vida; muerte como ruido si cuerpo vacío (Notion ejercicio blanco)"
+    }
+  ]
+}

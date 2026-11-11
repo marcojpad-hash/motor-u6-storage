@@ -1,0 +1,1068 @@
+[
+  {
+    "cut": "1971-1975",
+    "markers": [
+      {
+        "token": "inconformismo",
+        "value": "inconformismo observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.984226",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.984242",
+        "source": "documented"
+      },
+      {
+        "token": "conocimiento",
+        "value": "conocimiento observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.984244",
+        "source": "documented"
+      },
+      {
+        "token": "viaje",
+        "value": "viaje observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.984245",
+        "source": "documented"
+      }
+    ],
+    "control": {
+      "convergencia": 0.625,
+      "delta_h_t": 0.1375,
+      "sigma_sorpresa_t": 0.0415,
+      "delta_min_t": 0.1206,
+      "p_azar_t": 0.5,
+      "monte_carlo": {
+        "media_p_azar": 0.49997,
+        "n_simulaciones_usadas": 800,
+        "sigma_estimada_inicial": 0.141458,
+        "sigma_muestral_final": 0.007041,
+        "error_estandar_final": 0.000249,
+        "convergencia_alcanzada": true
+      },
+      "cuarentena": [],
+      "reevaluaciones_50_50": []
+    },
+    "top20": [
+      [
+        "arquetipo_el_creador",
+        0.7514
+      ],
+      [
+        "strauss_howe_02_the_awakening",
+        0.7514
+      ],
+      [
+        "arquetipo_el_explorador",
+        0.7328
+      ],
+      [
+        "monomito_05_cruce_del_primer_umbral",
+        0.5838
+      ],
+      [
+        "arquetipo_el_sabio",
+        0.5838
+      ],
+      [
+        "crisis_vocacional",
+        0.5
+      ],
+      [
+        "arquetipo_heroe",
+        0.5
+      ],
+      [
+        "situacion_dramatica_ambicion",
+        0.5
+      ],
+      [
+        "situacion_dramatica_venganza",
+        0.5
+      ],
+      [
+        "mbti_introvertido",
+        0.5
+      ],
+      [
+        "mbti_racional",
+        0.5
+      ],
+      [
+        "1_suplica",
+        0.5
+      ],
+      [
+        "2_salvacion",
+        0.5
+      ],
+      [
+        "3_venganza_del_crimen",
+        0.5
+      ],
+      [
+        "4_venganza_de_parientes",
+        0.5
+      ],
+      [
+        "5_persecucion",
+        0.5
+      ],
+      [
+        "6_desastre",
+        0.5
+      ],
+      [
+        "7_caer_victima",
+        0.5
+      ],
+      [
+        "8_rebelion",
+        0.5
+      ],
+      [
+        "9_audaz_empresa",
+        0.5
+      ]
+    ]
+  },
+  {
+    "cut": "1976-1980",
+    "markers": [
+      {
+        "token": "inconformismo",
+        "value": "inconformismo observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.986758",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.986763",
+        "source": "documented"
+      },
+      {
+        "token": "conocimiento",
+        "value": "conocimiento observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.986765",
+        "source": "documented"
+      },
+      {
+        "token": "viaje",
+        "value": "viaje observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.986766",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.986767",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.986768",
+        "source": "documented"
+      },
+      {
+        "token": "competencia",
+        "value": "competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.986769",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.986770",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_repentino",
+        "value": "cambio_repentino observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.986771",
+        "source": "documented"
+      }
+    ],
+    "control": {
+      "convergencia": 0.7778,
+      "delta_h_t": 0.1444,
+      "sigma_sorpresa_t": 0.0598,
+      "delta_min_t": 0.1217,
+      "p_azar_t": 0.4997,
+      "monte_carlo": {
+        "media_p_azar": 0.499676,
+        "n_simulaciones_usadas": 1021,
+        "sigma_estimada_inicial": 0.159835,
+        "sigma_muestral_final": 0.010126,
+        "error_estandar_final": 0.000317,
+        "convergencia_alcanzada": true
+      },
+      "cuarentena": [],
+      "reevaluaciones_50_50": []
+    },
+    "top20": [
+      [
+        "30_ambicion",
+        0.8096
+      ],
+      [
+        "arquetipo_el_creador",
+        0.8096
+      ],
+      [
+        "tainter_04_colapso_por_simplificacion_forzada",
+        0.8096
+      ],
+      [
+        "predictivo_04_caos_bifurcacion_critica",
+        0.8096
+      ],
+      [
+        "14_rivalidad_de_parientes",
+        0.7455
+      ],
+      [
+        "strauss_howe_02_the_awakening",
+        0.7455
+      ],
+      [
+        "eterno_retorno_03_desgaste_y_reinicio",
+        0.7455
+      ],
+      [
+        "social_05_granovetter_modelos_de_umbral",
+        0.7455
+      ],
+      [
+        "situacion_dramatica_ambicion",
+        0.7273
+      ],
+      [
+        "arquetipo_el_explorador",
+        0.7273
+      ],
+      [
+        "predictivo_02_mdp_politica_optima",
+        0.7046
+      ],
+      [
+        "12_obtencion",
+        0.6637
+      ],
+      [
+        "monomito_05_cruce_del_primer_umbral",
+        0.5818
+      ],
+      [
+        "arquetipo_el_sabio",
+        0.5818
+      ],
+      [
+        "erikson_04_laboriosidad_vs_inferioridad",
+        0.5573
+      ],
+      [
+        "crisis_vocacional",
+        0.5
+      ],
+      [
+        "arquetipo_heroe",
+        0.5
+      ],
+      [
+        "situacion_dramatica_venganza",
+        0.5
+      ],
+      [
+        "mbti_introvertido",
+        0.5
+      ],
+      [
+        "mbti_racional",
+        0.5
+      ]
+    ]
+  },
+  {
+    "cut": "1981-1984",
+    "markers": [
+      {
+        "token": "inconformismo",
+        "value": "inconformismo observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.989401",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.989406",
+        "source": "documented"
+      },
+      {
+        "token": "conocimiento",
+        "value": "conocimiento observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989407",
+        "source": "documented"
+      },
+      {
+        "token": "viaje",
+        "value": "viaje observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.989408",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.989409",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.989410",
+        "source": "documented"
+      },
+      {
+        "token": "competencia",
+        "value": "competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989411",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.989412",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_repentino",
+        "value": "cambio_repentino observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.989413",
+        "source": "documented"
+      },
+      {
+        "token": "desafio_autoridad",
+        "value": "desafio_autoridad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989414",
+        "source": "documented"
+      },
+      {
+        "token": "conflictividad",
+        "value": "conflictividad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989415",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.989416",
+        "source": "documented"
+      },
+      {
+        "token": "rivalidad_poder",
+        "value": "rivalidad_poder observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989417",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.989419",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.989420",
+        "source": "documented"
+      }
+    ],
+    "control": {
+      "convergencia": 0.75,
+      "delta_h_t": 0.1433,
+      "sigma_sorpresa_t": 0.0544,
+      "delta_min_t": 0.1215,
+      "p_azar_t": 0.5,
+      "monte_carlo": {
+        "media_p_azar": 0.500048,
+        "n_simulaciones_usadas": 953,
+        "sigma_estimada_inicial": 0.154365,
+        "sigma_muestral_final": 0.009641,
+        "error_estandar_final": 0.000312,
+        "convergencia_alcanzada": true
+      },
+      "cuarentena": [],
+      "reevaluaciones_50_50": []
+    },
+    "top20": [
+      [
+        "24_rivalidad_de_superior_e_inferior",
+        0.8119
+      ],
+      [
+        "30_ambicion",
+        0.8119
+      ],
+      [
+        "arquetipo_el_creador",
+        0.8119
+      ],
+      [
+        "tainter_04_colapso_por_simplificacion_forzada",
+        0.8119
+      ],
+      [
+        "dialectica_02_antitesis_contradiccion_y_conflicto",
+        0.8119
+      ],
+      [
+        "predictivo_04_caos_bifurcacion_critica",
+        0.8119
+      ],
+      [
+        "14_rivalidad_de_parientes",
+        0.7472
+      ],
+      [
+        "strauss_howe_02_the_awakening",
+        0.7472
+      ],
+      [
+        "eterno_retorno_03_desgaste_y_reinicio",
+        0.7472
+      ],
+      [
+        "social_05_granovetter_modelos_de_umbral",
+        0.7472
+      ],
+      [
+        "situacion_dramatica_ambicion",
+        0.7289
+      ],
+      [
+        "arquetipo_el_explorador",
+        0.7289
+      ],
+      [
+        "predictivo_02_mdp_politica_optima",
+        0.706
+      ],
+      [
+        "12_obtencion",
+        0.6648
+      ],
+      [
+        "trayectoria_financieros_brokers",
+        0.6442
+      ],
+      [
+        "erikson_04_laboriosidad_vs_inferioridad",
+        0.6132
+      ],
+      [
+        "monomito_05_cruce_del_primer_umbral",
+        0.5824
+      ],
+      [
+        "arquetipo_el_sabio",
+        0.5824
+      ],
+      [
+        "crisis_vocacional",
+        0.5
+      ],
+      [
+        "arquetipo_heroe",
+        0.5
+      ]
+    ]
+  },
+  {
+    "cut": "1985-1988",
+    "markers": [
+      {
+        "token": "inconformismo",
+        "value": "inconformismo observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992504",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992509",
+        "source": "documented"
+      },
+      {
+        "token": "conocimiento",
+        "value": "conocimiento observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992510",
+        "source": "documented"
+      },
+      {
+        "token": "viaje",
+        "value": "viaje observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.992512",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.992513",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992514",
+        "source": "documented"
+      },
+      {
+        "token": "competencia",
+        "value": "competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992515",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.992516",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_repentino",
+        "value": "cambio_repentino observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.992517",
+        "source": "documented"
+      },
+      {
+        "token": "desafio_autoridad",
+        "value": "desafio_autoridad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992518",
+        "source": "documented"
+      },
+      {
+        "token": "conflictividad",
+        "value": "conflictividad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992519",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.992520",
+        "source": "documented"
+      },
+      {
+        "token": "rivalidad_poder",
+        "value": "rivalidad_poder observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992521",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.992522",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.992523",
+        "source": "documented"
+      },
+      {
+        "token": "perdida",
+        "value": "perdida observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.992524",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_identidad",
+        "value": "cambio_identidad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992525",
+        "source": "documented"
+      },
+      {
+        "token": "independencia_critica",
+        "value": "independencia_critica observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992526",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.992527",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.992527",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.992528",
+        "source": "documented"
+      },
+      {
+        "token": "frustracion",
+        "value": "frustracion observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.992530",
+        "source": "documented"
+      }
+    ],
+    "control": {
+      "convergencia": 0.7531,
+      "delta_h_t": 0.1364,
+      "sigma_sorpresa_t": 0.0606,
+      "delta_min_t": 0.1205,
+      "p_azar_t": 0.5008,
+      "monte_carlo": {
+        "media_p_azar": 0.500778,
+        "n_simulaciones_usadas": 1032,
+        "sigma_estimada_inicial": 0.160644,
+        "sigma_muestral_final": 0.01056,
+        "error_estandar_final": 0.000329,
+        "convergencia_alcanzada": true
+      },
+      "cuarentena": [],
+      "reevaluaciones_50_50": []
+    },
+    "top20": [
+      [
+        "situacion_dramatica_ambicion",
+        0.8109
+      ],
+      [
+        "24_rivalidad_de_superior_e_inferior",
+        0.8109
+      ],
+      [
+        "30_ambicion",
+        0.8109
+      ],
+      [
+        "arquetipo_el_creador",
+        0.8109
+      ],
+      [
+        "tainter_04_colapso_por_simplificacion_forzada",
+        0.8109
+      ],
+      [
+        "dialectica_02_antitesis_contradiccion_y_conflicto",
+        0.8109
+      ],
+      [
+        "predictivo_02_mdp_politica_optima",
+        0.8109
+      ],
+      [
+        "predictivo_04_caos_bifurcacion_critica",
+        0.8109
+      ],
+      [
+        "trayectoria_financieros_brokers",
+        0.7554
+      ],
+      [
+        "14_rivalidad_de_parientes",
+        0.7457
+      ],
+      [
+        "strauss_howe_02_the_awakening",
+        0.7457
+      ],
+      [
+        "eterno_retorno_03_desgaste_y_reinicio",
+        0.7457
+      ],
+      [
+        "social_05_granovetter_modelos_de_umbral",
+        0.7457
+      ],
+      [
+        "12_obtencion",
+        0.7326
+      ],
+      [
+        "arquetipo_el_explorador",
+        0.7275
+      ],
+      [
+        "crisis_vocacional",
+        0.6638
+      ],
+      [
+        "monomito_11_la_resurreccion",
+        0.6638
+      ],
+      [
+        "strauss_howe_04_the_crisis",
+        0.6638
+      ],
+      [
+        "erikson_04_laboriosidad_vs_inferioridad",
+        0.6125
+      ],
+      [
+        "monomito_05_cruce_del_primer_umbral",
+        0.5819
+      ]
+    ]
+  },
+  {
+    "cut": "1989-1991",
+    "markers": [
+      {
+        "token": "inconformismo",
+        "value": "inconformismo observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996153",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996159",
+        "source": "documented"
+      },
+      {
+        "token": "conocimiento",
+        "value": "conocimiento observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996160",
+        "source": "documented"
+      },
+      {
+        "token": "viaje",
+        "value": "viaje observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996162",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.996163",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996164",
+        "source": "documented"
+      },
+      {
+        "token": "competencia",
+        "value": "competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996165",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996166",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_repentino",
+        "value": "cambio_repentino observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.996167",
+        "source": "documented"
+      },
+      {
+        "token": "desafio_autoridad",
+        "value": "desafio_autoridad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996168",
+        "source": "documented"
+      },
+      {
+        "token": "conflictividad",
+        "value": "conflictividad observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996169",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996170",
+        "source": "documented"
+      },
+      {
+        "token": "rivalidad_poder",
+        "value": "rivalidad_poder observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996171",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.996172",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996173",
+        "source": "documented"
+      },
+      {
+        "token": "perdida",
+        "value": "perdida observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.996174",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_identidad",
+        "value": "cambio_identidad observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996175",
+        "source": "documented"
+      },
+      {
+        "token": "independencia_critica",
+        "value": "independencia_critica observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996176",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.996177",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.9,
+        "timestamp": "2026-09-03T04:39:01.996178",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.996179",
+        "source": "documented"
+      },
+      {
+        "token": "frustracion",
+        "value": "frustracion observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996180",
+        "source": "documented"
+      },
+      {
+        "token": "cambio_conductual_sostenido",
+        "value": "cambio_conductual_sostenido observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996182",
+        "source": "documented"
+      },
+      {
+        "token": "creatividad",
+        "value": "creatividad observado",
+        "confidence": 0.95,
+        "timestamp": "2026-09-03T04:39:01.996183",
+        "source": "documented"
+      },
+      {
+        "token": "presion_rendimiento_kpi",
+        "value": "presion_rendimiento_kpi observado",
+        "confidence": 0.75,
+        "timestamp": "2026-09-03T04:39:01.996184",
+        "source": "documented"
+      },
+      {
+        "token": "perdida",
+        "value": "perdida observado",
+        "confidence": 0.7,
+        "timestamp": "2026-09-03T04:39:01.996185",
+        "source": "documented"
+      },
+      {
+        "token": "ambicion",
+        "value": "ambicion observado",
+        "confidence": 0.85,
+        "timestamp": "2026-09-03T04:39:01.996186",
+        "source": "documented"
+      },
+      {
+        "token": "reconocimiento_competencia",
+        "value": "reconocimiento_competencia observado",
+        "confidence": 0.8,
+        "timestamp": "2026-09-03T04:39:01.996187",
+        "source": "documented"
+      }
+    ],
+    "control": {
+      "convergencia": 0.7571,
+      "delta_h_t": 0.1482,
+      "sigma_sorpresa_t": 0.0688,
+      "delta_min_t": 0.1222,
+      "p_azar_t": 0.5001,
+      "monte_carlo": {
+        "media_p_azar": 0.500115,
+        "n_simulaciones_usadas": 1139,
+        "sigma_estimada_inicial": 0.168767,
+        "sigma_muestral_final": 0.012051,
+        "error_estandar_final": 0.000357,
+        "convergencia_alcanzada": true
+      },
+      "cuarentena": [],
+      "reevaluaciones_50_50": []
+    },
+    "top20": [
+      [
+        "situacion_dramatica_ambicion",
+        0.8056
+      ],
+      [
+        "24_rivalidad_de_superior_e_inferior",
+        0.8056
+      ],
+      [
+        "30_ambicion",
+        0.8056
+      ],
+      [
+        "arquetipo_el_creador",
+        0.8056
+      ],
+      [
+        "tainter_04_colapso_por_simplificacion_forzada",
+        0.8056
+      ],
+      [
+        "dialectica_02_antitesis_contradiccion_y_conflicto",
+        0.8056
+      ],
+      [
+        "predictivo_02_mdp_politica_optima",
+        0.8056
+      ],
+      [
+        "predictivo_04_caos_bifurcacion_critica",
+        0.8056
+      ],
+      [
+        "trayectoria_financieros_brokers",
+        0.8056
+      ],
+      [
+        "12_obtencion",
+        0.7828
+      ],
+      [
+        "14_rivalidad_de_parientes",
+        0.7427
+      ],
+      [
+        "strauss_howe_02_the_awakening",
+        0.7427
+      ],
+      [
+        "eterno_retorno_03_desgaste_y_reinicio",
+        0.7427
+      ],
+      [
+        "social_05_granovetter_modelos_de_umbral",
+        0.7427
+      ],
+      [
+        "arquetipo_el_explorador",
+        0.7247
+      ],
+      [
+        "ttm_05_mantenimiento",
+        0.6699
+      ],
+      [
+        "crisis_vocacional",
+        0.6618
+      ],
+      [
+        "monomito_11_la_resurreccion",
+        0.6618
+      ],
+      [
+        "strauss_howe_04_the_crisis",
+        0.6618
+      ],
+      [
+        "erikson_04_laboriosidad_vs_inferioridad",
+        0.6615
+      ]
+    ]
+  }
+]

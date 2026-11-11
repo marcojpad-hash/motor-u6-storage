@@ -1,0 +1,126 @@
+{
+  "case_id": "C18",
+  "question": "¿Qué trayectoria sigue el sujeto tras recibir el encargo de pintar la bóveda de la capilla papal?",
+  "tipo_sujeto": "artista",
+  "freeze": "1508-01-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1508",
+  "cuts": [
+    {
+      "id": "C1_1501",
+      "corte": "C1_1501",
+      "cut_id": "C1_1501",
+      "date": "1501-08-16",
+      "fecha_corte": "1501-08-16",
+      "hecho": "Recibe el encargo del David en Florencia; trabaja un bloque de mármol abandonado por otros escultores.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "determinacion",
+          0.82
+        ],
+        [
+          "perfeccionismo",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "reconocimiento_previo",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C2_1505",
+      "corte": "C2_1505",
+      "cut_id": "C2_1505",
+      "date": "1505-01-01",
+      "fecha_corte": "1505-01-01",
+      "hecho": "Llamado a Roma por el papa Julio II para su tumba; el proyecto se interrumpe y el sujeto se siente humillado.",
+      "P": [
+        [
+          "orgullo",
+          0.8
+        ],
+        [
+          "frustracion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "resiliencia",
+          0.78
+        ],
+        [
+          "rebeldia",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "rivalidad_profesional",
+          0.78
+        ],
+        [
+          "hostilidad",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C3_1508",
+      "corte": "C3_1508",
+      "cut_id": "C3_1508",
+      "date": "1508-01-01",
+      "fecha_corte": "1508-01-01",
+      "hecho": "Julio II le encarga pintar la bóveda de la Capilla Sixtina, un trabajo que el sujeto considera ajeno a su oficio de escultor.",
+      "P": [
+        [
+          "responsabilidad",
+          0.82
+        ],
+        [
+          "determinacion",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "presion_social",
+          0.78
+        ],
+        [
+          "desafio_autoridad",
+          0.72
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

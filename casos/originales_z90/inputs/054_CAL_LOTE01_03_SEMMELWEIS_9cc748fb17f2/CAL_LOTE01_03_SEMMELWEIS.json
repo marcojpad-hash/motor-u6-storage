@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_LOTE01_03_SEMMELWEIS",
+ "question": "¿Qué sucede con Semmelweis y su doctrina del lavado de manos en Viena?",
+ "person": "Ignaz Semmelweis",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1849-03-20",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1849",
+ "cuts": [
+  {
+   "id": "C1_1846",
+   "corte": "C1_1846",
+   "cut_id": "C1_1846",
+   "date": "1846-07-01",
+   "fecha_corte": "1846-07-01",
+   "hecho": "Asistente en la Primera Clínica obstétrica de Viena con mortalidad materna alta frente a la Segunda.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.77
+    ],
+    [
+     "responsabilidad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "analisis",
+     0.77
+    ],
+    [
+     "metodicidad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "desastre",
+     0.67
+    ],
+    [
+     "jerarquia",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C2_1847",
+   "corte": "C2_1847",
+   "cut_id": "C2_1847",
+   "date": "1847-05-15",
+   "fecha_corte": "1847-05-15",
+   "hecho": "Tras la muerte de Kolletschka instaura el lavado con cloruro de cal; la mortalidad cae drásticamente.",
+   "P": [
+    [
+     "conocimiento",
+     0.81
+    ],
+    [
+     "idealismo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "verificacion",
+     0.77
+    ],
+    [
+     "determinacion",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "evidencia_clara",
+     0.77
+    ],
+    [
+     "hostilidad",
+     0.6
+    ]
+   ]
+  },
+  {
+   "id": "C3_1849",
+   "corte": "C3_1849",
+   "cut_id": "C3_1849",
+   "date": "1849-03-20",
+   "fecha_corte": "1849-03-20",
+   "hecho": "No le renuevan el puesto; choca con su jefe Klein y casi no publica.",
+   "P": [
+    [
+     "orgullo",
+     0.7
+    ],
+    [
+     "rigidez",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion",
+     0.74
+    ],
+    [
+     "aislamiento_voluntario",
+     0.63
+    ]
+   ],
+   "C": [
+    [
+     "oposicion",
+     0.77
+    ],
+    [
+     "desconfianza_autoridad",
+     0.67
+    ]
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia 'Ignaz Semmelweis' (hechos hasta mar-1849)"
+}

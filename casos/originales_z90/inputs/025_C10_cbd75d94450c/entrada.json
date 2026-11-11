@@ -1,0 +1,126 @@
+{
+  "case_id": "C10",
+  "question": "¿Qué trayectoria sigue el sujeto tras ser coronado emperador en Roma?",
+  "tipo_sujeto": "gobernante",
+  "freeze": "0800-12-25",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_0800",
+  "cuts": [
+    {
+      "id": "C1_0768",
+      "corte": "C1_0768",
+      "cut_id": "C1_0768",
+      "date": "0768-09-24",
+      "fecha_corte": "0768-09-24",
+      "hecho": "Hereda el reino franco junto a su hermano; tras la muerte de este (771) queda como único rey.",
+      "P": [
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "poder",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "organizacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "rivalidad_poder",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C2_0782",
+      "corte": "C2_0782",
+      "cut_id": "C2_0782",
+      "date": "0782-01-01",
+      "fecha_corte": "0782-01-01",
+      "hecho": "Campañas contra los sajones; masacre de Verden y sumisión de los territorios del norte.",
+      "P": [
+        [
+          "conquista",
+          0.84
+        ],
+        [
+          "autoridad",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.82
+        ]
+      ],
+      "C": [
+        [
+          "terreno_hostil",
+          0.78
+        ],
+        [
+          "hostilidad",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C3_0800",
+      "corte": "C3_0800",
+      "cut_id": "C3_0800",
+      "date": "0800-12-25",
+      "fecha_corte": "0800-12-25",
+      "hecho": "Coronado emperador en Roma por el papa León III; une gran parte de Europa occidental bajo su corona.",
+      "P": [
+        [
+          "triunfo",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.84
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "legitimidad_percibida",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "escalada_status",
+          0.8
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

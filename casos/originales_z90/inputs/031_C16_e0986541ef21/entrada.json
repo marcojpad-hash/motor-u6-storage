@@ -1,0 +1,126 @@
+{
+  "case_id": "C16",
+  "question": "¿Qué trayectoria sigue el sujeto tras llegar a la corte del gran kan?",
+  "tipo_sujeto": "empresario",
+  "freeze": "1275-06-01",
+  "random_seed": 0,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C3_1275",
+  "cuts": [
+    {
+      "id": "C1_1271",
+      "corte": "C1_1271",
+      "cut_id": "C1_1271",
+      "date": "1271-01-01",
+      "fecha_corte": "1271-01-01",
+      "hecho": "Sale de Venecia con su padre y su tío rumbo a Oriente por la ruta terrestre.",
+      "P": [
+        [
+          "vision",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "viaje",
+          0.82
+        ],
+        [
+          "audacia",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.78
+        ],
+        [
+          "terreno_hostil",
+          0.75
+        ]
+      ]
+    },
+    {
+      "id": "C2_1273",
+      "corte": "C2_1273",
+      "cut_id": "C2_1273",
+      "date": "1273-01-01",
+      "fecha_corte": "1273-01-01",
+      "hecho": "Travesía por Persia y Asia Central; la ruta es larga, peligrosa y exige negociar con gobernantes locales.",
+      "P": [
+        [
+          "supervivencia",
+          0.82
+        ],
+        [
+          "resiliencia",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "flexibilidad_adaptativa",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "escasez",
+          0.75
+        ],
+        [
+          "terreno_hostil",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C3_1275",
+      "corte": "C3_1275",
+      "cut_id": "C3_1275",
+      "date": "1275-06-01",
+      "fecha_corte": "1275-06-01",
+      "hecho": "Llega a China (c. 1275) y entra al servicio de la corte del gran kan.",
+      "P": [
+        [
+          "logro_personal",
+          0.82
+        ],
+        [
+          "oportunidad",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "flexibilidad_adaptativa",
+          0.78
+        ],
+        [
+          "aprendizaje",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "escalada_status",
+          0.75
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Material pre-Z con fecha <= Z; fuentes primarias selladas en custodia (IDENTIDAD_SELLADA.json). Sin nombre ni URL en este archivo."
+}

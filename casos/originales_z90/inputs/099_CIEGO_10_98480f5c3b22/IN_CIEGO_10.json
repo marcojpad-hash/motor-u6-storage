@@ -1,0 +1,442 @@
+{
+  "case_id": "CIEGO_10",
+  "question": "caso_ciego_antecedentes_b",
+  "random_seed": 0,
+  "z90_date": null,
+  "modo_ciego": true,
+  "nota_pac": "Asignación P/A/C provisoria por round-robin peso-desc desde MARKERS planos (mismo formato flat que ciegos 09/10). Trazable; no inventa tokens.",
+  "fases": {
+    "A": "estabilidad prolongada post-conflicto; instituciones formales de república siguen",
+    "B": "estabilidad por acuerdos personales/redes; continuidad de dirección; centro interviene",
+    "C": "expansión económica; capital externo financia transformación",
+    "D": "crecimiento desigual; tierra/acceso rural cambia; labor rígida/deuda/dependencia",
+    "E": "competencia política limitada; oposición plural; demandas se enlazan",
+    "F": "sucesión bajo continuidad personal; debate estabilidad vs participación; reto público"
+  },
+  "cuts": [
+    {
+      "id": "A",
+      "P": [
+        [
+          "estabilidad",
+          0.84
+        ],
+        [
+          "reputacion_institucional",
+          0.8
+        ],
+        [
+          "organizacion",
+          0.74
+        ],
+        [
+          "autoridad",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "apego_normas",
+          0.84
+        ],
+        [
+          "participacion_colectiva",
+          0.78
+        ],
+        [
+          "orden_social",
+          0.72
+        ],
+        [
+          "responsabilidad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "legalidad",
+          0.82
+        ],
+        [
+          "consenso",
+          0.75
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "estatus_social",
+          0.65
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "P": [
+        [
+          "lealtad_al_regimen",
+          0.84
+        ],
+        [
+          "continuidad_sin_aviso",
+          0.84
+        ],
+        [
+          "control",
+          0.8
+        ],
+        [
+          "estabilidad",
+          0.75
+        ],
+        [
+          "autonomia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "redes_prestigio",
+          0.84
+        ],
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "sed_de_mando",
+          0.78
+        ],
+        [
+          "negociacion",
+          0.74
+        ],
+        [
+          "amenaza_central",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "liderazgo",
+          0.84
+        ],
+        [
+          "carisma",
+          0.82
+        ],
+        [
+          "maquiavelismo",
+          0.76
+        ],
+        [
+          "lealtad",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "P": [
+        [
+          "prosperidad",
+          0.84
+        ],
+        [
+          "escalada_status",
+          0.82
+        ],
+        [
+          "materialismo",
+          0.76
+        ],
+        [
+          "victoria",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "acumulacion_capital",
+          0.84
+        ],
+        [
+          "oportunidad",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.75
+        ],
+        [
+          "codicia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "escalada",
+          0.84
+        ],
+        [
+          "asimetria",
+          0.78
+        ],
+        [
+          "conquista",
+          0.74
+        ],
+        [
+          "botin",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "D",
+      "P": [
+        [
+          "asimetria",
+          0.84
+        ],
+        [
+          "opresion",
+          0.82
+        ],
+        [
+          "tradicionalismo",
+          0.78
+        ],
+        [
+          "codicia",
+          0.72
+        ],
+        [
+          "obligacion_moral",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "acumulacion_capital",
+          0.84
+        ],
+        [
+          "abuso_poder",
+          0.8
+        ],
+        [
+          "exceso_horas_laborales",
+          0.76
+        ],
+        [
+          "resistencia_cambio",
+          0.72
+        ],
+        [
+          "fragilidad_emocional_previa",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "dependencia",
+          0.84
+        ],
+        [
+          "desgaste_psicosocial",
+          0.8
+        ],
+        [
+          "materialismo",
+          0.74
+        ],
+        [
+          "estabilidad_ingreso_formal",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "E",
+      "P": [
+        [
+          "oposicion",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "desafio_autoridad",
+          0.8
+        ],
+        [
+          "poder",
+          0.78
+        ],
+        [
+          "rechazo_ritual_autoritario",
+          0.74
+        ]
+      ],
+      "A": [
+        [
+          "mensaje_de_cambio",
+          0.84
+        ],
+        [
+          "rivalidad_poder",
+          0.84
+        ],
+        [
+          "desconfianza_autoridad",
+          0.8
+        ],
+        [
+          "participacion_colectiva",
+          0.76
+        ],
+        [
+          "estancamiento_crisis",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "competencia",
+          0.84
+        ],
+        [
+          "popularidad",
+          0.82
+        ],
+        [
+          "discordia",
+          0.78
+        ],
+        [
+          "demanda_psicosocial_institucional",
+          0.75
+        ],
+        [
+          "eleccion_tragica",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "F",
+      "P": [
+        [
+          "continuidad_sin_aviso",
+          0.84
+        ],
+        [
+          "tension_alta",
+          0.84
+        ],
+        [
+          "miedo_cambio",
+          0.8
+        ],
+        [
+          "control",
+          0.78
+        ],
+        [
+          "fragmentacion",
+          0.75
+        ],
+        [
+          "romper_reglas",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "mensaje_de_cambio",
+          0.84
+        ],
+        [
+          "resistencia_cambio",
+          0.84
+        ],
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "escalada_autoritaria_rapida",
+          0.78
+        ],
+        [
+          "eleccion_tragica",
+          0.74
+        ],
+        [
+          "excepcion_trayectoria",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "desafio_autoridad",
+          0.84
+        ],
+        [
+          "miedo_caos",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "ira_institucional",
+          0.76
+        ],
+        [
+          "orgullo_hubris",
+          0.72
+        ],
+        [
+          "lealtad_al_regimen",
+          0.7
+        ]
+      ]
+    }
+  ],
+  "caldero_identity": {
+    "nombre_o_alias": "ciego_10_sellado",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "estabilidad",
+      "reputacion_institucional",
+      "organizacion",
+      "autoridad",
+      "apego_normas",
+      "participacion_colectiva",
+      "orden_social",
+      "responsabilidad",
+      "legalidad",
+      "consenso",
+      "jerarquia",
+      "estatus_social",
+      "lealtad_al_regimen",
+      "continuidad_sin_aviso",
+      "control",
+      "autonomia",
+      "redes_prestigio",
+      "poder",
+      "sed_de_mando",
+      "negociacion"
+    ]
+  },
+  "caldero_search_sources": [],
+  "external_lights": []
+}

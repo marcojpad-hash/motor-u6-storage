@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F004_07_CHANEL",
+ "question": "¿Qué trayectoria sigue Coco Chanel después de 1919?",
+ "person": "Coco Chanel",
+ "tipo_sujeto": "empresaria",
+ "freeze": "1920-01-01",
+ "z_trabajo": "1920-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1919-12-22",
+ "cuts": [
+  {
+   "id": "C1_1906",
+   "corte": "C1_1906",
+   "cut_id": "C1_1906",
+   "date": "1906",
+   "fecha_corte": "1906",
+   "hecho": "Nacida en un hospicio de pobres, huérfana de madre a los 11 años y criada en el orfanato de Aubazine, donde aprendió a coser; intenta una carrera de cantante y fracasa en Vichy.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "anhelo_seguridad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "supervivencia",
+     0.78
+    ],
+    [
+     "aprendizaje",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "escasez",
+     0.82
+    ],
+    [
+     "derrota_temporal",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Chanel nació en 1883 en el hospital de caridad de Saumur; su madre murió cuando ella tenía 11 años y fue enviada al orfanato de Aubazine, donde aprendió a coser.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1895",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1906 trabajó en Vichy buscando éxito como cantante; su voz era marginal y no consiguió trabajo escénico.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1906",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1916",
+   "corte": "C2_1916",
+   "cut_id": "C2_1916",
+   "date": "1916",
+   "fecha_corte": "1916",
+   "hecho": "Con financiación de Arthur 'Boy' Capel abre tienda de sombreros en París (1910), boutique en Deauville (1913) y casa en Biarritz (1915), con ropa de punto y jersey; en 1916 devuelve a Capel su inversión.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "autoexpresion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "audacia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.78
+    ],
+    [
+     "soporte",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Se hizo modista con licencia en 1910 y abrió Chanel Modes en el 21 de la rue Cambon; en 1913 abrió una boutique en Deauville financiada por Capel, con ropa de jersey y tricot.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1913",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1915 abrió un establecimiento en Biarritz; tras un año el negocio era tan lucrativo que en 1916 pudo reembolsar a Capel su inversión original.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1916",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1919_12",
+   "corte": "C3_1919_12",
+   "cut_id": "C3_1919_12",
+   "date": "1919-12-22",
+   "fecha_corte": "1919-12-22",
+   "hecho": "Compra el edificio del 31 de la rue Cambon (1918) y se registra como couturière con su maison de couture (1919); Capel, casado en 1918 con otra mujer, muere en un accidente de coche el 22 de diciembre de 1919.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "orgullo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "organizacion",
+     0.74
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "perdida",
+     0.82
+    ],
+    [
+     "duelo",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1918 compró el edificio del 31 de la rue Cambon; en 1919 estaba registrada como couturière con su maison de couture en esa dirección.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1919",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Capel se casó con Lady Diana Wyndham en 1918 y murió en un accidente de coche el 22 de diciembre de 1919.",
+     "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+     "source_date": "2026-10-27",
+     "claim_date": "1919-12-22",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta diciembre de 1919."
+}

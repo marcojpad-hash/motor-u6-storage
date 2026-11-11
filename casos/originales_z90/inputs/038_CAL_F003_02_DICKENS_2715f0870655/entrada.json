@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F003_02_DICKENS",
+ "question": "¿Qué trayectoria sigue Charles Dickens tras reunir sus Sketches by Boz en libro y empezar una serie mensual para Chapman and Hall?",
+ "person": "Charles Dickens",
+ "tipo_sujeto": "artista",
+ "freeze": "1836-04-02",
+ "z_trabajo": "1836-04-02",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1836-04-02",
+ "cuts": [
+  {
+   "id": "C1_1824",
+   "corte": "C1_1824",
+   "cut_id": "C1_1824",
+   "date": "1824",
+   "fecha_corte": "1824",
+   "hecho": "Su padre, John Dickens, entró en la prisión de deudores de Marshalsea en 1824; Charles, de 12 años, tuvo que dejar la escuela y trabajar jornadas de diez horas pegando etiquetas en la fábrica de betún Warren's Blacking por seis chelines a la semana.",
+   "P": [
+    [
+     "verguenza_infantil",
+     0.76
+    ],
+    [
+     "anhelo_seguridad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.78
+    ],
+    [
+     "supervivencia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "escasez",
+     0.82
+    ],
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1824 John Dickens fue enviado por sus acreedores a la prisión de deudores de Marshalsea; Charles, de 12 años, dejó la escuela y trabajó jornadas de diez horas en Warren's Blacking Warehouse.",
+     "source_url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+     "source_date": "2026-10-26",
+     "claim_date": "1824",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1834",
+   "corte": "C2_1834",
+   "cut_id": "C2_1834",
+   "date": "1834-08",
+   "fecha_corte": "1834-08",
+   "hecho": "En diciembre de 1833 publicó su primer relato en The Monthly Magazine; trabajaba como periodista parlamentario y para el Morning Chronicle, y en agosto de 1834 firmó por primera vez con el seudónimo Boz.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "autoexpresion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.76
+    ],
+    [
+     "reconocimiento",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1833 envió su primer relato, A Dinner at Poplar Walk, a The Monthly Magazine; trabajó como periodista político cubriendo los debates del Parlamento y campañas para el Morning Chronicle.",
+     "source_url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+     "source_date": "2026-10-26",
+     "claim_date": "1833",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Su primer relato apareció en The Monthly Magazine en diciembre de 1833; ninguno llevó firma hasta agosto de 1834, cuando The Boarding House apareció con el seudónimo Boz.",
+     "source_url": "https://en.wikipedia.org/wiki/Sketches_by_Boz",
+     "source_date": "2026-10-26",
+     "claim_date": "1834-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1836",
+   "corte": "C3_1836",
+   "cut_id": "C3_1836",
+   "date": "1836-04-02",
+   "fecha_corte": "1836-04-02",
+   "hecho": "En febrero de 1836 se publicaron en libro sus Sketches by Boz; por su éxito, la editorial Chapman and Hall le propuso escribir el texto para los grabados de Robert Seymour en una serie mensual, The Pickwick Papers, iniciada en marzo de 1836; el 2 de abril de 1836 se casó con Catherine Hogarth, hija del editor George Hogarth.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "compromiso_afectivo",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "humor",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.76
+    ],
+    [
+     "oportunidad",
+     0.8
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "La primera serie de Sketches by Boz la publicó John Macrone en dos volúmenes en febrero de 1836, un mes antes del primer número de The Pickwick Papers.",
+     "source_url": "https://en.wikipedia.org/wiki/Sketches_by_Boz",
+     "source_date": "2026-10-26",
+     "claim_date": "1836-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El éxito de Sketches by Boz llevó a Chapman and Hall a proponerle escribir el texto para los grabados de Robert Seymour en una entrega mensual.",
+     "source_url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+     "source_date": "2026-10-26",
+     "claim_date": "1836-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "The Pickwick Papers se publicó por entregas a partir de marzo de 1836, encargada por Chapman & Hall tras el éxito de Sketches by Boz.",
+     "source_url": "https://en.wikipedia.org/wiki/The_Pickwick_Papers",
+     "source_date": "2026-10-26",
+     "claim_date": "1836-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 2 de abril de 1836, tras un año de compromiso, se casó con Catherine Thomson Hogarth, hija de George Hogarth, editor del Evening Chronicle.",
+     "source_url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+     "source_date": "2026-10-26",
+     "claim_date": "1836-04-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta el 2 de abril de 1836."
+}

@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F003_05_FOUQUET",
+ "question": "¿Qué trayectoria sigue Nicolas Fouquet tras recibir a Luis XIV en la gran fiesta de inauguración de su château de Vaux-le-Vicomte?",
+ "person": "Nicolas Fouquet",
+ "tipo_sujeto": "politico",
+ "freeze": "1661-08-17",
+ "z_trabajo": "1661-08-17",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1661-08-17",
+ "cuts": [
+  {
+   "id": "C1_1653",
+   "corte": "C1_1653",
+   "cut_id": "C1_1653",
+   "date": "1653-02-07",
+   "fecha_corte": "1653-02-07",
+   "hecho": "Durante la Fronda se mantuvo leal al cardenal Mazarino y a la regente Ana de Austria; como recompensa obtuvo el 7 de febrero de 1653 la superintendencia de finanzas, la persona más joven en ocupar ese cargo, conservando además el puesto de procurador general del Parlamento de París.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "lealtad",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "alianza",
+     0.78
+    ],
+    [
+     "astucia",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "ascenso_reciente",
+     0.82
+    ],
+    [
+     "poder",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Durante la segunda Fronda permaneció leal a Mazarino y, a su regreso, pidió y obtuvo el 7 de febrero de 1653 la superintendencia de finanzas, siendo el más joven en ese cargo.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicolas_Fouquet",
+     "source_date": "2026-10-26",
+     "claim_date": "1653-02-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1650 compró el cargo de procurador general del Parlamento de París.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicolas_Fouquet",
+     "source_date": "2026-10-26",
+     "claim_date": "1650",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1658",
+   "corte": "C2_1658",
+   "cut_id": "C2_1658",
+   "date": "1658-12",
+   "fecha_corte": "1658-12",
+   "hecho": "Las finanzas reales estaban en desorden y él cubría a veces los pagos con su propio crédito; en 1658 compró Belle-Île y fortificó la isla con puerto y almacenes; en diciembre de 1658 presentó su renuncia a Mazarino, que no fue aceptada.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "busqueda_seguridad",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "acumulacion_capital",
+     0.78
+    ],
+    [
+     "doble_agenda",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.7
+    ],
+    [
+     "poder",
+     0.78
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Las largas guerras obligaron a Fouquet a cubrir la demanda de fondos tomando préstamos con su propio crédito; en diciembre de 1658 presentó su renuncia a Mazarino, que no fue aceptada.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicolas_Fouquet",
+     "source_date": "2026-10-26",
+     "claim_date": "1658-12",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1658 compró Belle-Île-en-Mer, reforzó sus fortificaciones y construyó un puerto y almacenes.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicolas_Fouquet",
+     "source_date": "2026-10-26",
+     "claim_date": "1658",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1661",
+   "corte": "C3_1661",
+   "cut_id": "C3_1661",
+   "date": "1661-08-17",
+   "fecha_corte": "1661-08-17",
+   "hecho": "Al morir Mazarino el 9 de marzo de 1661 esperaba ser primer ministro, pero Luis XIV declaró que gobernaría sin primer ministro y Colbert le llevaba informes adversos sobre el déficit; el 17 de agosto de 1661 ofreció al rey en Vaux-le-Vicomte, construido por Le Vau, Le Brun y Le Nôtre, una fiesta fastuosa con el estreno de Les Fâcheux de Molière, cena de Vatel y fuegos artificiales.",
+   "P": [
+    [
+     "orgullo_hubris",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "atencion_social",
+     0.78
+    ],
+    [
+     "persuasion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.8
+    ],
+    [
+     "desconfianza",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Con la muerte de Mazarino el 9 de marzo de 1661 Fouquet esperaba ser primer ministro, pero Luis XIV, receloso de su lealtad, declaró que gobernaría sin primer ministro; Colbert alimentaba el disgusto del rey con informes adversos.",
+     "source_url": "https://en.wikipedia.org/wiki/Nicolas_Fouquet",
+     "source_date": "2026-10-26",
+     "claim_date": "1661-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Vaux-le-Vicomte fue construido entre 1658 y 1661 por Le Vau, Le Nôtre y Le Brun; en su inauguración se representó una obra de Molière, con cena organizada por Vatel y fuegos artificiales.",
+     "source_url": "https://en.wikipedia.org/wiki/Vaux-le-Vicomte",
+     "source_date": "2026-10-26",
+     "claim_date": "1661-08-17",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La fiesta del 17 de agosto de 1661 estrenó Les Fâcheux de Molière.",
+     "source_url": "https://en.wikipedia.org/wiki/Vaux-le-Vicomte",
+     "source_date": "2026-10-26",
+     "claim_date": "1661-08-17",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta la fiesta del 17 de agosto de 1661."
+}

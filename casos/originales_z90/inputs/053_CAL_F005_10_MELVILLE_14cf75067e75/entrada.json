@@ -1,0 +1,173 @@
+{
+ "case_id": "CAL_F005_10_MELVILLE",
+ "question": "¿Qué trayectoria sigue Herman Melville después de su situación en septiembre de 1851?",
+ "person": "Herman Melville",
+ "tipo_sujeto": "artista",
+ "freeze": "1851-10-01",
+ "z_trabajo": "1851-10-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F005",
+  "custodio_destino": "GrokBot-custodio-rutina-F005",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1851-09",
+ "cuts": [
+  {
+   "id": "C1_1847",
+   "corte": "C1_1847",
+   "cut_id": "C1_1847",
+   "date": "1847",
+   "fecha_corte": "1847",
+   "hecho": "Marinero que desertó de un ballenero en las Marquesas; su primer libro Typee (1846) y la secuela Omoo (1847) tienen éxito y le dan seguridad económica para casarse con Elizabeth Shaw, hija del juez Lemuel Shaw.",
+   "P": [
+    [
+     "busqueda_libertad",
+     0.76
+    ],
+    [
+     "autoexpresion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "viaje",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "popularidad",
+     0.76
+    ],
+    [
+     "prosperidad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Typee (1846) y su secuela Omoo (1847) fueron relatos de aventuras en las islas; su éxito le dio la seguridad económica para casarse con Elizabeth Shaw, hija del juez Lemuel Shaw.",
+     "source_url": "https://en.wikipedia.org/wiki/Herman_Melville",
+     "source_date": "2026-10-28",
+     "claim_date": "1847",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1850",
+   "corte": "C2_1850",
+   "cut_id": "C2_1850",
+   "date": "1850-03",
+   "fecha_corte": "1850-03",
+   "hecho": "Mardi (1849), su primer libro no basado en su experiencia, no es bien recibido; Redburn (1849) y White-Jacket (1850) reciben reseñas respetables pero no venden lo bastante para sostener a su familia creciente.",
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "autoexpresion",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.78
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "frustracion",
+     0.74
+    ],
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Mardi (1849) no fue bien recibido; Redburn (1849) y White-Jacket (1850) tuvieron reseñas respetables pero no vendieron lo suficiente para sostener a su familia.",
+     "source_url": "https://en.wikipedia.org/wiki/Herman_Melville",
+     "source_date": "2026-10-28",
+     "claim_date": "1850-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1851",
+   "corte": "C3_1851",
+   "cut_id": "C3_1851",
+   "date": "1851-09",
+   "fecha_corte": "1851-09",
+   "hecho": "Pide prestados 3 000 dólares a su suegro para comprar la granja Arrowhead en Pittsfield (septiembre de 1850); traba amistad intensa con Hawthorne; lleva cerca de año y medio escribiendo un romance de aventuras ballenero, cada vez más ambicioso.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "obsesion",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.76
+    ],
+    [
+     "conexion_emocional",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En septiembre de 1850 pidió prestados tres mil dólares a su suegro Lemuel Shaw para comprar una granja de 160 acres en Pittsfield, que llamó Arrowhead; trató con frecuencia a Nathaniel Hawthorne.",
+     "source_url": "https://en.wikipedia.org/wiki/Herman_Melville",
+     "source_date": "2026-10-28",
+     "claim_date": "1850-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La primera mención de su libro ballenero es de una carta del 1 de mayo de 1850 ('voy a la mitad'); lo describió como 'un romance de aventuras basado en leyendas de las pesquerías de cachalote'; la obra le llevó casi año y medio de escritura y reflejaba su creciente ambición literaria.",
+     "source_url": "https://en.wikipedia.org/wiki/Herman_Melville",
+     "source_date": "2026-10-28",
+     "claim_date": "1851-09",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta septiembre de 1851."
+}

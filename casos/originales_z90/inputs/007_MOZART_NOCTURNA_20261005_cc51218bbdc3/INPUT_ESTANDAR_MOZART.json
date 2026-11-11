@@ -1,0 +1,411 @@
+{
+  "case_id": "MOZART_NOCTURNA_20261005",
+  "question": "MOZART_NOCTURNA_20261005",
+  "cuts": [
+    {
+      "id": "C1",
+      "hecho": "1756-1762: nace en Salzburg en una familia musical; recibe formación musical temprana de Leopold; muestra capacidades extraordinarias desde la infancia y actúa en cortes de Salzburg, Munich y Viena.",
+      "P": [
+        [
+          "aprendizaje",
+          0.84
+        ],
+        [
+          "conocimiento",
+          0.72
+        ],
+        [
+          "creatividad",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.62
+        ],
+        [
+          "desconfianza_autoridad",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.72
+        ],
+        [
+          "oportunidad",
+          0.68
+        ]
+      ]
+    },
+    {
+      "id": "C2",
+      "hecho": "1763-1766: gran viaje europeo con la familia; actuaciones en París, Londres, La Haya y territorios alemanes y suizos; aumenta la composición propia.",
+      "P": [
+        [
+          "viaje",
+          0.84
+        ],
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "aprendizaje",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "oportunidad",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "poder",
+          0.6
+        ]
+      ]
+    },
+    {
+      "id": "C3",
+      "hecho": "1769-1772: viajes italianos; encargos y estrenos operísticos; actividad compositiva intensiva y consolidación temprana como compositor.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "aprendizaje",
+          0.78
+        ],
+        [
+          "generacion_ideas",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "viaje",
+          0.72
+        ],
+        [
+          "autoridad",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "oportunidad",
+          0.8
+        ],
+        [
+          "competencia",
+          0.64
+        ]
+      ]
+    },
+    {
+      "id": "C4",
+      "hecho": "1773-1777: regreso y trabajo en Salzburg; producción musical continua; relación de servicio con la corte y búsqueda de oportunidades profesionales.",
+      "P": [
+        [
+          "creatividad",
+          0.82
+        ],
+        [
+          "trabajo_sedentario",
+          0.66
+        ],
+        [
+          "ambicion",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "autoridad",
+          0.76
+        ],
+        [
+          "rivalidad_profesional",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "reconocimiento",
+          0.7
+        ],
+        [
+          "poder",
+          0.64
+        ]
+      ]
+    },
+    {
+      "id": "C5",
+      "hecho": "1777-1778: viaje por Mannheim y París buscando oportunidades; muerte de Anna Maria Mozart en París; regreso posterior a Salzburg.",
+      "P": [
+        [
+          "viaje",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.76
+        ],
+        [
+          "busqueda_libertad",
+          0.68
+        ]
+      ],
+      "A": [
+        [
+          "perdida_familiar",
+          0.84
+        ],
+        [
+          "duelo",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "reconocimiento",
+          0.62
+        ]
+      ]
+    },
+    {
+      "id": "C6",
+      "hecho": "1779-1781: regreso a Salzburg; compone Idomeneo y se estrena en Munich en enero de 1781; conflicto creciente con el servicio arzobispal.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "independencia",
+          0.72
+        ],
+        [
+          "ambicion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "desafio_autoridad",
+          0.8
+        ],
+        [
+          "rivalidad_profesional",
+          0.64
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "oportunidad",
+          0.72
+        ],
+        [
+          "poder",
+          0.64
+        ]
+      ]
+    },
+    {
+      "id": "C7",
+      "hecho": "1781-1788-05-04: rompe con el servicio del arzobispo y se establece en Viena; Die Entführung aus dem Serail; matrimonio con Constanze; Figaro, éxito en Praga, Don Giovanni; continúa componiendo y trabajando de forma independiente.",
+      "P": [
+        [
+          "independencia",
+          0.84
+        ],
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "rivalidad",
+          0.68
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "oportunidad",
+          0.82
+        ],
+        [
+          "liderazgo",
+          0.7
+        ]
+      ]
+    },
+    {
+      "id": "C8",
+      "hecho": "1788-1789: tras el punto Z90 continúa componiendo; trabaja en la producción vienesa de Don Giovanni y realiza nuevas obras; Figaro vuelve a representarse en Viena en 1789.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "independencia",
+          0.74
+        ],
+        [
+          "generacion_ideas",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "rivalidad_profesional",
+          0.62
+        ],
+        [
+          "trabajo_sedentario",
+          0.6
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C9",
+      "hecho": "1790: compone Così fan tutte; mantiene actividad compositiva y teatral en Viena.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "generacion_ideas",
+          0.8
+        ],
+        [
+          "independencia",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "competencia",
+          0.62
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.76
+        ],
+        [
+          "oportunidad",
+          0.74
+        ],
+        [
+          "liderazgo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C10",
+      "hecho": "1791: compone y estrena La clemenza di Tito y Die Zauberflöte; continúa trabajando hasta enfermar gravemente a mediados de noviembre; muere el 5 de diciembre de 1791 en Viena.",
+      "P": [
+        [
+          "creatividad",
+          0.84
+        ],
+        [
+          "trabajo_sedentario",
+          0.66
+        ],
+        [
+          "generacion_ideas",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "crisis_abrupta",
+          0.78
+        ],
+        [
+          "perdida_definitiva",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.82
+        ],
+        [
+          "oportunidad",
+          0.7
+        ],
+        [
+          "liderazgo",
+          0.62
+        ]
+      ]
+    }
+  ],
+  "random_seed": 0
+}

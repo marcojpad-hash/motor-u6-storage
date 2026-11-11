@@ -1,0 +1,155 @@
+{
+  "estudio": "CASO_CIEGO_MUSK_FREEZE_1997_2000",
+  "fecha": "2026-09-09",
+  "tipo": "retrospectiva_de_apuesta",
+  "motor": "V15_sobre_V5_ciego_14_estilo",
+  "oficio": {
+    "regla": "tablero completo → un rumbo → una familia + un descarte → una frase → inversa",
+    "anti_dispersion": "N_familias=1 (no buffet de 3 opciones)",
+    "freeze": "≤2000; corte interesante E≈1997 señal política=mando organizacional",
+    "producto": "rumbo/tipo, no apellido ni evento exacto"
+  },
+  "estado": {
+    "apuesta": "Fundador serial que escala con capital y pelea el control del mando operativo, no político de partidos.",
+    "respuesta_revelada": "Elon Musk",
+    "resultado": "ACIERTO DEL RUMBO Y DEL TIPO GENERAL"
+  },
+  "cortes": {
+    "corte_freeze_A_F": {
+      "datos": [
+        "infancia: padre ingeniero, madre modelo, divorcio, casa dura",
+        "autoaprendizaje libros/computadoras; riesgo; sale solo ~17 del país",
+        "migración + trabajo granja/molino + universidad; cold-call a gente con poder",
+        "física + economía; deuda; abandona doctorado a los días por boom de herramientas/internet",
+        "co-funda software/guía urbana; noches de código; VC; consejo pone CEO externo; fundador a CTO",
+        "~1997: alianzas con prensa; pelea dirección estratégico; sed de recuperar CEO; conflictos de poder/agenda en el consejo",
+        "1998–2000: bloquea fusión; más democión; venta por caja; funda banco/pagos con capital propio; fusión con rival; otra vez lo bajan de CEO"
+      ],
+      "apuesta_unica_congelada": [
+        "fundador técnico-empresarial audaz + luchas seriales de control con capital/consejo",
+        "va a repetir ciclo a mayor escala: más ventures de herramientas/mercado + pelear no perder el mando",
+        "NO colapso-tragedia",
+        "NO trayectoria arte/fama-masa",
+        "NO carrera electoral aunque E prenda política/gobernante/poder (lectura: mando organizacional)"
+      ],
+      "apuestas_concretas_prolongadas": [
+        "sigue fundador/constructor serial, no empleado/académico estable",
+        "peleará CEO/control; intentará no quedar solo de CTO",
+        "escala con capital a infraestructura/herramientas ambiciosas",
+        "señal política 97 = poder/agenda/estatus primero dentro de empresas; si crece, opinión pública/regulación/discurso — sin apostar político electoral"
+      ]
+    },
+    "corte_completo_post_2000_solo_para_inversa": {
+      "datos": [
+        "funda SpaceX (CEO/ingeniero jefe)",
+        "Tesla: inversionista → CEO; casi quiebra dual; SolarCity",
+        "OpenAI (luego salida), Neuralink, Boring Company",
+        "compra Twitter → X; funda xAI; plataforma como megáfono/agenda",
+        "2024–25: donante/asesor breve DOGE; no cargo electivo; sale del rol"
+      ],
+      "nota": "No se usó para modificar la apuesta freeze; solo inversa."
+    }
+  },
+  "tablero_V15": {
+    "cadena_Top1_IDs_no_producto": [
+      "autodireccion",
+      "autodireccion",
+      "obtencion",
+      "audaz_empresa",
+      "audaz_empresa",
+      "situacion_dramatica_ambicion"
+    ],
+    "R_abs_gap_0_03": {
+      "A": 3,
+      "B": 3,
+      "C": 9,
+      "D": 11,
+      "E": 25,
+      "F": 39
+    },
+    "pinchos": {
+      "A": "autodireccion + creador + difusion",
+      "B": "autodireccion + individualista; ambicion ~0.73",
+      "C": "obtencion + ambicion + audaz_empresa",
+      "D": "audaz_empresa + rivalidad_superior_inferior + mando/control",
+      "E_1997": "mdp_politica_optima + arquetipo_el_gobernante + ambicion + rivalidad + audaz_empresa + mercado + principio_estado (~0.72); poder Schwartz ~0.67",
+      "F": "situacion_dramatica_ambicion + capital + otra democion; patron serial"
+    },
+    "lectura_E_sin_peek": "política/gobernante/poder/estado en 1997 = mando de consejo, no predicción electoral",
+    "_summary_keys": [
+      "A_sample",
+      "E_polit_like",
+      "E_top20",
+      "aquiles",
+      "arco",
+      "cadena",
+      "delta_ups",
+      "familias_lit_p65",
+      "freeze_hit_rate",
+      "freezes",
+      "fugas",
+      "meta_brief",
+      "p_30_ambicion",
+      "p_schwartz_06_poder",
+      "serie_R_counts",
+      "sesgo",
+      "track_series"
+    ]
+  },
+  "retrospectiva": {
+    "campo": [
+      "autodidacta técnico",
+      "redes/oportunidad",
+      "abandono academia",
+      "software/internet",
+      "VC vs fundador",
+      "pelea de consejo ~1997",
+      "venta + reinversión",
+      "pagos/online bank",
+      "segunda ousted CEO",
+      "SpaceX/Tesla/Neuralink/Boring/xAI/X",
+      "CEO recurrente / no soltar mando",
+      "plataforma pública + discurso",
+      "cola larga: DOGE/asesor 2024–25 sin carrera electoral"
+    ],
+    "rumbo": "autodidacta técnico → redes → deja academia → funda → capital lo baja → pelea consejo → vende → vuelve a fundar → ciclo a mayor escala (herramientas/mercado + pelear mando)",
+    "mecanismo_estructural_observado": "Cada vez que el capital/consejo le quita el mando operativo, el sujeto reinicia con más capital propio y pelea más duro por el CEO; la señal temprana de 'política' es sed de mando organizacional que décadas después puede tocar Estado como cola larga, sin ser el rumbo principal del freeze.",
+    "descarte": [
+      "colapso-tragedia",
+      "arte/fama-masa (Warhol)",
+      "político de partidos / carrera electoral (aunque E prenda política_optima/gobernante)"
+    ]
+  },
+  "pack_metodologico": {
+    "244": "DISPONIBLE — BOARDS_244.json en EXPERIMENTOS/13_CASO_CIEGO_MUSK_FREEZE_1997_2000/",
+    "traza": "DISPONIBLE — ORIGENES_RENOVABLES.json / traza_campo_244",
+    "A_prima": "corrida en RESULTADO/sesgo según pack V15",
+    "picos_mesetas": "via plugins V15 en corrida",
+    "3D": "reporte via plugin_reporte_3d en flujo V15",
+    "sesgo": "SESGO_LECTURA.json disponible",
+    "arco": "reconstruido + tablero",
+    "Aquiles": "lente de eje/temática; no producto Top1",
+    "Tortuga": "no fue el foco de este ciego; |R| engordó 3→39 (tablero se abre, rumbo igual aguantó)",
+    "Engine_V5": "NO TOCADO"
+  },
+  "evaluacion": {
+    "acierto": "Familia/rumbo: fundador serial + pelea mando vs capital; descarte electoral correcto; lectura organizacional del pincho 1997 correcta.",
+    "error_o_atencion": "Atención de menos: subestimar que mando+capital+plataforma pueden desembocar en política de Estado décadas después (DOGE) como cola larga — sin convertir eso en apuesta de 'va a ser político'.",
+    "aprendizaje": "Una sola familia basta para alta predictibilidad de rumbo/tipo; no hacen falta 3 opciones. Distinguir señal de poder (tablero) de evento electoral (no inventar).",
+    "retrospectiva_no_retroactiva": "La bio post-2000 no modificó la apuesta freeze; solo evalúa.",
+    "validacion": "Cualitativa de rumbo/tipo + métricas de tablero (|R|, pinchos, Top1 IDs no-producto)."
+  },
+  "reglas": [
+    "No inventar valores faltantes.",
+    "No convertir coincidencia retrospectiva en predicción universal.",
+    "Separar campo, rumbo, tipo/análogo, apuesta e inversa.",
+    "Una familia + un descarte + una frase (anti-dispersión).",
+    "Las familias históricas son capa lateral y no nuevos patrones del V5/244.",
+    "No modificar Engine_V5_CANONICO_SOLO.py ni patterns_final_v14.json.",
+    "Conservar la apuesta anterior para poder auditarla."
+  ],
+  "rutas": {
+    "experimento": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/EXPERIMENTOS/13_CASO_CIEGO_MUSK_FREEZE_1997_2000/",
+    "datos_caso": "/workspace/pred_hist_bio_in/TRANSFER_V15_1/DATOS_CASO/13_MUSK_1997_2000/"
+  }
+}
