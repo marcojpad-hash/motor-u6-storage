@@ -6,457 +6,609 @@
       "code": "0244",
       "token": "cameo_0244_appeal_change_institutions_regime",
       "label": "appeal_change_institutions_regime",
-      "root": "02"
+      "root": "02",
+      "peso_equivalente": 0.68,
+      "evidence_status": "unverified"
     },
     "026": {
       "code": "026",
       "token": "cameo_026_appeal_meet_negotiate",
       "label": "appeal_meet_negotiate",
-      "root": "02"
+      "root": "02",
+      "peso_equivalente": 0.68,
+      "evidence_status": "unverified"
     },
     "027": {
       "code": "027",
       "token": "cameo_027_appeal_settle_dispute",
       "label": "appeal_settle_dispute",
-      "root": "02"
+      "root": "02",
+      "peso_equivalente": 0.68,
+      "evidence_status": "unverified"
     },
     "028": {
       "code": "028",
       "token": "cameo_028_appeal_mediation",
       "label": "appeal_mediation",
-      "root": "02"
+      "root": "02",
+      "peso_equivalente": 0.68,
+      "evidence_status": "unverified"
     },
     "0344": {
       "code": "0344",
       "token": "cameo_0344_intent_change_institutions_regime",
       "label": "intent_change_institutions_regime",
-      "root": "03"
+      "root": "03",
+      "peso_equivalente": 0.62,
+      "evidence_status": "unverified"
     },
     "036": {
       "code": "036",
       "token": "cameo_036_intent_meet_negotiate",
       "label": "intent_meet_negotiate",
-      "root": "03"
+      "root": "03",
+      "peso_equivalente": 0.62,
+      "evidence_status": "unverified"
     },
     "037": {
       "code": "037",
       "token": "cameo_037_intent_settle_dispute",
       "label": "intent_settle_dispute",
-      "root": "03"
+      "root": "03",
+      "peso_equivalente": 0.62,
+      "evidence_status": "unverified"
     },
     "038": {
       "code": "038",
       "token": "cameo_038_intent_accept_mediation",
       "label": "intent_accept_mediation",
-      "root": "03"
+      "root": "03",
+      "peso_equivalente": 0.62,
+      "evidence_status": "unverified"
     },
     "046": {
       "code": "046",
       "token": "cameo_046_engage_negotiation",
       "label": "engage_negotiation",
-      "root": "04"
+      "root": "04",
+      "peso_equivalente": 0.65,
+      "evidence_status": "unverified"
     },
     "057": {
       "code": "057",
       "token": "cameo_057_sign_formal_agreement",
       "label": "sign_formal_agreement",
-      "root": "05"
+      "root": "05",
+      "peso_equivalente": 0.7,
+      "evidence_status": "unverified"
     },
     "063": {
       "code": "063",
       "token": "cameo_063_judicial_cooperation",
       "label": "judicial_cooperation",
-      "root": "06"
+      "root": "06",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "0811": {
       "code": "0811",
       "token": "cameo_0811_ease_political_freedom_restrictions",
       "label": "ease_political_freedom_restrictions",
-      "root": "08"
+      "root": "08",
+      "peso_equivalente": 0.66,
+      "evidence_status": "unverified"
     },
     "0812": {
       "code": "0812",
       "token": "cameo_0812_ease_party_ban",
       "label": "ease_party_ban",
-      "root": "08"
+      "root": "08",
+      "peso_equivalente": 0.66,
+      "evidence_status": "unverified"
     },
     "0814": {
       "code": "0814",
       "token": "cameo_0814_ease_emergency_state",
       "label": "ease_emergency_state",
-      "root": "08"
+      "root": "08",
+      "peso_equivalente": 0.66,
+      "evidence_status": "unverified"
     },
     "082": {
       "code": "082",
       "token": "cameo_082_ease_political_dissent",
       "label": "ease_political_dissent",
-      "root": "08"
+      "root": "08",
+      "peso_equivalente": 0.66,
+      "evidence_status": "unverified"
     },
     "0834": {
       "code": "0834",
       "token": "cameo_0834_accede_institutional_change",
       "label": "accede_institutional_change",
-      "root": "08"
+      "root": "08",
+      "peso_equivalente": 0.66,
+      "evidence_status": "unverified"
     },
     "091": {
       "code": "091",
       "token": "cameo_091_investigate_crime_corruption",
       "label": "investigate_crime_corruption",
-      "root": "09"
+      "root": "09",
+      "peso_equivalente": 0.58,
+      "evidence_status": "unverified"
     },
     "092": {
       "code": "092",
       "token": "cameo_092_investigate_human_rights",
       "label": "investigate_human_rights",
-      "root": "09"
+      "root": "09",
+      "peso_equivalente": 0.58,
+      "evidence_status": "unverified"
     },
     "094": {
       "code": "094",
       "token": "cameo_094_investigate_war_crimes",
       "label": "investigate_war_crimes",
-      "root": "09"
+      "root": "09",
+      "peso_equivalente": 0.58,
+      "evidence_status": "unverified"
     },
     "1041": {
       "code": "1041",
       "token": "cameo_1041_demand_leadership_change",
       "label": "demand_leadership_change",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "1042": {
       "code": "1042",
       "token": "cameo_1042_demand_policy_change",
       "label": "demand_policy_change",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "1043": {
       "code": "1043",
       "token": "cameo_1043_demand_rights",
       "label": "demand_rights",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "1044": {
       "code": "1044",
       "token": "cameo_1044_demand_institutional_change",
       "label": "demand_institutional_change",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "106": {
       "code": "106",
       "token": "cameo_106_demand_meeting_negotiation",
       "label": "demand_meeting_negotiation",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "107": {
       "code": "107",
       "token": "cameo_107_demand_settle_dispute",
       "label": "demand_settle_dispute",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "108": {
       "code": "108",
       "token": "cameo_108_demand_mediation",
       "label": "demand_mediation",
-      "root": "10"
+      "root": "10",
+      "peso_equivalente": 0.74,
+      "evidence_status": "unverified"
     },
     "111": {
       "code": "111",
       "token": "cameo_111_criticize_denounce",
       "label": "criticize_denounce",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "1121": {
       "code": "1121",
       "token": "cameo_1121_accuse_crime_corruption",
       "label": "accuse_crime_corruption",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "1122": {
       "code": "1122",
       "token": "cameo_1122_accuse_human_rights",
       "label": "accuse_human_rights",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "113": {
       "code": "113",
       "token": "cameo_113_rally_opposition",
       "label": "rally_opposition",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "114": {
       "code": "114",
       "token": "cameo_114_official_complaint",
       "label": "official_complaint",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "115": {
       "code": "115",
       "token": "cameo_115_bring_lawsuit",
       "label": "bring_lawsuit",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "116": {
       "code": "116",
       "token": "cameo_116_find_guilty_liable",
       "label": "find_guilty_liable",
-      "root": "11"
+      "root": "11",
+      "peso_equivalente": 0.72,
+      "evidence_status": "unverified"
     },
     "1231": {
       "code": "1231",
       "token": "cameo_1231_reject_leadership_change",
       "label": "reject_leadership_change",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "1232": {
       "code": "1232",
       "token": "cameo_1232_reject_policy_change",
       "label": "reject_policy_change",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "1233": {
       "code": "1233",
       "token": "cameo_1233_reject_rights",
       "label": "reject_rights",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "1234": {
       "code": "1234",
       "token": "cameo_1234_reject_institutional_change",
       "label": "reject_institutional_change",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "124": {
       "code": "124",
       "token": "cameo_124_refuse_yield",
       "label": "refuse_yield",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "125": {
       "code": "125",
       "token": "cameo_125_reject_negotiation",
       "label": "reject_negotiation",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "126": {
       "code": "126",
       "token": "cameo_126_reject_mediation",
       "label": "reject_mediation",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "127": {
       "code": "127",
       "token": "cameo_127_reject_settlement",
       "label": "reject_settlement",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "128": {
       "code": "128",
       "token": "cameo_128_defy_norms_law",
       "label": "defy_norms_law",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "129": {
       "code": "129",
       "token": "cameo_129_veto",
       "label": "veto",
-      "root": "12"
+      "root": "12",
+      "peso_equivalente": 0.75,
+      "evidence_status": "unverified"
     },
     "1312": {
       "code": "1312",
       "token": "cameo_1312_threaten_sanctions",
       "label": "threaten_sanctions",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "1313": {
       "code": "1313",
       "token": "cameo_1313_threaten_break_relations",
       "label": "threaten_break_relations",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "1321": {
       "code": "1321",
       "token": "cameo_1321_threaten_political_restrictions",
       "label": "threaten_political_restrictions",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "1322": {
       "code": "1322",
       "token": "cameo_1322_threaten_party_ban",
       "label": "threaten_party_ban",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "1324": {
       "code": "1324",
       "token": "cameo_1324_threaten_emergency_state",
       "label": "threaten_emergency_state",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "133": {
       "code": "133",
       "token": "cameo_133_threaten_protest",
       "label": "threaten_protest",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "134": {
       "code": "134",
       "token": "cameo_134_threaten_halt_negotiations",
       "label": "threaten_halt_negotiations",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "137": {
       "code": "137",
       "token": "cameo_137_threaten_repression",
       "label": "threaten_repression",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "139": {
       "code": "139",
       "token": "cameo_139_ultimatum",
       "label": "ultimatum",
-      "root": "13"
+      "root": "13",
+      "peso_equivalente": 0.82,
+      "evidence_status": "unverified"
     },
     "1412": {
       "code": "1412",
       "token": "cameo_1412_demonstrate_policy_change",
       "label": "demonstrate_policy_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1413": {
       "code": "1413",
       "token": "cameo_1413_demonstrate_rights",
       "label": "demonstrate_rights",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1414": {
       "code": "1414",
       "token": "cameo_1414_demonstrate_institutional_change",
       "label": "demonstrate_institutional_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1432": {
       "code": "1432",
       "token": "cameo_1432_strike_boycott_policy_change",
       "label": "strike_boycott_policy_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1434": {
       "code": "1434",
       "token": "cameo_1434_strike_boycott_institutional_change",
       "label": "strike_boycott_institutional_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1442": {
       "code": "1442",
       "token": "cameo_1442_obstruct_policy_change",
       "label": "obstruct_policy_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "1444": {
       "code": "1444",
       "token": "cameo_1444_obstruct_institutional_change",
       "label": "obstruct_institutional_change",
-      "root": "14"
+      "root": "14",
+      "peso_equivalente": 0.76,
+      "evidence_status": "unverified"
     },
     "151": {
       "code": "151",
       "token": "cameo_151_increase_police_alert",
       "label": "increase_police_alert",
-      "root": "15"
+      "root": "15",
+      "peso_equivalente": 0.8,
+      "evidence_status": "unverified"
     },
     "153": {
       "code": "153",
       "token": "cameo_153_increase_police_power",
       "label": "increase_police_power",
-      "root": "15"
+      "root": "15",
+      "peso_equivalente": 0.8,
+      "evidence_status": "unverified"
     },
     "155": {
       "code": "155",
       "token": "cameo_155_increase_cyber_forces",
       "label": "increase_cyber_forces",
-      "root": "15"
+      "root": "15",
+      "peso_equivalente": 0.8,
+      "evidence_status": "unverified"
     },
     "161": {
       "code": "161",
       "token": "cameo_161_break_diplomatic_relations",
       "label": "break_diplomatic_relations",
-      "root": "16"
+      "root": "16",
+      "peso_equivalente": 0.84,
+      "evidence_status": "unverified"
     },
     "163": {
       "code": "163",
       "token": "cameo_163_impose_sanctions",
       "label": "impose_sanctions",
-      "root": "16"
+      "root": "16",
+      "peso_equivalente": 0.84,
+      "evidence_status": "unverified"
     },
     "164": {
       "code": "164",
       "token": "cameo_164_halt_negotiations",
       "label": "halt_negotiations",
-      "root": "16"
+      "root": "16",
+      "peso_equivalente": 0.84,
+      "evidence_status": "unverified"
     },
     "165": {
       "code": "165",
       "token": "cameo_165_halt_mediation",
       "label": "halt_mediation",
-      "root": "16"
+      "root": "16",
+      "peso_equivalente": 0.84,
+      "evidence_status": "unverified"
     },
     "1721": {
       "code": "1721",
       "token": "cameo_1721_impose_political_restrictions",
       "label": "impose_political_restrictions",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "1722": {
       "code": "1722",
       "token": "cameo_1722_ban_parties_politicians",
       "label": "ban_parties_politicians",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "1723": {
       "code": "1723",
       "token": "cameo_1723_impose_curfew",
       "label": "impose_curfew",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "1724": {
       "code": "1724",
       "token": "cameo_1724_impose_emergency_state",
       "label": "impose_emergency_state",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "173": {
       "code": "173",
       "token": "cameo_173_arrest_detain_charge",
       "label": "arrest_detain_charge",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "174": {
       "code": "174",
       "token": "cameo_174_expel_deport",
       "label": "expel_deport",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "175": {
       "code": "175",
       "token": "cameo_175_violent_repression",
       "label": "violent_repression",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "176": {
       "code": "176",
       "token": "cameo_176_cyber_attack",
       "label": "cyber_attack",
-      "root": "17"
+      "root": "17",
+      "peso_equivalente": 0.88,
+      "evidence_status": "unverified"
     },
     "191": {
       "code": "191",
       "token": "cameo_191_blockade_restrict_movement",
       "label": "blockade_restrict_movement",
-      "root": "19"
+      "root": "19",
+      "peso_equivalente": 0.94,
+      "evidence_status": "unverified"
     },
     "196": {
       "code": "196",
       "token": "cameo_196_violate_ceasefire",
       "label": "violate_ceasefire",
-      "root": "19"
+      "root": "19",
+      "peso_equivalente": 0.94,
+      "evidence_status": "unverified"
     }
   }
 }
