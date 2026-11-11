@@ -1,0 +1,21 @@
+# Ampliación pedida por Mj: candidatos locales, no artefactos globales
+
+Se deja de interpretar giro total, y_inicio=y_fin y radio en U como señal: son diagnósticos/artefactos del marco, no variables candidatas. No se cambia la transformación, los cortes, tokens ni pesos. Se preserva el control anterior como histórico, no como confirmación.
+
+## Definiciones antes de esta simulación
+
+1. En cada real y cada réplica, fase unwrap en radianes se ajusta OLS `phi=a+omega*(t-t0)` sobre TODOS sus cortes. Para cada slot i→i+1: `epsilon_i = (phi[i+1]-phi[i])-omega*(t[i+1]-t[i])`; se informa epsilon firmado en grados.
+2. Ponderación radial fija, simétrica: `rbar=(r[i]+r[i+1])/2`. Magnitud candidata = `rbar*abs(epsilon_i)` (arco residual), en unidades PC12. También se informa `rbar*abs(delta_phi)` para distinguir arco bruto de innovación respecto a tendencia, y distancia euclidiana `hypot(delta_x,delta_y)` como contraste independiente del origen polar. No es una velocidad ni nueva ponderación del motor.
+3. Percentil por paso compara ese slot real con el mismo slot de cada nulo, manteniendo las fechas reales fijas. Cada réplica tiene SU omega. Se guarda además p superior frente al MAXIMO de todos los pasos de esa réplica: control de elegir un salto tras verlo. Se aplica Holm por separado sobre pasos×casos×nulos principales para arco residual y distancia. Se informa también el máximo por caso y su Holm sobre 5×3=15 comparaciones. Todo post-hoc/exploratorio, no confirmatorio.
+4. Valle = min(y) en el marco tal cual lo arroja el script. Para percentil de profundidad se usa `-min(y)` (mayor=más profundo); se conservan min_y firmado y percentil correspondiente. Se contrasta además `max(abs(y))`, invariante a reflexión, porque la handedness SVD no es semántica. No se refleja para mejorar resultados. Holm separado sobre 15 comparaciones por cada estadístico de valle.
+5. Los mismos 1000 nulos por celda, mismas semillas, familias/N y varianzas EN ESPERANZA del control anterior. No se modifican umbrales ni se reemplazan muestras según resultados. Los pasos con delta_t=0 se retienen como desplazamientos, no se interpretan como velocidades; los años reconstruidos se explicitan.
+6. Mozart raw: se destacan C8→C9 y C5→C6, sin seleccionar otro contraste por ventaja. Napoleón solo CSV: destacar C4→C5 (Brumario, 76.4°). Sin su crudo_P no se inventan nulos familiares; se usan 1000 permutaciones de geometría2D conocida, válidas para magnitudes invariantes hasta redondeo y supuesto de brecha PC2/PC3 no degenerada, no verificable. El valle depende de reflexión: percentil acotado por las dos orientaciones posibles, no un percentil exacto de raw desconocido.
+7. H7 externo sigue apéndice: RW/iid PROXY de varianzas H6 y permutaciones geométricas2D, tiempo=índice. No participa en ajustes multiplicidad de cinco casos. Se guarda todo, no solo resultados favorables.
+8. Che: auditar entrada calibrada, fuente original y preparación/sello. No reparar/reordenar/cambiar tokens. Describir fechas civiles vs año decimal redondeado y orden por cierre de intervalos superpuestos.
+
+Sin Engine, sin H/ranking/apuesta. Commit local, sin push.
+
+## Nulo más estricto, ampliación solicitada antes de esta corrida
+Se filtra CADA pool original de 1000 falsas por R² del ajuste lineal de fase >= R² real del caso (tolerancia 1e-12). Se informan tamaño aceptado y percentiles por paso usando su propio omega y radio medio. No se fuerza un tamaño ocultando rechazos; si acepta menos de30, queda BAJA_MUESTRA. Esto condiciona linealidad, no iguala omega, giro ni todas las propiedades reales. Para Napoleón, solo pool geométrico2D condicionado: sin familias no puede declararse un nulo familiar emparejado. Focos solicitados: Mozart C8→C9, C9→C10 y C5→C6; Napoleón C4→C5 y C1→C2. Se conserva residual firmado para distinguir aceleración y estancamiento; el percentil de anomalía usa su magnitud absoluta ponderada por radio medio.
+
+Precisión de reporte: además de profundidad=-min_y se entrega percentil de min_y firmado. Los máximos de arco/distancia del nulo condicionado tienen su ajuste Holm separado sobre las15 celdas principales (y pasos en familia separada114). No se mezclan con las comparaciones sin condicionar ni con los CSV externos.

@@ -1,0 +1,7 @@
+MOZART10 faseR2 0.9537475299240257 aceptados {'permutacion': 4, 'caminata_gaussiana': 64, 'iid_gaussiano': 3}
+GALILEO faseR2 0.9181083029834634 aceptados {'permutacion': 58, 'caminata_gaussiana': 711, 'iid_gaussiano': 56}
+HAWKING6 faseR2 0.9247119419210851 aceptados {'permutacion': 26, 'caminata_gaussiana': 272, 'iid_gaussiano': 62}
+CHE faseR2 0.9474926481459335 aceptados {'permutacion': 20, 'caminata_gaussiana': 559, 'iid_gaussiano': 31}
+MLK faseR2 0.9117663651800373 aceptados {'permutacion': 30, 'caminata_gaussiana': 88, 'iid_gaussiano': 46}
+NAPOLEON_CSV faseR2 0.9481533259299474 aceptados {'permutacion_geometria2D': 8}
+HAWKING7_CSV faseR2 0.9559986315767958 aceptados {'permutacion_geometria2D': 51, 'caminata_gaussiana_PROXY_H6': 637, 'iid_gaussiano_PROXY_H6': 73}

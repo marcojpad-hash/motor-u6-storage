@@ -1,0 +1,2121 @@
+{
+  "estado": "EJECUTADO_NULOS_CINCO_CASOS_Y_PROXY_H7",
+  "seed": 202611110503,
+  "n_por_celda": 1000,
+  "n_simulaciones_principales": 15000,
+  "n_simulaciones_proxy": 2000,
+  "n_permutaciones_geometria_h7": 1000,
+  "modo": "GEOMETRICO_DESCRIPTIVO_NO_PREDICTIVO",
+  "casos": [
+    {
+      "caso": "MOZART10",
+      "n_cortes": 10,
+      "n_familias": 244,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/gate_mozart/result.json.gz",
+      "source_sha256": "acd797939421e0959b4cdfc9e965b1884cb12985d2593bb709078cb6b7d04322",
+      "real": {
+        "giro_abs": 222.45249997614937,
+        "giro_signed": 222.45249997614937,
+        "forma": true,
+        "b": 0.07588598412896014,
+        "r2_radio": 0.8719612992108375,
+        "fit_radio": "AJUSTADO_CONTRACCION",
+        "radio_n_fit": 6,
+        "shape": {
+          "coincide": true,
+          "cresta": 0,
+          "valle": 4,
+          "salto_inicio": 7,
+          "salto_fin": 8,
+          "salto_largo": true,
+          "salto_cruza_eje": true,
+          "cruza_x_0": false,
+          "cruza_y_0": true,
+          "subida": true,
+          "salto_umbral": 0.19204002970820677,
+          "pasos": [
+            0.14934492757254378,
+            0.12802668647213786,
+            0.21417784639133045,
+            0.08906594175425302,
+            0.18762216574656293,
+            0.06863404553312623,
+            0.07968618132984054,
+            0.3863295032506453,
+            0.12271350796593779
+          ],
+          "todos_saltos_candidatos": [
+            7
+          ],
+          "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+        },
+        "jump_pos": 7,
+        "jump_ratio": 3.0175701167953077,
+        "rise_zmax": 2.4185378511264495,
+        "winner_ids": [
+          15
+        ],
+        "winner_families": [
+          "24_rivalidad_de_superior_e_inferior"
+        ],
+        "winner_delta": 0.19620000000000004,
+        "sine_pct": 82.89456640886173
+      },
+      "ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10"
+      ],
+      "nulos": {
+        "permutacion": {
+          "n": 1000,
+          "seed": 202611110503,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 15.2,
+          "giro_ge_180_pct": 58.8,
+          "ajuste_radio_valido_pct": 17.0,
+          "salto_pct": 64.7,
+          "metricas": {
+            "giro_abs": {
+              "real": 222.45249997614937,
+              "n_validos": 1000,
+              "percentil": 54.9,
+              "p_superior": 0.45454545454545453,
+              "mediana_nulo": 213.00407212026067,
+              "q025": 14.443550076565572,
+              "q975": 695.793003111887
+            },
+            "b": {
+              "real": 0.07588598412896014,
+              "n_validos": 170,
+              "percentil": 1.7647058823529411,
+              "p_superior": 0.9824561403508771,
+              "mediana_nulo": 0.5768004438252329,
+              "q025": 0.07764978298707559,
+              "q975": 1.0120031777531542
+            },
+            "r2_radio": {
+              "real": 0.8719612992108375,
+              "n_validos": 170,
+              "percentil": 32.35294117647059,
+              "p_superior": 0.6783625730994152,
+              "mediana_nulo": 0.9286369314959534,
+              "q025": 0.38221248875101677,
+              "q975": 0.9995314445180883
+            },
+            "sine_pct": {
+              "real": 82.89456640886173,
+              "n_validos": 1000,
+              "percentil": 93.7,
+              "p_superior": 0.06393606393606394,
+              "mediana_nulo": 56.36767339567517,
+              "q025": 24.7816418022225,
+              "q975": 89.58264118628908
+            },
+            "jump_ratio": {
+              "real": 3.0175701167953077,
+              "n_validos": 647,
+              "percentil": 96.44513137557959,
+              "p_superior": 0.037037037037037035,
+              "mediana_nulo": 1.8753121079870279,
+              "q025": 1.5104704751235594,
+              "q975": 3.1746332585176336,
+              "p_superior_holm": 0.25925925925925924,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.4185378511264495,
+              "n_validos": 647,
+              "percentil": 8.191653786707883,
+              "p_superior": 0.9459876543209876,
+              "mediana_nulo": 3.073665540944355,
+              "q025": 2.3414918327539747,
+              "q975": 3.541439574944788,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0,
+          "ordenes_unicos": 1000,
+          "frecuencia_familias_ganadoras": {
+            "30_ambicion": 266,
+            "schwartz_07_logro": 60,
+            "19_asesinato_de_un_pariente_no_reconocido": 95,
+            "arquetipo_el_inocente": 189,
+            "tainter_02_rendimientos_decrecientes": 11,
+            "social_02_milgram_obediencia": 3,
+            "schwartz_10_autodireccion": 4,
+            "dumezil_f1_soberania_magica": 15,
+            "24_rivalidad_de_superior_e_inferior": 4
+          },
+          "mismo_slot_pct_total": 7.7,
+          "mismo_slot_pct_cond_salto": 11.901081916537867,
+          "misma_familia_pct_total": 0.4,
+          "misma_familia_pct_cond_salto": 0.6182380216383307
+        },
+        "caminata_gaussiana": {
+          "n": 1000,
+          "seed": 202611110504,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 26.3,
+          "giro_ge_180_pct": 98.6,
+          "ajuste_radio_valido_pct": 76.2,
+          "salto_pct": 34.300000000000004,
+          "metricas": {
+            "giro_abs": {
+              "real": 222.45249997614937,
+              "n_validos": 1000,
+              "percentil": 29.8,
+              "p_superior": 0.7022977022977023,
+              "mediana_nulo": 229.41481128072104,
+              "q025": 194.31904830353184,
+              "q975": 256.32890734373336
+            },
+            "b": {
+              "real": 0.07588598412896014,
+              "n_validos": 762,
+              "percentil": 31.364829396325458,
+              "p_superior": 0.6867627785058977,
+              "mediana_nulo": 0.09665619347298676,
+              "q025": 0.03993536614106303,
+              "q975": 0.5712982355703241
+            },
+            "r2_radio": {
+              "real": 0.8719612992108375,
+              "n_validos": 762,
+              "percentil": 58.661417322834644,
+              "p_superior": 0.41415465268676277,
+              "mediana_nulo": 0.8413102978155231,
+              "q025": 0.5066180701335401,
+              "q975": 0.9977900319751313
+            },
+            "sine_pct": {
+              "real": 82.89456640886173,
+              "n_validos": 1000,
+              "percentil": 43.4,
+              "p_superior": 0.5664335664335665,
+              "mediana_nulo": 84.26192020054076,
+              "q025": 68.76980753147545,
+              "q975": 95.53140031317992
+            },
+            "jump_ratio": {
+              "real": 3.0175701167953077,
+              "n_validos": 343,
+              "percentil": 99.70845481049562,
+              "p_superior": 0.005813953488372093,
+              "mediana_nulo": 1.7709740760435415,
+              "q025": 1.5099558941350903,
+              "q975": 2.636832306698984,
+              "p_superior_holm": 0.05813953488372093,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.4185378511264495,
+              "n_validos": 343,
+              "percentil": 97.95918367346938,
+              "p_superior": 0.023255813953488372,
+              "mediana_nulo": 1.739933929199785,
+              "q025": 1.2194288584801396,
+              "q975": 2.38800342306093,
+              "p_superior_holm": 0.27906976744186046,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9950349736630127,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "situacion_dramatica_ambicion": 17,
+            "30_ambicion": 61,
+            "utopia_autonomia_atenas": 35,
+            "arquetipo_el_inocente": 30,
+            "dumezil_desequilibrio_f3_come_al_resto": 13,
+            "predictivo_02_mdp_politica_optima": 11,
+            "crisis_vocacional": 2,
+            "utopia_principio_mercado": 35,
+            "schwartz_04_conformidad": 7,
+            "schwartz_10_autodireccion": 9,
+            "social_02_milgram_obediencia": 11,
+            "19_asesinato_de_un_pariente_no_reconocido": 18,
+            "12_obtencion": 21,
+            "monomito_05_cruce_del_primer_umbral": 8,
+            "schwartz_07_logro": 29,
+            "utopia_mentalidad_liberal": 5,
+            "arquetipo_el_explorador": 3,
+            "arquetipo_el_sabio": 2,
+            "schwartz_02_benevolencia": 6,
+            "24_rivalidad_de_superior_e_inferior": 11,
+            "dumezil_f1_soberania_magica": 2,
+            "dumezil_desequilibrio_f1_come_al_resto": 3,
+            "utopia_mentalidad_milenarista": 1,
+            "1_suplica": 1,
+            "tainter_02_rendimientos_decrecientes": 2
+          },
+          "mismo_slot_pct_total": 10.7,
+          "mismo_slot_pct_cond_salto": 31.19533527696793,
+          "misma_familia_pct_total": 1.0999999999999999,
+          "misma_familia_pct_cond_salto": 3.206997084548105
+        },
+        "iid_gaussiano": {
+          "n": 1000,
+          "seed": 202611110505,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 8.4,
+          "giro_ge_180_pct": 63.2,
+          "ajuste_radio_valido_pct": 15.299999999999999,
+          "salto_pct": 52.2,
+          "metricas": {
+            "giro_abs": {
+              "real": 222.45249997614937,
+              "n_validos": 1000,
+              "percentil": 44.6,
+              "p_superior": 0.5544455544455544,
+              "mediana_nulo": 244.98499734749245,
+              "q025": 19.479149613998374,
+              "q975": 746.3336582587652
+            },
+            "b": {
+              "real": 0.07588598412896014,
+              "n_validos": 153,
+              "percentil": 3.9215686274509802,
+              "p_superior": 0.961038961038961,
+              "mediana_nulo": 0.5650184981318497,
+              "q025": 0.04369448912507524,
+              "q975": 1.602864076782838
+            },
+            "r2_radio": {
+              "real": 0.8719612992108375,
+              "n_validos": 153,
+              "percentil": 45.09803921568628,
+              "p_superior": 0.551948051948052,
+              "mediana_nulo": 0.895520115708135,
+              "q025": 0.27124881396777323,
+              "q975": 0.9997458650631287
+            },
+            "sine_pct": {
+              "real": 82.89456640886173,
+              "n_validos": 1000,
+              "percentil": 94.9,
+              "p_superior": 0.05194805194805195,
+              "mediana_nulo": 56.573687563383054,
+              "q025": 22.79362527676841,
+              "q975": 87.00665872841759
+            },
+            "jump_ratio": {
+              "real": 3.0175701167953077,
+              "n_validos": 522,
+              "percentil": 98.65900383141762,
+              "p_superior": 0.015296367112810707,
+              "mediana_nulo": 1.8173621565340485,
+              "q025": 1.5136352754815345,
+              "q975": 2.7002729853022442,
+              "p_superior_holm": 0.12237093690248566,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.4185378511264495,
+              "n_validos": 522,
+              "percentil": 6.513409961685824,
+              "p_superior": 0.9349904397705545,
+              "mediana_nulo": 3.289072181475457,
+              "q025": 2.2267026140938206,
+              "q975": 4.946691389063545,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9994588463069898,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "utopia_autonomia_atenas": 51,
+            "situacion_dramatica_ambicion": 22,
+            "dumezil_desequilibrio_f3_come_al_resto": 25,
+            "utopia_principio_mercado": 46,
+            "schwartz_10_autodireccion": 15,
+            "30_ambicion": 111,
+            "monomito_05_cruce_del_primer_umbral": 13,
+            "predictivo_02_mdp_politica_optima": 18,
+            "arquetipo_el_inocente": 49,
+            "schwartz_07_logro": 44,
+            "schwartz_02_benevolencia": 8,
+            "24_rivalidad_de_superior_e_inferior": 20,
+            "12_obtencion": 26,
+            "arquetipo_el_explorador": 6,
+            "arquetipo_el_creador": 1,
+            "19_asesinato_de_un_pariente_no_reconocido": 19,
+            "social_02_milgram_obediencia": 17,
+            "tainter_02_rendimientos_decrecientes": 4,
+            "schwartz_04_conformidad": 10,
+            "utopia_mentalidad_liberal": 2,
+            "dumezil_f3_fecundidad": 3,
+            "dumezil_desequilibrio_f1_come_al_resto": 4,
+            "crisis_vocacional": 1,
+            "utopia_mentalidad_milenarista": 1,
+            "arquetipo_el_sabio": 3,
+            "utopia_arkadia": 1,
+            "dumezil_f1_soberania_magica": 2
+          },
+          "mismo_slot_pct_total": 7.3999999999999995,
+          "mismo_slot_pct_cond_salto": 14.17624521072797,
+          "misma_familia_pct_total": 2.0,
+          "misma_familia_pct_cond_salto": 3.8314176245210727
+        }
+      },
+      "sine_cache_reference_abs_error": 5.684341886080802e-14
+    },
+    {
+      "caso": "GALILEO",
+      "n_cortes": 10,
+      "n_familias": 244,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/GALILEO.json",
+      "source_sha256": "ee097c53173dbf07275c39c25bc336ce87624be2aa6cb594c48c09cf0e888750",
+      "real": {
+        "giro_abs": 240.74462212301145,
+        "giro_signed": 240.74462212301145,
+        "forma": true,
+        "b": 0.04996500619150104,
+        "r2_radio": 0.8782581689814928,
+        "fit_radio": "AJUSTADO_CONTRACCION",
+        "radio_n_fit": 4,
+        "shape": {
+          "coincide": true,
+          "cresta": 0,
+          "valle": 6,
+          "salto_inicio": 6,
+          "salto_fin": 7,
+          "salto_largo": true,
+          "salto_cruza_eje": true,
+          "cruza_x_0": false,
+          "cruza_y_0": true,
+          "subida": true,
+          "salto_umbral": 0.19364364858720245,
+          "pasos": [
+            0.36237981473047337,
+            0.24953743483827176,
+            0.12909576572480164,
+            0.06567693259160721,
+            0.03896184221366681,
+            0.026641425200123327,
+            0.34023744697865116,
+            0.16565467107234616,
+            0.11123325340241269
+          ],
+          "todos_saltos_candidatos": [
+            6
+          ],
+          "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+        },
+        "jump_pos": 6,
+        "jump_ratio": 2.6355430410006497,
+        "rise_zmax": 2.0701966780270626,
+        "winner_ids": [
+          34
+        ],
+        "winner_families": [
+          "8_rebelion"
+        ],
+        "winner_delta": 0.2803,
+        "sine_pct": 82.98896205462222
+      },
+      "ids": [
+        "G_C1",
+        "G_C2",
+        "G_C3",
+        "G_C4",
+        "G_C5",
+        "G_C6",
+        "G_C7",
+        "G_C8",
+        "G_C9",
+        "G_C10_Z90"
+      ],
+      "nulos": {
+        "permutacion": {
+          "n": 1000,
+          "seed": 202611110603,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 16.2,
+          "giro_ge_180_pct": 63.2,
+          "ajuste_radio_valido_pct": 16.8,
+          "salto_pct": 63.9,
+          "metricas": {
+            "giro_abs": {
+              "real": 240.74462212301145,
+              "n_validos": 1000,
+              "percentil": 47.8,
+              "p_superior": 0.5264735264735265,
+              "mediana_nulo": 241.67881448250938,
+              "q025": 15.514612551318145,
+              "q975": 710.3927735255453
+            },
+            "b": {
+              "real": 0.04996500619150104,
+              "n_validos": 168,
+              "percentil": 64.28571428571429,
+              "p_superior": 0.3609467455621302,
+              "mediana_nulo": 0.041803647649000096,
+              "q025": 0.008350081815644101,
+              "q975": 0.08034664787970983
+            },
+            "r2_radio": {
+              "real": 0.8782581689814928,
+              "n_validos": 168,
+              "percentil": 37.5,
+              "p_superior": 0.6272189349112426,
+              "mediana_nulo": 0.915559324048463,
+              "q025": 0.7264183346717401,
+              "q975": 0.999565055684142
+            },
+            "sine_pct": {
+              "real": 82.98896205462222,
+              "n_validos": 1000,
+              "percentil": 95.1,
+              "p_superior": 0.04995004995004995,
+              "mediana_nulo": 55.09689404229647,
+              "q025": 26.333980753978153,
+              "q975": 88.19565062511072
+            },
+            "jump_ratio": {
+              "real": 2.6355430410006497,
+              "n_validos": 639,
+              "percentil": 91.07981220657277,
+              "p_superior": 0.090625,
+              "mediana_nulo": 1.8205266316802828,
+              "q025": 1.5152698549752102,
+              "q975": 3.5593090260087945,
+              "p_superior_holm": 0.3625,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.0701966780270626,
+              "n_validos": 639,
+              "percentil": 2.97339593114241,
+              "p_superior": 0.9890625,
+              "mediana_nulo": 3.051949481017602,
+              "q025": 2.0701966780270626,
+              "q975": 3.216654317860028,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0,
+          "ordenes_unicos": 999,
+          "frecuencia_familias_ganadoras": {
+            "arquetipo_el_creador": 185,
+            "schwartz_10_autodireccion": 145,
+            "strauss_howe_02_the_awakening": 167,
+            "social_01_asch_conformidad": 154,
+            "social_07_noelle_neumann_espiral_silencio": 216,
+            "tainter_02_rendimientos_decrecientes": 204,
+            "8_rebelion": 220
+          },
+          "mismo_slot_pct_total": 8.5,
+          "mismo_slot_pct_cond_salto": 13.302034428794991,
+          "misma_familia_pct_total": 22.0,
+          "misma_familia_pct_cond_salto": 34.42879499217528
+        },
+        "caminata_gaussiana": {
+          "n": 1000,
+          "seed": 202611110604,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 30.2,
+          "giro_ge_180_pct": 98.4,
+          "ajuste_radio_valido_pct": 69.39999999999999,
+          "salto_pct": 39.800000000000004,
+          "metricas": {
+            "giro_abs": {
+              "real": 240.74462212301145,
+              "n_validos": 1000,
+              "percentil": 76.0,
+              "p_superior": 0.24075924075924077,
+              "mediana_nulo": 228.99861885740978,
+              "q025": 189.58878733616731,
+              "q975": 257.72394106951344
+            },
+            "b": {
+              "real": 0.04996500619150104,
+              "n_validos": 694,
+              "percentil": 87.7521613832853,
+              "p_superior": 0.1237410071942446,
+              "mediana_nulo": 0.03146027541776389,
+              "q025": 0.013527151787765257,
+              "q975": 0.06252005169383819
+            },
+            "r2_radio": {
+              "real": 0.8782581689814928,
+              "n_validos": 694,
+              "percentil": 17.86743515850144,
+              "p_superior": 0.8215827338129497,
+              "mediana_nulo": 0.9460394524029417,
+              "q025": 0.7098478706260175,
+              "q975": 0.9992348298679862
+            },
+            "sine_pct": {
+              "real": 82.98896205462222,
+              "n_validos": 1000,
+              "percentil": 34.0,
+              "p_superior": 0.6603396603396603,
+              "mediana_nulo": 86.55090994548317,
+              "q025": 64.38159206345902,
+              "q975": 97.28574942455359
+            },
+            "jump_ratio": {
+              "real": 2.6355430410006497,
+              "n_validos": 398,
+              "percentil": 95.47738693467336,
+              "p_superior": 0.047619047619047616,
+              "mediana_nulo": 1.793946520451964,
+              "q025": 1.5120639105871059,
+              "q975": 2.8371339666967392,
+              "p_superior_holm": 0.25925925925925924,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.0701966780270626,
+              "n_validos": 398,
+              "percentil": 87.43718592964824,
+              "p_superior": 0.12781954887218044,
+              "mediana_nulo": 1.5910218433086816,
+              "q025": 1.0222482979078589,
+              "q975": 2.4537529250689243,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9955666271264298,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "spengler_01_primavera_nacimiento_mistico": 6,
+            "utopia_orden_sparte": 10,
+            "bbk_02_celebridad": 14,
+            "strauss_howe_02_the_awakening": 35,
+            "social_01_asch_conformidad": 49,
+            "dumezil_f1_soberania_magica": 9,
+            "8_rebelion": 86,
+            "anacyclosis_05_democracia": 36,
+            "tainter_02_rendimientos_decrecientes": 29,
+            "schwartz_10_autodireccion": 37,
+            "sistema_domiciano_maiestas": 2,
+            "arquetipo_el_creador": 21,
+            "spengler_02_verano_otono_racionalizacion": 7,
+            "dumezil_desequilibrio_f1_come_al_resto": 8,
+            "23_necesidad_de_sacrificar_a_los_seres_queridos": 5,
+            "social_07_noelle_neumann_espiral_silencio": 20,
+            "sistema_domiciano": 5,
+            "distopia_coercion_total": 3,
+            "utopia_mentalidad_liberal": 1,
+            "mbti_introvertido": 5,
+            "utopia_autonomia_atenas": 6,
+            "mbti_factor_pensamiento_t": 4
+          },
+          "mismo_slot_pct_total": 8.9,
+          "mismo_slot_pct_cond_salto": 22.36180904522613,
+          "misma_familia_pct_total": 8.6,
+          "misma_familia_pct_cond_salto": 21.608040201005025
+        },
+        "iid_gaussiano": {
+          "n": 1000,
+          "seed": 202611110605,
+          "n_cortes": 10,
+          "n_familias": 244,
+          "forma_pct": 9.9,
+          "giro_ge_180_pct": 61.8,
+          "ajuste_radio_valido_pct": 13.700000000000001,
+          "salto_pct": 49.5,
+          "metricas": {
+            "giro_abs": {
+              "real": 240.74462212301145,
+              "n_validos": 1000,
+              "percentil": 50.1,
+              "p_superior": 0.4995004995004995,
+              "mediana_nulo": 240.47374737265477,
+              "q025": 17.743159974889302,
+              "q975": 728.1929570813375
+            },
+            "b": {
+              "real": 0.04996500619150104,
+              "n_validos": 137,
+              "percentil": 51.824817518248175,
+              "p_superior": 0.4855072463768116,
+              "mediana_nulo": 0.047391350964537865,
+              "q025": 0.012311304509032171,
+              "q975": 0.1394726739016768
+            },
+            "r2_radio": {
+              "real": 0.8782581689814928,
+              "n_validos": 137,
+              "percentil": 40.87591240875913,
+              "p_superior": 0.5942028985507246,
+              "mediana_nulo": 0.8977396119076111,
+              "q025": 0.639212400008901,
+              "q975": 0.9994307325920041
+            },
+            "sine_pct": {
+              "real": 82.98896205462222,
+              "n_validos": 1000,
+              "percentil": 95.6,
+              "p_superior": 0.04495504495504495,
+              "mediana_nulo": 55.51081628062592,
+              "q025": 24.867786347971077,
+              "q975": 84.94369414949685
+            },
+            "jump_ratio": {
+              "real": 2.6355430410006497,
+              "n_validos": 495,
+              "percentil": 95.95959595959596,
+              "p_superior": 0.04233870967741935,
+              "mediana_nulo": 1.7540190897140706,
+              "q025": 1.5094802874762745,
+              "q975": 2.9193747581237033,
+              "p_superior_holm": 0.25925925925925924,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.0701966780270626,
+              "n_validos": 495,
+              "percentil": 5.656565656565657,
+              "p_superior": 0.9435483870967742,
+              "mediana_nulo": 3.198669016622624,
+              "q025": 1.8176624958691312,
+              "q975": 4.963074080475683,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.001805794516748,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "arquetipo_el_creador": 28,
+            "schwartz_10_autodireccion": 56,
+            "anacyclosis_05_democracia": 50,
+            "tainter_02_rendimientos_decrecientes": 44,
+            "8_rebelion": 100,
+            "mbti_introvertido": 7,
+            "social_01_asch_conformidad": 53,
+            "strauss_howe_02_the_awakening": 35,
+            "utopia_autonomia_atenas": 10,
+            "utopia_orden_sparte": 23,
+            "dumezil_desequilibrio_f1_come_al_resto": 9,
+            "social_07_noelle_neumann_espiral_silencio": 31,
+            "mbti_racional": 3,
+            "sistema_domiciano": 2,
+            "bbk_02_celebridad": 10,
+            "utopia_principio_libertades": 1,
+            "dumezil_f1_soberania_magica": 13,
+            "mbti_factor_pensamiento_t": 7,
+            "sistema_domiciano_maiestas": 3,
+            "23_necesidad_de_sacrificar_a_los_seres_queridos": 1,
+            "bbk_03_individualista": 1,
+            "distopia_coercion_total": 3,
+            "spengler_02_verano_otono_racionalizacion": 2,
+            "utopia_mentalidad_liberal": 3
+          },
+          "mismo_slot_pct_total": 6.5,
+          "mismo_slot_pct_cond_salto": 13.131313131313131,
+          "misma_familia_pct_total": 10.0,
+          "misma_familia_pct_cond_salto": 20.2020202020202
+        }
+      },
+      "sine_cache_reference_abs_error": 1.4210854715202004e-14
+    },
+    {
+      "caso": "HAWKING6",
+      "n_cortes": 6,
+      "n_familias": 244,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/HAWKING.json",
+      "source_sha256": "cb48560d1c66ccb85c402bdd3ca6be8cb71e3a3153c8f8d3608ddcaca25f3609",
+      "real": {
+        "giro_abs": 221.4112404460489,
+        "giro_signed": 221.4112404460489,
+        "forma": true,
+        "b": 0.12418353546491169,
+        "r2_radio": 0.9752792514912834,
+        "fit_radio": "AJUSTADO_CONTRACCION",
+        "radio_n_fit": 3,
+        "shape": {
+          "coincide": true,
+          "cresta": 0,
+          "valle": 3,
+          "salto_inicio": 3,
+          "salto_fin": 4,
+          "salto_largo": true,
+          "salto_cruza_eje": true,
+          "cruza_x_0": false,
+          "cruza_y_0": true,
+          "subida": true,
+          "salto_umbral": 0.3378572021717585,
+          "pasos": [
+            0.22523813478117236,
+            0.22379859470068228,
+            0.2971756775500596,
+            0.38000983640861036,
+            0.12356178224319984
+          ],
+          "todos_saltos_candidatos": [
+            3
+          ],
+          "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+        },
+        "jump_pos": 3,
+        "jump_ratio": 1.6871469690414758,
+        "rise_zmax": 1.9848840395708713,
+        "winner_ids": [
+          53,
+          155
+        ],
+        "winner_families": [
+          "arquetipo_el_gobernante",
+          "monomito_12_regreso_con_el_elixir"
+        ],
+        "winner_delta": 0.17300000000000004,
+        "sine_pct": 97.23925973479662
+      },
+      "ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "nulos": {
+        "permutacion": {
+          "n": 1000,
+          "seed": 202611110703,
+          "n_cortes": 6,
+          "n_familias": 244,
+          "forma_pct": 5.2,
+          "giro_ge_180_pct": 63.2,
+          "ajuste_radio_valido_pct": 18.2,
+          "salto_pct": 34.2,
+          "metricas": {
+            "giro_abs": {
+              "real": 221.4112404460489,
+              "n_validos": 1000,
+              "percentil": 52.25,
+              "p_superior": 0.4935064935064935,
+              "mediana_nulo": 216.95397303186036,
+              "q025": 17.537367988757413,
+              "q975": 582.0950825868292
+            },
+            "b": {
+              "real": 0.12418353546491169,
+              "n_validos": 182,
+              "percentil": 86.81318681318682,
+              "p_superior": 0.16393442622950818,
+              "mediana_nulo": 0.07696318995150449,
+              "q025": 0.0239642149380452,
+              "q975": 0.12950419946103517
+            },
+            "r2_radio": {
+              "real": 0.9752792514912834,
+              "n_validos": 182,
+              "percentil": 65.93406593406593,
+              "p_superior": 0.37158469945355194,
+              "mediana_nulo": 0.9595225525477314,
+              "q025": 0.7861121779752738,
+              "q975": 0.9997277087417876
+            },
+            "sine_pct": {
+              "real": 97.23925973479662,
+              "n_validos": 1000,
+              "percentil": 84.7,
+              "p_superior": 0.15484515484515485,
+              "mediana_nulo": 80.55205179312446,
+              "q025": 32.25906420603955,
+              "q975": 99.5210219453987
+            },
+            "jump_ratio": {
+              "real": 1.6871469690414758,
+              "n_validos": 342,
+              "percentil": 46.345029239766085,
+              "p_superior": 0.5422740524781341,
+              "mediana_nulo": 1.7262109974039737,
+              "q025": 1.5367807401558076,
+              "q975": 3.096428371988399,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 1.9848840395708713,
+              "n_validos": 342,
+              "percentil": 11.11111111111111,
+              "p_superior": 0.9300291545189504,
+              "mediana_nulo": 2.4968961109046175,
+              "q025": 1.8862135034997178,
+              "q975": 2.750062370199867,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0,
+          "ordenes_unicos": 549,
+          "frecuencia_familias_ganadoras": {
+            "mbti_factor_sensacion_s": 120,
+            "mentor": 86,
+            "spengler_02_verano_otono_racionalizacion": 125,
+            "spengler_01_primavera_nacimiento_mistico": 12,
+            "arquetipo_el_creador": 16,
+            "social_07_noelle_neumann_espiral_silencio": 26,
+            "6_desastre": 12,
+            "arquetipo_el_gobernante": 1,
+            "monomito_12_regreso_con_el_elixir": 1
+          },
+          "mismo_slot_pct_total": 7.6,
+          "mismo_slot_pct_cond_salto": 22.22222222222222,
+          "misma_familia_pct_total": 0.1,
+          "misma_familia_pct_cond_salto": 0.29239766081871343
+        },
+        "caminata_gaussiana": {
+          "n": 1000,
+          "seed": 202611110704,
+          "n_cortes": 6,
+          "n_familias": 244,
+          "forma_pct": 10.100000000000001,
+          "giro_ge_180_pct": 98.4,
+          "ajuste_radio_valido_pct": 82.1,
+          "salto_pct": 22.3,
+          "metricas": {
+            "giro_abs": {
+              "real": 221.4112404460489,
+              "n_validos": 1000,
+              "percentil": 33.2,
+              "p_superior": 0.6683316683316683,
+              "mediana_nulo": 227.04140880405254,
+              "q025": 188.47904674096776,
+              "q975": 252.91647251431476
+            },
+            "b": {
+              "real": 0.12418353546491169,
+              "n_validos": 821,
+              "percentil": 66.01705237515225,
+              "p_superior": 0.340632603406326,
+              "mediana_nulo": 0.09521404144871846,
+              "q025": 0.03276364450010069,
+              "q975": 0.24542428423787443
+            },
+            "r2_radio": {
+              "real": 0.9752792514912834,
+              "n_validos": 821,
+              "percentil": 72.71619975639464,
+              "p_superior": 0.2737226277372263,
+              "mediana_nulo": 0.9279072005015425,
+              "q025": 0.6439652777091811,
+              "q975": 0.9995896043174304
+            },
+            "sine_pct": {
+              "real": 97.23925973479662,
+              "n_validos": 1000,
+              "percentil": 85.9,
+              "p_superior": 0.14185814185814186,
+              "mediana_nulo": 87.76754831147582,
+              "q025": 65.82887291408056,
+              "q975": 99.60948245858386
+            },
+            "jump_ratio": {
+              "real": 1.6871469690414758,
+              "n_validos": 223,
+              "percentil": 43.497757847533634,
+              "p_superior": 0.5669642857142857,
+              "mediana_nulo": 1.7218579118604387,
+              "q025": 1.5119345855502697,
+              "q975": 2.5147090719163394,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 1.9848840395708713,
+              "n_validos": 223,
+              "percentil": 29.59641255605381,
+              "p_superior": 0.7053571428571429,
+              "mediana_nulo": 2.2378642339311496,
+              "q025": 1.549747121793928,
+              "q975": 3.1935064831832864,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9958050726153593,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "kwml_01_rey": 9,
+            "arquetipo_el_creador": 21,
+            "social_07_noelle_neumann_espiral_silencio": 11,
+            "mbti_factor_pensamiento_t": 7,
+            "mentor": 33,
+            "mbti_factor_sensacion_s": 10,
+            "mbti_factor_intuicion_n": 18,
+            "spengler_02_verano_otono_racionalizacion": 33,
+            "arquetipo_el_sabio": 10,
+            "spengler_01_primavera_nacimiento_mistico": 6,
+            "social_04_rogers_difusion_innovaciones": 9,
+            "monomito_12_regreso_con_el_elixir": 9,
+            "anacyclosis_01_monarquia": 2,
+            "ttm_04_accion": 9,
+            "6_desastre": 8,
+            "bbk_03_individualista": 6,
+            "35_recuperacion_de_lo_perdido": 8,
+            "arquetipo_el_gobernante": 9,
+            "strauss_howe_02_the_awakening": 1,
+            "predictivo_03_cox_survival_riesgo": 2,
+            "tainter_02_rendimientos_decrecientes": 1,
+            "9_audaz_empresa": 1
+          },
+          "mismo_slot_pct_total": 9.5,
+          "mismo_slot_pct_cond_salto": 42.600896860986545,
+          "misma_familia_pct_total": 1.7999999999999998,
+          "misma_familia_pct_cond_salto": 8.071748878923767
+        },
+        "iid_gaussiano": {
+          "n": 1000,
+          "seed": 202611110705,
+          "n_cortes": 6,
+          "n_familias": 244,
+          "forma_pct": 3.5000000000000004,
+          "giro_ge_180_pct": 59.3,
+          "ajuste_radio_valido_pct": 15.5,
+          "salto_pct": 27.3,
+          "metricas": {
+            "giro_abs": {
+              "real": 221.4112404460489,
+              "n_validos": 1000,
+              "percentil": 51.9,
+              "p_superior": 0.48151848151848153,
+              "mediana_nulo": 214.70944853339162,
+              "q025": 11.65301314579414,
+              "q975": 588.0547741730603
+            },
+            "b": {
+              "real": 0.12418353546491169,
+              "n_validos": 155,
+              "percentil": 51.61290322580645,
+              "p_superior": 0.48717948717948717,
+              "mediana_nulo": 0.12213725502188723,
+              "q025": 0.02970381412098008,
+              "q975": 0.35599113238002345
+            },
+            "r2_radio": {
+              "real": 0.9752792514912834,
+              "n_validos": 155,
+              "percentil": 76.7741935483871,
+              "p_superior": 0.23717948717948717,
+              "mediana_nulo": 0.906175286892262,
+              "q025": 0.4378251860685818,
+              "q975": 0.9995551499660986
+            },
+            "sine_pct": {
+              "real": 97.23925973479662,
+              "n_validos": 1000,
+              "percentil": 90.3,
+              "p_superior": 0.0979020979020979,
+              "mediana_nulo": 79.63001769503374,
+              "q025": 35.62379518197773,
+              "q975": 99.31661916613244
+            },
+            "jump_ratio": {
+              "real": 1.6871469690414758,
+              "n_validos": 273,
+              "percentil": 43.223443223443226,
+              "p_superior": 0.5693430656934306,
+              "mediana_nulo": 1.734836738110713,
+              "q025": 1.5086232197718048,
+              "q975": 2.8651882699459117,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 1.9848840395708713,
+              "n_validos": 273,
+              "percentil": 2.197802197802198,
+              "p_superior": 0.9781021897810219,
+              "mediana_nulo": 3.4356870692400254,
+              "q025": 2.111545155349472,
+              "q975": 4.793770828007376,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0054004516855322,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "mentor": 39,
+            "mbti_factor_sensacion_s": 16,
+            "bbk_03_individualista": 6,
+            "ttm_04_accion": 8,
+            "spengler_02_verano_otono_racionalizacion": 49,
+            "arquetipo_el_creador": 25,
+            "arquetipo_el_gobernante": 10,
+            "social_04_rogers_difusion_innovaciones": 16,
+            "monomito_12_regreso_con_el_elixir": 18,
+            "mbti_factor_pensamiento_t": 5,
+            "35_recuperacion_de_lo_perdido": 10,
+            "arquetipo_el_sabio": 10,
+            "tainter_02_rendimientos_decrecientes": 1,
+            "mbti_factor_intuicion_n": 12,
+            "social_07_noelle_neumann_espiral_silencio": 8,
+            "kwml_01_rey": 18,
+            "predictivo_03_cox_survival_riesgo": 4,
+            "6_desastre": 4,
+            "9_audaz_empresa": 10,
+            "anacyclosis_01_monarquia": 2,
+            "spengler_01_primavera_nacimiento_mistico": 2
+          },
+          "mismo_slot_pct_total": 5.3,
+          "mismo_slot_pct_cond_salto": 19.413919413919412,
+          "misma_familia_pct_total": 2.8000000000000003,
+          "misma_familia_pct_cond_salto": 10.256410256410257
+        }
+      },
+      "sine_cache_reference_abs_error": 1.4210854715202004e-13
+    },
+    {
+      "caso": "CHE",
+      "n_cortes": 9,
+      "n_familias": 244,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/CHE.json",
+      "source_sha256": "0904c8433c7e76d69d34c19c4572f6f7de3c1fa7a0a1f3e0d9bf2c37e9d1d6e7",
+      "real": {
+        "giro_abs": 225.75431896447867,
+        "giro_signed": 225.75431896447867,
+        "forma": true,
+        "b": 0.09319571802897018,
+        "r2_radio": 0.951808404494616,
+        "fit_radio": "AJUSTADO_CONTRACCION",
+        "radio_n_fit": 5,
+        "shape": {
+          "coincide": true,
+          "cresta": 0,
+          "valle": 5,
+          "salto_inicio": 6,
+          "salto_fin": 7,
+          "salto_largo": true,
+          "salto_cruza_eje": true,
+          "cruza_x_0": false,
+          "cruza_y_0": true,
+          "subida": true,
+          "salto_umbral": 0.26182941844093305,
+          "pasos": [
+            0.1567046326711133,
+            0.050110612316794284,
+            0.19240125858346413,
+            0.1973683637506454,
+            0.4480974337475148,
+            0.1305756301602758,
+            0.8742350033678856,
+            0.1299904569236207
+          ],
+          "todos_saltos_candidatos": [
+            6
+          ],
+          "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+        },
+        "jump_pos": 6,
+        "jump_ratio": 5.008423090347507,
+        "rise_zmax": 2.5810958394495787,
+        "winner_ids": [
+          108,
+          203
+        ],
+        "winner_families": [
+          "eterno_retorno_02_cosmizacion_fundacion",
+          "tainter_01_inversion_complejidad_productiva"
+        ],
+        "winner_delta": 0.2984,
+        "sine_pct": 92.99589601454784
+      },
+      "ids": [
+        "C1",
+        "C3",
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "nulos": {
+        "permutacion": {
+          "n": 1000,
+          "seed": 202611110803,
+          "n_cortes": 9,
+          "n_familias": 244,
+          "forma_pct": 12.3,
+          "giro_ge_180_pct": 58.8,
+          "ajuste_radio_valido_pct": 16.0,
+          "salto_pct": 50.6,
+          "metricas": {
+            "giro_abs": {
+              "real": 225.75431896447867,
+              "n_validos": 1000,
+              "percentil": 55.35,
+              "p_superior": 0.45254745254745254,
+              "mediana_nulo": 215.38227109142898,
+              "q025": 10.082386589212746,
+              "q975": 693.7104507523097
+            },
+            "b": {
+              "real": 0.09319571802897018,
+              "n_validos": 160,
+              "percentil": 21.25,
+              "p_superior": 0.7888198757763976,
+              "mediana_nulo": 0.1645334271875592,
+              "q025": 0.05033809051447197,
+              "q975": 0.26582719866890947
+            },
+            "r2_radio": {
+              "real": 0.951808404494616,
+              "n_validos": 160,
+              "percentil": 42.5,
+              "p_superior": 0.577639751552795,
+              "mediana_nulo": 0.972197239608908,
+              "q025": 0.5357998316010196,
+              "q975": 0.9998903374408449
+            },
+            "sine_pct": {
+              "real": 92.99589601454784,
+              "n_validos": 1000,
+              "percentil": 97.8,
+              "p_superior": 0.022977022977022976,
+              "mediana_nulo": 64.34848603780912,
+              "q025": 38.82669265821133,
+              "q975": 92.68353566823559
+            },
+            "jump_ratio": {
+              "real": 5.008423090347507,
+              "n_validos": 506,
+              "percentil": 99.60474308300395,
+              "p_superior": 0.005917159763313609,
+              "mediana_nulo": 1.7608522278961107,
+              "q025": 1.5095087889970389,
+              "q975": 4.071704866181477,
+              "p_superior_holm": 0.05813953488372093,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.5810958394495787,
+              "n_validos": 506,
+              "percentil": 26.58102766798419,
+              "p_superior": 0.7396449704142012,
+              "mediana_nulo": 3.0000000000000004,
+              "q025": 2.1382083809916135,
+              "q975": 3.363985091206988,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0,
+          "ordenes_unicos": 999,
+          "frecuencia_familias_ganadoras": {
+            "tainter_04_colapso_por_simplificacion_forzada": 213,
+            "arquetipo_el_gobernante": 98,
+            "20_sacrificio_por_un_ideal": 137,
+            "9_audaz_empresa": 127,
+            "eterno_retorno_02_cosmizacion_fundacion": 148,
+            "social_02_milgram_obediencia": 35,
+            "dumezil_f2_fuerza": 33,
+            "monomito_05_cruce_del_primer_umbral": 6,
+            "monomito_03_rechazo_del_llamado": 2,
+            "tainter_01_inversion_complejidad_productiva": 11,
+            "monomito_04_encuentro_con_el_mentor": 4
+          },
+          "mismo_slot_pct_total": 7.3999999999999995,
+          "mismo_slot_pct_cond_salto": 14.624505928853756,
+          "misma_familia_pct_total": 14.799999999999999,
+          "misma_familia_pct_cond_salto": 29.24901185770751
+        },
+        "caminata_gaussiana": {
+          "n": 1000,
+          "seed": 202611110804,
+          "n_cortes": 9,
+          "n_familias": 244,
+          "forma_pct": 20.1,
+          "giro_ge_180_pct": 100.0,
+          "ajuste_radio_valido_pct": 92.4,
+          "salto_pct": 21.7,
+          "metricas": {
+            "giro_abs": {
+              "real": 225.75431896447867,
+              "n_validos": 1000,
+              "percentil": 32.2,
+              "p_superior": 0.6783216783216783,
+              "mediana_nulo": 230.1875537025274,
+              "q025": 212.26802458771243,
+              "q975": 248.9001498699497
+            },
+            "b": {
+              "real": 0.09319571802897018,
+              "n_validos": 924,
+              "percentil": 5.086580086580087,
+              "p_superior": 0.9491891891891892,
+              "mediana_nulo": 0.15049980588455103,
+              "q025": 0.08813189265916904,
+              "q975": 0.24880131078192044
+            },
+            "r2_radio": {
+              "real": 0.951808404494616,
+              "n_validos": 924,
+              "percentil": 87.55411255411255,
+              "p_superior": 0.1254054054054054,
+              "mediana_nulo": 0.8410271935814573,
+              "q025": 0.5151076497683796,
+              "q975": 0.9866707300236494
+            },
+            "sine_pct": {
+              "real": 92.99589601454784,
+              "n_validos": 1000,
+              "percentil": 39.7,
+              "p_superior": 0.6033966033966034,
+              "mediana_nulo": 94.04713545802146,
+              "q025": 84.07975936962978,
+              "q975": 98.39879569757504
+            },
+            "jump_ratio": {
+              "real": 5.008423090347507,
+              "n_validos": 217,
+              "percentil": 100.0,
+              "p_superior": 0.0045871559633027525,
+              "mediana_nulo": 1.6799026590628878,
+              "q025": 1.5105085587284146,
+              "q975": 2.3481882118916793,
+              "p_superior_holm": 0.05045871559633028,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.5810958394495787,
+              "n_validos": 217,
+              "percentil": 93.08755760368663,
+              "p_superior": 0.07339449541284404,
+              "mediana_nulo": 1.9982146583747737,
+              "q025": 1.5230891807562534,
+              "q975": 2.7970183713225745,
+              "p_superior_holm": 0.8073394495412844,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9981115314970253,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "eterno_retorno_02_cosmizacion_fundacion": 13,
+            "monomito_05_cruce_del_primer_umbral": 14,
+            "tainter_04_colapso_por_simplificacion_forzada": 44,
+            "arquetipo_el_gobernante": 16,
+            "monomito_04_encuentro_con_el_mentor": 18,
+            "bbk_01_aventurero": 11,
+            "tainter_01_inversion_complejidad_productiva": 16,
+            "dumezil_f1_soberania_juridica": 3,
+            "frye_mythos_romance": 10,
+            "dumezil_f2_fuerza": 7,
+            "jaldun_01_asabiyyah_alta_cohesion": 4,
+            "monomito_06_pruebas_aliados_y_enemigos": 1,
+            "schwartz_09_estimulacion": 7,
+            "social_02_milgram_obediencia": 2,
+            "anacyclosis_03_aristocracia": 2,
+            "minsky_03_ponzi": 1,
+            "utopia_principio_estado": 1,
+            "monomito_03_rechazo_del_llamado": 1,
+            "9_audaz_empresa": 6,
+            "cliodinamica_03_fase_crisis_colapso": 8,
+            "eterno_retorno_01_caos_primordial": 11,
+            "mbti_factor_juicio_j": 1,
+            "mentor": 4,
+            "20_sacrificio_por_un_ideal": 4,
+            "kwml_01_rey": 5,
+            "24_rivalidad_de_superior_e_inferior": 3,
+            "anacyclosis_01_monarquia": 2,
+            "monomito_02_llamado_a_la_aventura": 1,
+            "utopia_oficio_roma": 1
+          },
+          "mismo_slot_pct_total": 10.4,
+          "mismo_slot_pct_cond_salto": 47.92626728110599,
+          "misma_familia_pct_total": 2.9000000000000004,
+          "misma_familia_pct_cond_salto": 13.36405529953917
+        },
+        "iid_gaussiano": {
+          "n": 1000,
+          "seed": 202611110805,
+          "n_cortes": 9,
+          "n_familias": 244,
+          "forma_pct": 8.0,
+          "giro_ge_180_pct": 59.9,
+          "ajuste_radio_valido_pct": 16.1,
+          "salto_pct": 44.1,
+          "metricas": {
+            "giro_abs": {
+              "real": 225.75431896447867,
+              "n_validos": 1000,
+              "percentil": 49.7,
+              "p_superior": 0.5034965034965035,
+              "mediana_nulo": 227.04519122818317,
+              "q025": 14.906240609833656,
+              "q975": 705.9745762350614
+            },
+            "b": {
+              "real": 0.09319571802897018,
+              "n_validos": 161,
+              "percentil": 8.074534161490684,
+              "p_superior": 0.9197530864197531,
+              "mediana_nulo": 0.22660007357769243,
+              "q025": 0.049840567301044844,
+              "q975": 0.5148099472151606
+            },
+            "r2_radio": {
+              "real": 0.951808404494616,
+              "n_validos": 161,
+              "percentil": 70.1863354037267,
+              "p_superior": 0.30246913580246915,
+              "mediana_nulo": 0.8550463324505706,
+              "q025": 0.17946385402112575,
+              "q975": 0.9989598864933226
+            },
+            "sine_pct": {
+              "real": 92.99589601454784,
+              "n_validos": 1000,
+              "percentil": 99.4,
+              "p_superior": 0.006993006993006993,
+              "mediana_nulo": 62.29200518718365,
+              "q025": 36.593406900053985,
+              "q975": 90.49213889963299
+            },
+            "jump_ratio": {
+              "real": 5.008423090347507,
+              "n_validos": 441,
+              "percentil": 100.0,
+              "p_superior": 0.0022624434389140274,
+              "mediana_nulo": 1.7579593776739555,
+              "q025": 1.513777576852566,
+              "q975": 2.7656499060699384,
+              "p_superior_holm": 0.027149321266968326,
+              "n_comparaciones_holm": 12
+            },
+            "rise_zmax": {
+              "real": 2.5810958394495787,
+              "n_validos": 441,
+              "percentil": 1.3605442176870748,
+              "p_superior": 0.9864253393665159,
+              "mediana_nulo": 3.7343820845567426,
+              "q025": 2.806503102532816,
+              "q975": 5.069997553330962,
+              "p_superior_holm": 1,
+              "n_comparaciones_holm": 12
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9998778049277123,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "kwml_01_rey": 16,
+            "eterno_retorno_02_cosmizacion_fundacion": 29,
+            "arquetipo_el_gobernante": 42,
+            "tainter_04_colapso_por_simplificacion_forzada": 99,
+            "eterno_retorno_01_caos_primordial": 29,
+            "jaldun_01_asabiyyah_alta_cohesion": 7,
+            "anacyclosis_01_monarquia": 6,
+            "cliodinamica_03_fase_crisis_colapso": 21,
+            "monomito_04_encuentro_con_el_mentor": 18,
+            "frye_mythos_romance": 16,
+            "bbk_01_aventurero": 25,
+            "utopia_oficio_roma": 6,
+            "tainter_01_inversion_complejidad_productiva": 24,
+            "monomito_06_pruebas_aliados_y_enemigos": 4,
+            "arquetipo_el_cuidador": 8,
+            "mentor": 5,
+            "monomito_05_cruce_del_primer_umbral": 10,
+            "bbk_04_guardian": 4,
+            "20_sacrificio_por_un_ideal": 19,
+            "9_audaz_empresa": 15,
+            "dumezil_f2_fuerza": 3,
+            "mbti_factor_percepcion_p": 2,
+            "monomito_02_llamado_a_la_aventura": 3,
+            "monomito_03_rechazo_del_llamado": 5,
+            "social_02_milgram_obediencia": 3,
+            "dumezil_f1_soberania_juridica": 1,
+            "schwartz_09_estimulacion": 10,
+            "arquetipo_el_explorador": 1,
+            "arquetipo_el_heroe": 3,
+            "utopia_mentalidad_socialista": 1,
+            "anacyclosis_03_aristocracia": 1,
+            "minsky_03_ponzi": 1,
+            "mbti_factor_juicio_j": 1,
+            "24_rivalidad_de_superior_e_inferior": 2,
+            "social_08_girard_mimesis_y_chivo_expiatorio": 1
+          },
+          "mismo_slot_pct_total": 9.0,
+          "mismo_slot_pct_cond_salto": 20.408163265306122,
+          "misma_familia_pct_total": 5.3,
+          "misma_familia_pct_cond_salto": 12.01814058956916
+        }
+      },
+      "sine_cache_reference_abs_error": 1.4210854715202004e-14
+    },
+    {
+      "caso": "MLK",
+      "n_cortes": 8,
+      "n_familias": 244,
+      "source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/MLK.json",
+      "source_sha256": "76570a8c418aca4e4254bc50dd6d0792abbe34d1fa24d175bdf3272e6e99f963",
+      "real": {
+        "giro_abs": 215.61231839190935,
+        "giro_signed": 215.61231839190935,
+        "forma": false,
+        "b": 0.06379561088155222,
+        "r2_radio": 0.7898545026985354,
+        "fit_radio": "AJUSTADO_CONTRACCION",
+        "radio_n_fit": 5,
+        "shape": {
+          "coincide": false,
+          "cresta": 0,
+          "valle": 3,
+          "salto_inicio": null,
+          "salto_fin": null,
+          "salto_largo": false,
+          "salto_cruza_eje": false,
+          "cruza_x_0": false,
+          "cruza_y_0": false,
+          "subida": false,
+          "salto_umbral": 0.2841041233472658,
+          "pasos": [
+            0.1403053311232892,
+            0.3835770474105763,
+            0.6415140530822874,
+            0.5565401217627403,
+            0.06881740045760916,
+            0.1894027488981772,
+            0.15417338712245457
+          ],
+          "todos_saltos_candidatos": [],
+          "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+        },
+        "jump_pos": -1,
+        "jump_ratio": null,
+        "rise_zmax": null,
+        "winner_ids": [],
+        "winner_families": [],
+        "winner_delta": null,
+        "sine_pct": 93.72523288696965
+      },
+      "ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "nulos": {
+        "permutacion": {
+          "n": 1000,
+          "seed": 202611110903,
+          "n_cortes": 8,
+          "n_familias": 244,
+          "forma_pct": 11.700000000000001,
+          "giro_ge_180_pct": 58.599999999999994,
+          "ajuste_radio_valido_pct": 16.400000000000002,
+          "salto_pct": 42.6,
+          "metricas": {
+            "giro_abs": {
+              "real": 215.61231839190935,
+              "n_validos": 1000,
+              "percentil": 58.1,
+              "p_superior": 0.42657342657342656,
+              "mediana_nulo": 191.3453098533198,
+              "q025": 8.589083488488235,
+              "q975": 695.8055688649325
+            },
+            "b": {
+              "real": 0.06379561088155222,
+              "n_validos": 164,
+              "percentil": 39.02439024390244,
+              "p_superior": 0.6121212121212121,
+              "mediana_nulo": 0.06935288162340554,
+              "q025": 0.03902999551222735,
+              "q975": 0.10395851365032685
+            },
+            "r2_radio": {
+              "real": 0.7898545026985354,
+              "n_validos": 164,
+              "percentil": 20.73170731707317,
+              "p_superior": 0.793939393939394,
+              "mediana_nulo": 0.9176876323040066,
+              "q025": 0.580352149835149,
+              "q975": 0.9999506034309905
+            },
+            "sine_pct": {
+              "real": 93.72523288696965,
+              "n_validos": 1000,
+              "percentil": 97.2,
+              "p_superior": 0.028971028971028972,
+              "mediana_nulo": 63.354959508691906,
+              "q025": 22.17967169544983,
+              "q975": 93.87174545858811
+            },
+            "jump_ratio": {
+              "real": null,
+              "n_validos": 426,
+              "percentil": null,
+              "p_superior": null
+            },
+            "rise_zmax": {
+              "real": null,
+              "n_validos": 426,
+              "percentil": null,
+              "p_superior": null
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0,
+          "ordenes_unicos": 992,
+          "frecuencia_familias_ganadoras": {
+            "20_sacrificio_por_un_ideal": 160,
+            "jaldun_01_asabiyyah_alta_cohesion": 70,
+            "cliodinamica_03_fase_crisis_colapso": 132,
+            "eterno_retorno_01_caos_primordial": 210,
+            "tainter_04_colapso_por_simplificacion_forzada": 210,
+            "arquetipo_el_cuidador": 59,
+            "arquetipo_el_heroe": 45,
+            "social_07_noelle_neumann_espiral_silencio": 6,
+            "eterno_retorno_02_cosmizacion_fundacion": 74,
+            "tainter_01_inversion_complejidad_productiva": 74,
+            "weber_02_autoridad_carismatica": 27,
+            "spengler_03_invierno_civilizacion_tecnica": 6
+          }
+        },
+        "caminata_gaussiana": {
+          "n": 1000,
+          "seed": 202611110904,
+          "n_cortes": 8,
+          "n_familias": 244,
+          "forma_pct": 17.9,
+          "giro_ge_180_pct": 100.0,
+          "ajuste_radio_valido_pct": 91.2,
+          "salto_pct": 21.6,
+          "metricas": {
+            "giro_abs": {
+              "real": 215.61231839190935,
+              "n_validos": 1000,
+              "percentil": 5.8,
+              "p_superior": 0.942057942057942,
+              "mediana_nulo": 229.60714676113645,
+              "q025": 210.26706594914305,
+              "q975": 248.53880038436247
+            },
+            "b": {
+              "real": 0.06379561088155222,
+              "n_validos": 912,
+              "percentil": 10.087719298245615,
+              "p_superior": 0.8992332968236583,
+              "mediana_nulo": 0.09580363372417576,
+              "q025": 0.05141073500407949,
+              "q975": 0.15638696195729335
+            },
+            "r2_radio": {
+              "real": 0.7898545026985354,
+              "n_validos": 912,
+              "percentil": 32.23684210526316,
+              "p_superior": 0.6779846659364732,
+              "mediana_nulo": 0.8567636059742733,
+              "q025": 0.5247951910343028,
+              "q975": 0.9922773155663781
+            },
+            "sine_pct": {
+              "real": 93.72523288696965,
+              "n_validos": 1000,
+              "percentil": 94.1,
+              "p_superior": 0.059940059940059943,
+              "mediana_nulo": 84.99494535464692,
+              "q025": 71.2865929039801,
+              "q975": 95.11935677774133
+            },
+            "jump_ratio": {
+              "real": null,
+              "n_validos": 216,
+              "percentil": null,
+              "p_superior": null
+            },
+            "rise_zmax": {
+              "real": null,
+              "n_validos": 216,
+              "percentil": null,
+              "p_superior": null
+            }
+          },
+          "varianza_muestral_ratio_media": 0.9918943877017615,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "arquetipo_el_gobernante": 5,
+            "arquetipo_el_heroe": 9,
+            "monomito_02_llamado_a_la_aventura": 5,
+            "mbti_factor_juicio_j": 1,
+            "arquetipo_el_cuidador": 9,
+            "eterno_retorno_02_cosmizacion_fundacion": 16,
+            "cliodinamica_03_fase_crisis_colapso": 15,
+            "jaldun_01_asabiyyah_alta_cohesion": 14,
+            "anacyclosis_01_monarquia": 3,
+            "eterno_retorno_01_caos_primordial": 11,
+            "20_sacrificio_por_un_ideal": 23,
+            "monomito_03_rechazo_del_llamado": 6,
+            "social_07_noelle_neumann_espiral_silencio": 3,
+            "weber_02_autoridad_carismatica": 6,
+            "predictivo_02_mdp_politica_optima": 2,
+            "monomito_07_aproximacion_a_la_caverna_mas_profunda": 1,
+            "monomito_11_la_resurreccion": 5,
+            "kwml_01_rey": 5,
+            "tainter_04_colapso_por_simplificacion_forzada": 15,
+            "social_13_le_bon_comportamiento_masas": 3,
+            "arquetipo_heroe": 1,
+            "heroe": 5,
+            "mentor": 4,
+            "monomito_08_la_odisea_o_prueba_suprema": 15,
+            "tainter_01_inversion_complejidad_productiva": 14,
+            "eterno_retorno_03_desgaste_y_reinicio": 12,
+            "mbti_factor_extraversion_e": 2,
+            "spengler_03_invierno_civilizacion_tecnica": 2,
+            "monomito_04_encuentro_con_el_mentor": 2,
+            "utopia_oficio_roma": 1,
+            "social_05_granovetter_modelos_de_umbral": 1
+          }
+        },
+        "iid_gaussiano": {
+          "n": 1000,
+          "seed": 202611110905,
+          "n_cortes": 8,
+          "n_familias": 244,
+          "forma_pct": 6.9,
+          "giro_ge_180_pct": 60.3,
+          "ajuste_radio_valido_pct": 18.8,
+          "salto_pct": 41.199999999999996,
+          "metricas": {
+            "giro_abs": {
+              "real": 215.61231839190935,
+              "n_validos": 1000,
+              "percentil": 46.9,
+              "p_superior": 0.5314685314685315,
+              "mediana_nulo": 234.76660264882355,
+              "q025": 16.420963484796346,
+              "q975": 636.5738798808595
+            },
+            "b": {
+              "real": 0.06379561088155222,
+              "n_validos": 188,
+              "percentil": 14.893617021276595,
+              "p_superior": 0.8518518518518519,
+              "mediana_nulo": 0.11996573334628036,
+              "q025": 0.028675495457485357,
+              "q975": 0.27988615064319816
+            },
+            "r2_radio": {
+              "real": 0.7898545026985354,
+              "n_validos": 188,
+              "percentil": 43.61702127659574,
+              "p_superior": 0.5661375661375662,
+              "mediana_nulo": 0.8365373103365911,
+              "q025": 0.2332669406681094,
+              "q975": 0.9994738306373792
+            },
+            "sine_pct": {
+              "real": 93.72523288696965,
+              "n_validos": 1000,
+              "percentil": 96.8,
+              "p_superior": 0.03296703296703297,
+              "mediana_nulo": 64.02517782965214,
+              "q025": 20.600751733578896,
+              "q975": 95.39930030917701
+            },
+            "jump_ratio": {
+              "real": null,
+              "n_validos": 412,
+              "percentil": null,
+              "p_superior": null
+            },
+            "rise_zmax": {
+              "real": null,
+              "n_validos": 412,
+              "percentil": null,
+              "p_superior": null
+            }
+          },
+          "varianza_muestral_ratio_media": 1.0008342457139143,
+          "ordenes_unicos": null,
+          "frecuencia_familias_ganadoras": {
+            "monomito_08_la_odisea_o_prueba_suprema": 23,
+            "monomito_03_rechazo_del_llamado": 13,
+            "monomito_04_encuentro_con_el_mentor": 6,
+            "eterno_retorno_03_desgaste_y_reinicio": 30,
+            "mbti_factor_percepcion_p": 5,
+            "tainter_01_inversion_complejidad_productiva": 30,
+            "eterno_retorno_02_cosmizacion_fundacion": 32,
+            "20_sacrificio_por_un_ideal": 42,
+            "tainter_04_colapso_por_simplificacion_forzada": 23,
+            "social_07_noelle_neumann_espiral_silencio": 6,
+            "heroe": 5,
+            "cliodinamica_03_fase_crisis_colapso": 30,
+            "mbti_factor_juicio_j": 8,
+            "arquetipo_el_gobernante": 11,
+            "eterno_retorno_01_caos_primordial": 22,
+            "arquetipo_heroe": 4,
+            "anacyclosis_01_monarquia": 3,
+            "weber_02_autoridad_carismatica": 18,
+            "social_12_zimbardo_prision_stanford": 1,
+            "mbti_factor_extraversion_e": 8,
+            "monomito_11_la_resurreccion": 9,
+            "mentor": 5,
+            "arquetipo_el_cuidador": 17,
+            "social_13_le_bon_comportamiento_masas": 4,
+            "monomito_07_aproximacion_a_la_caverna_mas_profunda": 1,
+            "jaldun_01_asabiyyah_alta_cohesion": 21,
+            "arquetipo_el_heroe": 18,
+            "kwml_01_rey": 3,
+            "strauss_howe_02_the_awakening": 1,
+            "monomito_02_llamado_a_la_aventura": 4,
+            "utopia_principio_estado": 1,
+            "spengler_03_invierno_civilizacion_tecnica": 3,
+            "predictivo_02_mdp_politica_optima": 2,
+            "dumezil_f1_soberania_magica": 1,
+            "monomito_05_cruce_del_primer_umbral": 1,
+            "utopia_oficio_roma": 1
+          }
+        }
+      },
+      "sine_cache_reference_abs_error": 1.4210854715202004e-14
+    }
+  ],
+  "cuenta_formas_conjunta_exploratoria": {
+    "permutacion": {
+      "formas_reales": 4,
+      "distribucion_cuenta_0_a_5": {
+        "0": 510,
+        "1": 388,
+        "2": 89,
+        "3": 12,
+        "4": 1,
+        "5": 0
+      },
+      "p_superior_MC_exploratorio": 0.001998001998001998,
+      "advertencia": "Nulos independientes entre casos; casos/criterio elegidos tras observación, no prueba confirmatoria ni independencia demostrada de biografías."
+    },
+    "caminata_gaussiana": {
+      "formas_reales": 4,
+      "distribucion_cuenta_0_a_5": {
+        "0": 293,
+        "1": 429,
+        "2": 224,
+        "3": 48,
+        "4": 5,
+        "5": 1
+      },
+      "p_superior_MC_exploratorio": 0.006993006993006993,
+      "advertencia": "Nulos independientes entre casos; casos/criterio elegidos tras observación, no prueba confirmatoria ni independencia demostrada de biografías."
+    },
+    "iid_gaussiano": {
+      "formas_reales": 4,
+      "distribucion_cuenta_0_a_5": {
+        "0": 674,
+        "1": 287,
+        "2": 38,
+        "3": 0,
+        "4": 1,
+        "5": 0
+      },
+      "p_superior_MC_exploratorio": 0.001998001998001998,
+      "advertencia": "Nulos independientes entre casos; casos/criterio elegidos tras observación, no prueba confirmatoria ni independencia demostrada de biografías."
+    }
+  },
+  "hawking7_proxy": {
+    "caso": "HAWKING7_EXTERNO_PROXY",
+    "proxy": true,
+    "n_cortes": 7,
+    "n_familias_nulo": 244,
+    "source": "/workspace/alt_cameo/casos/trayectoria_forma/coordenadas_modelo_externo/tabla_coordenadas_hawking_7cortes.csv",
+    "source_sha256": "b07ba4d13e56eecfc824102eaadd676c62a4d890402e1b828ec31b7716e11a54",
+    "real": {
+      "giro_abs": 222.5,
+      "giro_signed": 222.5,
+      "forma": false,
+      "b": 0.4134426671363838,
+      "r2_radio": 0.9989211155608841,
+      "fit_radio": "AJUSTADO_CONTRACCION",
+      "radio_n_fit": 3,
+      "shape": {
+        "coincide": false,
+        "cresta": 0,
+        "valle": 3,
+        "salto_inicio": null,
+        "salto_fin": null,
+        "salto_largo": false,
+        "salto_cruza_eje": false,
+        "cruza_x_0": false,
+        "cruza_y_0": false,
+        "subida": false,
+        "salto_umbral": 0.3216611782469928,
+        "pasos": [
+          0.2287008526437975,
+          0.20018071835219295,
+          0.30460966826415736,
+          0.3223311495961878,
+          0.15007254912208295,
+          0.16322971543196418
+        ],
+        "todos_saltos_candidatos": [],
+        "advertencia": "Criterio exploratorio PC12 dependiente del marco, no validación independiente."
+      },
+      "jump_pos": -1,
+      "jump_ratio": null,
+      "rise_zmax": null,
+      "winner_ids": [],
+      "winner_families": [],
+      "winner_delta": null,
+      "sine_pct": 94.77153591038874
+    },
+    "nulos": {
+      "caminata_gaussiana": {
+        "n": 1000,
+        "seed": 202611111403,
+        "n_cortes": 7,
+        "n_familias": 244,
+        "forma_pct": 18.7,
+        "giro_ge_180_pct": 98.6,
+        "ajuste_radio_valido_pct": 83.2,
+        "salto_pct": 27.500000000000004,
+        "metricas": {
+          "giro_abs": {
+            "real": 222.5,
+            "n_validos": 1000,
+            "percentil": 32.1,
+            "p_superior": 0.6793206793206793,
+            "mediana_nulo": 228.13688770816316,
+            "q025": 194.90411747004302,
+            "q975": 255.86425386268954
+          },
+          "b": {
+            "real": 0.4134426671363838,
+            "n_validos": 832,
+            "percentil": 64.78365384615384,
+            "p_superior": 0.35294117647058826,
+            "mediana_nulo": 0.36223731764656114,
+            "q025": 0.1629859739299845,
+            "q975": 0.7481092449334223
+          },
+          "r2_radio": {
+            "real": 0.9989211155608841,
+            "n_validos": 832,
+            "percentil": 95.79326923076923,
+            "p_superior": 0.04321728691476591,
+            "mediana_nulo": 0.9439696023661893,
+            "q025": 0.6561623453453213,
+            "q975": 0.9995667844497848
+          },
+          "sine_pct": {
+            "real": 94.77153591038874,
+            "n_validos": 1000,
+            "percentil": 34.0,
+            "p_superior": 0.6603396603396603,
+            "mediana_nulo": 96.46148049312984,
+            "q025": 79.7433230543283,
+            "q975": 99.78785613715814
+          },
+          "jump_ratio": {
+            "real": null,
+            "n_validos": 275,
+            "percentil": null,
+            "p_superior": null
+          },
+          "rise_zmax": {
+            "real": null,
+            "n_validos": 275,
+            "percentil": null,
+            "p_superior": null
+          }
+        },
+        "varianza_muestral_ratio_media": 0.9980850309282797,
+        "ordenes_unicos": null,
+        "frecuencia_familias_ganadoras": {
+          "mbti_factor_pensamiento_t": 5,
+          "mbti_factor_intuicion_n": 15,
+          "spengler_01_primavera_nacimiento_mistico": 5,
+          "arquetipo_el_creador": 30,
+          "spengler_02_verano_otono_racionalizacion": 56,
+          "arquetipo_el_sabio": 10,
+          "bbk_03_individualista": 10,
+          "ttm_04_accion": 8,
+          "social_04_rogers_difusion_innovaciones": 11,
+          "9_audaz_empresa": 6,
+          "mentor": 47,
+          "monomito_12_regreso_con_el_elixir": 8,
+          "kwml_01_rey": 13,
+          "mbti_factor_sensacion_s": 14,
+          "social_07_noelle_neumann_espiral_silencio": 12,
+          "arquetipo_el_gobernante": 10,
+          "anacyclosis_01_monarquia": 1,
+          "strauss_howe_02_the_awakening": 1,
+          "tainter_02_rendimientos_decrecientes": 2,
+          "35_recuperacion_de_lo_perdido": 4,
+          "6_desastre": 4,
+          "predictivo_03_cox_survival_riesgo": 3
+        }
+      },
+      "iid_gaussiano": {
+        "n": 1000,
+        "seed": 202611111404,
+        "n_cortes": 7,
+        "n_familias": 244,
+        "forma_pct": 3.1,
+        "giro_ge_180_pct": 59.8,
+        "ajuste_radio_valido_pct": 14.7,
+        "salto_pct": 31.900000000000002,
+        "metricas": {
+          "giro_abs": {
+            "real": 222.5,
+            "n_validos": 1000,
+            "percentil": 51.7,
+            "p_superior": 0.4835164835164835,
+            "mediana_nulo": 216.43956318585148,
+            "q025": 10.860844525335647,
+            "q975": 639.7928760078477
+          },
+          "b": {
+            "real": 0.4134426671363838,
+            "n_validos": 147,
+            "percentil": 41.49659863945578,
+            "p_superior": 0.5878378378378378,
+            "mediana_nulo": 0.4752198479099523,
+            "q025": 0.1287955371429806,
+            "q975": 1.511774228752813
+          },
+          "r2_radio": {
+            "real": 0.9989211155608841,
+            "n_validos": 147,
+            "percentil": 97.27891156462584,
+            "p_superior": 0.033783783783783786,
+            "mediana_nulo": 0.8993539670273236,
+            "q025": 0.33511225155126384,
+            "q975": 0.9989476888466519
+          },
+          "sine_pct": {
+            "real": 94.77153591038874,
+            "n_validos": 1000,
+            "percentil": 95.1,
+            "p_superior": 0.04995004995004995,
+            "mediana_nulo": 71.68752950566235,
+            "q025": 48.05904209108819,
+            "q975": 96.53693018582658
+          },
+          "jump_ratio": {
+            "real": null,
+            "n_validos": 319,
+            "percentil": null,
+            "p_superior": null
+          },
+          "rise_zmax": {
+            "real": null,
+            "n_validos": 319,
+            "percentil": null,
+            "p_superior": null
+          }
+        },
+        "varianza_muestral_ratio_media": 1.0012270897500517,
+        "ordenes_unicos": null,
+        "frecuencia_familias_ganadoras": {
+          "social_04_rogers_difusion_innovaciones": 18,
+          "arquetipo_el_creador": 32,
+          "mbti_factor_intuicion_n": 27,
+          "mentor": 54,
+          "6_desastre": 2,
+          "spengler_02_verano_otono_racionalizacion": 55,
+          "arquetipo_el_sabio": 8,
+          "social_07_noelle_neumann_espiral_silencio": 12,
+          "spengler_01_primavera_nacimiento_mistico": 6,
+          "ttm_04_accion": 7,
+          "35_recuperacion_de_lo_perdido": 8,
+          "arquetipo_el_gobernante": 15,
+          "9_audaz_empresa": 9,
+          "monomito_12_regreso_con_el_elixir": 18,
+          "bbk_03_individualista": 8,
+          "kwml_01_rey": 7,
+          "mbti_factor_sensacion_s": 16,
+          "strauss_howe_02_the_awakening": 1,
+          "predictivo_03_cox_survival_riesgo": 4,
+          "anacyclosis_01_monarquia": 1,
+          "mbti_factor_pensamiento_t": 8,
+          "tainter_02_rendimientos_decrecientes": 2,
+          "schwartz_07_logro": 1
+        }
+      },
+      "permutacion_geometria2D": {
+        "n": 1000,
+        "seed": 202611111405,
+        "n_cortes": 7,
+        "n_familias": null,
+        "n_coordenadas_observadas": 2,
+        "forma_pct_orientacion_2D": 8.200000000000001,
+        "forma_pct_limite_inferior": 0.0,
+        "forma_pct_limite_superior": 14.6,
+        "metricas": {
+          "giro_abs": {
+            "real": 222.5,
+            "n_validos": 1000,
+            "percentil": 55.6,
+            "p_superior": 0.44455544455544455,
+            "mediana_nulo": 210.4940726675018,
+            "q025": 18.045148957005097,
+            "q975": 649.9035569584796
+          },
+          "b": {
+            "real": 0.4134426671363838,
+            "n_validos": 158,
+            "percentil": 100.0,
+            "p_superior": 0.006289308176100629,
+            "mediana_nulo": 0.2749902156326435,
+            "q025": 0.08331767789437594,
+            "q975": 0.41340837180897416
+          },
+          "r2_radio": {
+            "real": 0.9989211155608841,
+            "n_validos": 158,
+            "percentil": 94.9367088607595,
+            "p_superior": 0.05660377358490566,
+            "mediana_nulo": 0.9380938579501773,
+            "q025": 0.7994601511771331,
+            "q975": 0.9991581805225171
+          },
+          "sine_pct": {
+            "real": 94.77153591038874,
+            "n_validos": 1000,
+            "percentil": 95.95,
+            "p_superior": 0.04195804195804196,
+            "mediana_nulo": 78.87397869300334,
+            "q025": 51.02255969651914,
+            "q975": 96.96188428227448
+          }
+        },
+        "ordenes_unicos": 912,
+        "nota": "Permutación de geometría 2-D conocida, no reconstrucción de crudo_P. La covarianza familiar no cambia al permutar filas: bajo el supuesto PC2/PC3 no degeneradas se identifica el mismo subespacio PC12 hasta orientación; la brecha no se puede verificar sin crudo_P H7. Radios, giro absoluto y R²/seno son invariantes a reflexión; forma depende de handedness desconocida del SVD completo, por eso solo se dan límites. No hay familia del salto identificable."
+      }
+    },
+    "permutacion_crudo_P": "NO_EVALUABLE_SIN_CRUDO_P_7_CORTES; ver permutacion_geometria2D para control de subespacio conocido",
+    "familias_salto": "NO_EVALUABLE_SIN_CRUDO_P",
+    "tiempo": "índice de corte, no año",
+    "variance_proxy_source": "/workspace/alt_cameo/casos/trayectoria_forma/tusi_pc12_v1/entradas/HAWKING.json",
+    "nota": "RW/iid N=7 usan sigma/medias de H6. No son nulos emparejados del H7 real; no se usan para concluir significancia de H7."
+  },
+  "integridad": {
+    "archivos_protegidos": 135,
+    "intactos": true
+  },
+  "script_sha256": "e371ed1c6b739e027ebcb8df0a1f38983e82839d779a4255b135c3a63009138d",
+  "metodo_sha256": "30bcb9d11e4fb6ef4d78b5df606d1d62d6a35fca995bc247e12b225f0da01779",
+  "proyeccion_sha256": "d67e9dbb6cd3bf1abc2c63d6e2c87413d2795aa05fdd45dac3d2991ae32bdec3",
+  "metricas_sha256": "b50e526b496358f3fd5e9ac04bd7cb0d079843f3e4578273c7a56383beb36777",
+  "numpy": "2.5.4",
+  "duracion_segundos": 10.112783193588257
+}

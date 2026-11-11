@@ -1,0 +1,19 @@
+MOZART10 permutacion giro percentil 54.9 forma% 15.2
+MOZART10 caminata_gaussiana giro percentil 29.8 forma% 26.3
+MOZART10 iid_gaussiano giro percentil 44.6 forma% 8.4
+GALILEO permutacion giro percentil 47.8 forma% 16.2
+GALILEO caminata_gaussiana giro percentil 76.0 forma% 30.2
+GALILEO iid_gaussiano giro percentil 50.1 forma% 9.9
+HAWKING6 permutacion giro percentil 52.25 forma% 5.2
+HAWKING6 caminata_gaussiana giro percentil 33.2 forma% 10.100000000000001
+HAWKING6 iid_gaussiano giro percentil 51.9 forma% 3.5000000000000004
+CHE permutacion giro percentil 55.35 forma% 12.3
+CHE caminata_gaussiana giro percentil 32.2 forma% 20.1
+CHE iid_gaussiano giro percentil 49.7 forma% 8.0
+MLK permutacion giro percentil 58.1 forma% 11.700000000000001
+MLK caminata_gaussiana giro percentil 5.8 forma% 17.9
+MLK iid_gaussiano giro percentil 46.9 forma% 6.9
+HAWKING7_EXTERNO_PROXY caminata_gaussiana giro percentil 32.1 forma% 18.7
+HAWKING7_EXTERNO_PROXY iid_gaussiano giro percentil 51.7 forma% 3.1
+HAWKING7 permutacion_geometria2D 55.6 forma bounds 0.0 14.6
+FIN 10.112783193588257 segundos

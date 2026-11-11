@@ -1,0 +1,16 @@
+test_2d_row_permutations_preserve_invariants_of_full_subspace (test_control_nulo.NullTests.test_2d_row_permutations_preserve_invariants_of_full_subspace) ... ok
+test_cache_matches_reference_irregular_and_duplicate_times (test_control_nulo.NullTests.test_cache_matches_reference_irregular_and_duplicate_times) ... ok
+test_constant_family_stays_constant (test_control_nulo.NullTests.test_constant_family_stays_constant) ... ok
+test_holm (test_control_nulo.NullTests.test_holm) ... ok
+test_midrank_and_missing_fit (test_control_nulo.NullTests.test_midrank_and_missing_fit) ... ok
+test_permutation_preserves_rows_and_covariance (test_control_nulo.NullTests.test_permutation_preserves_rows_and_covariance) ... ok
+test_walk_expected_sample_variance_formula (test_control_nulo.NullTests.test_walk_expected_sample_variance_formula) ... ok
+test_holm_family (test_senales_por_paso.StepTests.test_holm_family) ... ok
+test_linear_phase_has_zero_residual_and_correct_weight (test_senales_por_paso.StepTests.test_linear_phase_has_zero_residual_and_correct_weight) ... ok
+test_reflection_preserves_phase_arc_and_distance_not_depth (test_senales_por_paso.StepTests.test_reflection_preserves_phase_arc_and_distance_not_depth) ... ok
+test_residual_equals_delta_minus_own_omega_dt (test_senales_por_paso.StepTests.test_residual_equals_delta_minus_own_omega_dt) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.128s
+
+OK

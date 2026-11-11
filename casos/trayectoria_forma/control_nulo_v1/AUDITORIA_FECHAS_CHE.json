@@ -1,0 +1,155 @@
+{
+  "estado": "INCONSISTENCIA_DE_IDS_Y_CRITERIO_DE_CIERRE_NO_ERROR_NUEVO_DE_LA_GRAFICA",
+  "fuentes": {
+    "casos/originales_z90/inputs/001_Ernesto_Che_Guevara_9f3baec1110e/_cuts_che_run.json": "9f3baec1110ea3b8c4971697ea985597e9b04701bc79603fc2e2e129309fc12a",
+    "casos/calibracion_z90/CHE/entrada.json": "8a5c663053a4a5626dab595f89c22192c549f0d420c620d20909f597b344f78f",
+    "casos/calibracion_z90/CHE/PREPARACION_Y_SELLO.json": "f18305fd178ee35a1f107548bbb38278ec64182d4ad71c4f5e731e00b4e97c8e",
+    "casos/trayectoria_forma/tusi_pc12_v1/tablas_por_corte/CHE.csv": "978f4cc256babd0311a59eeaa8fffc1c34c4f6bd738065fd39c6a202c0ca7f5a"
+  },
+  "orden_original": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "orden_ejecucion": [
+    "C1",
+    "C3",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "datos": [
+    {
+      "id": "C1",
+      "date_original": null,
+      "date_calibrada": "1949-12-31",
+      "year_decimal": 1949.996577686516,
+      "year_redondeado_2dec": "1950.00",
+      "hecho_original": "1928-1940s Rosario/Córdoba: infancia clase media, asma, entorno familiar estable; rutina de estudios previos a medicina"
+    },
+    {
+      "id": "C2",
+      "date_original": null,
+      "date_calibrada": "1953-12-31",
+      "year_decimal": 1953.996577686516,
+      "year_redondeado_2dec": "1954.00",
+      "hecho_original": "c.1948-1953 Córdoba: estudios de medicina; conciencia social creciente; aún no salto político armado"
+    },
+    {
+      "id": "C3",
+      "date_original": null,
+      "date_calibrada": "1952-12-31",
+      "year_decimal": 1952.9993155373031,
+      "year_redondeado_2dec": "1953.00",
+      "hecho_original": "1951-1952 viaje en motocicleta por América del Sur: contacto con pobreza e injusticia; incidente detonante de vocación política"
+    },
+    {
+      "id": "C4",
+      "date_original": null,
+      "date_calibrada": "1954-12-31",
+      "year_decimal": 1954.996577686516,
+      "year_redondeado_2dec": "1955.00",
+      "hecho_original": "1954 Guatemala: caída de Árbenz / intervención; radicalización; hostilidad del orden regional"
+    },
+    {
+      "id": "C5",
+      "date_original": null,
+      "date_calibrada": "1956-12-31",
+      "year_decimal": 1956.9993155373031,
+      "year_redondeado_2dec": "1957.00",
+      "hecho_original": "1955-1956 México: encuentro con Castro (mentor); compromiso con Granma; partida hacia Cuba"
+    },
+    {
+      "id": "C6",
+      "date_original": null,
+      "date_calibrada": "1958-12-31",
+      "year_decimal": 1958.996577686516,
+      "year_redondeado_2dec": "1959.00",
+      "hecho_original": "1956-1958 Granma/Sierra Maestra: guerra de guerrillas; pruebas, aliados y enemigos; audacia y riesgo"
+    },
+    {
+      "id": "C7",
+      "date_original": null,
+      "date_calibrada": "1959-12-31",
+      "year_decimal": 1959.996577686516,
+      "year_redondeado_2dec": "1960.00",
+      "hecho_original": "1959 triunfo revolucionario / entrada a La Habana: victoria colectiva; celebración; nuevo poder"
+    },
+    {
+      "id": "C8",
+      "date_original": null,
+      "date_calibrada": "1962-12-31",
+      "year_decimal": 1962.996577686516,
+      "year_redondeado_2dec": "1963.00",
+      "hecho_original": "1959-1962 cargos ministeriales / industria / diplomacia revolucionaria: organización del Estado; tensión ideal vs pragmatismo"
+    },
+    {
+      "id": "C9",
+      "date_original": null,
+      "date_calibrada": "1963-11-03",
+      "year_decimal": 1963.8377823408625,
+      "year_redondeado_2dec": "1963.84",
+      "hecho_original": "Z≈1963-11 (90% vida): aún vivo en órbita cubana; idealismo internacionalista alto; inquietud de nueva lucha; Bolivia/muerte sellados"
+    }
+  ],
+  "hechos_tokens_pesos_intactos": true,
+  "fechas_reconstruidas": [
+    {
+      "id": "C1",
+      "date": "1949-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C2",
+      "date": "1953-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C3",
+      "date": "1952-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C4",
+      "date": "1954-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C5",
+      "date": "1956-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C6",
+      "date": "1958-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C7",
+      "date": "1959-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C8",
+      "date": "1962-12-31",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    },
+    {
+      "id": "C9",
+      "date": "1963-11-03",
+      "basis": "RECONSTRUIDO desde periodo en hecho/marker; fin de año/mes cuando falta día; no es fecha documentada exacta"
+    }
+  ],
+  "conclusion": "El original ya trae C2 (estudios c1948-1953) antes de C3 (viaje1951-1952), sin date. La calibracion reconstruyo fechas de CIERRE de intervalos: C3=1952-12-31 antes de C2=1953-12-31, orden explicitamente documentado. Son periodos solapados; no hay prueba de fecha historica exacta ni errata. Las etiquetas 1953.00/1954.00 son redondeo del ano decimal, no fechas civiles1953/1954. No corregir automaticamente IDs, fechas ni tokens.",
+  "modificaciones_fuentes": false
+}
