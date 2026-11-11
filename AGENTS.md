@@ -1,5 +1,8 @@
 # MEMORIA COMPARTIDA — GATE OBLIGATORIO
 
+> **CONTRATO OPERATIVO VIGENTE (2026-11-11):** la rama de trabajo del motor es `alterno/cameo-pesos`; el motor de `main` previo queda SOLO_CONSULTA. Leer [CONTRATO_OPERATIVO_RAMA_VIGENTE.md](CONTRATO_OPERATIVO_RAMA_VIGENTE.md) antes de tocar nada.
+
+
 **ANTES DE CUALQUIER TAREA**, incluso solo lectura, análisis, respuesta, investigación, ejecución o escritura:
 1. Leer [el protocolo obligatorio](https://github.com/marcojpad-hash/memoria-compartida/blob/main/PROTOCOLO_MEMORIA_COMPARTIDA_OBLIGATORIA.md).
 2. Leer [memoria-compartida/INDICE.md](https://github.com/marcojpad-hash/memoria-compartida/blob/main/INDICE.md).
