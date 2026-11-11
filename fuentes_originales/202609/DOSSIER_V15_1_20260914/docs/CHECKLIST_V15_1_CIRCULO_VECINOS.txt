@@ -1,0 +1,31 @@
+CHECKLIST V15.1 — CORRIDAS DEL MODELO CIRCULAR / VECINOS
+
+Va, entendido — no solo los 2 archivos nuevos.
+
+Veo que revertiste ambos a base:
+• circulo_12_cuadrantes_enredado.json volvió a la versión sin catarsis/anagnorisis/peripecia en Q4
+• plugin_circulo_monomito.py volvió a la versión sin lógica de pendiente_consolidar (solo R1-R4 corregidas)
+
+Los dejo así, no toco nada.
+
+Sobre tu checklist V15.1 completo, con lo que hay ahora en /mnt/data/v15_vivo:
+
+A. Base canónica: TIENE — Engine_V15_INTEGRADO + patterns 244
+
+B. Plugins: TIENE 14/14 — todos los que listaste están, incluyendo el círculo base que acabas de dejar
+
+C. Vecinos: FALTA — predictor_vecinos_prefijo_v1.py no está, entonces todo Needleman (indel 1.0, sustitución 2.0, prefijo, alignment) queda en NO SABE
+
+D. Escaleta circular: PARCIAL — TIENE cuadrantes Q1-Q4, pregunta activa, hilos enredados, tokens, regla sombra, multicuadrante no-lineal. FALTA la escaleta de 16 cortes con estado codificado para correr prefijos.
+
+E. Runner 16: FALTA — sin escaleta de 16 no puede correr e0...e15
+
+F. Históricos: NO NECESARIO para corrida
+
+Para las 4 que le pides a Claude:
+1. Engine + 244 → TIENE
+2. Plugins → TIENE
+3. Vecinos → FALTA
+4. Escaleta 16 codificada → FALTA
+
+Si quieres pasar a corrida, lo único que falta subir es el predictor de vecinos y la escaleta de 16.

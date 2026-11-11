@@ -1,0 +1,38 @@
+QUE ESTA VIVO — 2026-09-07 noche
+Si un modelo recibe 4 zips + este txt, usa SOLO la columna VIVO.
+
+MUERTO (archivo, no ejecutar)
+  CHECKPOINT_INTEGRACION_..._2026-08-28.md     motor v3 + familias conceptuales
+  CHECKPOINT_MAESTRO_V12_2_2026-09-06.json     V12.2 + agente_2. NO es la base de hoy
+  BETA_TRANSFER_2026-09-05.zip                 V12 / Constantino
+  CHECKPOINT_SOPORTE_V5_ACTUALIZADO.zip        tracing_engine_v3 + patterns v5
+  CHECKPOINT_PROYECTO_ACTUAL-1.zip             mezcolanza v3/v5/escaleta Jobs
+  CHECKPOINT_V15_2026-09-07.txt que pegaste    VIEJO DE ESTA MANANA:
+      dice solo otto_01 y 246. Ya no.
+      ahora otto_01+otto_02+hosteleria en memoria.
+
+VIVO (este hilo, V15.1)
+  Motor:     Engine_V5_CANONICO_SOLO.py
+  244 disco: patterns_final_v14.json
+  Tubo:      Engine_V15_INTEGRADO.py
+  Siempre:   traza_campo_244, reporte_3d, picos_mesetas
+  Sidecar:   fama + otto_01 + otto_02 + hosteleria
+  Default ON:  arco=True  sesgo=True
+  Default OFF: aquiles=False   <-- NO se me fue. Esta en el tubo
+               pero hay que pedirlo: correr(..., aquiles=True)
+  Arco:      plugin_arco_field_snyder_mckee.py  (Field+Snyder+McKee)
+  Aquiles:   plugin_aquiles_h.py
+  Sesgo:     plugin_sesgo_lectura.py
+  Protocolo: PROTOCOLO_HIPOTESIS_E_INVERSA.txt
+  Como:      COMO_USAR_AQUILES_Y_TRAZA.txt
+
+NO mezclar V12.2 "es la base" con V15.1. Esa frase del json
+del 6 sep esta superada EN ESTE HILO. V5+V15.1 es lo que corre aqui.
+
+SI TE PIDEN ESCALETA 16
+  run_predictor_escaleta_16.py + escaleta_marco_16_ejecutable.json
+  NO entra a correr(). Es otro script.
+
+SPECT / COPILOT / GPT-5.6 Pilot
+  Dale LEEME_QUE_ESTA_VIVO + README_DOSSIER_MINIMO_V15_1
+  + los py vivos. NO le des los 3 zips.

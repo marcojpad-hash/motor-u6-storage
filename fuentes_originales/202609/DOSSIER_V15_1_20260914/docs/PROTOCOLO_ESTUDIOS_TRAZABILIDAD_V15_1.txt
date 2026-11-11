@@ -1,0 +1,72 @@
+PROTOCOLO DE ESTUDIOS — TRAZABILIDAD, INERCIA, PROYECCIONES E INGENIERÍA INVERSA
+V15.1 — ESPECIFICACIÓN REPRODUCIBLE
+
+OBJETIVO
+Unificar el procedimiento para estudios de caso, ensayos y pruebas ciegas con cortes temporales. En cada corte se registra qué se sabía, qué mostró el sistema, qué hipótesis se congeló, qué se apostó, qué se proyectó, qué ocurrió después y qué aprendió la ingeniería inversa.
+
+FLUJO
+HECHO/FUENTE → MAPEADO → INPUT CONGELADO → ENGINE/ANÁLISIS → CAMPO + CURVAS + FULL TRACE → LECTURA DEL CORTE → HIPÓTESIS PROSPECTIVA CONGELADA → APUESTA EXPLÍCITA → PROYECCIÓN 1 → DETECCIÓN/REGISTRO DE INERCIA → PROYECCIÓN 2 SI CORRESPONDE → NUEVO CORTE → VALIDACIÓN TEMPORAL → INGENIERÍA INVERSA → FEEDBACK METODOLÓGICO
+
+1. REGLA TEMPORAL
+Solo puede utilizarse la información disponible hasta el corte t para formular la hipótesis de t+1. La hipótesis queda congelada antes de revelar el dato siguiente.
+
+2. NO APLASTAR LA SALIDA
+Se conserva campo completo, curvas, Full Trace y movimientos relevantes. El Top-1 no sustituye la estructura completa.
+
+3. INERCIA
+La inercia no se supone. Se busca una continuidad observable entre cortes: una dirección, configuración, relación o movimiento que persiste.
+Primero se mide. Después se formula una hipótesis de inercia.
+Si aparece una regularidad cuantificable, se investiga su fórmula. No se declara una fórmula universal antes de medirla.
+
+4. PRIMERA PROYECCIÓN
+Desde t se formula una proyección hacia t+1. Debe indicar qué se espera observar, qué evidencia la apoyaría, qué la refutaría y qué sería un acierto parcial.
+
+5. SEGUNDA PROYECCIÓN
+Si llega t+1 y la dirección observada mantiene la inercia previamente identificada, puede formularse una segunda proyección hacia t+2. P2 es una nueva congelación y no una reescritura de P1.
+
+6. HIPÓTESIS SIMULTÁNEAS
+Si dos hipótesis siguen siendo compatibles, se conservan ambas. No se fuerza una ganadora por Top-1.
+Puede existir H1 y H2 simultáneas para t+1 y otra rama condicionada a evidencia posterior. Cada rama conserva evidencia, refutadores, horizonte y criterios de evaluación.
+
+7. LA APUESTA
+Toda corrida prospectiva declara qué se está apostando: quién/configuración es, qué transición ocurrirá, qué línea persistirá, qué estado aparecerá, qué dirección dominará u otra variable definida explícitamente por el estudio.
+Cada apuesta debe tener criterio observable de acierto, acierto parcial y refutación.
+
+8. PRUEBA CIEGA
+En los estudios ciegos, el observador trabaja únicamente con la información disponible hasta el corte. Se congelan hipótesis, apuesta, proyección y criterios antes de revelar el siguiente dato.
+
+9. VALIDACIÓN
+Al llegar el dato: comparar contra P1; clasificar acierto, parcial o refutación; medir si la inercia continuó; no modificar el freeze. Si la regla previa lo permite, formular y congelar P2.
+
+10. INGENIERÍA INVERSA
+Después de conocer el dato real: qué acertó; qué falló; qué señales estaban presentes; cuáles fueron ignoradas; a qué se prestó demasiada atención; si la inercia se sostuvo o se rompió; si P2 estaba justificada; y si la apuesta estaba bien definida.
+La ingeniería inversa no reescribe el pasado.
+
+11. FEEDBACK
+El aprendizaje modifica el método para futuras corridas, no el dato histórico ni las hipótesis ya congeladas.
+
+12. REPRODUCIBILIDAD
+Conservar versiones y hashes, fuentes, inputs exactos, parámetros, Full Trace, hipótesis congeladas, apuestas, proyecciones, resultados reales, validación, ingeniería inversa y limitaciones.
+Si falta algo: FALTANTE / NO_VERIFICADO / RECONSTRUIDO.
+
+13. PRINCIPIO DE CONTROL
+No se busca demostrar retrospectivamente que el sistema “ya sabía” el resultado. Se mide qué podía formularse antes del siguiente dato, qué continuidad podía detectarse, hasta dónde podía extenderse una proyección y qué aprende el método cuando acierta o falla.
+
+14. COMPATIBILIDAD V15.1
+No exige modificar el Engine canónico. El predictor de vecinos permanece lateral. La estabilidad Monte Carlo no se interpreta como probabilidad futura. La estructura circular/monomítica puede actuar como lente semántica sin imponer una secuencia lineal.
+
+SALIDA MÍNIMA POR CORTE
+corte_id
+input_congelado
+salida_tecnica
+observaciones
+inercia_candidata
+hipotesis_congeladas
+apuestas
+proyeccion_1
+proyeccion_2_si_corresponde
+dato_real_siguiente
+validacion
+ingenieria_inversa
+feedback
+limitaciones

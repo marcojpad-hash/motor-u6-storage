@@ -1,0 +1,178 @@
+{
+  "package": "V15.1_PLUGINS_PROTOCOLOS_READMES_COMPLETO",
+  "purpose": "Transferencia de plugins, protocolos, READMEs y documentación de uso recuperados de la Biblioteca V15.1.",
+  "excluded": [
+    "NA_NO_ACTUALIZADO__*",
+    "duplicados de Biblioteca",
+    "NIGHTINGALE_x5f_5x3_x5f_PLUGINS_x5f_251.json.txt (datos de caso, no documentación del plugin)"
+  ],
+  "plugins": [
+    {
+      "file": "plugin_alias_reactivacion.py",
+      "bytes": 2368,
+      "sha256": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e"
+    },
+    {
+      "file": "plugin_aquiles_h.py",
+      "bytes": 5831,
+      "sha256": "3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc"
+    },
+    {
+      "file": "plugin_arco_field_snyder_mckee.py",
+      "bytes": 6105,
+      "sha256": "ed672db0cf93ffacbbe79fd58fadee4997e845319ac5c3fe9dbdd633fae91acc"
+    },
+    {
+      "file": "plugin_circulo_monomito.py",
+      "bytes": 6411,
+      "sha256": "a731b13bcf9646251c0c2ed6e49f6731d48d3c1df29a92a20d5a1ef3d727a38d"
+    },
+    {
+      "file": "plugin_embudo_clinico.py",
+      "bytes": 3294,
+      "sha256": "deb37f7e0124217c6f4ad329782063a830b61977e531fa91d6d144339413b2ee"
+    },
+    {
+      "file": "plugin_familias_gloria_sacro.py",
+      "bytes": 2564,
+      "sha256": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f"
+    },
+    {
+      "file": "plugin_fix_entrada.py",
+      "bytes": 2637,
+      "sha256": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd"
+    },
+    {
+      "file": "plugin_metodo_rigor.py",
+      "bytes": 1594,
+      "sha256": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0"
+    },
+    {
+      "file": "plugin_otto_numinoso.py",
+      "bytes": 2309,
+      "sha256": "2f22f06e6c3e8eececb54a839aa08a1391a7ab0c27f739492417768fed24954e"
+    },
+    {
+      "file": "plugin_picos_mesetas.py",
+      "bytes": 2071,
+      "sha256": "7720b6eb614497fb6aaf38d527ea323dbef31b9748f9835385ae9c3ba6081149"
+    },
+    {
+      "file": "plugin_pregunta_detras.py",
+      "bytes": 1987,
+      "sha256": "b3c564610a01380aeabe87c2eba91c25c87d9ea754a98fbe8563c7b9a2d6c397"
+    },
+    {
+      "file": "plugin_reporte_3d.py",
+      "bytes": 1690,
+      "sha256": "a1de66ac91e443e031817b1874e6ffad73f0fbdfc212ee43316f0d7ee2d9f17b"
+    },
+    {
+      "file": "plugin_sesgo_lectura.py",
+      "bytes": 3341,
+      "sha256": "fe098108d85ccc8a44d13a7a0beb556cf50d6e4450e7b631b5b665edb02e21a0"
+    },
+    {
+      "file": "plugin_trayectoria_hosteleria.py",
+      "bytes": 1619,
+      "sha256": "623496a7b8e118921d2684056a530600512cbbbcc307c71ed8025a3c81b41369"
+    },
+    {
+      "file": "traza_campo_244.py",
+      "bytes": 5687,
+      "sha256": "7d1f397563b8f925349da22d7c4fea125bbe0eebd2a9fff44fa0da8de8d3097d"
+    }
+  ],
+  "documentation": [
+    {
+      "file": "00_INDICE_BYTES_SHA256.json",
+      "bytes": 7657,
+      "sha256": "f24b71e0b64e898008bab6ecd03dbaa0036c3e0bb17ebd0b0fb11712ef6ae674"
+    },
+    {
+      "file": "03_PLUGINS_COMPLETOS.txt",
+      "bytes": 52995,
+      "sha256": "dfcffe08624d3eddb668ed2f75faabf0cf158b7cae061c60098e009e74fa0aba"
+    },
+    {
+      "file": "04_READMES_CANDADOS_Y_PROTOCOLOS.txt",
+      "bytes": 110825,
+      "sha256": "188cad356eacdbf251bb6e9dd95a3b83adc0581541978755e0c7a95343fc0da8"
+    },
+    {
+      "file": "CHECKLIST_V15_1_CIRCULO_VECINOS.txt",
+      "bytes": 1369,
+      "sha256": "3cc7c723ddd04766afddc7342aab1ce8107fa2ade298e1891dd3a1af4cab7dd8"
+    },
+    {
+      "file": "COMO_USAR_AQUILES_Y_TRAZA.txt",
+      "bytes": 3290,
+      "sha256": "5a69da1ae384b5bfb4c485301ed5053c821aaa3f2f19e248f532f684e8a2f57f"
+    },
+    {
+      "file": "FORMULARIO_COMPLETO_OPERACIONES_Y_MODELOS_V15_1.txt",
+      "bytes": 20688,
+      "sha256": "9d1116b8baaf842fea67a467630e6f87518b2ab830a8737b9bd305344f6ab7d4"
+    },
+    {
+      "file": "LEEME_QUE_ESTA_VIVO.txt",
+      "bytes": 1708,
+      "sha256": "b651c312ded0a7cb5b2669eeedc97caaf501890438277403c890fb652bc3100a"
+    },
+    {
+      "file": "METODO_HECATE_HOLMES_SCHOPENHAUER.txt",
+      "bytes": 1477,
+      "sha256": "717eeec8deef7c9c529b3d0aef11bcfd21dce67c56212027202dce131fbe8d8a"
+    },
+    {
+      "file": "PROTOCOLO_CHATGPT_EJECUTOR_V15_1.md",
+      "bytes": 3003,
+      "sha256": "8cb15c08273ee178a35af89a19bc85eda068b49c6860791f8e8e21bdc0f4600b"
+    },
+    {
+      "file": "PROTOCOLO_ESTUDIOS_TRAZABILIDAD_V15_1.json",
+      "bytes": 1482,
+      "sha256": "0ef9c15576e9cee4bf6f0154f2c9c86ca713ac2d973248a6b5cf01c09c35bddb"
+    },
+    {
+      "file": "PROTOCOLO_ESTUDIOS_TRAZABILIDAD_V15_1.txt",
+      "bytes": 4506,
+      "sha256": "44edb0260b45b3875c615cbbc9b21961a6f674d0ccc6ff19a986d34ecc13e25e"
+    },
+    {
+      "file": "PROTOCOLO_HIPOTESIS_E_INVERSA.txt",
+      "bytes": 862,
+      "sha256": "3713b065d986ad54a8a31ba46e30c3dec5a5794c26c49468fd04e2c9eaf33961"
+    },
+    {
+      "file": "README_DOSSIER_MINIMO_V15_1.txt",
+      "bytes": 4435,
+      "sha256": "5fe9d28e2d743efba9090f9db86155ea428b36f541423e2077b53d3bf0199eb7"
+    },
+    {
+      "file": "README_V15_REPRODUCIBLE.txt",
+      "bytes": 3293,
+      "sha256": "a37569bedbae393c6c545e8efbd66d16e834407131b33d03922e34d231bc4c92"
+    },
+    {
+      "file": "SCRIPT_ROLES_NO_ALUCINAR.txt",
+      "bytes": 2221,
+      "sha256": "b3cf6b477df380b7c4f9ffa6efd39c681d9b22c276ba1c90d877745de9ef4016"
+    },
+    {
+      "file": "V15_1_ESCALETA_PREDICTIBILIDAD_TODO.txt",
+      "bytes": 31746,
+      "sha256": "3a45bba3000d1c06b69001978f2e2c6eeccc1be67e8e737425e766a65b697da4"
+    },
+    {
+      "file": "V15_1_PLUGINS_Y_READMES_TODO_EN_UN_SOLO_TXT.txt",
+      "bytes": 75847,
+      "sha256": "e75776c231ad1aa1a25bafbfab7bf11971f2141a5c59d4ffb9b084ebea07e9c5"
+    },
+    {
+      "file": "V15_1_TODOS_LOS_PLUGINS_UN_SOLO_TXT.txt",
+      "bytes": 42211,
+      "sha256": "8b4884bb403bac1c5608570feb3a991df7ddb600939d9560c58dca9c83f69843"
+    }
+  ]
+}

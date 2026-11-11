@@ -1,0 +1,48 @@
+{
+  "protocolo": "PROTOCOLO_ESTUDIOS_TRAZABILIDAD_V15_1",
+  "version": "1.0",
+  "unidad": "corte temporal",
+  "flujo": [
+    "hecho_fuente",
+    "mapeado",
+    "input_congelado",
+    "engine_analisis",
+    "campo_curvas_full_trace",
+    "hipotesis_congelada",
+    "apuesta",
+    "proyeccion_1",
+    "inercia",
+    "proyeccion_2_si_corresponde",
+    "nuevo_corte",
+    "validacion",
+    "ingenieria_inversa",
+    "feedback"
+  ],
+  "reglas": {
+    "temporalidad": "usar solo información disponible hasta t",
+    "freeze": "congelar antes de t+1",
+    "inercia": "medir continuidad antes de proponerla; investigar fórmula solo después de observar regularidad",
+    "hipotesis_simultaneas": "conservar hipótesis compatibles en paralelo",
+    "proyeccion_2": "solo si la continuidad observada y una regla previamente definida la justifican",
+    "apuesta": "declarar objeto y criterios de acierto/parcial/refutación",
+    "ciego": "sin información posterior al freeze",
+    "inversa": "comparar aciertos, fallos, señales ignoradas y atención excesiva sin reescribir el freeze",
+    "faltantes": "FALTANTE/NO_VERIFICADO/RECONSTRUIDO"
+  },
+  "salida_por_corte": [
+    "corte_id",
+    "input_congelado",
+    "salida_tecnica",
+    "observaciones",
+    "inercia_candidata",
+    "hipotesis_congeladas",
+    "apuestas",
+    "proyeccion_1",
+    "proyeccion_2_si_corresponde",
+    "dato_real_siguiente",
+    "validacion",
+    "ingenieria_inversa",
+    "feedback",
+    "limitaciones"
+  ]
+}

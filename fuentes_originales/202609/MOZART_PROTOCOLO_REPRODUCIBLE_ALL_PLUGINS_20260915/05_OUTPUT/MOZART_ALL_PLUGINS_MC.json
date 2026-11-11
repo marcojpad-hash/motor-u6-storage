@@ -1,0 +1,2719 @@
+{
+  "version": "V15.1_PLUGIN_ALL_EXPERIMENTAL",
+  "base_canon_244": 244,
+  "sidecar_memory_patterns": 247,
+  "dynamic_fusion_memory_patterns": 250,
+  "engine_canon_tocado": false,
+  "patterns_disk_tocado": false,
+  "monte_carlo": true,
+  "axes": [
+    "P",
+    "A",
+    "C"
+  ],
+  "sidecar_fusion": [
+    "plugin_familias_gloria_sacro",
+    "plugin_otto_numinoso",
+    "plugin_trayectoria_hosteleria"
+  ],
+  "lenses_executed": [
+    "traza_campo_244",
+    "plugin_reporte_3d",
+    "plugin_picos_mesetas",
+    "plugin_sesgo_lectura",
+    "plugin_arco_field_snyder_mckee",
+    "plugin_circulo_monomito",
+    "plugin_aquiles_h",
+    "plugin_pregunta_detras_v2",
+    "plugin_embudo_clinico",
+    "plugin_alias_reactivacion",
+    "plugin_fix_entrada",
+    "plugin_metodo_rigor",
+    "plugin_arquetipos_dinamicos",
+    "plugin_capa2_antecedentes_arquetipos",
+    "plugin_guardia_no_cruce"
+  ],
+  "n_cuts": 10,
+  "sidecar_R_shape": [
+    10,
+    741
+  ],
+  "sidecar_dX_norm": [
+    0.4239547971187495,
+    0.41260128453508244,
+    0.5043343831229437,
+    0.4376202806086573,
+    0.45112499376558596,
+    0.44735070135185884,
+    0.2307069786547429,
+    0.24351726838152565,
+    0.310018644600611
+  ],
+  "sidecar_persist_cos": [
+    0.21571228994945232,
+    0.3370032302359191,
+    -0.02952240459179335,
+    -0.1297630043343424,
+    0.5934700344489212,
+    -0.10346950668508866,
+    0.11260043426012206,
+    0.25198671224916436
+  ],
+  "sidecar_kappa_dir": [
+    0.9764569667756811,
+    0.9415034905992415,
+    0.9995641188173565,
+    0.9915450381632321,
+    0.8048560854035933,
+    0.9946326262426467,
+    0.9936403485187344,
+    0.9677306943824077
+  ],
+  "final_top_P": [
+    [
+      "arquetipo_el_creador",
+      0.7872
+    ],
+    [
+      "social_04_rogers_difusion_innovaciones",
+      0.7872
+    ],
+    [
+      "schwartz_10_autodireccion",
+      0.7872
+    ],
+    [
+      "trayectoria_sedentarismo_cardiovascular",
+      0.7545
+    ],
+    [
+      "30_ambicion",
+      0.7517
+    ],
+    [
+      "utopia_mentalidad_liberal",
+      0.7388
+    ],
+    [
+      "schwartz_07_logro",
+      0.7357
+    ],
+    [
+      "12_obtencion",
+      0.7249
+    ],
+    [
+      "utopia_autonomia_atenas",
+      0.7189
+    ],
+    [
+      "arquetipo_el_explorador",
+      0.6863
+    ]
+  ],
+  "final_top_A": [
+    [
+      "24_rivalidad_de_superior_e_inferior",
+      0.753
+    ],
+    [
+      "cliodinamica_02_fase_estanflacion_presion",
+      0.753
+    ],
+    [
+      "36_perdida_de_los_seres_queridos",
+      0.736
+    ],
+    [
+      "dumezil_f1_soberania_juridica",
+      0.7134
+    ],
+    [
+      "schwartz_06_poder",
+      0.7134
+    ],
+    [
+      "arquetipo_el_gobernante",
+      0.7006
+    ],
+    [
+      "dumezil_f1_soberania_magica",
+      0.7006
+    ],
+    [
+      "utopia_oficio_roma",
+      0.7006
+    ],
+    [
+      "sistema_domiciano_maiestas",
+      0.6983
+    ],
+    [
+      "sistema_domiciano",
+      0.6814
+    ]
+  ],
+  "final_top_C": [
+    [
+      "monomito_02_llamado_a_la_aventura",
+      0.7765
+    ],
+    [
+      "arquetipo_el_gobernante",
+      0.7765
+    ],
+    [
+      "social_04_rogers_difusion_innovaciones",
+      0.7765
+    ],
+    [
+      "social_14_overton_ventana",
+      0.7765
+    ],
+    [
+      "kwml_01_rey",
+      0.7765
+    ],
+    [
+      "fama_reputacion_gloria_publica",
+      0.7765
+    ],
+    [
+      "anacyclosis_01_monarquia",
+      0.7574
+    ],
+    [
+      "30_ambicion",
+      0.7265
+    ],
+    [
+      "weber_01_autoridad_tradicional",
+      0.6454
+    ],
+    [
+      "weber_02_autoridad_carismatica",
+      0.6454
+    ]
+  ],
+  "reporte_3d": {
+    "plugin": "PLUGIN_REPORTE_3D",
+    "engine_tocado": false,
+    "cortes": [
+      {
+        "corte": "C1",
+        "H": "arquetipo_el_creador",
+        "p": 0.6718,
+        "se_movieron": [],
+        "no_se_apagaron": [
+          {
+            "h": "utopia_mentalidad_liberal",
+            "p": 0.6404
+          }
+        ]
+      },
+      {
+        "corte": "C2",
+        "H": "arquetipo_el_creador",
+        "p": 0.8005,
+        "se_movieron": [
+          {
+            "h": "arquetipo_el_creador",
+            "d": 0.1287,
+            "p": 0.8005
+          },
+          {
+            "h": "tainter_02_rendimientos_decrecientes",
+            "d": -0.1032,
+            "p": 0.2823
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "d": 0.0791,
+            "p": 0.6609
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "utopia_mentalidad_liberal",
+            "p": 0.6659
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.6609
+          }
+        ]
+      },
+      {
+        "corte": "C3",
+        "H": "arquetipo_el_creador",
+        "p": 0.8081,
+        "se_movieron": [
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "d": 0.1753,
+            "p": 0.6753
+          },
+          {
+            "h": "tainter_02_rendimientos_decrecientes",
+            "d": -0.0628,
+            "p": 0.2195
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "d": 0.0561,
+            "p": 0.717
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.717
+          },
+          {
+            "h": "utopia_mentalidad_liberal",
+            "p": 0.6782
+          },
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "p": 0.6753
+          }
+        ]
+      },
+      {
+        "corte": "C4",
+        "H": "arquetipo_el_creador",
+        "p": 0.7817,
+        "se_movieron": [
+          {
+            "h": "30_ambicion",
+            "d": 0.2203,
+            "p": 0.7203
+          },
+          {
+            "h": "trayectoria_sedentarismo_cardiovascular",
+            "d": 0.1652,
+            "p": 0.6652
+          },
+          {
+            "h": "schwartz_07_logro",
+            "d": 0.118,
+            "p": 0.618
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.7484
+          },
+          {
+            "h": "30_ambicion",
+            "p": 0.7203
+          },
+          {
+            "h": "utopia_mentalidad_liberal",
+            "p": 0.6819
+          }
+        ]
+      },
+      {
+        "corte": "C5",
+        "H": "arquetipo_el_creador",
+        "p": 0.7924,
+        "se_movieron": [
+          {
+            "h": "arquetipo_el_explorador",
+            "d": 0.1961,
+            "p": 0.7458
+          },
+          {
+            "h": "schwartz_03_tradicion",
+            "d": -0.0806,
+            "p": 0.4194
+          },
+          {
+            "h": "monomito_05_cruce_del_primer_umbral",
+            "d": 0.0533,
+            "p": 0.603
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.7877
+          },
+          {
+            "h": "arquetipo_el_explorador",
+            "p": 0.7458
+          },
+          {
+            "h": "30_ambicion",
+            "p": 0.7143
+          }
+        ]
+      },
+      {
+        "corte": "C6",
+        "H": "30_ambicion",
+        "p": 0.7908,
+        "se_movieron": [
+          {
+            "h": "schwartz_07_logro",
+            "d": 0.0967,
+            "p": 0.7115
+          },
+          {
+            "h": "12_obtencion",
+            "d": 0.0922,
+            "p": 0.6993
+          },
+          {
+            "h": "30_ambicion",
+            "d": 0.0765,
+            "p": 0.7908
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "arquetipo_el_creador",
+            "p": 0.7908
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.7908
+          },
+          {
+            "h": "arquetipo_el_explorador",
+            "p": 0.7322
+          }
+        ]
+      },
+      {
+        "corte": "C7",
+        "H": "30_ambicion",
+        "p": 0.8103,
+        "se_movieron": [
+          {
+            "h": "schwartz_07_logro",
+            "d": 0.0791,
+            "p": 0.7906
+          },
+          {
+            "h": "12_obtencion",
+            "d": 0.0779,
+            "p": 0.7772
+          },
+          {
+            "h": "utopia_principio_mercado",
+            "d": 0.0669,
+            "p": 0.714
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "arquetipo_el_creador",
+            "p": 0.8103
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.8103
+          },
+          {
+            "h": "schwartz_07_logro",
+            "p": 0.7906
+          }
+        ]
+      },
+      {
+        "corte": "C8",
+        "H": "arquetipo_el_creador",
+        "p": 0.8023,
+        "se_movieron": [
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "d": 0.1273,
+            "p": 0.77
+          },
+          {
+            "h": "mbti_factor_percepcion_p",
+            "d": 0.0309,
+            "p": 0.5581
+          },
+          {
+            "h": "30_ambicion",
+            "d": -0.0192,
+            "p": 0.7911
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.8023
+          },
+          {
+            "h": "30_ambicion",
+            "p": 0.7911
+          },
+          {
+            "h": "schwartz_07_logro",
+            "p": 0.7726
+          }
+        ]
+      },
+      {
+        "corte": "C9",
+        "H": "arquetipo_el_creador",
+        "p": 0.8011,
+        "se_movieron": [
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "d": 0.0311,
+            "p": 0.8011
+          },
+          {
+            "h": "mbti_factor_percepcion_p",
+            "d": 0.0286,
+            "p": 0.5867
+          },
+          {
+            "h": "30_ambicion",
+            "d": -0.0164,
+            "p": 0.7747
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "p": 0.8011
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.8011
+          },
+          {
+            "h": "30_ambicion",
+            "p": 0.7747
+          }
+        ]
+      },
+      {
+        "corte": "C10",
+        "H": "arquetipo_el_creador",
+        "p": 0.7872,
+        "se_movieron": [
+          {
+            "h": "trayectoria_sedentarismo_cardiovascular",
+            "d": 0.1216,
+            "p": 0.7545
+          },
+          {
+            "h": "30_ambicion",
+            "d": -0.023,
+            "p": 0.7517
+          },
+          {
+            "h": "mbti_factor_percepcion_p",
+            "d": 0.0225,
+            "p": 0.6092
+          }
+        ],
+        "no_se_apagaron": [
+          {
+            "h": "social_04_rogers_difusion_innovaciones",
+            "p": 0.7872
+          },
+          {
+            "h": "schwartz_10_autodireccion",
+            "p": 0.7872
+          },
+          {
+            "h": "trayectoria_sedentarismo_cardiovascular",
+            "p": 0.7545
+          }
+        ]
+      }
+    ]
+  },
+  "picos_mesetas": {
+    "plugin": "PLUGIN_PICOS_MESETAS",
+    "eps": 0.04,
+    "cortes": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10"
+    ],
+    "top1": [
+      "arquetipo_el_creador",
+      "arquetipo_el_creador",
+      "arquetipo_el_creador",
+      "arquetipo_el_creador",
+      "arquetipo_el_creador",
+      "30_ambicion",
+      "30_ambicion",
+      "arquetipo_el_creador",
+      "arquetipo_el_creador",
+      "arquetipo_el_creador"
+    ],
+    "curvas": {
+      "arquetipo_el_explorador": {
+        "serie": [
+          0.5,
+          0.56,
+          0.5555,
+          0.5497,
+          0.7458,
+          0.7322,
+          0.7297,
+          0.7155,
+          0.7033,
+          0.6863
+        ],
+        "deltas": [
+          0.06,
+          -0.0045,
+          -0.0058,
+          0.1961,
+          -0.0136,
+          -0.0025,
+          -0.0142,
+          -0.0122,
+          -0.017
+        ],
+        "forma": "↗→→↗→→→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "dumezil_desequilibrio_f3_come_al_resto": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.5629,
+          0.5612,
+          0.6192,
+          0.6766,
+          0.6657,
+          0.6563,
+          0.6433
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.0629,
+          -0.0017,
+          0.058,
+          0.0574,
+          -0.0109,
+          -0.0094,
+          -0.013
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "arquetipo_el_creador": {
+        "serie": [
+          0.6718,
+          0.8005,
+          0.8081,
+          0.7817,
+          0.7924,
+          0.7908,
+          0.8103,
+          0.8023,
+          0.8011,
+          0.7872
+        ],
+        "deltas": [
+          0.1287,
+          0.0076,
+          -0.0264,
+          0.0107,
+          -0.0016,
+          0.0195,
+          -0.008,
+          -0.0012,
+          -0.0139
+        ],
+        "forma": "↗→→→→→→→→",
+        "fue_top1": 0,
+        "subio_antes_de_ser_top1": false
+      },
+      "schwartz_10_autodireccion": {
+        "serie": [
+          0.5818,
+          0.6609,
+          0.717,
+          0.7484,
+          0.7877,
+          0.7908,
+          0.8103,
+          0.8023,
+          0.8011,
+          0.7872
+        ],
+        "deltas": [
+          0.0791,
+          0.0561,
+          0.0314,
+          0.0393,
+          0.0031,
+          0.0195,
+          -0.008,
+          -0.0012,
+          -0.0139
+        ],
+        "forma": "↗↗→→→→→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "utopia_principio_mercado": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.5787,
+          0.5765,
+          0.6471,
+          0.714,
+          0.7008,
+          0.6894,
+          0.6736
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.0787,
+          -0.0022,
+          0.0706,
+          0.0669,
+          -0.0132,
+          -0.0114,
+          -0.0158
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "situacion_dramatica_ambicion": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.5629,
+          0.5612,
+          0.6192,
+          0.6766,
+          0.6657,
+          0.6563,
+          0.6433
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.0629,
+          -0.0017,
+          0.058,
+          0.0574,
+          -0.0109,
+          -0.0094,
+          -0.013
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "trayectoria_sedentarismo_cardiovascular": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.6652,
+          0.6607,
+          0.6518,
+          0.6502,
+          0.6409,
+          0.6329,
+          0.7545
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.1652,
+          -0.0045,
+          -0.0089,
+          -0.0016,
+          -0.0093,
+          -0.008,
+          0.1216
+        ],
+        "forma": "→→↗→→→→→↗",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "monomito_06_pruebas_aliados_y_enemigos": {
+        "serie": [
+          0.5573,
+          0.6148,
+          0.6591,
+          0.6424,
+          0.6385,
+          0.6309,
+          0.6294,
+          0.6214,
+          0.6146,
+          0.605
+        ],
+        "deltas": [
+          0.0575,
+          0.0443,
+          -0.0167,
+          -0.0039,
+          -0.0076,
+          -0.0015,
+          -0.008,
+          -0.0068,
+          -0.0096
+        ],
+        "forma": "↗↗→→→→→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "12_obtencion": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.6102,
+          0.6071,
+          0.6993,
+          0.7772,
+          0.7601,
+          0.7454,
+          0.7249
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.1102,
+          -0.0031,
+          0.0922,
+          0.0779,
+          -0.0171,
+          -0.0147,
+          -0.0205
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "dumezil_f3_fecundidad": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.5551,
+          0.5536,
+          0.6048,
+          0.6566,
+          0.6469,
+          0.6387,
+          0.627
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.0551,
+          -0.0015,
+          0.0512,
+          0.0518,
+          -0.0097,
+          -0.0082,
+          -0.0117
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "30_ambicion": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.7203,
+          0.7143,
+          0.7908,
+          0.8103,
+          0.7911,
+          0.7747,
+          0.7517
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.2203,
+          -0.006,
+          0.0765,
+          0.0195,
+          -0.0192,
+          -0.0164,
+          -0.023
+        ],
+        "forma": "→→↗→↗→→→→",
+        "fue_top1": 5,
+        "subio_antes_de_ser_top1": true
+      },
+      "predictivo_02_mdp_politica_optima": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.5787,
+          0.5765,
+          0.6471,
+          0.714,
+          0.7008,
+          0.6894,
+          0.6736
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.0787,
+          -0.0022,
+          0.0706,
+          0.0669,
+          -0.0132,
+          -0.0114,
+          -0.0158
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "schwartz_07_logro": {
+        "serie": [
+          0.5,
+          0.5,
+          0.5,
+          0.618,
+          0.6148,
+          0.7115,
+          0.7906,
+          0.7726,
+          0.7572,
+          0.7357
+        ],
+        "deltas": [
+          0.0,
+          0.0,
+          0.118,
+          -0.0032,
+          0.0967,
+          0.0791,
+          -0.018,
+          -0.0154,
+          -0.0215
+        ],
+        "forma": "→→↗→↗↗→→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      },
+      "social_04_rogers_difusion_innovaciones": {
+        "serie": [
+          0.5,
+          0.5,
+          0.6753,
+          0.657,
+          0.6527,
+          0.6442,
+          0.6427,
+          0.77,
+          0.8011,
+          0.7872
+        ],
+        "deltas": [
+          0.0,
+          0.1753,
+          -0.0183,
+          -0.0043,
+          -0.0085,
+          -0.0015,
+          0.1273,
+          0.0311,
+          -0.0139
+        ],
+        "forma": "→↗→→→→↗→→",
+        "fue_top1": null,
+        "subio_antes_de_ser_top1": false
+      }
+    },
+    "eje": "Aquiles / meseta del tema. Esta pieza no lo declara."
+  },
+  "sesgo_lectura": {
+    "plugin": "PLUGIN_SESGO_LECTURA",
+    "version": 2,
+    "engine_tocado": false,
+    "regla": "Mismas palabras no equivalen a sesgo. Sesgo solo se SOSPECHA si el letrero se queda y D está vacío (cero carne nueva). Aun así no se anula el hallazgo.",
+    "con_aquiles": "Aquiles + universal_con_color = rumbo con instancia. Aquiles + universal_sin_color_nueva = rumbo, pero esta vida no aportó pigmento: no lo vendas como caso nuevo.",
+    "transiciones": [
+      {
+        "de": "C1",
+        "a": "C2",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.5,
+        "tokens_nuevos": [
+          "viaje"
+        ],
+        "tokens_idos": [
+          "conocimiento"
+        ],
+        "D_diferenciacion": [
+          "conocimiento",
+          "viaje"
+        ],
+        "letrero_igual": true,
+        "etiqueta": "universal_con_color"
+      },
+      {
+        "de": "C2",
+        "a": "C3",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.5,
+        "tokens_nuevos": [
+          "generacion_ideas"
+        ],
+        "tokens_idos": [
+          "viaje"
+        ],
+        "D_diferenciacion": [
+          "generacion_ideas",
+          "viaje"
+        ],
+        "letrero_igual": true,
+        "etiqueta": "universal_con_color"
+      },
+      {
+        "de": "C3",
+        "a": "C4",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.2,
+        "tokens_nuevos": [
+          "ambicion",
+          "trabajo_sedentario"
+        ],
+        "tokens_idos": [
+          "aprendizaje",
+          "generacion_ideas"
+        ],
+        "D_diferenciacion": [
+          "ambicion",
+          "aprendizaje",
+          "generacion_ideas",
+          "trabajo_sedentario"
+        ],
+        "letrero_igual": true,
+        "etiqueta": "universal_con_color"
+      },
+      {
+        "de": "C4",
+        "a": "C5",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.2,
+        "tokens_nuevos": [
+          "busqueda_libertad",
+          "viaje"
+        ],
+        "tokens_idos": [
+          "ambicion",
+          "trabajo_sedentario"
+        ],
+        "D_diferenciacion": [
+          "ambicion",
+          "busqueda_libertad",
+          "trabajo_sedentario",
+          "viaje"
+        ],
+        "letrero_igual": true,
+        "etiqueta": "universal_con_color"
+      },
+      {
+        "de": "C5",
+        "a": "C6",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "30_ambicion",
+        "C_solape": 0.2,
+        "tokens_nuevos": [
+          "ambicion",
+          "independencia"
+        ],
+        "tokens_idos": [
+          "busqueda_libertad",
+          "viaje"
+        ],
+        "D_diferenciacion": [
+          "ambicion",
+          "busqueda_libertad",
+          "independencia",
+          "viaje"
+        ],
+        "letrero_igual": false,
+        "etiqueta": "cambio_de_letrero"
+      },
+      {
+        "de": "C6",
+        "a": "C7",
+        "H_de": "30_ambicion",
+        "H_a": "30_ambicion",
+        "C_solape": 1.0,
+        "tokens_nuevos": [],
+        "tokens_idos": [],
+        "D_diferenciacion": [],
+        "letrero_igual": true,
+        "etiqueta": "universal_sin_color_nueva"
+      },
+      {
+        "de": "C7",
+        "a": "C8",
+        "H_de": "30_ambicion",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.5,
+        "tokens_nuevos": [
+          "generacion_ideas"
+        ],
+        "tokens_idos": [
+          "ambicion"
+        ],
+        "D_diferenciacion": [
+          "ambicion",
+          "generacion_ideas"
+        ],
+        "letrero_igual": false,
+        "etiqueta": "cambio_de_letrero"
+      },
+      {
+        "de": "C8",
+        "a": "C9",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 1.0,
+        "tokens_nuevos": [],
+        "tokens_idos": [],
+        "D_diferenciacion": [],
+        "letrero_igual": true,
+        "etiqueta": "universal_sin_color_nueva"
+      },
+      {
+        "de": "C9",
+        "a": "C10",
+        "H_de": "arquetipo_el_creador",
+        "H_a": "arquetipo_el_creador",
+        "C_solape": 0.5,
+        "tokens_nuevos": [
+          "trabajo_sedentario"
+        ],
+        "tokens_idos": [
+          "independencia"
+        ],
+        "D_diferenciacion": [
+          "independencia",
+          "trabajo_sedentario"
+        ],
+        "letrero_igual": true,
+        "etiqueta": "universal_con_color"
+      }
+    ]
+  },
+  "arco": {
+    "plugin": "PLUGIN_ARCO_DRAMATICO",
+    "engine_tocado": false,
+    "nuevas_hipotesis_244": 0,
+    "regla": "Tres lecturas. VACIO se deja. No encajar de a huevo.",
+    "para_que": "Ver si la trazabilidad de una vida/época SE NOTA como cinta (Field), como catálogo de momentos (Snyder) o como volteo de valor (McKee). Hueco = dato. No es predecir el iPhone.",
+    "matices": {
+      "Field": "arquitectura del tiempo",
+      "Snyder": "momentos de taller comercial",
+      "McKee": "carga de valor que se voltea"
+    },
+    "field": [
+      {
+        "beat": "ACTO_1",
+        "glosa": "planteamiento / casa",
+        "corte": "C1",
+        "se_nota": false,
+        "carga": "0",
+        "forzado": false
+      },
+      {
+        "beat": "PLOT_POINT_1",
+        "glosa": "ya no hay vuelta fácil",
+        "corte": "C3",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "PUNTO_MEDIO",
+        "glosa": "se ve el tipo de cinta",
+        "corte": "C6",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "PLOT_POINT_2",
+        "glosa": "segundo golpe",
+        "corte": "C8",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "ACTO_3",
+        "glosa": "se paga o se recoge",
+        "corte": "C10",
+        "se_nota": true,
+        "carga": "-",
+        "forzado": false
+      }
+    ],
+    "snyder": [
+      {
+        "beat": "opening_image",
+        "glosa": "foto de entrada",
+        "corte_cerca": "C1",
+        "estado": "VACIO",
+        "forzado": false
+      },
+      {
+        "beat": "theme_stated",
+        "glosa": "de qué va, sin querer",
+        "corte_cerca": "C2",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "setup",
+        "glosa": "casa",
+        "corte_cerca": "C2",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "catalyst",
+        "glosa": "el jalón",
+        "corte_cerca": "C3",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "debate",
+        "glosa": "¿entro o no?",
+        "corte_cerca": "C4",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "break_into_two",
+        "glosa": "cruza",
+        "corte_cerca": "C4",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "b_story",
+        "glosa": "otro hilo",
+        "corte_cerca": "C5",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "fun_and_games",
+        "glosa": "promesa del género",
+        "corte_cerca": "C5",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "midpoint",
+        "glosa": "falso triunfo o falso fondo",
+        "corte_cerca": "C6",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "bad_guys_close_in",
+        "glosa": "aprieta",
+        "corte_cerca": "C7",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "all_is_lost",
+        "glosa": "muerte aparente",
+        "corte_cerca": "C7",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "dark_night",
+        "glosa": "quieto y feo",
+        "corte_cerca": "C8",
+        "estado": "SE_NOTA",
+        "forzado": false
+      },
+      {
+        "beat": "break_into_three",
+        "glosa": "se levanta",
+        "corte_cerca": "C9",
+        "estado": "VACIO",
+        "forzado": false
+      },
+      {
+        "beat": "finale",
+        "glosa": "paga",
+        "corte_cerca": "C9",
+        "estado": "VACIO",
+        "forzado": false
+      },
+      {
+        "beat": "final_image",
+        "glosa": "foto de salida vs entrada",
+        "corte_cerca": "C10",
+        "estado": "SE_NOTA",
+        "forzado": false
+      }
+    ],
+    "mckee": [
+      {
+        "beat": "incidente_incitador",
+        "glosa": "el valor de la vida se toca por primera vez",
+        "corte": "C1",
+        "se_nota": false,
+        "carga": "0",
+        "forzado": false
+      },
+      {
+        "beat": "complicaciones",
+        "glosa": "el valor se aprieta, no se resuelve",
+        "corte": "C4",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "crisis",
+        "glosa": "dilema: dos males o dos bienes, hay que elegir",
+        "corte": "C6",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "climax",
+        "glosa": "la elección se ACTÚA y el valor se voltea",
+        "corte": "C8",
+        "se_nota": true,
+        "carga": "+",
+        "forzado": false
+      },
+      {
+        "beat": "resolucion",
+        "glosa": "el mundo nuevo, más chico que el clímax",
+        "corte": "C10",
+        "se_nota": true,
+        "carga": "-",
+        "forzado": false
+      }
+    ],
+    "mckee_volteos": [
+      {
+        "de": "C8",
+        "a": "C9",
+        "carga": "+→-"
+      }
+    ],
+    "n_snyder_vacios": 3,
+    "n_field_sin_nota": 1
+  },
+  "monomito": {
+    "plugin": "PLUGIN_CIRCULO_MONOMITO",
+    "tipo": "lente_lateral_no_pattern",
+    "no_toca": [
+      "Engine_V5_CANONICO_SOLO.py",
+      "patterns_final_v14.json"
+    ],
+    "r1_corregida": "listas por cuadrante son estructuras semanticas candidatas",
+    "posicion_monomito_por_corte": [
+      {
+        "corte": "C1",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q2_Descenso_4_6"
+        ],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12",
+          "Q3_Ordeal_7_9"
+        ]
+      },
+      {
+        "corte": "C2",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q2_Descenso_4_6"
+        ],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12",
+          "Q3_Ordeal_7_9"
+        ]
+      },
+      {
+        "corte": "C3",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q2_Descenso_4_6"
+        ],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12",
+          "Q3_Ordeal_7_9"
+        ]
+      },
+      {
+        "corte": "C4",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q2_Descenso_4_6",
+          "Q3_Ordeal_7_9",
+          "Q4_Retorno_10_12"
+        ]
+      },
+      {
+        "corte": "C5",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q3_Ordeal_7_9"
+        ],
+        "hilos_presentes": [
+          "hilo_vinculo"
+        ],
+        "estabilidad_hilo": {
+          "hilo_vinculo": 1
+        },
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q2_Descenso_4_6",
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12"
+        ]
+      },
+      {
+        "corte": "C6",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q2_Descenso_4_6"
+        ],
+        "hilos_presentes": [
+          "hilo_desafio"
+        ],
+        "estabilidad_hilo": {
+          "hilo_desafio": 1
+        },
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12",
+          "Q3_Ordeal_7_9"
+        ]
+      },
+      {
+        "corte": "C7",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q2_Descenso_4_6",
+          "Q3_Ordeal_7_9"
+        ],
+        "hilos_presentes": [
+          "hilo_desafio"
+        ],
+        "estabilidad_hilo": {
+          "hilo_desafio": 2
+        },
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12"
+        ]
+      },
+      {
+        "corte": "C8",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q1_Separacion_1_3",
+          "Q2_Descenso_4_6",
+          "Q3_Ordeal_7_9",
+          "Q4_Retorno_10_12"
+        ]
+      },
+      {
+        "corte": "C9",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q3_Ordeal_7_9"
+        ],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q2_Descenso_4_6",
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12"
+        ]
+      },
+      {
+        "corte": "C10",
+        "pregunta_activa": "Mozart",
+        "cuadrante_activo": [
+          "Q3_Ordeal_7_9"
+        ],
+        "hilos_presentes": [],
+        "estabilidad_hilo": {},
+        "r3_sombra_mentor": null,
+        "r4_nuevo_ciclo": false,
+        "catarsis_de_hilo": [],
+        "pendientes_consolidar_restantes": [],
+        "huecos": [
+          "Q2_Descenso_4_6",
+          "Q1_Separacion_1_3",
+          "Q4_Retorno_10_12"
+        ]
+      }
+    ],
+    "linea_mas_avanzada_actual": null,
+    "nota_catarsis": "catarsis = cierre en Q4 por conexion contextual con otro hilo (anagnorisis/peripecia)"
+  },
+  "pregunta": {
+    "plugin": "plugin_pregunta_detras_v2",
+    "version": "PROPUESTA_v2.3.1",
+    "superficie": "¿Hacia dónde se perfila la trayectoria de Mozart después del Z90?",
+    "marcajes": [],
+    "n_perfilamiento": 0,
+    "n_campo": 0,
+    "red_flag": false,
+    "bandera": null,
+    "accion": "continuar",
+    "calibrador": {
+      "nombre": "morfosintaxis_concordancia_genero_numero",
+      "umbral_score": 0.55,
+      "umbral_acumulacion": 2,
+      "morfo_sufijos": "APROX_BARATA",
+      "aviso": "Terminaciones (-oso/-ico/-ción/…) NO son analizador morfológico. Falsos +/- posibles (médico N|Adj; sacrificio puede no matchear). Score≠certeza. Manda el marco sintáctico (medible vs predicativo/adjetival)."
+    },
+    "protocolo": {
+      "unidad": "función del lexema en la pregunta (no la palabra)",
+      "apoyo": "marco sintáctico manda; concordancia g/n; morfología por sufijos=APROX (no certeza)",
+      "FENOMENO_CAMPO": "objeto/acto/hecho situado → pasa normal",
+      "ETIQUETA_SUJETO": "atributo/perfil del sujeto → marcaje",
+      "MARCO_EVALUATIVO": "enunciación de veredicto → marcaje",
+      "calibracion": "score≥0.55 + acumulación≥2 → RED_FLAG",
+      "efecto": "highlight only; no bloquea; no enciende tokens; no inventa H",
+      "analogia": "sombrero blanco medible ≠ 'qué bonito el color'"
+    },
+    "pregunta_detras_sugerida": null,
+    "nota": "Filtro capa 1 + calibrador semántico (concordancia / morfología / marcos). No perfila ni enciende tokens."
+  },
+  "embudo": {
+    "plugin": "EMBUDO_CLINICO",
+    "global": "NO_APLICA",
+    "sosten_max": 0,
+    "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+    "cortes": [
+      {
+        "corte": "C1",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C2",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C3",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C4",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C5",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C6",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C7",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C8",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C9",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      },
+      {
+        "corte": "C10",
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+      }
+    ]
+  },
+  "entrada_fix_diagnostico": {
+    "cortes": [
+      [
+        "C1",
+        [
+          [
+            "aprendizaje",
+            0.84
+          ],
+          [
+            "conocimiento",
+            0.72
+          ],
+          [
+            "creatividad",
+            0.78
+          ],
+          [
+            "autoridad",
+            0.62
+          ],
+          [
+            "desconfianza_autoridad",
+            0.6
+          ],
+          [
+            "reconocimiento",
+            0.72
+          ],
+          [
+            "oportunidad",
+            0.68
+          ]
+        ]
+      ],
+      [
+        "C2",
+        [
+          [
+            "viaje",
+            0.84
+          ],
+          [
+            "creatividad",
+            0.82
+          ],
+          [
+            "aprendizaje",
+            0.8
+          ],
+          [
+            "oportunidad",
+            0.76
+          ],
+          [
+            "reconocimiento",
+            0.7
+          ],
+          [
+            "reconocimiento",
+            0.8
+          ],
+          [
+            "oportunidad",
+            0.78
+          ],
+          [
+            "poder",
+            0.6
+          ]
+        ]
+      ],
+      [
+        "C3",
+        [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "aprendizaje",
+            0.78
+          ],
+          [
+            "generacion_ideas",
+            0.76
+          ],
+          [
+            "viaje",
+            0.72
+          ],
+          [
+            "autoridad",
+            0.6
+          ],
+          [
+            "reconocimiento",
+            0.82
+          ],
+          [
+            "oportunidad",
+            0.8
+          ],
+          [
+            "competencia",
+            0.64
+          ]
+        ]
+      ],
+      [
+        "C4",
+        [
+          [
+            "creatividad",
+            0.82
+          ],
+          [
+            "trabajo_sedentario",
+            0.66
+          ],
+          [
+            "ambicion",
+            0.68
+          ],
+          [
+            "autoridad",
+            0.76
+          ],
+          [
+            "rivalidad_profesional",
+            0.62
+          ],
+          [
+            "oportunidad",
+            0.72
+          ],
+          [
+            "reconocimiento",
+            0.7
+          ],
+          [
+            "poder",
+            0.64
+          ]
+        ]
+      ],
+      [
+        "C5",
+        [
+          [
+            "viaje",
+            0.82
+          ],
+          [
+            "creatividad",
+            0.76
+          ],
+          [
+            "busqueda_libertad",
+            0.68
+          ],
+          [
+            "perdida_familiar",
+            0.84
+          ],
+          [
+            "duelo",
+            0.78
+          ],
+          [
+            "oportunidad",
+            0.74
+          ],
+          [
+            "reconocimiento",
+            0.62
+          ]
+        ]
+      ],
+      [
+        "C6",
+        [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "independencia",
+            0.72
+          ],
+          [
+            "ambicion",
+            0.7
+          ],
+          [
+            "desafio_autoridad",
+            0.8
+          ],
+          [
+            "rivalidad_profesional",
+            0.64
+          ],
+          [
+            "reconocimiento",
+            0.82
+          ],
+          [
+            "oportunidad",
+            0.72
+          ],
+          [
+            "poder",
+            0.64
+          ]
+        ]
+      ],
+      [
+        "C7",
+        [
+          [
+            "independencia",
+            0.84
+          ],
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "autonomia",
+            0.76
+          ],
+          [
+            "desafio_autoridad",
+            0.78
+          ],
+          [
+            "rivalidad",
+            0.68
+          ],
+          [
+            "reconocimiento",
+            0.84
+          ],
+          [
+            "oportunidad",
+            0.82
+          ],
+          [
+            "liderazgo",
+            0.7
+          ]
+        ]
+      ],
+      [
+        "C8",
+        [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "independencia",
+            0.74
+          ],
+          [
+            "generacion_ideas",
+            0.76
+          ],
+          [
+            "rivalidad_profesional",
+            0.62
+          ],
+          [
+            "trabajo_sedentario",
+            0.6
+          ],
+          [
+            "reconocimiento",
+            0.78
+          ],
+          [
+            "oportunidad",
+            0.72
+          ]
+        ]
+      ],
+      [
+        "C9",
+        [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "generacion_ideas",
+            0.8
+          ],
+          [
+            "independencia",
+            0.72
+          ],
+          [
+            "competencia",
+            0.62
+          ],
+          [
+            "reconocimiento",
+            0.76
+          ],
+          [
+            "oportunidad",
+            0.74
+          ],
+          [
+            "liderazgo",
+            0.66
+          ]
+        ]
+      ],
+      [
+        "C10",
+        [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "trabajo_sedentario",
+            0.66
+          ],
+          [
+            "generacion_ideas",
+            0.78
+          ],
+          [
+            "crisis_abrupta",
+            0.78
+          ],
+          [
+            "perdida_definitiva",
+            0.7
+          ],
+          [
+            "reconocimiento",
+            0.82
+          ],
+          [
+            "oportunidad",
+            0.7
+          ],
+          [
+            "liderazgo",
+            0.62
+          ]
+        ]
+      ]
+    ],
+    "campos": [
+      {
+        "corte": "C1",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C2",
+        "conquista": 1,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C3",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C4",
+        "conquista": 1,
+        "agencia": 0,
+        "tiene_ambicion": true
+      },
+      {
+        "corte": "C5",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C6",
+        "conquista": 1,
+        "agencia": 1,
+        "tiene_ambicion": true
+      },
+      {
+        "corte": "C7",
+        "conquista": 0,
+        "agencia": 2,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C8",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C9",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      },
+      {
+        "corte": "C10",
+        "conquista": 0,
+        "agencia": 0,
+        "tiene_ambicion": false
+      }
+    ],
+    "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+        {
+          "corte": "C1",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C2",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C3",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C4",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C5",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C6",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C7",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C8",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C9",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        },
+        {
+          "corte": "C10",
+          "clinico": false,
+          "co_oficio": false,
+          "etiqueta": "NO_APLICA"
+        }
+      ]
+    }
+  },
+  "capa2": {
+    "plugin": "PLUGIN_CAPA2_ANTECEDENTES_ARQUETIPOS",
+    "version": 1,
+    "engine_tocado": false,
+    "evidence_status": "unverified",
+    "regla_oficio": "Este plugin SUGIERE. El cierre sigue siendo 1 familia_unica + 1 descarte + 1 frase. No uses el top_k como buffet de apuestas.",
+    "tokens_campo": [
+      "ambicion",
+      "aprendizaje",
+      "autoridad",
+      "busqueda_libertad",
+      "competencia",
+      "conocimiento",
+      "creatividad",
+      "crisis_abrupta",
+      "desafio_autoridad",
+      "desconfianza_autoridad",
+      "duelo",
+      "generacion_ideas",
+      "independencia",
+      "liderazgo",
+      "oportunidad",
+      "perdida_definitiva",
+      "perdida_familiar",
+      "poder",
+      "reconocimiento",
+      "rivalidad",
+      "rivalidad_profesional",
+      "trabajo_sedentario",
+      "viaje"
+    ],
+    "por_capa": {
+      "historica_trayectoria": [
+        {
+          "id": "mando_personalista_sucesion",
+          "capa": "historica_trayectoria",
+          "nombre": "Mando personalista / crisis de sucesión",
+          "score": 0.2,
+          "hits_favor": [
+            "ambicion"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 30,
+            "cuaja_tipico": 50
+          },
+          "antecedente_tipo": [
+            "Porfiriato",
+            "Roma tardía",
+            "César (cuaja tarde)"
+          ],
+          "nota": "No mapear todo 'poder' aquí; exige ancla estatal/personalista.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [
+              {
+                "corte": "C4",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C6",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C7",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              }
+            ],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        },
+        {
+          "id": "saber_prestigio_creativo_temprano_moderno",
+          "capa": "historica_trayectoria",
+          "nombre": "Saber + prestigio creativo (reacomodo de circuitos)",
+          "score": 0.2,
+          "hits_favor": [
+            "aprendizaje"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 20,
+            "cuaja_tipico": 40
+          },
+          "antecedente_tipo": [
+            "antecedentes Renacimiento"
+          ],
+          "nota": "Descarta colapso como familia dominante.",
+          "early": {
+            "ya_se_ve_temprano": true,
+            "evidencias": [
+              {
+                "corte": "C1",
+                "edad": null,
+                "hits": [
+                  "aprendizaje"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C2",
+                "edad": null,
+                "hits": [
+                  "aprendizaje"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C3",
+                "edad": null,
+                "hits": [
+                  "aprendizaje"
+                ],
+                "n": 1
+              }
+            ],
+            "lectura": "señal temprana tipo 'Alejandro ~15–16'"
+          }
+        },
+        {
+          "id": "fundador_tecnico_control_vs_capital",
+          "capa": "historica_trayectoria",
+          "nombre": "Fundador técnico-empresarial + mando vs capital",
+          "score": 0.1429,
+          "hits_favor": [
+            "ambicion"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 24,
+            "cuaja_tipico": 30
+          },
+          "antecedente_tipo": [
+            "Musk freeze≤2000",
+            "serial founder"
+          ],
+          "nota": "Señal 'política' temprana suele ser mando organizacional.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [
+              {
+                "corte": "C4",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C6",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C7",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              }
+            ],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        }
+      ],
+      "vinculo_amoroso": [
+        {
+          "id": "triangulo_rivalidad_deseante",
+          "capa": "vinculo_amoroso",
+          "nombre": "Triángulo / rivalidad deseante",
+          "score": 0.4,
+          "hits_favor": [
+            "ambicion",
+            "rivalidad"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 16,
+            "cuaja_tipico": 25
+          },
+          "antecedente_tipo": [
+            "patrones de vínculo competitivos"
+          ],
+          "nota": "Capa amorosa: solo si el campo prende vínculo; no forzar bios políticas.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [
+              {
+                "corte": "C4",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C6",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C7",
+                "edad": null,
+                "hits": [
+                  "ambicion",
+                  "rivalidad"
+                ],
+                "n": 2
+              }
+            ],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        },
+        {
+          "id": "alianza_estrategica_afecto",
+          "capa": "vinculo_amoroso",
+          "nombre": "Alianza estratégica con afecto instrumental",
+          "score": 0.2,
+          "hits_favor": [
+            "ambicion"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 22,
+            "cuaja_tipico": 35
+          },
+          "antecedente_tipo": [
+            "matrimonio-alianza / sponsor"
+          ],
+          "nota": "Útil en cortes donde el vínculo es vehículo de capital/estatus.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [
+              {
+                "corte": "C4",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C6",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C7",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              }
+            ],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        },
+        {
+          "id": "idealizacion_caida_desencanto",
+          "capa": "vinculo_amoroso",
+          "nombre": "Idealización → caída / desencanto",
+          "score": 0.0,
+          "hits_favor": [],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 18,
+            "cuaja_tipico": 30
+          },
+          "antecedente_tipo": [
+            "arcos de desilusión amorosa"
+          ],
+          "nota": "Lateral; no es familia histórica por defecto.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        }
+      ],
+      "estilo_psic": [
+        {
+          "id": "estilo_obsesivo_control",
+          "capa": "estilo_psic",
+          "nombre": "Estilo control / perfeccionismo operativo (NO diagnóstico)",
+          "score": 0.2,
+          "hits_favor": [
+            "ambicion"
+          ],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 20,
+            "cuaja_tipico": 35
+          },
+          "antecedente_tipo": [
+            "fundadores que no sueltan CEO"
+          ],
+          "nota": "Ancla a mando operativo, no a 'loco'.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [
+              {
+                "corte": "C4",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C6",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              },
+              {
+                "corte": "C7",
+                "edad": null,
+                "hits": [
+                  "ambicion"
+                ],
+                "n": 1
+              }
+            ],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        },
+        {
+          "id": "estilo_histrionico_exposicion",
+          "capa": "estilo_psic",
+          "nombre": "Estilo exposición / dramatización (NO diagnóstico)",
+          "score": 0.0,
+          "hits_favor": [],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 15,
+            "cuaja_tipico": 25
+          },
+          "antecedente_tipo": [
+            "Wilde imagen",
+            "figuras de salón"
+          ],
+          "nota": "Cambia la PREGUNTA (¿busca audiencia?), no etiqueta clínica.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        },
+        {
+          "id": "estilo_paranoide_vigilancia",
+          "capa": "estilo_psic",
+          "nombre": "Estilo vigilancia / amenaza percibida (NO diagnóstico)",
+          "score": 0.0,
+          "hits_favor": [],
+          "hits_contra": [],
+          "ventana_edad": {
+            "ya_se_ve_desde": 25,
+            "cuaja_tipico": 45
+          },
+          "antecedente_tipo": [
+            "cortes de acecho/conspiración"
+          ],
+          "nota": "Solo si el campo trae acecho; no proyectar.",
+          "early": {
+            "ya_se_ve_temprano": false,
+            "evidencias": [],
+            "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+          }
+        }
+      ]
+    },
+    "sugerencia_una_familia": {
+      "id": "triangulo_rivalidad_deseante",
+      "capa": "vinculo_amoroso",
+      "nombre": "Triángulo / rivalidad deseante",
+      "score": 0.4,
+      "hits_favor": [
+        "ambicion",
+        "rivalidad"
+      ],
+      "hits_contra": [],
+      "ventana_edad": {
+        "ya_se_ve_desde": 16,
+        "cuaja_tipico": 25
+      },
+      "antecedente_tipo": [
+        "patrones de vínculo competitivos"
+      ],
+      "nota": "Capa amorosa: solo si el campo prende vínculo; no forzar bios políticas.",
+      "early": {
+        "ya_se_ve_temprano": false,
+        "evidencias": [
+          {
+            "corte": "C4",
+            "edad": null,
+            "hits": [
+              "ambicion"
+            ],
+            "n": 1
+          },
+          {
+            "corte": "C6",
+            "edad": null,
+            "hits": [
+              "ambicion"
+            ],
+            "n": 1
+          },
+          {
+            "corte": "C7",
+            "edad": null,
+            "hits": [
+              "ambicion",
+              "rivalidad"
+            ],
+            "n": 2
+          }
+        ],
+        "lectura": "cuaja más tarde o aún no asoma (tipo 'César tarda')"
+      }
+    },
+    "descartes_sugeridos": [
+      "mando_personalista_sucesion",
+      "saber_prestigio_creativo_temprano_moderno",
+      "alianza_estrategica_afecto"
+    ],
+    "periodicidad": {
+      "idea": "Compara early_signal entre familias: misma estructura puede asomar adolescente (Alejandro) o cuajar adulto maduro (César)."
+    }
+  },
+  "aquiles_entre_cortes": {
+    "estado": "PARA_DE_EMPUJAR_H",
+    "estado_H": "PARA_DE_EMPUJAR_H",
+    "estado_traza": "ABIERTA",
+    "N_min": 7,
+    "N_estable": 7,
+    "eps_p": 0.02,
+    "m_ventanas": 3,
+    "bloques": [
+      {
+        "n": 2,
+        "delta_H": 0.1287,
+        "H_quieta": false,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 3,
+        "delta_H": 0.0076,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 4,
+        "delta_H": 0.0264,
+        "H_quieta": false,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 0.6
+        },
+        "I": 0.05
+      },
+      {
+        "n": 5,
+        "delta_H": 0.0107,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 6,
+        "delta_H": 0.0016,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "30_ambicion",
+          "winner_cambio": true,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 7,
+        "delta_H": 0.0195,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "30_ambicion",
+          "winner_cambio": false,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 8,
+        "delta_H": 0.008,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": true,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      },
+      {
+        "n": 9,
+        "delta_H": 0.0012,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 1.0
+        },
+        "I": 0.05
+      },
+      {
+        "n": 10,
+        "delta_H": 0.0139,
+        "H_quieta": true,
+        "viento": {
+          "winner_modal": "arquetipo_el_creador",
+          "winner_cambio": false,
+          "overlap_topk": 0.8
+        },
+        "I": 0.05
+      }
+    ],
+    "regla": "N_min = menor n donde p_H aguantó m ventanas seguidas. No es un tope elegido. Letrero modal no frena. Traza ABIERTA.",
+    "plugin": "PLUGIN_AQUILES_H",
+    "engine_tocado": false
+  },
+  "guardia_no_cruce": "PASS",
+  "metodo_rigor": {
+    "plugin": "METODO_RIGOR",
+    "plantilla": {
+      "holmes": "tokens de HECHOS del corte o de mi tesis?",
+      "hecate": "pedi mas de lo mismo / forcé una lampara?",
+      "schopenhauer": "defiendo lo que vi o leo el tablero?",
+      "sigue_en_cuaderno": "si/no"
+    },
+    "auto": [],
+    "cadena_top1": "",
+    "nota": "auto no sustituye las 4 lineas humanas. Es alarma."
+  }
+}

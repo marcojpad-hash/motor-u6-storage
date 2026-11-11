@@ -1,0 +1,78 @@
+USO — no se activa por existir en la carpeta.
+Engine_V5_CANONICO_SOLO.py NO se modifica. Estos son módulos al lado.
+
+============================================================
+1) plugin_aquiles_h.py
+============================================================
+Pregunta: ¿p_H se voltea si remuestreo ESTA foto?
+No ve el corte siguiente. estado_traza siempre ABIERTA.
+
+from plugin_aquiles_h import bootstrap_hasta_parar, evaluar_serie
+
+# replicar() DEBE devolver:
+#   p_H     float de LA hipótesis que estás midiendo (no el #1 modal)
+#   winner  nombre #1 de esa réplica (viento)
+#   topk    lista de nombres
+#   I       float >= 0.02
+
+out = bootstrap_hasta_parar(replicar)
+# out["estado_H"]  PARA_DE_EMPUJAR_H | SEGUIR_EMPUJANDO_H | NO_ENCONTRADO_FUSIBLE
+# out["N_min"]     menor n donde p_H aguantó 3 ventanas. NO es un tope elegido.
+# out["estado_traza"]  ABIERTA
+# fusible 8192 = se acabó el tiempo, NO es el N del experimento.
+
+No pases bloques=(50,100,200,400) como “la respuesta”.
+Eso era sesgo. El crecimiento 32,64,128… solo busca N_min.
+
+============================================================
+2) traza_campo_244.py
+============================================================
+Pregunta: ¿qué hizo el CAMPO de las 244 entre cortes?
+No se cuelga de H. No apaga Δ chicos.
+
+from traza_campo_244 import analizar, origenes_renovables
+
+# cortes = [("A", {nombre: p_final, ...244}), ("B", {...}), ...]
+campo = analizar(cortes)
+# campo["vectores"][i]["movimiento"]  las 244 Δ de ese tramo
+# campo["fichas"]                     serie P y Δ por hipótesis
+# campo["interrelacion_posible"]      corr(Δ_i, Δ_j) = posibilidad, no identidad
+
+ren = origenes_renovables(cortes, delta_senal=0.05)
+# Si una ficha se separa del piso en C, C puede ser A' de ESA señal.
+# No reescribe A-B. Abre traza nueva desde C.
+
+Fórmulas:
+  S_{t+1} = F(S_t, X_{t+1})     F = process_observation del V5
+  Δ_i(t)  = P_i(t) - P_i(t-1)
+  r_ij    = corr(Δ_i, Δ_j)
+  ABC_t   = (S_t, S_{t+1}, S_{t+2})
+  A'      := t  la primera vez que |Δ_i(t)| es señal
+
+============================================================
+3) Cómo armar los boards (obligatorio)
+============================================================
+Misma instancia de TracingEngine.
+start_question UNA vez.
+Cada corte: extract_from_text = marcadores NUEVOS de ese tramo
+            process_observation(..., monte_carlo=False)
+Guardar dict nombre→p_final de las 244 (todas, no top-10).
+
+============================================================
+4) Orden de las dos preguntas
+============================================================
+Foto t     → Aquiles sobre marcadores de ESE corte (o estado t)
+Tiempo t→t+1 → traza_campo Δ de las 244
+Señal nueva  → origenes_renovables (ese corte = A' de esa ficha)
+
+No uses Aquiles para decir “ya no hay política”.
+Aquiles no vio el siguiente año.
+
+============================================================
+5) Lo que NO hacer
+============================================================
+- Integrar esto dentro de Engine_V5.
+- Congelar H en A y tratar el plugin como predictor de BC.
+- Tirar Δ porque no es Top-10.
+- Inventar que la señal “ya estaba” en el corte anterior si P≈0.50.
+- Convertir corr o co-movimiento en “es el mismo fenómeno”.

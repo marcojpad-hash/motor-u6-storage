@@ -1,0 +1,1038 @@
+V15.1 — ESCALETA PARA PREDICTIBILIDAD — TODO LO RECUPERADO
+================================================================================
+Documento separado de la escaleta personal. Sirve como respaldo del
+mecanismo de escaleta usado por el predictor lateral de vecinos.
+No se incluyen aquí cambios futuros de la escaleta personal.
+
+# 1. RUNNER: run_predictor_escaleta_16.py
+
+#!/usr/bin/env python3
+"""
+run_predictor_escaleta_16.py
+
+Runner para ejecutar el predictor de vecinos por prefijo sobre una escaleta
+codificada. Está diseñado para impedir silenciosamente que se utilice una
+escaleta vieja de 10 etapas.
+
+Uso:
+  python3 run_predictor_escaleta_16.py <escaleta.json> <caso_id> [etapa_actual]
+
+El JSON debe contener una estructura compatible con:
+  {
+    "casos": {
+      "caso_id": {
+        "etapas": [
+          {"etapa_id": "e0", "nombre": "...", ...},
+          ...
+        ]
+      }
+    }
+  }
+
+Para el matching, cada etapa debe proporcionar un estado codificado. Se aceptan
+los campos "estado_monomito", "estado", "monomito", "codigo" o "stage".
+Si no existe ninguno, el runner falla explícitamente: no inventa una codificación.
+
+El archivo resultante contiene una corrida por cada prefijo e0..eN y el ranking
+completo de las 15 referencias elegibles en ese corte.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
+
+from predictor_vecinos_prefijo_v1 import predict_next
+
+
+STATE_FIELDS = ("estado_monomito", "estado", "monomito", "codigo", "stage")
+
+
+def load_case(path: Path, case_id: str) -> List[Dict[str, Any]]:
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if not isinstance(data, dict) or "casos" not in data or not isinstance(data["casos"], dict):
+        raise ValueError("Formato no compatible: falta objeto 'casos'.")
+    if case_id not in data["casos"]:
+        raise ValueError(f"Caso no encontrado: {case_id}")
+
+    case = data["casos"][case_id]
+    if not isinstance(case, dict) or not isinstance(case.get("etapas"), list):
+        raise ValueError("El caso debe contener una lista 'etapas'.")
+    stages = case["etapas"]
+
+    if len(stages) != 16:
+        raise ValueError(
+            f"ABORTADO: la escaleta cargada contiene {len(stages)} etapas; "
+            "este runner exige exactamente 16. No se acepta una copia de 10 etapas."
+        )
+
+    return stages
+
+
+def stage_code(stage: Dict[str, Any], index: int) -> str:
+    for field in STATE_FIELDS:
+        value = stage.get(field)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    raise ValueError(
+        f"Etapa {index} ({stage.get('etapa_id', '?')}) no tiene un estado codificado "
+        f"en ninguno de {STATE_FIELDS}. No se reconstruye por suposicion."
+    )
+
+
+def run(path: Path, case_id: str, current_index: int | None = None, top_n: int = 5) -> Dict[str, Any]:
+    stages = load_case(path, case_id)
+    codes = [stage_code(s, i) for i, s in enumerate(stages)]
+
+    if current_index is None:
+        current_index = len(codes) - 1
+    if not 0 <= current_index < len(codes):
+        raise ValueError("etapa_actual fuera de rango 0..15")
+
+    runs = []
+    for k in range(1, current_index + 1):
+        result = predict_next(codes[:k], top_n=top_n)
+        runs.append({
+            "stage_current_id": stages[k - 1].get("etapa_id", f"e{k-1}"),
+            "stage_current_name": stages[k - 1].get("nombre"),
+            "prefix_length": k,
+            "result": result,
+        })
+
+    return {
+        "status": "ok",
+        "case_id": case_id,
+        "input_file": str(path),
+        "validated_stage_count": 16,
+        "current_index": current_index,
+        "current_stage_id": stages[current_index].get("etapa_id", f"e{current_index}"),
+        "current_stage_name": stages[current_index].get("nombre"),
+        "runs": runs,
+        "disclaimer": "Estimación por vecinos más cercanos entre 15 casos; no es una probabilidad poblacional real.",
+    }
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("escaleta", type=Path)
+    ap.add_argument("caso_id")
+    ap.add_argument("etapa_actual", nargs="?", type=int)
+    ap.add_argument("--top", type=int, default=5)
+    ap.add_argument("--out", type=Path, default=None)
+    args = ap.parse_args()
+
+    result = run(args.escaleta, args.caso_id, args.etapa_actual, args.top)
+    text = json.dumps(result, ensure_ascii=False, indent=2)
+    if args.out:
+        args.out.write_text(text + "\n", encoding="utf-8")
+    else:
+        print(text)
+
+
+if __name__ == "__main__":
+    main()
+
+
+# 2. REGISTRO GENERAL DE EXPERIMENTOS DE PREDICTIBILIDAD
+
+{
+  "documento": "REGISTRO_GENERAL_EXPERIMENTOS_PREDICTIBILIDAD",
+  "version": "1.0",
+  "fecha_corte": "2026-09-07",
+  "proposito": "Registro consolidado y legible de los experimentos, corridas, biografías, métricas, cambios metodológicos y resultados recuperables de la biblioteca del proyecto.",
+  "criterio": "Se incluyen datos recuperados de archivos de la biblioteca y del checkpoint maestro. No se rellenan huecos por inferencia. Cuando una corrida es reconstruida, histórica, retrospectiva, parcial o no canónica, se declara.",
+  "baseline_actual": {
+    "engine": "Engine_V5_CANONICO_SOLO.py",
+    "engine_sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+    "patterns": "patterns_final_v14.json",
+    "patterns_count": 244,
+    "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+  },
+  "reglas_de_lectura": [
+    "Hecho/fuente, mapeo manual, salida del motor, Monte Carlo, ingeniería inversa e interpretación humana se mantienen separados.",
+    "p_final es un estado del motor, no una probabilidad de que ocurra el futuro.",
+    "Monte Carlo mide estabilidad bajo el procedimiento correspondiente; no demuestra el futuro.",
+    "Una CONFIRMADA requiere hipótesis congelada antes de observar t+1.",
+    "Los resultados retrospectivos no se convierten en predicción histórica.",
+    "Las versiones históricas no se mezclan con V14.",
+    "Si un dato no puede verificarse, se marca como tal."
+  ],
+  "experimentos": [
+    {
+      "id": "VISIONARIOS_V1",
+      "casos": [
+        "Alan Turing",
+        "Steve Jobs",
+        "Leonardo da Vinci",
+        "Nikola Tesla",
+        "Elon Musk"
+      ],
+      "engine": "tracing_engine_v3.py",
+      "patterns": 169,
+      "tipo": "familia histórica de trazabilidad/predictibilidad",
+      "resultados": {
+        "Turing": {
+          "cortes": 6,
+          "top_final": [
+            [
+              "arquetipo_el_sabio",
+              0.8234
+            ],
+            [
+              "mbti_factor_pensamiento",
+              0.8223
+            ],
+            [
+              "spengler_02_verano_otono_racionalizacion",
+              0.8201
+            ],
+            [
+              "predictivo_04_caos_bifurcacion_critica",
+              0.8192
+            ],
+            [
+              "arquetipo_el_creador",
+              0.8155
+            ]
+          ],
+          "hallazgo": "Aparece tardíamente un campo de vulnerabilidad/cambio/colapso; no se demostró predicción de suicidio ni causalidad.",
+          "monotonias": "3 ascendentes; 5 descendentes; late risers S5→S6."
+        },
+        "Steve Jobs": {
+          "cortes": 5,
+          "tops": {
+            "S1": [
+              [
+                "arquetipo_el_explorador",
+                0.7111
+              ],
+              [
+                "arquetipo_el_creador",
+                0.6926
+              ]
+            ],
+            "S2": [
+              [
+                "arquetipo_el_creador",
+                0.7581
+              ],
+              [
+                "30_ambicion",
+                0.7098
+              ]
+            ],
+            "S3": [
+              [
+                "arquetipo_el_creador",
+                0.7944
+              ],
+              [
+                "24_rivalidad_de_superior_e_inferior",
+                0.7729
+              ]
+            ],
+            "S4": [
+              [
+                "arquetipo_el_creador",
+                0.7989
+              ],
+              [
+                "30_ambicion",
+                0.7695
+              ]
+            ],
+            "S5": [
+              [
+                "arquetipo_el_creador",
+                0.7921
+              ],
+              [
+                "30_ambicion",
+                0.7828
+              ]
+            ]
+          },
+          "N_min_experimental": 1000,
+          "limitacion": "El bloque 1985–88 incluye datos de Pixar; no permite afirmar anticipación de Pixar antes de 1985."
+        },
+        "Leonardo da Vinci": {
+          "cortes": [
+            "~20 años",
+            "~45 años",
+            "final"
+          ],
+          "control": [
+            [
+              "creator",
+              0.7568
+            ],
+            [
+              "ambition/creator/Tainter/chaos ~45",
+              0.8059
+            ]
+          ],
+          "semantic_mc_final": [
+            [
+              "creator",
+              0.7794
+            ],
+            [
+              "ambition",
+              0.7641
+            ],
+            [
+              "chaos/Tainter",
+              0.7626
+            ],
+            [
+              "intuition",
+              0.7621
+            ]
+          ],
+          "N_min_experimental": 500,
+          "limitacion": "La versión corregida no reproduce perfectamente el flujo interactivo de Turing/Jobs; se conserva como evidencia retrospectiva."
+        },
+        "Nikola Tesla": {
+          "corte_temprano": "1856–1878 aprox.",
+          "hallazgo": "Creador e Intuición como señales principales; trayectoria acumulativa/no lineal más que monomítica simple.",
+          "estado": "Documentado; algunas corridas históricas quedaron superseded."
+        },
+        "Elon Musk": {
+          "corte_1": "1971–1991",
+          "top": [
+            [
+              "Explorer",
+              0.7033
+            ],
+            [
+              "Creator",
+              0.6848
+            ],
+            [
+              "Strauss-Howe Awakening",
+              0.6814
+            ],
+            [
+              "Intuition",
+              0.6454
+            ]
+          ],
+          "corte_2": "1971–1997",
+          "control_mc_off": {
+            "convergencia": 0.8333,
+            "grupo_principal": 0.8128
+          },
+          "semantic_mc_10000": [
+            [
+              "Ambición",
+              0.7069
+            ],
+            [
+              "Chaos/Tainter",
+              0.7043
+            ],
+            [
+              "Empresa",
+              0.6807
+            ],
+            [
+              "Creador",
+              0.68
+            ]
+          ],
+          "N_min_experimental": 250,
+          "corte_final": "1971–2008",
+          "control": {
+            "convergencia": 0.6306,
+            "delta_h": 0.1737,
+            "sigma": 0.0894,
+            "delta_min": 0.1261,
+            "p_azar": 0.500445,
+            "mc_n": 1434
+          },
+          "top_control": [
+            [
+              "empresa audaz",
+              0.7934
+            ],
+            [
+              "ambición",
+              0.7934
+            ],
+            [
+              "Tainter colapso",
+              0.7934
+            ],
+            [
+              "Granovetter",
+              0.7934
+            ],
+            [
+              "MDP política óptima",
+              0.7934
+            ]
+          ],
+          "limitacion": "La ingeniería inversa indica que el paquete ambición/empresa/transformación se vuelve claramente detectable en 1997; es retrospectiva, no predicción histórica en tiempo real."
+        }
+      },
+      "fuentes_archivo": [
+        "FAMILIA_VISIONARIOS_TRAZABILIDAD_V1.txt"
+      ]
+    },
+    {
+      "id": "EMPRESARIOS_V12",
+      "casos": [
+        "Buffett",
+        "Slim",
+        "Zuckerberg",
+        "Musk",
+        "Bezos",
+        "Regulador",
+        "Contexto"
+      ],
+      "engine": "Engine_V5_CANONICO_SOLO.py",
+      "patterns": 194,
+      "tipo": "CUT1 → freeze → inversa → proyección C; CUT2 en el lote de aprendizaje",
+      "freeze": {
+        "Buffett": "30_ambicion",
+        "Slim": "30_ambicion",
+        "Zuckerberg": "30_ambicion",
+        "Musk": "30_ambicion",
+        "Bezos": "30_ambicion",
+        "Regulador": "tainter_01_inversion_complejidad_productiva",
+        "Contexto": "30_ambicion"
+      },
+      "cut1": {
+        "Buffett": {
+          "p_final": 0.7307,
+          "convergencia": 0.5625,
+          "mc_n": 887
+        },
+        "Slim": {
+          "p_final": 0.7993,
+          "convergencia": 0.6875,
+          "mc_n": 821
+        },
+        "Zuckerberg": {
+          "p_final": 0.7359,
+          "convergencia": 0.6364,
+          "mc_n": 671
+        },
+        "Musk": {
+          "p_final": 0.7367,
+          "convergencia": 0.8182,
+          "mc_n": 712
+        },
+        "Bezos": {
+          "p_final": 0.7268,
+          "convergencia": 0.5625,
+          "mc_n": 1031
+        },
+        "Regulador": {
+          "p_final": 0.677,
+          "convergencia": null
+        },
+        "Contexto": {
+          "p_final": 0.788,
+          "convergencia": null
+        }
+      },
+      "cut2_aprendizaje": {
+        "Slim": "H sube; poder/competencia alimentan 30_ambicion.",
+        "Zuckerberg": "H sube y abre Tainter-04.",
+        "Bezos": "H sube y abre 'fundar máquina'.",
+        "Buffett": "H no crece; top nuevo Tainter-01.",
+        "Musk": "H no crece; top nuevo Polti 24.",
+        "Regulador": "Tainter no crece; top nuevo gobernante."
+      },
+      "hallazgo": "La misma hipótesis congelada puede divergir en el segundo acto; el freeze no se reescribe por el nuevo top.",
+      "fuentes_archivo": [
+        "TRAZABILIDAD_FAMILIA_CUT1_C-1.txt",
+        "INDICE_CORRIDAS_V12.json"
+      ]
+    },
+    {
+      "id": "EPOCAS_V12",
+      "casos": [
+        "Pax Romana",
+        "Antigüedad tardía",
+        "Renacimiento",
+        "Era industrial",
+        "Siglo XX bloques",
+        "Principado Domiciano",
+        "Entropía",
+        "Sistema-mundo"
+      ],
+      "patterns": 194,
+      "tipo": "CUT1→CUT2→CUT3 con freeze por mapeo",
+      "resultados_recuperados": {
+        "Pax Romana": {
+          "H": "tainter_01_inversion_complejidad_productiva",
+          "trayectoria": [
+            0.671,
+            0.803,
+            0.819
+          ]
+        },
+        "Antigüedad tardía": {
+          "H": "6_desastre",
+          "trayectoria": [
+            0.5,
+            0.82,
+            0.819
+          ]
+        },
+        "Renacimiento": {
+          "H": "30_ambicion"
+        },
+        "Era industrial": {
+          "H": "30_ambicion"
+        },
+        "Siglo XX bloques": {
+          "H": "24_rivalidad_de_superior_e_inferior"
+        },
+        "Principado Domiciano": {
+          "H": "sistema_domiciano"
+        },
+        "Antagonista entropía": {
+          "H": "6_desastre"
+        },
+        "Contexto sistema-mundo": {
+          "H": null
+        }
+      },
+      "hallazgo": "La Antigüedad tardía muestra un caso donde H estaba en 0.5 en CUT1 y aparece con fuerza en CUT2; se conserva como ejemplo de aprendizaje temporal sin reescritura del freeze.",
+      "fuentes_archivo": [
+        "INDICE_CORRIDAS_V12.json",
+        "REPORTE_ESTADO_PROYECTO_V12_A_V13.txt"
+      ]
+    },
+    {
+      "id": "VISIONARIOS_V13_V14_EXPLORADORES",
+      "casos": [
+        "Polo",
+        "Colón",
+        "Magallanes",
+        "Ragnar",
+        "Darwin"
+      ],
+      "engine": "Engine_V5_CANONICO_SOLO.py",
+      "v13_patterns": 240,
+      "v14_patterns": 244,
+      "n_corridas": 5,
+      "n_agentes": 15,
+      "tipo": "CUT1→freeze→CUT2, tres ejes por caso",
+      "regla_de_variable": "V14 reutiliza la misma entrada V13; la única variable declarada es patterns_final_v14.json.",
+      "resultados_v14": {
+        "Polo": {
+          "el": [
+            "30_ambicion",
+            0.729,
+            0.78,
+            "SUBE"
+          ],
+          "antagonista": [
+            "11_enigma",
+            0.816,
+            0.773,
+            "EN_PIE"
+          ],
+          "contexto": [
+            "tainter_01_inversion_complejidad_productiva",
+            0.67,
+            0.67,
+            "EN_PIE"
+          ]
+        },
+        "Colón": {
+          "el": [
+            "30_ambicion",
+            0.725,
+            0.727,
+            "EN_PIE"
+          ],
+          "antagonista": [
+            "utopia_mentalidad_conservadora",
+            0.694,
+            0.678,
+            "EN_PIE"
+          ],
+          "contexto": [
+            "30_ambicion",
+            0.8,
+            0.814,
+            "SUBE"
+          ]
+        },
+        "Magallanes": {
+          "el": [
+            "30_ambicion",
+            0.734,
+            0.727,
+            "NO_CRECIO"
+          ],
+          "antagonista": [
+            "24_rivalidad_de_superior_e_inferior",
+            0.804,
+            0.807,
+            "SUBE"
+          ],
+          "contexto": [
+            "30_ambicion",
+            0.804,
+            0.812,
+            "SUBE"
+          ]
+        },
+        "Ragnar": {
+          "el": [
+            "9_audaz_empresa",
+            0.704,
+            0.696,
+            "NO_CRECIO"
+          ],
+          "antagonista": [
+            "utopia_mentalidad_conservadora",
+            0.689,
+            0.687,
+            "EN_PIE"
+          ],
+          "contexto": [
+            null,
+            null,
+            null,
+            "NO_H"
+          ]
+        },
+        "Darwin": {
+          "el": [
+            "arquetipo_el_explorador",
+            0.559,
+            0.557,
+            "SE_DILUYO"
+          ],
+          "antagonista": [
+            "utopia_mentalidad_conservadora",
+            0.734,
+            0.653,
+            "EN_PIE"
+          ],
+          "contexto": [
+            "arquetipo_el_explorador",
+            0.56,
+            0.556,
+            "SE_DILUYO"
+          ]
+        }
+      },
+      "v13_v14": "Freeze, veredictos y tops no cambiaron; movimientos de 0.0001 se atribuyeron a ruido de P_azar.",
+      "fuentes_archivo": [
+        "REPORTE_EXPLORADORES_V14-1.txt",
+        "exploradores_5x3_v14-1.json"
+      ]
+    },
+    {
+      "id": "MUSK_LEGACY_V3C_PLUGINS",
+      "caso": "Elon Musk legacy",
+      "engine": "V3C histórico + capa externa de plugins",
+      "patterns": "histórico",
+      "cut1": {
+        "markers": [
+          "desafio",
+          "audacia",
+          "busqueda_riesgo",
+          "creatividad",
+          "ambicion"
+        ],
+        "convergencia": 0.8182,
+        "delta_h": 0.14,
+        "sigma": 0.0335,
+        "delta_min": 0.121,
+        "p_azar": 0.4999,
+        "mc_n": 712,
+        "top": [
+          [
+            "30_ambicion",
+            0.7367
+          ],
+          [
+            "9_audaz_empresa",
+            0.7072
+          ],
+          [
+            "arquetipo_el_creador",
+            0.6776
+          ],
+          [
+            "minsky_03_ponzi",
+            0.6776
+          ],
+          [
+            "kwml_02_guerrero",
+            0.6709
+          ]
+        ],
+        "freeze": "30_ambicion"
+      },
+      "plugins": "Los cinco tokens estaban ya en el vocabulario canónico; Agente2 dio identidad con p=1.0. No hubo traducción por alias.",
+      "limitacion": "Es una corrida histórica V3C; no sustituye el baseline V14.",
+      "fuentes_archivo": [
+        "MUSK_LEGACY_V3C_PLUGINS_RUN.json",
+        "familia_empresarios_CUT1_REPRODUCIBLE.json"
+      ]
+    },
+    {
+      "id": "CHURCHILL",
+      "caso": "Winston Churchill",
+      "engine": "Engine V5 / corridas V13 y experimentos de sensibilidad",
+      "cortes": [
+        "C1 1874–1894",
+        "C2 1874–1914",
+        "C3 1874–1920"
+      ],
+      "c2_c3_full_trace": {
+        "C2_top_cluster": [
+          "30_ambicion",
+          "arquetipo_el_creador",
+          "tainter_04_colapso_por_simplificacion_forzada",
+          "predictivo_04_caos_bifurcacion_critica"
+        ],
+        "C2_top_score": 0.7943,
+        "C3_top_score": 0.8006,
+        "top10_overlap": "7/10",
+        "top15_overlap": "14/15",
+        "ambicion_C2_C3": [
+          0.7943,
+          0.8006
+        ],
+        "creador_C2_C3": [
+          0.7943,
+          0.8006
+        ],
+        "clasificacion": "PARCIALMENTE_CONFIRMADA",
+        "limitacion": "C3 fue reconstruido; no existía vector C3 original verificable."
+      },
+      "sensibilidad_alcohol": {
+        "sin_alcohol_C2": {
+          "convergencia": 0.76,
+          "delta_h": 0.1816,
+          "sigma": 0.0831,
+          "delta_min": 0.1272,
+          "p_azar": 0.4994,
+          "mc_n": 1340,
+          "top1": [
+            "30_ambicion",
+            0.7943
+          ]
+        },
+        "con_alcohol_C2": {
+          "convergencia": 0.7931,
+          "delta_h": 0.1925,
+          "sigma": 0.0939,
+          "delta_min": 0.1289,
+          "p_azar": 0.5,
+          "mc_n": 1504,
+          "top1": [
+            "30_ambicion",
+            0.7884
+          ]
+        },
+        "lectura": "La sensibilidad se estudió como experimento de presencia/ausencia; no debe convertirse en una explicación causal de la trayectoria."
+      },
+      "fuentes_archivo": [
+        "CHURCHILL_C3_TRAZABILIDAD_V5.txt",
+        "CHURCHILL_CORRIDA_02_V1.txt",
+        "churchill_alcohol_sweep_presence_0_1_v5.json",
+        "CHURCHILL_POLITICOS_V5_ALCOHOL_INFORME.txt"
+      ]
+    },
+    {
+      "id": "PERICLES",
+      "caso": "Pericles",
+      "engine": "Engine V5 / patterns históricos del experimento",
+      "tipo": "C1→C2 freeze→C3 validación; rama event-driven de sensibilidad",
+      "resultados": {
+        "C3_semantic_top": [
+          [
+            "arquetipo_el_gobernante",
+            0.816436
+          ],
+          [
+            "kwml_01_rey",
+            0.799048
+          ],
+          [
+            "ttm_04_accion",
+            0.768801
+          ],
+          [
+            "28_obstaculos_para_el_amor",
+            0.759678
+          ],
+          [
+            "weber_02_autoridad_carismatica",
+            0.717604
+          ]
+        ],
+        "validacion": "CONFIRMADA",
+        "base": "C3 conserva soporte direccional en liderazgo/poder/acción/conflicto.",
+        "limitacion": "La validez depende de que el freeze de C2 haya ocurrido antes de C3; una reconstrucción post-hoc no constituye evidencia prospectiva."
+      },
+      "fuentes_archivo": [
+        "PERICLES_RETARGET_V10_MASTER_FULL_TRACE.json",
+        "PERICLES_RETARGET_V10_SUMMARY.json",
+        "run_pericles_v10.py"
+      ]
+    },
+    {
+      "id": "MARCO",
+      "caso": "Escaleta personal de 16 etapas",
+      "tipo": "trayectoria personal / matching / V13 recorrido parcial",
+      "etapas": 16,
+      "resultado_ejecutable_verificado": {
+        "cortes_exactos": 10,
+        "status": "ok_partial_exact_input",
+        "top1": {
+          "e0": [
+            "monomito_05_cruce_del_primer_umbral",
+            0.6197
+          ],
+          "e1": [
+            "24_rivalidad_de_superior_e_inferior",
+            0.7095
+          ],
+          "e2": [
+            "arquetipo_el_sabio",
+            0.6795
+          ],
+          "e3": [
+            "bbk_04_guardian",
+            0.6496
+          ],
+          "e4": [
+            "24_rivalidad_de_superior_e_inferior",
+            0.7095
+          ],
+          "e5": [
+            "arquetipo_el_explorador",
+            0.6795
+          ],
+          "e6": [
+            "sustancias_03_severo",
+            0.7993
+          ],
+          "e7": [
+            "apego_03_evitativo",
+            0.671
+          ],
+          "e8": [
+            "19_asesinato_de_un_pariente_no_reconocido",
+            0.7095
+          ],
+          "e9": [
+            "36_perdida_de_los_seres_queridos",
+            0.7394
+          ]
+        }
+      },
+      "regla_de_no_inferencia": "No se inventan vectores exactos para e10–e15.",
+      "limitaciones": [
+        "El raw 35A preservado tiene 14 claves e01–e14 y no contiene 16 marker vectors.",
+        "El artefacto monomito 15/16 no es canónico y tiene e7/e8 intercambiados.",
+        "No existe en la biblioteca un estado codificado compartido verificado que permita ejecutar honestamente el predictor lateral sobre las 16 etapas."
+      ],
+      "fuentes_archivo": [
+        "PAQUETE_ACTUAL_TRAZABILIDAD_V11_EXPANDIDO.json",
+        "REPORTE_CASO_MARCO_ESCALETA_LOG_COMPLETO_2026-09-04.txt",
+        "resultado_escaleta_etapas.json",
+        "resultado_35A_v16_REAL (1).json"
+      ]
+    },
+    {
+      "id": "GRUPO_B",
+      "tipo": "validación retrospectiva de predictor lateral por vecinos",
+      "muestra": 121,
+      "metodo": "Needleman-Wunsch / optimal matching; indel=1.0; sustitución=2.0",
+      "resultados": {
+        "Top1_accuracy": 0.6446,
+        "Top3_recall": 0.9752
+      },
+      "interpretacion": "Es validación LOO retrospectiva sobre 121 casos; no equivale a 97.52% de predicción futura.",
+      "arquitectura": "Predictor lateral: consume estado S(t), busca vecinos/secuencias y propone transiciones candidatas; no modifica Bayes ni V5.",
+      "limitacion": "El corpus de 15 biografías no es adecuado para pronósticos diarios o de dos semanas; se requiere corpus temporal con esa granularidad.",
+      "fuentes_archivo": [
+        "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt",
+        "PERICLES_C3_BACKEND_V5_SELF_CONTAINED.txt"
+      ]
+    },
+    {
+      "id": "PICOS_MESETAS_V14",
+      "tipo": "metodología de lectura de movimiento",
+      "biblioteca": 244,
+      "cortes": 3,
+      "hallazgos": {
+        "hipotesis_sin_cambio_aprox": "180–200 de 244 en pruebas de tres cortes",
+        "emergentes_ejemplos": [
+          [
+            "tainter_01_inversion_complejidad_productiva",
+            [
+              0.5,
+              0.679,
+              0.7909
+            ]
+          ],
+          [
+            "eterno_retorno_02_cosmizacion_fundacion",
+            [
+              0.5,
+              0.679,
+              0.7909
+            ]
+          ],
+          [
+            "utopia_oficio_roma",
+            [
+              0.5,
+              0.6492,
+              0.7536
+            ]
+          ],
+          [
+            "jaldun_02_institucionalizacion_y_sedentarismo",
+            [
+              0.5,
+              0.6194,
+              0.7108
+            ]
+          ],
+          [
+            "mbti_factor_juicio_j",
+            [
+              0.5,
+              0.6023,
+              0.684
+            ]
+          ],
+          [
+            "strauss_howe_01_the_high",
+            [
+              0.5,
+              0.6023,
+              0.684
+            ]
+          ]
+        ]
+      },
+      "interpretacion": "Una meseta alta estable se trata como identidad/estructura persistente; los cambios respecto de la línea base son candidatos de movimiento. No equivale por sí mismo a capacidad predictiva.",
+      "fuentes_archivo": [
+        "PICOS_MESETAS_V14.txt",
+        "METODO_PICOS_MESETAS_APRENDIZAJE_v1.txt",
+        "picos_mesetas_v14.json"
+      ]
+    },
+    {
+      "id": "SMOKE_V14",
+      "tipo": "verificación de ejecución del runtime",
+      "engine": "Engine_V5_CANONICO_SOLO.py",
+      "patterns": 244,
+      "input": [
+        "desafio .86",
+        "audacia .88",
+        "busqueda_riesgo .90",
+        "creatividad .80",
+        "ambicion .86"
+      ],
+      "resultado": {
+        "status": "PASS",
+        "hypotheses_loaded": 244,
+        "quarantine": [],
+        "top5": [
+          [
+            "dumezil_f2_fuerza",
+            0.778
+          ],
+          [
+            "bbk_01_aventurero",
+            0.7426
+          ],
+          [
+            "30_ambicion",
+            0.7367
+          ],
+          [
+            "9_audaz_empresa",
+            0.7071
+          ],
+          [
+            "schwartz_09_estimulacion",
+            0.6994
+          ]
+        ]
+      },
+      "nota": "Es un smoke test de ejecución con marcadores manuales; no es un resultado histórico ni una predicción."
+    }
+  ],
+  "evolucion_metodologica": [
+    "Se pasó de resultados aislados a trazabilidad temporal por cortes.",
+    "Se formalizó la separación entre hecho/fuente, mapeo, motor, MC, ingeniería inversa e interpretación.",
+    "Se estableció que la hipótesis prospectiva debe congelarse antes del siguiente corte.",
+    "Se incorporó ingeniería inversa para identificar qué señales sostenían una hipótesis sin reescribir el freeze.",
+    "Se introdujo el predictor lateral por vecinos como capa separada del motor.",
+    "Se estableció que el predictor lateral no debe inventar secuencias ni estados faltantes.",
+    "V12 documentó 194 patrones; V13 240; V14 244.",
+    "La comparación V13→V14 en exploradores mantuvo freezes, veredictos y tops; los cambios de 0.0001 se atribuyeron a P_azar.",
+    "Grok añadió una capa metodológica de contrato de predictibilidad y picos/mesetas sobre V14, sin modificar Engine V5 ni la biblioteca.",
+    "El objetivo metodológico evolucionó de 'qué hipótesis está alta' a 'qué cambia, persiste, emerge, decae o se reorganiza entre cortes'."
+  ],
+  "estado_actual": {
+    "apoyado_por_experimentos": [
+      "Las configuraciones pueden conservar estructura mientras cambian su composición.",
+      "Una hipótesis puede ser visible antes del desenlace sin que ello constituya predicción formal si no hubo freeze prospectivo.",
+      "La ingeniería inversa puede identificar señales previas de una configuración posterior.",
+      "La estabilidad Monte Carlo es estabilidad del perfil bajo perturbación, no probabilidad futura.",
+      "El predictor lateral puede evaluarse retrospectivamente mediante LOO; el resultado registrado es 64.46% Top-1 y 97.52% Top-3 en 121 casos."
+    ],
+    "todavia_no_demostrado": [
+      "Una fórmula universal de predictibilidad.",
+      "Que más patrones produzcan automáticamente más predictibilidad.",
+      "Que p_final sea probabilidad futura.",
+      "Que la integración del Grupo B mejore V5.",
+      "Calibración probabilística externa.",
+      "Transferencia entre casos como evidencia predictiva prospectiva.",
+      "Hit-rate de cableado y hit-rate de H en una batería ciega."
+    ]
+  },
+  "artefactos_clave": [
+    "CHECKPOINT_MASTER_PREDICTIBILIDAD_V14_REPRODUCIBLE.json",
+    "Engine_V5_CANONICO_SOLO.py",
+    "patterns_final_v14.json",
+    "CONTRATO_PREDICTIBILIDAD_TRAZA_v1.md",
+    "PICOS_MESETAS_V14.txt",
+    "METODO_PICOS_MESETAS_APRENDIZAJE_v1.txt",
+    "REPORTE_EXPLORADORES_V14-1.txt",
+    "FAMILIA_VISIONARIOS_TRAZABILIDAD_V1.txt",
+    "TRAZABILIDAD_FAMILIA_CUT1_C-1.txt",
+    "INDICE_CORRIDAS_V12.json",
+    "CHURCHILL_C3_TRAZABILIDAD_V5.txt",
+    "PERICLES_RETARGET_V10_MASTER_FULL_TRACE.json",
+    "REPORTE_CASO_MARCO_ESCALETA_LOG_COMPLETO_2026-09-04.txt",
+    "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+  ]
+}
+
+# 3. REGLAS ESTRUCTURALES DE LA ESCALETA PARA PREDICTIBILIDAD
+
+• El runner exige exactamente 16 etapas.
+• Rechaza explícitamente una escaleta de 10 etapas.
+• Cada etapa debe aportar un estado codificado.
+• Campos aceptados: estado_monomito, estado, monomito, codigo o stage.
+• Si no existe un estado codificado, el runner falla; no reconstruye por suposición.
+• El predictor se ejecuta sobre prefijos sucesivos e0..eN.
+• Para cada corte se conserva el ranking de las referencias elegibles.
+• La estimación por vecinos no debe presentarse como probabilidad poblacional.
+• La escaleta de predictibilidad y la escaleta personal son artefactos distintos,
+  aunque la segunda puede servir como entrada al runner cuando esté codificada.

@@ -1,0 +1,61 @@
+SCRIPT DE ROLES — pegar tal cual en ChatGPT / Claude web / el que entre.
+No es el motor. Es quien hace que.
+
+FECHA: 2026-09-07
+PROYECTO: predictibilidad V15.1 (sidecar). V5 y 244 en disco NO se tocan.
+
+------------------------------------------------
+QUIEN HACE QUE
+------------------------------------------------
+GROK
+  Corre V15, mapea cortes, reporta tablero/picos/inversa.
+  Escribe plugins y notas. No inventa que Claude "ya verifico" X.
+
+CHATGPT (gratis, archivo)
+  Guarda, unifica, lista pendientes.
+  NO ejecuta F, NO recalcula pesos, NO "verifica" el 64.46.
+  Si le pegan un JSON, lo archiva. Si le piden formula, apunta
+  a NOTA_CLAUDE_RECALIBRACION. No la activa.
+
+CLAUDE APP
+  Tiene (o tuvo) PROPUESTA_GRUPO_B y el 64.46/97.52.
+  NO se le pide rehacer el LOO. Tokens caros. Ese numero
+  no bloquea el resto del proyecto.
+
+CLAUDE WEB
+  Juez de maximo 3 .py + 15 lineas de estado.
+  Corre archivos. No relee 20 ciegos. No busca el Grupo B
+  si no se lo suben.
+
+DEEPSEEK / GEMINI
+  No se les pide cifras ni "ya lo verifique". Alucinan.
+  Si se usan: leer notas. Nunca lineas base.
+
+MARCO
+  Copy, casos, pregunta detras, visto bueno.
+  No tiene que volverse informatico.
+
+------------------------------------------------
+REGLAS
+------------------------------------------------
+1. Nadie corre "todo el stack" porque si. Cada motor hace SU oficio.
+2. 64.46 / 97.52 = CITA en Claude app. No verificada por Claude web
+   ni por Grok contra crudos en este hilo. NO circular
+   "ya lo verificaste". Pendiente. No urgente.
+3. alpha de nicho y alias automatico: DORMIDOS.
+4. Sidecar memoria: fama, otto_01 + otto_02, hosteleria
+   (SAMHSA 2015 #1 SUD 16.9%, no 3o).
+5. Embudo: primera ventana = indice 0, no el nombre "A".
+6. 30_ambicion = poder sin limites. Agencia = autonomia.
+7. Perfil de ventana != prediccion de cierre.
+8. Si un modelo dice un numero que no esta en un archivo
+   del lote, es alucinacion hasta que haya archivo.
+
+------------------------------------------------
+QUE NO HACER EN EL PROXIMO TURNO
+------------------------------------------------
+No reabrir Otto vs sacro.
+No recontar los 20 ciegos.
+No pagar tokens en el LOO.
+No fusionar al 244.
+Un caso nuevo O un .py a Claude. No las dos cosas.

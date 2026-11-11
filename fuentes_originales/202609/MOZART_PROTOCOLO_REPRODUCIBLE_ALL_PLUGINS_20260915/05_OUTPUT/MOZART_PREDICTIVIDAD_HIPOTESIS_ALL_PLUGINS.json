@@ -1,0 +1,114 @@
+{
+  "version": "V15.1_PREDICTIVIDAD_HIPOTESIS_ALL_PLUGINS_V1",
+  "case": "Mozart",
+  "plugin_run": "MOZART_ALL_PLUGINS_MC.json",
+  "freeze": {
+    "freeze_cut": "C7",
+    "z_rule": "90% lifespan; C7 is the historical Z90 work point used here",
+    "primary_bet": "H2",
+    "primary_family": "30_ambicion",
+    "discarded_direction": "arquetipo_el_creador",
+    "evidence_counts": {
+      "H1": 3,
+      "H2": 8,
+      "H3": 2
+    },
+    "evidence": {
+      "H1": [
+        "REPORTE_3D_C7_CREADOR_NO_SE_APAGA",
+        "REPORTE_3D_C7_AUTODIRECCION_NO_SE_APAGA",
+        "PICOS_C1_C5_CREADOR_TOP1"
+      ],
+      "H2": [
+        "REPORTE_3D_C7_H=30_ambicion",
+        "REPORTE_3D_C7_LOGRO_SE_MOVIO",
+        "REPORTE_3D_C7_OBTENCION_SE_MOVIO",
+        "PICOS_C6_C7_AMBICION_TOP1",
+        "SESGO_C6_C7_LETRERO_AMBICION",
+        "AQUILES_C7_VIENTO_AMBICION",
+        "CIRCULO_C7_HILO_DESAFIO",
+        "CIRCULO_C7_Q2_Q3_SIMULTANEOS"
+      ],
+      "H3": [
+        "C_AXIS_ROGERS_PRESENTE_EN_RESULTADO_FINAL",
+        "HECHO_C7_RECONOCIMIENTO"
+      ]
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "familia": "arquetipo_el_creador",
+        "tesis": "Continuidad creadora e independiente después de Z90: creación/producción permanece activa y la independencia no se apaga.",
+        "descarte": "No asumir que la ambición/estatus pasa a ser el eje dominante y desplaza la creación."
+      },
+      {
+        "id": "H2",
+        "familia": "30_ambicion",
+        "tesis": "Después de Z90, ambición/estatus/logro y conflicto de campo pasan a dominar la trayectoria, reduciendo la centralidad creadora.",
+        "descarte": "No asumir continuidad creadora como eje dominante."
+      },
+      {
+        "id": "H3",
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "tesis": "La continuidad posterior se organiza principalmente alrededor de difusión/reconocimiento de la obra, más que alrededor de un desplazamiento hacia ambición.",
+        "descarte": "No asumir que el cambio principal sea hacia ambición/estatus."
+      }
+    ],
+    "source_result_sha256": "a743b36927b17a9d38c6138e0c4c8e59ebd44bf9e38b6912c3fc24c4c5dadb92",
+    "canonical_engine_sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23",
+    "canonical_patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+    "canonical_patterns_count": 244,
+    "sidecar_memory_patterns": 247,
+    "dynamic_fusion_memory_patterns": 250,
+    "rule": "freeze constructed from C1-C7 only; C8-C10 excluded from construction"
+  },
+  "validation": [
+    {
+      "cut": "C8",
+      "H1": "HIT",
+      "H2": "MISS",
+      "H3": "HIT"
+    },
+    {
+      "cut": "C9",
+      "H1": "HIT",
+      "H2": "MISS",
+      "H3": "HIT"
+    },
+    {
+      "cut": "C10",
+      "H1": "HIT",
+      "H2": "MISS",
+      "H3": "PARTIAL"
+    }
+  ],
+  "summary": {
+    "H1": {
+      "hits": 3,
+      "partials": 0,
+      "misses": 0,
+      "n": 3
+    },
+    "H2": {
+      "hits": 0,
+      "partials": 0,
+      "misses": 3,
+      "n": 3
+    },
+    "H3": {
+      "hits": 2,
+      "partials": 1,
+      "misses": 0,
+      "n": 3
+    }
+  },
+  "status": "RETROSPECTIVE_FREEZE_BEFORE_C8",
+  "interpretation_rule": "No se convierte en probabilidad poblacional; valida si las señales congeladas antes de C8 se sostuvieron en C8-C10.",
+  "limitations": [
+    "un solo caso",
+    "cortes históricos",
+    "mapeo de tokens hecho antes de esta capa",
+    "Capa2 evidence_status=unverified",
+    "no es predicción prospectiva de una vida real"
+  ]
+}

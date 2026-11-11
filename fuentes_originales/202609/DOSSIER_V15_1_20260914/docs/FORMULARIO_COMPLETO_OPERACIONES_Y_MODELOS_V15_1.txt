@@ -1,0 +1,964 @@
+FORMULARIO COMPLETO — OPERACIONES, FÓRMULAS Y MODELOS
+Proyecto de predictibilidad / perfilamiento
+Corte documental: 2026-09-11
+
+IMPORTANTE
+Este documento distingue:
+[CANÓNICA] fórmula implementada en el V5/V15.1 vivo.
+[PLUGIN] fórmula/operación implementada por un plugin.
+[EXPERIMENTAL] fórmula usada en una prueba separada.
+[CANDIDATA] arquitectura discutida, no integrada.
+[NO IMPLEMENTADA] aparece en documentos como parte futura o Grupo B.
+
+No se modifica Engine_V5_CANONICO_SOLO.py ni patterns_final_v14.json.
+
+============================================================
+I. MOTOR V5 — NÚCLEO BAYESIANO
+============================================================
+
+1. Incertidumbre contextual de un marcador [CANÓNICA]
+
+Para un marcador m con confianza c_m:
+
+    sigma_m(t) = 1 - c_m
+
+Implementación exacta:
+    Marker.uncertainty() = 1.0 - confidence
+
+Fuente: Engine_V5_CANONICO_SOLO.py.
+
+2. Actualización Bayesiana de una hipótesis [CANÓNICA]
+
+Para probabilidad previa p y likelihood l:
+
+    p' = [p l] / [p l + (1-p)(1-l)]
+
+Antes:
+    l <- max(0.001, min(0.999, l))
+
+Si el denominador es cero:
+    p' = p
+
+3. Evidencia favorable [CANÓNICA]
+
+Si un token tiene peso favorable w:
+
+    l = w
+    p <- Bayes(p, l)
+
+4. Evidencia contraria [CANÓNICA]
+
+Si un token tiene peso contrario w:
+
+    l = 1 - w
+    p <- Bayes(p, l)
+
+5. Corrección por estado de evidencia de la ficha [CANÓNICA]
+
+Multiplicadores:
+
+    primary_verified       = 1.0
+    secondary_verified     = 0.7
+    outdated               = 0.5
+    unverified             = 0.4
+    contestado_academicamente = 0.4
+    contradicted_partial   = 0.2
+    contradicted            = 0.1
+
+Transformación del peso original w:
+
+    w_efectivo = 0.5 + (w - 0.5) * multiplicador
+
+Si no existe estado conocido:
+    multiplicador = 1.0
+
+6. Epsilon / masa residual de incertidumbre [CANÓNICA]
+
+Una vez por observación:
+
+    p <- (1-epsilon)p + epsilon*0.5
+
+El epsilon conceptual no debe confundirse con la tolerancia numérica de coma flotante.
+
+7. Indeterminación [CANÓNICA]
+
+Con umbral de indeterminación 0.1 y tolerancia numérica 1e-9:
+
+    indeterminado <=> |p - 0.5| < 0.1 - 1e-9
+
+8. Dirección [CANÓNICA]
+
+    direction = 0, si indeterminado
+    direction = +1, si p > 0.5
+    direction = -1, si p < 0.5
+
+9. Delta de hipótesis del corte [CANÓNICA]
+
+Para marcadores m_1 ... m_n:
+
+    delta_H(t) = (1/n) * sum_i sigma_i(t)
+
+donde:
+    sigma_i(t) = 1 - confidence_i
+
+Si no hay marcadores:
+
+    delta_H(t) = 0
+
+10. Delta mínimo dinámico [CANÓNICA]
+
+    delta_min(t) =
+        delta_min_base
+        + (delta_min_max - delta_min_base) * delta_H(t)
+
+11. Sorpresa/dispersión [CANÓNICA]
+
+Si hay menos de dos marcadores:
+
+    sigma_sorpresa(t) = 0
+
+Si hay n >= 2:
+
+    sigma_sorpresa(t) =
+        sqrt[(1/n) * sum_i (sigma_i(t) - mean_sigma)^2]
+
+Es desviación estándar poblacional (pstdev), no muestral.
+
+12. Azar interno [CANÓNICA]
+
+Sea:
+
+    spread = sigma_sorpresa(t) * sigma_sorpresa_scale
+
+Entonces:
+
+    p_azar(t) =
+        clip(0.5 + U[-spread, +spread], 0, 1)
+
+donde U es uniforme aleatoria.
+
+13. Monte Carlo de p_azar [CANÓNICA]
+
+Estimación inicial:
+
+    sigma_estimada_inicial =
+        sigma_sorpresa(t) + delta_min_base
+
+    n_inicial =
+        max(min_n, floor[(sigma_estimada_inicial/epsilon)^2])
+
+limitado por:
+
+    n_inicial <= max_n
+
+Por defecto documentado:
+    min_n = 50
+    max_n = 200000
+    batch = 200
+
+Error estándar:
+
+    SE = sigma_muestral / sqrt(n)
+
+Se detiene cuando:
+
+    SE < epsilon
+
+o cuando se alcanza max_n.
+
+14. P indeterminado [CANÓNICA]
+
+    p_indet = 0.5
+
+15. Peso de evidencia [CANÓNICA]
+
+    peso_evidencia =
+        max(0, 1 - delta_min(t) - sigma_sorpresa(t))
+
+16. P final [CANÓNICA]
+
+    p_final =
+        peso_evidencia * p
+        + delta_min(t) * p_indet
+        + sigma_sorpresa(t) * p_azar(t)
+
+con:
+
+    p_indet = 0.5
+
+p_final es estado del motor, NO probabilidad calibrada del futuro.
+
+17. Convergencia interna del tablero [CANÓNICA]
+
+Para hipótesis no indeterminadas:
+
+    strength_h =
+        (favor_h - contra_h) / (favor_h + contra_h)
+
+Se toma signo y magnitud:
+
+    signo_h = +1 si strength_h >= 0
+              -1 si strength_h < 0
+
+Se selecciona la mayoría por cantidad de signos.
+
+Entonces:
+
+    convergencia =
+        (N_mayoría / N_decididas)
+        *
+        mean(|strength_h| en la mayoría)
+
+No es una métrica de predicción futura.
+
+============================================================
+II. CAMPO 244 / TRAZA
+============================================================
+
+18. Delta temporal de cada hipótesis [PLUGIN]
+
+    Delta_i(t) = P_i(t) - P_i(t-1)
+
+Para cada corte se conserva el vector completo de deltas.
+
+19. Cambio de rango [PLUGIN]
+
+Si rank_de y rank_a son posiciones ordinales:
+
+    delta_rank = rank_de - rank_a
+
+Un valor positivo significa que la hipótesis subió posiciones.
+
+20. Interrelación entre hipótesis [PLUGIN]
+
+Para dos series de deltas:
+
+    r_ij =
+      sum_t[(Delta_i(t)-mean_i)(Delta_j(t)-mean_j)]
+      /
+      sqrt(
+        sum_t(Delta_i(t)-mean_i)^2 *
+        sum_t(Delta_j(t)-mean_j)^2
+      )
+
+Es correlación de las trayectorias de delta.
+
+Con menos de dos observaciones no se calcula.
+Con varianza prácticamente cero el código devuelve 0.
+
+El resultado se interpreta como POSIBILIDAD DE INTERRELACIÓN, no identidad causal.
+
+21. Neto de una hipótesis [PLUGIN]
+
+    neto_i = P_i(último) - P_i(primero)
+
+============================================================
+III. REPORTE 3D
+============================================================
+
+22. Top-1 [PLUGIN]
+
+    H_t = argmax_i P_i(t)
+
+Es el letrero, no el hallazgo completo.
+
+23. Movimiento [PLUGIN]
+
+Para cada hipótesis:
+
+    d_i(t) = P_i(t) - P_i(t-1)
+
+Se ordenan por:
+
+    |d_i(t)|
+
+y se muestran los N_MOV principales.
+
+Configuración documentada:
+    N_MOV = 3
+
+24. Persistencia [PLUGIN]
+
+Se buscan hipótesis distintas de H_t entre el Top-12 que cumplan:
+
+    P_i(t) >= piso
+
+Configuración:
+
+    piso = 0.62
+    N_PERSIST = 3
+
+Las primeras tres se registran como "no_se_apagaron".
+
+============================================================
+IV. PICOS Y MESETAS
+============================================================
+
+25. Serie de una hipótesis [PLUGIN]
+
+    serie_i = [P_i(t_0), ..., P_i(t_n)]
+
+Si falta una hipótesis en un corte:
+
+    P_i(t) = 0.5
+
+26. Delta de la curva [PLUGIN]
+
+    d_i(t) = P_i(t) - P_i(t-1)
+
+27. Codificación de forma [PLUGIN]
+
+Con epsilon de forma eps:
+
+    signo(d) =
+        "↗" si d >= eps
+        "↘" si d <= -eps
+        "→" en otro caso
+
+28. Piso de inclusión [PLUGIN]
+
+Solo se conserva la curva si:
+
+    max(serie_i) >= piso
+
+Configuración:
+    piso = 0.62
+
+29. Subida previa al Top-1 [PLUGIN]
+
+Si el Top-1 ocurre en i_top:
+
+    subio_antes =
+        exists j < i_top tal que d_i(j) >= eps
+
+La intención es detectar una subida antes de que la hipótesis sea el letrero.
+
+============================================================
+V. SESGO DE LECTURA
+============================================================
+
+30. Conjunto de tokens por corte [PLUGIN]
+
+    T_t = conjunto de tokens del corte t
+
+31. Solape Jaccard [PLUGIN]
+
+    C(t,t+1) = |T_t ∩ T_{t+1}| / |T_t ∪ T_{t+1}|
+
+Casos especiales:
+    ambos vacíos -> 1
+    unión vacía -> 0
+
+32. Tokens nuevos [PLUGIN]
+
+    N = T_{t+1} - T_t
+
+33. Tokens que se fueron [PLUGIN]
+
+    K = T_t - T_{t+1}
+
+34. Vector de diferenciación [PLUGIN]
+
+    D = N ∪ K
+
+35. Letrero persistente [PLUGIN]
+
+    P = [H_t = H_{t+1}]
+
+36. Clasificación [PLUGIN]
+
+Si P = falso:
+
+    cambio_de_letrero
+
+Si P = verdadero y D != vacío:
+
+    universal_con_color
+
+Si P = verdadero y D = vacío:
+
+    universal_sin_color_nueva
+
+No se llama automáticamente "sesgo".
+
+============================================================
+VI. AQUILES / RESOLUCIÓN DE FOTO
+============================================================
+
+37. Solapamiento Top-K [PLUGIN]
+
+Para conjuntos/listas A y B:
+
+    overlap(A,B) = |A ∩ B| / max(|A|,|B|)
+
+Casos:
+    ambos vacíos -> 1
+    uno vacío -> 0
+
+38. Cambio de p_H entre remuestreos [PLUGIN]
+
+    delta_H_replica = |p_H(n) - p_H(n_prev)|
+
+39. Condición de foto quieta [PLUGIN]
+
+    H_quieta =
+        [ |p_H(n)-p_H(n_prev)| <= 0.02 ]
+        AND
+        [ I >= 0.02 ]
+
+40. N_min [PLUGIN]
+
+N_min es el menor n para el cual la condición anterior se mantiene durante:
+
+    m = 3
+
+ventanas consecutivas.
+
+41. Resolución creciente [PLUGIN]
+
+    n_k = n_0 * 2^k
+
+con:
+
+    n_0 = 32
+
+por tanto:
+
+    32, 64, 128, 256, 512, ...
+
+42. Fusible [PLUGIN]
+
+    N <= 8192
+
+Si se alcanza el fusible sin N_min:
+
+    NO_ENCONTRADO_FUSIBLE
+
+El fusible NO se interpreta como N_min.
+
+43. Media de p_H en bootstrap [PLUGIN]
+
+Para n réplicas:
+
+    p_H(n) = (1/n) * sum_j p_H,j
+
+44. Intensidad residual I [PLUGIN]
+
+    I(n) = max(0.02, mean(I_j))
+
+si existen valores I_j; de lo contrario:
+
+    I(n) = 0.02
+
+45. Ganador modal [PLUGIN]
+
+Se selecciona el nombre con mayor frecuencia entre las réplicas:
+
+    winner = mode(winner_j)
+
+46. Top-K bootstrap [PLUGIN]
+
+Se cuentan los nombres de los Top-K de cada réplica y se ordenan por frecuencia.
+
+============================================================
+VII. ARCO FIELD / SNYDER / McKEE
+============================================================
+
+47. Magnitud máxima de cambio [PLUGIN]
+
+    d_max(corte) =
+        max(|delta_max|)
+
+o, si no existe, el máximo:
+
+    max(|d|) entre movers
+
+48. Carga de McKee [PLUGIN]
+
+Si el caller da carga:
+
+    carga ∈ {+, -, 0}
+
+Si no:
+
+    carga = + si delta_neto > 0
+            - si delta_neto < 0
+            0 si delta_neto = 0
+
+49. Nota dramática [PLUGIN]
+
+    se_nota = [d_max >= umbral]
+
+Configuración documentada:
+
+    umbral = 0.04
+
+50. Selección proporcional de corte [PLUGIN]
+
+Para fracción f:
+
+    j = round(f*(n-1))
+
+limitado a:
+
+    0 <= j <= n-1
+
+51. Posiciones Field [PLUGIN]
+
+Con n >= 4:
+
+    acto 1       -> 0
+    plot point 1 -> max(1, n//4)
+    punto medio  -> n//2
+    plot point 2 -> min(n-2, 3n//4)
+    acto 3       -> n-1
+
+52. Posiciones McKee [PLUGIN]
+
+    f = [0, 0.3, 0.55, 0.8, 1.0]
+
+53. Volteo de carga [PLUGIN]
+
+Entre cortes consecutivos:
+
+    volteo si
+      carga_t != carga_{t-1}
+      AND ambas cargas != 0
+
+Resultado:
+
+    carga_{t-1} -> carga_t
+
+============================================================
+VIII. FAMILIAS GLORIA / SACRO Y OTTO
+============================================================
+
+54. No existe una fórmula nueva universal aquí.
+
+Los sidecars suministran hipótesis adicionales con pesos favor/contra y pasan por el mismo mecanismo Bayesiano del V5 cuando son incorporados en memoria.
+
+Ejemplo de ficha Gloria:
+
+    reconocimiento = 0.8
+    estatus_social = 0.75
+    redes_prestigio = 0.7
+    escalada_status = 0.7
+
+Contra:
+
+    humildad = 0.7
+    olvido = 0.75
+
+La transformación posterior del peso sigue siendo:
+
+    w_efectivo = 0.5 + (w-0.5)*multiplicador
+
+Otto utiliza tokens del léxico existente y sidecar; no implica crear un 247 en el JSON maestro.
+
+============================================================
+IX. HOSTELERÍA
+============================================================
+
+55. Activación de tokens por umbral [PLUGIN]
+
+En el embudo experimental:
+
+    token_activo = [valor >= 0.5]
+
+56. Presencia clínica:
+
+    clinico = bool(T ∩ CLINICO)
+
+57. Presencia de co-oficio:
+
+    co_oficio = bool(T ∩ CO_OFICIO)
+
+58. Etiquetado por ventana [PLUGIN]
+
+Si clinico y no co_oficio:
+
+    RUIDO_ALIAS
+
+Si clinico y co_oficio:
+
+    PERFIL_VENTANA
+
+Si no:
+
+    NO_APLICA
+
+59. Sostenimiento [PLUGIN]
+
+    sosten(t) = sosten(t-1)+1 si PERFIL_VENTANA
+                0             en otro caso
+
+    max_sosten = máximo sosten(t)
+
+60. Etiqueta global [PLUGIN]
+
+Si existe RUIDO_ALIAS y max_sosten=0:
+
+    RUIDO_ALIAS
+
+Si max_sosten >= 2:
+
+    PERFIL_SOSTENIDO
+
+Si max_sosten = 1:
+
+    PERFIL_VENTANA
+
+En otro caso:
+
+    NO_APLICA
+
+Esto no es predicción de cierre.
+
+============================================================
+X. ALIAS / FIX DE ENTRADA — FUERA DEL TUBO
+============================================================
+
+61. Alias canónico [EXPERIMENTAL]
+
+Un texto puede traducirse a un token existente:
+
+    texto_lavado -> token_canónico
+
+con peso por defecto:
+
+    0.78
+
+No sube p por sí mismo; prepara entrada.
+
+62. Campo conquista/agencia [EXPERIMENTAL]
+
+Con tokens activos >= 0.5:
+
+    conquista = |T ∩ CONQUISTA|
+    agencia   = |T ∩ AGENCIA|
+
+Si hay ambición pero no hay poder/sed_de_mando/escalada:
+
+    ambicion -> autonomia
+
+Esto NO está integrado en V5.
+
+============================================================
+XI. PREGUNTA DETRÁS / RIGOR
+============================================================
+
+63. Pregunta detrás [EXPERIMENTAL]
+
+No contiene una fórmula matemática de puntuación.
+
+Mapea:
+
+    pregunta_superficie
+        ->
+    falso_problema
+        ->
+    pregunta_real
+
+Ejemplos:
+    "quién es" -> apellido/aristos -> qué sube y en qué ventana
+    "qué va a pasar" -> desenlace -> qué se falsearía en el siguiente corte
+
+64. Método de rigor [EXPERIMENTAL]
+
+Alarmas:
+
+    HECATE:
+      Top-1 idéntico durante >= 4 cortes
+
+    HOLMES:
+      hipótesis contiene "se llama", "es Kant", "es Freud", etc.
+
+    SCHOPENHAUER:
+      inversa contiene "como yo dije"
+
+No puntúa el motor.
+
+============================================================
+XII. M v0.1 — MATRIZ DE EQUIVALENCIA
+============================================================
+
+65. Transformación dinámica [EXPERIMENTAL CONGELADA]
+
+    T_D(I_t) = D I_{t-1} + f_ext
+
+M v0.1 está congelado con:
+
+    D_opt_USD = 0.998
+    f_ext = -0.06
+
+para la fórmula simplificada utilizada en el experimento USD/MXN.
+
+66. Alpha de una trayectoria [EXPERIMENTAL]
+
+    alpha = mean[ ln(I_t / I_{t-1}) ]
+
+67. Pérdida MSE [EXPERIMENTAL]
+
+    MSE = (1/n) * sum_t (y_t - yhat_t)^2
+
+68. Función de pérdida de M v0.1 [EXPERIMENTAL]
+
+    loss =
+      MSE_USD(D)
+      + MSE_Mono(D)
+      + (alpha_USD - alpha_Mono)^2
+
+69. Distancia de equivalencia M v0.1 [EXPERIMENTAL]
+
+    d_ij = |D_i-D_j| + |alpha_i-alpha_j|
+
+Advertencia: esta distancia suma magnitudes en escalas potencialmente distintas; por eso quedó como punto de auditoría para una versión posterior, no como verdad universal.
+
+70. Transformación temporal candidata [EXPERIMENTAL]
+
+    D_eff = D_usd^(1/k)
+
+con grid pre-registrado:
+
+    k ∈ {1,2,4,7,14,28,56,112}
+
+No se puede concluir t_mono = k*t_usd sin prueba.
+
+============================================================
+XIII. MÉTRICA DE PREDICTIVIDAD USADA EN LA COMPARACIÓN USD/MXN
+============================================================
+
+71. Error relativo [EXPERIMENTAL]
+
+    error = |pred-real| / |real|
+
+72. Métrica de cercanía usada:
+
+    predictividad = 1 - |pred-real|/|real|
+
+o en porcentaje:
+
+    100 * [1 - |pred-real|/|real|]
+
+Esta métrica NO es una probabilidad y no sustituye validación OOS.
+
+============================================================
+XIV. MODELO USD/MXN DE CHATGPT
+============================================================
+
+73. Arquitectura conceptual [CANDIDATA]
+
+La formulación discutida fue:
+
+    V_{t+1} = F_macro(V_t, Theta_micro,t)
+
+donde:
+
+    Theta_micro,t = TORTUGA(datos <= t)
+
+Otra forma equivalente de la arquitectura conceptual:
+
+    V_{t+1}
+      = F(V_t, Theta_t, Trace_t)
+
+con separación:
+
+    D_t = D_macro + delta D_micro
+    F_t = F_macro + delta F_micro
+
+Esto fue una arquitectura conceptual para organizar macro estable + micro mutable; NO es una fórmula validada ni está integrada en V15.1.
+
+74. Proyección ChatGPT congelada para septiembre [EXPERIMENTAL]
+
+    12 sep  ~17.00
+    19 sep  ~17.02
+    26 sep  ~17.03
+    30 sep  ~17.04
+
+Estas cifras son las proyecciones congeladas del experimento y no deben reescribirse retrospectivamente.
+
+============================================================
+XV. FÓRMULA DE META CONGELADA — EXTERNA AL MOTOR
+============================================================
+
+75. Fórmula Meta:
+
+    I_t = 0.998 I_{t-1} - 0.06
+
+Agosto, según el experimento congelado:
+
+    31 Jul = 17.3303
+    31 Aug pred = 16.76
+    31 Aug real = 17.0000
+
+Error relativo:
+
+    |16.76-17.00| / 17.00 = 1.41% aproximadamente
+
+Predictividad bajo la métrica anterior:
+
+    98.59%
+
+Esta fórmula es de Meta, no del motor V15.1.
+
+============================================================
+XVI. FIBONACCI / PHI — EXPERIMENTO EXTERNO DE ARQUITECTURA
+============================================================
+
+76. Ecuación AR2 recuperada:
+
+    x_t = x_{t-1} + x_{t-2}
+
+77. Polinomio característico:
+
+    r^2 = r + 1
+
+o:
+
+    r^2 - r - 1 = 0
+
+78. Raíces:
+
+    r_1 = (1 + sqrt(5))/2 = phi
+    r_2 = (1 - sqrt(5))/2 = -1/phi
+
+79. Ratio asintótico:
+
+    F_{n+1}/F_n -> phi
+
+80. Tasa logarítmica:
+
+    s = ln(phi)
+
+81. Representación Z/Laplace del experimento:
+
+    H(z) = z^2 / (z^2 - z - 1)
+
+Polos:
+
+    phi
+    -1/phi
+
+82. SINDy recuperó:
+
+    x_t = 1*x_{t-1} + 1*x_{t-2}
+
+El experimento recuperó la misma estructura por tres rutas:
+    AR2 -> polinomio característico -> phi
+    SINDy -> ecuación de recurrencia -> phi
+    Z/Laplace -> polos -> phi
+
+Esto fue una validación externa de recuperación estructural, NO una demostración de metafórmula universal.
+
+============================================================
+XVII. OPERACIONES DE COMPARACIÓN / DIAGNÓSTICO TRANSVERSAL
+============================================================
+
+83. Esquema de representación:
+
+    modelo
+      -> representación
+      -> invariantes/estructura
+      -> comparación
+      -> reconstrucción
+      -> diagnóstico independiente
+
+Este es el objetivo de investigación de nivel superior, no una operación ya integrada al V15.1.
+
+84. Principio de diagnóstico:
+
+    semejanza estructural != semejanza superficial
+
+85. Principio de verificación:
+
+    estructura_extraída(modelo_original)
+        ≈
+    estructura_extraída(modelo_generado)
+
+usando, idealmente, una representación independiente.
+
+No existe todavía una función canónica del motor que implemente este ciclo completo.
+
+============================================================
+XVIII. OPERACIONES QUE NO DEBEMOS CONFUNDIR CON FÓRMULAS
+============================================================
+
+86. Top-1:
+    argmax no equivale a predicción validada.
+
+87. p_final:
+    estado del motor, no probabilidad futura calibrada.
+
+88. Monte Carlo:
+    mide estabilidad/azar bajo perturbación del procedimiento; no mide automáticamente futuro.
+
+89. Aquiles:
+    estabilidad de una misma foto bajo remuestreo; no trayectoria temporal.
+
+90. Traza:
+    movimiento del campo entre cortes; no sustituto de Aquiles.
+
+91. Picos/mesetas:
+    forma temporal de hipótesis; no predicción por sí misma.
+
+92. Arco:
+    lectura estructural periférica; no modifica las 244.
+
+93. Sidecars:
+    capas laterales; no deben confundirse con modificaciones del canon de 244.
+
+============================================================
+XIX. ESTADO CANÓNICO Y SEPARACIÓN DE CAPAS
+============================================================
+
+CANÓNICO:
+    Engine_V5_CANONICO_SOLO.py
+    patterns_final_v14.json (244)
+
+TUBO V15.1:
+    Engine_V15_INTEGRADO.py
+    traza_campo_244.py
+    plugin_reporte_3d.py
+    plugin_picos_mesetas.py
+    plugin_familias_gloria_sacro.py
+    plugin_otto_numinoso.py
+    plugin_trayectoria_hosteleria.py
+    plugin_arco_field_snyder_mckee.py
+    plugin_sesgo_lectura.py
+    Aquiles, activación según protocolo
+
+FUERA DEL TUBO / EXPERIMENTAL:
+    plugin_fix_entrada.py
+    plugin_embudo_clinico.py
+    plugin_alias_reactivacion.py
+    plugin_pregunta_detras.py
+    plugin_metodo_rigor.py
+    M v0.1
+    experimentos phi/Fibonacci
+    fórmula Meta
+    arquitectura macro/micro candidata
+
+REGLA:
+    Una fórmula experimental no se convierte en fórmula del motor
+    simplemente porque produzca un resultado interesante.
+
+============================================================
+XX. FUENTES DE ESTE INVENTARIO
+============================================================
+
+- Engine_V5_CANONICO_SOLO.py
+- patterns_final_v14.json
+- V15_1_PLUGINS_Y_READMES_TODO_EN_UN_SOLO_TXT.txt
+- V15_1_TODOS_LOS_PLUGINS_UN_SOLO_TXT.txt
+- PROTOCOLO_CHATGPT_EJECUTOR_V15_1.md
+- CHECKPOINT_V15_2026-09-07.txt
+- INVENTARIO_V15_1_BYTES_2026-09-08.txt
+- materiales de M v0.1 y experimentos de Fibonacci/phi conservados en el historial del proyecto
+
+NOTA DE COMPLETITUD
+Este inventario reproduce las fórmulas que están explícitas o reconstruibles
+directamente desde los artefactos recuperados. Cuando un documento describe
+una operación sin exponer su ecuación completa, se conserva la descripción
+y no se inventa una fórmula ausente.
+
+FIN

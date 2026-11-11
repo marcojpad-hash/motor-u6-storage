@@ -1,0 +1,1514 @@
+V15.1 — TRANSFERENCIA EXACTA DE ARCHIVOS RECUPERADOS
+Fecha de corte: 2026-09-11
+Cada bloque conserva el contenido del archivo fuente.
+
+
+========================================================================================
+ARCHIVO: plugin_reporte_3d.py
+TAMANO_BYTES: 1690
+SHA256: a1de66ac91e443e031817b1874e6ffad73f0fbdfc212ee43316f0d7ee2d9f17b
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_REPORTE_3D
+No toca V5. A partir de una secuencia de tableros 244 arma, por corte:
+  H              letrero
+  se_movieron    las que más cambiaron vs el corte previo
+  no_se_apagaron las que siguen altas aunque no griten
+"""
+from __future__ import annotations
+from typing import Any, Dict, List, Sequence, Tuple
+
+PISO = 0.62
+N_MOV = 3
+N_PERSIST = 3
+
+
+def _top(board: Dict[str, float], n: int = 1) -> List[Tuple[str, float]]:
+    return sorted(board.items(), key=lambda x: -x[1])[:n]
+
+
+def leer(
+    seq: Sequence[Tuple[str, Dict[str, float]]],
+    piso: float = PISO,
+    n_mov: int = N_MOV,
+    n_persist: int = N_PERSIST,
+) -> Dict[str, Any]:
+    cortes = []
+    prev = None
+    for i, (cid, board) in enumerate(seq):
+        H, p = _top(board, 1)[0]
+        if prev is None:
+            mov = []
+        else:
+            deltas = []
+            keys = set(board) | set(prev)
+            for k in keys:
+                d = board.get(k, 0.5) - prev.get(k, 0.5)
+                deltas.append((k, round(d, 4), round(board.get(k, 0.5), 4)))
+            deltas.sort(key=lambda x: -abs(x[1]))
+            mov = [{"h": k, "d": d, "p": pv} for k, d, pv in deltas[:n_mov]]
+        persist = [
+            {"h": k, "p": round(v, 4)}
+            for k, v in _top(board, 12)
+            if k != H and v >= piso
+        ][:n_persist]
+        cortes.append({
+            "corte": cid,
+            "H": H,
+            "p": round(p, 4),
+            "se_movieron": mov,
+            "no_se_apagaron": persist,
+        })
+        prev = board
+    return {"plugin": "PLUGIN_REPORTE_3D", "engine_tocado": False, "cortes": cortes}
+
+
+if __name__ == "__main__":
+    print("ok")
+
+========================================================================================
+ARCHIVO: plugin_picos_mesetas.py
+TAMANO_BYTES: 2071
+SHA256: 7720b6eb614497fb6aaf38d527ea323dbef31b9748f9835385ae9c3ba6081149
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_PICOS_MESETAS
+
+Forma temporal de cada hipótesis. No es el eje (eso es Aquiles).
+No entra a Engine_V5. Se corre sobre la secuencia de tableros.
+
+Para cada k:
+  serie p_k(t0)...p_k(tn)
+  d_t = p_k(t) - p_k(t-1)
+  ↗ si d >= eps
+  ↘ si d <= -eps
+  → si |d| < eps   (meseta de movimiento, no "es el campeón")
+
+Señal de trabajo (no ley):
+  un ↗ de k que ocurre ANTES de que k sea Top1.
+"""
+from __future__ import annotations
+from typing import Any, Dict, List, Sequence, Tuple
+
+EPS = 0.04
+
+
+def signo(d: float, eps: float = EPS) -> str:
+    if d >= eps:
+        return "↗"
+    if d <= -eps:
+        return "↘"
+    return "→"
+
+
+def curvas(
+    seq: Sequence[Tuple[str, Dict[str, float]]],
+    eps: float = EPS,
+    piso: float = 0.62,
+) -> Dict[str, Any]:
+    if not seq:
+        return {"plugin": "PLUGIN_PICOS_MESETAS", "curvas": {}}
+    ids = [s[0] for s in seq]
+    keys = set()
+    for _, b in seq:
+        keys.update(b)
+    tops = []
+    for _, b in seq:
+        tops.append(max(b, key=lambda k: b[k]))
+    out = {}
+    for k in keys:
+        serie = [round(b.get(k, 0.5), 4) for _, b in seq]
+        if max(serie) < piso:
+            continue
+        ds = [round(serie[i] - serie[i - 1], 4) for i in range(1, len(serie))]
+        forma = "".join(signo(d, eps) for d in ds)
+        if set(forma) <= {"→"}:
+            continue
+        i_top = next((i for i, t in enumerate(tops) if t == k), None)
+        subio_antes = False
+        if i_top is not None and i_top >= 1:
+            subio_antes = any(ds[j] >= eps for j in range(i_top))
+        out[k] = {
+            "serie": serie,
+            "deltas": ds,
+            "forma": forma,
+            "fue_top1": i_top,
+            "subio_antes_de_ser_top1": subio_antes,
+        }
+    return {
+        "plugin": "PLUGIN_PICOS_MESETAS",
+        "eps": eps,
+        "cortes": ids,
+        "top1": tops,
+        "curvas": out,
+        "eje": "Aquiles / meseta del tema. Esta pieza no lo declara.",
+    }
+
+
+if __name__ == "__main__":
+    print("PLUGIN_PICOS_MESETAS listo")
+
+========================================================================================
+ARCHIVO: plugin_familias_gloria_sacro.py
+TAMANO_BYTES: 2564
+SHA256: 8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_FAMILIAS_GLORIA_SACRO
+
+No toca Engine_V5 ni reescribe patterns_final_v14.json.
+Suma DOS hipótesis al diccionario en memoria / a un JSON de salida.
+
+Candado de tokens:
+- tokens_favor/contra SOLO del léxico ya existente en las 244.
+- No se plantan fama_hegemonica, evangelizacion, etc.: no dispararían.
+- cap conceptual: estas fichas USAN reconocimiento y humildad_religiosa
+  como favor; no cancelan las vías contra que ya tenían esas palabras.
+"""
+from __future__ import annotations
+
+import copy
+import json
+from pathlib import Path
+from typing import Dict
+
+EXTRA = {
+    "fama_reputacion_gloria_publica": {
+        "description": (
+            "El nombre se multiplica en la memoria colectiva. "
+            "No es poder de cargo ni logro Schwartz: es que te vean."
+        ),
+        "tokens_favor": {
+            "reconocimiento": 0.8,
+            "estatus_social": 0.75,
+            "redes_prestigio": 0.7,
+            "escalada_status": 0.7,
+        },
+        "tokens_contra": {
+            "humildad": 0.7,
+            "olvido": 0.75,
+        },
+        "evidence_status": "unverified",
+        "fuente": "PLUGIN_FAMILIAS_GLORIA_SACRO; no calibrado.",
+    },
+    "carisma_sacro_vocacion_religiosa": {
+        "description": (
+            "El sujeto opera como canal de lo sacro (starets, predicador, piedad operativa). "
+            "No es kwml_03_mago ni solo tradicion Schwartz."
+        ),
+        "tokens_favor": {
+            "humildad_religiosa": 0.85,
+            "humildad": 0.7,
+            "piedad": 0.8,
+            "devocion": 0.75,
+            "desafio_sagrado": 0.65,
+        },
+        "tokens_contra": {
+            "orgullo": 0.8,
+        },
+        "evidence_status": "unverified",
+        "fuente": "PLUGIN_FAMILIAS_GLORIA_SACRO; no calibrado.",
+    },
+}
+
+
+def fusionar(patterns: Dict) -> Dict:
+    out = copy.deepcopy(patterns)
+    for k, v in EXTRA.items():
+        if k in out:
+            raise ValueError(f"colision con 244: {k}")
+        out[k] = v
+    return out
+
+
+def escribir_fusion(
+    patterns_path: str,
+    dest: str = "patterns_v14_plus_gloria_sacro.json",
+) -> str:
+    p = json.loads(Path(patterns_path).read_text(encoding="utf-8"))
+    q = fusionar(p)
+    Path(dest).write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return dest
+
+
+if __name__ == "__main__":
+    import sys
+    src = sys.argv[1] if len(sys.argv) > 1 else "patterns_final_v14.json"
+    dest = escribir_fusion(src)
+    print("n", len(json.loads(Path(dest).read_text())), "->", dest)
+
+========================================================================================
+ARCHIVO: plugin_otto_numinoso.py
+TAMANO_BYTES: 2309
+SHA256: 2f22f06e6c3e8eececb54a839aa08a1391a7ab0c27f739492417768fed24954e
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_OTTO_NUMINOSO
+Sidecar. No pisa patterns_final_v14.json.
+
+Dos polos (Otto 1917, mysterium tremendum et fascinans).
+El JSON de esta carpeta venia en UNA ficha
+(otto_01_numinoso_tremendum_fascinans). El wrapper anterior
+acorto el nombre a otto_01_...tremendum: recorte de nombre.
+
+Claude 2026-09-07: partir en 01 tremendum + 02 fascinans.
+Se pueden encender los dos a la vez.
+"""
+from __future__ import annotations
+
+from typing import Dict
+
+PARCHE_A_REEMPLAZAR = "carisma_sacro_vocacion_religiosa"
+
+OTTO = {
+    "otto_01_numinoso_tremendum": {
+        "description": (
+            "Otto 1917 polo tremendum: miedo, misterio, "
+            "desafio_sagrado. No es el fascinans."
+        ),
+        "tokens_favor": {
+            "desafio_sagrado": 0.85,
+            "misterio": 0.80,
+            "miedo": 0.78,
+        },
+        "tokens_contra": {
+            "cotidiano": 0.80,
+            "orgullo": 0.78,
+            "poder": 0.70,
+        },
+        "evidence_status": "secondary_verified",
+        "fuente": "Otto 1917 Das Heilige; polo tremendum.",
+    },
+    "otto_02_numinoso_fascinans": {
+        "description": (
+            "Otto 1917 polo fascinans: devocion, piedad, "
+            "paz_interior, carisma que atrae. Coexiste con 01."
+        ),
+        "tokens_favor": {
+            "devocion": 0.82,
+            "piedad": 0.80,
+            "paz_interior": 0.72,
+            "carisma": 0.70,
+            "sabiduria": 0.65,
+            "humildad_religiosa": 0.75,
+            "humildad": 0.68,
+        },
+        "tokens_contra": {
+            "orgullo": 0.78,
+            "estatus_social": 0.68,
+            "poder": 0.70,
+        },
+        "evidence_status": "secondary_verified",
+        "fuente": "Otto 1917 Das Heilige; polo fascinans.",
+    },
+}
+
+
+def fusionar(patterns: Dict) -> Dict:
+    out = dict(patterns)
+    out.pop(PARCHE_A_REEMPLAZAR, None)
+    out.pop("otto_01_numinoso_tremendum_fascinans", None)
+    out.update(OTTO)
+    return out
+
+
+if __name__ == "__main__":
+    import json
+    from pathlib import Path
+    base = json.loads(Path("patterns_final_v14.json").read_text(encoding="utf-8"))
+    lib = fusionar(base)
+    assert "otto_01_numinoso_tremendum" in lib
+    assert "otto_02_numinoso_fascinans" in lib
+    print("ok otto 01+02", "n", len(lib))
+
+========================================================================================
+ARCHIVO: plugin_trayectoria_hosteleria.py
+TAMANO_BYTES: 1619
+SHA256: 623496a7b8e118921d2684056a530600512cbbbcc307c71ed8025a3c81b41369
+========================================================================================
+
+#!/usr/bin/env python3
+"""SIDECAR — trayectoria_hosteleria_turno_sustancias
+NO fusionar a patterns_final_v14.json (244 en disco).
+Se carga en memoria con sidecar V15.1.
+
+Oficio cocina/barra/sala: turno raro + desgaste + consumo.
+Perfil de ventana, no destino.
+
+Fuente primaria (Claude web 2026-09-07):
+Bush & Lipari, SAMHSA CBHSQ Report, 16 abril 2015.
+Alojamiento y alimentos #1 SUD 16.9% y #1 ilicitas 19.1%
+entre 19 industrias. Mineria/construccion lideran binge
+alcohol, no SUD general. La cita "3er lugar" estaba invertida.
+"""
+from __future__ import annotations
+
+FICHA = "trayectoria_hosteleria_turno_sustancias"
+
+PATRON = {
+    "description": (
+        "Oficio de cocina/barra/sala: turno raro, desgaste, "
+        "co-ocurrencia frecuente con consumo. Perfil de ventana, "
+        "no prediccion de cierre."
+    ),
+    "tokens_favor": {
+        "consumo_sustancias": 0.8,
+        "turno_atipico_nocturno": 0.8,
+        "desgaste_psicosocial": 0.7,
+        "desgaste_cambaceo_itinerante": 0.55,
+        "aislamiento_social": 0.5,
+    },
+    "tokens_contra": {
+        "estabilidad_horario": 0.85,
+        "entorno_controlado_oficina": 0.8,
+    },
+    "fuente": "SAMHSA 2015 (Bush & Lipari, CBHSQ Report, 16 abril 2015): alojamiento y servicios de alimentos = 16.9% SUD, EL MAS ALTO de 19 industrias medidas (no 3o -- corregido tras verificar fuente primaria; mineria/construccion solo lideran en consumo excesivo de alcohol especificamente, no en SUD general).",
+    "evidence_status": "secondary_verified",
+}
+
+
+def fusionar(lib: dict) -> dict:
+    out = dict(lib)
+    out[FICHA] = dict(PATRON)
+    return out
+
+========================================================================================
+ARCHIVO: plugin_arco_field_snyder_mckee.py
+TAMANO_BYTES: 6105
+SHA256: ed672db0cf93ffacbbe79fd58fadee4997e845319ac5c3fe9dbdd633fae91acc
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_ARCO_DRAMATICO
+Sid Field + Blake Snyder (Save the Cat) + Robert McKee.
+
+NO son lo mismo. Tres lecturas del MISMO timeline.
+NO toca Engine_V5. NO agrega hipótesis a las 244.
+VACIO se deja. No se rellena de a huevo.
+
+Field  = dónde se parte el TIEMPO (actos, plot points).
+Snyder = qué MOMENTO de catálogo comercial hay cerca.
+McKee  = si el VALOR se voltea (carga +/−) hacia crisis/clímax.
+"""
+from __future__ import annotations
+
+from typing import Any, Dict, List, Optional, Sequence
+
+FIELD = [
+    ("ACTO_1", "planteamiento / casa"),
+    ("PLOT_POINT_1", "ya no hay vuelta fácil"),
+    ("PUNTO_MEDIO", "se ve el tipo de cinta"),
+    ("PLOT_POINT_2", "segundo golpe"),
+    ("ACTO_3", "se paga o se recoge"),
+]
+
+SNYDER = [
+    ("opening_image", "foto de entrada"),
+    ("theme_stated", "de qué va, sin querer"),
+    ("setup", "casa"),
+    ("catalyst", "el jalón"),
+    ("debate", "¿entro o no?"),
+    ("break_into_two", "cruza"),
+    ("b_story", "otro hilo"),
+    ("fun_and_games", "promesa del género"),
+    ("midpoint", "falso triunfo o falso fondo"),
+    ("bad_guys_close_in", "aprieta"),
+    ("all_is_lost", "muerte aparente"),
+    ("dark_night", "quieto y feo"),
+    ("break_into_three", "se levanta"),
+    ("finale", "paga"),
+    ("final_image", "foto de salida vs entrada"),
+]
+
+MCKEE = [
+    ("incidente_incitador", "el valor de la vida se toca por primera vez"),
+    ("complicaciones", "el valor se aprieta, no se resuelve"),
+    ("crisis", "dilema: dos males o dos bienes, hay que elegir"),
+    ("climax", "la elección se ACTÚA y el valor se voltea"),
+    ("resolucion", "el mundo nuevo, más chico que el clímax"),
+]
+
+
+def _dmax(cut: Dict[str, Any]) -> float:
+    if cut.get("delta_max") is not None:
+        return abs(float(cut["delta_max"]))
+    if cut.get("d_max") is not None:
+        return abs(float(cut["d_max"]))
+    movers = cut.get("movers") or []
+    if movers:
+        return max(abs(float(x.get("d", 0))) for x in movers)
+    return 0.0
+
+
+def _carga(cut: Dict[str, Any]) -> Optional[str]:
+    """McKee: + o − si el caller lo manda; si no, se infiere del signo de delta_neto."""
+    if cut.get("carga") in ("+", "-", "0"):
+        return cut["carga"]
+    neto = cut.get("delta_neto")
+    if neto is None:
+        return None
+    if neto > 0:
+        return "+"
+    if neto < 0:
+        return "-"
+    return "0"
+
+
+def _nota(cut: Dict[str, Any], umbral: float) -> bool:
+    return _dmax(cut) >= umbral
+
+
+def _pick(cortes: Sequence[Dict[str, Any]], frac: float) -> Dict[str, Any]:
+    n = len(cortes)
+    j = min(n - 1, max(0, round(frac * (n - 1))))
+    return cortes[j]
+
+
+def leer(
+    cortes: Sequence[Dict[str, Any]],
+    umbral: float = 0.04,
+) -> Dict[str, Any]:
+    n = len(cortes)
+    if n == 0:
+        return {"plugin": "PLUGIN_ARCO_DRAMATICO", "error": "sin cortes"}
+
+    # Field por posición
+    if n == 1:
+        f_idx = [(0, "ACTO_1")]
+    elif n == 2:
+        f_idx = [(0, "ACTO_1"), (1, "ACTO_3")]
+    elif n == 3:
+        f_idx = [(0, "ACTO_1"), (1, "PUNTO_MEDIO"), (2, "ACTO_3")]
+    else:
+        f_idx = [
+            (0, "ACTO_1"),
+            (max(1, n // 4), "PLOT_POINT_1"),
+            (n // 2, "PUNTO_MEDIO"),
+            (min(n - 2, (3 * n) // 4), "PLOT_POINT_2"),
+            (n - 1, "ACTO_3"),
+        ]
+    glosa_f = {a: b for a, b in FIELD}
+    field = []
+    for i, nombre in f_idx:
+        cut = cortes[i]
+        field.append({
+            "beat": nombre,
+            "glosa": glosa_f.get(nombre, ""),
+            "corte": cut.get("id"),
+            "se_nota": _nota(cut, umbral),
+            "carga": _carga(cut),
+            "forzado": False,
+        })
+
+    snyder = []
+    for i, (bid, glosa) in enumerate(SNYDER):
+        cut = _pick(cortes, i / max(1, len(SNYDER) - 1))
+        snyder.append({
+            "beat": bid,
+            "glosa": glosa,
+            "corte_cerca": cut.get("id"),
+            "estado": "SE_NOTA" if _nota(cut, umbral) else "VACIO",
+            "forzado": False,
+        })
+
+    # McKee: 5 hitos + volteos de carga entre cortes consecutivos
+    m_frac = [0.0, 0.3, 0.55, 0.8, 1.0]
+    mckee = []
+    for frac, (bid, glosa) in zip(m_frac, MCKEE):
+        cut = _pick(cortes, frac)
+        mckee.append({
+            "beat": bid,
+            "glosa": glosa,
+            "corte": cut.get("id"),
+            "se_nota": _nota(cut, umbral),
+            "carga": _carga(cut),
+            "forzado": False,
+        })
+    volteos = []
+    for i in range(1, n):
+        a, b = _carga(cortes[i - 1]), _carga(cortes[i])
+        if a and b and a != b and a != "0" and b != "0":
+            volteos.append({
+                "de": cortes[i - 1].get("id"),
+                "a": cortes[i].get("id"),
+                "carga": f"{a}→{b}",
+            })
+
+    return {
+        "plugin": "PLUGIN_ARCO_DRAMATICO",
+        "engine_tocado": False,
+        "nuevas_hipotesis_244": 0,
+        "regla": "Tres lecturas. VACIO se deja. No encajar de a huevo.",
+        "para_que": (
+            "Ver si la trazabilidad de una vida/época SE NOTA como cinta "
+            "(Field), como catálogo de momentos (Snyder) o como volteo de valor "
+            "(McKee). Hueco = dato. No es predecir el iPhone."
+        ),
+        "matices": {
+            "Field": "arquitectura del tiempo",
+            "Snyder": "momentos de taller comercial",
+            "McKee": "carga de valor que se voltea",
+        },
+        "field": field,
+        "snyder": snyder,
+        "mckee": mckee,
+        "mckee_volteos": volteos,
+        "n_snyder_vacios": sum(1 for x in snyder if x["estado"] == "VACIO"),
+        "n_field_sin_nota": sum(1 for x in field if not x["se_nota"]),
+    }
+
+
+if __name__ == "__main__":
+    import json
+    demo = [
+        {"id": "A", "delta_max": 0.02, "delta_neto": 0.01},
+        {"id": "B", "delta_max": 0.12, "delta_neto": 0.10},
+        {"id": "C", "delta_max": 0.08, "delta_neto": -0.06},
+        {"id": "D", "delta_max": 0.03, "delta_neto": -0.02},
+        {"id": "E", "delta_max": 0.11, "delta_neto": 0.09},
+    ]
+    print(json.dumps(leer(demo), ensure_ascii=False, indent=2))
+
+========================================================================================
+ARCHIVO: plugin_sesgo_lectura.py
+TAMANO_BYTES: 3341
+SHA256: fe098108d85ccc8a44d13a7a0beb556cf50d6e4450e7b631b5b665edb02e21a0
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_SESGO_LECTURA v2
+
+Repetir tokens NO es sesgo. Los universales se escriben con las
+mismas palabras (hambre, caída, grupo). Eso es el cliché / arquetipo.
+
+Lo que se mide:
+  C  = solape de tokens (diccionario estable o no)
+  N  = tokens NUEVOS en t+1 (color de ESTA vida)
+  K  = tokens que se fueron
+  P  = el letrero #1 se quedó
+
+Vector de diferenciación D = N ∪ K
+  Si P y D no vacío: el universal se quedó CON otra carne.
+  Si P y D vacío: misma frase otra vez. No condena; avisa "poca carne nueva".
+  Si no P: cambió el letrero.
+
+No hay etiqueta 'sesgo' automática.
+Hay: universal_con_color | universal_sin_color_nueva | cambio_de_letrero
+"""
+from __future__ import annotations
+
+from typing import Any, Dict, List, Sequence, Set
+
+
+def _toks(cut: Dict[str, Any]) -> Set[str]:
+    raw = cut.get("tokens") or cut.get("markers") or []
+    out = set()
+    for x in raw:
+        if isinstance(x, str):
+            out.add(x)
+        elif isinstance(x, dict):
+            t = x.get("token") or x.get("name")
+            if t:
+                out.add(str(t))
+        elif isinstance(x, (list, tuple)) and x:
+            out.add(str(x[0]))
+    return out
+
+
+def jaccard(a: Set[str], b: Set[str]) -> float:
+    if not a and not b:
+        return 1.0
+    u = a | b
+    return len(a & b) / len(u) if u else 0.0
+
+
+def leer(cortes: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
+    filas = []
+    for i in range(len(cortes) - 1):
+        a, b = cortes[i], cortes[i + 1]
+        ta, tb = _toks(a), _toks(b)
+        nuevos = sorted(tb - ta)
+        idos = sorted(ta - tb)
+        C = round(jaccard(ta, tb), 4)
+        Ha, Hb = a.get("H"), b.get("H")
+        P = Ha is not None and Ha == Hb
+        if not P:
+            tag = "cambio_de_letrero"
+        elif nuevos or idos:
+            tag = "universal_con_color"
+        else:
+            tag = "universal_sin_color_nueva"
+        filas.append({
+            "de": a.get("id"),
+            "a": b.get("id"),
+            "H_de": Ha,
+            "H_a": Hb,
+            "C_solape": C,
+            "tokens_nuevos": nuevos,
+            "tokens_idos": idos,
+            "D_diferenciacion": sorted(set(nuevos) | set(idos)),
+            "letrero_igual": P,
+            "etiqueta": tag,
+        })
+    return {
+        "plugin": "PLUGIN_SESGO_LECTURA",
+        "version": 2,
+        "engine_tocado": False,
+        "regla": (
+            "Mismas palabras no equivalen a sesgo. "
+            "Sesgo solo se SOSPECHA si el letrero se queda y D está vacío "
+            "(cero carne nueva). Aun así no se anula el hallazgo."
+        ),
+        "con_aquiles": (
+            "Aquiles + universal_con_color = rumbo con instancia. "
+            "Aquiles + universal_sin_color_nueva = rumbo, pero esta vida "
+            "no aportó pigmento: no lo vendas como caso nuevo."
+        ),
+        "transiciones": filas,
+    }
+
+
+if __name__ == "__main__":
+    import json
+    demo = [
+        {"id": "A", "H": "30_ambicion", "tokens": ["ambicion", "aprendizaje"]},
+        {"id": "B", "H": "30_ambicion", "tokens": ["ambicion", "poder", "liderazgo"]},
+        {"id": "C", "H": "30_ambicion", "tokens": ["ambicion", "poder", "liderazgo"]},
+        {"id": "D", "H": "6_desastre", "tokens": ["desastre", "caida"]},
+    ]
+    print(json.dumps(leer(demo), ensure_ascii=False, indent=2))
+
+========================================================================================
+ARCHIVO: plugin_aquiles_h.py
+TAMANO_BYTES: 5831
+SHA256: 3fe976dfc40259003ea828fb39f58adbc17c4da9045b2639fa98a8f1371c1ecc
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_AQUILES_H — capa plugin. NO modifica Engine_V5.
+
+Busca N_min: el menor n donde p_H ya no se voltea
+si sigues remuestreando LA MISMA foto.
+
+No hay N oficial (400, 3200, un millón). Eso es sesgo.
+Hay un fusible de recursos (N_FUSIBLE). Si lo tocas,
+no encontraste N_min: reportas NO_ENCONTRADO, no “N=fusible”.
+
+estado_H: PARA_DE_EMPUJAR_H | SEGUIR_EMPUJANDO_H | NO_ENCONTRADO_FUSIBLE
+estado_traza: ABIERTA siempre — el eje quieto no cierra AB/BC.
+"""
+from __future__ import annotations
+
+from collections import Counter
+from typing import Any, Callable, Dict, List, Sequence
+
+EPS_2PT = 0.02
+M_VENTANAS = 3
+# I = intensidad residual de la foto (masa que no es ruido puro).
+# Si la replica no manda I, se usa I_FLOOR. Nunca 0: un tablero
+# vacio no cuenta como "H ya es H". No es p_azar (eso es MC1).
+I_FLOOR = 0.02
+N0 = 32
+FACTOR = 2
+N_FUSIBLE = 8192
+
+
+def _overlap(a: Sequence[str], b: Sequence[str]) -> float:
+    if not a and not b:
+        return 1.0
+    sa, sb = set(a), set(b)
+    if not sa or not sb:
+        return 0.0
+    return len(sa & sb) / max(len(sa), len(sb))
+
+
+def evaluar_serie(
+    puntos: List[Dict[str, Any]],
+    eps_p: float = EPS_2PT,
+    m: int = M_VENTANAS,
+) -> Dict[str, Any]:
+    if len(puntos) < 2:
+        return {
+            "estado_H": "SEGUIR_EMPUJANDO_H",
+            "estado": "SEGUIR_EMPUJANDO_H",
+            "estado_traza": "ABIERTA",
+            "N_min": None,
+            "plugin": "PLUGIN_AQUILES_H",
+        }
+
+    estables = 0
+    n_min = None
+    hist = []
+    for i in range(1, len(puntos)):
+        a, b = puntos[i - 1], puntos[i]
+        p1, p2 = a.get("p_H"), b.get("p_H")
+        d = None if (p1 is None or p2 is None) else abs(p2 - p1)
+        I = b.get("I") if b.get("I") is not None else I_FLOOR
+        h_quieta = d is not None and d <= eps_p and I >= I_FLOOR
+        hist.append({
+            "n": b.get("n"),
+            "delta_H": None if d is None else round(d, 4),
+            "H_quieta": h_quieta,
+            "viento": {
+                "winner_modal": b.get("winner"),
+                "winner_cambio": a.get("winner") != b.get("winner"),
+                "overlap_topk": round(_overlap(a.get("topk") or [], b.get("topk") or []), 4),
+            },
+            "I": I,
+        })
+        if h_quieta:
+            estables += 1
+            if estables >= m and n_min is None:
+                n_min = b.get("n")
+        else:
+            estables = 0
+
+    if n_min is not None:
+        estado_H = "PARA_DE_EMPUJAR_H"
+    else:
+        estado_H = "SEGUIR_EMPUJANDO_H"
+
+    return {
+        "estado": estado_H,
+        "estado_H": estado_H,
+        "estado_traza": "ABIERTA",
+        "N_min": n_min,
+        "N_estable": n_min,
+        "eps_p": eps_p,
+        "m_ventanas": m,
+        "bloques": hist,
+        "regla": (
+            "N_min = menor n donde p_H aguantó m ventanas seguidas. "
+            "No es un tope elegido. Letrero modal no frena. Traza ABIERTA."
+        ),
+        "plugin": "PLUGIN_AQUILES_H",
+        "engine_tocado": False,
+    }
+
+
+def _ns_crecimiento(n0: int = N0, factor: int = FACTOR, fusible: int = N_FUSIBLE):
+    n = n0
+    while n <= fusible:
+        yield n
+        n = n * factor
+
+
+def bootstrap_hasta_parar(
+    replicar: Callable[[], Dict[str, Any]],
+    bloques: Sequence[int] | None = None,
+    eps_p: float = EPS_2PT,
+    m: int = M_VENTANAS,
+    k: int = 5,
+    seed: int = 12345,
+    n0: int = N0,
+    fusible: int = N_FUSIBLE,
+) -> Dict[str, Any]:
+    grid = list(bloques) if bloques else list(_ns_crecimiento(n0=n0, fusible=fusible))
+    pool: List[Dict[str, Any]] = []
+    puntos: List[Dict[str, Any]] = []
+    for n in grid:
+        if n < n0:
+            continue
+        if n > fusible:
+            break
+        while len(pool) < n:
+            pool.append(replicar())
+        slice_n = pool[:n]
+        ps = [x["p_H"] for x in slice_n if x.get("p_H") is not None]
+        winners = [x.get("winner") for x in slice_n]
+        winner = Counter(winners).most_common(1)[0][0] if winners else None
+        names = []
+        for x in slice_n:
+            names.extend(x.get("topk") or [])
+        topk = [nm for nm, _ in Counter(names).most_common(k)]
+        p_mean = sum(ps) / len(ps) if ps else None
+        I_vals = [x.get("I") for x in slice_n if x.get("I") is not None]
+        I = max(I_FLOOR, sum(I_vals) / len(I_vals)) if I_vals else I_FLOOR
+        puntos.append({"n": n, "p_H": p_mean, "winner": winner, "topk": topk, "I": I})
+        ver = evaluar_serie(puntos, eps_p=eps_p, m=m)
+        if ver["estado_H"] == "PARA_DE_EMPUJAR_H":
+            ver["puntos"] = puntos
+            ver["n_replicas_usadas"] = n
+            ver["fusible"] = fusible
+            ver["toque_fusible"] = False
+            ver["seed"] = seed
+            return ver
+
+    ver = evaluar_serie(puntos, eps_p=eps_p, m=m)
+    toque = (puntos[-1]["n"] >= fusible) if puntos else False
+    if toque and ver["N_min"] is None:
+        ver["estado_H"] = "NO_ENCONTRADO_FUSIBLE"
+        ver["estado"] = "NO_ENCONTRADO_FUSIBLE"
+    ver["puntos"] = puntos
+    ver["n_replicas_usadas"] = puntos[-1]["n"] if puntos else 0
+    ver["fusible"] = fusible
+    ver["toque_fusible"] = toque
+    ver["seed"] = seed
+    return ver
+
+
+if __name__ == "__main__":
+    import json
+    pts = [
+        {"n": 32, "p_H": 0.64, "winner": "9_audaz_empresa", "topk": ["9_audaz_empresa", "30_ambicion"], "I": 0.03},
+        {"n": 64, "p_H": 0.669, "winner": "9_audaz_empresa", "topk": ["9_audaz_empresa", "30_ambicion"], "I": 0.03},
+        {"n": 128, "p_H": 0.670, "winner": "30_ambicion", "topk": ["30_ambicion", "9_audaz_empresa"], "I": 0.03},
+        {"n": 256, "p_H": 0.671, "winner": "9_audaz_empresa", "topk": ["9_audaz_empresa", "30_ambicion"], "I": 0.03},
+    ]
+    print(json.dumps(evaluar_serie(pts), ensure_ascii=False, indent=2))
+
+========================================================================================
+ARCHIVO: plugin_pregunta_detras.py
+TAMANO_BYTES: 1987
+SHA256: b3c564610a01380aeabe87c2eba91c25c87d9ea754a98fbe8563c7b9a2d6c397
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_PREGUNTA_DETRAS — decimo hombre de la PREGUNTA.
+No toca F ni p. No autorizar fusion.
+
+El problema nunca es el problema. El problema es el falso problema:
+la pregunta que el mapper/LLM va a responder si nadie la para.
+
+Uso (humano o wrapper):
+  from plugin_pregunta_detras import interrogar
+  interrogar("que va a pasar con este cocinero")
+"""
+from __future__ import annotations
+
+# pregunta de superficie -> default que el sistema suelta -> pregunta real
+TRAMPAS = [
+    (("quien es", "quién es"), "apellido / aristos", "que ↗ que no es el eje, en que ventana"),
+    (("que va a pasar", "qué va a pasar", "que le va a pasar"), "desenlace dossier", "que se falsearia en el siguiente corte"),
+    (("es adicto", "se muere", "se va a morir", "va a morir"), "DSM de biografia", "en QUE ventana hay evidencia clinica"),
+    (("es ambicioso", "ambicion", "ambición"), "30_ambicion", "conquista sobre otros o agencia sobre si"),
+    (("por que famoso", "por qué famoso", "es famoso"), "fama como causa", "fama es eje o laterales"),
+    (("que ficha falta", "qué ficha falta"), "inventar 247", "que token FRIO no pegue"),
+    (("el motor fallo", "el motor falló"), "culpa F", "el mapper pego el token caliente"),
+]
+
+
+def interrogar(pregunta_superficie: str) -> dict:
+    p = (pregunta_superficie or "").lower()
+    golpe = None
+    for agujas, falso, real in TRAMPAS:
+        if any(a in p for a in agujas):
+            golpe = {"trampa": agujas[0], "falso_problema": falso, "pregunta_detras": real}
+            break
+    return {
+        "plugin": "PREGUNTA_DETRAS",
+        "superficie": pregunta_superficie,
+        "golpe": golpe,
+        "siempre": {
+            "1_superficie": pregunta_superficie,
+            "2_default_si_nadie_para": "aristos + Top-1 + desenlace",
+            "3_detras": "que fuerza, que ventana, que token no puse, que la falsearia",
+            "4_falso_si": "la respuesta no cambia si quito el apellido",
+        },
+    }
+
+========================================================================================
+ARCHIVO: plugin_metodo_rigor.py
+TAMANO_BYTES: 1594
+SHA256: a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_METODO_RIGOR — Holmes / Hecate / Schopenhauer
+No toca F. No puntua. No fusionar al V5 sin visto.
+
+Por que "se les olvida" si es matematica:
+  F no olvida. Quien narra olvida. Este plugin obliga el bloque
+  DESPUES de correr(), igual que pregunta_detras va ANTES.
+
+Uso:
+  from plugin_metodo_rigor import rigor
+  print(rigor(out, hipotesis="...", inverso="..."))
+"""
+from __future__ import annotations
+
+
+def rigor(out: dict | None = None, hipotesis: str = "", inverso: str = "") -> dict:
+    cadena = ""
+    if out:
+        cadena = out.get("cadena_top1") or ""
+    tops = [x.strip() for x in cadena.split("→") if x.strip()]
+    flags = []
+    if len(tops) >= 4 and len(set(tops[:4])) == 1:
+        flags.append("HECATE_MAS_DE_LO_MISMO: el letrero no cambio 4 cortes")
+    if hipotesis and any(n in hipotesis.lower() for n in
+                         ("se llama", "es kant", "es freud", "es monroe")):
+        flags.append("HOLMES: la hipotesis nombra apellido (ciego roto)")
+    if inverso and "como yo dije" in inverso.lower():
+        flags.append("SCHOPENHAUER: defender el tanteo, no el tablero")
+
+    return {
+        "plugin": "METODO_RIGOR",
+        "plantilla": {
+            "holmes": "tokens de HECHOS del corte o de mi tesis?",
+            "hecate": "pedi mas de lo mismo / forcé una lampara?",
+            "schopenhauer": "defiendo lo que vi o leo el tablero?",
+            "sigue_en_cuaderno": "si/no",
+        },
+        "auto": flags,
+        "cadena_top1": cadena,
+        "nota": "auto no sustituye las 4 lineas humanas. Es alarma.",
+    }
+
+========================================================================================
+ARCHIVO: plugin_embudo_clinico.py
+TAMANO_BYTES: 3294
+SHA256: deb37f7e0124217c6f4ad329782063a830b61977e531fa91d6d144339413b2ee
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_EMBUDO_CLINICO — provisional. No toca F del V5.
+
+No depende de que Grok/ChatGPT/Marco recuerden en qué corte pegar el token.
+Lee la SERIE de cortes ya corrida + los tokens de cada ventana.
+
+Embudo:
+  1. ¿El token clinico (consumo_sustancias, etc.) esta en ESTA ventana?
+  2. ¿Hay co-token de oficio/itinerancia/cronicidad en ESA misma ventana?
+  3. ¿En cuantas ventanas seguidas se sostiene?
+  4. ¿La primera ventana de la vida (formacion) solo trae aprendizaje/casa?
+
+Salidas (etiqueta, no pronostico):
+  RUIDO_ALIAS     — clinico en cuna sin carretera/desorden local
+  PERFIL_VENTANA  — clinico + co-token en ventanas de oficio; no es cierre
+  SENAL_TEMPRANA  — clinico ↗ al menos 1 corte ANTES de un hecho de quiebre
+                    que el texto de esa ventana aun no nombra (raro; hay
+                    que marcarlo a mano el 'quiebre' o no existe)
+  NO_APLICA       — no hubo token clinico
+
+Sustancias_03 no se declara por un solo corte con alias.
+Hace falta sosten + co-token.
+
+INDICE 0: formativa = primer item de la LISTA que le pases.
+Si pasas la vida completa desde el inicio, 0 es cuna/arranque.
+Si pasas un fragmento (cortes 5-9), el 5 se leeria como formativa.
+No es bug del indice: es supuesto. No recortar la serie.
+"""
+from __future__ import annotations
+
+from typing import Dict, List, Sequence, Tuple
+
+CLINICO = {"consumo_sustancias", "cronicidad_sintomatica", "estancamiento_crisis"}
+CO_OFICIO = {
+    "desgaste_cambaceo_itinerante", "aislamiento_social",
+    "busqueda_riesgo", "presion_social", "caida",
+}
+CUNA = {"aprendizaje", "humildad", "alianza", "cotidiano"}
+
+
+def _nombres(tokens: Sequence[Tuple[str, float]]) -> set:
+    return {t for t, v in tokens if v >= 0.5}
+
+
+def etiquetar(
+    cortes: Sequence[Tuple[str, Sequence[Tuple[str, float]]]],
+) -> Dict:
+    filas = []
+    for i, (cid, toks) in enumerate(cortes):
+        n = _nombres(toks)
+        clin = bool(n & CLINICO)
+        co = bool(n & CO_OFICIO)
+        # primera por POSICION, no por nombre "A"
+        formativa = i == 0
+        solo_cuna = bool(n <= (CUNA | CLINICO | {"creatividad", "conocimiento"}))
+        if clin and not co:
+            et = "RUIDO_ALIAS"
+        elif clin and formativa and solo_cuna:
+            et = "RUIDO_ALIAS"
+        elif clin and co:
+            et = "PERFIL_VENTANA"
+        else:
+            et = "NO_APLICA"
+        filas.append({
+            "corte": cid, "i": i, "formativa": formativa,
+            "clinico": clin, "co_oficio": co, "etiqueta": et,
+        })
+
+    sosten = 0
+    max_sosten = 0
+    for f in filas:
+        if f["etiqueta"] == "PERFIL_VENTANA":
+            sosten += 1
+            max_sosten = max(max_sosten, sosten)
+        else:
+            sosten = 0
+
+    if any(f["etiqueta"] == "RUIDO_ALIAS" for f in filas) and max_sosten == 0:
+        global_et = "RUIDO_ALIAS"
+    elif max_sosten >= 2:
+        global_et = "PERFIL_SOSTENIDO"
+    elif max_sosten == 1:
+        global_et = "PERFIL_VENTANA"
+    else:
+        global_et = "NO_APLICA"
+
+    return {
+        "plugin": "EMBUDO_CLINICO",
+        "global": global_et,
+        "sosten_max": max_sosten,
+        "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+        "cortes": filas,
+    }
+
+========================================================================================
+ARCHIVO: plugin_alias_reactivacion.py
+TAMANO_BYTES: 2368
+SHA256: 5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_ALIAS_REACTIVACION — provisional. No toca V5 ni el 244.
+
+Problema: sustancias_* y trayectoria_musicos_* exigen
+consumo_sustancias, desgaste_cambaceo_itinerante, aislamiento_social.
+El texto lavado dice desorden, carretera, soledad. El mapper
+pone caida/presion y esas fichas se quedan en 0.5.
+
+Esto NO sube p solo. Traduce sinonimos del texto lavado
+al lexico que YA existe. Agente2 pobre.
+
+Uso:
+  from plugin_alias_reactivacion import traducir
+  tokens = traducir([('caida', 0.82), ('presion_social', 0.86)],
+                    hechos='periodos de desorden, desplazamientos')
+"""
+from __future__ import annotations
+
+from typing import List, Sequence, Tuple
+
+# lavado -> token canonico (peso tope si el hecho esta)
+ALIAS = {
+    "desorden": "consumo_sustancias",
+    "irregular": "consumo_sustancias",
+    "habitos": "consumo_sustancias",
+    "trago": "consumo_sustancias",
+    "alcohol": "consumo_sustancias",
+    "carretera": "desgaste_cambaceo_itinerante",
+    "desplazamientos": "desgaste_cambaceo_itinerante",
+    "horarios": "desgaste_cambaceo_itinerante",
+    "itinerante": "desgaste_cambaceo_itinerante",
+    "soledad": "aislamiento_social",
+    "aislamiento": "aislamiento_social",
+    "agencia": "inconformismo",
+    "control sobre su trabajo": "desafio_autoridad",
+}
+
+
+def traducir(
+    tokens: Sequence[Tuple[str, float]],
+    hechos: str = "",
+    peso: float = 0.78,
+) -> List[Tuple[str, float]]:
+    out = list(tokens)
+    have = {t for t, _ in out}
+    h = (hechos or "").lower()
+    for needle, canon in ALIAS.items():
+        if needle in h and canon not in have:
+            out.append((canon, peso))
+            have.add(canon)
+    return out
+
+
+def faltaron(hechos: str, board: dict, piso: float = 0.55) -> list:
+    """Auditor: el texto pedia X y el tablero no lo encendio."""
+    flags = []
+    h = (hechos or "").lower()
+    if any(w in h for w in ("desorden", "trago", "alcohol", "irregular")):
+        if board.get("sustancias_01_leve", 0) < piso and board.get("sustancias_02_moderado", 0) < piso:
+            flags.append("sustancias_* pedida por texto y no prendio")
+    if any(w in h for w in ("carretera", "desplazamientos", "musicos", "grabaciones")):
+        if board.get("trayectoria_musicos_populares", 0) < piso:
+            flags.append("trayectoria_musicos pedida y no prendio")
+    return flags
+
+========================================================================================
+ARCHIVO: plugin_fix_entrada.py
+TAMANO_BYTES: 2637
+SHA256: 8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd
+========================================================================================
+
+#!/usr/bin/env python3
+"""FIX PROVISIONAL DE ENTRADA — no toca Engine_V5.
+
+Lo que el V5 SI hace:
+  get_weight = peso del token en la ficha x multiplicador evidence_status
+  support / contradict = Bayes por token
+  epsilon, p_azar
+NO hace: nicho / vecinos / campo semantico. Los tokens no se
+empujan entre si. Por eso ambicion suelta enciende 30_ambicion
+(ficha = 'poder sin limites') aunque el texto sea agencia.
+
+Este archivo es el candado que no depende de los 3 humanos:
+
+1) Campo semantico: cuenta tokens de CONQUISTA vs AGENCIA.
+   Si hay 'ambicion' sin poder/sed_de_mando/escalada → se
+   REESCRIBE a 'autonomia' (lexico de Schwartz 10).
+2) Alias clinico SOLO con el texto de ESA ventana.
+3) Embudo se llama aparte (plugin_embudo_clinico).
+
+Uso:
+  from plugin_fix_entrada import preparar_corte
+  cid, toks = preparar_corte('E', [('ambicion',0.8)], hechos='quiso controlar su trabajo')
+"""
+from __future__ import annotations
+
+from typing import List, Sequence, Tuple
+
+from plugin_alias_reactivacion import traducir
+from plugin_embudo_clinico import etiquetar
+
+CONQUISTA = {"poder", "sed_de_mando", "escalada", "codicia", "maquiavelismo"}
+AGENCIA = {"autonomia", "inconformismo", "desafio_autoridad", "humildad"}
+
+
+def campo(tokens: Sequence[Tuple[str, float]]) -> dict:
+    n = {t for t, v in tokens if v >= 0.5}
+    return {
+        "conquista": len(n & CONQUISTA),
+        "agencia": len(n & AGENCIA),
+        "tiene_ambicion": "ambicion" in n,
+    }
+
+
+def remapeo_ambicion(
+    tokens: Sequence[Tuple[str, float]],
+) -> List[Tuple[str, float]]:
+    c = campo(tokens)
+    out = []
+    for t, v in tokens:
+        if t == "ambicion" and c["conquista"] == 0:
+            out.append(("autonomia", v))
+        else:
+            out.append((t, v))
+    return out
+
+
+def preparar_corte(
+    cid: str,
+    tokens: Sequence[Tuple[str, float]],
+    hechos: str = "",
+) -> Tuple[str, List[Tuple[str, float]]]:
+    """Alias por ventana + remapeo ambicion→autonomia si no hay conquista."""
+    toks = traducir(list(tokens), hechos=hechos or "")
+    toks = remapeo_ambicion(toks)
+    return cid, toks
+
+
+def preparar_caso(
+    cortes: Sequence[Tuple[str, Sequence[Tuple[str, float]], str]],
+) -> dict:
+    """cortes = [(id, tokens, hechos_de_esa_ventana), ...]"""
+    listos = []
+    for item in cortes:
+        if len(item) == 2:
+            cid, toks = item
+            hechos = ""
+        else:
+            cid, toks, hechos = item
+        listos.append(preparar_corte(cid, toks, hechos))
+    return {
+        "cortes": listos,
+        "campos": [{"corte": c, **campo(t)} for c, t in listos],
+        "embudo": etiquetar(listos),
+    }
+
+========================================================================================
+ARCHIVO: plugin_x5f_circulo_x5f_monomito.py (1).txt
+TAMANO_BYTES: 6411
+SHA256: a731b13bcf9646251c0c2ed6e49f6731d48d3c1df29a92a20d5a1ef3d727a38d
+========================================================================================
+
+#!/usr/bin/env python3
+"""PLUGIN_CIRCULO_MONOMITO — lente lateral, NO pattern.
+No toca Engine_V5_CANONICO_SOLO.py ni patterns_final_v14.json.
+No agrega tokens nuevos a la biblioteca 244.
+Reutiliza origenes_renovables por corte.
+
+R1: listas Q1-Q4 CANDIDATAS, no asignacion exclusiva.
+R2: posicion real = co-ocurrencia + pregunta_activa.
+R3: sombra vs mentor mirando corte siguiente.
+R4: ciclo nuevo cuando reaparece mundo_ordinario.
+Catarsis: cierre en Q4 por conexion contextual con otro hilo (anagnorisis/peripecia).
+"""
+from __future__ import annotations
+from typing import Dict, List, Tuple, Any
+
+ESTRUCTURAS_CANDIDATAS = {
+    "Q1_Separacion_1_3": {
+        "etapas": ["01_mundo_ordinario","02_llamada_aventura","03_rechazo_llamada"],
+        "nota": "CANDIDATO",
+        "tokens_candidatos": ["ruptura_pasado","adaptacion_forzada","mundo_ordinario","llamada_aventura","rechazo_o_duda","autonomia","rebeldia","dogmatismo","escepticismo"],
+        "pregunta_tipo": "origen"
+    },
+    "Q2_Descenso_4_6": {
+        "etapas": ["04_encuentro_mentor","05_cruce_primer_umbral","06_pruebas_aliados_enemigos"],
+        "nota": "CANDIDATO",
+        "tokens_candidatos": ["sabiduria","consejo","guia","herramienta_nueva","entrenamiento","aprendizaje","desafio_autoridad","aburrimiento","racionalidad","cautela"],
+        "pregunta_tipo": "con_que_contra_quien"
+    },
+    "Q3_Ordeal_7_9": {
+        "etapas": ["07_acercamiento_cueva_interior","08_prueba_suprema","09_recompensa"],
+        "nota": "CANDIDATO - prueba ANTES, caverna DESPUES recompensa",
+        "tokens_candidatos": ["acercamiento_cueva_interior","prueba_suprema","recompensa","consumo_sustancias","turno_atipico","liderazgo","desapego_emocional","pragmatismo_frio","evitacion","crisis_existencial","duelo","perdida_familiar","aislamiento_social"],
+        "pregunta_tipo": "donde_se_rompe"
+    },
+    "Q4_Retorno_10_12": {
+        "etapas": ["10_camino_regreso","11_resurreccion_transformacion","12_retorno_con_elixir"],
+        "nota": "CANDIDATO - cierre + catarsis (anagnorisis/peripecia)",
+        "tokens_candidatos": ["camino_regreso","resurreccion_transformacion","retorno_con_elixir","obtencion","resolucion","reconciliacion","comprension_nueva","sabiduria_compartida","proposito_claro","mentoria_activa","resiliencia","catarsis","anagnorisis","peripecia"],
+        "pregunta_tipo": "que_queda"
+    }
+}
+
+HILOS = {
+    "hilo_formacion": {"tokens_ancla": ["formacion_literaria"]},
+    "hilo_desafio": {"tokens_ancla": ["desafio_autoridad"]},
+    "hilo_sombra_consumo": {"tokens_ancla": ["consumo_sustancias","antagonismo","autodestruccion","ira_institucional"]},
+    "hilo_vinculo": {"tokens_ancla": ["lealtad","apoyo_activo","duelo","perdida_familiar"]},
+}
+
+def _cuadrantes_activos_por_coocurrencia(tokens_corte: List[str]) -> List[str]:
+    scores = {}
+    for q, data in ESTRUCTURAS_CANDIDATAS.items():
+        overlap = len(set(tokens_corte) & set(data["tokens_candidatos"]))
+        if overlap:
+            scores[q] = overlap
+    if not scores:
+        return []
+    max_s = max(scores.values())
+    return [q for q,s in scores.items() if s >= max_s]
+
+def posicion_por_corte(cortes_tokens: List[Tuple[str, List[str], str]]) -> Dict[str, Any]:
+    resultados = []
+    pendientes: Dict[str, str] = {}
+    for idx, (cid, tokens, pregunta) in enumerate(cortes_tokens):
+        q_act = _cuadrantes_activos_por_coocurrencia(tokens)
+        hilos_presentes = [h for h,d in HILOS.items() if any(t in tokens for t in d["tokens_ancla"])]
+        r3 = None
+        if any(t in tokens for t in HILOS["hilo_sombra_consumo"]["tokens_ancla"]):
+            if idx+1 < len(cortes_tokens):
+                sig = cortes_tokens[idx+1][1]
+                if any(x in sig for x in ["aprendizaje","comprension_nueva","resolucion","reconciliacion"]):
+                    r3 = "fue_mentor_demora_etiqueta"
+                    for h in hilos_presentes:
+                        pendientes.setdefault(h, cid)
+                elif any(x in sig for x in ["autodestruccion","aislamiento","estancamiento"]):
+                    r3 = "sombra_confirmada_demora_etiqueta"
+                else:
+                    r3 = "pendiente_siguiente_corte"
+            else:
+                r3 = "sin_siguiente_corte_aun"
+        r4 = False
+        if ("mundo_ordinario" in tokens or "ruptura_pasado" in tokens) and idx>0:
+            if any("Q4" in "".join(r["cuadrante_activo"]) for r in resultados):
+                r4 = True
+        estabilidad = {}
+        for h in hilos_presentes:
+            cnt=1
+            for j in range(idx-1,-1,-1):
+                if h in resultados[j]["hilos_presentes"] and set(resultados[j]["cuadrante_activo"]) & set(q_act):
+                    cnt+=1
+                else:
+                    break
+            estabilidad[h]=cnt
+        catarsis=[]
+        if any("Q4" in q for q in q_act):
+            for hp, orig in list(pendientes.items()):
+                catarsis.append({"hilo": hp, "origen": orig, "cierre_en": cid, "tipo": "catarsis_contextual_Q4"})
+            for it in catarsis:
+                pendientes.pop(it["hilo"], None)
+        resultados.append({
+            "corte": cid,
+            "pregunta_activa": pregunta,
+            "cuadrante_activo": q_act,
+            "hilos_presentes": hilos_presentes,
+            "estabilidad_hilo": estabilidad,
+            "r3_sombra_mentor": r3,
+            "r4_nuevo_ciclo": r4,
+            "catarsis_de_hilo": catarsis,
+            "pendientes_consolidar_restantes": list(pendientes.keys()),
+            "huecos": list(set(ESTRUCTURAS_CANDIDATAS.keys()) - set(q_act)) if q_act else list(ESTRUCTURAS_CANDIDATAS.keys())
+        })
+    mas=None
+    lineas={}
+    for r in resultados[-3:]:
+        for h,est in r["estabilidad_hilo"].items():
+            if any("Q4" in q for q in r["cuadrante_activo"]):
+                lineas[h]=max(lineas.get(h,0), est)
+    if lineas:
+        mas=max(lineas, key=lineas.get)
+    return {
+        "plugin": "PLUGIN_CIRCULO_MONOMITO",
+        "tipo": "lente_lateral_no_pattern",
+        "no_toca": ["Engine_V5_CANONICO_SOLO.py","patterns_final_v14.json"],
+        "r1_corregida": "listas por cuadrante son estructuras semanticas candidatas",
+        "posicion_monomito_por_corte": resultados,
+        "linea_mas_avanzada_actual": mas,
+        "nota_catarsis": "catarsis = cierre en Q4 por conexion contextual con otro hilo (anagnorisis/peripecia)"
+    }
+
+========================================================================================
+ARCHIVO: circulo_x5f_12_x5f_cuadrantes_x5f_enredado.json (1).txt
+TAMANO_BYTES: 4385
+SHA256: e8a61b989fd8609d2002330a85c827dfa4fb1ff2bf03bf6b3efc220c6d01e3c7
+========================================================================================
+
+{
+  "modelo": "circulo_12_cadenas_enredadas",
+  "nota": "No lineal 1->12. Cadenas yuxtapuestas, ciclicas, pueden estar en cuadrantes distintos al mismo tiempo. Baco 3 nacimientos / Jesus 2 cavernas = multiciclicidad.",
+  "cuadrantes": {
+    "Q1_Separacion_1_3": {
+      "etapas": [
+        "01_mundo_ordinario",
+        "02_llamada_aventura",
+        "03_rechazo_llamada"
+      ],
+      "pregunta_activa": "origen",
+      "tokens": [
+        "ruptura_pasado",
+        "adaptacion_forzada",
+        "mundo_ordinario",
+        "llamada_aventura",
+        "rechazo_o_duda",
+        "autonomia",
+        "rebeldia",
+        "dogmatismo",
+        "escepticismo"
+      ]
+    },
+    "Q2_Descenso_4_6": {
+      "etapas": [
+        "04_encuentro_mentor",
+        "05_cruce_primer_umbral",
+        "06_pruebas_aliados_enemigos"
+      ],
+      "pregunta_activa": "con que / contra quien",
+      "tokens": [
+        "sabiduria",
+        "consejo",
+        "guia",
+        "herramienta_nueva",
+        "entrenamiento",
+        "aprendizaje",
+        "desafio_autoridad",
+        "aburrimiento",
+        "racionalidad",
+        "cautela"
+      ]
+    },
+    "Q3_Ordeal_7_9": {
+      "etapas": [
+        "07_acercamiento_cueva_interior",
+        "08_prueba_suprema",
+        "09_recompensa"
+      ],
+      "orden_usuario_vs_campbell": "usuario: prueba suprema ANTES, caverna DESPUES recompensa",
+      "pregunta_activa": "donde se rompe",
+      "tokens": [
+        "acercamiento_cueva_interior",
+        "prueba_suprema",
+        "recompensa",
+        "consumo_sustancias",
+        "turno_atipico",
+        "liderazgo",
+        "desapego_emocional",
+        "pragmatismo_frio",
+        "evitacion",
+        "crisis_existencial",
+        "duelo",
+        "perdida_familiar",
+        "aislamiento_social"
+      ]
+    },
+    "Q4_Retorno_10_12": {
+      "etapas": [
+        "10_camino_regreso",
+        "11_resurreccion_transformacion",
+        "12_retorno_con_elixir"
+      ],
+      "hueco_detectado": "nunca mentor 3 ni elixir 11 en ambos ciclos e0->e10 y e11->e15",
+      "pregunta_activa": "que queda",
+      "tokens": [
+        "camino_regreso",
+        "resurreccion_transformacion",
+        "retorno_con_elixir",
+        "obtencion",
+        "resolucion",
+        "reconciliacion",
+        "comprension_nueva",
+        "sabiduria_compartida",
+        "proposito_claro",
+        "mentoria_activa",
+        "resiliencia",
+        "catarsis",
+        "anagnorisis",
+        "peripecia"
+      ]
+    }
+  },
+  "cadenas_enredadas": {
+    "hilo_formacion": {
+      "tokens": [
+        "formacion_literaria"
+      ],
+      "regla": "insatisfaccion+busqueda_libertad=explorador Q2, duelo=sabio Q3, consumo=caverna Q3"
+    },
+    "hilo_desafio": {
+      "tokens": [
+        "desafio_autoridad"
+      ],
+      "regla": "se cerro temprano e1,e4"
+    },
+    "hilo_sombra": {
+      "tokens": [
+        "antagonismo",
+        "autodestruccion",
+        "consumo_sustancias"
+      ],
+      "regla": "decision por corte siguiente: si siguiente tiene aprendizaje=resolucion => fue_mentor, si siguiente tiene autodestruccion=>sombra_confirmada"
+    },
+    "hilo_vinculo": {
+      "tokens": [
+        "lealtad",
+        "apoyo_activo",
+        "duelo"
+      ],
+      "nota": "puede estar Q3 mientras formacion esta Q1"
+    }
+  },
+  "investigacion_previa": {
+    "circulo_12_vogler": true,
+    "4_movimientos_3_actos": true,
+    "hilos_fisico_emocional": true,
+    "no_lineal_paralelo": true,
+    "4_cuadrantes_medicine_wheel": true,
+    "tu_version_tokens_protoA_pregunta_cadenas_yuxtapuestas": false
+  },
+  "R1_CORREGIDA": "listas por cuadrante son estructuras semanticas candidatas, no asignacion exclusiva; posicion real depende de co-ocurrencia + pregunta_activa (ver R2)",
+  "tipo": "lente_lateral_no_pattern_bolsita",
+  "no_toca": [
+    "Engine_V5_CANONICO_SOLO.py",
+    "patterns_final_v14.json"
+  ],
+  "regla_catarsis": {
+    "definicion": "cierre en Q4 por conexion contextual con otro hilo",
+    "familia": "anagnorisis/peripecia Aristoteles",
+    "mecanismo": "pendiente_consolidar + Q4 posterior = catarsis"
+  },
+  "output_definido": {
+    "cuadrante_activo": "lista multicuadrante",
+    "hilos_presentes": "lista",
+    "catarsis_de_hilo": "cierre contextual Q4",
+    "excluye": "probability, weight, confianza"
+  },
+  "nota_cierre_corregida": "linea con Q4 mas estable es la mas avanzada en este momento"
+}

@@ -1,0 +1,185 @@
+{
+  "protocol_version": "V15.1_MOZART_ALL_PLUGINS_REPRODUCIBLE_20260915",
+  "files": [
+    {
+      "path": "00_README/PROTOCOLO_MOZART_ALL_PLUGINS_20260915.md",
+      "bytes": 5950,
+      "sha256": "653413fb98235c71da0b19344236d25dfe3902257c7368f580303a0744103ae3"
+    },
+    {
+      "path": "01_INPUT/mozart_cuts_full.json",
+      "bytes": 3680,
+      "sha256": "a86ab3e48c235e2d50d9da4cde305ae3eb2b2b105f5122e71ad24443d9b44858"
+    },
+    {
+      "path": "02_CANON/Engine_V5_CANONICO_SOLO.py",
+      "bytes": 24944,
+      "sha256": "e5d9ab3a8b904ca7eb488a91342debfabd9d916a5549956c77d5b8e2c7957e23"
+    },
+    {
+      "path": "02_CANON/MOTOR_V15_1_10CORTES_LIMPIO.py",
+      "bytes": 8821,
+      "sha256": "2677c1f83e85a4e0516db608b9742970e3b18327990da3a43bfa856459476a78"
+    },
+    {
+      "path": "02_CANON/patterns_final_v14.json",
+      "bytes": 123937,
+      "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "path": "03_PLUGINS/candado_plugins.py",
+      "bytes": 5869,
+      "sha256": "c4949500167dd64f2bf5e8c87cd6a05922abc48754bfa61144da141197bd9d93"
+    },
+    {
+      "path": "03_PLUGINS/plugin_alias_reactivacion.py",
+      "bytes": 2368,
+      "sha256": "5c630bc563cc46959134b72d6de174ed50e68b1c679ef35dfff597fd7212ee4e"
+    },
+    {
+      "path": "03_PLUGINS/plugin_aquiles_ancla_estricto.py",
+      "bytes": 9852,
+      "sha256": "16b793d38ce72c74c6925b42e4b69435e983db05fe6a1956c8de318926ae8640"
+    },
+    {
+      "path": "03_PLUGINS/plugin_aquiles_h.py",
+      "bytes": 5584,
+      "sha256": "4aeda7caf368464719c4a260a140dc7841bee199270e832fc91b584dba6a2c39"
+    },
+    {
+      "path": "03_PLUGINS/plugin_arco_field_snyder_mckee.py",
+      "bytes": 6105,
+      "sha256": "ed672db0cf93ffacbbe79fd58fadee4997e845319ac5c3fe9dbdd633fae91acc"
+    },
+    {
+      "path": "03_PLUGINS/plugin_arquetipos_dinamicos.py",
+      "bytes": 2853,
+      "sha256": "529e79afb7dfabd605da3dc220949d1325e786700e59b58b1fde3e11b23f2d79"
+    },
+    {
+      "path": "03_PLUGINS/plugin_capa2_antecedentes_arquetipos.py",
+      "bytes": 6630,
+      "sha256": "79bc4b487bfee990301bf916367bddd3f1e9158aacc6c9899f2ef40b34aa0113"
+    },
+    {
+      "path": "03_PLUGINS/plugin_circulo_monomito.py",
+      "bytes": 6411,
+      "sha256": "a731b13bcf9646251c0c2ed6e49f6731d48d3c1df29a92a20d5a1ef3d727a38d"
+    },
+    {
+      "path": "03_PLUGINS/plugin_embudo_clinico.py",
+      "bytes": 3109,
+      "sha256": "a87bc038c4e0a339d7ee01c2e30f160c2fcfa3729ed2f1013d4bffbcc16a7fa6"
+    },
+    {
+      "path": "03_PLUGINS/plugin_familias_gloria_sacro.py",
+      "bytes": 2564,
+      "sha256": "8cc568a9009bde662ee167126772b7c87a08d7091b2d4cc61f96530ea98cef0f"
+    },
+    {
+      "path": "03_PLUGINS/plugin_fix_entrada.py",
+      "bytes": 2637,
+      "sha256": "8ebdcd0de1c52392d996716fe0c472beafd9568ed79b6de56e30379d91fb87dd"
+    },
+    {
+      "path": "03_PLUGINS/plugin_guardia_no_cruce.py",
+      "bytes": 5133,
+      "sha256": "27759007f33abe577cc53ebaff785d922cbdd096072ac7c2fcf9ec614cb6e828"
+    },
+    {
+      "path": "03_PLUGINS/plugin_metodo_rigor.py",
+      "bytes": 1594,
+      "sha256": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0"
+    },
+    {
+      "path": "03_PLUGINS/plugin_otto_numinoso.py",
+      "bytes": 1911,
+      "sha256": "f5c151d8dbcfff54366eb5df4244bd035eb479aee1ac225761f83203641b286e"
+    },
+    {
+      "path": "03_PLUGINS/plugin_picos_mesetas.py",
+      "bytes": 2071,
+      "sha256": "7720b6eb614497fb6aaf38d527ea323dbef31b9748f9835385ae9c3ba6081149"
+    },
+    {
+      "path": "03_PLUGINS/plugin_pregunta_detras.py",
+      "bytes": 1758,
+      "sha256": "3ad8e453423cfd9e3166127ca26da06203306615b7a2d65328e34b13336eae99"
+    },
+    {
+      "path": "03_PLUGINS/plugin_pregunta_detras_v2.py",
+      "bytes": 32747,
+      "sha256": "20e514f2eb168000e982067b7e76082a13b10931f2df158e6f5e5847b16a75db"
+    },
+    {
+      "path": "03_PLUGINS/plugin_reporte_3d.py",
+      "bytes": 1690,
+      "sha256": "a1de66ac91e443e031817b1874e6ffad73f0fbdfc212ee43316f0d7ee2d9f17b"
+    },
+    {
+      "path": "03_PLUGINS/plugin_sesgo_lectura.py",
+      "bytes": 3341,
+      "sha256": "fe098108d85ccc8a44d13a7a0beb556cf50d6e4450e7b631b5b665edb02e21a0"
+    },
+    {
+      "path": "03_PLUGINS/plugin_trayectoria_hosteleria.py",
+      "bytes": 1619,
+      "sha256": "623496a7b8e118921d2684056a530600512cbbbcc307c71ed8025a3c81b41369"
+    },
+    {
+      "path": "03_PLUGINS/traza_campo_244.py",
+      "bytes": 5687,
+      "sha256": "7d1f397563b8f925349da22d7c4fea125bbe0eebd2a9fff44fa0da8de8d3097d"
+    },
+    {
+      "path": "04_RUNNER/mozart_predictividad_plugins_v1.py",
+      "bytes": 8239,
+      "sha256": "8cfcf2dbd6edf77c805cdf2da96bc856ffdcd556f028379570bd8e41a61aae8e"
+    },
+    {
+      "path": "04_RUNNER/run_mozart_plugins_all.py",
+      "bytes": 6745,
+      "sha256": "5f1b58fb2f3a0b3f6224092a4c7dbece08df4b3257c690632f15a26d918528bf"
+    },
+    {
+      "path": "05_OUTPUT/MOZART_ALL_PLUGINS_MC.json",
+      "bytes": 62174,
+      "sha256": "a743b36927b17a9d38c6138e0c4c8e59ebd44bf9e38b6912c3fc24c4c5dadb92"
+    },
+    {
+      "path": "05_OUTPUT/MOZART_FREEZE_H1_H2.json",
+      "bytes": 310,
+      "sha256": "7f0b4efdcfe7fcce42d4f96366dc8bcf1a602abafe435912df4c8b3fecaa6b6b"
+    },
+    {
+      "path": "05_OUTPUT/MOZART_FULL_MC_BASELINE_COPY.json",
+      "bytes": 789969,
+      "sha256": "ff427bd34a2b9775ee53704cf9b357dec1e9cb6c42c63046705437c1b633475b"
+    },
+    {
+      "path": "05_OUTPUT/MOZART_PREDICTIVIDAD_HIPOTESIS_ALL_PLUGINS.json",
+      "bytes": 3556,
+      "sha256": "df47c92b4d00b627c4b28e44a38b54fc17c2c5eda040f1a98ff63c5572b712cf"
+    },
+    {
+      "path": "05_OUTPUT/mozart_full_mc.json",
+      "bytes": 789969,
+      "sha256": "ff427bd34a2b9775ee53704cf9b357dec1e9cb6c42c63046705437c1b633475b"
+    },
+    {
+      "path": "05_OUTPUT/mozart_z90_work_mc.json",
+      "bytes": 554418,
+      "sha256": "6c40112a07777b74f7af5a2cbf96375ce2e4d233ad12d23c2dfb165d134c5252"
+    },
+    {
+      "path": "06_LOGS/rerun_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "06_LOGS/rerun_stdout.txt",
+      "bytes": 2097,
+      "sha256": "4ce13175e4f7df8aa38465f7f4e0458b80860fe8ec0ffcc08247708e1a80f4a0"
+    }
+  ]
+}

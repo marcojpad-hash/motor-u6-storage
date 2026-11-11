@@ -1,0 +1,37 @@
+METODO DE RIGOR (no motor, no plugin, no 244)
+Watzlawick / Hécate + Konnikova-Holmes + Schopenhauer
+Se corre DESPUES de la corrida, a mano o en un txt.
+Si no aplica, se escribe "no". Todo dato es un dato; no todo dato entra al V5.
+
+------------------------------------------------
+1. HOLMES  (observar antes de nombrar)
+   Antes de leer el letrero #1:
+   - ¿Los tokens salieron de HECHOS del corte o de la tesis que yo ya traía?
+   - ¿Qué hecho NO mapeé porque no me convenía?
+   Si el letrero nació de la tesis previa: anotar SESGO_DE_TEORIA.
+   Holmes: la teoría entra al final.
+
+2. HECATE / WATZLAWICK  (la cura que enferma)
+   - ¿Pedí OTRO corte / otro token igual porque el anterior no "cerraba"?
+     (dos veces lo mismo ≠ el doble de bueno)
+   - ¿Traté el contrario como solución? (no-desastre ⇒ creador)
+   - ¿Forcé una sola lámpara? (tercero excluido)
+   - ¿Declaré ley para "aclarar"? (solución clarifinante)
+   Si sí: anotar MAS_DE_LO_MISMO o CLARIFINANTE.
+   Aquiles ya dijo basta: no empujar.
+
+3. SCHOPENHAUER  (ganar la pelea ≠ trazar)
+   - ¿Estoy defendiendo mi tanteo anterior o leyendo el tablero?
+   - Analogía (White≈Macbeth) vendida como identidad
+   - 17 persistencias vendidas como ley
+   Si sí: anotar ESTRATAGEMA, no hallazgo.
+
+------------------------------------------------
+SALIDA MINIMA POR CORRIDA
+caso:
+holmes:
+hecate:
+schopenhauer:
+sigue_en_cuaderno: si/no
+
+No puntúa. No anula el JSON. Es el software de pensar.
