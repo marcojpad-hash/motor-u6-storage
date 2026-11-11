@@ -712,19 +712,53 @@ def sensores_pre(base, case, motor, features, reg, ctx=None):
     out["tusi"] = _pieza("tusi_par", "tusi_par_indice_exploratorio_v0_1.py", "SENSOR EXPLORATORIO", tusi, base, reg)
 
     def schro():
-        m, _ = _load(base, "schrodinger_transport_esqueleto_v0_1.py", "lu_schro")
+        # V0_1 (SPEC_SCHRODINGER_V0_1.md): el puente implementado. Carga el módulo
+        # V0_1; si falta, cae al esqueleto (solo μ_t, sin transporte).
+        m, _ = _load(base, "schrodinger_transport_v0_1.py", "lu_schro")
+        if m is None:
+            m, _ = _load(base, "schrodinger_transport_esqueleto_v0_1.py", "lu_schro")
+            if m is None:
+                return "NO_CORRE", "falta schrodinger_transport_v0_1.py y el esqueleto", None
         mus = []
         for c in mcuts:
             K = m.candidatos(c, None, [])
             mu = m.mu_t(c, K); top = sorted(mu.items(), key=lambda kv: -kv[1])[:3]
             mus.append({"corte": c.get("corte"), "n_soporte": len(K), "mu_top3": [(k, round(v, 4)) for k, v in top]})
-        sal = {"salida": m.salida_vacia(str(case.get("case_id"))), "mu_t": mus}
+        sal = {"mu_t": mus}
+        # Transporte (V0_1). Si el módulo no lo trae (esqueleto), se degrada.
+        if not hasattr(m, "transportar_trayectoria"):
+            sal["salida"] = m.salida_vacia(str(case.get("case_id")))
+            if geo_traza.get("anillos"):
+                sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": False,
+                                                  "motivo": "esqueleto sin transporte (costo/sinkhorn NotImplemented)"}
+            return "ACTIVA_MUDA", "esqueleto: μ_t por corte calculado; sin transporte", sal
+        try:
+            tr = m.transportar_trayectoria(mcuts)
+        except Exception as e:
+            sal["salida"] = m.salida_vacia(str(case.get("case_id")))
+            sal["error_transporte"] = f"{type(e).__name__}: {str(e)[:200]}"
+            return "ACTIVA_MUDA", f"μ_t calculado; transporte no corrió ({type(e).__name__})", sal
+        sal["salida"] = m.salida(str(case.get("case_id")), tr)
+        sal["trayectoria"] = {"cruda": tr.get("trayectoria_cruda"), "regularizada": tr.get("trayectoria_regularizada"),
+                              "oscilacion": tr.get("oscilacion"), "estado": tr.get("estado")}
+        # memento_inversa (SPEC §6): orden de recuperación P->A->C aplicado al
+        # estado del último corte (nº de familias activas por componente).
+        ult = mcuts[-1] if mcuts else {}
+        est = {k: sum(1 for v in (ult.get(f"{k}_FULL_244") or {}).values() if v is not None and abs(float(v) - 0.5) > 1e-9)
+               for k in ("P", "A", "C")}
+        sal["memento_inversa"] = m.memento_inversa(est)
         if geo_traza.get("anillos"):
-            # PATCH 009: contexto aditivo (fases/ω/intersecciones por corte). NO consumido: costo() y sinkhorn() son NotImplemented.
-            sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": False,
-                                              "motivo": "schrodinger_transport_esqueleto_v0_1: costo/sinkhorn NotImplemented (pendiente Mj SPEC §5)"}
-        return "ACTIVA_MUDA", "esqueleto: μ_t por corte calculado; costo y Sinkhorn NO_VERIFICADO (NotImplemented por diseño)", sal
-    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_esqueleto_v0_1.py", "SENSOR (esqueleto)", schro, base, reg)
+            # V0_1: el transporte corre; los anillos quedan consumidos como contexto.
+            sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": True,
+                                              "motivo": "transporte V0_1 ejecutado (costo + Sinkhorn); anillos como contexto por corte",
+                                              "transporte": tr.get("estado")}
+        if tr.get("estado") == "TRANSPORTE_OK":
+            osc = tr.get("oscilacion") or {}
+            ta = (osc.get("transversal_antes") or {}).get("variacion_total")
+            td = (osc.get("transversal_despues") or {}).get("variacion_total")
+            return "ACTIVA", f"puente V0_1: trayectoria regularizada; TV transversal {ta} -> {td}", sal
+        return "ACTIVA_MUDA", f"μ_t calculado; transporte sin trayectoria ({tr.get('estado')}: {str(tr.get('nota', ''))[:100]})", sal
+    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_v0_1.py", "SENSOR (puente Schrödinger V0_1; regulariza la trayectoria)", schro, base, reg)
 
     def caldero_cuadrantes():
         # PATCH 006: Caldero II sin escaleta lineal externa = cuadrantes circulares Q1-Q4 (plugin_circulo_monomito_v2,
