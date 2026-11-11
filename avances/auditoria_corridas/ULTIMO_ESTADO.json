@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 43093957597,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "0dcba5a0ed1f9572d89c3ca512e9d03956a68bdf",
+      "created_at_utc": "2026-11-11T20:10:13Z",
+      "created_at_cdmx": "2026-11-11T14:10:13-06:00",
+      "started_at_utc": "2026-11-11T20:10:13Z",
+      "started_at_cdmx": "2026-11-11T14:10:13-06:00",
+      "finished_at_utc": "2026-11-11T20:11:54Z",
+      "finished_at_cdmx": "2026-11-11T14:11:54-06:00",
+      "duration_seconds": 101.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43093957597",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-11T20:10:16Z",
+          "finished_at_utc": "2026-11-11T20:11:53Z",
+          "duration_seconds": 97.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 43084832582,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2987,36 +3017,6 @@
           "started_at_utc": "2026-11-07T18:56:02Z",
           "finished_at_utc": "2026-11-07T18:57:17Z",
           "duration_seconds": 75.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 42397918973,
-      "run_attempt": 1,
-      "workflow": "Auditoría de corridas Motor U6",
-      "event": "schedule",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "1e889391fd1b9452854d72645b2915efa0d2afaa",
-      "created_at_utc": "2026-11-07T17:46:02Z",
-      "created_at_cdmx": "2026-11-07T11:46:02-06:00",
-      "started_at_utc": "2026-11-07T17:46:02Z",
-      "started_at_cdmx": "2026-11-07T11:46:02-06:00",
-      "finished_at_utc": "2026-11-07T17:47:18Z",
-      "finished_at_cdmx": "2026-11-07T11:47:18-06:00",
-      "duration_seconds": 76.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42397918973",
-      "jobs": [
-        {
-          "name": "auditar",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-07T17:46:16Z",
-          "finished_at_utc": "2026-11-07T17:47:17Z",
-          "duration_seconds": 61.0
         }
       ],
       "artifacts": []
