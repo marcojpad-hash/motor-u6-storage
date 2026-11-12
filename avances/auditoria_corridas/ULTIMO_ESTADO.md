@@ -4,6 +4,8 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 43326642541 | Motor runner contract tests | pull_request | 2026-11-12T17:11:01-06:00 | 2026-11-12T17:11:01-06:00 | 2026-11-12T17:11:17-06:00 | 16.0 | success |
+| 43324554461 | Auditoría de corridas Motor U6 | schedule | 2026-11-12T16:57:04-06:00 | 2026-11-12T16:57:04-06:00 | 2026-11-12T16:58:19-06:00 | 75.0 | success |
 | 43315275900 | Auditoría de corridas Motor U6 | schedule | 2026-11-12T15:57:18-06:00 | 2026-11-12T15:57:18-06:00 | 2026-11-12T15:58:29-06:00 | 71.0 | success |
 | 43305715746 | Auditoría de corridas Motor U6 | schedule | 2026-11-12T14:59:24-06:00 | 2026-11-12T14:59:24-06:00 | 2026-11-12T15:01:12-06:00 | 108.0 | success |
 | 43296489757 | Auditoría de corridas Motor U6 | schedule | 2026-11-12T14:03:44-06:00 | 2026-11-12T14:03:44-06:00 | 2026-11-12T14:05:11-06:00 | 87.0 | success |
@@ -101,8 +103,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42501909560 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T10:50:18-06:00 | 2026-11-08T10:50:18-06:00 | 2026-11-08T10:51:25-06:00 | 67.0 | success |
 | 42496658502 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T09:48:21-06:00 | 2026-11-08T09:48:21-06:00 | 2026-11-08T09:49:21-06:00 | 60.0 | success |
 | 42491744388 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T08:50:08-06:00 | 2026-11-08T08:50:08-06:00 | 2026-11-08T08:51:37-06:00 | 89.0 | success |
-| 42487406647 | Auditoría de corridas Motor U6 | schedule | 2026-11-08T07:57:29-06:00 | 2026-11-08T07:57:29-06:00 | 2026-11-08T07:58:54-06:00 | 85.0 | success |
-| 42485950750 | ChatGPT startup contract | push | 2026-11-08T07:38:52-06:00 | 2026-11-08T07:38:52-06:00 | 2026-11-08T07:39:02-06:00 | 10.0 | success |
 
 ## Fallos y cancelaciones
 
