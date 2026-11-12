@@ -37,6 +37,24 @@ Resultado verificado en Napoleón 10 cortes (`NEGATIVO_RECONECTADO_DH_NAPOLEON_1
 siempre: si hay 5–6 opciones, elimina 1–2 porque no eran. Ni 0/5 (proxy) ni
 5/5 (exacto en grafo denso): 2/5.
 
+## Parte 2: cuadrante → dirección (`direccion_cuadrante.py`)
+
+El cuadrante solo se contaba y nunca se usaba para dirección. Reconectado:
+la dirección es el próximo cuadrante en el ciclo Q1→Q2→Q3→Q4, y cada
+candidata se mide con datos: su P media en los cortes del cuadrante siguiente
+vs su P media en los cortes del cuadrante actual.
+
+Verificado en Napoleón 10 cortes (`DIRECCION_CUADRANTE_NAPOLEON_10CORTES.json`):
+- Secuencia: Q2→Q3→Q3→Q3→Q2→(—)→Q3→(—)→Q2→Q2. **Oscila Q2↔Q3, no progresa a Q4.**
+- Actual (C10): Q2_Descenso. Dirección: Q3_Ordeal.
+- gobernante +0.048 ALINEADA (DH 36/53, se sostiene)
+- mercado +0.033 ALINEADA (DH 6/53, se sostiene)
+- 30_ambicion +0.020 ALINEADA (DH 11/53, se sostiene)
+- situación_ambicion −0.003 NO_ALINEADA (DH 0/53, descartada)
+- 12_obtencion +0.022 ALINEADA (DH 0/53, descartada) — tensión real: crece
+  hacia Q3 pero no sobrevive ningún contrafactual. El DH y la dirección no
+  coinciden ahí; queda abierto, no se fuerza.
+
 ## Falta por reconectar (no en esta versión)
 
 - Cuadrante del monomito → dirección que alimente predictibilidad_021.

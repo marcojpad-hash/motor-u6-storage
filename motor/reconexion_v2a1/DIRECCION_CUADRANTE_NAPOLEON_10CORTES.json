@@ -1,0 +1,53 @@
+{
+ "caso": "NAPOLEON_Z90_10CORTES",
+ "cuadrante_actual": "Q2_Descenso_4_6",
+ "cuadrante_siguiente": "Q3_Ordeal_7_9",
+ "oscila": true,
+ "filas": [
+  {
+   "familia": "arquetipo_el_gobernante",
+   "rank_fusion": 27.55385,
+   "supervivencia_dh": 36,
+   "p_cuadrante_actual": 0.7241,
+   "p_cuadrante_siguiente": 0.7721,
+   "delta": 0.048,
+   "alineacion_direccion": "ALINEADA_CON_DIRECCION"
+  },
+  {
+   "familia": "utopia_principio_mercado",
+   "rank_fusion": 27.496447,
+   "supervivencia_dh": 6,
+   "p_cuadrante_actual": 0.7442,
+   "p_cuadrante_siguiente": 0.7774,
+   "delta": 0.0333,
+   "alineacion_direccion": "ALINEADA_CON_DIRECCION"
+  },
+  {
+   "familia": "30_ambicion",
+   "rank_fusion": 27.451896,
+   "supervivencia_dh": 11,
+   "p_cuadrante_actual": 0.7803,
+   "p_cuadrante_siguiente": 0.8007,
+   "delta": 0.0204,
+   "alineacion_direccion": "ALINEADA_CON_DIRECCION"
+  },
+  {
+   "familia": "situacion_dramatica_ambicion",
+   "rank_fusion": 26.274663,
+   "supervivencia_dh": 0,
+   "p_cuadrante_actual": 0.739,
+   "p_cuadrante_siguiente": 0.7356,
+   "delta": -0.0033,
+   "alineacion_direccion": "NO_ALINEADA"
+  },
+  {
+   "familia": "12_obtencion",
+   "rank_fusion": 26.24433,
+   "supervivencia_dh": 0,
+   "p_cuadrante_actual": 0.7522,
+   "p_cuadrante_siguiente": 0.7738,
+   "delta": 0.0215,
+   "alineacion_direccion": "ALINEADA_CON_DIRECCION"
+  }
+ ]
+}
