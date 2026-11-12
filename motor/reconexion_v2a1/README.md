@@ -55,6 +55,25 @@ Verificado en Napoleón 10 cortes (`DIRECCION_CUADRANTE_NAPOLEON_10CORTES.json`)
   hacia Q3 pero no sobrevive ningún contrafactual. El DH y la dirección no
   coinciden ahí; queda abierto, no se fuerza.
 
+## Parte 3: la predictibilidad ajustada (`motor/motor/predictibilidad_set_021.py`)
+
+Qué se modificó: el lateral que calcula la predictibilidad (Fórmula 22),
+NO el Engine canónico. La Fórmula 22 original queda intacta para comparar;
+se añade por hipótesis la variante ajustada.
+
+- `dh_supervivencia_frac` = contador_supervivencia / 53 contrafactuales.
+- `direccion_cuadrante_norm` = 0.5 + delta_P_hacia_el_cuadrante_siguiente × 5.
+- `ajuste_reconexion` = media de las dos; `factor_reconexion` = 0.5 + 0.5×ajuste.
+- `predictibilidad_estructural_ajustada_0_1` = K × F × factor + base_pp/100.
+
+Verificado en Napoleón 10 cortes (corriendo el archivo modificado sobre el RESULT):
+- Spread top 5: 0.0211 → 0.1127 (5.3×). Gap entre los dos primeros: 0.0009 → 0.0688 (76×).
+- gobernante 0.5411 → 0.4767; mercado 0.5402 → 0.4051; 30_ambicion 0.5395 → 0.4079.
+- OJO: la ajustada reordena el 2º lugar: 30_ambicion (0.4079) pasa por encima
+  de mercado (0.4051). El rank_fusion y H1/H2 NO cambian (el archivo no los
+  toca); lo que cambia es la predictibilidad ajustada. Eso es consecuencia
+  real de la reconexión, no un artefacto: mercado sobrevive solo 6/53.
+
 ## Falta por reconectar (no en esta versión)
 
 - Cuadrante del monomito → dirección que alimente predictibilidad_021.
