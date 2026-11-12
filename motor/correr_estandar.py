@@ -382,6 +382,57 @@ def verificar_candado_plugins() -> dict:
     return {"stage": "candado_plugins", "status": "OK" if not fallos else "WARN", "verificados": ok, "fallos": fallos, "bloquea": False}
 
 
+def _guardian_z90(case: dict) -> dict:
+    """Guardián Z90 cableado al runner estándar (Issue #64, punto 2 de la auditoría
+    de trazabilidad). La compuerta Z_TRABAJO (motor/calibracion/gate_z90.py) ya
+    existía, pero solo la llamaban fabrica.py y arnes_calibracion.py; correr_estandar
+    nunca la ejecutaba, así que un caso con datos post-Z90 entraba al motor.
+
+    Activa SOLO cuando el caso declara disciplina Z90 (gate_z, o z_trabajo+modo_z)
+    o FABRICA_GATE_Z90=1 — igual que los otros dos llamadores. Los casos sin esos
+    campos (lote F001, ciegos: solo freeze, sin evidencia) quedan NO_CONFIGURADO y
+    corren como antes; cablear sin esta condición rechazaría todo el catálogo
+    existente. Cuando está activa y validar_entrada() devuelve errores, el caso se
+    BLOQUEA: ningún dato post-Z90 entra al motor. No escribe H ni toca
+    Engine/patterns. R6 (lista negra post-Z) no se aplica aquí: la lista vive fuera
+    de la entrada, junto al destino sellado."""
+    activo_por = None
+    if case.get("gate_z"):
+        activo_por = "gate_z"
+    elif os.environ.get("FABRICA_GATE_Z90") == "1":
+        activo_por = "FABRICA_GATE_Z90=1"
+    elif case.get("z_trabajo") and case.get("modo_z"):
+        activo_por = "z_trabajo+modo_z"
+    base = {"stage": "guardian_z90", "version": "GATE_Z_TRABAJO_20261024",
+            "z_trabajo": case.get("z_trabajo") or case.get("freeze") or "NO_DECLARADO",
+            "modo_z": case.get("modo_z") or "NO_DECLARADO", "activado_por": activo_por or "NO_APLICA"}
+    if activo_por is None:
+        base.update({"status": "NO_CONFIGURADO", "bloquea": False,
+                     "motivo": "sin gate_z, sin z_trabajo+modo_z y sin FABRICA_GATE_Z90=1; el caso no declara disciplina Z90"})
+        return base
+    gate_path = ROOT / "calibracion" / "gate_z90.py"
+    if not gate_path.is_file():
+        base.update({"status": "ERROR", "bloquea": True,
+                     "errores": ["GATE_Z90_NO_DISPONIBLE: motor/calibracion/gate_z90.py ausente"],
+                     "n_errores": 1,
+                     "motivo": "la compuerta no está disponible; fail-closed: sin guardián no se puede verificar el caso"})
+        return base
+    try:
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("gate_z90_runner", str(gate_path))
+        mod = _iu.module_from_spec(spec); spec.loader.exec_module(mod)
+        errores = mod.validar_entrada(case)
+    except Exception as e:
+        base.update({"status": "ERROR", "bloquea": True,
+                     "errores": [f"GATE_Z90_ERROR: {type(e).__name__}: {e}"],
+                     "n_errores": 1,
+                     "motivo": "la compuerta falló al ejecutarse; fail-closed: sin veredicto no se puede verificar el caso"})
+        return base
+    base.update({"status": "PASS" if not errores else "RECHAZADO",
+                 "bloquea": bool(errores), "errores": errores, "n_errores": len(errores)})
+    return base
+
+
 def preservar_ledger_ceb(rd: Path, out: Path, result: dict | None = None) -> dict:
     """U6 #5: _build() hace rmtree de runs/ESTANDAR__X en cada corrida y el ledger CEB se perdía.
     Se copian los .jsonl junto al resultado (antes de cualquier borrado) con su sha256."""
@@ -486,6 +537,29 @@ def puntuar_t1(sello: dict, cuts_t1, motor_t1: dict) -> dict:
         "n_cuts_t1": len(list(cuts_t1)),
         "fuente_tops_t1": "anexo T+1/candidatos no recuperados" if evidence_tops else "solo candidatos recuperados o sin candidatos",
     }
+
+
+def _efectividad_corte_retenido(sello: dict, visto: dict, retenido) -> dict:
+    """Efectividad del corte retenido (T+1). Issue #64: previo_error (junto con
+    visto_error y los estados) debe estar SIEMPRE, en éxito y en fallo. Antes solo
+    aparecía en la rama de fallo; en éxito el campo faltaba del todo — el mismo
+    hueco del recibo: el guardián solo corría como diagnóstico. En éxito no hay
+    error, así que previo_error es "" (cadena vacía = sin error), nunca None: el
+    sanitizador convertiría None en hueco de dato y cambiaría el estado del recibo."""
+    if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" or visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
+        return {"estado": "INTERNAL_T1_RUN_FAILED",
+                "previo_status": sello.get("_internal_run_status"),
+                "visto_status": visto.get("_internal_run_status"),
+                "previo_error": sello.get("stderr_tail") or "",
+                "visto_error": visto.get("stderr_tail") or "",
+                "hit_H": "INCONCLUSO_CORRIDA_INTERNA_FALLIDA"}
+    out = puntuar_t1(_plain_json_copy(sello), [retenido], _plain_json_copy(visto))
+    out["internal_runs_isolated"] = True
+    out["previo_status"] = sello.get("_internal_run_status")
+    out["visto_status"] = visto.get("_internal_run_status")
+    out["previo_error"] = sello.get("stderr_tail") or ""
+    out["visto_error"] = visto.get("stderr_tail") or ""
+    return out
 
 
 def _parse_standard_args(argv):
@@ -661,6 +735,60 @@ def main(argv) -> int:
         # SIDECAR SELLADO: procedencia y texto original de cada respuesta. Fuera de runs/: el motor no lo lee.
         out.with_name(out.stem + "_CONSULTA_SELLADO.json").write_text(json.dumps(_cd_side, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
 
+    # Issue #64 — guardián Z90 cableado al runner estándar. Corre sobre el caso final
+    # (tras filtro 017 y consulta dirigida) y ANTES de que nada entre al motor. Si
+    # la compuerta rechaza, no se ejecuta el motor: se escribe el resultado y el
+    # recibo del bloqueo y se sale con código 7 (0, 2, 3, 4, 5, 6 ya están usados).
+    result_guardian_z90 = _guardian_z90(case)
+    if result_guardian_z90.get("bloquea"):
+        _t_bloqueo = time.time()
+        _resultado_bloqueo = _sanitize_json_contract({
+            "case_id": case.get("case_id"),
+            "estado": "BLOQUEADO_GUARDIAN_Z90",
+            "guardian_z90": result_guardian_z90,
+            "estandar": {"entrada": "correr_estandar.py", "engine_sha256": sha(eng), "patterns_sha256": sha(pat)},
+        })[0]
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(_resultado_bloqueo, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+        _recibo_bloqueo = {
+            "receipt_version": "EXECUTION_RECEIPT_V1",
+            "status": "BLOQUEADO_GUARDIAN_Z90",
+            "case_id": case.get("case_id"),
+            "started_epoch": round(_t_bloqueo, 6),
+            "finished_epoch": round(_t_bloqueo, 6),
+            "duration_seconds": 0,
+            "input_path": str(src.resolve()),
+            "input_sha256": sha(src),
+            "normalized_input_sha256": hashlib.sha256(json.dumps(case, ensure_ascii=False, sort_keys=True, default=str).encode("utf-8")).hexdigest(),
+            "output_path": str(out.resolve()),
+            "output_sha256": sha(out),
+            "runner_path": str(Path(__file__).resolve()),
+            "runner_sha256": sha(Path(__file__).resolve()),
+            "canonical_engine_sha256": sha(eng),
+            "patterns_sha256": sha(pat),
+            "monte_carlo": True,
+            "stages": [
+                {"stage": "input_read_and_normalization", "status": "COMPLETED"},
+                {"stage": "guardian_z90", "status": "RECHAZADO", "version": result_guardian_z90.get("version"),
+                 "errores": result_guardian_z90.get("errores"), "n_errores": result_guardian_z90.get("n_errores")},
+                {"stage": "motor_run", "status": "BLOQUEADO_POR_GUARDIAN_Z90"},
+            ],
+            "guardian_z90": result_guardian_z90,
+            "receipt_written_after_result": True,
+        }
+        receipt_path = out.with_name(out.stem + "_RECIBO_EJECUCION.json")
+        receipt_path.write_text(json.dumps(_recibo_bloqueo, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
+        print(json.dumps({"ok": False, "stage": "guardian_z90", "status": "BLOQUEADO_GUARDIAN_Z90",
+                          "case_id": case.get("case_id"), "errores": result_guardian_z90.get("errores"),
+                          "output": str(out), "execution_receipt": str(receipt_path)}, ensure_ascii=False))
+        try:
+            _log = _u6_logger(nombre)
+            if _log is not None:
+                _log.run_end(returncode=7, seconds=0, h1=None, h2=None, receipt_status="BLOQUEADO_GUARDIAN_Z90")
+        except Exception:
+            pass
+        return 7
+
     rd = ROOT / "runs" / f"ESTANDAR__{nombre}"
     _build(rd)
     inp = rd / "_INPUT.json"
@@ -686,6 +814,7 @@ def main(argv) -> int:
     result.pop("_internal_run_status", None)
     result.pop("_internal_run_label", None)
     result["primary_run_isolated_subprocess"] = True
+    result["guardian_z90"] = result_guardian_z90
     # Durable checkpoint immediately after the primary run, before retained-cut analyses/ledgers.
     # If later work times out, token events from the primary run are already indexed.
     _stinkbox_primary_checkpoint = _ingest_stinkbox_registry(stink_home, stink_storage, rd)
@@ -746,13 +875,7 @@ def main(argv) -> int:
         # one execution cannot contaminate or stall the next calibration comparison.
         sello=_run_internal_case_isolated(previo, rd, "INTERNAL_PREVIO")
         visto=_run_internal_case_isolated(visto_case, rd, "INTERNAL_RETENIDO")
-        if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" or visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
-            result["efectividad_corte_retenido"]={"estado":"INTERNAL_T1_RUN_FAILED", "previo_status":sello.get("_internal_run_status"),
-                "visto_status":visto.get("_internal_run_status"), "previo_error":sello.get("stderr_tail"), "visto_error":visto.get("stderr_tail"),
-                "hit_H":"INCONCLUSO_CORRIDA_INTERNA_FALLIDA"}
-        else:
-            result["efectividad_corte_retenido"]=puntuar_t1(_plain_json_copy(sello), [retenido], _plain_json_copy(visto))
-            result["efectividad_corte_retenido"]["internal_runs_isolated"] = True
+        result["efectividad_corte_retenido"] = _efectividad_corte_retenido(sello, visto, retenido)
     _ceb_pres = preservar_ledger_ceb(rd, out, result)
     if isinstance(result.get("ceb"), dict):
         result["ceb"]["ledger_preservado_U6"] = _ceb_pres
@@ -829,6 +952,8 @@ def main(argv) -> int:
             {"stage": "input_read_and_normalization", "status": "COMPLETED"},
             {"stage": "integrity_preflight", "status": "COMPLETED" if preflight.is_file() else "NOT_CONFIGURED"},
             {"stage": "canonical_engine_and_patterns_hash_check", "status": "MATCH" if sha(eng) == ENGINE_SHA and sha(pat) == PAT_SHA else "MISMATCH", "canonical_engine_expected_sha256": ENGINE_SHA, "patterns_expected_sha256": PAT_SHA},
+            {"stage": "guardian_z90", "status": result_guardian_z90.get("status"), "version": result_guardian_z90.get("version"),
+             "errores": result_guardian_z90.get("errores", []), "n_errores": result_guardian_z90.get("n_errores", 0)},
             {"stage": "motor_run", "status": "COMPLETED", "monte_carlo": True},
             {"stage": "monte_carlo_diagnostics", **((result.get("motor") or {}).get("monte_carlo_audit") or {"status":"NO_METRICS_RETURNED"})},
             {"stage": "terminal_resolution", "status": terminal.get("status", result.get("estado_final", "OUTPUT_WRITTEN")), "method": terminal.get("method", terminal.get("metodo")), "H1": (result.get("salida_interpretable") or {}).get("H1"), "H2": (result.get("salida_interpretable") or {}).get("H2")},
@@ -842,6 +967,7 @@ def main(argv) -> int:
              "ledgers": [{k: x[k] for k in ("copia", "sha256", "lineas")} for x in _ceb_pres.get("ledgers") or []]},
         ],
         "archetype_search_receipt": search_receipt,
+        "guardian_z90": result_guardian_z90,
         "terminal_resolution": terminal,
         "continuidad_corrida": result.get("continuidad_corrida") or {"status": "NO_PAUSADA", "final_decision_authorized": True},
         "huellas_declaradas_ausentes": _declared_absent_hashes(result),
