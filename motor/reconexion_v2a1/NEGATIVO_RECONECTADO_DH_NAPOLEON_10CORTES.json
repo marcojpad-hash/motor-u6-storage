@@ -1,0 +1,43 @@
+{
+ "caso": "NAPOLEON_Z90_10CORTES",
+ "n_contrafactuales": 53,
+ "filas": [
+  {
+   "familia": "arquetipo_el_gobernante",
+   "rank_fusion": 27.55385,
+   "supervivencia": 36,
+   "n_contrafactuales": 53,
+   "veredicto": "SE_SOSTIENE"
+  },
+  {
+   "familia": "utopia_principio_mercado",
+   "rank_fusion": 27.496447,
+   "supervivencia": 6,
+   "n_contrafactuales": 53,
+   "veredicto": "SE_SOSTIENE"
+  },
+  {
+   "familia": "30_ambicion",
+   "rank_fusion": 27.451896,
+   "supervivencia": 11,
+   "n_contrafactuales": 53,
+   "veredicto": "SE_SOSTIENE"
+  },
+  {
+   "familia": "situacion_dramatica_ambicion",
+   "rank_fusion": 26.274663,
+   "supervivencia": 0,
+   "n_contrafactuales": 53,
+   "veredicto": "DESCARTE"
+  },
+  {
+   "familia": "12_obtencion",
+   "rank_fusion": 26.24433,
+   "supervivencia": 0,
+   "n_contrafactuales": 53,
+   "veredicto": "DESCARTE"
+  }
+ ],
+ "descartados": 2,
+ "sostenidos": 3
+}
