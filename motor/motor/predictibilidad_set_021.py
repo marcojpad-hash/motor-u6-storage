@@ -89,7 +89,57 @@ def _frac_scores(vals: Dict[str, float]) -> Dict[str, float]:
 
 
 # ---------------------------------------------------------------- A) escala
+# Reconexión v2.A.1 (2026-11-11): el "no" del Décimo Hombre y la dirección del
+# cuadrante del monomito alimentan la predictibilidad. Antes iban a la nada
+# (el contador_supervivencia no lo leía nadie; el cuadrante solo se contaba).
+# NO cambia la Fórmula 22 original (predictibilidad_estructural_0_1 queda
+# intacta para comparar); añade la variante ajustada por hipótesis.
+ORDEN_CUADRANTES = ['Q1_Separacion_1_3', 'Q2_Descenso_4_6', 'Q3_Ordeal_7_9', 'Q4_Retorno_10_12']
+
+
+def _ajuste_reconexion(result):
+    """Por familia: dh_frac (supervivencia en contrafactuales del DH, 0-1) y
+    dir_norm (alineación con la dirección del cuadrante, 0-1). ajuste es la
+    media; factor = 0.5 + 0.5*ajuste, en [0.5, 1.0]. Si falta el dato, None
+    (factor 1.0: la ajustada es igual a la original)."""
+    dh = (result.get("decimo_hombre_esteroides") or {})
+    sup = dh.get("contador_supervivencia") or {}
+    cfs = dh.get("contrafactuales_ejecutados") or []
+    n_cf = len(cfs) if cfs else 0
+    mono = ((result.get("features") or {}).get("plugin_circulo_monomito") or {}).get("posicion_monomito_por_corte") or []
+    cp = ((result.get("motor") or {}).get("annex") or {}).get("traza_P") or {}
+    crudo = cp.get("crudo_P") or {}
+    q = [(f.get("cuadrante_activo") or [None])[0] for f in mono]
+    seq = [x for x in q if x]
+    actual = seq[-1] if seq else None
+    siguiente = ORDEN_CUADRANTES[(ORDEN_CUADRANTES.index(actual) + 1) % 4] if actual in ORDEN_CUADRANTES else None
+    ia = [i for i, x in enumerate(q) if x == actual]
+    ib = [i for i, x in enumerate(q) if x == siguiente]
+    out = {"cuadrante_actual": actual, "cuadrante_siguiente": siguiente,
+           "n_contrafactuales": n_cf, "dh_disponible": bool(sup and n_cf),
+           "cuadrante_disponible": bool(actual and siguiente and ia and ib), "por_familia": {}}
+    fams = set(sup.keys()) | set(crudo.keys())
+    for fam in fams:
+        dh_frac = (float(sup.get(fam, 0)) / n_cf) if (sup and n_cf) else None
+        dir_delta = None; dir_norm = None
+        ps = crudo.get(fam) or []
+        if actual and siguiente and ia and ib and ps and len(ps) >= max(ia + ib) + 1:
+            m_a = sum(ps[i] for i in ia) / len(ia)
+            m_b = sum(ps[i] for i in ib) / len(ib)
+            dir_delta = m_b - m_a
+            dir_norm = max(0.0, min(1.0, 0.5 + dir_delta * 5.0))
+        partes = [x for x in (dh_frac, dir_norm) if x is not None]
+        ajuste = (sum(partes) / len(partes)) if partes else None
+        factor = (0.5 + 0.5 * ajuste) if ajuste is not None else 1.0
+        out["por_familia"][fam] = {"dh_supervivencia_frac": dh_frac,
+                                   "direccion_cuadrante_delta": dir_delta,
+                                   "direccion_cuadrante_norm": dir_norm,
+                                   "ajuste_reconexion": ajuste, "factor_reconexion": round(factor, 6)}
+    return out
+
+
 def escala_predictibilidad(result: Dict[str, Any], case: Dict[str, Any], base: Path) -> Dict[str, Any]:
+    recon = _ajuste_reconexion(result)
     pred = result.get("predictor") or {}
     cands = [c for c in (pred.get("candidates") or []) if isinstance(c, dict) and c.get("family")]
     dims = list(pred.get("dimensions") or [])
@@ -142,8 +192,18 @@ def escala_predictibilidad(result: Dict[str, Any], case: Dict[str, Any], base: P
             g["pp"] = round(g["pp"], 4); g["aporte"] = round(g["aporte"], 6); g["fraccion_de_su_maximo"] = round(g["aporte"] / g["maximo"], 6) if g["maximo"] else 0.0
         top = sorted(rows, key=lambda r: (-r["pp"], r["componente"]))
         old = {e: (mboards.get(f"{e}_FULL_244") or {}).get(n, "NO_EN_244") for e in ("P", "A", "C")}
+        aj = (recon.get("por_familia") or {}).get(n) or {}
+        factor = float(aj.get("factor_reconexion") or 1.0)
+        p_aj = K * F * factor + base_pp / 100.0
         por_h[n] = {"rank_fusion": round(rf, 6), "F_fraccion_del_techo": round(F, 6),
                     "predictibilidad_estructural_0_1": round(p, 6), "predictibilidad_estructural_pct": round(100.0 * p, 2),
+                    "predictibilidad_estructural_ajustada_0_1": round(p_aj, 6),
+                    "predictibilidad_estructural_ajustada_pct": round(100.0 * p_aj, 2),
+                    "dh_supervivencia_frac": aj.get("dh_supervivencia_frac"),
+                    "direccion_cuadrante_delta": (round(aj["direccion_cuadrante_delta"], 6) if aj.get("direccion_cuadrante_delta") is not None else None),
+                    "direccion_cuadrante_norm": aj.get("direccion_cuadrante_norm"),
+                    "ajuste_reconexion": aj.get("ajuste_reconexion"),
+                    "factor_reconexion": round(factor, 6),
                     "base_pp": round(base_pp, 4), "suma_pp_componentes": round(sum(r["pp"] for r in rows), 4),
                     "cuadra_rank_fusion": abs(suma_rangos - rf) <= 1e-4, "suma_aportes_recalculada": round(suma_rangos, 6),
                     "top_componentes": [{"componente": r["componente"], "grupo": r["grupo"], "pp": r["pp"], "aporte_0_1": r["aporte_0_1"]} for r in top[:6]],
@@ -152,7 +212,13 @@ def escala_predictibilidad(result: Dict[str, Any], case: Dict[str, Any], base: P
                     "soporte_canonico_p_final_en_Z": old}
     return {"version": VERSION, "nombre": "predictibilidad estructural (soporte interno)",
             "es_probabilidad_calibrada": False, "es_porcentaje_de_acierto": False,
-            "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)",
+            "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar.",
+            "reconexion_v2a1": {"cuadrante_actual": recon.get("cuadrante_actual"),
+                                "cuadrante_siguiente": recon.get("cuadrante_siguiente"),
+                                "n_contrafactuales": recon.get("n_contrafactuales"),
+                                "dh_disponible": recon.get("dh_disponible"),
+                                "cuadrante_disponible": recon.get("cuadrante_disponible"),
+                                "nota": "El 'no' del DH (contador_supervivencia) y la dirección del cuadrante del monomito alimentan la predictibilidad ajustada; la Fórmula 22 original no cambia."},
             "techo_rank": T, "delta_min_Z": dm, "sigma_Z": sg, "peso_evidencia_K": round(K, 6),
             "base_pp": round(base_pp, 4), "techo_pp": round(techo_pp, 4),
             "pp_por_punto_de_rank_fusion": round(100.0 * K / T, 6) if T else 0.0,
