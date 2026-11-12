@@ -7,7 +7,7 @@
 
 ## Para qué es cada carpeta
 - `motor/` — Motor U6 (código, contratos, candados, laterales). **Engine y catálogo 244 no se tocan.** Leer `motor/REGLAS.md`.
-- `casos/` — Hashes de casos, plantilla, calibración, fábrica y resúmenes de resultados. Nunca corridas completas.
+- `casos/` — Hashes de casos, plantilla, calibración, fábrica y resúmenes de resultados. El resumen de una línea por corrida va en `resultados/resultados.jsonl`; la corrida completa va en `motor/runs/<LOTE>_<FECHA>/` para el historial (ver `CONTRATO_GUARDAR_CORRIDAS.md`).
 - `stinkbox/` — Tokens StinkBox deduplicados (`tokens.jsonl`), procedencia y reportes de brechas.
 - `avances/` — Bitácora técnica por cambio (antes → después, hashes, pruebas). Una entrada por commit relevante.
 - `informes/` — **Resúmenes para Mj y modelos** en español llano, uno por sesión: `AAAA-MM-DD_tema.md`. Empezar aquí para saber "dónde vamos".

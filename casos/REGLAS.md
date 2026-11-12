@@ -5,5 +5,5 @@
 3. **Sellar el caso antes de conocer el desenlace.**
 4. Guardar **solo la entrada y sus hashes**. Nada de contenido completo de casos aquí.
 5. Un ejercicio de biografía de caso se construye **desde cero**, sin reutilizar ejercicios anteriores.
-6. Corridas y calibración: **nunca subir la corrida completa**. Solo un resumen por corrida en `resultados/resultados.jsonl` (una línea JSON): hash del caso (sha256 de la entrada), fecha, H1/H2/apuesta, grado, margen, métricas clave y hashes de entrada/salida. Lo genera `scripts/sincronizar_storage.py despues`.
+6. Corridas y calibración: un resumen por corrida en `resultados/resultados.jsonl` (una línea JSON): hash del caso (sha256 de la entrada), fecha, H1/H2/apuesta, grado, margen, métricas clave y hashes de entrada/salida. Lo genera `scripts/sincronizar_storage.py despues`. La corrida completa va en el apartado separado `motor/runs/<LOTE>_<FECHA>/` para el historial, gobernada por `CONTRATO_GUARDAR_CORRIDAS.md` y verificada por el candado `scripts/candado_entrega.py` con `LECTURA.json` (evidencia de lectura).
 7. Caso nuevo: partir de `PLANTILLA_CASO_NUEVO.json`.

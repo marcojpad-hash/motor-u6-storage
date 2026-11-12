@@ -20,7 +20,7 @@ existente `motor/calibracion/arnes_calibracion.py`. No cambia el protocolo, no t
    - vuelve a verificar los candados (repo y copia);
    - abre los desenlaces solo si su hash coincide con el compromiso, y evalúa con el arnés;
    - agrega filas a `calibracion_acumulada.csv` y regenera `CALIBRACION_ACUMULADA.md`.
-   Corridas completas quedan fuera del repo, en `/workspace/FABRICA_CORRIDAS/<lote>/`.
+   El resumen de una línea por corrida va en `resultados/resultados.jsonl`; la corrida completa va en `motor/runs/<LOTE>_<FECHA>/` para el historial, gobernada por `CONTRATO_GUARDAR_CORRIDAS.md` y verificada por el candado `scripts/candado_entrega.py` con `LECTURA.json`. La copia local de trabajo queda en `/workspace/FABRICA_CORRIDAS/<lote>/`.
 
 ## Calificación (0/1 por caso)
 - `acierto_H1`, `acierto_H2`: la familia está entre las del desenlace.
