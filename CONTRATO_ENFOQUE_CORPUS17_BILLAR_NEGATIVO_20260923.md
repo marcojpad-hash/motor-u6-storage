@@ -81,6 +81,12 @@ No dice qué es algo; dice qué NO es.
   `Alimenta_H = NO`. `writes_H = False`. Solo lectura sobre los JSON de entrada.
   No importa Engine ni 244.
 - ESTADO: **PROPUESTA, no cableado, no tubo.**
+- ENTRADAS: el script pide el layout UNIFICADO (`RESULT_G_E_V0163_D_lentes_{caso}.json`
+  + `lentes_billar_ricci_outputs/BILLAR_V0_2_{caso}.json` + `RICCI_V0_1_{caso}.json`).
+  Esas entradas NO existen en general para las corridas actuales (F001/F002 y
+  precedentes no traen ese layout). Sin ellas el script no corre tal cual; las
+  features embebidas en el RESULT (`billar_circular_v0_2`, `ricci_forman_v0_1`) son
+  lo que hay para leerlo. Ver §7.
 
 ## §3. La distinción que hay que conservar
 
@@ -121,7 +127,28 @@ La tríada del motor (ver `motor/motor/SPEC_SCHRODINGER_V0_1.md` §9):
 - No cablear el negativo en este contrato. Este contrato solo pone bien dónde vive
   y qué hace.
 
-## §6. Referencias
+## §7. Por qué el indicador entró por otro lado (y por qué se comporta raro)
+
+- **Las entradas UNIFICADO no existen en general.** El layout que pide la lectura
+  por negativo (`RESULT_G_E_V0163_D_lentes_*` + `lentes_billar_ricci_outputs/`)
+  no existe para las corridas actuales. No es que esté bloqueando al otro: **el
+  negativo NO bloquea nada** — es PROPUESTA, no cableado, no toca el motor ni a
+  ningún otro componente.
+- **Por qué el "Ricci" entró por otro lado:** como no se encontraba la curvatura
+  Forman-Ricci exacta (la primitiva pide un grafo explícito con topología validada
+  que los cortes P/A/C no especifican), la "Ricci" que usa el motor entró por el
+  lado de la lente de coocurrencia (§2.2): un proxy de deriva temporal hecho con
+  tokens P entre cortes. Por eso se comporta raro: **no es la curvatura exacta,
+  es un sustituto que entró por donde pudo.** En Napoleón (F001) el proxy da
+  media 0.0438 y sus 3 valores más grandes son todos positivos (0.0677) — no hay
+  señal negativa que descartar en esa corrida; y el método mismo dice
+  `TEMPORAL_WEIGHT_DRIFT_PROXY_NOT_EXACT_FORMAN`, `forman_ricci_verified: False`.
+- **Para que embone:** si se quiere la curvatura exacta, hay que darle a la
+  primitiva un grafo explícito con topología y pesos validados (eso no lo dan los
+  cortes P/A/C). Mientras tanto, el indicador de deriva se llama indicador, no
+  curvatura, y no se presenta como integrado al ranking.
+
+## §8. Referencias
 
 - Citado por: `motor/motor/lectura_negativo_ricci_vs_billar_v0_1.py` (encabezado).
 - `motor/motor/forman_ricci_weighted_graph.py` (primitiva; su propio contrato en el
