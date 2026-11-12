@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F004_05_KHRUSHCHEV",
+ "question": "¿Qué trayectoria sigue Nikita Jrushchov después de 1963?",
+ "person": "Nikita Jrushchov",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1964-01-01",
+ "z_trabajo": "1964-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1963",
+ "cuts": [
+  {
+   "id": "C1_1956",
+   "corte": "C1_1956",
+   "cut_id": "C1_1956",
+   "date": "1956-02-25",
+   "fecha_corte": "1956-02-25",
+   "hecho": "Tras imponerse en la lucha por el poder posterior a Stalin, pronuncia el 'Discurso secreto' en el XX Congreso, que demuele la reputación de Stalin.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "audacia",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "ruptura_pasado",
+     0.8
+    ],
+    [
+     "oratoria",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "poder",
+     0.82
+    ],
+    [
+     "rivalidad_poder",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Tras la muerte de Stalin (5 de marzo de 1953) Jrushchov salió victorioso de la lucha por el poder; el 25 de febrero de 1956 pronunció el Discurso secreto contra las purgas de Stalin.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1956-02-25",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1962",
+   "corte": "C2_1962",
+   "cut_id": "C2_1962",
+   "date": "1962-12",
+   "fecha_corte": "1962-12",
+   "hecho": "Sube los precios de carne y mantequilla (revuelta de Novocherkask reprimida); en la crisis de los misiles retira los misiles de Cuba, arreglo visto como derrota soviética; estalla contra los artistas en el Manège; divide los comités del partido, lo que molesta a los dirigentes que lo apoyaron.",
+   "P": [
+    [
+     "impulsividad",
+     0.78
+    ],
+    [
+     "orgullo",
+     0.74
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.76
+    ],
+    [
+     "cambio_repentino",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.76
+    ],
+    [
+     "friccion_organizacional_kpi",
+     0.64
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En junio de 1962 subieron los precios de carne y mantequilla un 25–30 %; la revuelta de Novocherkask fue reprimida por el ejército.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1962-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En la crisis de octubre de 1962 Jrushchov aceptó retirar los misiles de Cuba; el arreglo se vio como una gran derrota soviética y Castro se enfureció.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1962-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El 1 de diciembre de 1962 estalló de ira ante obras de vanguardia en la galería del Manège; en 1962 dividió los obkom en industria y agricultura, lo que creó tensión con el Comité Central y molestó a los dirigentes que lo habían apoyado.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1962-12-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1963",
+   "corte": "C3_1963",
+   "cut_id": "C3_1963",
+   "date": "1963",
+   "fecha_corte": "1963",
+   "hecho": "Sequía y cosecha de grano muy por debajo del pico de 1958; colas por pan; agota las reservas de divisas y parte del oro para comprar grano; en julio negocia el tratado de prohibición de pruebas nucleares.",
+   "P": [
+    [
+     "determinacion",
+     0.72
+    ],
+    [
+     "optimismo",
+     0.66
+    ]
+   ],
+   "A": [
+    [
+     "negociacion",
+     0.74
+    ],
+    [
+     "pragmatismo_frio",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "escasez",
+     0.82
+    ],
+    [
+     "desgaste_psicosocial",
+     0.62
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1963 la sequía bajó la cosecha a 97,5 millones de toneladas frente al pico de 122,2 en 1958; hubo colas por pan y Jrushchov gastó las reservas de divisas y parte del oro en comprar grano.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1963",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En julio de 1963 negoció el tratado de prohibición de pruebas nucleares con Harriman y Lord Hailsham.",
+     "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "source_date": "2026-10-27",
+     "claim_date": "1963-07",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1963."
+}

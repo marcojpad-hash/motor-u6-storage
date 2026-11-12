@@ -1,0 +1,448 @@
+{
+  "case_id": "CAL_F004_05_KHRUSHCHEV",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 34.378,
+  "result_completo_sha256": "37828342cb51ab8ac208b7c5c7084876b3b65a06f89e6a248eb652f99f2f09b8",
+  "result_completo_bytes": 5574000,
+  "entrada_sha256": "91988e3a63427efae031a6cbbf2050a90484ac65d130c3511326b535d0f6994c",
+  "receipt_sha256": "a218fbc200fbf5284c613a4f69af1c488a7c25d431d5cdc2c43d5660ffb217df",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 57.58,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 40.0,
+        "booker": 53.3333,
+        "dynamis": 26.0,
+        "estructura": 60.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 53.3333,
+        "otras_dimensiones": 75.0,
+        "puente_lateral": 96.1039,
+        "trayectoria_estado": 72.0
+      },
+      "peso_relativo": 0.226397,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.58
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 63.85,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 100.0,
+        "booker": 66.6667,
+        "dynamis": 70.0,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 80.0,
+        "greimas": 0.0,
+        "otras_dimensiones": 52.5,
+        "puente_lateral": 63.3177,
+        "trayectoria_estado": 56.0
+      },
+      "peso_relativo": 0.206027,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.93
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 9.8666,
+      "techo_pct": 90.1334,
+      "pp_por_punto_de_rank_fusion": 1.824243,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "eje",
+        "peso_en_set": 0.334514,
+        "predictibilidad_estructural_pct": 61.58,
+        "cobertura_unica_frac": 0.2809
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.304416,
+        "predictibilidad_estructural_pct": 56.93,
+        "cobertura_unica_frac": 0.3034
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.184075,
+        "predictibilidad_estructural_pct": 38.32,
+        "cobertura_unica_frac": 0.2846
+      },
+      {
+        "familia": "eterno_retorno_03_desgaste_y_reinicio",
+        "rol": "componente",
+        "peso_en_set": 0.176995,
+        "predictibilidad_estructural_pct": 37.23,
+        "cobertura_unica_frac": 0.1311
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "9_audaz_empresa domina; 30_ambicion es rival distinto (margen 2.550757 >= 1.0 y afinidad 0.2 < 0.5)",
+      "peso_H1": 0.226397,
+      "peso_H2": 0.206027,
+      "peso_H1_en_par": 0.523553,
+      "peso_H2_en_par": 0.476447
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.349354,
+          "soporte_estructural_relativo": 0.33451374,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.139197,
+            "micro": 0.612824,
+            "meso": 0.547985,
+            "macro": 0.547985,
+            "aceleracion": 0.63026,
+            "divergencia_entre_escala": 0.064839,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.798597,
+          "soporte_estructural_relativo": 0.30441558,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.068515,
+            "micro": 0.464858,
+            "meso": 0.466185,
+            "macro": 0.466185,
+            "aceleracion": 0.497333,
+            "divergencia_entre_escala": 0.001327,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.6,
+          "soporte_estructural_relativo": 0.18407525,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.209186,
+            "micro": 0.473625,
+            "meso": 0.670077,
+            "macro": 0.670077,
+            "aceleracion": 0.164068,
+            "divergencia_entre_escala": 0.196452,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "eterno_retorno_03_desgaste_y_reinicio",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.0,
+          "soporte_estructural_relativo": 0.17699543,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.135996,
+            "micro": 0.487603,
+            "meso": 0.608195,
+            "macro": 0.608195,
+            "aceleracion": 0.273156,
+            "divergencia_entre_escala": 0.120593,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "9_audaz_empresa",
+            "monomito_08_la_odisea_o_prueba_suprema",
+            "eterno_retorno_03_desgaste_y_reinicio"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.69558442,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.30441558,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "monomito_08_la_odisea_o_prueba_suprema",
+          "eterno_retorno_03_desgaste_y_reinicio"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.69558442,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_05_KHRUSHCHEV",
+    "question": "¿Qué trayectoria sigue Nikita Jrushchov después de 1963?",
+    "person": "Nikita Jrushchov",
+    "tipo_sujeto": "gobernante",
+    "freeze": "1964-01-01",
+    "z_trabajo": "1964-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1963",
+    "cuts": [
+      {
+        "id": "C1_1956",
+        "corte": "C1_1956",
+        "cut_id": "C1_1956",
+        "date": "1956-02-25",
+        "fecha_corte": "1956-02-25",
+        "hecho": "Tras imponerse en la lucha por el poder posterior a Stalin, pronuncia el 'Discurso secreto' en el XX Congreso, que demuele la reputación de Stalin.",
+        "P": [
+          [
+            "ambicion",
+            0.8
+          ],
+          [
+            "audacia",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "ruptura_pasado",
+            0.8
+          ],
+          [
+            "oratoria",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "poder",
+            0.82
+          ],
+          [
+            "rivalidad_poder",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Tras la muerte de Stalin (5 de marzo de 1953) Jrushchov salió victorioso de la lucha por el poder; el 25 de febrero de 1956 pronunció el Discurso secreto contra las purgas de Stalin.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1956-02-25",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1962",
+        "corte": "C2_1962",
+        "cut_id": "C2_1962",
+        "date": "1962-12",
+        "fecha_corte": "1962-12",
+        "hecho": "Sube los precios de carne y mantequilla (revuelta de Novocherkask reprimida); en la crisis de los misiles retira los misiles de Cuba, arreglo visto como derrota soviética; estalla contra los artistas en el Manège; divide los comités del partido, lo que molesta a los dirigentes que lo apoyaron.",
+        "P": [
+          [
+            "impulsividad",
+            0.78
+          ],
+          [
+            "orgullo",
+            0.74
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.76
+          ],
+          [
+            "cambio_repentino",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "derrota_temporal",
+            0.76
+          ],
+          [
+            "friccion_organizacional_kpi",
+            0.64
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En junio de 1962 subieron los precios de carne y mantequilla un 25–30 %; la revuelta de Novocherkask fue reprimida por el ejército.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1962-06",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En la crisis de octubre de 1962 Jrushchov aceptó retirar los misiles de Cuba; el arreglo se vio como una gran derrota soviética y Castro se enfureció.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1962-10",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 1 de diciembre de 1962 estalló de ira ante obras de vanguardia en la galería del Manège; en 1962 dividió los obkom en industria y agricultura, lo que creó tensión con el Comité Central y molestó a los dirigentes que lo habían apoyado.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1962-12-01",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1963",
+        "corte": "C3_1963",
+        "cut_id": "C3_1963",
+        "date": "1963",
+        "fecha_corte": "1963",
+        "hecho": "Sequía y cosecha de grano muy por debajo del pico de 1958; colas por pan; agota las reservas de divisas y parte del oro para comprar grano; en julio negocia el tratado de prohibición de pruebas nucleares.",
+        "P": [
+          [
+            "determinacion",
+            0.72
+          ],
+          [
+            "optimismo",
+            0.66
+          ]
+        ],
+        "A": [
+          [
+            "negociacion",
+            0.74
+          ],
+          [
+            "pragmatismo_frio",
+            0.68
+          ]
+        ],
+        "C": [
+          [
+            "escasez",
+            0.82
+          ],
+          [
+            "desgaste_psicosocial",
+            0.62
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1963 la sequía bajó la cosecha a 97,5 millones de toneladas frente al pico de 122,2 en 1958; hubo colas por pan y Jrushchov gastó las reservas de divisas y parte del oro en comprar grano.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1963",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En julio de 1963 negoció el tratado de prohibición de pruebas nucleares con Harriman y Lord Hailsham.",
+            "source_url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+            "source_date": "2026-10-27",
+            "claim_date": "1963-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1963."
+  }
+}

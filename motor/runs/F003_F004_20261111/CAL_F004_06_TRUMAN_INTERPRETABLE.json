@@ -1,0 +1,439 @@
+{
+  "case_id": "CAL_F004_06_TRUMAN",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 36.267,
+  "result_completo_sha256": "82709cd06cad0f7ef6a3c56de34fb06cc021c4d35fd3d953433add336ebdbf55",
+  "result_completo_bytes": 5287219,
+  "entrada_sha256": "1691fb7f5844d4c75dffacfdb86bb8edc28d5a8101c5af26151769b6d3f5fc65",
+  "receipt_sha256": "6094f21cc93b524013dccb2cbc4fffff3628aaf6f839d8612bc44322ab1c0c43",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 61.36,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 20.0,
+        "booker": 40.0,
+        "dynamis": 80.0,
+        "estructura": 80.0,
+        "frye": 53.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 80.0,
+        "otras_dimensiones": 57.5,
+        "puente_lateral": 94.7199,
+        "trayectoria_estado": 58.0
+      },
+      "peso_relativo": 0.24344,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 63.79
+    },
+    "H2": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 45.15,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 60.0,
+        "booker": 30.0,
+        "dynamis": 40.0,
+        "estructura": 20.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 40.0,
+        "otras_dimensiones": 52.5,
+        "puente_lateral": 59.0263,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.178948,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 48.97
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.8416,
+      "techo_pct": 92.1583,
+      "pp_por_punto_de_rank_fusion": 2.161967,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "eje",
+        "peso_en_set": 0.357536,
+        "predictibilidad_estructural_pct": 63.79,
+        "cobertura_unica_frac": 0.259
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.247314,
+        "predictibilidad_estructural_pct": 46.54,
+        "cobertura_unica_frac": 0.377
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.207246,
+        "predictibilidad_estructural_pct": 40.27,
+        "cobertura_unica_frac": 0.2393
+      },
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "componente",
+        "peso_en_set": 0.187903,
+        "predictibilidad_estructural_pct": 37.24,
+        "cobertura_unica_frac": 0.1246
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "9_audaz_empresa con componentes de schwartz_07_logro (afinidad 0.633119 >= 0.5)",
+      "peso_H1": 0.24344,
+      "peso_H2": 0.178948,
+      "peso_H1_en_par": 0.576342,
+      "peso_H2_en_par": 0.423658
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "eje",
+          "rank_fusion": 25.877589,
+          "soporte_estructural_relativo": 0.35753594,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.315313,
+            "micro": 0.643946,
+            "meso": 0.664512,
+            "macro": 0.664512,
+            "aceleracion": 0.454658,
+            "divergencia_entre_escala": 0.020566,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.9,
+          "soporte_estructural_relativo": 0.24731412,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.435769,
+            "micro": 0.657041,
+            "meso": 0.748306,
+            "macro": 0.748306,
+            "aceleracion": 0.293399,
+            "divergencia_entre_escala": 0.091266,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.0,
+          "soporte_estructural_relativo": 0.20724647,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.011466,
+            "micro": 0.492667,
+            "meso": 0.495067,
+            "macro": 0.495067,
+            "aceleracion": 0.4952,
+            "divergencia_entre_escala": 0.0024,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "componente",
+          "rank_fusion": 13.6,
+          "soporte_estructural_relativo": 0.18790347,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.0072,
+            "micro": 0.497867,
+            "meso": 0.495667,
+            "macro": 0.495667,
+            "aceleracion": 0.5044,
+            "divergencia_entre_escala": 0.0022,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "9_audaz_empresa",
+            "monomito_08_la_odisea_o_prueba_suprema"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.60485006,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_gobernante",
+            "eterno_retorno_01_caos_primordial"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.39514994,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "monomito_08_la_odisea_o_prueba_suprema"
+        ],
+        "n_hipotesis": 2,
+        "soporte_estructural_agregado": 0.60485006,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_06_TRUMAN",
+    "question": "¿Qué trayectoria sigue Harry S. Truman después de julio de 1948?",
+    "person": "Harry S. Truman",
+    "tipo_sujeto": "politico",
+    "freeze": "1948-08-01",
+    "z_trabajo": "1948-08-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1948-07",
+    "cuts": [
+      {
+        "id": "C1_1945",
+        "corte": "C1_1945",
+        "cut_id": "C1_1945",
+        "date": "1945-04-12",
+        "fecha_corte": "1945-04-12",
+        "hecho": "Vicepresidente desde hace 82 días, poco consultado por Roosevelt; a la muerte de este jura como presidente y dice sentir que se le vinieron encima 'la luna, las estrellas y todos los planetas'.",
+        "P": [
+          [
+            "deber",
+            0.8
+          ],
+          [
+            "humildad",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "responsabilidad",
+            0.8
+          ],
+          [
+            "liderazgo",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "carga_cognitiva_evaluacion",
+            0.64
+          ],
+          [
+            "incertidumbre",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Truman llevaba 82 días como vicepresidente cuando Roosevelt murió el 12 de abril de 1945; juró como presidente esa tarde; Roosevelt rara vez lo consultaba.",
+            "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+            "source_date": "2026-10-27",
+            "claim_date": "1945-04-12",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1946",
+        "corte": "C2_1946",
+        "cut_id": "C2_1946",
+        "date": "1946-11",
+        "fecha_corte": "1946-11",
+        "hecho": "Su aprobación cae del 82 % (enero) al 52 % (junio) y luego al 32 %; los republicanos ganan el Congreso en las elecciones de mitad de periodo; el senador Fulbright sugiere que renuncie.",
+        "P": [
+          [
+            "orgullo",
+            0.7
+          ],
+          [
+            "determinacion",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.72
+          ],
+          [
+            "oposicion",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "derrota_temporal",
+            0.8
+          ],
+          [
+            "hostilidad",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "La aprobación de Truman cayó del 82 % en enero de 1946 al 52 % en junio; los demócratas sufrieron grandes pérdidas en las elecciones de 1946 y los republicanos tomaron el Congreso; con 32 % Fulbright sugirió que renunciara.",
+            "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+            "source_date": "2026-10-27",
+            "claim_date": "1946-11",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1948_07",
+        "corte": "C3_1948_07",
+        "cut_id": "C3_1948_07",
+        "date": "1948-07",
+        "fecha_corte": "1948-07",
+        "hecho": "En primavera tiene 36 % de aprobación y casi nadie lo cree capaz de ganar; en la convención ataca al 'Congreso que no hace nada'; firma la Orden 9981 contra la discriminación en las fuerzas armadas; el partido se parte en tres (Thurmond y los dixiecrats, Wallace y los progresistas); el 25 de junio inició el puente aéreo de Berlín.",
+        "P": [
+          [
+            "determinacion",
+            0.82
+          ],
+          [
+            "obligacion_moral",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.78
+          ],
+          [
+            "oratoria",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "fragmentacion",
+            0.8
+          ],
+          [
+            "oposicion",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En la primavera de 1948 la aprobación de Truman era del 36 % y casi universalmente se le veía incapaz de ganar; en la convención atacó al 'Do Nothing Congress'.",
+            "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+            "source_date": "2026-10-27",
+            "claim_date": "1948-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En julio de 1948 emitió la Orden Ejecutiva 9981; Thurmond encabezó la revuelta dixiecrat y Wallace la del Partido Progresista: el Partido Demócrata se dividía en tres.",
+            "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+            "source_date": "2026-10-27",
+            "claim_date": "1948-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 25 de junio de 1948 los aliados iniciaron el puente aéreo de Berlín, aprobado por Truman.",
+            "source_url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+            "source_date": "2026-10-27",
+            "claim_date": "1948-06-25",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta julio de 1948."
+  }
+}

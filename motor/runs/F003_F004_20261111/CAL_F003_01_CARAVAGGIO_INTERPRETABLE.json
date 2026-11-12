@@ -1,0 +1,577 @@
+{
+  "case_id": "CAL_F003_01_CARAVAGGIO",
+  "lote": "F003",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 37.01,
+  "result_completo_sha256": "363b444b4fd91f6a26b3ced2baa9b351e4ac14a97838c88e59cd869d56f8ee2a",
+  "result_completo_bytes": 8133533,
+  "entrada_sha256": "953aadc15725c4c40bbd231fc9391f90c6fe0bad619fb01c545dc04c273bd2ae",
+  "receipt_sha256": "263440a8bcfb4de4147e2842f8f204dc79c735e11e2103744309bc1a554d3555",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "anacyclosis_06_oclocracia",
+      "porcentaje_relleno": 63.24,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 45.8333,
+        "booker": 43.0556,
+        "dynamis": 74.4048,
+        "estructura": 79.1667,
+        "frye": 50.0,
+        "geometria_inercia": 58.3333,
+        "greimas": 68.0556,
+        "otras_dimensiones": 63.4259,
+        "puente_lateral": 86.7438,
+        "resolucion": 70.8333,
+        "trayectoria_estado": 55.8333
+      },
+      "peso_relativo": 0.113067,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 63.35
+    },
+    "H2": {
+      "familia": "social_13_le_bon_comportamiento_masas",
+      "porcentaje_relleno": 63.46,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 33.3333,
+        "booker": 43.0556,
+        "dynamis": 77.9762,
+        "estructura": 91.6667,
+        "frye": 50.0,
+        "geometria_inercia": 58.3333,
+        "greimas": 80.5556,
+        "otras_dimensiones": 54.1667,
+        "puente_lateral": 79.8596,
+        "resolucion": 70.8333,
+        "trayectoria_estado": 58.3333
+      },
+      "peso_relativo": 0.111055,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 62.38
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.9917,
+      "techo_pct": 91.0084,
+      "pp_por_punto_de_rank_fusion": 1.67381,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "anacyclosis_06_oclocracia",
+        "rol": "eje",
+        "peso_en_set": 0.172625,
+        "predictibilidad_estructural_pct": 63.35,
+        "cobertura_unica_frac": 0.161
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.1216,
+        "predictibilidad_estructural_pct": 47.28,
+        "cobertura_unica_frac": 0.161
+      },
+      {
+        "familia": "aliado",
+        "rol": "componente",
+        "peso_en_set": 0.117392,
+        "predictibilidad_estructural_pct": 45.95,
+        "cobertura_unica_frac": 0.0716
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.115469,
+        "predictibilidad_estructural_pct": 45.35,
+        "cobertura_unica_frac": 0.0775
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.104506,
+        "predictibilidad_estructural_pct": 41.9,
+        "cobertura_unica_frac": 0.0736
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.101949,
+        "predictibilidad_estructural_pct": 41.09,
+        "cobertura_unica_frac": 0.161
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.098122,
+        "predictibilidad_estructural_pct": 39.89,
+        "cobertura_unica_frac": 0.0755
+      },
+      {
+        "familia": "cliodinamica_02_fase_estanflacion_presion",
+        "rol": "componente",
+        "peso_en_set": 0.088155,
+        "predictibilidad_estructural_pct": 36.75,
+        "cobertura_unica_frac": 0.0775
+      },
+      {
+        "familia": "picar_trickster",
+        "rol": "componente",
+        "peso_en_set": 0.080181,
+        "predictibilidad_estructural_pct": 34.24,
+        "cobertura_unica_frac": 0.0716
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "anacyclosis_06_oclocracia con componentes de social_13_le_bon_comportamiento_masas (margen 0.577907 < GATE_SEPARATION 1.0; afinidad 0.668566 >= 0.5)",
+      "peso_H1": 0.113067,
+      "peso_H2": 0.111055,
+      "peso_H1_en_par": 0.504489,
+      "peso_H2_en_par": 0.495511
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 9,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "anacyclosis_06_oclocracia",
+          "rol_en_set": "eje",
+          "rank_fusion": 32.473605,
+          "soporte_estructural_relativo": 0.17262538,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.255606,
+            "micro": 0.613963,
+            "meso": 0.634723,
+            "macro": 0.634723,
+            "aceleracion": 0.455849,
+            "divergencia_entre_escala": 0.02076,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.875,
+          "soporte_estructural_relativo": 0.12160047,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.333735,
+            "micro": 0.641374,
+            "meso": 0.679614,
+            "macro": 0.679614,
+            "aceleracion": 0.415486,
+            "divergencia_entre_escala": 0.03824,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "aliado",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.083333,
+          "soporte_estructural_relativo": 0.11739207,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.300457,
+            "micro": 0.719477,
+            "meso": 0.615605,
+            "macro": 0.615605,
+            "aceleracion": 0.719477,
+            "divergencia_entre_escala": 0.103872,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.721558,
+          "soporte_estructural_relativo": 0.11546892,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.050267,
+            "micro": 0.470302,
+            "meso": 0.477149,
+            "macro": 0.477149,
+            "aceleracion": 0.48627,
+            "divergencia_entre_escala": 0.006848,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.659315,
+          "soporte_estructural_relativo": 0.10450631,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.034475,
+            "micro": 0.481342,
+            "meso": 0.483473,
+            "macro": 0.483473,
+            "aceleracion": 0.495733,
+            "divergencia_entre_escala": 0.002131,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.178246,
+          "soporte_estructural_relativo": 0.10194901,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.042197,
+            "micro": 0.476551,
+            "meso": 0.480077,
+            "macro": 0.480077,
+            "aceleracion": 0.492934,
+            "divergencia_entre_escala": 0.003527,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.458333,
+          "soporte_estructural_relativo": 0.09812205,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.023639,
+            "micro": 0.4932,
+            "meso": 0.485671,
+            "macro": 0.485671,
+            "aceleracion": 0.515062,
+            "divergencia_entre_escala": 0.00753,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "cliodinamica_02_fase_estanflacion_presion",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.583333,
+          "soporte_estructural_relativo": 0.0881548,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.142627,
+            "micro": 0.493867,
+            "meso": 0.610037,
+            "macro": 0.610037,
+            "aceleracion": 0.280093,
+            "divergencia_entre_escala": 0.11617,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "picar_trickster",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.083333,
+          "soporte_estructural_relativo": 0.080181,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.149796,
+            "micro": 0.480277,
+            "meso": 0.622209,
+            "macro": 0.622209,
+            "aceleracion": 0.239443,
+            "divergencia_entre_escala": 0.141932,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "anacyclosis_06_oclocracia",
+            "monomito_08_la_odisea_o_prueba_suprema",
+            "aliado",
+            "cliodinamica_02_fase_estanflacion_presion",
+            "picar_trickster"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 0.57995372,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "9_audaz_empresa",
+            "arquetipo_el_creador",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.42004629,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "anacyclosis_06_oclocracia",
+          "monomito_08_la_odisea_o_prueba_suprema",
+          "aliado",
+          "cliodinamica_02_fase_estanflacion_presion",
+          "picar_trickster"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 0.57995372,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F003_01_CARAVAGGIO",
+    "question": "¿Qué trayectoria sigue Caravaggio tras otro año de pleitos y riñas en Roma mientras sus mecenas siguen encargándole cuadros?",
+    "person": "Michelangelo Merisi da Caravaggio",
+    "tipo_sujeto": "artista",
+    "freeze": "1605-12-31",
+    "z_trabajo": "1605-12-31",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F003",
+      "custodio_destino": "GrokBot-custodio-rutina-F003",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1605-08",
+    "cuts": [
+      {
+        "id": "C1_1600",
+        "corte": "C1_1600",
+        "cut_id": "C1_1600",
+        "date": "1600",
+        "fecha_corte": "1600",
+        "hecho": "Con el apoyo del cardenal Francesco Maria del Monte, entregó en 1600 los dos lienzos de San Mateo para la capilla Contarelli de San Luigi dei Francesi; fueron una sensación inmediata y desde entonces no le faltaron encargos ni mecenas.",
+        "P": [
+          [
+            "ambicion",
+            0.78
+          ],
+          [
+            "autoexpresion",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.82
+          ],
+          [
+            "audacia",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.8
+          ],
+          [
+            "redes_prestigio",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Hacia 1599, se supone que por influencia de del Monte, recibió el encargo de la capilla Contarelli; los dos cuadros de San Mateo se entregaron en 1600 y fueron una sensación inmediata, y desde entonces no le faltaron encargos ni mecenas.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1600",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El cardenal Francesco Maria del Monte, uno de los principales conocedores de Roma, compró sus primeros cuadros y se volvió su mecenas.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1600",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1603",
+        "corte": "C2_1603",
+        "cut_id": "C2_1603",
+        "date": "1603",
+        "fecha_corte": "1603",
+        "hecho": "El 28 de noviembre de 1600 golpeó con un garrote al noble Girolamo Stampa, huésped de del Monte, y las riñas se hicieron frecuentes; en 1603 fue arrestado por difamar al pintor Giovanni Baglione con versos ofensivos y, tras un mes en la cárcel de Tor di Nona, pasó a arresto domiciliario por intervención del embajador de Francia.",
+        "P": [
+          [
+            "orgullo",
+            0.78
+          ],
+          [
+            "impulsividad",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.8
+          ],
+          [
+            "burla",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_profesional",
+            0.78
+          ],
+          [
+            "privacion_libertad",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El 28 de noviembre de 1600 golpeó con un garrote a Girolamo Stampa da Montepulciano, huésped del cardenal del Monte; las riñas se hicieron cada vez más frecuentes y a menudo fue encarcelado en Tor di Nona.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1600-11-28",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1603 fue arrestado por difamar a Giovanni Baglione, que lo demandó junto con Orazio Gentileschi y Onorio Longhi por versos ofensivos; intervino el embajador de Francia y pasó a arresto domiciliario tras un mes en Tor di Nona.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1603",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1605",
+        "corte": "C3_1605",
+        "cut_id": "C3_1605",
+        "date": "1605-08",
+        "fecha_corte": "1605-08",
+        "hecho": "Entre mayo y octubre de 1604 fue arrestado varias veces por portar armas ilegales e insultar a los guardias, y un mesero lo demandó por arrojarle un plato de alcachofas; el 29 de julio de 1605 hirió gravemente con espada al notario Mariano Pasqualone en una disputa por Lena, su modelo, huyó tres semanas a Génova y sus mecenas lograron encubrir el incidente.",
+        "P": [
+          [
+            "impulsividad",
+            0.82
+          ],
+          [
+            "pasion",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.82
+          ],
+          [
+            "evasion",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "impunidad",
+            0.76
+          ],
+          [
+            "soporte",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Entre mayo y octubre de 1604 fue arrestado varias veces por posesión de armas ilegales y por insultar a los guardias de la ciudad; un mesero lo demandó por arrojarle un plato de alcachofas a la cara.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1604-10",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1605 tuvo que huir a Génova tres semanas tras herir gravemente al notario Mariano Pasqualone por Lena; el notario denunció el ataque con espada del 29 de julio y los mecenas intervinieron para encubrir el incidente.",
+            "source_url": "https://en.wikipedia.org/wiki/Caravaggio",
+            "source_date": "2026-10-26",
+            "claim_date": "1605-08",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta finales de 1605."
+  }
+}

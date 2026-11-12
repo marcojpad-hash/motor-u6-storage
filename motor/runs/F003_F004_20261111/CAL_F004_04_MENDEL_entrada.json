@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F004_04_MENDEL",
+ "question": "¿Qué trayectoria sigue Gregor Mendel después de 1866?",
+ "person": "Gregor Mendel",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1867-01-01",
+ "z_trabajo": "1867-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1866",
+ "cuts": [
+  {
+   "id": "C1_1850",
+   "corte": "C1_1850",
+   "cut_id": "C1_1850",
+   "date": "1850",
+   "fecha_corte": "1850",
+   "hecho": "Fraile agustino en Brno y maestro suplente; reprueba la parte oral del examen para maestro certificado.",
+   "P": [
+    [
+     "busqueda_seguridad",
+     0.72
+    ],
+    [
+     "curiosidad_abstracta",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "aprendizaje",
+     0.76
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "obstaculo",
+     0.74
+    ],
+    [
+     "escasez",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Mendel trabajó como maestro suplente; en 1850 reprobó la parte oral, la última de tres, del examen para maestro certificado.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1850",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1856",
+   "corte": "C2_1856",
+   "cut_id": "C2_1856",
+   "date": "1856",
+   "fecha_corte": "1856",
+   "hecho": "Estudia en Viena (física con Doppler) patrocinado por su superior Cyril Napp; vuelve a Brno como maestro; en 1856 reprueba otra vez el oral; Zawadzki lo anima a investigar.",
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.8
+    ],
+    [
+     "perfeccionismo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "metodicidad",
+     0.78
+    ],
+    [
+     "analisis",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "frustracion",
+     0.72
+    ],
+    [
+     "mentoria_activa",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1851 fue enviado a la Universidad de Viena con patrocinio de Cyril Napp; su profesor de física fue Christian Doppler; volvió a la abadía en 1853 como maestro.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1853",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1854 conoció a Aleksander Zawadzki, que animó su investigación; en 1856 volvió a reprobar la parte oral del examen.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1856",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1866",
+   "corte": "C3_1866",
+   "cut_id": "C3_1866",
+   "date": "1866",
+   "fecha_corte": "1866",
+   "hecho": "Tras cultivar unas 28 000 plantas de guisante (1856–1863) presenta sus experimentos de hibridación en dos sesiones de la Sociedad de Historia Natural de Brno (1865), con algunas reseñas favorables en la prensa local, y los publica en 1866; funda la Sociedad Meteorológica Austriaca; su superior le escribió desanimándolo.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.8
+    ],
+    [
+     "introversion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "teorizacion",
+     0.78
+    ],
+    [
+     "metodicidad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "incertidumbre",
+     0.7
+    ],
+    [
+     "soporte",
+     0.62
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Entre 1856 y 1863 Mendel cultivó y probó unas 28 000 plantas; su superior Napp le escribió para desanimarlo.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1863",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Presentó Versuche über Pflanzenhybriden en dos sesiones de la Sociedad de Historia Natural de Brno el 8 de febrero y el 8 de marzo de 1865, con algunas reseñas favorables en periódicos locales; el trabajo se publicó en 1866 en las Verhandlungen.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1866",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Fundó la Sociedad Meteorológica Austriaca en 1865.",
+     "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+     "source_date": "2026-10-27",
+     "claim_date": "1865",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1866."
+}

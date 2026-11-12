@@ -1,0 +1,459 @@
+{
+  "case_id": "CAL_F004_08_LESSEPS",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 39.55,
+  "result_completo_sha256": "92dadeeb64839705b359f9e2461d874860f6a1a82531d46fce3611553dfadf18",
+  "result_completo_bytes": 5640687,
+  "entrada_sha256": "8f9e1695fdbad046ee3c84220b4d3bee530c81b6a813816b465d30b9bd11e87d",
+  "receipt_sha256": "31e3d62bc65d851c7d777d71d4b79076a150094ec4618b7daf7df62470e1e959",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 66.87,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 80.0,
+        "booker": 63.3333,
+        "dynamis": 34.0,
+        "estructura": 100.0,
+        "frye": 33.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 80.0,
+        "otras_dimensiones": 82.5,
+        "puente_lateral": 63.5456,
+        "trayectoria_estado": 82.0
+      },
+      "peso_relativo": 0.221411,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.88
+    },
+    "H2": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 65.37,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 100.0,
+        "booker": 63.3333,
+        "dynamis": 82.0,
+        "estructura": 80.0,
+        "frye": 53.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 46.6667,
+        "otras_dimensiones": 67.5,
+        "puente_lateral": 44.8943,
+        "trayectoria_estado": 66.0
+      },
+      "peso_relativo": 0.211379,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 59.43
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.9916,
+      "techo_pct": 92.0083,
+      "pp_por_punto_de_rank_fusion": 1.90947,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "eje",
+        "peso_en_set": 0.339337,
+        "predictibilidad_estructural_pct": 61.88,
+        "cobertura_unica_frac": 0.1919
+      },
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "componente",
+        "peso_en_set": 0.323961,
+        "predictibilidad_estructural_pct": 59.43,
+        "cobertura_unica_frac": 0.2071
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.169553,
+        "predictibilidad_estructural_pct": 34.92,
+        "cobertura_unica_frac": 0.101
+      },
+      {
+        "familia": "social_14_overton_ventana",
+        "rol": "componente",
+        "peso_en_set": 0.167148,
+        "predictibilidad_estructural_pct": 34.53,
+        "cobertura_unica_frac": 0.1995
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "9_audaz_empresa domina; schwartz_07_logro es rival distinto (margen 1.278618 >= 1.0 y afinidad 0.407403 < 0.5)",
+      "peso_H1": 0.221411,
+      "peso_H2": 0.211379,
+      "peso_H1_en_par": 0.51159,
+      "peso_H2_en_par": 0.48841
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.219107,
+          "soporte_estructural_relativo": 0.26810212,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.242394,
+            "micro": 0.63175,
+            "meso": 0.61592,
+            "macro": 0.61592,
+            "aceleracion": 0.533682,
+            "divergencia_entre_escala": 0.01583,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.940489,
+          "soporte_estructural_relativo": 0.25595431,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.123025,
+            "micro": 0.543093,
+            "meso": 0.570723,
+            "macro": 0.570723,
+            "aceleracion": 0.444233,
+            "divergencia_entre_escala": 0.02763,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "31_conflicto_con_un_dios",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 22.095474,
+          "soporte_estructural_relativo": 0.20992313,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.187079,
+            "micro": 0.486137,
+            "meso": 0.647241,
+            "macro": 0.647241,
+            "aceleracion": 0.210021,
+            "divergencia_entre_escala": 0.161104,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.1,
+          "soporte_estructural_relativo": 0.13396029,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.151962,
+            "micro": 0.480144,
+            "meso": 0.6239,
+            "macro": 0.6239,
+            "aceleracion": 0.236638,
+            "divergencia_entre_escala": 0.143756,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "social_14_overton_ventana",
+          "rol_en_set": "componente",
+          "rank_fusion": 13.9,
+          "soporte_estructural_relativo": 0.13206015,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.066345,
+            "micro": 0.486403,
+            "meso": 0.556557,
+            "macro": 0.556557,
+            "aceleracion": 0.362807,
+            "divergencia_entre_escala": 0.070154,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "9_audaz_empresa",
+            "schwartz_07_logro",
+            "31_conflicto_con_un_dios",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.86793985,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "social_14_overton_ventana"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.13206015,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "schwartz_07_logro",
+          "31_conflicto_con_un_dios",
+          "candidato_trayectoria_arte_prestigio"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.86793985,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_08_LESSEPS",
+    "question": "¿Qué trayectoria sigue Ferdinand de Lesseps después de 1886?",
+    "person": "Ferdinand de Lesseps",
+    "tipo_sujeto": "empresario",
+    "freeze": "1887-01-01",
+    "z_trabajo": "1887-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1886",
+    "cuts": [
+      {
+        "id": "C1_1869",
+        "corte": "C1_1869",
+        "cut_id": "C1_1869",
+        "date": "1869-11-17",
+        "fecha_corte": "1869-11-17",
+        "hecho": "Obtiene la concesión de Suez (1854), reúne capital con suscripciones patrióticas francesas, resiste la oposición británica sin escuchar críticas y el canal se inaugura el 17 de noviembre de 1869.",
+        "P": [
+          [
+            "ambicion",
+            0.82
+          ],
+          [
+            "determinacion",
+            0.82
+          ]
+        ],
+        "A": [
+          [
+            "persuasion",
+            0.78
+          ],
+          [
+            "audacia",
+            0.76
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.82
+          ],
+          [
+            "obstaculo",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El 30 de noviembre de 1854 Said Pasha firmó la concesión; Lesseps no escuchaba críticas adversas ni retrocedía ante obstáculos, y reunió con suscripciones francesas más de la mitad del capital.",
+            "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+            "source_date": "2026-10-27",
+            "claim_date": "1858",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El canal fue inaugurado oficialmente el 17 de noviembre de 1869 pese a la resistencia del gobierno británico.",
+            "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+            "source_date": "2026-10-27",
+            "claim_date": "1869-11-17",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1880",
+        "corte": "C2_1880",
+        "cut_id": "C2_1880",
+        "date": "1880",
+        "fecha_corte": "1880",
+        "hecho": "Un congreso en París vota un canal de Panamá a nivel del mar, sin esclusas, como Suez; con 74 años lo nombran presidente de la compañía y Gambetta lo llama 'Le Grand Français'; recorre Estados Unidos buscando dinero y estima 658 millones de francos y ocho años de obra.",
+        "P": [
+          [
+            "ambicion",
+            0.82
+          ],
+          [
+            "orgullo_hubris",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "persuasion",
+            0.8
+          ],
+          [
+            "apuesta_extrema",
+            0.76
+          ]
+        ],
+        "C": [
+          [
+            "redes_prestigio",
+            0.8
+          ],
+          [
+            "popularidad",
+            0.74
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En mayo de 1879 un congreso de 136 delegados en París votó un canal de Panamá sin esclusas; Lesseps, de 74 años, fue nombrado presidente de la compañía y Gambetta lo llamó 'Le Grand Français'.",
+            "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+            "source_date": "2026-10-27",
+            "claim_date": "1879-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En febrero de 1880 fue a Nueva York a reunir dinero; en 1880 estimó que el proyecto costaría 658 millones de francos y ocho años.",
+            "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+            "source_date": "2026-10-27",
+            "claim_date": "1880",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1886",
+        "corte": "C3_1886",
+        "cut_id": "C3_1886",
+        "date": "1886",
+        "fecha_corte": "1886",
+        "hecho": "La obra empezó en 1882; las dificultades técnicas del trópico húmedo la acosan: deslizamientos recurrentes de cerros saturados dentro de las excavaciones y muertes por malaria y fiebre amarilla.",
+        "P": [
+          [
+            "determinacion",
+            0.78
+          ],
+          [
+            "confianza_ciega",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "esfuerzo_sostenido_reciente",
+            0.72
+          ],
+          [
+            "negacion_problema",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "terreno_hostil",
+            0.82
+          ],
+          [
+            "aviso_ignorado",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Tras dos años de estudios, la obra del canal comenzó en 1882; las dificultades técnicas del trópico húmedo, los deslizamientos recurrentes y la mortalidad por malaria y fiebre amarilla acosaron el proyecto.",
+            "source_url": "https://en.wikipedia.org/wiki/Ferdinand_de_Lesseps",
+            "source_date": "2026-10-27",
+            "claim_date": "1886",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1886."
+  }
+}

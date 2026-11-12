@@ -1,0 +1,476 @@
+{
+  "case_id": "CAL_F004_03_OPPENHEIMER",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 33.205,
+  "result_completo_sha256": "7ee4e9845b212000d7eeda50e53c1849961ec37e0f3ebb086ed2877b5955da06",
+  "result_completo_bytes": 5644362,
+  "entrada_sha256": "b51580b50f6b349b29671444ac1b3d32bd538d8c7e35596c9c3f8b41c7b7d7ef",
+  "receipt_sha256": "4449c4166319e465cd228329ce7891834907b150a0384497cd27fa59d8ab6ca5",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "mauss_02_deuda_de_honor",
+      "porcentaje_relleno": 56.58,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 0.0,
+        "dynamis": 57.5,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 100.0,
+        "otras_dimensiones": 43.0556,
+        "puente_lateral": 61.8718,
+        "resolucion": 100.0,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.237411,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.07
+    },
+    "H2": {
+      "familia": "20_sacrificio_por_un_ideal",
+      "porcentaje_relleno": 52.37,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 100.0,
+        "booker": 37.5,
+        "dynamis": 37.5,
+        "estructura": 0.0,
+        "frye": 50.0,
+        "geometria_inercia": 62.5,
+        "greimas": 41.6667,
+        "otras_dimensiones": 62.5,
+        "puente_lateral": 66.8879,
+        "resolucion": 62.5,
+        "trayectoria_estado": 55.0
+      },
+      "peso_relativo": 0.223442,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.24
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.9,
+      "techo_pct": 92.1,
+      "pp_por_punto_de_rank_fusion": 1.830435,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "mauss_02_deuda_de_honor",
+        "rol": "eje",
+        "peso_en_set": 0.237411,
+        "predictibilidad_estructural_pct": 56.07,
+        "cobertura_unica_frac": 0.3333
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.223442,
+        "predictibilidad_estructural_pct": 53.24,
+        "cobertura_unica_frac": 0.1645
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.227482,
+        "predictibilidad_estructural_pct": 54.06,
+        "cobertura_unica_frac": 0.1602
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.162824,
+        "predictibilidad_estructural_pct": 40.94,
+        "cobertura_unica_frac": 0.1732
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.148841,
+        "predictibilidad_estructural_pct": 38.1,
+        "cobertura_unica_frac": 0.1688
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "mauss_02_deuda_de_honor domina; 20_sacrificio_por_un_ideal es rival distinto (margen 1.100668 >= 1.0 y afinidad 0.066667 < 0.5)",
+      "peso_H1": 0.237411,
+      "peso_H2": 0.223442,
+      "peso_H1_en_par": 0.515156,
+      "peso_H2_en_par": 0.484844
+    },
+    "grado": "FIRME",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "mauss_02_deuda_de_honor",
+          "rol_en_set": "eje",
+          "rank_fusion": 26.318458,
+          "soporte_estructural_relativo": 0.23741074,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.282968,
+            "micro": 0.63497,
+            "meso": 0.644741,
+            "macro": 0.644741,
+            "aceleracion": 0.478813,
+            "divergencia_entre_escala": 0.00977,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.21779,
+          "soporte_estructural_relativo": 0.22748195,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.028254,
+            "micro": 0.4964,
+            "meso": 0.48061,
+            "macro": 0.48061,
+            "aceleracion": 0.531558,
+            "divergencia_entre_escala": 0.01579,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.769912,
+          "soporte_estructural_relativo": 0.22344178,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.02115,
+            "micro": 0.497333,
+            "meso": 0.485471,
+            "macro": 0.485471,
+            "aceleracion": 0.523716,
+            "divergencia_entre_escala": 0.011863,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.050063,
+          "soporte_estructural_relativo": 0.16282408,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.019464,
+            "micro": 0.490135,
+            "meso": 0.490335,
+            "macro": 0.490335,
+            "aceleracion": 0.4996,
+            "divergencia_entre_escala": 0.0002,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.5,
+          "soporte_estructural_relativo": 0.14884144,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.022571,
+            "micro": 0.4968,
+            "meso": 0.484671,
+            "macro": 0.484671,
+            "aceleracion": 0.524248,
+            "divergencia_entre_escala": 0.012129,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "20_sacrificio_por_un_ideal",
+            "arquetipo_el_gobernante",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.76258925,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "mauss_02_deuda_de_honor"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.23741074,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "30_ambicion",
+          "20_sacrificio_por_un_ideal",
+          "arquetipo_el_gobernante",
+          "candidato_trayectoria_arte_prestigio"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.76258925,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_03_OPPENHEIMER",
+    "question": "¿Qué trayectoria sigue J. Robert Oppenheimer después de septiembre de 1953?",
+    "person": "J. Robert Oppenheimer",
+    "tipo_sujeto": "cientifico",
+    "freeze": "1953-10-01",
+    "z_trabajo": "1953-10-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1953-06",
+    "cuts": [
+      {
+        "id": "C1_1947",
+        "corte": "C1_1947",
+        "cut_id": "C1_1947",
+        "date": "1947",
+        "fecha_corte": "1947",
+        "hecho": "Director del Instituto de Estudios Avanzados de Princeton y presidente del Comité Asesor General de la nueva Comisión de Energía Atómica; promueve el control internacional de las armas nucleares.",
+        "P": [
+          [
+            "ambicion",
+            0.74
+          ],
+          [
+            "idealismo",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "liderazgo",
+            0.8
+          ],
+          [
+            "transmision_saber",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.8
+          ],
+          [
+            "redes_prestigio",
+            0.78
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1947 Oppenheimer fue nombrado director del Institute for Advanced Study y presidente del General Advisory Committee de la AEC; abogó por el control internacional de la energía y las armas nucleares.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1947",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1950",
+        "corte": "C2_1950",
+        "cut_id": "C2_1950",
+        "date": "1950-01-31",
+        "fecha_corte": "1950-01-31",
+        "hecho": "En 1949 testifica ante el Comité de Actividades Antiestadounidenses sobre sus vínculos comunistas de los años treinta y los de sus alumnos; el GAC que preside recomienda no desarrollar la Super; Truman decide desarrollarla y Oppenheimer piensa en renunciar.",
+        "P": [
+          [
+            "obligacion_moral",
+            0.78
+          ],
+          [
+            "orgullo",
+            0.66
+          ]
+        ],
+        "A": [
+          [
+            "oposicion",
+            0.78
+          ],
+          [
+            "disenso_individual",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "derrota_temporal",
+            0.74
+          ],
+          [
+            "desconfianza_autoridad",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El 7 de junio de 1949 testificó ante el House Un-American Activities Committee sobre sus asociaciones con el Partido Comunista en los años treinta y señaló a varios alumnos.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1949-06-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En octubre de 1949 Oppenheimer y el GAC recomendaron no desarrollar la Super; el 31 de enero de 1950 Truman decidió hacerlo; los opositores del GAC pensaron en renunciar.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1950-01-31",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1953_06",
+        "corte": "C3_1953_06",
+        "cut_id": "C3_1953_06",
+        "date": "1953-06",
+        "fecha_corte": "1953-06",
+        "hecho": "Sale del GAC en agosto de 1952 porque Truman no lo renueva (opositores pidieron su salida); preside el panel de desarme y publica en Foreign Affairs (junio de 1953) contra arsenales cada vez mayores; Lewis Strauss, comisionado de la AEC, le guarda resentimiento.",
+        "P": [
+          [
+            "obligacion_moral",
+            0.76
+          ],
+          [
+            "orgullo",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "persuasion",
+            0.74
+          ],
+          [
+            "transparencia",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.8
+          ],
+          [
+            "hostilidad",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Oppenheimer dejó el GAC al vencer su mandato en agosto de 1952; Truman no lo renovó y varios opositores habían pedido su salida.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1952-08",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Presidió en 1952 el panel de consultores de desarme del Departamento de Estado y en un artículo de junio de 1953 en Foreign Affairs expuso la inutilidad de arsenales cada vez mayores.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1953-06",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Strauss, comisionado de la AEC, guardaba resentimiento contra Oppenheimer por su oposición a la bomba de hidrógeno y por haberlo humillado ante el Congreso.",
+            "source_url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+            "source_date": "2026-10-27",
+            "claim_date": "1953-06",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta junio de 1953."
+  }
+}

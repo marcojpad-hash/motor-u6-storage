@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F004_02_DAVID",
+ "question": "¿Qué trayectoria sigue Jacques-Louis David después de junio de 1794?",
+ "person": "Jacques-Louis David",
+ "tipo_sujeto": "artista",
+ "freeze": "1794-07-01",
+ "z_trabajo": "1794-07-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F004",
+  "custodio_destino": "GrokBot-custodio-rutina-F004",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1794-06-08",
+ "cuts": [
+  {
+   "id": "C1_1784",
+   "corte": "C1_1784",
+   "cut_id": "C1_1784",
+   "date": "1784",
+   "fecha_corte": "1784",
+   "hecho": "Tras tres intentos fallidos por el Premio de Roma (con huelga de hambre en 1772) lo gana en 1774; en Roma pinta El juramento de los Horacios.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "perfeccionismo",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.76
+    ],
+    [
+     "creatividad",
+     0.82
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.74
+    ],
+    [
+     "rivalidad_profesional",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "David hizo tres intentos consecutivos por el Premio de Roma; tras la segunda derrota en 1772 hizo una huelga de hambre; en 1774 ganó el premio.",
+     "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+     "source_date": "2026-10-27",
+     "claim_date": "1774",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En Roma pintó El juramento de los Horacios en 1784.",
+     "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+     "source_date": "2026-10-27",
+     "claim_date": "1784",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1793",
+   "corte": "C2_1793",
+   "cut_id": "C2_1793",
+   "date": "1793",
+   "fecha_corte": "1793",
+   "hecho": "Jacobino y amigo de Robespierre y de Marat; vota en la Convención por la ejecución de Luis XVI; tras el asesinato de Marat pinta La muerte de Marat, imagen central del Terror.",
+   "P": [
+    [
+     "idealismo",
+     0.78
+    ],
+    [
+     "lealtad_declarada",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.72
+    ],
+    [
+     "autoexpresion",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "poder",
+     0.7
+    ],
+    [
+     "escalada",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "David era amigo de Robespierre, miembro del Club Jacobino y regicida: votó en la Convención por la ejecución de Luis XVI (ejecutado el 21 de enero de 1793).",
+     "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+     "source_date": "2026-10-27",
+     "claim_date": "1793-01-21",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Marat fue asesinado el 13 de julio de 1793; La muerte de Marat, de 1793, se convirtió en la imagen principal del Terror.",
+     "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+     "source_date": "2026-10-27",
+     "claim_date": "1793",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1794_06",
+   "corte": "C3_1794_06",
+   "cut_id": "C3_1794_06",
+   "date": "1794-06-08",
+   "fecha_corte": "1794-06-08",
+   "hecho": "Miembro del Comité de Seguridad General, contribuye directamente al Terror; organiza la Fiesta del Ser Supremo de Robespierre (20 pradial del año II).",
+   "P": [
+    [
+     "devocion",
+     0.74
+    ],
+    [
+     "ambicion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "organizacion",
+     0.8
+    ],
+    [
+     "lealtad",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "abuso_poder",
+     0.7
+    ],
+    [
+     "dogmatismo",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Como miembro del Comité de Seguridad General, David contribuyó directamente al Reinado del Terror y organizó la fiesta del Ser Supremo.",
+     "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+     "source_date": "2026-10-27",
+     "claim_date": "1794-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Robespierre declaró el 20 pradial del año II (8 de junio de 1794) primer día de celebración nacional del Ser Supremo; la fiesta fue organizada por el artista David.",
+     "source_url": "https://en.wikipedia.org/wiki/Cult_of_the_Supreme_Being",
+     "source_date": "2026-10-27",
+     "claim_date": "1794-06-08",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta junio de 1794."
+}

@@ -1,0 +1,737 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "CAL_F003_03_LAVOISIER",
+  "started_epoch": 1794445640.560467,
+  "finished_epoch": 1794445669.146542,
+  "duration_seconds": 28.586,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/casos/fabrica/cola/CAL_F003_03_LAVOISIER/entrada.json",
+  "input_sha256": "33e508f4b5b2c55d7e0f052f31dfd8118f442fe999febf56c6340e3afca60091",
+  "normalized_input_sha256": "9e188e90d06f27bc7289380477637548e4bd9f23018ebe66be940c8da25363f7",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F003_03_LAVOISIER.json",
+  "output_sha256": "6b4dc7ec14d34e9e1e88c64aec8297ee80436bd81fb808e25dbe782c9bb5ce40",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "dace97ff02a16c67a4f9c9b2745d6a322785a50d5dd50b29c054b5894ea0143d",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 5701,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1771_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1771_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1771_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1783_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1783_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1783_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 783,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1789_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1024,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1789_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1789_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 900,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "arquetipo_el_sabio",
+        "porcentaje_relleno": 59.68,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 14.2857,
+          "booker": 47.619,
+          "dynamis": 55.9524,
+          "estructura": 100.0,
+          "frye": 50.0,
+          "geometria_inercia": 35.7143,
+          "greimas": 75.0,
+          "otras_dimensiones": 64.2857,
+          "puente_lateral": 89.6771,
+          "trayectoria_estado": 64.2857
+        },
+        "peso_relativo": 0.17766,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 62.23
+      },
+      "H2": {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "porcentaje_relleno": 53.88,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 35.7143,
+          "booker": 42.8571,
+          "dynamis": 48.8095,
+          "estructura": 78.5714,
+          "frye": 50.0,
+          "geometria_inercia": 92.8571,
+          "greimas": 62.5,
+          "otras_dimensiones": 67.4603,
+          "puente_lateral": 0.0,
+          "trayectoria_estado": 60.0
+        },
+        "peso_relativo": 0.134488,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 49.23
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "duckduckgo_lite",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "95afb632d3a36c9b8af3acec2adba3e2d5f70b854114dd56ed0f23f9ffdbe6a4"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "6b4dc7ec14d34e9e1e88c64aec8297ee80436bd81fb808e25dbe782c9bb5ce40"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "dace97ff02a1"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "88d11b0138a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 111,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F003_03_LAVOISIER_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F003_03_LAVOISIER_CEB_LEDGER_1.jsonl",
+          "sha256": "5ffc49299b56b7e4d5403ab4681e3283e5fc163e8483d572d0192d6258f77ba9",
+          "lineas": 25349
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "gate_z90",
+      "status": "PASA",
+      "n_errores": 0,
+      "errores": [],
+      "bloquea": false
+    },
+    {
+      "stage": "filogenia_mezcla",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_CAL_F003_03_LAVOISIER.json",
+      "sha256_json": "10364fd78a6f4d6b58a4194762a0882ca1f9a91c73e8e02e9d091efd88bb6fbc",
+      "bloquea": false
+    },
+    {
+      "stage": "teoria_color",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_CAL_F003_03_LAVOISIER.json",
+      "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_CAL_F003_03_LAVOISIER.png",
+      "sha256_json": "a50f1f3d12c9c0be38814ba2ca922453d43dcfa62f10f3f1a9ac7b9fd7e746d5",
+      "bloquea": false
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "duckduckgo_lite",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "95afb632d3a36c9b8af3acec2adba3e2d5f70b854114dd56ed0f23f9ffdbe6a4",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 142,
+    "z_corte": "1790-01-01",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1790-01-01",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 142,
+      "tokens_despues_corte": 142
+    },
+    "query": "ambicion curiosidad_abstracta acumulacion_capital alianza estatus_social redes_prestigio busqueda_verdad conocimiento verificacion metodicidad reconocimiento rivalidad_profesional orgullo organizacion transmision_saber desconfianza_autoridad",
+    "urls": [
+      "https://www.researchgate.net/publication/357741570_La_acumulacion_social_del_conocimiento_una_perspectiva_interdisciplinar/fulltext/64f0f398743dc20a6eb2aa03/La-acumulacion-social-del-conocimiento-una-perspectiva-interdisciplinar.pdf",
+      "https://fastercapital.com/es/contenido/Acumulacion-de-capital--teoria-de-la-acumulacion-de-capital-y-evidencia-empirica-para-el-desarrollo-economico.html",
+      "https://conceptualia.es/ser-humano/valores/ambicion/",
+      "https://economipedia.com/definiciones/acumulacion-del-capital.html",
+      "https://es.wikipedia.org/wiki/Ambici%C3%B3n",
+      "https://fastercapital.com/es/contenido/Acumulacion-de-capital--los-determinantes-y-los-efectos-de-la-acumulacion-de-capital-en-el-crecimiento-economico.html",
+      "https://dle.rae.es/ambici%C3%B3n",
+      "https://es.wikipedia.org/wiki/Acumulaci%C3%B3n_del_capital"
+    ],
+    "consultado_utc": "2026-11-12T01:07:22+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-12T01:07:21+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-12T01:07:21+00:00",
+        "error": "buscador duckduckgo_html sin resultados URL verificables"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-12T01:07:22+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "arquetipo_el_sabio",
+    "H2": "tainter_01_inversion_complejidad_productiva",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "arquetipo_el_sabio",
+      "porcentaje_relleno": 59.68,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 14.2857,
+        "booker": 47.619,
+        "dynamis": 55.9524,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 35.7143,
+        "greimas": 75.0,
+        "otras_dimensiones": 64.2857,
+        "puente_lateral": 89.6771,
+        "trayectoria_estado": 64.2857
+      },
+      "peso_relativo": 0.17766,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 62.23
+    },
+    "H2": {
+      "familia": "tainter_01_inversion_complejidad_productiva",
+      "porcentaje_relleno": 53.88,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 35.7143,
+        "booker": 42.8571,
+        "dynamis": 48.8095,
+        "estructura": 78.5714,
+        "frye": 50.0,
+        "geometria_inercia": 92.8571,
+        "greimas": 62.5,
+        "otras_dimensiones": 67.4603,
+        "puente_lateral": 0.0,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.134488,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 49.23
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.75,
+      "techo_pct": 91.25,
+      "pp_por_punto_de_rank_fusion": 1.793478,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "eje",
+        "peso_en_set": 0.292369,
+        "predictibilidad_estructural_pct": 62.23,
+        "cobertura_unica_frac": 0.391
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.21876,
+        "predictibilidad_estructural_pct": 48.76,
+        "cobertura_unica_frac": 0.1218
+      },
+      {
+        "familia": "mbti_factor_juicio_j",
+        "rol": "componente",
+        "peso_en_set": 0.189805,
+        "predictibilidad_estructural_pct": 43.47,
+        "cobertura_unica_frac": 0.2564
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.157587,
+        "predictibilidad_estructural_pct": 37.57,
+        "cobertura_unica_frac": 0.1218
+      },
+      {
+        "familia": "cliodinamica_02_fase_estanflacion_presion",
+        "rol": "componente",
+        "peso_en_set": 0.141478,
+        "predictibilidad_estructural_pct": 34.63,
+        "cobertura_unica_frac": 0.109
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "arquetipo_el_sabio domina; tainter_01_inversion_complejidad_productiva es rival distinto (margen 7.245598 >= 1.0 y afinidad 0.134311 < 0.5)",
+      "peso_H1": 0.17766,
+      "peso_H2": 0.134488,
+      "peso_H1_en_par": 0.569153,
+      "peso_H2_en_par": 0.430847
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "eje",
+          "rank_fusion": 29.817027,
+          "soporte_estructural_relativo": 0.29236885,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.304846,
+            "micro": 0.58568,
+            "meso": 0.685795,
+            "macro": 0.685795,
+            "aceleracion": 0.295504,
+            "divergencia_entre_escala": 0.100115,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.31011,
+          "soporte_estructural_relativo": 0.21876028,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.053276,
+            "micro": 0.465389,
+            "meso": 0.477349,
+            "macro": 0.477349,
+            "aceleracion": 0.476018,
+            "divergencia_entre_escala": 0.01196,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "mbti_factor_juicio_j",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.357143,
+          "soporte_estructural_relativo": 0.18980516,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.223403,
+            "micro": 0.622021,
+            "meso": 0.606542,
+            "macro": 0.606542,
+            "aceleracion": 0.53262,
+            "divergencia_entre_escala": 0.015478,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.071429,
+          "soporte_estructural_relativo": 0.15758732,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.036072,
+            "micro": 0.485737,
+            "meso": 0.480077,
+            "macro": 0.480077,
+            "aceleracion": 0.511331,
+            "divergencia_entre_escala": 0.00566,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "cliodinamica_02_fase_estanflacion_presion",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.428571,
+          "soporte_estructural_relativo": 0.14147838,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.133266,
+            "micro": 0.48707,
+            "meso": 0.606415,
+            "macro": 0.606415,
+            "aceleracion": 0.275279,
+            "divergencia_entre_escala": 0.119345,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_sabio",
+            "mbti_factor_juicio_j",
+            "cliodinamica_02_fase_estanflacion_presion"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.62365239,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.3763476,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_sabio",
+          "mbti_factor_juicio_j",
+          "cliodinamica_02_fase_estanflacion_presion"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.62365239,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F003_03_LAVOISIER",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F003_03_LAVOISIER",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1826
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 58,
+          "new_event_records": 2196,
+          "new_token_strings": 83,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1909
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F003_03_LAVOISIER",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F003_03_LAVOISIER",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1909
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 60,
+          "new_event_records": 3602,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1909
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "case_id": "CAL_F003_03_LAVOISIER",
+  "lote": "F003",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 28.586,
+  "result_completo_sha256": "6b4dc7ec14d34e9e1e88c64aec8297ee80436bd81fb808e25dbe782c9bb5ce40",
+  "result_completo_bytes": 6287165,
+  "entrada_sha256": "33e508f4b5b2c55d7e0f052f31dfd8118f442fe999febf56c6340e3afca60091",
+  "receipt_sha256": "2b2ae3431e303e4f491dbaa52a8e72a92d73bda2040ccba48e97d0f3d5835f4b",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "arquetipo_el_sabio",
+      "porcentaje_relleno": 59.68,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 14.2857,
+        "booker": 47.619,
+        "dynamis": 55.9524,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 35.7143,
+        "greimas": 75.0,
+        "otras_dimensiones": 64.2857,
+        "puente_lateral": 89.6771,
+        "trayectoria_estado": 64.2857
+      },
+      "peso_relativo": 0.17766,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 62.23
+    },
+    "H2": {
+      "familia": "tainter_01_inversion_complejidad_productiva",
+      "porcentaje_relleno": 53.88,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 35.7143,
+        "booker": 42.8571,
+        "dynamis": 48.8095,
+        "estructura": 78.5714,
+        "frye": 50.0,
+        "geometria_inercia": 92.8571,
+        "greimas": 62.5,
+        "otras_dimensiones": 67.4603,
+        "puente_lateral": 0.0,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.134488,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 49.23
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.75,
+      "techo_pct": 91.25,
+      "pp_por_punto_de_rank_fusion": 1.793478,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "eje",
+        "peso_en_set": 0.292369,
+        "predictibilidad_estructural_pct": 62.23,
+        "cobertura_unica_frac": 0.391
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.21876,
+        "predictibilidad_estructural_pct": 48.76,
+        "cobertura_unica_frac": 0.1218
+      },
+      {
+        "familia": "mbti_factor_juicio_j",
+        "rol": "componente",
+        "peso_en_set": 0.189805,
+        "predictibilidad_estructural_pct": 43.47,
+        "cobertura_unica_frac": 0.2564
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.157587,
+        "predictibilidad_estructural_pct": 37.57,
+        "cobertura_unica_frac": 0.1218
+      },
+      {
+        "familia": "cliodinamica_02_fase_estanflacion_presion",
+        "rol": "componente",
+        "peso_en_set": 0.141478,
+        "predictibilidad_estructural_pct": 34.63,
+        "cobertura_unica_frac": 0.109
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "arquetipo_el_sabio domina; tainter_01_inversion_complejidad_productiva es rival distinto (margen 7.245598 >= 1.0 y afinidad 0.134311 < 0.5)",
+      "peso_H1": 0.17766,
+      "peso_H2": 0.134488,
+      "peso_H1_en_par": 0.569153,
+      "peso_H2_en_par": 0.430847
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "eje",
+          "rank_fusion": 29.817027,
+          "soporte_estructural_relativo": 0.29236885,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.304846,
+            "micro": 0.58568,
+            "meso": 0.685795,
+            "macro": 0.685795,
+            "aceleracion": 0.295504,
+            "divergencia_entre_escala": 0.100115,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.31011,
+          "soporte_estructural_relativo": 0.21876028,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.053276,
+            "micro": 0.465389,
+            "meso": 0.477349,
+            "macro": 0.477349,
+            "aceleracion": 0.476018,
+            "divergencia_entre_escala": 0.01196,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "mbti_factor_juicio_j",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.357143,
+          "soporte_estructural_relativo": 0.18980516,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.223403,
+            "micro": 0.622021,
+            "meso": 0.606542,
+            "macro": 0.606542,
+            "aceleracion": 0.53262,
+            "divergencia_entre_escala": 0.015478,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.071429,
+          "soporte_estructural_relativo": 0.15758732,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.036072,
+            "micro": 0.485737,
+            "meso": 0.480077,
+            "macro": 0.480077,
+            "aceleracion": 0.511331,
+            "divergencia_entre_escala": 0.00566,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "cliodinamica_02_fase_estanflacion_presion",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.428571,
+          "soporte_estructural_relativo": 0.14147838,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.133266,
+            "micro": 0.48707,
+            "meso": 0.606415,
+            "macro": 0.606415,
+            "aceleracion": 0.275279,
+            "divergencia_entre_escala": 0.119345,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_sabio",
+            "mbti_factor_juicio_j",
+            "cliodinamica_02_fase_estanflacion_presion"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.62365239,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.3763476,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_sabio",
+          "mbti_factor_juicio_j",
+          "cliodinamica_02_fase_estanflacion_presion"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.62365239,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F003_03_LAVOISIER",
+    "question": "¿Qué trayectoria sigue Antoine Lavoisier tras publicar su Traité élémentaire de chimie mientras sigue siendo socio de la Ferme générale?",
+    "person": "Antoine Lavoisier",
+    "tipo_sujeto": "cientifico",
+    "freeze": "1790-01-01",
+    "z_trabajo": "1790-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F003",
+      "custodio_destino": "GrokBot-custodio-rutina-F003",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1789",
+    "cuts": [
+      {
+        "id": "C1_1771",
+        "corte": "C1_1771",
+        "cut_id": "C1_1771",
+        "date": "1771",
+        "fecha_corte": "1771",
+        "hecho": "En 1768 recibió un nombramiento provisional en la Academia de Ciencias y, hacia esa fecha, compró una participación en la Ferme générale, la compañía privada que adelantaba al rey los impuestos a cambio de cobrarlos; en 1771 se casó con Marie-Anne Paulze, hija de un alto miembro de la Ferme.",
+        "P": [
+          [
+            "ambicion",
+            0.76
+          ],
+          [
+            "curiosidad_abstracta",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "acumulacion_capital",
+            0.74
+          ],
+          [
+            "alianza",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "estatus_social",
+            0.78
+          ],
+          [
+            "redes_prestigio",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1768 Lavoisier recibió un nombramiento provisional en la Academia de Ciencias.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1768",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "A los 26 años, cerca de su elección en la Academia, compró una participación en la Ferme générale, compañía de arrendamiento de impuestos que adelantaba al gobierno el ingreso estimado a cambio del derecho a cobrarlo.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1769",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1771, a los 28 años, se casó con Marie-Anne Pierrette Paulze, de 13 años, hija de un alto miembro de la Ferme générale.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1771",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1783",
+        "corte": "C2_1783",
+        "cut_id": "C2_1783",
+        "date": "1783",
+        "fecha_corte": "1783",
+        "hecho": "En 1775 fue nombrado uno de los cuatro comisarios de la pólvora y mejoró la cantidad y calidad de la pólvora francesa; en 1783 leyó en la Academia sus Réflexions sur le phlogistique, un ataque frontal a la teoría del flogisto, y reconoció el agua como óxido de un gas que llamó hidrógeno.",
+        "P": [
+          [
+            "busqueda_verdad",
+            0.82
+          ],
+          [
+            "conocimiento",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "verificacion",
+            0.82
+          ],
+          [
+            "metodicidad",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.76
+          ],
+          [
+            "rivalidad_profesional",
+            0.68
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1775 fue nombrado uno de los cuatro comisarios de la pólvora; gracias a su trabajo mejoraron la cantidad y calidad de la pólvora francesa, que se volvió fuente de ingresos para el gobierno.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1775",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1783 leyó en la Academia Réflexions sur le phlogistique, un ataque completo a la teoría del flogisto, y en junio de 1783 reconoció el agua como óxido de un gas hidrogenador.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1783",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1789",
+        "corte": "C3_1789",
+        "cut_id": "C3_1789",
+        "date": "1789",
+        "fecha_corte": "1789",
+        "hecho": "En 1787 presentó con Guyton de Morveau, Berthollet y Fourcroy la Méthode de nomenclature chimique, ligada a su teoría del oxígeno, y en 1789 publicó el Traité élémentaire de chimie, síntesis de su obra; seguía siendo administrador de la Ferme générale, uno de los organismos más odiados del Antiguo Régimen por sus ganancias, sus contratos secretos y la violencia de sus agentes armados.",
+        "P": [
+          [
+            "busqueda_verdad",
+            0.82
+          ],
+          [
+            "orgullo",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "organizacion",
+            0.8
+          ],
+          [
+            "transmision_saber",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.8
+          ],
+          [
+            "desconfianza_autoridad",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1787 presentó a la Academia, con Guyton de Morveau, Berthollet y Fourcroy, la Méthode de nomenclature chimique, ligada a su nueva teoría del oxígeno.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1787",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El Traité élémentaire de chimie, publicado en 1789, sintetiza su contribución a la química.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1789",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Era administrador de la Ferme générale, uno de los componentes más odiados del Antiguo Régimen por sus ganancias a costa del Estado, el secreto de sus contratos y la violencia de sus agentes armados.",
+            "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+            "source_date": "2026-10-26",
+            "claim_date": "1789",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1789."
+  }
+}

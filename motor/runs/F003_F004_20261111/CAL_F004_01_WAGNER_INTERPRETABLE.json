@@ -1,0 +1,538 @@
+{
+  "case_id": "CAL_F004_01_WAGNER",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 37.091,
+  "result_completo_sha256": "50522c7c17ce8dc9283bf7181a8af6ef81dfcdd1e46cae7ce2b2b9eb7411ebe3",
+  "result_completo_bytes": 6665902,
+  "entrada_sha256": "ff8e2bf77851d9dcde1c4f4a269178b58b1fc62a8ab0a24cd4d49f839eaf352c",
+  "receipt_sha256": "dcd999c4b668123ec6f44a81158038e7a61bfb366f100dbc2a0a43850f51b9f5",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 68.17,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 55.5556,
+        "booker": 48.1481,
+        "dynamis": 84.4444,
+        "estructura": 55.5556,
+        "frye": 51.8519,
+        "geometria_inercia": 94.4444,
+        "greimas": 77.7778,
+        "otras_dimensiones": 83.3333,
+        "puente_lateral": 72.7982,
+        "trayectoria_estado": 57.7778
+      },
+      "peso_relativo": 0.148622,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 66.79
+    },
+    "H2": {
+      "familia": "12_obtencion",
+      "porcentaje_relleno": 55.43,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 66.6667,
+        "booker": 40.7407,
+        "dynamis": 80.0,
+        "estructura": 44.4444,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 55.5556,
+        "otras_dimensiones": 51.3889,
+        "puente_lateral": 74.3783,
+        "trayectoria_estado": 41.1111
+      },
+      "peso_relativo": 0.121492,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.02
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.75,
+      "techo_pct": 92.25,
+      "pp_por_punto_de_rank_fusion": 1.965116,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "eje",
+        "peso_en_set": 0.259494,
+        "predictibilidad_estructural_pct": 66.79,
+        "cobertura_unica_frac": 0.2328
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.183474,
+        "predictibilidad_estructural_pct": 49.5,
+        "cobertura_unica_frac": 0.2409
+      },
+      {
+        "familia": "monomito_06_pruebas_aliados_y_enemigos",
+        "rol": "componente",
+        "peso_en_set": 0.158337,
+        "predictibilidad_estructural_pct": 43.78,
+        "cobertura_unica_frac": 0.1498
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.136809,
+        "predictibilidad_estructural_pct": 38.88,
+        "cobertura_unica_frac": 0.0769
+      },
+      {
+        "familia": "5_persecucion",
+        "rol": "componente",
+        "peso_en_set": 0.134826,
+        "predictibilidad_estructural_pct": 38.43,
+        "cobertura_unica_frac": 0.1559
+      },
+      {
+        "familia": "8_rebelion",
+        "rol": "componente",
+        "peso_en_set": 0.12706,
+        "predictibilidad_estructural_pct": 36.66,
+        "cobertura_unica_frac": 0.0729
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "schwartz_07_logro con componentes de 12_obtencion (afinidad 0.531922 >= 0.5)",
+      "peso_H1": 0.148622,
+      "peso_H2": 0.121492,
+      "peso_H1_en_par": 0.55022,
+      "peso_H2_en_par": 0.44978
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 9,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "eje",
+          "rank_fusion": 30.046082,
+          "soporte_estructural_relativo": 0.16813386,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.367796,
+            "micro": 0.693046,
+            "meso": 0.679324,
+            "macro": 0.679324,
+            "aceleracion": 0.531824,
+            "divergencia_entre_escala": 0.013722,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "12_obtencion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 24.561373,
+          "soporte_estructural_relativo": 0.13744216,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.267566,
+            "micro": 0.623023,
+            "meso": 0.639163,
+            "macro": 0.639163,
+            "aceleracion": 0.465389,
+            "divergencia_entre_escala": 0.01614,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.604414,
+          "soporte_estructural_relativo": 0.13208715,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.408898,
+            "micro": 0.684242,
+            "meso": 0.714553,
+            "macro": 0.714553,
+            "aceleracion": 0.428363,
+            "divergencia_entre_escala": 0.030311,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.243915,
+          "soporte_estructural_relativo": 0.11887811,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.396138,
+            "micro": 0.656439,
+            "meso": 0.718884,
+            "macro": 0.718884,
+            "aceleracion": 0.358258,
+            "divergencia_entre_escala": 0.062445,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "monomito_06_pruebas_aliados_y_enemigos",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.333333,
+          "soporte_estructural_relativo": 0.10259088,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.242214,
+            "micro": 0.642232,
+            "meso": 0.610544,
+            "macro": 0.610544,
+            "aceleracion": 0.567322,
+            "divergencia_entre_escala": 0.031688,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.840727,
+          "soporte_estructural_relativo": 0.08864259,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.026927,
+            "micro": 0.484938,
+            "meso": 0.487336,
+            "macro": 0.487336,
+            "aceleracion": 0.4952,
+            "divergencia_entre_escala": 0.002398,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "5_persecucion",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.611111,
+          "soporte_estructural_relativo": 0.08735769,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.046715,
+            "micro": 0.485071,
+            "meso": 0.472428,
+            "macro": 0.472428,
+            "aceleracion": 0.525312,
+            "divergencia_entre_escala": 0.012643,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "strauss_howe_02_the_awakening",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 14.750526,
+          "soporte_estructural_relativo": 0.08254197,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.064321,
+            "micro": 0.485737,
+            "meso": 0.555372,
+            "macro": 0.555372,
+            "aceleracion": 0.363794,
+            "divergencia_entre_escala": 0.069635,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "8_rebelion",
+          "rol_en_set": "componente",
+          "rank_fusion": 14.711859,
+          "soporte_estructural_relativo": 0.0823256,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.017686,
+            "micro": 0.496667,
+            "meso": 0.488402,
+            "macro": 0.488402,
+            "aceleracion": 0.516527,
+            "divergencia_entre_escala": 0.008265,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "schwartz_07_logro",
+            "12_obtencion",
+            "9_audaz_empresa",
+            "arquetipo_el_creador",
+            "monomito_06_pruebas_aliados_y_enemigos"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 0.65913216,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "20_sacrificio_por_un_ideal",
+            "5_persecucion",
+            "strauss_howe_02_the_awakening",
+            "8_rebelion"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.34086785,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "12_obtencion",
+          "9_audaz_empresa",
+          "arquetipo_el_creador",
+          "monomito_06_pruebas_aliados_y_enemigos"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 0.65913216,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_01_WAGNER",
+    "question": "¿Qué trayectoria sigue Richard Wagner después de su situación a finales de 1863?",
+    "person": "Richard Wagner",
+    "tipo_sujeto": "artista",
+    "freeze": "1864-01-01",
+    "z_trabajo": "1864-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1863",
+    "cuts": [
+      {
+        "id": "C1_1849",
+        "corte": "C1_1849",
+        "cut_id": "C1_1849",
+        "date": "1849",
+        "fecha_corte": "1849",
+        "hecho": "Participa en el fallido Levantamiento de Mayo de Dresde; se emiten órdenes de arresto, huye a París y se instala en Zúrich; comienza un exilio de Alemania.",
+        "P": [
+          [
+            "idealismo",
+            0.76
+          ],
+          [
+            "rebeldia",
+            0.74
+          ]
+        ],
+        "A": [
+          [
+            "insurreccion",
+            0.72
+          ],
+          [
+            "fugitivo",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "persecucion",
+            0.76
+          ],
+          [
+            "distancia_forzada",
+            0.74
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1849 estalló el fallido Levantamiento de Mayo en Dresde, con un papel menor de Wagner; hubo órdenes de arresto y Wagner huyó a París y luego a Zúrich.",
+            "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+            "source_date": "2026-10-27",
+            "claim_date": "1849",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1861",
+        "corte": "C2_1861",
+        "cut_id": "C2_1861",
+        "date": "1861",
+        "fecha_corte": "1861",
+        "hecho": "El Tannhäuser de París es un fiasco notable: protestas organizadas por el Jockey Club y retirada de la obra tras pocas funciones.",
+        "P": [
+          [
+            "ambicion",
+            0.78
+          ],
+          [
+            "autoexpresion",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.8
+          ],
+          [
+            "audacia",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "derrota_temporal",
+            0.76
+          ],
+          [
+            "hostilidad",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Las funciones del Tannhäuser de París en 1861 fueron un fiasco notable, con manifestaciones organizadas por el Jockey Club en el teatro.",
+            "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+            "source_date": "2026-10-27",
+            "claim_date": "1861",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1863",
+        "corte": "C3_1863",
+        "cut_id": "C3_1863",
+        "date": "1863",
+        "fecha_corte": "1863",
+        "hecho": "Levantada la prohibición política (1862), vive en Biebrich, se separa de forma irrevocable de su esposa Minna y empieza Los maestros cantores; Tristán e Isolda sigue sin estrenarse en Viena, con fama de 'imposible', lo que agrava sus problemas económicos.",
+        "P": [
+          [
+            "determinacion",
+            0.78
+          ],
+          [
+            "ambicion",
+            0.74
+          ]
+        ],
+        "A": [
+          [
+            "esfuerzo_sostenido_reciente",
+            0.74
+          ],
+          [
+            "creatividad",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "vulnerabilidad_financiera_inmediata",
+            0.8
+          ],
+          [
+            "obstaculo",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "La prohibición política sobre Wagner en la Confederación Germánica se levantó por completo en 1862; se instaló en Biebrich, donde se separó irrevocablemente de Minna.",
+            "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+            "source_date": "2026-10-27",
+            "claim_date": "1862",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En Biebrich comenzó Die Meistersinger von Nürnberg; entre 1861 y 1863 buscó estrenar Tristan und Isolde en Viena, que quedó sin representarse pese a muchos ensayos, con fama de 'imposible' de cantar, lo que se sumó a sus problemas económicos.",
+            "source_url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+            "source_date": "2026-10-27",
+            "claim_date": "1863",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1863."
+  }
+}

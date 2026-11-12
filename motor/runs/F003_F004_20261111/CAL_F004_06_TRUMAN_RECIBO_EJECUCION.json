@@ -1,0 +1,717 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "CAL_F004_06_TRUMAN",
+  "started_epoch": 1794446375.058543,
+  "finished_epoch": 1794446411.325091,
+  "duration_seconds": 36.267,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/casos/fabrica/cola/CAL_F004_06_TRUMAN/entrada.json",
+  "input_sha256": "1691fb7f5844d4c75dffacfdb86bb8edc28d5a8101c5af26151769b6d3f5fc65",
+  "normalized_input_sha256": "bb7f08d64626ea75ad663cee1fd71fb25b562492dc0aacf895df71d1cab1c6a0",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F004_06_TRUMAN.json",
+  "output_sha256": "82709cd06cad0f7ef6a3c56de34fb06cc021c4d35fd3d953433add336ebdbf55",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "dace97ff02a16c67a4f9c9b2745d6a322785a50d5dd50b29c054b5894ea0143d",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 7158,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1945_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 900,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1945_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1156,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1945_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1024,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1946_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1946_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 675,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1946_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 900,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1948_07_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 675,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1948_07_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1948_07_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "9_audaz_empresa",
+        "porcentaje_relleno": 61.36,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 20.0,
+          "booker": 40.0,
+          "dynamis": 80.0,
+          "estructura": 80.0,
+          "frye": 53.3333,
+          "geometria_inercia": 50.0,
+          "greimas": 80.0,
+          "otras_dimensiones": 57.5,
+          "puente_lateral": 94.7199,
+          "trayectoria_estado": 58.0
+        },
+        "peso_relativo": 0.24344,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 63.79
+      },
+      "H2": {
+        "familia": "schwartz_07_logro",
+        "porcentaje_relleno": 45.15,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 60.0,
+          "booker": 30.0,
+          "dynamis": 40.0,
+          "estructura": 20.0,
+          "frye": 50.0,
+          "geometria_inercia": 50.0,
+          "greimas": 40.0,
+          "otras_dimensiones": 52.5,
+          "puente_lateral": 59.0263,
+          "trayectoria_estado": 50.0
+        },
+        "peso_relativo": 0.178948,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 48.97
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "bing_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "7c37528013dded70aea857b9e2ef2c223939f3326a7701ceaf3864df7bbc2313"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "82709cd06cad0f7ef6a3c56de34fb06cc021c4d35fd3d953433add336ebdbf55"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "dace97ff02a1"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "88d11b0138a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 111,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F004_06_TRUMAN_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F004_06_TRUMAN_CEB_LEDGER_1.jsonl",
+          "sha256": "41bd6f73e79f41f7827fb49ec03857465a86bf0903cfa213d2471c7c2a20bd22",
+          "lineas": 19737
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "gate_z90",
+      "status": "PASA",
+      "n_errores": 0,
+      "errores": [],
+      "bloquea": false
+    },
+    {
+      "stage": "filogenia_mezcla",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_CAL_F004_06_TRUMAN.json",
+      "sha256_json": "fa3702c11907a44213ca31aaa405b8a62d465ef00be1aacac9a3e263154c239a",
+      "bloquea": false
+    },
+    {
+      "stage": "teoria_color",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_CAL_F004_06_TRUMAN.json",
+      "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_CAL_F004_06_TRUMAN.png",
+      "sha256_json": "bab4936bae10794b81e2dc7448d27f960e0d24a6f2978d69819319c39d615bc8",
+      "bloquea": false
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "bing_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "7c37528013dded70aea857b9e2ef2c223939f3326a7701ceaf3864df7bbc2313",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 96,
+    "z_corte": "1948-08-01",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1948-08-01",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 96,
+      "tokens_despues_corte": 96
+    },
+    "query": "deber humildad responsabilidad liderazgo carga_cognitiva_evaluacion incertidumbre orgullo determinacion confrontacion_directa oposicion derrota_temporal hostilidad obligacion_moral oratoria fragmentacion",
+    "urls": [
+      "https://www.spanishdict.com/translate/deber",
+      "https://eldeber.com.bo/",
+      "https://www.spanishdict.com/conjugate/deber",
+      "https://dle.rae.es/deber",
+      "https://www.tellmeinspanish.com/verbs/deber-conjugation/",
+      "https://en.wiktionary.org/wiki/deber",
+      "https://spanishstep.com/archives/3558",
+      "https://ellaverbs.com/spanish-verbs/deber-conjugation/"
+    ],
+    "consultado_utc": "2026-11-12T01:19:37+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-12T01:19:36+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-12T01:19:36+00:00",
+        "error": "buscador duckduckgo_html sin resultados URL verificables"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-12T01:19:36+00:00",
+        "error": "buscador duckduckgo_lite sin resultados URL verificables"
+      },
+      {
+        "provider": "bing_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-12T01:19:37+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "9_audaz_empresa",
+    "H2": "schwartz_07_logro",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 61.36,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 20.0,
+        "booker": 40.0,
+        "dynamis": 80.0,
+        "estructura": 80.0,
+        "frye": 53.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 80.0,
+        "otras_dimensiones": 57.5,
+        "puente_lateral": 94.7199,
+        "trayectoria_estado": 58.0
+      },
+      "peso_relativo": 0.24344,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 63.79
+    },
+    "H2": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 45.15,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 60.0,
+        "booker": 30.0,
+        "dynamis": 40.0,
+        "estructura": 20.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 40.0,
+        "otras_dimensiones": 52.5,
+        "puente_lateral": 59.0263,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.178948,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 48.97
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.8416,
+      "techo_pct": 92.1583,
+      "pp_por_punto_de_rank_fusion": 2.161967,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "eje",
+        "peso_en_set": 0.357536,
+        "predictibilidad_estructural_pct": 63.79,
+        "cobertura_unica_frac": 0.259
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.247314,
+        "predictibilidad_estructural_pct": 46.54,
+        "cobertura_unica_frac": 0.377
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.207246,
+        "predictibilidad_estructural_pct": 40.27,
+        "cobertura_unica_frac": 0.2393
+      },
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "componente",
+        "peso_en_set": 0.187903,
+        "predictibilidad_estructural_pct": 37.24,
+        "cobertura_unica_frac": 0.1246
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "9_audaz_empresa con componentes de schwartz_07_logro (afinidad 0.633119 >= 0.5)",
+      "peso_H1": 0.24344,
+      "peso_H2": 0.178948,
+      "peso_H1_en_par": 0.576342,
+      "peso_H2_en_par": 0.423658
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "eje",
+          "rank_fusion": 25.877589,
+          "soporte_estructural_relativo": 0.35753594,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.315313,
+            "micro": 0.643946,
+            "meso": 0.664512,
+            "macro": 0.664512,
+            "aceleracion": 0.454658,
+            "divergencia_entre_escala": 0.020566,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.9,
+          "soporte_estructural_relativo": 0.24731412,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.435769,
+            "micro": 0.657041,
+            "meso": 0.748306,
+            "macro": 0.748306,
+            "aceleracion": 0.293399,
+            "divergencia_entre_escala": 0.091266,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.0,
+          "soporte_estructural_relativo": 0.20724647,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.011466,
+            "micro": 0.492667,
+            "meso": 0.495067,
+            "macro": 0.495067,
+            "aceleracion": 0.4952,
+            "divergencia_entre_escala": 0.0024,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "componente",
+          "rank_fusion": 13.6,
+          "soporte_estructural_relativo": 0.18790347,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.0072,
+            "micro": 0.497867,
+            "meso": 0.495667,
+            "macro": 0.495667,
+            "aceleracion": 0.5044,
+            "divergencia_entre_escala": 0.0022,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "9_audaz_empresa",
+            "monomito_08_la_odisea_o_prueba_suprema"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.60485006,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_gobernante",
+            "eterno_retorno_01_caos_primordial"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.39514994,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "monomito_08_la_odisea_o_prueba_suprema"
+        ],
+        "n_hipotesis": 2,
+        "soporte_estructural_agregado": 0.60485006,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F004_06_TRUMAN",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F004_06_TRUMAN",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 2635
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 97,
+          "new_event_records": 2856,
+          "new_token_strings": 65,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 2700
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F004_06_TRUMAN",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F004_06_TRUMAN",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 2700
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 99,
+          "new_event_records": 5128,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 2700
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

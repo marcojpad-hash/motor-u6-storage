@@ -1,0 +1,508 @@
+{
+  "case_id": "CAL_F004_09_LAY",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 38.923,
+  "result_completo_sha256": "1497f62d6b01836f0499957c76c36a1546a5d91c26cfabf0c9877bfae4f43e0c",
+  "result_completo_bytes": 6533832,
+  "entrada_sha256": "8f31b211572116733d883a6a9a4184a8f6004f1e3c7cc18a7857518c502f8aa5",
+  "receipt_sha256": "1eef5573aaeed52769f75b3fcf668a850a5077427f08c9356a722c9220cc18d4",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "31_conflicto_con_un_dios",
+      "porcentaje_relleno": 64.91,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 71.4286,
+        "booker": 61.9048,
+        "dynamis": 48.5714,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 71.4286,
+        "otras_dimensiones": 57.1429,
+        "puente_lateral": 78.5864,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.170367,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.12
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 51.89,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 33.3333,
+        "dynamis": 88.5714,
+        "estructura": 71.4286,
+        "frye": 47.619,
+        "geometria_inercia": 50.0,
+        "greimas": 66.6667,
+        "otras_dimensiones": 53.1746,
+        "puente_lateral": 60.9944,
+        "trayectoria_estado": 47.1429
+      },
+      "peso_relativo": 0.152273,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.41
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.275,
+      "techo_pct": 92.725,
+      "pp_por_punto_de_rank_fusion": 1.898889,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "31_conflicto_con_un_dios",
+        "rol": "eje",
+        "peso_en_set": 0.236234,
+        "predictibilidad_estructural_pct": 61.12,
+        "cobertura_unica_frac": 0.1083
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.211144,
+        "predictibilidad_estructural_pct": 55.41,
+        "cobertura_unica_frac": 0.3476
+      },
+      {
+        "familia": "5_persecucion",
+        "rol": "componente",
+        "peso_en_set": 0.160628,
+        "predictibilidad_estructural_pct": 43.89,
+        "cobertura_unica_frac": 0.1026
+      },
+      {
+        "familia": "17_fatal_imprudencia",
+        "rol": "componente",
+        "peso_en_set": 0.14863,
+        "predictibilidad_estructural_pct": 41.16,
+        "cobertura_unica_frac": 0.114
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.127929,
+        "predictibilidad_estructural_pct": 36.44,
+        "cobertura_unica_frac": 0.2137
+      },
+      {
+        "familia": "distopia_tecnica_herramienta_manda",
+        "rol": "componente",
+        "peso_en_set": 0.115434,
+        "predictibilidad_estructural_pct": 33.59,
+        "cobertura_unica_frac": 0.114
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "31_conflicto_con_un_dios domina; 30_ambicion es rival distinto (margen 3.011848 >= 1.0 y afinidad 0.158503 < 0.5)",
+      "peso_H1": 0.170367,
+      "peso_H2": 0.152273,
+      "peso_H1_en_par": 0.528041,
+      "peso_H2_en_par": 0.471959
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 6,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "31_conflicto_con_un_dios",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.358489,
+          "soporte_estructural_relativo": 0.23623395,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.393933,
+            "micro": 0.781996,
+            "meso": 0.654452,
+            "macro": 0.654452,
+            "aceleracion": 0.781996,
+            "divergencia_entre_escala": 0.127544,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.346641,
+          "soporte_estructural_relativo": 0.21114443,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.165963,
+            "micro": 0.485071,
+            "meso": 0.631936,
+            "macro": 0.631936,
+            "aceleracion": 0.23138,
+            "divergencia_entre_escala": 0.146865,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "5_persecucion",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.282494,
+          "soporte_estructural_relativo": 0.16062843,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.30326,
+            "micro": 0.72141,
+            "meso": 0.61674,
+            "macro": 0.61674,
+            "aceleracion": 0.72141,
+            "divergencia_entre_escala": 0.10467,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "17_fatal_imprudencia",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.84218,
+          "soporte_estructural_relativo": 0.14863022,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.258556,
+            "micro": 0.690203,
+            "meso": 0.598816,
+            "macro": 0.598816,
+            "aceleracion": 0.690203,
+            "divergencia_entre_escala": 0.091387,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.357143,
+          "soporte_estructural_relativo": 0.12792919,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.143258,
+            "micro": 0.46884,
+            "meso": 0.623023,
+            "macro": 0.623023,
+            "aceleracion": 0.221939,
+            "divergencia_entre_escala": 0.154183,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "distopia_tecnica_herramienta_manda",
+          "rol_en_set": "componente",
+          "rank_fusion": 13.857143,
+          "soporte_estructural_relativo": 0.11543378,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.114274,
+            "micro": 0.485338,
+            "meso": 0.593037,
+            "macro": 0.593037,
+            "aceleracion": 0.295171,
+            "divergencia_entre_escala": 0.107699,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "31_conflicto_con_un_dios",
+            "30_ambicion",
+            "5_persecucion",
+            "17_fatal_imprudencia",
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 0.88456622,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "distopia_tecnica_herramienta_manda"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.11543378,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "31_conflicto_con_un_dios",
+          "30_ambicion",
+          "5_persecucion",
+          "17_fatal_imprudencia",
+          "candidato_trayectoria_arte_prestigio"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 0.88456622,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_09_LAY",
+    "question": "¿Qué trayectoria sigue Kenneth Lay después de julio de 2001?",
+    "person": "Kenneth Lay",
+    "tipo_sujeto": "empresario",
+    "freeze": "2001-08-01",
+    "z_trabajo": "2001-08-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "2001-07",
+    "cuts": [
+      {
+        "id": "C1_1985",
+        "corte": "C1_1985",
+        "cut_id": "C1_1985",
+        "date": "1985",
+        "fecha_corte": "1985",
+        "hecho": "Hijo de un predicador bautista, crecido en la pobreza tras el fracaso de la tienda familiar; doctor en economía; preside Houston Natural Gas, que se fusiona con InterNorth y pasa a llamarse Enron, aprovechando la desregulación.",
+        "P": [
+          [
+            "ambicion",
+            0.82
+          ],
+          [
+            "verguenza_infantil",
+            0.62
+          ]
+        ],
+        "A": [
+          [
+            "oportunidad",
+            0.8
+          ],
+          [
+            "acumulacion_capital",
+            0.76
+          ]
+        ],
+        "C": [
+          [
+            "escalada_status",
+            0.8
+          ],
+          [
+            "redes_prestigio",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Lay creció en la pobreza después de que fracasara la tienda de su familia; obtuvo un doctorado en economía en 1970.",
+            "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+            "source_date": "2026-10-27",
+            "claim_date": "1970",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1984 era presidente y director general de Houston Natural Gas; InterNorth la compró y en 1985 la empresa pasó a llamarse Enron, aprovechando la desregulación energética.",
+            "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+            "source_date": "2026-10-27",
+            "claim_date": "1985",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_2000",
+        "corte": "C2_2000",
+        "cut_id": "C2_2000",
+        "date": "2000-12",
+        "fecha_corte": "2000-12",
+        "hecho": "Los ingresos de Enron pasan de 13 300 a 100 700 millones de dólares (1996–2000); la acción cierra 2000 en 83,13 dólares con capitalización de más de 60 000 millones; Lay, amigo de la familia Bush, suena para secretario de Energía o del Tesoro.",
+        "P": [
+          [
+            "ambicion",
+            0.84
+          ],
+          [
+            "orgullo",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "escalada",
+            0.8
+          ],
+          [
+            "redes_prestigio",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "prosperidad",
+            0.82
+          ],
+          [
+            "poder",
+            0.78
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Entre 1996 y 2000 los ingresos de Enron subieron de 13 300 a 100 700 millones de dólares; al 31 de diciembre de 2000 la acción valía 83,13 dólares y la capitalización superaba 60 000 millones.",
+            "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+            "source_date": "2026-10-27",
+            "claim_date": "2000-12-31",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En diciembre de 2000 Lay fue mencionado como posible secretario de Energía o del Tesoro con George W. Bush.",
+            "source_url": "https://en.wikipedia.org/wiki/Kenneth_Lay",
+            "source_date": "2026-10-27",
+            "claim_date": "2000-12",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_2001_07",
+        "corte": "C3_2001_07",
+        "cut_id": "C3_2001_07",
+        "date": "2001-07",
+        "fecha_corte": "2001-07",
+        "hecho": "Lay preside el consejo y Skilling es director general; un artículo de Fortune (marzo) pregunta si Enron está sobrevalorada y no explica cómo gana dinero; Skilling insulta a un analista que pide el balance (abril); en julio reporta ingresos récord, pero la acción cae más de 30 % frente al mismo trimestre de 2000.",
+        "P": [
+          [
+            "confianza_ciega",
+            0.78
+          ],
+          [
+            "orgullo_hubris",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "evasion",
+            0.72
+          ],
+          [
+            "complacencia",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "escepticismo",
+            0.78
+          ],
+          [
+            "aviso_ignorado",
+            0.8
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Lay era presidente del consejo de Enron y aprobaba las acciones de Skilling y Fastow sin preguntar siempre por los detalles; Skilling impulsaba la contabilidad a valor de mercado.",
+            "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+            "source_date": "2026-10-27",
+            "claim_date": "2001-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 5 de marzo de 2001 el artículo de Bethany McLean en Fortune, 'Is Enron Overpriced?', cuestionó cómo Enron mantenía su alto valor; el 17 de abril de 2001 el director general Skilling insultó al analista Richard Grubman en una llamada.",
+            "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+            "source_date": "2026-10-27",
+            "claim_date": "2001-04-17",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "A mediados de julio de 2001 Enron reportó ingresos de 50 100 millones de dólares, pero su acción había bajado más de 30 % respecto al mismo trimestre de 2000.",
+            "source_url": "https://en.wikipedia.org/wiki/Enron_scandal",
+            "source_date": "2026-10-27",
+            "claim_date": "2001-07",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta julio de 2001."
+  }
+}

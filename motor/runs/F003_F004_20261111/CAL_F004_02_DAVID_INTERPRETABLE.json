@@ -1,0 +1,528 @@
+{
+  "case_id": "CAL_F004_02_DAVID",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 36.826,
+  "result_completo_sha256": "3d70c9097ad756ced274e0f9f546a4974192153bdad3d07b94e3d87858a27276",
+  "result_completo_bytes": 8028364,
+  "entrada_sha256": "da23e1a1cfadd56f2a768c02694757930b3512231186577a3b6e3cb0ef82d104",
+  "receipt_sha256": "580b1445a32c33c64421e671a55559c95f497d9e464a5f1a9ec0df3046324c24",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 60.14,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 45.4545,
+        "booker": 69.697,
+        "dynamis": 75.3247,
+        "estructura": 100.0,
+        "frye": 48.4848,
+        "geometria_inercia": 45.4545,
+        "greimas": 68.1818,
+        "otras_dimensiones": 58.5859,
+        "puente_lateral": 52.1321,
+        "resolucion": 36.3636,
+        "trayectoria_estado": 61.8182
+      },
+      "peso_relativo": 0.109418,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.87
+    },
+    "H2": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 48.69,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 27.2727,
+        "booker": 39.3939,
+        "dynamis": 70.1299,
+        "estructura": 31.8182,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 38.6364,
+        "otras_dimensiones": 60.6061,
+        "puente_lateral": 70.4241,
+        "resolucion": 45.4545,
+        "trayectoria_estado": 51.8182
+      },
+      "peso_relativo": 0.100217,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.56
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.6167,
+      "techo_pct": 92.3834,
+      "pp_por_punto_de_rank_fusion": 1.729933,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "30_ambicion",
+        "rol": "eje",
+        "peso_en_set": 0.186636,
+        "predictibilidad_estructural_pct": 58.87,
+        "cobertura_unica_frac": 0.2461
+      },
+      {
+        "familia": "21_sacrificio_por_los_parientes",
+        "rol": "componente",
+        "peso_en_set": 0.154923,
+        "predictibilidad_estructural_pct": 50.16,
+        "cobertura_unica_frac": 0.0872
+      },
+      {
+        "familia": "social_03_janis_pensamiento_grupal",
+        "rol": "componente",
+        "peso_en_set": 0.144039,
+        "predictibilidad_estructural_pct": 47.17,
+        "cobertura_unica_frac": 0.0805
+      },
+      {
+        "familia": "anacyclosis_02_tirania",
+        "rol": "componente",
+        "peso_en_set": 0.142608,
+        "predictibilidad_estructural_pct": 46.78,
+        "cobertura_unica_frac": 0.0783
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.13962,
+        "predictibilidad_estructural_pct": 45.96,
+        "cobertura_unica_frac": 0.0872
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.134239,
+        "predictibilidad_estructural_pct": 44.48,
+        "cobertura_unica_frac": 0.2662
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.097935,
+        "predictibilidad_estructural_pct": 34.51,
+        "cobertura_unica_frac": 0.0805
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "30_ambicion domina; schwartz_07_logro es rival distinto (margen 2.491186 >= 1.0 y afinidad 0.378948 < 0.5)",
+      "peso_H1": 0.109418,
+      "peso_H2": 0.100217,
+      "peso_H1_en_par": 0.521945,
+      "peso_H2_en_par": 0.478055
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "30_ambicion",
+          "rol_en_set": "eje",
+          "rank_fusion": 29.625113,
+          "soporte_estructural_relativo": 0.18663613,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.213694,
+            "micro": 0.590847,
+            "meso": 0.614847,
+            "macro": 0.614847,
+            "aceleracion": 0.450034,
+            "divergencia_entre_escala": 0.024,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "21_sacrificio_por_los_parientes",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.591233,
+          "soporte_estructural_relativo": 0.15492304,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.351707,
+            "micro": 0.754285,
+            "meso": 0.636638,
+            "macro": 0.636638,
+            "aceleracion": 0.754285,
+            "divergencia_entre_escala": 0.117648,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "social_03_janis_pensamiento_grupal",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.863636,
+          "soporte_estructural_relativo": 0.1440393,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.302326,
+            "micro": 0.720766,
+            "meso": 0.616362,
+            "macro": 0.616362,
+            "aceleracion": 0.720766,
+            "divergencia_entre_escala": 0.104405,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "anacyclosis_02_tirania",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.636364,
+          "soporte_estructural_relativo": 0.1426075,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.302326,
+            "micro": 0.720766,
+            "meso": 0.616362,
+            "macro": 0.616362,
+            "aceleracion": 0.720766,
+            "divergencia_entre_escala": 0.104405,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.162085,
+          "soporte_estructural_relativo": 0.13961958,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.135101,
+            "micro": 0.48334,
+            "meso": 0.609656,
+            "macro": 0.609656,
+            "aceleracion": 0.264042,
+            "divergencia_entre_escala": 0.126317,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.308043,
+          "soporte_estructural_relativo": 0.13423917,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.008354,
+            "micro": 0.48667,
+            "meso": 0.51293,
+            "macro": 0.51293,
+            "aceleracion": 0.447659,
+            "divergencia_entre_escala": 0.026261,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.545455,
+          "soporte_estructural_relativo": 0.09793527,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.148162,
+            "micro": 0.497733,
+            "meso": 0.612255,
+            "macro": 0.612255,
+            "aceleracion": 0.282573,
+            "divergencia_entre_escala": 0.114521,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "21_sacrificio_por_los_parientes",
+            "social_03_janis_pensamiento_grupal",
+            "anacyclosis_02_tirania",
+            "20_sacrificio_por_un_ideal",
+            "monomito_08_la_odisea_o_prueba_suprema"
+          ],
+          "n_hipotesis": 6,
+          "soporte_estructural_agregado": 0.86576082,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_creador"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.13423917,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "30_ambicion",
+          "21_sacrificio_por_los_parientes",
+          "social_03_janis_pensamiento_grupal",
+          "anacyclosis_02_tirania",
+          "20_sacrificio_por_un_ideal",
+          "monomito_08_la_odisea_o_prueba_suprema"
+        ],
+        "n_hipotesis": 6,
+        "soporte_estructural_agregado": 0.86576082,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_02_DAVID",
+    "question": "¿Qué trayectoria sigue Jacques-Louis David después de junio de 1794?",
+    "person": "Jacques-Louis David",
+    "tipo_sujeto": "artista",
+    "freeze": "1794-07-01",
+    "z_trabajo": "1794-07-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1794-06-08",
+    "cuts": [
+      {
+        "id": "C1_1784",
+        "corte": "C1_1784",
+        "cut_id": "C1_1784",
+        "date": "1784",
+        "fecha_corte": "1784",
+        "hecho": "Tras tres intentos fallidos por el Premio de Roma (con huelga de hambre en 1772) lo gana en 1774; en Roma pinta El juramento de los Horacios.",
+        "P": [
+          [
+            "ambicion",
+            0.8
+          ],
+          [
+            "perfeccionismo",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "esfuerzo_sostenido_reciente",
+            0.76
+          ],
+          [
+            "creatividad",
+            0.82
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.74
+          ],
+          [
+            "rivalidad_profesional",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "David hizo tres intentos consecutivos por el Premio de Roma; tras la segunda derrota en 1772 hizo una huelga de hambre; en 1774 ganó el premio.",
+            "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+            "source_date": "2026-10-27",
+            "claim_date": "1774",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En Roma pintó El juramento de los Horacios en 1784.",
+            "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+            "source_date": "2026-10-27",
+            "claim_date": "1784",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1793",
+        "corte": "C2_1793",
+        "cut_id": "C2_1793",
+        "date": "1793",
+        "fecha_corte": "1793",
+        "hecho": "Jacobino y amigo de Robespierre y de Marat; vota en la Convención por la ejecución de Luis XVI; tras el asesinato de Marat pinta La muerte de Marat, imagen central del Terror.",
+        "P": [
+          [
+            "idealismo",
+            0.78
+          ],
+          [
+            "lealtad_declarada",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.72
+          ],
+          [
+            "autoexpresion",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "poder",
+            0.7
+          ],
+          [
+            "escalada",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "David era amigo de Robespierre, miembro del Club Jacobino y regicida: votó en la Convención por la ejecución de Luis XVI (ejecutado el 21 de enero de 1793).",
+            "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+            "source_date": "2026-10-27",
+            "claim_date": "1793-01-21",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Marat fue asesinado el 13 de julio de 1793; La muerte de Marat, de 1793, se convirtió en la imagen principal del Terror.",
+            "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+            "source_date": "2026-10-27",
+            "claim_date": "1793",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1794_06",
+        "corte": "C3_1794_06",
+        "cut_id": "C3_1794_06",
+        "date": "1794-06-08",
+        "fecha_corte": "1794-06-08",
+        "hecho": "Miembro del Comité de Seguridad General, contribuye directamente al Terror; organiza la Fiesta del Ser Supremo de Robespierre (20 pradial del año II).",
+        "P": [
+          [
+            "devocion",
+            0.74
+          ],
+          [
+            "ambicion",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "organizacion",
+            0.8
+          ],
+          [
+            "lealtad",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "abuso_poder",
+            0.7
+          ],
+          [
+            "dogmatismo",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Como miembro del Comité de Seguridad General, David contribuyó directamente al Reinado del Terror y organizó la fiesta del Ser Supremo.",
+            "source_url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+            "source_date": "2026-10-27",
+            "claim_date": "1794-06",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Robespierre declaró el 20 pradial del año II (8 de junio de 1794) primer día de celebración nacional del Ser Supremo; la fiesta fue organizada por el artista David.",
+            "source_url": "https://en.wikipedia.org/wiki/Cult_of_the_Supreme_Being",
+            "source_date": "2026-10-27",
+            "claim_date": "1794-06-08",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta junio de 1794."
+  }
+}

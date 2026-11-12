@@ -1,0 +1,473 @@
+{
+  "case_id": "CAL_F003_06_TROTSKY",
+  "lote": "F003",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 31.149,
+  "result_completo_sha256": "2f84183f311d20cf785d3d7186497f9b6bcc75a49d597188b26e6126de3ddcdb",
+  "result_completo_bytes": 6003417,
+  "entrada_sha256": "e92fd2825725c0359480c89c6896b76e3fca0b622c4fa9c480ffdccbe7668f47",
+  "receipt_sha256": "f0e011ce3b0b4be7961581d66e3e987169fce8c0596df16d0f5b9b21bf5d1e7d",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "24_rivalidad_de_superior_e_inferior",
+      "porcentaje_relleno": 67.02,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 14.2857,
+        "booker": 52.381,
+        "dynamis": 100.0,
+        "estructura": 100.0,
+        "frye": 45.2381,
+        "geometria_inercia": 100.0,
+        "greimas": 100.0,
+        "otras_dimensiones": 82.8571,
+        "puente_lateral": 8.2796,
+        "trayectoria_estado": 67.1429
+      },
+      "peso_relativo": 0.170748,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 59.6
+    },
+    "H2": {
+      "familia": "mauss_01_intercambio_agonistico",
+      "porcentaje_relleno": 54.12,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 42.8571,
+        "booker": 28.5714,
+        "dynamis": 64.2857,
+        "estructura": 71.4286,
+        "frye": 50.0,
+        "geometria_inercia": 35.7143,
+        "greimas": 76.1905,
+        "otras_dimensiones": 42.8571,
+        "puente_lateral": 79.336,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.154758,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.9
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 9.375,
+      "techo_pct": 90.625,
+      "pp_por_punto_de_rank_fusion": 1.805556,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "24_rivalidad_de_superior_e_inferior",
+        "rol": "eje",
+        "peso_en_set": 0.23957,
+        "predictibilidad_estructural_pct": 59.6,
+        "cobertura_unica_frac": 0.3089
+      },
+      {
+        "familia": "mauss_01_intercambio_agonistico",
+        "rol": "componente",
+        "peso_en_set": 0.217135,
+        "predictibilidad_estructural_pct": 54.9,
+        "cobertura_unica_frac": 0.1899
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.211367,
+        "predictibilidad_estructural_pct": 53.69,
+        "cobertura_unica_frac": 0.1949
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.188592,
+        "predictibilidad_estructural_pct": 48.91,
+        "cobertura_unica_frac": 0.2025
+      },
+      {
+        "familia": "utopia_oficio_roma",
+        "rol": "componente",
+        "peso_en_set": 0.143336,
+        "predictibilidad_estructural_pct": 39.42,
+        "cobertura_unica_frac": 0.1038
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "24_rivalidad_de_superior_e_inferior domina; mauss_01_intercambio_agonistico es rival distinto (margen 2.604924 >= 1.0 y afinidad 0.20337 < 0.5)",
+      "peso_H1": 0.170748,
+      "peso_H2": 0.154758,
+      "peso_H1_en_par": 0.524562,
+      "peso_H2_en_par": 0.475438
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "24_rivalidad_de_superior_e_inferior",
+          "rol_en_set": "eje",
+          "rank_fusion": 27.816594,
+          "soporte_estructural_relativo": 0.23956983,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.572795,
+            "micro": 0.834979,
+            "meso": 0.762107,
+            "macro": 0.762107,
+            "aceleracion": 0.713845,
+            "divergencia_entre_escala": 0.072872,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "mauss_01_intercambio_agonistico",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.21167,
+          "soporte_estructural_relativo": 0.21713497,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.204107,
+            "micro": 0.597919,
+            "meso": 0.604121,
+            "macro": 0.604121,
+            "aceleracion": 0.48707,
+            "divergencia_entre_escala": 0.006203,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.541977,
+          "soporte_estructural_relativo": 0.21136726,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.203614,
+            "micro": 0.658361,
+            "meso": 0.57353,
+            "macro": 0.57353,
+            "aceleracion": 0.67249,
+            "divergencia_entre_escala": 0.084832,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.897492,
+          "soporte_estructural_relativo": 0.18859169,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.05035,
+            "micro": 0.48334,
+            "meso": 0.470567,
+            "macro": 0.470567,
+            "aceleracion": 0.525578,
+            "divergencia_entre_escala": 0.012772,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "utopia_oficio_roma",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.642857,
+          "soporte_estructural_relativo": 0.14333625,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.024617,
+            "micro": 0.488935,
+            "meso": 0.48707,
+            "macro": 0.48707,
+            "aceleracion": 0.503733,
+            "divergencia_entre_escala": 0.001866,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "24_rivalidad_de_superior_e_inferior",
+            "mauss_01_intercambio_agonistico",
+            "20_sacrificio_por_un_ideal"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.66807206,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "utopia_oficio_roma"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.33192794,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "24_rivalidad_de_superior_e_inferior",
+          "mauss_01_intercambio_agonistico",
+          "20_sacrificio_por_un_ideal"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.66807206,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F003_06_TROTSKY",
+    "question": "¿Qué trayectoria sigue León Trotski tras escribir al Comité Central contra la falta de democracia interna mientras Lenin está enfermo?",
+    "person": "León Trotski",
+    "tipo_sujeto": "politico",
+    "freeze": "1923-10-15",
+    "z_trabajo": "1923-10-15",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F003",
+      "custodio_destino": "GrokBot-custodio-rutina-F003",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1923-10-15",
+    "cuts": [
+      {
+        "id": "C1_1918",
+        "corte": "C1_1918",
+        "cut_id": "C1_1918",
+        "date": "1918-03-13",
+        "fecha_corte": "1918-03-13",
+        "hecho": "Presidente del Sóviet de Petrogrado, dirigió la organización práctica de la Revolución de Octubre de 1917; fue comisario de Asuntos Exteriores y el 13 de marzo de 1918 fue nombrado comisario del Pueblo para el Ejército y la Marina, con control pleno del Ejército Rojo.",
+        "P": [
+          [
+            "sed_de_mando",
+            0.78
+          ],
+          [
+            "idealismo",
+            0.76
+          ]
+        ],
+        "A": [
+          [
+            "oratoria",
+            0.8
+          ],
+          [
+            "organizacion",
+            0.82
+          ]
+        ],
+        "C": [
+          [
+            "poder",
+            0.82
+          ],
+          [
+            "ascenso_reciente",
+            0.8
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Fue elegido presidente del Sóviet de Petrogrado el 8 de octubre de 1917 y dirigió los esfuerzos para derrocar al Gobierno Provisional.",
+            "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+            "source_date": "2026-10-26",
+            "claim_date": "1917-10-08",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 13 de marzo de 1918 fue nombrado comisario del Pueblo para el Ejército y la Marina y presidente del Consejo Militar Supremo, con control pleno del Ejército Rojo.",
+            "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+            "source_date": "2026-10-26",
+            "claim_date": "1918-03-13",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1922",
+        "corte": "C2_1922",
+        "cut_id": "C2_1922",
+        "date": "1922-09-11",
+        "fecha_corte": "1922-09-11",
+        "hecho": "Con Lenin enfermo tras su primer infarto cerebral de mayo de 1922, Stalin fue nombrado secretario general del Comité Central en abril de 1922 y Zinóviev y Kámenev formaron con él una troika; el 11 de septiembre de 1922 Lenin propuso a Trotski como su adjunto en el Consejo de Comisarios del Pueblo, y Trotski se negó categóricamente.",
+        "P": [
+          [
+            "orgullo",
+            0.76
+          ],
+          [
+            "independencia",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "renuncia",
+            0.68
+          ],
+          [
+            "evitacion_confrontacion",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.82
+          ],
+          [
+            "alianza",
+            0.62
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Lenin sufrió infartos cerebrales desde el 25 de mayo de 1922; Stalin fue elevado a secretario general en abril de 1922 y Zinóviev y Kámenev formaron con él una troika frente a Trotski, públicamente el número dos.",
+            "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+            "source_date": "2026-10-26",
+            "claim_date": "1922",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 11 de septiembre de 1922 Lenin propuso que Trotski fuera su adjunto en el Sovnarkom; el Politburó aprobó, pero Trotski se negó categóricamente.",
+            "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+            "source_date": "2026-10-26",
+            "claim_date": "1922-09-11",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1923",
+        "corte": "C3_1923",
+        "cut_id": "C3_1923",
+        "date": "1923-10-15",
+        "fecha_corte": "1923-10-15",
+        "hecho": "En el XII Congreso de abril de 1923 habló de democracia interna sin enfrentar a la troika y recibió una ovación; el 8 de octubre de 1923 escribió al Comité Central atribuyendo los problemas a la falta de democracia interna, y el 15 de octubre 46 dirigentes enviaron una declaración en el mismo sentido.",
+        "P": [
+          [
+            "idealismo",
+            0.78
+          ],
+          [
+            "orgullo",
+            0.74
+          ]
+        ],
+        "A": [
+          [
+            "desafio_autoridad",
+            0.78
+          ],
+          [
+            "oratoria",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.84
+          ],
+          [
+            "aislamiento_social",
+            0.64
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En el XII Congreso de abril de 1923 habló de democracia interna evitando la confrontación directa con la troika y los delegados le dieron una ovación de pie.",
+            "source_url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+            "source_date": "2026-10-26",
+            "claim_date": "1923-04",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 8 de octubre de 1923 Trotski escribió al Comité Central y a la Comisión Central de Control atribuyendo las dificultades a la falta de democracia interna; el 15 de octubre de 1923 se envió la Declaración de los 46.",
+            "source_url": "https://en.wikipedia.org/wiki/The_Declaration_of_46",
+            "source_date": "2026-10-26",
+            "claim_date": "1923-10-15",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta el 15 de octubre de 1923."
+  }
+}

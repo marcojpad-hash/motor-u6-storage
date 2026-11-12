@@ -1,0 +1,205 @@
+{
+ "case_id": "CAL_F003_03_LAVOISIER",
+ "question": "¿Qué trayectoria sigue Antoine Lavoisier tras publicar su Traité élémentaire de chimie mientras sigue siendo socio de la Ferme générale?",
+ "person": "Antoine Lavoisier",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1790-01-01",
+ "z_trabajo": "1790-01-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F003",
+  "custodio_destino": "GrokBot-custodio-rutina-F003",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1789",
+ "cuts": [
+  {
+   "id": "C1_1771",
+   "corte": "C1_1771",
+   "cut_id": "C1_1771",
+   "date": "1771",
+   "fecha_corte": "1771",
+   "hecho": "En 1768 recibió un nombramiento provisional en la Academia de Ciencias y, hacia esa fecha, compró una participación en la Ferme générale, la compañía privada que adelantaba al rey los impuestos a cambio de cobrarlos; en 1771 se casó con Marie-Anne Paulze, hija de un alto miembro de la Ferme.",
+   "P": [
+    [
+     "ambicion",
+     0.76
+    ],
+    [
+     "curiosidad_abstracta",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "acumulacion_capital",
+     0.74
+    ],
+    [
+     "alianza",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "estatus_social",
+     0.78
+    ],
+    [
+     "redes_prestigio",
+     0.76
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1768 Lavoisier recibió un nombramiento provisional en la Academia de Ciencias.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1768",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "A los 26 años, cerca de su elección en la Academia, compró una participación en la Ferme générale, compañía de arrendamiento de impuestos que adelantaba al gobierno el ingreso estimado a cambio del derecho a cobrarlo.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1769",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1771, a los 28 años, se casó con Marie-Anne Pierrette Paulze, de 13 años, hija de un alto miembro de la Ferme générale.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1771",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1783",
+   "corte": "C2_1783",
+   "cut_id": "C2_1783",
+   "date": "1783",
+   "fecha_corte": "1783",
+   "hecho": "En 1775 fue nombrado uno de los cuatro comisarios de la pólvora y mejoró la cantidad y calidad de la pólvora francesa; en 1783 leyó en la Academia sus Réflexions sur le phlogistique, un ataque frontal a la teoría del flogisto, y reconoció el agua como óxido de un gas que llamó hidrógeno.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.82
+    ],
+    [
+     "conocimiento",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "verificacion",
+     0.82
+    ],
+    [
+     "metodicidad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.76
+    ],
+    [
+     "rivalidad_profesional",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1775 fue nombrado uno de los cuatro comisarios de la pólvora; gracias a su trabajo mejoraron la cantidad y calidad de la pólvora francesa, que se volvió fuente de ingresos para el gobierno.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1775",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "En 1783 leyó en la Academia Réflexions sur le phlogistique, un ataque completo a la teoría del flogisto, y en junio de 1783 reconoció el agua como óxido de un gas hidrogenador.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1783",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1789",
+   "corte": "C3_1789",
+   "cut_id": "C3_1789",
+   "date": "1789",
+   "fecha_corte": "1789",
+   "hecho": "En 1787 presentó con Guyton de Morveau, Berthollet y Fourcroy la Méthode de nomenclature chimique, ligada a su teoría del oxígeno, y en 1789 publicó el Traité élémentaire de chimie, síntesis de su obra; seguía siendo administrador de la Ferme générale, uno de los organismos más odiados del Antiguo Régimen por sus ganancias, sus contratos secretos y la violencia de sus agentes armados.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.82
+    ],
+    [
+     "orgullo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "organizacion",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "desconfianza_autoridad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1787 presentó a la Academia, con Guyton de Morveau, Berthollet y Fourcroy, la Méthode de nomenclature chimique, ligada a su nueva teoría del oxígeno.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1787",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El Traité élémentaire de chimie, publicado en 1789, sintetiza su contribución a la química.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1789",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Era administrador de la Ferme générale, uno de los componentes más odiados del Antiguo Régimen por sus ganancias a costa del Estado, el secreto de sus contratos y la violencia de sus agentes armados.",
+     "source_url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+     "source_date": "2026-10-26",
+     "claim_date": "1789",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1789."
+}

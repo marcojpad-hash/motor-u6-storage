@@ -1,0 +1,447 @@
+{
+  "case_id": "CAL_F004_04_MENDEL",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 34.039,
+  "result_completo_sha256": "0b783136e68950a8faabb6a5349b45c21aa6c8e28957f10f21c259b6f90266e2",
+  "result_completo_bytes": 5371796,
+  "entrada_sha256": "8ba5c5ee72952055c9a1891722b3f7414ee07727ff81582345b2f4a2138d3e63",
+  "receipt_sha256": "0243feeab1535436cdde780a597003a12ee95a0e873b34e77fb1122baff918b9",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "arquetipo_el_sabio",
+      "porcentaje_relleno": 64.09,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 60.0,
+        "booker": 56.6667,
+        "dynamis": 80.0,
+        "estructura": 80.0,
+        "frye": 53.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 60.0,
+        "otras_dimensiones": 68.8889,
+        "puente_lateral": 68.0069,
+        "trayectoria_estado": 64.0
+      },
+      "peso_relativo": 0.240445,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.77
+    },
+    "H2": {
+      "familia": "spengler_02_verano_otono_racionalizacion",
+      "porcentaje_relleno": 65.33,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 20.0,
+        "booker": 56.6667,
+        "dynamis": 100.0,
+        "estructura": 100.0,
+        "frye": 46.6667,
+        "geometria_inercia": 80.0,
+        "greimas": 80.0,
+        "otras_dimensiones": 73.3333,
+        "puente_lateral": 10.5836,
+        "trayectoria_estado": 86.0
+      },
+      "peso_relativo": 0.220701,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 57.41
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.6667,
+      "techo_pct": 91.3334,
+      "pp_por_punto_de_rank_fusion": 1.922481,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "eje",
+        "peso_en_set": 0.342803,
+        "predictibilidad_estructural_pct": 61.77,
+        "cobertura_unica_frac": 0.0
+      },
+      {
+        "familia": "spengler_02_verano_otono_racionalizacion",
+        "rol": "componente",
+        "peso_en_set": 0.314653,
+        "predictibilidad_estructural_pct": 57.41,
+        "cobertura_unica_frac": 0.346
+      },
+      {
+        "familia": "schwartz_10_autodireccion",
+        "rol": "componente",
+        "peso_en_set": 0.192369,
+        "predictibilidad_estructural_pct": 38.46,
+        "cobertura_unica_frac": 0.2317
+      },
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "componente",
+        "peso_en_set": 0.150175,
+        "predictibilidad_estructural_pct": 31.93,
+        "cobertura_unica_frac": 0.1026
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "arquetipo_el_sabio domina; spengler_02_verano_otono_racionalizacion es rival distinto (margen 2.268104 >= 1.0 y afinidad 0.364422 < 0.5)",
+      "peso_H1": 0.240445,
+      "peso_H2": 0.220701,
+      "peso_H1_en_par": 0.521408,
+      "peso_H2_en_par": 0.478592
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "eje",
+          "rank_fusion": 27.620625,
+          "soporte_estructural_relativo": 0.34280303,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.379532,
+            "micro": 0.706822,
+            "meso": 0.681238,
+            "macro": 0.681238,
+            "aceleracion": 0.559976,
+            "divergencia_entre_escala": 0.025584,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "spengler_02_verano_otono_racionalizacion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.352521,
+          "soporte_estructural_relativo": 0.31465331,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.484428,
+            "micro": 0.759194,
+            "meso": 0.733724,
+            "macro": 0.733724,
+            "aceleracion": 0.566929,
+            "divergencia_entre_escala": 0.02547,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.499726,
+          "soporte_estructural_relativo": 0.19236904,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.047966,
+            "micro": 0.489735,
+            "meso": 0.541107,
+            "macro": 0.541107,
+            "aceleracion": 0.398497,
+            "divergencia_entre_escala": 0.051372,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "componente",
+          "rank_fusion": 12.1,
+          "soporte_estructural_relativo": 0.15017461,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.072575,
+            "micro": 0.564309,
+            "meso": 0.413415,
+            "macro": 0.413415,
+            "aceleracion": 0.771547,
+            "divergencia_entre_escala": 0.150894,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_sabio",
+            "spengler_02_verano_otono_racionalizacion"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.65745634,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "schwartz_10_autodireccion",
+            "eterno_retorno_01_caos_primordial"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.34254365,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_sabio",
+          "spengler_02_verano_otono_racionalizacion"
+        ],
+        "n_hipotesis": 2,
+        "soporte_estructural_agregado": 0.65745634,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_04_MENDEL",
+    "question": "¿Qué trayectoria sigue Gregor Mendel después de 1866?",
+    "person": "Gregor Mendel",
+    "tipo_sujeto": "cientifico",
+    "freeze": "1867-01-01",
+    "z_trabajo": "1867-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1866",
+    "cuts": [
+      {
+        "id": "C1_1850",
+        "corte": "C1_1850",
+        "cut_id": "C1_1850",
+        "date": "1850",
+        "fecha_corte": "1850",
+        "hecho": "Fraile agustino en Brno y maestro suplente; reprueba la parte oral del examen para maestro certificado.",
+        "P": [
+          [
+            "busqueda_seguridad",
+            0.72
+          ],
+          [
+            "curiosidad_abstracta",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "aprendizaje",
+            0.76
+          ],
+          [
+            "esfuerzo_sostenido_reciente",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "obstaculo",
+            0.74
+          ],
+          [
+            "escasez",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Mendel trabajó como maestro suplente; en 1850 reprobó la parte oral, la última de tres, del examen para maestro certificado.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1850",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1856",
+        "corte": "C2_1856",
+        "cut_id": "C2_1856",
+        "date": "1856",
+        "fecha_corte": "1856",
+        "hecho": "Estudia en Viena (física con Doppler) patrocinado por su superior Cyril Napp; vuelve a Brno como maestro; en 1856 reprueba otra vez el oral; Zawadzki lo anima a investigar.",
+        "P": [
+          [
+            "curiosidad_abstracta",
+            0.8
+          ],
+          [
+            "perfeccionismo",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "metodicidad",
+            0.78
+          ],
+          [
+            "analisis",
+            0.76
+          ]
+        ],
+        "C": [
+          [
+            "frustracion",
+            0.72
+          ],
+          [
+            "mentoria_activa",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1851 fue enviado a la Universidad de Viena con patrocinio de Cyril Napp; su profesor de física fue Christian Doppler; volvió a la abadía en 1853 como maestro.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1853",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1854 conoció a Aleksander Zawadzki, que animó su investigación; en 1856 volvió a reprobar la parte oral del examen.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1856",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1866",
+        "corte": "C3_1866",
+        "cut_id": "C3_1866",
+        "date": "1866",
+        "fecha_corte": "1866",
+        "hecho": "Tras cultivar unas 28 000 plantas de guisante (1856–1863) presenta sus experimentos de hibridación en dos sesiones de la Sociedad de Historia Natural de Brno (1865), con algunas reseñas favorables en la prensa local, y los publica en 1866; funda la Sociedad Meteorológica Austriaca; su superior le escribió desanimándolo.",
+        "P": [
+          [
+            "busqueda_verdad",
+            0.8
+          ],
+          [
+            "introversion",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "teorizacion",
+            0.78
+          ],
+          [
+            "metodicidad",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "incertidumbre",
+            0.7
+          ],
+          [
+            "soporte",
+            0.62
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Entre 1856 y 1863 Mendel cultivó y probó unas 28 000 plantas; su superior Napp le escribió para desanimarlo.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1863",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Presentó Versuche über Pflanzenhybriden en dos sesiones de la Sociedad de Historia Natural de Brno el 8 de febrero y el 8 de marzo de 1865, con algunas reseñas favorables en periódicos locales; el trabajo se publicó en 1866 en las Verhandlungen.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1866",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Fundó la Sociedad Meteorológica Austriaca en 1865.",
+            "source_url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+            "source_date": "2026-10-27",
+            "claim_date": "1865",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta 1866."
+  }
+}

@@ -1,0 +1,492 @@
+{
+  "case_id": "CAL_F004_07_CHANEL",
+  "lote": "F004",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 40.509,
+  "result_completo_sha256": "1838625bb36d08d8e25aa4aba38d59578a10b996df59bad78fd33b49fcbee780",
+  "result_completo_bytes": 6562673,
+  "entrada_sha256": "a6cac4f38bb7bb651d74743b0cbf0761ec6cb3811cd78d3f494ef3af1b493a86",
+  "receipt_sha256": "0e3fab8ad1fecb88cff4e9a3e080d874f5dd6e34168d463b3c34b6e99f70661a",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 68.72,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 62.5,
+        "booker": 72.9167,
+        "dynamis": 77.5,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 62.5,
+        "greimas": 60.9375,
+        "otras_dimensiones": 64.5833,
+        "puente_lateral": 68.75,
+        "trayectoria_estado": 67.5
+      },
+      "peso_relativo": 0.161709,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 64.09
+    },
+    "H2": {
+      "familia": "36_perdida_de_los_seres_queridos",
+      "porcentaje_relleno": 62.12,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 75.0,
+        "booker": 56.25,
+        "dynamis": 51.25,
+        "estructura": 87.5,
+        "frye": 50.0,
+        "geometria_inercia": 100.0,
+        "greimas": 64.0625,
+        "otras_dimensiones": 70.1389,
+        "puente_lateral": 5.782,
+        "trayectoria_estado": 61.25
+      },
+      "peso_relativo": 0.129905,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.07
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.0833,
+      "techo_pct": 91.9166,
+      "pp_por_punto_de_rank_fusion": 1.862962,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "eje",
+        "peso_en_set": 0.250866,
+        "predictibilidad_estructural_pct": 64.09,
+        "cobertura_unica_frac": 0.3467
+      },
+      {
+        "familia": "36_perdida_de_los_seres_queridos",
+        "rol": "componente",
+        "peso_en_set": 0.201528,
+        "predictibilidad_estructural_pct": 53.07,
+        "cobertura_unica_frac": 0.1117
+      },
+      {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "rol": "componente",
+        "peso_en_set": 0.16794,
+        "predictibilidad_estructural_pct": 45.58,
+        "cobertura_unica_frac": 0.106
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.138315,
+        "predictibilidad_estructural_pct": 38.96,
+        "cobertura_unica_frac": 0.2264
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.132347,
+        "predictibilidad_estructural_pct": 37.63,
+        "cobertura_unica_frac": 0.106
+      },
+      {
+        "familia": "aliado",
+        "rol": "componente",
+        "peso_en_set": 0.109004,
+        "predictibilidad_estructural_pct": 32.42,
+        "cobertura_unica_frac": 0.1032
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "schwartz_07_logro domina; 36_perdida_de_los_seres_queridos es rival distinto (margen 5.912439 >= 1.0 y afinidad 0.154215 < 0.5)",
+      "peso_H1": 0.161709,
+      "peso_H2": 0.129905,
+      "peso_H1_en_par": 0.554531,
+      "peso_H2_en_par": 0.445469
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 6,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "eje",
+          "rank_fusion": 30.0625,
+          "soporte_estructural_relativo": 0.25086617,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.190806,
+            "micro": 0.57529,
+            "meso": 0.60546,
+            "macro": 0.60546,
+            "aceleracion": 0.437922,
+            "divergencia_entre_escala": 0.03017,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "36_perdida_de_los_seres_queridos",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.150061,
+          "soporte_estructural_relativo": 0.20152792,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.391815,
+            "micro": 0.780629,
+            "meso": 0.653547,
+            "macro": 0.653547,
+            "aceleracion": 0.780629,
+            "divergencia_entre_escala": 0.127082,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "tainter_01_inversion_complejidad_productiva",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.125,
+          "soporte_estructural_relativo": 0.16793951,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.304192,
+            "micro": 0.722053,
+            "meso": 0.617118,
+            "macro": 0.617118,
+            "aceleracion": 0.722053,
+            "divergencia_entre_escala": 0.104935,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.574919,
+          "soporte_estructural_relativo": 0.13831472,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.183879,
+            "micro": 0.485604,
+            "meso": 0.645107,
+            "macro": 0.645107,
+            "aceleracion": 0.21242,
+            "divergencia_entre_escala": 0.159503,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.859832,
+          "soporte_estructural_relativo": 0.13234745,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.166754,
+            "micro": 0.491601,
+            "meso": 0.629265,
+            "macro": 0.629265,
+            "aceleracion": 0.245023,
+            "divergencia_entre_escala": 0.137665,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "aliado",
+          "rol_en_set": "componente",
+          "rank_fusion": 13.0625,
+          "soporte_estructural_relativo": 0.10900422,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.143615,
+            "micro": 0.493067,
+            "meso": 0.611178,
+            "macro": 0.611178,
+            "aceleracion": 0.276878,
+            "divergencia_entre_escala": 0.118111,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "schwartz_07_logro",
+            "36_perdida_de_los_seres_queridos",
+            "tainter_01_inversion_complejidad_productiva",
+            "arquetipo_el_creador",
+            "9_audaz_empresa",
+            "aliado"
+          ],
+          "n_hipotesis": 6,
+          "soporte_estructural_agregado": 0.99999999,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "36_perdida_de_los_seres_queridos",
+          "tainter_01_inversion_complejidad_productiva",
+          "arquetipo_el_creador",
+          "9_audaz_empresa",
+          "aliado"
+        ],
+        "n_hipotesis": 6,
+        "soporte_estructural_agregado": 0.99999999,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F004_07_CHANEL",
+    "question": "¿Qué trayectoria sigue Coco Chanel después de 1919?",
+    "person": "Coco Chanel",
+    "tipo_sujeto": "empresaria",
+    "freeze": "1920-01-01",
+    "z_trabajo": "1920-01-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F004",
+      "custodio_destino": "GrokBot-custodio-rutina-F004",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1919-12-22",
+    "cuts": [
+      {
+        "id": "C1_1906",
+        "corte": "C1_1906",
+        "cut_id": "C1_1906",
+        "date": "1906",
+        "fecha_corte": "1906",
+        "hecho": "Nacida en un hospicio de pobres, huérfana de madre a los 11 años y criada en el orfanato de Aubazine, donde aprendió a coser; intenta una carrera de cantante y fracasa en Vichy.",
+        "P": [
+          [
+            "ambicion",
+            0.8
+          ],
+          [
+            "anhelo_seguridad",
+            0.74
+          ]
+        ],
+        "A": [
+          [
+            "supervivencia",
+            0.78
+          ],
+          [
+            "aprendizaje",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "escasez",
+            0.82
+          ],
+          [
+            "derrota_temporal",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Chanel nació en 1883 en el hospital de caridad de Saumur; su madre murió cuando ella tenía 11 años y fue enviada al orfanato de Aubazine, donde aprendió a coser.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1895",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1906 trabajó en Vichy buscando éxito como cantante; su voz era marginal y no consiguió trabajo escénico.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1906",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1916",
+        "corte": "C2_1916",
+        "cut_id": "C2_1916",
+        "date": "1916",
+        "fecha_corte": "1916",
+        "hecho": "Con financiación de Arthur 'Boy' Capel abre tienda de sombreros en París (1910), boutique en Deauville (1913) y casa en Biarritz (1915), con ropa de punto y jersey; en 1916 devuelve a Capel su inversión.",
+        "P": [
+          [
+            "ambicion",
+            0.82
+          ],
+          [
+            "autoexpresion",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.8
+          ],
+          [
+            "audacia",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "oportunidad",
+            0.78
+          ],
+          [
+            "soporte",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Se hizo modista con licencia en 1910 y abrió Chanel Modes en el 21 de la rue Cambon; en 1913 abrió una boutique en Deauville financiada por Capel, con ropa de jersey y tricot.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1913",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "En 1915 abrió un establecimiento en Biarritz; tras un año el negocio era tan lucrativo que en 1916 pudo reembolsar a Capel su inversión original.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1916",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1919_12",
+        "corte": "C3_1919_12",
+        "cut_id": "C3_1919_12",
+        "date": "1919-12-22",
+        "fecha_corte": "1919-12-22",
+        "hecho": "Compra el edificio del 31 de la rue Cambon (1918) y se registra como couturière con su maison de couture (1919); Capel, casado en 1918 con otra mujer, muere en un accidente de coche el 22 de diciembre de 1919.",
+        "P": [
+          [
+            "ambicion",
+            0.8
+          ],
+          [
+            "orgullo",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "organizacion",
+            0.74
+          ],
+          [
+            "esfuerzo_sostenido_reciente",
+            0.76
+          ]
+        ],
+        "C": [
+          [
+            "perdida",
+            0.82
+          ],
+          [
+            "duelo",
+            0.78
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1918 compró el edificio del 31 de la rue Cambon; en 1919 estaba registrada como couturière con su maison de couture en esa dirección.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1919",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Capel se casó con Lady Diana Wyndham en 1918 y murió en un accidente de coche el 22 de diciembre de 1919.",
+            "source_url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+            "source_date": "2026-10-27",
+            "claim_date": "1919-12-22",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta diciembre de 1919."
+  }
+}
