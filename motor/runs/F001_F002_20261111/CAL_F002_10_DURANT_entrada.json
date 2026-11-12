@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F002_10_DURANT",
+ "question": "¿Qué trayectoria sigue William C. Durant tras haber recuperado la presidencia de General Motors en 1916 y lanzar una gran expansión de la empresa?",
+ "person": "William C. Durant",
+ "tipo_sujeto": "empresario",
+ "freeze": "1920-06-30",
+ "z_trabajo": "1920-06-30",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1919",
+ "cuts": [
+  {
+   "id": "C1_1908",
+   "corte": "C1_1908",
+   "cut_id": "C1_1908",
+   "date": "1908-11-12",
+   "fecha_corte": "1908-11-12",
+   "hecho": "Tomó el control de Buick el 1 de noviembre de 1904; el 16 de septiembre de 1908 fundó General Motors como sociedad de cartera y el 12 de noviembre de 1908 compró Olds Motor Works.",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "vision",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.8
+    ],
+    [
+     "persuasion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.78
+    ],
+    [
+     "prosperidad",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Durant tomó el control de Buick el 1 de noviembre de 1904.",
+     "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+     "source_date": "2026-10-25",
+     "claim_date": "1904-11-01",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "General Motors se fundó el 16 de septiembre de 1908 y compró Olds el 12 de noviembre de 1908.",
+     "source_url": "https://en.wikipedia.org/wiki/General_Motors",
+     "source_date": "2026-10-25",
+     "claim_date": "1908-11-12",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1911",
+   "corte": "C2_1911",
+   "cut_id": "C2_1911",
+   "date": "1911-11-03",
+   "fecha_corte": "1911-11-03",
+   "hecho": "Sobreendeudado tras sumar Cadillac, Oakland y otras compañías, perdió en 1910 el control de General Motors a manos de los banqueros; el 3 de noviembre de 1911 fundó Chevrolet con el piloto Louis Chevrolet.",
+   "P": [
+    [
+     "determinacion",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "resiliencia",
+     0.8
+    ],
+    [
+     "generacion_ideas",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "derrota_temporal",
+     0.78
+    ],
+    [
+     "vulnerabilidad_financiera_inmediata",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1909 GM sumó Cadillac y Oakland; en 1910 los banqueros apartaron a Durant del control de GM.",
+     "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+     "source_date": "2026-10-25",
+     "claim_date": "1910",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Chevrolet se fundó el 3 de noviembre de 1911 por Durant y Louis Chevrolet.",
+     "source_url": "https://en.wikipedia.org/wiki/Chevrolet",
+     "source_date": "2026-10-25",
+     "claim_date": "1911-11-03",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1919",
+   "corte": "C3_1919",
+   "cut_id": "C3_1919",
+   "date": "1919",
+   "fecha_corte": "1919",
+   "hecho": "Apoyado en las ventas de Chevrolet recuperó en 1916 el control de General Motors; en febrero de 1918 se anunció el plan para que GM absorbiera Chevrolet, y en 1919 GM compró la Guardian Frigerator Company, en parte propiedad de Durant, rebautizada Frigidaire, y creó la financiera General Motors Acceptance Corporation.",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "vision",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.78
+    ],
+    [
+     "diversificacion",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.75
+    ],
+    [
+     "prosperidad",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1916 Durant recuperó el control de GM gracias a Chevrolet.",
+     "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+     "source_date": "2026-10-25",
+     "claim_date": "1916",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El plan de absorber Chevrolet se informó el 24 de febrero de 1918; en 1919 GM adquirió Guardian Frigerator (Frigidaire) y creó GMAC.",
+     "source_url": "https://en.wikipedia.org/wiki/General_Motors",
+     "source_date": "2026-10-25",
+     "claim_date": "1919",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Guardian Frigerator Company fue adquirida por GM en 1919 y rebautizada Frigidaire.",
+     "source_url": "https://en.wikipedia.org/wiki/Frigidaire",
+     "source_date": "2026-10-25",
+     "claim_date": "1919",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (biografía de Durant, General Motors, Chevrolet, Frigidaire)."
+}

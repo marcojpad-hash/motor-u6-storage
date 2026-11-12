@@ -1,0 +1,462 @@
+{
+  "case_id": "CAL_F001_03_WILDE",
+  "lote": "F001",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 18.255,
+  "result_completo_sha256": "01c2b35a181c874dc3db38054932e3ef2bade1eb78647eff15577f0ee881fe55",
+  "result_completo_bytes": 6314968,
+  "entrada_sha256": "54247ffa2a4f5f1478ed253f5ae6f7c73fa947a3f991a979e12dc7a8ba4e9df8",
+  "receipt_sha256": "b3df95e6ce4163ac364c3c432584fb7223567b24d1ba9f7ea82e9470111df601",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "31_conflicto_con_un_dios",
+      "porcentaje_relleno": 64.39,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 77.7778,
+        "booker": 59.2593,
+        "dynamis": 58.8889,
+        "estructura": 88.8889,
+        "frye": 50.0,
+        "geometria_inercia": 44.4444,
+        "greimas": 69.4444,
+        "otras_dimensiones": 60.4938,
+        "puente_lateral": 72.5261,
+        "trayectoria_estado": 62.2222
+      },
+      "peso_relativo": 0.140969,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 60.79
+    },
+    "H2": {
+      "familia": "schwartz_08_hedonismo",
+      "porcentaje_relleno": 54.26,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 33.3333,
+        "booker": 51.8519,
+        "dynamis": 81.1111,
+        "estructura": 55.5556,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 43.0556,
+        "otras_dimensiones": 43.2099,
+        "puente_lateral": 56.6661,
+        "trayectoria_estado": 77.7778
+      },
+      "peso_relativo": 0.124594,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.75
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.8292,
+      "techo_pct": 91.1709,
+      "pp_por_punto_de_rank_fusion": 1.790037,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "31_conflicto_con_un_dios",
+        "rol": "eje",
+        "peso_en_set": 0.191359,
+        "predictibilidad_estructural_pct": 60.79,
+        "cobertura_unica_frac": 0.0927
+      },
+      {
+        "familia": "schwartz_08_hedonismo",
+        "rol": "componente",
+        "peso_en_set": 0.169131,
+        "predictibilidad_estructural_pct": 54.75,
+        "cobertura_unica_frac": 0.1703
+      },
+      {
+        "familia": "29_un_enemigo_amado",
+        "rol": "componente",
+        "peso_en_set": 0.147812,
+        "predictibilidad_estructural_pct": 48.96,
+        "cobertura_unica_frac": 0.0834
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.138806,
+        "predictibilidad_estructural_pct": 46.52,
+        "cobertura_unica_frac": 0.0927
+      },
+      {
+        "familia": "arquetipo_el_creador",
+        "rol": "componente",
+        "peso_en_set": 0.130636,
+        "predictibilidad_estructural_pct": 44.3,
+        "cobertura_unica_frac": 0.292
+      },
+      {
+        "familia": "frye_mythos_romance",
+        "rol": "componente",
+        "peso_en_set": 0.111338,
+        "predictibilidad_estructural_pct": 39.06,
+        "cobertura_unica_frac": 0.095
+      },
+      {
+        "familia": "arquetipo_el_bufon",
+        "rol": "componente",
+        "peso_en_set": 0.110917,
+        "predictibilidad_estructural_pct": 38.95,
+        "cobertura_unica_frac": 0.0904
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "31_conflicto_con_un_dios domina; schwartz_08_hedonismo es rival distinto (margen 3.371846 >= 1.0 y afinidad 0.199955 < 0.5)",
+      "peso_H1": 0.140969,
+      "peso_H2": 0.124594,
+      "peso_H1_en_par": 0.530831,
+      "peso_H2_en_par": 0.469169
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "31_conflicto_con_un_dios",
+          "rol_en_set": "eje",
+          "rank_fusion": 29.027347,
+          "soporte_estructural_relativo": 0.1913592,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.365089,
+            "micro": 0.763169,
+            "meso": 0.642232,
+            "macro": 0.642232,
+            "aceleracion": 0.763169,
+            "divergencia_entre_escala": 0.120937,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "schwartz_08_hedonismo",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.655501,
+          "soporte_estructural_relativo": 0.16913072,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.114824,
+            "micro": 0.586844,
+            "meso": 0.542696,
+            "macro": 0.542696,
+            "aceleracion": 0.588911,
+            "divergencia_entre_escala": 0.044148,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "29_un_enemigo_amado",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.421687,
+          "soporte_estructural_relativo": 0.1478122,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.026038,
+            "micro": 0.484405,
+            "meso": 0.488269,
+            "macro": 0.488269,
+            "aceleracion": 0.492267,
+            "divergencia_entre_escala": 0.003864,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.055556,
+          "soporte_estructural_relativo": 0.13880615,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.300613,
+            "micro": 0.719584,
+            "meso": 0.615668,
+            "macro": 0.615668,
+            "aceleracion": 0.719584,
+            "divergencia_entre_escala": 0.103916,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.816283,
+          "soporte_estructural_relativo": 0.1306364,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.066571,
+            "micro": 0.471763,
+            "meso": 0.564046,
+            "macro": 0.564046,
+            "aceleracion": 0.322713,
+            "divergencia_entre_escala": 0.092283,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "frye_mythos_romance",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.888889,
+          "soporte_estructural_relativo": 0.11133792,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.136463,
+            "micro": 0.483606,
+            "meso": 0.610544,
+            "macro": 0.610544,
+            "aceleracion": 0.263007,
+            "divergencia_entre_escala": 0.126938,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "arquetipo_el_bufon",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.8251,
+          "soporte_estructural_relativo": 0.1109174,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.138806,
+            "micro": 0.488136,
+            "meso": 0.610037,
+            "macro": 0.610037,
+            "aceleracion": 0.270938,
+            "divergencia_entre_escala": 0.121901,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "31_conflicto_con_un_dios",
+            "monomito_08_la_odisea_o_prueba_suprema",
+            "frye_mythos_romance",
+            "arquetipo_el_bufon"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.55242067,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "schwartz_08_hedonismo",
+            "29_un_enemigo_amado",
+            "arquetipo_el_creador"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.44757932,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "31_conflicto_con_un_dios",
+          "monomito_08_la_odisea_o_prueba_suprema",
+          "frye_mythos_romance",
+          "arquetipo_el_bufon"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.55242067,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F001_03_WILDE",
+    "question": "¿Qué ocurre con Oscar Wilde al denunciar por difamación al marqués de Queensberry?",
+    "person": "Oscar Wilde",
+    "tipo_sujeto": "artista",
+    "freeze": "1895-03-01",
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "C3_1895B",
+    "cuts": [
+      {
+        "id": "C1_1891",
+        "corte": "C1_1891",
+        "cut_id": "C1_1891",
+        "date": "1891-06-01",
+        "fecha_corte": "1891-06-01",
+        "hecho": "Publica El retrato de Dorian Gray en libro y conoce a Lord Alfred Douglas.",
+        "P": [
+          [
+            "autoexpresion",
+            0.84
+          ],
+          [
+            "busqueda_placer",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "carisma",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.7
+          ],
+          [
+            "atraccion_prohibida",
+            0.72
+          ]
+        ]
+      },
+      {
+        "id": "C2_1895A",
+        "corte": "C2_1895A",
+        "cut_id": "C2_1895A",
+        "date": "1895-02-14",
+        "fecha_corte": "1895-02-14",
+        "hecho": "Estreno triunfal de La importancia de llamarse Ernesto en Londres.",
+        "P": [
+          [
+            "reconocimiento",
+            0.8
+          ],
+          [
+            "orgullo",
+            0.75
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "humor",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "triunfo",
+            0.82
+          ],
+          [
+            "popularidad",
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "C3_1895B",
+        "corte": "C3_1895B",
+        "cut_id": "C3_1895B",
+        "date": "1895-03-01",
+        "fecha_corte": "1895-03-01",
+        "hecho": "Queensberry le deja una tarjeta insultante en su club; Wilde obtiene orden de arresto contra él por difamación.",
+        "P": [
+          [
+            "orgullo_hubris",
+            0.8
+          ],
+          [
+            "justicia",
+            0.65
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.8
+          ],
+          [
+            "impulsividad",
+            0.75
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.75
+          ],
+          [
+            "secreto",
+            0.72
+          ]
+        ]
+      }
+    ],
+    "source_notes": "https://en.wikipedia.org/wiki/Oscar_Wilde (solo hechos hasta 1-mar-1895)"
+  }
+}

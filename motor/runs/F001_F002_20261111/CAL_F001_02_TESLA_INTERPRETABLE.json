@@ -1,0 +1,450 @@
+{
+  "case_id": "CAL_F001_02_TESLA",
+  "lote": "F001",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 18.813,
+  "result_completo_sha256": "3308d1c0d07ffd26ddf63b6e2f2627a0d5b4e068a469b269c93fab88707df237",
+  "result_completo_bytes": 6738984,
+  "entrada_sha256": "be89b315b99b09cb06f0cd46a5eb823aefd4e1b9681fea0279d8803128137635",
+  "receipt_sha256": "cd26989a9abee64acf102353883d52261c1bef50484f03b145ade12b5f2a7f88",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "22_todo_sacrificado_por_una_pasion",
+      "porcentaje_relleno": 67.93,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 87.5,
+        "booker": 60.4167,
+        "dynamis": 63.75,
+        "estructura": 93.75,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 75.0,
+        "otras_dimensiones": 48.8636,
+        "puente_lateral": 67.9947,
+        "resolucion": 100.0,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.144477,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 59.29
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 56.93,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 12.5,
+        "booker": 50.0,
+        "dynamis": 87.5,
+        "estructura": 68.75,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 54.1667,
+        "otras_dimensiones": 68.1818,
+        "puente_lateral": 41.3353,
+        "resolucion": 62.5,
+        "trayectoria_estado": 81.25
+      },
+      "peso_relativo": 0.142253,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.51
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.5667,
+      "techo_pct": 91.4334,
+      "pp_por_punto_de_rank_fusion": 1.691157,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "22_todo_sacrificado_por_una_pasion",
+        "rol": "eje",
+        "peso_en_set": 0.247298,
+        "predictibilidad_estructural_pct": 59.29,
+        "cobertura_unica_frac": 0.0858
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.24349,
+        "predictibilidad_estructural_pct": 58.51,
+        "cobertura_unica_frac": 0.1788
+      },
+      {
+        "familia": "utopia_mentalidad_liberal",
+        "rol": "componente",
+        "peso_en_set": 0.214977,
+        "predictibilidad_estructural_pct": 52.66,
+        "cobertura_unica_frac": 0.3838
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.147375,
+        "predictibilidad_estructural_pct": 38.8,
+        "cobertura_unica_frac": 0.1847
+      },
+      {
+        "familia": "frye_mythos_romance",
+        "rol": "componente",
+        "peso_en_set": 0.14686,
+        "predictibilidad_estructural_pct": 38.69,
+        "cobertura_unica_frac": 0.0894
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "22_todo_sacrificado_por_una_pasion con componentes de 30_ambicion (margen 0.46185 < GATE_SEPARATION 1.0)",
+      "peso_H1": 0.144477,
+      "peso_H2": 0.142253,
+      "peso_H1_en_par": 0.503878,
+      "peso_H2_en_par": 0.496122
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "22_todo_sacrificado_por_una_pasion",
+          "rol_en_set": "eje",
+          "rank_fusion": 29.994525,
+          "soporte_estructural_relativo": 0.17827602,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.332852,
+            "micro": 0.741619,
+            "meso": 0.62883,
+            "macro": 0.62883,
+            "aceleracion": 0.741619,
+            "divergencia_entre_escala": 0.112789,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 29.532675,
+          "soporte_estructural_relativo": 0.17553096,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.157553,
+            "micro": 0.6244,
+            "meso": 0.555965,
+            "macro": 0.555965,
+            "aceleracion": 0.638055,
+            "divergencia_entre_escala": 0.068436,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "utopia_mentalidad_liberal",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.07441,
+          "soporte_estructural_relativo": 0.15497635,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.086419,
+            "micro": 0.471631,
+            "meso": 0.578999,
+            "macro": 0.578999,
+            "aceleracion": 0.296393,
+            "divergencia_entre_escala": 0.107369,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.537909,
+          "soporte_estructural_relativo": 0.13990036,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.016349,
+            "micro": 0.463001,
+            "meso": 0.530761,
+            "macro": 0.530761,
+            "aceleracion": 0.367505,
+            "divergencia_entre_escala": 0.06776,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "tainter_04_colapso_por_simplificacion_forzada",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.42065,
+          "soporte_estructural_relativo": 0.13920341,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.038025,
+            "micro": 0.47695,
+            "meso": 0.483007,
+            "macro": 0.483007,
+            "aceleracion": 0.487869,
+            "divergencia_entre_escala": 0.006057,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.875,
+          "soporte_estructural_relativo": 0.10624219,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.120167,
+            "micro": 0.474688,
+            "meso": 0.602781,
+            "macro": 0.602781,
+            "aceleracion": 0.261768,
+            "divergencia_entre_escala": 0.128093,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "frye_mythos_romance",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.8125,
+          "soporte_estructural_relativo": 0.10587071,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.138683,
+            "micro": 0.486936,
+            "meso": 0.610544,
+            "macro": 0.610544,
+            "aceleracion": 0.268208,
+            "divergencia_entre_escala": 0.123608,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "22_todo_sacrificado_por_una_pasion",
+            "30_ambicion",
+            "social_04_rogers_difusion_innovaciones",
+            "frye_mythos_romance"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.56591988,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "utopia_mentalidad_liberal",
+            "schwartz_10_autodireccion",
+            "tainter_04_colapso_por_simplificacion_forzada"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.43408012,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "22_todo_sacrificado_por_una_pasion",
+          "30_ambicion",
+          "social_04_rogers_difusion_innovaciones",
+          "frye_mythos_romance"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.56591988,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F001_02_TESLA",
+    "question": "¿Qué ocurre con Tesla y su proyecto de transmisión inalámbrica financiado por J. P. Morgan?",
+    "person": "Nikola Tesla",
+    "tipo_sujeto": "cientifico",
+    "freeze": "1901-03-01",
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "C3_1901",
+    "cuts": [
+      {
+        "id": "C1_1884",
+        "corte": "C1_1884",
+        "cut_id": "C1_1884",
+        "date": "1884-06-06",
+        "fecha_corte": "1884-06-06",
+        "hecho": "Llega a Nueva York, trabaja para Edison y renuncia al poco tiempo por un desacuerdo de pago.",
+        "P": [
+          [
+            "ambicion",
+            0.75
+          ],
+          [
+            "autonomia",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.8
+          ],
+          [
+            "desafio_autoridad",
+            0.65
+          ]
+        ],
+        "C": [
+          [
+            "oportunidad",
+            0.75
+          ],
+          [
+            "escasez",
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "C2_1893",
+        "corte": "C2_1893",
+        "cut_id": "C2_1893",
+        "date": "1893-05-01",
+        "fecha_corte": "1893-05-01",
+        "hecho": "Sus patentes de corriente alterna, licenciadas a Westinghouse (1888), iluminan la Exposición de Chicago.",
+        "P": [
+          [
+            "vision",
+            0.84
+          ],
+          [
+            "conocimiento",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "generacion_ideas",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "triunfo",
+            0.75
+          ],
+          [
+            "reconocimiento",
+            0.78
+          ]
+        ]
+      },
+      {
+        "id": "C3_1901",
+        "corte": "C3_1901",
+        "cut_id": "C3_1901",
+        "date": "1901-03-01",
+        "fecha_corte": "1901-03-01",
+        "hecho": "Morgan acepta financiar con 150 000 dólares una torre de transmisión inalámbrica (Wardenclyffe).",
+        "P": [
+          [
+            "visionario",
+            0.84
+          ],
+          [
+            "obsesion",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "apuesta_extrema",
+            0.75
+          ],
+          [
+            "persuasion",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "dependencia",
+            0.72
+          ],
+          [
+            "competencia",
+            0.75
+          ]
+        ]
+      }
+    ],
+    "source_notes": "https://en.wikipedia.org/wiki/Nikola_Tesla ; https://en.wikipedia.org/wiki/Wardenclyffe_Tower (solo hechos hasta mar-1901)"
+  }
+}

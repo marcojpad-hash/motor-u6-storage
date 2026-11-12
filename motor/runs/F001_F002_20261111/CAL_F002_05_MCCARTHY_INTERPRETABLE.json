@@ -1,0 +1,482 @@
+{
+  "case_id": "CAL_F002_05_MCCARTHY",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 39.319,
+  "result_completo_sha256": "885167f0191c9fbe04aa6893dccfbd86a5dcb3f5b26d20f8d9aeacbc589ce0ab",
+  "result_completo_bytes": 5976663,
+  "entrada_sha256": "a84c20ef8b32c2c09b1ca351f95628f8db81b3670194518dd09f96682db42ecb",
+  "receipt_sha256": "87c3cb4ccfe32bc696fb1882285b049760aa4e047433411d514d7e6a3028eb5b",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 56.52,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 37.5,
+        "dynamis": 85.0,
+        "estructura": 37.5,
+        "frye": 50.0,
+        "geometria_inercia": 93.75,
+        "greimas": 58.3333,
+        "otras_dimensiones": 78.125,
+        "puente_lateral": 75.0,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.156892,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 61.46
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 61.54,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 62.5,
+        "booker": 66.6667,
+        "dynamis": 72.5,
+        "estructura": 87.5,
+        "frye": 50.0,
+        "geometria_inercia": 56.25,
+        "greimas": 41.6667,
+        "otras_dimensiones": 67.1875,
+        "puente_lateral": 51.1088,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.147414,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.28
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.95,
+      "techo_pct": 91.05,
+      "pp_por_punto_de_rank_fusion": 1.909302,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "eje",
+        "peso_en_set": 0.236639,
+        "predictibilidad_estructural_pct": 61.46,
+        "cobertura_unica_frac": 0.0
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.222343,
+        "predictibilidad_estructural_pct": 58.28,
+        "cobertura_unica_frac": 0.2247
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "rol": "componente",
+        "peso_en_set": 0.183933,
+        "predictibilidad_estructural_pct": 49.76,
+        "cobertura_unica_frac": 0.1589
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.145185,
+        "predictibilidad_estructural_pct": 41.16,
+        "cobertura_unica_frac": 0.0789
+      },
+      {
+        "familia": "schwartz_06_poder",
+        "rol": "componente",
+        "peso_en_set": 0.11079,
+        "predictibilidad_estructural_pct": 33.53,
+        "cobertura_unica_frac": 0.0789
+      },
+      {
+        "familia": "mbti_factor_extraversion_e",
+        "rol": "componente",
+        "peso_en_set": 0.101109,
+        "predictibilidad_estructural_pct": 31.38,
+        "cobertura_unica_frac": 0.2318
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "schwartz_07_logro domina; 30_ambicion es rival distinto (margen 1.661299 >= 1.0 y afinidad 0.287722 < 0.5)",
+      "peso_H1": 0.156892,
+      "peso_H2": 0.147414,
+      "peso_H1_en_par": 0.515573,
+      "peso_H2_en_par": 0.484427
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 6,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "eje",
+          "rank_fusion": 27.5,
+          "soporte_estructural_relativo": 0.23663902,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.177735,
+            "micro": 0.63497,
+            "meso": 0.565816,
+            "macro": 0.565816,
+            "aceleracion": 0.640515,
+            "divergencia_entre_escala": 0.069155,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 25.838701,
+          "soporte_estructural_relativo": 0.22234345,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.004978,
+            "micro": 0.500133,
+            "meso": 0.503667,
+            "macro": 0.503667,
+            "aceleracion": 0.492934,
+            "divergencia_entre_escala": 0.003533,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "monomito_08_la_odisea_o_prueba_suprema",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.375,
+          "soporte_estructural_relativo": 0.18393306,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.333981,
+            "micro": 0.641742,
+            "meso": 0.679614,
+            "macro": 0.679614,
+            "aceleracion": 0.416263,
+            "divergencia_entre_escala": 0.037872,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.872056,
+          "soporte_estructural_relativo": 0.14518498,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.038026,
+            "micro": 0.481741,
+            "meso": 0.48061,
+            "macro": 0.48061,
+            "aceleracion": 0.502267,
+            "divergencia_entre_escala": 0.001132,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "schwartz_06_poder",
+          "rol_en_set": "componente",
+          "rank_fusion": 12.875,
+          "soporte_estructural_relativo": 0.11079009,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.124351,
+            "micro": 0.481475,
+            "meso": 0.602526,
+            "macro": 0.602526,
+            "aceleracion": 0.272839,
+            "divergencia_entre_escala": 0.121051,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "mbti_factor_extraversion_e",
+          "rol_en_set": "componente",
+          "rank_fusion": 11.75,
+          "soporte_estructural_relativo": 0.1011094,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.040755,
+            "micro": 0.473359,
+            "meso": 0.543887,
+            "macro": 0.543887,
+            "aceleracion": 0.362314,
+            "divergencia_entre_escala": 0.070528,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "schwartz_07_logro",
+            "monomito_08_la_odisea_o_prueba_suprema",
+            "schwartz_06_poder"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.53136217,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "9_audaz_empresa",
+            "mbti_factor_extraversion_e"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.46863783,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "monomito_08_la_odisea_o_prueba_suprema",
+          "schwartz_06_poder"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.53136217,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_05_MCCARTHY",
+    "question": "¿Qué trayectoria sigue el senador Joseph McCarthy tras llevar sus investigaciones anticomunistas al Ejército de Estados Unidos y enfrentarse en audiencia al general Ralph Zwicker?",
+    "person": "Joseph McCarthy",
+    "tipo_sujeto": "politico",
+    "freeze": "1954-02-28",
+    "z_trabajo": "1954-02-28",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1954-02-18",
+    "cuts": [
+      {
+        "id": "C1_1950",
+        "corte": "C1_1950",
+        "cut_id": "C1_1950",
+        "date": "1950-02-09",
+        "fecha_corte": "1950-02-09",
+        "hecho": "En un discurso en Wheeling, Virginia Occidental, mostró un papel que según dijo contenía una lista de comunistas conocidos que trabajaban en el Departamento de Estado; el discurso le dio notoriedad nacional.",
+        "P": [
+          [
+            "ambicion",
+            0.8
+          ],
+          [
+            "sed_de_mando",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "audacia",
+            0.78
+          ],
+          [
+            "oratoria",
+            0.74
+          ]
+        ],
+        "C": [
+          [
+            "atencion_social",
+            0.8
+          ],
+          [
+            "desconfianza",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Discurso de Wheeling del 9 de febrero de 1950 con una supuesta lista de comunistas en el Departamento de Estado.",
+            "source_url": "https://en.wikipedia.org/wiki/Joseph_McCarthy",
+            "source_date": "2026-10-25",
+            "claim_date": "1950-02-09",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1953",
+        "corte": "C2_1953",
+        "cut_id": "C2_1953",
+        "date": "1953-01",
+        "fecha_corte": "1953-01",
+        "hecho": "Al iniciar su segundo mandato en enero de 1953 pasó a presidir la Comisión de Operaciones Gubernamentales del Senado, que incluía el Subcomité Permanente de Investigaciones, cuyo mandato flexible usó para sus propias investigaciones sobre comunistas en el gobierno.",
+        "P": [
+          [
+            "poder",
+            0.8
+          ],
+          [
+            "sed_de_mando",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.75
+          ],
+          [
+            "astucia",
+            0.68
+          ]
+        ],
+        "C": [
+          [
+            "autoridad",
+            0.78
+          ],
+          [
+            "atencion_social",
+            0.75
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En enero de 1953 fue nombrado presidente de la Comisión de Operaciones Gubernamentales y usó el Subcomité Permanente de Investigaciones para investigar comunistas en el gobierno.",
+            "source_url": "https://en.wikipedia.org/wiki/Joseph_McCarthy",
+            "source_date": "2026-10-25",
+            "claim_date": "1953-01",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1954",
+        "corte": "C3_1954",
+        "cut_id": "C3_1954",
+        "date": "1954-02-18",
+        "fecha_corte": "1954-02-18",
+        "hecho": "El subcomité citó el 30 de enero de 1954 al mayor del Ejército Irving Peress, que se acogió a la Quinta Enmienda; el 18 de febrero de 1954 interrogó al general Ralph Zwicker, su comandante, que por consejo del Ejército se negó a responder algunas preguntas, y McCarthy le dijo que no era apto para vestir ese uniforme.",
+        "P": [
+          [
+            "ambicion",
+            0.74
+          ],
+          [
+            "obsesion",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "confrontacion_directa",
+            0.82
+          ],
+          [
+            "impulsividad",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.78
+          ],
+          [
+            "jerarquia",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Peress fue citado el 30 de enero de 1954 y se acogió a la Quinta Enmienda.",
+            "source_url": "https://en.wikipedia.org/wiki/Ralph_Wise_Zwicker",
+            "source_date": "2026-10-25",
+            "claim_date": "1954-01-30",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El 18 de febrero de 1954 Zwicker compareció, se negó a responder algunas preguntas por consejo del Ejército y McCarthy le dijo que no era apto para vestir ese uniforme.",
+            "source_url": "https://en.wikipedia.org/wiki/Ralph_Wise_Zwicker",
+            "source_date": "2026-10-25",
+            "claim_date": "1954-02-18",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia en inglés (biografía de McCarthy y de Ralph W. Zwicker); solo hechos hasta la audiencia del 18 de febrero de 1954."
+  }
+}

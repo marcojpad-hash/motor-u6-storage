@@ -1,0 +1,432 @@
+{
+  "case_id": "CAL_F002_08_LUISXVI",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 16.225,
+  "result_completo_sha256": "38574d4726f824666a6c7c9aed15a87c8e84ac189781e19378be91fe893f477d",
+  "result_completo_bytes": 4771047,
+  "entrada_sha256": "905cd94e3734ef2c44f6368c1e415adab41287e2208dc950be0511eac2a8ed27",
+  "receipt_sha256": "489741d4fb15441fb9bd0b6335cae4a36d701b076f08934d278d8113c5956d00",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "arquetipo_el_explorador",
+      "porcentaje_relleno": 55.73,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 66.6667,
+        "booker": 50.0,
+        "dynamis": 33.3333,
+        "estructura": 33.3333,
+        "frye": 50.0,
+        "geometria_inercia": 66.6667,
+        "greimas": 38.8889,
+        "otras_dimensiones": 70.8333,
+        "puente_lateral": 94.2835,
+        "trayectoria_estado": 53.3333
+      },
+      "peso_relativo": 0.342782,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 60.45
+    },
+    "H2": {
+      "familia": "32_celos_equivocados",
+      "porcentaje_relleno": 54.32,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 33.3333,
+        "booker": 50.0,
+        "dynamis": 66.6667,
+        "estructura": 66.6667,
+        "frye": 50.0,
+        "geometria_inercia": 100.0,
+        "greimas": 61.1111,
+        "otras_dimensiones": 58.3333,
+        "puente_lateral": 7.1192,
+        "trayectoria_estado": 50.0
+      },
+      "peso_relativo": 0.26113,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 48.01
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.1917,
+      "techo_pct": 91.8083,
+      "pp_por_punto_de_rank_fusion": 2.144018,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "arquetipo_el_explorador",
+        "rol": "eje",
+        "peso_en_set": 0.342782,
+        "predictibilidad_estructural_pct": 60.45,
+        "cobertura_unica_frac": 0.2058
+      },
+      {
+        "familia": "32_celos_equivocados",
+        "rol": "componente",
+        "peso_en_set": 0.26113,
+        "predictibilidad_estructural_pct": 48.01,
+        "cobertura_unica_frac": 0.1979
+      },
+      {
+        "familia": "10_rapto",
+        "rol": "componente",
+        "peso_en_set": 0.269527,
+        "predictibilidad_estructural_pct": 49.29,
+        "cobertura_unica_frac": 0.3852
+      },
+      {
+        "familia": "social_01_asch_conformidad",
+        "rol": "componente",
+        "peso_en_set": 0.126561,
+        "predictibilidad_estructural_pct": 27.49,
+        "cobertura_unica_frac": 0.2111
+      }
+    ],
+    "grado_inverso_set": "SET_CON_CORTES_SIN_EXPLICAR",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "arquetipo_el_explorador domina; 32_celos_equivocados es rival distinto (margen 5.209343 >= 1.0 y afinidad 0.2 < 0.5)",
+      "peso_H1": 0.342782,
+      "peso_H2": 0.26113,
+      "peso_H1_en_par": 0.567603,
+      "peso_H2_en_par": 0.432397
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "arquetipo_el_explorador",
+          "rol_en_set": "eje",
+          "rank_fusion": 24.37601,
+          "soporte_estructural_relativo": 0.34278232,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.297647,
+            "micro": 0.717535,
+            "meso": 0.614468,
+            "macro": 0.614468,
+            "aceleracion": 0.717535,
+            "divergencia_entre_escala": 0.103067,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "10_rapto",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.166667,
+          "soporte_estructural_relativo": 0.26952707,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.362757,
+            "micro": 0.666471,
+            "meso": 0.688832,
+            "macro": 0.688832,
+            "aceleracion": 0.448978,
+            "divergencia_entre_escala": 0.022362,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "32_celos_equivocados",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.569537,
+          "soporte_estructural_relativo": 0.26113006,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.348591,
+            "micro": 0.752204,
+            "meso": 0.635341,
+            "macro": 0.635341,
+            "aceleracion": 0.752204,
+            "divergencia_entre_escala": 0.116862,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "social_01_asch_conformidad",
+          "rol_en_set": "componente",
+          "rank_fusion": 9.0,
+          "soporte_estructural_relativo": 0.12656054,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.149308,
+            "micro": 0.501733,
+            "meso": 0.611115,
+            "macro": 0.611115,
+            "aceleracion": 0.291082,
+            "divergencia_entre_escala": 0.109381,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_explorador",
+            "10_rapto",
+            "32_celos_equivocados",
+            "social_01_asch_conformidad"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 0.99999999,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_explorador",
+          "10_rapto",
+          "32_celos_equivocados",
+          "social_01_asch_conformidad"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 0.99999999,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_08_LUISXVI",
+    "question": "¿Qué trayectoria sigue Luis XVI, rey bajo la nueva monarquía constitucional, instalado en las Tullerías de París y tras impedírsele la salida hacia Saint-Cloud en abril?",
+    "person": "Luis XVI de Francia",
+    "tipo_sujeto": "gobernante",
+    "freeze": "1791-06-01",
+    "z_trabajo": "1791-06-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1791-04",
+    "cuts": [
+      {
+        "id": "C1_1789A",
+        "corte": "C1_1789A",
+        "cut_id": "C1_1789A",
+        "date": "1789-05-05",
+        "fecha_corte": "1789-05-05",
+        "hecho": "Ante una grave crisis fiscal convocó los Estados Generales, que se abrieron en Versalles el 5 de mayo de 1789, la primera reunión desde 1614.",
+        "P": [
+          [
+            "responsabilidad",
+            0.75
+          ],
+          [
+            "anhelo_seguridad",
+            0.68
+          ]
+        ],
+        "A": [
+          [
+            "negociacion",
+            0.7
+          ],
+          [
+            "consenso",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "crisis_abrupta",
+            0.75
+          ],
+          [
+            "escasez",
+            0.74
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Los Estados Generales, convocados por Luis XVI ante una crisis fiscal, se abrieron el 5 de mayo de 1789 en Versalles, por primera vez desde 1614.",
+            "source_url": "https://en.wikipedia.org/wiki/Estates_General_of_1789",
+            "source_date": "2026-10-25",
+            "claim_date": "1789-05-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1789B",
+        "corte": "C2_1789B",
+        "cut_id": "C2_1789B",
+        "date": "1789-10-06",
+        "fecha_corte": "1789-10-06",
+        "hecho": "Tras la marcha de las mujeres sobre Versalles, la multitud, con la Guardia Nacional al frente, llevó a la familia real a París el 6 de octubre de 1789 y la instaló en las Tullerías; el 14 de julio de 1790 la Fiesta de la Federación le reservó el papel de rey ciudadano de la naciente monarquía constitucional.",
+        "P": [
+          [
+            "busqueda_seguridad",
+            0.72
+          ],
+          [
+            "deber",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "conformidad",
+            0.7
+          ],
+          [
+            "evitacion_confrontacion",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "presion_social",
+            0.8
+          ],
+          [
+            "retencion_forzada",
+            0.68
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El 6 de octubre de 1789 la multitud escoltó a la familia real de Versalles a París.",
+            "source_url": "https://en.wikipedia.org/wiki/Women%27s_March_on_Versailles",
+            "source_date": "2026-10-25",
+            "claim_date": "1789-10-06",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Tras la marcha de octubre de 1789 la familia real pasó a residir en el palacio de las Tullerías.",
+            "source_url": "https://en.wikipedia.org/wiki/Women%27s_March_on_Versailles",
+            "source_date": "2026-10-25",
+            "claim_date": "1789-10",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "La Fiesta de la Federación del 14 de julio de 1790 dio a Luis XVI un papel de rey ciudadano de la monarquía constitucional.",
+            "source_url": "https://en.wikipedia.org/wiki/F%C3%AAte_de_la_F%C3%A9d%C3%A9ration",
+            "source_date": "2026-10-25",
+            "claim_date": "1790-07-14",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1791",
+        "corte": "C3_1791",
+        "cut_id": "C3_1791",
+        "date": "1791-04",
+        "fecha_corte": "1791-04",
+        "hecho": "En Semana Santa de 1791 quiso salir de las Tullerías hacia Saint-Cloud para recibir los servicios de un sacerdote no juramentado, contrario a la Constitución Civil del Clero, y no le dejaron moverse.",
+        "P": [
+          [
+            "busqueda_libertad",
+            0.78
+          ],
+          [
+            "devocion",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "resistencia_cambio",
+            0.7
+          ],
+          [
+            "discrecion",
+            0.65
+          ]
+        ],
+        "C": [
+          [
+            "privacion_libertad",
+            0.78
+          ],
+          [
+            "desconfianza",
+            0.75
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En Semana Santa de 1791 se impidió al rey salir de las Tullerías hacia Saint-Cloud, donde quería recibir a un sacerdote no juramentado.",
+            "source_url": "https://en.wikipedia.org/wiki/French_Revolution_from_the_summer_of_1790_to_the_establishment_of_the_Legislative_Assembly",
+            "source_date": "2026-10-25",
+            "claim_date": "1791-04",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia en inglés (Luis XVI, Estados Generales de 1789, marcha sobre Versalles, revolución de 1790-1791); la salida a Saint-Cloud solo se fecha en Semana Santa de 1791."
+  }
+}

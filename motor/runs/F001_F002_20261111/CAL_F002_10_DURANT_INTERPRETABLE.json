@@ -1,0 +1,422 @@
+{
+  "case_id": "CAL_F002_10_DURANT",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 39.239,
+  "result_completo_sha256": "f779d214ecd0428dfd48ba9c0b97962edf1a5d399c807103bb9b7279c7a97321",
+  "result_completo_bytes": 5372891,
+  "entrada_sha256": "e3d8254732e64439841bdbdde8950f2d315d91f38c4bebd242c2168e4aa9b22b",
+  "receipt_sha256": "a0f73c5bd9673d0e30bae0dc48f9370902e183868aba94f0aca6353365617691",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "12_obtencion",
+      "porcentaje_relleno": 66.3,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 100.0,
+        "booker": 60.0,
+        "dynamis": 76.0,
+        "estructura": 60.0,
+        "frye": 53.3333,
+        "geometria_inercia": 60.0,
+        "greimas": 53.3333,
+        "otras_dimensiones": 52.5,
+        "puente_lateral": 95.8681,
+        "trayectoria_estado": 52.0
+      },
+      "peso_relativo": 0.228154,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 63.49
+    },
+    "H2": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 67.35,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 60.0,
+        "booker": 60.0,
+        "dynamis": 40.0,
+        "estructura": 100.0,
+        "frye": 33.3333,
+        "geometria_inercia": 90.0,
+        "greimas": 86.6667,
+        "otras_dimensiones": 95.0,
+        "puente_lateral": 32.4711,
+        "trayectoria_estado": 76.0
+      },
+      "peso_relativo": 0.216276,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 60.56
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.15,
+      "techo_pct": 92.85,
+      "pp_por_punto_de_rank_fusion": 1.993023,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "12_obtencion",
+        "rol": "eje",
+        "peso_en_set": 0.429189,
+        "predictibilidad_estructural_pct": 63.49,
+        "cobertura_unica_frac": 0.3861
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.406845,
+        "predictibilidad_estructural_pct": 60.56,
+        "cobertura_unica_frac": 0.3766
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.163966,
+        "predictibilidad_estructural_pct": 28.67,
+        "cobertura_unica_frac": 0.2373
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "12_obtencion domina; 9_audaz_empresa es rival distinto (margen 1.471763 >= 1.0 y afinidad 0.19962 < 0.5)",
+      "peso_H1": 0.228154,
+      "peso_H2": 0.216276,
+      "peso_H1_en_par": 0.513363,
+      "peso_H2_en_par": 0.486637
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 3,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "12_obtencion",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.269451,
+          "soporte_estructural_relativo": 0.42918899,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.204722,
+            "micro": 0.58904,
+            "meso": 0.609021,
+            "macro": 0.609021,
+            "aceleracion": 0.458496,
+            "divergencia_entre_escala": 0.019981,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.797688,
+          "soporte_estructural_relativo": 0.40684457,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.315317,
+            "micro": 0.649551,
+            "meso": 0.661712,
+            "macro": 0.661712,
+            "aceleracion": 0.473093,
+            "divergencia_entre_escala": 0.012161,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 10.8,
+          "soporte_estructural_relativo": 0.16396644,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.144329,
+            "micro": 0.499467,
+            "meso": 0.608513,
+            "macro": 0.608513,
+            "aceleracion": 0.291853,
+            "divergencia_entre_escala": 0.109046,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "12_obtencion",
+            "9_audaz_empresa",
+            "social_04_rogers_difusion_innovaciones"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 1.0,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "12_obtencion",
+          "9_audaz_empresa",
+          "social_04_rogers_difusion_innovaciones"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 1.0,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_10_DURANT",
+    "question": "¿Qué trayectoria sigue William C. Durant tras haber recuperado la presidencia de General Motors en 1916 y lanzar una gran expansión de la empresa?",
+    "person": "William C. Durant",
+    "tipo_sujeto": "empresario",
+    "freeze": "1920-06-30",
+    "z_trabajo": "1920-06-30",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1919",
+    "cuts": [
+      {
+        "id": "C1_1908",
+        "corte": "C1_1908",
+        "cut_id": "C1_1908",
+        "date": "1908-11-12",
+        "fecha_corte": "1908-11-12",
+        "hecho": "Tomó el control de Buick el 1 de noviembre de 1904; el 16 de septiembre de 1908 fundó General Motors como sociedad de cartera y el 12 de noviembre de 1908 compró Olds Motor Works.",
+        "P": [
+          [
+            "ambicion",
+            0.84
+          ],
+          [
+            "vision",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "audacia",
+            0.8
+          ],
+          [
+            "persuasion",
+            0.75
+          ]
+        ],
+        "C": [
+          [
+            "oportunidad",
+            0.78
+          ],
+          [
+            "prosperidad",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Durant tomó el control de Buick el 1 de noviembre de 1904.",
+            "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+            "source_date": "2026-10-25",
+            "claim_date": "1904-11-01",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "General Motors se fundó el 16 de septiembre de 1908 y compró Olds el 12 de noviembre de 1908.",
+            "source_url": "https://en.wikipedia.org/wiki/General_Motors",
+            "source_date": "2026-10-25",
+            "claim_date": "1908-11-12",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1911",
+        "corte": "C2_1911",
+        "cut_id": "C2_1911",
+        "date": "1911-11-03",
+        "fecha_corte": "1911-11-03",
+        "hecho": "Sobreendeudado tras sumar Cadillac, Oakland y otras compañías, perdió en 1910 el control de General Motors a manos de los banqueros; el 3 de noviembre de 1911 fundó Chevrolet con el piloto Louis Chevrolet.",
+        "P": [
+          [
+            "determinacion",
+            0.8
+          ],
+          [
+            "ambicion",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "resiliencia",
+            0.8
+          ],
+          [
+            "generacion_ideas",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "derrota_temporal",
+            0.78
+          ],
+          [
+            "vulnerabilidad_financiera_inmediata",
+            0.68
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1909 GM sumó Cadillac y Oakland; en 1910 los banqueros apartaron a Durant del control de GM.",
+            "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+            "source_date": "2026-10-25",
+            "claim_date": "1910",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Chevrolet se fundó el 3 de noviembre de 1911 por Durant y Louis Chevrolet.",
+            "source_url": "https://en.wikipedia.org/wiki/Chevrolet",
+            "source_date": "2026-10-25",
+            "claim_date": "1911-11-03",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1919",
+        "corte": "C3_1919",
+        "cut_id": "C3_1919",
+        "date": "1919",
+        "fecha_corte": "1919",
+        "hecho": "Apoyado en las ventas de Chevrolet recuperó en 1916 el control de General Motors; en febrero de 1918 se anunció el plan para que GM absorbiera Chevrolet, y en 1919 GM compró la Guardian Frigerator Company, en parte propiedad de Durant, rebautizada Frigidaire, y creó la financiera General Motors Acceptance Corporation.",
+        "P": [
+          [
+            "ambicion",
+            0.82
+          ],
+          [
+            "vision",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "audacia",
+            0.78
+          ],
+          [
+            "diversificacion",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "triunfo",
+            0.75
+          ],
+          [
+            "prosperidad",
+            0.75
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "En 1916 Durant recuperó el control de GM gracias a Chevrolet.",
+            "source_url": "https://en.wikipedia.org/wiki/William_C._Durant",
+            "source_date": "2026-10-25",
+            "claim_date": "1916",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El plan de absorber Chevrolet se informó el 24 de febrero de 1918; en 1919 GM adquirió Guardian Frigerator (Frigidaire) y creó GMAC.",
+            "source_url": "https://en.wikipedia.org/wiki/General_Motors",
+            "source_date": "2026-10-25",
+            "claim_date": "1919",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Guardian Frigerator Company fue adquirida por GM en 1919 y rebautizada Frigidaire.",
+            "source_url": "https://en.wikipedia.org/wiki/Frigidaire",
+            "source_date": "2026-10-25",
+            "claim_date": "1919",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia en inglés (biografía de Durant, General Motors, Chevrolet, Frigidaire)."
+  }
+}

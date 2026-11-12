@@ -1,0 +1,542 @@
+{
+  "case_id": "CAL_F002_04_BACH",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 20.856,
+  "result_completo_sha256": "748513abf09b58c6083ec3d94c52f87cc38762bfca44f18e380cbc091972f583",
+  "result_completo_bytes": 7117152,
+  "entrada_sha256": "805d719d412f057b567efe41f969b93fc58ebf3e4aa49f9181346eabf6e8222f",
+  "receipt_sha256": "6163f37767b833fddfc1ff95365eb4b49e5960a17311243787454e067e7f5431",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "tainter_01_inversion_complejidad_productiva",
+      "porcentaje_relleno": 64.48,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 45.0,
+        "booker": 50.0,
+        "dynamis": 85.0,
+        "estructura": 90.0,
+        "frye": 50.0,
+        "geometria_inercia": 95.0,
+        "greimas": 68.75,
+        "otras_dimensiones": 67.5,
+        "puente_lateral": 0.0,
+        "resolucion": 95.0,
+        "trayectoria_estado": 63.0
+      },
+      "peso_relativo": 0.11039,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.5
+    },
+    "H2": {
+      "familia": "schwartz_10_autodireccion",
+      "porcentaje_relleno": 48.82,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 20.0,
+        "booker": 40.0,
+        "dynamis": 50.0,
+        "estructura": 30.0,
+        "frye": 50.0,
+        "geometria_inercia": 35.0,
+        "greimas": 45.0,
+        "otras_dimensiones": 53.5,
+        "puente_lateral": 77.4773,
+        "resolucion": 65.0,
+        "trayectoria_estado": 71.0
+      },
+      "peso_relativo": 0.110382,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.5
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.7834,
+      "techo_pct": 92.2167,
+      "pp_por_punto_de_rank_fusion": 1.876296,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "rol": "eje",
+        "peso_en_set": 0.172366,
+        "predictibilidad_estructural_pct": 54.5,
+        "cobertura_unica_frac": 0.1121
+      },
+      {
+        "familia": "schwartz_10_autodireccion",
+        "rol": "componente",
+        "peso_en_set": 0.172353,
+        "predictibilidad_estructural_pct": 54.5,
+        "cobertura_unica_frac": 0.2451
+      },
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "componente",
+        "peso_en_set": 0.168397,
+        "predictibilidad_estructural_pct": 53.43,
+        "cobertura_unica_frac": 0.1166
+      },
+      {
+        "familia": "10_rapto",
+        "rol": "componente",
+        "peso_en_set": 0.141644,
+        "predictibilidad_estructural_pct": 46.18,
+        "cobertura_unica_frac": 0.1046
+      },
+      {
+        "familia": "36_perdida_de_los_seres_queridos",
+        "rol": "componente",
+        "peso_en_set": 0.124764,
+        "predictibilidad_estructural_pct": 41.6,
+        "cobertura_unica_frac": 0.1136
+      },
+      {
+        "familia": "24_rivalidad_de_superior_e_inferior",
+        "rol": "componente",
+        "peso_en_set": 0.113526,
+        "predictibilidad_estructural_pct": 38.55,
+        "cobertura_unica_frac": 0.1076
+      },
+      {
+        "familia": "aliado",
+        "rol": "componente",
+        "peso_en_set": 0.10695,
+        "predictibilidad_estructural_pct": 36.77,
+        "cobertura_unica_frac": 0.1016
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "MEZCLA_H1_H2_SIN_SEPARACION",
+      "lectura_texto": "tainter_01_inversion_complejidad_productiva y schwartz_10_autodireccion en mezcla: diferencia top1-top2 0.001815 < banda 0.25 (indistinguibles a la resolución del motor)",
+      "peso_H1": 0.11039,
+      "peso_H2": 0.110382,
+      "peso_H1_en_par": 0.500018,
+      "peso_H2_en_par": 0.499982
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "tainter_01_inversion_complejidad_productiva",
+          "rol_en_set": "eje",
+          "rank_fusion": 24.9,
+          "soporte_estructural_relativo": 0.17236571,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.301859,
+            "micro": 0.720444,
+            "meso": 0.616172,
+            "macro": 0.616172,
+            "aceleracion": 0.720444,
+            "divergencia_entre_escala": 0.104272,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.898185,
+          "soporte_estructural_relativo": 0.17235315,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.048498,
+            "micro": 0.490268,
+            "meso": 0.541239,
+            "macro": 0.541239,
+            "aceleracion": 0.399264,
+            "divergencia_entre_escala": 0.050972,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.326642,
+          "soporte_estructural_relativo": 0.16839675,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.020442,
+            "micro": 0.490668,
+            "meso": 0.489335,
+            "macro": 0.489335,
+            "aceleracion": 0.502667,
+            "divergencia_entre_escala": 0.001333,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "10_rapto",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.462003,
+          "soporte_estructural_relativo": 0.14164449,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.017598,
+            "micro": 0.494134,
+            "meso": 0.489735,
+            "macro": 0.489735,
+            "aceleracion": 0.508799,
+            "divergencia_entre_escala": 0.004399,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "36_perdida_de_los_seres_queridos",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.023455,
+          "soporte_estructural_relativo": 0.12476408,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.187077,
+            "micro": 0.491867,
+            "meso": 0.644374,
+            "macro": 0.644374,
+            "aceleracion": 0.222032,
+            "divergencia_entre_escala": 0.152507,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "24_rivalidad_de_superior_e_inferior",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.4,
+          "soporte_estructural_relativo": 0.11352601,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_DESCENDENTE",
+            "senal_multiescala": -0.31078,
+            "micro": 0.283006,
+            "meso": 0.375412,
+            "macro": 0.375412,
+            "aceleracion": 0.30131,
+            "divergencia_entre_escala": 0.092406,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "aliado",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.45,
+          "soporte_estructural_relativo": 0.10694981,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.142119,
+            "micro": 0.493867,
+            "meso": 0.609656,
+            "macro": 0.609656,
+            "aceleracion": 0.280739,
+            "divergencia_entre_escala": 0.115789,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "schwartz_10_autodireccion",
+            "9_audaz_empresa",
+            "10_rapto"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.48239439,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "tainter_01_inversion_complejidad_productiva",
+            "36_perdida_de_los_seres_queridos",
+            "aliado"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.4040796,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_DESCENDENTE",
+          "hipotesis_que_convergen": [
+            "24_rivalidad_de_superior_e_inferior"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.11352601,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "schwartz_10_autodireccion",
+          "9_audaz_empresa",
+          "10_rapto"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.48239439,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_04_BACH",
+    "question": "¿Qué trayectoria sigue Johann Sebastian Bach tras dejar la corte de Köthen y asumir el cargo de cantor de Santo Tomás y director musical de Leipzig?",
+    "person": "Johann Sebastian Bach",
+    "tipo_sujeto": "artista",
+    "freeze": "1723-06-01",
+    "z_trabajo": "1723-06-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1723-05-30",
+    "cuts": [
+      {
+        "id": "C1_1717",
+        "corte": "C1_1717",
+        "cut_id": "C1_1717",
+        "date": "1717-12-02",
+        "fecha_corte": "1717-12-02",
+        "hecho": "Al insistir con terquedad en que la corte de Weimar lo dejara ir, fue detenido el 6 de noviembre de 1717 y liberado el 2 de diciembre con un despido desfavorable; ese año el príncipe Leopoldo de Anhalt-Köthen, también músico, lo había contratado como maestro de capilla, con buen sueldo y amplia libertad.",
+        "P": [
+          [
+            "autonomia",
+            0.8
+          ],
+          [
+            "determinacion",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "desafio_autoridad",
+            0.72
+          ],
+          [
+            "confrontacion_directa",
+            0.66
+          ]
+        ],
+        "C": [
+          [
+            "privacion_libertad",
+            0.7
+          ],
+          [
+            "oportunidad",
+            0.76
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Según el secretario de la corte, fue detenido el 6 de noviembre de 1717 por forzar su salida y liberado el 2 de diciembre con despido desfavorable.",
+            "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+            "source_date": "2026-10-25",
+            "claim_date": "1717-12-02",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Leopoldo de Anhalt-Köthen lo contrató como maestro de capilla en 1717, le pagaba bien y le daba amplia libertad.",
+            "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+            "source_date": "2026-10-25",
+            "claim_date": "1717",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1721",
+        "corte": "C2_1721",
+        "cut_id": "C2_1721",
+        "date": "1721-12-03",
+        "fecha_corte": "1721-12-03",
+        "hecho": "En Köthen se dedicó sobre todo a la música instrumental; el 7 de julio de 1720 perdió de forma repentina a su esposa Maria Barbara; el 24 de marzo de 1721 dedicó seis conciertos al margrave Christian Ludwig de Brandemburgo y el 3 de diciembre de 1721 se casó con la soprano Anna Magdalena Wilcke.",
+        "P": [
+          [
+            "logro_personal",
+            0.74
+          ],
+          [
+            "compromiso_afectivo",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "creatividad",
+            0.84
+          ],
+          [
+            "esfuerzo_sostenido_reciente",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "duelo",
+            0.76
+          ],
+          [
+            "soporte",
+            0.68
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Bach perdió repentinamente a su esposa Maria Barbara el 7 de julio de 1720 y se casó con Anna Magdalena Wilcke el 3 de diciembre de 1721.",
+            "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+            "source_date": "2026-10-25",
+            "claim_date": "1721-12-03",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Los seis conciertos se dedicaron al margrave Christian Ludwig de Brandemburgo-Schwedt con dedicatoria del 24 de marzo de 1721.",
+            "source_url": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+            "source_date": "2026-10-25",
+            "claim_date": "1721-03-24",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1723",
+        "corte": "C3_1723",
+        "cut_id": "C3_1723",
+        "date": "1723-05-30",
+        "fecha_corte": "1723-05-30",
+        "hecho": "El concejo de Leipzig le ofreció el puesto de cantor de Santo Tomás después de que Telemann y Graupner lo rechazaran; asumió en 1723 la preparación del coro de Santo Tomás para cuatro iglesias luteranas y la música de los actos de la ciudad, y el 30 de mayo de 1723, su primer domingo en el cargo, estrenó la cantata BWV 75 en la Nikolaikirche.",
+        "P": [
+          [
+            "deber",
+            0.78
+          ],
+          [
+            "devocion",
+            0.75
+          ]
+        ],
+        "A": [
+          [
+            "planificacion",
+            0.75
+          ],
+          [
+            "transmision_saber",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "jerarquia",
+            0.7
+          ],
+          [
+            "ascenso_reciente",
+            0.74
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El puesto se le ofreció después de que Telemann y Graupner lo rechazaran; fue nombrado en 1723.",
+            "source_url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+            "source_date": "2026-10-25",
+            "claim_date": "1723-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El Thomaskantor preparaba al coro de Santo Tomás para cuatro iglesias luteranas de Leipzig y organizaba la música de los actos de la ciudad.",
+            "source_url": "https://en.wikipedia.org/wiki/Thomaskantor",
+            "source_date": "2026-10-25",
+            "claim_date": "1723-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "La cantata BWV 75 se estrenó el 30 de mayo de 1723 en la Nikolaikirche, primer domingo de Bach como Thomaskantor.",
+            "source_url": "https://en.wikipedia.org/wiki/Die_Elenden_sollen_essen,_BWV_75",
+            "source_date": "2026-10-25",
+            "claim_date": "1723-05-30",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia en inglés (biografía, Conciertos de Brandemburgo, BWV 75, Thomaskantor); el informe del secretario de la corte de Weimar se cita a través de la biografía."
+  }
+}

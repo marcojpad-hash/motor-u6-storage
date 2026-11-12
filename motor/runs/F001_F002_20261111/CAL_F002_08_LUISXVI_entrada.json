@@ -1,0 +1,181 @@
+{
+ "case_id": "CAL_F002_08_LUISXVI",
+ "question": "¿Qué trayectoria sigue Luis XVI, rey bajo la nueva monarquía constitucional, instalado en las Tullerías de París y tras impedírsele la salida hacia Saint-Cloud en abril?",
+ "person": "Luis XVI de Francia",
+ "tipo_sujeto": "gobernante",
+ "freeze": "1791-06-01",
+ "z_trabajo": "1791-06-01",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1791-04",
+ "cuts": [
+  {
+   "id": "C1_1789A",
+   "corte": "C1_1789A",
+   "cut_id": "C1_1789A",
+   "date": "1789-05-05",
+   "fecha_corte": "1789-05-05",
+   "hecho": "Ante una grave crisis fiscal convocó los Estados Generales, que se abrieron en Versalles el 5 de mayo de 1789, la primera reunión desde 1614.",
+   "P": [
+    [
+     "responsabilidad",
+     0.75
+    ],
+    [
+     "anhelo_seguridad",
+     0.68
+    ]
+   ],
+   "A": [
+    [
+     "negociacion",
+     0.7
+    ],
+    [
+     "consenso",
+     0.66
+    ]
+   ],
+   "C": [
+    [
+     "crisis_abrupta",
+     0.75
+    ],
+    [
+     "escasez",
+     0.74
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Los Estados Generales, convocados por Luis XVI ante una crisis fiscal, se abrieron el 5 de mayo de 1789 en Versalles, por primera vez desde 1614.",
+     "source_url": "https://en.wikipedia.org/wiki/Estates_General_of_1789",
+     "source_date": "2026-10-25",
+     "claim_date": "1789-05-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1789B",
+   "corte": "C2_1789B",
+   "cut_id": "C2_1789B",
+   "date": "1789-10-06",
+   "fecha_corte": "1789-10-06",
+   "hecho": "Tras la marcha de las mujeres sobre Versalles, la multitud, con la Guardia Nacional al frente, llevó a la familia real a París el 6 de octubre de 1789 y la instaló en las Tullerías; el 14 de julio de 1790 la Fiesta de la Federación le reservó el papel de rey ciudadano de la naciente monarquía constitucional.",
+   "P": [
+    [
+     "busqueda_seguridad",
+     0.72
+    ],
+    [
+     "deber",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "conformidad",
+     0.7
+    ],
+    [
+     "evitacion_confrontacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "presion_social",
+     0.8
+    ],
+    [
+     "retencion_forzada",
+     0.68
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El 6 de octubre de 1789 la multitud escoltó a la familia real de Versalles a París.",
+     "source_url": "https://en.wikipedia.org/wiki/Women%27s_March_on_Versailles",
+     "source_date": "2026-10-25",
+     "claim_date": "1789-10-06",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Tras la marcha de octubre de 1789 la familia real pasó a residir en el palacio de las Tullerías.",
+     "source_url": "https://en.wikipedia.org/wiki/Women%27s_March_on_Versailles",
+     "source_date": "2026-10-25",
+     "claim_date": "1789-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La Fiesta de la Federación del 14 de julio de 1790 dio a Luis XVI un papel de rey ciudadano de la monarquía constitucional.",
+     "source_url": "https://en.wikipedia.org/wiki/F%C3%AAte_de_la_F%C3%A9d%C3%A9ration",
+     "source_date": "2026-10-25",
+     "claim_date": "1790-07-14",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1791",
+   "corte": "C3_1791",
+   "cut_id": "C3_1791",
+   "date": "1791-04",
+   "fecha_corte": "1791-04",
+   "hecho": "En Semana Santa de 1791 quiso salir de las Tullerías hacia Saint-Cloud para recibir los servicios de un sacerdote no juramentado, contrario a la Constitución Civil del Clero, y no le dejaron moverse.",
+   "P": [
+    [
+     "busqueda_libertad",
+     0.78
+    ],
+    [
+     "devocion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "resistencia_cambio",
+     0.7
+    ],
+    [
+     "discrecion",
+     0.65
+    ]
+   ],
+   "C": [
+    [
+     "privacion_libertad",
+     0.78
+    ],
+    [
+     "desconfianza",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En Semana Santa de 1791 se impidió al rey salir de las Tullerías hacia Saint-Cloud, donde quería recibir a un sacerdote no juramentado.",
+     "source_url": "https://en.wikipedia.org/wiki/French_Revolution_from_the_summer_of_1790_to_the_establishment_of_the_Legislative_Assembly",
+     "source_date": "2026-10-25",
+     "claim_date": "1791-04",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia en inglés (Luis XVI, Estados Generales de 1789, marcha sobre Versalles, revolución de 1790-1791); la salida a Saint-Cloud solo se fecha en Semana Santa de 1791."
+}

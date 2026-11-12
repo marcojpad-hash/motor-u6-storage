@@ -1,0 +1,411 @@
+{
+  "case_id": "CAL_F001_01_NAPOLEON",
+  "lote": "F001",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 33.703,
+  "result_completo_sha256": "680aa443bf393313630c5066b56c7f89bb0a0fbbdfd107b700830d1497f5b153",
+  "result_completo_bytes": 6771381,
+  "entrada_sha256": "e05645ddb3eab1601992b86037b8ef530c6b27413575241b6bf0e3860e66b046",
+  "receipt_sha256": "5c5b157fd5ffc432fd0ca7a2c74b02bd5568b3dd27bdb487b76a91af12962a15",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "31_conflicto_con_un_dios",
+      "porcentaje_relleno": 64.01,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 60.0,
+        "booker": 56.6667,
+        "dynamis": 60.0,
+        "estructura": 100.0,
+        "frye": 51.6667,
+        "geometria_inercia": 50.0,
+        "greimas": 72.5,
+        "otras_dimensiones": 49.4444,
+        "puente_lateral": 73.8397,
+        "trayectoria_estado": 66.0
+      },
+      "peso_relativo": 0.128799,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 60.37
+    },
+    "H2": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 52.59,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 10.0,
+        "booker": 50.0,
+        "dynamis": 83.0,
+        "estructura": 55.0,
+        "frye": 51.6667,
+        "geometria_inercia": 40.0,
+        "greimas": 50.0,
+        "otras_dimensiones": 61.1111,
+        "puente_lateral": 51.0753,
+        "trayectoria_estado": 74.0
+      },
+      "peso_relativo": 0.119154,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.46
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.1292,
+      "techo_pct": 91.8708,
+      "pp_por_punto_de_rank_fusion": 1.820472,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "31_conflicto_con_un_dios",
+        "rol": "eje",
+        "peso_en_set": 0.244117,
+        "predictibilidad_estructural_pct": 60.37,
+        "cobertura_unica_frac": 0.0761
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.225837,
+        "predictibilidad_estructural_pct": 56.46,
+        "cobertura_unica_frac": 0.2332
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.222087,
+        "predictibilidad_estructural_pct": 55.65,
+        "cobertura_unica_frac": 0.16
+      },
+      {
+        "familia": "bbk_01_aventurero",
+        "rol": "componente",
+        "peso_en_set": 0.162061,
+        "predictibilidad_estructural_pct": 42.81,
+        "cobertura_unica_frac": 0.1512
+      },
+      {
+        "familia": "social_04_rogers_difusion_innovaciones",
+        "rol": "componente",
+        "peso_en_set": 0.145897,
+        "predictibilidad_estructural_pct": 39.35,
+        "cobertura_unica_frac": 0.1512
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "31_conflicto_con_un_dios domina; 30_ambicion es rival distinto (margen 2.148795 >= 1.0 y afinidad 0.246217 < 0.5)",
+      "peso_H1": 0.128799,
+      "peso_H2": 0.119154,
+      "peso_H1_en_par": 0.519449,
+      "peso_H2_en_par": 0.480551
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "31_conflicto_con_un_dios",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.69557,
+          "soporte_estructural_relativo": 0.2441172,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.395201,
+            "micro": 0.782813,
+            "meso": 0.654995,
+            "macro": 0.654995,
+            "aceleracion": 0.782813,
+            "divergencia_entre_escala": 0.127818,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.546775,
+          "soporte_estructural_relativo": 0.2258371,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.016618,
+            "micro": 0.515995,
+            "meso": 0.504467,
+            "macro": 0.504467,
+            "aceleracion": 0.52305,
+            "divergencia_entre_escala": 0.011528,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.10599,
+          "soporte_estructural_relativo": 0.22208728,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.161471,
+            "micro": 0.484671,
+            "meso": 0.628768,
+            "macro": 0.628768,
+            "aceleracion": 0.235676,
+            "divergencia_entre_escala": 0.144096,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "bbk_01_aventurero",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.05,
+          "soporte_estructural_relativo": 0.16206099,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.203854,
+            "micro": 0.658721,
+            "meso": 0.57353,
+            "macro": 0.57353,
+            "aceleracion": 0.673194,
+            "divergencia_entre_escala": 0.085191,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "social_04_rogers_difusion_innovaciones",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.15,
+          "soporte_estructural_relativo": 0.14589743,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.064575,
+            "micro": 0.463266,
+            "meso": 0.566798,
+            "macro": 0.566798,
+            "aceleracion": 0.303222,
+            "divergencia_entre_escala": 0.103532,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "31_conflicto_con_un_dios",
+            "arquetipo_el_gobernante",
+            "bbk_01_aventurero"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.62826547,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "social_04_rogers_difusion_innovaciones"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.37173453,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "31_conflicto_con_un_dios",
+          "arquetipo_el_gobernante",
+          "bbk_01_aventurero"
+        ],
+        "n_hipotesis": 3,
+        "soporte_estructural_agregado": 0.62826547,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F001_01_NAPOLEON",
+    "question": "¿Qué trayectoria sigue Napoleón al invadir Rusia con la Grande Armée?",
+    "person": "Napoleón Bonaparte",
+    "tipo_sujeto": "politico",
+    "freeze": "1812-06-24",
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "C3_1812",
+    "cuts": [
+      {
+        "id": "C1_1799",
+        "corte": "C1_1799",
+        "cut_id": "C1_1799",
+        "date": "1799-11-09",
+        "fecha_corte": "1799-11-09",
+        "hecho": "Golpe del 18 de brumario; se convierte en Primer Cónsul.",
+        "P": [
+          [
+            "ambicion",
+            0.84
+          ],
+          [
+            "poder",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "audacia",
+            0.8
+          ],
+          [
+            "liderazgo",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "caos",
+            0.7
+          ],
+          [
+            "oportunidad",
+            0.75
+          ]
+        ]
+      },
+      {
+        "id": "C2_1805",
+        "corte": "C2_1805",
+        "cut_id": "C2_1805",
+        "date": "1805-12-02",
+        "fecha_corte": "1805-12-02",
+        "hecho": "Emperador desde 1804; victoria en Austerlitz sobre Austria y Rusia.",
+        "P": [
+          [
+            "poder",
+            0.84
+          ],
+          [
+            "sed_de_mando",
+            0.75
+          ]
+        ],
+        "A": [
+          [
+            "liderazgo",
+            0.84
+          ],
+          [
+            "planificacion",
+            0.75
+          ]
+        ],
+        "C": [
+          [
+            "triunfo",
+            0.8
+          ],
+          [
+            "conquista",
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "C3_1812",
+        "corte": "C3_1812",
+        "cut_id": "C3_1812",
+        "date": "1812-06-24",
+        "fecha_corte": "1812-06-24",
+        "hecho": "Rusia abandona el Bloqueo Continental; Napoleón cruza el Niemen con unos 600 000 hombres.",
+        "P": [
+          [
+            "orgullo_hubris",
+            0.78
+          ],
+          [
+            "ambicion",
+            0.8
+          ]
+        ],
+        "A": [
+          [
+            "busqueda_riesgo",
+            0.75
+          ],
+          [
+            "confrontacion_directa",
+            0.8
+          ]
+        ],
+        "C": [
+          [
+            "rivalidad_poder",
+            0.8
+          ],
+          [
+            "terreno_hostil",
+            0.7
+          ]
+        ]
+      }
+    ],
+    "source_notes": "https://en.wikipedia.org/wiki/Napoleon ; https://en.wikipedia.org/wiki/French_invasion_of_Russia (solo hechos hasta 24-jun-1812)"
+  }
+}

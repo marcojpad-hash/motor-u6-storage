@@ -1,0 +1,685 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "CAL_F002_09_ROCKEFELLER",
+  "started_epoch": 1794440830.907722,
+  "finished_epoch": 1794440866.534589,
+  "duration_seconds": 35.627,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/casos/fabrica/cola/CAL_F002_09_ROCKEFELLER/entrada.json",
+  "input_sha256": "8d817fffc938d0f56b280221eee35448556de19afa9e3623f78e0c080fd67151",
+  "normalized_input_sha256": "87c7cdd45b6b3a0dae8ca212f755c066bbb83151f7d19e02f0900711f8fbf6fd",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F002_09_ROCKEFELLER.json",
+  "output_sha256": "7ec9787c44371a4c05bb73601e9cf8fcfc3edb97278638b3daa24ab11274b95d",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226",
+  "motor_sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 9,
+      "engine_observation_calls_with_mc_metrics": 9,
+      "total_simulations": 6479,
+      "converged_calls": 9,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1859_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1859_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 625,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1859_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 1296,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1868_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 728,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1868_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1868_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1870_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 840,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1870_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1870_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 625,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "30_ambicion",
+        "porcentaje_relleno": 59.48,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 60.0,
+          "dynamis": 68.5714,
+          "estructura": 100.0,
+          "frye": 33.3333,
+          "geometria_inercia": 50.0,
+          "greimas": 80.0,
+          "otras_dimensiones": 55.0,
+          "puente_lateral": 49.361,
+          "resolucion": 70.0,
+          "trayectoria_estado": 88.0
+        },
+        "peso_relativo": 0.210081,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 58.13
+      },
+      "H2": {
+        "familia": "schwartz_07_logro",
+        "porcentaje_relleno": 50.89,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 80.0,
+          "booker": 60.0,
+          "dynamis": 57.1429,
+          "estructura": 20.0,
+          "frye": 56.6667,
+          "geometria_inercia": 60.0,
+          "greimas": 26.6667,
+          "otras_dimensiones": 67.5,
+          "puente_lateral": 77.7778,
+          "resolucion": 20.0,
+          "trayectoria_estado": 34.0
+        },
+        "peso_relativo": 0.197027,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 55.01
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "bing_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "6bb008f22fd4a759b61c741da271cceba5ee0d60ac41f8f58c35495e59dedac4"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "7ec9787c44371a4c05bb73601e9cf8fcfc3edb97278638b3daa24ab11274b95d"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "3a0d88a99ba2"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "ef9aad3bcbd0"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "88d11b0138a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 111,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F002_09_ROCKEFELLER_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_CAL_F002_09_ROCKEFELLER_CEB_LEDGER_1.jsonl",
+          "sha256": "3e863667b614e6807eaf9b207e7bee2851928911102ffb3d67273e54c587ab7a",
+          "lineas": 22619
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "bing_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "6bb008f22fd4a759b61c741da271cceba5ee0d60ac41f8f58c35495e59dedac4",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 66,
+    "z_corte": "1870-01-31",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1870-01-31",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 66,
+      "tokens_despues_corte": 66
+    },
+    "query": "ambicion logro_personal metodicidad eficiencia oportunidad dependencia control planificacion negociacion competencia prosperidad poder organizacion acumulacion_capital",
+    "urls": [
+      "https://www.yelp.com/search?find_desc=take+out&find_loc=Marin%2C+CA&msockid=0a3e8829d0256db9042c9027d1f06c88",
+      "https://www.yelp.com/search?find_desc=takeout&find_loc=Marin%2C+CA&msockid=0a3e8829d0256db9042c9027d1f06c88",
+      "https://www.yelp.ca/search?find_desc=Lunch&find_loc=Marin+County%2C+CA%2F%2F%2F%2F",
+      "https://www.yelp.ca/search?find_desc=Best+Marin+Restaurants&find_loc=Marin+County%2C+CA",
+      "https://www.tripadvisor.com/Restaurants-g155988-zfp30-Marin_County_California.html",
+      "https://www.tripadvisor.com/Restaurants-g155988-zfp10601-Marin_County_California.html",
+      "https://wanderlog.com/list/geoCategory/321027/best-spots-for-lunch-in-marin-county",
+      "https://www.opentable.com/features/best-lunch-restaurants-marin-ca"
+    ],
+    "consultado_utc": "2026-11-11T23:47:28+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-11T23:47:11+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-11T23:47:11+00:00",
+        "error": "buscador duckduckgo_html fallido: The read operation timed out"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-11T23:47:27+00:00",
+        "error": "buscador duckduckgo_lite sin resultados URL verificables"
+      },
+      {
+        "provider": "bing_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-11T23:47:28+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "30_ambicion",
+    "H2": "schwartz_07_logro",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": false,
+    "tortugas_aplicado_al_orden": false,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "30_ambicion",
+      "porcentaje_relleno": 59.48,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 60.0,
+        "dynamis": 68.5714,
+        "estructura": 100.0,
+        "frye": 33.3333,
+        "geometria_inercia": 50.0,
+        "greimas": 80.0,
+        "otras_dimensiones": 55.0,
+        "puente_lateral": 49.361,
+        "resolucion": 70.0,
+        "trayectoria_estado": 88.0
+      },
+      "peso_relativo": 0.210081,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 58.13
+    },
+    "H2": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 50.89,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 80.0,
+        "booker": 60.0,
+        "dynamis": 57.1429,
+        "estructura": 20.0,
+        "frye": 56.6667,
+        "geometria_inercia": 60.0,
+        "greimas": 26.6667,
+        "otras_dimensiones": 67.5,
+        "puente_lateral": 77.7778,
+        "resolucion": 20.0,
+        "trayectoria_estado": 34.0
+      },
+      "peso_relativo": 0.197027,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.01
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.9333,
+      "techo_pct": 92.0667,
+      "pp_por_punto_de_rank_fusion": 1.79007,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "30_ambicion",
+        "rol": "eje",
+        "peso_en_set": 0.451966,
+        "predictibilidad_estructural_pct": 58.13,
+        "cobertura_unica_frac": 0.5058
+      },
+      {
+        "familia": "mbti_factor_juicio_j",
+        "rol": "componente",
+        "peso_en_set": 0.306277,
+        "predictibilidad_estructural_pct": 41.95,
+        "cobertura_unica_frac": 0.1644
+      },
+      {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "rol": "componente",
+        "peso_en_set": 0.241758,
+        "predictibilidad_estructural_pct": 34.78,
+        "cobertura_unica_frac": 0.1622
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "30_ambicion domina; schwartz_07_logro es rival distinto (margen 1.742494 >= 1.0 y afinidad 0.457682 < 0.5)",
+      "peso_H1": 0.210081,
+      "peso_H2": 0.197027,
+      "peso_H1_en_par": 0.516033,
+      "peso_H2_en_par": 0.483967
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 4,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "30_ambicion",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.042494,
+          "soporte_estructural_relativo": 0.33605629,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.322734,
+            "micro": 0.621393,
+            "meso": 0.681354,
+            "macro": 0.681354,
+            "aceleracion": 0.370735,
+            "divergencia_entre_escala": 0.05996,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "eterno_retorno_02_cosmizacion_fundacion",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 21.400181,
+          "soporte_estructural_relativo": 0.25645599,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.435086,
+            "micro": 0.653909,
+            "meso": 0.74936,
+            "macro": 0.74936,
+            "aceleracion": 0.285393,
+            "divergencia_entre_escala": 0.095451,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "mbti_factor_juicio_j",
+          "rol_en_set": "componente",
+          "rank_fusion": 19.003148,
+          "soporte_estructural_relativo": 0.22773037,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.266101,
+            "micro": 0.5992,
+            "meso": 0.649976,
+            "macro": 0.649976,
+            "aceleracion": 0.393267,
+            "divergencia_entre_escala": 0.050776,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "tainter_01_inversion_complejidad_productiva",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.0,
+          "soporte_estructural_relativo": 0.17975735,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.224969,
+            "micro": 0.578674,
+            "meso": 0.62939,
+            "macro": 0.62939,
+            "aceleracion": 0.395432,
+            "divergencia_entre_escala": 0.050716,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "30_ambicion",
+            "eterno_retorno_02_cosmizacion_fundacion",
+            "mbti_factor_juicio_j",
+            "tainter_01_inversion_complejidad_productiva"
+          ],
+          "n_hipotesis": 4,
+          "soporte_estructural_agregado": 1.0,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "30_ambicion",
+          "eterno_retorno_02_cosmizacion_fundacion",
+          "mbti_factor_juicio_j",
+          "tainter_01_inversion_complejidad_productiva"
+        ],
+        "n_hipotesis": 4,
+        "soporte_estructural_agregado": 1.0,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F002_09_ROCKEFELLER",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F002_09_ROCKEFELLER",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1531
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 46,
+          "new_event_records": 1692,
+          "new_token_strings": 58,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1589
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F002_09_ROCKEFELLER",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__CAL_F002_09_ROCKEFELLER",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1589
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 48,
+          "new_event_records": 2977,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 1589
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+ "case_id": "CAL_F002_02_PASTEUR",
+ "question": "¿Qué trayectoria sigue Louis Pasteur tras presentar ante la Academia de Ciencias sus ensayos de inmunización contra la rabia en perros?",
+ "person": "Louis Pasteur",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1885-06-30",
+ "z_trabajo": "1885-06-30",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1884-06-15",
+ "cuts": [
+  {
+   "id": "C1_1862",
+   "corte": "C1_1862",
+   "cut_id": "C1_1862",
+   "date": "1862",
+   "fecha_corte": "1862",
+   "hecho": "Sus experimentos contra la generación espontánea, repetidos con Claude Bernard el 20 de abril de 1862, le valieron ese año el premio Alhumbert de 2500 francos de la Academia de Ciencias.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.82
+    ],
+    [
+     "conocimiento",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "verificacion",
+     0.8
+    ],
+    [
+     "metodicidad",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.76
+    ],
+    [
+     "rivalidad_profesional",
+     0.66
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Recibió el premio Alhumbert (2500 francos) en 1862 por sus experimentos contra la generación espontánea; las pruebas con Claude Bernard se hicieron el 20 de abril de 1862.",
+     "source_url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+     "source_date": "2026-10-25",
+     "claim_date": "1862",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1881",
+   "corte": "C2_1881",
+   "cut_id": "C2_1881",
+   "date": "1881-06-02",
+   "fecha_corte": "1881-06-02",
+   "hecho": "En Pouilly-le-Fort inoculó ovejas y cabras con cultivos atenuados de carbunco el 5 y el 17 de mayo de 1881, expuso a todos los animales al agente virulento el 31 de mayo y el 2 de junio, ante más de 200 espectadores, todos los animales inoculados habían sobrevivido, a diferencia del grupo de control.",
+   "P": [
+    [
+     "conocimiento",
+     0.75
+    ],
+    [
+     "ambicion",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "verificacion",
+     0.82
+    ],
+    [
+     "audacia",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.82
+    ],
+    [
+     "atencion_social",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Ensayo público de Pouilly-le-Fort: inoculaciones el 5 y 17 de mayo de 1881, exposición el 31 de mayo y resultado observado el 2 de junio de 1881 ante más de 200 personas; sobrevivieron todos los animales inoculados.",
+     "source_url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+     "source_date": "2026-10-25",
+     "claim_date": "1881-06-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Relato del ensayo de Pouilly-le-Fort en una reimpresión comentada.",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2588695/",
+     "source_date": "2026-10-25",
+     "claim_date": "1881-06-02",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1884",
+   "corte": "C3_1884",
+   "cut_id": "C3_1884",
+   "date": "1884-06-15",
+   "fecha_corte": "1884-06-15",
+   "hecho": "En notas a la Academia de Ciencias de febrero y mayo de 1884 informó que la virulencia del agente de la rabia cambiaba al pasar por distintos animales (el mono la atenuaba; el conejo y el cobayo la aumentaban) y el 19 de mayo de 1884 expuso un método de inoculación preventiva en perros; se nombró una comisión de control para verificar los experimentos.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.8
+    ],
+    [
+     "determinacion",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "metodicidad",
+     0.8
+    ],
+    [
+     "verificacion",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "presion_social",
+     0.68
+    ],
+    [
+     "legitimidad_percibida",
+     0.7
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "Notas de Pasteur a la Academia de Ciencias en febrero y mayo de 1884 (Comptes rendus, tomo 98) sobre la modificación de la virulencia rábica por pasajes en animales.",
+     "source_url": "https://fr.wikipedia.org/wiki/Louis_Pasteur",
+     "source_date": "2026-10-25",
+     "claim_date": "1884-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Lista de los artículos de Pasteur publicados en los Comptes rendus, incluidos los de 1884 sobre la rabia.",
+     "source_url": "https://comptes-rendus.academie-sciences.fr/page/anciens-articles-de-pasteur_fr/",
+     "source_date": "2026-10-25",
+     "claim_date": "1884-05",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Crónica de H. Bouley (15 de junio de 1884): comunicación de Pasteur del 19 de mayo sobre la inoculación preventiva de la rabia, atenuación del virus en el mono y aumento en conejo y cobayo, y nombramiento de una comisión de control.",
+     "source_url": "https://www.persee.fr/doc/rmv_0034-1843_1884_num_61_1_1817",
+     "source_date": "1884-06-15",
+     "claim_date": "1884-05-19",
+     "tipo_fuente": "primaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Wikipedia (inglés y francés), reimpresión en PMC, índice de artículos de Pasteur en los Comptes rendus y una crónica veterinaria de junio de 1884 (Persée, fuente primaria)."
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "CAL_F001_04_DISNEY",
+ "question": "¿Qué trayectoria sigue Walt Disney tras perder los derechos de Oswald y a la mayoría de sus animadores?",
+ "person": "Walt Disney",
+ "tipo_sujeto": "empresario",
+ "freeze": "1928-03-01",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1928",
+ "cuts": [
+  {
+   "id": "C1_1923",
+   "corte": "C1_1923",
+   "cut_id": "C1_1923",
+   "date": "1923-10-16",
+   "fecha_corte": "1923-10-16",
+   "hecho": "Tras la quiebra de Laugh-O-Gram en Kansas City funda con su hermano Roy el estudio Disney Brothers en Los Ángeles.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "autonomia",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "busqueda_riesgo",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "escasez",
+     0.78
+    ],
+    [
+     "derrota_temporal",
+     0.72
+    ]
+   ]
+  },
+  {
+   "id": "C2_1927",
+   "corte": "C2_1927",
+   "cut_id": "C2_1927",
+   "date": "1927-09-05",
+   "fecha_corte": "1927-09-05",
+   "hecho": "Oswald the Lucky Rabbit, producido para Universal vía Charles Mintz, tiene éxito.",
+   "P": [
+    [
+     "logro_personal",
+     0.78
+    ],
+    [
+     "reconocimiento",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "planificacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.75
+    ],
+    [
+     "dependencia",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1928",
+   "corte": "C3_1928",
+   "cut_id": "C3_1928",
+   "date": "1928-03-01",
+   "fecha_corte": "1928-03-01",
+   "hecho": "En Nueva York, Mintz se queda con Oswald (los derechos eran de Universal) y contrata a casi todos sus animadores.",
+   "P": [
+    [
+     "determinacion",
+     0.8
+    ],
+    [
+     "autonomia",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "resiliencia",
+     0.78
+    ],
+    [
+     "generacion_ideas",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "traicion",
+     0.8
+    ],
+    [
+     "perdida",
+     0.78
+    ]
+   ]
+  }
+ ],
+ "source_notes": "https://en.wikipedia.org/wiki/Walt_Disney ; https://en.wikipedia.org/wiki/Oswald_the_Lucky_Rabbit (solo hechos hasta mar-1928)"
+}

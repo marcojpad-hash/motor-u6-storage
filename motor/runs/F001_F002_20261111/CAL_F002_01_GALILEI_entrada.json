@@ -1,0 +1,197 @@
+{
+ "case_id": "CAL_F002_01_GALILEI",
+ "question": "¿Qué trayectoria sigue Galileo Galilei tras imprimir en Florencia, con licencia eclesiástica, su Diálogo sobre los dos máximos sistemas del mundo?",
+ "person": "Galileo Galilei",
+ "tipo_sujeto": "cientifico",
+ "freeze": "1632-03-31",
+ "z_trabajo": "1632-03-31",
+ "modo_z": "historico",
+ "gate_z": "GATE_Z_TRABAJO_20261024",
+ "preparacion_ciega": {
+  "preparador_entrada": "GrokBot-preparador-ciego-F002",
+  "custodio_destino": "GrokBot-custodio-rutina-F002",
+  "vio_destino": false
+ },
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "1632-02-22",
+ "cuts": [
+  {
+   "id": "C1_1610",
+   "corte": "C1_1610",
+   "cut_id": "C1_1610",
+   "date": "1610-03-13",
+   "fecha_corte": "1610-03-13",
+   "hecho": "Publicó el Sidereus Nuncius con sus observaciones telescópicas, dedicado a Cosme II de Médici; llamó estrellas mediceas a las lunas de Júpiter que había descubierto, y el gesto le ayudó a obtener el puesto de matemático y filósofo principal de los Médici.",
+   "P": [
+    [
+     "conocimiento",
+     0.82
+    ],
+    [
+     "curiosidad_abstracta",
+     0.78
+    ]
+   ],
+   "A": [
+    [
+     "herramienta_nueva",
+     0.82
+    ],
+    [
+     "analisis",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "oportunidad",
+     0.75
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El Sidereus Nuncius se publicó el 13 de marzo de 1610 y estaba dedicado a Cosme II de Médici, con las lunas llamadas estrellas mediceas.",
+     "source_url": "https://en.wikipedia.org/wiki/Sidereus_Nuncius",
+     "source_date": "2026-10-25",
+     "claim_date": "1610-03-13",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "La dedicatoria le ayudó a obtener el puesto de matemático y filósofo principal de los Médici.",
+     "source_url": "https://en.wikipedia.org/wiki/Sidereus_Nuncius",
+     "source_date": "2026-10-25",
+     "claim_date": "1610",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C2_1623",
+   "corte": "C2_1623",
+   "cut_id": "C2_1623",
+   "date": "1623-10",
+   "fecha_corte": "1623-10",
+   "hecho": "Tras un decreto eclesiástico de 1616 que suspendió el libro de Copérnico hasta su corrección, el cardenal Maffeo Barberini, amigo y admirador suyo que se había opuesto a la amonestación de Galileo, fue elegido papa Urbano VIII en 1623; en octubre de 1623 Galileo publicó en Roma El ensayador, dedicado al nuevo papa y recibido con amplio aplauso.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.75
+    ],
+    [
+     "burla",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "redes_prestigio",
+     0.78
+    ],
+    [
+     "prohibicion",
+     0.65
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "En 1616 un decreto de una congregación eclesiástica de Roma suspendió De revolutionibus hasta su corrección.",
+     "source_url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+     "source_date": "2026-10-25",
+     "claim_date": "1616",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "Barberini, amigo y admirador de Galileo, se había opuesto a la amonestación de 1616 y fue elegido papa Urbano VIII en 1623.",
+     "source_url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+     "source_date": "2026-10-25",
+     "claim_date": "1623",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El ensayador se publicó en Roma en octubre de 1623, dedicado a Urbano VIII, con amplio aplauso.",
+     "source_url": "https://en.wikipedia.org/wiki/The_Assayer",
+     "source_date": "2026-10-25",
+     "claim_date": "1623-10",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  },
+  {
+   "id": "C3_1632",
+   "corte": "C3_1632",
+   "cut_id": "C3_1632",
+   "date": "1632-02-22",
+   "fecha_corte": "1632-02-22",
+   "hecho": "Publicó el Diálogo sobre los dos máximos sistemas del mundo, que comparaba el sistema copernicano con el ptolemaico, con autorización formal de la Iglesia y permiso papal; la obra estaba dedicada a Fernando II de Médici, que recibió el primer ejemplar impreso el 22 de febrero de 1632.",
+   "P": [
+    [
+     "busqueda_verdad",
+     0.82
+    ],
+    [
+     "orgullo",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "persuasion",
+     0.78
+    ],
+    [
+     "audacia",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.75
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "evidencia": [
+    {
+     "afirmacion": "El Diálogo se publicó en 1632 con autorización formal de la Iglesia y permiso papal.",
+     "source_url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+     "source_date": "2026-10-25",
+     "claim_date": "1632-02-22",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    },
+    {
+     "afirmacion": "El Diálogo comparaba los sistemas copernicano y ptolemaico, estaba dedicado a Fernando II y el primer ejemplar impreso se entregó el 22 de febrero de 1632.",
+     "source_url": "https://en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems",
+     "source_date": "2026-10-25",
+     "claim_date": "1632-02-22",
+     "tipo_fuente": "secundaria",
+     "conocido_en_Z": "sí"
+    }
+   ]
+  }
+ ],
+ "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta la impresión del Diálogo."
+}

@@ -1,0 +1,509 @@
+{
+  "case_id": "CAL_F002_07_CATALINA",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 20.55,
+  "result_completo_sha256": "5256e8878cc26dfddc1a46bebca33fd2459686b13f61b2d943206ba1967f2bbb",
+  "result_completo_bytes": 6733219,
+  "entrada_sha256": "267264ce64257c224f7d68041ee924cb519a72de3959cb3a9a141f976a2d5ec5",
+  "receipt_sha256": "ee8b0d105c4315cc1193b12497246915b5fc29de4d4bbfac9b3768b619dbe02c",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "schwartz_07_logro",
+      "porcentaje_relleno": 53.77,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 37.5,
+        "booker": 45.8333,
+        "dynamis": 82.5,
+        "estructura": 43.75,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 54.1667,
+        "otras_dimensiones": 64.5833,
+        "puente_lateral": 43.1571,
+        "resolucion": 62.5,
+        "trayectoria_estado": 57.5
+      },
+      "peso_relativo": 0.127994,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 54.9
+    },
+    "H2": {
+      "familia": "12_obtencion",
+      "porcentaje_relleno": 53.35,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 62.5,
+        "booker": 50.0,
+        "dynamis": 77.5,
+        "estructura": 25.0,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 50.0,
+        "otras_dimensiones": 55.5556,
+        "puente_lateral": 48.7885,
+        "resolucion": 62.5,
+        "trayectoria_estado": 55.0
+      },
+      "peso_relativo": 0.124058,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.44
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.2916,
+      "techo_pct": 92.7084,
+      "pp_por_punto_de_rank_fusion": 1.817377,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "schwartz_07_logro",
+        "rol": "eje",
+        "peso_en_set": 0.237675,
+        "predictibilidad_estructural_pct": 54.9,
+        "cobertura_unica_frac": 0.2565
+      },
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "componente",
+        "peso_en_set": 0.217178,
+        "predictibilidad_estructural_pct": 50.8,
+        "cobertura_unica_frac": 0.1257
+      },
+      {
+        "familia": "utopia_mentalidad_liberal",
+        "rol": "componente",
+        "peso_en_set": 0.218306,
+        "predictibilidad_estructural_pct": 51.02,
+        "cobertura_unica_frac": 0.2548
+      },
+      {
+        "familia": "social_01_asch_conformidad",
+        "rol": "componente",
+        "peso_en_set": 0.170249,
+        "predictibilidad_estructural_pct": 41.39,
+        "cobertura_unica_frac": 0.2443
+      },
+      {
+        "familia": "25_adulterio",
+        "rol": "componente",
+        "peso_en_set": 0.156592,
+        "predictibilidad_estructural_pct": 38.66,
+        "cobertura_unica_frac": 0.1187
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "schwartz_07_logro con componentes de 12_obtencion (margen 0.805673 < GATE_SEPARATION 1.0; afinidad 0.633333 >= 0.5)",
+      "peso_H1": 0.127994,
+      "peso_H2": 0.124058,
+      "peso_H1_en_par": 0.507808,
+      "peso_H2_en_par": 0.492192
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 7,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "schwartz_07_logro",
+          "rol_en_set": "eje",
+          "rank_fusion": 26.196642,
+          "soporte_estructural_relativo": 0.17008573,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.179401,
+            "micro": 0.636946,
+            "meso": 0.566078,
+            "macro": 0.566078,
+            "aceleracion": 0.643946,
+            "divergencia_entre_escala": 0.070868,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "utopia_mentalidad_liberal",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.061749,
+          "soporte_estructural_relativo": 0.15622461,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.13787,
+            "micro": 0.490668,
+            "meso": 0.608068,
+            "macro": 0.608068,
+            "aceleracion": 0.278269,
+            "divergencia_entre_escala": 0.117401,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.9375,
+          "soporte_estructural_relativo": 0.1554179,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.306055,
+            "micro": 0.723335,
+            "meso": 0.617874,
+            "macro": 0.617874,
+            "aceleracion": 0.723335,
+            "divergencia_entre_escala": 0.105462,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "tainter_04_colapso_por_simplificacion_forzada",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.403729,
+          "soporte_estructural_relativo": 0.15195231,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.143189,
+            "micro": 0.490401,
+            "meso": 0.612191,
+            "macro": 0.612191,
+            "aceleracion": 0.270938,
+            "divergencia_entre_escala": 0.12179,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "arquetipo_el_ciudadano",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 20.396056,
+          "soporte_estructural_relativo": 0.13242453,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.019375,
+            "micro": 0.490801,
+            "meso": 0.490068,
+            "macro": 0.490068,
+            "aceleracion": 0.501467,
+            "divergencia_entre_escala": 0.000733,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "social_01_asch_conformidad",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.764892,
+          "soporte_estructural_relativo": 0.12183395,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.027904,
+            "micro": 0.486936,
+            "meso": 0.485604,
+            "macro": 0.485604,
+            "aceleracion": 0.502667,
+            "divergencia_entre_escala": 0.001332,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "25_adulterio",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.259656,
+          "soporte_estructural_relativo": 0.11206097,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.168988,
+            "micro": 0.493334,
+            "meso": 0.630074,
+            "macro": 0.630074,
+            "aceleracion": 0.246308,
+            "divergencia_entre_escala": 0.13674,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "schwartz_07_logro",
+            "utopia_mentalidad_liberal",
+            "eterno_retorno_01_caos_primordial",
+            "tainter_04_colapso_por_simplificacion_forzada",
+            "25_adulterio"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 0.74574152,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_ciudadano",
+            "social_01_asch_conformidad"
+          ],
+          "n_hipotesis": 2,
+          "soporte_estructural_agregado": 0.25425848,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "schwartz_07_logro",
+          "utopia_mentalidad_liberal",
+          "eterno_retorno_01_caos_primordial",
+          "tainter_04_colapso_por_simplificacion_forzada",
+          "25_adulterio"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 0.74574152,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_07_CATALINA",
+    "question": "¿Qué trayectoria sigue Catalina Alexéievna, consorte del emperador Pedro III, tras la llegada de su esposo al trono ruso y el creciente distanciamiento entre ambos?",
+    "person": "Catalina Alexéievna (nacida Sofía de Anhalt-Zerbst)",
+    "tipo_sujeto": "gobernante",
+    "freeze": "1762-06-01",
+    "z_trabajo": "1762-06-01",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1762-05-05",
+    "cuts": [
+      {
+        "id": "C1_1745",
+        "corte": "C1_1745",
+        "cut_id": "C1_1745",
+        "date": "1745-08-21",
+        "fecha_corte": "1745-08-21",
+        "hecho": "Princesa alemana llegada a Rusia en 1744 a los 15 años, se empeñó en aprender ruso y ganarse a la emperatriz Isabel; el 28 de junio de 1744 fue recibida en la Iglesia ortodoxa con el nombre de Yekaterina Alexéievna y el 21 de agosto de 1745 se casó con el gran duque Pedro.",
+        "P": [
+          [
+            "ambicion",
+            0.75
+          ],
+          [
+            "necesidad_pertenencia",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "aprendizaje",
+            0.8
+          ],
+          [
+            "astucia",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "oportunidad",
+            0.76
+          ],
+          [
+            "presion_social",
+            0.68
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Llegó a Rusia en 1744, fue recibida en la ortodoxia el 28 de junio de 1744 como Yekaterina Alexéievna y se casó con Pedro el 21 de agosto de 1745.",
+            "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+            "source_date": "2026-10-25",
+            "claim_date": "1745-08-21",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1754",
+        "corte": "C2_1754",
+        "cut_id": "C2_1754",
+        "date": "1754",
+        "fecha_corte": "1754",
+        "hecho": "El matrimonio resultó infeliz; Pedro tomó una amante y ella se relacionó con otras figuras de la corte, se ganó el favor de grupos políticos poderosos opuestos a su esposo y se volvió una lectora ávida en francés; en 1754 nació su hijo Pablo, heredero de la dinastía.",
+        "P": [
+          [
+            "conocimiento",
+            0.74
+          ],
+          [
+            "autonomia",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "analisis",
+            0.72
+          ],
+          [
+            "discrecion",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "estancamiento_emocional",
+            0.7
+          ],
+          [
+            "infidelidad",
+            0.68
+          ],
+          [
+            "alianza",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "El matrimonio fue infeliz; tras tomar Pedro una amante, Catalina se relacionó con otras figuras de la corte, ganó popularidad entre grupos opuestos a su esposo y se volvió lectora ávida.",
+            "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+            "source_date": "2026-10-25",
+            "claim_date": "1754",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Su hijo Pablo nació en 1754.",
+            "source_url": "https://en.wikipedia.org/wiki/Paul_I_of_Russia",
+            "source_date": "2026-10-25",
+            "claim_date": "1754",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1762",
+        "corte": "C3_1762",
+        "cut_id": "C3_1762",
+        "date": "1762-05-05",
+        "fecha_corte": "1762-05-05",
+        "hecho": "Pedro subió al trono el 5 de enero de 1762 y ella pasó a ser emperatriz consorte; admirador de Federico II, Pedro firmó el 5 de mayo de 1762 el Tratado de San Petersburgo, que cerró la guerra con Prusia y devolvió las ganancias rusas.",
+        "P": [
+          [
+            "busqueda_seguridad",
+            0.72
+          ],
+          [
+            "ambicion",
+            0.72
+          ]
+        ],
+        "A": [
+          [
+            "cautela",
+            0.72
+          ],
+          [
+            "discrecion",
+            0.7
+          ]
+        ],
+        "C": [
+          [
+            "incertidumbre",
+            0.72
+          ],
+          [
+            "rivalidad_poder",
+            0.72
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Pedro III reinó desde el 5 de enero de 1762; Catalina fue emperatriz consorte desde esa fecha.",
+            "source_url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+            "source_date": "2026-10-25",
+            "claim_date": "1762-01-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "El Tratado de San Petersburgo del 5 de mayo de 1762 cerró la guerra entre Rusia y Prusia y devolvió las conquistas rusas.",
+            "source_url": "https://en.wikipedia.org/wiki/Treaty_of_Saint_Petersburg_(1762)",
+            "source_date": "2026-10-25",
+            "claim_date": "1762-05-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia en inglés (Catalina, Pedro III, Tratado de San Petersburgo); las fechas siguen a esas fuentes."
+  }
+}

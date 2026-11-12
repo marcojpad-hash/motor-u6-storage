@@ -1,0 +1,468 @@
+{
+  "case_id": "CAL_F002_02_PASTEUR",
+  "lote": "F002",
+  "fecha_corrida": "2026-11-11",
+  "ok": true,
+  "seconds": 34.037,
+  "result_completo_sha256": "a8712c9b696f80c8b758ed6af36325433c922722887f629f408ca6d2502cc8d8",
+  "result_completo_bytes": 6131616,
+  "entrada_sha256": "53fc65d239ad4c25dae1c7e70c8abf6099a7bfe04f4e5a2824a0d37c400eb59b",
+  "receipt_sha256": "6a930ea01948d9383489bf4e8940a54adf3237d4e72be67635632928abbf81f5",
+  "receipt_status": "COMPLETED",
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "9_audaz_empresa",
+      "porcentaje_relleno": 64.53,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 57.1429,
+        "booker": 54.7619,
+        "dynamis": 54.0816,
+        "estructura": 100.0,
+        "frye": 50.0,
+        "geometria_inercia": 57.1429,
+        "greimas": 90.4762,
+        "otras_dimensiones": 64.2857,
+        "puente_lateral": 23.3224,
+        "resolucion": 85.7143,
+        "trayectoria_estado": 72.8571
+      },
+      "peso_relativo": 0.15344,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.72
+    },
+    "H2": {
+      "familia": "arquetipo_el_sabio",
+      "porcentaje_relleno": 57.95,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 71.4286,
+        "booker": 69.0476,
+        "dynamis": 35.7143,
+        "estructura": 85.7143,
+        "frye": 50.0,
+        "geometria_inercia": 50.0,
+        "greimas": 52.381,
+        "otras_dimensiones": 57.1429,
+        "puente_lateral": 68.8891,
+        "resolucion": 35.7143,
+        "trayectoria_estado": 61.4286
+      },
+      "peso_relativo": 0.149026,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.3
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.6125,
+      "techo_pct": 92.3875,
+      "pp_por_punto_de_rank_fusion": 1.803723,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P)"
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "9_audaz_empresa",
+        "rol": "eje",
+        "peso_en_set": 0.231149,
+        "predictibilidad_estructural_pct": 56.72,
+        "cobertura_unica_frac": 0.1784
+      },
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "componente",
+        "peso_en_set": 0.224498,
+        "predictibilidad_estructural_pct": 55.3,
+        "cobertura_unica_frac": 0.3823
+      },
+      {
+        "familia": "social_01_asch_conformidad",
+        "rol": "componente",
+        "peso_en_set": 0.205602,
+        "predictibilidad_estructural_pct": 51.29,
+        "cobertura_unica_frac": 0.0825
+      },
+      {
+        "familia": "30_ambicion",
+        "rol": "componente",
+        "peso_en_set": 0.200469,
+        "predictibilidad_estructural_pct": 50.2,
+        "cobertura_unica_frac": 0.085
+      },
+      {
+        "familia": "bbk_03_individualista",
+        "rol": "componente",
+        "peso_en_set": 0.138281,
+        "predictibilidad_estructural_pct": 36.99,
+        "cobertura_unica_frac": 0.1917
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "9_audaz_empresa con componentes de arquetipo_el_sabio (margen 0.783237 < GATE_SEPARATION 1.0)",
+      "peso_H1": 0.15344,
+      "peso_H2": 0.149026,
+      "peso_H1_en_par": 0.507297,
+      "peso_H2_en_par": 0.492703
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 5,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "eje",
+          "rank_fusion": 27.222938,
+          "soporte_estructural_relativo": 0.2311488,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.412684,
+            "micro": 0.686771,
+            "meso": 0.716128,
+            "macro": 0.716128,
+            "aceleracion": 0.430323,
+            "divergencia_entre_escala": 0.029356,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.439701,
+          "soporte_estructural_relativo": 0.22449837,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.124803,
+            "micro": 0.576592,
+            "meso": 0.555306,
+            "macro": 0.555306,
+            "aceleracion": 0.543225,
+            "divergencia_entre_escala": 0.021286,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "social_01_asch_conformidad",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.214286,
+          "soporte_estructural_relativo": 0.20560246,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.301236,
+            "micro": 0.720014,
+            "meso": 0.61592,
+            "macro": 0.61592,
+            "aceleracion": 0.720014,
+            "divergencia_entre_escala": 0.104094,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "30_ambicion",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.609715,
+          "soporte_estructural_relativo": 0.20046908,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.184612,
+            "micro": 0.48707,
+            "meso": 0.644924,
+            "macro": 0.644924,
+            "aceleracion": 0.214659,
+            "divergencia_entre_escala": 0.157854,
+            "n_cortes_observados": 3
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "bbk_03_individualista",
+          "rol_en_set": "componente",
+          "rank_fusion": 16.285714,
+          "soporte_estructural_relativo": 0.1382813,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.139373,
+            "micro": 0.609656,
+            "meso": 0.549702,
+            "macro": 0.549702,
+            "aceleracion": 0.620766,
+            "divergencia_entre_escala": 0.059954,
+            "n_cortes_observados": 3
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "9_audaz_empresa",
+            "arquetipo_el_sabio",
+            "social_01_asch_conformidad",
+            "30_ambicion",
+            "bbk_03_individualista"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 1.00000001,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "CONTINUIDAD_ASCENDENTE",
+        "hipotesis_que_convergen": [
+          "9_audaz_empresa",
+          "arquetipo_el_sabio",
+          "social_01_asch_conformidad",
+          "30_ambicion",
+          "bbk_03_individualista"
+        ],
+        "n_hipotesis": 5,
+        "soporte_estructural_agregado": 1.00000001,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "monte_carlo": {},
+  "predictive_validation": {
+    "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+    "structural_fill_is_probability": false,
+    "rank_fusion_is_probability": false,
+    "historical_reference": {
+      "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+      "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+      "module": "Grupo B predictor lateral de trayectorias",
+      "validation": "leave_one_out",
+      "n_reference_biographies": 15,
+      "n_evaluable_predictions": 121,
+      "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+      "functions_tested": {
+        "linear": "max(0, 1-d)",
+        "exponential": "exp(-3d)",
+        "inverse": "1/(1+3d)"
+      },
+      "top1_accuracy_pct": 64.46,
+      "top3_recall_pct": 97.52,
+      "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+      "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+    },
+    "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+  },
+  "entrada": {
+    "case_id": "CAL_F002_02_PASTEUR",
+    "question": "¿Qué trayectoria sigue Louis Pasteur tras presentar ante la Academia de Ciencias sus ensayos de inmunización contra la rabia en perros?",
+    "person": "Louis Pasteur",
+    "tipo_sujeto": "cientifico",
+    "freeze": "1885-06-30",
+    "z_trabajo": "1885-06-30",
+    "modo_z": "historico",
+    "gate_z": "GATE_Z_TRABAJO_20261024",
+    "preparacion_ciega": {
+      "preparador_entrada": "GrokBot-preparador-ciego-F002",
+      "custodio_destino": "GrokBot-custodio-rutina-F002",
+      "vio_destino": false
+    },
+    "random_seed": 20261024,
+    "z_work_kind": "CASE_CUTOFF",
+    "z_work_date": "1884-06-15",
+    "cuts": [
+      {
+        "id": "C1_1862",
+        "corte": "C1_1862",
+        "cut_id": "C1_1862",
+        "date": "1862",
+        "fecha_corte": "1862",
+        "hecho": "Sus experimentos contra la generación espontánea, repetidos con Claude Bernard el 20 de abril de 1862, le valieron ese año el premio Alhumbert de 2500 francos de la Academia de Ciencias.",
+        "P": [
+          [
+            "busqueda_verdad",
+            0.82
+          ],
+          [
+            "conocimiento",
+            0.78
+          ]
+        ],
+        "A": [
+          [
+            "verificacion",
+            0.8
+          ],
+          [
+            "metodicidad",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.76
+          ],
+          [
+            "rivalidad_profesional",
+            0.66
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Recibió el premio Alhumbert (2500 francos) en 1862 por sus experimentos contra la generación espontánea; las pruebas con Claude Bernard se hicieron el 20 de abril de 1862.",
+            "source_url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+            "source_date": "2026-10-25",
+            "claim_date": "1862",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C2_1881",
+        "corte": "C2_1881",
+        "cut_id": "C2_1881",
+        "date": "1881-06-02",
+        "fecha_corte": "1881-06-02",
+        "hecho": "En Pouilly-le-Fort inoculó ovejas y cabras con cultivos atenuados de carbunco el 5 y el 17 de mayo de 1881, expuso a todos los animales al agente virulento el 31 de mayo y el 2 de junio, ante más de 200 espectadores, todos los animales inoculados habían sobrevivido, a diferencia del grupo de control.",
+        "P": [
+          [
+            "conocimiento",
+            0.75
+          ],
+          [
+            "ambicion",
+            0.7
+          ]
+        ],
+        "A": [
+          [
+            "verificacion",
+            0.82
+          ],
+          [
+            "audacia",
+            0.72
+          ]
+        ],
+        "C": [
+          [
+            "reconocimiento",
+            0.82
+          ],
+          [
+            "atencion_social",
+            0.75
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Ensayo público de Pouilly-le-Fort: inoculaciones el 5 y 17 de mayo de 1881, exposición el 31 de mayo y resultado observado el 2 de junio de 1881 ante más de 200 personas; sobrevivieron todos los animales inoculados.",
+            "source_url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+            "source_date": "2026-10-25",
+            "claim_date": "1881-06-02",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Relato del ensayo de Pouilly-le-Fort en una reimpresión comentada.",
+            "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2588695/",
+            "source_date": "2026-10-25",
+            "claim_date": "1881-06-02",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      },
+      {
+        "id": "C3_1884",
+        "corte": "C3_1884",
+        "cut_id": "C3_1884",
+        "date": "1884-06-15",
+        "fecha_corte": "1884-06-15",
+        "hecho": "En notas a la Academia de Ciencias de febrero y mayo de 1884 informó que la virulencia del agente de la rabia cambiaba al pasar por distintos animales (el mono la atenuaba; el conejo y el cobayo la aumentaban) y el 19 de mayo de 1884 expuso un método de inoculación preventiva en perros; se nombró una comisión de control para verificar los experimentos.",
+        "P": [
+          [
+            "busqueda_verdad",
+            0.8
+          ],
+          [
+            "determinacion",
+            0.75
+          ]
+        ],
+        "A": [
+          [
+            "metodicidad",
+            0.8
+          ],
+          [
+            "verificacion",
+            0.78
+          ]
+        ],
+        "C": [
+          [
+            "presion_social",
+            0.68
+          ],
+          [
+            "legitimidad_percibida",
+            0.7
+          ]
+        ],
+        "evidencia": [
+          {
+            "afirmacion": "Notas de Pasteur a la Academia de Ciencias en febrero y mayo de 1884 (Comptes rendus, tomo 98) sobre la modificación de la virulencia rábica por pasajes en animales.",
+            "source_url": "https://fr.wikipedia.org/wiki/Louis_Pasteur",
+            "source_date": "2026-10-25",
+            "claim_date": "1884-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Lista de los artículos de Pasteur publicados en los Comptes rendus, incluidos los de 1884 sobre la rabia.",
+            "source_url": "https://comptes-rendus.academie-sciences.fr/page/anciens-articles-de-pasteur_fr/",
+            "source_date": "2026-10-25",
+            "claim_date": "1884-05",
+            "tipo_fuente": "secundaria",
+            "conocido_en_Z": "sí"
+          },
+          {
+            "afirmacion": "Crónica de H. Bouley (15 de junio de 1884): comunicación de Pasteur del 19 de mayo sobre la inoculación preventiva de la rabia, atenuación del virus en el mono y aumento en conejo y cobayo, y nombramiento de una comisión de control.",
+            "source_url": "https://www.persee.fr/doc/rmv_0034-1843_1884_num_61_1_1817",
+            "source_date": "1884-06-15",
+            "claim_date": "1884-05-19",
+            "tipo_fuente": "primaria",
+            "conocido_en_Z": "sí"
+          }
+        ]
+      }
+    ],
+    "source_notes": "Wikipedia (inglés y francés), reimpresión en PMC, índice de artículos de Pasteur en los Comptes rendus y una crónica veterinaria de junio de 1884 (Persée, fuente primaria)."
+  }
+}
