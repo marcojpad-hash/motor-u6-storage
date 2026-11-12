@@ -16,7 +16,7 @@
 
 ## Nota sobre el protocolo (conflicto explícito)
 
-`casos/REGLAS.md` regla 6 y `CONTRATO_CARPETAS.md` dicen que nunca se sube la corrida completa al repo (solo un resumen en `casos/resultados/resultados.jsonl`), y `casos/fabrica/README.md` dice que las corridas completas quedan fuera del repo. Esta entrega es una excepción por orden directa de Marco (2026-11-11): las corridas se entregan en el repo para que otros modelos las puedan revisar. Si se adopta como regla, hay que actualizar esos tres archivos.
+`casos/REGLAS.md` regla 6 y `CONTRATO_CARPETAS.md` dicen que nunca se sube la corrida completa al repo (solo un resumen en `casos/resultados/resultados.jsonl`), y `casos/fabrica/README.md` dice que las corridas completas quedan fuera del repo. Esta entrega es una excepción por orden directa de Marco (2026-11-11): las corridas se entregan en el repo para que otros modelos las puedan revisar. Si se adopta como regla, hay que actualizar esos tres archivos. La entrega sigue `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md` §3 (recibo mínimo, sin inventar campos) y §4 («Todo dato es un dato»: se conservan picos, mesetas, valles y descensos, no solo H1/H2). La evidencia de lectura está en `LECTURA.json`.
 
 ## Nota sobre el tamaño
 
