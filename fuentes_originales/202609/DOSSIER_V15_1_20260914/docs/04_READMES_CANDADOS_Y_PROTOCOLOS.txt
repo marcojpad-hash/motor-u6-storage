@@ -2649,6 +2649,14 @@ SHA256: 67e94d727b0ca1d88e72489169560905b50ce3a25be3c633057186e45fe50641
 
 NOTA PARA CLAUDE — RECALIBRACION MATEMATICA
 2026-09-07. NO AUTORIZADO. No tocar F hasta medir.
+AUTORIZADO por Marco 2026-11-13 (rama alterno/motor-autorizado). El nicho corre
+como lateral (motor/motor/plugin_nicho_campo_v1.py, contrato NICHO_CAMPO_V1_20261113,
+can_decide_H False): traza w' paralela, NO multiplica dentro de F (eso seria V6).
+Medido 2026-11-13 (sondas mínimas, 5 etapas por partes): alpha 0.2 (punto medio
+0.1-0.3), cap 0.999. Monroe ambicion sola +5.0% vs agencia junta +10.0%;
+Alejandro conquista junta +12.0% (poder 0.84->0.9408). Sensibilidad alpha 0.1/0.3:
+ambicion Alejandro C2 0.868/0.924. H1/H2 sin cambio en los 6 casos (observación).
+La integración al 244/V5 sigue FUERA (no se fusionó nada).
 
 1. HECHO
 Los ~20 ciegos NO actualizaron pesos del 244 ni get_weight.
@@ -2731,6 +2739,15 @@ SHA256: d5bfd90bc6361bcbdadd618d18ff7722976b9db43a5a0ec1126ebc154b3800f7
 NOTA PARA CLAUDE — NO AUTORIZADO. Revisar / corregir / tumbar.
 Fecha: 2026-09-07
 Estado: plugin provisional. NO fusionar a Engine_V5 ni a patterns_final_v14.
+AUTORIZADO por Marco 2026-11-13 (rama alterno/motor-autorizado). Los 3 plugins
+corren como laterales en motor/motor/laterales_unico_v1.py (sensores_pre),
+como trazas, sin fusionar al 244/V5 y sin modificar la entrada ni F ni H:
+alias_reactivacion (qué tokens agregaría por corte), embudo_clinico (etiquetas
+sobre cortes crudos), fix_entrada (caso preparado: alias+remap+embudo).
+Prueba mínima 2026-11-13: 5/5 (Monroe remap ambicion->autonomia en C2;
+Alejandro sin remap, H2=30_ambicion; Jose A RUIDO_ALIAS; Jose E-F PERFIL_VENTANA;
+Freud C PERFIL_VENTANA sosten 1). Hallazgo: el alias es ciego a negaciones
+("sin carretera" dispara carretera). Ver informes/TABLA_COMPARATIVA_NICHO_AUTORIZADO_20261113.md.
 
 ------------------------------------------------
 POR QUE EXISTE

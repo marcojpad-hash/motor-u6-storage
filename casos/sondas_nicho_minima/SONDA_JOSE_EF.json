@@ -1,0 +1,173 @@
+{
+ "case_id": "SONDA_JOSE_EF",
+ "question": "¿El token clínico en la ventana de oficio es perfil de ventana?",
+ "person": "JOSE_EF (sonda: desorden+desplazamientos en oficio)",
+ "tipo_sujeto": "artista",
+ "freeze": "2000-03-01",
+ "random_seed": 20261113,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C6_2000",
+ "cuts": [
+  {
+   "id": "C1_1950",
+   "corte": "C1_1950",
+   "cut_id": "C1_1950",
+   "date": "1950-06-01",
+   "fecha_corte": "1950-06-01",
+   "hecho": "Infancia pobre; aprende a cantar.",
+   "P": [
+    [
+     "aprendizaje",
+     0.7
+    ],
+    [
+     "humildad",
+     0.65
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "cotidiano",
+     0.65
+    ]
+   ]
+  },
+  {
+   "id": "C2_1960",
+   "corte": "C2_1960",
+   "cut_id": "C2_1960",
+   "date": "1960-03-01",
+   "fecha_corte": "1960-03-01",
+   "hecho": "Canta en bares.",
+   "P": [
+    [
+     "creatividad",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "alianza",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1970",
+   "corte": "C3_1970",
+   "cut_id": "C3_1970",
+   "date": "1970-06-01",
+   "fecha_corte": "1970-06-01",
+   "hecho": "Primer éxito; giras regionales.",
+   "P": [
+    [
+     "reconocimiento",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "estatus_social",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C4_1980",
+   "corte": "C4_1980",
+   "cut_id": "C4_1980",
+   "date": "1980-03-01",
+   "fecha_corte": "1980-03-01",
+   "hecho": "Giras nacionales; agenda fija.",
+   "P": [
+    [
+     "reconocimiento",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.75
+    ]
+   ]
+  },
+  {
+   "id": "C5_1990",
+   "corte": "C5_1990",
+   "cut_id": "C5_1990",
+   "date": "1990-06-01",
+   "fecha_corte": "1990-06-01",
+   "hecho": "Periodos de desorden, desplazamientos constantes por carretera.",
+   "P": [
+    [
+     "reconocimiento",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C6_2000",
+   "corte": "C6_2000",
+   "cut_id": "C6_2000",
+   "date": "2000-03-01",
+   "fecha_corte": "2000-03-01",
+   "hecho": "Sigue la gira; agenda fija y vida ordenada.",
+   "P": [
+    [
+     "reconocimiento",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ]
+   ]
+  }
+ ],
+ "source_notes": "SONDA MINIMA nicho/alias/embudo (dossier 2026-09-07). Casos sintéticos tipo, no biografías reales."
+}

@@ -1,0 +1,115 @@
+{
+ "case_id": "SONDA_ALEJANDRO_TIPO",
+ "question": "¿La ambición de la figura es poder con escalada (conquista)?",
+ "person": "ALEJANDRO_TIPO (sonda: poder+escalada)",
+ "tipo_sujeto": "politico",
+ "freeze": "1990-06-01",
+ "random_seed": 20261113,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1990",
+ "cuts": [
+  {
+   "id": "C1_1980",
+   "corte": "C1_1980",
+   "cut_id": "C1_1980",
+   "date": "1980-06-01",
+   "fecha_corte": "1980-06-01",
+   "hecho": "Educación con un tutor; aprende estrategia.",
+   "P": [
+    [
+     "aprendizaje",
+     0.7
+    ],
+    [
+     "humildad",
+     0.65
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "cotidiano",
+     0.65
+    ]
+   ]
+  },
+  {
+   "id": "C2_1985",
+   "corte": "C2_1985",
+   "cut_id": "C2_1985",
+   "date": "1985-03-01",
+   "fecha_corte": "1985-03-01",
+   "hecho": "Cruza el río; busca el imperio vecino.",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "poder",
+     0.84
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.8
+    ],
+    [
+     "audacia",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "conquista",
+     0.8
+    ],
+    [
+     "triunfo",
+     0.8
+    ]
+   ]
+  },
+  {
+   "id": "C3_1990",
+   "corte": "C3_1990",
+   "cut_id": "C3_1990",
+   "date": "1990-06-01",
+   "fecha_corte": "1990-06-01",
+   "hecho": "Toma la ciudad y escala la campaña hacia el este.",
+   "P": [
+    [
+     "poder",
+     0.84
+    ],
+    [
+     "sed_de_mando",
+     0.8
+    ],
+    [
+     "escalada",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion_directa",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.8
+    ]
+   ]
+  }
+ ],
+ "source_notes": "SONDA MINIMA nicho/alias/embudo (dossier 2026-09-07). Casos sintéticos tipo, no biografías reales."
+}

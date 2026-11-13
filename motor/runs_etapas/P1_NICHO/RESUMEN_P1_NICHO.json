@@ -1,0 +1,1601 @@
+{
+ "etapa": "P1_NICHO",
+ "casos": {
+  "SONDA_MONROE_TIPO": {
+   "case_id": "SONDA_MONROE_TIPO",
+   "H1": "schwartz_10_autodireccion",
+   "H2": "tainter_04_colapso_por_simplificacion_forzada",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos_estado",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 10.0,
+    "foco_30_ambicion": [
+     {
+      "corte": "C2_1955",
+      "token": "ambicion",
+      "w": 0.8,
+      "n_campo": 1,
+      "w_prima": 0.84,
+      "boost_pct": 5.0
+     }
+    ],
+    "top_boosts": [
+     {
+      "boost_pct": 10.0,
+      "corte": "C3_1960",
+      "token": "inconformismo",
+      "campo": "agencia",
+      "w": 0.75,
+      "w_prima": 0.8250000000000001
+     },
+     {
+      "boost_pct": 10.0,
+      "corte": "C3_1960",
+      "token": "autonomia",
+      "campo": "agencia",
+      "w": 0.8,
+      "w_prima": 0.8800000000000001
+     },
+     {
+      "boost_pct": 10.0,
+      "corte": "C2_1955",
+      "token": "inconformismo",
+      "campo": "agencia",
+      "w": 0.7,
+      "w_prima": 0.77
+     },
+     {
+      "boost_pct": 10.0,
+      "corte": "C2_1955",
+      "token": "autonomia",
+      "campo": "agencia",
+      "w": 0.7,
+      "w_prima": 0.77
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C3_1960",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.7,
+      "w_prima": 0.735
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C2_1955",
+      "token": "ambicion",
+      "campo": "conquista",
+      "w": 0.8,
+      "w_prima": 0.8400000000000001
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C1_1950",
+      "token": "humildad",
+      "campo": "agencia",
+      "w": 0.65,
+      "w_prima": 0.6825000000000001
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1950",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     },
+     {
+      "corte": "C2_1955",
+      "n_corte": 4,
+      "n_con_campo": 3,
+      "max_boost_pct": 10.0
+     },
+     {
+      "corte": "C3_1960",
+      "n_corte": 4,
+      "n_con_campo": 3,
+      "max_boost_pct": 10.0
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1950",
+       [
+        [
+         "aprendizaje",
+         0.7
+        ],
+        [
+         "humildad",
+         0.65
+        ],
+        [
+         "creatividad",
+         0.7
+        ],
+        [
+         "cotidiano",
+         0.65
+        ]
+       ]
+      ],
+      [
+       "C2_1955",
+       [
+        [
+         "autonomia",
+         0.8
+        ],
+        [
+         "autonomia",
+         0.7
+        ],
+        [
+         "inconformismo",
+         0.7
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C3_1960",
+       [
+        [
+         "autonomia",
+         0.8
+        ],
+        [
+         "inconformismo",
+         0.75
+        ],
+        [
+         "creatividad",
+         0.8
+        ],
+        [
+         "reconocimiento",
+         0.7
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1950",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C2_1955",
+       "conquista": 0,
+       "agencia": 2,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C3_1960",
+       "conquista": 0,
+       "agencia": 2,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1950",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1955",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1960",
+        "i": 2,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  },
+  "SONDA_ALEJANDRO_TIPO": {
+   "case_id": "SONDA_ALEJANDRO_TIPO",
+   "H1": "arquetipo_el_gobernante",
+   "H2": "30_ambicion",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos_estado",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 12.0,
+    "foco_30_ambicion": [
+     {
+      "corte": "C2_1985",
+      "token": "ambicion",
+      "w": 0.84,
+      "n_campo": 2,
+      "w_prima": 0.896,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C2_1985",
+      "token": "poder",
+      "w": 0.84,
+      "n_campo": 2,
+      "w_prima": 0.896,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C3_1990",
+      "token": "poder",
+      "w": 0.84,
+      "n_campo": 3,
+      "w_prima": 0.9408,
+      "boost_pct": 12.0
+     },
+     {
+      "corte": "C3_1990",
+      "token": "sed_de_mando",
+      "w": 0.8,
+      "n_campo": 3,
+      "w_prima": 0.896,
+      "boost_pct": 12.0
+     }
+    ],
+    "top_boosts": [
+     {
+      "boost_pct": 12.0,
+      "corte": "C3_1990",
+      "token": "sed_de_mando",
+      "campo": "conquista",
+      "w": 0.8,
+      "w_prima": 0.8960000000000001
+     },
+     {
+      "boost_pct": 12.0,
+      "corte": "C3_1990",
+      "token": "poder",
+      "campo": "conquista",
+      "w": 0.84,
+      "w_prima": 0.9408000000000001
+     },
+     {
+      "boost_pct": 12.0,
+      "corte": "C3_1990",
+      "token": "escalada",
+      "campo": "conquista",
+      "w": 0.75,
+      "w_prima": 0.8400000000000001
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C2_1985",
+      "token": "poder",
+      "campo": "conquista",
+      "w": 0.84,
+      "w_prima": 0.8959999999999999
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C2_1985",
+      "token": "ambicion",
+      "campo": "conquista",
+      "w": 0.84,
+      "w_prima": 0.8959999999999999
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C1_1980",
+      "token": "humildad",
+      "campo": "agencia",
+      "w": 0.65,
+      "w_prima": 0.6825000000000001
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1980",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     },
+     {
+      "corte": "C2_1985",
+      "n_corte": 6,
+      "n_con_campo": 2,
+      "max_boost_pct": 6.67
+     },
+     {
+      "corte": "C3_1990",
+      "n_corte": 5,
+      "n_con_campo": 3,
+      "max_boost_pct": 12.0
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1980",
+       [
+        [
+         "aprendizaje",
+         0.7
+        ],
+        [
+         "humildad",
+         0.65
+        ],
+        [
+         "creatividad",
+         0.7
+        ],
+        [
+         "cotidiano",
+         0.65
+        ]
+       ]
+      ],
+      [
+       "C2_1985",
+       [
+        [
+         "ambicion",
+         0.84
+        ],
+        [
+         "poder",
+         0.84
+        ],
+        [
+         "liderazgo",
+         0.8
+        ],
+        [
+         "audacia",
+         0.8
+        ],
+        [
+         "conquista",
+         0.8
+        ],
+        [
+         "triunfo",
+         0.8
+        ]
+       ]
+      ],
+      [
+       "C3_1990",
+       [
+        [
+         "poder",
+         0.84
+        ],
+        [
+         "sed_de_mando",
+         0.8
+        ],
+        [
+         "escalada",
+         0.75
+        ],
+        [
+         "confrontacion_directa",
+         0.8
+        ],
+        [
+         "rivalidad_poder",
+         0.8
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1980",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C2_1985",
+       "conquista": 1,
+       "agencia": 0,
+       "tiene_ambicion": true
+      },
+      {
+       "corte": "C3_1990",
+       "conquista": 3,
+       "agencia": 0,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1980",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1985",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1990",
+        "i": 2,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  },
+  "SONDA_JOSE_A": {
+   "case_id": "SONDA_JOSE_A",
+   "H1": "arquetipo_el_creador",
+   "H2": "schwartz_10_autodireccion",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos_estado",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 13.33,
+    "foco_30_ambicion": [],
+    "top_boosts": [
+     {
+      "boost_pct": 13.33,
+      "corte": "C3_1970",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.75,
+      "w_prima": 0.85
+     },
+     {
+      "boost_pct": 13.33,
+      "corte": "C3_1970",
+      "token": "estatus_social",
+      "campo": "sacro",
+      "w": 0.7,
+      "w_prima": 0.7933333333333332
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C1_1950",
+      "token": "humildad",
+      "campo": "agencia",
+      "w": 0.65,
+      "w_prima": 0.6825000000000001
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1950",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     },
+     {
+      "corte": "C2_1960",
+      "n_corte": 4,
+      "n_con_campo": 0,
+      "max_boost_pct": 0.0
+     },
+     {
+      "corte": "C3_1970",
+      "n_corte": 3,
+      "n_con_campo": 2,
+      "max_boost_pct": 13.33
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1950",
+       [
+        [
+         "aprendizaje",
+         0.7
+        ],
+        [
+         "humildad",
+         0.65
+        ],
+        [
+         "creatividad",
+         0.7
+        ],
+        [
+         "cotidiano",
+         0.65
+        ]
+       ]
+      ],
+      [
+       "C2_1960",
+       [
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "conocimiento",
+         0.7
+        ],
+        [
+         "alianza",
+         0.7
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C3_1970",
+       [
+        [
+         "reconocimiento",
+         0.75
+        ],
+        [
+         "creatividad",
+         0.8
+        ],
+        [
+         "estatus_social",
+         0.7
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1950",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C2_1960",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C3_1970",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1950",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1960",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1970",
+        "i": 2,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  },
+  "SONDA_JOSE_EF": {
+   "case_id": "SONDA_JOSE_EF",
+   "H1": "schwartz_10_autodireccion",
+   "H2": "arquetipo_el_creador",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos_estado",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 13.33,
+    "foco_30_ambicion": [],
+    "top_boosts": [
+     {
+      "boost_pct": 13.33,
+      "corte": "C3_1970",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.75,
+      "w_prima": 0.85
+     },
+     {
+      "boost_pct": 13.33,
+      "corte": "C3_1970",
+      "token": "estatus_social",
+      "campo": "sacro",
+      "w": 0.7,
+      "w_prima": 0.7933333333333332
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C6_2000",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.8,
+      "w_prima": 0.8533333333333334
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C5_1990",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.8,
+      "w_prima": 0.8533333333333334
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C4_1980",
+      "token": "reconocimiento",
+      "campo": "sacro",
+      "w": 0.8,
+      "w_prima": 0.8533333333333334
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C1_1950",
+      "token": "humildad",
+      "campo": "agencia",
+      "w": 0.65,
+      "w_prima": 0.6825000000000001
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1950",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     },
+     {
+      "corte": "C2_1960",
+      "n_corte": 3,
+      "n_con_campo": 0,
+      "max_boost_pct": 0.0
+     },
+     {
+      "corte": "C3_1970",
+      "n_corte": 3,
+      "n_con_campo": 2,
+      "max_boost_pct": 13.33
+     },
+     {
+      "corte": "C4_1980",
+      "n_corte": 3,
+      "n_con_campo": 1,
+      "max_boost_pct": 6.67
+     },
+     {
+      "corte": "C5_1990",
+      "n_corte": 3,
+      "n_con_campo": 1,
+      "max_boost_pct": 6.67
+     },
+     {
+      "corte": "C6_2000",
+      "n_corte": 3,
+      "n_con_campo": 1,
+      "max_boost_pct": 6.67
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1950",
+       [
+        [
+         "aprendizaje",
+         0.7
+        ],
+        [
+         "humildad",
+         0.65
+        ],
+        [
+         "creatividad",
+         0.7
+        ],
+        [
+         "cotidiano",
+         0.65
+        ]
+       ]
+      ],
+      [
+       "C2_1960",
+       [
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "alianza",
+         0.7
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C3_1970",
+       [
+        [
+         "reconocimiento",
+         0.75
+        ],
+        [
+         "creatividad",
+         0.8
+        ],
+        [
+         "estatus_social",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C4_1980",
+       [
+        [
+         "reconocimiento",
+         0.8
+        ],
+        [
+         "creatividad",
+         0.8
+        ],
+        [
+         "oportunidad",
+         0.75
+        ]
+       ]
+      ],
+      [
+       "C5_1990",
+       [
+        [
+         "reconocimiento",
+         0.8
+        ],
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C6_2000",
+       [
+        [
+         "reconocimiento",
+         0.8
+        ],
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1950",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C2_1960",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C3_1970",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C4_1980",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C5_1990",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C6_2000",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1950",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1960",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1970",
+        "i": 2,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C4_1980",
+        "i": 3,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C5_1990",
+        "i": 4,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C6_2000",
+        "i": 5,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  },
+  "SONDA_FREUD_C": {
+   "case_id": "SONDA_FREUD_C",
+   "H1": "sustancias_03_severo",
+   "H2": "utopia_mentalidad_liberal",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos_estado",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 5.0,
+    "foco_30_ambicion": [],
+    "top_boosts": [
+     {
+      "boost_pct": 5.0,
+      "corte": "C3_1970",
+      "token": "consumo_sustancias",
+      "campo": "clinico",
+      "w": 0.8,
+      "w_prima": 0.8400000000000001
+     },
+     {
+      "boost_pct": 5.0,
+      "corte": "C1_1950",
+      "token": "humildad",
+      "campo": "agencia",
+      "w": 0.65,
+      "w_prima": 0.6825000000000001
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1950",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     },
+     {
+      "corte": "C2_1960",
+      "n_corte": 4,
+      "n_con_campo": 0,
+      "max_boost_pct": 0.0
+     },
+     {
+      "corte": "C3_1970",
+      "n_corte": 4,
+      "n_con_campo": 1,
+      "max_boost_pct": 5.0
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1950",
+       [
+        [
+         "aprendizaje",
+         0.7
+        ],
+        [
+         "humildad",
+         0.65
+        ],
+        [
+         "creatividad",
+         0.7
+        ],
+        [
+         "cotidiano",
+         0.65
+        ]
+       ]
+      ],
+      [
+       "C2_1960",
+       [
+        [
+         "conocimiento",
+         0.8
+        ],
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "alianza",
+         0.7
+        ],
+        [
+         "oportunidad",
+         0.7
+        ]
+       ]
+      ],
+      [
+       "C3_1970",
+       [
+        [
+         "consumo_sustancias",
+         0.8
+        ],
+        [
+         "conocimiento",
+         0.8
+        ],
+        [
+         "creatividad",
+         0.75
+        ],
+        [
+         "busqueda_riesgo",
+         0.7
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1950",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C2_1960",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C3_1970",
+       "conquista": 0,
+       "agencia": 0,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "PERFIL_VENTANA",
+      "sosten_max": 1,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1950",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1960",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1970",
+        "i": 2,
+        "formativa": false,
+        "clinico": true,
+        "co_oficio": true,
+        "etiqueta": "PERFIL_VENTANA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  },
+  "NAPOLEON": {
+   "case_id": "CAL_F001_01_NAPOLEON",
+   "H1": "31_conflicto_con_un_dios",
+   "H2": "arquetipo_el_gobernante",
+   "apuesta": "CONTINUIDAD_ASCENDENTE",
+   "sensores_pre_claves": [
+    "alias_reactivacion",
+    "amantes_arquetipos",
+    "arquetipos_dinamicos",
+    "caldero_ii_cuadrantes",
+    "cuerpo_arco",
+    "familias_gloria_sacro",
+    "filtro_identidad_estado",
+    "fix_entrada",
+    "integracion_semantica",
+    "interrelacion_tokens",
+    "lente_souriau",
+    "luces_gemini_packs",
+    "marco_7783_geometria",
+    "matriz_corrida_control",
+    "memento",
+    "metodo_rigor_pre",
+    "nicho_campo",
+    "predictor_vecinos_prefijo",
+    "pregunta_dirigida",
+    "protocolo_orden0",
+    "schrodinger",
+    "souriau_v1_4",
+    "trayectoria_hosteleria",
+    "trazabilidad_temporal",
+    "tusi",
+    "zri"
+   ],
+   "piezas_registro": {},
+   "nicho_campo": {
+    "alpha": 0.2,
+    "cap": 0.999,
+    "max_boost_pct_global": 6.67,
+    "foco_30_ambicion": [
+     {
+      "corte": "C1_1799",
+      "token": "ambicion",
+      "w": 0.84,
+      "n_campo": 2,
+      "w_prima": 0.896,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C1_1799",
+      "token": "poder",
+      "w": 0.8,
+      "n_campo": 2,
+      "w_prima": 0.8533,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C2_1805",
+      "token": "poder",
+      "w": 0.84,
+      "n_campo": 2,
+      "w_prima": 0.896,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C2_1805",
+      "token": "sed_de_mando",
+      "w": 0.75,
+      "n_campo": 2,
+      "w_prima": 0.8,
+      "boost_pct": 6.67
+     },
+     {
+      "corte": "C3_1812",
+      "token": "ambicion",
+      "w": 0.8,
+      "n_campo": 1,
+      "w_prima": 0.8267,
+      "boost_pct": 3.33
+     }
+    ],
+    "top_boosts": [
+     {
+      "boost_pct": 6.67,
+      "corte": "C2_1805",
+      "token": "sed_de_mando",
+      "campo": "conquista",
+      "w": 0.75,
+      "w_prima": 0.8
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C2_1805",
+      "token": "poder",
+      "campo": "conquista",
+      "w": 0.84,
+      "w_prima": 0.8959999999999999
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C1_1799",
+      "token": "poder",
+      "campo": "conquista",
+      "w": 0.8,
+      "w_prima": 0.8533333333333334
+     },
+     {
+      "boost_pct": 6.67,
+      "corte": "C1_1799",
+      "token": "ambicion",
+      "campo": "conquista",
+      "w": 0.84,
+      "w_prima": 0.8959999999999999
+     },
+     {
+      "boost_pct": 3.33,
+      "corte": "C3_1812",
+      "token": "ambicion",
+      "campo": "conquista",
+      "w": 0.8,
+      "w_prima": 0.8266666666666668
+     }
+    ],
+    "por_corte_resumen": [
+     {
+      "corte": "C1_1799",
+      "n_corte": 6,
+      "n_con_campo": 2,
+      "max_boost_pct": 6.67
+     },
+     {
+      "corte": "C2_1805",
+      "n_corte": 6,
+      "n_con_campo": 2,
+      "max_boost_pct": 6.67
+     },
+     {
+      "corte": "C3_1812",
+      "n_corte": 6,
+      "n_con_campo": 1,
+      "max_boost_pct": 3.33
+     }
+    ]
+   },
+   "alias_reactivacion": {
+    "alias_propuestos_no_aplicados": {},
+    "faltaron": [],
+    "nota": "propuestas sobre copia; NO se aplican al input (cambiar el input es decisión de Mj)"
+   },
+   "embudo_clinico": null,
+   "fix_entrada": {
+    "propuesta_no_aplicada": {
+     "cortes": [
+      [
+       "C1_1799",
+       [
+        [
+         "ambicion",
+         0.84
+        ],
+        [
+         "poder",
+         0.8
+        ],
+        [
+         "audacia",
+         0.8
+        ],
+        [
+         "liderazgo",
+         0.8
+        ],
+        [
+         "caos",
+         0.7
+        ],
+        [
+         "oportunidad",
+         0.75
+        ]
+       ]
+      ],
+      [
+       "C2_1805",
+       [
+        [
+         "poder",
+         0.84
+        ],
+        [
+         "sed_de_mando",
+         0.75
+        ],
+        [
+         "liderazgo",
+         0.84
+        ],
+        [
+         "planificacion",
+         0.75
+        ],
+        [
+         "triunfo",
+         0.8
+        ],
+        [
+         "conquista",
+         0.8
+        ]
+       ]
+      ],
+      [
+       "C3_1812",
+       [
+        [
+         "orgullo_hubris",
+         0.78
+        ],
+        [
+         "autonomia",
+         0.8
+        ],
+        [
+         "busqueda_riesgo",
+         0.75
+        ],
+        [
+         "confrontacion_directa",
+         0.8
+        ],
+        [
+         "rivalidad_poder",
+         0.8
+        ],
+        [
+         "terreno_hostil",
+         0.7
+        ]
+       ]
+      ]
+     ],
+     "campos": [
+      {
+       "corte": "C1_1799",
+       "conquista": 1,
+       "agencia": 0,
+       "tiene_ambicion": true
+      },
+      {
+       "corte": "C2_1805",
+       "conquista": 2,
+       "agencia": 0,
+       "tiene_ambicion": false
+      },
+      {
+       "corte": "C3_1812",
+       "conquista": 0,
+       "agencia": 1,
+       "tiene_ambicion": false
+      }
+     ],
+     "embudo": {
+      "plugin": "EMBUDO_CLINICO",
+      "global": "NO_APLICA",
+      "sosten_max": 0,
+      "nota": "PERFIL no es prediccion de cierre. SENAL_TEMPRANA no se declara sin quiebre aun no escrito.",
+      "cortes": [
+       {
+        "corte": "C1_1799",
+        "i": 0,
+        "formativa": true,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C2_1805",
+        "i": 1,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": false,
+        "etiqueta": "NO_APLICA"
+       },
+       {
+        "corte": "C3_1812",
+        "i": 2,
+        "formativa": false,
+        "clinico": false,
+        "co_oficio": true,
+        "etiqueta": "NO_APLICA"
+       }
+      ]
+     }
+    }
+   },
+   "exit": 0
+  }
+ }
+}

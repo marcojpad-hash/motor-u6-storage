@@ -988,6 +988,116 @@ def pre_predictor(case, motor, features, base, patterns_path, patterns):
     det["sensores_pre"]["trayectoria_hosteleria"] = _pieza("trayectoria_hosteleria", "plugin_trayectoria_hosteleria.py", "FAMILIA DE TOKENS ocupacional (área de tokens)", hosteleria, base, reg,
                                                          feeds_predictor=False)
 
+    def nicho_campo():
+        # NICHO_CAMPO_V1 (20261113, autorizado por Marco 2026-11-13): traza
+        # paralela w' = w*(1+alpha*n_campo/n_corte). NO modifica F ni la
+        # entrada ni H. Solo observa (can_decide_H False, feeds_predictor False).
+        m, _ = _load(base, "plugin_nicho_campo_v1.py", "lu_nicho")
+        if m is None:
+            return "NO_CORRE", "plugin_nicho_campo_v1.py no se cargó", None
+        cortes = []
+        for c in (case.get("cuts") or []):
+            toks = []
+            for eje in ("P", "A", "C"):
+                for t, v in (c.get(eje) or []):
+                    toks.append((str(t), float(v)))
+            cortes.append((str(c.get("id") or c.get("corte") or "?"), toks))
+        r = m.nicho(cortes)
+        foco = r.get("foco_30_ambicion") or []
+        maxb = r.get("max_boost_pct_global", 0.0)
+        return ("ACTIVA" if (foco or maxb > 0) else "ACTIVA_MUDA"), \
+            (f"nicho alpha={r['alpha']}: {len(foco)} tokens 30_ambicion con boost; "
+             f"max boost {maxb}%"), r
+    det["sensores_pre"]["nicho_campo"] = _pieza("nicho_campo", "plugin_nicho_campo_v1.py", "NICHO CAMPO SEMANTICO (traza w' paralela; no decide H)", nicho_campo, base, reg,
+                                                feeds_predictor=False)
+
+    def alias_reactivacion():
+        # PLUGIN_ALIAS_REACTIVACION (20261113, autorizado por Marco 2026-11-13):
+        # traduce sinónimos lavados -> léxico 244 SOLO con el texto de ESA
+        # ventana (hecho del corte). Traza: qué tokens AGREGARÍA por corte.
+        # NO modifica la entrada ni H. PELIGRO (nota): no aplicar al texto
+        # entero; aquí solo se observa, no se reescribe el caso.
+        m, _ = _load(base, "plugin_alias_reactivacion.py", "lu_alias")
+        if m is None:
+            return "NO_CORRE", "plugin_alias_reactivacion.py no se cargó", None
+        por_corte = []
+        total = 0
+        for c in (case.get("cuts") or []):
+            toks = [(str(t), float(v)) for eje in ("P", "A", "C") for t, v in (c.get(eje) or [])]
+            nombres = {t for t, _ in toks}
+            hechos = " ".join(x for x in (str(c.get("hecho") or ""), str(c.get("source_note") or "")) if x)
+            salida = m.traducir(list(toks), hechos=hechos)
+            agregados = [(t, v) for t, v in salida if t not in nombres]
+            h = hechos.lower()
+            disparadores = {}
+            for needle, canon in (m.ALIAS or {}).items():
+                if needle in h and canon in [t for t, _ in agregados]:
+                    disparadores.setdefault(canon, []).append(needle)
+            total += len(agregados)
+            por_corte.append({"corte": str(c.get("id") or c.get("corte") or "?"),
+                              "hecho": hechos,
+                              "agregados": [{"token": t, "peso": v, "palabra_lavada": disparadores.get(t, [])} for t, v in agregados]})
+        r = {"plugin": "ALIAS_REACTIVACION", "contrato": "ALIAS_REACTIVACION_V1_20261113",
+             "can_decide_H": False,
+             "nota": "Traza: tokens que el alias AGREGARÍA por corte (texto de ESA ventana). NO modifica la entrada ni H. El alias es ciego a negaciones (\"sin carretera\" dispara carretera).",
+             "por_corte": por_corte, "total_agregados": total}
+        return ("ACTIVA" if total > 0 else "ACTIVA_MUDA"), \
+            (f"alias: {total} tokens agregados en {sum(1 for pc in por_corte if pc['agregados'])} cortes" if total > 0 else "alias: ningún sinónimo lavado en los hechos"), r
+    det["sensores_pre"]["alias_reactivacion"] = _pieza("alias_reactivacion", "plugin_alias_reactivacion.py", "ALIAS REACTIVACION (traza: tokens que agregaría por corte; no decide H)", alias_reactivacion, base, reg,
+                                                       feeds_predictor=False)
+
+    def embudo_clinico():
+        # PLUGIN_EMBUDO_CLINICO (20261113, autorizado por Marco 2026-11-13):
+        # etiqueta RUIDO_ALIAS / PERFIL_VENTANA / PERFIL_SOSTENIDO sobre los
+        # cortes CRUDOS del caso (tokens P+A+C, sin alias). No sube p.
+        # Perfil != predicción de cierre. NO modifica la entrada ni H.
+        m, _ = _load(base, "plugin_embudo_clinico.py", "lu_embudo")
+        if m is None:
+            return "NO_CORRE", "plugin_embudo_clinico.py no se cargó", None
+        cortes = []
+        for c in (case.get("cuts") or []):
+            toks = [(str(t), float(v)) for eje in ("P", "A", "C") for t, v in (c.get(eje) or [])]
+            cortes.append((str(c.get("id") or c.get("corte") or "?"), toks))
+        r = m.etiquetar(cortes)
+        r["contrato"] = "EMBUDO_CLINICO_V1_20261113"
+        r["can_decide_H"] = False
+        return ("ACTIVA" if r.get("global") not in (None, "NO_APLICA") else "ACTIVA_MUDA"), \
+            (f"embudo: global={r.get('global')} sosten_max={r.get('sosten_max')}"), r
+    det["sensores_pre"]["embudo_clinico"] = _pieza("embudo_clinico", "plugin_embudo_clinico.py", "EMBUDO CLINICO (etiqueta RUIDO_ALIAS/PERFIL_VENTANA; no decide H)", embudo_clinico, base, reg,
+                                                   feeds_predictor=False)
+
+    def fix_entrada():
+        # PLUGIN_FIX_ENTRADA (20261113, autorizado por Marco 2026-11-13):
+        # preparar_caso = alias por ventana + remapeo ambicion->autonomia
+        # si cero conquista + embudo sobre el caso PREPARADO. Traza: el caso
+        # preparado (propuesta, NO se aplica a la entrada del motor) y sus
+        # etiquetas. NO modifica la entrada ni F ni H. La nota lo dejaba
+        # fuera hasta tabular (a) y Grupo B (b); aquí corre como observación.
+        m, _ = _load(base, "plugin_fix_entrada.py", "lu_fix")
+        if m is None:
+            return "NO_CORRE", "plugin_fix_entrada.py no se cargó", None
+        cortes = []
+        for c in (case.get("cuts") or []):
+            toks = [(str(t), float(v)) for eje in ("P", "A", "C") for t, v in (c.get(eje) or [])]
+            hechos = " ".join(x for x in (str(c.get("hecho") or ""), str(c.get("source_note") or "")) if x)
+            cortes.append((str(c.get("id") or c.get("corte") or "?"), toks, hechos))
+        r = m.preparar_caso(cortes)
+        r["contrato"] = "FIX_ENTRADA_V1_20261113"
+        r["can_decide_H"] = False
+        # qué cambió el preparado vs el crudo (remapes + alias)
+        crudo = {cid: {t for t, _ in toks} for cid, toks, _ in cortes}
+        cambios = []
+        for cid, toks in r.get("cortes") or []:
+            antes, despues = crudo.get(cid, set()), {t for t, _ in toks}
+            if antes != despues:
+                cambios.append({"corte": cid, "quitados": sorted(antes - despues), "agregados": sorted(despues - antes)})
+        r["cambios_vs_crudo"] = cambios
+        emb = (r.get("embudo") or {}).get("global")
+        return ("ACTIVA" if cambios or emb not in (None, "NO_APLICA") else "ACTIVA_MUDA"), \
+            (f"fix: {len(cambios)} cortes con cambio; embudo preparado global={emb}"), r
+    det["sensores_pre"]["fix_entrada"] = _pieza("fix_entrada", "plugin_fix_entrada.py", "FIX ENTRADA (caso preparado: alias+remap+embudo; propuesta, no decide H)", fix_entrada, base, reg,
+                                                feeds_predictor=False)
+
     def arq_din():
         # PATCH 010a-4: UNICO llama info() (catálogo estático, constante). Aquí: tokens observados por arquetipo.
         res = {f: v for f, v in ((ctx.get("area") or {}).get("resumen_por_familia") or {}).items() if f.startswith("arquetipos_dinamicos.")}
