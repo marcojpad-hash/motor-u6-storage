@@ -1,0 +1,4019 @@
+{
+ "componentes": [
+  {
+   "componente": "Engine_V5_CANONICO_SOLO",
+   "archivo": "motor/Engine_V5_CANONICO_SOLO.py",
+   "lineas": 700,
+   "estados": {},
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "MOTOR_V15_3_NATIVO_V0_9",
+   "archivo": "motor/MOTOR_V15_3_NATIVO_V0_9.py",
+   "lineas": 13,
+   "estados": {},
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "MOTOR_V15_3_NATIVO_V0_9_UNICO",
+   "archivo": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
+   "lineas": 1033,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 351,
+      "texto": "estado, accion = \"ALMACENADO_ESPERANDO_DATOS\", \"ESPERAR_MAS_TOKENS\""
+     },
+     {
+      "linea": 999,
+      "texto": "\"ALMACENADO_ESPERANDO_DATOS\","
+     }
+    ],
+    "DESACTIVADO": [
+     {
+      "linea": 669,
+      "texto": "\"status\": \"EXECUTED\" if monte_carlo and isinstance(mc, dict) and int(mc.get(\"n_simulaciones_usadas\") or 0) > 0 else (\"DISABLED\" if not monte_carlo else \"NO_METRICS_RETURNED\"),"
+     },
+     {
+      "linea": 881,
+      "texto": "r732[\"marcador_limite_geometrico\"] = {\"status\":\"DISABLED_FOR_ABLATION\",\"can_decide_H\":False,\"feeds_H\":False,\"rank_effect\":\"NONE\",\"per_cut\":[]}"
+     },
+     {
+      "linea": 942,
+      "texto": "\"status\": \"EXECUTED\" if _MC_AUDIT and all(x[\"status\"] == \"EXECUTED\" for x in _MC_AUDIT) else (\"DISABLED\" if _MC_AUDIT and all(x[\"status\"] == \"DISABLED\" for x in _MC_AUDIT) else \"PARTIAL\"),"
+     }
+    ],
+    "NO_DISPONIBLE": [
+     {
+      "linea": 897,
+      "texto": "raise RuntimeError(\"MARCADOR_LIMITE_GEOMETRICO_V0_1_AUSENTE\")"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 563,
+      "texto": "# validando sobre TODOS los tokens."
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "MOTOR_V15_3_UNICO_20260927",
+   "archivo": "motor/MOTOR_V15_3_UNICO_20260927.py",
+   "lineas": 4443,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 667,
+      "texto": "\"plugin_arquetipos_dinamicos\":(\"ACTIVA_MUDA_SIN_MAPEO\",\"info() devuelve 3 claves PROPUESTAS fuera del 244, sin valor por caso\"),"
+     }
+    ],
+    "ESPERANDO": [
+     {
+      "linea": 66,
+      "texto": "GATE_PENDING_TOPK = 10    # candidatos vivos considerados para abrir latencia por frente"
+     },
+     {
+      "linea": 1154,
+      "texto": "# FIX_20261025: el sidecar no emite 'status'; la reutilización nunca disparaba (PRE-H quedaba API_PENDING aunque"
+     },
+     {
+      "linea": 1174,
+      "texto": "# directamente (sin red) para que la búsqueda PRE-H no quede API_PENDING."
+     },
+     {
+      "linea": 1222,
+      "texto": "return {**base,\"status\":\"API_PENDING\",\"activated\":True,\"reason\":\"pre_h_orientation_required\","
+     },
+     {
+      "linea": 1657,
+      "texto": "for i,row in enumerate(rows[1:GATE_PENDING_TOPK],start=2):"
+     },
+     {
+      "linea": 3522,
+      "texto": "\"ERROR\":\"NO_CORRE\",\"FALTA_ARCHIVO\":\"NO_CORRE\",\"API_PENDING\":\"ACTIVA_MUDA\",\"CABLEADO_ESPERANDO_LLM_SEARCH\":\"ACTIVA_MUDA\"}"
+     }
+    ],
+    "DESACTIVADO": [
+     {
+      "linea": 311,
+      "texto": "status.append({\"component\": name, \"status\": \"APAGADO_ABLACION\", \"feeds_predictor\": False}); return"
+     },
+     {
+      "linea": 2439,
+      "texto": "out=interrelation_mod.run_external(_lights, _cuts_for_inter) if not _off(\"interrelation\") else {\"status\":\"APAGADO_ABLACION\",\"unique_tokens\":[],\"hyperrelations\":[],\"movement\":[]}"
+     },
+     {
+      "linea": 2478,
+      "texto": "features[\"caldero_neighbor_memory\"]={\"status\":\"APAGADO_ABLACION\",\"unique_tokens\":[],\"observations\":0,\"cases\":0}"
+     },
+     {
+      "linea": 2483,
+      "texto": "status.append({\"component\":\"plugin_arcos_emocionales_laterales.py\",\"status\":\"APAGADO_ABLACION\" if _off(\"arcos_emocionales\") else \"PLUGIN_SALTADO\",\"reason\":\"ablacion\" if _off(\"arcos_emocionales\") else \"archivo_no_disponib"
+     },
+     {
+      "linea": 2504,
+      "texto": "out={\"status\":\"APAGADO_ABLACION\",\"activated\":False,\"can_decide_H\":False,\"writes_canonical\":False,\"writes_H\":False}"
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 486,
+      "texto": "status.append({\"component\":fn,\"status\":\"CABLEADO_NO_EJECUTADO\",\"reason\":\"API_no_encontrada\",\"effect\":\"sin_ejecucion\"})"
+     },
+     {
+      "linea": 537,
+      "texto": "# CABLEADO_NO_EJECUTADO sin intentar. Ahora: se intenta con el input real (clave explícita por corte o token"
+     },
+     {
+      "linea": 1960,
+      "texto": "return {\"status\":\"SKIPPED_INTERNAL_ANALYSIS\", \"reason\":\"subcorrida_interna_T1_no_escribe_ledger_geometrico\","
+     },
+     {
+      "linea": 2231,
+      "texto": "_caldero_attempt={\"required\":False,\"status\":\"SKIPPED_INTERNAL_ANALYSIS\",\"provider\":\"none\",\"query_count\":0,\"result_count\":0,"
+     },
+     {
+      "linea": 2233,
+      "texto": "features[\"caldero_busqueda_arquetipos\"]={\"status\":\"SKIPPED_INTERNAL_ANALYSIS\",\"required\":False,\"can_decide_H\":False}"
+     },
+     {
+      "linea": 2234,
+      "texto": "status.append({\"component\":\"sidecar_caldero_busqueda_arquetipos.py\",\"status\":\"SKIPPED_INTERNAL_ANALYSIS\",\"required\":False,"
+     }
+    ],
+    "NO_DISPONIBLE": [
+     {
+      "linea": 1072,
+      "texto": "NO_DISPONIBLE/ERROR y la corrida sigue con el caso crudo (la capa LLM es"
+     },
+     {
+      "linea": 1087,
+      "texto": "return case, {**_base, \"status\": \"NO_DISPONIBLE\","
+     },
+     {
+      "linea": 1136,
+      "texto": "return {**base,\"status\":\"NOT_AVAILABLE\",\"activated\":False,\"reason\":\"sidecar_missing\"}"
+     },
+     {
+      "linea": 1591,
+      "texto": "block.update({\"status\":\"NO_DISPONIBLE\",\"pendientes_revisados\":[],\"resueltos\":[],\"siguen_latentes\":[],"
+     },
+     {
+      "linea": 1630,
+      "texto": "return {\"status\":\"NO_DISPONIBLE\",\"abiertos\":[]}"
+     },
+     {
+      "linea": 2310,
+      "texto": "if _gpl is None and _hints: raise RuntimeError(\"GUARDIAN_PISTAS_LLM_AUSENTE\")"
+     }
+    ],
+    "CABLEADA_SIN_SENAL": [
+     {
+      "linea": 320,
+      "texto": "\"feeds_predictor\": (_d6 is None or _d6[0] in (\"ACTIVA\",\"CABLEADA_SIN_SENAL_EN_CASO\")),"
+     },
+     {
+      "linea": 650,
+      "texto": "#   CABLEADA_SIN_SENAL_EN_CASO   -> hay vía real al ranking; en este caso la entrada está vacía o es igual para todas las candidatas"
+     },
+     {
+      "linea": 672,
+      "texto": "\"plugin_cameo_institucional.py\":(\"CABLEADA_SIN_SENAL_EN_CASO\",\"dims cameo_activity/cameo_profile_activity son de nivel caso (iguales para todas); sus tokens explícitos van al bus de luces -> interrelation -> relational_a"
+     },
+     {
+      "linea": 673,
+      "texto": "\"sidecar_caldero_busqueda_arquetipos.py\":(\"CABLEADA_SIN_SENAL_EN_CASO\",\"vía caldero_neighbor_alignment; sin fuentes de búsqueda (offline / input sin caldero_search_sources) no hay vecinos\"),"
+     },
+     {
+      "linea": 674,
+      "texto": "\"vecinos_caldero/neighbor_store.py\":(\"CABLEADA_SIN_SENAL_EN_CASO\",\"vía caldero_neighbor_memory/alignment; store vacío en la corrida estándar\"),"
+     },
+     {
+      "linea": 675,
+      "texto": "\"motor_interrelacion_extensible_v0_1.py\":(\"CABLEADA_SIN_SENAL_EN_CASO\",\"vía relational_alignment; solo trabaja sobre external_lights/external_activations, ausentes en el input\"),"
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 43,
+      "texto": "# Laterales/sensores: can_decide_H=False; nunca escriben H ni el catálogo. MODO_ESTRICTO=0 apaga el cierre estricto."
+     },
+     {
+      "linea": 53,
+      "texto": "# con cadena_top1). can_decide_H=False: se verifica por hash que el predictor no cambia."
+     },
+     {
+      "linea": 480,
+      "texto": "if isinstance(o,dict): o[\"score_u6\"]=\"score=fracción de transiciones ↗ (eps del plugin) por familia; señal lateral can_decide_H=False\""
+     },
+     {
+      "linea": 649,
+      "texto": "#   ACTIVA                       -> su salida llega a rank_fusion como señal lateral o dimensión (can_decide_H=False siempre)"
+     },
+     {
+      "linea": 2844,
+      "texto": "# SOMBRERO BLANCO TOKEN: reporta fuera_catalogo a StinkBox; no canoniza; can_decide_H=False."
+     },
+     {
+      "linea": 3101,
+      "texto": "# modo estricto gradúan y objetan; no bloquean la emisión ni escriben H (can_decide_H=False)."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 3210,
+      "texto": "\"can_decide_H\":False,\"rewrites_H\":False,\"hipotesis_apuesta\":{\"candidata\":_fallback_winner,\"estado\":\"CONCLUSION_OPERACIONAL_RECUPERADA\","
+     },
+     {
+      "linea": 3223,
+      "texto": "_dh_retry_out[\"recuperacion\"]={\"estado\":\"REINTENTO_DIMENSIONAL_EJECUTADO\",\"causa_original\":f\"{type(_dhx_exc).__name__}:{_dhx_exc}\","
+     },
+     {
+      "linea": 3235,
+      "texto": "\"can_decide_H\":False,\"rewrites_H\":False,\"hipotesis_apuesta\":{\"candidata\":_winner,\"estado\":\"CONCLUSION_OPERACIONAL_RECUPERADA\","
+     },
+     {
+      "linea": 3318,
+      "texto": "result[\"hipotesis_trayectoria_abierta\"]={\"estado\":\"ERROR\",\"error\":f\"{type(_ha_exc).__name__}:{_ha_exc}\",\"cardinalidad_fija\":False}"
+     },
+     {
+      "linea": 3352,
+      "texto": "result[\"apuesta_destino_personal\"]={\"estado\":\"ERROR\",\"error\":f\"{type(_e022).__name__}:{_e022}\",\"can_decide_H\":False}"
+     },
+     {
+      "linea": 3539,
+      "texto": "filas.append({\"pieza\":\"INVENTARIO_COMPONENTES_UNICO.json\",\"fuente\":\"inventario_estatico\",\"estado\":\"NO_CORRE\",\"motivo\":f\"{type(e).__name__}\"})"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 3264,
+      "texto": "# U4_todos_tokens (2026-10-11): MOVIMIENTO DE FONDO. Lateral y de traza: series de TODOS los tokens y de las 244"
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "analogos_fase_v1",
+   "archivo": "motor/analogos_fase_v1.py",
+   "lineas": 14,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "apuesta_destino_personal_022",
+   "archivo": "motor/apuesta_destino_personal_022.py",
+   "lineas": 96,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 6,
+      "texto": "ni rank_fusion, ni Engine/catálogo. can_decide_H=False. Se apaga con DESTINO_022=0."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 76,
+      "texto": "return {**base, \"estado\": \"SIN_TRAYECTORIA\", \"apuesta\": \"meseta\", \"motivo\": \"menos de 2 cortes o sin series de familias\"}"
+     },
+     {
+      "linea": 92,
+      "texto": "return {**base, \"estado\": \"EJECUTADO\", \"apuesta\": lab, \"porque\": por, \"cortes\": cortes,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "autoevidencia_stores_011",
+   "archivo": "motor/autoevidencia_stores_011.py",
+   "lineas": 216,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "autoevidencia_stores_011.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "billar_circular_convergencia_v0_1",
+   "archivo": "motor/billar_circular_convergencia_v0_1.py",
+   "lineas": 233,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "billar_circular_convergencia_v0_2",
+   "archivo": "motor/billar_circular_convergencia_v0_2.py",
+   "lineas": 88,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "caldero_II_runner_generico",
+   "archivo": "motor/caldero_II_runner_generico.py",
+   "lineas": 49,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "caldero_buscadores",
+   "archivo": "motor/caldero_buscadores.py",
+   "lineas": 259,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "caldero_zoomout_acero_v0_1",
+   "archivo": "motor/caldero_zoomout_acero_v0_1.py",
+   "lineas": 135,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "calibracion_predictiva_v1",
+   "archivo": "motor/calibracion_predictiva_v1.py",
+   "lineas": 72,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "cameo_to_244_adapter_v1",
+   "archivo": "motor/cameo_to_244_adapter_v1.py",
+   "lineas": 102,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "cameo_to_244_adapter_v1#1",
+    "cameo_to_244_adapter_v1.output#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "cameo_to_703_lateral_v1",
+   "archivo": "motor/cameo_to_703_lateral_v1.py",
+   "lineas": 81,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "cameo_to_703_lateral_v1.output#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "candado_plugins",
+   "archivo": "motor/candado_plugins.py",
+   "lineas": 151,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 130,
+      "texto": "estado = \"registrado_por_primera_vez\""
+     },
+     {
+      "linea": 132,
+      "texto": "estado = \"sin_cambios_desde_ultimo_registro\""
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 12,
+      "texto": "de V15_1_TODOS_LOS_PLUGINS_UN_SOLO_TXT.txt de inmediato)."
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "capa_integracion_semantica_v1_2",
+   "archivo": "motor/capa_integracion_semantica_v1_2.py",
+   "lineas": 203,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 190,
+      "texto": "\"estado\": \"PROPUESTA\","
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 190,
+      "texto": "\"estado\": \"PROPUESTA\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "capa_interrelacion_tokens",
+   "archivo": "motor/capa_interrelacion_tokens.py",
+   "lineas": 191,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 5,
+      "texto": "PROPUESTA — capa general de interrelación entre familias del 244."
+     },
+     {
+      "linea": 151,
+      "texto": "\"estado\": \"PROPUESTA\","
+     },
+     {
+      "linea": 182,
+      "texto": "\"estado\": \"PROPUESTA\","
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 151,
+      "texto": "\"estado\": \"PROPUESTA\","
+     },
+     {
+      "linea": 182,
+      "texto": "\"estado\": \"PROPUESTA\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "ceb_runtime_v0_6_flow",
+   "archivo": "motor/ceb_runtime_v0_6_flow.py",
+   "lineas": 511,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 477,
+      "texto": "non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING','ACTIVA_MUDA','ABSORBIDO_EN_GUARDIA_TRANSVERSAL'}"
+     }
+    ],
+    "DESACTIVADO": [
+     {
+      "linea": 477,
+      "texto": "non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING','ACTIVA_MUDA','ABSORBIDO_EN_GUARDIA_TRANSVERSAL'}"
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 267,
+      "texto": "def skip(self,sid,reason,detail=''): return self.emit('STAGE_SKIP',sid,{'reason_code':reason,'reason_detail':detail})"
+     },
+     {
+      "linea": 477,
+      "texto": "non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING','ACTIVA_MUDA','ABSORBIDO_EN_GUARDIA_TRANSVERSAL'}"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "coactivacion_escalas",
+   "archivo": "motor/coactivacion_escalas.py",
+   "lineas": 172,
+   "estados": {
+    "PENDIENTE": [
+     {
+      "linea": 15,
+      "texto": "* INDEPENDIENTE: al menos dos de esas escalas tienen cada una una palabra 'empuja' que no enciende a la otra."
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 2,
+      "texto": "\"\"\"Prueba de coactivacion de escalas (LATERAL OPCIONAL, can_decide_H=False)."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 67,
+      "texto": "estado = \"apagada\"; indep = False"
+     },
+     {
+      "linea": 68,
+      "texto": "if len(lit) == 1: estado = \"una_escala\""
+     },
+     {
+      "linea": 75,
+      "texto": "estado = \"coactivacion_independiente\" if indep else \"coactivacion_trivial\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "control_flujo_soluciones",
+   "archivo": "motor/control_flujo_soluciones.py",
+   "lineas": 275,
+   "estados": {
+    "NO_IMPLEMENTADO": [
+     {
+      "linea": 76,
+      "texto": "\"Si existe SPEC sin .py: marcar NO_IMPLEMENTADO y continuar otra pieza; no inventar código canónico.\","
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 94,
+      "texto": "\"Dejar PENDIENTE_AUTH con el siguiente paso concreto; no dramatizar.\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "control_latencia_decimo_hombre",
+   "archivo": "motor/control_latencia_decimo_hombre.py",
+   "lineas": 293,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 14,
+      "texto": "4) Si sigue empate → ALMACENADO_ESPERANDO_DATOS (no inventar resolución)."
+     },
+     {
+      "linea": 55,
+      "texto": "estado: str  # LATENCIA | DESEMPATE_DECIMO | ALMACENADO_ESPERANDO_DATOS | RESUELTO | OFF"
+     },
+     {
+      "linea": 127,
+      "texto": "estado = \"ALMACENADO_ESPERANDO_DATOS\""
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 127,
+      "texto": "estado = \"ALMACENADO_ESPERANDO_DATOS\""
+     },
+     {
+      "linea": 135,
+      "texto": "estado = \"DESEMPATE_DECIMO\""
+     },
+     {
+      "linea": 141,
+      "texto": "estado = \"LATENCIA\""
+     },
+     {
+      "linea": 150,
+      "texto": "estado = \"RESUELTO\""
+     },
+     {
+      "linea": 155,
+      "texto": "estado = \"LATENCIA\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "decimo_hombre_esteroides_mayeutica_v1",
+   "archivo": "motor/decimo_hombre_esteroides_mayeutica_v1.py",
+   "lineas": 384,
+   "estados": {
+    "NO_IMPLEMENTADO": [
+     {
+      "linea": 355,
+      "texto": "\"orthogonal_residual_analysis\": {\"status\": \"NOT_IMPLEMENTED\","
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 163,
+      "texto": "\"estado\": \"RESUELTO_POR_ABLACION_REAL\" if dimensions else \"NO_EJECUTADO_SIN_DIMENSIONES_FINITAS\","
+     },
+     {
+      "linea": 185,
+      "texto": "(\"NO_EJECUTADO_SIN_FUENTES_DECLARADAS\" if not lateral_names else \"NO_EJECUTADO_SIN_RECALCULO_FINITO\")),"
+     },
+     {
+      "linea": 230,
+      "texto": "\"estado\": (\"RESUELTO_POR_ABLACIONES_DIMENSIONALES\" if dimensions else \"NO_EJECUTADO_SIN_CONTRAFACTUAL_VALIDO\"),"
+     },
+     {
+      "linea": 268,
+      "texto": "(\"NO_REABIERTO_SIN_RIVAL_DERROTADOR\" if not defeated else \"NO_EJECUTADO_SIN_RUNNER_CONTRAFACTUAL\")),"
+     },
+     {
+      "linea": 334,
+      "texto": "if _st.startswith((\"NO_EJECUTADO\", \"NO_RESUELTO\", \"NO_REABIERTO\")) or _st == \"RESUELTO_DIAGNOSTICO_DE_RECUPERACION\":"
+     }
+    ],
+    "NO_DISPONIBLE": [
+     {
+      "linea": 24,
+      "texto": "if x is None: return \"NO_DISPONIBLE\""
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 121,
+      "texto": "diagnosis = {\"estado\": \"CONCLUSION_OPERACIONAL\", \"candidata\": \"NO_IDENTIFICABLE_CON_ESTA_ENTRADA\","
+     },
+     {
+      "linea": 126,
+      "texto": "\"hipotesis_apuesta\": {\"candidata\": diagnosis[\"candidata\"], \"estado\": \"CONCLUSION_OPERACIONAL_NO_CANDIDATA\"},"
+     },
+     {
+      "linea": 145,
+      "texto": "attacks.append({\"ataque\": \"CONVERGENCIA_Y_SATURACION\", \"estado\": \"RESUELTO_POR_DESCONTAR_COMO_VOTO\", \"n_compartidas\": len(shared), \"n_saturadas\": len(saturated)})"
+     },
+     {
+      "linea": 163,
+      "texto": "\"estado\": \"RESUELTO_POR_ABLACION_REAL\" if dimensions else \"NO_EJECUTADO_SIN_DIMENSIONES_FINITAS\","
+     },
+     {
+      "linea": 219,
+      "texto": "attacks.append({\"ataque\": \"AQUILES_SIN_EL_PALO\", \"estado\": \"RESUELTO_POR_REEJECUCION_CORE\", \"pilar\": pillar,"
+     },
+     {
+      "linea": 223,
+      "texto": "attacks.append({\"ataque\": \"AQUILES_SIN_EL_PALO\", \"estado\": \"NO_RESUELTO_SIN_RANKING_CONTRAFACTUAL\", \"pilar\": pillar,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "decimo_hombre_esteroides_mayeutica_v1#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "estabilidad_vectorial_h",
+   "archivo": "motor/estabilidad_vectorial_h.py",
+   "lineas": 133,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 67,
+      "texto": "estado = \"SIN_H\""
+     },
+     {
+      "linea": 69,
+      "texto": "estado = \"RIVAL_AUN_POSIBLE\""
+     },
+     {
+      "linea": 71,
+      "texto": "estado = \"ESTABLE_VECTORIAL\""
+     },
+     {
+      "linea": 73,
+      "texto": "estado = \"MISMO_RUMBO_BANDA_SIN_MASA\""
+     },
+     {
+      "linea": 75,
+      "texto": "estado = \"MISMO_RUMBO_FUERA_BANDA\""
+     },
+     {
+      "linea": 77,
+      "texto": "estado = \"NO_ESTABLE\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "filtro_identidad_zoom_out_zoom_in",
+   "archivo": "motor/filtro_identidad_zoom_out_zoom_in.py",
+   "lineas": 488,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 26,
+      "texto": "ZOOM_OUT_THRESHOLD_PENDING = True"
+     },
+     {
+      "linea": 261,
+      "texto": "\"threshold_pending\": ZOOM_OUT_THRESHOLD_PENDING,"
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 24,
+      "texto": "# Umbral zoom-out: PENDIENTE de validación independiente (spec)."
+     },
+     {
+      "linea": 137,
+      "texto": "# tags de prototipo opcionales para zoom-out (PENDIENTE calibrar lista cerrada)"
+     }
+    ],
+    "CABLEADA_SIN_SENAL": [
+     {
+      "linea": 35,
+      "texto": "SIN_SENAL_CONSERVAR = \"sin_senal_conservar\""
+     },
+     {
+      "linea": 189,
+      "texto": "decision: str = Decision.SIN_SENAL_CONSERVAR.value"
+     },
+     {
+      "linea": 349,
+      "texto": "audit.decision = Decision.SIN_SENAL_CONSERVAR.value"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "filtro_relleno_013",
+   "archivo": "motor/filtro_relleno_013.py",
+   "lineas": 106,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "filtro_relleno_013.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "filtro_tokens_arquetipos_v1",
+   "archivo": "motor/filtro_tokens_arquetipos_v1.py",
+   "lineas": 86,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "filtro_tokens_arquetipos_v2",
+   "archivo": "motor/filtro_tokens_arquetipos_v2.py",
+   "lineas": 145,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "forman_ricci_weighted_graph",
+   "archivo": "motor/forman_ricci_weighted_graph.py",
+   "lineas": 44,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "formular_h_apuesta",
+   "archivo": "motor/formular_h_apuesta.py",
+   "lineas": 226,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardian_acero_rival_v1",
+   "archivo": "motor/guardian_acero_rival_v1.py",
+   "lineas": 127,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 25,
+      "texto": "Solo mide. can_decide_H=False: no reordena, no escribe H ni patterns."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 63,
+      "texto": "return {\"estado\": \"NO_APLICA\", \"motivo\": \"menos_de_2_candidatos_o_sin_dimensiones\", \"pruebas\": []}"
+     },
+     {
+      "linea": 98,
+      "texto": "return {\"estado\": \"EJECUTADO\", \"top1\": top1, \"orden_base_recalculado_top3\": orden_base[:3],"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardian_entrada_autoevidencia_v1",
+   "archivo": "motor/guardian_entrada_autoevidencia_v1.py",
+   "lineas": 68,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 9,
+      "texto": "Contrato: SOLO BANDERA. can_decide_H=False. No modifica el input, no quita tokens, no reordena"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardian_logica_copi_v1",
+   "archivo": "motor/guardian_logica_copi_v1.py",
+   "lineas": 385,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 27,
+      "texto": "Candados: control estructural siempre-on; can_decide_H=False; no escribe H ni patterns."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 196,
+      "texto": "estado = \"VALIDO\""
+     },
+     {
+      "linea": 198,
+      "texto": "estado = \"INVALIDO\""
+     },
+     {
+      "linea": 303,
+      "texto": "marcas.append({\"tipo\": \"NO_RESUELTO_CONCLUSION_CON_ATOMO_NUEVO\", \"evidencia\": ev[\"fragmento\"], \"estado\": \"NO_RESUELTO\"})"
+     },
+     {
+      "linea": 307,
+      "texto": "\"evidencia\": ev[\"fragmento\"], \"estado\": \"DETECTADA\"})"
+     },
+     {
+      "linea": 309,
+      "texto": "marcas.append({\"tipo\": \"AFIRMACIONES_INCONSISTENTES\", \"evidencia\": [a_texto(x) for x in afirmaciones], \"estado\": \"DETECTADA\"})"
+     },
+     {
+      "linea": 311,
+      "texto": "marcas.append({\"tipo\": \"NO_RESUELTO_ATOMO_AMBIGUO\", \"evidencia\": fr[:160], \"estado\": \"NO_RESUELTO\"})"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardian_pistas_llm_caldero_v1",
+   "archivo": "motor/guardian_pistas_llm_caldero_v1.py",
+   "lineas": 42,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 13,
+      "texto": "Determinista, sin red, sin LLM. can_decide_H=False. No toca Engine/244."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardian_tropos_beristain_v1",
+   "archivo": "motor/guardian_tropos_beristain_v1.py",
+   "lineas": 903,
+   "estados": {
+    "PENDIENTE": [
+     {
+      "linea": 65,
+      "texto": "\"METALEPSIS\":   {\"familia\": \"METASEMEMA\", \"ocr_line\": 18287, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,"
+     },
+     {
+      "linea": 69,
+      "texto": "\"IMAGEN\":       {\"familia\": \"METASEMEMA\", \"ocr_line\": 11531, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,"
+     },
+     {
+      "linea": 85,
+      "texto": "\"ASINDETON\":    {\"familia\": \"FIGURA_CONSTRUCCION\", \"ocr_line\": 4297, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,"
+     },
+     {
+      "linea": 87,
+      "texto": "\"ZEUGMA\":       {\"familia\": \"FIGURA_CONSTRUCCION\", \"ocr_line\": 16614, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,"
+     },
+     {
+      "linea": 839,
+      "texto": "\"pendiente_de_regla\": [k for k, v in CATALOGO.items() if v[\"codigo\"] == \"PENDIENTE_DE_REGLA\"], **CANDADOS}"
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 7,
+      "texto": "can_decide_H=False, no escribe H, no escribe patterns, no reordena candidatos."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 347,
+      "texto": "estado = \"NO_RESUELTO\" if subtipo == \"NO_RESUELTO\" else (\"DETECTADA\" if confianza >= 0.7 else \"POSIBLE\")"
+     },
+     {
+      "linea": 454,
+      "texto": "H.append(_h(\"SINESTESIA\", texto, origen, sp, \"sinestesia_lexicalizada\", confianza=0.4, estado=\"OBSERVACION\", bloquea=False,"
+     },
+     {
+      "linea": 592,
+      "texto": "H.append(_h(\"ANTITESIS\", texto, origen, sp, \"contrarios_en_miembros_distintos\", confianza=0.6, estado=\"OBSERVACION\", bloquea=False,"
+     },
+     {
+      "linea": 666,
+      "texto": "H.append(_h(\"CATACRESIS\", texto, origen, m.span(), \"catacresis_lexicalizada\", confianza=0.9, estado=\"OBSERVACION\", bloquea=False,"
+     },
+     {
+      "linea": 687,
+      "texto": "H.append(_h(\"CATACRESIS\", texto, origen, m.span(), \"catacresis_lexicalizada\", confianza=0.9, estado=\"OBSERVACION\", bloquea=False))"
+     },
+     {
+      "linea": 816,
+      "texto": "marcas.append({\"tipo\": \"TOKEN_POSIBLEMENTE_FIGURADO_EN_TABLERO\", \"estado\": \"POSIBLE\","
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 297,
+      "texto": "_REG_PARTE_TODO: Dict[str, Dict[str, Any]] = {}"
+     },
+     {
+      "linea": 306,
+      "texto": "d = _REG_PARTE_TODO.setdefault(key, {\"variantes\": set(), \"relacion\": None})"
+     },
+     {
+      "linea": 316,
+      "texto": "_REG_PARTE_TODO.clear()"
+     },
+     {
+      "linea": 523,
+      "texto": "H.append(_h(\"SINECDOQUE\", texto, origen, (a + m.start(), a + m.end()), \"parte_por_todo\", confianza=0.8, subtipo=\"PARTE_POR_TODO\","
+     },
+     {
+      "linea": 730,
+      "texto": "reg = {k: {\"variantes\": set(v[\"variantes\"]), \"relacion\": v.get(\"relacion\")} for k, v in _REG_PARTE_TODO.items()}"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "guardianes_control_v1",
+   "archivo": "motor/guardianes_control_v1.py",
+   "lineas": 481,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 134,
+      "texto": "LATENTES = {\"LATENCIA\", \"ALMACENADO_ESPERANDO_DATOS\"}"
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 7,
+      "texto": "Alimentan convergencia/latencia SOLO como registro. can_decide_H=False: ningún guardián"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 152,
+      "texto": "marcas.append({\"tipo\": \"CORTE_LATENTE\", \"evidencia\": fila, \"estado\": \"LATENTE\"})"
+     },
+     {
+      "linea": 169,
+      "texto": "marcas.append({\"tipo\": \"CIERRE_LATENTE_SEGUN_DECIMO_HOMBRE\", \"evidencia\": final, \"estado\": \"LATENTE\"})"
+     },
+     {
+      "linea": 196,
+      "texto": "marcas.append({\"tipo\": r.get(\"bandera\"), \"estado\": \"DETECTADA\","
+     },
+     {
+      "linea": 213,
+      "texto": "md.append({\"tipo\": h.tipo, \"estado\": \"DETECTADA\" if h.severidad == \"hard\" else \"POSIBLE\","
+     },
+     {
+      "linea": 217,
+      "texto": "md.append({\"tipo\": h.tipo, \"estado\": \"DETECTADA\" if h.severidad == \"hard\" else \"POSIBLE\","
+     },
+     {
+      "linea": 220,
+      "texto": "mf.append({\"tipo\": h.tipo, \"estado\": \"DETECTADA\" if h.severidad == \"hard\" else \"POSIBLE\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "guardianes_control_v1#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "hipotesis_trayectoria_abierta_v1",
+   "archivo": "motor/hipotesis_trayectoria_abierta_v1.py",
+   "lineas": 213,
+   "estados": {
+    "NO_DISPONIBLE": [
+     {
+      "linea": 114,
+      "texto": "\"estado\": geo.get(\"status\", \"NO_DISPONIBLE\"),"
+     },
+     {
+      "linea": 176,
+      "texto": "\"contexto_multicapa_status\": geo.get(\"status\", \"NO_DISPONIBLE\"),"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 144,
+      "texto": "forecast = {\"estado\": \"SIN_HIPOTESIS\", \"escenarios\": [], \"apuesta_principal\": None,"
+     },
+     {
+      "linea": 147,
+      "texto": "forecast = {\"estado\": \"TRAYECTORIA_INSUFICIENTE\", \"escenarios\": scenario_rows,"
+     },
+     {
+      "linea": 151,
+      "texto": "forecast = {\"estado\": \"APUESTA_MULTIESCENARIO_SELLABLE\", \"escenarios\": scenario_rows,"
+     },
+     {
+      "linea": 165,
+      "texto": "\"estado\": \"EJECUTADO\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "hipotesis_trayectoria_abierta_v1#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "laterales_unico_v1",
+   "archivo": "motor/laterales_unico_v1.py",
+   "lineas": 1310,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 100,
+      "texto": "\"API_PENDING\": \"adaptador/API sin conectar: cablear la API (credencial/endpoint) o el proveedor y re-correr\","
+     },
+     {
+      "linea": 135,
+      "texto": "if est == \"ACTIVA_MUDA\" and dec.startswith(\"API_PENDING\"):"
+     },
+     {
+      "linea": 136,
+      "texto": "est = \"API_PENDING\""
+     },
+     {
+      "linea": 1256,
+      "texto": "fila(\"pre_h_analogical_search(V0.18)\", ph.get(\"status\"), \"ACTIVA\" if lleg else (\"ACTIVA_MUDA\" if ph.get(\"status\") == \"API_PENDING\" else (\"ACTIVA\" if ph.get(\"tokens_neighbors\") else \"ACTIVA_MUDA\")), lleg,"
+     },
+     {
+      "linea": 1257,
+      "texto": "([f\"API_PENDING: {ph.get('adapter')}\"] if ph.get(\"status\") == \"API_PENDING\" else"
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 500,
+      "texto": "f\"mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)\")"
+     }
+    ],
+    "DESACTIVADO": [
+     {
+      "linea": 12,
+      "texto": "NO_CORRE (motivo) | SUPERADA (otra versión más completa ya corre) | APAGADA_POR_FLAG."
+     },
+     {
+      "linea": 99,
+      "texto": "\"APAGADA_POR_FLAG\": \"apagada por variable LAT_*=0: en fábrica no se apaga; quitar el flag o documentar contrato\","
+     },
+     {
+      "linea": 151,
+      "texto": "reg.append({\"pieza\": nombre, \"archivo\": archivo, \"rol\": rol, \"estado\": \"APAGADA_POR_FLAG\", \"aporte\": f\"LAT_{nombre.upper()}=0\", **extra})"
+     },
+     {
+      "linea": 925,
+      "texto": "return \"APAGADA_POR_FLAG\", \"FAMILIAS_TOKENS=0\", None"
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 12,
+      "texto": "NO_CORRE (motivo) | SUPERADA (otra versión más completa ya corre) | APAGADA_POR_FLAG."
+     },
+     {
+      "linea": 44,
+      "texto": "_GATED = (\"SKIPPED_INTERNAL_ANALYSIS\",)"
+     },
+     {
+      "linea": 73,
+      "texto": "# (hoy solo: SKIPPED_INTERNAL_ANALYSIS de la subcorrida interna T1, required=False en el motor)."
+     },
+     {
+      "linea": 98,
+      "texto": "_EST_FALLO = {\"NO_CORRE\": \"la pieza lanzó excepción: leer 'aporte'/trace, corregir el import/datos/código y re-correr smoke\","
+     },
+     {
+      "linea": 104,
+      "texto": "\"SKIPPED\": \"saltada sin contrato que lo permita: averiguar la condición\","
+     },
+     {
+      "linea": 156,
+      "texto": "estado, aporte, salida = \"NO_CORRE\", f\"error {type(e).__name__}: {str(e)[:160]}\", {\"trace\": traceback.format_exc()[-800:]}"
+     }
+    ],
+    "CABLEADA_SIN_SENAL": [
+     {
+      "linea": 94,
+      "texto": "_EST_CORRIO_SIN_SENAL = {\"ACTIVA_MUDA\"}  # corrió; no aportó/no llegó a H en este caso -> INFO, no fallo de ejecución"
+     },
+     {
+      "linea": 113,
+      "texto": "if e in _EST_CORRIO_SIN_SENAL:"
+     },
+     {
+      "linea": 114,
+      "texto": "return {\"debe_ejecutarse\": True, \"incumplimiento\": False, \"severidad\": \"INFO_CORRIO_SIN_SENAL\","
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 5,
+      "texto": "Contrato para TODO lo que corre aquí: can_decide_H=False, no escribe H1/H2, no reordena candidatos,"
+     },
+     {
+      "linea": 453,
+      "texto": "# NO llama marco_7783.visitar (no escribe zonas_7783.json); calor en memoria por caso. can_decide_H=False."
+     },
+     {
+      "linea": 1039,
+      "texto": "_pieza(\"guardian_entrada_autoevidencia\", \"guardian_entrada_autoevidencia_v1.py\", \"GUARDIAN (solo bandera; can_decide_H=False)\", guardian_entrada, base, reg)"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 151,
+      "texto": "reg.append({\"pieza\": nombre, \"archivo\": archivo, \"rol\": rol, \"estado\": \"APAGADA_POR_FLAG\", \"aporte\": f\"LAT_{nombre.upper()}=0\", **extra})"
+     },
+     {
+      "linea": 234,
+      "texto": "regs[fn] = {\"estado\": \"FALTA_ARCHIVO\"}; continue"
+     },
+     {
+      "linea": 628,
+      "texto": "funcs = {f: ({\"valor\": list(fx.get(f)), \"estado\": \"observado\", \"evidencia\": _ev016, \"corte\": i}"
+     },
+     {
+      "linea": 629,
+      "texto": "if fx.get(f) else {\"estado\": \"no_observado\", \"corte\": i}) for f in m.FUNCTIONS}"
+     },
+     {
+      "linea": 760,
+      "texto": "sal[\"v02\"] = {\"estado\": \"SIN_MODULO\", \"nota\": \"falta schrodinger_transport_v0_2.py\"}"
+     },
+     {
+      "linea": 762,
+      "texto": "sal[\"v02\"] = {\"estado\": \"ERROR\", \"error\": f\"{type(e).__name__}: {str(e)[:200]}\"}"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 5,
+      "texto": "Contrato para TODO lo que corre aquí: can_decide_H=False, no escribe H1/H2, no reordena candidatos,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "laterales_unico_v1.pre_predictor#1",
+    "laterales_unico_v1.pre_predictor.output#1",
+    "laterales_unico_v1.post_predictor#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "lectura_negativo_ricci_vs_billar_v0_1",
+   "archivo": "motor/lectura_negativo_ricci_vs_billar_v0_1.py",
+   "lineas": 202,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 4,
+      "texto": "lectura_negativo_ricci_vs_billar_v0_1.py  — PROPUESTA (no cableado, no tubo)"
+     },
+     {
+      "linea": 20,
+      "texto": "Cuadrantes (converge billar × curvatura negativa Ricci) y señal de descarte PROPUESTA:"
+     },
+     {
+      "linea": 43,
+      "texto": "ESTADO = \"PROPUESTA\""
+     },
+     {
+      "linea": 192,
+      "texto": "todos, md = [], [\"# Lectura por negativo — Ricci–Forman vs Billar v0.2 (variante E) — PROPUESTA\", \"\"]"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "lente_lateral_metrics_v1_1_galileo",
+   "archivo": "motor/lente_lateral_metrics_v1_1_galileo.py",
+   "lineas": 80,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "lexico_narrador_v0_1",
+   "archivo": "motor/lexico_narrador_v0_1.py",
+   "lineas": 79,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "marcador_limite_geometrico_v0_1",
+   "archivo": "motor/marcador_limite_geometrico_v0_1.py",
+   "lineas": 296,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "marco_7783",
+   "archivo": "motor/marco_7783.py",
+   "lineas": 43,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "marco_7783"
+   ],
+   "en_ceb_stages": [
+    "marco_7783#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "marco_funciones_souriau",
+   "archivo": "motor/marco_funciones_souriau.py",
+   "lineas": 115,
+   "estados": {
+    "NO_IMPLEMENTADO": [
+     {
+      "linea": 102,
+      "texto": "\"mathematical_momentum_map\": \"NOT_IMPLEMENTED_BY_THIS_MODULE\","
+     },
+     {
+      "linea": 111,
+      "texto": "\"mathematical_momentum_map\": \"NOT_IMPLEMENTED_BY_THIS_MODULE\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "matriz_corrida",
+   "archivo": "motor/matriz_corrida.py",
+   "lineas": 171,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "matriz_mortalidad_z90_v0_2",
+   "archivo": "motor/matriz_mortalidad_z90_v0_2.py",
+   "lineas": 290,
+   "estados": {
+    "NO_DISPONIBLE": [
+     {
+      "linea": 273,
+      "texto": "\"data_table_estado\": (\"DECLARADO_AUSENTE_SIN_TABLA\" if table_sha == \"NO_APLICA_SIN_TABLA\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "metacognition_v0_1",
+   "archivo": "motor/metacognition_v0_1.py",
+   "lineas": 182,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 92,
+      "texto": "\"status\": \"EXECUTED\" if pre_h.get(\"status\") in {\"EXECUTED\", \"API_PENDING\"} else \"NO_ANALOGS\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "metacognition_v0_1.pre_h#1",
+    "metacognition_v0_1.post_h#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "modo_estricto_v1",
+   "archivo": "motor/modo_estricto_v1.py",
+   "lineas": 263,
+   "estados": {
+    "NO_DISPONIBLE": [
+     {
+      "linea": 60,
+      "texto": "return {\"status\": \"NO_DISPONIBLE\", \"pieza\": meta}"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 255,
+      "texto": "estado = \"CIERRE_ESTRICTO\" if not motivos else \"LATENTE\""
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 124,
+      "texto": "return {\"familia\": f, \"cuadrante\": \"FUERA_DE_TOP5_EN_TODOS_LOS_CORTES\", \"senal\": \"LATENTE\", \"cuadrante_estricto\": \"—\", \"senal_estricta\": \"LATENTE\"}"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "modo_estricto_v1#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "motor_interrelacion_extensible_v0_1",
+   "archivo": "motor/motor_interrelacion_extensible_v0_1.py",
+   "lineas": 134,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "motor_interrelacion_extensible_v0_1#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "movimiento_de_fondo_u4",
+   "archivo": "motor/movimiento_de_fondo_u4.py",
+   "lineas": 276,
+   "estados": {
+    "CABLEADA_SIN_SENAL": [
+     {
+      "linea": 70,
+      "texto": "return {\"clase\": \"SIN_SENAL\", \"rasgos\": [], \"primera\": None}"
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 9,
+      "texto": "Contrato: can_decide_H=False, reordena=False, writes_canonical=False. No toca rank_fusion, H1/H2, apuesta, grado 020"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 6,
+      "texto": "(cuello de botella), pero hay que ver TODOS los tokens para ver cómo y qué se mueve abajo: algo puede estar"
+     },
+     {
+      "linea": 16,
+      "texto": "- FAMILIA f: a_f(c) = media_PAC(p_final_f(c)) - 0.5 en el tablero del Engine canónico alimentado con TODOS los tokens"
+     },
+     {
+      "linea": 127,
+      "texto": "return out, \"PASADA_LATERAL_ENGINE_CANONICO_TODOS_LOS_TOKENS (semilla del caso; estado RNG restaurado)\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "movimiento_de_fondo_u4#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "normalizar_familia_tokens",
+   "archivo": "motor/normalizar_familia_tokens.py",
+   "lineas": 116,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 90,
+      "texto": "\"dynamic_couplings\": {\"todos\": \"NOT_HARDCODED_PENDING_VALIDATION\"},"
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 85,
+      "texto": "\"id\": fid, \"status\": \"LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS\", \"source\": fuente,"
+     },
+     {
+      "linea": 91,
+      "texto": "\"puente_244\": \"PENDIENTE (sin puente la familia queda cableada pero muda)\","
+     }
+    ],
+    "CABLEADA_SIN_SENAL": [
+     {
+      "linea": 76,
+      "texto": "for t in todos - set(out_s): flags.append(f\"SIN_SENAL:{t}\")"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "observador_externo_v1",
+   "archivo": "motor/observador_externo_v1.py",
+   "lineas": 289,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "personajes_corte_016",
+   "archivo": "motor/personajes_corte_016.py",
+   "lineas": 410,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 5,
+      "texto": "Contrato: can_decide_H=False · no escribe H1/H2 · no reordena candidatos · no escribe archivos ni stores ·"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 265,
+      "texto": "por_corte.append({\"corte\": cid, \"campo_texto\": None, \"estado\": \"SIN_TEXTO\", \"protagonista\": {\"presente\": False},"
+     },
+     {
+      "linea": 363,
+      "texto": "por_corte.append({\"corte\": cid, \"campo_texto\": k, \"estado\": \"DERIVADO\", \"protagonista\": prot, \"agentes\": otros,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_alias_reactivacion",
+   "archivo": "motor/plugin_alias_reactivacion.py",
+   "lineas": 64,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_aquiles_ancla_estricto",
+   "archivo": "motor/plugin_aquiles_ancla_estricto.py",
+   "lineas": 306,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_aquiles_h",
+   "archivo": "motor/plugin_aquiles_h.py",
+   "lineas": 172,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 47,
+      "texto": "\"estado\": \"SEGUIR_EMPUJANDO_H\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_arco_field_snyder_mckee",
+   "archivo": "motor/plugin_arco_field_snyder_mckee.py",
+   "lineas": 190,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 130,
+      "texto": "\"estado\": \"SE_NOTA\" if _nota(cut, umbral) else \"VACIO\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_arco_field_snyder_mckee.py"
+   ],
+   "en_ceb_stages": [
+    "plugin_arco_field_snyder_mckee.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_arcos_emocionales_laterales",
+   "archivo": "motor/plugin_arcos_emocionales_laterales.py",
+   "lineas": 72,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_arcos_emocionales_laterales#1",
+    "plugin_arcos_emocionales_laterales.output#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_arquetipos_dinamicos",
+   "archivo": "motor/plugin_arquetipos_dinamicos.py",
+   "lineas": 83,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_arquetipos_dinamicos"
+   ],
+   "en_ceb_stages": [
+    "plugin_arquetipos_dinamicos#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_cameo_institucional",
+   "archivo": "motor/plugin_cameo_institucional.py",
+   "lineas": 45,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_cameo_institucional#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_capa2_antecedentes_arquetipos",
+   "archivo": "motor/plugin_capa2_antecedentes_arquetipos.py",
+   "lineas": 403,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_circulo_monomito_v2",
+   "archivo": "motor/plugin_circulo_monomito_v2.py",
+   "lineas": 153,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_circulo_monomito_v2#1",
+    "plugin_circulo_monomito_v2.output#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_embudo_clinico",
+   "archivo": "motor/plugin_embudo_clinico.py",
+   "lineas": 93,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_entrega_luces_v1",
+   "archivo": "motor/plugin_entrega_luces_v1.py",
+   "lineas": 22,
+   "estados": {},
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_familias_gloria_sacro",
+   "archivo": "motor/plugin_familias_gloria_sacro.py",
+   "lineas": 83,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_fix_entrada",
+   "archivo": "motor/plugin_fix_entrada.py",
+   "lineas": 84,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_guardia_no_cruce",
+   "archivo": "motor/plugin_guardia_no_cruce.py",
+   "lineas": 112,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_guardia_no_cruce.absorbed#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_metodo_rigor",
+   "archivo": "motor/plugin_metodo_rigor.py",
+   "lineas": 41,
+   "estados": {
+    "TODO_FIXME": [
+     {
+      "linea": 2,
+      "texto": "\"\"\"PLUGIN_METODO_RIGOR — Holmes / Hecate / Schopenhauer"
+     },
+     {
+      "linea": 31,
+      "texto": "\"plugin\": \"METODO_RIGOR\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_metodo_rigor"
+   ],
+   "en_ceb_stages": [
+    "plugin_metodo_rigor#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_otto_numinoso",
+   "archivo": "motor/plugin_otto_numinoso.py",
+   "lineas": 78,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_picos_mesetas",
+   "archivo": "motor/plugin_picos_mesetas.py",
+   "lineas": 76,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_picos_mesetas.py"
+   ],
+   "en_ceb_stages": [
+    "plugin_picos_mesetas.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_polaridad_causal",
+   "archivo": "motor/plugin_polaridad_causal.py",
+   "lineas": 160,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_pregunta_detras_v2",
+   "archivo": "motor/plugin_pregunta_detras_v2.py",
+   "lineas": 927,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 4,
+      "texto": "PROPUESTA. No cablear al limpio sin OK de Marco."
+     },
+     {
+      "linea": 39,
+      "texto": "VERSION = \"PROPUESTA_v2.3.3\"  # 2.3.3 (27-sep): \"esta/este/estos/estas\" sin tilde tras preposición = demostrativo, no cópula"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_pregunta_dirigida",
+   "archivo": "motor/plugin_pregunta_dirigida.py",
+   "lineas": 13,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_pregunta_dirigida"
+   ],
+   "en_ceb_stages": [
+    "plugin_pregunta_dirigida#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_pregunta_dirigida_v0_5_1",
+   "archivo": "motor/plugin_pregunta_dirigida_v0_5_1.py",
+   "lineas": 1435,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 3,
+      "texto": "plugin_pregunta_dirigida.py — PROPUESTA SIDECAR unificada (no cableado al limpio)"
+     },
+     {
+      "linea": 25,
+      "texto": "Estado: PROPUESTA_0.4.1 / PENDIENTE de autorización al ON del limpio."
+     },
+     {
+      "linea": 42,
+      "texto": "VERSION = \"PROPUESTA_0.5.1_GUARDIANES\""
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 25,
+      "texto": "Estado: PROPUESTA_0.4.1 / PENDIENTE de autorización al ON del limpio."
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 859,
+      "texto": "\"estado\": \"DETECTADA\" if sev == \"hard\" else \"POSIBLE\","
+     },
+     {
+      "linea": 1364,
+      "texto": "\"estado\": \"DETECTADA\" if sev == \"hard\" else \"POSIBLE\", \"accion\": \"bandera_no_bloquea\"}"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 664,
+      "texto": "# Polaridad: si TODO el texto niega la causalidad, no hay post-hoc afirmado"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_reporte_3d",
+   "archivo": "motor/plugin_reporte_3d.py",
+   "lineas": 57,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_reporte_3d"
+   ],
+   "en_ceb_stages": [
+    "plugin_reporte_3d#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_resolucion_autonoma_consistencia",
+   "archivo": "motor/plugin_resolucion_autonoma_consistencia.py",
+   "lineas": 104,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_resolucion_autonoma_consistencia#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_sesgo_lectura",
+   "archivo": "motor/plugin_sesgo_lectura.py",
+   "lineas": 102,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "plugin_sesgo_lectura.py"
+   ],
+   "en_ceb_stages": [
+    "plugin_sesgo_lectura.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_sombrero_blanco_token",
+   "archivo": "motor/plugin_sombrero_blanco_token.py",
+   "lineas": 38,
+   "estados": {
+    "PENDIENTE": [
+     {
+      "linea": 22,
+      "texto": "\"estado\": \"EQUIVALENTE_UNICO\" if eq else \"PENDIENTE_REVISION\","
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 22,
+      "texto": "\"estado\": \"EQUIVALENTE_UNICO\" if eq else \"PENDIENTE_REVISION\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_sombrero_blanco_token#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_souriau_210141",
+   "archivo": "motor/plugin_souriau_210141.py",
+   "lineas": 371,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 122,
+      "texto": "return SouriauFunction(name, estado=\"no_observado\", corte=corte)"
+     },
+     {
+      "linea": 144,
+      "texto": "estado=\"observado\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_trayectoria_hosteleria",
+   "archivo": "motor/plugin_trayectoria_hosteleria.py",
+   "lineas": 44,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "plugin_verificador_consistencia_adversarial",
+   "archivo": "motor/plugin_verificador_consistencia_adversarial.py",
+   "lineas": 118,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "plugin_verificador_consistencia_adversarial#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "predictibilidad_set_021",
+   "archivo": "motor/predictibilidad_set_021.py",
+   "lineas": 419,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 12,
+      "texto": "Reglas: no cambia rank_fusion, ni el orden de H, ni H1/H2, ni la apuesta, ni el grado 020 (can_decide_H=False)."
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 373,
+      "texto": "grado = (\"SET_EXPLICA_TODOS_LOS_CORTES\" if not sin else \"SET_CON_CORTES_SIN_EXPLICAR\")"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "predictibilidad_set_021#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "predictor_vecinos_prefijo_v1",
+   "archivo": "motor/predictor_vecinos_prefijo_v1.py",
+   "lineas": 148,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "protocolo_kernel_motor",
+   "archivo": "motor/protocolo_kernel_motor.py",
+   "lineas": 294,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "puente_souriau_caldero_polti_v1",
+   "archivo": "motor/puente_souriau_caldero_polti_v1.py",
+   "lineas": 390,
+   "estados": {
+    "PENDIENTE": [
+     {
+      "linea": 21,
+      "texto": "NO está definida en disco: PENDIENTE de la regla de Mj (no se inventa aquí)."
+     },
+     {
+      "linea": 146,
+      "texto": "\"brecha_7783\": \"PENDIENTE regla de Mj: 7783 = funciones posibles notables por discrepancias entre los seis agentes en interacción consistente (y sus representaciones animales); la codificación actual solo alcanza 729. No"
+     }
+    ],
+    "NO_DISPONIBLE": [
+     {
+      "linea": 345,
+      "texto": "zri_out, zri_status = [], \"NO_DISPONIBLE\""
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 10,
+      "texto": "Candados: can_decide_H=False · no escribe H1/H2 · no reordena candidatos · no escribe catálogo ·"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "ricci_forman_coocurrencia_v0_1",
+   "archivo": "motor/ricci_forman_coocurrencia_v0_1.py",
+   "lineas": 121,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "schrodinger_transport_esqueleto_v0_1",
+   "archivo": "motor/schrodinger_transport_esqueleto_v0_1.py",
+   "lineas": 37,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 2,
+      "texto": "\"\"\"schrodinger_transport_esqueleto_v0_1.py — PROPUESTA / ESQUELETO. NO EJECUTA TRANSPORTE."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "schrodinger_transport_v0_1",
+   "archivo": "motor/schrodinger_transport_v0_1.py",
+   "lineas": 387,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 236,
+      "texto": "return {\"estado\": \"SIN_TRAYECTORIA\", \"n_cortes\": n,"
+     },
+     {
+      "linea": 334,
+      "texto": "return {\"estado\": \"TRANSPORTE_OK\", \"n_cortes\": n, \"parametros\": prm,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "schrodinger_transport_v0_2",
+   "archivo": "motor/schrodinger_transport_v0_2.py",
+   "lineas": 320,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 163,
+      "texto": "return {\"estado\": \"SIN_TRAYECTORIA\", \"n_cortes\": n,"
+     },
+     {
+      "linea": 273,
+      "texto": "return {\"estado\": \"TRANSPORTE_OK\", \"n_cortes\": n, \"parametros\": prm,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "semiotica_deriva_v0_1",
+   "archivo": "motor/semiotica_deriva_v0_1.py",
+   "lineas": 67,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sensor_perfil_narrador_v0_1",
+   "archivo": "motor/sensor_perfil_narrador_v0_1.py",
+   "lineas": 413,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 17,
+      "texto": "Candados: can_decide_H=False · Alimenta_H=NO · no escribe patterns.json · no entra al ranking ·"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 82,
+      "texto": "if tot < n_min: return {\"estado\": \"SIN_DATO\", \"n\": tot, \"proporciones\": prop, \"dominante\": None}"
+     },
+     {
+      "linea": 87,
+      "texto": "return {\"estado\": \"LATENCIA_EMPATE\", \"n\": tot, \"proporciones\": prop, \"dominante\": None,"
+     },
+     {
+      "linea": 254,
+      "texto": "\"estado\": \"LATENTE\", \"es_hecho\": False, \"marcado\": marcado, \"corte_de_referencia\": corte,"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_ablacion_hombre_acero",
+   "archivo": "motor/sidecar_ablacion_hombre_acero.py",
+   "lineas": 657,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 71,
+      "texto": "\"estado\": \"EXPERIMENTAL_SIDECAR\","
+     },
+     {
+      "linea": 450,
+      "texto": "\"estado\": \"EXPERIMENTAL_SIDECAR\","
+     },
+     {
+      "linea": 535,
+      "texto": "\"estado\": \"EXPERIMENTAL_SIDECAR\","
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 325,
+      "texto": "3) heurística: si se quitan TODOS los pilares de ejes P y A con consec>=N"
+     },
+     {
+      "linea": 508,
+      "texto": "# Reinterrelación obligatoria: quitar TODOS los pilares de acero"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_amantes_arquetipos",
+   "archivo": "motor/sidecar_amantes_arquetipos.py",
+   "lineas": 163,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 137,
+      "texto": "\"estado\": \"ON\" if hits else \"LATENCIA_FORZADA\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_area_tokens_v1",
+   "archivo": "motor/sidecar_area_tokens_v1.py",
+   "lineas": 236,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 106,
+      "texto": "\"nota_subfamilias\": \"el sidecar declara las 2 familias pero no asigna tokens a cada una: asignación = PROPUESTA\","
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 3,
+      "texto": "+ activación por corte desde input real + coactivaciones. Solo lectura. can_decide_H=False. No toca el 244."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_caldero_busqueda_arquetipos",
+   "archivo": "motor/sidecar_caldero_busqueda_arquetipos.py",
+   "lineas": 1092,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "sidecar_caldero_busqueda_arquetipos#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_corte_memento",
+   "archivo": "motor/sidecar_corte_memento.py",
+   "lineas": 650,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR",
+   "archivo": "motor/sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py",
+   "lineas": 226,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 5,
+      "texto": "PROPUESTA — sidecar corporal/arco."
+     },
+     {
+      "linea": 6,
+      "texto": "Estado: PROPUESTA. No se cablea al motor limpio."
+     },
+     {
+      "linea": 207,
+      "texto": "\"estado\": \"PROPUESTA\","
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 84,
+      "texto": "return {\"estado\": \"VACIO\", \"motivo\": \"sin_cortes\", \"cadena\": []}"
+     },
+     {
+      "linea": 98,
+      "texto": "return {\"estado\": \"VACIO\", \"motivo\": \"cadena_rota_sin_enfermedad_o_herida\","
+     },
+     {
+      "linea": 101,
+      "texto": "return {\"estado\": \"VACIO\", \"motivo\": \"falta_enfermedad_o_herida\", \"cadena\": []}"
+     },
+     {
+      "linea": 105,
+      "texto": "return {\"estado\": \"VACIO\", \"motivo\": \"falta_agonia\", \"cadena\": []}"
+     },
+     {
+      "linea": 109,
+      "texto": "return {\"estado\": \"VACIO\", \"motivo\": \"falta_muerte_propia\", \"cadena\": []}"
+     },
+     {
+      "linea": 113,
+      "texto": "\"estado\": \"HIT\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_geometria",
+   "archivo": "motor/sidecar_geometria.py",
+   "lineas": 50,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_lente_souriau",
+   "archivo": "motor/sidecar_lente_souriau.py",
+   "lineas": 162,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 92,
+      "texto": "estado=\"referencia\","
+     },
+     {
+      "linea": 127,
+      "texto": "return {f: {\"estado\": \"referencia\", \"valor\": None} for f in FOCOS}"
+     },
+     {
+      "linea": 136,
+      "texto": "estado = \"referencia\""
+     },
+     {
+      "linea": 149,
+      "texto": "estado = \"confirmada\""
+     },
+     {
+      "linea": 151,
+      "texto": "estado = \"corroborada\""
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_luces_gemini_packs",
+   "archivo": "motor/sidecar_luces_gemini_packs.py",
+   "lineas": 252,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_polti_caldero",
+   "archivo": "motor/sidecar_polti_caldero.py",
+   "lineas": 120,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_sombrero_blanco_filtro_v1",
+   "archivo": "motor/sidecar_sombrero_blanco_filtro_v1.py",
+   "lineas": 102,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 14,
+      "texto": "No modifica el input ni la salida: marca. can_decide_H=False, feeds_predictor=False."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_trazabilidad_temporal",
+   "archivo": "motor/sidecar_trazabilidad_temporal.py",
+   "lineas": 217,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 166,
+      "texto": "\"k_estado\": \"PROPUESTA_EMPIRICA\","
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 165,
+      "texto": "\"estado\": \"CABLEADO_BUS_LATERAL\","
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sidecar_venn_sistemas_v1",
+   "archivo": "motor/sidecar_venn_sistemas_v1.py",
+   "lineas": 162,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 4,
+      "texto": "NO decide nada: ALIMENTA_H=False, can_decide_H=False, fuera del ranking."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "souriau_momentum_so3",
+   "archivo": "motor/souriau_momentum_so3.py",
+   "lineas": 20,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "stinkbox_transport_v0_2",
+   "archivo": "motor/stinkbox_transport_v0_2.py",
+   "lineas": 482,
+   "estados": {
+    "NO_IMPLEMENTADO": [
+     {
+      "linea": 68,
+      "texto": "\"billard_source_execution\": \"NOT_IMPLEMENTED_HERE\","
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 473,
+      "texto": "\"status\": (\"SKIPPED_IDEMPOTENT_REPLAY\" if repeticion else (\"NO_TOKEN_INPUT\" if not token_unique else \"TOKENS_PERSISTED\")),"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "stinkbox_transport_v0_2#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "sujetos_014",
+   "archivo": "motor/sujetos_014.py",
+   "lineas": 112,
+   "estados": {
+    "TODO_FIXME": [
+     {
+      "linea": 12,
+      "texto": "- nombres_que_no_votan(case): POLÍTICA INTENCIONAL (015, confirmada por Mj): excluye TODOS los nombres propios"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [
+    "sujetos_014.py#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "traza_campo_244",
+   "archivo": "motor/traza_campo_244.py",
+   "lineas": 25,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [
+    "traza_campo_244"
+   ],
+   "en_ceb_stages": [
+    "traza_campo_244#1"
+   ],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "tusi_par_indice_exploratorio_v0_1",
+   "archivo": "motor/tusi_par_indice_exploratorio_v0_1.py",
+   "lineas": 49,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 2,
+      "texto": "\"\"\"tusi_par_indice_exploratorio_v0_1.py — PROPUESTA / EXPLORATORIO. Alimenta_H=NO. writes_H=False."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "v153_lateral_metrics_v1_1",
+   "archivo": "motor/v153_lateral_metrics_v1_1.py",
+   "lineas": 284,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "vecinos_caldero_neighbor_store",
+   "archivo": "motor/vecinos_caldero_neighbor_store.py",
+   "lineas": 13,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "zri_coupling_v0_2",
+   "archivo": "motor/zri_coupling_v0_2.py",
+   "lineas": 154,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "zri_experience_v0_1",
+   "archivo": "motor/zri_experience_v0_1.py",
+   "lineas": 189,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "filogenia_mezcla",
+   "archivo": "laterales/filogenia_mezcla/filogenia_mezcla.py",
+   "lineas": 381,
+   "estados": {
+    "estado_str": [
+     {
+      "linea": 270,
+      "texto": "clas[f] = {'H': hid[f], 'estado': 'NO_SE_SOSTIENE', 'motivo': 'sin tokens que lo sostengan en ningún corte'}; continue"
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "cuartos_monomito",
+   "archivo": "laterales/teoria_color/cuartos_monomito.py",
+   "lineas": 199,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "equivalencias",
+   "archivo": "laterales/teoria_color/equivalencias.py",
+   "lineas": 57,
+   "estados": {},
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "rueda_conjuncion",
+   "archivo": "laterales/teoria_color/rueda_conjuncion.py",
+   "lineas": 629,
+   "estados": {
+    "can_decide_H_False": [
+     {
+      "linea": 77,
+      "texto": "Reglas del lateral: can_decide_H=False. No decide H1/H2 del motor."
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "teoria_color",
+   "archivo": "laterales/teoria_color/teoria_color.py",
+   "lineas": 128,
+   "estados": {},
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "no_duplicacion_latencia",
+   "archivo": "reconexion_v2a1/no_duplicacion_latencia.py",
+   "lineas": 403,
+   "estados": {
+    "PROPUESTA": [
+     {
+      "linea": 8,
+      "texto": "como PROPUESTA / SENSOR y nunca toca el tablero. El Engine canónico"
+     }
+    ],
+    "DESACTIVADO": [
+     {
+      "linea": 40,
+      "texto": "3. Puerta de cordura (obligatoria): con la regla APAGADA el tablero"
+     }
+    ],
+    "can_decide_H_False": [
+     {
+      "linea": 72,
+      "texto": "Reglas del lateral: can_decide_H=False. No decide H1/H2 del motor;"
+     }
+    ],
+    "TODO_FIXME": [
+     {
+      "linea": 54,
+      "texto": "- Compañía: se mide sobre TODO el corte (P+A+C), no solo el eje"
+     }
+    ]
+   },
+   "cableado_correr_estandar": false,
+   "cableado_motor_unico": false,
+   "cableado_laterales_unico": false,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  },
+  {
+   "componente": "correr_estandar",
+   "archivo": "correr_estandar.py",
+   "lineas": 1051,
+   "estados": {
+    "ESPERANDO": [
+     {
+      "linea": 243,
+      "texto": "unresolved_states = {\"LATENCIA_INFORMACIONAL\", \"NO_RESUELTO\", \"UNRESOLVED\", \"PENDING\", \"PENDIENTE\", \"EMPATE\"}"
+     }
+    ],
+    "PENDIENTE": [
+     {
+      "linea": 243,
+      "texto": "unresolved_states = {\"LATENCIA_INFORMACIONAL\", \"NO_RESUELTO\", \"UNRESOLVED\", \"PENDING\", \"PENDIENTE\", \"EMPATE\"}"
+     }
+    ],
+    "NO_CORRE": [
+     {
+      "linea": 988,
+      "texto": "receipt[\"stages\"].append({\"stage\": \"gate_z90\", \"status\": (_gate_z90 or {}).get(\"status\", \"NO_EJECUTADO\"),"
+     },
+     {
+      "linea": 993,
+      "texto": "receipt[\"stages\"].append({\"stage\": \"filogenia_mezcla\", \"status\": _lf_stage.get(\"status\", \"NO_EJECUTADO\"),"
+     },
+     {
+      "linea": 997,
+      "texto": "receipt[\"stages\"].append({\"stage\": \"teoria_color\", \"status\": _tc_stage.get(\"status\", \"NO_EJECUTADO\"),"
+     }
+    ],
+    "NO_DISPONIBLE": [
+     {
+      "linea": 90,
+      "texto": "return \"HUELLA_ORIGEN_NO_DISPONIBLE\""
+     },
+     {
+      "linea": 91,
+      "texto": "return \"DATO_AUSENTE_REQUIERE_CLASIFICACION\""
+     },
+     {
+      "linea": 246,
+      "texto": "(tortugas_status in {\"ERROR\", \"NO_DISPONIBLE\", \"FAILED\", \"TIMEOUT\"} or not tortugas_executed))"
+     }
+    ],
+    "estado_str": [
+     {
+      "linea": 723,
+      "texto": "\"estado\": \"ACTIVA_DIAGNOSTICA\","
+     },
+     {
+      "linea": 734,
+      "texto": "\"estado\": \"ACTIVA_DIAGNOSTICA\" if _gate_z90.get(\"status\") in (\"PASA\", \"RECHAZADO_DIAGNOSTICO\") else _gate_z90.get(\"status\", \"ERROR\"),"
+     },
+     {
+      "linea": 784,
+      "texto": "result[\"efectividad_corte_retenido\"]={\"estado\":\"INTERNAL_T1_RUN_FAILED\", \"previo_status\":sello.get(\"_internal_run_status\"),"
+     },
+     {
+      "linea": 823,
+      "texto": "\"estado\": \"LIMPIO\" if not _result_missing_paths and not _result_nonfinite_paths else \"REQUIERE_CLASIFICACION_O_REMEDICION\""
+     },
+     {
+      "linea": 970,
+      "texto": "\"estado\": \"ACTIVA_DIAGNOSTICA\" if _res_lat.get(\"status\") == \"EJECUTADO\" else _res_lat.get(\"status\", \"ERROR\"),"
+     }
+    ]
+   },
+   "cableado_correr_estandar": true,
+   "cableado_motor_unico": true,
+   "cableado_laterales_unico": true,
+   "en_features_result": [],
+   "en_ceb_stages": [],
+   "en_laterales_unico_result": []
+  }
+ ],
+ "result_features_keys": [
+  "acero_zoomout",
+  "aquiles_h",
+  "arcos_emocionales_laterales",
+  "billar_circular_v0_2",
+  "caldero_busqueda_arquetipos",
+  "cameo_703_lateral",
+  "cameo_activated_tokens_703",
+  "cameo_lateral",
+  "cameo_legacy_adapter_audit",
+  "capa2_antecedentes",
+  "cuts",
+  "dynamis_dramatica_sistemica",
+  "embudo_clinico",
+  "estabilidad_vectorial",
+  "external_archetype_search_receipt",
+  "familias_tokens_puente",
+  "figura_pac",
+  "funciones_souriau",
+  "geometria",
+  "interrelation",
+  "lateral_metrics_v1_1",
+  "laterales_unico_detalle",
+  "marcador_limite_geometrico",
+  "marco_7783",
+  "matriz_clases",
+  "metacognition",
+  "negativo_ricci_vs_billar",
+  "otto_numinoso",
+  "plugin_arco_field_snyder_mckee.py",
+  "plugin_arquetipos_dinamicos",
+  "plugin_circulo_monomito",
+  "plugin_metodo_rigor",
+  "plugin_picos_mesetas.py",
+  "plugin_pregunta_detras",
+  "plugin_pregunta_dirigida",
+  "plugin_reporte_3d",
+  "plugin_sesgo_lectura.py",
+  "polti_caldero",
+  "post_h_analogical_contrast",
+  "pre_h_analogical_search",
+  "pre_h_lateral_tokens",
+  "ricci_forman_v0_1",
+  "semiotica_deriva",
+  "stinkbox_transport",
+  "trayectoria_hosteleria",
+  "traza_campo_244"
+ ],
+ "result_ceb_stages": {
+  "execution_integrity": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "native_core#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "geometria#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "polti_caldero#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "traza_campo_244#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_reporte_3d#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "otto_numinoso#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "embudo_clinico#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "trayectoria_hosteleria#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "estabilidad_vectorial#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "aquiles_h#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "billar_circular_v0_2#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "ricci_forman_v0_1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "lateral_metrics_v1_1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "acero_zoomout#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "capa2_antecedentes#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_picos_mesetas.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_arco_field_snyder_mckee.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_sesgo_lectura.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_pregunta_detras#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_metodo_rigor#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "semiotica_deriva#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_arquetipos_dinamicos#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_pregunta_dirigida#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 1
+  },
+  "plugin_cameo_institucional#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_cameo_to_703_lateral#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "cameo_to_703_lateral_v1.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_guardia_no_cruce.absorbed#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "sidecar_caldero_busqueda_arquetipos#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "vecinos_caldero/neighbor_store.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_circulo_monomito_v2#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_circulo_monomito_v2.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "motor_interrelacion_extensible_v0_1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "sujetos_014.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "autoevidencia_stores_011.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_arcos_emocionales_laterales#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_arcos_emocionales_laterales.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "dynamis_dramatica_sistemica#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "pre_h_analogical_search(V0.18)#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "pre_h_lateral_tokens#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "stinkbox_transport_v0_2#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "stinkbox_transport.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "filtro_relleno_013.py#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "stinkbox_to_light_bus_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "stinkbox_to_light_bus.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "protocolo_transversal_absorbido": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "laterales_unico_v1.pre_predictor#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "laterales_unico_v1.pre_predictor.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "cameo_to_244_adapter_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "cameo_to_244_adapter_v1.output#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "matriz_clases#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "funciones_souriau#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "marco_7783#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "figura_pac#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "predictor#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "metacognition_v0_1.pre_h#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "compuerta_cierre_latencia_v0_16_4": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "proyeccion_longitudinal": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "metacognition_v0_1.post_h#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_sombrero_blanco_token#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "analogos_fase#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_entrega_luces#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_resolucion_autonoma_consistencia#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "plugin_verificador_consistencia_adversarial#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "guardianes_control_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "ruta_cierre_latente_guardianes": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "modo_estricto_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "laterales_unico_v1.post_predictor#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "resolucion_operativa_terminal_017#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "cierre_final_016#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "decimo_hombre_esteroides_mayeutica_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "predictibilidad_set_021#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "movimiento_de_fondo_u4#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "UNSCOPED_RUNTIME": {
+   "started": 0,
+   "ended": 0,
+   "error": 0,
+   "output": 0,
+   "output_empty": 0
+  },
+  "hipotesis_trayectoria_abierta_v1#1": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "motor_result": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 1,
+   "output_empty": 0
+  },
+  "resource_lifecycle_audit": {
+   "started": 1,
+   "ended": 1,
+   "error": 0,
+   "output": 0,
+   "output_empty": 0
+  }
+ },
+ "result_laterales_unico_keys": [
+  "contrato",
+  "convergencia_lateral",
+  "post",
+  "pre",
+  "registro_piezas",
+  "sensores_pre",
+  "verificacion_H_intacto",
+  "version"
+ ],
+ "recibo_keys": [
+  "archetype_search_receipt",
+  "canonical_engine_sha256",
+  "case_id",
+  "continuidad_corrida",
+  "duration_seconds",
+  "finished_epoch",
+  "huellas_declaradas_ausentes",
+  "hypothesis_fronts_active_at_terminal",
+  "input_path",
+  "input_sha256",
+  "monte_carlo",
+  "motor_sha256",
+  "nonfinite_values_in_receipt",
+  "nonfinite_values_in_result_json",
+  "nonfinite_values_replaced_as_tortugas_in_receipt",
+  "normalized_input_sha256",
+  "null_values_in_receipt",
+  "null_values_in_result_json",
+  "null_values_replaced_as_tortugas_in_receipt",
+  "output_path",
+  "output_sha256",
+  "patterns_sha256",
+  "receipt_missing_paths",
+  "receipt_nonfinite_paths",
+  "receipt_version",
+  "receipt_written_after_result",
+  "result_missing_paths",
+  "result_nonfinite_paths",
+  "runner_path",
+  "runner_sha256",
+  "salida_interpretable",
+  "stages",
+  "started_epoch",
+  "status",
+  "stinkbox_persistent_registry",
+  "stinkbox_persistent_registry_primary_checkpoint",
+  "terminal_resolution"
+ ],
+ "recibo_stages": [
+  {
+   "stage": "input_read_and_normalization",
+   "status": "COMPLETED"
+  },
+  {
+   "stage": "integrity_preflight",
+   "status": "COMPLETED"
+  },
+  {
+   "stage": "canonical_engine_and_patterns_hash_check",
+   "status": "MATCH",
+   "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+   "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+  },
+  {
+   "stage": "motor_run",
+   "status": "COMPLETED",
+   "monte_carlo": true
+  },
+  {
+   "stage": "monte_carlo_diagnostics",
+   "status": "EXECUTED",
+   "engine_observation_calls": 21,
+   "engine_observation_calls_with_mc_metrics": 21,
+   "total_simulations": 13027,
+   "converged_calls": 21,
+   "nonconverged_calls": 0,
+   "calls": [
+    {
+     "observation_id": "C1_1831_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C1_1831_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C1_1831_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C2_1846_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C2_1846_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C2_1846_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C3_1847_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C3_1847_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C3_1847_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C4_1849_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C4_1849_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C4_1849_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C5_1852_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C5_1852_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C5_1852_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C6_1858_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C6_1858_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C6_1858_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    },
+    {
+     "observation_id": "C7_1861_P",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 722,
+     "converged": true
+    },
+    {
+     "observation_id": "C7_1861_A",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 541,
+     "converged": true
+    },
+    {
+     "observation_id": "C7_1861_C",
+     "enabled_requested": true,
+     "status": "EXECUTED",
+     "simulations": 598,
+     "converged": true
+    }
+   ]
+  },
+  {
+   "stage": "terminal_resolution",
+   "status": "RESUELTO_OPERACIONALMENTE",
+   "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+   "H1": {
+    "familia": "arquetipo_el_sabio",
+    "porcentaje_relleno": 50.85,
+    "desglose_relleno_por_grupo_pct": {
+     "acoplamiento": 0.0,
+     "booker": 40.7407,
+     "dynamis": 53.5714,
+     "estructura": 91.6667,
+     "frye": 33.3333,
+     "geometria_inercia": 26.3889,
+     "greimas": 65.2778,
+     "otras_dimensiones": 53.8889,
+     "puente_lateral": 84.4356,
+     "resolucion": 47.2222,
+     "trayectoria_estado": 62.7778
+    },
+    "peso_relativo": 0.065223,
+    "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+    "predictibilidad_estructural_pct": 55.74
+   },
+   "H2": {
+    "familia": "20_sacrificio_por_un_ideal",
+    "porcentaje_relleno": 61.3,
+    "desglose_relleno_por_grupo_pct": {
+     "acoplamiento": 72.2222,
+     "booker": 65.7407,
+     "dynamis": 49.6032,
+     "estructura": 94.4444,
+     "frye": 50.9259,
+     "geometria_inercia": 47.2222,
+     "greimas": 61.8056,
+     "otras_dimensiones": 56.3889,
+     "puente_lateral": 42.5944,
+     "resolucion": 75.0,
+     "trayectoria_estado": 58.3333
+    },
+    "peso_relativo": 0.063876,
+    "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+    "predictibilidad_estructural_pct": 54.76
+   }
+  },
+  {
+   "stage": "external_archetype_search",
+   "status": "EXECUTED_WITH_RESULTS",
+   "required": false,
+   "provider": "bing_html",
+   "query_count": 1,
+   "result_count": 8,
+   "query_sha256": "f79fc27699bbc901cd5c9e84e51441667a082a4ec942033ce760ebc4b90999a4"
+  },
+  {
+   "stage": "filtro_entrada_dirigida_017",
+   "status": "TRAZA_SIN_MODIFICACION",
+   "modo": "traza",
+   "n_aplicadas": 0
+  },
+  {
+   "stage": "consulta_dirigida",
+   "status": "NO_CONFIGURADO",
+   "modo": "off",
+   "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+   "n_preguntas": 0,
+   "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+  },
+  {
+   "stage": "result_json_written",
+   "status": "COMPLETED",
+   "sha256": "7d93716399a70e2d8a0b464445d3e3b758c954e18113e26a434d8e5b78de9404"
+  },
+  {
+   "stage": "unification_manifest_check",
+   "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+   "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+   "manifest_files": 314,
+   "deriva": [
+    {
+     "path": "correr_estandar.py",
+     "manifiesto": "19b5585c26b0",
+     "actual": "dace97ff02a1"
+    },
+    {
+     "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+     "manifiesto": "56fbe97d8f12",
+     "actual": "57e12dfbb91f"
+    },
+    {
+     "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+     "manifiesto": "f0912a3415f6",
+     "actual": "26c1f7eadd62"
+    },
+    {
+     "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+     "manifiesto": "07b20659a5ca",
+     "actual": "e2be0f45ea1b"
+    },
+    {
+     "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+     "manifiesto": "6818261d3ebf",
+     "actual": "ef9aad3bcbd0"
+    },
+    {
+     "path": "motor/cameo_codebook_lateral_v1.json",
+     "manifiesto": "d575473d4ea4",
+     "actual": "6f043d41dc9a"
+    },
+    {
+     "path": "motor/estado_latencia_decimo_hombre.json",
+     "manifiesto": "a3818cc8f378",
+     "actual": "cc51a5c8c031"
+    },
+    {
+     "path": "motor/estado_latencia_v15_3_nativo.json",
+     "manifiesto": "80d1605b619f",
+     "actual": "32f4f933567a"
+    },
+    {
+     "path": "motor/geometria_multicapa/adaptador_convergencia_real_v1.py",
+     "manifiesto": "0cbfacf280bf",
+     "actual": "3312fcf464fe"
+    },
+    {
+     "path": "motor/laterales_unico_v1.py",
+     "manifiesto": "3ae6ffbf7a88",
+     "actual": "88d11b0138a0"
+    },
+    {
+     "path": "motor/plugin_cameo_institucional.py",
+     "manifiesto": "98a58d5bed02",
+     "actual": "c159ade7fcb6"
+    },
+    {
+     "path": "motor/predictibilidad_set_021.py",
+     "manifiesto": "1d1ac27244ac",
+     "actual": "799cc2f33b5c"
+    },
+    {
+     "path": "motor/stinkbox_transport_v0_2.py",
+     "manifiesto": "a0253e6e2f51",
+     "actual": "7b9f761299ce"
+    },
+    {
+     "path": "motor/zonas_7783.json",
+     "manifiesto": "2148a44cb599",
+     "actual": "6f334bbd954a"
+    }
+   ],
+   "ausentes": [],
+   "motor_fuera_de_manifiesto": [
+    "motor/SPEC_SCHRODINGER_V0_1.md",
+    "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+    "motor/observador_externo_v1.py",
+    "motor/schrodinger_transport_v0_1.py",
+    "motor/schrodinger_transport_v0_2.py"
+   ],
+   "bloqueantes": [],
+   "bloquea": false,
+   "status": "DRIFT_WARNED"
+  },
+  {
+   "stage": "candado_plugins",
+   "status": "OK",
+   "verificados": 112,
+   "fallos": [],
+   "bloquea": false
+  },
+  {
+   "stage": "ceb_ledger_preserved",
+   "status": "COMPLETED",
+   "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_SEMMELWEIS_HEROE_SIN_TRONO_20261112_CEB_LEDGER_MANIFIESTO.json",
+   "ledgers": [
+    {
+     "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_SEMMELWEIS_HEROE_SIN_TRONO_20261112_CEB_LEDGER_1.jsonl",
+     "sha256": "85de3683c300b9f259d4f2e013b27b3cc7272ec85a4e40ccb4409ca2c671cef3",
+     "lineas": 45719
+    }
+   ]
+  },
+  {
+   "stage": "stinkbox_persistent_registry_primary_checkpoint",
+   "status": "OK",
+   "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+   "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+  },
+  {
+   "stage": "stinkbox_persistent_registry_ingest",
+   "status": "OK",
+   "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+   "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+  },
+  {
+   "stage": "gate_z90",
+   "status": "RECHAZADO_DIAGNOSTICO",
+   "n_errores": 11,
+   "errores": [
+    "R1 modo_z debe ser 'historico' o 'vivo'",
+    "R3 C1_1831: sin 'evidencia'",
+    "R3 C2_1846: sin 'evidencia'",
+    "R3 C3_1847: sin 'evidencia'",
+    "R3 C4_1849: sin 'evidencia'",
+    "R3 C5_1852: sin 'evidencia'",
+    "R3 C6_1858: sin 'evidencia'",
+    "R3 C7_1861: sin 'evidencia'",
+    "R5 source_notes: menciona el año 2026 (posterior a Z)",
+    "R5 source_notes: menciona el año 1865 (posterior a Z)",
+    "R5 source_notes: menciona el año 1865 (posterior a Z)"
+   ],
+   "bloquea": false
+  },
+  {
+   "stage": "filogenia_mezcla",
+   "status": "EJECUTADO",
+   "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_SEMMELWEIS_HEROE_SIN_TRONO_20261112.json",
+   "sha256_json": "9cb07093f6ed32947b0958ddb893e4a470b5d1585099ed068037c0c0d54884fb",
+   "bloquea": false
+  },
+  {
+   "stage": "teoria_color",
+   "status": "EJECUTADO",
+   "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_SEMMELWEIS_HEROE_SIN_TRONO_20261112.json",
+   "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_SEMMELWEIS_HEROE_SIN_TRONO_20261112.png",
+   "sha256_json": "5713cf9b0e91ec69f3a3a19accfe51b66737250150c9fe83be3fd5ba01c69998",
+   "bloquea": false
+  }
+ ]
+}

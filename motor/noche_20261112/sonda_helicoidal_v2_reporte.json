@@ -1,0 +1,192 @@
+{
+  "MOZART": {
+    "eje_inferido_u_blanqueado": [
+      0.691,
+      0.179,
+      -0.701
+    ],
+    "eje_inferido_vs_PC1_angulo_grados": 46.3,
+    "eje_gira_de_verdad": true,
+    "radio_CV_eje_inferido": 0.144,
+    "radio_CV_eje_PC1_v1": 0.39,
+    "radio_por_corte_eje_inferido": [
+      1.701,
+      1.262,
+      1.502,
+      1.503,
+      1.183,
+      1.47,
+      1.065,
+      1.273,
+      1.638
+    ],
+    "margen_radio_eje_inferido": [
+      1.065,
+      1.701
+    ],
+    "radio_C10_real": 2.175,
+    "fase_grados_por_corte_eje_inferido": [
+      -174.3,
+      -233.6,
+      -270.3,
+      -307.6,
+      -339.9,
+      -423.8,
+      -425.0,
+      -411.2,
+      -515.9
+    ],
+    "dphi_mediana_grados_v2": -37.0,
+    "dphi_desviacion_grados_v2": 36.9,
+    "dphi_mediana_grados_v1_PC1": -47.0,
+    "dphi_desviacion_grados_v1_PC1": 54.3,
+    "avance_h_por_corte_v2": [
+      -1.758,
+      -0.438,
+      0.179,
+      0.424,
+      -0.006,
+      -0.758,
+      -0.018,
+      0.158,
+      2.215
+    ],
+    "prediccion_C10": {
+      "eje_inferido_v2": {
+        "error_blanqueado": 1.794,
+        "error_PC": 0.273,
+        "rmse_244": 0.0204,
+        "corr_244": 0.976,
+        "top5_acierto": "0/5",
+        "radio_pred": 1.743,
+        "fase_pred_grados": -552.9,
+        "avance_pred": 2.646
+      },
+      "eje_PC1_v1": {
+        "error_blanqueado": 4.08,
+        "rmse_244": 0.03,
+        "corr_244": 0.928,
+        "top5_acierto": "0/5"
+      },
+      "plano": {
+        "error_blanqueado": 3.144,
+        "rmse_244": 0.0248,
+        "top5_acierto": "3/5"
+      },
+      "real": {
+        "radio": 2.175,
+        "fase_grados": -502.6,
+        "avance": 2.107
+      }
+    },
+    "top5_suben_reales_C10": [
+      "schwartz_07_logro",
+      "12_obtencion",
+      "predictivo_02_mdp_politica_optima",
+      "dumezil_f3_fecundidad",
+      "situacion_dramatica_ambicion"
+    ],
+    "top5_suben_predichos_v2": [
+      "dumezil_f1_soberania_magica",
+      "schwartz_02_benevolencia",
+      "arquetipo_el_creador",
+      "utopia_arkadia",
+      "dumezil_desequilibrio_f1_come_al_resto"
+    ]
+  },
+  "NAPOLEON": {
+    "eje_inferido_u_blanqueado": [
+      -0.383,
+      0.841,
+      -0.383
+    ],
+    "eje_inferido_vs_PC1_angulo_grados": 67.5,
+    "eje_gira_de_verdad": true,
+    "radio_CV_eje_inferido": 0.307,
+    "radio_CV_eje_PC1_v1": 0.436,
+    "radio_por_corte_eje_inferido": [
+      1.941,
+      1.244,
+      1.465,
+      0.941,
+      1.153,
+      0.608,
+      1.305,
+      1.539,
+      1.971
+    ],
+    "margen_radio_eje_inferido": [
+      0.608,
+      1.971
+    ],
+    "radio_C10_real": 1.677,
+    "fase_grados_por_corte_eje_inferido": [
+      -127.8,
+      -198.0,
+      -226.6,
+      -214.7,
+      -286.1,
+      -370.4,
+      -415.9,
+      -419.5,
+      -330.9
+    ],
+    "dphi_mediana_grados_v2": -37.0,
+    "dphi_desviacion_grados_v2": 53.5,
+    "dphi_mediana_grados_v1_PC1": -18.5,
+    "dphi_desviacion_grados_v1_PC1": 95.0,
+    "avance_h_por_corte_v2": [
+      1.667,
+      0.603,
+      -0.498,
+      -1.34,
+      0.025,
+      -0.248,
+      -0.844,
+      -0.874,
+      1.509
+    ],
+    "prediccion_C10": {
+      "eje_inferido_v2": {
+        "error_blanqueado": 1.265,
+        "error_PC": 0.241,
+        "rmse_244": 0.0231,
+        "corr_244": 0.974,
+        "top5_acierto": "0/5",
+        "radio_pred": 2.188,
+        "fase_pred_grados": -368.0,
+        "avance_pred": 1.075
+      },
+      "eje_PC1_v1": {
+        "error_blanqueado": 4.393,
+        "rmse_244": 0.0415,
+        "corr_244": 0.915,
+        "top5_acierto": "0/5"
+      },
+      "plano": {
+        "error_blanqueado": 3.69,
+        "rmse_244": 0.0327,
+        "top5_acierto": "0/5"
+      },
+      "real": {
+        "radio": 1.677,
+        "fase_grados": -334.9,
+        "avance": 1.466
+      }
+    },
+    "top5_suben_reales_C10": [
+      "arquetipo_el_creador",
+      "arquetipo_el_sabio",
+      "schwartz_10_autodireccion",
+      "monomito_06_pruebas_aliados_y_enemigos",
+      "mbti_introvertido"
+    ],
+    "top5_suben_predichos_v2": [
+      "24_rivalidad_de_superior_e_inferior",
+      "frye_mythos_romance",
+      "predictivo_02_mdp_politica_optima",
+      "dumezil_f3_fecundidad",
+      "situacion_dramatica_ambicion"
+    ]
+  }
+}

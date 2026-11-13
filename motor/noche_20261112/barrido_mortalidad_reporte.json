@@ -1,0 +1,886 @@
+{
+  "resumen": {
+    "n_casos_F": 35,
+    "radio_crece_hacia_final": 15,
+    "radio_contrae_hacia_final": 20,
+    "radio_monotono_creciente": 0,
+    "ultimo_paso_acelera": 8,
+    "desenlace_con_fatalidad": 18,
+    "crece_Y_fatalidad": 11,
+    "crece_sin_fatalidad": 4,
+    "no_crece_Y_fatalidad": 7,
+    "acelera_Y_fatalidad": 3,
+    "referencia_10_cortes": {
+      "MOZART_Z90": {
+        "radio_rompe_margen": true,
+        "fase_se_invierte": true,
+        "ultimo_paso_acelera": false,
+        "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+        "desenlace_con_fatalidad": null
+      },
+      "NAPOLEON_Z90": {
+        "radio_rompe_margen": false,
+        "fase_se_invierte": false,
+        "ultimo_paso_acelera": true,
+        "regimen_marcador_ultimo_corte": "MOVIMIENTO_ACELERADO",
+        "desenlace_con_fatalidad": true
+      }
+    }
+  },
+  "casos": [
+    {
+      "caso": "CAL_F001_01_NAPOLEON",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.156,
+        0.135,
+        0.256
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.92,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "6_desastre",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F001_02_TESLA",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.158,
+        0.121,
+        0.219
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.99,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "22_todo_sacrificado_por_una_pasion",
+        "9_audaz_empresa",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "22_todo_sacrificado_por_una_pasion",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F001_03_WILDE",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.156,
+        0.131,
+        0.237
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.65,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "5_persecucion",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F001_04_DISNEY",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.159,
+        0.157,
+        0.274
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.89,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "35_recuperacion_de_lo_perdido",
+        "9_audaz_empresa",
+        "schwartz_07_logro",
+        "duelo_bonanno_01_resiliencia"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F001_05_TURING",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.106,
+        0.071,
+        0.079
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 1.21,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "5_persecucion",
+        "7_caer_victima",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F002_01_GALILEI",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.294,
+        0.13,
+        0.204
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.73,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "5_persecucion",
+        "31_conflicto_con_un_dios",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "31_conflicto_con_un_dios",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F002_02_PASTEUR",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.256,
+        0.139,
+        0.193
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.86,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "9_audaz_empresa",
+        "2_salvacion",
+        "schwartz_07_logro",
+        "arquetipo_el_sabio"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_03_ARBUCKLE",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.306,
+        0.182,
+        0.209
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.78,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "7_caer_victima",
+        "5_persecucion",
+        "social_10_cohen_panico_moral",
+        "social_08_girard_mimesis_y_chivo_expiatorio"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_04_BACH",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.125,
+        0.108,
+        0.208
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.57,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "24_rivalidad_de_superior_e_inferior",
+        "arquetipo_el_creador",
+        "schwartz_03_tradicion",
+        "erikson_07_generatividad_vs_estancamiento"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_05_MCCARTHY",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.166,
+        0.117,
+        0.219
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.91,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "33_error_de_juicio",
+        "17_fatal_imprudencia",
+        "social_10_cohen_panico_moral",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F002_06_COOLIDGE",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.118,
+        0.063,
+        0.068
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 2.05,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "weber_03_autoridad_legal_racional",
+        "schwartz_05_seguridad",
+        "kondratiev_02_verano_auge",
+        "arquetipo_el_gobernante"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_07_CATALINA",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.333,
+        0.195,
+        0.227
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.95,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "30_ambicion",
+        "8_rebelion",
+        "arquetipo_el_gobernante",
+        "schwartz_06_poder"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_08_LUISXVI",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.172,
+        0.121,
+        0.194
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.01,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "6_desastre",
+        "33_error_de_juicio",
+        "8_rebelion",
+        "cliodinamica_03_fase_crisis_colapso",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "6_desastre",
+        "cliodinamica_03_fase_crisis_colapso",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F002_09_ROCKEFELLER",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.348,
+        0.16,
+        0.262
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.73,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "9_audaz_empresa",
+        "30_ambicion",
+        "schwartz_06_poder",
+        "schwartz_07_logro"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F002_10_DURANT",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.248,
+        0.082,
+        0.204
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.88,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "minsky_02_especulativa",
+        "kondratiev_04_invierno_recesion"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia"
+      ]
+    },
+    {
+      "caso": "CAL_F003_01_CARAVAGGIO",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.315,
+        0.074,
+        0.301
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.78,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "17_fatal_imprudencia",
+        "5_persecucion",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F003_02_DICKENS",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.339,
+        0.103,
+        0.27
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.71,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "MOVIMIENTO_PERSISTENTE",
+      "desenlace_familias": [
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "trayectoria_escritores_creativos",
+        "bbk_02_celebridad"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F003_03_LAVOISIER",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.244,
+        0.083,
+        0.193
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.96,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "7_caer_victima",
+        "5_persecucion",
+        "social_08_girard_mimesis_y_chivo_expiatorio",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F003_04_FARADAY",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.17,
+        0.104,
+        0.117
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.7,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "arquetipo_el_sabio",
+        "schwartz_07_logro",
+        "24_rivalidad_de_superior_e_inferior",
+        "erikson_07_generatividad_vs_estancamiento"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F003_05_FOUQUET",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.25,
+        0.107,
+        0.299
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.46,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "33_error_de_juicio",
+        "30_ambicion",
+        "24_rivalidad_de_superior_e_inferior",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F003_06_TROTSKY",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.111,
+        0.063,
+        0.147
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.37,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "24_rivalidad_de_superior_e_inferior",
+        "5_persecucion",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F003_07_LINCOLN",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.292,
+        0.042,
+        0.258
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 1.04,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "30_ambicion",
+        "weber_02_autoridad_carismatica",
+        "arquetipo_el_heroe",
+        "schwartz_07_logro"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F003_08_LAW",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.249,
+        0.113,
+        0.276
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.74,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "minsky_03_ponzi",
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "33_error_de_juicio"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "6_desastre"
+      ]
+    },
+    {
+      "caso": "CAL_F003_09_CARNEGIE",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.249,
+        0.034,
+        0.226
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 1.62,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "9_audaz_empresa",
+        "schwartz_07_logro",
+        "kondratiev_02_verano_auge",
+        "12_obtencion"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F003_10_PEDRO_II",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.155,
+        0.109,
+        0.18
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.23,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "7_caer_victima",
+        "weber_01_autoridad_tradicional",
+        "anacyclosis_01_monarquia",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F004_01_WAGNER",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.348,
+        0.109,
+        0.305
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.71,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "2_salvacion",
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "trayectoria_escritores_creativos"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_02_DAVID",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.194,
+        0.143,
+        0.223
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.68,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "5_persecucion",
+        "33_error_de_juicio",
+        "7_caer_victima",
+        "social_08_girard_mimesis_y_chivo_expiatorio"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_03_OPPENHEIMER",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.153,
+        0.015,
+        0.146
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.99,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "5_persecucion",
+        "24_rivalidad_de_superior_e_inferior",
+        "7_caer_victima",
+        "social_10_cohen_panico_moral"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_04_MENDEL",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.133,
+        0.104,
+        0.182
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.0,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "arquetipo_el_sabio",
+        "social_04_rogers_difusion_innovaciones",
+        "erikson_07_generatividad_vs_estancamiento",
+        "jaldun_02_institucionalizacion_y_sedentarismo"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_05_KHRUSHCHEV",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.227,
+        0.136,
+        0.155
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.51,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "24_rivalidad_de_superior_e_inferior",
+        "33_error_de_juicio",
+        "7_caer_victima",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F004_06_TRUMAN",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.175,
+        0.056,
+        0.17
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.84,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "schwartz_07_logro",
+        "35_recuperacion_de_lo_perdido",
+        "arquetipo_el_ciudadano",
+        "weber_03_autoridad_legal_racional"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_07_CHANEL",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.25,
+        0.095,
+        0.197
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 1.27,
+      "ultimo_paso_acelera": true,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "bbk_02_celebridad",
+        "duelo_bonanno_01_resiliencia"
+      ],
+      "desenlace_con_fatalidad": false,
+      "desenlace_fatalidad_cuales": []
+    },
+    {
+      "caso": "CAL_F004_08_LESSEPS",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.253,
+        0.154,
+        0.198
+      ],
+      "radio_crece_hacia_final": false,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": true,
+      "aceleracion_ultimo_paso_ratio": 0.83,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "CAL_F004_09_LAY",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.219,
+        0.156,
+        0.26
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 1.0,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "minsky_03_ponzi",
+        "6_desastre",
+        "33_error_de_juicio",
+        "17_fatal_imprudencia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "6_desastre",
+        "17_fatal_imprudencia"
+      ]
+    },
+    {
+      "caso": "CAL_F004_10_LUDWIG_II",
+      "n_cortes": 3,
+      "radio_por_corte": [
+        0.178,
+        0.118,
+        0.183
+      ],
+      "radio_crece_hacia_final": true,
+      "radio_monotono_creciente": false,
+      "radio_contrae_hacia_final": false,
+      "aceleracion_ultimo_paso_ratio": 0.88,
+      "ultimo_paso_acelera": false,
+      "regimen_marcador_ultimo_corte": "GIRO_FUERTE",
+      "desenlace_familias": [
+        "16_locura",
+        "7_caer_victima",
+        "weber_01_autoridad_tradicional",
+        "frye_mythos_tragedia"
+      ],
+      "desenlace_con_fatalidad": true,
+      "desenlace_fatalidad_cuales": [
+        "16_locura",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4055 @@
+{
+ "resumen_clases": {
+  "a": 71,
+  "b": 98,
+  "e": 12,
+  "c": 18,
+  "d": 20
+ },
+ "filas": [
+  {
+   "nombre": "Engine_V5_CANONICO_SOLO",
+   "archivo": "motor/Engine_V5_CANONICO_SOLO.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "Engine canónico (núcleo, no lateral).",
+   "quien_lee_su_salida": "todo el motor",
+   "evidencia": "código: Engine_V5_CANONICO_SOLO.py"
+  },
+  {
+   "nombre": "MOTOR_V15_3_NATIVO_V0_9",
+   "archivo": "motor/MOTOR_V15_3_NATIVO_V0_9.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "Motor nativo V0.9 (núcleo alterno, no lateral).",
+   "quien_lee_su_salida": "todo el motor",
+   "evidencia": "código: MOTOR_V15_3_NATIVO_V0_9.py"
+  },
+  {
+   "nombre": "MOTOR_V15_3_NATIVO_V0_9_UNICO",
+   "archivo": "motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L351: estado, accion = \"ALMACENADO_ESPERANDO_DATOS\", \"ESPERAR_MAS_TOKENS\"",
+     "L999: \"ALMACENADO_ESPERANDO_DATOS\","
+    ],
+    "DESACTIVADO": [
+     "L669: \"status\": \"EXECUTED\" if monte_carlo and isinstance(mc, dict) and int(mc.get(\"n_simulaciones_usadas\") or 0) > 0 else (\"DISABLED\" if not monte_carlo els",
+     "L881: r732[\"marcador_limite_geometrico\"] = {\"status\":\"DISABLED_FOR_ABLATION\",\"can_decide_H\":False,\"feeds_H\":False,\"rank_effect\":\"NONE\",\"per_cut\":[]}",
+     "L942: \"status\": \"EXECUTED\" if _MC_AUDIT and all(x[\"status\"] == \"EXECUTED\" for x in _MC_AUDIT) else (\"DISABLED\" if _MC_AUDIT and all(x[\"status\"] == \"DISABLED"
+    ],
+    "NO_DISPONIBLE": [
+     "L897: raise RuntimeError(\"MARCADOR_LIMITE_GEOMETRICO_V0_1_AUSENTE\")"
+    ],
+    "TODO_FIXME": [
+     "L563: # validando sobre TODOS los tokens."
+    ]
+   },
+   "clase": "a",
+   "freno": "Motor nativo V0.9 único (núcleo alterno, no lateral).",
+   "quien_lee_su_salida": "todo el motor",
+   "evidencia": "código: MOTOR_V15_3_NATIVO_V0_9_UNICO.py"
+  },
+  {
+   "nombre": "MOTOR_V15_3_UNICO_20260927",
+   "archivo": "motor/MOTOR_V15_3_UNICO_20260927.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L667: \"plugin_arquetipos_dinamicos\":(\"ACTIVA_MUDA_SIN_MAPEO\",\"info() devuelve 3 claves PROPUESTAS fuera del 244, sin valor por caso\"),"
+    ],
+    "ESPERANDO": [
+     "L66: GATE_PENDING_TOPK = 10    # candidatos vivos considerados para abrir latencia por frente",
+     "L1154: # FIX_20261025: el sidecar no emite 'status'; la reutilización nunca disparaba (PRE-H quedaba API_PENDING aunque",
+     "L1174: # directamente (sin red) para que la búsqueda PRE-H no quede API_PENDING."
+    ],
+    "DESACTIVADO": [
+     "L311: status.append({\"component\": name, \"status\": \"APAGADO_ABLACION\", \"feeds_predictor\": False}); return",
+     "L2439: out=interrelation_mod.run_external(_lights, _cuts_for_inter) if not _off(\"interrelation\") else {\"status\":\"APAGADO_ABLACION\",\"unique_tokens\":[],\"hyperr",
+     "L2478: features[\"caldero_neighbor_memory\"]={\"status\":\"APAGADO_ABLACION\",\"unique_tokens\":[],\"observations\":0,\"cases\":0}"
+    ],
+    "NO_CORRE": [
+     "L486: status.append({\"component\":fn,\"status\":\"CABLEADO_NO_EJECUTADO\",\"reason\":\"API_no_encontrada\",\"effect\":\"sin_ejecucion\"})",
+     "L537: # CABLEADO_NO_EJECUTADO sin intentar. Ahora: se intenta con el input real (clave explícita por corte o token",
+     "L1960: return {\"status\":\"SKIPPED_INTERNAL_ANALYSIS\", \"reason\":\"subcorrida_interna_T1_no_escribe_ledger_geometrico\","
+    ],
+    "NO_DISPONIBLE": [
+     "L1072: NO_DISPONIBLE/ERROR y la corrida sigue con el caso crudo (la capa LLM es",
+     "L1087: return case, {**_base, \"status\": \"NO_DISPONIBLE\",",
+     "L1136: return {**base,\"status\":\"NOT_AVAILABLE\",\"activated\":False,\"reason\":\"sidecar_missing\"}"
+    ],
+    "CABLEADA_SIN_SENAL": [
+     "L320: \"feeds_predictor\": (_d6 is None or _d6[0] in (\"ACTIVA\",\"CABLEADA_SIN_SENAL_EN_CASO\")),",
+     "L650: #   CABLEADA_SIN_SENAL_EN_CASO   -> hay vía real al ranking; en este caso la entrada está vacía o es igual para todas las candidatas",
+     "L672: \"plugin_cameo_institucional.py\":(\"CABLEADA_SIN_SENAL_EN_CASO\",\"dims cameo_activity/cameo_profile_activity son de nivel caso (iguales para todas); sus "
+    ],
+    "can_decide_H_False": [
+     "L43: # Laterales/sensores: can_decide_H=False; nunca escriben H ni el catálogo. MODO_ESTRICTO=0 apaga el cierre estricto.",
+     "L53: # con cadena_top1). can_decide_H=False: se verifica por hash que el predictor no cambia.",
+     "L480: if isinstance(o,dict): o[\"score_u6\"]=\"score=fracción de transiciones ↗ (eps del plugin) por familia; señal lateral can_decide_H=False\""
+    ],
+    "estado_str": [
+     "L3210: \"can_decide_H\":False,\"rewrites_H\":False,\"hipotesis_apuesta\":{\"candidata\":_fallback_winner,\"estado\":\"CONCLUSION_OPERACIONAL_RECUPERADA\",",
+     "L3223: _dh_retry_out[\"recuperacion\"]={\"estado\":\"REINTENTO_DIMENSIONAL_EJECUTADO\",\"causa_original\":f\"{type(_dhx_exc).__name__}:{_dhx_exc}\",",
+     "L3235: \"can_decide_H\":False,\"rewrites_H\":False,\"hipotesis_apuesta\":{\"candidata\":_winner,\"estado\":\"CONCLUSION_OPERACIONAL_RECUPERADA\","
+    ],
+    "TODO_FIXME": [
+     "L3264: # U4_todos_tokens (2026-10-11): MOVIMIENTO DE FONDO. Lateral y de traza: series de TODOS los tokens y de las 244"
+    ]
+   },
+   "clase": "a",
+   "freno": "Núcleo del motor (no es un lateral). La mención PROPUESTA en su línea 667 es el registro de plugin_arquetipos_dinamicos, no su propio estado.",
+   "quien_lee_su_salida": "todo el motor",
+   "evidencia": "código: es el motor UNICO; registro componente motor"
+  },
+  {
+   "nombre": "analogos_fase_v1",
+   "archivo": "motor/analogos_fase_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Corre como stage CEB analogos_fase#1 (started/ended, sin error). Análogos por fase; diagnóstico, sin lector de su salida localizado en RESULT.",
+   "quien_lee_su_salida": "DESCONOCIDO (stage corre; lector no localizado)",
+   "evidencia": "RESULT ceb.stages analogos_fase#1"
+  },
+  {
+   "nombre": "apuesta_destino_personal_022",
+   "archivo": "motor/apuesta_destino_personal_022.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L6: ni rank_fusion, ni Engine/catálogo. can_decide_H=False. Se apaga con DESTINO_022=0."
+    ],
+    "estado_str": [
+     "L76: return {**base, \"estado\": \"SIN_TRAYECTORIA\", \"apuesta\": \"meseta\", \"motivo\": \"menos de 2 cortes o sin series de familias\"}",
+     "L92: return {**base, \"estado\": \"EJECUTADO\", \"apuesta\": lab, \"porque\": por, \"cortes\": cortes,"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "autoevidencia_stores_011",
+   "archivo": "motor/autoevidencia_stores_011.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "autoevidencia_stores_011.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "billar_circular_convergencia_v0_1",
+   "archivo": "motor/billar_circular_convergencia_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Biblioteca base de v0_2 (importada por v0_2 y por el adaptador de convergencia) y cargada por el hub (lu_billar1_geo). No decide; alimenta a v0_2 y a la geometría del hub.",
+   "quien_lee_su_salida": "billar v0_2, hub geometría",
+   "evidencia": "laterales_unico_v1.py:474 _load lu_billar1_geo; v0_2.py:20 import"
+  },
+  {
+   "nombre": "billar_circular_convergencia_v0_2",
+   "archivo": "motor/billar_circular_convergencia_v0_2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "ACTIVA; llega a H como señal lateral del rank_fusion (junto a ricci). v0_2 importa v0_1 como base.",
+   "quien_lee_su_salida": "H (rank_fusion:señal_lateral)",
+   "evidencia": "estado_verificado billar_circular_v0_2 ACTIVA llega_a_H True"
+  },
+  {
+   "nombre": "caldero_II_runner_generico",
+   "archivo": "motor/caldero_II_runner_generico.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Cableado/presente pero no se verificó su punto de llamada ni su lector individualmente",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "presente en _load o RESULT; sin verificación individual"
+  },
+  {
+   "nombre": "caldero_buscadores",
+   "archivo": "motor/caldero_buscadores.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Cableado/presente pero no se verificó su punto de llamada ni su lector individualmente",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "presente en _load o RESULT; sin verificación individual"
+  },
+  {
+   "nombre": "caldero_zoomout_acero_v0_1",
+   "archivo": "motor/caldero_zoomout_acero_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "ACTIVA; llega a H como señal lateral (acero_zoomout).",
+   "quien_lee_su_salida": "H (rank_fusion:señal_lateral)",
+   "evidencia": "estado_verificado acero_zoomout ACTIVA llega_a_H True"
+  },
+  {
+   "nombre": "calibracion_predictiva_v1",
+   "archivo": "motor/calibracion_predictiva_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "cameo_to_244_adapter_v1",
+   "archivo": "motor/cameo_to_244_adapter_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "cameo_to_244_adapter_v1#1",
+     "cameo_to_244_adapter_v1.output#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Cargado (cameo_to_244_adapter_v1) pero declarado NOT_APPLICABLE en este run (adaptador CAMEO->244 legado; solo auditable). No aplica por diseño aquí.",
+   "quien_lee_su_salida": "nadie (no aplicable)",
+   "evidencia": "estado_verificado ACTIVA_MUDA 'declarado=NOT_APPLICABLE | llega=no'"
+  },
+  {
+   "nombre": "cameo_to_703_lateral_v1",
+   "archivo": "motor/cameo_to_703_lateral_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "cameo_to_703_lateral_v1.output#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'cameo_to_703_lateral_v1.py', 'declarado_UNICO': '(ver component_status)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "candado_plugins",
+   "archivo": "motor/candado_plugins.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L130: estado = \"registrado_por_primera_vez\"",
+     "L132: estado = \"sin_cambios_desde_ultimo_registro\""
+    ],
+    "TODO_FIXME": [
+     "L12: de V15_1_TODOS_LOS_PLUGINS_UN_SOLO_TXT.txt de inmediato)."
+    ]
+   },
+   "clase": "a",
+   "freno": "Corre como stage del recibo: candado_plugins OK, 112 verificados, 0 fallos. Es el candado que verifica los plugins antes de la corrida.",
+   "quien_lee_su_salida": "recibo (bloquea si falla)",
+   "evidencia": "recibo stage candado_plugins OK"
+  },
+  {
+   "nombre": "capa_integracion_semantica_v1_2",
+   "archivo": "motor/capa_integracion_semantica_v1_2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L190: \"estado\": \"PROPUESTA\","
+    ],
+    "estado_str": [
+     "L190: \"estado\": \"PROPUESTA\","
+    ]
+   },
+   "clase": "c",
+   "freno": "Su propio estado es PROPUESTA (línea 190: \"estado\": \"PROPUESTA\"); el principio central (token_es_unidad, reaparicion_no_duplica) está escrito pero el Engine nunca lo aplica. El sensor del hub lo reporta tal cual en el RESULT (sensores_pre.integracion_semantica estado PROPUESTA).",
+   "quien_lee_su_salida": "nadie (sensor: solo reporta)",
+   "evidencia": "RESULT laterales_unico.sensores_pre.integracion_semantica estado=PROPUESTA; registro ACTIVA '7 configuraciones'"
+  },
+  {
+   "nombre": "capa_interrelacion_tokens",
+   "archivo": "motor/capa_interrelacion_tokens.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L5: PROPUESTA — capa general de interrelación entre familias del 244.",
+     "L151: \"estado\": \"PROPUESTA\",",
+     "L182: \"estado\": \"PROPUESTA\","
+    ],
+    "estado_str": [
+     "L151: \"estado\": \"PROPUESTA\",",
+     "L182: \"estado\": \"PROPUESTA\","
+    ]
+   },
+   "clase": "c",
+   "freno": "Su propio estado es PROPUESTA (analizar_corte/analizar_cortes devuelven \"estado\": \"PROPUESTA\", líneas 151/182); cuenta_doble_global=False. El sensor del hub lo reporta en PROPUESTA.",
+   "quien_lee_su_salida": "nadie (sensor: solo reporta)",
+   "evidencia": "RESULT sensores_pre.interrelacion_tokens estado=PROPUESTA"
+  },
+  {
+   "nombre": "ceb_runtime_v0_6_flow",
+   "archivo": "motor/ceb_runtime_v0_6_flow.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L477: non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING'"
+    ],
+    "DESACTIVADO": [
+     "L477: non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING'"
+    ],
+    "NO_CORRE": [
+     "L267: def skip(self,sid,reason,detail=''): return self.emit('STAGE_SKIP',sid,{'reason_code':reason,'reason_detail':detail})",
+     "L477: non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING'"
+    ]
+   },
+   "clase": "a",
+   "freno": "Runtime CEB (ceb_runtime_v03): ejecuta los 77 stages del run (todos started/ended salvo UNSCOPED_RUNTIME).",
+   "quien_lee_su_salida": "todos los stages CEB",
+   "evidencia": "RESULT ceb.stages 77; _load ceb_runtime_v03"
+  },
+  {
+   "nombre": "coactivacion_escalas",
+   "archivo": "motor/coactivacion_escalas.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PENDIENTE": [
+     "L15: * INDEPENDIENTE: al menos dos de esas escalas tienen cada una una palabra 'empuja' que no enciende a la otra."
+    ],
+    "can_decide_H_False": [
+     "L2: \"\"\"Prueba de coactivacion de escalas (LATERAL OPCIONAL, can_decide_H=False)."
+    ],
+    "estado_str": [
+     "L67: estado = \"apagada\"; indep = False",
+     "L68: if len(lit) == 1: estado = \"una_escala\"",
+     "L75: estado = \"coactivacion_independiente\" if indep else \"coactivacion_trivial\""
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "control_flujo_soluciones",
+   "archivo": "motor/control_flujo_soluciones.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_IMPLEMENTADO": [
+     "L76: \"Si existe SPEC sin .py: marcar NO_IMPLEMENTADO y continuar otra pieza; no inventar código canónico.\","
+    ],
+    "PENDIENTE": [
+     "L94: \"Dejar PENDIENTE_AUTH con el siguiente paso concreto; no dramatizar.\","
+    ]
+   },
+   "clase": "a",
+   "freno": "Controlador de flujo: cargado por NATIVO y usado por matriz_corrida y protocolo_kernel_motor (contornar). Corre.",
+   "quien_lee_su_salida": "matriz_corrida, protocolo_kernel",
+   "evidencia": "MOTOR_V15_3_NATIVO_V0_9_UNICO.py:189,295; matriz_corrida.py:37"
+  },
+  {
+   "nombre": "control_latencia_decimo_hombre",
+   "archivo": "motor/control_latencia_decimo_hombre.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L14: 4) Si sigue empate → ALMACENADO_ESPERANDO_DATOS (no inventar resolución).",
+     "L55: estado: str  # LATENCIA | DESEMPATE_DECIMO | ALMACENADO_ESPERANDO_DATOS | RESUELTO | OFF",
+     "L127: estado = \"ALMACENADO_ESPERANDO_DATOS\""
+    ],
+    "estado_str": [
+     "L127: estado = \"ALMACENADO_ESPERANDO_DATOS\"",
+     "L135: estado = \"DESEMPATE_DECIMO\"",
+     "L141: estado = \"LATENCIA\""
+    ]
+   },
+   "clase": "a",
+   "freno": "Control de latencia activo (el alias sidecar_latencia_decimo_hombre está contenido en él).",
+   "quien_lee_su_salida": "predictor (estados LATENCIA/ALMACENADO_ESPERANDO_DATOS)",
+   "evidencia": "INVENTARIO estaticas; MOTOR UNICO _load implícito"
+  },
+  {
+   "nombre": "decimo_hombre_esteroides_mayeutica_v1",
+   "archivo": "motor/decimo_hombre_esteroides_mayeutica_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "decimo_hombre_esteroides_mayeutica_v1#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_IMPLEMENTADO": [
+     "L355: \"orthogonal_residual_analysis\": {\"status\": \"NOT_IMPLEMENTED\","
+    ],
+    "NO_CORRE": [
+     "L163: \"estado\": \"RESUELTO_POR_ABLACION_REAL\" if dimensions else \"NO_EJECUTADO_SIN_DIMENSIONES_FINITAS\",",
+     "L185: (\"NO_EJECUTADO_SIN_FUENTES_DECLARADAS\" if not lateral_names else \"NO_EJECUTADO_SIN_RECALCULO_FINITO\")),",
+     "L230: \"estado\": (\"RESUELTO_POR_ABLACIONES_DIMENSIONALES\" if dimensions else \"NO_EJECUTADO_SIN_CONTRAFACTUAL_VALIDO\"),"
+    ],
+    "NO_DISPONIBLE": [
+     "L24: if x is None: return \"NO_DISPONIBLE\""
+    ],
+    "estado_str": [
+     "L121: diagnosis = {\"estado\": \"CONCLUSION_OPERACIONAL\", \"candidata\": \"NO_IDENTIFICABLE_CON_ESTA_ENTRADA\",",
+     "L126: \"hipotesis_apuesta\": {\"candidata\": diagnosis[\"candidata\"], \"estado\": \"CONCLUSION_OPERACIONAL_NO_CANDIDATA\"},",
+     "L145: attacks.append({\"ataque\": \"CONVERGENCIA_Y_SATURACION\", \"estado\": \"RESUELTO_POR_DESCONTAR_COMO_VOTO\", \"n_compartidas\": len(shared), \"n_saturadas\": len("
+    ]
+   },
+   "clase": "a",
+   "freno": "EJECUTADO_CIERRE_ADVERSARIAL. Sub-análisis orthogonal_residual_analysis: NOT_IMPLEMENTED (línea 355) — eso es un hueco dentro del módulo, no su estado. El contador_supervivencia SÍ lo lee ahora predictibilidad_set_021 (línea 106: la fuga original está cerrada en esta copia vía pred_ajustada, no vía H).",
+   "quien_lee_su_salida": "predictibilidad_set_021 (contador_supervivencia); cierre adversarial",
+   "evidencia": "RESULT decimo_hombre_esteroides EJECUTADO_CIERRE_ADVERSARIAL; predictibilidad_set_021.py:106"
+  },
+  {
+   "nombre": "estabilidad_vectorial_h",
+   "archivo": "motor/estabilidad_vectorial_h.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L67: estado = \"SIN_H\"",
+     "L69: estado = \"RIVAL_AUN_POSIBLE\"",
+     "L71: estado = \"ESTABLE_VECTORIAL\""
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA_MUDA. Diagnóstico de estabilidad vectorial; no decide.",
+   "quien_lee_su_salida": "nadie",
+   "evidencia": "estado_verificado estabilidad_vectorial ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "filtro_identidad_zoom_out_zoom_in",
+   "archivo": "motor/filtro_identidad_zoom_out_zoom_in.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L26: ZOOM_OUT_THRESHOLD_PENDING = True",
+     "L261: \"threshold_pending\": ZOOM_OUT_THRESHOLD_PENDING,"
+    ],
+    "PENDIENTE": [
+     "L24: # Umbral zoom-out: PENDIENTE de validación independiente (spec).",
+     "L137: # tags de prototipo opcionales para zoom-out (PENDIENTE calibrar lista cerrada)"
+    ],
+    "CABLEADA_SIN_SENAL": [
+     "L35: SIN_SENAL_CONSERVAR = \"sin_senal_conservar\"",
+     "L189: decision: str = Decision.SIN_SENAL_CONSERVAR.value",
+     "L349: audit.decision = Decision.SIN_SENAL_CONSERVAR.value"
+    ]
+   },
+   "clase": "c",
+   "freno": "Cableado y llamado, pero ACTIVA_MUDA: sin fuentes de búsqueda verificables (caldero_search_sources o puente conectado). Además el umbral zoom-out está PENDIENTE de validación independiente (línea 24).",
+   "quien_lee_su_salida": "nadie (filtro_identidad_estado=MEDIDA_O_ESTADO_NO_EMITIDO)",
+   "evidencia": "RESULT sensores_pre.filtro_identidad_estado"
+  },
+  {
+   "nombre": "filtro_relleno_013",
+   "archivo": "motor/filtro_relleno_013.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "filtro_relleno_013.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "filtro_tokens_arquetipos_v1",
+   "archivo": "motor/filtro_tokens_arquetipos_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "filtro_tokens_arquetipos_v2",
+   "archivo": "motor/filtro_tokens_arquetipos_v2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "forman_ricci_weighted_graph",
+   "archivo": "motor/forman_ricci_weighted_graph.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "formular_h_apuesta",
+   "archivo": "motor/formular_h_apuesta.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "guardian_acero_rival_v1",
+   "archivo": "motor/guardian_acero_rival_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L25: Solo mide. can_decide_H=False: no reordena, no escribe H ni patterns."
+    ],
+    "estado_str": [
+     "L63: return {\"estado\": \"NO_APLICA\", \"motivo\": \"menos_de_2_candidatos_o_sin_dimensiones\", \"pruebas\": []}",
+     "L98: return {\"estado\": \"EJECUTADO\", \"top1\": top1, \"orden_base_recalculado_top3\": orden_base[:3],"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "guardian_entrada_autoevidencia_v1",
+   "archivo": "motor/guardian_entrada_autoevidencia_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L9: Contrato: SOLO BANDERA. can_decide_H=False. No modifica el input, no quita tokens, no reordena"
+    ]
+   },
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: bandera=False autoevidencia=0 familias=[]",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: bandera=False autoevidencia=0 familias=[]"
+  },
+  {
+   "nombre": "guardian_logica_copi_v1",
+   "archivo": "motor/guardian_logica_copi_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L27: Candados: control estructural siempre-on; can_decide_H=False; no escribe H ni patterns."
+    ],
+    "estado_str": [
+     "L196: estado = \"VALIDO\"",
+     "L198: estado = \"INVALIDO\"",
+     "L303: marcas.append({\"tipo\": \"NO_RESUELTO_CONCLUSION_CON_ATOMO_NUEVO\", \"evidencia\": ev[\"fragmento\"], \"estado\": \"NO_RESUELTO\"})"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "guardian_pistas_llm_caldero_v1",
+   "archivo": "motor/guardian_pistas_llm_caldero_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L13: Determinista, sin red, sin LLM. can_decide_H=False. No toca Engine/244."
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "guardian_tropos_beristain_v1",
+   "archivo": "motor/guardian_tropos_beristain_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PENDIENTE": [
+     "L65: \"METALEPSIS\":   {\"familia\": \"METASEMEMA\", \"ocr_line\": 18287, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,",
+     "L69: \"IMAGEN\":       {\"familia\": \"METASEMEMA\", \"ocr_line\": 11531, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,",
+     "L85: \"ASINDETON\":    {\"familia\": \"FIGURA_CONSTRUCCION\", \"ocr_line\": 4297, \"codigo\": \"PENDIENTE_DE_REGLA\", \"estante\": None,"
+    ],
+    "can_decide_H_False": [
+     "L7: can_decide_H=False, no escribe H, no escribe patterns, no reordena candidatos."
+    ],
+    "estado_str": [
+     "L347: estado = \"NO_RESUELTO\" if subtipo == \"NO_RESUELTO\" else (\"DETECTADA\" if confianza >= 0.7 else \"POSIBLE\")",
+     "L454: H.append(_h(\"SINESTESIA\", texto, origen, sp, \"sinestesia_lexicalizada\", confianza=0.4, estado=\"OBSERVACION\", bloquea=False,",
+     "L592: H.append(_h(\"ANTITESIS\", texto, origen, sp, \"contrarios_en_miembros_distintos\", confianza=0.6, estado=\"OBSERVACION\", bloquea=False,"
+    ],
+    "TODO_FIXME": [
+     "L297: _REG_PARTE_TODO: Dict[str, Dict[str, Any]] = {}",
+     "L306: d = _REG_PARTE_TODO.setdefault(key, {\"variantes\": set(), \"relacion\": None})",
+     "L316: _REG_PARTE_TODO.clear()"
+    ]
+   },
+   "clase": "b",
+   "freno": "Corre vía guardianes_control (cargado). 4 tropos con código PENDIENTE_DE_REGLA (METALEPSIS, IMAGEN, ASINDETON, ZEUGMA, líneas 65-87): sin regla de detección, no se marcan. El guardián en sí corre.",
+   "quien_lee_su_salida": "guardianes_control (registro)",
+   "evidencia": "código líneas 65-87; guardianes_control_v1.py:319 lo carga"
+  },
+  {
+   "nombre": "guardianes_control_v1",
+   "archivo": "motor/guardianes_control_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "guardianes_control_v1#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L134: LATENTES = {\"LATENCIA\", \"ALMACENADO_ESPERANDO_DATOS\"}"
+    ],
+    "can_decide_H_False": [
+     "L7: Alimentan convergencia/latencia SOLO como registro. can_decide_H=False: ningún guardián"
+    ],
+    "estado_str": [
+     "L152: marcas.append({\"tipo\": \"CORTE_LATENTE\", \"evidencia\": fila, \"estado\": \"LATENTE\"})",
+     "L169: marcas.append({\"tipo\": \"CIERRE_LATENTE_SEGUN_DECIMO_HOMBRE\", \"evidencia\": final, \"estado\": \"LATENTE\"})",
+     "L196: marcas.append({\"tipo\": r.get(\"bandera\"), \"estado\": \"DETECTADA\","
+    ]
+   },
+   "clase": "b",
+   "freno": "can_decide_H=False por contrato (lateral: observa, no decide)",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "registro ACTIVA; can_decide_H=False en motor/guardianes_control_v1.py"
+  },
+  {
+   "nombre": "hipotesis_trayectoria_abierta_v1",
+   "archivo": "motor/hipotesis_trayectoria_abierta_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "hipotesis_trayectoria_abierta_v1#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_DISPONIBLE": [
+     "L114: \"estado\": geo.get(\"status\", \"NO_DISPONIBLE\"),",
+     "L176: \"contexto_multicapa_status\": geo.get(\"status\", \"NO_DISPONIBLE\"),"
+    ],
+    "estado_str": [
+     "L144: forecast = {\"estado\": \"SIN_HIPOTESIS\", \"escenarios\": [], \"apuesta_principal\": None,",
+     "L147: forecast = {\"estado\": \"TRAYECTORIA_INSUFICIENTE\", \"escenarios\": scenario_rows,",
+     "L151: forecast = {\"estado\": \"APUESTA_MULTIESCENARIO_SELLABLE\", \"escenarios\": scenario_rows,"
+    ]
+   },
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (rank_fusion o dimensión)",
+   "evidencia": "registro_componentes: hipotesis_trayectoria_abierta_v1.py ACTIVA alimenta_H=True; motivo: None"
+  },
+  {
+   "nombre": "laterales_unico_v1",
+   "archivo": "motor/laterales_unico_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "laterales_unico_v1.pre_predictor#1",
+     "laterales_unico_v1.pre_predictor.output#1",
+     "laterales_unico_v1.post_predictor#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L100: \"API_PENDING\": \"adaptador/API sin conectar: cablear la API (credencial/endpoint) o el proveedor y re-correr\",",
+     "L135: if est == \"ACTIVA_MUDA\" and dec.startswith(\"API_PENDING\"):",
+     "L136: est = \"API_PENDING\""
+    ],
+    "PENDIENTE": [
+     "L500: f\"mapeo seis funciones->7783 PENDIENTE regla Mj (solo 729 alcanzables)\")"
+    ],
+    "DESACTIVADO": [
+     "L12: NO_CORRE (motivo) | SUPERADA (otra versión más completa ya corre) | APAGADA_POR_FLAG.",
+     "L99: \"APAGADA_POR_FLAG\": \"apagada por variable LAT_*=0: en fábrica no se apaga; quitar el flag o documentar contrato\",",
+     "L151: reg.append({\"pieza\": nombre, \"archivo\": archivo, \"rol\": rol, \"estado\": \"APAGADA_POR_FLAG\", \"aporte\": f\"LAT_{nombre.upper()}=0\", **extra})"
+    ],
+    "NO_CORRE": [
+     "L12: NO_CORRE (motivo) | SUPERADA (otra versión más completa ya corre) | APAGADA_POR_FLAG.",
+     "L44: _GATED = (\"SKIPPED_INTERNAL_ANALYSIS\",)",
+     "L73: # (hoy solo: SKIPPED_INTERNAL_ANALYSIS de la subcorrida interna T1, required=False en el motor)."
+    ],
+    "CABLEADA_SIN_SENAL": [
+     "L94: _EST_CORRIO_SIN_SENAL = {\"ACTIVA_MUDA\"}  # corrió; no aportó/no llegó a H en este caso -> INFO, no fallo de ejecución",
+     "L113: if e in _EST_CORRIO_SIN_SENAL:",
+     "L114: return {\"debe_ejecutarse\": True, \"incumplimiento\": False, \"severidad\": \"INFO_CORRIO_SIN_SENAL\","
+    ],
+    "can_decide_H_False": [
+     "L5: Contrato para TODO lo que corre aquí: can_decide_H=False, no escribe H1/H2, no reordena candidatos,",
+     "L453: # NO llama marco_7783.visitar (no escribe zonas_7783.json); calor en memoria por caso. can_decide_H=False.",
+     "L1039: _pieza(\"guardian_entrada_autoevidencia\", \"guardian_entrada_autoevidencia_v1.py\", \"GUARDIAN (solo bandera; can_decide_H=False)\", guardian_entrada, base"
+    ],
+    "estado_str": [
+     "L151: reg.append({\"pieza\": nombre, \"archivo\": archivo, \"rol\": rol, \"estado\": \"APAGADA_POR_FLAG\", \"aporte\": f\"LAT_{nombre.upper()}=0\", **extra})",
+     "L234: regs[fn] = {\"estado\": \"FALTA_ARCHIVO\"}; continue",
+     "L628: funcs = {f: ({\"valor\": list(fx.get(f)), \"estado\": \"observado\", \"evidencia\": _ev016, \"corte\": i}"
+    ],
+    "TODO_FIXME": [
+     "L5: Contrato para TODO lo que corre aquí: can_decide_H=False, no escribe H1/H2, no reordena candidatos,"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "lectura_negativo_ricci_vs_billar_v0_1",
+   "archivo": "motor/lectura_negativo_ricci_vs_billar_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L4: lectura_negativo_ricci_vs_billar_v0_1.py  — PROPUESTA (no cableado, no tubo)",
+     "L20: Cuadrantes (converge billar × curvatura negativa Ricci) y señal de descarte PROPUESTA:",
+     "L43: ESTADO = \"PROPUESTA\""
+    ]
+   },
+   "clase": "c",
+   "freno": "Su cabecera dice ESTADO=PROPUESTA, 'no cableado, no tubo' (líneas 4, 43), pero el hub SÍ lo lee como voto (voto_negativo). La REGLA (la lectura por negativo DESCARTA) sigue en PROPUESTA; el voto llega a H como señal lateral, el descarte no se aplica.",
+   "quien_lee_su_salida": "hub voto_negativo -> H(rank_fusion:señal_lateral) solo como voto, no como descarte",
+   "evidencia": "RESULT pre.negativo_ricci_vs_billar ACTIVA, 13 familias; registro hub:negativo_ricci_vs_billar ACTIVA llega_a_H True"
+  },
+  {
+   "nombre": "lente_lateral_metrics_v1_1_galileo",
+   "archivo": "motor/lente_lateral_metrics_v1_1_galileo.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA_MUDA. Lente de métricas laterales; no decide.",
+   "quien_lee_su_salida": "nadie",
+   "evidencia": "estado_verificado lateral_metrics_v1_1 ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "lexico_narrador_v0_1",
+   "archivo": "motor/lexico_narrador_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "marcador_limite_geometrico_v0_1",
+   "archivo": "motor/marcador_limite_geometrico_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "marco_7783",
+   "archivo": "motor/marco_7783.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "marco_7783"
+    ],
+    "en_ceb_stages": [
+     "marco_7783#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "marco_funciones_souriau",
+   "archivo": "motor/marco_funciones_souriau.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_IMPLEMENTADO": [
+     "L102: \"mathematical_momentum_map\": \"NOT_IMPLEMENTED_BY_THIS_MODULE\",",
+     "L111: \"mathematical_momentum_map\": \"NOT_IMPLEMENTED_BY_THIS_MODULE\","
+    ]
+   },
+   "clase": "c",
+   "freno": "Sub-función mathematical_momentum_map: NOT_IMPLEMENTED_BY_THIS_MODULE (líneas 102, 111). El resto corre (el sensor souriau14 deriva las funciones por PATCH 007).",
+   "quien_lee_su_salida": "nadie (esa sub-función)",
+   "evidencia": "código líneas 102, 111; RESULT sensores_pre.souriau_v1_4"
+  },
+  {
+   "nombre": "matriz_corrida",
+   "archivo": "motor/matriz_corrida.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "matriz_mortalidad_z90_v0_2",
+   "archivo": "motor/matriz_mortalidad_z90_v0_2.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_DISPONIBLE": [
+     "L273: \"data_table_estado\": (\"DECLARADO_AUSENTE_SIN_TABLA\" if table_sha == \"NO_APLICA_SIN_TABLA\""
+    ]
+   },
+   "clase": "c",
+   "freno": "WIRED_WAITING_VERIFIED_MORTALITY_DATA: cableada en el runner pero sin tabla (data_table NO_APLICA_SIN_TABLA, 0 filas aceptadas). Espera datos de mortalidad verificados.",
+   "quien_lee_su_salida": "nadie (feeds_H=False; solo diagnóstico)",
+   "evidencia": "RESULT matriz_mortalidad_z90 status WIRED_WAITING_VERIFIED_MORTALITY_DATA; recibo huellas_declaradas_ausentes $.matriz_mortalidad_z90.data_table_sha256"
+  },
+  {
+   "nombre": "metacognition_v0_1",
+   "archivo": "motor/metacognition_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "metacognition_v0_1.pre_h#1",
+     "metacognition_v0_1.post_h#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L92: \"status\": \"EXECUTED\" if pre_h.get(\"status\") in {\"EXECUTED\", \"API_PENDING\"} else \"NO_ANALOGS\","
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'metacognition_v0_1.py', 'declarado_UNICO': '(ver component_status)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': \"'metacognition' no lo recorre el puente de nombres (excluido o ausente en features)\", 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "modo_estricto_v1",
+   "archivo": "motor/modo_estricto_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "modo_estricto_v1#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_DISPONIBLE": [
+     "L60: return {\"status\": \"NO_DISPONIBLE\", \"pieza\": meta}"
+    ],
+    "estado_str": [
+     "L255: estado = \"CIERRE_ESTRICTO\" if not motivos else \"LATENTE\""
+    ],
+    "TODO_FIXME": [
+     "L124: return {\"familia\": f, \"cuadrante\": \"FUERA_DE_TOP5_EN_TODOS_LOS_CORTES\", \"senal\": \"LATENTE\", \"cuadrante_estricto\": \"—\", \"senal_estricta\": \"LATENTE\"}"
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "motor_interrelacion_extensible_v0_1",
+   "archivo": "motor/motor_interrelacion_extensible_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "motor_interrelacion_extensible_v0_1#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'motor_interrelacion_extensible_v0_1.py', 'declarado_UNICO': '(ver component_status)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': \"su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['relational_activity', 'relational_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)\", 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "movimiento_de_fondo_u4",
+   "archivo": "motor/movimiento_de_fondo_u4.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "movimiento_de_fondo_u4#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "CABLEADA_SIN_SENAL": [
+     "L70: return {\"clase\": \"SIN_SENAL\", \"rasgos\": [], \"primera\": None}"
+    ],
+    "can_decide_H_False": [
+     "L9: Contrato: can_decide_H=False, reordena=False, writes_canonical=False. No toca rank_fusion, H1/H2, apuesta, grado 020"
+    ],
+    "TODO_FIXME": [
+     "L6: (cuello de botella), pero hay que ver TODOS los tokens para ver cómo y qué se mueve abajo: algo puede estar",
+     "L16: - FAMILIA f: a_f(c) = media_PAC(p_final_f(c)) - 0.5 en el tablero del Engine canónico alimentado con TODOS los tokens",
+     "L127: return out, \"PASADA_LATERAL_ENGINE_CANONICO_TODOS_LOS_TOKENS (semilla del caso; estado RNG restaurado)\""
+    ]
+   },
+   "clase": "b",
+   "freno": "can_decide_H=False por contrato (lateral: observa, no decide)",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "registro ACTIVA; can_decide_H=False en motor/movimiento_de_fondo_u4.py"
+  },
+  {
+   "nombre": "normalizar_familia_tokens",
+   "archivo": "motor/normalizar_familia_tokens.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L90: \"dynamic_couplings\": {\"todos\": \"NOT_HARDCODED_PENDING_VALIDATION\"},"
+    ],
+    "PENDIENTE": [
+     "L85: \"id\": fid, \"status\": \"LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS\", \"source\": fuente,",
+     "L91: \"puente_244\": \"PENDIENTE (sin puente la familia queda cableada pero muda)\","
+    ],
+    "CABLEADA_SIN_SENAL": [
+     "L76: for t in todos - set(out_s): flags.append(f\"SIN_SENAL:{t}\")"
+    ]
+   },
+   "clase": "d",
+   "freno": "Sin puente la familia queda cableada pero muda (línea 91: 'puente_244: PENDIENTE'); status LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS. Ningún archivo lo carga (0 referencias fuera de sí mismo).",
+   "quien_lee_su_salida": "nadie (no cargado)",
+   "evidencia": "grep: 0 _load/import; código líneas 85, 91-92"
+  },
+  {
+   "nombre": "observador_externo_v1",
+   "archivo": "motor/observador_externo_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "d",
+   "freno": "0 referencias en todo motor/, correr_estandar.py, laterales/ y reconexion_v2a1/. Módulo local de la sesión (lee el RESULT sellado); nunca cableado al motor.",
+   "quien_lee_su_salida": "nadie",
+   "evidencia": "grep observador_externo = 0 refs"
+  },
+  {
+   "nombre": "personajes_corte_016",
+   "archivo": "motor/personajes_corte_016.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L5: Contrato: can_decide_H=False · no escribe H1/H2 · no reordena candidatos · no escribe archivos ni stores ·"
+    ],
+    "estado_str": [
+     "L265: por_corte.append({\"corte\": cid, \"campo_texto\": None, \"estado\": \"SIN_TEXTO\", \"protagonista\": {\"presente\": False},",
+     "L363: por_corte.append({\"corte\": cid, \"campo_texto\": k, \"estado\": \"DERIVADO\", \"protagonista\": prot, \"agentes\": otros,"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "plugin_alias_reactivacion",
+   "archivo": "motor/plugin_alias_reactivacion.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: alias propuestos 0; faltaron []",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: alias propuestos 0; faltaron []"
+  },
+  {
+   "nombre": "plugin_aquiles_ancla_estricto",
+   "archivo": "motor/plugin_aquiles_ancla_estricto.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: llamada real: estado_H=NO_VERIFICADO motivo='no hay eje_candidato; prohibido fabricarlo por bigrama' (sin eje_candidato con cita en el input",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: llamada real: estado_H=NO_VERIFICADO motivo='no hay eje_candidato; prohibido fabricarlo por bigrama' (sin eje_candidato con cita en el input"
+  },
+  {
+   "nombre": "plugin_aquiles_h",
+   "archivo": "motor/plugin_aquiles_h.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L47: \"estado\": \"SEGUIR_EMPUJANDO_H\","
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'aquiles_h', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_arco_field_snyder_mckee",
+   "archivo": "motor/plugin_arco_field_snyder_mckee.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_arco_field_snyder_mckee.py"
+    ],
+    "en_ceb_stages": [
+     "plugin_arco_field_snyder_mckee.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L130: \"estado\": \"SE_NOTA\" if _nota(cut, umbral) else \"VACIO\","
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'plugin_arco_field_snyder_mckee.py', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_arcos_emocionales_laterales",
+   "archivo": "motor/plugin_arcos_emocionales_laterales.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_arcos_emocionales_laterales#1",
+     "plugin_arcos_emocionales_laterales.output#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'plugin_arcos_emocionales_laterales.py', 'declarado_UNICO': '(ver component_status)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_arquetipos_dinamicos",
+   "archivo": "motor/plugin_arquetipos_dinamicos.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_arquetipos_dinamicos"
+    ],
+    "en_ceb_stages": [
+     "plugin_arquetipos_dinamicos#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "c",
+   "freno": "Cargado (opt_dyn) y llamado (dyn.info), pero ACTIVA_MUDA_SIN_MAPEO (MOTOR UNICO línea 667): info() devuelve 3 claves PROPUESTAS fuera del 244, sin valor por caso. No hay puente nombre->familia.",
+   "quien_lee_su_salida": "nadie (llega=[])",
+   "evidencia": "registro ACTIVA_MUDA; estado_verificado ACTIVA_MUDA llega=[]; MOTOR UNICO:667"
+  },
+  {
+   "nombre": "plugin_cameo_institucional",
+   "archivo": "motor/plugin_cameo_institucional.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_cameo_institucional#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "plugin_capa2_antecedentes_arquetipos",
+   "archivo": "motor/plugin_capa2_antecedentes_arquetipos.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA_MUDA en este run (capa2 sin señal discriminante). Diagnóstico.",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "estado_verificado capa2_antecedentes ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "plugin_circulo_monomito_v2",
+   "archivo": "motor/plugin_circulo_monomito_v2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_circulo_monomito_v2#1",
+     "plugin_circulo_monomito_v2.output#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'plugin_circulo_monomito_v2.py', 'declarado_UNICO': '(ver component_status)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_embudo_clinico",
+   "archivo": "motor/plugin_embudo_clinico.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'embudo_clinico', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_entrega_luces_v1",
+   "archivo": "motor/plugin_entrega_luces_v1.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "plugin_familias_gloria_sacro",
+   "archivo": "motor/plugin_familias_gloria_sacro.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: familias fuera del catálogo cargado (fusionar() escribiría patterns: prohibido); solo se reportan tokens observados",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: familias fuera del catálogo cargado (fusionar() escribiría patterns: prohibido); solo se reportan tokens observados"
+  },
+  {
+   "nombre": "plugin_fix_entrada",
+   "archivo": "motor/plugin_fix_entrada.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "plugin_guardia_no_cruce",
+   "archivo": "motor/plugin_guardia_no_cruce.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_guardia_no_cruce.absorbed#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Cargado como artefacto auxiliar; su lógica corre ABSORBIDA en GuardiaNoCruce dentro de _run_transversal_guards. No se invoca como API independiente por diseño.",
+   "quien_lee_su_salida": "guardia transversal (absorbido)",
+   "evidencia": "MOTOR UNICO: estado ABSORBIDO_EN_GUARDIA_TRANSVERSAL"
+  },
+  {
+   "nombre": "plugin_metodo_rigor",
+   "archivo": "motor/plugin_metodo_rigor.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_metodo_rigor"
+    ],
+    "en_ceb_stages": [
+     "plugin_metodo_rigor#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "TODO_FIXME": [
+     "L2: \"\"\"PLUGIN_METODO_RIGOR — Holmes / Hecate / Schopenhauer",
+     "L31: \"plugin\": \"METODO_RIGOR\","
+    ]
+   },
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: verificado por hub (plugin_metodo_rigor (alimentado)): cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOP",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: verificado por hub (plugin_metodo_rigor (alimentado)): cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOP"
+  },
+  {
+   "nombre": "plugin_otto_numinoso",
+   "archivo": "motor/plugin_otto_numinoso.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'otto_numinoso', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_picos_mesetas",
+   "archivo": "motor/plugin_picos_mesetas.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_picos_mesetas.py"
+    ],
+    "en_ceb_stages": [
+     "plugin_picos_mesetas.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (['H(rank_fusion:señal_lateral)'])",
+   "evidencia": "registro ACTIVA; estado_verificado llega=['H(rank_fusion:señal_lateral)']"
+  },
+  {
+   "nombre": "plugin_polaridad_causal",
+   "archivo": "motor/plugin_polaridad_causal.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Cableado/presente pero no se verificó su punto de llamada ni su lector individualmente",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "presente en _load o RESULT; sin verificación individual"
+  },
+  {
+   "nombre": "plugin_pregunta_detras_v2",
+   "archivo": "motor/plugin_pregunta_detras_v2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L4: PROPUESTA. No cablear al limpio sin OK de Marco.",
+     "L39: VERSION = \"PROPUESTA_v2.3.3\"  # 2.3.3 (27-sep): \"esta/este/estos/estas\" sin tilde tras preposición = demostrativo, no cópula"
+    ]
+   },
+   "clase": "c",
+   "freno": "Su cabecera dice 'PROPUESTA. No cablear al limpio sin OK de Marco' (línea 4), pero MOTOR UNICO lo carga (opt_qd, línea 489) y lo llama (interrogar, línea 490) como control observacional. Su salida no altera H. Pregunta para Marco: ¿existe el OK?",
+   "quien_lee_su_salida": "nadie (observacional; llega=[])",
+   "evidencia": "MOTOR UNICO:489-490; estado_verificado ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "plugin_pregunta_dirigida",
+   "archivo": "motor/plugin_pregunta_dirigida.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_pregunta_dirigida"
+    ],
+    "en_ceb_stages": [
+     "plugin_pregunta_dirigida#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: pregunta neutral: 0 estructuras dirigidas detectadas",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: pregunta neutral: 0 estructuras dirigidas detectadas"
+  },
+  {
+   "nombre": "plugin_pregunta_dirigida_v0_5_1",
+   "archivo": "motor/plugin_pregunta_dirigida_v0_5_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L3: plugin_pregunta_dirigida.py — PROPUESTA SIDECAR unificada (no cableado al limpio)",
+     "L25: Estado: PROPUESTA_0.4.1 / PENDIENTE de autorización al ON del limpio.",
+     "L42: VERSION = \"PROPUESTA_0.5.1_GUARDIANES\""
+    ],
+    "PENDIENTE": [
+     "L25: Estado: PROPUESTA_0.4.1 / PENDIENTE de autorización al ON del limpio."
+    ],
+    "estado_str": [
+     "L859: \"estado\": \"DETECTADA\" if sev == \"hard\" else \"POSIBLE\",",
+     "L1364: \"estado\": \"DETECTADA\" if sev == \"hard\" else \"POSIBLE\", \"accion\": \"bandera_no_bloquea\"}"
+    ],
+    "TODO_FIXME": [
+     "L664: # Polaridad: si TODO el texto niega la causalidad, no hay post-hoc afirmado"
+    ]
+   },
+   "clase": "d",
+   "freno": "PROPUESTA SIDECAR unificada (no cableado al limpio), PENDIENTE de autorización al ON del limpio (líneas 3, 25). El motor carga plugin_pregunta_dirigida.py (sin versión, opt_qdir), NO la v0_5_1.",
+   "quien_lee_su_salida": "nadie (no cargado)",
+   "evidencia": "código líneas 3, 25, 42; _load solo opt_qdir->plugin_pregunta_dirigida.py"
+  },
+  {
+   "nombre": "plugin_reporte_3d",
+   "archivo": "motor/plugin_reporte_3d.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_reporte_3d"
+    ],
+    "en_ceb_stages": [
+     "plugin_reporte_3d#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (['H(rank_fusion:señal_lateral)'])",
+   "evidencia": "registro ACTIVA; estado_verificado llega=['H(rank_fusion:señal_lateral)']"
+  },
+  {
+   "nombre": "plugin_resolucion_autonoma_consistencia",
+   "archivo": "motor/plugin_resolucion_autonoma_consistencia.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_resolucion_autonoma_consistencia#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "plugin_sesgo_lectura",
+   "archivo": "motor/plugin_sesgo_lectura.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "plugin_sesgo_lectura.py"
+    ],
+    "en_ceb_stages": [
+     "plugin_sesgo_lectura.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'plugin_sesgo_lectura.py', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "plugin_sombrero_blanco_token",
+   "archivo": "motor/plugin_sombrero_blanco_token.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_sombrero_blanco_token#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PENDIENTE": [
+     "L22: \"estado\": \"EQUIVALENTE_UNICO\" if eq else \"PENDIENTE_REVISION\","
+    ],
+    "estado_str": [
+     "L22: \"estado\": \"EQUIVALENTE_UNICO\" if eq else \"PENDIENTE_REVISION\","
+    ]
+   },
+   "clase": "c",
+   "freno": "Declarado feeds_predictor=True en UNICO, VERIFICADO=False en el run (registro: n_esta_corrida=0). Su salida no llega a ningún consumidor en este run.",
+   "quien_lee_su_salida": "nadie (llega=no)",
+   "evidencia": "registro GUARDIAN_FILTRO 'declarado=EXECUTED feeds_predictor=True | llega=no'; estado_verificado llega=[]"
+  },
+  {
+   "nombre": "plugin_souriau_210141",
+   "archivo": "motor/plugin_souriau_210141.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L122: return SouriauFunction(name, estado=\"no_observado\", corte=corte)",
+     "L144: estado=\"observado\","
+    ]
+   },
+   "clase": "b",
+   "freno": "MARCAJE por decisión Mj 2026-10-06: la aritmética Souriau 210141 es marcaje, no trazabilidad. Corre como sensor de marcaje.",
+   "quien_lee_su_salida": "nadie por decisión (marcaje)",
+   "evidencia": "registro souriau_v1_4 MARCAJE"
+  },
+  {
+   "nombre": "plugin_trayectoria_hosteleria",
+   "archivo": "motor/plugin_trayectoria_hosteleria.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: verificado por hub (trayectoria_hosteleria): ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, d",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: verificado por hub (trayectoria_hosteleria): ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, d"
+  },
+  {
+   "nombre": "plugin_verificador_consistencia_adversarial",
+   "archivo": "motor/plugin_verificador_consistencia_adversarial.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "plugin_verificador_consistencia_adversarial#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "predictibilidad_set_021",
+   "archivo": "motor/predictibilidad_set_021.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "predictibilidad_set_021#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L12: Reglas: no cambia rank_fusion, ni el orden de H, ni H1/H2, ni la apuesta, ni el grado 020 (can_decide_H=False)."
+    ],
+    "TODO_FIXME": [
+     "L373: grado = (\"SET_EXPLICA_TODOS_LOS_CORTES\" if not sin else \"SET_CON_CORTES_SIN_EXPLICAR\")"
+    ]
+   },
+   "clase": "b",
+   "freno": "can_decide_H=False por contrato (lateral: observa, no decide)",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "registro ACTIVA; can_decide_H=False en motor/predictibilidad_set_021.py"
+  },
+  {
+   "nombre": "predictor_vecinos_prefijo_v1",
+   "archivo": "motor/predictor_vecinos_prefijo_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "c",
+   "freno": "Cableado y llamado, pero MEDIDA_O_ESTADO_NO_EMITIDO: ningún corte trae estado monomítico exacto (sin prefijo), 0 candidatos. No hay vecinos mapeados de donde predecir.",
+   "quien_lee_su_salida": "nadie (0 candidatos)",
+   "evidencia": "RESULT sensores_pre.predictor_vecinos_prefijo prefijo_detalle sin_estado, candidatos=[]"
+  },
+  {
+   "nombre": "protocolo_kernel_motor",
+   "archivo": "motor/protocolo_kernel_motor.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA_MUDA: protocolo_orden0 constante por diseño (contrato fijo de arranque).",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "estado_verificado protocolo_orden0 ACTIVA_MUDA"
+  },
+  {
+   "nombre": "puente_souriau_caldero_polti_v1",
+   "archivo": "motor/puente_souriau_caldero_polti_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PENDIENTE": [
+     "L21: NO está definida en disco: PENDIENTE de la regla de Mj (no se inventa aquí).",
+     "L146: \"brecha_7783\": \"PENDIENTE regla de Mj: 7783 = funciones posibles notables por discrepancias entre los seis agentes en interacción consistente (y sus r"
+    ],
+    "NO_DISPONIBLE": [
+     "L345: zri_out, zri_status = [], \"NO_DISPONIBLE\""
+    ],
+    "can_decide_H_False": [
+     "L10: Candados: can_decide_H=False · no escribe H1/H2 · no reordena candidatos · no escribe catálogo ·"
+    ]
+   },
+   "clase": "c",
+   "freno": "Corre (marco_7783_geometria EXECUTED), pero el mapeo seis funciones -> 7783 está PENDIENTE de la regla de Mj (líneas 21, 146: solo 729 alcanzables). La brecha_7783 no se cierra sin esa regla.",
+   "quien_lee_su_salida": "hub marco_7783_geometria (solo lo alcanzable)",
+   "evidencia": "código líneas 21, 146; RESULT sensores_pre.marco_7783_geometria EXECUTED"
+  },
+  {
+   "nombre": "ricci_forman_coocurrencia_v0_1",
+   "archivo": "motor/ricci_forman_coocurrencia_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "ACTIVA; llega a H como señal lateral del rank_fusion (proxy de deriva temporal, NO el Forman exacto).",
+   "quien_lee_su_salida": "H (rank_fusion:señal_lateral)",
+   "evidencia": "estado_verificado ricci_forman_v0_1 ACTIVA llega_a_H True"
+  },
+  {
+   "nombre": "schrodinger_transport_esqueleto_v0_1",
+   "archivo": "motor/schrodinger_transport_esqueleto_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L2: \"\"\"schrodinger_transport_esqueleto_v0_1.py — PROPUESTA / ESQUELETO. NO EJECUTA TRANSPORTE."
+    ]
+   },
+   "clase": "c",
+   "freno": "PROPUESTA / ESQUELETO. NO EJECUTA TRANSPORTE (línea 2). El sensor schro del hub lo necesita presente para no dar NO_CORRE, pero el esqueleto no transporta nada.",
+   "quien_lee_su_salida": "nadie",
+   "evidencia": "código línea 2; hub laterales_unico_v1.py:721"
+  },
+  {
+   "nombre": "schrodinger_transport_v0_1",
+   "archivo": "motor/schrodinger_transport_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L236: return {\"estado\": \"SIN_TRAYECTORIA\", \"n_cortes\": n,",
+     "L334: return {\"estado\": \"TRANSPORTE_OK\", \"n_cortes\": n, \"parametros\": prm,"
+    ]
+   },
+   "clase": "e",
+   "freno": "El sensor schro lo computa (salida V0_1_IMPLEMENTADO, alimenta_convergencia=True según el propio sensor), pero el núcleo del motor no tiene ninguna referencia a schrodinger y no se encontró el consumidor de esa 'convergencia' en el árbol buscado. No se puede determinar desde código+RESULT si V0_1 alimenta algún ajuste en esta copia.",
+   "quien_lee_su_salida": "DESCONOCIDO (el sensor dice alimenta_convergencia=True; sin consumidor localizado)",
+   "evidencia": "RESULT sensores_pre.schrodinger salida V0_1_IMPLEMENTADO; grep schrodinger fuera de laterales_unico = 0 archivos"
+  },
+  {
+   "nombre": "schrodinger_transport_v0_2",
+   "archivo": "motor/schrodinger_transport_v0_2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L163: return {\"estado\": \"SIN_TRAYECTORIA\", \"n_cortes\": n,",
+     "L273: return {\"estado\": \"TRANSPORTE_OK\", \"n_cortes\": n, \"parametros\": prm,"
+    ]
+   },
+   "clase": "c",
+   "freno": "Computa (sensor schro: salida estado V0_2_IMPLEMENTADO, rho=0.1) pero Marco ancló el puente en V0_1 sin V0_2 (2026-11-12: V0_2 destruyó ~40% de la masa). El núcleo del motor (MOTOR UNICO) no tiene ninguna referencia a schrodinger: ni V0_1 ni V0_2 alimentan el rank en esta copia.",
+   "quien_lee_su_salida": "nadie en el núcleo (sensor: solo calcula)",
+   "evidencia": "RESULT sensores_pre.schrodinger v02 V0_2_IMPLEMENTADO; grep schrodinger en MOTOR UNICO = 0 refs"
+  },
+  {
+   "nombre": "semiotica_deriva_v0_1",
+   "archivo": "motor/semiotica_deriva_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "sensor_perfil_narrador_v0_1",
+   "archivo": "motor/sensor_perfil_narrador_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L17: Candados: can_decide_H=False · Alimenta_H=NO · no escribe patterns.json · no entra al ranking ·"
+    ],
+    "estado_str": [
+     "L82: if tot < n_min: return {\"estado\": \"SIN_DATO\", \"n\": tot, \"proporciones\": prop, \"dominante\": None}",
+     "L87: return {\"estado\": \"LATENCIA_EMPATE\", \"n\": tot, \"proporciones\": prop, \"dominante\": None,",
+     "L254: \"estado\": \"LATENTE\", \"es_hecho\": False, \"marcado\": marcado, \"corte_de_referencia\": corte,"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "sidecar_ablacion_hombre_acero",
+   "archivo": "motor/sidecar_ablacion_hombre_acero.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L71: \"estado\": \"EXPERIMENTAL_SIDECAR\",",
+     "L450: \"estado\": \"EXPERIMENTAL_SIDECAR\",",
+     "L535: \"estado\": \"EXPERIMENTAL_SIDECAR\","
+    ],
+    "TODO_FIXME": [
+     "L325: 3) heurística: si se quitan TODOS los pilares de ejes P y A con consec>=N",
+     "L508: # Reinterrelación obligatoria: quitar TODOS los pilares de acero"
+    ]
+   },
+   "clase": "e",
+   "freno": "Cableado/presente pero no se verificó su punto de llamada ni su lector individualmente",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "presente en _load o RESULT; sin verificación individual"
+  },
+  {
+   "nombre": "sidecar_amantes_arquetipos",
+   "archivo": "motor/sidecar_amantes_arquetipos.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L137: \"estado\": \"ON\" if hits else \"LATENCIA_FORZADA\","
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA_MUDA en este caso: gatillo None (ningún arquetipo amante se activa con estos tokens). Muda por ausencia de señal, no por freno.",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro amantes_arquetipos ACTIVA_MUDA 'gatillo: None'"
+  },
+  {
+   "nombre": "sidecar_area_tokens_v1",
+   "archivo": "motor/sidecar_area_tokens_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L106: \"nota_subfamilias\": \"el sidecar declara las 2 familias pero no asigna tokens a cada una: asignación = PROPUESTA\","
+    ],
+    "can_decide_H_False": [
+     "L3: + activación por corte desde input real + coactivaciones. Solo lectura. can_decide_H=False. No toca el 244."
+    ]
+   },
+   "clase": "c",
+   "freno": "El sidecar corre (30 familias registradas), pero la asignación de tokens a las 2 subfamilias es PROPUESTA (línea 106: 'asignación = PROPUESTA').",
+   "quien_lee_su_salida": "hub area_tokens (registro)",
+   "evidencia": "código línea 106; RESULT pre.area_tokens ACTIVA"
+  },
+  {
+   "nombre": "sidecar_caldero_busqueda_arquetipos",
+   "archivo": "motor/sidecar_caldero_busqueda_arquetipos.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "sidecar_caldero_busqueda_arquetipos#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "c",
+   "freno": "EJECUTADO con 74 vecinos crudos, pero 0 mapean al 244 (current_neighbors=[]); llm_neighbor_hints_n=0 (las pistas vienen de la entrada y no se pusieron). Su salida no llega a H.",
+   "quien_lee_su_salida": "nadie (llega=no)",
+   "evidencia": "RESULT caldero_bridge current_neighbors=[]; estado_verificado ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "sidecar_corte_memento",
+   "archivo": "motor/sidecar_corte_memento.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA; proto-H leída en post.memento_vs_top1 (contraste, no Top1). Diagnóstico.",
+   "quien_lee_su_salida": "post.memento_vs_top1",
+   "evidencia": "registro memento ACTIVA"
+  },
+  {
+   "nombre": "sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR",
+   "archivo": "motor/sidecar_cuerpo_arco__BUG_A_SIN_CONFIRMAR.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L5: PROPUESTA — sidecar corporal/arco.",
+     "L6: Estado: PROPUESTA. No se cablea al motor limpio.",
+     "L207: \"estado\": \"PROPUESTA\","
+    ],
+    "estado_str": [
+     "L84: return {\"estado\": \"VACIO\", \"motivo\": \"sin_cortes\", \"cadena\": []}",
+     "L98: return {\"estado\": \"VACIO\", \"motivo\": \"cadena_rota_sin_enfermedad_o_herida\",",
+     "L101: return {\"estado\": \"VACIO\", \"motivo\": \"falta_enfermedad_o_herida\", \"cadena\": []}"
+    ]
+   },
+   "clase": "b",
+   "freno": "Cabecera PROPUESTA 'No se cablea al motor limpio' (líneas 5-6), pero el hub lo carga como SENSOR (no como motor limpio). En este caso ACTIVA_MUDA: sin tokens de cuerpo/salud en P/A/C. La distinción sensor-vs-limpio es la que lo sostiene; su regla corporal sigue sin autorizar al limpio.",
+   "quien_lee_su_salida": "nadie en este caso (sin tokens de cuerpo)",
+   "evidencia": "RESULT pre/sensores cuerpo_arco ACTIVA_MUDA; código líneas 5-6, 207"
+  },
+  {
+   "nombre": "sidecar_geometria",
+   "archivo": "motor/sidecar_geometria.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "c",
+   "freno": "Corre (u_geo) pero su salida no nombra ningún candidato del top: el puente no llega (registro 'geometria' ACTIVA_MUDA). La geometría del sidecar no alimenta el ranking.",
+   "quien_lee_su_salida": "nadie (el puente no llega)",
+   "evidencia": "registro geometria ACTIVA_MUDA 'su salida no nombra ningún candidato del top'; estado_verificado geometria ACTIVA_MUDA llega=[]"
+  },
+  {
+   "nombre": "sidecar_lente_souriau",
+   "archivo": "motor/sidecar_lente_souriau.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L92: estado=\"referencia\",",
+     "L127: return {f: {\"estado\": \"referencia\", \"valor\": None} for f in FOCOS}",
+     "L136: estado = \"referencia\""
+    ]
+   },
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: focos con valor: 0",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: focos con valor: 0"
+  },
+  {
+   "nombre": "sidecar_luces_gemini_packs",
+   "archivo": "motor/sidecar_luces_gemini_packs.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Muda en este caso por ausencia de señal: luces activas: 0",
+   "quien_lee_su_salida": "nadie en este caso",
+   "evidencia": "registro ACTIVA_MUDA: luces activas: 0"
+  },
+  {
+   "nombre": "sidecar_polti_caldero",
+   "archivo": "motor/sidecar_polti_caldero.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (['H(rank_fusion:señal_lateral)'])",
+   "evidencia": "registro ACTIVA; estado_verificado llega=['H(rank_fusion:señal_lateral)']"
+  },
+  {
+   "nombre": "sidecar_sombrero_blanco_filtro_v1",
+   "archivo": "motor/sidecar_sombrero_blanco_filtro_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L14: No modifica el input ni la salida: marca. can_decide_H=False, feeds_predictor=False."
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado; can_decide_H=False por contrato",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "cableado MU/LU/CE; presente en RESULT"
+  },
+  {
+   "nombre": "sidecar_trazabilidad_temporal",
+   "archivo": "motor/sidecar_trazabilidad_temporal.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L166: \"k_estado\": \"PROPUESTA_EMPIRICA\","
+    ],
+    "estado_str": [
+     "L165: \"estado\": \"CABLEADO_BUS_LATERAL\","
+    ]
+   },
+   "clase": "c",
+   "freno": "El trazado corre (47 tokens, estados ON/PARPADEO/NO_APAGADO) pero su k empírico es PROPUESTA_EMPIRICA (línea 166) y el sensor reporta estado CABLEADO_BUS_LATERAL. La regla empírica de k no está autorizada como tal.",
+   "quien_lee_su_salida": "sensor (solo traza)",
+   "evidencia": "RESULT sensores_pre.trazabilidad_temporal estado=CABLEADO_BUS_LATERAL, k_estado=PROPUESTA_EMPIRICA"
+  },
+  {
+   "nombre": "sidecar_venn_sistemas_v1",
+   "archivo": "motor/sidecar_venn_sistemas_v1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L4: NO decide nada: ALIMENTA_H=False, can_decide_H=False, fuera del ranking."
+    ]
+   },
+   "clase": "b",
+   "freno": "can_decide_H=False por contrato (lateral: observa, no decide)",
+   "quien_lee_su_salida": "nadie por diseño",
+   "evidencia": "registro ACTIVA; can_decide_H=False en motor/sidecar_venn_sistemas_v1.py"
+  },
+  {
+   "nombre": "souriau_momentum_so3",
+   "archivo": "motor/souriau_momentum_so3.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Sin _load, sin registro en laterales_unico, sin presencia en RESULT; no se puede determinar si corre por otra vía",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "sin evidencia de cableado ni de ejecución"
+  },
+  {
+   "nombre": "stinkbox_transport_v0_2",
+   "archivo": "motor/stinkbox_transport_v0_2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "stinkbox_transport_v0_2#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "NO_IMPLEMENTADO": [
+     "L68: \"billard_source_execution\": \"NOT_IMPLEMENTED_HERE\","
+    ],
+    "NO_CORRE": [
+     "L473: \"status\": (\"SKIPPED_IDEMPOTENT_REPLAY\" if repeticion else (\"NO_TOKEN_INPUT\" if not token_unique else \"TOKENS_PERSISTED\")),"
+    ]
+   },
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (rank_fusion o dimensión)",
+   "evidencia": "registro_componentes: stinkbox_transport_v0_2.py ACTIVA alimenta_H=True; motivo: llega a H"
+  },
+  {
+   "nombre": "sujetos_014",
+   "archivo": "motor/sujetos_014.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [
+     "sujetos_014.py#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "TODO_FIXME": [
+     "L12: - nombres_que_no_votan(case): POLÍTICA INTENCIONAL (015, confirmada por Mj): excluye TODOS los nombres propios"
+    ]
+   },
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: None"
+  },
+  {
+   "nombre": "traza_campo_244",
+   "archivo": "motor/traza_campo_244.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [
+     "traza_campo_244"
+    ],
+    "en_ceb_stages": [
+     "traza_campo_244#1"
+    ],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "a",
+   "freno": "",
+   "quien_lee_su_salida": "H (['H(rank_fusion:señal_lateral)'])",
+   "evidencia": "registro ACTIVA; estado_verificado llega=['H(rank_fusion:señal_lateral)']"
+  },
+  {
+   "nombre": "tusi_par_indice_exploratorio_v0_1",
+   "archivo": "motor/tusi_par_indice_exploratorio_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L2: \"\"\"tusi_par_indice_exploratorio_v0_1.py — PROPUESTA / EXPLORATORIO. Alimenta_H=NO. writes_H=False."
+    ]
+   },
+   "clase": "b",
+   "freno": "PROPUESTA / EXPLORATORIO por diseño (línea 2); Alimenta_H=NO. Corre (ACTIVA, 6 pares con índice de Tusi). Diagnóstico por diseño, no freno.",
+   "quien_lee_su_salida": "nadie por diseño (exploratorio)",
+   "evidencia": "código línea 2; registro tusi_par ACTIVA"
+  },
+  {
+   "nombre": "v153_lateral_metrics_v1_1",
+   "archivo": "motor/v153_lateral_metrics_v1_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA sin alimenta_H y sin llega registrado; sin freno localizado",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro ACTIVA; estado_verificado: {'componente': 'lateral_metrics_v1_1', 'declarado_UNICO': 'EXECUTED feeds_predictor=True (run() lo pone a todos)', 'estado_verificado': 'ACTIVA_MUDA', 'llega_a_H': False, 'llega': [], 'feeds_predictor_verificado': False, 'motivo': 'su salida no nombra ningún candidato del top: el puente no llega', 'can_decide_H': False, 'debe_ejecutarse': True, 'incumplimiento': False, 'severidad': 'INFO_CORRIO_SIN_SENAL', 'accion': \"corrió pero no aportó/no llegó a H en este caso: revisar 'motivo' si se repite en todos los casos\"}"
+  },
+  {
+   "nombre": "vecinos_caldero_neighbor_store",
+   "archivo": "motor/vecinos_caldero_neighbor_store.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "c",
+   "freno": "Declarado EJECUTADO feeds_H=True, VERIFICADO llega=no. Los 74 vecinos persisten al StinkBox pero no votan (0 mapeados al 244).",
+   "quien_lee_su_salida": "nadie (llega=no)",
+   "evidencia": "estado_verificado ACTIVA_MUDA 'declarado=EJECUTADO feeds_H=True | llega=no'"
+  },
+  {
+   "nombre": "zri_coupling_v0_2",
+   "archivo": "motor/zri_coupling_v0_2.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "ACTIVA (v0.1: 7 sellos; v0.2: acople P/A/C en 7 cortes). E_n no se calcula. Diagnóstico; sus anillos los usa el sensor schro del hub.",
+   "quien_lee_su_salida": "hub schro (anillos_helice_zri)",
+   "evidencia": "registro zri_v0_1_v0_2 ACTIVA"
+  },
+  {
+   "nombre": "zri_experience_v0_1",
+   "archivo": "motor/zri_experience_v0_1.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "e",
+   "freno": "Cableado/presente pero no se verificó su punto de llamada ni su lector individualmente",
+   "quien_lee_su_salida": "DESCONOCIDO",
+   "evidencia": "presente en _load o RESULT; sin verificación individual"
+  },
+  {
+   "nombre": "filogenia_mezcla",
+   "archivo": "laterales/filogenia_mezcla/filogenia_mezcla.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "estado_str": [
+     "L270: clas[f] = {'H': hid[f], 'estado': 'NO_SE_SOSTIENE', 'motivo': 'sin tokens que lo sostengan en ningún corte'}; continue"
+    ]
+   },
+   "clase": "b",
+   "freno": "Lateral post-corrida cableado en correr_estandar; EJECUTADO en Semmelweis (FILOGENIA_MEZCLA json/md). Lectura, no decide.",
+   "quien_lee_su_salida": "nadie por diseño (archivos FILOGENIA_MEZCLA)",
+   "evidencia": "recibo stage filogenia_mezcla EJECUTADO"
+  },
+  {
+   "nombre": "cuartos_monomito",
+   "archivo": "laterales/teoria_color/cuartos_monomito.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "d",
+   "freno": "Lateral construido esta noche (2026-11-12); standalone, no cableado al motor (por diseño).",
+   "quien_lee_su_salida": "nadie",
+   "evidencia": "laterales/teoria_color/cuartos_monomito.py"
+  },
+  {
+   "nombre": "equivalencias",
+   "archivo": "laterales/teoria_color/equivalencias.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Biblioteca de la rueda (hue/hx), usada por teoria_color y rueda_conjuncion. No es un componente que corra solo.",
+   "quien_lee_su_salida": "teoria_color, rueda_conjuncion",
+   "evidencia": "laterales/teoria_color/equivalencias.py"
+  },
+  {
+   "nombre": "rueda_conjuncion",
+   "archivo": "laterales/teoria_color/rueda_conjuncion.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "can_decide_H_False": [
+     "L77: Reglas del lateral: can_decide_H=False. No decide H1/H2 del motor."
+    ]
+   },
+   "clase": "d",
+   "freno": "Lateral construido esta noche (2026-11-12); standalone, no cableado al motor (por diseño). Lee COLOR_RESULT y tableros sombra.",
+   "quien_lee_su_salida": "nadie (ruedas PNG + resumen aparte)",
+   "evidencia": "laterales/teoria_color/rueda_conjuncion.py; RUEDA_CONJUNCION_VERIFICACION_20261112.md"
+  },
+  {
+   "nombre": "teoria_color",
+   "archivo": "laterales/teoria_color/teoria_color.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {},
+   "clase": "b",
+   "freno": "Lateral post-corrida cableado en correr_estandar; EJECUTADO en Semmelweis (COLOR_RESULT json/md/png). can_decide_H=False por diseño: observa, no decide.",
+   "quien_lee_su_salida": "nadie por diseño (archivos COLOR_RESULT)",
+   "evidencia": "recibo stage teoria_color EJECUTADO; laterales_post_corrida.teoria_color"
+  },
+  {
+   "nombre": "no_duplicacion_latencia",
+   "archivo": "reconexion_v2a1/no_duplicacion_latencia.py",
+   "cableado": {
+    "correr_estandar": false,
+    "motor_unico": false,
+    "laterales_unico": false,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "PROPUESTA": [
+     "L8: como PROPUESTA / SENSOR y nunca toca el tablero. El Engine canónico"
+    ],
+    "DESACTIVADO": [
+     "L40: 3. Puerta de cordura (obligatoria): con la regla APAGADA el tablero"
+    ],
+    "can_decide_H_False": [
+     "L72: Reglas del lateral: can_decide_H=False. No decide H1/H2 del motor;"
+    ],
+    "TODO_FIXME": [
+     "L54: - Compañía: se mide sobre TODO el corte (P+A+C), no solo el eje"
+    ]
+   },
+   "clase": "d",
+   "freno": "Lateral construido esta noche (2026-11-12); standalone, no cableado al motor (por diseño: no toca Engine/244). Su puerta de cordura pasa (reproduce el canónico exacto con la regla apagada).",
+   "quien_lee_su_salida": "nadie (tablero sombra aparte)",
+   "evidencia": "reconexion_v2a1/no_duplicacion_latencia.py; NO_DUPLICACION_VERIFICACION_20261112.md"
+  },
+  {
+   "nombre": "correr_estandar",
+   "archivo": "correr_estandar.py",
+   "cableado": {
+    "correr_estandar": true,
+    "motor_unico": true,
+    "laterales_unico": true,
+    "en_features_result": [],
+    "en_ceb_stages": [],
+    "en_laterales_unico_result": []
+   },
+   "estado_textual": {
+    "ESPERANDO": [
+     "L243: unresolved_states = {\"LATENCIA_INFORMACIONAL\", \"NO_RESUELTO\", \"UNRESOLVED\", \"PENDING\", \"PENDIENTE\", \"EMPATE\"}"
+    ],
+    "PENDIENTE": [
+     "L243: unresolved_states = {\"LATENCIA_INFORMACIONAL\", \"NO_RESUELTO\", \"UNRESOLVED\", \"PENDING\", \"PENDIENTE\", \"EMPATE\"}"
+    ],
+    "NO_CORRE": [
+     "L988: receipt[\"stages\"].append({\"stage\": \"gate_z90\", \"status\": (_gate_z90 or {}).get(\"status\", \"NO_EJECUTADO\"),",
+     "L993: receipt[\"stages\"].append({\"stage\": \"filogenia_mezcla\", \"status\": _lf_stage.get(\"status\", \"NO_EJECUTADO\"),",
+     "L997: receipt[\"stages\"].append({\"stage\": \"teoria_color\", \"status\": _tc_stage.get(\"status\", \"NO_EJECUTADO\"),"
+    ],
+    "NO_DISPONIBLE": [
+     "L90: return \"HUELLA_ORIGEN_NO_DISPONIBLE\"",
+     "L91: return \"DATO_AUSENTE_REQUIERE_CLASIFICACION\"",
+     "L246: (tortugas_status in {\"ERROR\", \"NO_DISPONIBLE\", \"FAILED\", \"TIMEOUT\"} or not tortugas_executed))"
+    ],
+    "estado_str": [
+     "L723: \"estado\": \"ACTIVA_DIAGNOSTICA\",",
+     "L734: \"estado\": \"ACTIVA_DIAGNOSTICA\" if _gate_z90.get(\"status\") in (\"PASA\", \"RECHAZADO_DIAGNOSTICO\") else _gate_z90.get(\"status\", \"ERROR\"),",
+     "L784: result[\"efectividad_corte_retenido\"]={\"estado\":\"INTERNAL_T1_RUN_FAILED\", \"previo_status\":sello.get(\"_internal_run_status\"),"
+    ]
+   },
+   "clase": "a",
+   "freno": "Corredor estándar (no es un lateral).",
+   "quien_lee_su_salida": "todo el run",
+   "evidencia": "recibo: 18 stages COMPLETED"
+  },
+  {
+   "nombre": "geometria",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: geometria"
+  },
+  {
+   "nombre": "polti_caldero",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: polti_caldero"
+  },
+  {
+   "nombre": "otto_numinoso",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: otto_numinoso"
+  },
+  {
+   "nombre": "embudo_clinico",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: embudo_clinico"
+  },
+  {
+   "nombre": "trayectoria_hosteleria",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: verificado por hub (trayectoria_hosteleria): ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, desgaste_ca"
+    ]
+   },
+   "clase": "b",
+   "freno": "verificado por hub (trayectoria_hosteleria): ningún token de la familia (consumo_sustancias, turno_atipico_nocturno, desgaste_psicosocial, desgaste_cambaceo_itinerante, aislamiento_social) en P/A/C ni",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: trayectoria_hosteleria"
+  },
+  {
+   "nombre": "estabilidad_vectorial",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: estabilidad_vectorial"
+  },
+  {
+   "nombre": "aquiles_h",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: aquiles_h"
+  },
+  {
+   "nombre": "billar_circular_v0_2",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: billar_circular_v0_2"
+  },
+  {
+   "nombre": "ricci_forman_v0_1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: ricci_forman_v0_1"
+  },
+  {
+   "nombre": "lateral_metrics_v1_1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: lateral_metrics_v1_1"
+  },
+  {
+   "nombre": "acero_zoomout",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: acero_zoomout"
+  },
+  {
+   "nombre": "capa2_antecedentes",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: capa2_antecedentes"
+  },
+  {
+   "nombre": "plugin_pregunta_detras",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: su salida no nombra ningún candidato del top: el puente no llega"
+    ]
+   },
+   "clase": "a",
+   "freno": "su salida no nombra ningún candidato del top: el puente no llega",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_pregunta_detras"
+  },
+  {
+   "nombre": "semiotica_deriva",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: semiotica_deriva"
+  },
+  {
+   "nombre": "caldero_run.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monom"
+    ]
+   },
+   "clase": "d",
+   "freno": "escaleta lineal (Marco-16 / Caldero II 2.0 f670b872) sustituida por cuadrantes circulares Q1-Q4 derivados de los cortes; ver fila plugin_circulo_monomito_v2.py",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: caldero_run.py"
+  },
+  {
+   "nombre": "vecinos_caldero/neighbor_store.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: dimensiones ['caldero_neighbor_memory', 'caldero_neighbor_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)"
+    ]
+   },
+   "clase": "a",
+   "freno": "dimensiones ['caldero_neighbor_memory', 'caldero_neighbor_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: vecinos_caldero/neighbor_store.py"
+  },
+  {
+   "nombre": "dynamis_dramatica_sistemica",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: corre en UNICO (l.~1703) y sus dims dynamis_* entran al vector de candidato"
+    ]
+   },
+   "clase": "a",
+   "freno": "corre en UNICO (l.~1703) y sus dims dynamis_* entran al vector de candidato",
+   "quien_lee_su_salida": "H",
+   "evidencia": "registro_componentes: dynamis_dramatica_sistemica"
+  },
+  {
+   "nombre": "pre_h_analogical_search(V0.18)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: pre_h_orientation_reused_caldero_search"
+    ]
+   },
+   "clase": "a",
+   "freno": "pre_h_orientation_reused_caldero_search",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: pre_h_analogical_search(V0.18)"
+  },
+  {
+   "nombre": "stinkbox_to_light_bus_v1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: dimensiones ['relational_activity', 'relational_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)"
+    ]
+   },
+   "clase": "a",
+   "freno": "dimensiones ['relational_activity', 'relational_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: stinkbox_to_light_bus_v1"
+  },
+  {
+   "nombre": "protocolo_transversal_absorbido",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: protocolo_transversal_absorbido"
+  },
+  {
+   "nombre": "laterales_unico_v1.py(pre)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: votos del hub que llegan al rank: negativo_ricci_vs_billar, familias_tokens_puente; los sensores del hub no alimentan al predictor"
+    ]
+   },
+   "clase": "a",
+   "freno": "votos del hub que llegan al rank: negativo_ricci_vs_billar, familias_tokens_puente; los sensores del hub no alimentan al predictor",
+   "quien_lee_su_salida": "H",
+   "evidencia": "registro_componentes: laterales_unico_v1.py(pre)"
+  },
+  {
+   "nombre": "hub:sombrero_blanco_entrada",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)"
+    ]
+   },
+   "clase": "b",
+   "freno": "entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: hub:sombrero_blanco_entrada"
+  },
+  {
+   "nombre": "hub:negativo_ricci_vs_billar",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 13 familias leídas; cuadrantes {'SOLO_BILLAR': 11, 'NINGUNO': 2}; lentes bajo nulo: ['billar', 'ricci']"
+    ]
+   },
+   "clase": "a",
+   "freno": "13 familias leídas; cuadrantes {'SOLO_BILLAR': 11, 'NINGUNO': 2}; lentes bajo nulo: ['billar', 'ricci']",
+   "quien_lee_su_salida": "H",
+   "evidencia": "registro_componentes: hub:negativo_ricci_vs_billar"
+  },
+  {
+   "nombre": "hub:familias_tokens_puente",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: EXPERIMENTAL; 5 candidatos con señal; voto varía; coactivación indep 1, trivial 0"
+    ]
+   },
+   "clase": "a",
+   "freno": "EXPERIMENTAL; 5 candidatos con señal; voto varía; coactivación indep 1, trivial 0",
+   "quien_lee_su_salida": "H",
+   "evidencia": "registro_componentes: hub:familias_tokens_puente"
+  },
+  {
+   "nombre": "hub:marco_7783_geometria",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 3/7; Polti en 4/7; intersecciones de anillos 0 en ["
+    ]
+   },
+   "clase": "a",
+   "freno": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 3/7; Polti en 4/7; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: hub:marco_7783_geometria"
+  },
+  {
+   "nombre": "hub:caldero_ii_cuadrantes",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: Q1-Q4 derivados de tokens del corte: 3/7 cortes con cuadrante; puente Caldero=False"
+    ]
+   },
+   "clase": "a",
+   "freno": "Q1-Q4 derivados de tokens del corte: 3/7 cortes con cuadrante; puente Caldero=False",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: hub:caldero_ii_cuadrantes"
+  },
+  {
+   "nombre": "hub:guardian_entrada_autoevidencia",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: bandera=False autoevidencia=0 familias=[]"
+    ]
+   },
+   "clase": "b",
+   "freno": "bandera=False autoevidencia=0 familias=[]",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: hub:guardian_entrada_autoevidencia"
+  },
+  {
+   "nombre": "funciones_souriau",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: funciones_souriau"
+  },
+  {
+   "nombre": "matriz_clases",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: registro de PRESENCIA de MATRIZ/PUENTE/familias_tokens (inventario; no depende del caso); sin nombres de candidato -> no entra al ranking"
+    ]
+   },
+   "clase": "b",
+   "freno": "registro de PRESENCIA de MATRIZ/PUENTE/familias_tokens (inventario; no depende del caso); sin nombres de candidato -> no entra al ranking",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: matriz_clases"
+  },
+  {
+   "nombre": "figura_pac",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: asigna_foco_no_intercambia_sujeto"
+    ]
+   },
+   "clase": "a",
+   "freno": "asigna_foco_no_intercambia_sujeto",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: figura_pac"
+  },
+  {
+   "nombre": "compuerta_cierre_latencia_v0_16_4",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: compuerta_cierre_latencia_v0_16_4"
+  },
+  {
+   "nombre": "proyeccion_longitudinal",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: proyeccion_longitudinal"
+  },
+  {
+   "nombre": "plugin_entrega_luces",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_entrega_luces"
+  },
+  {
+   "nombre": "ruta_cierre_latente_guardianes",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: ruta_cierre_latente_guardianes"
+  },
+  {
+   "nombre": "laterales_unico_v1.py(post)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: laterales_unico_v1.py(post)"
+  },
+  {
+   "nombre": "resolucion_operativa_terminal_017",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: None"
+    ]
+   },
+   "clase": "b",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: resolucion_operativa_terminal_017"
+  },
+  {
+   "nombre": "cierre_final_016",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: cierre_final_016"
+  },
+  {
+   "nombre": "geometria_multicapa_integrada_working_v1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "None",
+   "quien_lee_su_salida": "H",
+   "evidencia": "registro_componentes: geometria_multicapa_integrada_working_v1"
+  },
+  {
+   "nombre": "traza_campo_244_dedupe",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: sin doble copia en features (nada que deduplicar)"
+    ]
+   },
+   "clase": "b",
+   "freno": "sin doble copia en features (nada que deduplicar)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: traza_campo_244_dedupe"
+  },
+  {
+   "nombre": "sombrero_blanco_entrada",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)"
+    ]
+   },
+   "clase": "b",
+   "freno": "entrada limpia: sin fuera_catalogo, sin ruido de protocolo, sin campos prohibidos, sin textos meta (nada que filtrar)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: sombrero_blanco_entrada"
+  },
+  {
+   "nombre": "negativo_ricci_vs_billar",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 13 familias leídas; cuadrantes {'SOLO_BILLAR': 11, 'NINGUNO': 2}; lentes bajo nulo: ['billar', 'ricci']"
+    ]
+   },
+   "clase": "a",
+   "freno": "13 familias leídas; cuadrantes {'SOLO_BILLAR': 11, 'NINGUNO': 2}; lentes bajo nulo: ['billar', 'ricci']",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: negativo_ricci_vs_billar"
+  },
+  {
+   "nombre": "familias_tokens_puente",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: EXPERIMENTAL; 5 candidatos con señal; voto varía; coactivación indep 1, trivial 0"
+    ]
+   },
+   "clase": "a",
+   "freno": "EXPERIMENTAL; 5 candidatos con señal; voto varía; coactivación indep 1, trivial 0",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: familias_tokens_puente"
+  },
+  {
+   "nombre": "area_tokens",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 30 familias registradas; activas: arquetipos_dinamicos.propp_01_villano_agresor@['C1_1831', 'C2_1846', 'C5_1852', 'C7_1861']:['estabilidad', 'persecuc"
+    ]
+   },
+   "clase": "a",
+   "freno": "30 familias registradas; activas: arquetipos_dinamicos.propp_01_villano_agresor@['C1_1831', 'C2_1846', 'C5_1852', 'C7_1861']:['estabilidad', 'persecucion']; consumo_sustancias.sustancias_02_moderado@[",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: area_tokens"
+  },
+  {
+   "nombre": "memento",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: proto-H ['reflexion', 'defensa_debil', 'compromiso']; se sostiene: None"
+    ]
+   },
+   "clase": "a",
+   "freno": "proto-H ['reflexion', 'defensa_debil', 'compromiso']; se sostiene: None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: memento"
+  },
+  {
+   "nombre": "luces_gemini_packs",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: luces activas: 0"
+    ]
+   },
+   "clase": "b",
+   "freno": "luces activas: 0",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: luces_gemini_packs"
+  },
+  {
+   "nombre": "amantes_arquetipos",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: gatillo: None"
+    ]
+   },
+   "clase": "b",
+   "freno": "gatillo: None",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: amantes_arquetipos"
+  },
+  {
+   "nombre": "marco_7783_geometria",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 3/7; Polti en 4/7; intersecciones de anillos 0 en ["
+    ]
+   },
+   "clase": "a",
+   "freno": "PATCH009: zonas [0] (0 transiciones, 0 revisitas); discrepancia media 0.0; cúmulos 0; cuadrante en 3/7; Polti en 4/7; intersecciones de anillos 0 en []; mapeo seis funciones->7783 PENDIENTE regla Mj (",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: marco_7783_geometria"
+  },
+  {
+   "nombre": "trazabilidad_temporal",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: PATCH004 lee P/A/C: 47 tokens trazados; estados {'ON': 12, 'PARPADEO': 15, 'NO_APARECIDO_AUN': 0, 'OFF': 20}; PATCH009 capa geométrica Souriau/Caldero"
+    ]
+   },
+   "clase": "a",
+   "freno": "PATCH004 lee P/A/C: 47 tokens trazados; estados {'ON': 12, 'PARPADEO': 15, 'NO_APARECIDO_AUN': 0, 'OFF': 20}; PATCH009 capa geométrica Souriau/Caldero/Polti adjunta",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: trazabilidad_temporal"
+  },
+  {
+   "nombre": "integracion_semantica",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 7 configuraciones"
+    ]
+   },
+   "clase": "a",
+   "freno": "7 configuraciones",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: integracion_semantica"
+  },
+  {
+   "nombre": "interrelacion_tokens",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: relación por corte entre familias activas (top5 P) y contexto"
+    ]
+   },
+   "clase": "a",
+   "freno": "relación por corte entre familias activas (top5 P) y contexto",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: interrelacion_tokens"
+  },
+  {
+   "nombre": "cuerpo_arco",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: sin tokens de cuerpo/salud en P/A/C ni en textos admitidos (ninguna enfermedad/herida/agonía/muerte en el input)"
+    ]
+   },
+   "clase": "b",
+   "freno": "sin tokens de cuerpo/salud en P/A/C ni en textos admitidos (ninguna enfermedad/herida/agonía/muerte en el input)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: cuerpo_arco"
+  },
+  {
+   "nombre": "alias_reactivacion",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: alias propuestos 0; faltaron []"
+    ]
+   },
+   "clase": "b",
+   "freno": "alias propuestos 0; faltaron []",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: alias_reactivacion"
+  },
+  {
+   "nombre": "fix_entrada",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: remapeo propuesto (no aplicado)"
+    ]
+   },
+   "clase": "a",
+   "freno": "remapeo propuesto (no aplicado)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: fix_entrada"
+  },
+  {
+   "nombre": "familias_gloria_sacro",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: familias fuera del catálogo cargado (fusionar() escribiría patterns: prohibido); solo se reportan tokens observados"
+    ]
+   },
+   "clase": "b",
+   "freno": "familias fuera del catálogo cargado (fusionar() escribiría patterns: prohibido); solo se reportan tokens observados",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: familias_gloria_sacro"
+  },
+  {
+   "nombre": "lente_souriau",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: focos con valor: 0"
+    ]
+   },
+   "clase": "b",
+   "freno": "focos con valor: 0",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: lente_souriau"
+  },
+  {
+   "nombre": "souriau_v1_4",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "MARCAJE: MARCAJE — decisión Mj 2026-10-06: aritmética Souriau 210141 = marcaje, no trazabilidad | PATCH007: 7 situaciones por corte, 0 relaciones entre funcion"
+    ]
+   },
+   "clase": "b",
+   "freno": "MARCAJE — decisión Mj 2026-10-06: aritmética Souriau 210141 = marcaje, no trazabilidad | PATCH007: 7 situaciones por corte, 0 relaciones entre funciones; funciones DERIVADAS (no declaradas)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: souriau_v1_4"
+  },
+  {
+   "nombre": "zri_v0_1_v0_2",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: v0.1: 7 sellos; v0.2: acople P/A/C en 7 cortes; E_n no se calcula (no hay resultado liberado); PATCH009 + acople de anillos"
+    ]
+   },
+   "clase": "a",
+   "freno": "v0.1: 7 sellos; v0.2: acople P/A/C en 7 cortes; E_n no se calcula (no hay resultado liberado); PATCH009 + acople de anillos",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: zri_v0_1_v0_2"
+  },
+  {
+   "nombre": "tusi_par",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 6 pares con índice de Tusi"
+    ]
+   },
+   "clase": "a",
+   "freno": "6 pares con índice de Tusi",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: tusi_par"
+  },
+  {
+   "nombre": "schrodinger_transport",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: puente V0_1: trayectoria regularizada; TV transversal 0.9862150475591507 -> 0.9360830650360552; V0_2: TV -> 0.5195313513542134"
+    ]
+   },
+   "clase": "a",
+   "freno": "puente V0_1: trayectoria regularizada; TV transversal 0.9862150475591507 -> 0.9360830650360552; V0_2: TV -> 0.5195313513542134",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: schrodinger_transport"
+  },
+  {
+   "nombre": "caldero_ii_cuadrantes",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: Q1-Q4 derivados de tokens del corte: 3/7 cortes con cuadrante; puente Caldero=False"
+    ]
+   },
+   "clase": "a",
+   "freno": "Q1-Q4 derivados de tokens del corte: 3/7 cortes con cuadrante; puente Caldero=False",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: caldero_ii_cuadrantes"
+  },
+  {
+   "nombre": "predictor_vecinos_prefijo",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: PATCH005 intentado: ningún corte inicial trae estado monomítico exacto (sin prefijo; no se rellena)"
+    ]
+   },
+   "clase": "b",
+   "freno": "PATCH005 intentado: ningún corte inicial trae estado monomítico exacto (sin prefijo; no se rellena)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: predictor_vecinos_prefijo"
+  },
+  {
+   "nombre": "filtro_identidad_zoom",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: sin fuentes de búsqueda verificables (caldero_search_sources o puente conectado ausentes): nada que filtrar"
+    ]
+   },
+   "clase": "b",
+   "freno": "sin fuentes de búsqueda verificables (caldero_search_sources o puente conectado ausentes): nada que filtrar",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: filtro_identidad_zoom"
+  },
+  {
+   "nombre": "venn_sistemas",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 7 cortes; 1 con intersección entre sistemas; núcleo ≥3 sistemas en []; vacíos en todo el caso: ['souriau', 'cameo', 'memoria_caldero']"
+    ]
+   },
+   "clase": "a",
+   "freno": "7 cortes; 1 con intersección entre sistemas; núcleo ≥3 sistemas en []; vacíos en todo el caso: ['souriau', 'cameo', 'memoria_caldero']",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: venn_sistemas"
+  },
+  {
+   "nombre": "plugin_metodo_rigor (alimentado)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOPENHAUER requieren hipótesis/inverso (post-H, guardianes)"
+    ]
+   },
+   "clase": "b",
+   "freno": "cadena top1 por corte sin 4 cortes iguales seguidos (sin alarma HECATE); HOLMES/SCHOPENHAUER requieren hipótesis/inverso (post-H, guardianes)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_metodo_rigor (alimentado)"
+  },
+  {
+   "nombre": "plugin_pregunta_dirigida (verificado)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: pregunta neutral: ninguna estructura dirigida detectada"
+    ]
+   },
+   "clase": "b",
+   "freno": "pregunta neutral: ninguna estructura dirigida detectada",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_pregunta_dirigida (verificado)"
+  },
+  {
+   "nombre": "protocolo_orden0 (verificado)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: constante por diseño: arranque_matriz es un contrato fijo y clasificar_para_protocolo clasifica OBSTÁCULOS de ejecución (aquí 'typo_ruta' por defecto)"
+    ]
+   },
+   "clase": "b",
+   "freno": "constante por diseño: arranque_matriz es un contrato fijo y clasificar_para_protocolo clasifica OBSTÁCULOS de ejecución (aquí 'typo_ruta' por defecto); el input no trae obstáculo -> no es un sensor de",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: protocolo_orden0 (verificado)"
+  },
+  {
+   "nombre": "guardian_entrada_autoevidencia",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: bandera=False autoevidencia=0 familias=[]"
+    ]
+   },
+   "clase": "b",
+   "freno": "bandera=False autoevidencia=0 familias=[]",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: guardian_entrada_autoevidencia"
+  },
+  {
+   "nombre": "aquiles_bootstrap",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: estado PARA_DE_EMPUJAR_H N_min 256; ganador remuestreo arquetipo_el_sabio = top1"
+    ]
+   },
+   "clase": "a",
+   "freno": "estado PARA_DE_EMPUJAR_H N_min 256; ganador remuestreo arquetipo_el_sabio = top1",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: aquiles_bootstrap"
+  },
+  {
+   "nombre": "aquiles_ancla_estricto",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: llamada real: estado_H=NO_VERIFICADO motivo='no hay eje_candidato; prohibido fabricarlo por bigrama' (sin eje_candidato con cita en el input; prohibid"
+    ]
+   },
+   "clase": "b",
+   "freno": "llamada real: estado_H=NO_VERIFICADO motivo='no hay eje_candidato; prohibido fabricarlo por bigrama' (sin eje_candidato con cita en el input; prohibido fabricarlo)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: aquiles_ancla_estricto"
+  },
+  {
+   "nombre": "perfil_narrador",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: 16 puntos ciegos (0 ALTO); 6 preguntas"
+    ]
+   },
+   "clase": "a",
+   "freno": "16 puntos ciegos (0 ALTO); 6 preguntas",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: perfil_narrador"
+  },
+  {
+   "nombre": "sombrero_blanco_salida",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: salida limpia: 10 candidatos del catálogo, evidencia solo con vocabulario del catálogo, sin ruido de protocolo (nada que filtrar)"
+    ]
+   },
+   "clase": "b",
+   "freno": "salida limpia: 10 candidatos del catálogo, evidencia solo con vocabulario del catálogo, sin ruido de protocolo (nada que filtrar)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: sombrero_blanco_salida"
+  },
+  {
+   "nombre": "plugin_sombrero_blanco_token (declaración)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: n_esta_corrida=0; feeds_predictor VERIFICADO=False (la fila UNICO declara True; corrige 010b)"
+    ]
+   },
+   "clase": "b",
+   "freno": "n_esta_corrida=0; feeds_predictor VERIFICADO=False (la fila UNICO declara True; corrige 010b)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_sombrero_blanco_token (declaración)"
+  },
+  {
+   "nombre": "n_piezas (verificado)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: control de conteo (constante por diseño entre casos): pre=33 + post=6 (+esta fila) = 40; el n_piezas de component_status es solo el PRE"
+    ]
+   },
+   "clase": "b",
+   "freno": "control de conteo (constante por diseño entre casos): pre=33 + post=6 (+esta fila) = 40; el n_piezas de component_status es solo el PRE",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: n_piezas (verificado)"
+  },
+  {
+   "nombre": "verificado:familias_tokens_puente (voto hub)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:familias_tokens_puente (voto hub)"
+  },
+  {
+   "nombre": "verificado:negativo_ricci_vs_billar (voto hub)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H"
+    ]
+   },
+   "clase": "a",
+   "freno": "declarado=(sin fila en component_status; voto del hub guardado en features) | llega=['H(rank_fusion:señal_lateral)'] | llega a H",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:negativo_ricci_vs_billar (voto hub)"
+  },
+  {
+   "nombre": "verificado:dynamis_dramatica_sistemica",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: declarado=(sin fila en component_status) | llega=['H(dim:dynamis_shared_evidence)', 'H(dim:dynamis_load_shift_loop)', 'H(dim:dynamis_emotional_oscilla"
+    ]
+   },
+   "clase": "a",
+   "freno": "declarado=(sin fila en component_status) | llega=['H(dim:dynamis_shared_evidence)', 'H(dim:dynamis_load_shift_loop)', 'H(dim:dynamis_emotional_oscillation)', 'H(dim:dynamis_guardian_attenuation)', 'H(",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:dynamis_dramatica_sistemica"
+  },
+  {
+   "nombre": "verificado:matriz_clases",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=PRESENTE | llega=no | registro de PRESENCIA de MATRIZ_EQUIVALENCIAS_ESCALA.json / PUENTE_244_FAMILIAS.json / familias_tokens (inventario; no"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=PRESENTE | llega=no | registro de PRESENCIA de MATRIZ_EQUIVALENCIAS_ESCALA.json / PUENTE_244_FAMILIAS.json / familias_tokens (inventario; no depende del caso). Su salida no trae nombres de c",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:matriz_clases"
+  },
+  {
+   "nombre": "verificado:plugin_guardia_no_cruce.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=ABSORBIDO_EN_GUARDIA_TRANSVERSAL | llega=no | absorbido: la lógica corre en GuardiaNoCruce dentro de _run_transversal_guards (protocol_contr"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=ABSORBIDO_EN_GUARDIA_TRANSVERSAL | llega=no | absorbido: la lógica corre en GuardiaNoCruce dentro de _run_transversal_guards (protocol_controls); el archivo se carga como artefacto, no como ",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:plugin_guardia_no_cruce.py"
+  },
+  {
+   "nombre": "verificado:cameo_to_244_adapter_v1.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=NOT_APPLICABLE | llega=no | el adaptador CAMEO->244 (legado, solo auditoría) devuelve NOT_APPLICABLE porque falta el mapping aprobado cameo_"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=NOT_APPLICABLE | llega=no | el adaptador CAMEO->244 (legado, solo auditoría) devuelve NOT_APPLICABLE porque falta el mapping aprobado cameo_to_244.json; UNICO sobrescribe su salida a AUDIT_O",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:cameo_to_244_adapter_v1.py"
+  },
+  {
+   "nombre": "verificado:protocolo_orden0",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=(sin fila) | llega=no | constante por diseño (contrato de arranque + clasificación de obstáculos de ejecución)"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=(sin fila) | llega=no | constante por diseño (contrato de arranque + clasificación de obstáculos de ejecución)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:protocolo_orden0"
+  },
+  {
+   "nombre": "verificado:plugin_sombrero_blanco_token.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "GUARDIAN_FILTRO: declarado=EXECUTED feeds_predictor=True | llega=no | GUARDIAN/FILTRO post-apuesta (tokens fuera de catálogo -> StinkBox). No alimenta al predictor"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=EXECUTED feeds_predictor=True | llega=no | GUARDIAN/FILTRO post-apuesta (tokens fuera de catálogo -> StinkBox). No alimenta al predictor",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:plugin_sombrero_blanco_token.py"
+  },
+  {
+   "nombre": "verificado:pre_h_analogical_search(V0.18)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA: declarado=EXECUTED | llega=no | status=EXECUTED; fuentes=8; tokens analógicos=[{'token': '11-uppgraderingen', 'coactivation_frequency': 1, 'source_ref"
+    ]
+   },
+   "clase": "a",
+   "freno": "declarado=EXECUTED | llega=no | status=EXECUTED; fuentes=8; tokens analógicos=[{'token': '11-uppgraderingen', 'coactivation_frequency': 1, 'source_refs': ['https://support.microsoft.com/sv-se/windows/",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:pre_h_analogical_search(V0.18)"
+  },
+  {
+   "nombre": "verificado:sidecar_caldero_busqueda_arquetipos.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=EJECUTADO | llega=no | EJECUTADO: provider=bing_html intento=EXECUTED resultados=8 consultas=1; 74 tokens vecinos; su salida no nombra ningú"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=EJECUTADO | llega=no | EJECUTADO: provider=bing_html intento=EXECUTED resultados=8 consultas=1; 74 tokens vecinos; su salida no nombra ningún candidato del top: el puente no llega; dimension",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:sidecar_caldero_busqueda_arquetipos.py"
+  },
+  {
+   "nombre": "verificado:vecinos_caldero/neighbor_store.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=EJECUTADO feeds_H=True | llega=no | dimensiones ['caldero_neighbor_memory', 'caldero_neighbor_alignment'] excluidas por dimension_guard (con"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=EJECUTADO feeds_H=True | llega=no | dimensiones ['caldero_neighbor_memory', 'caldero_neighbor_alignment'] excluidas por dimension_guard (constantes/duplicadas entre candidatos)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:vecinos_caldero/neighbor_store.py"
+  },
+  {
+   "nombre": "verificado:plugin_cameo_institucional.py (coherencia feeds_H)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_MUDA: declarado=fila feeds_H=False / salida feeds_H=False | llega=no | su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['cameo"
+    ]
+   },
+   "clase": "b",
+   "freno": "declarado=fila feeds_H=False / salida feeds_H=False | llega=no | su salida no nombra ningún candidato del top: el puente no llega; dimensiones ['cameo_activity', 'cameo_profile_activity'] excluidas po",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: verificado:plugin_cameo_institucional.py (coherencia feeds_H)"
+  },
+  {
+   "nombre": "B9_V0_9_TORTUGA.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: motor alterno V0.9 viejo; las tortugas nativas y la ruta de tortugas de guardianes ya corren en este motor"
+    ]
+   },
+   "clase": "d",
+   "freno": "motor alterno V0.9 viejo; las tortugas nativas y la ruta de tortugas de guardianes ya corren en este motor",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: B9_V0_9_TORTUGA.py"
+  },
+  {
+   "nombre": "stinkbox v0.1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: contenida en StinkBox v0.2 (86b791d6, activa con compuerta de pendientes)"
+    ]
+   },
+   "clase": "d",
+   "freno": "contenida en StinkBox v0.2 (86b791d6, activa con compuerta de pendientes)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: stinkbox v0.1"
+  },
+  {
+   "nombre": "caldero_run.py (Caldero II 2.0)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "NO_CORRE: necesita lib/ propia y una escaleta/fixture externo; los 7 casos no la traen"
+    ]
+   },
+   "clase": "d",
+   "freno": "necesita lib/ propia y una escaleta/fixture externo; los 7 casos no la traen",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: caldero_run.py (Caldero II 2.0)"
+  },
+  {
+   "nombre": "montecarlo_predictibilidad_semantica_v1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "FUERA_DEL_MOTOR: análisis específico del caso Jobs; no es pieza de corrida general"
+    ]
+   },
+   "clase": "d",
+   "freno": "análisis específico del caso Jobs; no es pieza de corrida general",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: montecarlo_predictibilidad_semantica_v1"
+  },
+  {
+   "nombre": "sofista.py",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "FUERA_DEL_MOTOR: laboratorio de red team; no se ejecuta en corridas"
+    ]
+   },
+   "clase": "d",
+   "freno": "laboratorio de red team; no se ejecuta en corridas",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: sofista.py"
+  },
+  {
+   "nombre": "v153_lateral_metrics (versiones previas)",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: activa lente_lateral_metrics_v1_1_galileo (con dimensión = 3×len(catálogo))"
+    ]
+   },
+   "clase": "d",
+   "freno": "activa lente_lateral_metrics_v1_1_galileo (con dimensión = 3×len(catálogo))",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: v153_lateral_metrics (versiones previas)"
+  },
+  {
+   "nombre": "tracing_engine / V11 / V15.1 / V15.2",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: versiones anteriores del motor"
+    ]
+   },
+   "clase": "d",
+   "freno": "versiones anteriores del motor",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: tracing_engine / V11 / V15.1 / V15.2"
+  },
+  {
+   "nombre": "sidecar_latencia_decimo_hombre",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: alias contenido en control_latencia_decimo_hombre (activo)"
+    ]
+   },
+   "clase": "d",
+   "freno": "alias contenido en control_latencia_decimo_hombre (activo)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: sidecar_latencia_decimo_hombre"
+  },
+  {
+   "nombre": "plugin_pregunta_dirigida 0.4.1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: reemplazada por 0.5.1 (8aa9fc79)"
+    ]
+   },
+   "clase": "d",
+   "freno": "reemplazada por 0.5.1 (8aa9fc79)",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_pregunta_dirigida 0.4.1"
+  },
+  {
+   "nombre": "plugin_circulo_monomito v1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: el motor carga primero monomito_v2 (8cd81bc1); v1 queda como respaldo si falta v2"
+    ]
+   },
+   "clase": "d",
+   "freno": "el motor carga primero monomito_v2 (8cd81bc1); v1 queda como respaldo si falta v2",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_circulo_monomito v1"
+  },
+  {
+   "nombre": "plugin_pregunta_detras_v2 2.3.2",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: falso positivo 'esta' demostrativo corregido en 2.3.3; original en rescate/"
+    ]
+   },
+   "clase": "d",
+   "freno": "falso positivo 'esta' demostrativo corregido en 2.3.3; original en rescate/",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: plugin_pregunta_detras_v2 2.3.2"
+  },
+  {
+   "nombre": "guardianes_control_v1 V1.1",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "SUPERADA: V1.2 espera detrás 2.3.3; original en rescate/"
+    ]
+   },
+   "clase": "d",
+   "freno": "V1.2 espera detrás 2.3.3; original en rescate/",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: guardianes_control_v1 V1.1"
+  },
+  {
+   "nombre": "Engine falso",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "PROHIBIDA: candado: nunca se copia ni se carga; el orquestador lo verifica en cada run dir"
+    ]
+   },
+   "clase": "d",
+   "freno": "candado: nunca se copia ni se carga; el orquestador lo verifica en cada run dir",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: Engine falso"
+  },
+  {
+   "nombre": "gate_z90",
+   "archivo": "(registro_componentes, sin archivo .py propio en el barrido)",
+   "cableado": {},
+   "estado_textual": {
+    "registro": [
+     "ACTIVA_DIAGNOSTICA: Cableado en runner (pre-motor, diagnóstico); no bloquea la corrida ni escribe H1/H2."
+    ]
+   },
+   "clase": "b",
+   "freno": "Cableado en runner (pre-motor, diagnóstico); no bloquea la corrida ni escribe H1/H2.",
+   "quien_lee_su_salida": "nadie registrado",
+   "evidencia": "registro_componentes: gate_z90"
+  }
+ ]
+}

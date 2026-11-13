@@ -1,0 +1,443 @@
+{
+  "casos_3c": [
+    {
+      "caso": "CAL_F001_01_NAPOLEON",
+      "n_cortes": 3,
+      "dX": [
+        0.675,
+        0.622
+      ],
+      "perfil": "plano",
+      "ratio": 0.92,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F001_02_TESLA",
+      "n_cortes": 3,
+      "dX": [
+        0.418,
+        0.413
+      ],
+      "perfil": "plano",
+      "ratio": 0.99,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F001_03_WILDE",
+      "n_cortes": 3,
+      "dX": [
+        0.385,
+        0.637
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.65,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F001_04_DISNEY",
+      "n_cortes": 3,
+      "dX": [
+        0.619,
+        0.553
+      ],
+      "perfil": "plano",
+      "ratio": 0.89,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F001_05_TURING",
+      "n_cortes": 3,
+      "dX": [
+        0.389,
+        0.47
+      ],
+      "perfil": "plano",
+      "ratio": 1.21,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F002_01_GALILEI",
+      "n_cortes": 3,
+      "dX": [
+        0.527,
+        0.383
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.73,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F002_02_PASTEUR",
+      "n_cortes": 3,
+      "dX": [
+        0.505,
+        0.436
+      ],
+      "perfil": "plano",
+      "ratio": 0.86,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_03_ARBUCKLE",
+      "n_cortes": 3,
+      "dX": [
+        0.544,
+        0.423
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.78,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_04_BACH",
+      "n_cortes": 3,
+      "dX": [
+        0.437,
+        0.686
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.57,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_05_MCCARTHY",
+      "n_cortes": 3,
+      "dX": [
+        0.571,
+        0.518
+      ],
+      "perfil": "plano",
+      "ratio": 0.91,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F002_06_COOLIDGE",
+      "n_cortes": 3,
+      "dX": [
+        0.263,
+        0.54
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 2.05,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_07_CATALINA",
+      "n_cortes": 3,
+      "dX": [
+        0.641,
+        0.606
+      ],
+      "perfil": "plano",
+      "ratio": 0.95,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_08_LUISXVI",
+      "n_cortes": 3,
+      "dX": [
+        0.407,
+        0.411
+      ],
+      "perfil": "plano",
+      "ratio": 1.01,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F002_09_ROCKEFELLER",
+      "n_cortes": 3,
+      "dX": [
+        0.683,
+        0.501
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.73,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F002_10_DURANT",
+      "n_cortes": 3,
+      "dX": [
+        0.445,
+        0.393
+      ],
+      "perfil": "plano",
+      "ratio": 0.88,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_01_CARAVAGGIO",
+      "n_cortes": 3,
+      "dX": [
+        0.548,
+        0.428
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.78,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_02_DICKENS",
+      "n_cortes": 3,
+      "dX": [
+        0.534,
+        0.377
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.71,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F003_03_LAVOISIER",
+      "n_cortes": 3,
+      "dX": [
+        0.58,
+        0.556
+      ],
+      "perfil": "plano",
+      "ratio": 0.96,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_04_FARADAY",
+      "n_cortes": 3,
+      "dX": [
+        0.58,
+        0.403
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.7,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F003_05_FOUQUET",
+      "n_cortes": 3,
+      "dX": [
+        0.358,
+        0.524
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.46,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_06_TROTSKY",
+      "n_cortes": 3,
+      "dX": [
+        0.347,
+        0.476
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.37,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_07_LINCOLN",
+      "n_cortes": 3,
+      "dX": [
+        0.411,
+        0.429
+      ],
+      "perfil": "plano",
+      "ratio": 1.04,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F003_08_LAW",
+      "n_cortes": 3,
+      "dX": [
+        0.671,
+        0.494
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.74,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F003_09_CARNEGIE",
+      "n_cortes": 3,
+      "dX": [
+        0.396,
+        0.641
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.62,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F003_10_PEDRO_II",
+      "n_cortes": 3,
+      "dX": [
+        0.355,
+        0.437
+      ],
+      "perfil": "plano",
+      "ratio": 1.23,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F004_01_WAGNER",
+      "n_cortes": 3,
+      "dX": [
+        0.571,
+        0.404
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.71,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_02_DAVID",
+      "n_cortes": 3,
+      "dX": [
+        0.554,
+        0.931
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.68,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_03_OPPENHEIMER",
+      "n_cortes": 3,
+      "dX": [
+        0.35,
+        0.345
+      ],
+      "perfil": "plano",
+      "ratio": 0.99,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_04_MENDEL",
+      "n_cortes": 3,
+      "dX": [
+        0.492,
+        0.493
+      ],
+      "perfil": "plano",
+      "ratio": 1.0,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_05_KHRUSHCHEV",
+      "n_cortes": 3,
+      "dX": [
+        0.651,
+        0.334
+      ],
+      "perfil": "quema_al_inicio",
+      "ratio": 0.51,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F004_06_TRUMAN",
+      "n_cortes": 3,
+      "dX": [
+        0.415,
+        0.347
+      ],
+      "perfil": "plano",
+      "ratio": 0.84,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_07_CHANEL",
+      "n_cortes": 3,
+      "dX": [
+        0.545,
+        0.693
+      ],
+      "perfil": "plano_y_quema_al_final",
+      "ratio": 1.27,
+      "fatalidad": false
+    },
+    {
+      "caso": "CAL_F004_08_LESSEPS",
+      "n_cortes": 3,
+      "dX": [
+        0.449,
+        0.372
+      ],
+      "perfil": "plano",
+      "ratio": 0.83,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F004_09_LAY",
+      "n_cortes": 3,
+      "dX": [
+        0.503,
+        0.505
+      ],
+      "perfil": "plano",
+      "ratio": 1.0,
+      "fatalidad": true
+    },
+    {
+      "caso": "CAL_F004_10_LUDWIG_II",
+      "n_cortes": 3,
+      "dX": [
+        0.623,
+        0.55
+      ],
+      "perfil": "plano",
+      "ratio": 0.88,
+      "fatalidad": true
+    }
+  ],
+  "largos": [
+    {
+      "caso": "MOZART_Z90",
+      "n_cortes": 10,
+      "dX": [
+        0.237,
+        0.18,
+        0.231,
+        0.144,
+        0.267,
+        0.189,
+        0.132,
+        0.416,
+        0.2
+      ],
+      "mediana_dX": 0.2,
+      "ultimo_vs_mediana_previa": 0.95
+    },
+    {
+      "caso": "NAPOLEON_Z90",
+      "n_cortes": 10,
+      "dX": [
+        0.406,
+        0.327,
+        0.229,
+        0.379,
+        0.171,
+        0.173,
+        0.077,
+        0.394,
+        0.269
+      ],
+      "mediana_dX": 0.269,
+      "ultimo_vs_mediana_previa": 0.97
+    }
+  ],
+  "referencia_freeze": {
+    "NOETHER_freeze_sep": [
+      0.6103,
+      0.7165,
+      0.4773,
+      0.4472,
+      0.4988,
+      0.5309
+    ],
+    "CARSON_freeze_sep": [
+      0.5985,
+      0.6752,
+      0.3586,
+      0.4682,
+      0.7048,
+      0.6698
+    ]
+  }
+}

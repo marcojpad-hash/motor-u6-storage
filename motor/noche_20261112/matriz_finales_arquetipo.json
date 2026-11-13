@@ -1,0 +1,609 @@
+{
+  "31_conflicto_con_un_dios": [
+    {
+      "caso": "F001 01 Napoleon",
+      "H2": "30_ambicion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "6_desastre",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F001 03 Wilde",
+      "H2": "schwartz_08_hedonismo",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "5_persecucion",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F004 09 Lay",
+      "H2": "30_ambicion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "minsky_03_ponzi",
+        "6_desastre",
+        "33_error_de_juicio",
+        "17_fatal_imprudencia"
+      ]
+    }
+  ],
+  "22_todo_sacrificado_por_una_pasion": [
+    {
+      "caso": "F001 02 Tesla",
+      "H2": "30_ambicion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "22_todo_sacrificado_por_una_pasion",
+        "9_audaz_empresa",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F004 10 Ludwig Ii",
+      "H2": "arquetipo_el_creador",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "16_locura",
+        "7_caer_victima",
+        "weber_01_autoridad_tradicional",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "schwartz_10_autodireccion": [
+    {
+      "caso": "F001 04 Disney",
+      "H2": "30_ambicion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": false,
+      "desenlace": [
+        "35_recuperacion_de_lo_perdido",
+        "9_audaz_empresa",
+        "schwartz_07_logro",
+        "duelo_bonanno_01_resiliencia"
+      ]
+    }
+  ],
+  "utopia_mentalidad_liberal": [
+    {
+      "caso": "F001 05 Turing",
+      "H2": "arquetipo_el_sabio",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "5_persecucion",
+        "7_caer_victima",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "arquetipo_el_sabio": [
+    {
+      "caso": "F002 01 Galilei",
+      "H2": "kwml_03_mago",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "5_persecucion",
+        "31_conflicto_con_un_dios",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F003 03 Lavoisier",
+      "H2": "tainter_01_inversion_complejidad_productiva",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "7_caer_victima",
+        "5_persecucion",
+        "social_08_girard_mimesis_y_chivo_expiatorio",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F004 04 Mendel",
+      "H2": "spengler_02_verano_otono_racionalizacion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": false,
+      "desenlace": [
+        "arquetipo_el_sabio",
+        "social_04_rogers_difusion_innovaciones",
+        "erikson_07_generatividad_vs_estancamiento",
+        "jaldun_02_institucionalizacion_y_sedentarismo"
+      ]
+    },
+    {
+      "caso": "SEMMELWEIS",
+      "H2": "20_sacrificio_por_un_ideal",
+      "perfil_quema": "plano",
+      "radio": "rompe_C7",
+      "fatalidad": true,
+      "desenlace": [
+        "20_sacrificio_por_un_ideal",
+        "5_persecucion",
+        "heroe",
+        "frye_mythos_tragedia"
+      ],
+      "nota": "sin trono; heroe/arquetipo_heroe/arquetipo_el_heroe/sacrificio en 0.8013; gobernante/rey planos 0.5"
+    }
+  ],
+  "9_audaz_empresa": [
+    {
+      "caso": "F002 02 Pasteur",
+      "H2": "arquetipo_el_sabio",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "9_audaz_empresa",
+        "2_salvacion",
+        "schwartz_07_logro",
+        "arquetipo_el_sabio"
+      ]
+    },
+    {
+      "caso": "F004 05 Khrushchev",
+      "H2": "30_ambicion",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "24_rivalidad_de_superior_e_inferior",
+        "33_error_de_juicio",
+        "7_caer_victima",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F004 06 Truman",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "schwartz_07_logro",
+        "35_recuperacion_de_lo_perdido",
+        "arquetipo_el_ciudadano",
+        "weber_03_autoridad_legal_racional"
+      ]
+    },
+    {
+      "caso": "F004 08 Lesseps",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "schwartz_07_logro": [
+    {
+      "caso": "F002 03 Arbuckle",
+      "H2": "schwartz_10_autodireccion",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "7_caer_victima",
+        "5_persecucion",
+        "social_10_cohen_panico_moral",
+        "social_08_girard_mimesis_y_chivo_expiatorio"
+      ]
+    },
+    {
+      "caso": "F002 05 Mccarthy",
+      "H2": "30_ambicion",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "33_error_de_juicio",
+        "17_fatal_imprudencia",
+        "social_10_cohen_panico_moral",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F002 07 Catalina",
+      "H2": "12_obtencion",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "30_ambicion",
+        "8_rebelion",
+        "arquetipo_el_gobernante",
+        "schwartz_06_poder"
+      ]
+    },
+    {
+      "caso": "F003 02 Dickens",
+      "H2": "12_obtencion",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "trayectoria_escritores_creativos",
+        "bbk_02_celebridad"
+      ]
+    },
+    {
+      "caso": "F003 05 Fouquet",
+      "H2": "12_obtencion",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "33_error_de_juicio",
+        "30_ambicion",
+        "24_rivalidad_de_superior_e_inferior",
+        "frye_mythos_tragedia"
+      ]
+    },
+    {
+      "caso": "F003 09 Carnegie",
+      "H2": "12_obtencion",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "9_audaz_empresa",
+        "schwartz_07_logro",
+        "kondratiev_02_verano_auge",
+        "12_obtencion"
+      ]
+    },
+    {
+      "caso": "F004 01 Wagner",
+      "H2": "12_obtencion",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "2_salvacion",
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "trayectoria_escritores_creativos"
+      ]
+    },
+    {
+      "caso": "F004 07 Chanel",
+      "H2": "36_perdida_de_los_seres_queridos",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "arquetipo_el_creador",
+        "schwartz_07_logro",
+        "bbk_02_celebridad",
+        "duelo_bonanno_01_resiliencia"
+      ]
+    }
+  ],
+  "tainter_01_inversion_complejidad_productiva": [
+    {
+      "caso": "F002 04 Bach",
+      "H2": "schwartz_10_autodireccion",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "crece",
+      "fatalidad": false,
+      "desenlace": [
+        "24_rivalidad_de_superior_e_inferior",
+        "arquetipo_el_creador",
+        "schwartz_03_tradicion",
+        "erikson_07_generatividad_vs_estancamiento"
+      ]
+    }
+  ],
+  "36_perdida_de_los_seres_queridos": [
+    {
+      "caso": "F002 06 Coolidge",
+      "H2": "frye_mythos_romance",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "weber_03_autoridad_legal_racional",
+        "schwartz_05_seguridad",
+        "kondratiev_02_verano_auge",
+        "arquetipo_el_gobernante"
+      ]
+    }
+  ],
+  "arquetipo_el_explorador": [
+    {
+      "caso": "F002 08 Luisxvi",
+      "H2": "32_celos_equivocados",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "6_desastre",
+        "33_error_de_juicio",
+        "8_rebelion",
+        "cliodinamica_03_fase_crisis_colapso",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "30_ambicion": [
+    {
+      "caso": "F002 09 Rockefeller",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "9_audaz_empresa",
+        "30_ambicion",
+        "schwartz_06_poder",
+        "schwartz_07_logro"
+      ]
+    },
+    {
+      "caso": "F003 04 Faraday",
+      "H2": "cliodinamica_02_fase_estanflacion_presion",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "arquetipo_el_sabio",
+        "schwartz_07_logro",
+        "24_rivalidad_de_superior_e_inferior",
+        "erikson_07_generatividad_vs_estancamiento"
+      ]
+    },
+    {
+      "caso": "F003 08 Law",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "minsky_03_ponzi",
+        "17_fatal_imprudencia",
+        "6_desastre",
+        "33_error_de_juicio"
+      ]
+    },
+    {
+      "caso": "F004 02 David",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "crece",
+      "fatalidad": false,
+      "desenlace": [
+        "5_persecucion",
+        "33_error_de_juicio",
+        "7_caer_victima",
+        "social_08_girard_mimesis_y_chivo_expiatorio"
+      ]
+    }
+  ],
+  "12_obtencion": [
+    {
+      "caso": "F002 10 Durant",
+      "H2": "9_audaz_empresa",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "17_fatal_imprudencia",
+        "33_error_de_juicio",
+        "minsky_02_especulativa",
+        "kondratiev_04_invierno_recesion"
+      ]
+    },
+    {
+      "caso": "F003 07 Lincoln",
+      "H2": "schwartz_07_logro",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "30_ambicion",
+        "weber_02_autoridad_carismatica",
+        "arquetipo_el_heroe",
+        "schwartz_07_logro"
+      ]
+    }
+  ],
+  "anacyclosis_06_oclocracia": [
+    {
+      "caso": "F003 01 Caravaggio",
+      "H2": "social_13_le_bon_comportamiento_masas",
+      "perfil_quema": "quema_al_inicio",
+      "radio": "contrae",
+      "fatalidad": true,
+      "desenlace": [
+        "17_fatal_imprudencia",
+        "5_persecucion",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "24_rivalidad_de_superior_e_inferior": [
+    {
+      "caso": "F003 06 Trotsky",
+      "H2": "mauss_01_intercambio_agonistico",
+      "perfil_quema": "plano_y_quema_al_final",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "24_rivalidad_de_superior_e_inferior",
+        "5_persecucion",
+        "33_error_de_juicio",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "tainter_03_vulnerabilidad_sistemica": [
+    {
+      "caso": "F003 10 Pedro Ii",
+      "H2": "dumezil_f1_soberania_juridica",
+      "perfil_quema": "plano",
+      "radio": "crece",
+      "fatalidad": true,
+      "desenlace": [
+        "7_caer_victima",
+        "weber_01_autoridad_tradicional",
+        "anacyclosis_01_monarquia",
+        "frye_mythos_tragedia"
+      ]
+    }
+  ],
+  "mauss_02_deuda_de_honor": [
+    {
+      "caso": "F004 03 Oppenheimer",
+      "H2": "20_sacrificio_por_un_ideal",
+      "perfil_quema": "plano",
+      "radio": "contrae",
+      "fatalidad": false,
+      "desenlace": [
+        "5_persecucion",
+        "24_rivalidad_de_superior_e_inferior",
+        "7_caer_victima",
+        "social_10_cohen_panico_moral"
+      ]
+    }
+  ],
+  "utopia_autonomia_atenas": [
+    {
+      "caso": "MOZART (10 cortes, referencia)",
+      "H2": "utopia_mentalidad_liberal",
+      "perfil_quema": "largo",
+      "radio": "crece (rompe margen)",
+      "fatalidad": null,
+      "desenlace": [
+        "(sin desenlace_sellado en este formato)"
+      ]
+    }
+  ],
+  "utopia_principio_mercado": [
+    {
+      "caso": "NAPOLEON (10 cortes, referencia)",
+      "H2": "arquetipo_el_gobernante",
+      "perfil_quema": "largo",
+      "radio": "dentro (acelera)",
+      "fatalidad": null,
+      "desenlace": [
+        "(sin desenlace_sellado en este formato)"
+      ]
+    }
+  ],
+  "arquetipo_el_gobernante": [
+    {
+      "caso": "Juana de Arco (heroe tragico, 7 cortes)",
+      "H2": "20_sacrificio_por_un_ideal",
+      "perfil_quema": "heroe-7c",
+      "radio": "ROMPE margen en C7=Z (2.149 vs max 1.733)",
+      "fatalidad": true,
+      "desenlace": [
+        "5_persecucion",
+        "20_sacrificio_por_un_ideal",
+        "36_perdida_de_los_seres_queridos",
+        "frye_mythos_tragedia (sellado: quemada 1431)"
+      ]
+    },
+    {
+      "caso": "Harriet Tubman (heroe generativo, 7 cortes)",
+      "H2": "monomito_01_mundo_ordinario",
+      "perfil_quema": "heroe-7c",
+      "radio": "ROMPE margen en C7=Z (2.470 vs max 1.837)",
+      "fatalidad": false,
+      "desenlace": [
+        "monomito_12_regreso_con_el_elixir",
+        "schwartz_02_benevolencia",
+        "20_sacrificio_por_un_ideal",
+        "generatividad (sellado: muere 1913, honrada)"
+      ]
+    },
+    {
+      "caso": "Emmy Noether (7 cortes, corrida fresca)",
+      "H2": "berlin_01_erizo",
+      "perfil_quema": "largo-7c",
+      "radio": "ROMPE margen en C7=Z (1.573 vs max 1.536)",
+      "fatalidad": false,
+      "desenlace": [
+        "HIT sellado (mentor>gobernante)",
+        "generatividad + muerte 1935"
+      ]
+    }
+  ],
+  "kwml_01_rey": [
+    {
+      "caso": "Nelson Mandela (heroe generativo, 7 cortes)",
+      "H2": "berlin_01_erizo",
+      "perfil_quema": "heroe-7c",
+      "radio": "ROMPE margen en C7=Z (1.651 vs max 1.488)",
+      "fatalidad": false,
+      "desenlace": [
+        "anacyclosis_01_monarquia",
+        "arquetipo_el_gobernante",
+        "20_sacrificio_por_un_ideal",
+        "generatividad (sellado: muere 2013, legado)"
+      ]
+    }
+  ],
+  "arquetipo_el_creador": [
+    {
+      "caso": "Rachel Carson (7 cortes, corrida fresca)",
+      "H2": "mentor",
+      "perfil_quema": "largo-7c",
+      "radio": "DENTRO del margen en C7=Z (1.420 vs max 1.540)",
+      "fatalidad": false,
+      "desenlace": [
+        "HIT sellado (creadora-divulgadora)",
+        "generatividad + muerte 1964"
+      ]
+    }
+  ],
+  "20_sacrificio_por_un_ideal": [
+    {
+      "caso": "KOLBE",
+      "H2": "5_persecucion",
+      "perfil_quema": "plano",
+      "radio": "rompe_C7",
+      "fatalidad": true,
+      "desenlace": [
+        "20_sacrificio_por_un_ideal",
+        "5_persecucion",
+        "heroe",
+        "frye_mythos_tragedia"
+      ],
+      "nota": "sin trono; heroe y arquetipo_el_heroe en 0.8013; gobernante/rey planos 0.5"
+    }
+  ]
+}

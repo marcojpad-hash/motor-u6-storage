@@ -1,0 +1,1686 @@
+{
+  "version": "RUEDA_CONJUNCION_V1_20261112",
+  "casos": [
+    {
+      "caso": "JUANA_DE_ARCO_HEROE_20261112",
+      "gate_pasa": true,
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "frentes_abiertos": 23,
+      "frentes_resueltos": 0,
+      "mezcla_canonica": {
+        "tono": {
+          "externo": 0.32675,
+          "interno": 0.346845,
+          "situacion": 0.326405
+        },
+        "matiz": 0.84458,
+        "croma": 0.02027,
+        "saturacion": 0.02044,
+        "neutralizacion": 0.817949
+      },
+      "mezcla_sombra": {
+        "tono": {
+          "interno": 0.337226,
+          "externo": 0.327169,
+          "situacion": 0.335605
+        },
+        "matiz": 308.632865,
+        "croma": 0.009352,
+        "croma_desaturado": 0.001738,
+        "saturacion": 0.010058,
+        "neutralizacion": 0.632127
+      },
+      "cluster_heroe": {
+        "matices_canonicos": {
+          "heroe": 0.0,
+          "arquetipo_heroe": 116.565051,
+          "arquetipo_el_heroe": 180.0
+        },
+        "matices_sombra": {
+          "heroe": 253.982519,
+          "arquetipo_heroe": 253.982519,
+          "arquetipo_el_heroe": 253.982519
+        },
+        "pares": [
+          {
+            "par": [
+              "heroe",
+              "arquetipo_heroe"
+            ],
+            "d_canonico": 116.565051,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 180.0,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "arquetipo_heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 63.434949,
+            "d_sombra": 0.0
+          }
+        ],
+        "analogos_canonico": [],
+        "analogos_sombra": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            0.0
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            0.0
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            0.0
+          ]
+        ],
+        "pigmentos_identicos_canonico": [],
+        "pigmentos_identicos_sombra": [
+          [
+            "arquetipo_el_gobernante",
+            "20_sacrificio_por_un_ideal",
+            "5_persecucion",
+            "9_audaz_empresa",
+            "arquetipo_el_sabio",
+            "dumezil_f2_fuerza",
+            "bbk_01_aventurero",
+            "kwml_01_rey",
+            "dumezil_f1_soberania_juridica",
+            "schwartz_06_poder",
+            "sistema_domiciano",
+            "arquetipo_el_creador",
+            "24_rivalidad_de_superior_e_inferior"
+          ]
+        ]
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "matiz_canonico": 206.919139,
+          "croma_canonico": 0.024384,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "matiz_canonico": 93.570805,
+          "croma_canonico": 0.101137,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        }
+      },
+      "heroes": {
+        "heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.036565,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_heroe": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_desaturado": 0.00309,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "matiz_canonico": 180.0,
+          "croma_canonico": 0.010889,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": false
+        }
+      },
+      "desaturacion": {
+        "heroe": {
+          "ocurrencias_canonicas": 2,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.036565,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.332765,
+            "externo": 0.331903,
+            "situacion": 0.335332
+          },
+          "tono_canonico": {
+            "interno": 0.35771,
+            "externo": 0.321145,
+            "situacion": 0.321145
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_heroe": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_sombra_desaturado": 0.00309,
+          "tono_sombra": {
+            "interno": 0.332765,
+            "externo": 0.331903,
+            "situacion": 0.335332
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "ocurrencias_canonicas": 1,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 180.0,
+          "croma_canonico": 0.010889,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.332765,
+            "externo": 0.331903,
+            "situacion": 0.335332
+          },
+          "tono_canonico": {
+            "interno": 0.326074,
+            "externo": 0.336963,
+            "situacion": 0.336963
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_gobernante": {
+          "ocurrencias_canonicas": 8,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 206.919139,
+          "croma_canonico": 0.024384,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.332765,
+            "externo": 0.331903,
+            "situacion": 0.335332
+          },
+          "tono_canonico": {
+            "externo": 0.334207,
+            "interno": 0.318839,
+            "situacion": 0.346954
+          },
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "ocurrencias_canonicas": 5,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 93.570805,
+          "croma_canonico": 0.101137,
+          "matiz_sombra": 253.982519,
+          "croma_sombra": 0.00309,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.332765,
+            "externo": 0.331903,
+            "situacion": 0.335332
+          },
+          "tono_canonico": {
+            "externo": 0.393711,
+            "interno": 0.329134,
+            "situacion": 0.277155
+          },
+          "en_set_canonico": true
+        }
+      },
+      "complementarios_canonico": [
+        [
+          "20_sacrificio_por_un_ideal",
+          "arquetipo_el_gobernante",
+          206.919139
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "arquetipo_el_gobernante",
+          163.122861
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "dumezil_f1_soberania_juridica",
+          196.203722
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "schwartz_06_poder",
+          196.203722
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "sistema_domiciano",
+          192.087905
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "social_02_milgram_obediencia",
+          174.242344
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "sombra",
+          196.203722
+        ],
+        [
+          "36_perdida_de_los_seres_queridos",
+          "arquetipo_el_gobernante",
+          206.919139
+        ],
+        [
+          "5_persecucion",
+          "arquetipo_el_gobernante",
+          206.919139
+        ],
+        [
+          "9_audaz_empresa",
+          "arquetipo_el_gobernante",
+          206.919139
+        ],
+        [
+          "arquetipo_el_gobernante",
+          "bbk_01_aventurero",
+          206.919139
+        ],
+        [
+          "arquetipo_el_gobernante",
+          "dumezil_f2_fuerza",
+          206.919139
+        ],
+        [
+          "arquetipo_el_gobernante",
+          "monomito_01_mundo_ordinario",
+          180.46441
+        ],
+        [
+          "monomito_01_mundo_ordinario",
+          "sistema_domiciano",
+          209.429454
+        ],
+        [
+          "monomito_01_mundo_ordinario",
+          "social_02_milgram_obediencia",
+          191.583893
+        ]
+      ],
+      "complementarios_sombra": [],
+      "h1_sombra_tablero": {
+        "familia": "36_perdida_de_los_seres_queridos",
+        "p_final": 0.8011
+      }
+    },
+    {
+      "caso": "TUBMAN_HEROE_20261112",
+      "gate_pasa": true,
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "frentes_abiertos": 18,
+      "frentes_resueltos": 0,
+      "mezcla_canonica": {
+        "tono": {
+          "externo": 0.323847,
+          "interno": 0.347978,
+          "situacion": 0.328175
+        },
+        "matiz": 350.317056,
+        "croma": 0.022284,
+        "saturacion": 0.024131,
+        "neutralizacion": 0.766129
+      },
+      "mezcla_sombra": {
+        "tono": {
+          "interno": 0.341844,
+          "externo": 0.326912,
+          "situacion": 0.331244
+        },
+        "matiz": 343.623199,
+        "croma": 0.013306,
+        "croma_desaturado": 0.00439,
+        "saturacion": 0.014932,
+        "neutralizacion": 0.626101
+      },
+      "cluster_heroe": {
+        "matices_canonicos": {
+          "heroe": 0.0,
+          "arquetipo_heroe": 116.565051,
+          "arquetipo_el_heroe": 116.565051
+        },
+        "matices_sombra": {
+          "heroe": 309.767466,
+          "arquetipo_heroe": 309.767466,
+          "arquetipo_el_heroe": 309.767466
+        },
+        "pares": [
+          {
+            "par": [
+              "heroe",
+              "arquetipo_heroe"
+            ],
+            "d_canonico": 116.565051,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 116.565051,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "arquetipo_heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 0.0,
+            "d_sombra": 0.0
+          }
+        ],
+        "analogos_canonico": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            0.0
+          ]
+        ],
+        "analogos_sombra": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            0.0
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            0.0
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            0.0
+          ]
+        ],
+        "pigmentos_identicos_canonico": [],
+        "pigmentos_identicos_sombra": [
+          [
+            "arquetipo_el_gobernante",
+            "kwml_01_rey",
+            "sustancias_03_severo",
+            "20_sacrificio_por_un_ideal",
+            "9_audaz_empresa",
+            "arquetipo_el_sabio",
+            "arquetipo_el_creador",
+            "eterno_retorno_01_caos_primordial",
+            "trayectoria_policia_alcohol_ptds",
+            "dumezil_f1_soberania_juridica",
+            "schwartz_06_poder"
+          ]
+        ]
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "matiz_canonico": 337.301466,
+          "croma_canonico": 0.02488,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "matiz_canonico": 57.778977,
+          "croma_canonico": 0.094995,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        }
+      },
+      "heroes": {
+        "heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.09556,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_heroe": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_desaturado": 0.003068,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_desaturado": 0.003068,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        }
+      },
+      "desaturacion": {
+        "heroe": {
+          "ocurrencias_canonicas": 2,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.09556,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.334642,
+            "externo": 0.331318,
+            "situacion": 0.334041
+          },
+          "tono_canonico": {
+            "interno": 0.39704,
+            "externo": 0.30148,
+            "situacion": 0.30148
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_heroe": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_sombra_desaturado": 0.003068,
+          "tono_sombra": {
+            "interno": 0.334642,
+            "externo": 0.331318,
+            "situacion": 0.334041
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_sombra_desaturado": 0.003068,
+          "tono_sombra": {
+            "interno": 0.334642,
+            "externo": 0.331318,
+            "situacion": 0.334041
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_gobernante": {
+          "ocurrencias_canonicas": 6,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 337.301466,
+          "croma_canonico": 0.02488,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.334642,
+            "externo": 0.331318,
+            "situacion": 0.334041
+          },
+          "tono_canonico": {
+            "externo": 0.320139,
+            "interno": 0.348635,
+            "situacion": 0.331225
+          },
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "ocurrencias_canonicas": 6,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 57.778977,
+          "croma_canonico": 0.094995,
+          "matiz_sombra": 309.767466,
+          "croma_sombra": 0.003068,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.334642,
+            "externo": 0.331318,
+            "situacion": 0.334041
+          },
+          "tono_canonico": {
+            "externo": 0.362849,
+            "interno": 0.3671,
+            "situacion": 0.270051
+          },
+          "en_set_canonico": true
+        }
+      },
+      "complementarios_canonico": [
+        [
+          "arquetipo_el_creador",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          163.603744
+        ],
+        [
+          "arquetipo_el_sabio",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          175.199251
+        ],
+        [
+          "dumezil_f1_soberania_juridica",
+          "kwml_01_rey",
+          182.221023
+        ],
+        [
+          "eterno_retorno_01_caos_primordial",
+          "kwml_01_rey",
+          182.221023
+        ],
+        [
+          "kwml_01_rey",
+          "schwartz_06_poder",
+          182.221023
+        ],
+        [
+          "kwml_01_rey",
+          "sombra",
+          182.221023
+        ],
+        [
+          "kwml_01_rey",
+          "sustancias_03_severo",
+          182.221023
+        ],
+        [
+          "kwml_01_rey",
+          "trayectoria_policia_alcohol_ptds",
+          182.221023
+        ],
+        [
+          "mentor",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          163.603744
+        ]
+      ],
+      "complementarios_sombra": [
+        [
+          "mentor",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          164.732602
+        ]
+      ],
+      "h1_sombra_tablero": {
+        "familia": "schwartz_02_benevolencia",
+        "p_final": 0.8124
+      }
+    },
+    {
+      "caso": "MANDELA_HEROE_20261112",
+      "gate_pasa": true,
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "frentes_abiertos": 22,
+      "frentes_resueltos": 0,
+      "mezcla_canonica": {
+        "tono": {
+          "externo": 0.311885,
+          "interno": 0.364412,
+          "situacion": 0.323703
+        },
+        "matiz": 347.617521,
+        "croma": 0.047728,
+        "saturacion": 0.052528,
+        "neutralizacion": 0.59169
+      },
+      "mezcla_sombra": {
+        "tono": {
+          "interno": 0.333993,
+          "externo": 0.328862,
+          "situacion": 0.337145
+        },
+        "matiz": 277.853947,
+        "croma": 0.007241,
+        "croma_desaturado": 0.000802,
+        "saturacion": 0.008283,
+        "neutralizacion": 0.51696
+      },
+      "cluster_heroe": {
+        "matices_canonicos": {
+          "heroe": 0.0,
+          "arquetipo_heroe": 116.565051,
+          "arquetipo_el_heroe": 116.565051
+        },
+        "matices_sombra": {
+          "heroe": 319.739108,
+          "arquetipo_heroe": 319.739108,
+          "arquetipo_el_heroe": 319.739108
+        },
+        "pares": [
+          {
+            "par": [
+              "heroe",
+              "arquetipo_heroe"
+            ],
+            "d_canonico": 116.565051,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 116.565051,
+            "d_sombra": 0.0
+          },
+          {
+            "par": [
+              "arquetipo_heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 0.0,
+            "d_sombra": 0.0
+          }
+        ],
+        "analogos_canonico": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            0.0
+          ]
+        ],
+        "analogos_sombra": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            0.0
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            0.0
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            0.0
+          ]
+        ],
+        "pigmentos_identicos_canonico": [],
+        "pigmentos_identicos_sombra": [
+          [
+            "kwml_01_rey",
+            "berlin_01_erizo",
+            "arquetipo_el_gobernante",
+            "anacyclosis_01_monarquia",
+            "9_audaz_empresa",
+            "utopia_mentalidad_milenarista",
+            "20_sacrificio_por_un_ideal",
+            "heroe",
+            "24_rivalidad_de_superior_e_inferior",
+            "dialectica_01_tesis_estabilidad_hegemonica",
+            "arquetipo_el_sabio",
+            "social_04_rogers_difusion_innovaciones",
+            "dumezil_f1_soberania_juridica",
+            "schwartz_06_poder",
+            "sistema_domiciano"
+          ]
+        ]
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "matiz_canonico": 302.168174,
+          "croma_canonico": 0.115279,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "matiz_canonico": 24.797253,
+          "croma_canonico": 0.101571,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        }
+      },
+      "heroes": {
+        "heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.106976,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_desaturado": 0.007205,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_desaturado": 0.007205,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        }
+      },
+      "desaturacion": {
+        "heroe": {
+          "ocurrencias_canonicas": 3,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.106976,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.336999,
+            "externo": 0.328812,
+            "situacion": 0.334189
+          },
+          "tono_canonico": {
+            "externo": 0.297675,
+            "interno": 0.404651,
+            "situacion": 0.297675
+          },
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_sombra_desaturado": 0.007205,
+          "tono_sombra": {
+            "interno": 0.336999,
+            "externo": 0.328812,
+            "situacion": 0.334189
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_sombra_desaturado": 0.007205,
+          "tono_sombra": {
+            "interno": 0.336999,
+            "externo": 0.328812,
+            "situacion": 0.334189
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_gobernante": {
+          "ocurrencias_canonicas": 8,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 302.168174,
+          "croma_canonico": 0.115279,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.336999,
+            "externo": 0.328812,
+            "situacion": 0.334189
+          },
+          "tono_canonico": {
+            "externo": 0.256536,
+            "interno": 0.37425,
+            "situacion": 0.369214
+          },
+          "en_set_canonico": true
+        },
+        "kwml_01_rey": {
+          "ocurrencias_canonicas": 8,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 24.797253,
+          "croma_canonico": 0.101571,
+          "matiz_sombra": 319.739108,
+          "croma_sombra": 0.007205,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.336999,
+            "externo": 0.328812,
+            "situacion": 0.334189
+          },
+          "tono_canonico": {
+            "externo": 0.327193,
+            "interno": 0.394804,
+            "situacion": 0.278003
+          },
+          "en_set_canonico": true
+        }
+      },
+      "complementarios_canonico": [
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          199.121048
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "dumezil_f1_soberania_juridica",
+          199.121048
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "schwartz_06_poder",
+          199.121048
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "sistema_domiciano",
+          191.644762
+        ],
+        [
+          "24_rivalidad_de_superior_e_inferior",
+          "sombra",
+          199.121048
+        ],
+        [
+          "anacyclosis_01_monarquia",
+          "mentor",
+          199.618313
+        ],
+        [
+          "arquetipo_el_gobernante",
+          "mentor",
+          182.168174
+        ],
+        [
+          "arquetipo_el_sabio",
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          154.730406
+        ],
+        [
+          "arquetipo_el_sabio",
+          "dumezil_f1_soberania_juridica",
+          154.730406
+        ],
+        [
+          "arquetipo_el_sabio",
+          "schwartz_06_poder",
+          154.730406
+        ],
+        [
+          "arquetipo_el_sabio",
+          "sombra",
+          154.730406
+        ],
+        [
+          "berlin_01_erizo",
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          197.686417
+        ],
+        [
+          "berlin_01_erizo",
+          "dumezil_f1_soberania_juridica",
+          197.686417
+        ],
+        [
+          "berlin_01_erizo",
+          "schwartz_06_poder",
+          197.686417
+        ],
+        [
+          "berlin_01_erizo",
+          "sistema_domiciano",
+          190.210131
+        ],
+        [
+          "berlin_01_erizo",
+          "sombra",
+          197.686417
+        ],
+        [
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          "social_04_rogers_difusion_innovaciones",
+          154.820253
+        ],
+        [
+          "dumezil_f1_soberania_juridica",
+          "social_04_rogers_difusion_innovaciones",
+          154.820253
+        ],
+        [
+          "kwml_01_rey",
+          "sistema_domiciano",
+          207.726461
+        ],
+        [
+          "schwartz_06_poder",
+          "social_04_rogers_difusion_innovaciones",
+          154.820253
+        ],
+        [
+          "social_04_rogers_difusion_innovaciones",
+          "sombra",
+          154.820253
+        ]
+      ],
+      "complementarios_sombra": [],
+      "h1_sombra_tablero": {
+        "familia": "frye_mythos_romance",
+        "p_final": 0.7285
+      }
+    },
+    {
+      "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+      "gate_pasa": true,
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "frentes_abiertos": 20,
+      "frentes_resueltos": 1,
+      "mezcla_canonica": {
+        "tono": {
+          "externo": 0.317295,
+          "interno": 0.35961,
+          "situacion": 0.323095
+        },
+        "matiz": 352.737518,
+        "croma": 0.039734,
+        "saturacion": 0.042314,
+        "neutralizacion": 0.552706
+      },
+      "mezcla_sombra": {
+        "tono": {
+          "interno": 0.341468,
+          "externo": 0.325044,
+          "situacion": 0.333488
+        },
+        "matiz": 329.065536,
+        "croma": 0.014225,
+        "croma_desaturado": 0.004414,
+        "saturacion": 0.016424,
+        "neutralizacion": 0.60054
+      },
+      "cluster_heroe": {
+        "matices_canonicos": {
+          "heroe": 0.0,
+          "arquetipo_heroe": 0.0,
+          "arquetipo_el_heroe": 1.932973
+        },
+        "matices_sombra": {
+          "heroe": 359.432548,
+          "arquetipo_heroe": 344.589423,
+          "arquetipo_el_heroe": 359.63545
+        },
+        "pares": [
+          {
+            "par": [
+              "heroe",
+              "arquetipo_heroe"
+            ],
+            "d_canonico": 0.0,
+            "d_sombra": 14.843125
+          },
+          {
+            "par": [
+              "heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 1.932973,
+            "d_sombra": 0.202902
+          },
+          {
+            "par": [
+              "arquetipo_heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 1.932973,
+            "d_sombra": 15.046027
+          }
+        ],
+        "analogos_canonico": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            1.932973
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            1.932973
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            0.0
+          ]
+        ],
+        "analogos_sombra": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            15.046027
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            0.202902
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            14.843125
+          ]
+        ],
+        "pigmentos_identicos_canonico": [],
+        "pigmentos_identicos_sombra": [
+          [
+            "arquetipo_el_sabio",
+            "20_sacrificio_por_un_ideal",
+            "sustancias_03_severo",
+            "arquetipo_heroe",
+            "jaldun_01_asabiyyah_alta_cohesion",
+            "utopia_mentalidad_liberal",
+            "spengler_02_verano_otono_racionalizacion",
+            "arquetipo_el_creador",
+            "social_04_rogers_difusion_innovaciones",
+            "trayectoria_policia_alcohol_ptds",
+            "cliodinamica_03_fase_crisis_colapso",
+            "eterno_retorno_01_caos_primordial"
+          ]
+        ]
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_desaturado": 0.003367,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        },
+        "kwml_01_rey": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_desaturado": 0.003367,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        }
+      },
+      "heroes": {
+        "heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.0994,
+          "matiz_sombra": 359.432548,
+          "croma_sombra": 0.083072,
+          "croma_desaturado": 0.027691,
+          "fraccion_resuelta": 0.333333,
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.094781,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": true
+        },
+        "arquetipo_el_heroe": {
+          "matiz_canonico": 1.932973,
+          "croma_canonico": 0.125525,
+          "matiz_sombra": 359.63545,
+          "croma_sombra": 0.123591,
+          "croma_desaturado": 0.096126,
+          "fraccion_resuelta": 0.777778,
+          "en_set_canonico": true
+        }
+      },
+      "desaturacion": {
+        "heroe": {
+          "ocurrencias_canonicas": 3,
+          "ocurrencias_resueltas_sombra": 1,
+          "fraccion_resuelta": 0.333333,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.0994,
+          "matiz_sombra": 359.432548,
+          "croma_sombra": 0.083072,
+          "croma_sombra_desaturado": 0.027691,
+          "tono_sombra": {
+            "interno": 0.388712,
+            "externo": 0.305169,
+            "situacion": 0.306119
+          },
+          "tono_canonico": {
+            "externo": 0.3002,
+            "interno": 0.3996,
+            "situacion": 0.3002
+          },
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "ocurrencias_canonicas": 4,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.094781,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.335497,
+            "externo": 0.331735,
+            "situacion": 0.332768
+          },
+          "tono_canonico": {
+            "externo": 0.30174,
+            "interno": 0.396521,
+            "situacion": 0.30174
+          },
+          "en_set_canonico": true
+        },
+        "arquetipo_el_heroe": {
+          "ocurrencias_canonicas": 9,
+          "ocurrencias_resueltas_sombra": 7,
+          "fraccion_resuelta": 0.777778,
+          "matiz_canonico": 1.932973,
+          "croma_canonico": 0.125525,
+          "matiz_sombra": 359.63545,
+          "croma_sombra": 0.123591,
+          "croma_sombra_desaturado": 0.096126,
+          "tono_sombra": {
+            "interno": 0.415725,
+            "externo": 0.291683,
+            "situacion": 0.292591
+          },
+          "tono_canonico": {
+            "externo": 0.29396,
+            "interno": 0.416969,
+            "situacion": 0.289071
+          },
+          "en_set_canonico": true
+        },
+        "arquetipo_el_gobernante": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_sombra_desaturado": 0.003367,
+          "tono_sombra": {
+            "interno": 0.335497,
+            "externo": 0.331735,
+            "situacion": 0.332768
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "kwml_01_rey": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 344.589423,
+          "croma_sombra": 0.003367,
+          "croma_sombra_desaturado": 0.003367,
+          "tono_sombra": {
+            "interno": 0.335497,
+            "externo": 0.331735,
+            "situacion": 0.332768
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        }
+      },
+      "complementarios_canonico": [
+        [
+          "arquetipo_el_sabio",
+          "cliodinamica_03_fase_crisis_colapso",
+          187.058074
+        ],
+        [
+          "arquetipo_el_sabio",
+          "eterno_retorno_01_caos_primordial",
+          165.588056
+        ],
+        [
+          "arquetipo_el_sabio",
+          "guardian_del_umbral",
+          187.058074
+        ],
+        [
+          "arquetipo_el_sabio",
+          "monomito_01_mundo_ordinario",
+          187.058074
+        ],
+        [
+          "arquetipo_el_sabio",
+          "monomito_06_pruebas_aliados_y_enemigos",
+          205.73696
+        ],
+        [
+          "arquetipo_el_sabio",
+          "sustancias_03_severo",
+          187.058074
+        ],
+        [
+          "arquetipo_el_sabio",
+          "trayectoria_policia_alcohol_ptds",
+          187.058074
+        ]
+      ],
+      "complementarios_sombra": [],
+      "h1_sombra_tablero": {
+        "familia": "arquetipo_el_heroe",
+        "p_final": 0.8122
+      }
+    },
+    {
+      "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+      "gate_pasa": true,
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "frentes_abiertos": 19,
+      "frentes_resueltos": 1,
+      "mezcla_canonica": {
+        "tono": {
+          "externo": 0.32298,
+          "interno": 0.350807,
+          "situacion": 0.326212
+        },
+        "matiz": 353.904655,
+        "croma": 0.02636,
+        "saturacion": 0.027827,
+        "neutralizacion": 0.664597
+      },
+      "mezcla_sombra": {
+        "tono": {
+          "interno": 0.34851,
+          "externo": 0.323237,
+          "situacion": 0.328254
+        },
+        "matiz": 349.194442,
+        "croma": 0.023175,
+        "croma_desaturado": 0.010009,
+        "saturacion": 0.025273,
+        "neutralizacion": 0.44509
+      },
+      "cluster_heroe": {
+        "matices_canonicos": {
+          "heroe": 0.0,
+          "arquetipo_heroe": 0.0,
+          "arquetipo_el_heroe": 5.808876
+        },
+        "matices_sombra": {
+          "heroe": 359.872275,
+          "arquetipo_heroe": 358.134707,
+          "arquetipo_el_heroe": 359.868538
+        },
+        "pares": [
+          {
+            "par": [
+              "heroe",
+              "arquetipo_heroe"
+            ],
+            "d_canonico": 0.0,
+            "d_sombra": 1.737568
+          },
+          {
+            "par": [
+              "heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 5.808876,
+            "d_sombra": 0.003737
+          },
+          {
+            "par": [
+              "arquetipo_heroe",
+              "arquetipo_el_heroe"
+            ],
+            "d_canonico": 5.808876,
+            "d_sombra": 1.733831
+          }
+        ],
+        "analogos_canonico": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            5.808876
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            5.808876
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            0.0
+          ]
+        ],
+        "analogos_sombra": [
+          [
+            "arquetipo_el_heroe",
+            "arquetipo_heroe",
+            1.733831
+          ],
+          [
+            "arquetipo_el_heroe",
+            "heroe",
+            0.003737
+          ],
+          [
+            "arquetipo_heroe",
+            "heroe",
+            1.737568
+          ]
+        ],
+        "pigmentos_identicos_canonico": [],
+        "pigmentos_identicos_sombra": [
+          [
+            "20_sacrificio_por_un_ideal",
+            "5_persecucion",
+            "sustancias_03_severo",
+            "arquetipo_el_creador",
+            "arquetipo_el_sabio",
+            "social_04_rogers_difusion_innovaciones",
+            "mbti_introvertido",
+            "dialectica_01_tesis_estabilidad_hegemonica",
+            "eterno_retorno_01_caos_primordial",
+            "trayectoria_policia_alcohol_ptds"
+          ]
+        ]
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_desaturado": 0.004044,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        },
+        "kwml_01_rey": {
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_desaturado": 0.004044,
+          "fraccion_resuelta": 1.0,
+          "en_set_canonico": false
+        }
+      },
+      "heroes": {
+        "heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.053926,
+          "matiz_sombra": 359.872275,
+          "croma_sombra": 0.055942,
+          "croma_desaturado": 0.037295,
+          "fraccion_resuelta": 0.666667,
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.030175,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_desaturado": 0.0,
+          "fraccion_resuelta": 0.0,
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "matiz_canonico": 5.808876,
+          "croma_canonico": 0.045658,
+          "matiz_sombra": 359.868538,
+          "croma_sombra": 0.054352,
+          "croma_desaturado": 0.036235,
+          "fraccion_resuelta": 0.666667,
+          "en_set_canonico": false
+        }
+      },
+      "desaturacion": {
+        "heroe": {
+          "ocurrencias_canonicas": 3,
+          "ocurrencias_resueltas_sombra": 2,
+          "fraccion_resuelta": 0.666667,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.053926,
+          "matiz_sombra": 359.872275,
+          "croma_sombra": 0.055942,
+          "croma_sombra_desaturado": 0.037295,
+          "tono_sombra": {
+            "interno": 0.370628,
+            "externo": 0.314614,
+            "situacion": 0.314758
+          },
+          "tono_canonico": {
+            "externo": 0.315358,
+            "interno": 0.369284,
+            "situacion": 0.315358
+          },
+          "en_set_canonico": true
+        },
+        "arquetipo_heroe": {
+          "ocurrencias_canonicas": 2,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 0.0,
+          "matiz_canonico": 0.0,
+          "croma_canonico": 0.030175,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_sombra_desaturado": 0.0,
+          "tono_sombra": {
+            "interno": 0.336028,
+            "externo": 0.33191,
+            "situacion": 0.332062
+          },
+          "tono_canonico": {
+            "interno": 0.35345,
+            "externo": 0.323275,
+            "situacion": 0.323275
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_heroe": {
+          "ocurrencias_canonicas": 6,
+          "ocurrencias_resueltas_sombra": 4,
+          "fraccion_resuelta": 0.666667,
+          "matiz_canonico": 5.808876,
+          "croma_canonico": 0.045658,
+          "matiz_sombra": 359.868538,
+          "croma_sombra": 0.054352,
+          "croma_sombra_desaturado": 0.036235,
+          "tono_sombra": {
+            "interno": 0.369568,
+            "externo": 0.315144,
+            "situacion": 0.315288
+          },
+          "tono_canonico": {
+            "interno": 0.363616,
+            "externo": 0.32086,
+            "situacion": 0.315524
+          },
+          "en_set_canonico": false
+        },
+        "arquetipo_el_gobernante": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_sombra_desaturado": 0.004044,
+          "tono_sombra": {
+            "interno": 0.336028,
+            "externo": 0.33191,
+            "situacion": 0.332062
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        },
+        "kwml_01_rey": {
+          "ocurrencias_canonicas": 0,
+          "ocurrencias_resueltas_sombra": 0,
+          "fraccion_resuelta": 1.0,
+          "matiz_canonico": 116.565051,
+          "croma_canonico": 0.0,
+          "matiz_sombra": 358.134707,
+          "croma_sombra": 0.004044,
+          "croma_sombra_desaturado": 0.004044,
+          "tono_sombra": {
+            "interno": 0.336028,
+            "externo": 0.33191,
+            "situacion": 0.332062
+          },
+          "tono_canonico": {
+            "interno": 0.333333,
+            "externo": 0.333333,
+            "situacion": 0.333333
+          },
+          "en_set_canonico": false
+        }
+      },
+      "complementarios_canonico": [
+        [
+          "arquetipo_el_creador",
+          "dialectica_01_tesis_estabilidad_hegemonica",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "eterno_retorno_01_caos_primordial",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "guardian_del_umbral",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "monomito_01_mundo_ordinario",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "sombra",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "sustancias_03_severo",
+          187.38239
+        ],
+        [
+          "arquetipo_el_creador",
+          "trayectoria_policia_alcohol_ptds",
+          187.38239
+        ]
+      ],
+      "complementarios_sombra": [],
+      "h1_sombra_tablero": {
+        "familia": "arquetipo_el_heroe",
+        "p_final": 0.8123
+      }
+    }
+  ]
+}
