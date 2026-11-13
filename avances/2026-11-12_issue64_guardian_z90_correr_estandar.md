@@ -34,15 +34,18 @@ Rama de trabajo: `alterno/cameo-pesos`. PR sin merge.
   junto al destino sellado.
 
 ## Verificación por ejecución (no solo lectura)
-- `CAL_F002_01_GALILEI` (caso gated real del repo): exit 0, 37.2 s,
-  H1 `arquetipo_el_sabio`, H2 `kwml_03_mago`, recibo COMPLETED, `guardian_z90`
-  PASS (0 errores), `previo_error` `False` y `visto_error` `False` en éxito.
-- Mismo caso con el corte movido a 1700 (post-Z90): exit 8,
-  `BLOQUEADO_GUARDIAN_Z90`, errores R2 + R3, resultado + recibo escritos.
+- **Ejecución de la primera versión del PR (antes de la corrección de conformidad):**
+  `CAL_F002_01_GALILEI` exit 0, 37.2 s, H1 `arquetipo_el_sabio`, H2
+  `kwml_03_mago`, recibo COMPLETED, `guardian_z90` PASS (0 errores). En esa
+  versión los campos de error vacíos eran `""` y el bloqueo usaba exit 7.
+- **Corrección actual:** el bloqueo ahora usa exit 8 y los campos de error vacíos
+  son `False`. El nuevo commit `48a3bd4` está pendiente de su nuevo check de
+  GitHub Actions; no se declara ejecutado ni verde hasta que termine.
 - Tests nuevos: 8 en `motor/tests/test_guardian_z90_correr_estandar.py`
   (NO_CONFIGURADO, PASS, rechazo post-Z, rechazo sin evidencia, previo_error en
   éxito y en fallo, sin nulos en el veredicto, e2e de bloqueo con exit 8).
-- Suite completa: **192 passed, 2 skipped** (`motor/tests/` + `tests/`, 11.6 s).
+- La primera suite completa reportó **192 passed, 2 skipped** (`motor/tests/` +
+  `tests/`, 11.6 s), antes de la corrección. La nueva ejecución está pendiente.
 - Integración: `test_interruptor_viva_offline` PASA. `test_pausa_y_reanudacion`
   FALLA también en el árbol limpio (verificado con `git stash`): preexistente,
   el harness que fuerza el fallo de TORTUGAS no dispara la pausa en este entorno;
