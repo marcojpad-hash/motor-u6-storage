@@ -1,0 +1,71 @@
+{
+ "rama": "alterno/reconexion-2a1",
+ "carpeta": "motor/corridas_ciegas_20261113/",
+ "motor_sha256": "c8da733e2f02be7a8e1895f8b88aba549488e3b7a01ca87507604969238ab085",
+ "nota_motor": "MOTOR_V15_3_UNICO de la copia de trabajo (con cableado Caldero + laterales + etiquetas ACTIVA_CON_DESENLACES_SELLADOS); el de la rama es el blob 18fb0507, sha256 distinto: verificar contra el recibo de cada corrida",
+ "archivos": [
+  {
+   "caso": "ANONIMO_Z90_20261113",
+   "result_gz": "RESULT_ANONIMO_Z90_20261113.json.gz",
+   "sha256_result_gz": "2a0c4078143558ea5e222b60d1d9d08c59ba9c183d520f65368cf27e2270eaff",
+   "sha256_result_crudo": "4dec53fbdea02ce2f50746a80ba7d39a73563fefae7f1abe14b68ec39813c93f",
+   "sha256_entrada": "bec3e93d6f98569bbcc102559c54bbb85ea4c6776d3c23bcbcb25784a7dc6425"
+  },
+  {
+   "caso": "ANONIMO2_Z90_20261113",
+   "result_gz": "RESULT_ANONIMO2_Z90_20261113.json.gz",
+   "sha256_result_gz": "d1517f47acfb7eac0eb719862b738e59aa6477adbee6f60e5934e5698558ce21",
+   "sha256_result_crudo": "5ee1839b586e5c4ab318b4e13e46c52c33b722f20aff1cd54ea10d642520bb2f",
+   "sha256_entrada": "e5b92446a7554a3c4ce2306a94e467e1ce58f19be65aa9460c9f99592dec1078"
+  },
+  {
+   "caso": "ANONIMO3_Z90_20261113",
+   "result_gz": "RESULT_ANONIMO3_Z90_20261113.json.gz",
+   "sha256_result_gz": "a4daad9b5682ded8c4ba2cc66d2abc8e8507aa775425e5e79f4023547d7a80a5",
+   "sha256_result_crudo": "32038437b6413f9e73759ee4d89bc9d2b44d368f62ad27929c0d119962f0e4ed",
+   "sha256_entrada": "305f8d15776eba7ada08804252910771473643cbc89dbb302ae54cd5bce10960"
+  },
+  {
+   "caso": "ANONIMO3_Z90_20261113_v2",
+   "result_gz": "RESULT_ANONIMO3_Z90_20261113_v2.json.gz",
+   "sha256_result_gz": "5c3c4a15b7035ad6e1bff37dfd938eb1aae0f20279e35ea47a688b17d52a34fa",
+   "sha256_result_crudo": "178816a04a53487244ff94256c2f0a31a41a3024b0cafa38efb957f0a0a5ece3",
+   "sha256_entrada": "0c59532d8ce1963ae226935ce196b421606a7e00ce056468e5dcbd061abf39b6"
+  },
+  {
+   "caso": "TRANSICION1_Z90_20261113",
+   "result_gz": "RESULT_TRANSICION1_Z90_20261113.json.gz",
+   "sha256_result_gz": "ee0109209e2f95ebd51e03d2dcaf352ed48a0ceb5d7cd6accbf0eaa9e94c5eed",
+   "sha256_result_crudo": "cb7ac346a28d7d3d0c8596566656a30aa398f9a4f284e7803c1a2d63f99b1c77",
+   "sha256_entrada": "3be38f04a05112194f3788f646f52799f9da54db6112b9afa18e081f6e515ca8"
+  },
+  {
+   "caso": "TRANSICION1_Z90_20261113_v2",
+   "result_gz": "RESULT_TRANSICION1_Z90_20261113_v2.json.gz",
+   "sha256_result_gz": "fbe7f584dafe3565b61082c00fc757da65428cd7e34c31d060cb0668ce88a66c",
+   "sha256_result_crudo": "da87983cfeb48a9561549984b20e1b006bc709b52c41c2602f9221429f826d0f",
+   "sha256_entrada": "f37231bd8d73d2ae63132e4f3e29d0c77a8feb87ab46cb44fef6e0d3d0b5fc1f"
+  },
+  {
+   "caso": "TRANSICION2_Z90_20261113",
+   "result_gz": "RESULT_TRANSICION2_Z90_20261113.json.gz",
+   "sha256_result_gz": "92b2e3eb0fa07591928735d3f8a355a3fb50a6995c050cd0a2c1f478367725a7",
+   "sha256_result_crudo": "cba3bf2f0285e641272678fdf5a4c1c8aacc0f607318638b5f0baff3631a77a5",
+   "sha256_entrada": "a1b594ae196d803b0df2e63b589ede738d8a744330388a750e3392a7383a959c"
+  },
+  {
+   "caso": "ANONIMO4_Z90_20261113",
+   "result_gz": "RESULT_ANONIMO4_Z90_20261113.json.gz",
+   "sha256_result_gz": "7356326e9aac8d5aaaeec709f8286c944dc289e3df61f9dafa19d5210c9506e5",
+   "sha256_result_crudo": "2e14617e738a5241e3a02c0d7b56417634d098eed8d903cdec67d37527221544",
+   "sha256_entrada": "d460ff77529c9517c021592cbe39b33b1ea3100e5de308abeb947c167203c196"
+  },
+  {
+   "caso": "TEST_CALIBRACION_20261113",
+   "result_gz": "RESULT_TEST_CALIBRACION_20261113.json.gz",
+   "sha256_result_gz": "46b7c9af33832a38378a1961be9d1519f73fe4bb919baf105be4de688368f558",
+   "sha256_result_crudo": "a2b9a9f5ab936353ffebdf70f1ca1201e647eb9c9121afcbd06fe0d397500f4e",
+   "nota": "Re-corrida de ANONIMO4 (Che) para verificar las etiquetas; no es una prueba ciega nueva"
+  }
+ ]
+}

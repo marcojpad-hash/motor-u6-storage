@@ -1,0 +1,55 @@
+{
+ "tabla_seis_corridas": [
+  {
+   "caso": "Einstein",
+   "H1": "arquetipo_el_sabio",
+   "H2": "arquetipo_el_creador",
+   "apuesta": "MESETA",
+   "soporte_apuesta": 0.7369,
+   "destino_sellado": "meseta_y_auge"
+  },
+  {
+   "caso": "Rembrandt",
+   "H1": "arquetipo_el_sabio",
+   "H2": "berlin_01_erizo",
+   "apuesta": "ASCENDENTE",
+   "soporte_apuesta": 0.5082,
+   "destino_sellado": "auge"
+  },
+  {
+   "caso": "Elvis",
+   "H1": "20_sacrificio_por_un_ideal",
+   "H2": "arquetipo_el_sabio",
+   "apuesta": "MESETA",
+   "soporte_apuesta": 0.733,
+   "destino_sellado": "auge"
+  },
+  {
+   "caso": "Tulipan",
+   "H1": "arquetipo_el_creador",
+   "H2": "arquetipo_el_sabio",
+   "apuesta": "MESETA",
+   "soporte_apuesta": 0.6781,
+   "destino_sellado": "caida"
+  },
+  {
+   "caso": "Revolucion",
+   "H1": "tainter_01_inversion_complejidad_productiva",
+   "H2": "sustancias_03_severo",
+   "apuesta": "MESETA",
+   "soporte_apuesta": 0.7632,
+   "destino_sellado": "meseta"
+  },
+  {
+   "caso": "Che",
+   "H1": "arquetipo_el_gobernante",
+   "H2": "sustancias_03_severo",
+   "apuesta": "MESETA",
+   "soporte_apuesta": 0.7373,
+   "destino_sellado": "ruptura_sujeto_meseta_estado"
+  }
+ ],
+ "baseline_H1_mas_frecuente": "arquetipo_el_sabio",
+ "acierto_baseline_H1": "2/6",
+ "nota": "Sin regla de acierto pre-registrada: la columna de acierto no existe porque no se escribió antes de correr. El desenlace sellado es la lectura histórica post-hoc (HALLAZGOS), no un desenlace sellado con regla previa."
+}

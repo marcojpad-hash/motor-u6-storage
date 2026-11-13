@@ -1,0 +1,502 @@
+{
+ "fecha": "2026-11-13",
+ "motor": {
+  "engine": "665c39a2861e",
+  "catalogo": "d827dcc38826",
+  "familias": 244,
+  "tokens": 703
+ },
+ "fitness": {
+  "advertencia": "El motor NO tiene ninguna metrica llamada fitness: cero ocurrencias de 'fitness' en motor/*.py, motor/laterales/ y en los RESULT JSON. Lo que sigue es la medida verificada mas cercana, en los terminos de Marco: direccion y proyectividad, no Top-1.",
+  "definicion": "Direccion: la familia central del desenlace sellado (segun el HALLAZGOS) esta dentro del top-3 del modelo por rank_fusion. Veredicto ciego: contraste de la lectura completa contra el desenlace sellado, juzgado por Marco. Apuesta vs destino: si el escenario de la apuesta_principal coincide con el destino sellado.",
+  "direccion_top3": "6/6 pruebas ciegas con familia central en top-3",
+  "veredicto_ciego": "7/7 pruebas ciegas pasaron (veredicto de Marco)",
+  "apuesta_vs_destino": "3 coinciden claro, 1 parcial (Che: meseta para el Estado, ruptura para el hombre), 3 no coinciden",
+  "sesgo_apuesta": "la apuesta dice MESETA en 7/8 corridas",
+  "referencia_historica": "Top-1 64.46% / Top-3 97.52% (experimento de septiembre, leave-one-out, 15 biografias, 121 predicciones, predictor lateral de trayectorias; NO es el motor entero y nunca se volvio a correr)",
+  "casos_sellados_disponibles": 25,
+  "pendiente": "recomputar la direccion (top-3) sobre los 25 desenlaces sellados en vez del Top-1"
+ },
+ "casos": [
+  {
+   "caso": "ANONIMO_Z90_20261113",
+   "H1": {
+    "familia": "arquetipo_el_sabio",
+    "rank_fusion": 33.51,
+    "grado": "AJUSTADA"
+   },
+   "H2": {
+    "familia": "arquetipo_el_creador",
+    "rank_fusion": 28.49
+   },
+   "top3": [
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 33.51
+    },
+    {
+     "familia": "arquetipo_el_creador",
+     "rank_fusion": 28.49
+    },
+    {
+     "familia": "utopia_mentalidad_liberal",
+     "rank_fusion": 27.78
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.7369,
+    "n_hipotesis_convergen": 10,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 10
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 3
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 77.722,
+    "input_sha256": "bec3e93d6f98569b"
+   },
+   "identidad_sellada": "Albert Einstein (1879-1955)",
+   "destino_sellado": "meseta_y_auge",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "coincide",
+   "nota_apuesta": "desenlace dual: meseta cientifica + auge de influencia publica; la apuesta trae MESETA (10) + ASCENDENTE (3), las dos caras estan en la apuesta",
+   "direccion_top3": {
+    "familia_central": "arquetipo_el_sabio",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "ANONIMO2_Z90_20261113",
+   "H1": {
+    "familia": "arquetipo_el_sabio",
+    "rank_fusion": 31.51,
+    "grado": "AJUSTADA"
+   },
+   "H2": {
+    "familia": "berlin_01_erizo",
+    "rank_fusion": 28.1
+   },
+   "top3": [
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 31.51
+    },
+    {
+     "familia": "berlin_01_erizo",
+     "rank_fusion": 28.1
+    },
+    {
+     "familia": "heroe",
+     "rank_fusion": 27.12
+    }
+   ],
+   "apuesta": {
+    "escenario": "ASCENDENTE",
+    "escenario_crudo": "CONTINUIDAD_ASCENDENTE",
+    "soporte_estructural_agregado": 0.5082,
+    "n_hipotesis_convergen": 7,
+    "escenarios": [
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 7
+     },
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 9
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 75.859,
+    "input_sha256": "e5b92446a7554a3c"
+   },
+   "identidad_sellada": "Rembrandt van Rijn (1606-1669)",
+   "destino_sellado": "auge",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "coincide",
+   "direccion_top3": {
+    "familia_central": "arquetipo_el_sabio",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "ANONIMO3_Z90_20261113",
+   "H1": {
+    "familia": "20_sacrificio_por_un_ideal",
+    "rank_fusion": 28.16,
+    "grado": "FRAGIL"
+   },
+   "H2": {
+    "familia": "arquetipo_el_sabio",
+    "rank_fusion": 27.56
+   },
+   "top3": [
+    {
+     "familia": "20_sacrificio_por_un_ideal",
+     "rank_fusion": 28.16
+    },
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 27.56
+    },
+    {
+     "familia": "berlin_01_erizo",
+     "rank_fusion": 27.56
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.733,
+    "n_hipotesis_convergen": 10,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 10
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 3
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 71.593,
+    "input_sha256": "305f8d15776eba7a"
+   },
+   "identidad_sellada": "Elvis Presley (1935-1977) v1",
+   "destino_sellado": "auge",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "no_coincide",
+   "direccion_top3": {
+    "familia_central": "20_sacrificio_por_un_ideal",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "ANONIMO3_Z90_20261113_v2",
+   "H1": {
+    "familia": "20_sacrificio_por_un_ideal",
+    "rank_fusion": 28.07,
+    "grado": "FRAGIL"
+   },
+   "H2": {
+    "familia": "berlin_01_erizo",
+    "rank_fusion": 27.16
+   },
+   "top3": [
+    {
+     "familia": "20_sacrificio_por_un_ideal",
+     "rank_fusion": 28.07
+    },
+    {
+     "familia": "berlin_01_erizo",
+     "rank_fusion": 27.16
+    },
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 26.84
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.6416,
+    "n_hipotesis_convergen": 10,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 10
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 5
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 75.051,
+    "input_sha256": "0c59532d8ce1963a"
+   },
+   "identidad_sellada": "Elvis Presley (1935-1977) v2 (con consumo_sustancias)",
+   "destino_sellado": "auge",
+   "veredicto_ciego_marco": "variante_no_prueba_ciega",
+   "apuesta_vs_destino": "no_coincide",
+   "direccion_top3": {
+    "familia_central": "20_sacrificio_por_un_ideal",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "TRANSICION1_Z90_20261113",
+   "H1": {
+    "familia": "arquetipo_el_creador",
+    "rank_fusion": 29.25,
+    "grado": "AJUSTADA"
+   },
+   "H2": {
+    "familia": "arquetipo_el_sabio",
+    "rank_fusion": 27.86
+   },
+   "top3": [
+    {
+     "familia": "arquetipo_el_creador",
+     "rank_fusion": 29.25
+    },
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 27.86
+    },
+    {
+     "familia": "berlin_01_erizo",
+     "rank_fusion": 25.34
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.6781,
+    "n_hipotesis_convergen": 10,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 10
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 4
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 72.632,
+    "input_sha256": "3be38f04a0511219"
+   },
+   "identidad_sellada": "Tulipomania (1634-1637) v1",
+   "destino_sellado": "caida",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "no_coincide",
+   "direccion_top3": {
+    "familia_central": null,
+    "en_top3": null,
+    "nota": "sin familia central unica en el HALLAZGOS; se lee por veredicto"
+   }
+  },
+  {
+   "caso": "TRANSICION1_Z90_20261113_v2",
+   "H1": {
+    "familia": "arquetipo_el_sabio",
+    "rank_fusion": 27.26,
+    "grado": "FRAGIL"
+   },
+   "H2": {
+    "familia": "minsky_03_ponzi",
+    "rank_fusion": 26.87
+   },
+   "top3": [
+    {
+     "familia": "arquetipo_el_sabio",
+     "rank_fusion": 27.26
+    },
+    {
+     "familia": "minsky_03_ponzi",
+     "rank_fusion": 26.87
+    },
+    {
+     "familia": "arquetipo_el_creador",
+     "rank_fusion": 26.15
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.7152,
+    "n_hipotesis_convergen": 11,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 11
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 4
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 76.096,
+    "input_sha256": "f37231bd8d73d2ae"
+   },
+   "identidad_sellada": "Tulipomania (1634-1637) v2 (con tokens Minsky)",
+   "destino_sellado": "caida",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "no_coincide",
+   "direccion_top3": {
+    "familia_central": "minsky_03_ponzi",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "TRANSICION2_Z90_20261113",
+   "H1": {
+    "familia": "tainter_01_inversion_complejidad_productiva",
+    "rank_fusion": 30.89,
+    "grado": "AJUSTADA"
+   },
+   "H2": {
+    "familia": "sustancias_03_severo",
+    "rank_fusion": 29.54
+   },
+   "top3": [
+    {
+     "familia": "tainter_01_inversion_complejidad_productiva",
+     "rank_fusion": 30.89
+    },
+    {
+     "familia": "sustancias_03_severo",
+     "rank_fusion": 29.54
+    },
+    {
+     "familia": "arquetipo_el_gobernante",
+     "rank_fusion": 29.3
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.7632,
+    "n_hipotesis_convergen": 18,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 18
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 3
+     },
+     {
+      "escenario": "CAIDA",
+      "n_hipotesis": 1
+     },
+     {
+      "escenario": "GIRO_O_DIVERGENCIA_MULTIESCALA",
+      "n_hipotesis": 1
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 93.178,
+    "input_sha256": "a1b594ae196d803b"
+   },
+   "identidad_sellada": "Revolucion Francesa (1789-1799)",
+   "destino_sellado": "meseta",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "coincide",
+   "direccion_top3": {
+    "familia_central": "tainter_01_inversion_complejidad_productiva",
+    "en_top3": true
+   }
+  },
+  {
+   "caso": "ANONIMO4_Z90_20261113",
+   "H1": {
+    "familia": "arquetipo_el_gobernante",
+    "rank_fusion": 35.22,
+    "grado": "AJUSTADA"
+   },
+   "H2": {
+    "familia": "sustancias_03_severo",
+    "rank_fusion": 31.72
+   },
+   "top3": [
+    {
+     "familia": "arquetipo_el_gobernante",
+     "rank_fusion": 35.22
+    },
+    {
+     "familia": "sustancias_03_severo",
+     "rank_fusion": 31.72
+    },
+    {
+     "familia": "8_rebelion",
+     "rank_fusion": 30.96
+    }
+   ],
+   "apuesta": {
+    "escenario": "MESETA",
+    "escenario_crudo": "MESeta_O_ESTABILIZACION",
+    "soporte_estructural_agregado": 0.7373,
+    "n_hipotesis_convergen": 13,
+    "escenarios": [
+     {
+      "escenario": "MESETA",
+      "n_hipotesis": 13
+     },
+     {
+      "escenario": "ASCENDENTE",
+      "n_hipotesis": 3
+     },
+     {
+      "escenario": "CAIDA",
+      "n_hipotesis": 1
+     }
+    ]
+   },
+   "recibo": {
+    "status": "COMPLETED",
+    "duration_seconds": 87.997,
+    "input_sha256": "d460ff77529c9517"
+   },
+   "identidad_sellada": "Ernesto Che Guevara (1928-1967)",
+   "destino_sellado": "ruptura_sujeto_meseta_estado",
+   "veredicto_ciego_marco": "paso",
+   "apuesta_vs_destino": "parcial",
+   "direccion_top3": {
+    "familia_central": "arquetipo_el_gobernante",
+    "en_top3": true
+   }
+  }
+ ],
+ "test_calibracion": {
+  "caso": "TEST_CALIBRACION_20261113",
+  "nota": "re-corrida de la entrada ANONIMO4 (Che Guevara) para verificar las etiquetas de calibracion; NO es una prueba ciega nueva ni una biografia distinta. La entrada es la misma biografia anonimizada #4 (7 cortes); el H1/H2 se mueven un poco por el crecimiento del StinkBox entre corridas (gobernante 34.75 vs 35.22 en ANONIMO4)",
+  "entrada_recorrida": "ANONIMO4_Z90_20261113",
+  "entrada_sha256": "6ca48a164e1ff162",
+  "H1": {
+   "familia": "arquetipo_el_gobernante",
+   "rank_fusion": 34.75
+  },
+  "H2": {
+   "familia": "sustancias_03_severo",
+   "rank_fusion": 31.27
+  },
+  "apuesta": {
+   "escenario": "MESETA",
+   "soporte_estructural_agregado": 0.7377
+  },
+  "calibracion": {
+   "status": "ACTIVA_CON_DESENLACES_SELLADOS",
+   "n_casos_resueltos_sellados": 25
+  },
+  "recibo": {
+   "status": "COMPLETED",
+   "duration_seconds": 88.167
+  }
+ }
+}
