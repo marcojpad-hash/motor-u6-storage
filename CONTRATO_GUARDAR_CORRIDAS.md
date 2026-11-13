@@ -1,6 +1,6 @@
 # Contrato para guardar corridas — motor U6
 
-Para modelos que guardan o revisan corridas. Lee esto antes de entregar una corrida. Si algo aquí contradice otro archivo, este contrato manda sobre la forma de guardar corridas, porque recoge la forma adoptada por Marco el 2026-11-11; los tres archivos viejos que dicen lo contrario están pendientes de actualizar (ver §6).
+Para modelos que guardan o revisan corridas. Lee esto antes de entregar una corrida. Si algo aquí contradice otro archivo, este contrato manda sobre la forma de guardar corridas. La reconciliación de los documentos subordinados quedó verificada el 2026-11-13 (ver §6).
 
 ## 1. Dos cosas diferentes, no las confundas
 
@@ -67,8 +67,8 @@ El candado no decide la política: valida el paquete de `motor/runs/`. No toca `
   "entrega": "F001_F002_20261111",
   "fecha_lectura": "2026-11-11",
   "lecturas": [
-    {"ruta": "casos/REGLAS.md", "sha256": "<64 hex>", "reglas": ["regla 6"]},
-    {"ruta": "CONTRATO_CARPETAS.md", "sha256": "<64 hex>", "reglas": ["casos/: nunca corridas completas"]},
+    {"ruta": "casos/REGLAS.md", "sha256": "<64 hex>", "reglas": ["resumen por corrida en resultados/resultados.jsonl; corrida completa en motor/runs/<LOTE>_<FECHA>/"]},
+    {"ruta": "CONTRATO_CARPETAS.md", "sha256": "<64 hex>", "reglas": ["casos/: hashes, plantilla, calibración, fábrica y resúmenes; corridas completas en motor/runs/"]},
     {"ruta": "PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md", "sha256": "<64 hex>", "reglas": ["§3 recibo mínimo", "§4 todo dato es un dato"]}
   ]
 }
@@ -76,15 +76,15 @@ El candado no decide la política: valida el paquete de `motor/runs/`. No toca `
 
 El candado comprueba: cada `ruta` existe en el repo; si trae `sha256`, coincide con el archivo actual (si el archivo cambió desde la lectura, lo reporta como no coincidente); y README.md o REVISION.md menciona el nombre de cada archivo leído (la entrega cita lo que leyó). Sin `LECTURA.json`, la entrega no pasa: es el criterio [A4].
 
-## 6. Conflicto explícito con el protocolo viejo
+## 6. Reconciliación documental — 2026-11-13
 
-Tres archivos todavía dicen que nunca se sube la corrida completa:
+La forma adoptada por Marco el 2026-11-11 queda normalizada en los tres documentos subordinados y fue releída en `alterno/cameo-pesos` el 2026-11-13:
 
-- `casos/REGLAS.md` regla 6: «nunca subir la corrida completa».
-- `CONTRATO_CARPETAS.md`: `casos/` — «Nunca corridas completas».
-- `casos/fabrica/README.md`: «Corridas completas quedan fuera del repo, en `/workspace/FABRICA_CORRIDAS/<lote>/`».
+- `casos/REGLAS.md`, regla 6: resumen de una línea en `casos/resultados/resultados.jsonl` y corrida completa en `motor/runs/<LOTE>_<FECHA>/`.
+- `CONTRATO_CARPETAS.md`: `casos/` conserva hashes, plantilla, calibración, fábrica y resúmenes; las corridas completas viven en `motor/runs/`.
+- `casos/fabrica/README.md`: la fábrica entrega resumen en `resultados.jsonl` y corrida completa en `motor/runs/`; la copia local de trabajo permanece en `/workspace/FABRICA_CORRIDAS/<lote>/`.
 
-La forma adoptada por Marco (2026-11-11 ~18:07 CST) es: resumen de una línea en `resultados.jsonl` **y** corridas completas en el apartado separado `motor/runs/<LOTE>_<FECHA>/` para el historial. Este contrato recoge esa forma. Esos tres archivos siguen pendientes de actualizar para que la regla quede escrita. Mientras tanto, si un modelo se encuentra con la contradicción, manda la forma adoptada por Marco y este contrato, no la prohibición vieja.
+No queda conflicto vigente entre esos tres documentos y este contrato. `LECTURA.json` de la entrega F003/F004 del 11-nov conserva las descripciones y SHA-256 de las versiones anteriores de esos archivos; por tanto, su evidencia de lectura está obsoleta respecto de la documentación actual y debe regenerarse/revalidarse mediante el procedimiento autorizado antes de ejecutar el candado. Esta revisión no modifica `LECTURA.json`, no ejecuta el candado y no recalifica la entrega.
 
 ## 7. Lo que no cambia
 
