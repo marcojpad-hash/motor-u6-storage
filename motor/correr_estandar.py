@@ -745,9 +745,11 @@ def main(argv) -> int:
     result["external_archetype_search_receipt"] = _search_run
     _hist_path = ROOT / "HISTORICAL_PREDICTIVE_REFERENCE.json"
     _hist_ref = json.loads(_hist_path.read_text(encoding="utf-8")) if _hist_path.is_file() else None
-    # Calibración activa (2026-11-13, decisión de Marco): el StinkBox ya tiene
-    # desenlaces sellados por caso (pruebas ciegas Z90 verificadas). El estado
-    # ya no es "sin calibrar": los componentes están activos y funcionan.
+    # Calibración parcial (2026-11-13, corrección tras auditoría de Claude,
+    # orden de Marco): el StinkBox tiene desenlaces sellados por caso
+    # (pruebas ciegas Z90), pero son parciales y NO hay regla de acierto
+    # pre-registrada; los destinos se leyeron a posteriori. La etiqueta
+    # no promete calibración.
     _n_resueltos = 0
     try:
         _idx_path = stink_storage / "resolved_cases_index.json"
@@ -757,12 +759,12 @@ def main(argv) -> int:
     except Exception:
         _n_resueltos = 0
     result["predictive_validation"] = {
-        "status": "ACTIVA_CON_DESENLACES_SELLADOS" if _n_resueltos > 0 else "SIN_DESENLACES_SELLADOS",
+        "status": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA" if _n_resueltos > 0 else "SIN_DESENLACES_SELLADOS",
         "n_casos_resueltos_sellados": _n_resueltos,
         "structural_fill_is_probability": False,
         "rank_fusion_is_probability": False,
         "historical_reference": _hist_ref,
-        "reason": "componentes activos y verificados contra desenlaces sellados por caso en el StinkBox (pruebas ciegas Z90); rank_fusion y relleno estructural son índices estructurales, no probabilidades"
+        "reason": "desenlaces sellados por caso en el StinkBox (pruebas ciegas Z90), parciales y sin regla de acierto pre-registrada; baseline H1 más frecuente acierta 2 de 6; rank_fusion y relleno estructural son índices estructurales, no probabilidades"
     }
     import importlib.util
     _sp = Path(__file__).resolve().parent / "motor" / "plugin_entrega_luces_v1.py"

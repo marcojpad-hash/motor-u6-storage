@@ -153,7 +153,7 @@ def _construir_impl(result: Dict[str, Any], case: Dict[str, Any], patterns: Dict
                     "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
                     "horizonte": "siguiente_corte",
                     "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": True,
-                    "calibracion": "ACTIVA_CON_DESENLACES_SELLADOS"}
+                    "calibracion": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA"}
 
     all_names = {str(c["family"]) for c in candidates}
     selected_names = {h["familia"] for h in hypotheses}
