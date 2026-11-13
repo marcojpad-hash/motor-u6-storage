@@ -2,7 +2,7 @@
 
 **Marco Juárez (Mj)** — autor del motor U6. Análisis asistido por dos modelos de IA: *Grok Bot* y un *modelo externo*.
 
-Fecha del intercambio: 11 de noviembre de 2026. Repositorio: <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma>. Revisión del manuscrito: 11 de noviembre de 2026. Esta revisión queda en un commit exclusivo de `paper/paper.md`; no modifica scripts, resultados ni archivos del experimento CAMEO `cameo-pesos`. Aunque el archivo vive en la rama `alterno/cameo-pesos`, el cambio del manuscrito queda separado a nivel de commit.
+Fecha del intercambio: 11 de noviembre de 2026. Repositorio: <https://github.com/marcojpad-hash/motor-u6-storage/tree/alterno/cameo-pesos/casos/trayectoria_forma>. Revisión del manuscrito: 11 de noviembre de 2026; correcciones de consistencia (fechas de la figura de Mozart, siete trayectorias frente a seis casos, R² 0.929 frente a 0.872, rótulo del primer intento): 13 de noviembre de 2026. Esta revisión queda en un commit exclusivo de `paper/paper.md`; no modifica scripts, resultados ni archivos del experimento CAMEO `cameo-pesos`. Aunque el archivo vive en la rama `alterno/cameo-pesos`, el cambio del manuscrito queda separado a nivel de commit.
 
 ## Resumen
 
@@ -52,7 +52,7 @@ Sobre Mozart y Napoleón (10 cortes cada uno), el modelo externo reportó: giro 
 
 ### 3.2 Primer intento de Grok Bot: transformación distinta
 
-Grok Bot usó primero la geometría ya existente en el motor (PCA a 3 componentes + ajuste helicoidal). Los giros fueron: Mozart 94.35°, Galileo 380.96°, Hawking 27.44°, Che 401.44°, MLK 37.96°; la “forma” apareció solo en Che (1/5). No reproducía al externo, porque la transformación era otra. Este desacuerdo fue el primer indicio de que el resultado dependía fuertemente del procedimiento.
+Grok Bot usó primero la geometría ya existente en el motor (PCA a 3 componentes + ajuste helicoidal). Los giros fueron: Mozart 94.35°, Galileo 380.96°, Hawking 27.44°, Che 401.44°, MLK 37.96°; la “forma” apareció solo en Che (1/5). No reproducía al externo, porque la transformación era otra. Este desacuerdo fue el primer indicio de que el resultado dependía fuertemente del procedimiento. Las cifras de este apartado y las cinco figuras de `geometria_existente_v1/` corresponden a ese primer intento (PCA a 3 componentes + ajuste helicoidal, eje PCA, sin Tusi externo) y quedan sustituidas por la reproducción de §3.3 (Tabla 1) y las Figuras 1–5, que usan la proyección Tusi del modelo externo.
 
 ### 3.3 Gate de reproducción y extensión a seis casos
 
@@ -67,7 +67,7 @@ Mj pasó el CSV y el script del modelo externo. Como compuerta previa, Grok Bot 
 | Che | 225.75 | 0.6534 | 0.09320 | 0.952 | 18.94 | 93.0% | sí |
 | MLK | 215.61 | 0.9155 | 0.06380 | 0.790 | 16.74 | 93.7% | no |
 
-*Tabla 1. Métricas geométricas por caso (PCA por caso; valores de R0 no comparables entre casos). El modelo externo obtuvo para Hawking con 7 cortes un giro de 222.5°.*
+*Tabla 1. Métricas geométricas por caso (PCA por caso; valores de R0 no comparables entre casos). El modelo externo obtuvo para Hawking con 7 cortes un giro de 222.5°. El R² = 0.929 de §3.1 es el ajuste del modelo externo hasta C6; el R² = 0.872 de Mozart en esta tabla es el ajuste reproducido sobre los 10 cortes. Son ajustes distintos (distinto rango), no una discrepancia.*
 
 A primera vista, cinco de seis casos comparten la forma y todos los giros caen en una banda estrecha (215–241°). Ese grado de regularidad entre vidas tan distintas fue, precisamente, lo que despertó sospecha.
 
@@ -87,7 +87,7 @@ La comparación es más precisa que la formulación anterior: la rivalidad es el
 
 Grok Bot sospechó que la regularidad era del método por dos razones geométricas: (a) rotar para que C1→Cn quede horizontal hace que los extremos queden en lados opuestos respecto al centroide, lo que fuerza un giro base cercano a 180°; (b) el centrado acerca los cortes intermedios al origen, lo que produce una U en el radio (grande al inicio y al final, pequeño en medio). Al revisar las tablas encontró además que **y_inicio = y_fin en todos los casos**, por construcción: MLK +0.2365/+0.2365, Galileo +0.2951/+0.2951. Si C1→Cn es horizontal, ambos extremos tienen la misma coordenada transversal; la “misma cresta” al inicio y al final no es un hallazgo.
 
-El modelo externo lo verificó de forma independiente en sus propias tablas (Mozart +0.2101, Napoleón +0.2670, Hawking +0.1887) y en 200 trazas falsas: la diferencia y_fin − y_inicio fue siempre 0, y la U del radio apareció en el 100% de las trazas falsas suaves. El giro de los siete casos reales (215–241°, media ~228°) coincide con el de las falsas suaves. Conclusión compartida: **giro, cresta compartida y U del radio son del método**. El modelo externo se corrigió explícitamente respecto a su lectura inicial.
+El modelo externo lo verificó de forma independiente en sus propias tablas (Mozart +0.2101, Napoleón +0.2670, Hawking +0.1887) y en 200 trazas falsas: la diferencia y_fin − y_inicio fue siempre 0, y la U del radio apareció en el 100% de las trazas falsas suaves. El giro de las siete trayectorias reales (215–241°, media ~228°) coincide con el de las falsas suaves. Las siete son los seis casos de la Tabla 1 más la versión de Hawking de 7 cortes del modelo externo, que no está en la Tabla 1. Conclusión compartida: **giro, cresta compartida y U del radio son del método**. El modelo externo se corrigió explícitamente respecto a su lectura inicial.
 
 ![Figura 3. Giro neto real (línea negra) frente a 1000 nulos por tipo y caso. La caminata gaussiana concentra el giro en la misma banda que los casos reales.](GIRO_REAL_VS_NULOS.png)
 
@@ -111,7 +111,7 @@ Grok Bot repitió el control con 1000 nulos por tipo, condicionados a R² de fas
 
 El resultado se reproduce en `control_nulo_v1/SENALES_POR_PASO.json`; los SHA-256 del script `senales_por_paso.py` y de `METODO_SENALES_POR_PASO.md` coinciden con los declarados por el resultado. El log de ejecución conserva los tamaños aceptados. El percentil 100 no significa p=0: significa que ninguna réplica aceptada de ese slot superó el valor real. Ninguno de los cinco máximos pasa Holm15. El menor p sin ajustar es Mozart (0.0154), pero queda en 0.2308 tras Holm. En Mozart, C8→C9 da A=+0.1922 frente a +0.0673 en C5→C6; al permitir que la falsa elija cualquier paso, C8→C9 deja de ser excepcional (p≈0.969). Che C7→C8 destaca por distancia euclidiana frente a caminata aleatoria (Holm≈0.015), pero no frente a permutación ni iid; depende del nulo elegido.
 
-El Brumario de Napoleón conserva residual +50.54° y A=+0.2001 en el CSV externo. El nulo condicionado original acepta solo 8 permutaciones geométricas 2D: es BAJA_MUESTRA y no constituye un control familiar. El nuevo crudo_P permite análisis de familias, pero no fue incorporado retrospectivamente a esta Tabla 2 ni a sus 15 comparaciones. Para extender el contraste inferencial a Napoleón hace falta una corrida nueva con su matriz de 244 familias, sin mezclarla con el resultado 2D anterior. Conclusión acotada: **no hay señal común robusta acreditada en los controles ejecutados**. En esta versión, el C10 de Mozart cae en 1788.34 = Z90, por lo que el estancamiento final es anterior a Z y no viola el sellado.
+El Brumario de Napoleón conserva residual +50.54° y A=+0.2001 en el CSV externo. El nulo condicionado original acepta solo 8 permutaciones geométricas 2D: es BAJA_MUESTRA y no constituye un control familiar. El nuevo crudo_P permite análisis de familias, pero no fue incorporado retrospectivamente a esta Tabla 2 ni a sus 15 comparaciones. Para extender el contraste inferencial a Napoleón hace falta una corrida nueva con su matriz de 244 familias, sin mezclarla con el resultado 2D anterior. Conclusión acotada: **no hay señal común robusta acreditada en los controles ejecutados**. En esta versión, el C10 de Mozart cae en 1788.34 = Z90, por lo que el estancamiento final es anterior a Z y no viola el sellado. Aclaración sobre la figura de `geometria_existente_v1/MOZART_10_TRAYECTORIA.png` (primer intento): su eje de años usa fechas reconstruidas de la corrida U10 (octubre de 2026), con C10 = 1791-12-31 como cierre convencional posterior a la muerte; por eso muestra puntos en 1790–1792 y su propio archivo de datos marca C8–C10 como DESPUES_Z90. Esas fechas no son las de la entrada sellada: en la entrada `MOZART_FRESH_Z90_U6_20261014` los diez cortes terminan el 1788-05-04 = Z90 y ninguno es posterior. No hay fuga en la entrada del motor; el eje de esa figura es una reconstrucción y debe leerse como tal.
 
 ![Figura 5. Percentiles del arco residual por paso frente a cada nulo. La línea punteada (95) es descriptiva, no el umbral corregido.](SENALES_POR_PASO.png)
 
