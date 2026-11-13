@@ -24,3 +24,11 @@ Casos revisados: 20. Recibo COMPLETED en 20. Grados: 1 FRAGIL, 16 AJUSTADA.
 
 ## Nota de entrega
 Los RESULT completos no se suben por el límite de 16 MiB del snapshot de push-files; se sube el resultado interpretable completo (salida_interpretable íntegra, sin recortes) + recibo + entrada, y el SHA-256 de cada RESULT completo queda en MANIFIESTO.json.
+
+## Corrección de lectura documental — 2026-11-13
+
+Se releyeron individualmente los 20 archivos `*_RECIBO_EJECUCION.json` del lote (10 F003 y 10 F004). Los 20 conservan `status=COMPLETED`. En los 20, `stages[8]` es `consulta_dirigida` y contiene ambas claves `adaptador` y `verificacion_no_escribe_H`; ambas tienen el valor literal `DATO_AUSENTE_REQUIERE_CLASIFICACION`.
+
+Por tanto, la frase anterior `receipt_missing_paths` no describe una ausencia estructural de esas claves: las rutas existen. El problema verificado es semántico y permanece abierto: ambos valores son marcadores de dato ausente que requieren clasificación; no demuestran que el adaptador esté configurado ni que la verificación de no escritura sobre H se haya realizado. No se infiere éxito de esos campos.
+
+También se comprobó que `LECTURA.json` conserva las descripciones antiguas de `casos/REGLAS.md`, `CONTRATO_CARPETAS.md` y `casos/fabrica/README.md`. Esas descripciones ya no coinciden con el contenido actual; la evidencia de lectura está obsoleta y debe renovarse antes de ejecutar el candado. No se modificó `LECTURA.json`, no se ejecutó `scripts/candado_entrega.py`, no se ejecutaron tests ni se corrió el motor. El estado `NO_CALIBRADO` permanece.
