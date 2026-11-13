@@ -14,9 +14,11 @@
 - `MANIFIESTO.json` — SHA-256 de cada RESULT completo y de cada entrada, con estado y segundos.
 - `REVISION.md` — revisión de los 20: hallazgos sistemáticos y por caso.
 
-## Nota sobre el protocolo (conflicto explícito)
+## Nota sobre el protocolo — reconciliación documental 2026-11-13
 
-`casos/REGLAS.md` regla 6 y `CONTRATO_CARPETAS.md` dicen que nunca se sube la corrida completa al repo (solo un resumen en `casos/resultados/resultados.jsonl`), y `casos/fabrica/README.md` dice que las corridas completas quedan fuera del repo. Esta entrega es una excepción por orden directa de Marco (2026-11-11): las corridas se entregan en el repo para que otros modelos las puedan revisar. Si se adopta como regla, hay que actualizar esos tres archivos. La entrega sigue `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md` §3 (recibo mínimo, sin inventar campos) y §4 («Todo dato es un dato»: se conservan picos, mesetas, valles y descensos, no solo H1/H2). La evidencia de lectura está en `LECTURA.json`.
+La forma de almacenamiento adoptada el 2026-11-11 ya está reflejada en `casos/REGLAS.md`, `CONTRATO_CARPETAS.md`, `casos/fabrica/README.md` y `CONTRATO_GUARDAR_CORRIDAS.md`: resumen de una línea en `casos/resultados/resultados.jsonl` y corrida completa interpretable, recibo y entrada en `motor/runs/<LOTE>_<FECHA>/`. Esta entrega no es una excepción.
+
+**Advertencia de evidencia:** `LECTURA.json` conserva descripciones y SHA-256 de las versiones anteriores de los tres documentos subordinados. Tras su actualización, esa evidencia quedó obsoleta y debe regenerarse/revalidarse mediante el procedimiento autorizado antes de ejecutar `scripts/candado_entrega.py`. No se modificó `LECTURA.json` ni se ejecutó el candado en esta revisión documental. La revisión de los recibos y la corrección de su interpretación constan en `REVISION.md`.
 
 ## Nota sobre el tamaño
 
