@@ -1,0 +1,1286 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "TRANSICION2_Z90_20261113",
+  "started_epoch": 1794558169.384693,
+  "finished_epoch": 1794558262.562968,
+  "duration_seconds": 93.178,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/casos/precedentes/TRANSICION2_Z90_20261113/entrada.json",
+  "input_sha256": "a1b594ae196d803b0df2e63b589ede738d8a744330388a750e3392a7383a959c",
+  "normalized_input_sha256": "66e2149e677edd403b7d74c702d213d69097238ba4569a1e2c36af10438fd325",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_TRANSICION2_Z90_20261113.json",
+  "output_sha256": "cba3bf2f0285e641272678fdf5a4c1c8aacc0f607318638b5f0baff3631a77a5",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "0485503dbaf6e14a9432f51bf6b088b7a304e6ee5e2b32c559d5d42e54a04063",
+  "motor_sha256": "b4d4d657e0691da4fcb1a526e0c2a7d54a70ac4fa6fc4d9fe3176ab21d716f4e",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 21,
+      "engine_observation_calls_with_mc_metrics": 21,
+      "total_simulations": 12801,
+      "converged_calls": 21,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1501_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1501_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1501_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 692,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1511_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1511_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1511_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1520_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1520_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1520_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1525_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 692,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1525_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1525_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 703,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1530_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 671,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1530_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1530_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1538_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 624,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1538_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1538_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1548_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1548_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1548_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "porcentaje_relleno": 57.06,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 34.7826,
+          "booker": 50.7246,
+          "dynamis": 42.3913,
+          "estructura": 80.4348,
+          "frye": 52.8986,
+          "geometria_inercia": 50.0,
+          "greimas": 78.2609,
+          "otras_dimensiones": 52.3411,
+          "puente_lateral": 64.5357,
+          "resolucion": 58.6957,
+          "trayectoria_estado": 62.6087
+        },
+        "peso_relativo": 0.052059,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 56.07
+      },
+      "H2": {
+        "familia": "sustancias_03_severo",
+        "porcentaje_relleno": 56.49,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 34.058,
+          "dynamis": 54.7101,
+          "estructura": 100.0,
+          "frye": 43.4783,
+          "geometria_inercia": 50.0,
+          "greimas": 79.3478,
+          "otras_dimensiones": 77.592,
+          "puente_lateral": 0.0,
+          "resolucion": 91.3043,
+          "trayectoria_estado": 90.8696
+        },
+        "peso_relativo": 0.049792,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 53.97
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "bing_html",
+      "query_count": 1,
+      "result_count": 1,
+      "query_sha256": "1c1ab792d9e9fca72129d274552437fa6f27376b0c37ff9fdd8f645d0c060d0a"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "cba3bf2f0285e641272678fdf5a4c1c8aacc0f607318638b5f0baff3631a77a5"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "capa_llm/consulta_dirigida_v1.py",
+          "manifiesto": "573870a998fb",
+          "actual": "3d4d1154c08d"
+        },
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "0485503dbaf6"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "b4d4d657e069"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/geometria_multicapa/adaptador_convergencia_real_v1.py",
+          "manifiesto": "0cbfacf280bf",
+          "actual": "3312fcf464fe"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "88d11b0138a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/plugin_circulo_monomito_v2.py",
+          "manifiesto": "9a6d858200f8",
+          "actual": "56a13786843f"
+        },
+        {
+          "path": "motor/predictibilidad_set_021.py",
+          "manifiesto": "1d1ac27244ac",
+          "actual": "799cc2f33b5c"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/MOTOR_V15_3_UNICO_20260927.py.pre-cableado-caldero",
+        "motor/MOTOR_V15_3_UNICO_20260927.py.pre-cuartos-contra",
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/observador_externo_v1.py",
+        "motor/plugin_circulo_monomito_v2.py.pre-cableado-caldero",
+        "motor/plugin_circulo_monomito_v2.py.pre-cuartos-contra",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 112,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_TRANSICION2_Z90_20261113_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_TRANSICION2_Z90_20261113_CEB_LEDGER_1.jsonl",
+          "sha256": "4b414b1cf9727ccb30c11acad30e76d47ebaef82f3a2216d34574ab1d810feef",
+          "lineas": 56206
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "gate_z90",
+      "status": "RECHAZADO_DIAGNOSTICO",
+      "n_errores": 1,
+      "errores": [
+        "R1 z_trabajo ausente o mal formado: ''"
+      ],
+      "bloquea": false
+    },
+    {
+      "stage": "filogenia_mezcla",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_TRANSICION2_Z90_20261113.json",
+      "sha256_json": "ac7185c05b2c6e24e61287afd81eee8a1229960246bf94c1630c4e43e7886640",
+      "bloquea": false
+    },
+    {
+      "stage": "teoria_color",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_TRANSICION2_Z90_20261113.json",
+      "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_TRANSICION2_Z90_20261113.png",
+      "sha256_json": "846e03daf01265220734779028a072e712c5c5b6ea0cef2ef11c3f64f19d35a3",
+      "bloquea": false
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "bing_html",
+    "query_count": 1,
+    "result_count": 1,
+    "query_sha256": "1c1ab792d9e9fca72129d274552437fa6f27376b0c37ff9fdd8f645d0c060d0a",
+    "raw_sources": 1,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 19,
+    "corte_temporal": {
+      "aplicado": false,
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 1,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 0,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 0,
+      "tokens_antes_corte": 19,
+      "tokens_despues_corte": 19,
+      "motivo": "sin_z_corte",
+      "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+    },
+    "query": "ruptura_pasado desafio_autoridad busqueda_libertad idealismo participacion_colectiva injusticia privacion_libertad corrupcion_poder justicia_social igualdad fraternidad crisis_abrupta planificacion cautela conocimiento cambio_identidad desconfianza_autoridad miedo_engano resistencia_cambio estado_de_derecho reputacion_institucional estancamiento_crisis insurreccion rebelion empoderamiento liderazgo audacia miedo_caos miedo rivalidad_poder ruptura_realidad cambio_lealtad justicia sacrificio sacrificio_forzado rebeldia miedo_al_castigo crisis_existencial abuso_poder ira_institucional",
+    "urls": [
+      "https://www.msn.com/en-us/news/other/nicki-minaj-torches-kathy-hochul-as-evil-woman-as-governor-fires-back-with-trump-jab/ar-AA2gqUer"
+    ],
+    "consultado_utc": "2026-11-13T08:22:54+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-13T08:22:51+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-13T08:22:51+00:00",
+        "error": "buscador duckduckgo_html sin resultados URL verificables"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-13T08:22:52+00:00",
+        "error": "buscador duckduckgo_lite sin resultados URL verificables"
+      },
+      {
+        "provider": "bing_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-13T08:22:54+00:00"
+      }
+    ],
+    "llm": false,
+    "z_corte_estado": "CAMPO_OPCIONAL_NO_EMITIDO"
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "tainter_01_inversion_complejidad_productiva",
+    "H2": "sustancias_03_severo",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "tainter_01_inversion_complejidad_productiva",
+      "porcentaje_relleno": 57.06,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 34.7826,
+        "booker": 50.7246,
+        "dynamis": 42.3913,
+        "estructura": 80.4348,
+        "frye": 52.8986,
+        "geometria_inercia": 50.0,
+        "greimas": 78.2609,
+        "otras_dimensiones": 52.3411,
+        "puente_lateral": 64.5357,
+        "resolucion": 58.6957,
+        "trayectoria_estado": 62.6087
+      },
+      "peso_relativo": 0.052059,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 56.07
+    },
+    "H2": {
+      "familia": "sustancias_03_severo",
+      "porcentaje_relleno": 56.49,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 34.058,
+        "dynamis": 54.7101,
+        "estructura": 100.0,
+        "frye": 43.4783,
+        "geometria_inercia": 50.0,
+        "greimas": 79.3478,
+        "otras_dimensiones": 77.592,
+        "puente_lateral": 0.0,
+        "resolucion": 91.3043,
+        "trayectoria_estado": 90.8696
+      },
+      "peso_relativo": 0.049792,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 53.97
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.8665,
+      "techo_pct": 92.1335,
+      "pp_por_punto_de_rank_fusion": 1.5605,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar."
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "tainter_01_inversion_complejidad_productiva",
+        "rol": "eje",
+        "peso_en_set": 0.076982,
+        "predictibilidad_estructural_pct": 56.07,
+        "cobertura_unica_frac": 0.0497
+      },
+      {
+        "familia": "sustancias_03_severo",
+        "rol": "componente",
+        "peso_en_set": 0.073631,
+        "predictibilidad_estructural_pct": 53.97,
+        "cobertura_unica_frac": 0.0709
+      },
+      {
+        "familia": "arquetipo_el_gobernante",
+        "rol": "componente",
+        "peso_en_set": 0.073034,
+        "predictibilidad_estructural_pct": 53.6,
+        "cobertura_unica_frac": 0.0504
+      },
+      {
+        "familia": "kwml_01_rey",
+        "rol": "componente",
+        "peso_en_set": 0.072255,
+        "predictibilidad_estructural_pct": 53.11,
+        "cobertura_unica_frac": 0.0245
+      },
+      {
+        "familia": "23_necesidad_de_sacrificar_a_los_seres_queridos",
+        "rol": "componente",
+        "peso_en_set": 0.066937,
+        "predictibilidad_estructural_pct": 49.78,
+        "cobertura_unica_frac": 0.0252
+      },
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "componente",
+        "peso_en_set": 0.066296,
+        "predictibilidad_estructural_pct": 49.38,
+        "cobertura_unica_frac": 0.0729
+      },
+      {
+        "familia": "sistema_domiciano",
+        "rol": "componente",
+        "peso_en_set": 0.065109,
+        "predictibilidad_estructural_pct": 48.63,
+        "cobertura_unica_frac": 0.1001
+      },
+      {
+        "familia": "24_rivalidad_de_superior_e_inferior",
+        "rol": "componente",
+        "peso_en_set": 0.061844,
+        "predictibilidad_estructural_pct": 46.59,
+        "cobertura_unica_frac": 0.0736
+      },
+      {
+        "familia": "arquetipo_el_explorador",
+        "rol": "componente",
+        "peso_en_set": 0.060842,
+        "predictibilidad_estructural_pct": 45.96,
+        "cobertura_unica_frac": 0.0245
+      },
+      {
+        "familia": "arquetipo_el_rebelde",
+        "rol": "componente",
+        "peso_en_set": 0.060157,
+        "predictibilidad_estructural_pct": 45.53,
+        "cobertura_unica_frac": 0.0497
+      },
+      {
+        "familia": "8_rebelion",
+        "rol": "componente",
+        "peso_en_set": 0.059035,
+        "predictibilidad_estructural_pct": 44.83,
+        "cobertura_unica_frac": 0.051
+      },
+      {
+        "familia": "candidato_trayectoria_arte_prestigio",
+        "rol": "componente",
+        "peso_en_set": 0.057714,
+        "predictibilidad_estructural_pct": 44.0,
+        "cobertura_unica_frac": 0.0471
+      },
+      {
+        "familia": "16_locura",
+        "rol": "componente",
+        "peso_en_set": 0.053001,
+        "predictibilidad_estructural_pct": 41.05,
+        "cobertura_unica_frac": 0.0252
+      },
+      {
+        "familia": "10_rapto",
+        "rol": "componente",
+        "peso_en_set": 0.051731,
+        "predictibilidad_estructural_pct": 40.26,
+        "cobertura_unica_frac": 0.049
+      },
+      {
+        "familia": "camaleon",
+        "rol": "componente",
+        "peso_en_set": 0.050983,
+        "predictibilidad_estructural_pct": 39.79,
+        "cobertura_unica_frac": 0.0484
+      },
+      {
+        "familia": "schwartz_01_universalismo",
+        "rol": "componente",
+        "peso_en_set": 0.050449,
+        "predictibilidad_estructural_pct": 39.45,
+        "cobertura_unica_frac": 0.0252
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "tainter_01_inversion_complejidad_productiva domina; sustancias_03_severo es rival distinto (margen 1.344871 >= 1.0 y afinidad 0.186517 < 0.5)",
+      "peso_H1": 0.052059,
+      "peso_H2": 0.049792,
+      "peso_H1_en_par": 0.511129,
+      "peso_H2_en_par": 0.488871
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 23,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "tainter_01_inversion_complejidad_productiva",
+          "rol_en_set": "eje",
+          "rank_fusion": 30.888349,
+          "soporte_estructural_relativo": 0.05379134,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.16886,
+            "micro": 0.670843,
+            "meso": 0.546836,
+            "macro": 0.535611,
+            "aceleracion": 0.678452,
+            "divergencia_entre_escala": 0.135232,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "sustancias_03_severo",
+          "rol_en_set": "componente",
+          "rank_fusion": 29.543478,
+          "soporte_estructural_relativo": 0.05144928,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.211709,
+            "micro": 0.695085,
+            "meso": 0.551365,
+            "macro": 0.571115,
+            "aceleracion": 0.707595,
+            "divergencia_entre_escala": 0.14372,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "componente",
+          "rank_fusion": 29.303999,
+          "soporte_estructural_relativo": 0.05103223,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.097593,
+            "micro": 0.490135,
+            "meso": 0.545262,
+            "macro": 0.610992,
+            "aceleracion": 0.495467,
+            "divergencia_entre_escala": 0.120858,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "kwml_01_rey",
+          "rol_en_set": "componente",
+          "rank_fusion": 28.991503,
+          "soporte_estructural_relativo": 0.05048803,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.048462,
+            "micro": 0.512264,
+            "meso": 0.52825,
+            "macro": 0.532179,
+            "aceleracion": 0.469903,
+            "divergencia_entre_escala": 0.019915,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "anacyclosis_01_monarquia",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 28.678937,
+          "soporte_estructural_relativo": 0.0499437,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.120832,
+            "micro": 0.4968,
+            "meso": 0.580546,
+            "macro": 0.603903,
+            "aceleracion": 0.426014,
+            "divergencia_entre_escala": 0.107102,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "9_audaz_empresa",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 26.92099,
+          "soporte_estructural_relativo": 0.04688228,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.012747,
+            "micro": 0.490135,
+            "meso": 0.489175,
+            "macro": 0.539811,
+            "aceleracion": 0.5008,
+            "divergencia_entre_escala": 0.050636,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "23_necesidad_de_sacrificar_a_los_seres_queridos",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.857595,
+          "soporte_estructural_relativo": 0.04677188,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.020037,
+            "micro": 0.489468,
+            "meso": 0.488562,
+            "macro": 0.552025,
+            "aceleracion": 0.500667,
+            "divergencia_entre_escala": 0.063463,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.60052,
+          "soporte_estructural_relativo": 0.04632419,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.002541,
+            "micro": 0.484538,
+            "meso": 0.483153,
+            "macro": 0.528498,
+            "aceleracion": 0.501067,
+            "divergencia_entre_escala": 0.045345,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "sistema_domiciano",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.124488,
+          "soporte_estructural_relativo": 0.04549519,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.104679,
+            "micro": 0.472295,
+            "meso": 0.568434,
+            "macro": 0.61629,
+            "aceleracion": 0.498,
+            "divergencia_entre_escala": 0.143994,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_010",
+          "familia": "utopia_mentalidad_liberal",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 25.929222,
+          "soporte_estructural_relativo": 0.04515514,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.064309,
+            "micro": 0.593294,
+            "meso": 0.502293,
+            "macro": 0.500876,
+            "aceleracion": 0.596251,
+            "divergencia_entre_escala": 0.092418,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_011",
+          "familia": "distopia_coercion_total",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 25.347826,
+          "soporte_estructural_relativo": 0.04414265,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.046276,
+            "micro": 0.479079,
+            "meso": 0.514063,
+            "macro": 0.576271,
+            "aceleracion": 0.4976,
+            "divergencia_entre_escala": 0.097193,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_012",
+          "familia": "24_rivalidad_de_superior_e_inferior",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.814454,
+          "soporte_estructural_relativo": 0.0432138,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.04119,
+            "micro": 0.473226,
+            "meso": 0.543609,
+            "macro": 0.54495,
+            "aceleracion": 0.334478,
+            "divergencia_entre_escala": 0.071724,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_013",
+          "familia": "arquetipo_el_explorador",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.412148,
+          "soporte_estructural_relativo": 0.04251319,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.017422,
+            "micro": 0.492267,
+            "meso": 0.491627,
+            "macro": 0.489973,
+            "aceleracion": 0.5004,
+            "divergencia_entre_escala": 0.002295,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_014",
+          "familia": "arquetipo_el_rebelde",
+          "rol_en_set": "componente",
+          "rank_fusion": 24.137271,
+          "soporte_estructural_relativo": 0.0420345,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.047072,
+            "micro": 0.484538,
+            "meso": 0.529286,
+            "macro": 0.556783,
+            "aceleracion": 0.496533,
+            "divergencia_entre_escala": 0.072244,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_015",
+          "familia": "8_rebelion",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.687263,
+          "soporte_estructural_relativo": 0.04125082,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_DESCENDENTE",
+            "senal_multiescala": -0.123656,
+            "micro": 0.335191,
+            "meso": 0.43741,
+            "macro": 0.541916,
+            "aceleracion": 0.349236,
+            "divergencia_entre_escala": 0.206725,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_016",
+          "familia": "candidato_trayectoria_arte_prestigio",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.157178,
+          "soporte_estructural_relativo": 0.04032769,
+          "trazabilidad_geometrica": {
+            "regimen": "GIRO_O_DIVERGENCIA_MULTIESCALA",
+            "senal_multiescala": 0.047358,
+            "micro": 0.774727,
+            "meso": 0.368436,
+            "macro": 0.427873,
+            "aceleracion": 0.921964,
+            "divergencia_entre_escala": 0.406292,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_017",
+          "familia": "anacyclosis_05_democracia",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 22.630521,
+          "soporte_estructural_relativo": 0.03941053,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.052854,
+            "micro": 0.5044,
+            "meso": 0.460324,
+            "macro": 0.455995,
+            "aceleracion": 0.5024,
+            "divergencia_entre_escala": 0.048405,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_018",
+          "familia": "anacyclosis_04_oligarquia",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 21.826087,
+          "soporte_estructural_relativo": 0.03800962,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.030925,
+            "micro": 0.479079,
+            "meso": 0.5173,
+            "macro": 0.550008,
+            "aceleracion": 0.4976,
+            "divergencia_entre_escala": 0.07093,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_019",
+          "familia": "anacyclosis_02_tirania",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 21.652174,
+          "soporte_estructural_relativo": 0.03770676,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.005148,
+            "micro": 0.479079,
+            "meso": 0.489068,
+            "macro": 0.539574,
+            "aceleracion": 0.4976,
+            "divergencia_entre_escala": 0.060495,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_020",
+          "familia": "16_locura",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.266042,
+          "soporte_estructural_relativo": 0.03703432,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.008716,
+            "micro": 0.488535,
+            "meso": 0.490388,
+            "macro": 0.534152,
+            "aceleracion": 0.497467,
+            "divergencia_entre_escala": 0.045616,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_021",
+          "familia": "10_rapto",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.75666,
+          "soporte_estructural_relativo": 0.03614724,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.030965,
+            "micro": 0.480943,
+            "meso": 0.538802,
+            "macro": 0.526703,
+            "aceleracion": 0.497733,
+            "divergencia_entre_escala": 0.057859,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_022",
+          "familia": "camaleon",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.456522,
+          "soporte_estructural_relativo": 0.03562456,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.067671,
+            "micro": 0.47828,
+            "meso": 0.558557,
+            "macro": 0.564669,
+            "aceleracion": 0.317258,
+            "divergencia_entre_escala": 0.086389,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_023",
+          "familia": "schwartz_01_universalismo",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.242053,
+          "soporte_estructural_relativo": 0.03525107,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.050142,
+            "micro": 0.494667,
+            "meso": 0.461821,
+            "macro": 0.4683,
+            "aceleracion": 0.4976,
+            "divergencia_entre_escala": 0.032846,
+            "n_cortes_observados": 7
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_gobernante",
+            "kwml_01_rey",
+            "9_audaz_empresa",
+            "23_necesidad_de_sacrificar_a_los_seres_queridos",
+            "20_sacrificio_por_un_ideal",
+            "sistema_domiciano",
+            "utopia_mentalidad_liberal",
+            "distopia_coercion_total",
+            "24_rivalidad_de_superior_e_inferior",
+            "arquetipo_el_explorador",
+            "arquetipo_el_rebelde",
+            "anacyclosis_05_democracia",
+            "anacyclosis_04_oligarquia",
+            "anacyclosis_02_tirania",
+            "16_locura",
+            "10_rapto",
+            "camaleon",
+            "schwartz_01_universalismo"
+          ],
+          "n_hipotesis": 18,
+          "soporte_estructural_agregado": 0.76323718,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "tainter_01_inversion_complejidad_productiva",
+            "sustancias_03_severo",
+            "anacyclosis_01_monarquia"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.15518432,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_DESCENDENTE",
+          "hipotesis_que_convergen": [
+            "8_rebelion"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.04125082,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "GIRO_O_DIVERGENCIA_MULTIESCALA",
+          "hipotesis_que_convergen": [
+            "candidato_trayectoria_arte_prestigio"
+          ],
+          "n_hipotesis": 1,
+          "soporte_estructural_agregado": 0.04032769,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_gobernante",
+          "kwml_01_rey",
+          "9_audaz_empresa",
+          "23_necesidad_de_sacrificar_a_los_seres_queridos",
+          "20_sacrificio_por_un_ideal",
+          "sistema_domiciano",
+          "utopia_mentalidad_liberal",
+          "distopia_coercion_total",
+          "24_rivalidad_de_superior_e_inferior",
+          "arquetipo_el_explorador",
+          "arquetipo_el_rebelde",
+          "anacyclosis_05_democracia",
+          "anacyclosis_04_oligarquia",
+          "anacyclosis_02_tirania",
+          "16_locura",
+          "10_rapto",
+          "camaleon",
+          "schwartz_01_universalismo"
+        ],
+        "n_hipotesis": 18,
+        "soporte_estructural_agregado": 0.76323718,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__TRANSICION2_Z90_20261113",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__TRANSICION2_Z90_20261113",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 4026
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 18,
+          "new_event_records": 679,
+          "new_token_strings": 36,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 4062
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__TRANSICION2_Z90_20261113",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__TRANSICION2_Z90_20261113",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 4062
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 20,
+          "new_event_records": 1204,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 4062
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,1061 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "ANONIMO3_Z90_20261113_v2",
+  "started_epoch": 1794556675.789418,
+  "finished_epoch": 1794556750.840104,
+  "duration_seconds": 75.051,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/casos/precedentes/ANONIMO3_Z90_20261113_v2/entrada.json",
+  "input_sha256": "0c59532d8ce1963ae226935ce196b421606a7e00ce056468e5dcbd061abf39b6",
+  "normalized_input_sha256": "0c59532d8ce1963ae226935ce196b421606a7e00ce056468e5dcbd061abf39b6",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_ANONIMO3_Z90_20261113_v2.json",
+  "output_sha256": "178816a04a53487244ff94256c2f0a31a41a3024b0cafa38efb957f0a0a5ece3",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "0485503dbaf6e14a9432f51bf6b088b7a304e6ee5e2b32c559d5d42e54a04063",
+  "motor_sha256": "066af6844dd540857beaf4e29302a05b0d7a789283cfdc82f349000257c6d666",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 21,
+      "engine_observation_calls_with_mc_metrics": 21,
+      "total_simulations": 13167,
+      "converged_calls": 21,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_1901_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 751,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1901_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_1901_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 671,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1911_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 722,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1911_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_1911_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1920_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1920_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_1920_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1925_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 722,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1925_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_1925_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1930_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1930_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_1930_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 598,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1938_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1938_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_1938_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1948_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 658,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1948_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 541,
+          "converged": true
+        },
+        {
+          "observation_id": "C7_1948_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 797,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "20_sacrificio_por_un_ideal",
+        "porcentaje_relleno": 58.15,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 17.6471,
+          "booker": 42.1569,
+          "dynamis": 82.3529,
+          "estructura": 58.8235,
+          "frye": 51.9608,
+          "geometria_inercia": 94.1176,
+          "greimas": 68.6275,
+          "otras_dimensiones": 57.0136,
+          "puente_lateral": 59.9317,
+          "resolucion": 47.0588,
+          "trayectoria_estado": 60.0
+        },
+        "peso_relativo": 0.072614,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 57.02
+      },
+      "H2": {
+        "familia": "berlin_01_erizo",
+        "porcentaje_relleno": 64.52,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 5.8824,
+          "booker": 61.7647,
+          "dynamis": 94.1176,
+          "estructura": 100.0,
+          "frye": 37.2549,
+          "geometria_inercia": 100.0,
+          "greimas": 74.5098,
+          "otras_dimensiones": 64.2534,
+          "puente_lateral": 12.5427,
+          "resolucion": 85.2941,
+          "trayectoria_estado": 74.1176
+        },
+        "peso_relativo": 0.070255,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 55.45
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "duckduckgo_html",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "c4febc7c6a7480d33e240b63d76b5faf3744c30cad3341bbd5cb81bdb2af0819"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "178816a04a53487244ff94256c2f0a31a41a3024b0cafa38efb957f0a0a5ece3"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "52eb7a61e0b86e945e3c354f3d1348580e41c37335844517a7e907c10980809b",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "capa_llm/consulta_dirigida_v1.py",
+          "manifiesto": "573870a998fb",
+          "actual": "3d4d1154c08d"
+        },
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "0485503dbaf6"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "6818261d3ebf",
+          "actual": "066af6844dd5"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/geometria_multicapa/adaptador_convergencia_real_v1.py",
+          "manifiesto": "0cbfacf280bf",
+          "actual": "3312fcf464fe"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "88d11b0138a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/predictibilidad_set_021.py",
+          "manifiesto": "1d1ac27244ac",
+          "actual": "799cc2f33b5c"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/MOTOR_V15_3_UNICO_20260927.py.pre-cableado-caldero",
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/observador_externo_v1.py",
+        "motor/plugin_circulo_monomito_v2.py.pre-cableado-caldero",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 112,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_ANONIMO3_Z90_20261113_v2_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_ANONIMO3_Z90_20261113_v2_CEB_LEDGER_1.jsonl",
+          "sha256": "1470dc6a1f1bd9095cf3a433fc4a9559eccc72d66249f5d1266994e8c82eb4d0",
+          "lineas": 41556
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "gate_z90",
+      "status": "RECHAZADO_DIAGNOSTICO",
+      "n_errores": 8,
+      "errores": [
+        "R1 modo_z debe ser 'historico' o 'vivo'",
+        "R3 C1_1901: sin 'evidencia'",
+        "R3 C2_1911: sin 'evidencia'",
+        "R3 C3_1920: sin 'evidencia'",
+        "R3 C4_1925: sin 'evidencia'",
+        "R3 C5_1930: sin 'evidencia'",
+        "R3 C6_1938: sin 'evidencia'",
+        "R3 C7_1948: sin 'evidencia'"
+      ],
+      "bloquea": false
+    },
+    {
+      "stage": "filogenia_mezcla",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_ANONIMO3_Z90_20261113_v2.json",
+      "sha256_json": "cbff21780e3402af5fe76498d0dda9e2299d75dbfb65aadb19504c07444c36dd",
+      "bloquea": false
+    },
+    {
+      "stage": "teoria_color",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_ANONIMO3_Z90_20261113_v2.json",
+      "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_ANONIMO3_Z90_20261113_v2.png",
+      "sha256_json": "b5e2add9acc945b7aa02927cb56ca81dcfd0299f99316ca6dfd0866634fe730e",
+      "bloquea": false
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "duckduckgo_html",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "c4febc7c6a7480d33e240b63d76b5faf3744c30cad3341bbd5cb81bdb2af0819",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 128,
+    "z_corte": "1951-01-01",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "1951-01-01",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 128,
+      "tokens_despues_corte": 128
+    },
+    "query": "aprendizaje curiosidad_abstracta conocimiento arte rutina autoridad jerarquia estatus_social oportunidad busqueda_identidad estabilidad creatividad resistencia_cambio reflexion claridad restriccion_iniciativa logro_personal reconocimiento audacia liderazgo vision crisis_abrupta sacrificio proposito_claro perdida_familiar duelo incertidumbre independencia carga_familiar aislamiento_social enfermedad amenaza_central consumo_sustancias",
+    "urls": [
+      "https://scholar.google.com/?hl=es",
+      "https://www.researchgate.net/publication/377135185_La_Curiosidad_un_Factor_Clave_para_Despertar_el_Interes_del_Educando_por_Aprender_a_Aprender",
+      "https://es.wikipedia.org/wiki/Aprendizaje",
+      "https://cesuma.edu.mx/2026/01/09/rol-curiosidad-aprendizaje/",
+      "https://universidadisep.com/mx/blog/neurociencias/curiosidad-y-aprendizaje/",
+      "https://www.researchgate.net/publication/380568329_La_Curiosidad_un_Espacio_Pedagogico_para_el_Desarrollo_de_la_Capacidad_de_Indagacion_en_el_Alumnado_de_Educacion_Basica",
+      "https://ibo.org/globalassets/new-structure/research/pdfs/oucea-jacobs-foundation-research-summary-sp.pdf",
+      "https://concepto.de/aprendizaje/"
+    ],
+    "consultado_utc": "2026-11-13T07:57:57+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-13T07:57:57+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-13T07:57:57+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "20_sacrificio_por_un_ideal",
+    "H2": "berlin_01_erizo",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "FRAGIL",
+    "estado_durante_corrida": "RESOLUCION_REQUERIDA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 4,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "20_sacrificio_por_un_ideal",
+      "porcentaje_relleno": 58.15,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 17.6471,
+        "booker": 42.1569,
+        "dynamis": 82.3529,
+        "estructura": 58.8235,
+        "frye": 51.9608,
+        "geometria_inercia": 94.1176,
+        "greimas": 68.6275,
+        "otras_dimensiones": 57.0136,
+        "puente_lateral": 59.9317,
+        "resolucion": 47.0588,
+        "trayectoria_estado": 60.0
+      },
+      "peso_relativo": 0.072614,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 57.02
+    },
+    "H2": {
+      "familia": "berlin_01_erizo",
+      "porcentaje_relleno": 64.52,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 5.8824,
+        "booker": 61.7647,
+        "dynamis": 94.1176,
+        "estructura": 100.0,
+        "frye": 37.2549,
+        "geometria_inercia": 100.0,
+        "greimas": 74.5098,
+        "otras_dimensiones": 64.2534,
+        "puente_lateral": 12.5427,
+        "resolucion": 85.2941,
+        "trayectoria_estado": 74.1176
+      },
+      "peso_relativo": 0.070255,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.45
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 8.6099,
+      "techo_pct": 91.3901,
+      "pp_por_punto_de_rank_fusion": 1.724585,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar."
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "20_sacrificio_por_un_ideal",
+        "rol": "eje",
+        "peso_en_set": 0.133997,
+        "predictibilidad_estructural_pct": 57.02,
+        "cobertura_unica_frac": 0.048
+      },
+      {
+        "familia": "berlin_01_erizo",
+        "rol": "componente",
+        "peso_en_set": 0.129643,
+        "predictibilidad_estructural_pct": 55.45,
+        "cobertura_unica_frac": 0.1321
+      },
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "componente",
+        "peso_en_set": 0.128107,
+        "predictibilidad_estructural_pct": 54.89,
+        "cobertura_unica_frac": 0.2636
+      },
+      {
+        "familia": "schwartz_10_autodireccion",
+        "rol": "componente",
+        "peso_en_set": 0.127605,
+        "predictibilidad_estructural_pct": 54.71,
+        "cobertura_unica_frac": 0.1402
+      },
+      {
+        "familia": "trayectoria_musicos_populares",
+        "rol": "componente",
+        "peso_en_set": 0.111337,
+        "predictibilidad_estructural_pct": 48.83,
+        "cobertura_unica_frac": 0.0922
+      },
+      {
+        "familia": "monomito_01_mundo_ordinario",
+        "rol": "componente",
+        "peso_en_set": 0.106817,
+        "predictibilidad_estructural_pct": 47.2,
+        "cobertura_unica_frac": 0.0629
+      },
+      {
+        "familia": "36_perdida_de_los_seres_queridos",
+        "rol": "componente",
+        "peso_en_set": 0.104544,
+        "predictibilidad_estructural_pct": 46.38,
+        "cobertura_unica_frac": 0.0648
+      },
+      {
+        "familia": "social_14_overton_ventana",
+        "rol": "componente",
+        "peso_en_set": 0.081713,
+        "predictibilidad_estructural_pct": 38.13,
+        "cobertura_unica_frac": 0.066
+      },
+      {
+        "familia": "ttm_01_precontemplacion",
+        "rol": "componente",
+        "peso_en_set": 0.076237,
+        "predictibilidad_estructural_pct": 36.15,
+        "cobertura_unica_frac": 0.0436
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_CON_COMPONENTES_DE_H2",
+      "lectura_texto": "20_sacrificio_por_un_ideal con componentes de berlin_01_erizo (margen 0.912069 < GATE_SEPARATION 1.0)",
+      "peso_H1": 0.072614,
+      "peso_H2": 0.070255,
+      "peso_H1_en_par": 0.508256,
+      "peso_H2_en_par": 0.491744
+    },
+    "grado": "FRAGIL",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 15,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "20_sacrificio_por_un_ideal",
+          "rol_en_set": "eje",
+          "rank_fusion": 28.070326,
+          "soporte_estructural_relativo": 0.08311872,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.144261,
+            "micro": 0.616992,
+            "meso": 0.526322,
+            "macro": 0.573078,
+            "aceleracion": 0.629887,
+            "divergencia_entre_escala": 0.09067,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "berlin_01_erizo",
+          "rol_en_set": "componente",
+          "rank_fusion": 27.158257,
+          "soporte_estructural_relativo": 0.080418,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.291767,
+            "micro": 0.701936,
+            "meso": 0.620263,
+            "macro": 0.615451,
+            "aceleracion": 0.635588,
+            "divergencia_entre_escala": 0.086484,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.836431,
+          "soporte_estructural_relativo": 0.07946505,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.110258,
+            "micro": 0.4952,
+            "meso": 0.548685,
+            "macro": 0.621501,
+            "aceleracion": 0.45532,
+            "divergencia_entre_escala": 0.126301,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "schwartz_10_autodireccion",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.7313,
+          "soporte_estructural_relativo": 0.07915374,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.066995,
+            "micro": 0.510932,
+            "meso": 0.543596,
+            "macro": 0.545965,
+            "aceleracion": 0.460748,
+            "divergencia_entre_escala": 0.035034,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "arquetipo_el_creador",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 26.330211,
+          "soporte_estructural_relativo": 0.07796608,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.04091,
+            "micro": 0.4952,
+            "meso": 0.510638,
+            "macro": 0.555527,
+            "aceleracion": 0.490401,
+            "divergencia_entre_escala": 0.060327,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "utopia_mentalidad_liberal",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.949291,
+          "soporte_estructural_relativo": 0.07091597,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.027016,
+            "micro": 0.507999,
+            "meso": 0.511451,
+            "macro": 0.521073,
+            "aceleracion": 0.496267,
+            "divergencia_entre_escala": 0.013074,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "trayectoria_musicos_populares",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.323529,
+          "soporte_estructural_relativo": 0.06906303,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.18035,
+            "micro": 0.561815,
+            "meso": 0.644386,
+            "macro": 0.564323,
+            "aceleracion": 0.258995,
+            "divergencia_entre_escala": 0.082571,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "trayectoria_escritores_creativos",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.0,
+          "soporte_estructural_relativo": 0.06810504,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.200624,
+            "micro": 0.598303,
+            "meso": 0.640945,
+            "macro": 0.561689,
+            "aceleracion": 0.320502,
+            "divergencia_entre_escala": 0.079256,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "monomito_01_mundo_ordinario",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.376559,
+          "soporte_estructural_relativo": 0.06625897,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.053738,
+            "micro": 0.486803,
+            "meso": 0.484272,
+            "macro": 0.448319,
+            "aceleracion": 0.502533,
+            "divergencia_entre_escala": 0.038484,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_010",
+          "familia": "36_perdida_de_los_seres_queridos",
+          "rol_en_set": "componente",
+          "rank_fusion": 21.900449,
+          "soporte_estructural_relativo": 0.06484917,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.074105,
+            "micro": 0.535407,
+            "meso": 0.496547,
+            "macro": 0.579204,
+            "aceleracion": 0.555767,
+            "divergencia_entre_escala": 0.082657,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_011",
+          "familia": "kwml_01_rey",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 19.823529,
+          "soporte_estructural_relativo": 0.05869922,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.090512,
+            "micro": 0.531824,
+            "meso": 0.539796,
+            "macro": 0.564149,
+            "aceleracion": 0.492267,
+            "divergencia_entre_escala": 0.032326,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_012",
+          "familia": "sustancias_03_severo",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 19.470588,
+          "soporte_estructural_relativo": 0.05765413,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.143442,
+            "micro": 0.495733,
+            "meso": 0.650449,
+            "macro": 0.568981,
+            "aceleracion": 0.170456,
+            "divergencia_entre_escala": 0.154716,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_013",
+          "familia": "social_14_overton_ventana",
+          "rol_en_set": "componente",
+          "rank_fusion": 17.117647,
+          "soporte_estructural_relativo": 0.05068687,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.012523,
+            "micro": 0.482008,
+            "meso": 0.483233,
+            "macro": 0.515976,
+            "aceleracion": 0.498533,
+            "divergencia_entre_escala": 0.033968,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_014",
+          "familia": "ttm_01_precontemplacion",
+          "rol_en_set": "componente",
+          "rank_fusion": 15.970588,
+          "soporte_estructural_relativo": 0.04729032,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.007003,
+            "micro": 0.487469,
+            "meso": 0.486803,
+            "macro": 0.536232,
+            "aceleracion": 0.500667,
+            "divergencia_entre_escala": 0.049429,
+            "n_cortes_observados": 7
+          }
+        },
+        {
+          "id": "H_015",
+          "familia": "arquetipo_el_gobernante",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 15.654945,
+          "soporte_estructural_relativo": 0.04635568,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.005228,
+            "micro": 0.485471,
+            "meso": 0.484725,
+            "macro": 0.521962,
+            "aceleracion": 0.500667,
+            "divergencia_entre_escala": 0.037237,
+            "n_cortes_observados": 7
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "arquetipo_el_sabio",
+            "schwartz_10_autodireccion",
+            "arquetipo_el_creador",
+            "utopia_mentalidad_liberal",
+            "monomito_01_mundo_ordinario",
+            "36_perdida_de_los_seres_queridos",
+            "kwml_01_rey",
+            "social_14_overton_ventana",
+            "ttm_01_precontemplacion",
+            "arquetipo_el_gobernante"
+          ],
+          "n_hipotesis": 10,
+          "soporte_estructural_agregado": 0.64164107,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "20_sacrificio_por_un_ideal",
+            "berlin_01_erizo",
+            "trayectoria_musicos_populares",
+            "trayectoria_escritores_creativos",
+            "sustancias_03_severo"
+          ],
+          "n_hipotesis": 5,
+          "soporte_estructural_agregado": 0.35835892,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "arquetipo_el_sabio",
+          "schwartz_10_autodireccion",
+          "arquetipo_el_creador",
+          "utopia_mentalidad_liberal",
+          "monomito_01_mundo_ordinario",
+          "36_perdida_de_los_seres_queridos",
+          "kwml_01_rey",
+          "social_14_overton_ventana",
+          "ttm_01_precontemplacion",
+          "arquetipo_el_gobernante"
+        ],
+        "n_hipotesis": 10,
+        "soporte_estructural_agregado": 0.64164107,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "NO_CALIBRADA_SIN_DESENLACES_POSTERIORES_SELLADOS"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__ANONIMO3_Z90_20261113_v2",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__ANONIMO3_Z90_20261113_v2",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 9,
+          "new_token_strings": 0,
+          "explicit_review_observations": 9,
+          "unique_tokens_total": 3922
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 9,
+          "new_event_records": 705,
+          "new_token_strings": 15,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 3937
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__ANONIMO3_Z90_20261113_v2",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__ANONIMO3_Z90_20261113_v2",
+          "artifacts_imported": 1,
+          "artifacts_skipped_same_sha": 0,
+          "new_event_records": 9,
+          "new_token_strings": 0,
+          "explicit_review_observations": 9,
+          "unique_tokens_total": 3937
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE/STINKBOX_STORAGE",
+          "artifacts_imported": 2,
+          "artifacts_skipped_same_sha": 11,
+          "new_event_records": 707,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 3937
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}
