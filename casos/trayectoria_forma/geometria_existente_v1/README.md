@@ -1,5 +1,7 @@
 > **HISTÓRICO — geometría radial distinta.** Informe vigente y disponibilidad actual de insumos: [../tusi_pc12_v1/README.md](../tusi_pc12_v1/README.md). Los avisos de adjuntos ausentes debajo describen un estado anterior, ya superado.
 
+> **Fechas del eje (Mozart):** las cinco figuras usan fechas reconstruidas de la corrida U10 (octubre de 2026); C10 = 1791-12-31 es un cierre convencional posterior a la muerte, no la fecha sellada. En la entrada sellada (`MOZART_FRESH_Z90_U6_20261014`) los diez cortes terminan el 1788-05-04 = Z90 y ninguno es posterior a Z90. No hay fuga en la entrada del motor; el eje de estas figuras es una reconstrucción y debe leerse como tal. Las cifras de este informe corresponden al primer intento (PCA a 3 componentes + ajuste helicoidal, eje PCA, sin Tusi externo) y quedan sustituidas por la reproducción Tusi del paper (§3.3, Tabla 1).
+
 # Trayectorias con la geometría existente del motor
 
 **EJECUTADO:** Mozart histórico de diez cortes, Galileo, Hawking, Che y MLK. Ejercicio retrospectivo, descriptivo, sin decidir H, ranking ni apuesta. No se exige reproducir los 222.5° del otro modelo.
