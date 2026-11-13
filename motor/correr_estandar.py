@@ -557,8 +557,8 @@ def _efectividad_corte_retenido(sello: dict, visto: dict, retenido) -> dict:
     out["internal_runs_isolated"] = True
     out["previo_status"] = sello.get("_internal_run_status")
     out["visto_status"] = visto.get("_internal_run_status")
-    out["previo_error"] = sello.get("stderr_tail") or ""
-    out["visto_error"] = visto.get("stderr_tail") or ""
+    out["previo_error"] = sello.get("stderr_tail") or False
+    out["visto_error"] = visto.get("stderr_tail") or False
     return out
 
 
