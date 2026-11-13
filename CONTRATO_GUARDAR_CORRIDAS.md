@@ -76,15 +76,19 @@ El candado no decide la política: valida el paquete de `motor/runs/`. No toca `
 
 El candado comprueba: cada `ruta` existe en el repo; si trae `sha256`, coincide con el archivo actual (si el archivo cambió desde la lectura, lo reporta como no coincidente); y README.md o REVISION.md menciona el nombre de cada archivo leído (la entrega cita lo que leyó). Sin `LECTURA.json`, la entrega no pasa: es el criterio [A4].
 
-## 6. Conflicto explícito con el protocolo viejo
+## 6. Estado del conflicto documental (actualizado 2026-11-13)
 
-Tres archivos todavía dicen que nunca se sube la corrida completa:
+El acuerdo de Marco del 2026-11-11 es: resumen de una línea en `resultados/resultados.jsonl` **y** corridas completas en el apartado separado `motor/runs/<LOTE>_<FECHA>/` para el historial.
 
-- `casos/REGLAS.md` regla 6: «nunca subir la corrida completa».
-- `CONTRATO_CARPETAS.md`: `casos/` — «Nunca corridas completas».
-- `casos/fabrica/README.md`: «Corridas completas quedan fuera del repo, en `/workspace/FABRICA_CORRIDAS/<lote>/`».
+Los tres documentos que antes prohibían guardar corridas completas ya reflejan ese acuerdo:
 
-La forma adoptada por Marco (2026-11-11 ~18:07 CST) es: resumen de una línea en `resultados.jsonl` **y** corridas completas en el apartado separado `motor/runs/<LOTE>_<FECHA>/` para el historial. Este contrato recoge esa forma. Esos tres archivos siguen pendientes de actualizar para que la regla quede escrita. Mientras tanto, si un modelo se encuentra con la contradicción, manda la forma adoptada por Marco y este contrato, no la prohibición vieja.
+- `casos/REGLAS.md`, regla 6: resumen en `resultados.jsonl` y corrida completa en `motor/runs/<LOTE>_<FECHA>/`.
+- `CONTRATO_CARPETAS.md`: la carpeta `casos/` conserva resúmenes y la corrida completa vive en `motor/runs/`.
+- `casos/fabrica/README.md`: mismo destino `motor/runs/`, con verificación por `scripts/candado_entrega.py`.
+
+Por tanto, la contradicción documental quedó resuelta; ya no es correcto afirmar que esos tres archivos siguen pendientes de actualizar.
+
+**Precaución con evidencias históricas:** el `LECTURA.json` de F003/F004 conserva los hashes de las versiones leídas el 11-nov. Como `candado_entrega.py` compara esos SHA contra los archivos actuales (criterio D4), esa lectura histórica no valida la versión actual. No se debe sobrescribir para simular una lectura previa. Para una revalidación posterior se conserva el original y se registra una nueva lectura explícitamente marcada como `REVALIDACION_POSTEJECUCION`, o se mejora el candado para validar contra el commit histórico de lectura. Hasta que exista una ejecución exitosa del candado, no se declara aceptada la entrega.
 
 ## 7. Lo que no cambia
 
