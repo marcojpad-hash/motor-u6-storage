@@ -1,0 +1,5889 @@
+{
+  "version": "CIERRE_TOKENS_V1_20261112",
+  "inventario": {
+    "cierre": {
+      "favor": {},
+      "contra": {}
+    },
+    "desenlace": {
+      "favor": {},
+      "contra": {}
+    },
+    "retorno": {
+      "favor": {
+        "monomito_10_el_camino_de_regreso": 0.8
+      },
+      "contra": {
+        "10_rapto": 0.6
+      }
+    },
+    "reconciliacion": {
+      "favor": {
+        "cliodinamica_04_fase_depresion_reconstruccion": 0.8,
+        "frye_mythos_comedia": 0.8
+      },
+      "contra": {
+        "situacion_dramatica_venganza": 0.65,
+        "dialectica_02_antitesis_contradiccion_y_conflicto": 0.8,
+        "frye_mythos_tragedia": 0.7,
+        "frye_mythos_ironia_satira": 0.6
+      }
+    },
+    "resolucion": {
+      "favor": {
+        "monomito_12_regreso_con_el_elixir": 0.9,
+        "cliodinamica_04_fase_depresion_reconstruccion": 0.8,
+        "dialectica_03_sintesis_superacion_estructural": 0.8,
+        "frye_mythos_comedia": 0.7
+      },
+      "contra": {
+        "frye_mythos_ironia_satira": 0.7,
+        "predictivo_01_markov_estado_absorbente": 0.75
+      }
+    },
+    "catarsis": {
+      "favor": {
+        "monomito_08_la_odisea_o_prueba_suprema": 0.8,
+        "monomito_11_la_resurreccion": 0.9,
+        "eterno_retorno_03_desgaste_y_reinicio": 0.9
+      },
+      "contra": {}
+    },
+    "redencion": {
+      "favor": {},
+      "contra": {
+        "sombra": 0.6
+      }
+    },
+    "reconocimiento": {
+      "favor": {},
+      "contra": {
+        "crisis_vocacional": 0.65,
+        "19_asesinato_de_un_pariente_no_reconocido": 0.7
+      }
+    },
+    "anagnorisis": {
+      "favor": {},
+      "contra": {}
+    },
+    "peripeteia": {
+      "favor": {},
+      "contra": {}
+    },
+    "regreso": {
+      "favor": {},
+      "contra": {}
+    },
+    "elixir": {
+      "favor": {},
+      "contra": {}
+    },
+    "paz_interior": {
+      "favor": {
+        "monomito_12_regreso_con_el_elixir": 0.8,
+        "cliodinamica_04_fase_depresion_reconstruccion": 0.7,
+        "dialectica_03_sintesis_superacion_estructural": 0.7
+      },
+      "contra": {
+        "dialectica_02_antitesis_contradiccion_y_conflicto": 0.9
+      }
+    },
+    "sabiduria_compartida": {
+      "favor": {
+        "monomito_12_regreso_con_el_elixir": 0.8
+      },
+      "contra": {}
+    },
+    "proposito_claro": {
+      "favor": {
+        "monomito_12_regreso_con_el_elixir": 0.7,
+        "eterno_retorno_02_cosmizacion_fundacion": 0.7,
+        "berlin_01_erizo": 0.75
+      },
+      "contra": {
+        "berlin_02_zorro": 0.55
+      }
+    },
+    "restauracion_equilibrio": {
+      "favor": {
+        "heroe": 0.7
+      },
+      "contra": {}
+    },
+    "perdon": {
+      "favor": {},
+      "contra": {
+        "situacion_dramatica_venganza": 0.7,
+        "3_venganza_del_crimen": 0.8,
+        "15_adulterio_homicida": 0.6
+      }
+    },
+    "reintegracion": {
+      "favor": {
+        "monomito_10_el_camino_de_regreso": 0.7
+      },
+      "contra": {}
+    },
+    "sacrificio_final": {
+      "favor": {
+        "monomito_11_la_resurreccion": 0.8,
+        "strauss_howe_04_the_crisis": 0.8,
+        "eterno_retorno_03_desgaste_y_reinicio": 0.8
+      },
+      "contra": {}
+    },
+    "superacion_miedo_raiz": {
+      "favor": {
+        "monomito_11_la_resurreccion": 0.8,
+        "frye_mythos_romance": 0.6
+      },
+      "contra": {}
+    },
+    "cambio_identidad": {
+      "favor": {
+        "monomito_11_la_resurreccion": 0.7,
+        "strauss_howe_04_the_crisis": 0.7
+      },
+      "contra": {}
+    },
+    "legado": {
+      "favor": {},
+      "contra": {}
+    },
+    "testamento": {
+      "favor": {},
+      "contra": {}
+    },
+    "despedida": {
+      "favor": {},
+      "contra": {}
+    },
+    "culminacion": {
+      "favor": {},
+      "contra": {}
+    },
+    "clausura": {
+      "favor": {},
+      "contra": {}
+    }
+  },
+  "auditoria_7": {
+    "JUANA_DE_ARCO_HEROE_20261112": {
+      "caso": "JUANA_DE_ARCO_HEROE_20261112",
+      "h1_matriz": "arquetipo_el_gobernante",
+      "presentes_cierre": {
+        "proposito_claro": [
+          [
+            "C2_1429_02",
+            "P",
+            0.74
+          ]
+        ],
+        "reconocimiento": [
+          [
+            "C3_1429_05",
+            "P",
+            0.7
+          ],
+          [
+            "C4_1429_07",
+            "P",
+            0.78
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "5_persecucion",
+        "20_sacrificio_por_un_ideal",
+        "36_perdida_de_los_seres_queridos",
+        "frye_mythos_tragedia (sellado: quemada 1431)"
+      ],
+      "implicados_catalogo": {},
+      "implicados_prosa": {
+        "reconocimiento": "Rehabilitada 1456; canonizada 1920",
+        "sacrificio_final": "condenada por herejia y quemada el 30-may-1431"
+      },
+      "faltantes": [
+        "sacrificio_final"
+      ],
+      "faltantes_aplicables": [
+        "sacrificio_final"
+      ],
+      "faltantes_inexistentes": [],
+      "faltantes_solo_contra": []
+    },
+    "TUBMAN_HEROE_20261112": {
+      "caso": "TUBMAN_HEROE_20261112",
+      "h1_matriz": "arquetipo_el_gobernante",
+      "presentes_cierre": {
+        "proposito_claro": [
+          [
+            "C2_1849",
+            "P",
+            0.76
+          ],
+          [
+            "C4_1859",
+            "P",
+            0.7
+          ]
+        ],
+        "reconocimiento": [
+          [
+            "C3_1853",
+            "P",
+            0.76
+          ],
+          [
+            "C4_1859",
+            "P",
+            0.76
+          ],
+          [
+            "C5_1862",
+            "P",
+            0.7
+          ],
+          [
+            "C7_1902",
+            "P",
+            0.76
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "C6_1875",
+            "P",
+            0.74
+          ],
+          [
+            "C7_1902",
+            "P",
+            0.8
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "monomito_12_regreso_con_el_elixir",
+        "schwartz_02_benevolencia",
+        "20_sacrificio_por_un_ideal",
+        "generatividad (sellado: muere 1913, honrada)"
+      ],
+      "implicados_catalogo": {
+        "paz_interior": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.8
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.8
+          ]
+        ],
+        "proposito_claro": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.7
+          ]
+        ],
+        "resolucion": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.9
+          ]
+        ]
+      },
+      "implicados_prosa": {
+        "reconocimiento": "honrada por el ejercito y por el pais",
+        "legado": "su obra (el ferrocarril subterraneo, la lucha por la libertad) perdura"
+      },
+      "faltantes": [
+        "legado",
+        "paz_interior",
+        "resolucion"
+      ],
+      "faltantes_aplicables": [
+        "paz_interior",
+        "resolucion"
+      ],
+      "faltantes_inexistentes": [
+        "legado"
+      ],
+      "faltantes_solo_contra": []
+    },
+    "MANDELA_HEROE_20261112": {
+      "caso": "MANDELA_HEROE_20261112",
+      "h1_matriz": "kwml_01_rey",
+      "presentes_cierre": {
+        "reconocimiento": [
+          [
+            "C2_1948",
+            "P",
+            0.74
+          ],
+          [
+            "C6_1986",
+            "P",
+            0.76
+          ],
+          [
+            "C7_1997",
+            "P",
+            0.76
+          ]
+        ],
+        "proposito_claro": [
+          [
+            "C2_1948",
+            "P",
+            0.7
+          ],
+          [
+            "C4_1964",
+            "P",
+            0.74
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "C7_1997",
+            "A",
+            0.66
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "anacyclosis_01_monarquia",
+        "arquetipo_el_gobernante",
+        "20_sacrificio_por_un_ideal",
+        "generatividad (sellado: muere 2013, legado)"
+      ],
+      "implicados_catalogo": {},
+      "implicados_prosa": {
+        "reconocimiento": "funeral de Estado y duelo mundial",
+        "reconciliacion": "su legado (reconciliacion, fin del apartheid) perdura",
+        "legado": "su legado (reconciliacion, fin del apartheid) perdura"
+      },
+      "faltantes": [
+        "legado",
+        "reconciliacion"
+      ],
+      "faltantes_aplicables": [
+        "reconciliacion"
+      ],
+      "faltantes_inexistentes": [
+        "legado"
+      ],
+      "faltantes_solo_contra": []
+    },
+    "SEMMELWEIS_HEROE_SIN_TRONO_20261112": {
+      "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+      "h1_matriz": "arquetipo_el_sabio",
+      "presentes_cierre": {},
+      "desenlace_familias": [
+        "20_sacrificio_por_un_ideal",
+        "5_persecucion",
+        "heroe",
+        "frye_mythos_tragedia"
+      ],
+      "implicados_catalogo": {
+        "restauracion_equilibrio": [
+          [
+            "heroe",
+            0.7
+          ]
+        ]
+      },
+      "implicados_prosa": {
+        "reconocimiento": "Reivindicado tras su muerte (Lister, teoria germinal)",
+        "restauracion_equilibrio": "'salvador de las madres'",
+        "legado": "generativo tras la muerte"
+      },
+      "faltantes": [
+        "legado",
+        "reconocimiento",
+        "restauracion_equilibrio"
+      ],
+      "faltantes_aplicables": [
+        "restauracion_equilibrio"
+      ],
+      "faltantes_inexistentes": [
+        "legado"
+      ],
+      "faltantes_solo_contra": [
+        "reconocimiento"
+      ]
+    },
+    "KOLBE_HEROE_SIN_TRONO_20261112": {
+      "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+      "h1_matriz": "20_sacrificio_por_un_ideal",
+      "presentes_cierre": {
+        "proposito_claro": [
+          [
+            "C2_1918",
+            "P",
+            0.78
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "C4_1933",
+            "P",
+            0.76
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "20_sacrificio_por_un_ideal",
+        "5_persecucion",
+        "heroe",
+        "frye_mythos_tragedia"
+      ],
+      "implicados_catalogo": {
+        "restauracion_equilibrio": [
+          [
+            "heroe",
+            0.7
+          ]
+        ]
+      },
+      "implicados_prosa": {
+        "reconocimiento": "Canonizado en 1982 ('martir de la caridad')",
+        "sacrificio_final": "Canonizado en 1982 ('martir de la caridad')",
+        "restauracion_equilibrio": "Gajowniczek sobrevive a la guerra"
+      },
+      "faltantes": [
+        "reconocimiento",
+        "restauracion_equilibrio",
+        "sacrificio_final"
+      ],
+      "faltantes_aplicables": [
+        "restauracion_equilibrio",
+        "sacrificio_final"
+      ],
+      "faltantes_inexistentes": [],
+      "faltantes_solo_contra": [
+        "reconocimiento"
+      ]
+    },
+    "NOETHER_CIEGO_Z90_20260914": {
+      "caso": "NOETHER_CIEGO_Z90_20260914",
+      "h1_matriz": "arquetipo_el_gobernante",
+      "presentes_cierre": {
+        "reconocimiento": [
+          [
+            "C2_1903",
+            "C",
+            0.74
+          ],
+          [
+            "C3_1911",
+            "C",
+            0.7
+          ],
+          [
+            "C4_1917",
+            "C",
+            0.76
+          ],
+          [
+            "C5_1923",
+            "C",
+            0.82
+          ],
+          [
+            "C6_1930",
+            "C",
+            0.84
+          ],
+          [
+            "C7_1932",
+            "P",
+            0.78
+          ]
+        ],
+        "proposito_claro": [
+          [
+            "C2_1903",
+            "C",
+            0.64
+          ],
+          [
+            "C7_1932",
+            "C",
+            0.62
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "C5_1923",
+            "P",
+            0.76
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "HIT sellado (mentor>gobernante)",
+        "generatividad + muerte 1935"
+      ],
+      "implicados_catalogo": {},
+      "implicados_prosa": {
+        "legado": "sigue la teoria (post-Z: ensena en Bryn Mawr)"
+      },
+      "faltantes": [
+        "legado"
+      ],
+      "faltantes_aplicables": [],
+      "faltantes_inexistentes": [
+        "legado"
+      ],
+      "faltantes_solo_contra": []
+    },
+    "CARSON_CIEGO_Z90_20260914": {
+      "caso": "CARSON_CIEGO_Z90_20260914",
+      "h1_matriz": "arquetipo_el_creador",
+      "presentes_cierre": {
+        "reconocimiento": [
+          [
+            "C2_1929",
+            "C",
+            0.78
+          ],
+          [
+            "C4_1941",
+            "C",
+            0.78
+          ],
+          [
+            "C5_1951",
+            "C",
+            0.84
+          ],
+          [
+            "C7_1962",
+            "C",
+            0.84
+          ]
+        ],
+        "proposito_claro": [
+          [
+            "C2_1929",
+            "C",
+            0.7
+          ],
+          [
+            "C6_1958",
+            "C",
+            0.72
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "C5_1951",
+            "P",
+            0.72
+          ]
+        ]
+      },
+      "desenlace_familias": [
+        "HIT sellado (creadora-divulgadora)",
+        "generatividad + muerte 1964"
+      ],
+      "implicados_catalogo": {},
+      "implicados_prosa": {
+        "reconocimiento": "Silent Spring 1962, atencion mundial"
+      },
+      "faltantes": [],
+      "faltantes_aplicables": [],
+      "faltantes_inexistentes": [],
+      "faltantes_solo_contra": []
+    }
+  },
+  "tabla_polti": {
+    "1_suplica": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "2_salvacion": {
+      "casos": [
+        "F002 02 Pasteur",
+        "F004 01 Wagner"
+      ],
+      "tokens_cierre": {}
+    },
+    "3_venganza_del_crimen": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "4_venganza_de_parientes": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "5_persecucion": {
+      "casos": [
+        "F001 03 Wilde",
+        "F001 05 Turing",
+        "F002 01 Galilei",
+        "F003 03 Lavoisier",
+        "SEMMELWEIS",
+        "F002 03 Arbuckle",
+        "F004 02 David",
+        "F003 01 Caravaggio",
+        "F003 06 Trotsky",
+        "F004 03 Oppenheimer",
+        "Juana de Arco (heroe tragico, 7 cortes)",
+        "KOLBE"
+      ],
+      "tokens_cierre": {
+        "restauracion_equilibrio": [
+          [
+            "heroe",
+            0.7
+          ],
+          [
+            "heroe",
+            0.7
+          ]
+        ]
+      }
+    },
+    "6_desastre": {
+      "casos": [
+        "F001 01 Napoleon",
+        "F004 09 Lay",
+        "F004 08 Lesseps",
+        "F002 08 Luisxvi",
+        "F003 08 Law"
+      ],
+      "tokens_cierre": {}
+    },
+    "7_caer_victima": {
+      "casos": [
+        "F004 10 Ludwig Ii",
+        "F001 05 Turing",
+        "F003 03 Lavoisier",
+        "F004 05 Khrushchev",
+        "F002 03 Arbuckle",
+        "F004 02 David",
+        "F003 10 Pedro Ii",
+        "F004 03 Oppenheimer"
+      ],
+      "tokens_cierre": {}
+    },
+    "8_rebelion": {
+      "casos": [
+        "F002 07 Catalina",
+        "F002 08 Luisxvi"
+      ],
+      "tokens_cierre": {}
+    },
+    "9_audaz_empresa": {
+      "casos": [
+        "F001 02 Tesla",
+        "F001 04 Disney",
+        "F002 02 Pasteur",
+        "F004 05 Khrushchev",
+        "F004 06 Truman",
+        "F004 08 Lesseps",
+        "F003 09 Carnegie",
+        "F002 09 Rockefeller"
+      ],
+      "tokens_cierre": {}
+    },
+    "10_rapto": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "11_enigma": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "12_obtencion": {
+      "casos": [
+        "F003 09 Carnegie",
+        "F002 10 Durant",
+        "F003 07 Lincoln"
+      ],
+      "tokens_cierre": {}
+    },
+    "13_enemistad_de_parientes": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "14_rivalidad_de_parientes": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "15_adulterio_homicida": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "16_locura": {
+      "casos": [
+        "F004 10 Ludwig Ii"
+      ],
+      "tokens_cierre": {}
+    },
+    "17_fatal_imprudencia": {
+      "casos": [
+        "F001 01 Napoleon",
+        "F001 03 Wilde",
+        "F004 09 Lay",
+        "F004 08 Lesseps",
+        "F002 05 Mccarthy",
+        "F003 08 Law",
+        "F002 10 Durant",
+        "F003 01 Caravaggio"
+      ],
+      "tokens_cierre": {}
+    },
+    "18_crimenes_involuntarios_de_amor": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "19_asesinato_de_un_pariente_no_reconocido": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "20_sacrificio_por_un_ideal": {
+      "casos": [
+        "SEMMELWEIS",
+        "Juana de Arco (heroe tragico, 7 cortes)",
+        "Harriet Tubman (heroe generativo, 7 cortes)",
+        "Nelson Mandela (heroe generativo, 7 cortes)",
+        "KOLBE"
+      ],
+      "tokens_cierre": {
+        "restauracion_equilibrio": [
+          [
+            "heroe",
+            0.7
+          ],
+          [
+            "heroe",
+            0.7
+          ]
+        ],
+        "paz_interior": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.8
+          ]
+        ],
+        "sabiduria_compartida": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.8
+          ]
+        ],
+        "proposito_claro": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.7
+          ]
+        ],
+        "resolucion": [
+          [
+            "monomito_12_regreso_con_el_elixir",
+            0.9
+          ]
+        ]
+      }
+    },
+    "21_sacrificio_por_los_parientes": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "22_todo_sacrificado_por_una_pasion": {
+      "casos": [
+        "F001 02 Tesla",
+        "F004 10 Ludwig Ii"
+      ],
+      "tokens_cierre": {}
+    },
+    "23_necesidad_de_sacrificar_a_los_seres_queridos": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "24_rivalidad_de_superior_e_inferior": {
+      "casos": [
+        "F004 05 Khrushchev",
+        "F003 05 Fouquet",
+        "F002 04 Bach",
+        "F003 04 Faraday",
+        "F003 06 Trotsky",
+        "F004 03 Oppenheimer"
+      ],
+      "tokens_cierre": {}
+    },
+    "25_adulterio": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "26_crimenes_de_amor": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "27_descubrimiento_de_la_deshonra_de_un_ser_querido": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "28_obstaculos_para_el_amor": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "29_un_enemigo_amado": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "30_ambicion": {
+      "casos": [
+        "F002 07 Catalina",
+        "F003 05 Fouquet",
+        "F002 09 Rockefeller",
+        "F003 04 Faraday",
+        "F003 08 Law",
+        "F004 02 David",
+        "F003 07 Lincoln"
+      ],
+      "tokens_cierre": {}
+    },
+    "31_conflicto_con_un_dios": {
+      "casos": [
+        "F001 01 Napoleon",
+        "F001 03 Wilde",
+        "F004 09 Lay",
+        "F002 01 Galilei"
+      ],
+      "tokens_cierre": {}
+    },
+    "32_celos_equivocados": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "33_error_de_juicio": {
+      "casos": [
+        "F001 01 Napoleon",
+        "F001 03 Wilde",
+        "F004 09 Lay",
+        "F002 01 Galilei",
+        "F004 05 Khrushchev",
+        "F004 08 Lesseps",
+        "F002 05 Mccarthy",
+        "F003 05 Fouquet",
+        "F002 08 Luisxvi",
+        "F003 08 Law",
+        "F004 02 David",
+        "F002 10 Durant",
+        "F003 01 Caravaggio",
+        "F003 06 Trotsky"
+      ],
+      "tokens_cierre": {}
+    },
+    "34_remordimiento": {
+      "casos": [],
+      "tokens_cierre": {}
+    },
+    "35_recuperacion_de_lo_perdido": {
+      "casos": [
+        "F001 04 Disney",
+        "F004 06 Truman"
+      ],
+      "tokens_cierre": {}
+    },
+    "36_perdida_de_los_seres_queridos": {
+      "casos": [
+        "F002 06 Coolidge",
+        "Juana de Arco (heroe tragico, 7 cortes)"
+      ],
+      "tokens_cierre": {}
+    }
+  },
+  "sombra": {
+    "JUANA_DE_ARCO_HEROE_20261112": {
+      "caso": "JUANA_DE_ARCO_HEROE_20261112",
+      "faltantes": [
+        "sacrificio_final"
+      ],
+      "gate_pasa": true,
+      "base_dedup_true": {
+        "h1_sombra": "36_perdida_de_los_seres_queridos",
+        "p_h1": 0.8011
+      },
+      "base_dedup_false": {
+        "h1_sombra": "5_persecucion",
+        "p_h1": 0.8013
+      },
+      "variantes": {
+        "peso_0.6_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8011,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5149,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5149,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5149,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5149,
+              "rango": 51,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5149,
+              "rango": 12,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5149,
+              "rango": 72,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 23
+        },
+        "peso_0.6_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8011,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5149,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5149,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5149,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5149,
+              "rango": 51,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5149,
+              "rango": 12,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5149,
+              "rango": 72,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5149,
+              "p_var": 0.5149,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 23
+        },
+        "peso_0.6_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 99,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 100,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5898,
+              "rango": 37,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7534,
+              "rango": 4,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 57,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4449,
+              "rango": 229,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.4776,
+              "p_var": 0.4776,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5473,
+              "p_var": 0.5473,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.4793,
+              "p_var": 0.4793,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.6_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 99,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 100,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5898,
+              "rango": 37,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7534,
+              "rango": 4,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 57,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4449,
+              "rango": 229,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.4776,
+              "p_var": 0.4776,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5473,
+              "p_var": 0.5473,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.4793,
+              "p_var": 0.4793,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8041,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5156,
+              "rango": 64,
+              "delta_p": 0.0007
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5156,
+              "rango": 65,
+              "delta_p": 0.0007
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5156,
+              "rango": 66,
+              "delta_p": 0.0007
+            },
+            "heroe": {
+              "p": 0.5156,
+              "rango": 50,
+              "delta_p": 0.0007
+            },
+            "arquetipo_heroe": {
+              "p": 0.5156,
+              "rango": 11,
+              "delta_p": 0.0007
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5156,
+              "rango": 72,
+              "delta_p": 0.0007
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.689,
+              "p_var": 0.5156,
+              "delta": -0.1734
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.8011,
+              "p_var": 0.8041,
+              "delta": 0.003
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6955,
+              "p_var": 0.6976,
+              "delta": 0.0021
+            },
+            {
+              "familia": "monomito_01_mundo_ordinario",
+              "p_base": 0.6731,
+              "p_var": 0.6751,
+              "delta": 0.002
+            },
+            {
+              "familia": "monomito_06_pruebas_aliados_y_enemigos",
+              "p_base": 0.6577,
+              "p_var": 0.6596,
+              "delta": 0.0019
+            }
+          ],
+          "frentes": 24
+        },
+        "peso_0.72_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8066,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5155,
+              "rango": 64,
+              "delta_p": 0.0006
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5155,
+              "rango": 65,
+              "delta_p": 0.0006
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5155,
+              "rango": 66,
+              "delta_p": 0.0006
+            },
+            "heroe": {
+              "p": 0.5155,
+              "rango": 50,
+              "delta_p": 0.0006
+            },
+            "arquetipo_heroe": {
+              "p": 0.5155,
+              "rango": 11,
+              "delta_p": 0.0006
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5155,
+              "rango": 72,
+              "delta_p": 0.0006
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.689,
+              "p_var": 0.5155,
+              "delta": -0.1735
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.8011,
+              "p_var": 0.8066,
+              "delta": 0.0055
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6955,
+              "p_var": 0.6992,
+              "delta": 0.0037
+            },
+            {
+              "familia": "monomito_01_mundo_ordinario",
+              "p_base": 0.6731,
+              "p_var": 0.6764,
+              "delta": 0.0033
+            },
+            {
+              "familia": "guardian_del_umbral",
+              "p_base": 0.672,
+              "p_var": 0.6753,
+              "delta": 0.0033
+            }
+          ],
+          "frentes": 23
+        },
+        "peso_0.72_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8026,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4984,
+              "rango": 102,
+              "delta_p": -0.0016
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.6739,
+              "rango": 14,
+              "delta_p": 0.1739
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.589,
+              "rango": 37,
+              "delta_p": -0.0008
+            },
+            "heroe": {
+              "p": 0.7539,
+              "rango": 4,
+              "delta_p": 0.0005
+            },
+            "arquetipo_heroe": {
+              "p": 0.4984,
+              "rango": 59,
+              "delta_p": -0.0016
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4428,
+              "rango": 232,
+              "delta_p": -0.0021
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6741,
+              "p_var": 0.4984,
+              "delta": -0.1757
+            },
+            {
+              "familia": "monomito_11_la_resurreccion",
+              "p_base": 0.5,
+              "p_var": 0.6739,
+              "delta": 0.1739
+            },
+            {
+              "familia": "eterno_retorno_03_desgaste_y_reinicio",
+              "p_base": 0.3294,
+              "p_var": 0.5026,
+              "delta": 0.1732
+            },
+            {
+              "familia": "strauss_howe_04_the_crisis",
+              "p_base": 0.4269,
+              "p_var": 0.5262,
+              "delta": 0.0993
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.4115,
+              "p_var": 0.4752,
+              "delta": 0.0637
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8083,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5001,
+              "rango": 99,
+              "delta_p": 0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5001,
+              "rango": 100,
+              "delta_p": 0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5914,
+              "rango": 36,
+              "delta_p": 0.0016
+            },
+            "heroe": {
+              "p": 0.7578,
+              "rango": 4,
+              "delta_p": 0.0044
+            },
+            "arquetipo_heroe": {
+              "p": 0.5001,
+              "rango": 56,
+              "delta_p": 0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.444,
+              "rango": 230,
+              "delta_p": -0.0009
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6741,
+              "p_var": 0.5001,
+              "delta": -0.174
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.4115,
+              "p_var": 0.4767,
+              "delta": 0.0652
+            },
+            {
+              "familia": "5_persecucion",
+              "p_base": 0.8013,
+              "p_var": 0.8083,
+              "delta": 0.007
+            },
+            {
+              "familia": "20_sacrificio_por_un_ideal",
+              "p_base": 0.8013,
+              "p_var": 0.8083,
+              "delta": 0.007
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7862,
+              "p_var": 0.7912,
+              "delta": 0.005
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8032,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5156,
+              "rango": 64,
+              "delta_p": 0.0007
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5156,
+              "rango": 65,
+              "delta_p": 0.0007
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5156,
+              "rango": 66,
+              "delta_p": 0.0007
+            },
+            "heroe": {
+              "p": 0.5156,
+              "rango": 50,
+              "delta_p": 0.0007
+            },
+            "arquetipo_heroe": {
+              "p": 0.5156,
+              "rango": 11,
+              "delta_p": 0.0007
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5156,
+              "rango": 72,
+              "delta_p": 0.0007
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.689,
+              "p_var": 0.5156,
+              "delta": -0.1734
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.8011,
+              "p_var": 0.8032,
+              "delta": 0.0021
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6955,
+              "p_var": 0.6971,
+              "delta": 0.0016
+            },
+            {
+              "familia": "monomito_01_mundo_ordinario",
+              "p_base": 0.6731,
+              "p_var": 0.6746,
+              "delta": 0.0015
+            },
+            {
+              "familia": "guardian_del_umbral",
+              "p_base": 0.672,
+              "p_var": 0.6735,
+              "delta": 0.0015
+            }
+          ],
+          "frentes": 24
+        },
+        "peso_0.84_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "36_perdida_de_los_seres_queridos",
+          "p_h1_sombra": 0.8066,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5155,
+              "rango": 64,
+              "delta_p": 0.0006
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5155,
+              "rango": 65,
+              "delta_p": 0.0006
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5155,
+              "rango": 66,
+              "delta_p": 0.0006
+            },
+            "heroe": {
+              "p": 0.5155,
+              "rango": 50,
+              "delta_p": 0.0006
+            },
+            "arquetipo_heroe": {
+              "p": 0.5155,
+              "rango": 11,
+              "delta_p": 0.0006
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5155,
+              "rango": 72,
+              "delta_p": 0.0006
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.689,
+              "p_var": 0.5155,
+              "delta": -0.1735
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.8011,
+              "p_var": 0.8066,
+              "delta": 0.0055
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6955,
+              "p_var": 0.6992,
+              "delta": 0.0037
+            },
+            {
+              "familia": "monomito_01_mundo_ordinario",
+              "p_base": 0.6731,
+              "p_var": 0.6764,
+              "delta": 0.0033
+            },
+            {
+              "familia": "guardian_del_umbral",
+              "p_base": 0.672,
+              "p_var": 0.6753,
+              "delta": 0.0033
+            }
+          ],
+          "frentes": 23
+        },
+        "peso_0.84_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8047,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4985,
+              "rango": 102,
+              "delta_p": -0.0015
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.6734,
+              "rango": 14,
+              "delta_p": 0.1734
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5887,
+              "rango": 37,
+              "delta_p": -0.0011
+            },
+            "heroe": {
+              "p": 0.7532,
+              "rango": 4,
+              "delta_p": -0.0002
+            },
+            "arquetipo_heroe": {
+              "p": 0.4985,
+              "rango": 59,
+              "delta_p": -0.0015
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4431,
+              "rango": 232,
+              "delta_p": -0.0018
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6741,
+              "p_var": 0.4985,
+              "delta": -0.1756
+            },
+            {
+              "familia": "monomito_11_la_resurreccion",
+              "p_base": 0.5,
+              "p_var": 0.6734,
+              "delta": 0.1734
+            },
+            {
+              "familia": "eterno_retorno_03_desgaste_y_reinicio",
+              "p_base": 0.3294,
+              "p_var": 0.5027,
+              "delta": 0.1733
+            },
+            {
+              "familia": "strauss_howe_04_the_crisis",
+              "p_base": 0.4269,
+              "p_var": 0.5261,
+              "delta": 0.0992
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.4115,
+              "p_var": 0.4754,
+              "delta": 0.0639
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "compromiso",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8083,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5001,
+              "rango": 99,
+              "delta_p": 0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5001,
+              "rango": 100,
+              "delta_p": 0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5914,
+              "rango": 36,
+              "delta_p": 0.0016
+            },
+            "heroe": {
+              "p": 0.7578,
+              "rango": 4,
+              "delta_p": 0.0044
+            },
+            "arquetipo_heroe": {
+              "p": 0.5001,
+              "rango": 56,
+              "delta_p": 0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.444,
+              "rango": 230,
+              "delta_p": -0.0009
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6741,
+              "p_var": 0.5001,
+              "delta": -0.174
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.4115,
+              "p_var": 0.4767,
+              "delta": 0.0652
+            },
+            {
+              "familia": "5_persecucion",
+              "p_base": 0.8013,
+              "p_var": 0.8083,
+              "delta": 0.007
+            },
+            {
+              "familia": "20_sacrificio_por_un_ideal",
+              "p_base": 0.8013,
+              "p_var": 0.8083,
+              "delta": 0.007
+            },
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7862,
+              "p_var": 0.7912,
+              "delta": 0.005
+            }
+          ],
+          "frentes": 0
+        }
+      }
+    },
+    "TUBMAN_HEROE_20261112": {
+      "caso": "TUBMAN_HEROE_20261112",
+      "faltantes": [
+        "paz_interior",
+        "resolucion"
+      ],
+      "gate_pasa": true,
+      "base_dedup_true": {
+        "h1_sombra": "schwartz_02_benevolencia",
+        "p_h1": 0.8124
+      },
+      "base_dedup_false": {
+        "h1_sombra": "monomito_12_regreso_con_el_elixir",
+        "p_h1": 0.8013
+      },
+      "variantes": {
+        "peso_0.6_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "paz_interior",
+              0.6
+            ],
+            [
+              "resolucion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "schwartz_02_benevolencia",
+          "p_h1_sombra": 0.8124,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5112,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5112,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8019,
+              "rango": 2,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5112,
+              "rango": 51,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5112,
+              "rango": 10,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5112,
+              "rango": 71,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.6_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "paz_interior",
+              0.6
+            ],
+            [
+              "resolucion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "schwartz_02_benevolencia",
+          "p_h1_sombra": 0.8124,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5112,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5112,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8019,
+              "rango": 2,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5112,
+              "rango": 51,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5112,
+              "rango": 10,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5112,
+              "rango": 71,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5112,
+              "p_var": 0.5112,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.6_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "paz_interior",
+              0.6
+            ],
+            [
+              "resolucion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 89,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 90,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8013,
+              "rango": 1,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7201,
+              "rango": 8,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 40,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5,
+              "rango": 95,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.6425,
+              "p_var": 0.6425,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.6425,
+              "p_var": 0.6425,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.6_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "paz_interior",
+              0.6
+            ],
+            [
+              "resolucion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 89,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 90,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8013,
+              "rango": 1,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7201,
+              "rango": 8,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 40,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5,
+              "rango": 95,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.6425,
+              "p_var": 0.6425,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.6425,
+              "p_var": 0.6425,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "resolucion",
+              0.72
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8143,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5101,
+              "rango": 65,
+              "delta_p": -0.0011
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5101,
+              "rango": 66,
+              "delta_p": -0.0011
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8143,
+              "rango": 1,
+              "delta_p": 0.0124
+            },
+            "heroe": {
+              "p": 0.5101,
+              "rango": 51,
+              "delta_p": -0.0011
+            },
+            "arquetipo_heroe": {
+              "p": 0.5101,
+              "rango": 10,
+              "delta_p": -0.0011
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5101,
+              "rango": 72,
+              "delta_p": -0.0011
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2791,
+              "p_var": 0.5101,
+              "delta": 0.231
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8019,
+              "p_var": 0.8143,
+              "delta": 0.0124
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.3738,
+              "p_var": 0.3717,
+              "delta": -0.0021
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8124,
+              "p_var": 0.8143,
+              "delta": 0.0019
+            },
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5112,
+              "p_var": 0.5101,
+              "delta": -0.0011
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.72_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "resolucion",
+              0.72
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "schwartz_02_benevolencia",
+          "p_h1_sombra": 0.8183,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5101,
+              "rango": 65,
+              "delta_p": -0.0011
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5101,
+              "rango": 66,
+              "delta_p": -0.0011
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8058,
+              "rango": 2,
+              "delta_p": 0.0039
+            },
+            "heroe": {
+              "p": 0.5101,
+              "rango": 51,
+              "delta_p": -0.0011
+            },
+            "arquetipo_heroe": {
+              "p": 0.5101,
+              "rango": 10,
+              "delta_p": -0.0011
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5101,
+              "rango": 72,
+              "delta_p": -0.0011
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2791,
+              "p_var": 0.5101,
+              "delta": 0.231
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8124,
+              "p_var": 0.8183,
+              "delta": 0.0059
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8019,
+              "p_var": 0.8058,
+              "delta": 0.0039
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.3738,
+              "p_var": 0.3704,
+              "delta": -0.0034
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6973,
+              "p_var": 0.6994,
+              "delta": 0.0021
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.72_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "resolucion",
+              0.72
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8029,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4987,
+              "rango": 92,
+              "delta_p": -0.0013
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4987,
+              "rango": 93,
+              "delta_p": -0.0013
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8029,
+              "rango": 1,
+              "delta_p": 0.0016
+            },
+            "heroe": {
+              "p": 0.7206,
+              "rango": 8,
+              "delta_p": 0.0005
+            },
+            "arquetipo_heroe": {
+              "p": 0.4987,
+              "rango": 42,
+              "delta_p": -0.0013
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4987,
+              "rango": 98,
+              "delta_p": -0.0013
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2679,
+              "p_var": 0.4987,
+              "delta": 0.2308
+            },
+            {
+              "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+              "p_base": 0.5,
+              "p_var": 0.365,
+              "delta": -0.135
+            },
+            {
+              "familia": "cliodinamica_04_fase_depresion_reconstruccion",
+              "p_base": 0.5,
+              "p_var": 0.6157,
+              "delta": 0.1157
+            },
+            {
+              "familia": "dialectica_03_sintesis_superacion_estructural",
+              "p_base": 0.5,
+              "p_var": 0.5656,
+              "delta": 0.0656
+            },
+            {
+              "familia": "19_asesinato_de_un_pariente_no_reconocido",
+              "p_base": 0.1987,
+              "p_var": 0.1945,
+              "delta": -0.0042
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "resolucion",
+              0.72
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8069,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4988,
+              "rango": 90,
+              "delta_p": -0.0012
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4988,
+              "rango": 91,
+              "delta_p": -0.0012
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8069,
+              "rango": 1,
+              "delta_p": 0.0056
+            },
+            "heroe": {
+              "p": 0.7226,
+              "rango": 8,
+              "delta_p": 0.0025
+            },
+            "arquetipo_heroe": {
+              "p": 0.4988,
+              "rango": 40,
+              "delta_p": -0.0012
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4988,
+              "rango": 96,
+              "delta_p": -0.0012
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2679,
+              "p_var": 0.4988,
+              "delta": 0.2309
+            },
+            {
+              "familia": "19_asesinato_de_un_pariente_no_reconocido",
+              "p_base": 0.1987,
+              "p_var": 0.1906,
+              "delta": -0.0081
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8013,
+              "p_var": 0.8069,
+              "delta": 0.0056
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8013,
+              "p_var": 0.8069,
+              "delta": 0.0056
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.2837,
+              "p_var": 0.2787,
+              "delta": -0.005
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "cuidado_cercanos",
+              0.74
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8213,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5105,
+              "rango": 65,
+              "delta_p": -0.0007
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5105,
+              "rango": 66,
+              "delta_p": -0.0007
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8213,
+              "rango": 1,
+              "delta_p": 0.0194
+            },
+            "heroe": {
+              "p": 0.5105,
+              "rango": 51,
+              "delta_p": -0.0007
+            },
+            "arquetipo_heroe": {
+              "p": 0.5105,
+              "rango": 10,
+              "delta_p": -0.0007
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5105,
+              "rango": 72,
+              "delta_p": -0.0007
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2791,
+              "p_var": 0.5105,
+              "delta": 0.2314
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8124,
+              "p_var": 0.7097,
+              "delta": -0.1027
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8019,
+              "p_var": 0.8213,
+              "delta": 0.0194
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.3738,
+              "p_var": 0.3716,
+              "delta": -0.0022
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6973,
+              "p_var": 0.6988,
+              "delta": 0.0015
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.84_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "cuidado_cercanos",
+              0.74
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8089,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5105,
+              "rango": 65,
+              "delta_p": -0.0007
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5105,
+              "rango": 66,
+              "delta_p": -0.0007
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8089,
+              "rango": 1,
+              "delta_p": 0.007
+            },
+            "heroe": {
+              "p": 0.5105,
+              "rango": 51,
+              "delta_p": -0.0007
+            },
+            "arquetipo_heroe": {
+              "p": 0.5105,
+              "rango": 10,
+              "delta_p": -0.0007
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5105,
+              "rango": 72,
+              "delta_p": -0.0007
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2791,
+              "p_var": 0.5105,
+              "delta": 0.2314
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8124,
+              "p_var": 0.7126,
+              "delta": -0.0998
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8019,
+              "p_var": 0.8089,
+              "delta": 0.007
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.3738,
+              "p_var": 0.3696,
+              "delta": -0.0042
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.6973,
+              "p_var": 0.7015,
+              "delta": 0.0042
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.84_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "cuidado_cercanos",
+              0.74
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "paz_interior": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ],
+            "resolucion": [
+              "monomito_12_regreso_con_el_elixir",
+              "favor",
+              "por_compania"
+            ]
+          },
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8092,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4984,
+              "rango": 93,
+              "delta_p": -0.0016
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4984,
+              "rango": 94,
+              "delta_p": -0.0016
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8092,
+              "rango": 1,
+              "delta_p": 0.0079
+            },
+            "heroe": {
+              "p": 0.7211,
+              "rango": 8,
+              "delta_p": 0.001
+            },
+            "arquetipo_heroe": {
+              "p": 0.4984,
+              "rango": 43,
+              "delta_p": -0.0016
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4984,
+              "rango": 99,
+              "delta_p": -0.0016
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "cliodinamica_04_fase_depresion_reconstruccion",
+              "p_base": 0.5,
+              "p_var": 0.7611,
+              "delta": 0.2611
+            },
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2679,
+              "p_var": 0.4984,
+              "delta": 0.2305
+            },
+            {
+              "familia": "dialectica_03_sintesis_superacion_estructural",
+              "p_base": 0.5,
+              "p_var": 0.66,
+              "delta": 0.16
+            },
+            {
+              "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+              "p_base": 0.5,
+              "p_var": 0.3643,
+              "delta": -0.1357
+            },
+            {
+              "familia": "frye_mythos_ironia_satira",
+              "p_base": 0.5,
+              "p_var": 0.381,
+              "delta": -0.119
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "cuidado_cercanos",
+              0.74
+            ],
+            [
+              "estabilidad",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "monomito_12_regreso_con_el_elixir",
+          "p_h1_sombra": 0.8112,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4991,
+              "rango": 90,
+              "delta_p": -0.0009
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4991,
+              "rango": 91,
+              "delta_p": -0.0009
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.8112,
+              "rango": 1,
+              "delta_p": 0.0099
+            },
+            "heroe": {
+              "p": 0.7249,
+              "rango": 7,
+              "delta_p": 0.0048
+            },
+            "arquetipo_heroe": {
+              "p": 0.4991,
+              "rango": 40,
+              "delta_p": -0.0009
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4991,
+              "rango": 96,
+              "delta_p": -0.0009
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.2679,
+              "p_var": 0.4991,
+              "delta": 0.2312
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.8013,
+              "p_var": 0.7011,
+              "delta": -0.1002
+            },
+            {
+              "familia": "19_asesinato_de_un_pariente_no_reconocido",
+              "p_base": 0.1987,
+              "p_var": 0.1869,
+              "delta": -0.0118
+            },
+            {
+              "familia": "monomito_12_regreso_con_el_elixir",
+              "p_base": 0.8013,
+              "p_var": 0.8112,
+              "delta": 0.0099
+            },
+            {
+              "familia": "crisis_vocacional",
+              "p_base": 0.2837,
+              "p_var": 0.277,
+              "delta": -0.0067
+            }
+          ],
+          "frentes": 0
+        }
+      }
+    },
+    "MANDELA_HEROE_20261112": {
+      "caso": "MANDELA_HEROE_20261112",
+      "faltantes": [
+        "reconciliacion"
+      ],
+      "gate_pasa": true,
+      "base_dedup_true": {
+        "h1_sombra": "frye_mythos_romance",
+        "p_h1": 0.7285
+      },
+      "base_dedup_false": {
+        "h1_sombra": "arquetipo_el_gobernante",
+        "p_h1": 0.8013
+      },
+      "variantes": {
+        "peso_0.6_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "reconciliacion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.7285,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5179,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5179,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5179,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5179,
+              "rango": 50,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5179,
+              "rango": 9,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5179,
+              "rango": 72,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 22
+        },
+        "peso_0.6_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "reconciliacion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.7285,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5179,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5179,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5179,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.5179,
+              "rango": 50,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5179,
+              "rango": 9,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5179,
+              "rango": 72,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5179,
+              "p_var": 0.5179,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 22
+        },
+        "peso_0.6_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "reconciliacion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 93,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 94,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6768,
+              "rango": 19,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7719,
+              "rango": 5,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 48,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5,
+              "rango": 99,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.4541,
+              "p_var": 0.4541,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.69,
+              "p_var": 0.69,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5659,
+              "p_var": 0.5659,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.6_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "reconciliacion",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 93,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 94,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6768,
+              "rango": 19,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7719,
+              "rango": 5,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5,
+              "rango": 48,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5,
+              "rango": 99,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.4541,
+              "p_var": 0.4541,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.69,
+              "p_var": 0.69,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5659,
+              "p_var": 0.5659,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.7302,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5178,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5178,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5178,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.5178,
+              "rango": 50,
+              "delta_p": -0.0001
+            },
+            "arquetipo_heroe": {
+              "p": 0.5178,
+              "rango": 9,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5178,
+              "rango": 72,
+              "delta_p": -0.0001
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.3084,
+              "p_var": 0.3067,
+              "delta": -0.0017
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.7285,
+              "p_var": 0.7302,
+              "delta": 0.0017
+            },
+            {
+              "familia": "monomito_06_pruebas_aliados_y_enemigos",
+              "p_base": 0.7089,
+              "p_var": 0.7105,
+              "delta": 0.0016
+            },
+            {
+              "familia": "candidato_trayectoria_arte_prestigio",
+              "p_base": 0.3288,
+              "p_var": 0.3272,
+              "delta": -0.0016
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6671,
+              "p_var": 0.6683,
+              "delta": 0.0012
+            }
+          ],
+          "frentes": 22
+        },
+        "peso_0.72_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.732,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5178,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5178,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5178,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.5178,
+              "rango": 50,
+              "delta_p": -0.0001
+            },
+            "arquetipo_heroe": {
+              "p": 0.5178,
+              "rango": 9,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5178,
+              "rango": 72,
+              "delta_p": -0.0001
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.3084,
+              "p_var": 0.3048,
+              "delta": -0.0036
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.7285,
+              "p_var": 0.732,
+              "delta": 0.0035
+            },
+            {
+              "familia": "monomito_06_pruebas_aliados_y_enemigos",
+              "p_base": 0.7089,
+              "p_var": 0.7122,
+              "delta": 0.0033
+            },
+            {
+              "familia": "candidato_trayectoria_arte_prestigio",
+              "p_base": 0.3288,
+              "p_var": 0.3255,
+              "delta": -0.0033
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6671,
+              "p_var": 0.6696,
+              "delta": 0.0025
+            }
+          ],
+          "frentes": 21
+        },
+        "peso_0.72_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.8039,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4997,
+              "rango": 94,
+              "delta_p": -0.0003
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4997,
+              "rango": 95,
+              "delta_p": -0.0003
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6779,
+              "rango": 19,
+              "delta_p": 0.0011
+            },
+            "heroe": {
+              "p": 0.7738,
+              "rango": 5,
+              "delta_p": 0.0019
+            },
+            "arquetipo_heroe": {
+              "p": 0.4997,
+              "rango": 48,
+              "delta_p": -0.0003
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4997,
+              "rango": 100,
+              "delta_p": -0.0003
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "frye_mythos_comedia",
+              "p_base": 0.5,
+              "p_var": 0.6752,
+              "delta": 0.1752
+            },
+            {
+              "familia": "cliodinamica_04_fase_depresion_reconstruccion",
+              "p_base": 0.5,
+              "p_var": 0.6752,
+              "delta": 0.1752
+            },
+            {
+              "familia": "frye_mythos_tragedia",
+              "p_base": 0.5,
+              "p_var": 0.3827,
+              "delta": -0.1173
+            },
+            {
+              "familia": "30_ambicion",
+              "p_base": 0.6161,
+              "p_var": 0.4997,
+              "delta": -0.1164
+            },
+            {
+              "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+              "p_base": 0.5,
+              "p_var": 0.3994,
+              "delta": -0.1006
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.8077,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4996,
+              "rango": 93,
+              "delta_p": -0.0004
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4996,
+              "rango": 94,
+              "delta_p": -0.0004
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6794,
+              "rango": 19,
+              "delta_p": 0.0026
+            },
+            "heroe": {
+              "p": 0.7761,
+              "rango": 5,
+              "delta_p": 0.0042
+            },
+            "arquetipo_heroe": {
+              "p": 0.4996,
+              "rango": 46,
+              "delta_p": -0.0004
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4996,
+              "rango": 99,
+              "delta_p": -0.0004
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "30_ambicion",
+              "p_base": 0.6161,
+              "p_var": 0.4996,
+              "delta": -0.1165
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.4171,
+              "p_var": 0.4996,
+              "delta": 0.0825
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.4171,
+              "p_var": 0.4996,
+              "delta": 0.0825
+            },
+            {
+              "familia": "situacion_dramatica_ambicion",
+              "p_base": 0.5332,
+              "p_var": 0.4996,
+              "delta": -0.0336
+            },
+            {
+              "familia": "kwml_01_rey",
+              "p_base": 0.8013,
+              "p_var": 0.8077,
+              "delta": 0.0064
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.7295,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5178,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5178,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5178,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.5178,
+              "rango": 50,
+              "delta_p": -0.0001
+            },
+            "arquetipo_heroe": {
+              "p": 0.5178,
+              "rango": 9,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5178,
+              "rango": 72,
+              "delta_p": -0.0001
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.3084,
+              "p_var": 0.3073,
+              "delta": -0.0011
+            },
+            {
+              "familia": "monomito_06_pruebas_aliados_y_enemigos",
+              "p_base": 0.7089,
+              "p_var": 0.7099,
+              "delta": 0.001
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.7285,
+              "p_var": 0.7295,
+              "delta": 0.001
+            },
+            {
+              "familia": "candidato_trayectoria_arte_prestigio",
+              "p_base": 0.3288,
+              "p_var": 0.3278,
+              "delta": -0.001
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6671,
+              "p_var": 0.6679,
+              "delta": 0.0008
+            }
+          ],
+          "frentes": 22
+        },
+        "peso_0.84_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "frye_mythos_romance",
+          "p_h1_sombra": 0.732,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5178,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5178,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5178,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.5178,
+              "rango": 50,
+              "delta_p": -0.0001
+            },
+            "arquetipo_heroe": {
+              "p": 0.5178,
+              "rango": 9,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.5178,
+              "rango": 72,
+              "delta_p": -0.0001
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "monomito_08_la_odisea_o_prueba_suprema",
+              "p_base": 0.3084,
+              "p_var": 0.3048,
+              "delta": -0.0036
+            },
+            {
+              "familia": "frye_mythos_romance",
+              "p_base": 0.7285,
+              "p_var": 0.732,
+              "delta": 0.0035
+            },
+            {
+              "familia": "monomito_06_pruebas_aliados_y_enemigos",
+              "p_base": 0.7089,
+              "p_var": 0.7122,
+              "delta": 0.0033
+            },
+            {
+              "familia": "candidato_trayectoria_arte_prestigio",
+              "p_base": 0.3288,
+              "p_var": 0.3255,
+              "delta": -0.0033
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.6671,
+              "p_var": 0.6696,
+              "delta": 0.0025
+            }
+          ],
+          "frentes": 21
+        },
+        "peso_0.84_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "reconciliacion": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.806,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4997,
+              "rango": 94,
+              "delta_p": -0.0003
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4997,
+              "rango": 95,
+              "delta_p": -0.0003
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6774,
+              "rango": 19,
+              "delta_p": 0.0006
+            },
+            "heroe": {
+              "p": 0.7729,
+              "rango": 5,
+              "delta_p": 0.001
+            },
+            "arquetipo_heroe": {
+              "p": 0.4997,
+              "rango": 48,
+              "delta_p": -0.0003
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4997,
+              "rango": 100,
+              "delta_p": -0.0003
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "frye_mythos_comedia",
+              "p_base": 0.5,
+              "p_var": 0.6747,
+              "delta": 0.1747
+            },
+            {
+              "familia": "cliodinamica_04_fase_depresion_reconstruccion",
+              "p_base": 0.5,
+              "p_var": 0.6747,
+              "delta": 0.1747
+            },
+            {
+              "familia": "frye_mythos_tragedia",
+              "p_base": 0.5,
+              "p_var": 0.383,
+              "delta": -0.117
+            },
+            {
+              "familia": "30_ambicion",
+              "p_base": 0.6161,
+              "p_var": 0.4997,
+              "delta": -0.1164
+            },
+            {
+              "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+              "p_base": 0.5,
+              "p_var": 0.3997,
+              "delta": -0.1003
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "poder",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_gobernante",
+          "p_h1_sombra": 0.8077,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4996,
+              "rango": 93,
+              "delta_p": -0.0004
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.4996,
+              "rango": 94,
+              "delta_p": -0.0004
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6794,
+              "rango": 19,
+              "delta_p": 0.0026
+            },
+            "heroe": {
+              "p": 0.7761,
+              "rango": 5,
+              "delta_p": 0.0042
+            },
+            "arquetipo_heroe": {
+              "p": 0.4996,
+              "rango": 46,
+              "delta_p": -0.0004
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.4996,
+              "rango": 99,
+              "delta_p": -0.0004
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "30_ambicion",
+              "p_base": 0.6161,
+              "p_var": 0.4996,
+              "delta": -0.1165
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.4171,
+              "p_var": 0.4996,
+              "delta": 0.0825
+            },
+            {
+              "familia": "schwartz_01_universalismo",
+              "p_base": 0.4171,
+              "p_var": 0.4996,
+              "delta": 0.0825
+            },
+            {
+              "familia": "situacion_dramatica_ambicion",
+              "p_base": 0.5332,
+              "p_var": 0.4996,
+              "delta": -0.0336
+            },
+            {
+              "familia": "kwml_01_rey",
+              "p_base": 0.8013,
+              "p_var": 0.8077,
+              "delta": 0.0064
+            }
+          ],
+          "frentes": 0
+        }
+      }
+    },
+    "SEMMELWEIS_HEROE_SIN_TRONO_20261112": {
+      "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+      "faltantes": [
+        "restauracion_equilibrio"
+      ],
+      "gate_pasa": true,
+      "base_dedup_true": {
+        "h1_sombra": "arquetipo_el_heroe",
+        "p_h1": 0.8122
+      },
+      "base_dedup_false": {
+        "h1_sombra": "arquetipo_heroe",
+        "p_h1": 0.8013
+      },
+      "variantes": {
+        "peso_0.6_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.8122,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.511,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.511,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.511,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.6764,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.511,
+              "rango": 11,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8122,
+              "rango": 1,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 20
+        },
+        "peso_0.6_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.8122,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.511,
+              "rango": 64,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.511,
+              "rango": 65,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.511,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.6764,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.511,
+              "rango": 11,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8122,
+              "rango": 1,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.511,
+              "p_var": 0.511,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 20
+        },
+        "peso_0.6_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 85,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 86,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5,
+              "rango": 87,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.8013,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.8013,
+              "rango": 1,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8013,
+              "rango": 4,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.6_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 85,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 86,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5,
+              "rango": 87,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.8013,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.8013,
+              "rango": 1,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8013,
+              "rango": 4,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "heroe",
+          "p_h1_sombra": 0.8146,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5104,
+              "rango": 64,
+              "delta_p": -0.0006
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5104,
+              "rango": 65,
+              "delta_p": -0.0006
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5104,
+              "rango": 66,
+              "delta_p": -0.0006
+            },
+            "heroe": {
+              "p": 0.8146,
+              "rango": 1,
+              "delta_p": 0.1382
+            },
+            "arquetipo_heroe": {
+              "p": 0.5104,
+              "rango": 11,
+              "delta_p": -0.0006
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8146,
+              "rango": 2,
+              "delta_p": 0.0024
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "heroe",
+              "p_base": 0.6764,
+              "p_var": 0.8146,
+              "delta": 0.1382
+            },
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8122,
+              "p_var": 0.8146,
+              "delta": 0.0024
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7972,
+              "p_var": 0.7989,
+              "delta": 0.0017
+            },
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.511,
+              "p_var": 0.5104,
+              "delta": -0.0006
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.511,
+              "p_var": 0.5104,
+              "delta": -0.0006
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.72_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.819,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5109,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5109,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5109,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.6791,
+              "rango": 3,
+              "delta_p": 0.0027
+            },
+            "arquetipo_heroe": {
+              "p": 0.5109,
+              "rango": 11,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.819,
+              "rango": 1,
+              "delta_p": 0.0068
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8122,
+              "p_var": 0.819,
+              "delta": 0.0068
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7972,
+              "p_var": 0.802,
+              "delta": 0.0048
+            },
+            {
+              "familia": "heroe",
+              "p_base": 0.6764,
+              "p_var": 0.6791,
+              "delta": 0.0027
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.6419,
+              "p_var": 0.644,
+              "delta": 0.0021
+            },
+            {
+              "familia": "35_recuperacion_de_lo_perdido",
+              "p_base": 0.6291,
+              "p_var": 0.6311,
+              "delta": 0.002
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.72_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8053,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5011,
+              "rango": 82,
+              "delta_p": 0.0011
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5011,
+              "rango": 83,
+              "delta_p": 0.0011
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5011,
+              "rango": 84,
+              "delta_p": 0.0011
+            },
+            "heroe": {
+              "p": 0.8053,
+              "rango": 3,
+              "delta_p": 0.004
+            },
+            "arquetipo_heroe": {
+              "p": 0.8053,
+              "rango": 1,
+              "delta_p": 0.004
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8053,
+              "rango": 4,
+              "delta_p": 0.004
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5011,
+              "delta": -0.231
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5011,
+              "delta": -0.115
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5011,
+              "delta": 0.0881
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5011,
+              "delta": 0.0881
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.5011,
+              "delta": -0.0569
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8091,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5009,
+              "rango": 82,
+              "delta_p": 0.0009
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5009,
+              "rango": 83,
+              "delta_p": 0.0009
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5009,
+              "rango": 84,
+              "delta_p": 0.0009
+            },
+            "heroe": {
+              "p": 0.8091,
+              "rango": 3,
+              "delta_p": 0.0078
+            },
+            "arquetipo_heroe": {
+              "p": 0.8091,
+              "rango": 1,
+              "delta_p": 0.0078
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8091,
+              "rango": 4,
+              "delta_p": 0.0078
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5009,
+              "delta": -0.2312
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5009,
+              "delta": -0.1152
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.5009,
+              "delta": -0.0571
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "heroe",
+          "p_h1_sombra": 0.8166,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5104,
+              "rango": 64,
+              "delta_p": -0.0006
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5104,
+              "rango": 65,
+              "delta_p": -0.0006
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5104,
+              "rango": 66,
+              "delta_p": -0.0006
+            },
+            "heroe": {
+              "p": 0.8166,
+              "rango": 1,
+              "delta_p": 0.1402
+            },
+            "arquetipo_heroe": {
+              "p": 0.5104,
+              "rango": 11,
+              "delta_p": -0.0006
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8166,
+              "rango": 2,
+              "delta_p": 0.0044
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "heroe",
+              "p_base": 0.6764,
+              "p_var": 0.8166,
+              "delta": 0.1402
+            },
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8122,
+              "p_var": 0.8166,
+              "delta": 0.0044
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7972,
+              "p_var": 0.798,
+              "delta": 0.0008
+            },
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.511,
+              "p_var": 0.5104,
+              "delta": -0.0006
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.511,
+              "p_var": 0.5104,
+              "delta": -0.0006
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.84_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.819,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5109,
+              "rango": 64,
+              "delta_p": -0.0001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5109,
+              "rango": 65,
+              "delta_p": -0.0001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5109,
+              "rango": 66,
+              "delta_p": -0.0001
+            },
+            "heroe": {
+              "p": 0.6791,
+              "rango": 3,
+              "delta_p": 0.0027
+            },
+            "arquetipo_heroe": {
+              "p": 0.5109,
+              "rango": 11,
+              "delta_p": -0.0001
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.819,
+              "rango": 1,
+              "delta_p": 0.0068
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8122,
+              "p_var": 0.819,
+              "delta": 0.0068
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7972,
+              "p_var": 0.802,
+              "delta": 0.0048
+            },
+            {
+              "familia": "heroe",
+              "p_base": 0.6764,
+              "p_var": 0.6791,
+              "delta": 0.0027
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.6419,
+              "p_var": 0.644,
+              "delta": 0.0021
+            },
+            {
+              "familia": "35_recuperacion_de_lo_perdido",
+              "p_base": 0.6291,
+              "p_var": 0.6311,
+              "delta": 0.002
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.84_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ]
+          },
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8073,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5011,
+              "rango": 82,
+              "delta_p": 0.0011
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5011,
+              "rango": 83,
+              "delta_p": 0.0011
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5011,
+              "rango": 84,
+              "delta_p": 0.0011
+            },
+            "heroe": {
+              "p": 0.8073,
+              "rango": 3,
+              "delta_p": 0.006
+            },
+            "arquetipo_heroe": {
+              "p": 0.8073,
+              "rango": 1,
+              "delta_p": 0.006
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8073,
+              "rango": 4,
+              "delta_p": 0.006
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5011,
+              "delta": -0.231
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5011,
+              "delta": -0.115
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5011,
+              "delta": 0.0881
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5011,
+              "delta": 0.0881
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.5011,
+              "delta": -0.0569
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_heroe",
+          "p_h1_sombra": 0.8091,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5009,
+              "rango": 82,
+              "delta_p": 0.0009
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5009,
+              "rango": 83,
+              "delta_p": 0.0009
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.5009,
+              "rango": 84,
+              "delta_p": 0.0009
+            },
+            "heroe": {
+              "p": 0.8091,
+              "rango": 3,
+              "delta_p": 0.0078
+            },
+            "arquetipo_heroe": {
+              "p": 0.8091,
+              "rango": 1,
+              "delta_p": 0.0078
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8091,
+              "rango": 4,
+              "delta_p": 0.0078
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5009,
+              "delta": -0.2312
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5009,
+              "delta": -0.1152
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.5009,
+              "delta": -0.0571
+            }
+          ],
+          "frentes": 0
+        }
+      }
+    },
+    "KOLBE_HEROE_SIN_TRONO_20261112": {
+      "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+      "faltantes": [
+        "restauracion_equilibrio",
+        "sacrificio_final"
+      ],
+      "gate_pasa": true,
+      "base_dedup_true": {
+        "h1_sombra": "arquetipo_el_heroe",
+        "p_h1": 0.8123
+      },
+      "base_dedup_false": {
+        "h1_sombra": "5_persecucion",
+        "p_h1": 0.8013
+      },
+      "variantes": {
+        "peso_0.6_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ],
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.8123,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5111,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5111,
+              "rango": 67,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6603,
+              "rango": 6,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7934,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5111,
+              "rango": 13,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8123,
+              "rango": 1,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.6_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ],
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.8123,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5111,
+              "rango": 66,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5111,
+              "rango": 67,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6603,
+              "rango": 6,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.7934,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.5111,
+              "rango": 13,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8123,
+              "rango": 1,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5111,
+              "p_var": 0.5111,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 19
+        },
+        "peso_0.6_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ],
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 90,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 91,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7161,
+              "rango": 10,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.8013,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.7106,
+              "rango": 11,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8013,
+              "rango": 4,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.6_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "restauracion_equilibrio",
+              0.6
+            ],
+            [
+              "sacrificio_final",
+              0.6
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8013,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5,
+              "rango": 90,
+              "delta_p": 0.0
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5,
+              "rango": 91,
+              "delta_p": 0.0
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7161,
+              "rango": 10,
+              "delta_p": 0.0
+            },
+            "heroe": {
+              "p": 0.8013,
+              "rango": 3,
+              "delta_p": 0.0
+            },
+            "arquetipo_heroe": {
+              "p": 0.7106,
+              "rango": 11,
+              "delta_p": 0.0
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8013,
+              "rango": 4,
+              "delta_p": 0.0
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "weber_03_autoridad_legal_racional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_02_autoridad_carismatica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "weber_01_autoridad_tradicional",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "vulnerabilidad_sistemica",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            },
+            {
+              "familia": "utopia_principio_naturaleza",
+              "p_base": 0.5,
+              "p_var": 0.5,
+              "delta": 0.0
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.72
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "heroe",
+          "p_h1_sombra": 0.8151,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5109,
+              "rango": 66,
+              "delta_p": -0.0002
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5109,
+              "rango": 67,
+              "delta_p": -0.0002
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6614,
+              "rango": 6,
+              "delta_p": 0.0011
+            },
+            "heroe": {
+              "p": 0.8151,
+              "rango": 1,
+              "delta_p": 0.0217
+            },
+            "arquetipo_heroe": {
+              "p": 0.5109,
+              "rango": 13,
+              "delta_p": -0.0002
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8151,
+              "rango": 2,
+              "delta_p": 0.0028
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "heroe",
+              "p_base": 0.7934,
+              "p_var": 0.8151,
+              "delta": 0.0217
+            },
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8123,
+              "p_var": 0.8151,
+              "delta": 0.0028
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.7829,
+              "p_var": 0.785,
+              "delta": 0.0021
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7973,
+              "p_var": 0.7994,
+              "delta": 0.0021
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.7175,
+              "p_var": 0.719,
+              "delta": 0.0015
+            }
+          ],
+          "frentes": 17
+        },
+        "peso_0.72_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.72
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.8191,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5109,
+              "rango": 66,
+              "delta_p": -0.0002
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5109,
+              "rango": 67,
+              "delta_p": -0.0002
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6627,
+              "rango": 6,
+              "delta_p": 0.0024
+            },
+            "heroe": {
+              "p": 0.7981,
+              "rango": 3,
+              "delta_p": 0.0047
+            },
+            "arquetipo_heroe": {
+              "p": 0.5109,
+              "rango": 13,
+              "delta_p": -0.0002
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8191,
+              "rango": 1,
+              "delta_p": 0.0068
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8123,
+              "p_var": 0.8191,
+              "delta": 0.0068
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7973,
+              "p_var": 0.802,
+              "delta": 0.0047
+            },
+            {
+              "familia": "heroe",
+              "p_base": 0.7934,
+              "p_var": 0.7981,
+              "delta": 0.0047
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.7829,
+              "p_var": 0.7874,
+              "delta": 0.0045
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.7175,
+              "p_var": 0.7208,
+              "delta": 0.0033
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.72_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.72
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.8052,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.501,
+              "rango": 87,
+              "delta_p": 0.001
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.501,
+              "rango": 88,
+              "delta_p": 0.001
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7189,
+              "rango": 9,
+              "delta_p": 0.0028
+            },
+            "heroe": {
+              "p": 0.8052,
+              "rango": 3,
+              "delta_p": 0.0039
+            },
+            "arquetipo_heroe": {
+              "p": 0.7134,
+              "rango": 10,
+              "delta_p": 0.0028
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8052,
+              "rango": 4,
+              "delta_p": 0.0039
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.501,
+              "delta": -0.2311
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.501,
+              "delta": -0.1151
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.501,
+              "delta": 0.088
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.501,
+              "delta": 0.088
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.501,
+              "delta": -0.057
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.72_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "sacrificio_final",
+              0.72
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "5_persecucion",
+          "p_h1_sombra": 0.809,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5009,
+              "rango": 87,
+              "delta_p": 0.0009
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5009,
+              "rango": 88,
+              "delta_p": 0.0009
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7207,
+              "rango": 9,
+              "delta_p": 0.0046
+            },
+            "heroe": {
+              "p": 0.809,
+              "rango": 3,
+              "delta_p": 0.0077
+            },
+            "arquetipo_heroe": {
+              "p": 0.7151,
+              "rango": 10,
+              "delta_p": 0.0045
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.809,
+              "rango": 4,
+              "delta_p": 0.0077
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5009,
+              "delta": -0.2312
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5009,
+              "delta": -0.1152
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5009,
+              "delta": 0.0879
+            },
+            {
+              "familia": "duelo_bonanno_04_depresion_cronica_preexistente",
+              "p_base": 0.558,
+              "p_var": 0.5009,
+              "delta": -0.0571
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_True_cierre": {
+          "soltados_cuello": [
+            [
+              "persecucion",
+              0.74
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "heroe",
+          "p_h1_sombra": 0.8216,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5108,
+              "rango": 66,
+              "delta_p": -0.0003
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5108,
+              "rango": 67,
+              "delta_p": -0.0003
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.6618,
+              "rango": 6,
+              "delta_p": 0.0015
+            },
+            "heroe": {
+              "p": 0.8216,
+              "rango": 1,
+              "delta_p": 0.0282
+            },
+            "arquetipo_heroe": {
+              "p": 0.5108,
+              "rango": 13,
+              "delta_p": -0.0003
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8216,
+              "rango": 2,
+              "delta_p": 0.0093
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "heroe",
+              "p_base": 0.7934,
+              "p_var": 0.8216,
+              "delta": 0.0282
+            },
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8123,
+              "p_var": 0.8216,
+              "delta": 0.0093
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7973,
+              "p_var": 0.8004,
+              "delta": 0.0031
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.7829,
+              "p_var": 0.7859,
+              "delta": 0.003
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.7175,
+              "p_var": 0.7196,
+              "delta": 0.0021
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.84_dedup_True_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "persecucion",
+              0.74
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "arquetipo_el_heroe",
+          "p_h1_sombra": 0.823,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5108,
+              "rango": 66,
+              "delta_p": -0.0003
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5108,
+              "rango": 67,
+              "delta_p": -0.0003
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.664,
+              "rango": 6,
+              "delta_p": 0.0037
+            },
+            "heroe": {
+              "p": 0.8006,
+              "rango": 3,
+              "delta_p": 0.0072
+            },
+            "arquetipo_heroe": {
+              "p": 0.5108,
+              "rango": 13,
+              "delta_p": -0.0003
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.823,
+              "rango": 1,
+              "delta_p": 0.0107
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "arquetipo_el_heroe",
+              "p_base": 0.8123,
+              "p_var": 0.823,
+              "delta": 0.0107
+            },
+            {
+              "familia": "monomito_05_cruce_del_primer_umbral",
+              "p_base": 0.7973,
+              "p_var": 0.8045,
+              "delta": 0.0072
+            },
+            {
+              "familia": "heroe",
+              "p_base": 0.7934,
+              "p_var": 0.8006,
+              "delta": 0.0072
+            },
+            {
+              "familia": "schwartz_02_benevolencia",
+              "p_base": 0.7829,
+              "p_var": 0.7898,
+              "delta": 0.0069
+            },
+            {
+              "familia": "mentor",
+              "p_base": 0.7175,
+              "p_var": 0.7226,
+              "delta": 0.0051
+            }
+          ],
+          "frentes": 18
+        },
+        "peso_0.84_dedup_False_cierre": {
+          "soltados_cuello": [
+            [
+              "persecucion",
+              0.74
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {
+            "restauracion_equilibrio": [
+              "heroe",
+              "favor",
+              "unica"
+            ],
+            "sacrificio_final": [
+              null,
+              null,
+              "latencia_sin_compania"
+            ]
+          },
+          "h1_sombra": "20_sacrificio_por_un_ideal",
+          "p_h1_sombra": 0.8105,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.4997,
+              "rango": 90,
+              "delta_p": -0.0003
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.6758,
+              "rango": 13,
+              "delta_p": 0.1758
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7183,
+              "rango": 8,
+              "delta_p": 0.0022
+            },
+            "heroe": {
+              "p": 0.8105,
+              "rango": 2,
+              "delta_p": 0.0092
+            },
+            "arquetipo_heroe": {
+              "p": 0.7128,
+              "rango": 9,
+              "delta_p": 0.0022
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8105,
+              "rango": 3,
+              "delta_p": 0.0092
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.4997,
+              "delta": -0.2324
+            },
+            {
+              "familia": "monomito_11_la_resurreccion",
+              "p_base": 0.5,
+              "p_var": 0.6758,
+              "delta": 0.1758
+            },
+            {
+              "familia": "eterno_retorno_03_desgaste_y_reinicio",
+              "p_base": 0.5,
+              "p_var": 0.6758,
+              "delta": 0.1758
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.4997,
+              "delta": -0.1164
+            },
+            {
+              "familia": "5_persecucion",
+              "p_base": 0.8013,
+              "p_var": 0.6851,
+              "delta": -0.1162
+            }
+          ],
+          "frentes": 0
+        },
+        "peso_0.84_dedup_False_control_solo_cuello": {
+          "soltados_cuello": [
+            [
+              "persecucion",
+              0.74
+            ],
+            [
+              "duelo",
+              0.7
+            ]
+          ],
+          "asignacion_cierre": {},
+          "h1_sombra": "20_sacrificio_por_un_ideal",
+          "p_h1_sombra": 0.8136,
+          "deltas": {
+            "monomito_10_el_camino_de_regreso": {
+              "p": 0.5014,
+              "rango": 87,
+              "delta_p": 0.0014
+            },
+            "monomito_11_la_resurreccion": {
+              "p": 0.5014,
+              "rango": 88,
+              "delta_p": 0.0014
+            },
+            "monomito_12_regreso_con_el_elixir": {
+              "p": 0.7232,
+              "rango": 8,
+              "delta_p": 0.0071
+            },
+            "heroe": {
+              "p": 0.8136,
+              "rango": 2,
+              "delta_p": 0.0123
+            },
+            "arquetipo_heroe": {
+              "p": 0.7175,
+              "rango": 9,
+              "delta_p": 0.0069
+            },
+            "arquetipo_el_heroe": {
+              "p": 0.8136,
+              "rango": 3,
+              "delta_p": 0.0123
+            }
+          },
+          "top_movers": [
+            {
+              "familia": "36_perdida_de_los_seres_queridos",
+              "p_base": 0.7321,
+              "p_var": 0.5014,
+              "delta": -0.2307
+            },
+            {
+              "familia": "duelo_bonanno_02_comun_recuperacion",
+              "p_base": 0.6161,
+              "p_var": 0.5014,
+              "delta": -0.1147
+            },
+            {
+              "familia": "5_persecucion",
+              "p_base": 0.8013,
+              "p_var": 0.6895,
+              "delta": -0.1118
+            },
+            {
+              "familia": "duelo_bonanno_05_mejoria_tras_perdida",
+              "p_base": 0.413,
+              "p_var": 0.5014,
+              "delta": 0.0884
+            },
+            {
+              "familia": "duelo_bonanno_01_resiliencia",
+              "p_base": 0.413,
+              "p_var": 0.5014,
+              "delta": 0.0884
+            }
+          ],
+          "frentes": 0
+        }
+      }
+    }
+  }
+}
