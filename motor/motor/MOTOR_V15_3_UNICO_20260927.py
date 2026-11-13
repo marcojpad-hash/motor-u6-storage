@@ -2404,7 +2404,12 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         if _mono_cuts:
             # Caldero search is case-level, so current neighbors are attached to
             # the work/final cut only; earlier cuts retain their own frozen tokens.
-            _mono_cuts[-1]=(_mono_cuts[-1][0],_mono_cuts[-1][1],_mono_cuts[-1][2],{"tokens_neighbors":_cal_current,"source":"caldero_current_run"})
+            # DECISION_MJ_CUARTOS_20261113: el contra CUENTA como evidencia de etapa.
+            # Cada cuadrante puede repetirse y llevar varios hilos a la vez (favor y
+            # contra son hilos del mismo cuarto); eso no impide ver la transicion.
+            # Por eso el puente pasa las RUTAS (familia:cuarto:signo), no solo los
+            # nombres: el plugin suma favor y contra como evidencia del cuarto.
+            _mono_cuts[-1]=(_mono_cuts[-1][0],_mono_cuts[-1][1],_mono_cuts[-1][2],{"tokens_neighbors":_cal_current,"rutas_vecinos":{t:_cal_mapa.get(t,[]) for t in _cal_current},"source":"caldero_current_run"})
         _mono=_ceb_stage("plugin_circulo_monomito_v2", lambda: circ.posicion_por_corte(_mono_cuts))
         _mono["caldero_bridge"]={"wired":True,"lleva_vecinos":bool(_cal_current),"estado":("CON_VECINOS" if _cal_current else "SIN_VECINOS"),"current_neighbors":_cal_current,"mapeo_por_token":_cal_mapa,"raw_current_neighbors":len(_cal_raw),"ignored_unmapped_neighbors":_cal_ignored,"injected_cut":(_mono_cuts[-1][0] if _mono_cuts and _cal_current else None),"historical_memory_used_as_current":False,"mapping":"familia_monomito_favor_contra_o_candidato_plugin"}
         def _store_mono():

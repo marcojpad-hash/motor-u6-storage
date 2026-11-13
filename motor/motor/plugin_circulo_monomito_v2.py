@@ -47,12 +47,23 @@ HILOS = {
     "hilo_vinculo": {"tokens_ancla": ["lealtad","apoyo_activo","duelo","perdida_familiar"]},
 }
 
-def _cuadrantes_activos_por_coocurrencia(tokens_corte: List[str]) -> List[str]:
+def _cuadrantes_activos_por_coocurrencia(tokens_corte: List[str], evidencia_vecinos=None) -> List[str]:
+    """Cuartos activos por solape de tokens + evidencia mapeada del puente.
+
+    DECISION_MJ_CUARTOS_20261113: el contra CUENTA como evidencia de etapa.
+    Cada ruta del puente (familia:cuarto:favor|contra) suma 1 a su cuarto,
+    con favor y con contra por igual: son hilos del mismo cuarto, que puede
+    repetirse y llevar varios a la vez. La transicion se sigue viendo en la
+    secuencia de cuartos activos por corte (la regla de empate ya devuelve
+    varios cuartos a la vez). evidencia_vecinos: {cuarto: n}."""
     scores = {}
     for q, data in ESTRUCTURAS_CANDIDATAS.items():
         overlap = len(set(tokens_corte) & set(data["tokens_candidatos"]))
         if overlap:
             scores[q] = overlap
+    for q, n in (evidencia_vecinos or {}).items():
+        if n:
+            scores[q] = scores.get(q, 0) + int(n)
     if not scores:
         return []
     max_s = max(scores.values())
@@ -76,7 +87,23 @@ def posicion_por_corte(cortes_tokens: List[Tuple[str, List[str], str]]) -> Dict[
         # Caldero is a resolver input for the lateral lens, not a new 244 token.
         # It participates only as current contextual evidence for this cut.
         tokens_resolucion = list(dict.fromkeys(tokens_base + caldero_neighbors))
-        q_act = _cuadrantes_activos_por_coocurrencia(tokens_resolucion)
+        # Rutas del puente (DECISION_MJ_CUARTOS_20261113): cada ruta
+        # familia:cuarto:favor|contra suma 1 a su cuarto, con el signo
+        # registrado para que el hilo (favor o contra) quede visible.
+        evidencia_vecinos = {}
+        detalle_vecinos = []
+        for _tok, _rutas in (caldero_ctx.get("rutas_vecinos") or {}).items():
+            for _ruta in (_rutas or []):
+                try:
+                    _fam, _q, _signo = str(_ruta).split(":")
+                except ValueError:
+                    continue
+                _qkey = next((k for k in ESTRUCTURAS_CANDIDATAS.keys() if k.startswith(_q)), None)
+                if not _qkey:
+                    continue
+                evidencia_vecinos[_qkey] = evidencia_vecinos.get(_qkey, 0) + 1
+                detalle_vecinos.append({"token": str(_tok), "familia": _fam, "cuarto": _qkey, "signo": _signo})
+        q_act = _cuadrantes_activos_por_coocurrencia(tokens_resolucion, evidencia_vecinos)
         hilos_presentes = [h for h,d in HILOS.items() if any(t in tokens_resolucion for t in d["tokens_ancla"])]
         r3 = None
         if any(t in tokens for t in HILOS["hilo_sombra_consumo"]["tokens_ancla"]):
@@ -122,6 +149,7 @@ def posicion_por_corte(cortes_tokens: List[Tuple[str, List[str], str]]) -> Dict[
             "tokens_resolucion_monomito": tokens_resolucion,
             "caldero_inyectado_en_resolucion": bool(caldero_neighbors),
             "cuadrante_activo": q_act,
+            "evidencia_vecinos_cuarto": detalle_vecinos,
             "hilos_presentes": hilos_presentes,
             "estabilidad_hilo": estabilidad,
             "r3_sombra_mentor": r3,
