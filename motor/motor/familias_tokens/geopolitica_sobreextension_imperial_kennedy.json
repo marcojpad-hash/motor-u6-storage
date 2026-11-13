@@ -1,0 +1,23 @@
+{
+ "id": "geopolitica_sobreextension_imperial_kennedy",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Paul Kennedy, The Rise and Fall of the Great Powers (1987), imperial overstretch. Historia economica comparada; pesos asignados.",
+ "description": "Asimetria creciente entre los compromisos militares o territoriales asumidos por una potencia y la base economica real que los financia.",
+ "evidence_status": "secondary_verified",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "agotamiento_tributario": 0.8,
+  "deficit_fiscal_belico": 0.85,
+  "desgaste_logistico_externo": 0.8,
+  "frentes_multiples_abiertos": 0.85,
+  "rebelion_periferica": 0.75
+ },
+ "tokens_contra": {
+  "alianza_carga_compartida": 0.75,
+  "consolidacion_interna": 0.8,
+  "repliegue_estrategico": 0.85,
+  "superavit_comercial": 0.75
+ }
+}

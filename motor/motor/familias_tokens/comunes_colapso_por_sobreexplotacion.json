@@ -1,0 +1,23 @@
+{
+ "id": "comunes_colapso_por_sobreexplotacion",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Elinor Ostrom, Governing the Commons (1990). Principios de diseno institucional verificados empiricamente; pesos asignados.",
+ "description": "Agotamiento progresivo de un recurso o infraestructura compartida por incentivos individuales de extraccion sin reglas efectivas de monitoreo y sancion.",
+ "evidence_status": "primary_verified",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "agotamiento_recurso_base": 0.85,
+  "desconfianza_comunitaria": 0.7,
+  "extraccion_no_regulada": 0.85,
+  "impunidad_infraccion": 0.8,
+  "polizon_free_rider": 0.8
+ },
+ "tokens_contra": {
+  "autogobernanza_local": 0.75,
+  "limite_extraccion_pactado": 0.85,
+  "monitoreo_comunitario": 0.85,
+  "sancion_graduada": 0.8
+ }
+}

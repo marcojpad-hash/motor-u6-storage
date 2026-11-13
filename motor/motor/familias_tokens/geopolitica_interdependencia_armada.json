@@ -1,0 +1,23 @@
+{
+ "id": "geopolitica_interdependencia_armada",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Farrell & Newman, Weaponized Interdependence (International Security, 2019). Pesos de token asignados.",
+ "description": "Uso asimetrico de nodos criticos de red (financieros, tecnologicos o logisticos) para extraer concesiones o estrangular a un competidor.",
+ "evidence_status": "secondary_verified",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "asimetria_dependencia": 0.75,
+  "bloqueo_tecnologico": 0.8,
+  "estrangulamiento_suministro": 0.85,
+  "monopolio_nodo_critico": 0.85,
+  "sancion_extraterritorial": 0.8
+ },
+ "tokens_contra": {
+  "autonomia_estrategica": 0.85,
+  "diversificacion_proveedores": 0.75,
+  "neutralidad_infraestructura": 0.7,
+  "redundancia_logistica": 0.8
+ }
+}

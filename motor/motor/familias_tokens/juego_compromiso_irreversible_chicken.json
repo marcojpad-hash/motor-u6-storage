@@ -1,0 +1,23 @@
+{
+ "id": "juego_compromiso_irreversible_chicken",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Schelling, The Strategy of Conflict (1960); Arms and Influence (1966). Teoria de juegos aplicada; pesos asignados.",
+ "description": "Estrategia de brinkmanship: llevar el conflicto al borde del abismo eliminando la propia marcha atras para forzar la capitulacion del rival.",
+ "evidence_status": "secondary_verified",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "borde_del_abismo": 0.8,
+  "costo_reputacional_retroceso": 0.75,
+  "escalada_simetrica": 0.8,
+  "quema_de_naves": 0.85,
+  "ultimatum_publico": 0.85
+ },
+ "tokens_contra": {
+  "ambiguedad_tactica": 0.65,
+  "concesion_gradual": 0.75,
+  "mediacion_externa": 0.75,
+  "salida_honrosa": 0.85
+ }
+}

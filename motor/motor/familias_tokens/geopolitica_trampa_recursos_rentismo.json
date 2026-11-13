@@ -1,0 +1,23 @@
+{
+ "id": "geopolitica_trampa_recursos_rentismo",
+ "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+ "source": "gemini",
+ "fuente_teorica": "Auty (1993), Resource Curse; Sachs & Warner (1995); Ross (2012). Literatura de economia politica; pesos asignados.",
+ "description": "Abundancia concentrada de rentas primarias que atrofia la diversificacion productiva, debilita la rendicion de cuentas y dispara disputas por captura estatal.",
+ "evidence_status": "secondary_verified",
+ "canonical_244": false,
+ "role": "lateral_token_family",
+ "tokens_favor": {
+  "captura_renta_estatal": 0.85,
+  "dependencia_exportacion_primaria": 0.8,
+  "desindustrializacion": 0.75,
+  "disputa_territorial_recurso": 0.7,
+  "volatilidad_precios_externos": 0.75
+ },
+ "tokens_contra": {
+  "diversificacion_productiva": 0.85,
+  "fiscalidad_diversificada": 0.8,
+  "fondo_soberano_ahorro": 0.75,
+  "institucion_regulatoria_autonoma": 0.75
+ }
+}
