@@ -544,14 +544,14 @@ def _efectividad_corte_retenido(sello: dict, visto: dict, retenido) -> dict:
     visto_error y los estados) debe estar SIEMPRE, en éxito y en fallo. Antes solo
     aparecía en la rama de fallo; en éxito el campo faltaba del todo — el mismo
     hueco del recibo: el guardián solo corría como diagnóstico. En éxito no hay
-    error, así que previo_error es "" (cadena vacía = sin error), nunca None: el
+    error, así que previo_error es False (sin error), nunca None: el
     sanitizador convertiría None en hueco de dato y cambiaría el estado del recibo."""
     if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" or visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
         return {"estado": "INTERNAL_T1_RUN_FAILED",
                 "previo_status": sello.get("_internal_run_status"),
                 "visto_status": visto.get("_internal_run_status"),
-                "previo_error": sello.get("stderr_tail") or "",
-                "visto_error": visto.get("stderr_tail") or "",
+                "previo_error": sello.get("stderr_tail") or False,
+                "visto_error": visto.get("stderr_tail") or False,
                 "hit_H": "INCONCLUSO_CORRIDA_INTERNA_FALLIDA"}
     out = puntuar_t1(_plain_json_copy(sello), [retenido], _plain_json_copy(visto))
     out["internal_runs_isolated"] = True
@@ -784,10 +784,10 @@ def main(argv) -> int:
         try:
             _log = _u6_logger(nombre)
             if _log is not None:
-                _log.run_end(returncode=7, seconds=0, h1=None, h2=None, receipt_status="BLOQUEADO_GUARDIAN_Z90")
+                _log.run_end(returncode=8, seconds=0, h1=None, h2=None, receipt_status="BLOQUEADO_GUARDIAN_Z90")
         except Exception:
             pass
-        return 7
+        return 8
 
     rd = ROOT / "runs" / f"ESTANDAR__{nombre}"
     _build(rd)
