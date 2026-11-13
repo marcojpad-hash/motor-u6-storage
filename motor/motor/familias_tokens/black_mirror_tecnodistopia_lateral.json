@@ -1,0 +1,113 @@
+{
+  "id": "black_mirror_tecnodistopia_lateral",
+  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "source": "STINKBOX_BLACK_MIRROR_CANDIDATOS.json (registro documental StinkBox, 18 conceptos; fuente: BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json, Modugno & Krijnen 2020)",
+  "description": "Tecnodistopía estilo Black Mirror: la tecnología media lo real, cede autonomía y reordena lo social. Familia lateral: no compite en el 244, solo voto experimental por puente.",
+  "evidence_status": "mixed",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "bm_espectaculo_mediacion_pantalla": 0.78,
+    "bm_nuevo_contrato_social_cesion": 0.78,
+    "bm_riesgo_perdida_privacidad_seguridad": 0.78,
+    "bm_confusion_real_virtual": 0.78,
+    "bm_conducta_adictiva_tecnologica": 0.78,
+    "bm_puntuacion_social_ranking": 0.65,
+    "bm_justicia_digital_turba": 0.78,
+    "bm_transferencia_conciencia_copia": 0.78,
+    "bm_oposicion_autonomia_control": 0.78,
+    "bm_responsabilidad_externalizada": 0.78,
+    "bm_corporeidad_vs_desencarnacion": 0.78,
+    "ia_inmortalidad_vs_inhumanidad": 0.78,
+    "ia_comodidad_vs_obsolescencia": 0.78,
+    "ia_gratificacion_vs_alienacion": 0.78,
+    "ia_dominio_vs_rebelion": 0.78,
+    "bm_seduccion_tecnologica_degradacion": 0.78,
+    "bm_tecnologia_neutra_uso_humano_desviado": 0.78,
+    "bm_valencia_final": 0.65
+  },
+  "tokens_contra": {},
+  "peso_asignacion": "VERIFICADO -> 0.78 ; NO_VERIFICADO -> 0.65 (asignación por estatus documental; los candidatos no traían pesos de origen)",
+  "documentary_status_por_token": {
+    "bm_espectaculo_mediacion_pantalla": "VERIFICADO",
+    "bm_nuevo_contrato_social_cesion": "VERIFICADO",
+    "bm_riesgo_perdida_privacidad_seguridad": "VERIFICADO",
+    "bm_confusion_real_virtual": "VERIFICADO",
+    "bm_conducta_adictiva_tecnologica": "VERIFICADO",
+    "bm_puntuacion_social_ranking": "NO_VERIFICADO",
+    "bm_justicia_digital_turba": "VERIFICADO",
+    "bm_transferencia_conciencia_copia": "VERIFICADO",
+    "bm_oposicion_autonomia_control": "VERIFICADO",
+    "bm_responsabilidad_externalizada": "VERIFICADO",
+    "bm_corporeidad_vs_desencarnacion": "VERIFICADO",
+    "ia_inmortalidad_vs_inhumanidad": "VERIFICADO",
+    "ia_comodidad_vs_obsolescencia": "VERIFICADO",
+    "ia_gratificacion_vs_alienacion": "VERIFICADO",
+    "ia_dominio_vs_rebelion": "VERIFICADO",
+    "bm_seduccion_tecnologica_degradacion": "VERIFICADO",
+    "bm_tecnologia_neutra_uso_humano_desviado": "VERIFICADO",
+    "bm_valencia_final": "NO_VERIFICADO"
+  },
+  "mapping_244_por_token": {
+    "bm_espectaculo_mediacion_pantalla": "NUEVO",
+    "bm_nuevo_contrato_social_cesion": [
+      "distopia_tecnica_herramienta_manda",
+      "distopia_coercion_total"
+    ],
+    "bm_riesgo_perdida_privacidad_seguridad": [
+      "sistema_domiciano_delacion"
+    ],
+    "bm_confusion_real_virtual": "NUEVO",
+    "bm_conducta_adictiva_tecnologica": [
+      "sustancias_01_leve",
+      "sustancias_02_moderado",
+      "sustancias_03_severo"
+    ],
+    "bm_puntuacion_social_ranking": [
+      "social_01_asch_conformidad",
+      "social_07_noelle_neumann_espiral_silencio"
+    ],
+    "bm_justicia_digital_turba": [
+      "social_08_girard_mimesis_y_chivo_expiatorio",
+      "social_10_cohen_panico_moral",
+      "social_13_le_bon_comportamiento_masas"
+    ],
+    "bm_transferencia_conciencia_copia": [
+      "erikson_05_identidad_vs_confusion_rol"
+    ],
+    "bm_oposicion_autonomia_control": [
+      "distopia_coercion_total",
+      "utopia_principio_libertades"
+    ],
+    "bm_responsabilidad_externalizada": [
+      "social_02_milgram_obediencia"
+    ],
+    "bm_corporeidad_vs_desencarnacion": "NUEVO",
+    "ia_inmortalidad_vs_inhumanidad": "NUEVO",
+    "ia_comodidad_vs_obsolescencia": [
+      "tainter_02_rendimientos_decrecientes"
+    ],
+    "ia_gratificacion_vs_alienacion": [
+      "utopia_abundancia_sybaris",
+      "erikson_06_intimidad_vs_aislamiento"
+    ],
+    "ia_dominio_vs_rebelion": [
+      "dialectica_02_antitesis_contradiccion_y_conflicto",
+      "8_rebelion"
+    ],
+    "bm_seduccion_tecnologica_degradacion": [
+      "jaldun_03_entropia_y_perdida_de_cohesion"
+    ],
+    "bm_tecnologia_neutra_uso_humano_desviado": [
+      "17_fatal_imprudencia"
+    ],
+    "bm_valencia_final": "NUEVO"
+  },
+  "integration": {
+    "feeds_predictor": false,
+    "feeds_H": false,
+    "can_decide_H": false,
+    "Alimenta_H": false,
+    "rank_effect": "NONE"
+  }
+}
