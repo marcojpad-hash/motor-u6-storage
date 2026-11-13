@@ -1,0 +1,130 @@
+{
+ "case_id": "CAL_F001_01_NAPOLEON",
+ "question": "¿Qué trayectoria sigue Napoleón al invadir Rusia con la Grande Armée?",
+ "person": "Napoleón Bonaparte",
+ "tipo_sujeto": "politico",
+ "freeze": "1812-06-24",
+ "random_seed": 20261024,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1812",
+ "cuts": [
+  {
+   "id": "C1_1799",
+   "corte": "C1_1799",
+   "cut_id": "C1_1799",
+   "date": "1799-11-09",
+   "fecha_corte": "1799-11-09",
+   "hecho": "Golpe del 18 de brumario; se convierte en Primer Cónsul.",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "poder",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "audacia",
+     0.8
+    ],
+    [
+     "liderazgo",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "caos",
+     0.7
+    ],
+    [
+     "oportunidad",
+     0.75
+    ]
+   ],
+   "embudo": "NO_APLICA"
+  },
+  {
+   "id": "C2_1805",
+   "corte": "C2_1805",
+   "cut_id": "C2_1805",
+   "date": "1805-12-02",
+   "fecha_corte": "1805-12-02",
+   "hecho": "Emperador desde 1804; victoria en Austerlitz sobre Austria y Rusia.",
+   "P": [
+    [
+     "poder",
+     0.84
+    ],
+    [
+     "sed_de_mando",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "liderazgo",
+     0.84
+    ],
+    [
+     "planificacion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "triunfo",
+     0.8
+    ],
+    [
+     "conquista",
+     0.8
+    ]
+   ],
+   "embudo": "NO_APLICA"
+  },
+  {
+   "id": "C3_1812",
+   "corte": "C3_1812",
+   "cut_id": "C3_1812",
+   "date": "1812-06-24",
+   "fecha_corte": "1812-06-24",
+   "hecho": "Rusia abandona el Bloqueo Continental; Napoleón cruza el Niemen con unos 600 000 hombres.",
+   "P": [
+    [
+     "orgullo_hubris",
+     0.78
+    ],
+    [
+     "autonomia",
+     0.8
+    ]
+   ],
+   "A": [
+    [
+     "busqueda_riesgo",
+     0.75
+    ],
+    [
+     "confrontacion_directa",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad_poder",
+     0.8
+    ],
+    [
+     "terreno_hostil",
+     0.7
+    ]
+   ],
+   "embudo": "NO_APLICA"
+  }
+ ],
+ "source_notes": "https://en.wikipedia.org/wiki/Napoleon ; https://en.wikipedia.org/wiki/French_invasion_of_Russia (solo hechos hasta 24-jun-1812)"
+}

@@ -1,0 +1,103 @@
+{
+ "case_id": "SONDA_MONROE_TIPO",
+ "question": "¿La ambición de la figura es poder (conquista) o agencia (control de su trabajo)?",
+ "person": "MONROE_TIPO (sonda: agencia sin conquista)",
+ "tipo_sujeto": "artista",
+ "freeze": "1960-06-01",
+ "random_seed": 20261113,
+ "z_work_kind": "CASE_CUTOFF",
+ "z_work_date": "C3_1960",
+ "cuts": [
+  {
+   "id": "C1_1950",
+   "corte": "C1_1950",
+   "cut_id": "C1_1950",
+   "date": "1950-06-01",
+   "fecha_corte": "1950-06-01",
+   "hecho": "Infancia en hogares de acogida; aprende a valerse por sí misma.",
+   "P": [
+    [
+     "aprendizaje",
+     0.7
+    ],
+    [
+     "humildad",
+     0.65
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "cotidiano",
+     0.65
+    ]
+   ]
+  },
+  {
+   "id": "C2_1955",
+   "corte": "C2_1955",
+   "cut_id": "C2_1955",
+   "date": "1955-03-01",
+   "fecha_corte": "1955-03-01",
+   "hecho": "Quiso controlar su trabajo y elegir sus papeles.",
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "autonomia",
+     0.7
+    ]
+   ],
+   "A": [
+    [
+     "inconformismo",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_1960",
+   "corte": "C3_1960",
+   "cut_id": "C3_1960",
+   "date": "1960-06-01",
+   "fecha_corte": "1960-06-01",
+   "hecho": "Funda su propia productora para decidir sobre su imagen.",
+   "P": [
+    [
+     "autonomia",
+     0.8
+    ],
+    [
+     "inconformismo",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.7
+    ]
+   ]
+  }
+ ],
+ "source_notes": "SONDA MINIMA nicho/alias/embudo (dossier 2026-09-07). Casos sintéticos tipo, no biografías reales."
+}

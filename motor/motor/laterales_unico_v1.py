@@ -890,6 +890,43 @@ def _dedupe_traza_campo_244(features, reg, det):
                 "can_decide_H": False})
 
 
+def _voto_nicho(nicho_trace, patterns):
+    """Voto nicho para el ranking (USO, motor-autorizado 20261113).
+
+    Señal por familia = suma de (w'-w) de sus tokens favor activos
+    menos la de sus tokens contra, agregada por corte (la traza nicho
+    ya trae w y w_prima por token y corte). Es la masa de nicho que
+    cada familia recibe. El puente de nombres recoge este voto como
+    módulo y, si discrimina, entra a rank_fusion como señal lateral
+    (normalizada 0..1, como las demás señales laterales). NO toca F
+    ni el Engine ni el 244: los pesos w del motor no se reescriben;
+    el nicho alimenta el ranking por la vía lateral existente.
+    """
+    if not isinstance(nicho_trace, dict) or not isinstance(patterns, dict):
+        return {}
+    boost = {}
+    for pc in (nicho_trace.get("por_corte") or []):
+        for f in (pc.get("por_token") or []):
+            t = f.get("token")
+            if t is None:
+                continue
+            d = float(f.get("w_prima", f.get("w", 0.0))) - float(f.get("w", 0.0))
+            if d:
+                boost[t] = boost.get(t, 0.0) + d
+    if not boost:
+        return {}
+    out = {}
+    for fam, spec in patterns.items():
+        if not isinstance(spec, dict):
+            continue
+        fav = spec.get("tokens_favor") or {}
+        con = spec.get("tokens_contra") or {}
+        s = sum(boost.get(t, 0.0) for t in fav) - sum(boost.get(t, 0.0) for t in con)
+        if s:
+            out[fam] = round(float(s), 6)
+    return out
+
+
 def pre_predictor(case, motor, features, base, patterns_path, patterns):
     """Devuelve (votos: dict para features, detalle: dict, registro: list)."""
     reg: List[Dict[str, Any]] = []
@@ -1165,6 +1202,18 @@ def pre_predictor(case, motor, features, base, patterns_path, patterns):
         "store_root_vecinos": str(case.get("caldero_neighbor_store_root") or (Path(base) / "vecinos_caldero")),
     }
     det["n_piezas_pre"] = len(reg)
+    # USO_NICHO (20261113, motor-autorizado): el voto nicho_campo alimenta
+    # el ranking vía el puente de nombres (señal lateral en rank_fusion).
+    # Solo si USO_NICHO=1; sin la variable, el nicho sigue siendo solo
+    # traza de observación (comportamiento anterior, U0).
+    if os.environ.get("USO_NICHO") == "1":
+        v_nicho = _voto_nicho((det.get("sensores_pre") or {}).get("nicho_campo"), patterns)
+        if v_nicho:
+            votos["nicho_campo"] = v_nicho
+            det["nicho_campo_voto"] = {"contrato": "NICHO_CAMPO_V1_20261113",
+                                       "modo": "USO (alimenta rank_fusion como señal lateral)",
+                                       "n_familias_con_senal": len(v_nicho),
+                                       "max_senal": max(v_nicho.values())}
     return votos, det, reg
 
 

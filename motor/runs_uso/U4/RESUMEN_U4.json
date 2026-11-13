@@ -1,0 +1,1239 @@
+{
+ "etapa": "U4",
+ "casos": {
+  "SONDA_MONROE_TIPO": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/SONDA_MONROE_TIPO.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "agregados": []
+      },
+      {
+       "corte": "C2_1955",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1960",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "NO_APLICA",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2_1955",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1960",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1955",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C3_1960",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 1
+    }
+   },
+   "estabilidad": {
+    "case_id": "SONDA_MONROE_TIPO",
+    "n_cortes": 3,
+    "H1": "schwartz_10_autodireccion",
+    "H2": "tainter_04_colapso_por_simplificacion_forzada",
+    "dX_norm": {
+     "media": 0.5336126987182935,
+     "desv": 0.037598706980157104,
+     "max": 0.5712114056984506,
+     "valores": [
+      0.5712,
+      0.496
+     ]
+    },
+    "persist_cos": {
+     "media": 0.5279506491518742,
+     "min": 0.5279506491518742,
+     "valores": [
+      0.528
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.8492750508875877,
+     "max": 0.8492750508875877,
+     "valores": [
+      0.8493
+     ]
+    },
+    "margen_final_H1H2": 11.7555,
+    "margen_P_por_corte": {
+     "media": 0.011799999999999958,
+     "desv": 0.0033793490497431647,
+     "valores": [
+      0.0165,
+      0.0087,
+      0.0102
+     ]
+    },
+    "helice": null
+   }
+  },
+  "SONDA_ALEJANDRO_TIPO": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/SONDA_ALEJANDRO_TIPO.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1980",
+       "agregados": []
+      },
+      {
+       "corte": "C2_1985",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1990",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "NO_APLICA",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1_1980",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2_1985",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1990",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1980",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1985",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3_1990",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 0
+    }
+   },
+   "estabilidad": {
+    "case_id": "SONDA_ALEJANDRO_TIPO",
+    "n_cortes": 3,
+    "H1": "arquetipo_el_gobernante",
+    "H2": "30_ambicion",
+    "dX_norm": {
+     "media": 0.6019117400656047,
+     "desv": 0.14873083799668468,
+     "max": 0.7506425780622893,
+     "valores": [
+      0.7506,
+      0.4532
+     ]
+    },
+    "persist_cos": {
+     "media": 0.14183862203270242,
+     "min": 0.14183862203270242,
+     "valores": [
+      0.1418
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9898897945225338,
+     "max": 0.9898897945225338,
+     "valores": [
+      0.9899
+     ]
+    },
+    "margen_final_H1H2": 0.62,
+    "margen_P_por_corte": {
+     "media": 0.055400000000000005,
+     "desv": 0.03269689077980762,
+     "valores": [
+      0.0165,
+      0.0965,
+      0.0532
+     ]
+    },
+    "helice": null
+   }
+  },
+  "SONDA_JOSE_A": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/SONDA_JOSE_A.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "agregados": [
+        {
+         "token": "consumo_sustancias",
+         "peso": 0.78
+        }
+       ]
+      },
+      {
+       "corte": "C2_1960",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1970",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 1
+    },
+    "embudo": {
+     "global": "RUIDO_ALIAS",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "etiqueta": "RUIDO_ALIAS",
+       "clinico": true,
+       "co_oficio": false,
+       "quitados": [
+        "consumo_sustancias"
+       ]
+      },
+      {
+       "corte": "C2_1960",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1970",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1960",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3_1970",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 0
+    }
+   },
+   "estabilidad": {
+    "case_id": "SONDA_JOSE_A",
+    "n_cortes": 3,
+    "H1": "arquetipo_el_creador",
+    "H2": "schwartz_10_autodireccion",
+    "dX_norm": {
+     "media": 0.3093886667422538,
+     "desv": 0.07321381626066671,
+     "max": 0.3826024830029205,
+     "valores": [
+      0.3826,
+      0.2362
+     ]
+    },
+    "persist_cos": {
+     "media": -0.06926311314385979,
+     "min": -0.06926311314385979,
+     "valores": [
+      -0.0693
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9975984268018976,
+     "max": 0.9975984268018976,
+     "valores": [
+      0.9976
+     ]
+    },
+    "margen_final_H1H2": 3.1826,
+    "margen_P_por_corte": {
+     "media": 0.02666666666666669,
+     "desv": 0.007191816336797184,
+     "valores": [
+      0.0165,
+      0.032,
+      0.0315
+     ]
+    },
+    "helice": null
+   }
+  },
+  "SONDA_JOSE_EF": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/SONDA_JOSE_EF.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "agregados": []
+      },
+      {
+       "corte": "C2_1960",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1970",
+       "agregados": []
+      },
+      {
+       "corte": "C4_1980",
+       "agregados": []
+      },
+      {
+       "corte": "C5_1990",
+       "agregados": [
+        {
+         "token": "consumo_sustancias",
+         "peso": 0.78
+        },
+        {
+         "token": "desgaste_cambaceo_itinerante",
+         "peso": 0.78
+        }
+       ]
+      },
+      {
+       "corte": "C6_2000",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 2
+    },
+    "embudo": {
+     "global": "PERFIL_VENTANA",
+     "sosten_max": 1,
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2_1960",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1970",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C4_1980",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C5_1990",
+       "etiqueta": "PERFIL_VENTANA",
+       "clinico": true,
+       "co_oficio": true,
+       "quitados": []
+      },
+      {
+       "corte": "C6_2000",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1960",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3_1970",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C4_1980",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C5_1990",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C6_2000",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 0
+    }
+   },
+   "estabilidad": {
+    "case_id": "SONDA_JOSE_EF",
+    "n_cortes": 6,
+    "H1": "arquetipo_el_creador",
+    "H2": "schwartz_10_autodireccion",
+    "dX_norm": {
+     "media": 0.2859844175306103,
+     "desv": 0.14195783504152748,
+     "max": 0.522625362951321,
+     "valores": [
+      0.3513,
+      0.2365,
+      0.2153,
+      0.5226,
+      0.1042
+     ]
+    },
+    "persist_cos": {
+     "media": 0.2253718597627552,
+     "min": -0.09330415837082606,
+     "valores": [
+      -0.0933,
+      0.6219,
+      0.2801,
+      0.0928
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9335972511596967,
+     "max": 0.9956826193369007,
+     "valores": [
+      0.9956,
+      0.7831,
+      0.96,
+      0.9957
+     ]
+    },
+    "margen_final_H1H2": 1.9482,
+    "margen_P_por_corte": {
+     "media": 0.06351666666666667,
+     "desv": 0.0288914875967915,
+     "valores": [
+      0.0165,
+      0.0949,
+      0.0902,
+      0.0864,
+      0.0474,
+      0.0457
+     ]
+    },
+    "helice": {
+     "status": "DESCRIPTIVE_FIT_ONLY",
+     "n_cortes": 6,
+     "radio": 0.1287,
+     "radial_cv": 0.1267,
+     "giro_por_paso_deg": 74.39,
+     "phase_linearity_r2": 0.9335,
+     "axial_pitch_r2": 0.9122,
+     "eje": [
+      0.965,
+      -0.258,
+      0.053
+     ]
+    }
+   }
+  },
+  "SONDA_FREUD_C": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/SONDA_FREUD_C.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "agregados": []
+      },
+      {
+       "corte": "C2_1960",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1970",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "PERFIL_VENTANA",
+     "sosten_max": 1,
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2_1960",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1970",
+       "etiqueta": "PERFIL_VENTANA",
+       "clinico": true,
+       "co_oficio": true,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1950",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1960",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3_1970",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 0
+    }
+   },
+   "estabilidad": {
+    "case_id": "SONDA_FREUD_C",
+    "n_cortes": 3,
+    "H1": "sustancias_03_severo",
+    "H2": "utopia_mentalidad_liberal",
+    "dX_norm": {
+     "media": 0.5150687768961785,
+     "desv": 0.1305676455584411,
+     "max": 0.6456364224546196,
+     "valores": [
+      0.3845,
+      0.6456
+     ]
+    },
+    "persist_cos": {
+     "media": 0.0605991748048993,
+     "min": 0.0605991748048993,
+     "valores": [
+      0.0606
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9981621812175441,
+     "max": 0.9981621812175441,
+     "valores": [
+      0.9982
+     ]
+    },
+    "margen_final_H1H2": 1.827,
+    "margen_P_por_corte": {
+     "media": 0.037233333333333306,
+     "desv": 0.01926124491188343,
+     "valores": [
+      0.0165,
+      0.0323,
+      0.0629
+     ]
+    },
+    "helice": null
+   }
+  },
+  "NAPOLEON_F001": {
+   "exit": 0,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/NAPOLEON_F001.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1_1799",
+       "agregados": []
+      },
+      {
+       "corte": "C2_1805",
+       "agregados": []
+      },
+      {
+       "corte": "C3_1812",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "NO_APLICA",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1_1799",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2_1805",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3_1812",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": true,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1_1799",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2_1805",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3_1812",
+       "remap_ambicion_a_autonomia": true
+      }
+     ],
+     "total_remapes": 1
+    }
+   },
+   "estabilidad": {
+    "case_id": "CAL_F001_01_NAPOLEON",
+    "n_cortes": 3,
+    "H1": "31_conflicto_con_un_dios",
+    "H2": "30_ambicion",
+    "dX_norm": {
+     "media": 0.7066336967749478,
+     "desv": 0.03150140603482915,
+     "max": 0.7381351028097769,
+     "valores": [
+      0.6751,
+      0.7381
+     ]
+    },
+    "persist_cos": {
+     "media": -0.06807641123635988,
+     "min": -0.06807641123635988,
+     "valores": [
+      -0.0681
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9976801101721824,
+     "max": 0.9976801101721824,
+     "valores": [
+      0.9977
+     ]
+    },
+    "margen_final_H1H2": 2.0365,
+    "margen_P_por_corte": {
+     "media": 0.08823333333333334,
+     "desv": 0.05102994763426231,
+     "valores": [
+      0.1604,
+      0.0524,
+      0.0519
+     ]
+    },
+    "helice": null
+   }
+  },
+  "MOZART_10": {
+   "exit": 4,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/MOZART_10.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1",
+       "agregados": []
+      },
+      {
+       "corte": "C2",
+       "agregados": []
+      },
+      {
+       "corte": "C3",
+       "agregados": []
+      },
+      {
+       "corte": "C4",
+       "agregados": []
+      },
+      {
+       "corte": "C5",
+       "agregados": []
+      },
+      {
+       "corte": "C6",
+       "agregados": []
+      },
+      {
+       "corte": "C7",
+       "agregados": []
+      },
+      {
+       "corte": "C8",
+       "agregados": []
+      },
+      {
+       "corte": "C9",
+       "agregados": []
+      },
+      {
+       "corte": "C10",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "NO_APLICA",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C4",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C5",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C6",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C7",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C8",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C9",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C10",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C2",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C3",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C4",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C5",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C6",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C7",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C8",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C9",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C10",
+       "remap_ambicion_a_autonomia": true
+      }
+     ],
+     "total_remapes": 3
+    }
+   },
+   "estabilidad": {
+    "case_id": "MOZART_FRESH_Z90_U6_20261014",
+    "n_cortes": 10,
+    "H1": "utopia_autonomia_atenas",
+    "H2": "schwartz_10_autodireccion",
+    "dX_norm": {
+     "media": 0.24757790437932334,
+     "desv": 0.10833634937764872,
+     "max": 0.481277238190214,
+     "valores": [
+      0.2368,
+      0.1795,
+      0.231,
+      0.1442,
+      0.3917,
+      0.1834,
+      0.1465,
+      0.4813,
+      0.2338
+     ]
+    },
+    "persist_cos": {
+     "media": 0.24144709987208582,
+     "min": -0.13644909525604837,
+     "valores": [
+      0.485,
+      0.4832,
+      0.668,
+      0.0344,
+      0.065,
+      -0.1364,
+      -0.1284,
+      0.4608
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.9201677432771689,
+     "max": 0.9994096917277123,
+     "valores": [
+      0.8745,
+      0.8755,
+      0.7441,
+      0.9994,
+      0.9979,
+      0.9906,
+      0.9917,
+      0.8875
+     ]
+    },
+    "margen_final_H1H2": 7.6869,
+    "margen_P_por_corte": {
+     "media": 0.01987000000000001,
+     "desv": 0.03888279953912785,
+     "valores": [
+      0.0308,
+      0.1288,
+      0.0391,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "helice": {
+     "status": "DESCRIPTIVE_FIT_ONLY",
+     "n_cortes": 10,
+     "radio": 0.1797,
+     "radial_cv": 0.2662,
+     "giro_por_paso_deg": -38.59,
+     "phase_linearity_r2": 0.9315,
+     "axial_pitch_r2": 0.9462,
+     "eje": [
+      0.992,
+      -0.075,
+      -0.102
+     ]
+    }
+   }
+  },
+  "NAPOLEON_10": {
+   "exit": 4,
+   "entrada": "/home/hatch/workspace/u6-alterno/motor-autorizado/casos/sondas_nicho_minima/uso/U4/NAPOLEON_10.json",
+   "preparacion": {
+    "alias": {
+     "por_corte": [
+      {
+       "corte": "C1",
+       "agregados": []
+      },
+      {
+       "corte": "C2",
+       "agregados": []
+      },
+      {
+       "corte": "C3",
+       "agregados": []
+      },
+      {
+       "corte": "C4",
+       "agregados": []
+      },
+      {
+       "corte": "C5",
+       "agregados": []
+      },
+      {
+       "corte": "C6",
+       "agregados": []
+      },
+      {
+       "corte": "C7",
+       "agregados": []
+      },
+      {
+       "corte": "C8",
+       "agregados": []
+      },
+      {
+       "corte": "C9",
+       "agregados": []
+      },
+      {
+       "corte": "C10",
+       "agregados": []
+      }
+     ],
+     "total_agregados": 0
+    },
+    "embudo": {
+     "global": "NO_APLICA",
+     "sosten_max": 0,
+     "por_corte": [
+      {
+       "corte": "C1",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C2",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C3",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C4",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C5",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C6",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C7",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C8",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C9",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      },
+      {
+       "corte": "C10",
+       "etiqueta": "NO_APLICA",
+       "clinico": false,
+       "co_oficio": false,
+       "quitados": []
+      }
+     ]
+    },
+    "remap": {
+     "por_corte": [
+      {
+       "corte": "C1",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C2",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C3",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C4",
+       "remap_ambicion_a_autonomia": true
+      },
+      {
+       "corte": "C5",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C6",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C7",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C8",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C9",
+       "remap_ambicion_a_autonomia": false
+      },
+      {
+       "corte": "C10",
+       "remap_ambicion_a_autonomia": false
+      }
+     ],
+     "total_remapes": 4
+    }
+   },
+   "estabilidad": {
+    "case_id": "NAPOLEON_FRESH_Z90_U6_20261111",
+    "n_cortes": 10,
+    "H1": "utopia_autonomia_atenas",
+    "H2": "arquetipo_el_gobernante",
+    "dX_norm": {
+     "media": 0.32219575473881645,
+     "desv": 0.11437188400348494,
+     "max": 0.4968663703653126,
+     "valores": [
+      0.4969,
+      0.3617,
+      0.2377,
+      0.4841,
+      0.2904,
+      0.1745,
+      0.186,
+      0.4072,
+      0.2614
+     ]
+    },
+    "persist_cos": {
+     "media": 0.2537358631131211,
+     "min": -0.169390903996203,
+     "valores": [
+      0.8665,
+      0.7072,
+      -0.1314,
+      0.5328,
+      0.1298,
+      -0.0924,
+      0.1868,
+      -0.1694
+     ]
+    },
+    "kappa_dir": {
+     "media": 0.874871626693183,
+     "max": 0.9957261544210916,
+     "valores": [
+      0.4992,
+      0.707,
+      0.9913,
+      0.8463,
+      0.9915,
+      0.9957,
+      0.9824,
+      0.9855
+     ]
+    },
+    "margen_final_H1H2": 1.479,
+    "margen_P_por_corte": {
+     "media": 0.001419999999999999,
+     "desv": 0.0028624465060503746,
+     "valores": [
+      0.0063,
+      0.0079,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "helice": {
+     "status": "DESCRIPTIVE_FIT_ONLY",
+     "n_cortes": 10,
+     "radio": 0.2975,
+     "radial_cv": 0.3493,
+     "giro_por_paso_deg": -34.02,
+     "phase_linearity_r2": 0.9186,
+     "axial_pitch_r2": 0.9263,
+     "eje": [
+      0.968,
+      -0.177,
+      -0.18
+     ]
+    }
+   }
+  }
+ }
+}

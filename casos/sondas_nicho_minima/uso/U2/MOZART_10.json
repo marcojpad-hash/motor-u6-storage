@@ -1,0 +1,701 @@
+{
+ "case_id": "MOZART_FRESH_Z90_U6_20261014",
+ "question": "¿Qué configuración dinámica se perfila en Mozart a partir de una nueva selección independiente de hitos biográficos, usando solo evidencia hasta Z90?",
+ "protocol": "BIOGRAFIA_Z90_CASO_FRESCO_COMPARATIVO_20261014",
+ "birth_date": "1756-01-27",
+ "death_date": "1791-12-05",
+ "z90_date": "1788-05-04",
+ "source_mode": "WEB_RESEARCH_FRESH_20261014",
+ "cuts": [
+  {
+   "id": "C1",
+   "date": "1761-12-31",
+   "P": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "aprendizaje",
+     0.74
+    ],
+    [
+     "conocimiento",
+     0.68
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "creatividad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "aprendizaje",
+     "strength": 0.74,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "date": "1762-10-13",
+   "P": [
+    [
+     "viaje",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.7
+    ],
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "aprendizaje",
+     0.76
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "viaje",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.7,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.8,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "aprendizaje",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "date": "1763-06-01",
+   "P": [
+    [
+     "viaje",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "aprendizaje",
+     0.74
+    ],
+    [
+     "conocimiento",
+     0.76
+    ],
+    [
+     "exploracion_permitida",
+     0.66
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "viaje",
+     "strength": 0.84,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "aprendizaje",
+     "strength": 0.74,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "exploracion_permitida",
+     "strength": 0.66,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C4",
+   "date": "1769-12-11",
+   "P": [
+    [
+     "viaje",
+     0.8
+    ],
+    [
+     "competencia",
+     0.74
+    ],
+    [
+     "conocimiento",
+     0.76
+    ],
+    [
+     "reconocimiento",
+     0.68
+    ],
+    [
+     "creatividad",
+     0.82
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "viaje",
+     "strength": 0.8,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "competencia",
+     "strength": 0.74,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C5",
+   "date": "1773-03-13",
+   "P": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "conocimiento",
+     0.76
+    ],
+    [
+     "competencia",
+     0.68
+    ],
+    [
+     "independencia",
+     0.64
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "creatividad",
+     "strength": 0.8,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "competencia",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.64,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C6",
+   "date": "1777-09-23",
+   "P": [
+    [
+     "viaje",
+     0.82
+    ],
+    [
+     "independencia",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.7
+    ],
+    [
+     "exploracion_permitida",
+     0.66
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "viaje",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.78,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.7,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "exploracion_permitida",
+     "strength": 0.66,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C7",
+   "date": "1778-07-03",
+   "P": [
+    [
+     "viaje",
+     0.82
+    ],
+    [
+     "independencia",
+     0.8
+    ],
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "rebeldia",
+     0.68
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "viaje",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.8,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.8,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "rebeldia",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C8",
+   "date": "1779-01-17",
+   "P": [
+    [
+     "competencia",
+     0.76
+    ],
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "conocimiento",
+     0.76
+    ],
+    [
+     "reconocimiento",
+     0.68
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "competencia",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.76,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C9",
+   "date": "1781-06-08",
+   "P": [
+    [
+     "rebeldia",
+     0.84
+    ],
+    [
+     "desafio_autoridad",
+     0.82
+    ],
+    [
+     "independencia",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "ambicion",
+     0.66
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "rebeldia",
+     "strength": 0.84,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "desafio_autoridad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.84,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.66,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  },
+  {
+   "id": "C10",
+   "date": "1788-05-04",
+   "P": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "logro_personal",
+     0.82
+    ],
+    [
+     "independencia",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.68
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "creatividad",
+     "strength": 0.84,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "logro_personal",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.82,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.78,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.68,
+     "source": "fresh_web_biography_mapping_pre_Z90"
+    }
+   ]
+  }
+ ],
+ "caldero_identity": {
+  "nombre_o_alias": "Wolfgang Amadé Mozart",
+  "prohibido_self_match": true
+ },
+ "caldero_archetype_input": {
+  "tokens_activos": [
+   "ambicion",
+   "aprendizaje",
+   "competencia",
+   "conocimiento",
+   "creatividad",
+   "desafio_autoridad",
+   "exploracion_permitida",
+   "independencia",
+   "logro_personal",
+   "rebeldia",
+   "reconocimiento",
+   "viaje"
+  ]
+ },
+ "caldero_search_sources": [
+  {
+   "id": "src1",
+   "texto": "Mozarteum Foundation: Mozart compuso primeras piezas desde los cinco años; viaje familiar europeo entre junio de 1763 y diciembre de 1766, con París, Londres, La Haya, Alemania y Suiza.",
+   "origen": "https://mozarteum.at/en/wolfgang-amade-mozart"
+  },
+  {
+   "id": "src2",
+   "texto": "The Mozart Portal timeline: primeras composiciones K.1a/K.1b en 1761; primer viaje a Múnich en 1762 y actuaciones en Viena.",
+   "origen": "https://www.mozartportal.com/es/timeline"
+  },
+  {
+   "id": "src3",
+   "texto": "Fundación Mozarteum del Uruguay: nombramiento como Konzertmeister en 1769; viajes a Italia 1769–1771; retorno a Salzburgo en 1771 y actividad compositiva posterior.",
+   "origen": "https://www.mozarteumuruguay.org/bio.php"
+  },
+  {
+   "id": "src4",
+   "texto": "Fundación Mozarteum del Uruguay: viaje con su madre en 1777, estancia en París y muerte de Anna Maria en 1778; regreso a Salzburgo en 1779 y puesto de organista de corte.",
+   "origen": "https://www.mozarteumuruguay.org/bio.php"
+  },
+  {
+   "id": "src5",
+   "texto": "Fundación Mozarteum del Uruguay: en 1781 termina la relación laboral con el príncipe-arzobispo y Mozart decide establecerse en Viena; se casa con Constanze en 1782.",
+   "origen": "https://www.mozarteumuruguay.org/bio.php"
+  },
+  {
+   "id": "src6",
+   "texto": "Mozart Documents: documentos de conciertos y actividad pública en Viena en 1786; el informe de 7 de abril identifica una academia de Mozart en el Kärntnertortheater. Solo se usan hechos hasta 1786.",
+   "origen": "https://www.mozartdocuments.org/documents/7-april-1786/"
+  },
+  {
+   "id": "src7",
+   "texto": "Mozart Documents: informe fechado el 7 de mayo de 1786 sobre el estreno de Le nozze di Figaro la noche del 1 de mayo de 1786.",
+   "origen": "https://www.mozartdocuments.org/documents/7-may-1786/"
+  }
+ ],
+ "caldero_llm_neighbor_hints": [],
+ "external_lights": [
+  {
+   "token": "ambicion",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "aprendizaje",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "audacia",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "competencia",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "conocimiento",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "creatividad",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "desafio_autoridad",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "exploracion_permitida",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "independencia",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "logro_personal",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "rebeldia",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "reconocimiento",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "viaje",
+   "branch": "web_biography",
+   "stereotype": "fresh_biography_mapping",
+   "axes": [
+    "trajectory"
+   ]
+  }
+ ],
+ "random_seed": 20261014,
+ "protocol_note": "Caso nuevo: cortes e hitos seleccionados de nuevo a partir de fuentes biográficas/documentales citadas abajo; no se reutiliza el vector de tokens de MOZART_FRESH_WEB_V04. Z90 calculado desde nacimiento y muerte; la muerte solo calcula la frontera temporal. No se incorpora el estreno vienés de Don Giovanni del 7 de mayo de 1788 porque ocurre después de Z90=1788-05-04. C10 es un corte de frontera que solo resume evidencia documentada hasta 1786, sin añadir acontecimientos posteriores.",
+ "caldero_search_bridge": {
+  "status": "EXECUTED",
+  "origin": "connected_tool_call",
+  "provider": "chatgpt_connected_tool",
+  "tool_name": "mcp__Exa__web_search_exa",
+  "bridge_id": "MOZART_U6_R2_BLIND_SEARCH_EXA_20261014",
+  "query_count": 1,
+  "submitted_query": "ambicion aprendizaje competencia conocimiento creatividad desafio_autoridad exploracion_permitida independencia logro_personal rebeldia reconocimiento viaje",
+  "blind_query_sha256": "bb8998d4b8077cd428422a49e1552276094bfb371fde2c4c5750e00de0b7fa10",
+  "results": [
+   {
+    "url": "https://www.euskadi.eus/contenidos/documentacion/inn_doc_comp_basicas/es_def/adjuntos/evaluacion/311043c_Pub_ISEI_comp_autonomia_c.pdf",
+    "title": "Competencia en autonomía e iniciativa personal",
+    "snippet": "Documento sobre autonomía e iniciativa personal, creatividad, aprendizaje autónomo, iniciativa, afrontamiento de desafíos y ambición personal. Fuente localizada mediante búsqueda conectada; el resultado se usa como contexto lateral, no como evidencia biográfica."
+   },
+   {
+    "url": "https://positiverebellion.org/es/read/",
+    "title": "Veinticinco ensayos para impulsar una rebelión positiva en la educación",
+    "snippet": "Texto sobre libertad para aprender, creatividad, cuestionamiento de estructuras heredadas, agencia e independencia. Fuente localizada mediante búsqueda conectada; contexto lateral."
+   },
+   {
+    "url": "https://www.themarschallenge.org/es/conocimiento/aprendizaje-basado-en-desafios/",
+    "title": "¿Qué es el aprendizaje basado en desafíos?",
+    "snippet": "Descripción del aprendizaje basado en retos, investigación, autonomía, creatividad, toma de decisiones, revisión y feedback. Fuente localizada mediante búsqueda conectada; contexto lateral."
+   },
+   {
+    "url": "https://fernandogonzalezrey.com/wp-content/uploads/2025/01/La-emergencia-del-aprendizaje-creativo.pdf",
+    "title": "La emergencia del aprendizaje creativo",
+    "snippet": "Texto académico sobre aprendizaje creativo, autonomía, audacia, apertura a lo nuevo y producción subjetiva en contexto. Fuente localizada mediante búsqueda conectada; contexto lateral."
+   },
+   {
+    "url": "https://www.redalyc.org/pdf/447/44713058006.pdf",
+    "title": "Autonomía en el aprendizaje: direcciones para el desarrollo en la formación profesional",
+    "snippet": "Artículo académico sobre aprendizaje autónomo, independencia, creatividad, autorregulación y búsqueda de conocimiento. Fuente localizada mediante búsqueda conectada; contexto lateral."
+   }
+  ]
+ }
+}
