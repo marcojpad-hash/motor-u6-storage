@@ -1,7 +1,25 @@
 {
- "contrato": "COSECHA_V2_20261113",
+ "contrato": "COSECHA_V2_1_20261113",
  "fecha": "20261113",
  "can_decide_H": false,
+ "parche_evidencia": {
+  "contrato": "COSECHA_V2_1_20261113",
+  "motivo": "La v2 solo leía nombres, raíces y co-activación; la salud vive en la evidencia (DSM, muerte, hospital) y en el sidecar de hostelería (no en el 244).",
+  "peso_evidencia": 0.3,
+  "campos": [
+   "arte",
+   "deuda",
+   "riesgo",
+   "salud"
+  ],
+  "fichas_sidecar": [
+   "trayectoria_hosteleria_turno_sustancias"
+  ]
+ },
+ "n_fichas_sidecar": 1,
+ "fichas_sidecar": [
+  "trayectoria_hosteleria_turno_sustancias"
+ ],
  "fuente_v1": "COSECHA_20261113.json",
  "nota_migracion": "migrados 99 casos y 4 tokens desde v1; omitidos por ya existir: 1230 familias conocidas (top15+Z) y 6 tokens delta en el catálogo (busqueda_riesgo, cautela, codicia, consumo_sustancias, negacion_problema, optimismo)",
  "n_casos_union": 99,
@@ -129,8 +147,64 @@
    "token": "arte",
    "decision": "ACTIVADO",
    "familia": "candidato_trayectoria_arte_prestigio",
-   "puntaje": 0.5,
+   "puntaje": 0.65,
    "motivo": "analogo_por_proximidad",
+   "campo": "arte",
+   "top3": [
+    {
+     "familia": "candidato_trayectoria_arte_prestigio",
+     "puntaje": 0.65,
+     "nombre": 1,
+     "raiz": 0,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "utopia_orden_sparte",
+     "puntaje": 0.214286,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.3214,
+     "n_coact": 9,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "dumezil_f2_fuerza",
+     "puntaje": 0.178571,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.1429,
+     "n_coact": 4,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
    "casos": [
     "ANONIMO2_Z90_20261113",
     "ANONIMO3_Z90_20261113",
@@ -258,14 +332,69 @@
      }
     }
    ],
-   "contexto": "'arte' se activa como análogo de 'candidato_trayectoria_arte_prestigio' (puntaje 0.5: nombre=1, raiz=0, coact=0.0 en 0/28 apariciones; margen 0.3286 sobre el 2º)."
+   "contexto": "'arte' se activa como análogo de 'candidato_trayectoria_arte_prestigio' (puntaje 0.65: nombre=1, raiz=0, coact=0.0 en 0/28 apariciones, evidencia=0.5 (arte); margen 0.4357 sobre el 2º)."
   },
   {
    "token": "deuda",
    "decision": "ACTIVADO",
    "familia": "mauss_02_deuda_de_honor",
-   "puntaje": 0.5,
+   "puntaje": 0.65,
    "motivo": "analogo_por_proximidad",
+   "campo": "deuda",
+   "top3": [
+    {
+     "familia": "mauss_02_deuda_de_honor",
+     "puntaje": 0.65,
+     "nombre": 1,
+     "raiz": 0,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "obligacion"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "4_venganza_de_parientes",
+     "puntaje": 0.3,
+     "nombre": 0,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.0,
+     "n_hits_evidencia": 0,
+     "hits_evidencia": [],
+     "sidecar": false
+    },
+    {
+     "familia": "mauss_01_intercambio_agonistico",
+     "puntaje": 0.3,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "deuda",
+      "honor"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
    "casos": [
     "ANONIMO2_Z90_20261113",
     "TRANSICION1_Z90_20261113",
@@ -320,14 +449,89 @@
      }
     }
    ],
-   "contexto": "'deuda' se activa como análogo de 'mauss_02_deuda_de_honor' (puntaje 0.5: nombre=1, raiz=0, coact=0.0 en 0/7 apariciones; margen 0.2 sobre el 2º)."
+   "contexto": "'deuda' se activa como análogo de 'mauss_02_deuda_de_honor' (puntaje 0.65: nombre=1, raiz=0, coact=0.0 en 0/7 apariciones, evidencia=0.5 (obligacion); margen 0.35 sobre el 2º)."
   },
   {
    "token": "enfermedad",
    "decision": "PENDIENTE",
-   "familia": "monomito_01_mundo_ordinario",
-   "puntaje": 0.175,
-   "motivo": "lejos_de_todas",
+   "familia": "sustancias_03_severo",
+   "puntaje": 0.45,
+   "motivo": "campo_general_varias_familias",
+   "campo": "salud",
+   "top3": [
+    {
+     "familia": "sustancias_03_severo",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 3,
+     "hits_evidencia": [
+      "dsm",
+      "clinic",
+      "adicc"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "trayectoria_hosteleria_turno_sustancias",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 8,
+     "hits_evidencia": [
+      "consumo",
+      "sustancias",
+      "abuso",
+      "desgaste",
+      "turno",
+      "cocina",
+      "restaurante",
+      "samhsa"
+     ],
+     "sidecar": true
+    },
+    {
+     "familia": "trayectoria_musicos_populares",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "muerte",
+      "mortal"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.45,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.75,
+    "n_coact": 6,
+    "evidencia": 1.0,
+    "n_hits_evidencia": 8,
+    "hits_evidencia": [
+     "consumo",
+     "sustancias",
+     "abuso",
+     "desgaste",
+     "turno",
+     "cocina",
+     "restaurante",
+     "samhsa"
+    ]
+   },
    "casos": [
     "ANONIMO2_Z90_20261113",
     "ANONIMO3_Z90_20261113",
@@ -392,14 +596,73 @@
      }
     }
    ],
-   "contexto": "'enfermedad' está lejos de todas las familias del 244 (mejor puntaje 0.175, umbral 0.5). Necesita familia nueva, no análogo."
+   "contexto": "'enfermedad' es un concepto general del campo 'salud': el campo está documentado en la evidencia de varias familias (sustancias_03_severo, trayectoria_hosteleria_turno_sustancias, trayectoria_musicos_populares, puntaje 0.45 cada una) y ninguna destaca como su análogo único. Necesita familia nueva, no análogo forzado."
   },
   {
    "token": "riesgo",
    "decision": "PENDIENTE",
    "familia": null,
-   "puntaje": 0.8,
+   "puntaje": 1.0,
    "motivo": "ambiguo_empate",
+   "campo": "riesgo",
+   "top3": [
+    {
+     "familia": "candidato_riesgo_institucional_burocratico",
+     "puntaje": 1.0,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 3,
+     "hits_evidencia": [
+      "riesgo",
+      "peligro",
+      "exposicion"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "candidato_riesgo_operativo_salud_y_medicos",
+     "puntaje": 1.0,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "riesgo",
+      "exposicion"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "candidato_alto_riesgo_tecnico_infraestructura",
+     "puntaje": 0.95,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "exposicion"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
    "casos": [
     "TUBMAN_HEROE_20261112",
     "TUBMAN_HEROE_SIN_C7_20261112"
@@ -435,47 +698,13 @@
      }
     }
    ],
-   "contexto": "'riesgo' empata en el mejor puntaje (0.8) entre 3 familias: candidato_alto_riesgo_tecnico_infraestructura, candidato_riesgo_institucional_burocratico, candidato_riesgo_operativo_salud_y_medicos. La medida no puede elegir y no se fuerza la activación."
+   "contexto": "'riesgo' empata en el mejor puntaje (1.0) entre 2 familias: candidato_riesgo_institucional_burocratico, candidato_riesgo_operativo_salud_y_medicos. La medida no puede elegir y no se fuerza la activación."
   }
  ],
  "decisiones": {
   "arte": {
    "token": "arte",
-   "decision": "ACTIVADO",
-   "motivo": "analogo_por_proximidad",
-   "familia_mas_cercana": "candidato_trayectoria_arte_prestigio",
-   "puntaje": 0.5,
-   "nombre": 1,
-   "raiz": 0,
-   "coact": 0.0,
-   "n_coact": 0,
-   "margen_sobre_segundo": 0.328571,
-   "top3": [
-    {
-     "familia": "candidato_trayectoria_arte_prestigio",
-     "puntaje": 0.5,
-     "nombre": 1,
-     "raiz": 0,
-     "coact": 0.0,
-     "n_coact": 0
-    },
-    {
-     "familia": "utopia_mentalidad_liberal",
-     "puntaje": 0.171429,
-     "nombre": 0,
-     "raiz": 0,
-     "coact": 0.8571,
-     "n_coact": 24
-    },
-    {
-     "familia": "arquetipo_el_sabio",
-     "puntaje": 0.164286,
-     "nombre": 0,
-     "raiz": 0,
-     "coact": 0.8214,
-     "n_coact": 23
-    }
-   ],
+   "campo": "arte",
    "n_apariciones": 28,
    "casos": [
     "ANONIMO2_Z90_20261113",
@@ -483,27 +712,100 @@
     "ANONIMO3_Z90_20261113_v2",
     "ANONIMO3_Z90_ABLACION_20261113"
    ],
-   "contexto": "'arte' se activa como análogo de 'candidato_trayectoria_arte_prestigio' (puntaje 0.5: nombre=1, raiz=0, coact=0.0 en 0/28 apariciones; margen 0.3286 sobre el 2º)."
-  },
-  "deuda": {
-   "token": "deuda",
+   "top3": [
+    {
+     "familia": "candidato_trayectoria_arte_prestigio",
+     "puntaje": 0.65,
+     "nombre": 1,
+     "raiz": 0,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "utopia_orden_sparte",
+     "puntaje": 0.214286,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.3214,
+     "n_coact": 9,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "dumezil_f2_fuerza",
+     "puntaje": 0.178571,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.1429,
+     "n_coact": 4,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "arte"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
    "decision": "ACTIVADO",
    "motivo": "analogo_por_proximidad",
-   "familia_mas_cercana": "mauss_02_deuda_de_honor",
-   "puntaje": 0.5,
+   "familia_mas_cercana": "candidato_trayectoria_arte_prestigio",
+   "puntaje": 0.65,
    "nombre": 1,
    "raiz": 0,
    "coact": 0.0,
    "n_coact": 0,
-   "margen_sobre_segundo": 0.2,
+   "evidencia": 0.5,
+   "n_hits_evidencia": 1,
+   "hits_evidencia": [
+    "arte"
+   ],
+   "margen_sobre_segundo": 0.435714,
+   "contexto": "'arte' se activa como análogo de 'candidato_trayectoria_arte_prestigio' (puntaje 0.65: nombre=1, raiz=0, coact=0.0 en 0/28 apariciones, evidencia=0.5 (arte); margen 0.4357 sobre el 2º)."
+  },
+  "deuda": {
+   "token": "deuda",
+   "campo": "deuda",
+   "n_apariciones": 7,
+   "casos": [
+    "ANONIMO2_Z90_20261113",
+    "TRANSICION1_Z90_20261113",
+    "TRANSICION1_Z90_20261113_v2"
+   ],
    "top3": [
     {
      "familia": "mauss_02_deuda_de_honor",
-     "puntaje": 0.5,
+     "puntaje": 0.65,
      "nombre": 1,
      "raiz": 0,
      "coact": 0.0,
-     "n_coact": 0
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "obligacion"
+     ],
+     "sidecar": false
     },
     {
      "familia": "4_venganza_de_parientes",
@@ -511,57 +813,58 @@
      "nombre": 0,
      "raiz": 1,
      "coact": 0.0,
-     "n_coact": 0
+     "n_coact": 0,
+     "evidencia": 0.0,
+     "n_hits_evidencia": 0,
+     "hits_evidencia": [],
+     "sidecar": false
     },
     {
-     "familia": "monomito_01_mundo_ordinario",
-     "puntaje": 0.2,
+     "familia": "mauss_01_intercambio_agonistico",
+     "puntaje": 0.3,
      "nombre": 0,
      "raiz": 0,
-     "coact": 1.0,
-     "n_coact": 7
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "deuda",
+      "honor"
+     ],
+     "sidecar": false
     }
    ],
-   "n_apariciones": 7,
-   "casos": [
-    "ANONIMO2_Z90_20261113",
-    "TRANSICION1_Z90_20261113",
-    "TRANSICION1_Z90_20261113_v2"
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
+   "decision": "ACTIVADO",
+   "motivo": "analogo_por_proximidad",
+   "familia_mas_cercana": "mauss_02_deuda_de_honor",
+   "puntaje": 0.65,
+   "nombre": 1,
+   "raiz": 0,
+   "coact": 0.0,
+   "n_coact": 0,
+   "evidencia": 0.5,
+   "n_hits_evidencia": 1,
+   "hits_evidencia": [
+    "obligacion"
    ],
-   "contexto": "'deuda' se activa como análogo de 'mauss_02_deuda_de_honor' (puntaje 0.5: nombre=1, raiz=0, coact=0.0 en 0/7 apariciones; margen 0.2 sobre el 2º)."
+   "margen_sobre_segundo": 0.35,
+   "contexto": "'deuda' se activa como análogo de 'mauss_02_deuda_de_honor' (puntaje 0.65: nombre=1, raiz=0, coact=0.0 en 0/7 apariciones, evidencia=0.5 (obligacion); margen 0.35 sobre el 2º)."
   },
   "enfermedad": {
    "token": "enfermedad",
-   "decision": "PENDIENTE",
-   "motivo": "lejos_de_todas",
-   "familia_mas_cercana": "monomito_01_mundo_ordinario",
-   "puntaje": 0.175,
-   "top3": [
-    {
-     "familia": "monomito_01_mundo_ordinario",
-     "puntaje": 0.175,
-     "nombre": 0,
-     "raiz": 0,
-     "coact": 0.875,
-     "n_coact": 7
-    },
-    {
-     "familia": "erikson_06_intimidad_vs_aislamiento",
-     "puntaje": 0.15,
-     "nombre": 0,
-     "raiz": 0,
-     "coact": 0.75,
-     "n_coact": 6
-    },
-    {
-     "familia": "kwml_04_amante",
-     "puntaje": 0.15,
-     "nombre": 0,
-     "raiz": 0,
-     "coact": 0.75,
-     "n_coact": 6
-    }
-   ],
+   "campo": "salud",
    "n_apariciones": 8,
    "casos": [
     "ANONIMO2_Z90_20261113",
@@ -569,51 +872,166 @@
     "ANONIMO3_Z90_20261113_v2",
     "ANONIMO3_Z90_ABLACION_20261113"
    ],
-   "contexto": "'enfermedad' está lejos de todas las familias del 244 (mejor puntaje 0.175, umbral 0.5). Necesita familia nueva, no análogo."
+   "top3": [
+    {
+     "familia": "sustancias_03_severo",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 3,
+     "hits_evidencia": [
+      "dsm",
+      "clinic",
+      "adicc"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "trayectoria_hosteleria_turno_sustancias",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 8,
+     "hits_evidencia": [
+      "consumo",
+      "sustancias",
+      "abuso",
+      "desgaste",
+      "turno",
+      "cocina",
+      "restaurante",
+      "samhsa"
+     ],
+     "sidecar": true
+    },
+    {
+     "familia": "trayectoria_musicos_populares",
+     "puntaje": 0.45,
+     "nombre": 0,
+     "raiz": 0,
+     "coact": 0.75,
+     "n_coact": 6,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "muerte",
+      "mortal"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.45,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.75,
+    "n_coact": 6,
+    "evidencia": 1.0,
+    "n_hits_evidencia": 8,
+    "hits_evidencia": [
+     "consumo",
+     "sustancias",
+     "abuso",
+     "desgaste",
+     "turno",
+     "cocina",
+     "restaurante",
+     "samhsa"
+    ]
+   },
+   "decision": "PENDIENTE",
+   "motivo": "campo_general_varias_familias",
+   "familia_mas_cercana": "sustancias_03_severo",
+   "puntaje": 0.45,
+   "familias_empatadas": [
+    "sustancias_03_severo",
+    "trayectoria_hosteleria_turno_sustancias",
+    "trayectoria_musicos_populares"
+   ],
+   "contexto": "'enfermedad' es un concepto general del campo 'salud': el campo está documentado en la evidencia de varias familias (sustancias_03_severo, trayectoria_hosteleria_turno_sustancias, trayectoria_musicos_populares, puntaje 0.45 cada una) y ninguna destaca como su análogo único. Necesita familia nueva, no análogo forzado."
   },
   "riesgo": {
    "token": "riesgo",
-   "decision": "PENDIENTE",
-   "motivo": "ambiguo_empate",
-   "familia_mas_cercana": null,
-   "puntaje": 0.8,
-   "top3": [
-    {
-     "familia": "candidato_alto_riesgo_tecnico_infraestructura",
-     "puntaje": 0.8,
-     "nombre": 1,
-     "raiz": 1,
-     "coact": 0.0,
-     "n_coact": 0
-    },
-    {
-     "familia": "candidato_riesgo_institucional_burocratico",
-     "puntaje": 0.8,
-     "nombre": 1,
-     "raiz": 1,
-     "coact": 0.0,
-     "n_coact": 0
-    },
-    {
-     "familia": "candidato_riesgo_operativo_salud_y_medicos",
-     "puntaje": 0.8,
-     "nombre": 1,
-     "raiz": 1,
-     "coact": 0.0,
-     "n_coact": 0
-    }
-   ],
-   "familias_empatadas": [
-    "candidato_alto_riesgo_tecnico_infraestructura",
-    "candidato_riesgo_institucional_burocratico",
-    "candidato_riesgo_operativo_salud_y_medicos"
-   ],
+   "campo": "riesgo",
    "n_apariciones": 2,
    "casos": [
     "TUBMAN_HEROE_20261112",
     "TUBMAN_HEROE_SIN_C7_20261112"
    ],
-   "contexto": "'riesgo' empata en el mejor puntaje (0.8) entre 3 familias: candidato_alto_riesgo_tecnico_infraestructura, candidato_riesgo_institucional_burocratico, candidato_riesgo_operativo_salud_y_medicos. La medida no puede elegir y no se fuerza la activación."
+   "top3": [
+    {
+     "familia": "candidato_riesgo_institucional_burocratico",
+     "puntaje": 1.0,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 3,
+     "hits_evidencia": [
+      "riesgo",
+      "peligro",
+      "exposicion"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "candidato_riesgo_operativo_salud_y_medicos",
+     "puntaje": 1.0,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 1.0,
+     "n_hits_evidencia": 2,
+     "hits_evidencia": [
+      "riesgo",
+      "exposicion"
+     ],
+     "sidecar": false
+    },
+    {
+     "familia": "candidato_alto_riesgo_tecnico_infraestructura",
+     "puntaje": 0.95,
+     "nombre": 1,
+     "raiz": 1,
+     "coact": 0.0,
+     "n_coact": 0,
+     "evidencia": 0.5,
+     "n_hits_evidencia": 1,
+     "hits_evidencia": [
+      "exposicion"
+     ],
+     "sidecar": false
+    }
+   ],
+   "sidecar_mas_cercano": {
+    "ficha": "trayectoria_hosteleria_turno_sustancias",
+    "puntaje": 0.0,
+    "nombre": 0,
+    "raiz": 0,
+    "coact": 0.0,
+    "n_coact": 0,
+    "evidencia": 0.0,
+    "n_hits_evidencia": 0,
+    "hits_evidencia": []
+   },
+   "decision": "PENDIENTE",
+   "motivo": "ambiguo_empate",
+   "familia_mas_cercana": null,
+   "puntaje": 1.0,
+   "familias_empatadas": [
+    "candidato_riesgo_institucional_burocratico",
+    "candidato_riesgo_operativo_salud_y_medicos"
+   ],
+   "contexto": "'riesgo' empata en el mejor puntaje (1.0) entre 2 familias: candidato_riesgo_institucional_burocratico, candidato_riesgo_operativo_salud_y_medicos. La medida no puede elegir y no se fuerza la activación."
   }
  },
  "tokens_pendientes": [

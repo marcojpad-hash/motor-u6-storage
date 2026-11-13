@@ -1,5 +1,5 @@
 {
- "contrato": "COSECHA_V2_20261113",
+ "contrato": "COSECHA_V2_1_20261113",
  "version": 2,
  "casos": {
   "ANONIMO2_Z90_20261113": {
@@ -999,7 +999,7 @@
    "decision": {
     "decision": "ACTIVADO",
     "familia_mas_cercana": "candidato_trayectoria_arte_prestigio",
-    "puntaje": 0.5,
+    "puntaje": 0.65,
     "motivo": "analogo_por_proximidad",
     "fecha": "20261113"
    }
@@ -1059,7 +1059,7 @@
    "decision": {
     "decision": "ACTIVADO",
     "familia_mas_cercana": "mauss_02_deuda_de_honor",
-    "puntaje": 0.5,
+    "puntaje": 0.65,
     "motivo": "analogo_por_proximidad",
     "fecha": "20261113"
    }
@@ -1125,9 +1125,9 @@
    "n_total": 8,
    "decision": {
     "decision": "PENDIENTE",
-    "familia_mas_cercana": "monomito_01_mundo_ordinario",
-    "puntaje": 0.175,
-    "motivo": "lejos_de_todas",
+    "familia_mas_cercana": "sustancias_03_severo",
+    "puntaje": 0.45,
+    "motivo": "campo_general_varias_familias",
     "fecha": "20261113"
    }
   },
@@ -1155,7 +1155,7 @@
    "decision": {
     "decision": "PENDIENTE",
     "familia_mas_cercana": null,
-    "puntaje": 0.8,
+    "puntaje": 1.0,
     "motivo": "ambiguo_empate",
     "fecha": "20261113"
    }
@@ -1488,5 +1488,19 @@
   }
  },
  "actualizado": "20261113",
- "nota_migracion": "migrados 99 casos y 4 tokens desde v1; omitidos por ya existir: 1230 familias conocidas (top15+Z) y 6 tokens delta en el catálogo (busqueda_riesgo, cautela, codicia, consumo_sustancias, negacion_problema, optimismo)"
+ "nota_migracion": "migrados 99 casos y 4 tokens desde v1; omitidos por ya existir: 1230 familias conocidas (top15+Z) y 6 tokens delta en el catálogo (busqueda_riesgo, cautela, codicia, consumo_sustancias, negacion_problema, optimismo)",
+ "parche_evidencia": {
+  "contrato": "COSECHA_V2_1_20261113",
+  "motivo": "La v2 solo leía nombres, raíces y co-activación; la salud vive en la evidencia (DSM, muerte, hospital) y en el sidecar de hostelería (no en el 244).",
+  "peso_evidencia": 0.3,
+  "campos": [
+   "arte",
+   "deuda",
+   "riesgo",
+   "salud"
+  ],
+  "fichas_sidecar": [
+   "trayectoria_hosteleria_turno_sustancias"
+  ]
+ }
 }

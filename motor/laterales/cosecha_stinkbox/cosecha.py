@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""cosecha.py — Cosecha del StinkBox (lateral, contrato COSECHA_V2_20261113).
+"""cosecha.py — Cosecha del StinkBox (lateral, contrato COSECHA_V2_1_20261113).
 
 La v1 (COSECHA_V1_20261113) juntaba lo activado y lo dejaba como
 propuesta para que Marco decidiera. La v2 cambia el diseño por orden de
 Marco (2026-11-13): EL MOTOR DECIDE POR PROXIMIDAD, no Marco, y el
 StinkBox es REPOSITORIO DE HALLAZGOS NUEVOS, no basurero.
+
+Parche v2.1 (2026-11-13, corrección de Marco): la v2 solo leía nombres,
+raíces y co-activación; nunca leía la EVIDENCIA, que es donde vive la
+salud (DSM, muerte, hospital) y donde vive la hostelería (sidecar, no
+en el 244). La v2.1 añade el componente de evidencia (CAMPOS_EVIDENCIA)
+y las fichas sidecar de trayectoria al ranking de proximidad.
 
 Regla (Marco): SI YA LO TENEMOS, SE OMITE — ningún token duplicado
 entra al StinkBox. El dedupe es por identidad de TOKEN: un token que
@@ -21,7 +27,8 @@ Lo que hace la v2, por token sin familia:
      edición, o misma raíz con poca diferencia de largo). Regla de
      no-duplicación: no se activa lo que ya mide otra cosa.
   2. Si no es duplicado, se mide su PROXIMIDAD a cada familia del 244
-     con tres componentes deterministas (sin LLM, sin azar):
+     (y a las fichas sidecar de trayectoria, marcadas sidecar=True)
+     con cuatro componentes deterministas (sin LLM, sin azar):
        nombre: 1 si el token es un componente del nombre de la familia
                (el nombre se parte por "_"; "arte" en
                candidato_trayectoria_arte_prestigio).
@@ -31,14 +38,29 @@ Lo que hace la v2, por token sin familia:
        coact:  fracción de las apariciones del token (caso, corte, eje)
                en las que algún token de la familia está en el mismo
                (caso, corte, eje) de la misma entrada.
-     puntaje = 0.5*nombre + 0.3*raiz + 0.2*coact.
+       evidencia: 0 / 0.5 / 1.0 según cuántos términos distintos del
+               campo del token aparecen en el texto de evidencia de la
+               familia (description + fuente): 0 = no habla del campo,
+               0.5 = una mención, 1.0 = dos o más (la evidencia habla
+               del campo). La salud vive ahí: DSM en sustancias, muerte
+               en musicos, hospital en operativo_salud, consumo /
+               desgaste / turno en el sidecar de hostelería.
+     puntaje = min(1.0, 0.5*nombre + 0.3*raiz + 0.2*coact + 0.3*evidencia).
      La co-activación sola nunca alcanza: las familias genéricas
      (monomito_01_mundo_ordinario) co-activan con todo y no dicen nada.
+     La evidencia nunca decide duplicados (eso sigue siendo por
+     nombre/raíz/similaridad).
   3. ACTIVADO como análogo de la familia más cercana si puntaje >= 0.50
-     Y es la única en el mejor puntaje (margen > 0).
-     PENDIENTE si puntaje < 0.50 (lejos de todas: necesita familia
-     nueva, no análogo) o si hay empate en el mejor puntaje (ambiguo:
-     la medida no puede elegir y no se fuerza la activación).
+     Y es la única en el mejor puntaje (margen > 0). Una ficha sidecar
+     nunca es objetivo de activación (no está en el 244).
+     PENDIENTE si puntaje < 0.50 y el campo está documentado en varias
+     familias empatadas arriba (campo_general_varias_familias: el
+     concepto abarca varias familias del campo, sin análogo único);
+     si puntaje < 0.50 y no es ese caso (lejos_de_todas: necesita
+     familia nueva, no análogo); si hay empate en el mejor puntaje
+     >= 0.50 (ambiguo: la medida no puede elegir y no se fuerza la
+     activación); o si lo más cercano es solo un sidecar (solo_sidecar:
+     el campo vive en un sidecar, no en el 244).
 
 REGISTRO (REGISTRO_COSECHA.json): los casos se registran por IDENTIDAD
 de caso (sin los sufijos _SIN_ULTIMO/_RETENIDO del índice) y los TOKENS
@@ -74,13 +96,15 @@ Uso:
 import json
 import re
 import sys
+import unicodedata
 from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent.parent  # motor-cameo/
 
-CONTRATO = "COSECHA_V2_20261113"
+CONTRATO = "COSECHA_V2_1_20261113"
+CONTRATO_V2 = "COSECHA_V2_20261113"
 CONTRATO_V1 = "COSECHA_V1_20261113"
 can_decide_H = False
 
@@ -92,7 +116,30 @@ UMBRAL_RAZON_LARGO_DUPLICADO = 0.60  # largo(corto)/largo(largo) en subcadena
 PESO_NOMBRE = 0.5
 PESO_RAIZ = 0.3
 PESO_COACT = 0.2
+PESO_EVIDENCIA = 0.3
 UMBRAL_ACTIVAR = 0.50
+
+# --- Mapa campo -> términos de evidencia (parche v2.1, ver NOTA.md) ---
+# La salud se lee en la EVIDENCIA (description + fuente), no en los
+# nombres: DSM, muerte y hospital viven ahí, y el cluster ocupacional
+# (consumo / desgaste / turno) en el sidecar de hostelería. Un término
+# es una raíz (sin acentos, minúsculas); hace hit si aparece como
+# subcadena del texto de evidencia normalizado. El mapa es el
+# vocabulario del campo, no una lista por caso: se aplica igual a
+# cualquier token cuyo campo sea ese (el campo del token es el campo
+# cuya lista lo contiene, o cuyo nombre es el token). Los términos
+# cocina/restaurante/samhsa solo existen en la evidencia del sidecar
+# de hostelería (0 hits en el 244) y se dejan documentados.
+CAMPOS_EVIDENCIA = {
+    "salud": ["salud", "enfermedad", "dsm", "muerte", "mortal", "hospital",
+              "sintom", "clinic", "trastorn", "adicc", "suicid", "medic",
+              "biolog", "dolor", "consumo", "sustancias", "abuso",
+              "desgaste", "turno", "cocina", "restaurante", "samhsa"],
+    "arte": ["arte", "artist", "creativ", "pintura", "musica", "obra", "estetic"],
+    "deuda": ["deuda", "bancarrota", "ruina", "obligacion", "honor",
+              "prestamo", "financiero", "crash", "quiebra"],
+    "riesgo": ["riesgo", "peligro", "exposicion", "amenaza"],
+}
 
 ARCHIVO_V1 = HERE / "COSECHA_20261113.json"
 ARCHIVO_REGISTRO = HERE / "REGISTRO_COSECHA.json"
@@ -433,27 +480,109 @@ def _mapa_tokens_entrada(root, case_id):
     return m
 
 
-def proximidad_familias(token, apariciones, patrones):
-    """Puntaje de proximidad del token a cada familia del 244.
+def _norm_texto(s):
+    """Minúsculas sin acentos (la evidencia del catálogo mezcla con/sin acento)."""
+    s = unicodedata.normalize("NFKD", (s or "").lower())
+    return "".join(c for c in s if not unicodedata.combining(c))
 
-    apariciones: [{caso, corte, eje, peso}] acumuladas del token.
-    Devuelve [(puntaje, familia, nombre, raiz, coact, n_coact)] ordenado
-    por puntaje descendente y nombre de familia ascendente (desempate
-    determinista). La co-activación se calcula por (caso, corte, eje):
-    en cuántas apariciones del token hay al menos un token de la
-    familia en el mismo corte y eje de la misma entrada.
+
+def texto_evidencia(d):
+    """El texto de evidencia de una familia/ficha: description + fuente, normalizado."""
+    return _norm_texto((d.get("description") or "") + " " + (d.get("fuente") or ""))
+
+
+def cargar_fichas_sidecar(root=ROOT):
+    """Fichas de trayectoria que viven como sidecar (NO en el catálogo 244).
+
+    Lee motor/motor/plugin_trayectoria_*.py y toma las que definen FICHA
+    y PATRON con description/fuente/tokens_favor. Hoy solo hay una:
+    trayectoria_hosteleria_turno_sustancias (SAMHSA 2015; NO fusionar
+    al 244 hasta Claude; se carga en memoria como sidecar). Una ficha
+    sidecar participa en el ranking de proximidad (misma medida) pero
+    NUNCA es objetivo de activación: activar es ser análogo de una
+    familia del 244; el sidecar solo corrobora el campo y puede ser lo
+    más cercano (motivo solo_sidecar). Devuelve [{ficha, description,
+    fuente, tokens_favor, tokens_contra, evidence_status}] ordenado por
+    ficha (determinista). Un plugin roto no tumba la cosecha: se salta.
     """
-    # mapas de entrada por caso (se cargan una vez por caso)
+    import importlib.util
+    out = []
+    for ruta in sorted((root / "motor" / "motor").glob("plugin_trayectoria_*.py")):
+        try:
+            spec = importlib.util.spec_from_file_location(f"sidecar_{ruta.stem}", str(ruta))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            patron = getattr(mod, "PATRON", None)
+            ficha = getattr(mod, "FICHA", None)
+            if not isinstance(patron, dict) or not ficha:
+                continue
+            out.append({"ficha": ficha,
+                        "description": patron.get("description") or "",
+                        "fuente": patron.get("fuente") or "",
+                        "tokens_favor": patron.get("tokens_favor") or {},
+                        "tokens_contra": patron.get("tokens_contra") or {},
+                        "evidence_status": patron.get("evidence_status") or ""})
+        except Exception:
+            continue
+    return out
+
+
+def campo_del_token(token):
+    """El campo semántico del token según el mapa de evidencia.
+
+    El token pertenece al campo cuya lista de términos lo contiene
+    (exacto) o cuyo nombre es el token. Si no está en ningún campo,
+    None: la evidencia no se le aplica (se comporta como en v2).
+    """
+    for campo, terminos in CAMPOS_EVIDENCIA.items():
+        if token == campo or token in terminos:
+            return campo
+    return None
+
+
+def evidencia_campo(texto, campo):
+    """(evidencia, hits) del campo en un texto de evidencia normalizado.
+
+    hits = términos distintos del campo que aparecen como subcadena.
+    evidencia = min(1, hits/2): 0 = la evidencia no habla del campo,
+    0.5 = una mención (señal parcial), 1.0 = dos o más términos distintos
+    (la evidencia habla del campo). Determinista.
+    """
+    if campo is None:
+        return 0.0, []
+    hits = [t for t in CAMPOS_EVIDENCIA[campo] if t in texto]
+    return min(1.0, len(hits) / 2), hits
+
+
+def proximidad_familias(token, apariciones, patrones, fichas_sidecar=None, campo=None):
+    """Puntaje de proximidad del token a cada familia del 244 (+ sidecar).
+
+    Componentes deterministas (sin LLM, sin azar):
+      nombre (0.5), raiz (0.3), coact (0.2) como en v2, más
+      evidencia (0.3, parche v2.1): la familia habla del campo del token
+      en su texto de evidencia (description + fuente). La evidencia
+      puede levantar a un token que está en el campo de una familia sin
+      compartir nombre ni raíz; nunca decide duplicados (eso sigue
+      siendo por nombre/raíz/similaridad).
+    puntaje = min(1.0, 0.5*nombre + 0.3*raiz + 0.2*coact + 0.3*evidencia).
+    Las fichas sidecar se puntúan igual (misma medida) y se marcan
+    sidecar=True; nunca son objetivo de activación.
+    Devuelve [(puntaje, familia, nombre, raiz, coact, n_coact,
+    evidencia, n_hits, hits, sidecar)] ordenado por puntaje descendente
+    y familia ascendente (desempate determinista).
+    """
+    if campo is None:
+        campo = campo_del_token(token)
+    if fichas_sidecar is None:
+        fichas_sidecar = cargar_fichas_sidecar()
     mapas = {}
     for ap in apariciones:
         cid = ap["caso"]
         if cid not in mapas:
             mapas[cid] = _mapa_tokens_entrada(ROOT, cid)
     n_apar = len(apariciones)
-    filas = []
-    for fam in sorted(patrones.keys()):
-        d = patrones[fam]
-        toks_fam = set((d.get("tokens_favor") or {}).keys()) | set((d.get("tokens_contra") or {}).keys())
+
+    def fila(fam, toks_fam, texto_ev, sidecar):
         nombre = 1 if token in fam.split("_") else 0
         raiz = 1 if any(token in u or u in token for u in toks_fam) else 0
         n_coact = 0
@@ -462,18 +591,30 @@ def proximidad_familias(token, apariciones, patrones):
             if toks_fam & toks_corte:
                 n_coact += 1
         coact = n_coact / n_apar if n_apar else 0.0
-        puntaje = PESO_NOMBRE * nombre + PESO_RAIZ * raiz + PESO_COACT * coact
-        filas.append((round(puntaje, 6), fam, nombre, raiz, round(coact, 4), n_coact))
+        ev, hits = evidencia_campo(texto_ev, campo)
+        puntaje = min(1.0, PESO_NOMBRE * nombre + PESO_RAIZ * raiz
+                      + PESO_COACT * coact + PESO_EVIDENCIA * ev)
+        return (round(puntaje, 6), fam, nombre, raiz, round(coact, 4), n_coact,
+                ev, len(hits), hits, sidecar)
+
+    filas = []
+    for fam in sorted(patrones.keys()):
+        d = patrones[fam]
+        toks_fam = set((d.get("tokens_favor") or {}).keys()) | set((d.get("tokens_contra") or {}).keys())
+        filas.append(fila(fam, toks_fam, texto_evidencia(d), False))
+    for f in sorted(fichas_sidecar, key=lambda x: x["ficha"]):
+        toks_fam = set((f.get("tokens_favor") or {}).keys()) | set((f.get("tokens_contra") or {}).keys())
+        filas.append(fila(f["ficha"], toks_fam, texto_evidencia(f), True))
     filas.sort(key=lambda r: (-r[0], r[1]))
     return filas
 
 
-def decidir_token(token, apariciones, patrones, tokens_703):
-    """Decisión determinista para un token sin familia.
+def decidir_token(token, apariciones, patrones, tokens_703, fichas_sidecar=None, campo=None):
+    """Decisión determinista para un token sin familia (parche v2.1).
 
     Devuelve el dict de decisión con su evidencia. La decisión es
-    función pura de (token, apariciones, catálogo): misma entrada,
-    misma decisión (G4).
+    función pura de (token, apariciones, catálogo, fichas sidecar):
+    misma entrada, misma decisión (G4).
     """
     dup, ev_dup = es_duplicado(token, tokens_703)
     if dup:
@@ -486,48 +627,77 @@ def decidir_token(token, apariciones, patrones, tokens_703):
                 "contexto": (f"'{token}' es duplicado de '{ev_dup.get('token_catalogo')}' "
                              f"({ev_dup.get('tipo')}, similitud {ev_dup.get('similitud')}). "
                              f"Regla de no-duplicación: no se activa lo que ya mide otro token.")}
-    filas = proximidad_familias(token, apariciones, patrones)
+    if campo is None:
+        campo = campo_del_token(token)
+    if fichas_sidecar is None:
+        fichas_sidecar = cargar_fichas_sidecar()
+    filas = proximidad_familias(token, apariciones, patrones, fichas_sidecar, campo)
     mejor_puntaje = filas[0][0] if filas else 0.0
     empatadas = [f for f in filas if f[0] == mejor_puntaje]
     top3 = [{"familia": f[1], "puntaje": f[0], "nombre": f[2], "raiz": f[3],
-             "coact": f[4], "n_coact": f[5]} for f in filas[:3]]
-    if mejor_puntaje < UMBRAL_ACTIVAR:
-        return {"token": token, "decision": "PENDIENTE",
-                "motivo": "lejos_de_todas",
-                "familia_mas_cercana": filas[0][1] if filas else None,
-                "puntaje": mejor_puntaje,
-                "top3": top3,
-                "n_apariciones": len(apariciones),
-                "casos": sorted({a["caso"] for a in apariciones}),
-                "contexto": (f"'{token}' está lejos de todas las familias del 244 "
-                             f"(mejor puntaje {mejor_puntaje}, umbral {UMBRAL_ACTIVAR}). "
-                             f"Necesita familia nueva, no análogo.")}
-    if len(empatadas) > 1:
-        return {"token": token, "decision": "PENDIENTE",
-                "motivo": "ambiguo_empate",
-                "familia_mas_cercana": None,
-                "puntaje": mejor_puntaje,
-                "top3": top3,
+             "coact": f[4], "n_coact": f[5], "evidencia": f[6],
+             "n_hits_evidencia": f[7], "hits_evidencia": f[8],
+             "sidecar": f[9]} for f in filas[:3]]
+    sidecar_mejor = None
+    for f in filas:
+        if f[9]:
+            sidecar_mejor = {"ficha": f[1], "puntaje": f[0], "nombre": f[2],
+                             "raiz": f[3], "coact": f[4], "n_coact": f[5],
+                             "evidencia": f[6], "n_hits_evidencia": f[7],
+                             "hits_evidencia": f[8]}
+            break
+    base = {"token": token, "campo": campo,
+            "n_apariciones": len(apariciones),
+            "casos": sorted({a["caso"] for a in apariciones}),
+            "top3": top3, "sidecar_mas_cercano": sidecar_mejor}
+    if mejor_puntaje >= UMBRAL_ACTIVAR and len(empatadas) == 1:
+        f = empatadas[0]
+        if f[9]:
+            return {**base, "decision": "PENDIENTE", "motivo": "solo_sidecar",
+                    "familia_mas_cercana": f[1], "puntaje": f[0],
+                    "contexto": (f"'{token}' está más cerca de la ficha sidecar '{f[1]}' "
+                                 f"(puntaje {f[0]}: nombre={f[2]}, raiz={f[3]}, coact={f[4]} "
+                                 f"en {f[5]}/{len(apariciones)} apariciones, evidencia={f[6]} "
+                                 f"({', '.join(f[8]) or 'sin hits'})), que NO está en el "
+                                 f"catálogo 244: no se activa como análogo de un sidecar. "
+                                 f"Necesita que la ficha entre al catálogo o un análogo del 244.")}
+        segundo = filas[1][0] if len(filas) > 1 else 0.0
+        return {**base, "decision": "ACTIVADO",
+                "motivo": "analogo_por_proximidad",
+                "familia_mas_cercana": f[1], "puntaje": f[0],
+                "nombre": f[2], "raiz": f[3], "coact": f[4], "n_coact": f[5],
+                "evidencia": f[6], "n_hits_evidencia": f[7], "hits_evidencia": f[8],
+                "margen_sobre_segundo": round(f[0] - segundo, 6),
+                "contexto": (f"'{token}' se activa como análogo de '{f[1]}' "
+                             f"(puntaje {f[0]}: nombre={f[2]}, raiz={f[3]}, coact={f[4]} "
+                             f"en {f[5]}/{len(apariciones)} apariciones, evidencia={f[6]} "
+                             f"({', '.join(f[8]) or 'sin hits'}); "
+                             f"margen {round(f[0] - segundo, 4)} sobre el 2º).")}
+    if mejor_puntaje >= UMBRAL_ACTIVAR:
+        return {**base, "decision": "PENDIENTE", "motivo": "ambiguo_empate",
+                "familia_mas_cercana": None, "puntaje": mejor_puntaje,
                 "familias_empatadas": [f[1] for f in empatadas],
-                "n_apariciones": len(apariciones),
-                "casos": sorted({a["caso"] for a in apariciones}),
                 "contexto": (f"'{token}' empata en el mejor puntaje ({mejor_puntaje}) entre "
                              f"{len(empatadas)} familias: {', '.join(f[1] for f in empatadas)}. "
                              f"La medida no puede elegir y no se fuerza la activación.")}
-    f = filas[0]
-    segundo = filas[1][0] if len(filas) > 1 else 0.0
-    return {"token": token, "decision": "ACTIVADO",
-            "motivo": "analogo_por_proximidad",
-            "familia_mas_cercana": f[1], "puntaje": f[0],
-            "nombre": f[2], "raiz": f[3], "coact": f[4], "n_coact": f[5],
-            "margen_sobre_segundo": round(f[0] - segundo, 6),
-            "top3": top3,
-            "n_apariciones": len(apariciones),
-            "casos": sorted({a["caso"] for a in apariciones}),
-            "contexto": (f"'{token}' se activa como análogo de '{f[1]}' "
-                         f"(puntaje {f[0]}: nombre={f[2]}, raiz={f[3]}, coact={f[4]} "
-                         f"en {f[5]}/{len(apariciones)} apariciones; "
-                         f"margen {round(f[0] - segundo, 4)} sobre el 2º).")}
+    empatadas_con_evidencia = [f for f in empatadas if f[6] > 0]
+    if len(empatadas) >= 2 and len(empatadas_con_evidencia) == len(empatadas):
+        return {**base, "decision": "PENDIENTE",
+                "motivo": "campo_general_varias_familias",
+                "familia_mas_cercana": filas[0][1] if filas else None,
+                "puntaje": mejor_puntaje,
+                "familias_empatadas": [f[1] for f in empatadas],
+                "contexto": (f"'{token}' es un concepto general del campo '{campo}': el campo "
+                             f"está documentado en la evidencia de varias familias "
+                             f"({', '.join(f[1] for f in empatadas)}, puntaje {mejor_puntaje} "
+                             f"cada una) y ninguna destaca como su análogo único. "
+                             f"Necesita familia nueva, no análogo forzado.")}
+    return {**base, "decision": "PENDIENTE", "motivo": "lejos_de_todas",
+            "familia_mas_cercana": filas[0][1] if filas else None,
+            "puntaje": mejor_puntaje,
+            "contexto": (f"'{token}' está lejos de todas las familias del 244 "
+                         f"(mejor puntaje {mejor_puntaje}, umbral {UMBRAL_ACTIVAR}). "
+                         f"Necesita familia nueva, no análogo.")}
 
 
 def vinculos_token(root, token, apariciones, tokens_703):
@@ -715,8 +885,18 @@ def cosechar_v2(root=ROOT, fecha=None):
     fecha = fecha or date.today().strftime("%Y%m%d")
     patrones = cargar_patrones(root)
     _, tokens_703 = cargar_catalogo(root)
+    fichas_sidecar = cargar_fichas_sidecar(root)
     casos_union, n_distintos, n_entradas_indice = _union_casos(root)
     registro = cargar_registro()
+    registro["contrato"] = CONTRATO
+    registro["parche_evidencia"] = {
+        "contrato": CONTRATO,
+        "motivo": ("La v2 solo leía nombres, raíces y co-activación; la salud vive "
+                   "en la evidencia (DSM, muerte, hospital) y en el sidecar de "
+                   "hostelería (no en el 244)."),
+        "peso_evidencia": PESO_EVIDENCIA,
+        "campos": sorted(CAMPOS_EVIDENCIA.keys()),
+        "fichas_sidecar": [f["ficha"] for f in fichas_sidecar]}
     casos_registro_antes = len(registro["casos"])
     nota_migracion = None
     n_migrados = 0
@@ -773,7 +953,8 @@ def cosechar_v2(root=ROOT, fecha=None):
     decisiones = {}
     for tok in sorted(registro["tokens"].keys()):
         ent = registro["tokens"][tok]
-        dec = decidir_token(tok, ent["apariciones"], patrones, tokens_703)
+        dec = decidir_token(tok, ent["apariciones"], patrones, tokens_703,
+                            fichas_sidecar)
         decisiones[tok] = dec
         ent["decision"] = {"decision": dec["decision"],
                            "familia_mas_cercana": dec.get("familia_mas_cercana"),
@@ -822,7 +1003,10 @@ def cosechar_v2(root=ROOT, fecha=None):
         familias_que_faltan.append({
             "token": tok, "decision": dec["decision"],
             "familia": dec.get("familia_mas_cercana"), "puntaje": dec.get("puntaje"),
-            "motivo": dec["motivo"], "casos": ent["casos"],
+            "motivo": dec["motivo"], "campo": dec.get("campo"),
+            "top3": dec.get("top3"),
+            "sidecar_mas_cercano": dec.get("sidecar_mas_cercano"),
+            "casos": ent["casos"],
             "n_apariciones": len(ent["apariciones"]), "peso_max": ent["peso_max"],
             "vinculos": [{"token_catalogo": v["token_catalogo"],
                           "n_instancias": v["n_instancias"],
@@ -831,6 +1015,9 @@ def cosechar_v2(root=ROOT, fecha=None):
     salida = {"contrato": CONTRATO,
               "fecha": fecha,
               "can_decide_H": False,
+              "parche_evidencia": registro["parche_evidencia"],
+              "n_fichas_sidecar": len(fichas_sidecar),
+              "fichas_sidecar": [f["ficha"] for f in fichas_sidecar],
               "fuente_v1": "COSECHA_20261113.json",
               "nota_migracion": nota_migracion or registro.get("nota_migracion"),
               "n_casos_union": len(casos_union),
