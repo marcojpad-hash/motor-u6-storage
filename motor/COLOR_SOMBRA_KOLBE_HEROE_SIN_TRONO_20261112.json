@@ -1,0 +1,1022 @@
+{
+ "H1_sombra_tablero": {
+  "familia": "arquetipo_el_heroe",
+  "p_final": 0.8123
+ },
+ "H_motor": {
+  "H1": null,
+  "H2": null
+ },
+ "decide_H": false,
+ "desaturacion_latencia": {
+  "arquetipo_el_gobernante": {
+   "croma_canonico": 0.0,
+   "croma_sombra": 0.004044,
+   "croma_sombra_desaturado": 0.004044,
+   "en_set_canonico": false,
+   "fraccion_resuelta": 1.0,
+   "matiz_canonico": 116.565051,
+   "matiz_sombra": 358.134707,
+   "ocurrencias_canonicas": 0,
+   "ocurrencias_resueltas_sombra": 0,
+   "tono_canonico": {
+    "externo": 0.333333,
+    "interno": 0.333333,
+    "situacion": 0.333333
+   },
+   "tono_sombra": {
+    "externo": 0.33191,
+    "interno": 0.336028,
+    "situacion": 0.332062
+   }
+  },
+  "arquetipo_el_heroe": {
+   "croma_canonico": 0.045658,
+   "croma_sombra": 0.054352,
+   "croma_sombra_desaturado": 0.036235,
+   "en_set_canonico": false,
+   "fraccion_resuelta": 0.666667,
+   "matiz_canonico": 5.808876,
+   "matiz_sombra": 359.868538,
+   "ocurrencias_canonicas": 6,
+   "ocurrencias_resueltas_sombra": 4,
+   "tono_canonico": {
+    "externo": 0.32086,
+    "interno": 0.363616,
+    "situacion": 0.315524
+   },
+   "tono_sombra": {
+    "externo": 0.315144,
+    "interno": 0.369568,
+    "situacion": 0.315288
+   }
+  },
+  "arquetipo_heroe": {
+   "croma_canonico": 0.030175,
+   "croma_sombra": 0.004044,
+   "croma_sombra_desaturado": 0.0,
+   "en_set_canonico": false,
+   "fraccion_resuelta": 0.0,
+   "matiz_canonico": 0.0,
+   "matiz_sombra": 358.134707,
+   "ocurrencias_canonicas": 2,
+   "ocurrencias_resueltas_sombra": 0,
+   "tono_canonico": {
+    "externo": 0.323275,
+    "interno": 0.35345,
+    "situacion": 0.323275
+   },
+   "tono_sombra": {
+    "externo": 0.33191,
+    "interno": 0.336028,
+    "situacion": 0.332062
+   }
+  },
+  "heroe": {
+   "croma_canonico": 0.053926,
+   "croma_sombra": 0.055942,
+   "croma_sombra_desaturado": 0.037295,
+   "en_set_canonico": true,
+   "fraccion_resuelta": 0.666667,
+   "matiz_canonico": 0.0,
+   "matiz_sombra": 359.872275,
+   "ocurrencias_canonicas": 3,
+   "ocurrencias_resueltas_sombra": 2,
+   "tono_canonico": {
+    "externo": 0.315358,
+    "interno": 0.369284,
+    "situacion": 0.315358
+   },
+   "tono_sombra": {
+    "externo": 0.314614,
+    "interno": 0.370628,
+    "situacion": 0.314758
+   }
+  },
+  "kwml_01_rey": {
+   "croma_canonico": 0.0,
+   "croma_sombra": 0.004044,
+   "croma_sombra_desaturado": 0.004044,
+   "en_set_canonico": false,
+   "fraccion_resuelta": 1.0,
+   "matiz_canonico": 116.565051,
+   "matiz_sombra": 358.134707,
+   "ocurrencias_canonicas": 0,
+   "ocurrencias_resueltas_sombra": 0,
+   "tono_canonico": {
+    "externo": 0.333333,
+    "interno": 0.333333,
+    "situacion": 0.333333
+   },
+   "tono_sombra": {
+    "externo": 0.33191,
+    "interno": 0.336028,
+    "situacion": 0.332062
+   }
+  }
+ },
+ "familias_interes_sombra": {
+  "arquetipo_el_gobernante": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "arquetipo_el_heroe": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.997356,
+    "hex_ilustrativo": "#ffd9da",
+    "intensidad": 0.530207,
+    "pureza": 0.369568,
+    "saturacion": 0.054425,
+    "tono": {
+     "externo": 0.315144,
+     "interno": 0.369568,
+     "situacion": 0.315288
+    }
+   },
+   "vector_medio_PAC": [
+    0.586114,
+    0.4998,
+    0.500029
+   ]
+  },
+  "arquetipo_heroe": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "heroe": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.9972,
+    "hex_ilustrativo": "#ffd8d9",
+    "intensidad": 0.531193,
+    "pureza": 0.370628,
+    "saturacion": 0.056015,
+    "tono": {
+     "externo": 0.314614,
+     "interno": 0.370628,
+     "situacion": 0.314758
+    }
+   },
+   "vector_medio_PAC": [
+    0.588786,
+    0.4998,
+    0.500029
+   ]
+  },
+  "kwml_01_rey": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  }
+ },
+ "fuente": "tableros sombra no_duplicacion_latencia_v1 (sombra_tableros_KOLBE_HEROE_SIN_TRONO_20261112.json)",
+ "fuente_resultado_sellado": "RESULT_KOLBE_HEROE_SIN_TRONO_20261112.json",
+ "hipotesis": {
+  "20_sacrificio_por_un_ideal": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.064587,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "5_persecucion": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.063367,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "arquetipo_el_creador": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.056482,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "arquetipo_el_sabio": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.052754,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "dialectica_01_tesis_estabilidad_hegemonica": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.042537,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "eterno_retorno_01_caos_primordial": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.041636,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "guardian_del_umbral": {
+   "color": {
+    "eje_dominante": "situacion",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.997347,
+    "hex_ilustrativo": "#dbd8ff",
+    "intensidad": 0.533369,
+    "pureza": 0.369557,
+    "saturacion": 0.056278,
+    "tono": {
+     "externo": 0.313278,
+     "interno": 0.317165,
+     "situacion": 0.369557
+    }
+   },
+   "peso_rank_fusion_norm": 0.051482,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.589586
+   ]
+  },
+  "heroe": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.9972,
+    "hex_ilustrativo": "#ffd8d9",
+    "intensidad": 0.531193,
+    "pureza": 0.370628,
+    "saturacion": 0.056015,
+    "tono": {
+     "externo": 0.314614,
+     "interno": 0.370628,
+     "situacion": 0.314758
+    }
+   },
+   "peso_rank_fusion_norm": 0.060926,
+   "vector_medio_PAC": [
+    0.588786,
+    0.4998,
+    0.500029
+   ]
+  },
+  "mbti_introvertido": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.049873,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "mentor": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.992026,
+    "hex_ilustrativo": "#ffd5b9",
+    "intensidad": 0.594455,
+    "pureza": 0.390594,
+    "saturacion": 0.107749,
+    "tono": {
+     "externo": 0.326562,
+     "interno": 0.390594,
+     "situacion": 0.282844
+    }
+   },
+   "peso_rank_fusion_norm": 0.058908,
+   "vector_medio_PAC": [
+    0.690514,
+    0.577314,
+    0.500029
+   ]
+  },
+  "monomito_01_mundo_ordinario": {
+   "color": {
+    "eje_dominante": "situacion",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.992716,
+    "hex_ilustrativo": "#c6c3ff",
+    "intensidad": 0.557526,
+    "pureza": 0.393731,
+    "saturacion": 0.092465,
+    "tono": {
+     "externo": 0.301266,
+     "interno": 0.305003,
+     "situacion": 0.393731
+    }
+   },
+   "peso_rank_fusion_norm": 0.043502,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.6532
+   ]
+  },
+  "monomito_05_cruce_del_primer_umbral": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.983034,
+    "hex_ilustrativo": "#ffacac",
+    "intensidad": 0.591886,
+    "pureza": 0.426121,
+    "saturacion": 0.139247,
+    "tono": {
+     "externo": 0.286874,
+     "interno": 0.426121,
+     "situacion": 0.287005
+    }
+   },
+   "peso_rank_fusion_norm": 0.057555,
+   "vector_medio_PAC": [
+    0.7424,
+    0.4998,
+    0.500029
+   ]
+  },
+  "monomito_12_regreso_con_el_elixir": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.996618,
+    "hex_ilustrativo": "#ffd5d5",
+    "intensidad": 0.534709,
+    "pureza": 0.374359,
+    "saturacion": 0.061609,
+    "tono": {
+     "externo": 0.312749,
+     "interno": 0.374359,
+     "situacion": 0.312892
+    }
+   },
+   "peso_rank_fusion_norm": 0.048915,
+   "vector_medio_PAC": [
+    0.598257,
+    0.4998,
+    0.500029
+   ]
+  },
+  "schwartz_02_benevolencia": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.987656,
+    "hex_ilustrativo": "#ffb6b6",
+    "intensidad": 0.574976,
+    "pureza": 0.41229,
+    "saturacion": 0.118503,
+    "tono": {
+     "externo": 0.293788,
+     "interno": 0.41229,
+     "situacion": 0.293922
+    }
+   },
+   "peso_rank_fusion_norm": 0.058908,
+   "vector_medio_PAC": [
+    0.7014,
+    0.4998,
+    0.500029
+   ]
+  },
+  "social_04_rogers_difusion_innovaciones": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.052999,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "sombra": {
+   "color": {
+    "eje_dominante": "situacion",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.996166,
+    "hex_ilustrativo": "#d4d1ff",
+    "intensidad": 0.540436,
+    "pureza": 0.376977,
+    "saturacion": 0.067385,
+    "tono": {
+     "externo": 0.309591,
+     "interno": 0.313432,
+     "situacion": 0.376977
+    }
+   },
+   "peso_rank_fusion_norm": 0.049938,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.608586
+   ]
+  },
+  "sustancias_03_severo": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.05914,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "trayectoria_policia_alcohol_ptds": {
+   "color": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "hex_ilustrativo": "#fffcfc",
+    "intensidad": 0.501951,
+    "pureza": 0.336028,
+    "saturacion": 0.004117,
+    "tono": {
+     "externo": 0.33191,
+     "interno": 0.336028,
+     "situacion": 0.332062
+    }
+   },
+   "peso_rank_fusion_norm": 0.035137,
+   "vector_medio_PAC": [
+    0.506,
+    0.4998,
+    0.500029
+   ]
+  },
+  "ttm_02_contemplacion": {
+   "color": {
+    "eje_dominante": "externo",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.997503,
+    "hex_ilustrativo": "#dcffd9",
+    "intensidad": 0.532478,
+    "pureza": 0.368469,
+    "saturacion": 0.054578,
+    "tono": {
+     "externo": 0.368469,
+     "interno": 0.31764,
+     "situacion": 0.313891
+    }
+   },
+   "peso_rank_fusion_norm": 0.051354,
+   "vector_medio_PAC": [
+    0.506,
+    0.586971,
+    0.500029
+   ]
+  }
+ },
+ "huecos": [],
+ "lateral": "rueda_conjuncion_v1",
+ "mapeo": {
+  "externo": "A sombra",
+  "interno": "P sombra",
+  "situacion": "C sombra"
+ },
+ "movimiento": [
+  {
+   "a": "C2_1918",
+   "de": "C1_1904",
+   "delta": {
+    "externo": -0.005003,
+    "interno": 0.008284,
+    "situacion": -0.003281
+   },
+   "eje_que_mueve": "interno"
+  },
+  {
+   "a": "C3_1927",
+   "de": "C2_1918",
+   "delta": {
+    "externo": -0.00437,
+    "interno": 0.008278,
+    "situacion": -0.003909
+   },
+   "eje_que_mueve": "interno"
+  },
+  {
+   "a": "C4_1933",
+   "de": "C3_1927",
+   "delta": {
+    "externo": 0.000886,
+    "interno": 0.0031,
+    "situacion": -0.003986
+   },
+   "eje_que_mueve": "situacion"
+  },
+  {
+   "a": "C5_1941_02",
+   "de": "C4_1933",
+   "delta": {
+    "externo": 6.6e-05,
+    "interno": -0.003318,
+    "situacion": 0.003253
+   },
+   "eje_que_mueve": "interno"
+  },
+  {
+   "a": "C6_1941_07",
+   "de": "C5_1941_02",
+   "delta": {
+    "externo": -0.001663,
+    "interno": 0.006773,
+    "situacion": -0.00511
+   },
+   "eje_que_mueve": "interno"
+  },
+  {
+   "a": "C7_1941",
+   "de": "C6_1941_07",
+   "delta": {
+    "externo": -0.00085,
+    "interno": -0.002324,
+    "situacion": 0.003174
+   },
+   "eje_que_mueve": "situacion"
+  }
+ ],
+ "pesos": "predictor.candidates[].rank_fusion / suma (CANONICOS; la mezcla compara solo el cambio de tablero)",
+ "pigmentos_identicos": [
+  [
+   "20_sacrificio_por_un_ideal",
+   "5_persecucion",
+   "sustancias_03_severo",
+   "arquetipo_el_creador",
+   "arquetipo_el_sabio",
+   "social_04_rogers_difusion_innovaciones",
+   "mbti_introvertido",
+   "dialectica_01_tesis_estabilidad_hegemonica",
+   "eterno_retorno_01_caos_primordial",
+   "trayectoria_policia_alcohol_ptds"
+  ]
+ ],
+ "tono_final_mezcla": {
+  "eje_dominante": "interno",
+  "ejes_con_datos": [
+   "interno",
+   "externo",
+   "situacion"
+  ],
+  "entropia_norm": 0.999514,
+  "hex_ilustrativo": "#ffedf0",
+  "intensidad": 0.333512,
+  "pureza": 0.34851,
+  "saturacion": 0.025273,
+  "tono": {
+   "externo": 0.323237,
+   "interno": 0.34851,
+   "situacion": 0.328254
+  }
+ },
+ "trayectoria": [
+  {
+   "corte": "C1_1904",
+   "mezcla": {
+    "eje_dominante": "situacion",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999985,
+    "intensidad": 0.333339,
+    "pureza": 0.335743,
+    "saturacion": 0.004608,
+    "tono": {
+     "externo": 0.331134,
+     "interno": 0.333123,
+     "situacion": 0.335743
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C2_1918",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999839,
+    "intensidad": 0.333392,
+    "pureza": 0.341407,
+    "saturacion": 0.015276,
+    "tono": {
+     "externo": 0.326131,
+     "interno": 0.341407,
+     "situacion": 0.332462
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C3_1927",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999424,
+    "intensidad": 0.333545,
+    "pureza": 0.349685,
+    "saturacion": 0.027924,
+    "tono": {
+     "externo": 0.321761,
+     "interno": 0.349685,
+     "situacion": 0.328553
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C4_1933",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.99923,
+    "intensidad": 0.333618,
+    "pureza": 0.352785,
+    "saturacion": 0.030138,
+    "tono": {
+     "externo": 0.322647,
+     "interno": 0.352785,
+     "situacion": 0.324567
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C5_1941_02",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999453,
+    "intensidad": 0.333535,
+    "pureza": 0.349467,
+    "saturacion": 0.026754,
+    "tono": {
+     "externo": 0.322713,
+     "interno": 0.349467,
+     "situacion": 0.32782
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C6_1941_07",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.998935,
+    "intensidad": 0.333727,
+    "pureza": 0.35624,
+    "saturacion": 0.03519,
+    "tono": {
+     "externo": 0.32105,
+     "interno": 0.35624,
+     "situacion": 0.32271
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  },
+  {
+   "corte": "C7_1941",
+   "mezcla": {
+    "eje_dominante": "interno",
+    "ejes_con_datos": [
+     "interno",
+     "externo",
+     "situacion"
+    ],
+    "entropia_norm": 0.999118,
+    "intensidad": 0.333659,
+    "pureza": 0.353916,
+    "saturacion": 0.033715,
+    "tono": {
+     "externo": 0.3202,
+     "interno": 0.353916,
+     "situacion": 0.325884
+    }
+   },
+   "n_tokens": {
+    "A": 3,
+    "C": 4,
+    "P": 5
+   }
+  }
+ ]
+}
