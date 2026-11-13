@@ -2,7 +2,19 @@
  "rama": "alterno/reconexion-2a1",
  "carpeta": "motor/corridas_ciegas_20261113/",
  "motor_sha256": "c8da733e2f02be7a8e1895f8b88aba549488e3b7a01ca87507604969238ab085",
- "nota_motor": "MOTOR_V15_3_UNICO de la copia de trabajo (con cableado Caldero + laterales + etiquetas ACTIVA_CON_DESENLACES_SELLADOS); el de la rama es el blob 18fb0507, sha256 distinto: verificar contra el recibo de cada corrida",
+ "nota_motor": "CORRECCIÓN 2026-11-13 (auditoría de Claude, punto 1): c8da733e es el motor de la cabeza anterior de la rama (c9e5436) y SOLO corrió TEST_CALIBRACION. Las 8 ciegas corrieron DOS motores distintos: 066af6844dd54085 (lote 1: Einstein, Rembrandt, Elvis; commit 78b9a9a) y b4d4d657e0691da4 (lote 2: Che, Tulipomanía, Revolución; commit d3eab75). Ambos están en motor_corrido/ con su hash, verificados byte a byte contra los run dirs y los recibos. El runner que corrió (0485503d en 7 corridas, 32280328 en Einstein) NO es recuperable: solo sobrevive su hash en los recibos; ver motor_corrido/README.md.",
+ "motor_por_corrida": {
+  "ANONIMO_Z90_20261113": "066af6844dd54085",
+  "ANONIMO2_Z90_20261113": "066af6844dd54085",
+  "ANONIMO3_Z90_20261113": "066af6844dd54085",
+  "ANONIMO3_Z90_20261113_v2": "066af6844dd54085",
+  "TRANSICION1_Z90_20261113": "b4d4d657e0691da4",
+  "TRANSICION1_Z90_20261113_v2": "b4d4d657e0691da4",
+  "TRANSICION2_Z90_20261113": "b4d4d657e0691da4",
+  "ANONIMO4_Z90_20261113": "b4d4d657e0691da4",
+  "TEST_CALIBRACION_20261113": "c8da733e2f02be7a"
+ },
+ "nota_muestra": "La muestra son las 8 ciegas. TEST_CALIBRACION es ANONIMO4 (Che) repetido: mismos 7 cortes, misma descripción, seed 0, mismo H1/H2 y mismo Monte Carlo 13,617. No cuenta como 9ª muestra. La corrida RESULT_VERIF_CALIB_LABEL2 es otro re-run de Che (verificación de la etiqueta), tampoco es muestra nueva.",
  "archivos": [
   {
    "caso": "ANONIMO_Z90_20261113",
