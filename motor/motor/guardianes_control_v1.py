@@ -455,6 +455,21 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
     vecinos = [b for b in bloques if b["guardian"] in ("FALACIAS", "PREGUNTA_DIRIGIDA_POST_HOC", "LOGICA_COPI", "POLARIDAD_CAUSAL")]
     bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
     _anotar_vecinos(bloques)
+    # BOLSITAS_TROPO (spec 2026-09-14, ids A–F): ruteo de los hallazgos de tropos y de
+    # lógica enunciativa a bolsitas de marcaje. Highlight only: no decide H, no bloquea,
+    # no toca Engine/244. Si el archivo falta o truena, los guardianes siguen igual
+    # (las bolsitas son un reporte de ruteo, no un guardián).
+    try:
+        _bmod, _bmeta = _cargar(base, "bolsitas_tropo_v1.py", "g_bolsitas_tropo")
+        if _bmod is None:
+            bolsitas = {"catalogo": "BOLSITAS_TROPO", "status": "FALTA_ARCHIVO",
+                        "archivo": "bolsitas_tropo_v1.py", **CANDADOS}
+        else:
+            bolsitas = _bmod.rastrear(bloques)
+            bolsitas["piezas"] = [_bmeta]
+    except Exception as e:
+        bolsitas = {"catalogo": "BOLSITAS_TROPO", "status": "ERROR",
+                    "error": f"{type(e).__name__}: {e}", **CANDADOS}
     banderas = {b["guardian"]: b["bandera"] for b in bloques}
     acero = next((b for b in bloques if b["guardian"] == "HOMBRE_DE_ACERO"), {})
     copi = next((b for b in bloques if b["guardian"] == "LOGICA_COPI"), {})
@@ -468,12 +483,15 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
     tb = next((b for b in bloques if b["guardian"] == "TROPOS_BERISTAIN"), {})
     if tb.get("bandera") == "NO_RESUELTO":
         sug.append("tropos: lenguaje figurado sin frontera clara en la pregunta o los textos")
+    if bolsitas.get("bandera_perfil_disfemismo"):
+        sug.append("bolsitas: disfemismo regularizado como rasgo de perfil (PERFIL_DISFEMISMO), no veredicto")
     try:
         ruta = ruta_cierre_latente(bloques, case, motor, pred, base)
     except Exception as e:
         ruta = {"estado_cierre": "ERROR", "error": f"{type(e).__name__}: {e}", "can_decide_H": False}
     return {"version": VERSION, "tipo": "PRUEBAS_DE_CONTROL_ESTRUCTURAL", **CANDADOS, "ruta_cierre_latente": ruta,
             "n_textos_entrada": len(textos), "textos_entrada": textos, "bloques": bloques, "banderas": banderas,
+            "bolsitas_tropo": bolsitas,
             "convergencia": {"n_guardianes": len(bloques),
                              "n_con_marca": sum(1 for v in banderas.values() if v in ("MARCA", "NO_RESUELTO", "LATENTE")),
                              "cortes_latentes": (next((b for b in bloques if b["guardian"] == "DECIMO_HOMBRE_LATENCIA"), {}).get("detalle") or {}).get("cortes_latentes", []),
