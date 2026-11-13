@@ -265,3 +265,11 @@ Los reportes y scripts van a la carpeta nueva `motor/noche_20261112/`
 (junto a los laterales), para que todo lo de esta noche quede junto y con
 este índice como puerta de entrada. `motor/reconexion_v2a1/` no existía en
 la rama: se crea con el lateral de no-duplicación y sus tableros sombra.
+
+## Cableado del Caldero (subido después, 2026-11-13 ~01:15 CST)
+
+- **CABLEADO_CALDERO_20261112.md**: por qué el Caldero "no estaba cableado" — nada se descableó, nunca se cableó completo (4 contratos contradictorios).
+- **CABLEADO_CALDERO_VERIFICACION_20261112.md**: los 5 cables, puerta PASA en las 3 corridas cableadas (tablero P idéntico, Engine y 244 intactos).
+- Los archivos cableados suben en esta misma entrega: `motor/correr_estandar.py` (cables 1 y 4), `motor/motor/MOTOR_V15_3_UNICO_20260927.py` (cables 2, 2b, 3 y 5), `motor/capa_llm/consulta_dirigida_v1.py` (adaptador Gemini + corrección Q_ANIO).
+- **Corrección Q_ANIO (2026-11-12 ~22:58 CST, después del reporte de verificación):** la regla rechaza la entrada del dato del año, no la pregunta. La plantilla ya no mete el año ("corte C1", no "C1_1831") y el prompt tampoco lo lleva. Verificado: 28 preguntas, 0 rechazadas, 18 respuestas aceptadas; H1 sacrificio / H2 sabio, frágil.
+- Queda pendiente la decisión de Marco sobre los cuartos: ¿un contra cuenta como evidencia de etapa?

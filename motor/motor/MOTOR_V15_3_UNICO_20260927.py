@@ -2364,8 +2364,36 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     if circ and hasattr(circ,"posicion_por_corte"):
         _cal_raw=[str(x.get("token")).strip().casefold() for x in ((features.get("caldero_busqueda_arquetipos") or {}).get("caldero_input") or {}).get("tokens_neighbors") or [] if isinstance(x,dict) and str(x.get("token")).strip()]
         _mono_vocab={str(t).strip().casefold() for _q in getattr(circ,"ESTRUCTURAS_CANDIDATAS",{}).values() for t in (_q.get("tokens_candidatos") or [])}
-        _cal_current=sorted({t for t in _cal_raw if t in _mono_vocab})
-        _cal_ignored=sorted({t for t in _cal_raw if t not in _mono_vocab})
+        # CABLEADO_CALDERO_20261112 (5): mapeo por familia, no exact-only.
+        # Un vecino mapea si es token favor/contra de alguna familia
+        # monomito_XX (vía el catálogo, _patterns()) o si está en el
+        # vocabulario de candidatos del plugin (ruta anterior, se conserva).
+        # Se registra la ruta por token: familia:cuarto:signo y/o
+        # candidato_plugin. El dict del puente dice si lleva o no lleva.
+        _mono_fam={}
+        try:
+            for _fam,_spec in (_patterns().items() if isinstance(_patterns(),dict) else []):
+                if not str(_fam).startswith("monomito_"):
+                    continue
+                try: _n=int(str(_fam).split("_")[1])
+                except (ValueError, IndexError): continue
+                _q="Q1" if _n<=3 else "Q2" if _n<=6 else "Q3" if _n<=9 else "Q4"
+                for _tk in list((_spec.get("tokens_favor") or {})):
+                    _mono_fam.setdefault(str(_tk).strip().casefold(),[]).append(f"{_fam}:{_q}:favor")
+                for _tk in list((_spec.get("tokens_contra") or {})):
+                    _mono_fam.setdefault(str(_tk).strip().casefold(),[]).append(f"{_fam}:{_q}:contra")
+        except Exception:
+            _mono_fam={}
+        _cal_mapa={}
+        for _t in sorted(set(_cal_raw)):
+            _rutas=[]
+            if _t in _mono_vocab:
+                _rutas.append("candidato_plugin")
+            _rutas.extend(_mono_fam.get(_t,[]))
+            if _rutas:
+                _cal_mapa[_t]=_rutas
+        _cal_current=sorted(_cal_mapa)
+        _cal_ignored=sorted({t for t in _cal_raw if t not in _cal_mapa})
         _mono_cuts=[]
         for _raw in (case.get("cuts") or []):
             _cid=str(_raw.get("id") or _raw.get("corte") or "")
@@ -2378,12 +2406,12 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             # the work/final cut only; earlier cuts retain their own frozen tokens.
             _mono_cuts[-1]=(_mono_cuts[-1][0],_mono_cuts[-1][1],_mono_cuts[-1][2],{"tokens_neighbors":_cal_current,"source":"caldero_current_run"})
         _mono=_ceb_stage("plugin_circulo_monomito_v2", lambda: circ.posicion_por_corte(_mono_cuts))
-        _mono["caldero_bridge"]={"wired":True,"current_neighbors":_cal_current,"raw_current_neighbors":len(_cal_raw),"ignored_unmapped_neighbors":_cal_ignored,"injected_cut":(_mono_cuts[-1][0] if _mono_cuts and _cal_current else None),"historical_memory_used_as_current":False,"mapping":"exact_existing_monomito_vocab_only"}
+        _mono["caldero_bridge"]={"wired":True,"lleva_vecinos":bool(_cal_current),"estado":("CON_VECINOS" if _cal_current else "SIN_VECINOS"),"current_neighbors":_cal_current,"mapeo_por_token":_cal_mapa,"raw_current_neighbors":len(_cal_raw),"ignored_unmapped_neighbors":_cal_ignored,"injected_cut":(_mono_cuts[-1][0] if _mono_cuts and _cal_current else None),"historical_memory_used_as_current":False,"mapping":"familia_monomito_favor_contra_o_candidato_plugin"}
         def _store_mono():
             features["plugin_circulo_monomito"]=_mono
             return _mono
         _ceb_stage("plugin_circulo_monomito_v2.output", _store_mono, shared=[_mono])
-        status.append({"component":"plugin_circulo_monomito_v2.py","status":"EXECUTED","feeds_predictor":True,"feeds_H":False,"can_decide_H":False,"caldero_bridge":True,"current_caldero_neighbors":len(_cal_current),"question_forwarded":True,"role":"lateral_quadrant_resolution"})
+        status.append({"component":"plugin_circulo_monomito_v2.py","status":"EXECUTED","feeds_predictor":True,"feeds_H":False,"can_decide_H":False,"caldero_bridge":True,"lleva_vecinos":bool(_cal_current),"current_caldero_neighbors":len(_cal_current),"question_forwarded":True,"role":"lateral_quadrant_resolution"})
     else:
         status.append({"component":"plugin_circulo_monomito_v2.py","status":"PLUGIN_SALTADO","reason":"archivo_o_API_no_disponible","effect":"sin_resolucion_Q1_Q4"})
 
@@ -2396,7 +2424,17 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         features["interrelation"]=interrelation
         status.append({"component":"motor_interrelacion_extensible_v0_1.py","status":"PLUGIN_SALTADO","reason":"archivo_no_en_este_pack"})
     else:
-        _lights=list(case.get("external_lights", []) or [])
+        # CABLEADO_CALDERO_20261112 (2): las luces del contrato no traen
+        # "branch" y run_external lo exige (KeyError: 'branch'). Normalizar:
+        # branch = fuente del contrato o "capa2". Se copia cada luz para no
+        # mutar el caso sellado; las de Cameo ya traen branch.
+        _lights=[]
+        for _l0 in (case.get("external_lights", []) or []):
+            if isinstance(_l0, dict) and _l0.get("token"):
+                _l=dict(_l0)
+                if not _l.get("branch"):
+                    _l["branch"]=str(_l.get("fuente") or "capa2")
+                _lights.append(_l)
         _lights.extend([{"token":t,"branch":"cameo","stereotype":"cameo_institucional","axes":()} for t in cameo_tokens])
 
         # Persistent Caldero neighbors are part of the reusable light bus.
@@ -2591,7 +2629,15 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     # The first interrelation pass remains a baseline; this pass incorporates
     # persistent Caldero lights loaded from StinkBox and current-run reactivations.
     if interrelation_mod is not None and not _off("interrelation"):
-        _lights2=list(case.get("external_lights", []) or [])
+        # CABLEADO_CALDERO_20261112 (2b): mismo arreglo que en la primera pasada:
+        # las luces del contrato no traen "branch" y run_external lo exige.
+        _lights2=[]
+        for _l0 in (case.get("external_lights", []) or []):
+            if isinstance(_l0, dict) and _l0.get("token"):
+                _l=dict(_l0)
+                if not _l.get("branch"):
+                    _l["branch"]=str(_l.get("fuente") or "capa2")
+                _lights2.append(_l)
         _lights2.extend([{"token":t,"branch":"cameo","stereotype":"cameo_institucional","axes":()} for t in cameo_tokens])
         _persistent_lights=list((features.get("stinkbox_transport") or {}).get("persistent_neighbor_lights") or [])
         # PATCH 011: solo luces de vecinos aportados por OTROS casos/inputs del store actual (sin propios ni restos ya fuera del store).
@@ -3693,7 +3739,7 @@ def _resolver_cierre_operativo_017(result,pred,boards,histories,features,motor,r
     needs_tortugas=(info.get("state") not in ("DETERMINADO","RESUELTO_OPERACIONALMENTE") or margin<GATE_SEPARATION or guardian_obj or len(cands)<2 or bool(similar_case_ids))
     tortugas=(result.get("cierre_guardianes") or {}).get("tortugas")
     if modo=="020":
-        # CIERRE_020: orden = rank_fusion; tortugas/casos semejantes solo dentro de la banda; pistas LLM solo traza.
+        # CIERRE_020: orden = rank_fusion; tortugas/casos semejantes solo dentro de la banda; pistas LLM ordenan dentro de la banda, tras tortugas/casos semejantes (CABLEADO_CALDERO_20261112).
         cands,tortugas,_banda020=_ordenar_020(cands,pred,boards,histories,features,motor,route,sim_votes,llm_hint_scores,tortugas_prev=tortugas)
         needs_tortugas=bool(_banda020.get("requiere_medicion_tortugas"))
         pred["candidates"]=cands
@@ -3873,8 +3919,13 @@ def _grupos_banda_020(cands, delta):
     return grupos
 
 def _clave_desempate_020(c):
+    # CABLEADO_CALDERO_20261112 (3): el puntaje de pista LLM entra al orden
+    # DENTRO de la banda, tras tortugas/casos semejantes y antes de rank_fusion.
+    # Solo reordena dentro del grupo de banda (eso lo garantiza _ordenar_020);
+    # nunca fuera de ella, y no cambia el default del modo.
     return (-int(c.get("apoyo_tortugas_votos", 0)), -int(c.get("resoluciones_previas_casos_semejantes", 0)),
-            -round(float(c.get("apoyo_tortugas_media", 0.0)), 6), -float(c.get("rank_fusion", 0.0)), str(c.get("family")))
+            -round(float(c.get("apoyo_tortugas_media", 0.0)), 6), -round(float(c.get("pista_llm_arquetipos_traza", 0.0)), 6),
+            -float(c.get("rank_fusion", 0.0)), str(c.get("family")))
 
 def _ordenar_020(cands, pred, boards, histories, features, motor, route, sim_votes, llm_hint_scores, tortugas_prev=None):
     """Devuelve (cands_ordenadas, tortugas, banda_info). Solo reordena DENTRO de cada grupo de banda."""
@@ -3916,7 +3967,7 @@ def _ordenar_020(cands, pred, boards, histories, features, motor, route, sim_vot
         c["casos_semejantes_con_familia_en_H2"] = int(sim_votes.get(fam, {}).get("runner_up", 0))
         c["n_casos_semejantes"] = int(sim_votes.get(fam, {}).get("similar_cases", 0))
         c["mejor_similitud_casos_previos"] = round(float(sim_votes.get(fam, {}).get("best_similarity", 0.0)), 6)
-        c["pista_llm_arquetipos_traza"] = float(llm_hint_scores.get(fam, 0.0))   # traza lateral; no entra al orden
+        c["pista_llm_arquetipos_traza"] = float(llm_hint_scores.get(fam, 0.0))   # traza lateral; entra al orden SOLO dentro de la banda 020 (ver _clave_desempate_020)
     nuevo = []; registro = []
     for g in grupos:
         miembros = [cands[k] for k in g]
@@ -3930,10 +3981,11 @@ def _ordenar_020(cands, pred, boards, histories, features, motor, route, sim_vot
                 if a.get("apoyo_tortugas_votos", 0) != b.get("apoyo_tortugas_votos", 0): por = "tortugas_votos_argmax"
                 elif a.get("resoluciones_previas_casos_semejantes", 0) != b.get("resoluciones_previas_casos_semejantes", 0): por = "casos_semejantes_resoluciones_previas"
                 elif round(a.get("apoyo_tortugas_media", 0.0), 6) != round(b.get("apoyo_tortugas_media", 0.0), 6): por = "tortugas_evidencia_media"
+                elif round(a.get("pista_llm_arquetipos_traza", 0.0), 6) != round(b.get("pista_llm_arquetipos_traza", 0.0), 6): por = "pista_llm_arquetipos"
                 else: por = "rank_fusion"
                 cambios.append({"posicion_operativa": g[0] + pos + 1, "entra": a["family"], "en_lugar_de": b["family"], "por": por,
-                                "valores_entra": [a.get("apoyo_tortugas_votos"), a.get("resoluciones_previas_casos_semejantes"), round(a.get("apoyo_tortugas_media", 0.0), 6), a.get("rank_fusion")],
-                                "valores_en_lugar_de": [b.get("apoyo_tortugas_votos"), b.get("resoluciones_previas_casos_semejantes"), round(b.get("apoyo_tortugas_media", 0.0), 6), b.get("rank_fusion")]})
+                                "valores_entra": [a.get("apoyo_tortugas_votos"), a.get("resoluciones_previas_casos_semejantes"), round(a.get("apoyo_tortugas_media", 0.0), 6), round(a.get("pista_llm_arquetipos_traza", 0.0), 6), a.get("rank_fusion")],
+                                "valores_en_lugar_de": [b.get("apoyo_tortugas_votos"), b.get("resoluciones_previas_casos_semejantes"), round(b.get("apoyo_tortugas_media", 0.0), 6), round(b.get("pista_llm_arquetipos_traza", 0.0), 6), b.get("rank_fusion")]})
             registro.append({"posiciones_rank_fusion": [k + 1 for k in g], "miembros_orden_rank_fusion": antes,
                              "rank_fusion": [m.get("rank_fusion") for m in miembros],
                              "distancia_al_lider": [round(float(miembros[0]["rank_fusion"]) - float(m["rank_fusion"]), 6) for m in miembros],
@@ -3956,8 +4008,8 @@ def _ordenar_020(cands, pred, boards, histories, features, motor, route, sim_vot
                   "H1_en_banda": bool(grupos and len(grupos[0]) >= 2),
                   "H1_cambiado_por_desempate": bool(nuevo and cands and nuevo[0]["family"] != cands[0]["family"]),
                   "H2_cambiado_por_desempate": bool(len(nuevo) > 1 and len(cands) > 1 and nuevo[1]["family"] != cands[1]["family"]),
-                  "clave_desempate": "tortugas votos_argmax > resoluciones previas de casos semejantes > tortugas evidencia_media > rank_fusion > nombre",
-                  "pistas_llm_en_orden": False})
+                  "clave_desempate": "tortugas votos_argmax > resoluciones previas de casos semejantes > tortugas evidencia_media > pista_llm_arquetipos > rank_fusion > nombre",
+                  "pistas_llm_en_orden": True})
     return nuevo, tortugas, banda
 
 def _pesos_020(cands):

@@ -52,7 +52,10 @@ import copy
 import hashlib
 import importlib.util
 import json
+import os
 import re
+import subprocess
+import sys
 import unicodedata
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Mapping, Optional, Tuple
@@ -127,6 +130,13 @@ RX_FUGA = [r"\bcomo (?:se sabe|es sabido|es bien sabido|sabemos)\b", r"\bes (?:b
            r"\brevolucion cientifica\b", r"\bilustracion\b", r"\bmodernidad\b", r"\bedad moderna\b", r"\bsimbolo de\b",
            r"\bse convirti\w* en (?:un )?simbolo\b", r"\binfluy\w* en (?:la|el|los|las) (?:ciencia|filosofia|pensamiento|historia)\b"]
 RX_ANIO = re.compile(r"(?<!\d)(1\d{3}|20\d{2})(?!\d)")
+
+def _sin_anios(texto: str) -> str:
+    """Quita el DATO del año sin tocar el contenido: el año no entra, la pregunta sí.
+    Regla de Mj (2026-11-12): se rechaza la entrada del dato del año, no todo lo
+    que viene después de que se dijo un año. Matar, comer, morir, dormir, soñar
+    surgen en cualquier momento, sin año. Neutraliza a '(fecha)', como F3."""
+    return RX_ANIO.sub("(fecha)", str(texto or ""))
 RX_CORTE_REF = re.compile(r"\bcorte\s+([A-Z]?\d+|[A-F])\b", re.I)
 # sustantivos de ROL del léxico 016 permitidos aunque coincidan con un lema de familia (rol observable, no etiqueta)
 ROLES_016_PERMITIDOS = {"mentor", "familia", "pareja", "autoridad", "institucion", "colectivo", "antagonista", "rival", "maestro",
@@ -247,7 +257,7 @@ def validar_pregunta(texto: str, R: Recursos) -> List[str]:
         mot.append("Q_FUTURO:" + ",".join(fut))
     if not re.search(r"\bhasta el corte\b", t) or "nada posterior a" not in t:
         mot.append("Q_SIN_LIMITE_TEMPORAL")
-    if RX_ANIO.search(t): mot.append("Q_ANIO")
+    if RX_ANIO.search(t): mot.append("Q_ANIO")  # guarda: si un año quedó en el texto, el dato no entra
     lem = [l for l in R.lemas if l not in ROLES_016_PERMITIDOS and re.search(r"\b" + re.escape(l) + r"\b", t)]
     ids = [i for i in R.ids if i in t]
     if lem or ids: mot.append("Q_ETIQUETA_244:" + ",".join(sorted(set(lem) | set(ids))))
@@ -264,7 +274,8 @@ def construir_preguntas(case: Mapping[str, Any], R: Recursos) -> Dict[str, Any]:
         limite = h["fecha_corte"] or (H["z"] or "el corte " + str(h["corte"]))
         if H["z"] and h["fecha_corte"] and str(h["fecha_corte"]) > str(H["z"]):
             limite = H["z"]
-        txt = PLANTILLAS[h["tipo"]].format(corte=h["corte"], limite="la fecha del corte" if h["fecha_corte"] else "ese corte")
+        corte_ref = "C" + str(int(h["corte_idx"]) + 1)  # referencia sin año: el id crudo ("C1_1831") trae el año como dato
+        txt = PLANTILLAS[h["tipo"]].format(corte=corte_ref, limite="la fecha del corte" if h["fecha_corte"] else "ese corte")
         q = {"id": f"Q-{base}-{h['corte']}-{h['tipo']}", "tipo": h["tipo"], "corte": h["corte"], "corte_idx": h["corte_idx"],
              "regla_hueco": h["regla"], "texto": txt, "reglas_respuesta": REGLAS_RESPUESTA,
              "limite_sellado": {"fecha_max": limite, "z": H["z"], "z_idx": H["z_idx"]}}
@@ -296,6 +307,67 @@ class AdaptadorExterno:
         self.llamar = llamar
     def responder(self, pregunta: Mapping[str, Any]) -> Optional[Dict[str, Any]]:
         return self.llamar(pregunta)
+
+
+# CABLEADO_CALDERO_20261112 (4): adaptador REAL al LM del par gratis
+# (Gemini, client.py del conector custom.gemini). Antes, el modo "on" del
+# runner usaba AdaptadorOffline, que nunca responde: fingir que corre.
+# Este adaptador pregunta de verdad: construye el prompt desde la pregunta
+# sellada + los hechos del corte, llama al CLI de Gemini y devuelve
+# {"texto","tokens","fuente"}. Nunca levanta: cualquier fallo (red, CLI,
+# JSON, timeout) devuelve None (SIN_RESPUESTA) y la corrida sigue.
+# No decide H: solo engrosa el input; los filtros F0-F5 y
+# verificar_no_escribe_H siguen mandando.
+class AdaptadorGemini:
+    nombre = "gemini-3-flash-preview"
+    def __init__(self, case=None, modelo: str = "gemini-3-flash-preview", timeout: float = 60.0, cli=None):
+        self.case = dict(case or {})
+        self.modelo = modelo
+        self.timeout = float(timeout)
+        self.cli = Path(cli or os.environ.get("GEMINI_CLI") or (Path.home() / "workspace/custom-connectors/custom.gemini/bin/client.py"))
+        if not self.cli.is_file():
+            raise FileNotFoundError(f"GEMINI_CLI_AUSENTE:{self.cli}")
+        self._hechos = {}
+        for c in (self.case.get("cuts") or []):
+            self._hechos[str(c.get("id"))] = str(c.get("hecho") or c.get("narracion") or "")[:1500]
+
+    def responder(self, pregunta: Mapping[str, Any]) -> Optional[Dict[str, Any]]:
+        try:
+            return self._responder(pregunta)
+        except Exception:
+            return None
+
+    def _responder(self, pregunta: Mapping[str, Any]) -> Optional[Dict[str, Any]]:
+        corte = str(pregunta.get("corte") or "")
+        # Referencia sin año y límite sin fecha: el año no entra como dato (regla de Mj).
+        corte_ref = "C" + str(int(pregunta.get("corte_idx", 0)) + 1) if str(pregunta.get("corte_idx", "")).strip() != "" else _sin_anios(corte)
+        limite = "ese corte"
+        hecho = _sin_anios(self._hechos.get(corte, ""))
+        prompt = (
+            "Describe hechos observables de un caso, solo hasta el corte indicado. "
+            f"Corte {corte_ref} (nada posterior a {limite}). "
+            f"Hechos del corte: {hecho or '(sin texto)'} "
+            f"Pregunta: {pregunta.get('texto') or ''} "
+            "Reglas estrictas: solo hechos observables en ese corte; roles genéricos, sin nombres propios de personas, "
+            "sin años ni fechas, sin valoraciones, sin desenlaces, sin hipótesis, sin arquetipos, sin predicciones, "
+            "sin mencionar lo que pasó después. "
+            "Responde SOLO con este JSON, sin más texto: {\"texto\": \"...\", \"tokens\": [\"palabra1\", \"palabra2\"]} "
+            "donde tokens son 0 a 2 palabras simples que aparecen en los hechos del corte (o lista vacía)."
+        )
+        r = subprocess.run([sys.executable, str(self.cli), "generate", "--model", self.modelo, "--prompt", prompt],
+                           capture_output=True, text=True, timeout=self.timeout)
+        out = (r.stdout or "").strip()
+        if not out:
+            return None
+        ini, fin = out.find("{"), out.rfind("}")
+        if ini < 0 or fin <= ini:
+            return None
+        data = json.loads(out[ini:fin + 1])
+        texto = str(data.get("texto") or "").strip()
+        toks = [str(t).strip() for t in (data.get("tokens") or []) if str(t).strip()][:2]
+        if not texto:
+            return None
+        return {"texto": texto, "tokens": toks, "fuente": "gemini:" + self.modelo}
 
 
 # ------------------------------------------------------------------ 4. filtros

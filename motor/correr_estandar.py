@@ -641,8 +641,34 @@ def main(argv) -> int:
         _f017_cat = json.loads((MOTOR / "patterns_final_v14.json").read_text(encoding="utf-8"))
         case, _f017_traza = _f017.compuerta(case, _f017_modo, _f017_cat)
 
+    # CABLEADO_CALDERO_20261112 (1): fuentes del contrato -> fixture del sidecar.
+    # CONTRATO_ENTRADA_LLM.txt promete que caldero_search_sources alimenta al
+    # Caldero, pero el sidecar nunca las leyó (0 menciones). El camino que ya
+    # existe es el fixture: el MOTOR lee caldero_search_fixture solo con
+    # allow_static_search_fixture=True (pre-H y Caldero principal). Si el caso
+    # trae sources y no trae fixture, se construye el fixture desde las
+    # sources (id->title, texto->snippet, url si la hay) y se enciende el
+    # permiso. No se inventa otro camino ni se toca el sidecar.
+    if (case.get("caldero_search_sources") and not case.get("caldero_search_fixture")
+            and case.get("allow_static_search_fixture") is not True):
+        _fx = []
+        for _s in (case.get("caldero_search_sources") or []):
+            if not isinstance(_s, dict):
+                continue
+            _row = {"id": _s.get("id") or "", "title": _s.get("title") or _s.get("id") or "",
+                    "snippet": _s.get("snippet") or _s.get("texto") or "",
+                    "texto": _s.get("texto") or "", "origen": _s.get("origen") or "llm"}
+            if _s.get("url"):
+                _row["url"] = _s["url"]
+            _fx.append(_row)
+        if _fx:
+            case["caldero_search_fixture"] = _fx
+            case["allow_static_search_fixture"] = True
+
     # UNIFICADO_20261011 — capa LLM de CONSULTAS DIRIGIDAS (fuera del motor). CONSULTA_DIRIGIDA=off (defecto) no toca nada.
-    #   on|offline: adaptador OFFLINE (sin respuestas, sin red)   mock: respuestas fijas de prueba (CONSULTA_FIXTURE, CONSULTA_CASE_KEY)
+    #   on: adaptador REAL del par gratis (Gemini; CABLEADO_CALDERO_20261112)
+    #   offline: adaptador OFFLINE (sin respuestas, sin red)
+    #   mock: respuestas fijas de prueba (CONSULTA_FIXTURE, CONSULTA_CASE_KEY)
     _cd_traza = None
     _cd_modo = os.environ.get("CONSULTA_DIRIGIDA", "off").strip().lower()
     if _cd_modo in ("on", "offline", "mock"):
@@ -654,6 +680,16 @@ def main(argv) -> int:
         if _cd_modo == "mock":
             _cdfx = json.loads(Path(os.environ["CONSULTA_FIXTURE"]).read_text(encoding="utf-8"))
             _cdad = _cd.AdaptadorMock(_cdfx, os.environ.get("CONSULTA_CASE_KEY") or nombre)
+        elif _cd_modo == "on":
+            # CABLEADO_CALDERO_20261112 (4): "on" usaba AdaptadorOffline, que
+            # nunca responde (fingir que corre). Ahora pregunta de verdad al
+            # LM del par gratis. Si el adaptador no se puede construir, se cae
+            # a OFFLINE y la traza lo dice; la corrida nunca muere por la consulta.
+            try:
+                _cdad = _cd.AdaptadorGemini(case)
+            except Exception as _cd_exc:
+                print(f"AVISO CONSULTA_DIRIGIDA: sin adaptador real ({type(_cd_exc).__name__}), se usa OFFLINE", file=sys.stderr)
+                _cdad = _cd.AdaptadorOffline()
         else:
             _cdad = _cd.AdaptadorOffline()
         case, _cd_traza, _cd_side = _cd.aplicar(case, _cdad, _cdR)
