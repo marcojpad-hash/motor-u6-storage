@@ -5,7 +5,7 @@ Verifica por ejecución (no solo por lectura):
   RECHAZADO (bloquea) con un corte post-Z90 y sin evidencia.
 - _efectividad_corte_retenido: previo_error y visto_error presentes en éxito ("")
   y en fallo (stderr_tail), nunca ausentes ni None.
-- E2E: correr_estandar bloquea un caso post-Z90 con exit 7 ANTES de correr el
+- E2E: correr_estandar bloquea un caso post-Z90 con exit 8 ANTES de correr el
   motor, y escribe resultado + recibo con estado BLOQUEADO_GUARDIAN_Z90.
 """
 import importlib.util, json, os, subprocess, sys
@@ -78,8 +78,8 @@ def test_previo_error_presente_en_exito():
     visto = {"_internal_run_status": "COMPLETED_ISOLATED_SUBPROCESS",
              "predictor": {"candidates": []}, "cuts": []}
     out = runner._efectividad_corte_retenido(sello, visto, {"id": "C2"})
-    assert "previo_error" in out and out["previo_error"] == ""
-    assert "visto_error" in out and out["visto_error"] == ""
+    assert "previo_error" in out and out["previo_error"] is False
+    assert "visto_error" in out and out["visto_error"] is False
     assert out["previo_status"] == "COMPLETED_ISOLATED_SUBPROCESS"
     assert out["visto_status"] == "COMPLETED_ISOLATED_SUBPROCESS"
     assert out["internal_runs_isolated"] is True
@@ -91,7 +91,7 @@ def test_previo_error_presente_en_fallo():
     out = runner._efectividad_corte_retenido(sello, visto, {"id": "C2"})
     assert out["estado"] == "INTERNAL_T1_RUN_FAILED"
     assert out["previo_error"] == "Traceback: boom"
-    assert out["visto_error"] == ""
+    assert out["visto_error"] is False
     assert out["previo_status"] == "ERROR"
 
 
@@ -107,7 +107,7 @@ def test_bloqueo_z90_e2e(tmp_path, monkeypatch):
     env.pop("FABRICA_GATE_Z90", None)
     pr = subprocess.run([sys.executable, str(ROOT / "correr_estandar.py"), str(src), "TEST_Z90", str(out)],
                         cwd=str(ROOT), text=True, capture_output=True, timeout=180, env=env)
-    assert pr.returncode == 7, pr.stdout[-2000:] + pr.stderr[-2000:]
+    assert pr.returncode == 8, pr.stdout[-2000:] + pr.stderr[-2000:]
     res = json.loads(out.read_text(encoding="utf-8"))
     assert res["estado"] == "BLOQUEADO_GUARDIAN_Z90"
     assert res["guardian_z90"]["status"] == "RECHAZADO"
