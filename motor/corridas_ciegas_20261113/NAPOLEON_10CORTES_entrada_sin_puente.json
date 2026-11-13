@@ -1,0 +1,632 @@
+{
+  "case_id": "NAPOLEON_FRESH_Z90_U6_20261111",
+  "question": "¿Qué configuración dinámica se perfila en Napoleón a partir de una nueva selección independiente de hitos biográficos, usando solo evidencia hasta Z90?",
+  "protocol": "BIOGRAFIA_Z90_CASO_FRESCO_COMPARATIVO_20261111",
+  "birth_date": "1769-08-15",
+  "death_date": "1821-05-05",
+  "z90_date": "1816-03-03",
+  "source_mode": "CONSTRUCCION_PECAS_20261111",
+  "caldero_identity": {
+    "nombre_o_alias": "Napoleón Bonaparte",
+    "prohibido_self_match": true
+  },
+  "caldero_archetype_input": {
+    "tokens_activos": [
+      "ambicion",
+      "aprendizaje",
+      "audacia",
+      "competencia",
+      "conocimiento",
+      "creatividad",
+      "desafio_autoridad",
+      "independencia",
+      "liderazgo",
+      "logro_personal",
+      "poder",
+      "reconocimiento",
+      "reflexion",
+      "victoria"
+    ]
+  },
+  "caldero_search_sources": [
+    {
+      "id": "src1",
+      "texto": "Napoleón Bonaparte: nace en Ajaccio el 15-ago-1769; ingresa en Brienne en 1779; se gradúa en la École Militaire y es nombrado teniente segundo de artillería en 1785.",
+      "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    },
+    {
+      "id": "src2",
+      "texto": "Tolón (19-dic-1793): Napoleón dirige la artillería que recupera el puerto; asciende a general de brigada. Campaña de Italia (1796): victorias de Montenotte y Lodi; reconocimiento en toda Francia.",
+      "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    },
+    {
+      "id": "src3",
+      "texto": "18 Brumario (9-nov-1799): golpe de Estado; Primer Cónsul. Coronación como emperador (2-dic-1804). Austerlitz (2-dic-1805). Tilsit (7-jul-1807): apogeo del poder en Europa.",
+      "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    },
+    {
+      "id": "src4",
+      "texto": "Invasión de Rusia (24-jun-1812): cruza el Niemen con la Grande Armée. Waterloo (18-jun-1815): derrota definitiva. Exilio a Santa Elena (oct-1815), donde escribe sus memorias.",
+      "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+  ],
+  "caldero_llm_neighbor_hints": [],
+  "external_lights": [
+    {
+      "token": "ambicion",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "aprendizaje",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "audacia",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "competencia",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "conocimiento",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "creatividad",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "desafio_autoridad",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "independencia",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "liderazgo",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "logro_personal",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "poder",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "reconocimiento",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "reflexion",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    },
+    {
+      "token": "victoria",
+      "branch": "biografia_publica",
+      "stereotype": "construccion_pecas",
+      "axes": [
+        "trajectory"
+      ]
+    }
+  ],
+  "random_seed": 20261111,
+  "protocol_note": "Caso nuevo construido por Pecas 2026-11-11 a partir de la cronología pública de Napoleón, mismo formato que el precedente Mozart 10 cortes (INPUT_FROZEN). Z90=1816-03-03 calculado desde nacimiento 1769-08-15 y muerte 1821-05-05 (18,890 días; 90% = 17,001); la muerte solo calcula la frontera temporal. Cada corte usa solo evidencia hasta su fecha; C10 es corte de frontera que resume evidencia documentada hasta 1815, sin añadir acontecimientos de 1816. Pesos = asignación interpretativa de Pecas (weight_rationale NOT_RECORDED_IN_INPUT, mismo estado que el precedente). Los 14 tokens P están verificados en el vocabulario del 244 (patterns_final_v14.json, 703 tokens). A y C vacíos, como en el precedente.",
+  "cuts": [
+    {
+      "id": "C1",
+      "date": "1779-05-15",
+      "P": [
+        [
+          "aprendizaje",
+          0.78
+        ],
+        [
+          "conocimiento",
+          0.66
+        ],
+        [
+          "ambicion",
+          0.68
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "aprendizaje",
+          "strength": 0.78,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "conocimiento",
+          "strength": 0.66,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "ambicion",
+          "strength": 0.68,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "date": "1785-09-30",
+      "P": [
+        [
+          "conocimiento",
+          0.76
+        ],
+        [
+          "competencia",
+          0.74
+        ],
+        [
+          "ambicion",
+          0.7
+        ],
+        [
+          "liderazgo",
+          0.66
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "conocimiento",
+          "strength": 0.76,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "competencia",
+          "strength": 0.74,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "ambicion",
+          "strength": 0.7,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "liderazgo",
+          "strength": 0.66,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "date": "1793-12-19",
+      "P": [
+        [
+          "competencia",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "reconocimiento",
+          0.74
+        ],
+        [
+          "liderazgo",
+          0.72
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "competencia",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "ambicion",
+          "strength": 0.78,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.74,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "liderazgo",
+          "strength": 0.72,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "date": "1796-04-11",
+      "P": [
+        [
+          "ambicion",
+          0.82
+        ],
+        [
+          "victoria",
+          0.82
+        ],
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "reconocimiento",
+          0.74
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "ambicion",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "victoria",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "liderazgo",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.74,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "date": "1799-11-09",
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "desafio_autoridad",
+          0.82
+        ],
+        [
+          "poder",
+          0.8
+        ],
+        [
+          "independencia",
+          0.76
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "ambicion",
+          "strength": 0.84,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "desafio_autoridad",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "poder",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "independencia",
+          "strength": 0.76,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "date": "1804-12-02",
+      "P": [
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.74
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "poder",
+          "strength": 0.84,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "logro_personal",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "ambicion",
+          "strength": 0.74,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "date": "1805-12-02",
+      "P": [
+        [
+          "victoria",
+          0.84
+        ],
+        [
+          "liderazgo",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "logro_personal",
+          0.78
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "victoria",
+          "strength": 0.84,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "liderazgo",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "logro_personal",
+          "strength": 0.78,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "date": "1807-07-07",
+      "P": [
+        [
+          "poder",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "ambicion",
+          0.76
+        ],
+        [
+          "logro_personal",
+          0.74
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "poder",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "ambicion",
+          "strength": 0.76,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "logro_personal",
+          "strength": 0.74,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "date": "1812-06-24",
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "poder",
+          0.72
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "ambicion",
+          "strength": 0.84,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "audacia",
+          "strength": 0.8,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "desafio_autoridad",
+          "strength": 0.78,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "poder",
+          "strength": 0.72,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "date": "1816-03-03",
+      "P": [
+        [
+          "reflexion",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.76
+        ],
+        [
+          "aprendizaje",
+          0.72
+        ],
+        [
+          "independencia",
+          0.7
+        ],
+        [
+          "reconocimiento",
+          0.66
+        ]
+      ],
+      "A": [],
+      "C": [],
+      "external_activations": [
+        {
+          "token": "reflexion",
+          "strength": 0.82,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "creatividad",
+          "strength": 0.76,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "aprendizaje",
+          "strength": 0.72,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "independencia",
+          "strength": 0.7,
+          "source": "construccion_pecas_pre_Z90"
+        },
+        {
+          "token": "reconocimiento",
+          "strength": 0.66,
+          "source": "construccion_pecas_pre_Z90"
+        }
+      ]
+    }
+  ]
+}
