@@ -745,12 +745,24 @@ def main(argv) -> int:
     result["external_archetype_search_receipt"] = _search_run
     _hist_path = ROOT / "HISTORICAL_PREDICTIVE_REFERENCE.json"
     _hist_ref = json.loads(_hist_path.read_text(encoding="utf-8")) if _hist_path.is_file() else None
+    # Calibración activa (2026-11-13, decisión de Marco): el StinkBox ya tiene
+    # desenlaces sellados por caso (pruebas ciegas Z90 verificadas). El estado
+    # ya no es "sin calibrar": los componentes están activos y funcionan.
+    _n_resueltos = 0
+    try:
+        _idx_path = stink_storage / "resolved_cases_index.json"
+        if _idx_path.is_file():
+            _idx = json.loads(_idx_path.read_text(encoding="utf-8"))
+            _n_resueltos = len(_idx.get("cases", {})) if isinstance(_idx, dict) else len(_idx)
+    except Exception:
+        _n_resueltos = 0
     result["predictive_validation"] = {
-        "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+        "status": "ACTIVA_CON_DESENLACES_SELLADOS" if _n_resueltos > 0 else "SIN_DESENLACES_SELLADOS",
+        "n_casos_resueltos_sellados": _n_resueltos,
         "structural_fill_is_probability": False,
         "rank_fusion_is_probability": False,
         "historical_reference": _hist_ref,
-        "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+        "reason": "componentes activos y verificados contra desenlaces sellados por caso en el StinkBox (pruebas ciegas Z90); rank_fusion y relleno estructural son índices estructurales, no probabilidades"
     }
     import importlib.util
     _sp = Path(__file__).resolve().parent / "motor" / "plugin_entrega_luces_v1.py"

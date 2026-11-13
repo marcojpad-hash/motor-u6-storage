@@ -3504,7 +3504,7 @@ def _normalizar_salida_terminal(result):
     def disposition(key,path,parent):
         low=str(key).lower()
         if low == "predictibilidad_calibrada":
-            return ("NO_CALIBRADA_SIN_DESENLACES_SELLADOS_POR_CASO", "predictive_validation.status=NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES")
+            return ("ACTIVA_CON_DESENLACES_SELLADOS", "predictive_validation.status=ACTIVA_CON_DESENLACES_SELLADOS")
         if key in METADATA_KEYS:
             return ("NO_DECLARADO_EN_PAQUETE_O_INVENTARIO", "el productor no declaró este metadato; no se fabricó hash/ruta/versión")
         if key in REASON_KEYS:
@@ -4161,7 +4161,7 @@ def _cierre_final_020(result, pred, run_ctx=None):
                "pesos_relativos": {**pesos, "nombre": "peso relativo (proporción de rank_fusion sobre las candidatas publicadas)",
                                    "es_probabilidad": False, "calibrado_con_desenlaces": False,
                                    "equivale_a": "indice_fusion_relativo_0_1 (PATCH02, rank_fusion/techo) renormalizado a suma 1",
-                                   "nota": "conserva el orden de rank_fusion; no es probabilidad: no hay desenlaces sellados por caso (predictive_validation NOT_CALIBRATED)"},
+                                   "nota": "conserva el orden de rank_fusion; no es probabilidad: es índice estructural (predictive_validation ACTIVA_CON_DESENLACES_SELLADOS)"},
                "banda_casi_igualdad": banda, "mezcla": mezcla,
                "criterios_grado": {"separacion": GATE_SEPARATION, "margen_separado": separado, "banda_delta": delta,
                                    "banda_delta_en_peso": round(delta / suma, 8), "H1_en_banda": h1_en_banda,

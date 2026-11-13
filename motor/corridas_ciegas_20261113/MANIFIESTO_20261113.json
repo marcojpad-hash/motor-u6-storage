@@ -67,5 +67,21 @@
    "sha256_result_crudo": "a2b9a9f5ab936353ffebdf70f1ca1201e647eb9c9121afcbd06fe0d397500f4e",
    "nota": "Re-corrida de ANONIMO4 (Che) para verificar las etiquetas; no es una prueba ciega nueva"
   }
- ]
+ ],
+ "monte_carlo": {
+  "veredicto": "ACTIVO en las 9 corridas y en las 4 ramas (main, cameo-pesos, reconexion-2a1, fix). El corredor bloquea --no-mc (MONTE_CARLO_OBLIGATORIO en motor/correr_estandar.py).",
+  "nota_bandera": "El campo laterales_unico/post/contrato_formular_h/salida/freeze/monte_carlo_en_v15_3=False NO significa que falte Monte Carlo: significa que Monte Carlo no vive dentro del archivo Engine v15_3; corre como capa de observacion/auditoria alrededor del Engine (motor.monte_carlo_audit, status EXECUTED, 21 llamadas de observacion por corrida).",
+  "totales_por_corrida": {
+   "ANONIMO_Z90_20261113": 13310,
+   "ANONIMO2_Z90_20261113": 13247,
+   "ANONIMO3_Z90_20261113": 12908,
+   "ANONIMO3_Z90_20261113_v2": 13167,
+   "TRANSICION1_Z90_20261113": 12875,
+   "TRANSICION1_Z90_20261113_v2": 12562,
+   "TRANSICION2_Z90_20261113": 12801,
+   "ANONIMO4_Z90_20261113": 13617,
+   "TEST_CALIBRACION_20261113": 13617
+  },
+  "campos": "execution.monte_carlo=True, estandar.monte_carlo=True, motor.monte_carlo_audit.status=EXECUTED"
+ }
 }

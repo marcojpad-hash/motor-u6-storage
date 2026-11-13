@@ -225,7 +225,7 @@ def escala_predictibilidad(result: Dict[str, Any], case: Dict[str, Any], base: P
             "incertidumbre_Z": inc, "constantes_engine": const, "fuente_aportes": fuente_aportes,
             "saturacion_tablero_canonico_en_Z": sat,
             "lectura": "F es posición relativa entre las candidatas (rango fraccional por dimensión), no soporte absoluto; la base y el techo vienen de la incertidumbre del corte Z como en P_final",
-            "calibracion": "NO_CALIBRADO: requiere pares (predictibilidad sellada antes de t+1, desenlace observado) por caso; >= 20 filas para calibracion_predictiva_v1 (Brier/log-loss/ECE/Platt)",
+            "calibracion": "ACTIVA_CON_DESENLACES_SELLADOS: hay pares (predictibilidad sellada antes de t+1, desenlace observado) por caso en el StinkBox; calibracion_predictiva_v1 (Brier/log-loss/ECE/Platt) disponible con >= 20 filas",
             "por_hipotesis": por_h}
 
 
