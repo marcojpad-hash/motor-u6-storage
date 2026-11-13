@@ -1,0 +1,105 @@
+{
+  "lateral": "dialectica_hegeliana",
+  "contrato": "V1_20261113",
+  "case_id": "SEMMELWEIS_HEROE_SIN_TRONO_CON_PISTAS_20261112",
+  "can_decide_H": false,
+  "triadas_completas": 0,
+  "cortes_con_sintesis": 4,
+  "cortes": 7,
+  "punto_fijo_en": "C5_1852",
+  "cadena": [
+    {
+      "corte": "C1_1831",
+      "tesis": [
+        "rutina"
+      ],
+      "antitesis": [],
+      "sintesis": [],
+      "via_sintesis": "sin_sintesis",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": []
+    },
+    {
+      "corte": "C2_1846",
+      "tesis": [],
+      "antitesis": [],
+      "sintesis": [],
+      "via_sintesis": "sin_sintesis",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": []
+    },
+    {
+      "corte": "C3_1847",
+      "tesis": [],
+      "antitesis": [],
+      "sintesis": [],
+      "via_sintesis": "sin_sintesis",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": []
+    },
+    {
+      "corte": "C4_1849",
+      "tesis": [],
+      "antitesis": [
+        "ira_institucional",
+        "oposicion"
+      ],
+      "sintesis": [
+        "paz_interior"
+      ],
+      "via_sintesis": "alcance_directo",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": []
+    },
+    {
+      "corte": "C5_1852",
+      "tesis": [
+        "rutina"
+      ],
+      "antitesis": [],
+      "sintesis": [
+        "paz_interior"
+      ],
+      "via_sintesis": "presente_en_corte",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": [
+        "paz_interior"
+      ]
+    },
+    {
+      "corte": "C6_1858",
+      "tesis": [],
+      "antitesis": [
+        "ira_institucional"
+      ],
+      "sintesis": [
+        "paz_interior"
+      ],
+      "via_sintesis": "presente_en_corte",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": [
+        "paz_interior"
+      ]
+    },
+    {
+      "corte": "C7_1861",
+      "tesis": [],
+      "antitesis": [],
+      "sintesis": [
+        "paz_interior"
+      ],
+      "via_sintesis": "presente_en_corte",
+      "analogo": null,
+      "triada_completa": false,
+      "tesis_acarreada_de_anterior": [
+        "paz_interior"
+      ]
+    }
+  ]
+}
