@@ -1,0 +1,1184 @@
+{
+  "version": "NO_DUPLICACION_LATENCIA_V1_20261112",
+  "casos": [
+    {
+      "caso": "JUANA_DE_ARCO_HEROE_20261112",
+      "h1_sombra": "36_perdida_de_los_seres_queridos",
+      "p_h1_sombra": 0.8011,
+      "h2_sombra": "frye_mythos_romance",
+      "p_h2_sombra": 0.6955,
+      "h1_canonico": "arquetipo_el_gobernante",
+      "h2_canonico": "20_sacrificio_por_un_ideal",
+      "p_h1_canonico_en_sombra": 0.5149,
+      "rango_h1_canonico_en_sombra": 75,
+      "top10_sombra": [
+        [
+          "36_perdida_de_los_seres_queridos",
+          0.8011
+        ],
+        [
+          "frye_mythos_romance",
+          0.6955
+        ],
+        [
+          "monomito_05_cruce_del_primer_umbral",
+          0.689
+        ],
+        [
+          "monomito_01_mundo_ordinario",
+          0.6731
+        ],
+        [
+          "guardian_del_umbral",
+          0.672
+        ],
+        [
+          "7_caer_victima",
+          0.66
+        ],
+        [
+          "monomito_06_pruebas_aliados_y_enemigos",
+          0.6577
+        ],
+        [
+          "ttm_01_precontemplacion",
+          0.6196
+        ],
+        [
+          "ttm_04_accion",
+          0.6196
+        ],
+        [
+          "crisis_vocacional",
+          0.5747
+        ]
+      ],
+      "heroes": {
+        "heroe": {
+          "p": 0.5149,
+          "rango": 51
+        },
+        "arquetipo_heroe": {
+          "p": 0.5149,
+          "rango": 12
+        },
+        "arquetipo_el_heroe": {
+          "p": 0.5149,
+          "rango": 72
+        }
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "p": 0.5149,
+          "rango": 75
+        },
+        "kwml_01_rey": {
+          "p": 0.5149,
+          "rango": 171
+        }
+      },
+      "factor_duplicacion": 0.38095238095238093,
+      "eventos_favor": 32,
+      "eventos_contra": 13,
+      "ocurrencias": 84,
+      "frentes_abiertos": 23,
+      "frentes_resueltos": 0,
+      "frentes_sin_resolver": 23,
+      "frentes": [
+        {
+          "token": "conocimiento",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "curiosidad_abstracta",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "creatividad",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reflexion",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "claridad",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "autoridad",
+          "corte_apertura": "C1_1418",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "audacia",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "desafio_autoridad",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "proposito_claro",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oportunidad",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "liderazgo",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vision",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "incertidumbre",
+          "corte_apertura": "C2_1429_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reconocimiento",
+          "corte_apertura": "C3_1429_05",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "generacion_ideas",
+          "corte_apertura": "C3_1429_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "exposicion_trauma_ajeno",
+          "corte_apertura": "C3_1429_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "poder",
+          "corte_apertura": "C4_1429_07",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "ira_institucional",
+          "corte_apertura": "C5_1429_11",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "persecucion",
+          "corte_apertura": "C6_1430_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vulnerabilidad",
+          "corte_apertura": "C6_1430_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "sacrificio",
+          "corte_apertura": "C6_1430_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oposicion",
+          "corte_apertura": "C6_1430_05",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "busqueda_verdad",
+          "corte_apertura": "C7_1430",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        }
+      ],
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "gate_pasa": true,
+      "factor_duplicacion_canonico": 2.4166666666666665,
+      "eventos_favor_canonico": 203,
+      "eventos_contra_canonico": 70,
+      "p_azar_ancho_max": 0.001709376736732049
+    },
+    {
+      "caso": "TUBMAN_HEROE_20261112",
+      "h1_sombra": "schwartz_02_benevolencia",
+      "p_h1_sombra": 0.8124,
+      "h2_sombra": "monomito_12_regreso_con_el_elixir",
+      "p_h2_sombra": 0.8019,
+      "h1_canonico": "arquetipo_el_gobernante",
+      "h2_canonico": "monomito_01_mundo_ordinario",
+      "p_h1_canonico_en_sombra": 0.5112,
+      "rango_h1_canonico_en_sombra": 74,
+      "top10_sombra": [
+        [
+          "schwartz_02_benevolencia",
+          0.8124
+        ],
+        [
+          "monomito_12_regreso_con_el_elixir",
+          0.8019
+        ],
+        [
+          "frye_mythos_romance",
+          0.6973
+        ],
+        [
+          "monomito_05_cruce_del_primer_umbral",
+          0.6766
+        ],
+        [
+          "erikson_07_generatividad_vs_estancamiento",
+          0.6715
+        ],
+        [
+          "monomito_01_mundo_ordinario",
+          0.6694
+        ],
+        [
+          "monomito_06_pruebas_aliados_y_enemigos",
+          0.6487
+        ],
+        [
+          "ttm_04_accion",
+          0.6057
+        ],
+        [
+          "crisis_vocacional",
+          0.5112
+        ],
+        [
+          "arquetipo_heroe",
+          0.5112
+        ]
+      ],
+      "heroes": {
+        "heroe": {
+          "p": 0.5112,
+          "rango": 51
+        },
+        "arquetipo_heroe": {
+          "p": 0.5112,
+          "rango": 10
+        },
+        "arquetipo_el_heroe": {
+          "p": 0.5112,
+          "rango": 71
+        }
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "p": 0.5112,
+          "rango": 74
+        },
+        "kwml_01_rey": {
+          "p": 0.5112,
+          "rango": 170
+        }
+      },
+      "factor_duplicacion": 0.42857142857142855,
+      "eventos_favor": 36,
+      "eventos_contra": 12,
+      "ocurrencias": 84,
+      "frentes_abiertos": 18,
+      "frentes_resueltos": 0,
+      "frentes_sin_resolver": 18,
+      "frentes": [
+        {
+          "token": "conocimiento",
+          "corte_apertura": "C1_1833",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "curiosidad_abstracta",
+          "corte_apertura": "C1_1833",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reflexion",
+          "corte_apertura": "C1_1833",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "claridad",
+          "corte_apertura": "C1_1833",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "autoridad",
+          "corte_apertura": "C1_1833",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "audacia",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "proposito_claro",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "sacrificio",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oportunidad",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "liderazgo",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vision",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "incertidumbre",
+          "corte_apertura": "C2_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reconocimiento",
+          "corte_apertura": "C3_1853",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "creatividad",
+          "corte_apertura": "C3_1853",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "generacion_ideas",
+          "corte_apertura": "C3_1853",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "exposicion_trauma_ajeno",
+          "corte_apertura": "C3_1853",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "estabilidad_ocupacional",
+          "corte_apertura": "C6_1875",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "cronicidad_sintomatica",
+          "corte_apertura": "C7_1902",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        }
+      ],
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "gate_pasa": true,
+      "factor_duplicacion_canonico": 2.011904761904762,
+      "eventos_favor_canonico": 169,
+      "eventos_contra_canonico": 62,
+      "p_azar_ancho_max": 0.001894392377859322
+    },
+    {
+      "caso": "MANDELA_HEROE_20261112",
+      "h1_sombra": "frye_mythos_romance",
+      "p_h1_sombra": 0.7285,
+      "h2_sombra": "monomito_06_pruebas_aliados_y_enemigos",
+      "p_h2_sombra": 0.7089,
+      "h1_canonico": "kwml_01_rey",
+      "h2_canonico": "berlin_01_erizo",
+      "p_h1_canonico_en_sombra": 0.5179,
+      "rango_h1_canonico_en_sombra": 168,
+      "top10_sombra": [
+        [
+          "frye_mythos_romance",
+          0.7285
+        ],
+        [
+          "monomito_06_pruebas_aliados_y_enemigos",
+          0.7089
+        ],
+        [
+          "monomito_05_cruce_del_primer_umbral",
+          0.6671
+        ],
+        [
+          "ttm_01_precontemplacion",
+          0.6226
+        ],
+        [
+          "ttm_04_accion",
+          0.6226
+        ],
+        [
+          "erikson_07_generatividad_vs_estancamiento",
+          0.5759
+        ],
+        [
+          "erikson_04_laboriosidad_vs_inferioridad",
+          0.5605
+        ],
+        [
+          "crisis_vocacional",
+          0.5179
+        ],
+        [
+          "arquetipo_heroe",
+          0.5179
+        ],
+        [
+          "situacion_dramatica_ambicion",
+          0.5179
+        ]
+      ],
+      "heroes": {
+        "heroe": {
+          "p": 0.5179,
+          "rango": 50
+        },
+        "arquetipo_heroe": {
+          "p": 0.5179,
+          "rango": 9
+        },
+        "arquetipo_el_heroe": {
+          "p": 0.5179,
+          "rango": 72
+        }
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "p": 0.5179,
+          "rango": 75
+        },
+        "kwml_01_rey": {
+          "p": 0.5179,
+          "rango": 168
+        }
+      },
+      "factor_duplicacion": 0.30952380952380953,
+      "eventos_favor": 26,
+      "eventos_contra": 13,
+      "ocurrencias": 84,
+      "frentes_abiertos": 22,
+      "frentes_resueltos": 0,
+      "frentes_sin_resolver": 22,
+      "frentes": [
+        {
+          "token": "conocimiento",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "curiosidad_abstracta",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oportunidad",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reflexion",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "claridad",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "autoridad",
+          "corte_apertura": "C1_1931",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "liderazgo",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "desafio_autoridad",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "audacia",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reconocimiento",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "proposito_claro",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vision",
+          "corte_apertura": "C2_1948",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "sacrificio",
+          "corte_apertura": "C3_1961",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "generacion_ideas",
+          "corte_apertura": "C3_1961",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oposicion",
+          "corte_apertura": "C3_1961",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "ira_institucional",
+          "corte_apertura": "C3_1961",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "busqueda_verdad",
+          "corte_apertura": "C4_1964",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "persecucion",
+          "corte_apertura": "C4_1964",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "incertidumbre",
+          "corte_apertura": "C6_1986",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "poder",
+          "corte_apertura": "C7_1997",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "rutina",
+          "corte_apertura": "C7_1997",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "estabilidad_ocupacional",
+          "corte_apertura": "C7_1997",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        }
+      ],
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "gate_pasa": true,
+      "factor_duplicacion_canonico": 2.4166666666666665,
+      "eventos_favor_canonico": 203,
+      "eventos_contra_canonico": 78,
+      "p_azar_ancho_max": 0.001894392377859322
+    },
+    {
+      "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+      "h1_sombra": "arquetipo_el_heroe",
+      "p_h1_sombra": 0.8122,
+      "h2_sombra": "monomito_05_cruce_del_primer_umbral",
+      "p_h2_sombra": 0.7972,
+      "h1_canonico": "arquetipo_el_sabio",
+      "h2_canonico": "20_sacrificio_por_un_ideal",
+      "p_h1_canonico_en_sombra": 0.511,
+      "rango_h1_canonico_en_sombra": 68,
+      "top10_sombra": [
+        [
+          "arquetipo_el_heroe",
+          0.8122
+        ],
+        [
+          "monomito_05_cruce_del_primer_umbral",
+          0.7972
+        ],
+        [
+          "heroe",
+          0.6764
+        ],
+        [
+          "mentor",
+          0.6419
+        ],
+        [
+          "35_recuperacion_de_lo_perdido",
+          0.6291
+        ],
+        [
+          "crisis_vocacional",
+          0.6281
+        ],
+        [
+          "ttm_04_accion",
+          0.6157
+        ],
+        [
+          "erikson_07_generatividad_vs_estancamiento",
+          0.5634
+        ],
+        [
+          "monomito_06_pruebas_aliados_y_enemigos",
+          0.5536
+        ],
+        [
+          "erikson_04_laboriosidad_vs_inferioridad",
+          0.5536
+        ]
+      ],
+      "heroes": {
+        "heroe": {
+          "p": 0.6764,
+          "rango": 3
+        },
+        "arquetipo_heroe": {
+          "p": 0.511,
+          "rango": 11
+        },
+        "arquetipo_el_heroe": {
+          "p": 0.8122,
+          "rango": 1
+        }
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "p": 0.511,
+          "rango": 74
+        },
+        "kwml_01_rey": {
+          "p": 0.511,
+          "rango": 170
+        }
+      },
+      "factor_duplicacion": 0.47619047619047616,
+      "eventos_favor": 40,
+      "eventos_contra": 10,
+      "ocurrencias": 84,
+      "frentes_abiertos": 20,
+      "frentes_resueltos": 1,
+      "frentes_sin_resolver": 19,
+      "frentes": [
+        {
+          "token": "conocimiento",
+          "corte_apertura": "C1_1831",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "curiosidad_abstracta",
+          "corte_apertura": "C1_1831",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oportunidad",
+          "corte_apertura": "C1_1831",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reflexion",
+          "corte_apertura": "C1_1831",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "claridad",
+          "corte_apertura": "C1_1831",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "busqueda_verdad",
+          "corte_apertura": "C2_1846",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "analisis",
+          "corte_apertura": "C2_1846",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "analisis_objetivo",
+          "corte_apertura": "C2_1846",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "incertidumbre",
+          "corte_apertura": "C2_1846",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "generacion_ideas",
+          "corte_apertura": "C3_1847",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "creatividad",
+          "corte_apertura": "C3_1847",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "exposicion_trauma_ajeno",
+          "corte_apertura": "C3_1847",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oposicion",
+          "corte_apertura": "C4_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "ira_institucional",
+          "corte_apertura": "C4_1849",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "valentia",
+          "corte_apertura": "C6_1858",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": "C7_1861",
+          "familia_resuelta": "arquetipo_el_heroe"
+        },
+        {
+          "token": "sacrificio",
+          "corte_apertura": "C6_1858",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "persecucion",
+          "corte_apertura": "C7_1861",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "duelo",
+          "corte_apertura": "C7_1861",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "cronicidad_sintomatica",
+          "corte_apertura": "C7_1861",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vulnerabilidad",
+          "corte_apertura": "C7_1861",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        }
+      ],
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "gate_pasa": true,
+      "factor_duplicacion_canonico": 1.7380952380952381,
+      "eventos_favor_canonico": 146,
+      "eventos_contra_canonico": 61,
+      "p_azar_ancho_max": 0.001894392377859322
+    },
+    {
+      "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+      "h1_sombra": "arquetipo_el_heroe",
+      "p_h1_sombra": 0.8123,
+      "h2_sombra": "monomito_05_cruce_del_primer_umbral",
+      "p_h2_sombra": 0.7973,
+      "h1_canonico": "20_sacrificio_por_un_ideal",
+      "h2_canonico": "5_persecucion",
+      "p_h1_canonico_en_sombra": 0.5111,
+      "rango_h1_canonico_en_sombra": 36,
+      "top10_sombra": [
+        [
+          "arquetipo_el_heroe",
+          0.8123
+        ],
+        [
+          "monomito_05_cruce_del_primer_umbral",
+          0.7973
+        ],
+        [
+          "heroe",
+          0.7934
+        ],
+        [
+          "schwartz_02_benevolencia",
+          0.7829
+        ],
+        [
+          "mentor",
+          0.7175
+        ],
+        [
+          "monomito_12_regreso_con_el_elixir",
+          0.6603
+        ],
+        [
+          "7_caer_victima",
+          0.642
+        ],
+        [
+          "erikson_07_generatividad_vs_estancamiento",
+          0.6063
+        ],
+        [
+          "ttm_04_accion",
+          0.6056
+        ],
+        [
+          "monomito_06_pruebas_aliados_y_enemigos",
+          0.5537
+        ]
+      ],
+      "heroes": {
+        "heroe": {
+          "p": 0.7934,
+          "rango": 3
+        },
+        "arquetipo_heroe": {
+          "p": 0.5111,
+          "rango": 13
+        },
+        "arquetipo_el_heroe": {
+          "p": 0.8123,
+          "rango": 1
+        }
+      },
+      "trono": {
+        "arquetipo_el_gobernante": {
+          "p": 0.5111,
+          "rango": 75
+        },
+        "kwml_01_rey": {
+          "p": 0.5111,
+          "rango": 171
+        }
+      },
+      "factor_duplicacion": 0.5119047619047619,
+      "eventos_favor": 43,
+      "eventos_contra": 8,
+      "ocurrencias": 84,
+      "frentes_abiertos": 19,
+      "frentes_resueltos": 1,
+      "frentes_sin_resolver": 18,
+      "frentes": [
+        {
+          "token": "conocimiento",
+          "corte_apertura": "C1_1904",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "curiosidad_abstracta",
+          "corte_apertura": "C1_1904",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oportunidad",
+          "corte_apertura": "C1_1904",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "reflexion",
+          "corte_apertura": "C1_1904",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "claridad",
+          "corte_apertura": "C1_1904",
+          "motivo": "latencia_sin_compania_contra",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "proposito_claro",
+          "corte_apertura": "C2_1918",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "generacion_ideas",
+          "corte_apertura": "C2_1918",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "creatividad",
+          "corte_apertura": "C2_1918",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "rutina",
+          "corte_apertura": "C2_1918",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": "C3_1927",
+          "familia_resuelta": "monomito_01_mundo_ordinario"
+        },
+        {
+          "token": "incertidumbre",
+          "corte_apertura": "C2_1918",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "estabilidad_ocupacional",
+          "corte_apertura": "C3_1927",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "empatia",
+          "corte_apertura": "C4_1933",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "persecucion",
+          "corte_apertura": "C5_1941_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "vulnerabilidad",
+          "corte_apertura": "C5_1941_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "oposicion",
+          "corte_apertura": "C5_1941_02",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "exposicion_trauma_ajeno",
+          "corte_apertura": "C6_1941_07",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "sacrificio",
+          "corte_apertura": "C7_1941",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "duelo",
+          "corte_apertura": "C7_1941",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        },
+        {
+          "token": "cronicidad_sintomatica",
+          "corte_apertura": "C7_1941",
+          "motivo": "latencia_sin_compania",
+          "corte_resolucion": null,
+          "familia_resuelta": null
+        }
+      ],
+      "gate_max_diff": 0.0,
+      "gate_mismatch": 0,
+      "gate_pasa": true,
+      "factor_duplicacion_canonico": 1.6666666666666667,
+      "eventos_favor_canonico": 140,
+      "eventos_contra_canonico": 68,
+      "p_azar_ancho_max": 0.001894392377859322
+    }
+  ]
+}
