@@ -1,23 +1,29 @@
 {
- "id": "cibernetica_ceguera_sensorial_algedonica",
- "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
- "source": "gemini",
- "fuente_teorica": "Stafford Beer, Brain of the Firm (1972); Viable System Model (VSM, canales algedonicos). Cibernetica organizacional; pesos asignados.",
- "description": "Fallo de retroalimentacion donde los filtros jerarquicos o la adulacion bloquean las senales de alarma desde la base operativa hacia la direccion.",
- "evidence_status": "secondary_verified",
- "canonical_244": false,
- "role": "lateral_token_family",
- "tokens_favor": {
-  "autoengano_institucional": 0.85,
-  "distorsion_reporte_jerarquico": 0.8,
-  "retraso_retroalimentacion": 0.8,
-  "rigidez_doctrinal": 0.75,
-  "supresion_malas_noticias": 0.85
- },
- "tokens_contra": {
-  "auditoria_independiente": 0.85,
-  "canal_alerta_directa": 0.85,
-  "disidencia_protegida": 0.75,
-  "retroalimentacion_tiempo_real": 0.8
- }
+  "id": "cibernetica_ceguera_sensorial_algedonica",
+  "status": "LATERAL_CABLEADA",
+  "source": "gemini",
+  "fuente_teorica": "Stafford Beer, Brain of the Firm (1972); Viable System Model (VSM, canales algedonicos). Cibernetica organizacional; pesos asignados.",
+  "description": "Fallo de retroalimentacion donde los filtros jerarquicos o la adulacion bloquean las senales de alarma desde la base operativa hacia la direccion.",
+  "evidence_status": "secondary_verified",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "autoengano_institucional": 0.85,
+    "distorsion_reporte_jerarquico": 0.8,
+    "retraso_retroalimentacion": 0.8,
+    "rigidez_doctrinal": 0.75,
+    "supresion_malas_noticias": 0.85
+  },
+  "tokens_contra": {
+    "auditoria_independiente": 0.85,
+    "canal_alerta_directa": 0.85,
+    "disidencia_protegida": 0.75,
+    "retroalimentacion_tiempo_real": 0.8
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
+  }
 }

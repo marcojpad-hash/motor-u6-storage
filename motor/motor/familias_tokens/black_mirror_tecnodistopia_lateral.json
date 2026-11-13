@@ -1,6 +1,6 @@
 {
   "id": "black_mirror_tecnodistopia_lateral",
-  "status": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+  "status": "LATERAL_CABLEADA",
   "source": "STINKBOX_BLACK_MIRROR_CANDIDATOS.json (registro documental StinkBox, 18 conceptos; fuente: BORRADOR_BLACK_MIRROR_TOKENS/BLACK_MIRROR_FAMILIA_TOKENS_BORRADOR.json, Modugno & Krijnen 2020)",
   "description": "Tecnodistopía estilo Black Mirror: la tecnología media lo real, cede autonomía y reordena lo social. Familia lateral: no compite en el 244, solo voto experimental por puente.",
   "evidence_status": "mixed",
@@ -109,5 +109,11 @@
     "can_decide_H": false,
     "Alimenta_H": false,
     "rank_effect": "NONE"
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_EXPERIMENTAL_NO_CABLEADA",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
   }
 }

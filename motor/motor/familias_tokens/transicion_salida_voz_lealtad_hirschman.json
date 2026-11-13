@@ -1,23 +1,29 @@
 {
- "id": "transicion_salida_voz_lealtad_hirschman",
- "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
- "source": "gemini",
- "fuente_teorica": "Albert O. Hirschman, Exit, Voice, and Loyalty (1970). Economia politica clasica; pesos de token asignados.",
- "description": "Deterioro de calidad o legitimidad en una organizacion o Estado medido por la fuga de miembros/capital (salida) frente a la protesta articulada (voz).",
- "evidence_status": "secondary_verified",
- "canonical_244": false,
- "role": "lateral_token_family",
- "tokens_favor": {
-  "boicot_economico": 0.75,
-  "desercion_elites": 0.85,
-  "fuga_capitales_talento": 0.85,
-  "perdida_legitimidad_interna": 0.8,
-  "protesta_organizada": 0.8
- },
- "tokens_contra": {
-  "cooptacion_efectiva": 0.7,
-  "inversion_retorno": 0.75,
-  "lealtad_institucional": 0.8,
-  "reforma_interna_creible": 0.85
- }
+  "id": "transicion_salida_voz_lealtad_hirschman",
+  "status": "LATERAL_CABLEADA",
+  "source": "gemini",
+  "fuente_teorica": "Albert O. Hirschman, Exit, Voice, and Loyalty (1970). Economia politica clasica; pesos de token asignados.",
+  "description": "Deterioro de calidad o legitimidad en una organizacion o Estado medido por la fuga de miembros/capital (salida) frente a la protesta articulada (voz).",
+  "evidence_status": "secondary_verified",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "boicot_economico": 0.75,
+    "desercion_elites": 0.85,
+    "fuga_capitales_talento": 0.85,
+    "perdida_legitimidad_interna": 0.8,
+    "protesta_organizada": 0.8
+  },
+  "tokens_contra": {
+    "cooptacion_efectiva": 0.7,
+    "inversion_retorno": 0.75,
+    "lealtad_institucional": 0.8,
+    "reforma_interna_creible": 0.85
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
+  }
 }

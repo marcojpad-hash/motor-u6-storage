@@ -1,23 +1,29 @@
 {
- "id": "sistemica_acoplamiento_estrecho_accidente_normal",
- "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
- "source": "gemini",
- "fuente_teorica": "Charles Perrow, Normal Accidents: Living with High-Risk Technologies (1984). Sociologia organizacional de riesgos; pesos asignados.",
- "description": "Sistema complejo con interacciones no lineales y acoplamiento rigido donde una anomalia local se propaga en cascada antes de poder aislarla.",
- "evidence_status": "secondary_verified",
- "canonical_244": false,
- "role": "lateral_token_family",
- "tokens_favor": {
-  "cascada_incumplimientos": 0.85,
-  "falta_amortiguadores": 0.8,
-  "interdependencia_critica": 0.85,
-  "opacidad_operativa": 0.75,
-  "propagacion_instantanea": 0.85
- },
- "tokens_contra": {
-  "cortafuegos_operativo": 0.85,
-  "desacoplamiento_modular": 0.85,
-  "holgura_capacidad": 0.75,
-  "redundancia_pasiva": 0.8
- }
+  "id": "sistemica_acoplamiento_estrecho_accidente_normal",
+  "status": "LATERAL_CABLEADA",
+  "source": "gemini",
+  "fuente_teorica": "Charles Perrow, Normal Accidents: Living with High-Risk Technologies (1984). Sociologia organizacional de riesgos; pesos asignados.",
+  "description": "Sistema complejo con interacciones no lineales y acoplamiento rigido donde una anomalia local se propaga en cascada antes de poder aislarla.",
+  "evidence_status": "secondary_verified",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "cascada_incumplimientos": 0.85,
+    "falta_amortiguadores": 0.8,
+    "interdependencia_critica": 0.85,
+    "opacidad_operativa": 0.75,
+    "propagacion_instantanea": 0.85
+  },
+  "tokens_contra": {
+    "cortafuegos_operativo": 0.85,
+    "desacoplamiento_modular": 0.85,
+    "holgura_capacidad": 0.75,
+    "redundancia_pasiva": 0.8
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
+  }
 }

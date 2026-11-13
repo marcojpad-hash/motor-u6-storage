@@ -1,23 +1,29 @@
 {
- "id": "juego_escalada_dilema_seguridad",
- "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
- "source": "gemini",
- "fuente_teorica": "Jervis, Cooperation under the Security Dilemma (World Politics, 1978); Herz (1950). Marco formal de relaciones internacionales; pesos asignados.",
- "description": "Las medidas defensivas o de aseguramiento de un actor son percibidas como ofensivas por su rival, provocando una espiral de rearme o tension.",
- "evidence_status": "secondary_verified",
- "canonical_244": false,
- "role": "lateral_token_family",
- "tokens_favor": {
-  "acumulacion_fuerzas": 0.7,
-  "carrera_armamentista": 0.85,
-  "desconfianza_estrategica": 0.75,
-  "percepcion_amenaza_mutua": 0.8,
-  "represalia_preventiva": 0.75
- },
- "tokens_contra": {
-  "desarme_mutuo": 0.85,
-  "distension_diplomatica": 0.75,
-  "transparencia_verificable": 0.8,
-  "zona_desmilitarizada": 0.7
- }
+  "id": "juego_escalada_dilema_seguridad",
+  "status": "LATERAL_CABLEADA",
+  "source": "gemini",
+  "fuente_teorica": "Jervis, Cooperation under the Security Dilemma (World Politics, 1978); Herz (1950). Marco formal de relaciones internacionales; pesos asignados.",
+  "description": "Las medidas defensivas o de aseguramiento de un actor son percibidas como ofensivas por su rival, provocando una espiral de rearme o tension.",
+  "evidence_status": "secondary_verified",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "acumulacion_fuerzas": 0.7,
+    "carrera_armamentista": 0.85,
+    "desconfianza_estrategica": 0.75,
+    "percepcion_amenaza_mutua": 0.8,
+    "represalia_preventiva": 0.75
+  },
+  "tokens_contra": {
+    "desarme_mutuo": 0.85,
+    "distension_diplomatica": 0.75,
+    "transparencia_verificable": 0.8,
+    "zona_desmilitarizada": 0.7
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
+  }
 }

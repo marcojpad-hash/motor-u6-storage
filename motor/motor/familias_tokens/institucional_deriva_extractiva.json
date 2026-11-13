@@ -1,23 +1,29 @@
 {
- "id": "institucional_deriva_extractiva",
- "status": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
- "source": "gemini",
- "fuente_teorica": "Acemoglu & Robinson, Why Nations Fail (2012). Marco institucionalista; pesos de token asignados.",
- "description": "Coalicion dominante cierra el acceso politico y economico para extraer rentas, bloqueando la destruccion creativa y erosionando el crecimiento sostenible.",
- "evidence_status": "secondary_verified",
- "canonical_244": false,
- "role": "lateral_token_family",
- "tokens_favor": {
-  "barrera_entrada_elite": 0.8,
-  "captura_regulatoria": 0.8,
-  "concentracion_monopolica": 0.85,
-  "erosion_estado_derecho": 0.85,
-  "patrimonialismo": 0.75
- },
- "tokens_contra": {
-  "competencia_abierta": 0.8,
-  "institucion_inclusiva": 0.85,
-  "movilidad_social_efectiva": 0.7,
-  "rendicion_cuentas": 0.8
- }
+  "id": "institucional_deriva_extractiva",
+  "status": "LATERAL_CABLEADA",
+  "source": "gemini",
+  "fuente_teorica": "Acemoglu & Robinson, Why Nations Fail (2012). Marco institucionalista; pesos de token asignados.",
+  "description": "Coalicion dominante cierra el acceso politico y economico para extraer rentas, bloqueando la destruccion creativa y erosionando el crecimiento sostenible.",
+  "evidence_status": "secondary_verified",
+  "canonical_244": false,
+  "role": "lateral_token_family",
+  "tokens_favor": {
+    "barrera_entrada_elite": 0.8,
+    "captura_regulatoria": 0.8,
+    "concentracion_monopolica": 0.85,
+    "erosion_estado_derecho": 0.85,
+    "patrimonialismo": 0.75
+  },
+  "tokens_contra": {
+    "competencia_abierta": 0.8,
+    "institucion_inclusiva": 0.85,
+    "movilidad_social_efectiva": 0.7,
+    "rendicion_cuentas": 0.8
+  },
+  "cableado": {
+    "fecha": "2026-11-13",
+    "verificado_por": "voto_familias_tokens (ejecución, caso Napoleón) + verif_activacion_contextual.py",
+    "status_anterior": "LATERAL_NORMALIZADO_PENDIENTE_CORRIDAS",
+    "nota": "Cableada en familias_tokens/ junto al 244. Ya no es prueba ni experimental: el motor la carga."
+  }
 }
