@@ -1,0 +1,367 @@
+{
+  "case_id": "MANDELA_HEROE_SIN_C7_20261112",
+  "person": "Nelson Mandela",
+  "question": "¿Qué configuración dinámica se perfila en Nelson Mandela a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "politico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C6_1986",
+  "freeze": "1986-01-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). Desenlace sellado (NO en la entrada, solo aqui): Muere el 5-dic-2013 en Johannesburgo, con funeral de Estado y duelo mundial; su legado (reconciliacion, fin del apartheid) perdura. Final generativo. Variante SIN_C7: se quita el corte-resumen final para probar si la ruptura de radio y el H1 dependen de el. Desenlace sellado igual.",
+  "cuts": [
+    {
+      "id": "C1_1931",
+      "date": "1931-01-01",
+      "hecho": "Nace el 18 de julio de 1918 en Mvezo, Transkei, del clan thembu. Estudia en Fort Hare, de donde es expulsado por protestar. Se muda a Johannesburgo, se hace abogado y en 1944 se une al Congreso Nacional Africano y funda su Liga Juvenil.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "logro_escolar",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "busqueda_identidad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "identidad_impuesta",
+          0.68
+        ],
+        [
+          "restriccion_iniciativa",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1948",
+      "date": "1948-01-01",
+      "hecho": "Entre 1944 y 1952 lidera la Campana de Desafio contra las leyes injustas y es acusado en el Juicio por Traicion (1956-1961), del que sale absuelto. Se vuelve el rostro de la resistencia no violenta.",
+      "P": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "audacia",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.74
+        ],
+        [
+          "proposito_claro",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "vision",
+          0.7
+        ],
+        [
+          "reflexion",
+          0.68
+        ],
+        [
+          "alianza",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "prohibicion",
+          0.7
+        ],
+        [
+          "injusticia",
+          0.68
+        ],
+        [
+          "amenaza_central",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1961",
+      "date": "1961-01-01",
+      "hecho": "Tras la masacre de Sharpeville (1960) concluye que la resistencia pacifica ya no basta y funda Umkhonto we Sizwe, el brazo armado. En 1962 es arrestado y condenado a cinco anos.",
+      "P": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "sacrificio",
+          0.76
+        ],
+        [
+          "liderazgo",
+          0.74
+        ],
+        [
+          "ruptura_barrera",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "vision",
+          0.7
+        ],
+        [
+          "generacion_ideas",
+          0.68
+        ],
+        [
+          "oposicion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "crisis_abrupta",
+          0.72
+        ],
+        [
+          "amenaza_central",
+          0.7
+        ],
+        [
+          "prohibicion",
+          0.68
+        ],
+        [
+          "ira_institucional",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1964",
+      "date": "1964-06-01",
+      "hecho": "En el Juicio de Rivonia (1963-1964) es condenado a cadena perpetua. En su discurso declara estar dispuesto a morir por el ideal de una sociedad democratica y libre. Lo trasladan a Robben Island.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "busqueda_verdad",
+          0.76
+        ],
+        [
+          "proposito_claro",
+          0.74
+        ],
+        [
+          "persecucion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "prohibicion",
+          0.68
+        ],
+        [
+          "crisis_abrupta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1973",
+      "date": "1973-01-01",
+      "hecho": "Pasa dieciocho anos en Robben Island picando piedra y rompiendo caliza. Estudia, escribe, organiza a los presos y se convierte en la figura moral del movimiento, mientras afuera su nombre crece.",
+      "P": [
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ],
+        [
+          "sacrificio",
+          0.78
+        ],
+        [
+          "aprendizaje",
+          0.76
+        ],
+        [
+          "resistencia_cambio",
+          0.74
+        ],
+        [
+          "estabilidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "transmision_saber",
+          0.68
+        ],
+        [
+          "mentoria_activa",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "restriccion_iniciativa",
+          0.72
+        ],
+        [
+          "rutina",
+          0.7
+        ],
+        [
+          "cotidiano",
+          0.68
+        ],
+        [
+          "bloqueo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1986",
+      "date": "1986-01-01",
+      "hecho": "En 1982 lo trasladan a Pollsmoor. Desde ahi inicia negociaciones secretas con el gobierno. El 11 de febrero de 1990 sale libre ante las camaras del mundo, despues de 27 anos preso.",
+      "P": [
+        [
+          "victoria",
+          0.8
+        ],
+        [
+          "liderazgo",
+          0.78
+        ],
+        [
+          "reconocimiento",
+          0.76
+        ],
+        [
+          "alianza",
+          0.74
+        ],
+        [
+          "vision",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "generacion_ideas",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.72
+        ],
+        [
+          "preocupacion_futuro",
+          0.7
+        ],
+        [
+          "oportunidad",
+          0.68
+        ],
+        [
+          "estabilidad",
+          0.66
+        ]
+      ]
+    }
+  ]
+}

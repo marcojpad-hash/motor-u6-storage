@@ -1,0 +1,426 @@
+{
+  "case_id": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+  "person": "Ignaz Semmelweis",
+  "question": "¿Qué configuración dinámica se perfila en Ignaz Semmelweis a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "cientifico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C7_1861",
+  "freeze": "1861-06-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe sin trono (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). SIN tokens de trono (sin liderazgo/autoridad/poder/vision/reconocimiento/estatus). Desenlace sellado (NO en la entrada, solo aqui): Internado en un asilo en 1865; muere el 13-ago-1865 por infeccion de una herida. Reivindicado tras su muerte (Lister, teoria germinal): 'salvador de las madres'. Heroe tragico, generativo tras la muerte.",
+  "cuts": [
+    {
+      "id": "C1_1831",
+      "date": "1831-01-01",
+      "hecho": "Nace en 1818 en Buda, Hungria. Estudia medicina en Viena y en 1846 se vuelve asistente en la clinica de maternidad del Hospital General de Viena.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "logro_escolar",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "busqueda_identidad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "rutina",
+          0.72
+        ],
+        [
+          "cotidiano",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "identidad_impuesta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1846",
+      "date": "1846-06-01",
+      "hecho": "Nota que la primera clinica, atendida por medicos, tiene mucha mas mortalidad materna por fiebre puerperal que la segunda, atendida por parteras. Empieza a investigar la diferencia.",
+      "P": [
+        [
+          "busqueda_verdad",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "analisis",
+          0.76
+        ],
+        [
+          "analisis_objetivo",
+          0.74
+        ],
+        [
+          "curiosidad_abstracta",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "conciencia_problema",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.72
+        ],
+        [
+          "obstaculo",
+          0.7
+        ],
+        [
+          "preocupacion_futuro",
+          0.68
+        ],
+        [
+          "estabilidad",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1847",
+      "date": "1847-05-01",
+      "hecho": "Descubre que el lavado de manos con solucion de cal clorada antes de atender partos baja la mortalidad de alrededor de 18% a alrededor de 2%. Lo impone en su clinica.",
+      "P": [
+        [
+          "hallazgo",
+          0.8
+        ],
+        [
+          "valor",
+          0.78
+        ],
+        [
+          "valentia",
+          0.76
+        ],
+        [
+          "defensa_debil",
+          0.74
+        ],
+        [
+          "generacion_ideas",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.68
+        ],
+        [
+          "transmision_saber",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "resistencia_cambio",
+          0.72
+        ],
+        [
+          "obstaculo",
+          0.7
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.68
+        ],
+        [
+          "crisis_abrupta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1849",
+      "date": "1849-01-01",
+      "hecho": "Presenta sus resultados ante el estamento medico, que lo rechaza y se burla. Pierde su puesto en 1849 y deja Viena. Sigue defendiendo el lavado de manos por escrito.",
+      "P": [
+        [
+          "valentia",
+          0.8
+        ],
+        [
+          "defensa_debil",
+          0.78
+        ],
+        [
+          "compromiso",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.74
+        ],
+        [
+          "frustracion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "oposicion",
+          0.7
+        ],
+        [
+          "injusticia",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "ira_institucional",
+          0.72
+        ],
+        [
+          "prohibicion",
+          0.7
+        ],
+        [
+          "restriccion_iniciativa",
+          0.68
+        ],
+        [
+          "bloqueo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1852",
+      "date": "1852-01-01",
+      "hecho": "Vuelve a Budapest y trabaja en el hospital de San Roque. Sigue con el lavado de manos y la mortalidad se mantiene baja. Escribe cartas a medicos de Europa defendiendo su metodo.",
+      "P": [
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "defensa_debil",
+          0.76
+        ],
+        [
+          "transmision_saber",
+          0.74
+        ],
+        [
+          "generatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "mentoria_activa",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "rutina",
+          0.72
+        ],
+        [
+          "cotidiano",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "discrecion",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1858",
+      "date": "1858-01-01",
+      "hecho": "Publica su libro en 1861, 'La etiologia, el concepto y la profilaxis de la fiebre puerperal'. El estamento lo ridiculiza. Se amarga, escribe cartas furiosas y se aisla cada vez mas.",
+      "P": [
+        [
+          "valentia",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "busqueda_verdad",
+          0.76
+        ],
+        [
+          "sacrificio",
+          0.74
+        ],
+        [
+          "frustracion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "preocupacion_futuro",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "ira_institucional",
+          0.72
+        ],
+        [
+          "bloqueo",
+          0.7
+        ],
+        [
+          "restriccion_iniciativa",
+          0.68
+        ],
+        [
+          "rivalidad_profesional",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C7_1861",
+      "date": "1861-06-01",
+      "hecho": "Aislado y con la salud mental deteriorada tras anos de rechazo. Su libro no cambia nada en vida. Es el punto final de su lucha publica por el lavado de manos.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "valentia",
+          0.78
+        ],
+        [
+          "defensa_debil",
+          0.76
+        ],
+        [
+          "persecucion",
+          0.74
+        ],
+        [
+          "duelo",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "cronicidad_sintomatica",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.7
+        ],
+        [
+          "bloqueo",
+          0.68
+        ],
+        [
+          "discrecion",
+          0.66
+        ]
+      ]
+    }
+  ]
+}

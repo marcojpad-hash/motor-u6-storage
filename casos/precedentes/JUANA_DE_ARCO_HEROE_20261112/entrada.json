@@ -1,0 +1,426 @@
+{
+  "case_id": "JUANA_DE_ARCO_HEROE_20261112",
+  "person": "Juana de Arco",
+  "question": "¿Qué configuración dinámica se perfila en Juana de Arco a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "politico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C7_1430",
+  "freeze": "1430-12-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). Desenlace sellado (NO en la entrada, solo aqui): Juicio en Ruan; condenada por herejia y quemada el 30-may-1431. Rehabilitada 1456; canonizada 1920. Final tragico.",
+  "cuts": [
+    {
+      "id": "C1_1418",
+      "date": "1418-01-01",
+      "hecho": "Nace hacia 1412 en Domremy (Lorena), hija de campesinos acomodados. Infancia en el campo: cuida el ganado, reza, trabaja en casa. Hacia los 13 anos empieza a oir voces que identifica con santos.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "rutina",
+          0.74
+        ],
+        [
+          "cotidiano",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "reflexion",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "identidad_impuesta",
+          0.72
+        ],
+        [
+          "autoridad",
+          0.7
+        ],
+        [
+          "jerarquia",
+          0.68
+        ],
+        [
+          "estabilidad",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1429_02",
+      "date": "1429-02-01",
+      "hecho": "En 1428-1429 viaja a Vaucouleurs y convence a Robert de Baudricourt de llevarla ante el delfin. Llega a Chinon en febrero de 1429 y se encuentra con Carlos, a quien reconoce entre la corte.",
+      "P": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "desafio_autoridad",
+          0.78
+        ],
+        [
+          "independencia",
+          0.76
+        ],
+        [
+          "proposito_claro",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.7
+        ],
+        [
+          "reflexion",
+          0.68
+        ],
+        [
+          "vision",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "restriccion_iniciativa",
+          0.68
+        ],
+        [
+          "incertidumbre",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1429_05",
+      "date": "1429-05-08",
+      "hecho": "En mayo de 1429 levanta el sitio de Orleans en nueve dias, con el ejercito frances. Es herida por una flecha en el cuello y vuelve al combate. La ciudad la celebra.",
+      "P": [
+        [
+          "victoria",
+          0.8
+        ],
+        [
+          "liderazgo",
+          0.78
+        ],
+        [
+          "audacia",
+          0.76
+        ],
+        [
+          "logro_personal",
+          0.74
+        ],
+        [
+          "reconocimiento",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.68
+        ],
+        [
+          "generacion_ideas",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "amenaza_central",
+          0.72
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.68
+        ],
+        [
+          "obstaculo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1429_07",
+      "date": "1429-07-17",
+      "hecho": "En junio-julio de 1429 gana en Jargeau y Patay. El 17 de julio de 1429 Carlos VII es coronado en Reims con Juana a su lado con el estandarte. Es el punto mas alto de su mision.",
+      "P": [
+        [
+          "victoria",
+          0.8
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "poder",
+          0.76
+        ],
+        [
+          "logro_personal",
+          0.74
+        ],
+        [
+          "estatus_social",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.7
+        ],
+        [
+          "vision",
+          0.68
+        ],
+        [
+          "redes_prestigio",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "popularidad",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1429_11",
+      "date": "1429-11-01",
+      "hecho": "En septiembre de 1429 fracasa el asalto a Paris; es herida en el muslo. En los meses siguientes dirige campanas menores y la corte empieza a apartarla de las decisiones.",
+      "P": [
+        [
+          "frustracion",
+          0.8
+        ],
+        [
+          "obstaculo",
+          0.78
+        ],
+        [
+          "bloqueo",
+          0.76
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.74
+        ],
+        [
+          "resistencia_cambio",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "preocupacion_futuro",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "restriccion_iniciativa",
+          0.72
+        ],
+        [
+          "rivalidad_profesional",
+          0.7
+        ],
+        [
+          "ira_institucional",
+          0.68
+        ],
+        [
+          "discrecion",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1430_05",
+      "date": "1430-05-23",
+      "hecho": "El 23 de mayo de 1430 es capturada en Compiegne por tropas borgoñonas al intentar levantar el sitio. La venden a los ingleses, que la trasladan a Ruan para juzgarla.",
+      "P": [
+        [
+          "persecucion",
+          0.8
+        ],
+        [
+          "vulnerabilidad",
+          0.78
+        ],
+        [
+          "perdida_familiar",
+          0.76
+        ],
+        [
+          "duelo",
+          0.74
+        ],
+        [
+          "sacrificio",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "oposicion",
+          0.7
+        ],
+        [
+          "injusticia",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "prohibicion",
+          0.72
+        ],
+        [
+          "amenaza_central",
+          0.7
+        ],
+        [
+          "crisis_abrupta",
+          0.68
+        ],
+        [
+          "bloqueo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C7_1430",
+      "date": "1430-12-01",
+      "hecho": "Prisionera en Ruan durante el otoño de 1430. Comienza el proceso eclesiastico en su contra, dirigido por el obispo Cauchon, con interrogatorios sobre sus voces, su ropa de hombre y su mision.",
+      "P": [
+        [
+          "persecucion",
+          0.8
+        ],
+        [
+          "injusticia",
+          0.78
+        ],
+        [
+          "sacrificio",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.74
+        ],
+        [
+          "compromiso",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "jerarquia",
+          0.7
+        ],
+        [
+          "prohibicion",
+          0.68
+        ],
+        [
+          "demanda_psicosocial_institucional",
+          0.66
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "case_id": "KOLBE_HEROE_SIN_TRONO_20261112",
+  "person": "Maximiliano Kolbe",
+  "question": "¿Qué configuración dinámica se perfila en Maximiliano Kolbe a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "politico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C7_1941",
+  "freeze": "1941-08-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe sin trono (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). SIN tokens de trono (sin liderazgo/autoridad/poder/vision/reconocimiento/estatus). Desenlace sellado (NO en la entrada, solo aqui): Canonizado en 1982 ('martir de la caridad'); Gajowniczek sobrevive a la guerra. Heroe tragico, generativo tras la muerte.",
+  "cuts": [
+    {
+      "id": "C1_1904",
+      "date": "1904-01-01",
+      "hecho": "Nace en 1894 en Zdunska Wola, Polonia. A los 16 anos entra en los franciscanos. Estudia en Roma y se ordena sacerdote en 1918.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "logro_escolar",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "busqueda_identidad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "rutina",
+          0.72
+        ],
+        [
+          "cotidiano",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "identidad_impuesta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1918",
+      "date": "1918-01-01",
+      "hecho": "En 1917 funda la Milicia de la Inmaculada, un movimiento de evangelizacion por la prensa. Se ordena sacerdote en 1918 y vuelve a Polonia.",
+      "P": [
+        [
+          "compromiso",
+          0.8
+        ],
+        [
+          "proposito_claro",
+          0.78
+        ],
+        [
+          "generacion_ideas",
+          0.76
+        ],
+        [
+          "transmision_saber",
+          0.74
+        ],
+        [
+          "creatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "claridad",
+          0.7
+        ],
+        [
+          "reflexion",
+          0.68
+        ],
+        [
+          "alianza",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "estabilidad",
+          0.72
+        ],
+        [
+          "rutina",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "oportunidad",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1927",
+      "date": "1927-01-01",
+      "hecho": "Funda el monasterio de Niepokalanow en 1927, un centro editorial catolico que crece hasta unos setecientos frailes. Publica revistas y libros.",
+      "P": [
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "generatividad",
+          0.76
+        ],
+        [
+          "transmision_saber",
+          0.74
+        ],
+        [
+          "cuidado_cercanos",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "mentoria_activa",
+          0.68
+        ],
+        [
+          "reflexion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "estabilidad",
+          0.72
+        ],
+        [
+          "rutina",
+          0.7
+        ],
+        [
+          "cotidiano",
+          0.68
+        ],
+        [
+          "estabilidad_ocupacional",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1933",
+      "date": "1933-01-01",
+      "hecho": "Hace obra misionera en Japon entre 1930 y 1936 y vuelve a Polonia. Niepokalanow sigue creciendo como centro de fe y de prensa.",
+      "P": [
+        [
+          "compromiso",
+          0.8
+        ],
+        [
+          "generatividad",
+          0.78
+        ],
+        [
+          "sabiduria_compartida",
+          0.76
+        ],
+        [
+          "cuidado_cercanos",
+          0.74
+        ],
+        [
+          "empatia",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "transmision_saber",
+          0.68
+        ],
+        [
+          "mentoria_activa",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "estabilidad",
+          0.72
+        ],
+        [
+          "rutina",
+          0.7
+        ],
+        [
+          "cotidiano",
+          0.68
+        ],
+        [
+          "estabilidad_ocupacional",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1941_02",
+      "date": "1941-02-01",
+      "hecho": "Segunda Guerra Mundial: la Gestapo lo arresta en febrero de 1941 y en mayo lo mandan a Auschwitz como prisionero 16670. Trabaja y reza entre los presos.",
+      "P": [
+        [
+          "persecucion",
+          0.8
+        ],
+        [
+          "injusticia",
+          0.78
+        ],
+        [
+          "vulnerabilidad",
+          0.76
+        ],
+        [
+          "compromiso",
+          0.74
+        ],
+        [
+          "cuidado_cercanos",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "oposicion",
+          0.7
+        ],
+        [
+          "conciencia_problema",
+          0.68
+        ],
+        [
+          "reflexion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "amenaza_central",
+          0.72
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ],
+        [
+          "prohibicion",
+          0.68
+        ],
+        [
+          "bloqueo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1941_07",
+      "date": "1941-07-01",
+      "hecho": "En Auschwitz un prisionero escapa y las SS eligen a diez hombres para morir de hambre. Kolbe se ofrece a tomar el lugar de Franciszek Gajowniczek, padre de familia.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "valor",
+          0.78
+        ],
+        [
+          "valentia",
+          0.76
+        ],
+        [
+          "defensa_debil",
+          0.74
+        ],
+        [
+          "compromiso",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "amenaza_central",
+          0.72
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.68
+        ],
+        [
+          "carga_familiar",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C7_1941",
+      "date": "1941-08-01",
+      "hecho": "Pasa dos semanas en el bunker de hambre, rezando con los demas condenados. Lo matan con una inyeccion letal el 14 de agosto de 1941.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "valentia",
+          0.78
+        ],
+        [
+          "defensa_debil",
+          0.76
+        ],
+        [
+          "persecucion",
+          0.74
+        ],
+        [
+          "duelo",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "vulnerabilidad",
+          0.72
+        ],
+        [
+          "cronicidad_sintomatica",
+          0.7
+        ],
+        [
+          "bloqueo",
+          0.68
+        ],
+        [
+          "amenaza_central",
+          0.66
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "case_id": "TUBMAN_HEROE_SIN_C7_20261112",
+  "person": "Harriet Tubman",
+  "question": "¿Qué configuración dinámica se perfila en Harriet Tubman a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "politico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C6_1875",
+  "freeze": "1875-01-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). Desenlace sellado (NO en la entrada, solo aqui): Muere el 10-mar-1913 en Auburn, honrada por el ejercito y por el pais; su obra (el ferrocarril subterraneo, la lucha por la libertad) perdura. Final generativo. Variante SIN_C7: se quita el corte-resumen final para probar si la ruptura de radio y el H1 dependen de el. Desenlace sellado igual.",
+  "cuts": [
+    {
+      "id": "C1_1833",
+      "date": "1833-01-01",
+      "hecho": "Nace hacia 1822 esclavizada en el condado de Dorchester, Maryland. Infancia de trabajo forzado en el campo y en casas; de adolescente sufre un golpe en la cabeza que le deja secuelas de por vida. Hacia 1844 se casa con John Tubman, hombre libre.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "rutina",
+          0.74
+        ],
+        [
+          "cotidiano",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "resistencia_cambio",
+          0.7
+        ],
+        [
+          "reflexion",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "identidad_impuesta",
+          0.72
+        ],
+        [
+          "autoridad",
+          0.7
+        ],
+        [
+          "jerarquia",
+          0.68
+        ],
+        [
+          "restriccion_iniciativa",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1849",
+      "date": "1849-09-01",
+      "hecho": "En septiembre de 1849, tras la muerte de su amo, huye sola a Filadelfia. Decide volver al sur a rescatar a su familia, aunque la Ley de Esclavos Fugitivos hace la huida mas peligrosa.",
+      "P": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "independencia",
+          0.78
+        ],
+        [
+          "proposito_claro",
+          0.76
+        ],
+        [
+          "sacrificio",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.7
+        ],
+        [
+          "vision",
+          0.68
+        ],
+        [
+          "reflexion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "amenaza_central",
+          0.72
+        ],
+        [
+          "crisis_abrupta",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "obstaculo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1853",
+      "date": "1853-01-01",
+      "hecho": "Entre 1850 y 1857 se vuelve conductora del Ferrocarril Subterraneo: hace unos trece viajes al sur y rescata a unas setenta personas. Gana el apodo de Moises; nunca pierde un pasajero.",
+      "P": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "logro_personal",
+          0.78
+        ],
+        [
+          "reconocimiento",
+          0.76
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.74
+        ],
+        [
+          "victoria",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "generacion_ideas",
+          0.68
+        ],
+        [
+          "transmision_saber",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "amenaza_central",
+          0.72
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.7
+        ],
+        [
+          "riesgo",
+          0.68
+        ],
+        [
+          "obstaculo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1859",
+      "date": "1859-01-01",
+      "hecho": "En 1858 conoce a John Brown y lo apoya. Sigue rescatando gente; la Ley de Esclavos Fugitivos de 1850 la obliga a llevar a los fugados hasta Canada. Su red se extiende y su nombre se vuelve legendario.",
+      "P": [
+        [
+          "audacia",
+          0.8
+        ],
+        [
+          "liderazgo",
+          0.78
+        ],
+        [
+          "reconocimiento",
+          0.76
+        ],
+        [
+          "alianza",
+          0.74
+        ],
+        [
+          "proposito_claro",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "vision",
+          0.7
+        ],
+        [
+          "apoyo_activo",
+          0.68
+        ],
+        [
+          "reflexion",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "autoridad",
+          0.72
+        ],
+        [
+          "prohibicion",
+          0.7
+        ],
+        [
+          "amenaza_central",
+          0.68
+        ],
+        [
+          "injusticia",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1862",
+      "date": "1862-06-01",
+      "hecho": "Durante la Guerra Civil sirve a la Union como enfermera, cocinera y espia. En junio de 1863 guia la incursion del rio Combahee, que libera a unas setecientas personas esclavizadas.",
+      "P": [
+        [
+          "victoria",
+          0.8
+        ],
+        [
+          "liderazgo",
+          0.78
+        ],
+        [
+          "sacrificio",
+          0.76
+        ],
+        [
+          "logro_personal",
+          0.74
+        ],
+        [
+          "reconocimiento",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "transmision_saber",
+          0.68
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "crisis_abrupta",
+          0.72
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.7
+        ],
+        [
+          "amenaza_central",
+          0.68
+        ],
+        [
+          "carga_familiar",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1875",
+      "date": "1875-01-01",
+      "hecho": "Despues de la guerra se instala en una granja en Auburn, Nueva York. Lucha por el sufragio femenino junto a Susan B. Anthony y dedica su vida a cuidar a pobres, ancianos y huerfanos.",
+      "P": [
+        [
+          "compromiso",
+          0.8
+        ],
+        [
+          "cuidado_cercanos",
+          0.78
+        ],
+        [
+          "generatividad",
+          0.76
+        ],
+        [
+          "sabiduria_compartida",
+          0.74
+        ],
+        [
+          "mentoria_activa",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "transmision_saber",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "estabilidad_ocupacional",
+          0.72
+        ],
+        [
+          "estabilidad_ingreso_formal",
+          0.7
+        ],
+        [
+          "rutina",
+          0.68
+        ],
+        [
+          "cotidiano",
+          0.66
+        ]
+      ]
+    }
+  ]
+}

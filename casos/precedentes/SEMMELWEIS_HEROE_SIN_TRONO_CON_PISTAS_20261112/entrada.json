@@ -1,0 +1,517 @@
+{
+  "case_id": "SEMMELWEIS_HEROE_SIN_TRONO_CON_PISTAS_20261112",
+  "person": "Ignaz Semmelweis",
+  "question": "¿Qué configuración dinámica se perfila en Ignaz Semmelweis a partir de una selección de hitos biográficos, usando solo evidencia hasta Z90?",
+  "tipo_sujeto": "cientifico",
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "C7_1861",
+  "freeze": "1861-06-01",
+  "random_seed": 20261112,
+  "source_notes": "Heroe sin trono (matriz de finales por arquetipo, orden de Marco 2026-11-12). 7 cortes; fechas aproximadas (punto medio del rango del hecho). SIN tokens de trono (sin liderazgo/autoridad/poder/vision/reconocimiento/estatus). Desenlace sellado (NO en la entrada, solo aqui): Internado en un asilo en 1865; muere el 13-ago-1865 por infeccion de una herida. Reivindicado tras su muerte (Lister, teoria germinal): 'salvador de las madres'. Heroe tragico, generativo tras la muerte. VARIANTE CON PISTAS (2026-11-12): identica a SEMMELWEIS_HEROE_SIN_TRONO_20261112 mas caldero_llm_neighbor_hints con 5 pistas LLM (Gemini gemini-3-flash-preview, una sola llamada): busqueda_verdad->arquetipo_el_sabio 0.95; defensa_debil->arquetipo_el_heroe 0.9; sacrificio->20_sacrificio_por_un_ideal 0.9; persecucion->5_persecucion 0.85; transmision_saber->mentor 0.8. Guardian: 5/5 aceptadas. El LM no conocia el desenlace. VARIANTE TRES CAMPOS (2026-11-12, correccion de Marco: hilo del contrato CONTRATO_ENTRADA_LLM.txt): caldero_llm_neighbor_hints (5, llamada LM 1) + caldero_search_sources (5, llamada LM 2, textos compuestos por el LM, SIN url ni busqueda web en vivo) + external_lights (5, llamada LM 2, forma del contrato token/peso/fuente, pesos 0.72-0.84).",
+  "cuts": [
+    {
+      "id": "C1_1831",
+      "date": "1831-01-01",
+      "hecho": "Nace en 1818 en Buda, Hungria. Estudia medicina en Viena y en 1846 se vuelve asistente en la clinica de maternidad del Hospital General de Viena.",
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "curiosidad_abstracta",
+          0.76
+        ],
+        [
+          "logro_escolar",
+          0.74
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "busqueda_identidad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "rutina",
+          0.72
+        ],
+        [
+          "cotidiano",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "identidad_impuesta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C2_1846",
+      "date": "1846-06-01",
+      "hecho": "Nota que la primera clinica, atendida por medicos, tiene mucha mas mortalidad materna por fiebre puerperal que la segunda, atendida por parteras. Empieza a investigar la diferencia.",
+      "P": [
+        [
+          "busqueda_verdad",
+          0.8
+        ],
+        [
+          "conocimiento",
+          0.78
+        ],
+        [
+          "analisis",
+          0.76
+        ],
+        [
+          "analisis_objetivo",
+          0.74
+        ],
+        [
+          "curiosidad_abstracta",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "conciencia_problema",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "incertidumbre",
+          0.72
+        ],
+        [
+          "obstaculo",
+          0.7
+        ],
+        [
+          "preocupacion_futuro",
+          0.68
+        ],
+        [
+          "estabilidad",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C3_1847",
+      "date": "1847-05-01",
+      "hecho": "Descubre que el lavado de manos con solucion de cal clorada antes de atender partos baja la mortalidad de alrededor de 18% a alrededor de 2%. Lo impone en su clinica.",
+      "P": [
+        [
+          "hallazgo",
+          0.8
+        ],
+        [
+          "valor",
+          0.78
+        ],
+        [
+          "valentia",
+          0.76
+        ],
+        [
+          "defensa_debil",
+          0.74
+        ],
+        [
+          "generacion_ideas",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.7
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.68
+        ],
+        [
+          "transmision_saber",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "resistencia_cambio",
+          0.72
+        ],
+        [
+          "obstaculo",
+          0.7
+        ],
+        [
+          "exposicion_trauma_ajeno",
+          0.68
+        ],
+        [
+          "crisis_abrupta",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C4_1849",
+      "date": "1849-01-01",
+      "hecho": "Presenta sus resultados ante el estamento medico, que lo rechaza y se burla. Pierde su puesto en 1849 y deja Viena. Sigue defendiendo el lavado de manos por escrito.",
+      "P": [
+        [
+          "valentia",
+          0.8
+        ],
+        [
+          "defensa_debil",
+          0.78
+        ],
+        [
+          "compromiso",
+          0.76
+        ],
+        [
+          "busqueda_verdad",
+          0.74
+        ],
+        [
+          "frustracion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "oposicion",
+          0.7
+        ],
+        [
+          "injusticia",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "ira_institucional",
+          0.72
+        ],
+        [
+          "prohibicion",
+          0.7
+        ],
+        [
+          "restriccion_iniciativa",
+          0.68
+        ],
+        [
+          "bloqueo",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C5_1852",
+      "date": "1852-01-01",
+      "hecho": "Vuelve a Budapest y trabaja en el hospital de San Roque. Sigue con el lavado de manos y la mortalidad se mantiene baja. Escribe cartas a medicos de Europa defendiendo su metodo.",
+      "P": [
+        [
+          "esfuerzo_sostenido_reciente",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "defensa_debil",
+          0.76
+        ],
+        [
+          "transmision_saber",
+          0.74
+        ],
+        [
+          "generatividad",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "mentoria_activa",
+          0.68
+        ],
+        [
+          "claridad",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "rutina",
+          0.72
+        ],
+        [
+          "cotidiano",
+          0.7
+        ],
+        [
+          "estabilidad",
+          0.68
+        ],
+        [
+          "discrecion",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C6_1858",
+      "date": "1858-01-01",
+      "hecho": "Publica su libro en 1861, 'La etiologia, el concepto y la profilaxis de la fiebre puerperal'. El estamento lo ridiculiza. Se amarga, escribe cartas furiosas y se aisla cada vez mas.",
+      "P": [
+        [
+          "valentia",
+          0.8
+        ],
+        [
+          "compromiso",
+          0.78
+        ],
+        [
+          "busqueda_verdad",
+          0.76
+        ],
+        [
+          "sacrificio",
+          0.74
+        ],
+        [
+          "frustracion",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "incertidumbre",
+          0.68
+        ],
+        [
+          "preocupacion_futuro",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "ira_institucional",
+          0.72
+        ],
+        [
+          "bloqueo",
+          0.7
+        ],
+        [
+          "restriccion_iniciativa",
+          0.68
+        ],
+        [
+          "rivalidad_profesional",
+          0.66
+        ]
+      ]
+    },
+    {
+      "id": "C7_1861",
+      "date": "1861-06-01",
+      "hecho": "Aislado y con la salud mental deteriorada tras anos de rechazo. Su libro no cambia nada en vida. Es el punto final de su lucha publica por el lavado de manos.",
+      "P": [
+        [
+          "sacrificio",
+          0.8
+        ],
+        [
+          "valentia",
+          0.78
+        ],
+        [
+          "defensa_debil",
+          0.76
+        ],
+        [
+          "persecucion",
+          0.74
+        ],
+        [
+          "duelo",
+          0.7
+        ]
+      ],
+      "A": [
+        [
+          "reflexion",
+          0.7
+        ],
+        [
+          "claridad",
+          0.68
+        ],
+        [
+          "conciencia_problema",
+          0.66
+        ]
+      ],
+      "C": [
+        [
+          "cronicidad_sintomatica",
+          0.72
+        ],
+        [
+          "vulnerabilidad",
+          0.7
+        ],
+        [
+          "bloqueo",
+          0.68
+        ],
+        [
+          "discrecion",
+          0.66
+        ]
+      ]
+    }
+  ],
+  "caldero_llm_neighbor_hints": [
+    {
+      "token": "busqueda_verdad",
+      "family": "arquetipo_el_sabio",
+      "relevance": 0.95
+    },
+    {
+      "token": "defensa_debil",
+      "family": "arquetipo_el_heroe",
+      "relevance": 0.9
+    },
+    {
+      "token": "sacrificio",
+      "family": "20_sacrificio_por_un_ideal",
+      "relevance": 0.9
+    },
+    {
+      "token": "persecucion",
+      "family": "5_persecucion",
+      "relevance": 0.85
+    },
+    {
+      "token": "transmision_saber",
+      "family": "mentor",
+      "relevance": 0.8
+    }
+  ],
+  "caldero_search_sources": [
+    {
+      "id": "src1",
+      "texto": "El análisis sistemático y la observación empírica permiten detectar fallas en el conocimiento aceptado por la mayoría mediante el estudio de patrones.",
+      "title": "El Observador de Anomalías",
+      "snippet": "El patrón del buscador de verdades ocultas por el hábito y la tradición institucional que desafía la inercia del pensamiento común.",
+      "origen": "llm"
+    },
+    {
+      "id": "src2",
+      "texto": "La vulnerabilidad de quien sostiene una postura fundamentada ante instituciones poderosas que perciben la nueva evidencia como una amenaza directa.",
+      "title": "La Resistencia de la Convicción",
+      "snippet": "Situación donde el individuo asume una postura de firmeza y vulnerabilidad frente a la presión de un grupo dominante y jerarquizado.",
+      "origen": "llm"
+    },
+    {
+      "id": "src3",
+      "texto": "La entrega total a un propósito que trasciende los intereses personales, enfocándose íntegramente en la defensa de un bien común superior.",
+      "title": "Priorización de la Causa",
+      "snippet": "El desapego de la estabilidad propia en favor de la difusión de un principio ético o técnico que se considera vital para otros.",
+      "origen": "llm"
+    },
+    {
+      "id": "src4",
+      "texto": "La marginación activa y el descrédito como mecanismos de defensa de un sistema ante ideas que generan disonancia en el orden establecido.",
+      "title": "Reacción Ante la Disonancia",
+      "snippet": "Patrón de hostilidad social y profesional hacia el individuo que cuestiona las bases de la autoridad vigente en su campo.",
+      "origen": "llm"
+    },
+    {
+      "id": "src5",
+      "texto": "El esfuerzo persistente por instruir y mejorar las prácticas ajenas a pesar de la resistencia cultural y el rechazo de quienes deberían recibirlas.",
+      "title": "El Intento de Instrucción",
+      "snippet": "La dinámica de intentar transferir un saber transformador a un colectivo que se aferra a métodos antiguos por orgullo o costumbre.",
+      "origen": "llm"
+    }
+  ],
+  "external_lights": [
+    {
+      "token": "busqueda_verdad",
+      "peso": 0.84,
+      "fuente": "capa2"
+    },
+    {
+      "token": "defensa_debil",
+      "peso": 0.79,
+      "fuente": "capa2"
+    },
+    {
+      "token": "sacrificio",
+      "peso": 0.79,
+      "fuente": "capa2"
+    },
+    {
+      "token": "persecucion",
+      "peso": 0.75,
+      "fuente": "capa2"
+    },
+    {
+      "token": "transmision_saber",
+      "peso": 0.72,
+      "fuente": "capa2"
+    }
+  ]
+}
