@@ -24,12 +24,11 @@ Rama de trabajo: `alterno/cameo-pesos`. PR sin merge.
   `NO_APLICA`).
 - Hook en `main()`, tras filtro 017 y consulta dirigida y ANTES de que nada entre
   al motor: si la compuerta rechaza, no se ejecuta el motor; se escribe resultado
-  y recibo con `BLOQUEADO_GUARDIAN_Z90` y se sale con código 7 (0, 2, 3, 4, 5, 6
-  ya están usados). En éxito, el veredicto queda en `result["guardian_z90"]`, en
+  y recibo con `BLOQUEADO_GUARDIAN_Z90` y se sale con código 8, como la compuerta de fábrica. En éxito, el veredicto queda en `result["guardian_z90"]`, en
   el recibo (clave + etapa) y en la etapa `guardian_z90` de los stages.
 - `_efectividad_corte_retenido(sello, visto, retenido)`: extrae el bloque a un
   helper testeable; `previo_error`, `visto_error`, `previo_status` y
-  `visto_status` están SIEMPRE, en éxito (`""` = sin error) y en fallo
+  `visto_status` están SIEMPRE, en éxito (`False` = sin error) y en fallo
   (`stderr_tail`). Nunca `None`.
 - R6 (lista negra post-Z) no se aplica aquí: la lista vive fuera de la entrada,
   junto al destino sellado.
@@ -37,12 +36,12 @@ Rama de trabajo: `alterno/cameo-pesos`. PR sin merge.
 ## Verificación por ejecución (no solo lectura)
 - `CAL_F002_01_GALILEI` (caso gated real del repo): exit 0, 37.2 s,
   H1 `arquetipo_el_sabio`, H2 `kwml_03_mago`, recibo COMPLETED, `guardian_z90`
-  PASS (0 errores), `previo_error` `""` y `visto_error` `""` en éxito.
-- Mismo caso con el corte movido a 1700 (post-Z90): exit 7,
+  PASS (0 errores), `previo_error` `False` y `visto_error` `False` en éxito.
+- Mismo caso con el corte movido a 1700 (post-Z90): exit 8,
   `BLOQUEADO_GUARDIAN_Z90`, errores R2 + R3, resultado + recibo escritos.
 - Tests nuevos: 8 en `motor/tests/test_guardian_z90_correr_estandar.py`
   (NO_CONFIGURADO, PASS, rechazo post-Z, rechazo sin evidencia, previo_error en
-  éxito y en fallo, sin nulos en el veredicto, e2e de bloqueo con exit 7).
+  éxito y en fallo, sin nulos en el veredicto, e2e de bloqueo con exit 8).
 - Suite completa: **192 passed, 2 skipped** (`motor/tests/` + `tests/`, 11.6 s).
 - Integración: `test_interruptor_viva_offline` PASA. `test_pausa_y_reanudacion`
   FALLA también en el árbol limpio (verificado con `git stash`): preexistente,
@@ -50,3 +49,9 @@ Rama de trabajo: `alterno/cameo-pesos`. PR sin merge.
   no es regresión de este cambio.
 
 Engine_V5_CANONICO_SOLO.py y patterns_final_v14.json intactos (sin tocar).
+
+
+## Corrección de conformidad — 2026-11-13
+- El encargo original exige código de salida **8**; la primera revisión del PR usó 7. Se corrigieron el runner, el test E2E y este informe para reservar 8 a `BLOQUEADO_GUARDIAN_Z90`.
+- `previo_error` y `visto_error` usan ahora `False` cuando no hay error; conservan `stderr_tail` cuando existe. Esto cumple el contrato sin introducir `null`.
+- Esta corrección queda pendiente de la nueva ejecución de GitHub Actions; no se declara verde hasta recibir el check.
