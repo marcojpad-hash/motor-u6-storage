@@ -1310,6 +1310,20 @@ def post_predictor(case, motor, pred, result_view, base, reg):
     out["memento_vs_top1"] = {"proto_H1_configuracion": ph.get("H1_candidata"), "nucleo_tokens": nuc, "top1": top1,
                               "nucleo_en_favor_de_top1": [t for t in nuc if t in fav], "nucleo_en_contra_de_top1": [t for t in nuc if t in con],
                               "lectura": "cuántos tokens del núcleo Memento (PRE, sin mirar top1) pertenecen al patrón top1; sensor, no decide H"}
+
+    def superposicion():
+        # SUPERPOSICION_H1_H2_V1: H1/H2 se superponen (coexisten), no compiten.
+        # Sensor post-predictor (necesita H1/H2 ya decididos); solo observa.
+        m, _ = _load(base, "lateral_superposicion_v1.py", "lu_superposicion")
+        if m is None:
+            return "NO_CORRE", "falta lateral_superposicion_v1.py", None
+        h1f = cands[0]["family"] if cands else None
+        h2f = cands[1]["family"] if len(cands) > 1 else None
+        res = {"case_id": case.get("case_id"), "H1": {"family": h1f}, "H2": {"family": h2f},
+               "motor": {"cuts": motor.get("cuts") or []}}
+        r = m.observar(res)
+        return "ACTIVA", f"par {r.get('par_superpuesto')} subtipo={r.get('subtipo')} sup={r.get('cortes_en_superposicion')}/{r.get('n_cortes')} sim={r.get('simetria_media')}", r
+    out["superposicion_h1_h2"] = _pieza("superposicion_h1_h2", "lateral_superposicion_v1.py", "SENSOR (superposición H1+H2, post-predictor; no decide H)", superposicion, base, reg)
     return out
 
 
