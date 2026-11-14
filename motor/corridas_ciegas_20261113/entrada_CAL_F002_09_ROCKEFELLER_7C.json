@@ -1,0 +1,325 @@
+{
+  "case_id": "CAL_F002_09_ROCKEFELLER_7C",
+  "question": "¿Qué trayectoria sigue John D. Rockefeller tras constituir en Ohio la Standard Oil Company con sus socios refinadores de Cleveland?",
+  "person": "John D. Rockefeller",
+  "tipo_sujeto": "empresario",
+  "freeze": "1870-01-31",
+  "z_trabajo": "1870-01-31",
+  "modo_z": "historico",
+  "gate_z": "GATE_Z_TRABAJO_20261024",
+  "preparacion_ciega": {
+    "preparador_entrada": "GrokBot-preparador-ciego-F002",
+    "custodio_destino": "GrokBot-custodio-rutina-F002",
+    "vio_destino": false
+  },
+  "random_seed": 20261024,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "1913",
+  "cuts": [
+    {
+      "id": "C1_1859",
+      "corte": "C1_1859",
+      "cut_id": "C1_1859",
+      "date": "1859",
+      "fecha_corte": "1859",
+      "hecho": "Con ahorros propios y 1000 dólares prestados por su padre fundó en Cleveland con Maurice Clark y George Gardner una casa de comisiones de productos agrícolas con 4000 dólares de capital, que pasó a llamarse Clark & Rockefeller.",
+      "P": [
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "logro_personal",
+          0.72
+        ]
+      ],
+      "A": [
+        [
+          "metodicidad",
+          0.8
+        ],
+        [
+          "eficiencia",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "dependencia",
+          0.62
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "En 1859 formó con Clark y Gardner una casa de comisiones con 4000 dólares de capital, con 1000 prestados por su padre; la firma se llamó Clark & Rockefeller.",
+          "source_url": "https://en.wikipedia.org/wiki/John_D._Rockefeller",
+          "source_date": "2026-10-25",
+          "claim_date": "1859",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C2_1868",
+      "corte": "C2_1868",
+      "cut_id": "C2_1868",
+      "date": "1868",
+      "fecha_corte": "1868",
+      "hecho": "En febrero de 1865 compró en subasta la parte de los hermanos Clark en la refinería por 72 500 dólares y formó Rockefeller & Andrews, día que llamó decisivo para su carrera; en 1867 entró Henry Flagler y nació Rockefeller, Andrews & Flagler, que hacia 1868 tenía dos refinerías en Cleveland y una filial comercial en Nueva York.",
+      "P": [
+        [
+          "ambicion",
+          0.82
+        ],
+        [
+          "control",
+          0.75
+        ]
+      ],
+      "A": [
+        [
+          "planificacion",
+          0.78
+        ],
+        [
+          "negociacion",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "competencia",
+          0.78
+        ],
+        [
+          "prosperidad",
+          0.75
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "En febrero de 1865 compró la parte de los Clark por 72 500 dólares en subasta y formó Rockefeller & Andrews.",
+          "source_url": "https://en.wikipedia.org/wiki/John_D._Rockefeller",
+          "source_date": "2026-10-25",
+          "claim_date": "1865-02",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        },
+        {
+          "afirmacion": "En 1867 Flagler se sumó (Rockefeller, Andrews & Flagler); hacia 1868 la firma tenía dos refinerías en Cleveland y una filial comercial en Nueva York.",
+          "source_url": "https://en.wikipedia.org/wiki/Rockefeller,_Andrews_%26_Flagler",
+          "source_date": "2026-10-25",
+          "claim_date": "1868",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C3_1870",
+      "corte": "C3_1870",
+      "cut_id": "C3_1870",
+      "date": "1870-01-10",
+      "fecha_corte": "1870-01-10",
+      "hecho": "El 10 de enero de 1870 disolvió la sociedad Rockefeller, Andrews & Flagler y cofundó con sus socios la Standard Oil Company de Ohio.",
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "poder",
+          0.75
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.8
+        ],
+        [
+          "eficiencia",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "competencia",
+          0.8
+        ],
+        [
+          "acumulacion_capital",
+          0.75
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "El 10 de enero de 1870 Rockefeller disolvió la sociedad y cofundó la Standard Oil de Ohio.",
+          "source_url": "https://en.wikipedia.org/wiki/John_D._Rockefeller",
+          "source_date": "2026-10-25",
+          "claim_date": "1870-01-10",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C4_1882",
+      "corte": "C4_1882",
+      "cut_id": "C4_1882",
+      "date": "1882",
+      "fecha_corte": "1882",
+      "hecho": "En 1882 crea el Standard Oil Trust y controla cerca del 90 por ciento del petróleo refinado en Estados Unidos.",
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "poder",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.84
+        ],
+        [
+          "planificacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "competencia",
+          0.82
+        ],
+        [
+          "acumulacion_capital",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C5_1892",
+      "corte": "C5_1892",
+      "cut_id": "C5_1892",
+      "date": "1892",
+      "fecha_corte": "1892",
+      "hecho": "En 1892 disuelve el Trust por presión legal, pero mantiene el control mediante la Standard Oil de Nueva Jersey.",
+      "P": [
+        [
+          "control",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "negociacion",
+          0.8
+        ],
+        [
+          "discrecion",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "presion_social",
+          0.78
+        ],
+        [
+          "legitimidad_percibida",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C6_1911",
+      "corte": "C6_1911",
+      "cut_id": "C6_1911",
+      "date": "1911-05-15",
+      "fecha_corte": "1911-05-15",
+      "hecho": "En 1911 la Corte Suprema disuelve Standard Oil en 34 empresas; Rockefeller se vuelve aún más rico por el valor de las acciones.",
+      "P": [
+        [
+          "triunfo",
+          0.84
+        ],
+        [
+          "ambicion",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "resiliencia",
+          0.8
+        ],
+        [
+          "planificacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "prosperidad",
+          0.84
+        ],
+        [
+          "acumulacion_capital",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C7_1913",
+      "corte": "C7_1913",
+      "cut_id": "C7_1913",
+      "date": "1913",
+      "fecha_corte": "1913",
+      "hecho": "En 1913 funda la Fundación Rockefeller y se dedica a la filantropía hasta su muerte en 1937.",
+      "P": [
+        [
+          "deber",
+          0.82
+        ],
+        [
+          "devocion",
+          0.75
+        ]
+      ],
+      "A": [
+        [
+          "generacion_ideas",
+          0.78
+        ],
+        [
+          "organizacion",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.8
+        ],
+        [
+          "legitimidad_percibida",
+          0.78
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Wikipedia en inglés (biografía y Rockefeller, Andrews & Flagler)."
+}
