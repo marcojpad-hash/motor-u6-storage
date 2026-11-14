@@ -1,0 +1,704 @@
+{
+ "21_sacrificio_por_los_parientes": {
+  "LISZT_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "29_un_enemigo_amado": {
+  "LISZT_NINO_7C": null
+ },
+ "9_audaz_empresa": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": null
+ },
+ "anacyclosis_03_aristocracia": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 1,
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 1,
+  "SIDIS_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "arquetipo_el_amante": {
+  "LISZT_NINO_7C": null,
+  "PICASSO_NINO_7C": null
+ },
+ "arquetipo_el_creador": {
+  "LISZT_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 1
+ },
+ "arquetipo_el_explorador": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 1,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "arquetipo_el_gobernante": {
+  "LISZT_NINO_7C": null,
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null
+ },
+ "arquetipo_el_heroe": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "PURCELL_NINO_7C": null
+ },
+ "berlin_01_erizo": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": null,
+  "KRIPKE_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "candidato_trayectoria_arte_prestigio": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": null,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": null,
+  "MOZART_NINO_7C": null
+ },
+ "cliodinamica_02_fase_estanflacion_presion": {
+  "LISZT_NINO_7C": null,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": null,
+  "PURCELL_NINO_7C": 1,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "distopia_agotamiento_ambiental": {
+  "LISZT_NINO_7C": 1,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "duelo_bonanno_02_comun_recuperacion": {
+  "LISZT_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "duelo_bonanno_03_cronico": {
+  "LISZT_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "duelo_bonanno_04_depresion_cronica_preexistente": {
+  "LISZT_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "dumezil_desequilibrio_f3_come_al_resto": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": 1,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "dumezil_f1_soberania_juridica": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null
+ },
+ "dumezil_f3_fecundidad": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": null,
+  "MOZART_NINO_7C": 1
+ },
+ "erikson_06_intimidad_vs_aislamiento": {
+  "LISZT_NINO_7C": null,
+  "PICASSO_NINO_7C": null
+ },
+ "erikson_07_generatividad_vs_estancamiento": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "eterno_retorno_03_desgaste_y_reinicio": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": null,
+  "PASCAL_NINO_7C": null
+ },
+ "kwml_01_rey": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": null,
+  "KRIPKE_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "mauss_01_intercambio_agonistico": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0
+ },
+ "mauss_02_deuda_de_honor": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 1,
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 1
+ },
+ "mbti_factor_percepcion_p": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": null,
+  "PASCAL_NINO_7C": null,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "mentor": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "minsky_02_especulativa": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": null
+ },
+ "monomito_02_llamado_a_la_aventura": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "monomito_05_cruce_del_primer_umbral": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 1,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "monomito_06_pruebas_aliados_y_enemigos": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "predictivo_02_mdp_politica_optima": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "predictivo_03_cox_survival_riesgo": {
+  "LISZT_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": null
+ },
+ "predictivo_04_caos_bifurcacion_critica": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": null,
+  "PASCAL_NINO_7C": 1
+ },
+ "schwartz_10_autodireccion": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": null,
+  "PASCAL_NINO_7C": 1,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "situacion_dramatica_ambicion": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": 1,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "social_04_rogers_difusion_innovaciones": {
+  "LISZT_NINO_7C": null,
+  "MENUHIN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 1
+ },
+ "social_05_granovetter_modelos_de_umbral": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": null,
+  "PASCAL_NINO_7C": null
+ },
+ "social_14_overton_ventana": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "PICASSO_NINO_7C": 1,
+  "MOZART_NINO_7C": 0
+ },
+ "tainter_04_colapso_por_simplificacion_forzada": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": null,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 1,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "ttm_04_accion": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "utopia_abundancia_sybaris": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": null,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": null,
+  "PURCELL_NINO_7C": null,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "utopia_arkadia": {
+  "LISZT_NINO_7C": null,
+  "BELLINI_NINO_7C": null,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": null
+ },
+ "utopia_autonomia_atenas": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 1,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "utopia_mentalidad_conservadora": {
+  "LISZT_NINO_7C": null,
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null
+ },
+ "utopia_mentalidad_liberal": {
+  "LISZT_NINO_7C": 0,
+  "MENUHIN_NINO_7C": null,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": null,
+  "PASCAL_NINO_7C": 1,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "utopia_mentalidad_milenarista": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": null,
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "PICASSO_NINO_7C": 0
+ },
+ "utopia_oficio_roma": {
+  "LISZT_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": 1,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null
+ },
+ "utopia_principio_mercado": {
+  "LISZT_NINO_7C": 1,
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 1,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": null,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "utopia_principio_naturaleza": {
+  "LISZT_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "12_obtencion": {
+  "MENUHIN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 1,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "aliado": {
+  "MENUHIN_NINO_7C": 0
+ },
+ "erikson_03_iniciativa_vs_culpa": {
+  "MENUHIN_NINO_7C": 0,
+  "ALKAN_NINO_7C": 0,
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "schwartz_07_logro": {
+  "MENUHIN_NINO_7C": 1,
+  "PASCAL_NINO_7C": null,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 1,
+  "PICASSO_NINO_7C": 1
+ },
+ "28_obstaculos_para_el_amor": {
+  "ALKAN_NINO_7C": null
+ },
+ "candidato_riesgo_institucional_burocratico": {
+  "ALKAN_NINO_7C": null
+ },
+ "frye_mythos_romance": {
+  "ALKAN_NINO_7C": 0,
+  "PURCELL_NINO_7C": null,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": null,
+  "MOZART_NINO_7C": null
+ },
+ "mbti_factor_introversion_i": {
+  "ALKAN_NINO_7C": null,
+  "SIDIS_NINO_7C": null
+ },
+ "social_07_noelle_neumann_espiral_silencio": {
+  "ALKAN_NINO_7C": null
+ },
+ "24_rivalidad_de_superior_e_inferior": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "PICASSO_NINO_7C": 0
+ },
+ "bbk_03_individualista": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 1,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "cliodinamica_04_fase_depresion_reconstruccion": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "distopia_tecnica_herramienta_manda": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "dumezil_desequilibrio_f2_come_al_resto": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 1,
+  "MOZART_NINO_7C": 0
+ },
+ "dumezil_f2_fuerza": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": 1,
+  "PICASSO_NINO_7C": 1,
+  "MOZART_NINO_7C": 0
+ },
+ "mbti_factor_extraversion_e": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "mbti_factor_juicio_j": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "mbti_factor_sensacion_s": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "predictivo_05_sir_contagio_conductual": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "sistema_domiciano_maiestas": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "social_01_asch_conformidad": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": 1
+ },
+ "spengler_02_verano_otono_racionalizacion": {
+  "BELLINI_NINO_7C": 0,
+  "PURCELL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "strauss_howe_02_the_awakening": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": 1
+ },
+ "turner_02_communitas": {
+  "BELLINI_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "utopia_mentalidad_socialista": {
+  "BELLINI_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "PICASSO_NINO_7C": 0
+ },
+ "1_suplica": {
+  "PURCELL_NINO_7C": 0
+ },
+ "minsky_01_cobertura": {
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": 0,
+  "MOZART_NINO_7C": null
+ },
+ "schwartz_03_tradicion": {
+  "PURCELL_NINO_7C": 0,
+  "PASCAL_NINO_7C": null,
+  "PICASSO_NINO_7C": null,
+  "MOZART_NINO_7C": null
+ },
+ "schwartz_05_seguridad": {
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": null
+ },
+ "social_02_milgram_obediencia": {
+  "PURCELL_NINO_7C": 0,
+  "MOZART_NINO_7C": null
+ },
+ "tainter_03_vulnerabilidad_sistemica": {
+  "PURCELL_NINO_7C": 0
+ },
+ "20_sacrificio_por_un_ideal": {
+  "PASCAL_NINO_7C": 0
+ },
+ "23_necesidad_de_sacrificar_a_los_seres_queridos": {
+  "PASCAL_NINO_7C": 0
+ },
+ "35_recuperacion_de_lo_perdido": {
+  "PASCAL_NINO_7C": 0
+ },
+ "anacyclosis_01_monarquia": {
+  "PASCAL_NINO_7C": 0
+ },
+ "bbk_01_aventurero": {
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": null,
+  "KRIPKE_NINO_7C": 1,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "berlin_02_zorro": {
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "dialectica_01_tesis_estabilidad_hegemonica": {
+  "PASCAL_NINO_7C": 0
+ },
+ "dumezil_desequilibrio_f1_come_al_resto": {
+  "PASCAL_NINO_7C": 0
+ },
+ "dumezil_f1_soberania_magica": {
+  "PASCAL_NINO_7C": 0
+ },
+ "eterno_retorno_02_cosmizacion_fundacion": {
+  "PASCAL_NINO_7C": 0
+ },
+ "kwml_03_mago": {
+  "PASCAL_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "mbti_factor_intuicion_n": {
+  "PASCAL_NINO_7C": 1,
+  "SIDIS_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0,
+  "MOZART_NINO_7C": 0
+ },
+ "monomito_04_encuentro_con_el_mentor": {
+  "PASCAL_NINO_7C": 0
+ },
+ "monomito_07_aproximacion_a_la_caverna_mas_profunda": {
+  "PASCAL_NINO_7C": 0
+ },
+ "monomito_08_la_odisea_o_prueba_suprema": {
+  "PASCAL_NINO_7C": null
+ },
+ "schwartz_06_poder": {
+  "PASCAL_NINO_7C": 0
+ },
+ "schwartz_09_estimulacion": {
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 1,
+  "PICASSO_NINO_7C": 1,
+  "MOZART_NINO_7C": 0
+ },
+ "sistema_domiciano": {
+  "PASCAL_NINO_7C": 0
+ },
+ "spengler_01_primavera_nacimiento_mistico": {
+  "PASCAL_NINO_7C": null,
+  "MOZART_NINO_7C": 0
+ },
+ "strauss_howe_03_the_unraveling": {
+  "PASCAL_NINO_7C": 0,
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "strauss_howe_04_the_crisis": {
+  "PASCAL_NINO_7C": null
+ },
+ "utopia_orden_sparte": {
+  "PASCAL_NINO_7C": 0
+ },
+ "utopia_principio_estado": {
+  "PASCAL_NINO_7C": 0
+ },
+ "5_persecucion": {
+  "SIDIS_NINO_7C": null
+ },
+ "arquetipo_el_sabio": {
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 1
+ },
+ "sustancias_02_moderado": {
+  "SIDIS_NINO_7C": null
+ },
+ "sustancias_03_severo": {
+  "SIDIS_NINO_7C": 0
+ },
+ "trayectoria_escritores_creativos": {
+  "SIDIS_NINO_7C": null
+ },
+ "trayectoria_musicos_populares": {
+  "SIDIS_NINO_7C": null
+ },
+ "trayectoria_posgrado_academicos": {
+  "SIDIS_NINO_7C": null
+ },
+ "trayectoria_transportistas_turno_nocturno": {
+  "SIDIS_NINO_7C": null
+ },
+ "utopia_principio_libertades": {
+  "SIDIS_NINO_7C": 0,
+  "KRIPKE_NINO_7C": 0,
+  "PICASSO_NINO_7C": 0
+ },
+ "mbti_factor_pensamiento_t": {
+  "KRIPKE_NINO_7C": 0
+ },
+ "mbti_racional": {
+  "KRIPKE_NINO_7C": 0
+ },
+ "tainter_01_inversion_complejidad_productiva": {
+  "KRIPKE_NINO_7C": 0
+ },
+ "36_perdida_de_los_seres_queridos": {
+  "PICASSO_NINO_7C": 0
+ },
+ "kwml_04_amante": {
+  "PICASSO_NINO_7C": 0
+ },
+ "arquetipo_el_mago": {
+  "MOZART_NINO_7C": 0
+ },
+ "kondratiev_01_primavera_expansion": {
+  "MOZART_NINO_7C": 0
+ },
+ "weber_02_autoridad_carismatica": {
+  "MOZART_NINO_7C": 0
+ }
+}
