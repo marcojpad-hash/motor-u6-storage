@@ -1,0 +1,442 @@
+[
+  {
+    "caso": "CAL_F001_01_NAPOLEON",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "31_conflicto_con_un_dios",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7404
+  },
+  {
+    "caso": "CAL_F001_02_TESLA",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.6977
+  },
+  {
+    "caso": "CAL_F001_03_WILDE",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "31_conflicto_con_un_dios",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7194
+  },
+  {
+    "caso": "CAL_F001_04_DISNEY",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_10_autodireccion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7893
+  },
+  {
+    "caso": "CAL_F001_05_TURING",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "utopia_mentalidad_liberal",
+    "peso_sol_Z_gravedad": 0.7012,
+    "peso_H1_Z_directo": 0.7012
+  },
+  {
+    "caso": "CAL_F002_01_GALILEI",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7927
+  },
+  {
+    "caso": "CAL_F002_02_PASTEUR",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "9_audaz_empresa",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.6472
+  },
+  {
+    "caso": "CAL_F002_03_ARBUCKLE",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.722
+  },
+  {
+    "caso": "CAL_F002_04_BACH",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "tainter_01_inversion_complejidad_productiva",
+    "peso_sol_Z_gravedad": 0.5,
+    "peso_H1_Z_directo": 0.5
+  },
+  {
+    "caso": "CAL_F002_05_MCCARTHY",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7212
+  },
+  {
+    "caso": "CAL_F002_06_COOLIDGE",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "36_perdida_de_los_seres_queridos",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.5
+  },
+  {
+    "caso": "CAL_F002_07_CATALINA",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7265
+  },
+  {
+    "caso": "CAL_F002_08_LUISXVI",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "arquetipo_el_explorador",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.6748
+  },
+  {
+    "caso": "CAL_F002_09_ROCKEFELLER",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "30_ambicion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8044
+  },
+  {
+    "caso": "CAL_F002_10_DURANT",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "12_obtencion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7856
+  },
+  {
+    "caso": "CAL_F003_01_CARAVAGGIO",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "anacyclosis_06_oclocracia",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7072
+  },
+  {
+    "caso": "CAL_F003_02_DICKENS",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7251
+  },
+  {
+    "caso": "CAL_F003_03_LAVOISIER",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7927
+  },
+  {
+    "caso": "CAL_F003_04_FARADAY",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "30_ambicion",
+    "peso_sol_Z_gravedad": 0.6973,
+    "peso_H1_Z_directo": 0.6973
+  },
+  {
+    "caso": "CAL_F003_05_FOUQUET",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8062
+  },
+  {
+    "caso": "CAL_F003_06_TROTSKY",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "24_rivalidad_de_superior_e_inferior",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.5
+  },
+  {
+    "caso": "CAL_F003_07_LINCOLN",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "12_obtencion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7846
+  },
+  {
+    "caso": "CAL_F003_08_LAW",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "30_ambicion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8145
+  },
+  {
+    "caso": "CAL_F003_09_CARNEGIE",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8032
+  },
+  {
+    "caso": "CAL_F003_10_PEDRO_II",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "tainter_03_vulnerabilidad_sistemica",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.679
+  },
+  {
+    "caso": "CAL_F004_01_WAGNER",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7815
+  },
+  {
+    "caso": "CAL_F004_02_DAVID",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "30_ambicion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8
+  },
+  {
+    "caso": "CAL_F004_03_OPPENHEIMER",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "mauss_02_deuda_de_honor",
+    "peso_sol_Z_gravedad": 0.7235,
+    "peso_H1_Z_directo": 0.7235
+  },
+  {
+    "caso": "CAL_F004_04_MENDEL",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.6706
+  },
+  {
+    "caso": "CAL_F004_05_KHRUSHCHEV",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "9_audaz_empresa",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7825
+  },
+  {
+    "caso": "CAL_F004_06_TRUMAN",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "9_audaz_empresa",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7563
+  },
+  {
+    "caso": "CAL_F004_07_CHANEL",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "schwartz_07_logro",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7859
+  },
+  {
+    "caso": "CAL_F004_08_LESSEPS",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "9_audaz_empresa",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7565
+  },
+  {
+    "caso": "CAL_F004_09_LAY",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "31_conflicto_con_un_dios",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7395
+  },
+  {
+    "caso": "CAL_F004_10_LUDWIG_II",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.7103
+  },
+  {
+    "caso": "ANONIMO2_Z90_20261113",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": null,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "ANONIMO3_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "20_sacrificio_por_un_ideal",
+    "peso_sol_Z_gravedad": 0.8006,
+    "peso_H1_Z_directo": 0.8006
+  },
+  {
+    "caso": "ANONIMO4_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7701,
+    "peso_H1_Z_directo": 0.7701
+  },
+  {
+    "caso": "ANONIMO_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": 0.8013,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "TRANSICION1_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_creador",
+    "peso_sol_Z_gravedad": 0.8006,
+    "peso_H1_Z_directo": 0.8006
+  },
+  {
+    "caso": "TRANSICION2_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "tainter_01_inversion_complejidad_productiva",
+    "peso_sol_Z_gravedad": 0.7768,
+    "peso_H1_Z_directo": 0.7768
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7336,
+    "peso_H1_Z_directo": 0.7336
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_SIN_C7_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7459,
+    "peso_H1_Z_directo": 0.7459
+  },
+  {
+    "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "20_sacrificio_por_un_ideal",
+    "peso_sol_Z_gravedad": 0.8013,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "MANDELA_HEROE_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "kwml_01_rey",
+    "peso_sol_Z_gravedad": 0.8013,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "MANDELA_HEROE_SIN_C7_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.8013,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_sabio",
+    "peso_sol_Z_gravedad": 0.7862,
+    "peso_H1_Z_directo": 0.7862
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_SOLO_HINTS_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "20_sacrificio_por_un_ideal",
+    "peso_sol_Z_gravedad": 0.8013,
+    "peso_H1_Z_directo": 0.8013
+  },
+  {
+    "caso": "TUBMAN_HEROE_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7719,
+    "peso_H1_Z_directo": 0.7719
+  },
+  {
+    "caso": "TUBMAN_HEROE_SIN_C7_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7862,
+    "peso_H1_Z_directo": 0.7862
+  },
+  {
+    "caso": "MOZART_CON_TEXTO_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "utopia_autonomia_atenas",
+    "peso_sol_Z_gravedad": 0.7985,
+    "peso_H1_Z_directo": 0.7985
+  },
+  {
+    "caso": "NAPOLEON_10CORTES_FINAL27",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.7813,
+    "peso_H1_Z_directo": 0.7813
+  },
+  {
+    "caso": "BOLIVAR_CON_TEXTO_EVIDENCIA_Z90_U6_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "peso_sol_Z_gravedad": 0.8155,
+    "peso_H1_Z_directo": 0.8155
+  },
+  {
+    "caso": "CURIE_EVIDENCIA_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "30_ambicion",
+    "peso_sol_Z_gravedad": 0.7545,
+    "peso_H1_Z_directo": 0.7545
+  },
+  {
+    "caso": "CHURCHILL_CAMEO_ALTERNO",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "berlin_01_erizo",
+    "peso_sol_Z_gravedad": 0.7179,
+    "peso_H1_Z_directo": 0.7179
+  }
+]
