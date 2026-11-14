@@ -51,5 +51,102 @@
     "divergencia_entre_escala": 0.057739,
     "n_cortes_observados": 10
   },
-  "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286)"
+  "gravedad": {
+    "sol": {
+      "familia": "arquetipo_el_gobernante",
+      "peso_Z": 0.7813
+    },
+    "nudos": [
+      {
+        "familia": "dumezil_f2_fuerza",
+        "peso_Z": 0.65,
+        "distancia_al_sol": 0.131,
+        "pendiente": 1.0286,
+        "rango_Z": 23,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_mentalidad_milenarista",
+        "peso_Z": 0.683,
+        "distancia_al_sol": 0.099,
+        "pendiente": 0.9143,
+        "rango_Z": 14,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "frye_mythos_romance",
+        "peso_Z": 0.668,
+        "distancia_al_sol": 0.113,
+        "pendiente": 0.5357,
+        "rango_Z": 17,
+        "primera_aparicion": "C4",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "dumezil_f3_fecundidad",
+        "peso_Z": 0.767,
+        "distancia_al_sol": 0.014,
+        "pendiente": 0.1636,
+        "rango_Z": 10,
+        "primera_aparicion": "C1",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "EN_TRANSITO"
+      },
+      {
+        "familia": "predictivo_02_mdp_politica_optima",
+        "peso_Z": 0.781,
+        "distancia_al_sol": 0.0,
+        "pendiente": 0.1636,
+        "rango_Z": 6,
+        "primera_aparicion": "C1",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "CAPTURADO"
+      },
+      {
+        "familia": "dumezil_desequilibrio_f2_come_al_resto",
+        "peso_Z": 0.636,
+        "distancia_al_sol": 0.145,
+        "pendiente": 0.1143,
+        "rango_Z": 24,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "RESISTE"
+      },
+      {
+        "familia": "situacion_dramatica_ambicion",
+        "peso_Z": 0.781,
+        "distancia_al_sol": 0.0,
+        "pendiente": 0.1091,
+        "rango_Z": 8,
+        "primera_aparicion": "C1",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "CAPTURADO"
+      }
+    ],
+    "cometa": {
+      "corte": "C9",
+      "nudos_que_suben": 3,
+      "salto_total": 0.32
+    },
+    "proporcionalidad": 0.568,
+    "capturados": [
+      "predictivo_02_mdp_politica_optima",
+      "situacion_dramatica_ambicion"
+    ],
+    "siendo_jalados": [
+      "dumezil_f2_fuerza",
+      "utopia_mentalidad_milenarista",
+      "frye_mythos_romance"
+    ],
+    "resisten": [
+      "dumezil_desequilibrio_f2_come_al_resto"
+    ],
+    "lectura": "sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568"
+  },
+  "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568"
 }

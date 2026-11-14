@@ -52,9 +52,35 @@ después de ver la hélice: la estabilización revela el comportamiento.
 - La lectura completa va en `laterales_unico.post.comportamiento_post_meseta`
   (cuando se corre post-corrida) y queda en el repo junto al RESULT.
 
+## Gravedad (Marco, 2026-11-13) — `leer_gravedad(result)`
+NO es gravedad terrestre. Es inercia de gravedad como un cometa que arrastra,
+o como el sol jalando a todos los cuerpos celestes dentro de su casa (la Vía
+Láctea). Se mide sobre los NUDOS que se movieron (las familias bajo el top5
+subiendo de rango) y se busca PROPORCIONALIDAD.
+
+- **SOL:** la familia más pesada (H1), el atractor central. Todo es jalado
+  hacia su peso (P_FULL_244 en Z).
+- **NUDOS:** cada familia que se movió, con peso en Z, distancia al Sol y
+  pendiente. Estados:
+  - `CAPTURADO`: ya llegó al peso del Sol (distancia ~0).
+  - `SIENDO_JALADO`: sube hacia el Sol, proporcional a su distancia.
+  - `RESISTE`: lejos del Sol pero no sube (su propia gravedad, posible
+    atractor rival).
+  - `EN_TRANSITO`: cerca del Sol, moviéndose lento.
+- **COMETA:** el corte donde varios nudos saltan a la vez (un arrastre).
+- **PROPORCIONALIDAD:** correlación pendiente ~ distancia al Sol.
+
 ## Verificación
 - `leer_resultado` contra `RESULT_NAPOLEON_10CORTES_FINAL27.json` (2026-11-13):
   en_meseta True, 7 familias bajo el top5 suben de rango, 0 cocinando,
   0 emergentes por umbral, punto no considerado `dumezil_f2_fuerza`
   (rango Z 23, pendiente 1.0286, LATENTE_DORMIDO). Trazabilidad
   micro 0.470833 / meso 0.48587 / macro 0.528572.
+- **Gravedad en FINAL27:** sol `arquetipo_el_gobernante` (peso Z 0.7813);
+  capturados `predictivo_02_mdp_politica_optima` y
+  `situacion_dramatica_ambicion` (peso = sol, 0.781); siendo jalados
+  `dumezil_f2_fuerza`, `utopia_mentalidad_milenarista`, `frye_mythos_romance`;
+  resiste `dumezil_desequilibrio_f2_come_al_resto` (el más lejos, 0.145, pero
+  el más lento, 0.114 — su propia gravedad, "come al resto"); en tránsito
+  `dumezil_f3_fecundidad`. Cometa en **C9** (3 nudos suben, salto total 0.32).
+  Proporcionalidad pendiente~distancia: **0.568**.
