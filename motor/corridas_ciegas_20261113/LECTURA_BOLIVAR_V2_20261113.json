@@ -1,0 +1,208 @@
+{
+  "contrato": "COMPORTAMIENTO_POST_MESETA_V1",
+  "version": "v2_20261113",
+  "can_decide_H": false,
+  "en_meseta": true,
+  "regimen": "MESeta_O_ESTABILIZACION",
+  "comportamiento": {
+    "resumen_clases_fondo": {
+      "tokens": {
+        "LATENTE_DORMIDO": 4,
+        "PICO": 7,
+        "DESCENSO": 2,
+        "SIN_FORMA_CLARA": 2
+      },
+      "familias": {
+        "PICO": 20,
+        "LATENTE_DORMIDO": 20,
+        "SIN_FORMA_CLARA": 3,
+        "ASCENSO_LENTO": 3
+      }
+    },
+    "familias_bajo_top5_subiendo_de_rango": 11,
+    "lo_que_se_cocina_abajo_n": 3,
+    "tokens_que_se_cocinan_abajo_n": 0,
+    "formas_picos_mesetas": {
+      "utopia_mentalidad_liberal": "↘→→→→↗↘→→",
+      "kwml_01_rey": "→→↗↗→→→→→",
+      "anacyclosis_01_monarquia": "→→→↗→→→→→",
+      "20_sacrificio_por_un_ideal": "↗→↘→→→→→→",
+      "9_audaz_empresa": "↗↗↗→→→→→↘",
+      "weber_01_autoridad_tradicional": "→→→→→→→→↗",
+      "schwartz_07_logro": "→↗→→→↘↗→↘",
+      "arquetipo_el_gobernante": "→→↗→→→→→→",
+      "30_ambicion": "→↗↗↘→→→→→",
+      "jaldun_01_asabiyyah_alta_cohesion": "↗→↘→→→→→→",
+      "21_sacrificio_por_los_parientes": "↗↘→→→→→→→",
+      "weber_02_autoridad_carismatica": "→→→→→→→→↗",
+      "aliado": "↗↘→→→→→→→"
+    }
+  },
+  "lo_que_emerge": [
+    {
+      "familia": "weber_02_autoridad_carismatica",
+      "rango_en_Z": 6,
+      "pendiente_rango_por_corte": 1.869,
+      "clase": "ASCENSO_LENTO"
+    }
+  ],
+  "punto_no_considerado": {
+    "familia": "weber_02_autoridad_carismatica",
+    "rango_en_Z": 6,
+    "pendiente_rango_por_corte": 1.869,
+    "clase": "ASCENSO_LENTO"
+  },
+  "trazabilidad": {
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "micro": 0.507066,
+    "meso": 0.50212,
+    "macro": 0.546287,
+    "aceleracion": 0.507066,
+    "divergencia_entre_escala": 0.044167,
+    "n_cortes_observados": 10
+  },
+  "gravedad": {
+    "sol": {
+      "familia": "arquetipo_el_gobernante",
+      "peso_Z": 0.8155
+    },
+    "nudos": [
+      {
+        "familia": "weber_02_autoridad_carismatica",
+        "peso_Z": 0.805,
+        "distancia_al_sol": 0.011,
+        "pendiente": 1.869,
+        "rango_Z": 6,
+        "primera_aparicion": "C3",
+        "clase": "ASCENSO_LENTO",
+        "estado": "EN_TRANSITO"
+      },
+      {
+        "familia": "utopia_oficio_roma",
+        "peso_Z": 0.681,
+        "distancia_al_sol": 0.134,
+        "pendiente": 1.7714,
+        "rango_Z": 14,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "dialectica_01_tesis_estabilidad_hegemonica",
+        "peso_Z": 0.658,
+        "distancia_al_sol": 0.157,
+        "pendiente": 1.4286,
+        "rango_Z": 19,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "sistema_domiciano_maiestas",
+        "peso_Z": 0.658,
+        "distancia_al_sol": 0.157,
+        "pendiente": 1.4286,
+        "rango_Z": 20,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_mentalidad_conservadora",
+        "peso_Z": 0.64,
+        "distancia_al_sol": 0.176,
+        "pendiente": 1.3714,
+        "rango_Z": 23,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_principio_estado",
+        "peso_Z": 0.608,
+        "distancia_al_sol": 0.207,
+        "pendiente": 1.1143,
+        "rango_Z": 27,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "dumezil_f1_soberania_juridica",
+        "peso_Z": 0.718,
+        "distancia_al_sol": 0.097,
+        "pendiente": 1.0,
+        "rango_Z": 12,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "sistema_domiciano",
+        "peso_Z": 0.718,
+        "distancia_al_sol": 0.097,
+        "pendiente": 1.0,
+        "rango_Z": 13,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_orden_sparte",
+        "peso_Z": 0.672,
+        "distancia_al_sol": 0.144,
+        "pendiente": 0.6167,
+        "rango_Z": 16,
+        "primera_aparicion": "C2",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "schwartz_06_poder",
+        "peso_Z": 0.742,
+        "distancia_al_sol": 0.073,
+        "pendiente": 0.5143,
+        "rango_Z": 11,
+        "primera_aparicion": "C5",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_autonomia_atenas",
+        "peso_Z": 0.634,
+        "distancia_al_sol": 0.182,
+        "pendiente": 0.2857,
+        "rango_Z": 26,
+        "primera_aparicion": "C4",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      }
+    ],
+    "cometa": {
+      "corte": "C5",
+      "nudos_que_suben": 9,
+      "salto_total": 1.045
+    },
+    "proporcionalidad": -0.232,
+    "n_nudos_proporcionalidad": 11,
+    "confianza_proporcionalidad": "MEDIA",
+    "capturados": [],
+    "siendo_jalados": [
+      "utopia_oficio_roma",
+      "dialectica_01_tesis_estabilidad_hegemonica",
+      "sistema_domiciano_maiestas",
+      "utopia_mentalidad_conservadora",
+      "utopia_principio_estado",
+      "dumezil_f1_soberania_juridica",
+      "sistema_domiciano",
+      "utopia_orden_sparte",
+      "schwartz_06_poder"
+    ],
+    "acercandose": [
+      "utopia_autonomia_atenas"
+    ],
+    "resisten": [],
+    "lectura": "sol arquetipo_el_gobernante (peso Z 0.8155); capturados: 0; siendo jalados: 9; acercándose: 1; resisten: 0; cometa en C5 (9 nudos suben); proporcionalidad pendiente~distancia: -0.232 (confianza MEDIA, n=11)"
+  },
+  "lectura": "estabilizado en meseta: 11 familias bajo el top5 suben de rango; lo que se cocina abajo: 3 familias / 0 tokens; emergentes: 1; punto no considerado: weber_02_autoridad_carismatica (rango Z 6, pendiente 1.869); sol arquetipo_el_gobernante (peso Z 0.8155); capturados: 0; siendo jalados: 9; acercándose: 1; resisten: 0; cometa en C5 (9 nudos suben); proporcionalidad pendiente~distancia: -0.232 (confianza MEDIA, n=11)"
+}
