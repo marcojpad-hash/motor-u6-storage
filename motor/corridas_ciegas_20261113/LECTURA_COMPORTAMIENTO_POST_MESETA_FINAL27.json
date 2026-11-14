@@ -1,0 +1,55 @@
+{
+  "contrato": "COMPORTAMIENTO_POST_MESETA_V1",
+  "version": "v1_20261113",
+  "can_decide_H": false,
+  "en_meseta": true,
+  "regimen": "MESeta_O_ESTABILIZACION",
+  "comportamiento": {
+    "resumen_clases_fondo": {
+      "tokens": {
+        "LATENTE_DORMIDO": 8,
+        "DESCENSO": 3,
+        "PICO": 3
+      },
+      "familias": {
+        "LATENTE_DORMIDO": 26,
+        "PICO": 6,
+        "SIN_FORMA_CLARA": 2
+      }
+    },
+    "familias_bajo_top5_subiendo_de_rango": 7,
+    "lo_que_se_cocina_abajo_n": 0,
+    "tokens_que_se_cocinan_abajo_n": 0,
+    "formas_picos_mesetas": {
+      "utopia_mentalidad_liberal": "↗↘→→→→→→→",
+      "predictivo_02_mdp_politica_optima": "↘→→→↗↘↗↘→",
+      "situacion_dramatica_ambicion": "→→→→↗→→→→",
+      "24_rivalidad_de_superior_e_inferior": "→→→→→→→↗→",
+      "utopia_principio_mercado": "↗↗→→↘→→→→",
+      "30_ambicion": "↗→→→→↘↗→→",
+      "kwml_01_rey": "→→↗↘→↗↘→→",
+      "12_obtencion": "↗↗→→→→→→→",
+      "anacyclosis_01_monarquia": "→→→→→↗↘→→",
+      "schwartz_07_logro": "↗↗↘↗↘→→→→",
+      "arquetipo_el_gobernante": "→↗→→→→→→→"
+    }
+  },
+  "lo_que_emerge": [],
+  "punto_no_considerado": {
+    "familia": "dumezil_f2_fuerza",
+    "rango_en_Z": 23,
+    "pendiente_rango_por_corte": 1.0286,
+    "clase": "LATENTE_DORMIDO",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+  },
+  "trazabilidad": {
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "micro": 0.470833,
+    "meso": 0.48587,
+    "macro": 0.528572,
+    "aceleracion": 0.475353,
+    "divergencia_entre_escala": 0.057739,
+    "n_cortes_observados": 10
+  },
+  "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286)"
+}
