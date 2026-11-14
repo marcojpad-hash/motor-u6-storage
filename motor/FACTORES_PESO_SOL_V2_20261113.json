@@ -1,0 +1,552 @@
+[
+  {
+    "caso": "CAL_F001_01_NAPOLEON",
+    "peso_H1_Z": 0.7404,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35,
+    "H1": "31_conflicto_con_un_dios",
+    "masa_favor_H1_total": 0.78,
+    "activacion_H1_Z": 0.0801
+  },
+  {
+    "caso": "CAL_F001_02_TESLA",
+    "peso_H1_Z": 0.6977,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 64,
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "masa_favor_H1_total": 0.72,
+    "activacion_H1_Z": 0.0659
+  },
+  {
+    "caso": "CAL_F001_03_WILDE",
+    "peso_H1_Z": 0.7194,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 16,
+    "H1": "31_conflicto_con_un_dios",
+    "masa_favor_H1_total": 0.8,
+    "activacion_H1_Z": 0.0731
+  },
+  {
+    "caso": "CAL_F001_04_DISNEY",
+    "peso_H1_Z": 0.7893,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 52,
+    "H1": "schwartz_10_autodireccion",
+    "masa_favor_H1_total": 3.22,
+    "activacion_H1_Z": 0.147
+  },
+  {
+    "caso": "CAL_F001_05_TURING",
+    "peso_H1_Z": 0.7012,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 21,
+    "H1": "utopia_mentalidad_liberal",
+    "masa_favor_H1_total": 2.46,
+    "activacion_H1_Z": 0.0763
+  },
+  {
+    "caso": "CAL_F002_01_GALILEI",
+    "peso_H1_Z": 0.7927,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 44,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 3.24,
+    "activacion_H1_Z": 0.1326
+  },
+  {
+    "caso": "CAL_F002_02_PASTEUR",
+    "peso_H1_Z": 0.6472,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 36,
+    "H1": "9_audaz_empresa",
+    "masa_favor_H1_total": 1.47,
+    "activacion_H1_Z": 0.1157
+  },
+  {
+    "caso": "CAL_F002_03_ARBUCKLE",
+    "peso_H1_Z": 0.722,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 1.52,
+    "activacion_H1_Z": 0.074
+  },
+  {
+    "caso": "CAL_F002_04_BACH",
+    "peso_H1_Z": 0.5,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 33,
+    "H1": "tainter_01_inversion_complejidad_productiva",
+    "masa_favor_H1_total": 0.75,
+    "activacion_H1_Z": 0.0592
+  },
+  {
+    "caso": "CAL_F002_05_MCCARTHY",
+    "peso_H1_Z": 0.7212,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 1.54,
+    "activacion_H1_Z": 0.0737
+  },
+  {
+    "caso": "CAL_F002_06_COOLIDGE",
+    "peso_H1_Z": 0.5,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 3,
+    "H1": "36_perdida_de_los_seres_queridos",
+    "masa_favor_H1_total": 0.74,
+    "activacion_H1_Z": 0.0782
+  },
+  {
+    "caso": "CAL_F002_07_CATALINA",
+    "peso_H1_Z": 0.7265,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 53,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 1.47,
+    "activacion_H1_Z": 0.0755
+  },
+  {
+    "caso": "CAL_F002_08_LUISXVI",
+    "peso_H1_Z": 0.6748,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 23,
+    "H1": "arquetipo_el_explorador",
+    "masa_favor_H1_total": 0.78,
+    "activacion_H1_Z": 0.0583
+  },
+  {
+    "caso": "CAL_F002_09_ROCKEFELLER",
+    "peso_H1_Z": 0.8044,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 57,
+    "H1": "30_ambicion",
+    "masa_favor_H1_total": 4.77,
+    "activacion_H1_Z": 0.1727
+  },
+  {
+    "caso": "CAL_F002_10_DURANT",
+    "peso_H1_Z": 0.7856,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 38,
+    "H1": "12_obtencion",
+    "masa_favor_H1_total": 2.44,
+    "activacion_H1_Z": 0.0952
+  },
+  {
+    "caso": "CAL_F003_01_CARAVAGGIO",
+    "peso_H1_Z": 0.7072,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51,
+    "H1": "anacyclosis_06_oclocracia",
+    "masa_favor_H1_total": 1.62,
+    "activacion_H1_Z": 0.0691
+  },
+  {
+    "caso": "CAL_F003_02_DICKENS",
+    "peso_H1_Z": 0.7251,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 28,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 1.58,
+    "activacion_H1_Z": 0.075
+  },
+  {
+    "caso": "CAL_F003_03_LAVOISIER",
+    "peso_H1_Z": 0.7927,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 2.44,
+    "activacion_H1_Z": 0.0976
+  },
+  {
+    "caso": "CAL_F003_04_FARADAY",
+    "peso_H1_Z": 0.6973,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 49,
+    "H1": "30_ambicion",
+    "masa_favor_H1_total": 0.7,
+    "activacion_H1_Z": 0.0658
+  },
+  {
+    "caso": "CAL_F003_05_FOUQUET",
+    "peso_H1_Z": 0.8062,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 43,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 2.38,
+    "activacion_H1_Z": 0.1021
+  },
+  {
+    "caso": "CAL_F003_06_TROTSKY",
+    "peso_H1_Z": 0.5,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 16,
+    "H1": "24_rivalidad_de_superior_e_inferior",
+    "masa_favor_H1_total": 2.44,
+    "activacion_H1_Z": 0.1455
+  },
+  {
+    "caso": "CAL_F003_07_LINCOLN",
+    "peso_H1_Z": 0.7846,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35,
+    "H1": "12_obtencion",
+    "masa_favor_H1_total": 2.34,
+    "activacion_H1_Z": 0.0949
+  },
+  {
+    "caso": "CAL_F003_08_LAW",
+    "peso_H1_Z": 0.8145,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 60,
+    "H1": "30_ambicion",
+    "masa_favor_H1_total": 3.26,
+    "activacion_H1_Z": 0.143
+  },
+  {
+    "caso": "CAL_F003_09_CARNEGIE",
+    "peso_H1_Z": 0.8032,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 37,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 2.4,
+    "activacion_H1_Z": 0.1011
+  },
+  {
+    "caso": "CAL_F003_10_PEDRO_II",
+    "peso_H1_Z": 0.679,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 20,
+    "H1": "tainter_03_vulnerabilidad_sistemica",
+    "masa_favor_H1_total": 0.74,
+    "activacion_H1_Z": 0.0597
+  },
+  {
+    "caso": "CAL_F004_01_WAGNER",
+    "peso_H1_Z": 0.7815,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 32,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 2.3,
+    "activacion_H1_Z": 0.0938
+  },
+  {
+    "caso": "CAL_F004_02_DAVID",
+    "peso_H1_Z": 0.8,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 40,
+    "H1": "30_ambicion",
+    "masa_favor_H1_total": 2.2,
+    "activacion_H1_Z": 0.1375
+  },
+  {
+    "caso": "CAL_F004_03_OPPENHEIMER",
+    "peso_H1_Z": 0.7235,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 45,
+    "H1": "mauss_02_deuda_de_honor",
+    "masa_favor_H1_total": 1.54,
+    "activacion_H1_Z": 0.0745
+  },
+  {
+    "caso": "CAL_F004_04_MENDEL",
+    "peso_H1_Z": 0.6706,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 18,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 1.56,
+    "activacion_H1_Z": 0.0949
+  },
+  {
+    "caso": "CAL_F004_05_KHRUSHCHEV",
+    "peso_H1_Z": 0.7825,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 62,
+    "H1": "9_audaz_empresa",
+    "masa_favor_H1_total": 1.5,
+    "activacion_H1_Z": 0.0942
+  },
+  {
+    "caso": "CAL_F004_06_TRUMAN",
+    "peso_H1_Z": 0.7563,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 12,
+    "H1": "9_audaz_empresa",
+    "masa_favor_H1_total": 1.58,
+    "activacion_H1_Z": 0.0854
+  },
+  {
+    "caso": "CAL_F004_07_CHANEL",
+    "peso_H1_Z": 0.7859,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 39,
+    "H1": "schwartz_07_logro",
+    "masa_favor_H1_total": 2.42,
+    "activacion_H1_Z": 0.0953
+  },
+  {
+    "caso": "CAL_F004_08_LESSEPS",
+    "peso_H1_Z": 0.7565,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 39,
+    "H1": "9_audaz_empresa",
+    "masa_favor_H1_total": 3.12,
+    "activacion_H1_Z": 0.1798
+  },
+  {
+    "caso": "CAL_F004_09_LAY",
+    "peso_H1_Z": 0.7395,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 38,
+    "H1": "31_conflicto_con_un_dios",
+    "masa_favor_H1_total": 0.76,
+    "activacion_H1_Z": 0.0798
+  },
+  {
+    "caso": "CAL_F004_10_LUDWIG_II",
+    "peso_H1_Z": 0.7103,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 17,
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "masa_favor_H1_total": 0.8,
+    "activacion_H1_Z": 0.0701
+  },
+  {
+    "caso": "ANONIMO2_Z90_20261113",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": false,
+    "n_cortes": 7,
+    "n_tokens_input": 140,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 7.04,
+    "activacion_H1_Z": 0.1985
+  },
+  {
+    "caso": "ANONIMO3_Z90_20261113",
+    "peso_H1_Z": 0.8006,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 147,
+    "H1": "20_sacrificio_por_un_ideal",
+    "masa_favor_H1_total": 1.54,
+    "activacion_H1_Z": 0.1002
+  },
+  {
+    "caso": "ANONIMO4_Z90_20261113",
+    "peso_H1_Z": 0.7701,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 288,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 5.28,
+    "activacion_H1_Z": 0.2415
+  },
+  {
+    "caso": "ANONIMO_Z90_20261113",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 163,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 7.22,
+    "activacion_H1_Z": 0.1985
+  },
+  {
+    "caso": "TRANSICION1_Z90_20261113",
+    "peso_H1_Z": 0.8006,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 125,
+    "H1": "arquetipo_el_creador",
+    "masa_favor_H1_total": 2.9,
+    "activacion_H1_Z": 0.1002
+  },
+  {
+    "caso": "TRANSICION2_Z90_20261113",
+    "peso_H1_Z": 0.7768,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 313,
+    "H1": "tainter_01_inversion_complejidad_productiva",
+    "masa_favor_H1_total": 1.5,
+    "activacion_H1_Z": 0.0923
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_20261112",
+    "peso_H1_Z": 0.7336,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 244,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 5.8,
+    "activacion_H1_Z": 0.2581
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.7459,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 188,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 5.08,
+    "activacion_H1_Z": 0.2504
+  },
+  {
+    "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 187,
+    "H1": "20_sacrificio_por_un_ideal",
+    "masa_favor_H1_total": 1.6,
+    "activacion_H1_Z": 0.1004
+  },
+  {
+    "caso": "MANDELA_HEROE_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 249,
+    "H1": "kwml_01_rey",
+    "masa_favor_H1_total": 5.9,
+    "activacion_H1_Z": 0.1489
+  },
+  {
+    "caso": "MANDELA_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 202,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 4.48,
+    "activacion_H1_Z": 0.1823
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+    "peso_H1_Z": 0.7862,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 170,
+    "H1": "arquetipo_el_sabio",
+    "masa_favor_H1_total": 8.12,
+    "activacion_H1_Z": 0.1935
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_SOLO_HINTS_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 170,
+    "H1": "20_sacrificio_por_un_ideal",
+    "masa_favor_H1_total": 1.54,
+    "activacion_H1_Z": 0.1004
+  },
+  {
+    "caso": "TUBMAN_HEROE_20261112",
+    "peso_H1_Z": 0.7719,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 225,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 4.48,
+    "activacion_H1_Z": 0.1938
+  },
+  {
+    "caso": "TUBMAN_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.7862,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 186,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 4.48,
+    "activacion_H1_Z": 0.204
+  },
+  {
+    "caso": "MOZART_CON_TEXTO_Z90_20261113",
+    "peso_H1_Z": 0.7985,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 166,
+    "H1": "utopia_autonomia_atenas",
+    "masa_favor_H1_total": 10.42,
+    "activacion_H1_Z": 0.0995
+  },
+  {
+    "caso": "NAPOLEON_10CORTES_FINAL27",
+    "peso_H1_Z": 0.7813,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 255,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 6.18,
+    "activacion_H1_Z": 0.0938
+  },
+  {
+    "caso": "BOLIVAR_CON_TEXTO_EVIDENCIA_Z90_U6_20261113",
+    "peso_H1_Z": 0.8155,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 346,
+    "H1": "arquetipo_el_gobernante",
+    "masa_favor_H1_total": 7.92,
+    "activacion_H1_Z": 0.1052
+  },
+  {
+    "caso": "CURIE_EVIDENCIA_Z90_20261113",
+    "peso_H1_Z": 0.7545,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 170,
+    "H1": "30_ambicion",
+    "masa_favor_H1_total": 4.46,
+    "activacion_H1_Z": 0.0848
+  },
+  {
+    "caso": "CHURCHILL_CAMEO_ALTERNO",
+    "peso_H1_Z": 0.7179,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 51,
+    "H1": "berlin_01_erizo",
+    "masa_favor_H1_total": 1.54,
+    "activacion_H1_Z": 0.0726
+  }
+]

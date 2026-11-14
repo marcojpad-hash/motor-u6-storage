@@ -1,0 +1,387 @@
+[
+  {
+    "caso": "CAL_F001_01_NAPOLEON",
+    "peso_H1_Z": 0.7404,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35
+  },
+  {
+    "caso": "CAL_F001_02_TESLA",
+    "peso_H1_Z": 0.6977,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 64
+  },
+  {
+    "caso": "CAL_F001_03_WILDE",
+    "peso_H1_Z": 0.7194,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 16
+  },
+  {
+    "caso": "CAL_F001_04_DISNEY",
+    "peso_H1_Z": 0.7893,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 52
+  },
+  {
+    "caso": "CAL_F001_05_TURING",
+    "peso_H1_Z": 0.7012,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 21
+  },
+  {
+    "caso": "CAL_F002_01_GALILEI",
+    "peso_H1_Z": 0.7927,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 44
+  },
+  {
+    "caso": "CAL_F002_02_PASTEUR",
+    "peso_H1_Z": 0.6472,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 36
+  },
+  {
+    "caso": "CAL_F002_03_ARBUCKLE",
+    "peso_H1_Z": 0.722,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51
+  },
+  {
+    "caso": "CAL_F002_04_BACH",
+    "peso_H1_Z": 0.5,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 33
+  },
+  {
+    "caso": "CAL_F002_05_MCCARTHY",
+    "peso_H1_Z": 0.7212,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35
+  },
+  {
+    "caso": "CAL_F002_06_COOLIDGE",
+    "peso_H1_Z": 0.5,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 3
+  },
+  {
+    "caso": "CAL_F002_07_CATALINA",
+    "peso_H1_Z": 0.7265,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 53
+  },
+  {
+    "caso": "CAL_F002_08_LUISXVI",
+    "peso_H1_Z": 0.6748,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 23
+  },
+  {
+    "caso": "CAL_F002_09_ROCKEFELLER",
+    "peso_H1_Z": 0.8044,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 57
+  },
+  {
+    "caso": "CAL_F002_10_DURANT",
+    "peso_H1_Z": 0.7856,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 38
+  },
+  {
+    "caso": "CAL_F003_01_CARAVAGGIO",
+    "peso_H1_Z": 0.7072,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51
+  },
+  {
+    "caso": "CAL_F003_02_DICKENS",
+    "peso_H1_Z": 0.7251,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 28
+  },
+  {
+    "caso": "CAL_F003_03_LAVOISIER",
+    "peso_H1_Z": 0.7927,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 51
+  },
+  {
+    "caso": "CAL_F003_04_FARADAY",
+    "peso_H1_Z": 0.6973,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 49
+  },
+  {
+    "caso": "CAL_F003_05_FOUQUET",
+    "peso_H1_Z": 0.8062,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 43
+  },
+  {
+    "caso": "CAL_F003_06_TROTSKY",
+    "peso_H1_Z": 0.5,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 16
+  },
+  {
+    "caso": "CAL_F003_07_LINCOLN",
+    "peso_H1_Z": 0.7846,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 35
+  },
+  {
+    "caso": "CAL_F003_08_LAW",
+    "peso_H1_Z": 0.8145,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 60
+  },
+  {
+    "caso": "CAL_F003_09_CARNEGIE",
+    "peso_H1_Z": 0.8032,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 37
+  },
+  {
+    "caso": "CAL_F003_10_PEDRO_II",
+    "peso_H1_Z": 0.679,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 20
+  },
+  {
+    "caso": "CAL_F004_01_WAGNER",
+    "peso_H1_Z": 0.7815,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 32
+  },
+  {
+    "caso": "CAL_F004_02_DAVID",
+    "peso_H1_Z": 0.8,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 40
+  },
+  {
+    "caso": "CAL_F004_03_OPPENHEIMER",
+    "peso_H1_Z": 0.7235,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 45
+  },
+  {
+    "caso": "CAL_F004_04_MENDEL",
+    "peso_H1_Z": 0.6706,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 18
+  },
+  {
+    "caso": "CAL_F004_05_KHRUSHCHEV",
+    "peso_H1_Z": 0.7825,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 62
+  },
+  {
+    "caso": "CAL_F004_06_TRUMAN",
+    "peso_H1_Z": 0.7563,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 12
+  },
+  {
+    "caso": "CAL_F004_07_CHANEL",
+    "peso_H1_Z": 0.7859,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 39
+  },
+  {
+    "caso": "CAL_F004_08_LESSEPS",
+    "peso_H1_Z": 0.7565,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 39
+  },
+  {
+    "caso": "CAL_F004_09_LAY",
+    "peso_H1_Z": 0.7395,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 38
+  },
+  {
+    "caso": "CAL_F004_10_LUDWIG_II",
+    "peso_H1_Z": 0.7103,
+    "en_meseta": false,
+    "n_cortes": 3,
+    "n_tokens_input": 17
+  },
+  {
+    "caso": "ANONIMO2_Z90_20261113",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": false,
+    "n_cortes": 7,
+    "n_tokens_input": 140
+  },
+  {
+    "caso": "ANONIMO3_Z90_20261113",
+    "peso_H1_Z": 0.8006,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 147
+  },
+  {
+    "caso": "ANONIMO4_Z90_20261113",
+    "peso_H1_Z": 0.7701,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 288
+  },
+  {
+    "caso": "ANONIMO_Z90_20261113",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 163
+  },
+  {
+    "caso": "TRANSICION1_Z90_20261113",
+    "peso_H1_Z": 0.8006,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 125
+  },
+  {
+    "caso": "TRANSICION2_Z90_20261113",
+    "peso_H1_Z": 0.7768,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 313
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_20261112",
+    "peso_H1_Z": 0.7336,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 244
+  },
+  {
+    "caso": "JUANA_DE_ARCO_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.7459,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 188
+  },
+  {
+    "caso": "KOLBE_HEROE_SIN_TRONO_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 187
+  },
+  {
+    "caso": "MANDELA_HEROE_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 249
+  },
+  {
+    "caso": "MANDELA_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 202
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_20261112",
+    "peso_H1_Z": 0.7862,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 170
+  },
+  {
+    "caso": "SEMMELWEIS_HEROE_SIN_TRONO_SOLO_HINTS_20261112",
+    "peso_H1_Z": 0.8013,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 170
+  },
+  {
+    "caso": "TUBMAN_HEROE_20261112",
+    "peso_H1_Z": 0.7719,
+    "en_meseta": true,
+    "n_cortes": 7,
+    "n_tokens_input": 225
+  },
+  {
+    "caso": "TUBMAN_HEROE_SIN_C7_20261112",
+    "peso_H1_Z": 0.7862,
+    "en_meseta": true,
+    "n_cortes": 6,
+    "n_tokens_input": 186
+  },
+  {
+    "caso": "MOZART_CON_TEXTO_Z90_20261113",
+    "peso_H1_Z": 0.7985,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 166
+  },
+  {
+    "caso": "NAPOLEON_10CORTES_FINAL27",
+    "peso_H1_Z": 0.7813,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 255
+  },
+  {
+    "caso": "BOLIVAR_CON_TEXTO_EVIDENCIA_Z90_U6_20261113",
+    "peso_H1_Z": 0.8155,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 346
+  },
+  {
+    "caso": "CURIE_EVIDENCIA_Z90_20261113",
+    "peso_H1_Z": 0.7545,
+    "en_meseta": true,
+    "n_cortes": 10,
+    "n_tokens_input": 170
+  },
+  {
+    "caso": "CHURCHILL_CAMEO_ALTERNO",
+    "peso_H1_Z": 0.7179,
+    "en_meseta": true,
+    "n_cortes": 3,
+    "n_tokens_input": 51
+  }
+]
