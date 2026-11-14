@@ -1,0 +1,127 @@
+{
+ "case_id": "LISZT_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.72
+    ],
+    [
+     "determinacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.78
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.75
+    ]
+   ],
+   "corte": "C1_1820",
+   "cut_id": "C1_1820",
+   "date": "1820-11-26",
+   "fecha_corte": "1820-11-26",
+   "hecho": "A los 9 años da sus primeros conciertos públicos en Sopron y Pressburg; un grupo de mecenas húngaros le financia los estudios en Viena.",
+   "id": "C1_1820"
+  },
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "redes_prestigio",
+     0.78
+    ],
+    [
+     "oportunidad",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "triunfo",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.78
+    ]
+   ],
+   "corte": "C2_1822",
+   "cut_id": "C2_1822",
+   "date": "1822-12-01",
+   "fecha_corte": "1822-12-01",
+   "hecho": "Debut público en Viena el 1 de diciembre de 1822, un triunfo; estudia piano con Carl Czerny y composición con Antonio Salieri, y conoce a Beethoven y a Schubert.",
+   "id": "C2_1822"
+  },
+  {
+   "A": [
+    [
+     "generacion_ideas",
+     0.78
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.78
+    ],
+    [
+     "estatus_social",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "reconocimiento",
+     0.84
+    ],
+    [
+     "orgullo",
+     0.78
+    ]
+   ],
+   "corte": "C3_1823",
+   "cut_id": "C3_1823",
+   "date": "1823-04-13",
+   "fecha_corte": "1823-04-13",
+   "hecho": "En su último concierto vienés, el 13 de abril de 1823, Beethoven —según la tradición— sube al escenario y lo besa en la frente; ese año aporta una variación al proyecto Diabelli junto a Schubert y Czerny.",
+   "id": "C3_1823"
+  }
+ ],
+ "freeze": "1823-04-13",
+ "person": "Franz Liszt",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Franz_Liszt ; https://en.wikipedia.org/wiki/Life_of_Franz_Liszt (solo hechos hasta dic-1835)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1823-04-13",
+ "z_work_kind": "CASE_CUTOFF"
+}

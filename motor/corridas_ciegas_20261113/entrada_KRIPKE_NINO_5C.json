@@ -1,0 +1,203 @@
+{
+ "case_id": "KRIPKE_NINO_5C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.82
+    ],
+    [
+     "autonomia",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "transmision_saber",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.84
+    ],
+    [
+     "curiosidad_abstracta",
+     0.8
+    ]
+   ],
+   "corte": "C1_1946",
+   "cut_id": "C1_1946",
+   "date": "1946-11-13",
+   "fecha_corte": "1946-11-13",
+   "hecho": "A los 6 años se enseña solo hebreo antiguo.",
+   "id": "C1_1946"
+  },
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.78
+    ],
+    [
+     "determinacion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento_previo",
+     0.72
+    ],
+    [
+     "atencion_social",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "conocimiento",
+     0.84
+    ],
+    [
+     "aprendizaje",
+     0.8
+    ]
+   ],
+   "corte": "C2_1949",
+   "cut_id": "C2_1949",
+   "date": "1949-11-13",
+   "fecha_corte": "1949-11-13",
+   "hecho": "A los 9 años ya leyó las obras completas de Shakespeare.",
+   "id": "C2_1949"
+  },
+  {
+   "A": [
+    [
+     "analisis",
+     0.8
+    ],
+    [
+     "solucion_problemas",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.75
+    ],
+    [
+     "mentoria_activa",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "teorizacion",
+     0.84
+    ],
+    [
+     "conocimiento",
+     0.82
+    ]
+   ],
+   "corte": "C3_1953",
+   "cut_id": "C3_1953",
+   "date": "1953-11-13",
+   "fecha_corte": "1953-11-13",
+   "hecho": "Antes de terminar la primaria ya domina las obras de Descartes y problemas matemáticos complejos.",
+   "id": "C3_1953"
+  },
+  {
+   "A": [
+    [
+     "generacion_ideas",
+     0.82
+    ],
+    [
+     "audacia",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.75
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "teorizacion",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "corte": "C4_1957",
+   "cut_id": "C4_1957",
+   "date": "1957-11-13",
+   "fecha_corte": "1957-11-13",
+   "hecho": "A los 17 años escribe su primer teorema de completitud en lógica modal.",
+   "id": "C4_1957"
+  },
+  {
+   "A": [
+    [
+     "verificacion",
+     0.78
+    ],
+    [
+     "determinacion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.75
+    ]
+   ],
+   "P": [
+    [
+     "logro_personal",
+     0.84
+    ],
+    [
+     "teorizacion",
+     0.82
+    ]
+   ],
+   "corte": "C5_1959",
+   "cut_id": "C5_1959",
+   "date": "1959-03-01",
+   "fecha_corte": "1959-03-01",
+   "hecho": "En marzo de 1959, a los 18 años, se publica 'A Completeness Theorem in Modal Logic' en el Journal of Symbolic Logic.",
+   "id": "C5_1959"
+  }
+ ],
+ "freeze": "1959-03-01",
+ "person": "Saul Aaron Kripke",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Saul_Kripke (solo hechos hasta 1963)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1959-03-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

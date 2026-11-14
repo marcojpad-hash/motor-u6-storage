@@ -1,0 +1,203 @@
+{
+ "case_id": "CHOPIN_NINO_5C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "carga_familiar",
+     0.68
+    ],
+    [
+     "dependencia",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.78
+    ],
+    [
+     "iniciativa_infantil",
+     0.74
+    ]
+   ],
+   "corte": "C1_1816",
+   "cut_id": "C1_1816",
+   "date": "1816-03-01",
+   "fecha_corte": "1816-03-01",
+   "hecho": "En 1816 su primer maestro profesional, el pianista checo Wojciech Żywny, empieza a darle lecciones; a los seis años ya compone y toca el piano, impresionado por su madre y su hermana Ludwika.",
+   "id": "C1_1816"
+  },
+  {
+   "A": [
+    [
+     "autoexpresion",
+     0.78
+    ],
+    [
+     "audacia",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.76
+    ],
+    [
+     "oportunidad",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "generacion_ideas",
+     0.8
+    ]
+   ],
+   "corte": "C2_1817",
+   "cut_id": "C2_1817",
+   "date": "1817-06-01",
+   "fecha_corte": "1817-06-01",
+   "hecho": "En 1817 compone dos polonesas, en sol menor y en si bemol mayor; la de sol menor es su primera obra publicada, cuando solo tiene siete años.",
+   "id": "C2_1817"
+  },
+  {
+   "A": [
+    [
+     "creatividad",
+     0.8
+    ],
+    [
+     "generacion_ideas",
+     0.74
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "atencion_social",
+     0.74
+    ]
+   ],
+   "P": [
+    [
+     "audacia",
+     0.8
+    ],
+    [
+     "autoexpresion",
+     0.78
+    ]
+   ],
+   "corte": "C3_1818",
+   "cut_id": "C3_1818",
+   "date": "1818-02-24",
+   "fecha_corte": "1818-02-24",
+   "hecho": "En 1818 hace su primera aparición pública en un concierto benéfico en Varsovia; poco después toca ante el gran duque Constantino de Polonia.",
+   "id": "C3_1818"
+  },
+  {
+   "A": [
+    [
+     "conocimiento",
+     0.78
+    ],
+    [
+     "metodicidad",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.74
+    ],
+    [
+     "dependencia",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "determinacion",
+     0.76
+    ]
+   ],
+   "corte": "C4_1823",
+   "cut_id": "C4_1823",
+   "date": "1823-09-01",
+   "fecha_corte": "1823-09-01",
+   "hecho": "En septiembre de 1823 entra en el Liceo de Varsovia, donde su padre enseña francés; en su primer año recibe lecciones de órgano de Wilhelm Würfel.",
+   "id": "C4_1823"
+  },
+  {
+   "A": [
+    [
+     "conocimiento",
+     0.8
+    ],
+    [
+     "perfeccionismo",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.78
+    ],
+    [
+     "estatus_social",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "ambicion",
+     0.78
+    ]
+   ],
+   "corte": "C5_1826",
+   "cut_id": "C5_1826",
+   "date": "1826-10-01",
+   "fecha_corte": "1826-10-01",
+   "hecho": "En otoño de 1826 empieza un curso de tres años con Józef Elsner en el Conservatorio de Varsovia, estudiando teoría, bajo cifrado y composición.",
+   "id": "C5_1826"
+  }
+ ],
+ "freeze": "1826-10-01",
+ "person": "Frédéric Chopin",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin ; https://www.ebsco.com/research-starters/history/frederic-chopin (nace 1-mar-1810; Żywny desde 1816, dos polonesas 1817, primera aparición pública 1818, Liceo de Varsovia sep-1823, Conservatorio con Elsner otoño 1826, debut en Viena 11-ago-1829, sale de Polonia 2-nov-1830)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1826-10-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

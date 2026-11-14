@@ -1,0 +1,127 @@
+{
+ "case_id": "MENUHIN_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.75
+    ],
+    [
+     "transmision_saber",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "soporte",
+     0.78
+    ],
+    [
+     "oportunidad",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "iniciativa_infantil",
+     0.78
+    ]
+   ],
+   "corte": "C1_1920",
+   "cut_id": "C1_1920",
+   "date": "1920-06",
+   "fecha_corte": "1920-06",
+   "hecho": "A los 4 años recibe sus primeras lecciones de violín con Sigmund Anker; sus padres habían querido a Louis Persinger, que al principio se negó a enseñarle.",
+   "id": "C1_1920"
+  },
+  {
+   "A": [
+    [
+     "perfeccionismo",
+     0.75
+    ],
+    [
+     "determinacion",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "triunfo",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.78
+    ]
+   ],
+   "corte": "C2_1923",
+   "cut_id": "C2_1923",
+   "date": "1923-06",
+   "fecha_corte": "1923-06",
+   "hecho": "Con 7 años actúa como violinista solista con la Orquesta Sinfónica de San Francisco; Persinger entonces acepta ser su maestro.",
+   "id": "C2_1923"
+  },
+  {
+   "A": [
+    [
+     "competencia",
+     0.72
+    ],
+    [
+     "rivalidad_profesional",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "viaje",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "vision",
+     0.75
+    ]
+   ],
+   "corte": "C3_1926",
+   "cut_id": "C3_1926",
+   "date": "1926-01-17",
+   "fecha_corte": "1926-01-17",
+   "hecho": "El 17 de enero de 1926, con 9 años, debuta en recital en Nueva York, en el Manhattan Opera House.",
+   "id": "C3_1926"
+  }
+ ],
+ "freeze": "1926-01-17",
+ "person": "Yehudi Menuhin",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261114,
+ "source_notes": "https://en.wikipedia.org/wiki/Yehudi_Menuhin (solo hechos hasta jul-1932)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1926-01-17",
+ "z_work_kind": "CASE_CUTOFF"
+}

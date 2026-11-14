@@ -1,0 +1,127 @@
+{
+ "case_id": "PICASSO_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.78
+    ],
+    [
+     "curiosidad_abstracta",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "mentoria_activa",
+     0.82
+    ],
+    [
+     "transmision_saber",
+     0.78
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "corte": "C1_1888",
+   "cut_id": "C1_1888",
+   "date": "1888-10-25",
+   "fecha_corte": "1888-10-25",
+   "hecho": "A los 7 años empieza su formación artística formal con su padre, dibujo de figura y pintura al óleo; sus primeras palabras, según su madre, fueron 'piz, piz', por lápiz.",
+   "id": "C1_1888"
+  },
+  {
+   "A": [
+    [
+     "determinacion",
+     0.75
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "carga_familiar",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "perfeccionismo",
+     0.78
+    ]
+   ],
+   "corte": "C2_1891",
+   "cut_id": "C2_1891",
+   "date": "1891-10-25",
+   "fecha_corte": "1891-10-25",
+   "hecho": "En 1891, a los 10 años, la familia se muda a La Coruña, donde su padre es profesor de la Escuela de Bellas Artes; el niño ya pinta con técnica precisa.",
+   "id": "C2_1891"
+  },
+  {
+   "A": [
+    [
+     "resiliencia",
+     0.82
+    ],
+    [
+     "audacia",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "perdida_familiar",
+     0.8
+    ],
+    [
+     "duelo",
+     0.78
+    ]
+   ],
+   "P": [
+    [
+     "determinacion",
+     0.84
+    ],
+    [
+     "logro_personal",
+     0.8
+    ]
+   ],
+   "corte": "C3_1895",
+   "cut_id": "C3_1895",
+   "date": "1895-09-01",
+   "fecha_corte": "1895-09-01",
+   "hecho": "En 1895 muere su hermana Conchita, de 7 años, de difteria; la familia se muda a Barcelona y Picasso, con 13 años, entra en la clase avanzada de la academia tras resolver en una semana un examen que tomaba un mes.",
+   "id": "C3_1895"
+  }
+ ],
+ "freeze": "1895-09-01",
+ "person": "Pablo Picasso",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Pablo_Picasso ; https://www.fairheadfineart.com/biographies/pablo-picasso (solo hechos hasta 1904)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1895-09-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

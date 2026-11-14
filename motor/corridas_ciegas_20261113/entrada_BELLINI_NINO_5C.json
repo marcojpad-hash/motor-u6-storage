@@ -1,0 +1,203 @@
+{
+ "case_id": "BELLINI_NINO_5C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.78
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "vinculo_compartido",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "iniciativa_infantil",
+     0.72
+    ]
+   ],
+   "corte": "C1_1804",
+   "cut_id": "C1_1804",
+   "date": "1804",
+   "fecha_corte": "1804",
+   "hecho": "A los 3 años empieza a estudiar piano con su padre Rosario, organista de Catania; desde los 2 le enseñaban teoría musical en casa.",
+   "id": "C1_1804"
+  },
+  {
+   "A": [
+    [
+     "perfeccionismo",
+     0.7
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.7
+    ],
+    [
+     "atencion_social",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "generacion_ideas",
+     0.78
+    ]
+   ],
+   "corte": "C2_1806",
+   "cut_id": "C2_1806",
+   "date": "1806",
+   "fecha_corte": "1806",
+   "hecho": "A los 5 años ya toca el piano muy bien; a los 6 compone sus primeras piezas, entre ellas el 'Gallus cantavit'.",
+   "id": "C2_1806"
+  },
+  {
+   "A": [
+    [
+     "metodicidad",
+     0.72
+    ],
+    [
+     "perfeccionismo",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "transmision_saber",
+     0.7
+    ],
+    [
+     "vinculo_compartido",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "autoexpresion",
+     0.78
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "corte": "C3_1810",
+   "cut_id": "C3_1810",
+   "date": "1810",
+   "fecha_corte": "1810",
+   "hecho": "Hacia 1810, con 9 años, ya escribe música vocal de cámara, arietas y romanzas para voz y piano: es la obra temprana más antigua que se conserva, con fecha conocida.",
+   "id": "C3_1810"
+  },
+  {
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.75
+    ],
+    [
+     "metodicidad",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "mentoria_activa",
+     0.75
+    ],
+    [
+     "escasez",
+     0.65
+    ]
+   ],
+   "P": [
+    [
+     "determinacion",
+     0.78
+    ],
+    [
+     "aprendizaje",
+     0.8
+    ]
+   ],
+   "corte": "C4_1816",
+   "cut_id": "C4_1816",
+   "date": "1816",
+   "fecha_corte": "1816",
+   "hecho": "A los 15 años, ya viviendo con su abuelo Vincenzo Tobia, profundiza sus estudios de composición y escribe piezas orquestales; a los 17 tendrá listas varias obras instrumentales.",
+   "id": "C4_1816"
+  },
+  {
+   "A": [
+    [
+     "viaje",
+     0.72
+    ],
+    [
+     "desafio_autoridad",
+     0.65
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.78
+    ]
+   ],
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "independencia",
+     0.78
+    ]
+   ],
+   "corte": "C5_1819",
+   "cut_id": "C5_1819",
+   "date": "1819-06-01",
+   "fecha_corte": "1819-06-01",
+   "hecho": "En junio de 1819, con 17 años, sale de Catania con una beca del ayuntamiento para estudiar en el Conservatorio de Nápoles; le dan matrícula gratuita y lo nombran 'maestrino' de los alumnos más jóvenes.",
+   "id": "C5_1819"
+  }
+ ],
+ "freeze": "1819-06-01",
+ "person": "Vincenzo Salvatore Carmelo Francesco Bellini",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Vincenzo_Bellini ; https://www.studibelliniani.eu/biografia?lang=en (solo hechos hasta oct-1827; la infancia temprana proviene de un manuscrito anónimo, tratado como leyenda por algunos historiadores)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1819-06-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

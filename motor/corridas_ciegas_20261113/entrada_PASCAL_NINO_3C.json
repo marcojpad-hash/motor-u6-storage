@@ -1,0 +1,127 @@
+{
+ "case_id": "PASCAL_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "prohibicion",
+     0.8
+    ],
+    [
+     "autoridad",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "carga_familiar",
+     0.7
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "P": [
+    [
+     "curiosidad_abstracta",
+     0.82
+    ],
+    [
+     "iniciativa_infantil",
+     0.78
+    ]
+   ],
+   "corte": "C1_1634",
+   "cut_id": "C1_1634",
+   "date": "1634-06-19",
+   "fecha_corte": "1634-06-19",
+   "hecho": "A los 11 años escribe un tratadito sobre los sonidos de los cuerpos vibrantes; su padre Étienne le prohíbe seguir con las matemáticas hasta los 15 para no dañar su latín y su griego.",
+   "id": "C1_1634"
+  },
+  {
+   "A": [
+    [
+     "teorizacion",
+     0.78
+    ],
+    [
+     "verificacion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.72
+    ],
+    [
+     "mentoria_activa",
+     0.78
+    ]
+   ],
+   "P": [
+    [
+     "busqueda_verdad",
+     0.84
+    ],
+    [
+     "solucion_problemas",
+     0.8
+    ]
+   ],
+   "corte": "C2_1635",
+   "cut_id": "C2_1635",
+   "date": "1635-06-19",
+   "fecha_corte": "1635-06-19",
+   "hecho": "A los 12 años, solo y con un carbón en la pared, demuestra que los ángulos de un triángulo suman dos rectos; su padre cede y le entrega los Elementos de Euclides.",
+   "id": "C2_1635"
+  },
+  {
+   "A": [
+    [
+     "generacion_ideas",
+     0.82
+    ],
+    [
+     "audacia",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "teorizacion",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "corte": "C3_1639",
+   "cut_id": "C3_1639",
+   "date": "1639-06-19",
+   "fecha_corte": "1639-06-19",
+   "hecho": "A los 16 años presenta en las reuniones de Mersenne su Ensayo sobre las cónicas, con el teorema del hexágono místico; Descartes no cree que lo haya escrito un muchacho.",
+   "id": "C3_1639"
+  }
+ ],
+ "freeze": "1639-06-19",
+ "person": "Blaise Pascal",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Blaise_Pascal ; https://www.biblicaltraining.org/library/blaise-pascal (solo hechos hasta 1657)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1639-06-19",
+ "z_work_kind": "CASE_CUTOFF"
+}

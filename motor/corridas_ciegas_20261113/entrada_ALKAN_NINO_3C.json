@@ -1,0 +1,127 @@
+{
+ "case_id": "ALKAN_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.72
+    ],
+    [
+     "transmision_saber",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "iniciativa_infantil",
+     0.78
+    ]
+   ],
+   "corte": "C1_1819",
+   "cut_id": "C1_1819",
+   "date": "1819-07-03",
+   "fecha_corte": "1819-07-03",
+   "hecho": "El 3 de julio de 1819, con 5 años y 7 meses, hace la audición de solfeo y entra al Conservatorio de París, el alumno más joven admitido, para estudiar piano y órgano.",
+   "id": "C1_1819"
+  },
+  {
+   "A": [
+    [
+     "perfeccionismo",
+     0.72
+    ],
+    [
+     "determinacion",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "legitimidad_percibida",
+     0.75
+    ],
+    [
+     "estatus_social",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "triunfo",
+     0.8
+    ],
+    [
+     "reconocimiento",
+     0.75
+    ]
+   ],
+   "corte": "C2_1821",
+   "cut_id": "C2_1821",
+   "date": "1821-06",
+   "fecha_corte": "1821-06",
+   "hecho": "Con 7 años gana el primer premio de solfeo y da su primera actuación pública como violinista, tocando un aire con variaciones de Pierre Rode.",
+   "id": "C2_1821"
+  },
+  {
+   "A": [
+    [
+     "esfuerzo_sostenido_reciente",
+     0.78
+    ],
+    [
+     "perfeccionismo",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "estatus_social",
+     0.75
+    ],
+    [
+     "redes_prestigio",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "logro_personal",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.78
+    ]
+   ],
+   "corte": "C3_1824",
+   "cut_id": "C3_1824",
+   "date": "1824-06",
+   "fecha_corte": "1824-06",
+   "hecho": "Con 10 años gana el primer premio de piano del Conservatorio de París; luego ganaría también los de armonía (1827) y órgano (1834).",
+   "id": "C3_1824"
+  }
+ ],
+ "freeze": "1824-06",
+ "person": "Charles-Valentin Alkan",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261115,
+ "source_notes": "https://en.wikipedia.org/wiki/Charles-Valentin_Alkan (solo hechos hasta 1838)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1824-06",
+ "z_work_kind": "CASE_CUTOFF"
+}

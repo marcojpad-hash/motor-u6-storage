@@ -1,0 +1,127 @@
+{
+ "case_id": "SIDIS_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.78
+    ],
+    [
+     "conocimiento",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "atencion_social",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.84
+    ],
+    [
+     "curiosidad_abstracta",
+     0.8
+    ]
+   ],
+   "corte": "C1_1899",
+   "cut_id": "C1_1899",
+   "date": "1899-10-01",
+   "fecha_corte": "1899-10-01",
+   "hecho": "A los 18 meses ya lee el New York Times.",
+   "id": "C1_1899"
+  },
+  {
+   "A": [
+    [
+     "generacion_ideas",
+     0.8
+    ],
+    [
+     "autonomia",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.75
+    ],
+    [
+     "atencion_social",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "conocimiento",
+     0.84
+    ],
+    [
+     "creatividad",
+     0.82
+    ]
+   ],
+   "corte": "C2_1906",
+   "cut_id": "C2_1906",
+   "date": "1906-04-01",
+   "fecha_corte": "1906-04-01",
+   "hecho": "A los 8 años ya se enseñó solo ocho idiomas y inventa otro, el vendergood, en el que escribe el Libro de Vendergood.",
+   "id": "C2_1906"
+  },
+  {
+   "A": [
+    [
+     "audacia",
+     0.75
+    ],
+    [
+     "determinacion",
+     0.8
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.82
+    ],
+    [
+     "redes_prestigio",
+     0.75
+    ]
+   ],
+   "P": [
+    [
+     "logro_personal",
+     0.84
+    ],
+    [
+     "ambicion",
+     0.78
+    ]
+   ],
+   "corte": "C3_1909",
+   "cut_id": "C3_1909",
+   "date": "1909-09-01",
+   "fecha_corte": "1909-09-01",
+   "hecho": "En 1909, a los 11 años, entra a la Universidad de Harvard, el estudiante más joven jamás admitido; a los 9 ya había calificado, pero la universidad lo hizo esperar.",
+   "id": "C3_1909"
+  }
+ ],
+ "freeze": "1909-09-01",
+ "person": "William James Sidis",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/William_James_Sidis ; https://www.harvardmagazine.com/sites/default/files/html/1998/03/pump.html (solo hechos hasta 1924)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1909-09-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

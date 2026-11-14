@@ -1,0 +1,203 @@
+{
+ "case_id": "PAGANINI_NINO_5C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "carga_familiar",
+     0.7
+    ],
+    [
+     "dependencia",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.78
+    ],
+    [
+     "iniciativa_infantil",
+     0.72
+    ]
+   ],
+   "corte": "C1_1788",
+   "cut_id": "C1_1788",
+   "date": "1788-04-01",
+   "fecha_corte": "1788-04-01",
+   "hecho": "A los cinco años y medio, su padre Antonio, corredor de comercio y mandolinista aficionado, le enseña a tocar la mandolina en Génova.",
+   "id": "C1_1788"
+  },
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.82
+    ],
+    [
+     "transmision_saber",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "dependencia",
+     0.72
+    ],
+    [
+     "oportunidad",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "curiosidad_abstracta",
+     0.72
+    ]
+   ],
+   "corte": "C2_1789",
+   "cut_id": "C2_1789",
+   "date": "1789-10-27",
+   "fecha_corte": "1789-10-27",
+   "hecho": "A los siete años su padre le da las primeras lecciones de violín; al poco tiempo lo pone con Giovanni Servetto y luego con Giacomo Costa, violinista de las iglesias de Génova.",
+   "id": "C2_1789"
+  },
+  {
+   "A": [
+    [
+     "generacion_ideas",
+     0.78
+    ],
+    [
+     "autoexpresion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.78
+    ],
+    [
+     "atencion_social",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "audacia",
+     0.8
+    ],
+    [
+     "creatividad",
+     0.82
+    ]
+   ],
+   "corte": "C3_1793",
+   "cut_id": "C3_1793",
+   "date": "1793-10-27",
+   "fecha_corte": "1793-10-27",
+   "hecho": "En 1793 hace su primera aparición en público en Génova, tocando variaciones sobre 'La Carmagnole', con gran éxito; a los ocho años ya había compuesto una sonata para violín.",
+   "id": "C3_1793"
+  },
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.72
+    ],
+    [
+     "desafio_autoridad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "reconocimiento",
+     0.75
+    ]
+   ],
+   "P": [
+    [
+     "audacia",
+     0.84
+    ],
+    [
+     "ambicion",
+     0.78
+    ]
+   ],
+   "corte": "C4_1795",
+   "cut_id": "C4_1795",
+   "date": "1795-07-01",
+   "fecha_corte": "1795-07-01",
+   "hecho": "En julio de 1795 su padre lo lleva a Parma para estudiar con Alessandro Rolla; al encontrarlo enfermo en cama, el niño toma su violín y toca a primera vista un concierto nuevo, y Rolla dice que no tiene nada que enseñarle.",
+   "id": "C4_1795"
+  },
+  {
+   "A": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "autoexpresion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "viaje",
+     0.78
+    ],
+    [
+     "reconocimiento",
+     0.8
+    ]
+   ],
+   "P": [
+    [
+     "ambicion",
+     0.8
+    ],
+    [
+     "determinacion",
+     0.78
+    ]
+   ],
+   "corte": "C5_1797",
+   "cut_id": "C5_1797",
+   "date": "1797-10-27",
+   "fecha_corte": "1797-10-27",
+   "hecho": "En 1797 hace su primera gira profesional con su padre por las ciudades de Lombardía, y en cada concierto crece su reputación; en noviembre de 1798 toca con gran éxito en el festival de Lucca.",
+   "id": "C5_1797"
+  }
+ ],
+ "freeze": "1797-10-27",
+ "person": "Niccolò Paganini",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Paganini ; https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Paganini%2C_Nicolo (nace 27-oct-1782; mandolina a los 5.5, violín a los 7, primera aparición pública 1793, Parma con Rolla 1795, gira Lombardía 1797, Lucca 1801, corte de Elisa 1805)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1797-10-27",
+ "z_work_kind": "CASE_CUTOFF"
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "KRIPKE_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.82
+    ],
+    [
+     "autonomia",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "transmision_saber",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.84
+    ],
+    [
+     "curiosidad_abstracta",
+     0.8
+    ]
+   ],
+   "corte": "C1_1946",
+   "cut_id": "C1_1946",
+   "date": "1946-11-13",
+   "fecha_corte": "1946-11-13",
+   "hecho": "A los 6 años se enseña solo hebreo antiguo.",
+   "id": "C1_1946"
+  },
+  {
+   "A": [
+    [
+     "iniciativa_infantil",
+     0.78
+    ],
+    [
+     "determinacion",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento_previo",
+     0.72
+    ],
+    [
+     "atencion_social",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "conocimiento",
+     0.84
+    ],
+    [
+     "aprendizaje",
+     0.8
+    ]
+   ],
+   "corte": "C2_1949",
+   "cut_id": "C2_1949",
+   "date": "1949-11-13",
+   "fecha_corte": "1949-11-13",
+   "hecho": "A los 9 años ya leyó las obras completas de Shakespeare.",
+   "id": "C2_1949"
+  },
+  {
+   "A": [
+    [
+     "analisis",
+     0.8
+    ],
+    [
+     "solucion_problemas",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.75
+    ],
+    [
+     "mentoria_activa",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "teorizacion",
+     0.84
+    ],
+    [
+     "conocimiento",
+     0.82
+    ]
+   ],
+   "corte": "C3_1953",
+   "cut_id": "C3_1953",
+   "date": "1953-11-13",
+   "fecha_corte": "1953-11-13",
+   "hecho": "Antes de terminar la primaria ya domina las obras de Descartes y problemas matemáticos complejos.",
+   "id": "C3_1953"
+  }
+ ],
+ "freeze": "1953-11-13",
+ "person": "Saul Aaron Kripke",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Saul_Kripke (solo hechos hasta 1963)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1953-11-13",
+ "z_work_kind": "CASE_CUTOFF"
+}

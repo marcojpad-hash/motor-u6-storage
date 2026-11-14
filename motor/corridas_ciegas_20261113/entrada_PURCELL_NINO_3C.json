@@ -1,0 +1,127 @@
+{
+ "case_id": "PURCELL_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "vulnerabilidad",
+     0.72
+    ],
+    [
+     "escasez",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "carga_familiar",
+     0.75
+    ],
+    [
+     "dependencia",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "perdida_familiar",
+     0.82
+    ],
+    [
+     "duelo",
+     0.75
+    ]
+   ],
+   "corte": "C1_1664",
+   "cut_id": "C1_1664",
+   "date": "1664",
+   "fecha_corte": "1664",
+   "hecho": "En 1664, con 5 años, muere su padre, maestro de coristas de la Abadía de Westminster; su madre traslada a los seis hijos a una casa más modesta.",
+   "id": "C1_1664"
+  },
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.8
+    ],
+    [
+     "jerarquia",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "iniciativa_infantil",
+     0.75
+    ]
+   ],
+   "corte": "C2_1668",
+   "cut_id": "C2_1668",
+   "date": "1668",
+   "fecha_corte": "1668",
+   "hecho": "Hacia 1668, con 9 años, entra como corista en la Capilla Real, bajo el maestro Henry Cooke, y toma lecciones de teclado con Christopher Gibbons.",
+   "id": "C2_1668"
+  },
+  {
+   "A": [
+    [
+     "responsabilidad",
+     0.72
+    ],
+    [
+     "metodicidad",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "jerarquia",
+     0.75
+    ],
+    [
+     "lealtad_al_regimen",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "logro_personal",
+     0.78
+    ],
+    [
+     "ambicion",
+     0.75
+    ]
+   ],
+   "corte": "C3_1673",
+   "cut_id": "C3_1673",
+   "date": "1673",
+   "fecha_corte": "1673",
+   "hecho": "En 1673, con 14 años, lo nombran ayudante de John Hingeston, encargado de los instrumentos del rey.",
+   "id": "C3_1673"
+  }
+ ],
+ "freeze": "1673",
+ "person": "Henry Purcell",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Henry_Purcell ; https://www.qobuz.com/no-en/composer/henry-purcell/542 (solo hechos hasta 1689)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1673",
+ "z_work_kind": "CASE_CUTOFF"
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "MOZART_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.8
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "carga_familiar",
+     0.7
+    ],
+    [
+     "vinculo_compartido",
+     0.72
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.82
+    ],
+    [
+     "iniciativa_infantil",
+     0.78
+    ]
+   ],
+   "corte": "C1_1760",
+   "cut_id": "C1_1760",
+   "date": "1760",
+   "fecha_corte": "1760",
+   "hecho": "A los 4 años, en 1760, empieza a tocar el clavecín y el piano con su padre Leopold, que le enseña música en casa junto a su hermana Nannerl.",
+   "id": "C1_1760"
+  },
+  {
+   "A": [
+    [
+     "perfeccionismo",
+     0.7
+    ],
+    [
+     "metodicidad",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.75
+    ],
+    [
+     "atencion_social",
+     0.7
+    ]
+   ],
+   "P": [
+    [
+     "creatividad",
+     0.84
+    ],
+    [
+     "generacion_ideas",
+     0.8
+    ]
+   ],
+   "corte": "C2_1761",
+   "cut_id": "C2_1761",
+   "date": "1761",
+   "fecha_corte": "1761",
+   "hecho": "En 1761, con 5 años, escribe sus primeras composiciones que se conservan: el Andante K. 1a y el Allegro K. 1b.",
+   "id": "C2_1761"
+  },
+  {
+   "A": [
+    [
+     "viaje",
+     0.8
+    ],
+    [
+     "presion_social",
+     0.7
+    ]
+   ],
+   "C": [
+    [
+     "oportunidad",
+     0.82
+    ],
+    [
+     "redes_prestigio",
+     0.78
+    ]
+   ],
+   "P": [
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "audacia",
+     0.75
+    ]
+   ],
+   "corte": "C3_1763",
+   "cut_id": "C3_1763",
+   "date": "1763-06-01",
+   "fecha_corte": "1763-06-01",
+   "hecho": "En junio de 1763, con 7 años, sale de gira por Europa con su padre Leopold y su hermana Nannerl: tocan en Múnich, Viena, París y Londres ante las cortes.",
+   "id": "C3_1763"
+  }
+ ],
+ "freeze": "1763-06-01",
+ "person": "Wolfgang Amadeus Mozart",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart (solo hechos hasta 1773; versión de niño, distinta de la entrada adulta de Mozart)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1763-06-01",
+ "z_work_kind": "CASE_CUTOFF"
+}

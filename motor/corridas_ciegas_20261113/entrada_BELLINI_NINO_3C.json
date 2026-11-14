@@ -1,0 +1,127 @@
+{
+ "case_id": "BELLINI_NINO_3C",
+ "cuts": [
+  {
+   "A": [
+    [
+     "mentoria_activa",
+     0.78
+    ],
+    [
+     "transmision_saber",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "vinculo_compartido",
+     0.7
+    ],
+    [
+     "carga_familiar",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "aprendizaje",
+     0.8
+    ],
+    [
+     "iniciativa_infantil",
+     0.72
+    ]
+   ],
+   "corte": "C1_1804",
+   "cut_id": "C1_1804",
+   "date": "1804",
+   "fecha_corte": "1804",
+   "hecho": "A los 3 años empieza a estudiar piano con su padre Rosario, organista de Catania; desde los 2 le enseñaban teoría musical en casa.",
+   "id": "C1_1804"
+  },
+  {
+   "A": [
+    [
+     "perfeccionismo",
+     0.7
+    ],
+    [
+     "esfuerzo_sostenido_reciente",
+     0.72
+    ]
+   ],
+   "C": [
+    [
+     "reconocimiento",
+     0.7
+    ],
+    [
+     "atencion_social",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "creatividad",
+     0.82
+    ],
+    [
+     "generacion_ideas",
+     0.78
+    ]
+   ],
+   "corte": "C2_1806",
+   "cut_id": "C2_1806",
+   "date": "1806",
+   "fecha_corte": "1806",
+   "hecho": "A los 5 años ya toca el piano muy bien; a los 6 compone sus primeras piezas, entre ellas el 'Gallus cantavit'.",
+   "id": "C2_1806"
+  },
+  {
+   "A": [
+    [
+     "metodicidad",
+     0.72
+    ],
+    [
+     "perfeccionismo",
+     0.75
+    ]
+   ],
+   "C": [
+    [
+     "transmision_saber",
+     0.7
+    ],
+    [
+     "vinculo_compartido",
+     0.68
+    ]
+   ],
+   "P": [
+    [
+     "autoexpresion",
+     0.78
+    ],
+    [
+     "creatividad",
+     0.8
+    ]
+   ],
+   "corte": "C3_1810",
+   "cut_id": "C3_1810",
+   "date": "1810",
+   "fecha_corte": "1810",
+   "hecho": "Hacia 1810, con 9 años, ya escribe música vocal de cámara, arietas y romanzas para voz y piano: es la obra temprana más antigua que se conserva, con fecha conocida.",
+   "id": "C3_1810"
+  }
+ ],
+ "freeze": "1810",
+ "person": "Vincenzo Salvatore Carmelo Francesco Bellini",
+ "question": "¿Cuál es el tema central de esta vida?",
+ "random_seed": 20261113,
+ "source_notes": "https://en.wikipedia.org/wiki/Vincenzo_Bellini ; https://www.studibelliniani.eu/biografia?lang=en (solo hechos hasta oct-1827; la infancia temprana proviene de un manuscrito anónimo, tratado como leyenda por algunos historiadores)",
+ "tipo_sujeto": "genio_nino",
+ "z_work_date": "1810",
+ "z_work_kind": "CASE_CUTOFF"
+}
