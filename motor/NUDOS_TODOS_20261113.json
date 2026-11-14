@@ -1,0 +1,1562 @@
+[
+  {
+    "caso": "ANONIMO",
+    "familia": "sombra",
+    "tipo": "sombra",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 14.0
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.086,
+    "pend": 9.0
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "EN_TRANSITO",
+    "dist": 0.023,
+    "pend": 7.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "EN_TRANSITO",
+    "dist": 0.023,
+    "pend": 7.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.143,
+    "pend": 7.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 5.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "anacyclosis_03_aristocracia",
+    "tipo": "anacyclosis",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.246,
+    "pend": 4.8
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "weber_01_autoridad_tradicional",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.246,
+    "pend": 4.8
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "weber_02_autoridad_carismatica",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.246,
+    "pend": 4.8
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.208,
+    "pend": 4.0
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "utopia_mentalidad_socialista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.22,
+    "pend": 3.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "anacyclosis_01_monarquia",
+    "tipo": "anacyclosis",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.191,
+    "pend": 2.6786
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "20_sacrificio_por_un_ideal",
+    "tipo": "numerada_20",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 2.5
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "kwml_01_rey",
+    "tipo": "kwml",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.163,
+    "pend": 1.7
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "monomito_06_pruebas_aliados_y_enemigos",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.173,
+    "pend": 1.3929
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "schwartz_10_autodireccion",
+    "tipo": "schwartz",
+    "estado": "EN_TRANSITO",
+    "dist": 0.018,
+    "pend": 0.8929
+  },
+  {
+    "caso": "ANONIMO",
+    "familia": "utopia_mentalidad_liberal",
+    "tipo": "utopia",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.75
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "trayectoria_escritores_creativos",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 15.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "sustancias_03_severo",
+    "tipo": "sustancias",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 12.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "trayectoria_musicos_populares",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 12.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "trayectoria_posgrado_academicos",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 12.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "trayectoria_transportistas_turno_nocturno",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 12.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "sustancias_02_moderado",
+    "tipo": "sustancias",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 10.0
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "mbti_introvertido",
+    "tipo": "mbti",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.18,
+    "pend": 4.6286
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.098,
+    "pend": 3.6
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "eterno_retorno_02_cosmizacion_fundacion",
+    "tipo": "eterno",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.098,
+    "pend": 3.6
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.098,
+    "pend": 3.6
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "monomito_12_regreso_con_el_elixir",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.098,
+    "pend": 3.6
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.151,
+    "pend": 2.7
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.056,
+    "pend": 2.6
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "kwml_01_rey",
+    "tipo": "kwml",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 1.5
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "ACERCANDOSE",
+    "dist": 0.194,
+    "pend": 0.3
+  },
+  {
+    "caso": "ANONIMO3",
+    "familia": "utopia_autonomia_atenas",
+    "tipo": "utopia",
+    "estado": "ACERCANDOSE",
+    "dist": 0.159,
+    "pend": 0.2571
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "trayectoria_escritores_creativos",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.107,
+    "pend": 48.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "trayectoria_musicos_populares",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.159,
+    "pend": 30.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "trayectoria_posgrado_academicos",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.159,
+    "pend": 30.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "trayectoria_transportistas_turno_nocturno",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.159,
+    "pend": 30.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "sustancias_02_moderado",
+    "tipo": "sustancias",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.19,
+    "pend": 28.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "monomito_11_la_resurreccion",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.096,
+    "pend": 10.0
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "anacyclosis_01_monarquia",
+    "tipo": "anacyclosis",
+    "estado": "EN_TRANSITO",
+    "dist": 0.044,
+    "pend": 9.2
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "strauss_howe_04_the_crisis",
+    "tipo": "strauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.171,
+    "pend": 6.5
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "schwartz_06_poder",
+    "tipo": "schwartz",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.121,
+    "pend": 6.2
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "dumezil_f1_soberania_magica",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.193,
+    "pend": 6.1
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "24_rivalidad_de_superior_e_inferior",
+    "tipo": "numerada_24",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.27,
+    "pend": 5.8
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.156,
+    "pend": 5.4
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "dumezil_desequilibrio_f2_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.215,
+    "pend": 4.7
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "eterno_retorno_03_desgaste_y_reinicio",
+    "tipo": "eterno",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.096,
+    "pend": 4.3
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "dumezil_f2_fuerza",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.09,
+    "pend": 3.9
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "sistema_domiciano_delacion",
+    "tipo": "sistema",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.204,
+    "pend": 3.1
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.152,
+    "pend": 2.9429
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "sistema_domiciano_maiestas",
+    "tipo": "sistema",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.18,
+    "pend": 2.5
+  },
+  {
+    "caso": "ANONIMO4",
+    "familia": "dumezil_desequilibrio_f1_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "ACERCANDOSE",
+    "dist": 0.249,
+    "pend": 0.4
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "weber_02_autoridad_carismatica",
+    "tipo": "weber",
+    "estado": "EN_TRANSITO",
+    "dist": 0.011,
+    "pend": 1.869
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "utopia_oficio_roma",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.134,
+    "pend": 1.7714
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "dialectica_01_tesis_estabilidad_hegemonica",
+    "tipo": "dialectica",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.157,
+    "pend": 1.4286
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "sistema_domiciano_maiestas",
+    "tipo": "sistema",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.157,
+    "pend": 1.4286
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "utopia_mentalidad_conservadora",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.176,
+    "pend": 1.3714
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "utopia_principio_estado",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.207,
+    "pend": 1.1143
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "dumezil_f1_soberania_juridica",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.097,
+    "pend": 1.0
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "sistema_domiciano",
+    "tipo": "sistema",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.097,
+    "pend": 1.0
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "utopia_orden_sparte",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.144,
+    "pend": 0.6167
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "schwartz_06_poder",
+    "tipo": "schwartz",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.073,
+    "pend": 0.5143
+  },
+  {
+    "caso": "BOLIVAR",
+    "familia": "utopia_autonomia_atenas",
+    "tipo": "utopia",
+    "estado": "ACERCANDOSE",
+    "dist": 0.182,
+    "pend": 0.2857
+  },
+  {
+    "caso": "CARSON",
+    "familia": "duelo_bonanno_01_resiliencia",
+    "tipo": "duelo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.126,
+    "pend": 49.0
+  },
+  {
+    "caso": "CARSON",
+    "familia": "sombra",
+    "tipo": "sombra",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 14.0
+  },
+  {
+    "caso": "CARSON",
+    "familia": "5_persecucion",
+    "tipo": "numerada_5",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 13.0
+  },
+  {
+    "caso": "CARSON",
+    "familia": "schwartz_10_autodireccion",
+    "tipo": "schwartz",
+    "estado": "EN_TRANSITO",
+    "dist": 0.046,
+    "pend": 4.7
+  },
+  {
+    "caso": "CARSON",
+    "familia": "schwartz_02_benevolencia",
+    "tipo": "schwartz",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 1.2
+  },
+  {
+    "caso": "CARSON",
+    "familia": "arquetipo_el_creador",
+    "tipo": "arquetipo",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.7
+  },
+  {
+    "caso": "CARSON",
+    "familia": "utopia_autonomia_atenas",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.185,
+    "pend": 0.6857
+  },
+  {
+    "caso": "CARSON",
+    "familia": "spengler_02_verano_otono_racionalizacion",
+    "tipo": "spengler",
+    "estado": "ACERCANDOSE",
+    "dist": 0.076,
+    "pend": 0.4571
+  },
+  {
+    "caso": "CARSON",
+    "familia": "arquetipo_el_sabio",
+    "tipo": "arquetipo",
+    "estado": "CAPTURADO",
+    "dist": 0.008,
+    "pend": 0.25
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "7_caer_victima",
+    "tipo": "numerada_7",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.089,
+    "pend": 24.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "CAPTURADO",
+    "dist": -0.02,
+    "pend": 21.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "EN_TRANSITO",
+    "dist": 0.023,
+    "pend": 20.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "EN_TRANSITO",
+    "dist": 0.023,
+    "pend": 19.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "ttm_02_contemplacion",
+    "tipo": "ttm",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.234,
+    "pend": 19.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.078,
+    "pend": 16.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "5_persecucion",
+    "tipo": "numerada_5",
+    "estado": "CAPTURADO",
+    "dist": -0.068,
+    "pend": 15.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "20_sacrificio_por_un_ideal",
+    "tipo": "numerada_20",
+    "estado": "CAPTURADO",
+    "dist": -0.068,
+    "pend": 12.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "guardian_del_umbral",
+    "tipo": "guardian",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.077,
+    "pend": 10.5
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "tainter_03_vulnerabilidad_sistemica",
+    "tipo": "tainter",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.068,
+    "pend": 5.3429
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.169,
+    "pend": 3.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "eterno_retorno_01_caos_primordial",
+    "tipo": "eterno",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.234,
+    "pend": 2.1143
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "monomito_06_pruebas_aliados_y_enemigos",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.091,
+    "pend": 1.7143
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "sombra",
+    "tipo": "sombra",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.234,
+    "pend": 1.3
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "1_suplica",
+    "tipo": "numerada_1",
+    "estado": "EN_TRANSITO",
+    "dist": 0.028,
+    "pend": 1.0
+  },
+  {
+    "caso": "JUANA_DE_ARCO",
+    "familia": "ttm_04_accion",
+    "tipo": "ttm",
+    "estado": "ACERCANDOSE",
+    "dist": 0.129,
+    "pend": 0.4
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.146,
+    "pend": 11.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "arquetipo_heroe",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.091,
+    "pend": 10.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "ttm_02_contemplacion",
+    "tipo": "ttm",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 6.5
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.19,
+    "pend": 4.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "utopia_orden_sparte",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.19,
+    "pend": 4.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "predictivo_03_cox_survival_riesgo",
+    "tipo": "predictivo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.197,
+    "pend": 3.5
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "5_persecucion",
+    "tipo": "numerada_5",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 3.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "EN_TRANSITO",
+    "dist": 0.026,
+    "pend": 2.5
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "sombra",
+    "tipo": "sombra",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 2.5
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 2.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "guardian_del_umbral",
+    "tipo": "guardian",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 1.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.237,
+    "pend": 1.0
+  },
+  {
+    "caso": "KOLBE",
+    "familia": "monomito_12_regreso_con_el_elixir",
+    "tipo": "monomito",
+    "estado": "RESISTE",
+    "dist": 0.085,
+    "pend": 0.0286
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "frye_mythos_romance",
+    "tipo": "frye",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.091,
+    "pend": 22.0
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "mentor",
+    "tipo": "mentor",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 8.5
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "erikson_07_generatividad_vs_estancamiento",
+    "tipo": "erikson",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.243,
+    "pend": 5.0
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "EN_TRANSITO",
+    "dist": 0.05,
+    "pend": 3.9
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "EN_TRANSITO",
+    "dist": 0.05,
+    "pend": 3.9
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.107,
+    "pend": 3.9
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "EN_TRANSITO",
+    "dist": 0.029,
+    "pend": 3.6
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "monomito_12_regreso_con_el_elixir",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.125,
+    "pend": 2.8857
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "monomito_06_pruebas_aliados_y_enemigos",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.11,
+    "pend": 1.9286
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "utopia_orden_sparte",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.159,
+    "pend": 1.6071
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "anacyclosis_01_monarquia",
+    "tipo": "anacyclosis",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 1.5
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "EN_TRANSITO",
+    "dist": 0.037,
+    "pend": 1.3714
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "weber_02_autoridad_carismatica",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.111,
+    "pend": 0.6857
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "anacyclosis_03_aristocracia",
+    "tipo": "anacyclosis",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.111,
+    "pend": 0.5429
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "20_sacrificio_por_un_ideal",
+    "tipo": "numerada_20",
+    "estado": "EN_TRANSITO",
+    "dist": 0.029,
+    "pend": 0.4
+  },
+  {
+    "caso": "MANDELA",
+    "familia": "dialectica_01_tesis_estabilidad_hegemonica",
+    "tipo": "dialectica",
+    "estado": "RESISTE",
+    "dist": 0.301,
+    "pend": 0.0714
+  },
+  {
+    "caso": "MOZART",
+    "familia": "schwartz_07_logro",
+    "tipo": "schwartz",
+    "estado": "EN_TRANSITO",
+    "dist": 0.019,
+    "pend": 1.6
+  },
+  {
+    "caso": "MOZART",
+    "familia": "12_obtencion",
+    "tipo": "numerada_12",
+    "estado": "EN_TRANSITO",
+    "dist": 0.032,
+    "pend": 1.4
+  },
+  {
+    "caso": "MOZART",
+    "familia": "predictivo_02_mdp_politica_optima",
+    "tipo": "predictivo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.093,
+    "pend": 1.1
+  },
+  {
+    "caso": "MOZART",
+    "familia": "situacion_dramatica_ambicion",
+    "tipo": "situacion_dramatica",
+    "estado": "ACERCANDOSE",
+    "dist": 0.072,
+    "pend": 0.3571
+  },
+  {
+    "caso": "MOZART",
+    "familia": "dumezil_desequilibrio_f3_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "ACERCANDOSE",
+    "dist": 0.072,
+    "pend": 0.3214
+  },
+  {
+    "caso": "MOZART",
+    "familia": "dumezil_f3_fecundidad",
+    "tipo": "dumezil",
+    "estado": "RESISTE",
+    "dist": 0.148,
+    "pend": 0.1
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "dumezil_f2_fuerza",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.131,
+    "pend": 1.0286
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.099,
+    "pend": 0.9143
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "frye_mythos_romance",
+    "tipo": "frye",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.113,
+    "pend": 0.5357
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "dumezil_f3_fecundidad",
+    "tipo": "dumezil",
+    "estado": "EN_TRANSITO",
+    "dist": 0.014,
+    "pend": 0.1636
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "predictivo_02_mdp_politica_optima",
+    "tipo": "predictivo",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.1636
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "dumezil_desequilibrio_f2_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "RESISTE",
+    "dist": 0.145,
+    "pend": 0.1143
+  },
+  {
+    "caso": "NAPOLEON",
+    "familia": "situacion_dramatica_ambicion",
+    "tipo": "situacion_dramatica",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.1091
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.091,
+    "pend": 10.0
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.146,
+    "pend": 8.0
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "guardian_del_umbral",
+    "tipo": "guardian",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 2.9
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "cliodinamica_03_fase_crisis_colapso",
+    "tipo": "cliodinamica",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 2.0
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "monomito_05_cruce_del_primer_umbral",
+    "tipo": "monomito",
+    "estado": "EN_TRANSITO",
+    "dist": 0.015,
+    "pend": 1.6
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.19,
+    "pend": 1.0
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "utopia_orden_sparte",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.19,
+    "pend": 1.0
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "kwml_03_mago",
+    "tipo": "kwml",
+    "estado": "EN_TRANSITO",
+    "dist": 0.046,
+    "pend": 0.9143
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.7
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "mentor",
+    "tipo": "mentor",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.17,
+    "pend": 0.7
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "CAPTURADO",
+    "dist": 0.0,
+    "pend": 0.5
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+    "tipo": "dialectica",
+    "estado": "ACERCANDOSE",
+    "dist": 0.301,
+    "pend": 0.4
+  },
+  {
+    "caso": "SEMMELWEIS",
+    "familia": "arquetipo_el_rebelde",
+    "tipo": "arquetipo",
+    "estado": "ACERCANDOSE",
+    "dist": 0.301,
+    "pend": 0.2
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "sombra",
+    "tipo": "sombra",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 18.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "mauss_01_intercambio_agonistico",
+    "tipo": "mauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.144,
+    "pend": 8.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "arquetipo_el_cuidador",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.089,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "distopia_agotamiento_ambiental",
+    "tipo": "distopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "eterno_retorno_02_cosmizacion_fundacion",
+    "tipo": "eterno",
+    "estado": "EN_TRANSITO",
+    "dist": 0.021,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "heroe",
+    "tipo": "heroe",
+    "estado": "EN_TRANSITO",
+    "dist": 0.046,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "jaldun_01_asabiyyah_alta_cohesion",
+    "tipo": "jaldun",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.089,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "monomito_12_regreso_con_el_elixir",
+    "tipo": "monomito",
+    "estado": "EN_TRANSITO",
+    "dist": 0.021,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "predictivo_01_markov_estado_absorbente",
+    "tipo": "predictivo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "utopia_mentalidad_milenarista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.189,
+    "pend": 7.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "utopia_mentalidad_socialista",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.244,
+    "pend": 6.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "6_desastre",
+    "tipo": "numerada_6",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 5.5
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.236,
+    "pend": 5.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "schwartz_09_estimulacion",
+    "tipo": "schwartz",
+    "estado": "EN_TRANSITO",
+    "dist": 0.018,
+    "pend": 2.4857
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "mbti_introvertido",
+    "tipo": "mbti",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.236,
+    "pend": 1.4571
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "bbk_01_aventurero",
+    "tipo": "bbk",
+    "estado": "EN_TRANSITO",
+    "dist": 0.015,
+    "pend": 1.1714
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "dumezil_f2_fuerza",
+    "tipo": "dumezil",
+    "estado": "EN_TRANSITO",
+    "dist": 0.015,
+    "pend": 1.1714
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "kondratiev_04_invierno_recesion",
+    "tipo": "kondratiev",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.301,
+    "pend": 1.0
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "schwartz_10_autodireccion",
+    "tipo": "schwartz",
+    "estado": "RESISTE",
+    "dist": 0.054,
+    "pend": 0.0571
+  },
+  {
+    "caso": "TRANSICION1",
+    "familia": "dumezil_desequilibrio_f2_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "RESISTE",
+    "dist": 0.164,
+    "pend": 0.0286
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "schwartz_06_poder",
+    "tipo": "schwartz",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.124,
+    "pend": 12.1
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "weber_01_autoridad_tradicional",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.131,
+    "pend": 11.0
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "eterno_retorno_03_desgaste_y_reinicio",
+    "tipo": "eterno",
+    "estado": "CAPTURADO",
+    "dist": -0.005,
+    "pend": 8.5
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "monomito_11_la_resurreccion",
+    "tipo": "monomito",
+    "estado": "EN_TRANSITO",
+    "dist": 0.048,
+    "pend": 3.1714
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "dumezil_desequilibrio_f1_come_al_resto",
+    "tipo": "dumezil",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.231,
+    "pend": 3.1
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "sistema_domiciano_maiestas",
+    "tipo": "sistema",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.174,
+    "pend": 2.75
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "distopia_coercion_total",
+    "tipo": "distopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 2.7
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "utopia_orden_sparte",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.15,
+    "pend": 2.4
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "monomito_08_la_odisea_o_prueba_suprema",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 2.2
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "weber_02_autoridad_carismatica",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.077,
+    "pend": 2.2
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "social_12_zimbardo_prision_stanford",
+    "tipo": "social",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 1.9
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "dialectica_02_antitesis_contradiccion_y_conflicto",
+    "tipo": "dialectica",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 1.8
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "anacyclosis_04_oligarquia",
+    "tipo": "anacyclosis",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 1.75
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "utopia_principio_identidad_grupo",
+    "tipo": "utopia",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.248,
+    "pend": 1.6
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "arquetipo_el_rebelde",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.277,
+    "pend": 1.2
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "strauss_howe_04_the_crisis",
+    "tipo": "strauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.138,
+    "pend": 1.1714
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "strauss_howe_02_the_awakening",
+    "tipo": "strauss",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.172,
+    "pend": 0.9286
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "anacyclosis_02_tirania",
+    "tipo": "anacyclosis",
+    "estado": "ACERCANDOSE",
+    "dist": 0.277,
+    "pend": 0.4643
+  },
+  {
+    "caso": "TRANSICION2",
+    "familia": "camaleon",
+    "tipo": "camaleon",
+    "estado": "ACERCANDOSE",
+    "dist": 0.277,
+    "pend": 0.2
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "erikson_07_generatividad_vs_estancamiento",
+    "tipo": "erikson",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.112,
+    "pend": 22.0
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "schwartz_02_benevolencia",
+    "tipo": "schwartz",
+    "estado": "CAPTURADO",
+    "dist": -0.029,
+    "pend": 14.0
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "monomito_12_regreso_con_el_elixir",
+    "tipo": "monomito",
+    "estado": "CAPTURADO",
+    "dist": -0.029,
+    "pend": 4.6286
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "mentor",
+    "tipo": "mentor",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.272,
+    "pend": 3.6
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "ttm_04_accion",
+    "tipo": "ttm",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.177,
+    "pend": 2.5
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "anacyclosis_03_aristocracia",
+    "tipo": "anacyclosis",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.129,
+    "pend": 1.9714
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "weber_01_autoridad_tradicional",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.129,
+    "pend": 1.9714
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "weber_02_autoridad_carismatica",
+    "tipo": "weber",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.129,
+    "pend": 1.9714
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "monomito_06_pruebas_aliados_y_enemigos",
+    "tipo": "monomito",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.134,
+    "pend": 1.8214
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "arquetipo_el_creador",
+    "tipo": "arquetipo",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.272,
+    "pend": 0.5
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "trayectoria_policia_alcohol_ptds",
+    "tipo": "trayectoria",
+    "estado": "SIENDO_JALADO",
+    "dist": 0.272,
+    "pend": 0.5
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "frye_mythos_romance",
+    "tipo": "frye",
+    "estado": "ACERCANDOSE",
+    "dist": 0.086,
+    "pend": 0.3
+  },
+  {
+    "caso": "TUBMAN",
+    "familia": "trayectoria_medicos_riesgo_suicida",
+    "tipo": "trayectoria",
+    "estado": "ACERCANDOSE",
+    "dist": 0.272,
+    "pend": 0.3
+  }
+]
