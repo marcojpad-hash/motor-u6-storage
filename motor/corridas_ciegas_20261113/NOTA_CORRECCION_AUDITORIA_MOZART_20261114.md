@@ -160,13 +160,24 @@ Entrada de reproducción: motor-cameo/motor/runs/ESTANDAR__MOZART_CON_TEXTO_Z90_
   hipótesis y apuesta MESETA_O_ESTABILIZACION con 5, idénticos al
   original; Caldero INFO_FIXTURE_AUTORIZADO, llm_neighbor_hints_n=0;
   semantica_estados presente; H1/H2 idénticos. Recibo COMPLETED,
-  result_missing_paths=[]. Publicado como motor/
-  RESULT_MOZART_CON_TEXTO_Z90_20261114.json.gz (+ recibo .gz; el
-  original de Mozart está sin comprimir, pero el resto de RESULTs de la
-  rama van .gz y el push MCP rechaza el JSON de 8.4 MB sin comprimir
-  con HTTP 413). Para verificar: gunzip el RESULT y correr
-  python3 motor/corridas_ciegas_20261113/verificar_correccion_mozart.py
-  <RESULT descomprimido> motor/RESULT_MOZART_CON_TEXTO_Z90_20261113.json.
+  result_missing_paths=[].
+  PUBLICACIÓN (2026-11-14 ~18:35 CST): el RESULT completo NO pudo
+  subirse por las herramientas MCP disponibles: el JSON de 8.4 MB da
+  HTTP 413 (request body too large) y el .gz (485 KB) lo rechaza
+  push-files por no ser UTF-8. Lo que SÍ quedó en la rama: el código
+  corregido, la entrada, el verificador, esta nota y el recibo
+  (RESULT_MOZART_CON_TEXTO_Z90_20261114_RECIBO_EJECUCION.json, sin
+  comprimir) con output_sha256 88bb0dcc96237eb1... El RESULT es
+  reproducible byte a byte desde la rama sola con el comando de abajo;
+  el sha del recibo lo verifica. El RESULT también queda en la copia
+  de trabajo (run ESTANDAR__MOZART_CON_TEXTO_Z90_20261113_FIX5 y
+  /tmp/RESULT_MOZART_POST_FIX5.json). Para verificar: correr
+  python3 motor/correr_estandar.py motor/corridas_ciegas_20261113/
+  INPUT_MOZART_CON_TEXTO_Z90_20261113.json MOZART_CON_TEXTO_Z90_
+  20261113_FIX5 <salida> y luego python3 motor/corridas_ciegas_
+  20261113/verificar_correccion_mozart.py <salida> motor/
+  RESULT_MOZART_CON_TEXTO_Z90_20261113.json (comparar el sha256 de
+  la salida con el del recibo).
   NOTA: el stdout del runner dice "ok": false por 2 nulls que mete el
   resumen post-corrida de teoria_color (.laterales_post_corrida.
   teoria_color.tono_final.tono.externo/.situacion) — preexistente
