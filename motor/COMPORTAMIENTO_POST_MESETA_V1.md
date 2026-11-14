@@ -59,7 +59,12 @@ Láctea). Se mide sobre los NUDOS que se movieron (las familias bajo el top5
 subiendo de rango) y se busca PROPORCIONALIDAD.
 
 - **SOL:** la familia más pesada (H1), el atractor central. Todo es jalado
-  hacia su peso (P_FULL_244 en Z).
+  hacia su peso (P_FULL_244 en Z). El Sol NUNCA es nudo: los nudos vienen de
+  familias_bajo_top5_subiendo_de_rango (bajo el top5) y H1 es el rango 1.
+  Distancia negativa: si un nudo tuviera más peso que H1 en Z, la distancia
+  sería negativa; no ocurre en los casos verificados (0 en 5 casos +
+  Bolívar). Si ocurriera, dist <= 0.01 marca CAPTURADO (por encima del Sol =
+  capturado por definición).
 - **NUDOS:** cada familia que se movió, con peso en Z, distancia al Sol y
   pendiente. Estados:
   - `CAPTURADO`: ya llegó al peso del Sol (distancia <= 0.01).
@@ -72,12 +77,19 @@ subiendo de rango) y se busca PROPORCIONALIDAD.
     a cualquier velocidad.
 - **COMETA:** el corte donde varios nudos saltan a la vez (un arrastre).
   Desempate (v2): en empate de (nudos_que_suben, salto_total) gana el corte
-  más temprano (primera ocurrencia).
+  más temprano (primera ocurrencia). NOTA (v3): el salto del cometa NO es
+  separable del pulso de input — el 11-19% de toda la masa_favor del run
+  llega en el corte del cometa (Napoleón 16%, Mozart 11%, Transición1 18%,
+  Mandela 19%). El cometa es un evento real y medible, pero su causa es el
+  pulso de input, no una dinámica gravitatoria pura.
 - **PROPORCIONALIDAD:** correlación de Pearson pendiente ~ distancia al Sol
   (mínimo 3 nudos). Varianza cero (todos los nudos con la misma distancia o
-  pendiente) -> null (indefinida). Siempre va con su n y su confianza (v2):
-  BAJA_MUESTRA si n<8, MEDIA si 8-11, ALTA si n>=12. Con pocos nudos un solo
-  valor atípico puede invertir el signo.
+  pendiente) -> null (indefinida). Unidades heterogéneas (v3): la pendiente
+  es cambio de RANGO Z por corte y la distancia es diferencia de PESO; la
+  lectura es SOLO DE SIGNO, no de elasticidad. Siempre va con su n y su
+  confianza (v2): BAJA_MUESTRA si n<8, MEDIA si 8-11, ALTA si n>=12. Si es
+  BAJA_MUESTRA (v3), la lectura dice NO CONCLUYENTE: el número se reporta
+  pero no se presenta como hallazgo.
 
 ## Proyectivo (Marco, 2026-11-13) — `proyectar_gravedad(result, hasta_corte)`
 La retrospectiva (leer_gravedad) NO se elimina: queda como referencia para
@@ -112,7 +124,8 @@ la extrapolación de la tendencia y la alerta temprana cuando el pulso ya entró
   resiste `dumezil_desequilibrio_f2_come_al_resto` (el más lejos, 0.145, pero
   el más lento, 0.114 — su propia gravedad, "come al resto"); en tránsito
   `dumezil_f3_fecundidad`. Cometa en **C9** (3 nudos suben, salto total 0.32).
-  Proporcionalidad pendiente~distancia: **0.568**.
+  Proporcionalidad pendiente~distancia: **0.568 (NO CONCLUYENTE, n=7,
+  BAJA_MUESTRA)** (v3).
 - **Proyectivo en FINAL27:** hasta C5 predice captura de predictivo_02 y
   situacion_ambicion en C7 (real: C6, a 1 corte) y de dumezil_f3 en C9
   (real: 0.014 en C10, casi capturado). Hasta C8 el pulso (3 nudos) alerta

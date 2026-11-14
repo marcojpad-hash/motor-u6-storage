@@ -24,7 +24,7 @@
 
 CAN_DECIDE_H = False
 CONTRATO = "COMPORTAMIENTO_POST_MESETA_V1"
-VERSION = "v2_20261113"  # v2: confianza por n en proporcionalidad + estado ACERCANDOSE + desempates y varianza cero documentados (revisión Gemini 2026-11-13)
+VERSION = "v3_20261113"  # v3: lectura degrada proporcionalidad si BAJA_MUESTRA + Sol nunca es nudo y distancia negativa documentados (revisión DeepSeek 2026-11-13)
 REGIMEN_MESETA = "MESeta_O_ESTABILIZACION"
 
 
@@ -78,7 +78,15 @@ def leer_gravedad(result):
     a todos los cuerpos celestes dentro de su casa (la Vía Láctea).
 
     - SOL: la familia más pesada (H1), el atractor central. Todo es jalado
-      hacia su peso.
+      hacia su peso. El Sol NUNCA es nudo: los nudos vienen de
+      familias_bajo_top5_subiendo_de_rango (familias BAJO el top5) y H1 es el
+      rango 1, así que está excluido por definición. El cometa mide el salto
+      simultáneo de los NUDOS, no del Sol (el salto propio de H1 en el corte
+      del cometa es pequeño o negativo en los casos verificados).
+      Distancia negativa: si un nudo tuviera más peso que H1 en Z (no ocurre
+      en los casos verificados: 0 distancias negativas en 5 casos + Bolívar),
+      la distancia sería negativa y caería en CAPTURADO por definición
+      (dist <= 0.01), es decir, por encima del Sol = capturado.
     - NUDOS: las familias que se movieron (bajo el top5 subiendo de rango).
       Se mide su distancia al Sol y su pendiente: ¿hay proporcionalidad?
       CAPTURADO = ya llegó al peso del Sol (dist <= 0.01).
@@ -90,10 +98,23 @@ def leer_gravedad(result):
     - COMETA: el corte donde varios nudos saltan a la vez (un arrastre).
       Desempate: en empate de (nudos_que_suben, salto_total) gana el corte
       más temprano (primera ocurrencia, por comparación estricta).
+      NOTA (DeepSeek 2026-11-13): el salto del cometa NO es separable del
+      pulso de input. En los casos verificados, el 11-19% de TODA la
+      masa_favor del run llega en el corte del cometa (Napoleón 16%,
+      Mozart 11%, Transición1 18%, Mandela 19%). Los nudos saltan porque
+      entró masa nueva (tokens) en ese corte. El cometa es un evento real
+      y medible (el salto simultáneo), pero su causa es el pulso de input,
+      no una dinámica gravitatoria pura.
     - PROPORCIONALIDAD: correlación de Pearson pendiente ~ distancia al Sol.
-      Si la varianza de la distancia o de la pendiente es cero (todos los
-      nudos con la misma distancia o la misma pendiente) es None (indefinida).
-      Siempre va con su n y su confianza (ver _confianza_prop).
+      Unidades heterogéneas (DeepSeek 2026-11-13): la pendiente es cambio
+      de RANGO Z por corte y la distancia es diferencia de PESO (P_FULL_244).
+      Pearson es invariante a escala, así que el número es válido, pero la
+      lectura es SOLO DE SIGNO (convergencia + / consolidación -), no de
+      elasticidad. Si la varianza de la distancia o de la pendiente es cero
+      (todos los nudos con la misma distancia o la misma pendiente) es None
+      (indefinida). Siempre va con su n y su confianza (ver _confianza_prop).
+      Si la confianza es BAJA_MUESTRA, la lectura dice NO CONCLUYENTE: el
+      número se reporta pero no se presenta como hallazgo.
     """
     result = result or {}
     si = result.get("salida_interpretable") or {}
@@ -189,11 +210,19 @@ def leer_gravedad(result):
     jal = [nd["familia"] for nd in nudos if nd["estado"] == "SIENDO_JALADO"]
     acer = [nd["familia"] for nd in nudos if nd["estado"] == "ACERCANDOSE"]
     res = [nd["familia"] for nd in nudos if nd["estado"] == "RESISTE"]
+    # Degradar la lectura si la confianza es BAJA_MUESTRA (DeepSeek 2026-11-13):
+    # el número se reporta pero NO se presenta como hallazgo.
+    if prop is not None and conf_prop == "BAJA_MUESTRA":
+        prop_txt = f"proporcionalidad pendiente~distancia: {prop} (NO CONCLUYENTE, n={n_prop}, BAJA_MUESTRA)"
+    elif prop is not None:
+        prop_txt = f"proporcionalidad pendiente~distancia: {prop} (confianza {conf_prop}, n={n_prop})"
+    else:
+        prop_txt = ""
     lectura = (
         f"sol {h1} (peso Z {peso_sol_z}); capturados: {len(caps)}; siendo jalados: {len(jal)}; "
         f"acercándose: {len(acer)}; resisten: {len(res)}"
         + (f"; cometa en {cometa['corte']} ({cometa['nudos_que_suben']} nudos suben)" if cometa and cometa.get("nudos_que_suben", 0) >= 2 else "")
-        + (f"; proporcionalidad pendiente~distancia: {prop} (confianza {conf_prop}, n={n_prop})" if prop is not None else "")
+        + (f"; {prop_txt}" if prop_txt else "")
     )
     return {
         "sol": {"familia": h1, "peso_Z": peso_sol_z},
@@ -335,6 +364,13 @@ def proyectar_gravedad(result, hasta_corte=None):
         sd = math.sqrt(sum((d - md) ** 2 for d in ds)); sp = math.sqrt(sum((p - mp) ** 2 for p in ps))
         prop = round(cov / (sd * sp), 3) if sd > 0 and sp > 0 else None
         conf_prop_k = _confianza_prop(n_prop_k) if prop is not None else None
+    # Degradar la lectura si la confianza es BAJA_MUESTRA (DeepSeek 2026-11-13).
+    if prop is not None and conf_prop_k == "BAJA_MUESTRA":
+        prop_txt_k = f"proporcionalidad hasta aquí: {prop} (NO CONCLUYENTE, n={n_prop_k}, BAJA_MUESTRA)"
+    elif prop is not None:
+        prop_txt_k = f"proporcionalidad hasta aquí: {prop} (confianza {conf_prop_k}, n={n_prop_k})"
+    else:
+        prop_txt_k = ""
     return {
         "contrato": CONTRATO, "version": VERSION, "can_decide_H": CAN_DECIDE_H,
         "modo": "PROYECTIVO", "hasta_corte": corte_k,
@@ -348,7 +384,7 @@ def proyectar_gravedad(result, hasta_corte=None):
             f"proyección hasta {corte_k}: "
             f"{sum(1 for p in proyecciones if p.get('captura_prevista'))} capturas previstas; "
             + (cometa_previsto["alerta"] if cometa_previsto else "sin pulso de masa en este corte")
-            + (f"; proporcionalidad hasta aquí: {prop} (confianza {conf_prop_k}, n={n_prop_k})" if prop is not None else "")
+            + (f"; {prop_txt_k}" if prop_txt_k else "")
         ),
     }
 

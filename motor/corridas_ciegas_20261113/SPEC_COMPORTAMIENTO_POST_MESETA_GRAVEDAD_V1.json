@@ -1,95 +1,104 @@
 {
   "comparacion_casos": [
     {
-      "capturados": 2,
       "caso": "NAPOLEON_FINAL27",
       "cometa": {
         "corte": "C9",
         "nudos": 3,
         "salto": 0.32
       },
-      "jalados": 3,
       "nudos": 7,
       "peso_sol_Z": 0.7813,
       "proporcionalidad": 0.568,
       "regimen": "MESETA",
-      "resisten": 1,
       "sol": "gobernante",
-      "acercandose": 0,
       "confianza_proporcionalidad": "BAJA_MUESTRA",
-      "n_proporcionalidad": 7
+      "n_proporcionalidad": 7,
+      "n_capturados": 2,
+      "n_jalados": 3,
+      "n_acercandose": 0,
+      "n_resisten": 1,
+      "regimen_nota": "Display abreviado \"MESETA\"; el canónico es \"MESeta_O_ESTABILIZACION\" (ver §3 del paper).",
+      "proporcionalidad_nota": "NO CONCLUYENTE (n=7, BAJA_MUESTRA)."
     },
     {
-      "capturados": 0,
       "caso": "MOZART_Z90",
       "cometa": {
         "corte": "C6",
         "nudos": 6,
         "salto": 0.482
       },
-      "jalados": 1,
       "nudos": 6,
       "peso_sol_Z": 0.7985,
       "proporcionalidad": -0.777,
       "regimen": "MESETA",
-      "resisten": 1,
       "sol": "autonomia_atenas",
-      "acercandose": 2,
       "confianza_proporcionalidad": "BAJA_MUESTRA",
-      "n_proporcionalidad": 6
+      "n_proporcionalidad": 6,
+      "n_capturados": 0,
+      "n_jalados": 1,
+      "n_acercandose": 2,
+      "n_resisten": 1,
+      "regimen_nota": "Display abreviado \"MESETA\"; el canónico es \"MESeta_O_ESTABILIZACION\" (ver §3 del paper).",
+      "proporcionalidad_nota": "NO CONCLUYENTE (n=6, BAJA_MUESTRA): no se presenta como hallazgo; el signo puede ser artefacto."
     },
     {
-      "capturados": 0,
       "caso": "TESLA_F001_02",
       "cometa": null,
-      "jalados": 0,
       "nudos": 0,
       "peso_sol_Z": null,
       "proporcionalidad": null,
       "regimen": "CONTINUIDAD_ASCENDENTE",
-      "resisten": 0,
       "sol": null,
-      "acercandose": 0,
       "confianza_proporcionalidad": null,
-      "n_proporcionalidad": 0
+      "n_proporcionalidad": 0,
+      "n_capturados": 0,
+      "n_jalados": 0,
+      "n_acercandose": 0,
+      "n_resisten": 0,
+      "regimen_nota": "Sin meseta: la lectura queda muda (ver contrato §13)."
     },
     {
-      "capturados": 0,
       "caso": "TRANSICION1_Z90",
       "cometa": {
         "corte": "C7_1448",
         "nudos": 8,
         "salto": 0.651
       },
-      "jalados": 12,
       "nudos": 20,
       "peso_sol_Z": 0.8006,
       "proporcionalidad": 0.295,
       "regimen": "MESETA",
-      "resisten": 2,
       "sol": "creador",
-      "acercandose": 0,
       "confianza_proporcionalidad": "ALTA",
-      "n_proporcionalidad": 20
+      "n_proporcionalidad": 20,
+      "n_capturados": 0,
+      "n_jalados": 12,
+      "n_acercandose": 0,
+      "n_resisten": 2,
+      "regimen_nota": "Display abreviado \"MESETA\"; el canónico es \"MESeta_O_ESTABILIZACION\" (ver §3 del paper).",
+      "cometa_nota": "Salto no separable del pulso de input (18% / 19% de toda la masa_favor llega en ese corte)."
     },
     {
-      "capturados": 1,
       "caso": "MANDELA_HEROE",
       "cometa": {
         "corte": "C3_1961",
         "nudos": 10,
         "salto": 1.077
       },
-      "jalados": 9,
       "nudos": 16,
       "peso_sol_Z": 0.8013,
       "proporcionalidad": 0.078,
       "regimen": "MESETA",
-      "resisten": 1,
       "sol": "kwml_01_rey",
-      "acercandose": 0,
       "confianza_proporcionalidad": "ALTA",
-      "n_proporcionalidad": 16
+      "n_proporcionalidad": 16,
+      "n_capturados": 1,
+      "n_jalados": 9,
+      "n_acercandose": 0,
+      "n_resisten": 1,
+      "regimen_nota": "Display abreviado \"MESETA\"; el canónico es \"MESeta_O_ESTABILIZACION\" (ver §3 del paper).",
+      "cometa_nota": "Salto no separable del pulso de input (18% / 19% de toda la masa_favor llega en ese corte)."
     }
   ],
   "constante_inercia": {
@@ -108,9 +117,9 @@
         "MOZART_Z90": 0.7985,
         "NAPOLEON_FINAL27": 0.7813,
         "TRANSICION1_Z90": 0.8006,
-        "desv": 0.008,
         "media": 0.7954,
-        "spread": 0.02
+        "desv_poblacional": 0.008,
+        "spread_max_min": 0.02
       }
     },
     "relacion_factores": {
@@ -143,7 +152,7 @@
       }
     }
   },
-  "descripcion": "Lectura de comportamiento post-meseta y gravedad. Sensor, solo observa (can_decide_H false). Reproducible por cualquier modelo de lenguaje a partir de un RESULT completo del motor U6. v2 (revisión Gemini 2026-11-13): confianza por n en proporcionalidad, estado ACERCANDOSE, desempates y varianza cero documentados.",
+  "descripcion": "Lectura de comportamiento post-meseta y gravedad. Sensor, solo observa (can_decide_H false). Reproducible por cualquier modelo de lenguaje a partir de un RESULT completo del motor U6. v3 (revisión DeepSeek 2026-11-13): lectura degrada proporcionalidad si BAJA_MUESTRA, cometa no separable del pulso de input, Sol nunca es nudo, distancia negativa documentada, unidades heterogéneas, punto por respaldo, versiones/régimen/tipos corregidos.",
   "ejemplo_trabajado": {
     "H1": "arquetipo_el_gobernante",
     "H2": "30_ambicion",
@@ -184,7 +193,9 @@
       },
       "n_nudos_proporcionalidad": 7,
       "confianza_proporcionalidad": "BAJA_MUESTRA",
-      "acercandose": []
+      "acercandose": [],
+      "proporcionalidad_concluyente": false,
+      "proporcionalidad_lectura": "NO CONCLUYENTE (n=7, BAJA_MUESTRA)"
     },
     "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568",
     "proyectivo": {
@@ -203,7 +214,8 @@
     "punto_no_considerado": {
       "familia": "dumezil_f2_fuerza",
       "pendiente": 1.0286,
-      "rango_Z": 23
+      "rango_Z": 23,
+      "via": "RESPALDO (rango Z 23 > 20, no EMERGE)"
     },
     "regimen": "MESeta_O_ESTABILIZACION",
     "trazabilidad": {
@@ -265,7 +277,8 @@
         "regla": "el corte con mayor (nudos_que_suben, salto_total)",
         "salto_por_corte_i": "P_FULL_244[f][i] - P_FULL_244[f][i-1] para cada nudo f",
         "salto_total": "suma de los saltos",
-        "desempate": "Si dos cortes empatan en (nudos_que_suben, salto_total), gana el corte más temprano (primera ocurrencia, por comparación estricta)."
+        "desempate": "Si dos cortes empatan en (nudos_que_suben, salto_total), gana el corte más temprano (primera ocurrencia, por comparación estricta).",
+        "nota_pulso_input": "El salto del cometa NO es separable del pulso de input. Fracción de TODA la masa_favor del run que llega en el corte del cometa: Napoleón 16% (C9), Mozart 11% (C6), Transición1 18% (C7_1448), Mandela 19% (C3_1961). Los nudos saltan porque entró masa nueva (tokens) en ese corte. El cometa es un evento real y medible (el salto simultáneo), pero su causa es el pulso de input, no una dinámica gravitatoria pura."
       },
       "descripcion": "NO es gravedad terrestre. Es inercia de gravedad como un cometa que arrastra, o como el sol jalando a los cuerpos de su casa (Vía Láctea).",
       "nudos": {
@@ -296,11 +309,15 @@
             "MEDIA": "8 <= n < 12",
             "ALTA": "n >= 12"
           }
-        }
+        },
+        "unidades_heterogeneas": "La pendiente es cambio de RANGO Z por corte y la distancia es diferencia de PESO (P_FULL_244). Son dos cantidades distintas. Pearson es invariante a escala, así que el número es válido, pero la lectura es SOLO DE SIGNO (convergencia + / consolidación -), no de elasticidad.",
+        "degradar_si_baja_muestra": "Si la confianza es BAJA_MUESTRA, la lectura dice \"proporcionalidad NO CONCLUYENTE (n=..., BAJA_MUESTRA)\": el número se reporta pero NO se presenta como hallazgo."
       },
       "sol": {
         "familia": "H1",
-        "peso_Z": "motor.cuts[Z].P_FULL_244[H1] (Z = último corte)"
+        "peso_Z": "motor.cuts[Z].P_FULL_244[H1] (Z = último corte)",
+        "nunca_es_nudo": "Los nudos vienen de familias_bajo_top5_subiendo_de_rango (familias BAJO el top5) y H1 es el rango 1, así que está excluido por definición. Verificado en 5 casos + Bolívar: H1 nunca aparece como nudo. El cometa mide el salto de los NUDOS, no del Sol.",
+        "distancia_negativa": "distancia_al_sol = peso_sol_Z - peso_Z. Si un nudo tuviera más peso que H1 en Z, la distancia sería negativa. No ocurre en los casos verificados (0 distancias negativas). Si ocurriera, distancia <= 0.01 marca CAPTURADO, así que un nudo por encima del Sol se trata como capturado por definición."
       }
     },
     "meseta": {
@@ -328,7 +345,8 @@
     "punto_no_considerado": {
       "descripcion": "Lo que emerge o sube y NO está en el top que ven los modelos",
       "regla": "primer emergente (o primera familia subiendo) cuya familia no está en top",
-      "top": "H1, H2 y las familias de conjunto_hipotesis_abiertas"
+      "top": "H1, H2 y las familias de conjunto_hipotesis_abiertas",
+      "respaldo_vs_emerge": "El punto puede entrar por dos vías. Si entra por EMERGE (rango_Z <= 20 y resto de umbrales), es un emergente. Si NO califica como emergente pero es la primera familia subiendo que no está en el top, entra por RESPALDO. Ejemplo: dumezil_f2_fuerza en Napoleón tiene rango Z 23 (> 20), así que NO es emergente (emergentes=0) y entra por respaldo."
     },
     "trazabilidad": {
       "campos": [
@@ -438,8 +456,9 @@
       "n_cortes_observados": 0,
       "regimen": "string"
     },
-    "version": "v2_20261113"
+    "version": "v3_20261113",
+    "si_no_meseta": "Si en_meseta es false, la salida es solo {contrato, version, can_decide_H, en_meseta: false, regimen, lectura: \"no estabilizado en meseta: no hay lectura de comportamiento post-meseta\"}. La clave gravedad NO aparece (null/ausente). Las listas de estados (capturados, siendo_jalados, acercandose, resisten) son SIEMPRE listas de familias, nunca números; en comparacion_casos se muestran como conteos n_* por brevedad."
   },
   "spec": "COMPORTAMIENTO_POST_MESETA_V1",
-  "version": "v2_20261113"
+  "version": "v3_20261113"
 }
