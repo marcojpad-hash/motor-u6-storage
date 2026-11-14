@@ -1,0 +1,520 @@
+{
+ "12_obtencion": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0
+ },
+ "24_rivalidad_de_superior_e_inferior": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 1,
+  "TESLA_7C": null,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": null
+ },
+ "31_conflicto_con_un_dios": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": 0
+ },
+ "9_audaz_empresa": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": null,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": null
+ },
+ "anacyclosis_03_aristocracia": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": null,
+  "ROCKEFELLER_7C": 1,
+  "TESLA_7C": null,
+  "TROTSKY_7C": null
+ },
+ "arquetipo_el_bufon": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0
+ },
+ "bbk_01_aventurero": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": 0
+ },
+ "bbk_03_individualista": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0
+ },
+ "cliodinamica_02_fase_estanflacion_presion": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": null,
+  "TROTSKY_7C": 1
+ },
+ "cliodinamica_04_fase_depresion_reconstruccion": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0
+ },
+ "distopia_agotamiento_ambiental": {
+  "ARBUCKLE_7C": 0,
+  "TESLA_7C": 1,
+  "TROTSKY_7C": 1
+ },
+ "distopia_tecnica_herramienta_manda": {
+  "ARBUCKLE_7C": null,
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 1,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "dumezil_desequilibrio_f2_come_al_resto": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "dumezil_desequilibrio_f3_come_al_resto": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 1,
+  "LINCOLN_7C": 0
+ },
+ "dumezil_f2_fuerza": {
+  "ARBUCKLE_7C": 1,
+  "WILDE_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "dumezil_f3_fecundidad": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": null,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": null,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "erikson_07_generatividad_vs_estancamiento": {
+  "ARBUCKLE_7C": 0
+ },
+ "frye_mythos_romance": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": null,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 1
+ },
+ "frye_mythos_tragedia": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0
+ },
+ "jaldun_02_institucionalizacion_y_sedentarismo": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": null,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": 1,
+  "TROTSKY_7C": 0
+ },
+ "mauss_02_deuda_de_honor": {
+  "ARBUCKLE_7C": 0
+ },
+ "mbti_factor_introversion_i": {
+  "ARBUCKLE_7C": 1,
+  "WILDE_7C": 1,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 1
+ },
+ "mbti_factor_juicio_j": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 1,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "mbti_factor_sensacion_s": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0
+ },
+ "minsky_02_especulativa": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "monomito_02_llamado_a_la_aventura": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 0
+ },
+ "monomito_06_pruebas_aliados_y_enemigos": {
+  "ARBUCKLE_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "predictivo_02_mdp_politica_optima": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "predictivo_03_cox_survival_riesgo": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": null,
+  "TESLA_7C": 0,
+  "TROTSKY_7C": null
+ },
+ "predictivo_05_sir_contagio_conductual": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": null,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "schwartz_03_tradicion": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": null,
+  "ROCKEFELLER_7C": null,
+  "PASTEUR_7C": null,
+  "TESLA_7C": null,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": null
+ },
+ "schwartz_09_estimulacion": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": 0
+ },
+ "situacion_dramatica_ambicion": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 1,
+  "LINCOLN_7C": 1,
+  "TROTSKY_7C": 0
+ },
+ "social_01_asch_conformidad": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "social_04_rogers_difusion_innovaciones": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 0
+ },
+ "social_14_overton_ventana": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "spengler_02_verano_otono_racionalizacion": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 0
+ },
+ "strauss_howe_02_the_awakening": {
+  "ARBUCKLE_7C": 0
+ },
+ "strauss_howe_03_the_unraveling": {
+  "ARBUCKLE_7C": 0,
+  "TESLA_7C": 0
+ },
+ "strauss_howe_04_the_crisis": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 1,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "tainter_04_colapso_por_simplificacion_forzada": {
+  "ARBUCKLE_7C": 0,
+  "TESLA_7C": 0
+ },
+ "ttm_04_accion": {
+  "ARBUCKLE_7C": 0
+ },
+ "utopia_abundancia_sybaris": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": null,
+  "LINCOLN_7C": 0
+ },
+ "utopia_arkadia": {
+  "ARBUCKLE_7C": null,
+  "WILDE_7C": 1,
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "utopia_autonomia_atenas": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0,
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "utopia_mentalidad_liberal": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0
+ },
+ "utopia_principio_identidad_grupo": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 1
+ },
+ "utopia_principio_libertades": {
+  "ARBUCKLE_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0
+ },
+ "utopia_principio_mercado": {
+  "ARBUCKLE_7C": 0,
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 1,
+  "LINCOLN_7C": 0
+ },
+ "utopia_principio_naturaleza": {
+  "ARBUCKLE_7C": 0,
+  "WILDE_7C": 1,
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "29_un_enemigo_amado": {
+  "WILDE_7C": 0
+ },
+ "3_venganza_del_crimen": {
+  "WILDE_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "anacyclosis_06_oclocracia": {
+  "WILDE_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": null
+ },
+ "arquetipo_el_heroe": {
+  "WILDE_7C": 0,
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "bbk_02_celebridad": {
+  "WILDE_7C": 0
+ },
+ "bbk_04_guardian": {
+  "WILDE_7C": null,
+  "TESLA_7C": null
+ },
+ "dumezil_f1_soberania_magica": {
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0
+ },
+ "eterno_retorno_01_caos_primordial": {
+  "WILDE_7C": 0
+ },
+ "kwml_03_mago": {
+  "WILDE_7C": 0
+ },
+ "kwml_04_amante": {
+  "WILDE_7C": 0
+ },
+ "mauss_01_intercambio_agonistico": {
+  "WILDE_7C": 0,
+  "TESLA_7C": 0
+ },
+ "mbti_factor_extraversion_e": {
+  "WILDE_7C": 0,
+  "PASTEUR_7C": 1,
+  "LINCOLN_7C": 1,
+  "TROTSKY_7C": 0
+ },
+ "mbti_factor_percepcion_p": {
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": null,
+  "TESLA_7C": 0
+ },
+ "schwartz_08_hedonismo": {
+  "WILDE_7C": 0
+ },
+ "schwartz_10_autodireccion": {
+  "WILDE_7C": null,
+  "TESLA_7C": 0
+ },
+ "sistema_domiciano": {
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0
+ },
+ "sistema_domiciano_delacion": {
+  "WILDE_7C": 0,
+  "ROCKEFELLER_7C": 0
+ },
+ "social_07_noelle_neumann_espiral_silencio": {
+  "WILDE_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "social_13_le_bon_comportamiento_masas": {
+  "WILDE_7C": 0
+ },
+ "weber_02_autoridad_carismatica": {
+  "WILDE_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "arquetipo_el_gobernante": {
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "dialectica_01_tesis_estabilidad_hegemonica": {
+  "ROCKEFELLER_7C": 0
+ },
+ "distopia_coercion_total": {
+  "ROCKEFELLER_7C": 0
+ },
+ "dumezil_desequilibrio_f1_come_al_resto": {
+  "ROCKEFELLER_7C": 0
+ },
+ "dumezil_f1_soberania_juridica": {
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "minsky_01_cobertura": {
+  "ROCKEFELLER_7C": 1
+ },
+ "monomito_07_aproximacion_a_la_caverna_mas_profunda": {
+  "ROCKEFELLER_7C": null
+ },
+ "strauss_howe_01_the_high": {
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "tainter_01_inversion_complejidad_productiva": {
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "utopia_mentalidad_socialista": {
+  "ROCKEFELLER_7C": 0,
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 1,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 1
+ },
+ "utopia_oficio_roma": {
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "utopia_orden_sparte": {
+  "ROCKEFELLER_7C": 0
+ },
+ "utopia_principio_estado": {
+  "ROCKEFELLER_7C": 1,
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "anacyclosis_01_monarquia": {
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "eterno_retorno_02_cosmizacion_fundacion": {
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "kwml_01_rey": {
+  "PASTEUR_7C": 0,
+  "TESLA_7C": 0,
+  "LINCOLN_7C": 0
+ },
+ "schwartz_07_logro": {
+  "PASTEUR_7C": null,
+  "TROTSKY_7C": 0
+ },
+ "weber_01_autoridad_tradicional": {
+  "PASTEUR_7C": 0,
+  "LINCOLN_7C": null
+ },
+ "arquetipo_el_creador": {
+  "TESLA_7C": 0
+ },
+ "arquetipo_el_mago": {
+  "TESLA_7C": 0
+ },
+ "arquetipo_el_sabio": {
+  "TESLA_7C": 1
+ },
+ "berlin_01_erizo": {
+  "TESLA_7C": 0
+ },
+ "kondratiev_01_primavera_expansion": {
+  "TESLA_7C": 0
+ },
+ "mbti_factor_intuicion_n": {
+  "TESLA_7C": 0
+ },
+ "monomito_08_la_odisea_o_prueba_suprema": {
+  "TESLA_7C": 1,
+  "LINCOLN_7C": null,
+  "TROTSKY_7C": null
+ },
+ "sistema_domiciano_maiestas": {
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "spengler_01_primavera_nacimiento_mistico": {
+  "TESLA_7C": 0
+ },
+ "utopia_mentalidad_milenarista": {
+  "TESLA_7C": 0,
+  "TROTSKY_7C": 0
+ },
+ "camaleon": {
+  "LINCOLN_7C": 0
+ },
+ "20_sacrificio_por_un_ideal": {
+  "TROTSKY_7C": 0
+ },
+ "30_ambicion": {
+  "TROTSKY_7C": 0
+ },
+ "sustancias_02_moderado": {
+  "TROTSKY_7C": 0
+ },
+ "sustancias_03_severo": {
+  "TROTSKY_7C": 1
+ },
+ "trayectoria_escritores_creativos": {
+  "TROTSKY_7C": 1
+ },
+ "trayectoria_musicos_populares": {
+  "TROTSKY_7C": 1
+ },
+ "trayectoria_posgrado_academicos": {
+  "TROTSKY_7C": 1
+ },
+ "trayectoria_transportistas_turno_nocturno": {
+  "TROTSKY_7C": 1
+ }
+}
