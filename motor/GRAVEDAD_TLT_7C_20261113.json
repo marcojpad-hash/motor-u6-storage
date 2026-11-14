@@ -1,0 +1,347 @@
+{
+  "TESLA_7C": {
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "H1_grado": "FRAGIL",
+    "H2": "30_ambicion",
+    "sol_peso_Z": 0.7551,
+    "n_nudos": 9,
+    "n_capturados": 0,
+    "n_jalados": 5,
+    "n_acercandose": 2,
+    "n_resisten": 1,
+    "proporcionalidad": -0.223,
+    "confianza_prop": "MEDIA",
+    "cometa": {
+      "corte": "C6_1926",
+      "nudos_que_suben": 3,
+      "salto_total": 0.304
+    },
+    "punto": {
+      "familia": "mbti_factor_introversion_i",
+      "rango_en_Z": 24,
+      "pendiente_rango_por_corte": 4.0,
+      "clase": "SIN_FORMA_CLARA",
+      "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+    },
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "nudos": [
+      {
+        "familia": "mbti_factor_introversion_i",
+        "peso_Z": 0.561,
+        "distancia_al_sol": 0.194,
+        "pendiente": 4.0,
+        "rango_Z": 24,
+        "primera_aparicion": "C5_1915",
+        "clase": "SIN_FORMA_CLARA",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "arquetipo_el_sabio",
+        "peso_Z": 0.694,
+        "distancia_al_sol": 0.061,
+        "pendiente": 3.4286,
+        "rango_Z": 14,
+        "primera_aparicion": "C2_1893",
+        "clase": "PICO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "kwml_03_mago",
+        "peso_Z": 0.733,
+        "distancia_al_sol": 0.022,
+        "pendiente": 1.5,
+        "rango_Z": 9,
+        "primera_aparicion": "C3_1901",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "EN_TRANSITO"
+      },
+      {
+        "familia": "monomito_08_la_odisea_o_prueba_suprema",
+        "peso_Z": 0.695,
+        "distancia_al_sol": 0.06,
+        "pendiente": 1.3,
+        "rango_Z": 12,
+        "primera_aparicion": "C4_1906",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "distopia_agotamiento_ambiental",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.255,
+        "pendiente": 1.25,
+        "rango_Z": 6,
+        "primera_aparicion": "C1_1884",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_principio_mercado",
+        "peso_Z": 0.627,
+        "distancia_al_sol": 0.128,
+        "pendiente": 0.6429,
+        "rango_Z": 16,
+        "primera_aparicion": "C1_1884",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "dumezil_desequilibrio_f3_come_al_resto",
+        "peso_Z": 0.603,
+        "distancia_al_sol": 0.152,
+        "pendiente": 0.4643,
+        "rango_Z": 20,
+        "primera_aparicion": "C1_1884",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "situacion_dramatica_ambicion",
+        "peso_Z": 0.603,
+        "distancia_al_sol": 0.152,
+        "pendiente": 0.4643,
+        "rango_Z": 21,
+        "primera_aparicion": "C1_1884",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "utopia_mentalidad_socialista",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.255,
+        "pendiente": 0.1071,
+        "rango_Z": 27,
+        "primera_aparicion": "C1_1884",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "RESISTE"
+      }
+    ]
+  },
+  "LINCOLN_7C": {
+    "H1": "3_venganza_del_crimen",
+    "H1_grado": "FRAGIL",
+    "H2": "12_obtencion",
+    "sol_peso_Z": 0.7871,
+    "n_nudos": 6,
+    "n_capturados": 1,
+    "n_jalados": 2,
+    "n_acercandose": 2,
+    "n_resisten": 0,
+    "proporcionalidad": -0.123,
+    "confianza_prop": "BAJA_MUESTRA",
+    "cometa": {
+      "corte": "C2_1856",
+      "nudos_que_suben": 2,
+      "salto_total": 0.212
+    },
+    "punto": {
+      "familia": "situacion_dramatica_ambicion",
+      "rango_en_Z": 9,
+      "pendiente_rango_por_corte": 0.3214,
+      "clase": "LATENTE_DORMIDO"
+    },
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "nudos": [
+      {
+        "familia": "frye_mythos_romance",
+        "peso_Z": 0.742,
+        "distancia_al_sol": 0.045,
+        "pendiente": 2.9,
+        "rango_Z": 15,
+        "primera_aparicion": "C4_1860",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "EN_TRANSITO"
+      },
+      {
+        "familia": "anacyclosis_03_aristocracia",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.287,
+        "pendiente": 1.5714,
+        "rango_Z": 7,
+        "primera_aparicion": "C2_1856",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "jaldun_02_institucionalizacion_y_sedentarismo",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.287,
+        "pendiente": 1.0,
+        "rango_Z": 20,
+        "primera_aparicion": "C3_1858",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "situacion_dramatica_ambicion",
+        "peso_Z": 0.695,
+        "distancia_al_sol": 0.092,
+        "pendiente": 0.3214,
+        "rango_Z": 9,
+        "primera_aparicion": "C1_1846",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "3_venganza_del_crimen",
+        "peso_Z": 0.787,
+        "distancia_al_sol": 0.0,
+        "pendiente": 0.3143,
+        "rango_Z": 6,
+        "primera_aparicion": "C2_1856",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "CAPTURADO"
+      },
+      {
+        "familia": "mbti_factor_extraversion_e",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.287,
+        "pendiente": 0.2571,
+        "rango_Z": 14,
+        "primera_aparicion": "C2_1856",
+        "clase": "ASCENSO_LENTO",
+        "estado": "ACERCANDOSE"
+      }
+    ]
+  },
+  "TROTSKY_7C": {
+    "H1": "mauss_01_intercambio_agonistico",
+    "H1_grado": "AJUSTADA",
+    "H2": "dumezil_f2_fuerza",
+    "sol_peso_Z": 0.6837,
+    "n_nudos": 11,
+    "n_capturados": 2,
+    "n_jalados": 5,
+    "n_acercandose": 4,
+    "n_resisten": 0,
+    "proporcionalidad": 0.316,
+    "confianza_prop": "MEDIA",
+    "cometa": {
+      "corte": "C3_1923",
+      "nudos_que_suben": 2,
+      "salto_total": 0.123
+    },
+    "punto": {
+      "familia": "trayectoria_escritores_creativos",
+      "rango_en_Z": 12,
+      "pendiente_rango_por_corte": 2.4,
+      "clase": "LATENTE_DORMIDO"
+    },
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "nudos": [
+      {
+        "familia": "sustancias_03_severo",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 2.6,
+        "rango_Z": 6,
+        "primera_aparicion": "C3_1923",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "trayectoria_escritores_creativos",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 2.4,
+        "rango_Z": 12,
+        "primera_aparicion": "C3_1923",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "cliodinamica_02_fase_estanflacion_presion",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 2.0,
+        "rango_Z": 30,
+        "primera_aparicion": "C6_1938",
+        "clase": "PICO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "distopia_agotamiento_ambiental",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 2.0,
+        "rango_Z": 31,
+        "primera_aparicion": "C6_1938",
+        "clase": "PICO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "utopia_principio_identidad_grupo",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 1.5714,
+        "rango_Z": 13,
+        "primera_aparicion": "C2_1922",
+        "clase": "ASCENSO_LENTO",
+        "estado": "SIENDO_JALADO"
+      },
+      {
+        "familia": "spengler_01_primavera_nacimiento_mistico",
+        "peso_Z": 0.703,
+        "distancia_al_sol": -0.019,
+        "pendiente": 0.5714,
+        "rango_Z": 14,
+        "primera_aparicion": "C1_1918",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "CAPTURADO"
+      },
+      {
+        "familia": "strauss_howe_02_the_awakening",
+        "peso_Z": 0.703,
+        "distancia_al_sol": -0.019,
+        "pendiente": 0.5714,
+        "rango_Z": 15,
+        "primera_aparicion": "C1_1918",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "CAPTURADO"
+      },
+      {
+        "familia": "trayectoria_musicos_populares",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 0.3,
+        "rango_Z": 24,
+        "primera_aparicion": "C3_1923",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "trayectoria_posgrado_academicos",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 0.3,
+        "rango_Z": 25,
+        "primera_aparicion": "C3_1923",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "trayectoria_transportistas_turno_nocturno",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 0.3,
+        "rango_Z": 26,
+        "primera_aparicion": "C3_1923",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      },
+      {
+        "familia": "utopia_mentalidad_socialista",
+        "peso_Z": 0.5,
+        "distancia_al_sol": 0.184,
+        "pendiente": 0.2857,
+        "rango_Z": 10,
+        "primera_aparicion": "C1_1918",
+        "clase": "LATENTE_DORMIDO",
+        "estado": "ACERCANDOSE"
+      }
+    ]
+  }
+}

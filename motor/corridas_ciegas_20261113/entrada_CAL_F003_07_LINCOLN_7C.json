@@ -1,0 +1,341 @@
+{
+  "case_id": "CAL_F003_07_LINCOLN_7C",
+  "question": "¿Qué trayectoria sigue Abraham Lincoln tras el último de sus siete debates con Stephen A. Douglas en la campaña al Senado por Illinois?",
+  "person": "Abraham Lincoln",
+  "tipo_sujeto": "politico",
+  "freeze": "1858-10-15",
+  "z_trabajo": "1858-10-15",
+  "modo_z": "historico",
+  "gate_z": "GATE_Z_TRABAJO_20261024",
+  "preparacion_ciega": {
+    "preparador_entrada": "GrokBot-preparador-ciego-F003",
+    "custodio_destino": "GrokBot-custodio-rutina-F003",
+    "vio_destino": false
+  },
+  "random_seed": 20261024,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "1865-04-14",
+  "cuts": [
+    {
+      "id": "C1_1846",
+      "corte": "C1_1846",
+      "cut_id": "C1_1846",
+      "date": "1846",
+      "fecha_corte": "1846",
+      "hecho": "Autodidacta criado en la frontera, perdió su primera candidatura a la legislatura de Illinois en 1832; en 1834, como whig seguidor de Henry Clay, entró en la legislatura estatal, y en 1846 ganó un escaño en la Cámara de Representantes federal, prometiendo servir un solo periodo.",
+      "P": [
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "determinacion",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "aprendizaje",
+          0.78
+        ],
+        [
+          "persuasion",
+          0.74
+        ]
+      ],
+      "C": [
+        [
+          "ascenso_reciente",
+          0.74
+        ],
+        [
+          "derrota_temporal",
+          0.62
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "En 1832 declaró su candidatura a la Cámara de Representantes de Illinois; en su segunda campaña, en 1834, como seguidor del whig Henry Clay, quedó segundo entre trece candidatos para cuatro puestos.",
+          "source_url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+          "source_date": "2026-10-26",
+          "claim_date": "1834",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        },
+        {
+          "afirmacion": "En 1846 obtuvo la candidatura whig y ganó la elección a la Cámara de Representantes; se había comprometido a servir un solo periodo.",
+          "source_url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+          "source_date": "2026-10-26",
+          "claim_date": "1846",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C2_1856",
+      "corte": "C2_1856",
+      "cut_id": "C2_1856",
+      "date": "1856-06",
+      "fecha_corte": "1856-06",
+      "hecho": "Indignado por la Ley Kansas-Nebraska de 1854, que abría los territorios a la esclavitud, dejó el partido whig en crisis; en 1856 se unió a los republicanos, dio el discurso final de la convención de Bloomington y en junio de 1856 recibió apoyos para la vicepresidencia, quedando como republicano destacado de Illinois.",
+      "P": [
+        [
+          "justicia",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "oratoria",
+          0.82
+        ],
+        [
+          "cambio_lealtad",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.74
+        ],
+        [
+          "reconocimiento",
+          0.72
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "La Ley Kansas-Nebraska de 1854 abrió los territorios a la esclavitud y lo llevó a ser dirigente del nuevo Partido Republicano.",
+          "source_url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+          "source_date": "2026-10-26",
+          "claim_date": "1854",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        },
+        {
+          "afirmacion": "En 1856 se unió a los republicanos, dio el discurso final de la convención de Bloomington y en la convención nacional de junio de 1856 recibió apoyos para la vicepresidencia; se convirtió en un republicano destacado de Illinois.",
+          "source_url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+          "source_date": "2026-10-26",
+          "claim_date": "1856-06",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C3_1858",
+      "corte": "C3_1858",
+      "cut_id": "C3_1858",
+      "date": "1858-10-15",
+      "fecha_corte": "1858-10-15",
+      "hecho": "En junio de 1858 los republicanos de Illinois lo nominaron al Senado contra el titular Stephen A. Douglas y el 16 de junio pronunció el discurso de la casa dividida; entre el 21 de agosto y el 15 de octubre sostuvo siete debates con Douglas que atrajeron multitudes de hasta 18,000 personas y le dieron audiencia nacional; los senadores aún los elegía la legislatura estatal.",
+      "P": [
+        [
+          "ambicion",
+          0.8
+        ],
+        [
+          "justicia",
+          0.76
+        ]
+      ],
+      "A": [
+        [
+          "oratoria",
+          0.84
+        ],
+        [
+          "confrontacion_directa",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "popularidad",
+          0.78
+        ],
+        [
+          "rivalidad_poder",
+          0.74
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "Pronunció el discurso de la casa dividida el 16 de junio de 1858 en Springfield, tras aceptar la nominación republicana al Senado.",
+          "source_url": "https://en.wikipedia.org/wiki/House_Divided_Speech",
+          "source_date": "2026-10-26",
+          "claim_date": "1858-06-16",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        },
+        {
+          "afirmacion": "Los siete debates con Douglas se celebraron entre agosto y octubre de 1858, de Ottawa (21 de agosto) a Alton (15 de octubre); se reportaron 16,000 a 18,000 asistentes en Galesburg; los senadores eran elegidos por la legislatura estatal.",
+          "source_url": "https://en.wikipedia.org/wiki/Lincoln%E2%80%93Douglas_debates",
+          "source_date": "2026-10-26",
+          "claim_date": "1858-10-15",
+          "tipo_fuente": "secundaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C4_1860",
+      "corte": "C4_1860",
+      "cut_id": "C4_1860",
+      "date": "1860-11-06",
+      "fecha_corte": "1860-11-06",
+      "hecho": "En noviembre de 1860 gana la presidencia; los estados del sur empiezan a separarse de la Unión.",
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "triunfo",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "oratoria",
+          0.82
+        ],
+        [
+          "persuasion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "poder",
+          0.84
+        ],
+        [
+          "rivalidad_poder",
+          0.8
+        ]
+      ]
+    },
+    {
+      "id": "C5_1863",
+      "corte": "C5_1863",
+      "cut_id": "C5_1863",
+      "date": "1863-01-01",
+      "fecha_corte": "1863-01-01",
+      "hecho": "En enero de 1863 firma la Proclama de Emancipación; en noviembre pronuncia el discurso de Gettysburg.",
+      "P": [
+        [
+          "justicia",
+          0.84
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "oratoria",
+          0.84
+        ],
+        [
+          "liderazgo",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ]
+      ]
+    },
+    {
+      "id": "C6_1864",
+      "corte": "C6_1864",
+      "cut_id": "C6_1864",
+      "date": "1864-11-08",
+      "fecha_corte": "1864-11-08",
+      "hecho": "En noviembre de 1864 es reelegido presidente en plena guerra civil; la Unión avanza hacia la victoria.",
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "resiliencia",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.8
+        ],
+        [
+          "determinacion",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "poder",
+          0.82
+        ],
+        [
+          "prosperidad",
+          0.72
+        ]
+      ]
+    },
+    {
+      "id": "C7_1865",
+      "corte": "C7_1865",
+      "cut_id": "C7_1865",
+      "date": "1865-04-14",
+      "fecha_corte": "1865-04-14",
+      "hecho": "En abril de 1865 termina la guerra; el 14 de abril es asesinado por John Wilkes Booth en el teatro Ford.",
+      "P": [
+        [
+          "derrota_temporal",
+          0.84
+        ],
+        [
+          "deber",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "devocion",
+          0.78
+        ],
+        [
+          "resiliencia",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "legitimidad_percibida",
+          0.82
+        ]
+      ]
+    }
+  ],
+  "source_notes": "Fuentes secundarias (Wikipedia en inglés) consultadas a ciegas; solo hechos fechados hasta el debate de Alton del 15 de octubre de 1858."
+}
