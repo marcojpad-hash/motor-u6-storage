@@ -3335,7 +3335,13 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             status.append({"component":"movimiento_de_fondo_u4.py","status":"ERROR","error":str(_eu4),"can_decide_H":False})
     # WORKING PATCH: integra geometría multicapas que antes solo corría en un ZIP lateral separado.
     # Se ejecuta sobre el prefijo completo hasta Z; sus trazas alimentan el generador del set abierto.
-    result["geometria_multicapa"] = _run_geometria_multicapa_working(result, case)
+    # CORRECCION_AUDITORIA_MOZART_20261114 (#3): la geometría multicapa se
+    # ejecutaba fuera del CEB (llamada directa) mientras component_status la
+    # declaraba EXECUTED como "geometria_multicapa_integrada_working_v1"; el
+    # verificador no encontraba ninguna etapa con ese nombre y la marcaba
+    # REPORTED_EXECUTED_NOT_OBSERVED. Se envuelve en _ceb_stage con el nombre
+    # declarado para que la etapa observada y la declaración coincidan.
+    result["geometria_multicapa"] = _ceb_stage("geometria_multicapa_integrada_working_v1", lambda: _run_geometria_multicapa_working(result, case))
     _geo_status = result["geometria_multicapa"]
     status.append({"component":"geometria_multicapa_integrada_working_v1", "status":_geo_status.get("status", "ERROR"),
                    "feeds_predictor":False, "feeds_H":bool(_geo_status.get("feeds_hypothesis_generation")),
@@ -3371,6 +3377,47 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     result["registro_componentes"]=_registro_componentes(status,_hub_reg)
     if execution_identity is not None:
         result["execution_identity"]=execution_identity
+    # CORRECCION_AUDITORIA_MOZART_20261114 (#3): sumideros terminales del CEB.
+    # Estas etapas producen artefactos finales (secciones del RESULT, registros
+    # de checkpoint o informes de auditoría) o son control puro; nada posterior
+    # las lee por el bus del CEB. Sin marca terminal el verificador las contaba
+    # como "salida sin consumidor observado". Cada una se verificó contra el
+    # RESULT de Mozart (ver NOTA_CORRECCION_AUDITORIA_MOZART_20261114.md).
+    # Dos etapas NO son sumideros sino consumidas por vías que el CEB no
+    # observa (argumento directo / _RUN_CTX): proyeccion_longitudinal (la lee
+    # metacognition post_h como argumento `apuesta`) y autoevidencia_stores_011
+    # (la lee filtro_relleno_013 vía _RUN_CTX["vecinos_011"]); para ellas se
+    # emite la arista FLOW_CONSUMED explícita en vez de marcarlas terminales.
+    # La geometría multicapa también se consume por vía directa (construir lee
+    # result["geometria_multicapa"]); su arista se emite aquí mismo.
+    # vecinos_caldero/neighbor_store.py es un sumidero persistente: su salida
+    # ES el store de vecinos en disco. stinkbox_transport solo lo lee cuando
+    # hay artefactos nuevos que importar (io_writes>0, como en la corrida
+    # original del 13-nov); en una re-corrida con todo ya importado no hay
+    # consumidor que lo lea, pero el archivo persiste como artefacto final.
+    if ceb:
+        for _leaf in ("execution_integrity",
+                      "plugin_guardia_no_cruce.absorbed",
+                      "protocolo_transversal_absorbido",
+                      "compuerta_cierre_latencia_v0_16_4",
+                      "metacognition_v0_1.pre_h",
+                      "metacognition_v0_1.post_h",
+                      "plugin_sombrero_blanco_token",
+                      "analogos_fase",
+                      "plugin_entrega_luces",
+                      "ruta_cierre_latente_guardianes",
+                      "predictibilidad_set_021",
+                      "movimiento_de_fondo_u4",
+                      "vecinos_caldero/neighbor_store.py"):
+            ceb.mark_terminal(_leaf, "terminal_sink_result_or_audit_artifact")
+        def _emit_edge(_prod_name, _cons_name, _evidence):
+            _p = ceb.latest_id(_prod_name)
+            _c = ceb.latest_id(_cons_name)
+            if _p and _c:
+                ceb.ledger.emit("FLOW_CONSUMED", _c, {"producer": _p, "consumer": _c, "evidence": _evidence})
+        _emit_edge("proyeccion_longitudinal", "metacognition_v0_1.post_h", "direct_argument_apuesta")
+        _emit_edge("autoevidencia_stores_011.py", "filtro_relleno_013.py", "run_ctx_vecinos_011_read")
+        _emit_edge("geometria_multicapa_integrada_working_v1", "hipotesis_trayectoria_abierta_v1", "construir_reads_result_geometria_multicapa")
     if ceb and ceb_ledger:
         ceb.ledger.register("motor_result", "motor_result")
         ceb.ledger.start("motor_result", [result])

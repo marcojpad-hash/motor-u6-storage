@@ -70,16 +70,30 @@ def estado_honesto_caldero(cb):
 
 # REGLA_MJ_20261025: las herramientas existen para EJECUTARSE. El CEB explica el fallo, no lo justifica.
 # Todo estado != EJECUTADO es un INCUMPLIMIENTO a investigar, salvo omisión documentada en contrato
-# (hoy solo: SKIPPED_INTERNAL_ANALYSIS de la subcorrida interna T1, required=False en el motor).
+# (hoy: SKIPPED_INTERNAL_ANALYSIS de la subcorrida interna T1, required=False en el motor;
+# y SIMULADO_FIXTURE con allow_static_search_fixture en el input — PATCH10: búsqueda opcional,
+# offline permitido; ver alerta_ejecucion(fixture_autorizado=True)).
 _CAUSA = {"SIMULADO_FIXTURE": "usó fixture/grabación en vez de buscar en vivo: averiguar por qué no se buscó de verdad",
           "NO_INVOCADO": "el sidecar ni siquiera se llamó: averiguar qué rama del motor lo saltó",
           "INTENTADO_FALLIDO": "se intentó y falló o trajo 0 resultados: revisar error/proveedor/red",
           "OMITIDO_POR_CONDICION": "omitido por compuerta: válido solo si el contrato lo permite"}
 
 
-def alerta_ejecucion(estado, contrato_permite_omision=False, error=None):
+def alerta_ejecucion(estado, contrato_permite_omision=False, error=None, fixture_autorizado=False):
     if estado == "EJECUTADO":
         return {"debe_ejecutarse": True, "incumplimiento": False, "severidad": "OK", "accion": "ninguna"}
+    if estado == "SIMULADO_FIXTURE" and fixture_autorizado:
+        # CORRECCION_AUDITORIA_MOZART_20261114 (#4): el fixture estático es el
+        # fallback previsto por contrato (PATCH10: la búsqueda de arquetipos es
+        # OPCIONAL y agnóstica; sin red ni clave la corrida completa offline y
+        # el fallo de búsqueda no es etapa obligatoria), no un fallo de
+        # ejecución. Solo se reclasifica cuando el input lo autoriza
+        # explícitamente (allow_static_search_fixture) y el recibo confirma
+        # proveedor fixture con fuentes congeladas del caso. Las pistas LLM
+        # siguen en 0: no se inventan.
+        return {"debe_ejecutarse": True, "incumplimiento": False, "severidad": "INFO_FIXTURE_AUTORIZADO",
+                "alerta": "FIXTURE AUTORIZADO POR CONTRATO: búsqueda en vivo opcional; fuentes congeladas del caso",
+                "accion": "fixture estático autorizado por el input (allow_static_search_fixture); la búsqueda en vivo es opcional por contrato (PATCH10: offline permitido); las fuentes son las congeladas del caso, no datos inventados; pistas LLM: 0 (no se inventan)"}
     if estado == "OMITIDO_POR_CONDICION" and contrato_permite_omision:
         return {"debe_ejecutarse": False, "incumplimiento": False, "severidad": "INFO_OMISION_CONTRACTUAL",
                 "accion": "omisión permitida por contrato (subcorrida interna)"}
@@ -712,19 +726,78 @@ def sensores_pre(base, case, motor, features, reg, ctx=None):
     out["tusi"] = _pieza("tusi_par", "tusi_par_indice_exploratorio_v0_1.py", "SENSOR EXPLORATORIO", tusi, base, reg)
 
     def schro():
-        m, _ = _load(base, "schrodinger_transport_esqueleto_v0_1.py", "lu_schro")
+        # V0_1 (SPEC_SCHRODINGER_V0_1.md): el puente implementado. Carga el módulo
+        # V0_1; si falta, cae al esqueleto (solo μ_t, sin transporte).
+        m, _ = _load(base, "schrodinger_transport_v0_1.py", "lu_schro")
+        if m is None:
+            m, _ = _load(base, "schrodinger_transport_esqueleto_v0_1.py", "lu_schro")
+            if m is None:
+                return "NO_CORRE", "falta schrodinger_transport_v0_1.py y el esqueleto", None
         mus = []
         for c in mcuts:
             K = m.candidatos(c, None, [])
             mu = m.mu_t(c, K); top = sorted(mu.items(), key=lambda kv: -kv[1])[:3]
             mus.append({"corte": c.get("corte"), "n_soporte": len(K), "mu_top3": [(k, round(v, 4)) for k, v in top]})
-        sal = {"salida": m.salida_vacia(str(case.get("case_id"))), "mu_t": mus}
+        sal = {"mu_t": mus}
+        # Transporte (V0_1). Si el módulo no lo trae (esqueleto), se degrada.
+        if not hasattr(m, "transportar_trayectoria"):
+            sal["salida"] = m.salida_vacia(str(case.get("case_id")))
+            if geo_traza.get("anillos"):
+                sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": False,
+                                                  "motivo": "esqueleto sin transporte (costo/sinkhorn NotImplemented)"}
+            return "ACTIVA_MUDA", "esqueleto: μ_t por corte calculado; sin transporte", sal
+        try:
+            tr = m.transportar_trayectoria(mcuts)
+        except Exception as e:
+            sal["salida"] = m.salida_vacia(str(case.get("case_id")))
+            sal["error_transporte"] = f"{type(e).__name__}: {str(e)[:200]}"
+            return "ACTIVA_MUDA", f"μ_t calculado; transporte no corrió ({type(e).__name__})", sal
+        sal["salida"] = m.salida(str(case.get("case_id")), tr)
+        sal["trayectoria"] = {"cruda": tr.get("trayectoria_cruda"), "regularizada": tr.get("trayectoria_regularizada"),
+                              "oscilacion": tr.get("oscilacion"), "estado": tr.get("estado")}
+        # V0_2 (SPEC §9): el puente no balanceado (marginales suaves). Corre
+        # AMBOS (decisión de Mj: V0_1 estabiliza, V0_2 transforma). Si el V0_2
+        # no está o no corre, se reporta y se queda el V0_1, sin romper.
+        sal["v02"] = None
+        try:
+            m2, _ = _load(base, "schrodinger_transport_v0_2.py", "lu_schro2")
+            if m2 is not None and hasattr(m2, "transportar_trayectoria_v02"):
+                tr2 = m2.transportar_trayectoria_v02(mcuts)
+                sal["v02"] = {"salida": m2.salida(str(case.get("case_id")), tr2),
+                              "trayectoria": {"cruda": tr2.get("trayectoria_cruda"),
+                                              "transformada": tr2.get("trayectoria_transformada"),
+                                              "oscilacion": tr2.get("oscilacion"),
+                                              "desplazamiento_media": tr2.get("desplazamiento_media"),
+                                              "costo_transformacion": tr2.get("costo_transformacion"),
+                                              "estado": tr2.get("estado")}}
+            else:
+                sal["v02"] = {"estado": "SIN_MODULO", "nota": "falta schrodinger_transport_v0_2.py"}
+        except Exception as e:
+            sal["v02"] = {"estado": "ERROR", "error": f"{type(e).__name__}: {str(e)[:200]}"}
+        # memento_inversa (SPEC §6): orden de recuperación P->A->C aplicado al
+        # estado del último corte (nº de familias activas por componente).
+        ult = mcuts[-1] if mcuts else {}
+        est = {k: sum(1 for v in (ult.get(f"{k}_FULL_244") or {}).values() if v is not None and abs(float(v) - 0.5) > 1e-9)
+               for k in ("P", "A", "C")}
+        sal["memento_inversa"] = m.memento_inversa(est)
         if geo_traza.get("anillos"):
-            # PATCH 009: contexto aditivo (fases/ω/intersecciones por corte). NO consumido: costo() y sinkhorn() son NotImplemented.
-            sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": False,
-                                              "motivo": "schrodinger_transport_esqueleto_v0_1: costo/sinkhorn NotImplemented (pendiente Mj SPEC §5)"}
-        return "ACTIVA_MUDA", "esqueleto: μ_t por corte calculado; costo y Sinkhorn NO_VERIFICADO (NotImplemented por diseño)", sal
-    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_esqueleto_v0_1.py", "SENSOR (esqueleto)", schro, base, reg)
+            # V0_1: el transporte corre; los anillos quedan consumidos como contexto.
+            sal["anillos_para_transporte"] = {"por_corte": geo_traza["anillos"].get("por_corte"), "consumido": True,
+                                              "motivo": "transporte V0_1 ejecutado (costo + Sinkhorn); anillos como contexto por corte",
+                                              "transporte": tr.get("estado")}
+        if tr.get("estado") == "TRANSPORTE_OK":
+            osc = tr.get("oscilacion") or {}
+            ta = (osc.get("transversal_antes") or {}).get("variacion_total")
+            td = (osc.get("transversal_despues") or {}).get("variacion_total")
+            motivo = f"puente V0_1: trayectoria regularizada; TV transversal {ta} -> {td}"
+            v02 = sal.get("v02") or {}
+            osc2 = ((v02.get("trayectoria") or {}).get("oscilacion") or {})
+            td2 = (osc2.get("transversal_despues") or {}).get("variacion_total")
+            if td2 is not None:
+                motivo += f"; V0_2: TV -> {td2}"
+            return "ACTIVA", motivo, sal
+        return "ACTIVA_MUDA", f"μ_t calculado; transporte sin trayectoria ({tr.get('estado')}: {str(tr.get('nota', ''))[:100]})", sal
+    out["schrodinger"] = _pieza("schrodinger_transport", "schrodinger_transport_v0_1.py", "SENSOR (puente Schrödinger V0_1+V0_2; regulariza y transforma la trayectoria)", schro, base, reg)
 
     def caldero_cuadrantes():
         # PATCH 006: Caldero II sin escaleta lineal externa = cuadrantes circulares Q1-Q4 (plugin_circulo_monomito_v2,
@@ -1200,10 +1273,14 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
     cb = foto.get("caldero_busqueda") or {}
     lleg, mot = llegada("sidecar_caldero_busqueda_arquetipos.py", "caldero_busqueda_arquetipos")
     est_cal = estado_honesto_caldero(cb)
+    # CORRECCION_AUDITORIA_MOZART_20261114 (#4): fixture autorizado solo si el
+    # input lo permite explícitamente y el recibo confirma proveedor fixture.
+    _fixture_autorizado = (est_cal == "SIMULADO_FIXTURE" and cb.get("provider") in _PROV_FIXTURE
+                           and bool(case.get("allow_static_search_fixture")))
     fila("sidecar_caldero_busqueda_arquetipos.py", est_cal, "ACTIVA" if lleg else "ACTIVA_MUDA", lleg,
          [f"{est_cal}: provider={cb.get('provider')} intento={cb.get('attempt_status')} resultados={cb.get('result_count')} consultas={cb.get('query_count')}; {cb.get('tokens_neighbors')} tokens vecinos"] + mot,
          estado_busqueda_externa=est_cal, search_performed=(est_cal == "EJECUTADO"),
-         **alerta_ejecucion(est_cal, contrato_permite_omision=(est_cal == "OMITIDO_POR_CONDICION" and cb.get("required") is False) or cb.get("cal_status") == "SKIPPED_INTERNAL_ANALYSIS", error=cb.get("error")))
+         **alerta_ejecucion(est_cal, contrato_permite_omision=(est_cal == "OMITIDO_POR_CONDICION" and cb.get("required") is False) or cb.get("cal_status") == "SKIPPED_INTERNAL_ANALYSIS", error=cb.get("error"), fixture_autorizado=_fixture_autorizado))
     # neighbor_store: la persistencia se adjunta a una COPIA (ceb.call envuelve la salida) -> no aparece en RESULT. Se lee el evento del store (solo lectura).
     ns = {"status": "SIN_EJECUCION", "motivo": "sin búsqueda Caldero en este caso (nada que persistir)"}
     if cb.get("presente"):
