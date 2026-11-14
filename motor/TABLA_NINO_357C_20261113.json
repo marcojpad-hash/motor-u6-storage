@@ -1,0 +1,1303 @@
+{
+ "PAGANINI": {
+  "3C": {
+   "case": "PAGANINI_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "arquetipo_el_creador",
+   "H2": "9_audaz_empresa",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "9_audaz_empresa",
+    "social_04_rogers_difusion_innovaciones",
+    "schwartz_10_autodireccion",
+    "mentor"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 202.7,
+   "giro_signado": 202.7,
+   "var_pc12": [
+    0.93,
+    0.07
+   ]
+  },
+  "5C": {
+   "case": "PAGANINI_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "arquetipo_el_creador",
+   "H2": "30_ambicion",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "schwartz_07_logro",
+    "9_audaz_empresa",
+    "schwartz_10_autodireccion"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 210.2,
+   "giro_signado": 210.2,
+   "var_pc12": [
+    0.856,
+    0.123
+   ]
+  },
+  "7C": {
+   "case": "PAGANINI_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "9_audaz_empresa",
+   "H2": "30_ambicion",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "9_audaz_empresa",
+    "30_ambicion",
+    "12_obtencion",
+    "schwartz_10_autodireccion",
+    "schwartz_07_logro"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 214.4,
+   "giro_signado": -214.4,
+   "var_pc12": [
+    0.845,
+    0.113
+   ]
+  }
+ },
+ "MENDELSSOHN": {
+  "3C": {
+   "case": "MENDELSSOHN_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "social_04_rogers_difusion_innovaciones",
+   "H2": "arquetipo_el_creador",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "social_04_rogers_difusion_innovaciones",
+    "arquetipo_el_creador",
+    "9_audaz_empresa",
+    "arquetipo_el_gobernante",
+    "mentor"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 215.3,
+   "giro_signado": 215.3,
+   "var_pc12": [
+    0.776,
+    0.224
+   ]
+  },
+  "5C": {
+   "case": "MENDELSSOHN_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "arquetipo_el_creador",
+   "H2": "social_04_rogers_difusion_innovaciones",
+   "grado": "FIRME",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "schwartz_10_autodireccion",
+    "9_audaz_empresa",
+    "30_ambicion"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 219.4,
+   "giro_signado": 219.4,
+   "var_pc12": [
+    0.694,
+    0.175
+   ]
+  },
+  "7C": {
+   "case": "MENDELSSOHN_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "30_ambicion",
+   "H2": "social_04_rogers_difusion_innovaciones",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "social_04_rogers_difusion_innovaciones",
+    "arquetipo_el_creador",
+    "schwartz_07_logro",
+    "schwartz_10_autodireccion"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 248.7,
+   "giro_signado": 221.4,
+   "var_pc12": [
+    0.755,
+    0.126
+   ]
+  }
+ },
+ "CHOPIN": {
+  "3C": {
+   "case": "CHOPIN_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "9_audaz_empresa",
+   "H2": "arquetipo_el_creador",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "9_audaz_empresa",
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 215.3,
+   "giro_signado": 215.3,
+   "var_pc12": [
+    0.773,
+    0.227
+   ]
+  },
+  "5C": {
+   "case": "CHOPIN_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "social_04_rogers_difusion_innovaciones",
+   "H2": "30_ambicion",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "social_04_rogers_difusion_innovaciones",
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "schwartz_07_logro",
+    "9_audaz_empresa"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 231.8,
+   "giro_signado": 231.8,
+   "var_pc12": [
+    0.663,
+    0.223
+   ]
+  },
+  "7C": {
+   "case": "CHOPIN_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "9_audaz_empresa",
+   "H2": "schwartz_07_logro",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "9_audaz_empresa",
+    "schwartz_07_logro",
+    "social_04_rogers_difusion_innovaciones",
+    "arquetipo_el_creador",
+    "30_ambicion"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 232.6,
+   "giro_signado": 232.6,
+   "var_pc12": [
+    0.659,
+    0.175
+   ]
+  }
+ },
+ "LISZT": {
+  "3C": {
+   "case": "LISZT_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "arquetipo_el_creador",
+   "H2": "social_04_rogers_difusion_innovaciones",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "30_ambicion",
+    "frye_mythos_romance",
+    "social_14_overton_ventana"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 205.5,
+   "giro_signado": 205.5,
+   "var_pc12": [
+    0.885,
+    0.115
+   ]
+  },
+  "5C": {
+   "case": "LISZT_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "36_perdida_de_los_seres_queridos",
+   "H2": "frye_mythos_romance",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "36_perdida_de_los_seres_queridos",
+    "frye_mythos_romance",
+    "30_ambicion",
+    "tainter_04_colapso_por_simplificacion_forzada",
+    "12_obtencion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "36_perdida_de_los_seres_queridos",
+   "sol_peso_Z": 0.738,
+   "n_nudos": 3,
+   "n_capturados": 0,
+   "n_jalados": 3,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C2_1822",
+    "nudos": 0,
+    "salto": 0.0
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": {
+    "familia": "distopia_agotamiento_ambiental",
+    "rango_en_Z": 8,
+    "pendiente_rango_por_corte": 12.0,
+    "clase": "SIN_FORMA_CLARA",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 236.0,
+   "giro_signado": 236.0,
+   "var_pc12": [
+    0.618,
+    0.218
+   ]
+  },
+  "7C": {
+   "case": "LISZT_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "frye_mythos_romance",
+   "H2": "36_perdida_de_los_seres_queridos",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "frye_mythos_romance",
+    "36_perdida_de_los_seres_queridos",
+    "schwartz_07_logro",
+    "30_ambicion",
+    "12_obtencion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "frye_mythos_romance",
+   "sol_peso_Z": 0.7786,
+   "n_nudos": 2,
+   "n_capturados": 0,
+   "n_jalados": 2,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C4_1824",
+    "nudos": 1,
+    "salto": 0.077
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": {
+    "familia": "distopia_agotamiento_ambiental",
+    "rango_en_Z": 15,
+    "pendiente_rango_por_corte": 0.9,
+    "clase": "SIN_FORMA_CLARA",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 266.3,
+   "giro_signado": 195.3,
+   "var_pc12": [
+    0.718,
+    0.122
+   ]
+  }
+ },
+ "MENUHIN": {
+  "3C": {
+   "case": "MENUHIN_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "30_ambicion",
+   "H2": "cliodinamica_02_fase_estanflacion_presion",
+   "grado": "FIRME",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "cliodinamica_02_fase_estanflacion_presion",
+    "frye_mythos_romance",
+    "social_04_rogers_difusion_innovaciones",
+    "social_14_overton_ventana"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 216.5,
+   "giro_signado": 216.5,
+   "var_pc12": [
+    0.777,
+    0.223
+   ]
+  },
+  "5C": {
+   "case": "MENUHIN_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "30_ambicion",
+   "H2": "frye_mythos_romance",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "frye_mythos_romance",
+    "arquetipo_el_creador",
+    "cliodinamica_02_fase_estanflacion_presion",
+    "social_14_overton_ventana"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "30_ambicion",
+   "sol_peso_Z": 0.7083,
+   "n_nudos": 1,
+   "n_capturados": 0,
+   "n_jalados": 0,
+   "n_acercandose": 0,
+   "n_resisten": 1,
+   "cometa": {
+    "corte": "C3_1926",
+    "nudos": 1,
+    "salto": 0.127
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": {
+    "familia": "schwartz_07_logro",
+    "rango_en_Z": 8,
+    "pendiente_rango_por_corte": 0.1,
+    "clase": "SIN_FORMA_CLARA",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 283.6,
+   "giro_signado": -184.5,
+   "var_pc12": [
+    0.811,
+    0.141
+   ]
+  },
+  "7C": {
+   "case": "MENUHIN_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "30_ambicion",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "frye_mythos_romance",
+    "mentor",
+    "cliodinamica_02_fase_estanflacion_presion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.6702,
+   "n_nudos": 5,
+   "n_capturados": 0,
+   "n_jalados": 4,
+   "n_acercandose": 1,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1926",
+    "nudos": 1,
+    "salto": 0.127
+   },
+   "prop": 0.685,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "anacyclosis_03_aristocracia",
+    "rango_en_Z": 10,
+    "pendiente_rango_por_corte": 5.0,
+    "clase": "LATENTE_DORMIDO",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 250.7,
+   "giro_signado": 212.6,
+   "var_pc12": [
+    0.732,
+    0.175
+   ]
+  }
+ },
+ "ALKAN": {
+  "3C": {
+   "case": "ALKAN_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "arquetipo_el_creador",
+   "H2": "frye_mythos_romance",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "frye_mythos_romance",
+    "candidato_trayectoria_arte_prestigio"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 203.6,
+   "giro_signado": 203.6,
+   "var_pc12": [
+    0.901,
+    0.099
+   ]
+  },
+  "5C": {
+   "case": "ALKAN_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "arquetipo_el_creador",
+   "H2": "social_04_rogers_difusion_innovaciones",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "frye_mythos_romance",
+    "30_ambicion",
+    "cliodinamica_02_fase_estanflacion_presion"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 227.7,
+   "giro_signado": 227.7,
+   "var_pc12": [
+    0.714,
+    0.165
+   ]
+  },
+  "7C": {
+   "case": "ALKAN_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "30_ambicion",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "social_04_rogers_difusion_innovaciones",
+    "12_obtencion",
+    "schwartz_07_logro"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.6611,
+   "n_nudos": 7,
+   "n_capturados": 1,
+   "n_jalados": 2,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C4_1826",
+    "nudos": 5,
+    "salto": 0.416
+   },
+   "prop": -0.093,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "utopia_autonomia_atenas",
+    "rango_en_Z": 17,
+    "pendiente_rango_por_corte": 1.4,
+    "clase": "SIN_FORMA_CLARA"
+   },
+   "giro_total": 229.7,
+   "giro_signado": 229.7,
+   "var_pc12": [
+    0.732,
+    0.129
+   ]
+  }
+ },
+ "BELLINI": {
+  "3C": {
+   "case": "BELLINI_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "arquetipo_el_creador",
+   "H2": "schwartz_10_autodireccion",
+   "grado": "FIRME",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "schwartz_10_autodireccion",
+    "social_04_rogers_difusion_innovaciones",
+    "turner_02_communitas"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 201.1,
+   "giro_signado": 201.1,
+   "var_pc12": [
+    0.906,
+    0.094
+   ]
+  },
+  "5C": {
+   "case": "BELLINI_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "social_04_rogers_difusion_innovaciones",
+   "H2": "arquetipo_el_creador",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "social_04_rogers_difusion_innovaciones",
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "schwartz_07_logro",
+    "24_rivalidad_de_superior_e_inferior"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "social_04_rogers_difusion_innovaciones",
+   "sol_peso_Z": 0.6546,
+   "n_nudos": 2,
+   "n_capturados": 1,
+   "n_jalados": 1,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C5_1819",
+    "nudos": 1,
+    "salto": 0.113
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": null,
+   "giro_total": 234.5,
+   "giro_signado": 234.5,
+   "var_pc12": [
+    0.654,
+    0.263
+   ]
+  },
+  "7C": {
+   "case": "BELLINI_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "30_ambicion",
+   "H2": "arquetipo_el_creador",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "frye_mythos_romance",
+    "schwartz_07_logro",
+    "social_04_rogers_difusion_innovaciones"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "30_ambicion",
+   "sol_peso_Z": 0.7958,
+   "n_nudos": 6,
+   "n_capturados": 0,
+   "n_jalados": 6,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C5_1819",
+    "nudos": 5,
+    "salto": 0.459
+   },
+   "prop": -0.145,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "utopia_principio_mercado",
+    "rango_en_Z": 8,
+    "pendiente_rango_por_corte": 9.5,
+    "clase": "SIN_FORMA_CLARA",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 232.9,
+   "giro_signado": 232.9,
+   "var_pc12": [
+    0.697,
+    0.21
+   ]
+  }
+ },
+ "PURCELL": {
+  "3C": {
+   "case": "PURCELL_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "30_ambicion",
+   "H2": "36_perdida_de_los_seres_queridos",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "36_perdida_de_los_seres_queridos",
+    "social_02_milgram_obediencia",
+    "tainter_03_vulnerabilidad_sistemica",
+    "mentor"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 198.3,
+   "giro_signado": 198.3,
+   "var_pc12": [
+    0.962,
+    0.038
+   ]
+  },
+  "5C": {
+   "case": "PURCELL_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "30_ambicion",
+   "H2": "schwartz_07_logro",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "schwartz_07_logro",
+    "36_perdida_de_los_seres_queridos",
+    "dumezil_f1_soberania_juridica",
+    "tainter_03_vulnerabilidad_sistemica"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "30_ambicion",
+   "sol_peso_Z": 0.7915,
+   "n_nudos": 10,
+   "n_capturados": 0,
+   "n_jalados": 10,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1673",
+    "nudos": 5,
+    "salto": 0.455
+   },
+   "prop": -0.099,
+   "prop_conf": "MEDIA",
+   "punto": {
+    "familia": "utopia_principio_mercado",
+    "rango_en_Z": 6,
+    "pendiente_rango_por_corte": 6.5,
+    "clase": "ASCENSO_LENTO"
+   },
+   "giro_total": 207.1,
+   "giro_signado": 207.1,
+   "var_pc12": [
+    0.894,
+    0.079
+   ]
+  },
+  "7C": {
+   "case": "PURCELL_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "schwartz_07_logro",
+   "H2": "arquetipo_el_creador",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "schwartz_07_logro",
+    "arquetipo_el_creador",
+    "36_perdida_de_los_seres_queridos",
+    "30_ambicion",
+    "dumezil_f1_soberania_juridica"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "schwartz_07_logro",
+   "sol_peso_Z": 0.6997,
+   "n_nudos": 8,
+   "n_capturados": 0,
+   "n_jalados": 7,
+   "n_acercandose": 1,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1673",
+    "nudos": 2,
+    "salto": 0.136
+   },
+   "prop": 0.127,
+   "prop_conf": "MEDIA",
+   "punto": {
+    "familia": "anacyclosis_03_aristocracia",
+    "rango_en_Z": 11,
+    "pendiente_rango_por_corte": 3.4,
+    "clase": "LATENTE_DORMIDO"
+   },
+   "giro_total": 229.2,
+   "giro_signado": 229.2,
+   "var_pc12": [
+    0.75,
+    0.16
+   ]
+  }
+ },
+ "PASCAL": {
+  "3C": {
+   "case": "PASCAL_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "arquetipo_el_creador",
+   "H2": "spengler_02_verano_otono_racionalizacion",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "spengler_02_verano_otono_racionalizacion",
+    "9_audaz_empresa",
+    "candidato_trayectoria_arte_prestigio",
+    "social_04_rogers_difusion_innovaciones"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 215.0,
+   "giro_signado": 215.0,
+   "var_pc12": [
+    0.771,
+    0.229
+   ]
+  },
+  "5C": {
+   "case": "PASCAL_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "spengler_02_verano_otono_racionalizacion",
+   "H2": "arquetipo_el_creador",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "spengler_02_verano_otono_racionalizacion",
+    "arquetipo_el_creador",
+    "schwartz_10_autodireccion",
+    "arquetipo_el_sabio",
+    "tainter_01_inversion_complejidad_productiva"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 255.7,
+   "giro_signado": -199.3,
+   "var_pc12": [
+    0.787,
+    0.129
+   ]
+  },
+  "7C": {
+   "case": "PASCAL_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "tainter_01_inversion_complejidad_productiva",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "tainter_01_inversion_complejidad_productiva",
+    "arquetipo_el_sabio",
+    "9_audaz_empresa",
+    "spengler_02_verano_otono_racionalizacion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.7591,
+   "n_nudos": 5,
+   "n_capturados": 0,
+   "n_jalados": 4,
+   "n_acercandose": 1,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1639",
+    "nudos": 2,
+    "salto": 0.199
+   },
+   "prop": 0.711,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "mbti_factor_intuicion_n",
+    "rango_en_Z": 8,
+    "pendiente_rango_por_corte": 0.4286,
+    "clase": "LATENTE_DORMIDO"
+   },
+   "giro_total": 226.5,
+   "giro_signado": 226.5,
+   "var_pc12": [
+    0.677,
+    0.216
+   ]
+  }
+ },
+ "SIDIS": {
+  "3C": {
+   "case": "SIDIS_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "30_ambicion",
+   "H2": "9_audaz_empresa",
+   "grado": "FIRME",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "9_audaz_empresa",
+    "arquetipo_el_creador",
+    "schwartz_10_autodireccion",
+    "candidato_trayectoria_arte_prestigio"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 218.5,
+   "giro_signado": 218.5,
+   "var_pc12": [
+    0.744,
+    0.256
+   ]
+  },
+  "5C": {
+   "case": "SIDIS_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "arquetipo_el_creador",
+   "H2": "30_ambicion",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "frye_mythos_romance",
+    "utopia_mentalidad_liberal",
+    "schwartz_10_autodireccion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.6536,
+   "n_nudos": 4,
+   "n_capturados": 0,
+   "n_jalados": 4,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C2_1906",
+    "nudos": 0,
+    "salto": 0.0
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": {
+    "familia": "bbk_01_aventurero",
+    "rango_en_Z": 8,
+    "pendiente_rango_por_corte": 2.5,
+    "clase": "SIN_FORMA_CLARA"
+   },
+   "giro_total": 224.4,
+   "giro_signado": 224.4,
+   "var_pc12": [
+    0.704,
+    0.136
+   ]
+  },
+  "7C": {
+   "case": "SIDIS_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "30_ambicion",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "30_ambicion",
+    "frye_mythos_romance",
+    "utopia_mentalidad_liberal",
+    "social_01_asch_conformidad"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.6381,
+   "n_nudos": 2,
+   "n_capturados": 0,
+   "n_jalados": 0,
+   "n_acercandose": 2,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C2_1906",
+    "nudos": 0,
+    "salto": 0.0
+   },
+   "prop": null,
+   "prop_conf": null,
+   "punto": {
+    "familia": "bbk_03_individualista",
+    "rango_en_Z": 10,
+    "pendiente_rango_por_corte": 0.3143,
+    "clase": "LATENTE_DORMIDO",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 247.6,
+   "giro_signado": 247.6,
+   "var_pc12": [
+    0.544,
+    0.247
+   ]
+  }
+ },
+ "KRIPKE": {
+  "3C": {
+   "case": "KRIPKE_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "utopia_mentalidad_liberal",
+   "H2": "tainter_01_inversion_complejidad_productiva",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "utopia_mentalidad_liberal",
+    "tainter_01_inversion_complejidad_productiva",
+    "mbti_factor_intuicion_n",
+    "schwartz_10_autodireccion",
+    "bbk_03_individualista"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 199.3,
+   "giro_signado": 199.3,
+   "var_pc12": [
+    0.922,
+    0.078
+   ]
+  },
+  "5C": {
+   "case": "KRIPKE_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "spengler_02_verano_otono_racionalizacion",
+   "H2": "mbti_factor_intuicion_n",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "spengler_02_verano_otono_racionalizacion",
+    "mbti_factor_intuicion_n",
+    "utopia_mentalidad_liberal",
+    "candidato_trayectoria_arte_prestigio",
+    "9_audaz_empresa"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 210.1,
+   "giro_signado": 210.1,
+   "var_pc12": [
+    0.854,
+    0.11
+   ]
+  },
+  "7C": {
+   "case": "KRIPKE_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "spengler_02_verano_otono_racionalizacion",
+   "H2": "utopia_mentalidad_liberal",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "spengler_02_verano_otono_racionalizacion",
+    "utopia_mentalidad_liberal",
+    "mbti_factor_intuicion_n",
+    "social_04_rogers_difusion_innovaciones",
+    "9_audaz_empresa"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "spengler_02_verano_otono_racionalizacion",
+   "sol_peso_Z": 0.7952,
+   "n_nudos": 7,
+   "n_capturados": 0,
+   "n_jalados": 4,
+   "n_acercandose": 0,
+   "n_resisten": 3,
+   "cometa": {
+    "corte": "C2_1949",
+    "nudos": 2,
+    "salto": 0.179
+   },
+   "prop": 0.484,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "schwartz_09_estimulacion",
+    "rango_en_Z": 14,
+    "pendiente_rango_por_corte": 2.5,
+    "clase": "LATENTE_DORMIDO",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 221.4,
+   "giro_signado": 217.2,
+   "var_pc12": [
+    0.775,
+    0.139
+   ]
+  }
+ },
+ "PICASSO": {
+  "3C": {
+   "case": "PICASSO_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "9_audaz_empresa",
+   "H2": "36_perdida_de_los_seres_queridos",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "9_audaz_empresa",
+    "36_perdida_de_los_seres_queridos",
+    "arquetipo_el_creador"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 213.3,
+   "giro_signado": 213.3,
+   "var_pc12": [
+    0.846,
+    0.154
+   ]
+  },
+  "5C": {
+   "case": "PICASSO_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "arquetipo_el_explorador",
+   "H2": "30_ambicion",
+   "grado": "FRAGIL",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_explorador",
+    "30_ambicion",
+    "9_audaz_empresa",
+    "dumezil_f2_fuerza",
+    "arquetipo_el_creador"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 205.3,
+   "giro_signado": 202.4,
+   "var_pc12": [
+    0.827,
+    0.119
+   ]
+  },
+  "7C": {
+   "case": "PICASSO_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "schwartz_10_autodireccion",
+   "grado": "FIRME",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "schwartz_10_autodireccion",
+    "strauss_howe_02_the_awakening",
+    "arquetipo_el_explorador",
+    "30_ambicion"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.82,
+   "n_nudos": 7,
+   "n_capturados": 0,
+   "n_jalados": 4,
+   "n_acercandose": 2,
+   "n_resisten": 1,
+   "cometa": {
+    "corte": "C5_1900",
+    "nudos": 1,
+    "salto": 0.154
+   },
+   "prop": -0.687,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "schwartz_09_estimulacion",
+    "rango_en_Z": 14,
+    "pendiente_rango_por_corte": 1.5,
+    "clase": "LATENTE_DORMIDO",
+    "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+   },
+   "giro_total": 216.5,
+   "giro_signado": -212.5,
+   "var_pc12": [
+    0.788,
+    0.115
+   ]
+  }
+ },
+ "MOZART": {
+  "3C": {
+   "case": "MOZART_NINO_3C",
+   "existe": true,
+   "n_cortes": 3,
+   "H1": "social_04_rogers_difusion_innovaciones",
+   "H2": "30_ambicion",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "social_04_rogers_difusion_innovaciones",
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "9_audaz_empresa",
+    "candidato_trayectoria_arte_prestigio"
+   ],
+   "en_meseta": false,
+   "regimen": "CONTINUIDAD_ASCENDENTE",
+   "gravedad": null,
+   "giro_total": 215.6,
+   "giro_signado": 215.6,
+   "var_pc12": [
+    0.795,
+    0.205
+   ]
+  },
+  "5C": {
+   "case": "MOZART_NINO_5C",
+   "existe": true,
+   "n_cortes": 5,
+   "H1": "30_ambicion",
+   "H2": "arquetipo_el_creador",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "30_ambicion",
+    "arquetipo_el_creador",
+    "social_04_rogers_difusion_innovaciones",
+    "schwartz_07_logro",
+    "9_audaz_empresa"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "30_ambicion",
+   "sol_peso_Z": 0.8145,
+   "n_nudos": 7,
+   "n_capturados": 0,
+   "n_jalados": 7,
+   "n_acercandose": 0,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1763",
+    "nudos": 5,
+    "salto": 0.427
+   },
+   "prop": -0.092,
+   "prop_conf": "BAJA_MUESTRA",
+   "punto": {
+    "familia": "dumezil_desequilibrio_f3_come_al_resto",
+    "rango_en_Z": 12,
+    "pendiente_rango_por_corte": 5.0,
+    "clase": "LATENTE_DORMIDO"
+   },
+   "giro_total": 307.6,
+   "giro_signado": -157.1,
+   "var_pc12": [
+    0.84,
+    0.099
+   ]
+  },
+  "7C": {
+   "case": "MOZART_NINO_7C",
+   "existe": true,
+   "n_cortes": 7,
+   "H1": "arquetipo_el_creador",
+   "H2": "9_audaz_empresa",
+   "grado": "AJUSTADA",
+   "meseta_regimen": null,
+   "top5_020": [
+    "arquetipo_el_creador",
+    "9_audaz_empresa",
+    "30_ambicion",
+    "schwartz_07_logro",
+    "social_04_rogers_difusion_innovaciones"
+   ],
+   "en_meseta": true,
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "sol": "arquetipo_el_creador",
+   "sol_peso_Z": 0.7511,
+   "n_nudos": 10,
+   "n_capturados": 1,
+   "n_jalados": 6,
+   "n_acercandose": 3,
+   "n_resisten": 0,
+   "cometa": {
+    "corte": "C3_1763",
+    "nudos": 7,
+    "salto": 0.61
+   },
+   "prop": 0.095,
+   "prop_conf": "MEDIA",
+   "punto": {
+    "familia": "utopia_principio_mercado",
+    "rango_en_Z": 7,
+    "pendiente_rango_por_corte": 3.9,
+    "clase": "LATENTE_DORMIDO"
+   },
+   "giro_total": 222.9,
+   "giro_signado": 222.9,
+   "var_pc12": [
+    0.736,
+    0.141
+   ]
+  }
+ }
+}
