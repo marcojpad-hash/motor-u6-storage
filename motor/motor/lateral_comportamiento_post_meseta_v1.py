@@ -24,7 +24,7 @@
 
 CAN_DECIDE_H = False
 CONTRATO = "COMPORTAMIENTO_POST_MESETA_V1"
-VERSION = "v1_20261113"
+VERSION = "v2_20261113"  # v2: confianza por n en proporcionalidad + estado ACERCANDOSE + desempates y varianza cero documentados (revisión Gemini 2026-11-13)
 REGIMEN_MESETA = "MESeta_O_ESTABILIZACION"
 
 
@@ -60,6 +60,18 @@ def _top_set(pred, result=None):
     return top
 
 
+def _confianza_prop(n):
+    """Confianza de la proporcionalidad según el número de nudos (Gemini, 2026-11-13).
+    Con pocos nudos un solo valor atípico puede invertir el signo de Pearson
+    y cambiar la lectura de convergencia a consolidación. Por eso el valor
+    siempre va acompañado de su n y de esta etiqueta."""
+    if n < 8:
+        return "BAJA_MUESTRA"
+    if n < 12:
+        return "MEDIA"
+    return "ALTA"
+
+
 def leer_gravedad(result):
     """Lectura gravitatoria (Marco, 2026-11-13): NO es gravedad terrestre.
     Es inercia de gravedad como un cometa que arrastra, o como el sol jalando
@@ -69,11 +81,19 @@ def leer_gravedad(result):
       hacia su peso.
     - NUDOS: las familias que se movieron (bajo el top5 subiendo de rango).
       Se mide su distancia al Sol y su pendiente: ¿hay proporcionalidad?
-      CAPTURADO = ya llegó al peso del Sol. SIENDO_JALADO = sube hacia el
-      Sol, proporcional a su distancia. RESISTE = lejos del Sol pero no sube
-      (su propia gravedad, posible atractor rival).
+      CAPTURADO = ya llegó al peso del Sol (dist <= 0.01).
+      SIENDO_JALADO = lejos del Sol (dist > 0.05) y sube rápido (pend >= 0.5).
+      ACERCANDOSE = lejos del Sol (dist > 0.05) y sube a velocidad media
+      (0.2 <= pend < 0.5). RESISTE = lejos del Sol pero no sube (pend < 0.2):
+      su propia gravedad, posible atractor rival. EN_TRANSITO = cerca del Sol
+      (0.01 < dist <= 0.05), aún no capturado, a cualquier velocidad.
     - COMETA: el corte donde varios nudos saltan a la vez (un arrastre).
-    - PROPORCIONALIDAD: correlación pendiente ~ distancia al Sol.
+      Desempate: en empate de (nudos_que_suben, salto_total) gana el corte
+      más temprano (primera ocurrencia, por comparación estricta).
+    - PROPORCIONALIDAD: correlación de Pearson pendiente ~ distancia al Sol.
+      Si la varianza de la distancia o de la pendiente es cero (todos los
+      nudos con la misma distancia o la misma pendiente) es None (indefinida).
+      Siempre va con su n y su confianza (ver _confianza_prop).
     """
     result = result or {}
     si = result.get("salida_interpretable") or {}
@@ -111,9 +131,15 @@ def leer_gravedad(result):
             estado = "CAPTURADO"
         elif pend is not None and dist is not None and dist > 0.05 and pend >= 0.5:
             estado = "SIENDO_JALADO"
+        elif dist is not None and dist > 0.05 and pend is not None and 0.2 <= pend < 0.5:
+            # Gemini 2026-11-13: antes caía en EN_TRANSITO aunque estuviera lejos
+            # del Sol, contradiciendo su definición ("cerca del Sol").
+            estado = "ACERCANDOSE"
         elif dist is not None and dist > 0.05 and (pend is None or pend < 0.2):
             estado = "RESISTE"
         else:
+            # cerca del Sol (0.01 < dist <= 0.05) a cualquier velocidad, o datos
+            # incompletos: en tránsito hacia el Sol, aún no capturado.
             estado = "EN_TRANSITO"
         nudos.append({
             "familia": fam, "peso_Z": round(pz, 3),
@@ -122,7 +148,9 @@ def leer_gravedad(result):
             "primera_aparicion": f.get("primera_aparicion"),
             "clase": f.get("clase"), "estado": estado,
         })
-    # cometa: corte con el mayor salto simultáneo de los nudos
+    # cometa: corte con el mayor salto simultáneo de los nudos.
+    # Desempate (Gemini 2026-11-13): comparación estricta (>) -> en empate de
+    # (nudos_que_suben, salto_total) gana el corte más temprano (primera ocurrencia).
     cometa = None
     if len(cuts) >= 2 and nudos:
         mejor = None
@@ -140,10 +168,15 @@ def leer_gravedad(result):
                     mejor = {"corte": (cuts[i] or {}).get("corte"), "nudos_que_suben": suben,
                              "salto_total": round(total, 3)}
         cometa = mejor
-    # proporcionalidad: correlación pendiente ~ distancia
+    # proporcionalidad: correlación pendiente ~ distancia.
+    # Varianza cero (todos los nudos con la misma distancia o la misma
+    # pendiente) -> None (indefinida, división por cero evitada).
+    # Confianza según n (Gemini 2026-11-13): con pocos nudos el signo es frágil.
     prop = None
     pares = [(nd["distancia_al_sol"], nd["pendiente"]) for nd in nudos
              if nd.get("distancia_al_sol") is not None and nd.get("pendiente") is not None]
+    n_prop = len(pares)
+    conf_prop = None
     if len(pares) >= 3:
         import math
         ds = [p[0] for p in pares]; ps = [p[1] for p in pares]
@@ -151,21 +184,25 @@ def leer_gravedad(result):
         cov = sum((d - md) * (p - mp) for d, p in zip(ds, ps))
         sd = math.sqrt(sum((d - md) ** 2 for d in ds)); sp = math.sqrt(sum((p - mp) ** 2 for p in ps))
         prop = round(cov / (sd * sp), 3) if sd > 0 and sp > 0 else None
+        conf_prop = _confianza_prop(n_prop) if prop is not None else None
     caps = [nd["familia"] for nd in nudos if nd["estado"] == "CAPTURADO"]
     jal = [nd["familia"] for nd in nudos if nd["estado"] == "SIENDO_JALADO"]
+    acer = [nd["familia"] for nd in nudos if nd["estado"] == "ACERCANDOSE"]
     res = [nd["familia"] for nd in nudos if nd["estado"] == "RESISTE"]
     lectura = (
         f"sol {h1} (peso Z {peso_sol_z}); capturados: {len(caps)}; siendo jalados: {len(jal)}; "
-        f"resisten: {len(res)}"
+        f"acercándose: {len(acer)}; resisten: {len(res)}"
         + (f"; cometa en {cometa['corte']} ({cometa['nudos_que_suben']} nudos suben)" if cometa and cometa.get("nudos_que_suben", 0) >= 2 else "")
-        + (f"; proporcionalidad pendiente~distancia: {prop}" if prop is not None else "")
+        + (f"; proporcionalidad pendiente~distancia: {prop} (confianza {conf_prop}, n={n_prop})" if prop is not None else "")
     )
     return {
         "sol": {"familia": h1, "peso_Z": peso_sol_z},
         "nudos": nudos,
         "cometa": cometa,
         "proporcionalidad": prop,
-        "capturados": caps, "siendo_jalados": jal, "resisten": res,
+        "n_nudos_proporcionalidad": n_prop,
+        "confianza_proporcionalidad": conf_prop,
+        "capturados": caps, "siendo_jalados": jal, "acercandose": acer, "resisten": res,
         "lectura": lectura,
     }
 
@@ -278,7 +315,8 @@ def proyectar_gravedad(result, hasta_corte=None):
             "alerta": f"pulso de masa en {corte_k} en {len(pulsos_k)} nudos; posible cometa en los siguientes 1-3 cortes",
             "nudos_con_pulso": [p["familia"] for p in pulsos_k],
         }
-    # dirección hasta ahora (proporcionalidad con los datos hasta k)
+    # dirección hasta ahora (proporcionalidad con los datos hasta k).
+    # Misma regla que en leer_gravedad: varianza cero -> None; confianza por n.
     prop = None
     pares = []
     for p in proyecciones:
@@ -287,6 +325,8 @@ def proyectar_gravedad(result, hasta_corte=None):
             pend = f.get("pendiente_rango_por_corte_(+sube)")
             if pend is not None:
                 pares.append((p["distancia_al_sol_k"], pend))
+    n_prop_k = len(pares)
+    conf_prop_k = None
     if len(pares) >= 3:
         import math
         ds = [x[0] for x in pares]; ps = [x[1] for x in pares]
@@ -294,6 +334,7 @@ def proyectar_gravedad(result, hasta_corte=None):
         cov = sum((d - md) * (p - mp) for d, p in zip(ds, ps))
         sd = math.sqrt(sum((d - md) ** 2 for d in ds)); sp = math.sqrt(sum((p - mp) ** 2 for p in ps))
         prop = round(cov / (sd * sp), 3) if sd > 0 and sp > 0 else None
+        conf_prop_k = _confianza_prop(n_prop_k) if prop is not None else None
     return {
         "contrato": CONTRATO, "version": VERSION, "can_decide_H": CAN_DECIDE_H,
         "modo": "PROYECTIVO", "hasta_corte": corte_k,
@@ -301,11 +342,13 @@ def proyectar_gravedad(result, hasta_corte=None):
         "proyecciones": proyecciones,
         "cometa_previsto": cometa_previsto,
         "proporcionalidad_hasta_k": prop,
+        "n_nudos_proporcionalidad_hasta_k": n_prop_k,
+        "confianza_proporcionalidad_hasta_k": conf_prop_k,
         "lectura": (
             f"proyección hasta {corte_k}: "
             f"{sum(1 for p in proyecciones if p.get('captura_prevista'))} capturas previstas; "
             + (cometa_previsto["alerta"] if cometa_previsto else "sin pulso de masa en este corte")
-            + (f"; proporcionalidad hasta aquí: {prop}" if prop is not None else "")
+            + (f"; proporcionalidad hasta aquí: {prop} (confianza {conf_prop_k}, n={n_prop_k})" if prop is not None else "")
         ),
     }
 

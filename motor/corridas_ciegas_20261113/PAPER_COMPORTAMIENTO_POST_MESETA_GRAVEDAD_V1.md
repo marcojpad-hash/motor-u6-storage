@@ -1,11 +1,19 @@
 # Lectura de comportamiento post-meseta y gravedad — Paper reproducible
 
-**Versión:** v1_20261113
+**Versión:** v2_20261113
 **Fecha:** 2026-11-13
 **Autor de la idea:** Marco Antonio Juárez
 **Implementación:** Pecas (lateral `lateral_comportamiento_post_meseta_v1.py`)
 **Contrato:** `COMPORTAMIENTO_POST_MESETA_V1.md`
 **Repositorio:** marcojpad-hash/motor-u6-storage, rama `alterno/reconexion-2a1`
+
+**Cambios v2 (revisión de Gemini, 2026-11-13):** (1) la proporcionalidad
+lleva etiqueta de confianza según n (con pocos nudos el signo es frágil);
+(2) nuevo estado ACERCANDOSE para nudos lejos del Sol con pendiente media
+(antes caían en EN_TRANSITO, contradiciendo su definición); (3) reglas borde
+documentadas: desempate del cometa (gana el corte más temprano) y varianza
+cero (proporcionalidad null). Los números de los 5 casos comparados NO
+cambian; solo Mozart reclasifica 2 nudos (ver §12).
 
 Este documento permite que CUALQUIER modelo de lenguaje (DeepSeek, Gemini,
 ChatGPT, Grok) reproduzca la lectura en CUALQUIER caso, a partir de un RESULT
@@ -174,14 +182,19 @@ pendiente = f["pendiente_rango_por_corte_(+sube)"]
 estado =
     "CAPTURADO"      si distancia_al_sol <= 0.01
     "SIENDO_JALADO"  si distancia_al_sol > 0.05 y pendiente >= 0.5
+    "ACERCANDOSE"    si distancia_al_sol > 0.05 y 0.2 <= pendiente < 0.5
     "RESISTE"        si distancia_al_sol > 0.05 y pendiente < 0.2
-    "EN_TRANSITO"    en cualquier otro caso
+    "EN_TRANSITO"    en cualquier otro caso (cerca del Sol: 0.01 < distancia <= 0.05)
 ```
 
 - CAPTURADO: ya llegó al peso del Sol.
 - SIENDO_JALADO: sube hacia el Sol, proporcional a su distancia.
+- ACERCANDOSE (v2): lejos del Sol pero sube a velocidad media. Antes estos
+  nudos caían en EN_TRANSITO aunque estuvieran lejos del Sol, contradiciendo
+  su definición ("cerca del Sol"). En Mozart 2 nudos cambian a este estado.
 - RESISTE: lejos del Sol pero no sube (su propia gravedad, posible atractor rival).
-- EN_TRANSITO: cerca del Sol, moviéndose lento.
+- EN_TRANSITO: cerca del Sol (0.01 < distancia <= 0.05), aún no capturado,
+  a cualquier velocidad.
 
 ### 8.3 Cometa
 
@@ -194,6 +207,10 @@ para cada corte i (de 1 a n_cortes-1):
     salto_total = suma(saltos)
 cometa = el corte con mayor (nudos_que_suben, salto_total)
 ```
+
+**Desempate (v2):** si dos cortes empatan en (nudos_que_suben, salto_total),
+gana el corte más temprano (primera ocurrencia). La comparación es estricta
+(`>`), así que el primer corte con el mejor valor se queda.
 
 ### 8.4 Proporcionalidad
 
@@ -209,6 +226,27 @@ proporcionalidad = corr(pendiente, distancia_al_sol)
 - Negativa (-): cerca del Sol = sube más rápido (gravedad clásica, el tirón
   es más fuerte cerca, consolidación).
 - ~0: sin patrón claro.
+
+**Varianza cero (v2):** si todos los nudos tienen la misma distancia al Sol
+o la misma pendiente (varianza cero en una de las dos variables), la
+correlación es indefinida (división por cero) y la proporcionalidad es
+`null`, no un número.
+
+**Confianza según n (v2, revisión de Gemini):** con pocos nudos un solo
+valor atípico puede invertir el signo y cambiar la lectura de convergencia
+a consolidación. Por eso la proporcionalidad siempre va acompañada de su n
+y de esta etiqueta:
+
+```
+confianza_proporcionalidad =
+    "BAJA_MUESTRA"  si n < 8
+    "MEDIA"         si 8 <= n < 12
+    "ALTA"          si n >= 12
+```
+
+En los 5 casos comparados: Napoleón (n=7) y Mozart (n=6) son BAJA_MUESTRA —
+el signo es frágil, hay que leerlo con esa advertencia. Transición1 (n=20)
+y Mandela (n=16) son ALTA.
 
 ### 8.5 Lectura de gravedad
 
@@ -324,13 +362,22 @@ dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante
 
 ## 12. Comparación entre casos (para verificar la reproducción)
 
-| Caso | Régimen | Sol (H1) | Peso Sol Z | Nudos | Capt. | Jal. | Res. | Cometa | Proporc. |
-|------|---------|----------|-----------|-------|-------|------|------|--------|----------|
-| NAPOLEON_FINAL27 | MESETA | gobernante | 0.7813 | 7 | 2 | 3 | 1 | C9 (3, 0.32) | +0.568 |
-| MOZART_Z90 | MESETA | autonomia_atenas | 0.7985 | 6 | 0 | 1 | 1 | C6 (6, 0.482) | **-0.777** |
-| TESLA_F001_02 | CONTINUIDAD_ASCENDENTE | — | — | 0 | 0 | 0 | 0 | — | — |
-| TRANSICION1_Z90 | MESETA | creador | 0.8006 | 20 | 0 | 12 | 2 | C7_1448 (8, 0.651) | +0.295 |
-| MANDELA_HEROE | MESETA | kwml_01_rey | 0.8013 | 16 | 1 | 9 | 1 | C3_1961 (10, 1.077) | +0.078 |
+Valores v2 (la proporcionalidad lleva ahora su confianza; Mozart reclasifica
+2 nudos a ACERCANDOSE). Los números de sol, cometa y proporcionalidad son
+idénticos a v1.
+
+| Caso | Régimen | Sol (H1) | Peso Sol Z | Nudos | Capt. | Jal. | Acer. | Res. | Cometa | Proporc. | Confianza (n) |
+|------|---------|----------|-----------|-------|-------|------|-------|------|--------|----------|---------------|
+| NAPOLEON_FINAL27 | MESETA | gobernante | 0.7813 | 7 | 2 | 3 | 0 | 1 | C9 (3, 0.32) | +0.568 | BAJA_MUESTRA (7) |
+| MOZART_Z90 | MESETA | autonomia_atenas | 0.7985 | 6 | 0 | 1 | **2** | 1 | C6 (6, 0.482) | **-0.777** | BAJA_MUESTRA (6) |
+| TESLA_F001_02 | CONTINUIDAD_ASCENDENTE | — | — | 0 | 0 | 0 | 0 | 0 | — | — | — |
+| TRANSICION1_Z90 | MESETA | creador | 0.8006 | 20 | 0 | 12 | 0 | 2 | C7_1448 (8, 0.651) | +0.295 | ALTA (20) |
+| MANDELA_HEROE | MESETA | kwml_01_rey | 0.8013 | 16 | 1 | 9 | 0 | 1 | C3_1961 (10, 1.077) | +0.078 | ALTA (16) |
+
+Mozart v2: los 2 nudos que pasan a ACERCANDOSE son `situacion_dramatica_ambicion`
+(dist 0.072, pend 0.3571) y `dumezil_desequilibrio_f3_come_al_resto` (dist 0.072,
+pend 0.3214). En v1 estaban en EN_TRANSITO aunque estaban lejos del Sol — la
+contradicción que señaló Gemini.
 
 Si tu reproducción en otro caso da estos mismos números para Napoleón y
 Mozart, la implementación es correcta.
@@ -358,11 +405,14 @@ Mozart, la implementación es correcta.
   "trazabilidad": {"regimen": "...", "micro": 0.0, "meso": 0.0, "macro": 0.0, "aceleracion": 0.0, "divergencia_entre_escala": 0.0, "n_cortes_observados": 0},
   "gravedad": {
     "sol": {"familia": "...", "peso_Z": 0.0},
-    "nudos": [{"familia": "...", "peso_Z": 0.0, "distancia_al_sol": 0.0, "pendiente": 0.0, "rango_Z": 0, "primera_aparicion": "...", "clase": "...", "estado": "CAPTURADO|SIENDO_JALADO|RESISTE|EN_TRANSITO"}],
+    "nudos": [{"familia": "...", "peso_Z": 0.0, "distancia_al_sol": 0.0, "pendiente": 0.0, "rango_Z": 0, "primera_aparicion": "...", "clase": "...", "estado": "CAPTURADO|SIENDO_JALADO|ACERCANDOSE|RESISTE|EN_TRANSITO"}],
     "cometa": {"corte": "...", "nudos_que_suben": 0, "salto_total": 0.0},
     "proporcionalidad": 0.0,
+    "n_nudos_proporcionalidad": 0,
+    "confianza_proporcionalidad": "BAJA_MUESTRA|MEDIA|ALTA",
     "capturados": ["..."],
     "siendo_jalados": ["..."],
+    "acercandose": ["..."],
     "resisten": ["..."],
     "lectura": "..."
   },
@@ -390,7 +440,32 @@ La versión proyectiva (`proyectar_gravedad`) usa la misma estructura con
 
 ---
 
-## 15. Archivos de referencia (en el repo)
+## 15. Revisión de Gemini y cambios v2 (2026-11-13)
+
+Gemini reprodujo el ejemplo Napoleón (todos los números coinciden) y revisó
+el paper y el spec. Su veredicto: arquitectura madura, bien acotada y
+empíricamente verificada contra 55 casos. Señaló 3 riesgos reales, los 3
+corregidos en v2:
+
+1. **Inestabilidad estadística en muestras pequeñas (§8.4):** Pearson con
+   n=3 o n=6 es frágil; un solo valor atípico puede invertir el signo.
+   Corrección: la proporcionalidad lleva ahora su n y su etiqueta de
+   confianza (BAJA_MUESTRA si n<8, MEDIA si 8-11, ALTA si n>=12).
+2. **Frontera rígida en los estados (§8.2):** la franja intermedia
+   (0.2<=pendiente<0.5) caía en EN_TRANSITO sin importar la distancia,
+   contradiciendo su definición ("cerca del Sol"). Corrección: nuevo estado
+   ACERCANDOSE para nudos lejos del Sol con pendiente media; EN_TRANSITO
+   queda solo para nudos cerca del Sol (0.01<dist<=0.05).
+3. **Acoplamiento de formatos entre papel y código:** faltaban las reglas
+   borde en el texto del spec. Corrección: desempate del cometa (gana el
+   corte más temprano) y varianza cero (proporcionalidad null) documentados
+   en §8.3, §8.4 y en el código.
+
+Verificación v2 en los 5 casos: los números (sol, cometa, proporcionalidad)
+son idénticos a v1. Solo Mozart reclasifica 2 nudos a ACERCANDOSE. Napoleón
+y Mozart quedan en BAJA_MUESTRA; Transición1 y Mandela en ALTA.
+
+## 16. Archivos de referencia (en el repo)
 
 - `motor/motor/lateral_comportamiento_post_meseta_v1.py` — la implementación
   (funciones `leer_resultado`, `leer_gravedad`, `proyectar_gravedad`, `observar`).

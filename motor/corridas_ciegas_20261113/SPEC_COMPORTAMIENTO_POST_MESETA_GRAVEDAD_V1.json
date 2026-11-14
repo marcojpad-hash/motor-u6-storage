@@ -1,1 +1,445 @@
-{"comparacion_casos":[{"capturados":2,"caso":"NAPOLEON_FINAL27","cometa":{"corte":"C9","nudos":3,"salto":0.32},"jalados":3,"nudos":7,"peso_sol_Z":0.7813,"proporcionalidad":0.568,"regimen":"MESETA","resisten":1,"sol":"gobernante"},{"capturados":0,"caso":"MOZART_Z90","cometa":{"corte":"C6","nudos":6,"salto":0.482},"jalados":1,"nudos":6,"peso_sol_Z":0.7985,"proporcionalidad":-0.777,"regimen":"MESETA","resisten":1,"sol":"autonomia_atenas"},{"capturados":0,"caso":"TESLA_F001_02","cometa":null,"jalados":0,"nudos":0,"peso_sol_Z":null,"proporcionalidad":null,"regimen":"CONTINUIDAD_ASCENDENTE","resisten":0,"sol":null},{"capturados":0,"caso":"TRANSICION1_Z90","cometa":{"corte":"C7_1448","nudos":8,"salto":0.651},"jalados":12,"nudos":20,"peso_sol_Z":0.8006,"proporcionalidad":0.295,"regimen":"MESETA","resisten":2,"sol":"creador"},{"capturados":1,"caso":"MANDELA_HEROE","cometa":{"corte":"C3_1961","nudos":10,"salto":1.077},"jalados":9,"nudos":16,"peso_sol_Z":0.8013,"proporcionalidad":0.078,"regimen":"MESETA","resisten":1,"sol":"kwml_01_rey"}],"constante_inercia":{"descripcion":"Lo que hace predictivo al sistema es una CONSTANTE en la inercia, la misma fuerza a cualquier escala (10 minutos o 5 años). No se necesita el momento exacto aún.","peso_sol":{"condicional":"Verificado en 55 casos: en meseta 15/23 (65%) tienen H1 en 0.77-0.82; en todos 29/55 (53%). Vale para biografías fuertes y completas. No vale para casos débiles (Bach, Coolidge, Trotsky en 0.5; Pasteur 0.647, Mendel 0.671, Turing 0.701). No hay tope forzado en el código (P_FULL_244 es salida del Engine).","sobre_base_0.5":[0.281,0.298,0.301,0.301],"valor":"~0.79-0.80 en biografías fuertes y completas","verificado_4_casos":{"MANDELA_HEROE":0.8013,"MOZART_Z90":0.7985,"NAPOLEON_FINAL27":0.7813,"TRANSICION1_Z90":0.8006,"desv":0.008,"media":0.7954,"spread":0.02}},"relacion_factores":{"conclusion":"La fuerza de la predicción se escala con la evidencia: un caso rico predice fuerte, un caso flaco predice débil. ~0.79-0.80 es el techo cuando la evidencia es suficiente.","correlaciones":{"activacion_H1_Z":0.303,"masa_favor_total_H1":0.439,"n_cortes":0.385,"n_tokens_input":0.423,"tokens_por_corte":0.485},"descripcion":"El peso del Sol es proporcional a la riqueza del input (55 casos)","piso_por_n_cortes":{"10_cortes":{"media":0.787,"min":0.754},"3_cortes":{"media":0.724,"min":0.5},"6_cortes":{"media":0.778,"min":0.746},"7_cortes":{"media":0.787,"min":0.734}}}},"descripcion":"Lectura de comportamiento post-meseta y gravedad. Sensor, solo observa (can_decide_H false). Reproducible por cualquier modelo de lenguaje a partir de un RESULT completo del motor U6.","ejemplo_trabajado":{"H1":"arquetipo_el_gobernante","H2":"30_ambicion","caso":"NAPOLEON_10CORTES_FINAL27","comportamiento":{"cocina_familias":0,"cocina_tokens":0,"emergentes":0,"familias_bajo_top5_subiendo":7},"en_meseta":true,"entrada":"RESULT_NAPOLEON_10CORTES_FINAL27.json (10 cortes)","gravedad":{"capturados":["predictivo_02_mdp_politica_optima","situacion_dramatica_ambicion"],"cometa":{"corte":"C9","nudos_que_suben":3,"salto_total":0.32},"en_transito":["dumezil_f3_fecundidad"],"proporcionalidad":0.568,"resisten":["dumezil_desequilibrio_f2_come_al_resto"],"siendo_jalados":["dumezil_f2_fuerza","utopia_mentalidad_milenarista","frye_mythos_romance"],"sol":{"familia":"arquetipo_el_gobernante","peso_Z":0.7813}},"lectura":"estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568","proyectivo":{"hasta_C5":{"captura_prevista":{"predictivo_02_mdp_politica_optima":"C7","situacion_dramatica_ambicion":"C7"},"real":"C6 (a 1 corte)"},"hasta_C8":{"alerta":"pulso en 3 nudos","cometa_real":"C9 (a 1 corte)"}},"punto_no_considerado":{"familia":"dumezil_f2_fuerza","pendiente":1.0286,"rango_Z":23},"regimen":"MESeta_O_ESTABILIZACION","trazabilidad":{"macro":0.528572,"meso":0.48587,"micro":0.470833}},"entradas_requeridas":{"features.plugin_picos_mesetas.py.curvas":"por familia: serie, deltas, forma, subio_antes_de_ser_top1, score","motor.cuts[].P_FULL_244":"peso de cada familia por corte","movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango":"lista de nudos: familia, rango_en_Z, pendiente_rango_por_corte_(+sube), clase, primera_aparicion, emergente","movimiento_de_fondo.lo_que_se_cocina_abajo":"lista de familias que se cocinan abajo","movimiento_de_fondo.resumen_clases":{"familias":"conteo por clase","tokens":"conteo por clase"},"movimiento_de_fondo.series_familias":"por familia: masa_favor_por_corte[], serie_activacion[], serie_rango[]","movimiento_de_fondo.tokens_que_se_cocinan_abajo":"lista de tokens que se cocinan abajo","salida_interpretable.H1":"familia (string) - el top 1","salida_interpretable.H2":"familia (string) - el top 2","salida_interpretable.apuesta_multiescenario.apuesta_principal.escenario":"regimen (respaldo)","salida_interpretable.conjunto_hipotesis_abiertas.hipotesis[].trazabilidad_geometrica":"regimen, micro, meso, macro, aceleracion, divergencia_entre_escala, n_cortes_observados"},"fecha":"2026-11-13","formulas":{"comportamiento":{"descripcion":"Cómo se mueve todo una vez estabilizado","formas":"features.plugin_picos_mesetas.py.curvas[familia].forma","n_cocina_familias":"len(movimiento_de_fondo.lo_que_se_cocina_abajo)","n_cocina_tokens":"len(movimiento_de_fondo.tokens_que_se_cocinan_abajo)","n_familias_subiendo":"len(movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango)","resumen_clases":"movimiento_de_fondo.resumen_clases"},"emerge":{"clases":["ASCENSO_LENTO","MESETA","LATENTE_DORMIDO","PICO","DESCENSO","SIN_FORMA_CLARA","SIN_SENAL"],"descripcion":"Fórmula EMERGE del fondo (movimiento_de_fondo_u4.py)","lo_que_emerge":"familias_bajo_top5_subiendo_de_rango con emergente==true, ordenadas por pendiente_rango_por_corte descendente","umbrales":{"frac_pasos_que_suben_min":0.5,"pendiente_min":0.005,"rango_Z_max":20,"rango_Z_mayor_que":5,"sin_caidas_mayores_a_EPS":true}},"gravedad":{"cometa":{"descripcion":"El corte donde varios nudos saltan a la vez (un arrastre)","nudos_que_suben":"contar salto > 0.05","regla":"el corte con mayor (nudos_que_suben, salto_total)","salto_por_corte_i":"P_FULL_244[f][i] - P_FULL_244[f][i-1] para cada nudo f","salto_total":"suma de los saltos"},"descripcion":"NO es gravedad terrestre. Es inercia de gravedad como un cometa que arrastra, o como el sol jalando a los cuerpos de su casa (Vía Láctea).","nudos":{"distancia_al_sol":"peso_sol_Z - peso_Z","estados":{"CAPTURADO":"distancia_al_sol <= 0.01","EN_TRANSITO":"cualquier otro caso","RESISTE":"distancia_al_sol > 0.05 y pendiente < 0.2","SIENDO_JALADO":"distancia_al_sol > 0.05 y pendiente >= 0.5"},"fuente":"movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango","pendiente":"f['pendiente_rango_por_corte_(+sube)']","peso_Z":"motor.cuts[Z].P_FULL_244[familia]"},"proporcionalidad":{"descripcion":"Correlación de Pearson entre pendiente y distancia_al_sol sobre los nudos (mínimo 3 nudos)","interpretacion":{"cero":"sin patrón claro","negativa":"cerca del Sol = sube más rápido (gravedad clásica, consolidación)","positiva":"lejos del Sol = sube más rápido (caer hacia el Sol, convergencia)"}},"sol":{"familia":"H1","peso_Z":"motor.cuts[Z].P_FULL_244[H1] (Z = último corte)"}},"meseta":{"descripcion":"¿Está estabilizado?","en_meseta":"regimen == 'MESeta_O_ESTABILIZACION'","regimen":"salida_interpretable.apuesta_multiescenario.apuesta_principal.escenario (o trazabilidad_geometrica.regimen de la primera hipótesis si está vacío)","si_no_meseta":{"en_meseta":false,"lectura":"no estabilizado en meseta: no hay lectura de comportamiento post-meseta"}},"proyectivo":{"captura_prevista":{"descripcion":"Si la distancia al Sol se cierra monótona en los últimos 3 cortes, extrapolar linealmente el corte en que llega a 0","si_no_cierra":"NO_PROYECTABLE"},"descripcion":"ADICIÓN. Lo retrospectivo NO se elimina. Lee solo los cortes hasta k y proyecta.","limite_honesto":"El salto del cometa lo causa un pulso nuevo de masa_favor que llega con el contenido del corte (tokens nuevos del input). No se puede predecir el corte exacto ni el tamaño del salto antes de que el pulso llegue, porque eso sería predecir el contenido del siguiente corte.","pulso_alerta_cometa":{"alerta":"posible cometa en los siguientes 1-3 cortes","descripcion":"Si en el corte k llegó masa_favor > 0 en al menos 2 nudos, un pulso acaba de entrar","intervalo_pulsos_observado":"3-4 cortes (Napoleón C5->C9, Mozart C6->C9)"}},"punto_no_considerado":{"descripcion":"Lo que emerge o sube y NO está en el top que ven los modelos","regla":"primer emergente (o primera familia subiendo) cuya familia no está en top","top":"H1, H2 y las familias de conjunto_hipotesis_abiertas"},"trazabilidad":{"campos":["regimen","micro","meso","macro","aceleracion","divergencia_entre_escala","n_cortes_observados"],"descripcion":"El eje geométrico en meseta (de la primera hipótesis)"}},"idea_de":"Marco Antonio Juárez","referencias_repo":["motor/motor/lateral_comportamiento_post_meseta_v1.py","motor/COMPORTAMIENTO_POST_MESETA_V1.md","motor/corridas_ciegas_20261113/PAPER_COMPORTAMIENTO_POST_MESETA_GRAVEDAD_V1.md","motor/corridas_ciegas_20261113/LECTURA_COMPORTAMIENTO_POST_MESETA_FINAL27.json","motor/COMPARACION_GRAVEDAD_CASOS_20261113.json","motor/VERIF_PESO_SOL_MUCHOS_CASOS_20261113.json","motor/FACTORES_PESO_SOL_V2_20261113.json"],"reglas_duras":["can_decide_H = false. SENSOR, solo observa. No toca H1/H2, ranking, Engine ni catálogo 244. No reordena. No escribe canónico.","La activación es CONCEPTUAL según el contexto, no una matriz rígida. Todo lo que llega al StinkBox se activa en conjunto según la carga semántica, sin deduplicación, sin que uno se sobreponga al otro (superposición), sin doble peso.","Si no hay meseta, la lectura queda muda. No se fuerza.","Lo retrospectivo no se elimina: queda como referencia para comparación e ingeniería inversa. Lo proyectivo es una adición."],"salida":{"can_decide_H":false,"comportamiento":{"familias_bajo_top5_subiendo_de_rango":0,"formas_picos_mesetas":{},"lo_que_se_cocina_abajo_n":0,"resumen_clases_fondo":{"familias":{},"tokens":{}},"tokens_que_se_cocinan_abajo_n":0},"contrato":"COMPORTAMIENTO_POST_MESETA_V1","en_meseta":true,"gravedad":{"capturados":["string"],"cometa":{"corte":"string","nudos_que_suben":0,"salto_total":0.0},"lectura":"string","nudos":[{"clase":"string","distancia_al_sol":0.0,"estado":"CAPTURADO|SIENDO_JALADO|RESISTE|EN_TRANSITO","familia":"string","pendiente":0.0,"peso_Z":0.0,"primera_aparicion":"string","rango_Z":0}],"proporcionalidad":0.0,"resisten":["string"],"siendo_jalados":["string"],"sol":{"familia":"string","peso_Z":0.0}},"lectura":"string","lo_que_emerge":[{"clase":"string","familia":"string","pendiente_rango_por_corte":0.0,"rango_en_Z":0}],"punto_no_considerado":{"clase":"string","familia":"string","pendiente_rango_por_corte":0.0,"rango_en_Z":0},"regimen":"MESeta_O_ESTABILIZACION","trazabilidad":{"aceleracion":0.0,"divergencia_entre_escala":0.0,"macro":0.0,"meso":0.0,"micro":0.0,"n_cortes_observados":0,"regimen":"string"},"version":"v1_20261113"},"spec":"COMPORTAMIENTO_POST_MESETA_V1","version":"v1_20261113"}
+{
+  "comparacion_casos": [
+    {
+      "capturados": 2,
+      "caso": "NAPOLEON_FINAL27",
+      "cometa": {
+        "corte": "C9",
+        "nudos": 3,
+        "salto": 0.32
+      },
+      "jalados": 3,
+      "nudos": 7,
+      "peso_sol_Z": 0.7813,
+      "proporcionalidad": 0.568,
+      "regimen": "MESETA",
+      "resisten": 1,
+      "sol": "gobernante",
+      "acercandose": 0,
+      "confianza_proporcionalidad": "BAJA_MUESTRA",
+      "n_proporcionalidad": 7
+    },
+    {
+      "capturados": 0,
+      "caso": "MOZART_Z90",
+      "cometa": {
+        "corte": "C6",
+        "nudos": 6,
+        "salto": 0.482
+      },
+      "jalados": 1,
+      "nudos": 6,
+      "peso_sol_Z": 0.7985,
+      "proporcionalidad": -0.777,
+      "regimen": "MESETA",
+      "resisten": 1,
+      "sol": "autonomia_atenas",
+      "acercandose": 2,
+      "confianza_proporcionalidad": "BAJA_MUESTRA",
+      "n_proporcionalidad": 6
+    },
+    {
+      "capturados": 0,
+      "caso": "TESLA_F001_02",
+      "cometa": null,
+      "jalados": 0,
+      "nudos": 0,
+      "peso_sol_Z": null,
+      "proporcionalidad": null,
+      "regimen": "CONTINUIDAD_ASCENDENTE",
+      "resisten": 0,
+      "sol": null,
+      "acercandose": 0,
+      "confianza_proporcionalidad": null,
+      "n_proporcionalidad": 0
+    },
+    {
+      "capturados": 0,
+      "caso": "TRANSICION1_Z90",
+      "cometa": {
+        "corte": "C7_1448",
+        "nudos": 8,
+        "salto": 0.651
+      },
+      "jalados": 12,
+      "nudos": 20,
+      "peso_sol_Z": 0.8006,
+      "proporcionalidad": 0.295,
+      "regimen": "MESETA",
+      "resisten": 2,
+      "sol": "creador",
+      "acercandose": 0,
+      "confianza_proporcionalidad": "ALTA",
+      "n_proporcionalidad": 20
+    },
+    {
+      "capturados": 1,
+      "caso": "MANDELA_HEROE",
+      "cometa": {
+        "corte": "C3_1961",
+        "nudos": 10,
+        "salto": 1.077
+      },
+      "jalados": 9,
+      "nudos": 16,
+      "peso_sol_Z": 0.8013,
+      "proporcionalidad": 0.078,
+      "regimen": "MESETA",
+      "resisten": 1,
+      "sol": "kwml_01_rey",
+      "acercandose": 0,
+      "confianza_proporcionalidad": "ALTA",
+      "n_proporcionalidad": 16
+    }
+  ],
+  "constante_inercia": {
+    "descripcion": "Lo que hace predictivo al sistema es una CONSTANTE en la inercia, la misma fuerza a cualquier escala (10 minutos o 5 años). No se necesita el momento exacto aún.",
+    "peso_sol": {
+      "condicional": "Verificado en 55 casos: en meseta 15/23 (65%) tienen H1 en 0.77-0.82; en todos 29/55 (53%). Vale para biografías fuertes y completas. No vale para casos débiles (Bach, Coolidge, Trotsky en 0.5; Pasteur 0.647, Mendel 0.671, Turing 0.701). No hay tope forzado en el código (P_FULL_244 es salida del Engine).",
+      "sobre_base_0.5": [
+        0.281,
+        0.298,
+        0.301,
+        0.301
+      ],
+      "valor": "~0.79-0.80 en biografías fuertes y completas",
+      "verificado_4_casos": {
+        "MANDELA_HEROE": 0.8013,
+        "MOZART_Z90": 0.7985,
+        "NAPOLEON_FINAL27": 0.7813,
+        "TRANSICION1_Z90": 0.8006,
+        "desv": 0.008,
+        "media": 0.7954,
+        "spread": 0.02
+      }
+    },
+    "relacion_factores": {
+      "conclusion": "La fuerza de la predicción se escala con la evidencia: un caso rico predice fuerte, un caso flaco predice débil. ~0.79-0.80 es el techo cuando la evidencia es suficiente.",
+      "correlaciones": {
+        "activacion_H1_Z": 0.303,
+        "masa_favor_total_H1": 0.439,
+        "n_cortes": 0.385,
+        "n_tokens_input": 0.423,
+        "tokens_por_corte": 0.485
+      },
+      "descripcion": "El peso del Sol es proporcional a la riqueza del input (55 casos)",
+      "piso_por_n_cortes": {
+        "10_cortes": {
+          "media": 0.787,
+          "min": 0.754
+        },
+        "3_cortes": {
+          "media": 0.724,
+          "min": 0.5
+        },
+        "6_cortes": {
+          "media": 0.778,
+          "min": 0.746
+        },
+        "7_cortes": {
+          "media": 0.787,
+          "min": 0.734
+        }
+      }
+    }
+  },
+  "descripcion": "Lectura de comportamiento post-meseta y gravedad. Sensor, solo observa (can_decide_H false). Reproducible por cualquier modelo de lenguaje a partir de un RESULT completo del motor U6. v2 (revisión Gemini 2026-11-13): confianza por n en proporcionalidad, estado ACERCANDOSE, desempates y varianza cero documentados.",
+  "ejemplo_trabajado": {
+    "H1": "arquetipo_el_gobernante",
+    "H2": "30_ambicion",
+    "caso": "NAPOLEON_10CORTES_FINAL27",
+    "comportamiento": {
+      "cocina_familias": 0,
+      "cocina_tokens": 0,
+      "emergentes": 0,
+      "familias_bajo_top5_subiendo": 7
+    },
+    "en_meseta": true,
+    "entrada": "RESULT_NAPOLEON_10CORTES_FINAL27.json (10 cortes)",
+    "gravedad": {
+      "capturados": [
+        "predictivo_02_mdp_politica_optima",
+        "situacion_dramatica_ambicion"
+      ],
+      "cometa": {
+        "corte": "C9",
+        "nudos_que_suben": 3,
+        "salto_total": 0.32
+      },
+      "en_transito": [
+        "dumezil_f3_fecundidad"
+      ],
+      "proporcionalidad": 0.568,
+      "resisten": [
+        "dumezil_desequilibrio_f2_come_al_resto"
+      ],
+      "siendo_jalados": [
+        "dumezil_f2_fuerza",
+        "utopia_mentalidad_milenarista",
+        "frye_mythos_romance"
+      ],
+      "sol": {
+        "familia": "arquetipo_el_gobernante",
+        "peso_Z": 0.7813
+      },
+      "n_nudos_proporcionalidad": 7,
+      "confianza_proporcionalidad": "BAJA_MUESTRA",
+      "acercandose": []
+    },
+    "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568",
+    "proyectivo": {
+      "hasta_C5": {
+        "captura_prevista": {
+          "predictivo_02_mdp_politica_optima": "C7",
+          "situacion_dramatica_ambicion": "C7"
+        },
+        "real": "C6 (a 1 corte)"
+      },
+      "hasta_C8": {
+        "alerta": "pulso en 3 nudos",
+        "cometa_real": "C9 (a 1 corte)"
+      }
+    },
+    "punto_no_considerado": {
+      "familia": "dumezil_f2_fuerza",
+      "pendiente": 1.0286,
+      "rango_Z": 23
+    },
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "trazabilidad": {
+      "macro": 0.528572,
+      "meso": 0.48587,
+      "micro": 0.470833
+    }
+  },
+  "entradas_requeridas": {
+    "features.plugin_picos_mesetas.py.curvas": "por familia: serie, deltas, forma, subio_antes_de_ser_top1, score",
+    "motor.cuts[].P_FULL_244": "peso de cada familia por corte",
+    "movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango": "lista de nudos: familia, rango_en_Z, pendiente_rango_por_corte_(+sube), clase, primera_aparicion, emergente",
+    "movimiento_de_fondo.lo_que_se_cocina_abajo": "lista de familias que se cocinan abajo",
+    "movimiento_de_fondo.resumen_clases": {
+      "familias": "conteo por clase",
+      "tokens": "conteo por clase"
+    },
+    "movimiento_de_fondo.series_familias": "por familia: masa_favor_por_corte[], serie_activacion[], serie_rango[]",
+    "movimiento_de_fondo.tokens_que_se_cocinan_abajo": "lista de tokens que se cocinan abajo",
+    "salida_interpretable.H1": "familia (string) - el top 1",
+    "salida_interpretable.H2": "familia (string) - el top 2",
+    "salida_interpretable.apuesta_multiescenario.apuesta_principal.escenario": "regimen (respaldo)",
+    "salida_interpretable.conjunto_hipotesis_abiertas.hipotesis[].trazabilidad_geometrica": "regimen, micro, meso, macro, aceleracion, divergencia_entre_escala, n_cortes_observados"
+  },
+  "fecha": "2026-11-13",
+  "formulas": {
+    "comportamiento": {
+      "descripcion": "Cómo se mueve todo una vez estabilizado",
+      "formas": "features.plugin_picos_mesetas.py.curvas[familia].forma",
+      "n_cocina_familias": "len(movimiento_de_fondo.lo_que_se_cocina_abajo)",
+      "n_cocina_tokens": "len(movimiento_de_fondo.tokens_que_se_cocinan_abajo)",
+      "n_familias_subiendo": "len(movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango)",
+      "resumen_clases": "movimiento_de_fondo.resumen_clases"
+    },
+    "emerge": {
+      "clases": [
+        "ASCENSO_LENTO",
+        "MESETA",
+        "LATENTE_DORMIDO",
+        "PICO",
+        "DESCENSO",
+        "SIN_FORMA_CLARA",
+        "SIN_SENAL"
+      ],
+      "descripcion": "Fórmula EMERGE del fondo (movimiento_de_fondo_u4.py)",
+      "lo_que_emerge": "familias_bajo_top5_subiendo_de_rango con emergente==true, ordenadas por pendiente_rango_por_corte descendente",
+      "umbrales": {
+        "frac_pasos_que_suben_min": 0.5,
+        "pendiente_min": 0.005,
+        "rango_Z_max": 20,
+        "rango_Z_mayor_que": 5,
+        "sin_caidas_mayores_a_EPS": true
+      }
+    },
+    "gravedad": {
+      "cometa": {
+        "descripcion": "El corte donde varios nudos saltan a la vez (un arrastre)",
+        "nudos_que_suben": "contar salto > 0.05",
+        "regla": "el corte con mayor (nudos_que_suben, salto_total)",
+        "salto_por_corte_i": "P_FULL_244[f][i] - P_FULL_244[f][i-1] para cada nudo f",
+        "salto_total": "suma de los saltos",
+        "desempate": "Si dos cortes empatan en (nudos_que_suben, salto_total), gana el corte más temprano (primera ocurrencia, por comparación estricta)."
+      },
+      "descripcion": "NO es gravedad terrestre. Es inercia de gravedad como un cometa que arrastra, o como el sol jalando a los cuerpos de su casa (Vía Láctea).",
+      "nudos": {
+        "distancia_al_sol": "peso_sol_Z - peso_Z",
+        "estados": {
+          "CAPTURADO": "distancia_al_sol <= 0.01",
+          "SIENDO_JALADO": "distancia_al_sol > 0.05 y pendiente >= 0.5",
+          "ACERCANDOSE": "distancia_al_sol > 0.05 y 0.2 <= pendiente < 0.5 (v2: antes caía en EN_TRANSITO aunque estuviera lejos del Sol)",
+          "RESISTE": "distancia_al_sol > 0.05 y pendiente < 0.2",
+          "EN_TRANSITO": "cualquier otro caso (cerca del Sol: 0.01 < distancia_al_sol <= 0.05)"
+        },
+        "fuente": "movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango",
+        "pendiente": "f['pendiente_rango_por_corte_(+sube)']",
+        "peso_Z": "motor.cuts[Z].P_FULL_244[familia]"
+      },
+      "proporcionalidad": {
+        "descripcion": "Correlación de Pearson entre pendiente y distancia_al_sol sobre los nudos (mínimo 3 nudos)",
+        "interpretacion": {
+          "cero": "sin patrón claro",
+          "negativa": "cerca del Sol = sube más rápido (gravedad clásica, consolidación)",
+          "positiva": "lejos del Sol = sube más rápido (caer hacia el Sol, convergencia)"
+        },
+        "varianza_cero": "Si todos los nudos tienen la misma distancia_al_sol o la misma pendiente (varianza cero), la correlación es indefinida (división por cero) y la proporcionalidad es null.",
+        "confianza": {
+          "descripcion": "Con pocos nudos un solo valor atípico puede invertir el signo y cambiar la lectura de convergencia a consolidación. La proporcionalidad siempre va con su n y esta etiqueta.",
+          "regla": {
+            "BAJA_MUESTRA": "n < 8",
+            "MEDIA": "8 <= n < 12",
+            "ALTA": "n >= 12"
+          }
+        }
+      },
+      "sol": {
+        "familia": "H1",
+        "peso_Z": "motor.cuts[Z].P_FULL_244[H1] (Z = último corte)"
+      }
+    },
+    "meseta": {
+      "descripcion": "¿Está estabilizado?",
+      "en_meseta": "regimen == 'MESeta_O_ESTABILIZACION'",
+      "regimen": "salida_interpretable.apuesta_multiescenario.apuesta_principal.escenario (o trazabilidad_geometrica.regimen de la primera hipótesis si está vacío)",
+      "si_no_meseta": {
+        "en_meseta": false,
+        "lectura": "no estabilizado en meseta: no hay lectura de comportamiento post-meseta"
+      }
+    },
+    "proyectivo": {
+      "captura_prevista": {
+        "descripcion": "Si la distancia al Sol se cierra monótona en los últimos 3 cortes, extrapolar linealmente el corte en que llega a 0",
+        "si_no_cierra": "NO_PROYECTABLE"
+      },
+      "descripcion": "ADICIÓN. Lo retrospectivo NO se elimina. Lee solo los cortes hasta k y proyecta.",
+      "limite_honesto": "El salto del cometa lo causa un pulso nuevo de masa_favor que llega con el contenido del corte (tokens nuevos del input). No se puede predecir el corte exacto ni el tamaño del salto antes de que el pulso llegue, porque eso sería predecir el contenido del siguiente corte.",
+      "pulso_alerta_cometa": {
+        "alerta": "posible cometa en los siguientes 1-3 cortes",
+        "descripcion": "Si en el corte k llegó masa_favor > 0 en al menos 2 nudos, un pulso acaba de entrar",
+        "intervalo_pulsos_observado": "3-4 cortes (Napoleón C5->C9, Mozart C6->C9)"
+      }
+    },
+    "punto_no_considerado": {
+      "descripcion": "Lo que emerge o sube y NO está en el top que ven los modelos",
+      "regla": "primer emergente (o primera familia subiendo) cuya familia no está en top",
+      "top": "H1, H2 y las familias de conjunto_hipotesis_abiertas"
+    },
+    "trazabilidad": {
+      "campos": [
+        "regimen",
+        "micro",
+        "meso",
+        "macro",
+        "aceleracion",
+        "divergencia_entre_escala",
+        "n_cortes_observados"
+      ],
+      "descripcion": "El eje geométrico en meseta (de la primera hipótesis)"
+    }
+  },
+  "idea_de": "Marco Antonio Juárez",
+  "referencias_repo": [
+    "motor/motor/lateral_comportamiento_post_meseta_v1.py",
+    "motor/COMPORTAMIENTO_POST_MESETA_V1.md",
+    "motor/corridas_ciegas_20261113/PAPER_COMPORTAMIENTO_POST_MESETA_GRAVEDAD_V1.md",
+    "motor/corridas_ciegas_20261113/LECTURA_COMPORTAMIENTO_POST_MESETA_FINAL27.json",
+    "motor/COMPARACION_GRAVEDAD_CASOS_20261113.json",
+    "motor/VERIF_PESO_SOL_MUCHOS_CASOS_20261113.json",
+    "motor/FACTORES_PESO_SOL_V2_20261113.json",
+    "motor/corridas_ciegas_20261113/REPRODUCCION_GEMINI_NAPOLEON_20261113.md"
+  ],
+  "reglas_duras": [
+    "can_decide_H = false. SENSOR, solo observa. No toca H1/H2, ranking, Engine ni catálogo 244. No reordena. No escribe canónico.",
+    "La activación es CONCEPTUAL según el contexto, no una matriz rígida. Todo lo que llega al StinkBox se activa en conjunto según la carga semántica, sin deduplicación, sin que uno se sobreponga al otro (superposición), sin doble peso.",
+    "Si no hay meseta, la lectura queda muda. No se fuerza.",
+    "Lo retrospectivo no se elimina: queda como referencia para comparación e ingeniería inversa. Lo proyectivo es una adición."
+  ],
+  "salida": {
+    "can_decide_H": false,
+    "comportamiento": {
+      "familias_bajo_top5_subiendo_de_rango": 0,
+      "formas_picos_mesetas": {},
+      "lo_que_se_cocina_abajo_n": 0,
+      "resumen_clases_fondo": {
+        "familias": {},
+        "tokens": {}
+      },
+      "tokens_que_se_cocinan_abajo_n": 0
+    },
+    "contrato": "COMPORTAMIENTO_POST_MESETA_V1",
+    "en_meseta": true,
+    "gravedad": {
+      "capturados": [
+        "string"
+      ],
+      "cometa": {
+        "corte": "string",
+        "nudos_que_suben": 0,
+        "salto_total": 0.0
+      },
+      "lectura": "string",
+      "nudos": [
+        {
+          "clase": "string",
+          "distancia_al_sol": 0.0,
+          "estado": "CAPTURADO|SIENDO_JALADO|ACERCANDOSE|RESISTE|EN_TRANSITO",
+          "familia": "string",
+          "pendiente": 0.0,
+          "peso_Z": 0.0,
+          "primera_aparicion": "string",
+          "rango_Z": 0
+        }
+      ],
+      "proporcionalidad": 0.0,
+      "resisten": [
+        "string"
+      ],
+      "siendo_jalados": [
+        "string"
+      ],
+      "sol": {
+        "familia": "string",
+        "peso_Z": 0.0
+      },
+      "n_nudos_proporcionalidad": 0,
+      "confianza_proporcionalidad": "BAJA_MUESTRA|MEDIA|ALTA",
+      "acercandose": [
+        "string"
+      ]
+    },
+    "lectura": "string",
+    "lo_que_emerge": [
+      {
+        "clase": "string",
+        "familia": "string",
+        "pendiente_rango_por_corte": 0.0,
+        "rango_en_Z": 0
+      }
+    ],
+    "punto_no_considerado": {
+      "clase": "string",
+      "familia": "string",
+      "pendiente_rango_por_corte": 0.0,
+      "rango_en_Z": 0
+    },
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "trazabilidad": {
+      "aceleracion": 0.0,
+      "divergencia_entre_escala": 0.0,
+      "macro": 0.0,
+      "meso": 0.0,
+      "micro": 0.0,
+      "n_cortes_observados": 0,
+      "regimen": "string"
+    },
+    "version": "v2_20261113"
+  },
+  "spec": "COMPORTAMIENTO_POST_MESETA_V1",
+  "version": "v2_20261113"
+}

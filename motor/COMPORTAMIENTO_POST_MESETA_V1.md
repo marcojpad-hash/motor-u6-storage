@@ -62,13 +62,22 @@ subiendo de rango) y se busca PROPORCIONALIDAD.
   hacia su peso (P_FULL_244 en Z).
 - **NUDOS:** cada familia que se movió, con peso en Z, distancia al Sol y
   pendiente. Estados:
-  - `CAPTURADO`: ya llegó al peso del Sol (distancia ~0).
-  - `SIENDO_JALADO`: sube hacia el Sol, proporcional a su distancia.
-  - `RESISTE`: lejos del Sol pero no sube (su propia gravedad, posible
-    atractor rival).
-  - `EN_TRANSITO`: cerca del Sol, moviéndose lento.
+  - `CAPTURADO`: ya llegó al peso del Sol (distancia <= 0.01).
+  - `SIENDO_JALADO`: lejos del Sol (dist > 0.05) y sube rápido (pend >= 0.5).
+  - `ACERCANDOSE` (v2): lejos del Sol (dist > 0.05) y sube a velocidad media
+    (0.2 <= pend < 0.5). Antes caía en EN_TRANSITO aunque estuviera lejos.
+  - `RESISTE`: lejos del Sol pero no sube (pend < 0.2): su propia gravedad,
+    posible atractor rival.
+  - `EN_TRANSITO`: cerca del Sol (0.01 < dist <= 0.05), aún no capturado,
+    a cualquier velocidad.
 - **COMETA:** el corte donde varios nudos saltan a la vez (un arrastre).
-- **PROPORCIONALIDAD:** correlación pendiente ~ distancia al Sol.
+  Desempate (v2): en empate de (nudos_que_suben, salto_total) gana el corte
+  más temprano (primera ocurrencia).
+- **PROPORCIONALIDAD:** correlación de Pearson pendiente ~ distancia al Sol
+  (mínimo 3 nudos). Varianza cero (todos los nudos con la misma distancia o
+  pendiente) -> null (indefinida). Siempre va con su n y su confianza (v2):
+  BAJA_MUESTRA si n<8, MEDIA si 8-11, ALTA si n>=12. Con pocos nudos un solo
+  valor atípico puede invertir el signo.
 
 ## Proyectivo (Marco, 2026-11-13) — `proyectar_gravedad(result, hasta_corte)`
 La retrospectiva (leer_gravedad) NO se elimina: queda como referencia para
