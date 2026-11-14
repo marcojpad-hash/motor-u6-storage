@@ -1,0 +1,146 @@
+[
+  {
+    "caso": "NAPOLEON_10CORTES_FINAL27",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_gobernante",
+    "H2": "30_ambicion",
+    "sol": "arquetipo_el_gobernante",
+    "peso_sol_Z": 0.7813,
+    "n_nudos": 7,
+    "capturados": [
+      "predictivo_02_mdp_politica_optima",
+      "situacion_dramatica_ambicion"
+    ],
+    "siendo_jalados": [
+      "dumezil_f2_fuerza",
+      "utopia_mentalidad_milenarista",
+      "frye_mythos_romance"
+    ],
+    "resisten": [
+      "dumezil_desequilibrio_f2_come_al_resto"
+    ],
+    "cometa": {
+      "corte": "C9",
+      "nudos_que_suben": 3,
+      "salto_total": 0.32
+    },
+    "proporcionalidad": 0.568,
+    "punto_no_considerado": "dumezil_f2_fuerza",
+    "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568"
+  },
+  {
+    "caso": "MOZART_CON_TEXTO_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "utopia_autonomia_atenas",
+    "H2": "utopia_mentalidad_liberal",
+    "sol": "utopia_autonomia_atenas",
+    "peso_sol_Z": 0.7985,
+    "n_nudos": 6,
+    "capturados": [],
+    "siendo_jalados": [
+      "predictivo_02_mdp_politica_optima"
+    ],
+    "resisten": [
+      "dumezil_f3_fecundidad"
+    ],
+    "cometa": {
+      "corte": "C6",
+      "nudos_que_suben": 6,
+      "salto_total": 0.482
+    },
+    "proporcionalidad": -0.777,
+    "punto_no_considerado": "situacion_dramatica_ambicion",
+    "lectura": "estabilizado en meseta: 6 familias bajo el top5 suben de rango; lo que se cocina abajo: 3 familias / 0 tokens; emergentes: 2; punto no considerado: situacion_dramatica_ambicion (rango Z 10, pendiente 0.3571); sol utopia_autonomia_atenas (peso Z 0.7985); capturados: 0; siendo jalados: 1; resisten: 1; cometa en C6 (6 nudos suben); proporcionalidad pendiente~distancia: -0.777"
+  },
+  {
+    "caso": "CAL_F001_02_TESLA",
+    "en_meseta": false,
+    "regimen": "CONTINUIDAD_ASCENDENTE",
+    "H1": "22_todo_sacrificado_por_una_pasion",
+    "H2": "30_ambicion",
+    "sol": null,
+    "peso_sol_Z": null,
+    "n_nudos": 0,
+    "capturados": [],
+    "siendo_jalados": [],
+    "resisten": [],
+    "cometa": null,
+    "proporcionalidad": null,
+    "punto_no_considerado": null,
+    "lectura": "no estabilizado en meseta: no hay lectura de comportamiento post-meseta"
+  },
+  {
+    "caso": "TRANSICION1_Z90_20261113",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "arquetipo_el_creador",
+    "H2": "arquetipo_el_sabio",
+    "sol": "arquetipo_el_creador",
+    "peso_sol_Z": 0.8006,
+    "n_nudos": 20,
+    "capturados": [],
+    "siendo_jalados": [
+      "sombra",
+      "mauss_01_intercambio_agonistico",
+      "arquetipo_el_cuidador",
+      "distopia_agotamiento_ambiental",
+      "jaldun_01_asabiyyah_alta_cohesion",
+      "predictivo_01_markov_estado_absorbente",
+      "utopia_mentalidad_milenarista",
+      "utopia_mentalidad_socialista",
+      "6_desastre",
+      "utopia_principio_identidad_grupo",
+      "mbti_introvertido",
+      "kondratiev_04_invierno_recesion"
+    ],
+    "resisten": [
+      "schwartz_10_autodireccion",
+      "dumezil_desequilibrio_f2_come_al_resto"
+    ],
+    "cometa": {
+      "corte": "C7_1448",
+      "nudos_que_suben": 8,
+      "salto_total": 0.651
+    },
+    "proporcionalidad": 0.295,
+    "punto_no_considerado": "schwartz_09_estimulacion",
+    "lectura": "estabilizado en meseta: 20 familias bajo el top5 suben de rango; lo que se cocina abajo: 1 familias / 0 tokens; emergentes: 1; punto no considerado: schwartz_09_estimulacion (rango Z 12, pendiente 2.4857); sol arquetipo_el_creador (peso Z 0.8006); capturados: 0; siendo jalados: 12; resisten: 2; cometa en C7_1448 (8 nudos suben); proporcionalidad pendiente~distancia: 0.295"
+  },
+  {
+    "caso": "MANDELA_HEROE_20261112",
+    "en_meseta": true,
+    "regimen": "MESeta_O_ESTABILIZACION",
+    "H1": "kwml_01_rey",
+    "H2": "berlin_01_erizo",
+    "sol": "kwml_01_rey",
+    "peso_sol_Z": 0.8013,
+    "n_nudos": 16,
+    "capturados": [
+      "anacyclosis_01_monarquia"
+    ],
+    "siendo_jalados": [
+      "frye_mythos_romance",
+      "mentor",
+      "erikson_07_generatividad_vs_estancamiento",
+      "mauss_01_intercambio_agonistico",
+      "monomito_12_regreso_con_el_elixir",
+      "monomito_06_pruebas_aliados_y_enemigos",
+      "utopia_orden_sparte",
+      "weber_02_autoridad_carismatica",
+      "anacyclosis_03_aristocracia"
+    ],
+    "resisten": [
+      "dialectica_01_tesis_estabilidad_hegemonica"
+    ],
+    "cometa": {
+      "corte": "C3_1961",
+      "nudos_que_suben": 10,
+      "salto_total": 1.077
+    },
+    "proporcionalidad": 0.078,
+    "punto_no_considerado": "arquetipo_el_cuidador",
+    "lectura": "estabilizado en meseta: 16 familias bajo el top5 suben de rango; lo que se cocina abajo: 7 familias / 0 tokens; emergentes: 7; punto no considerado: arquetipo_el_cuidador (rango Z 16, pendiente 3.9); sol kwml_01_rey (peso Z 0.8013); capturados: 1; siendo jalados: 9; resisten: 1; cometa en C3_1961 (10 nudos suben); proporcionalidad pendiente~distancia: 0.078"
+  }
+]
