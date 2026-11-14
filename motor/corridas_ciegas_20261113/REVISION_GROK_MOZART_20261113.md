@@ -1,89 +1,71 @@
-# Revisión Grok — Reproducción gravedad Mozart (Z90)
+# Revisión Grok — Mozart con texto Z90 (2026-11-13)
 
-**Fecha:** 2026-11-13 ~19:00 CST  
-**Modelo:** Grok 4.7  
-**Rama:** `alterno/reconexion-2a1`  
-**Delegación:** `DELEGACION_GROK_REPRODUCIR_GRAVEDAD_20261113.md`
+Reproducción independiente del RESULT `motor/RESULT_MOZART_CON_TEXTO_Z90_20261113.json` (commit a57e2c3, rama alterno/reconexion-2a1). Misma lógica que la revisión de Gemini sobre Napoleón: reconstruir rank_fusion cifra por cifra desde las features publicadas y contrastar contra el valor reportado.
 
-## 1. Bloqueo de entrada
+**Actualización:** la revisión anterior (SHA 7a93aae) se bloqueó porque el RESULT no estaba en la rama. Ahora sí está (commit a57e2c3). Esta versión lo usa.
 
-La delegación pide aplicar las fórmulas sobre:
+## Identidad de la corrida
 
-`motor/RESULT_MOZART_CON_TEXTO_Z90_20261113.json`
+- case_id: MOZART_CON_TEXTO_Z90_U6_20261113
+- motor: V15.3_NATIVO (hash_candado 48333cd11b9234f1)
+- patterns_sha256: d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1 (244 patrones, verificado)
+- sidecar: false
+- predictor method: rank_fusion_fractional_ties_constant_guard_plus_bounded_lateral_plus_resolution_rescan
 
-Ese archivo **no está** en la rama `alterno/reconexion-2a1` (ni en `motor/`, ni en `motor/corridas_ciegas_20261113/`, ni bajo otro nombre con "MOZART"). Los RESULT disponibles son Napoleón, Transición1/2, Anónimos y calibración. Sin el RESULT completo no se puede recomputar de forma independiente `peso_Z` de cada nudo, los saltos por corte ni la correlación de Pearson a partir de `P_FULL_244`.
+## Cierre reportado
 
-Lo que sí está y se usó:
+| | H1 | H2 |
+|---|---|---|
+| familia | utopia_autonomia_atenas | utopia_mentalidad_liberal |
+| rank_fusion | 32.140733 | 31.572873 |
+| margen | 0.567860 | — |
+| grado | FRAGIL | FRAGIL |
+| peso_relativo | 0.229 | 0.224954 |
+| % relleno | 59.95 | 65.43 |
 
-- Paper y Spec (fórmulas).
-- `motor/COMPARACION_GRAVEDAD_CASOS_20261113.json` (valores ya calculados para Mozart).
-- Implementación `motor/motor/lateral_comportamiento_post_meseta_v1.py` (solo para verificar que las fórmulas del paper coinciden con el código; no se ejecutó sobre Mozart).
+Método de cierre: MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020. Compuerta: LATENCIA_INFORMACIONAL, cierre_propuesto=false, feeds_H=false.
 
-## 2. Valores conocidos vs. lo publicado
+## Reproducción cifra por cifra
 
-Fuente: `COMPARACION_GRAVEDAD_CASOS_20261113.json` y tabla 12 del paper. Coinciden entre sí.
+Fórmula aplicada (de MOTOR_V15_3_UNICO_20260927.py, `_frac_scores` + lateral aditivo + resolución):
 
-| Campo | Publicado (paper / comparación) | Estado |
-|-------|----------------------------------|--------|
-| Sol (H1) | `utopia_autonomia_atenas` | Coincide |
-| Peso Sol Z | 0.7985 | Coincide |
-| Nudos | 6 | Coincide |
-| Capturados | 0 | Coincide |
-| Siendo jalados | 1 (`predictivo_02_mdp_politica_optima`) | Coincide |
-| Resisten | 1 (`dumezil_f3_fecundidad`) | Coincide |
-| Cometa | C6, 6 nudos, salto 0.482 | Coincide |
-| Proporcionalidad | **-0.777** | Coincide |
-| Punto no considerado | `situacion_dramatica_ambicion` (rango Z 10, pendiente 0.3571) | Coincide |
-| Cocina abajo | 3 familias / 0 tokens; emergentes: 2 | Coincide |
+1. 40 dimensiones base (las 43 de `predictor.dimensions` menos las 3 de resolución).
+2. Rank fraccional por dimensión: valores iguales comparten el rango promedio; score = 1 - avg_rank / (N-1), N=5 candidatas.
+3. Suma de señales laterales crudas (`lateral_signal_contributions`, 10 señales).
+4. Suma de ranks fraccionales de resolution_micro / meso / macro.
 
-No se re-calcularon estos números desde el RESULT porque el archivo no está. La coincidencia es entre las dos fuentes publicadas, no una reproducción independiente como la de Gemini sobre Napoleón.
+Resultado:
 
-## 3. Revisión del spec y del paper
+| candidata | reportado | reconstruido | diff |
+|---|---|---|---|
+| utopia_autonomia_atenas | 32.140733 | 32.140733 | -8e-8 |
+| utopia_mentalidad_liberal | 31.572873 | 31.572873 | -3.3e-7 |
+| 30_ambicion | 28.113657 | 28.113657 | -4.6e-7 |
+| schwartz_10_autodireccion | 24.865760 | 24.865760 | +2e-8 |
+| arquetipo_el_creador | 23.659369 | 23.659369 | +1.7e-7 |
 
-### 3.1 ¿Las fórmulas se entienden y se pueden reproducir sin el código?
+Diff dentro de error de punto flotante. techo_rank = 53 (43 dims + 10 laterales). índice_fusion_relativo_0_1 H1 = 32.140733/53 = 0.606429, coincide con el publicado.
 
-Sí. El paper (§3–§9) y el Spec JSON dan:
+## Qué sostiene a H1 vs H2
 
-- Condición de meseta (`MESeta_O_ESTABILIZACION`).
-- Comportamiento (conteos de cocina, emergentes, formas).
-- Punto no considerado (primer emergente o subiendo que no está en el top).
-- Sol = H1, peso en Z desde `P_FULL_244`.
-- Estados de nudo: CAPTURADO (`dist ≤ 0.01`), SIENDO_JALADO (`dist > 0.05` y `pend ≥ 0.5`), RESISTE (`dist > 0.05` y `pend < 0.2`), resto EN_TRANSITO.
-- Cometa = corte con mayor `(nudos_que_suben, salto_total)` donde salto > 0.05.
-- Proporcionalidad = Pearson(pendiente, distancia_al_sol), mínimo 3 nudos.
-- Proyectivo: captura por extrapolación monótona + alerta de pulso.
+H1 (utopia_autonomia_atenas) toma rango 1.0 en: relational_alignment, stinkbox_support, lateral_shared_evidence, trajectory_meso_support, propp_signal, propp_transgression, structural_shared_evidence, structural_contribution.
 
-Estas reglas coinciden con `leer_gravedad` y `proyectar_gravedad` en el lateral. No hace falta el código para entenderlas.
+H2 (utopia_mentalidad_liberal) toma rango 1.0 en: delta, axis_convergence, geometric_inertia_alignment, geometric_direction_change, trajectory_micro_support, trajectory_acceleration_support, trajectory_inertia_alignment, trajectory_curvature_response.
 
-### 3.2 ¿Falta algo para reproducirlo en cualquier caso?
+Features propias H1: own_pattern_evidence 0.71, propp_signal 0.945, booker_signal 0.746, frye_support 0.693, greimas_support 0.661, structural_shared_evidence 0.761, dynamis_tokens_active = competencia + creatividad + desafio_autoridad.
 
-Sí, para un caso nuevo:
+Laterales H1 (crudos): traza_campo_244 0.911, plugin_reporte_3d 0.812, billar_circular_v0_2 0.667, ricci_forman_v0_1 0.638, lateral_metrics_v1_1 1.0, acero_zoomout 0.613, plugin_picos_mesetas 1.0, negativo_ricci_vs_billar 1.0, familias_tokens_puente 1.0, polti_caldero 0.0.
 
-1. El RESULT completo con `motor.cuts[].P_FULL_244` y `movimiento_de_fondo.familias_bajo_top5_subiendo_de_rango` (pendiente y rango). Sin eso no se puede calcular distancia, estado, cometa ni Pearson.
-2. El ejemplo trabajado de Napoleón en el Spec es autosuficiente. Mozart no tiene un ejemplo trabajado con la lista de nudos y sus pesos; solo el resumen. Por eso Gemini pudo reproducir Napoleón al 100 % y aquí no se puede hacer lo mismo con Mozart.
-3. El campo `corte` en cada elemento de `motor.cuts` es necesario para nombrar el cometa (C6, C9, etc.).
+## Estado de componentes
 
-### 3.3 ¿La proporcionalidad negativa de Mozart (-0.777) tiene sentido?
+Ejecutados y alimentan H: polti_caldero, traza_campo_244, plugin_reporte_3d, billar_circular_v0_2, ricci_forman_v0_1, lateral_metrics_v1_1, acero_zoomout, plugin_picos_mesetas, motor_interrelacion_extensible, sujetos_014, dynamis_dramatica_sistemica, stinkbox_transport, filtro_relleno_013, stinkbox_to_light_bus, laterales_unico_v1 (pre), hub:negativo_ricci_vs_billar, hub:familias_tokens_puente, hipotesis_trayectoria_abierta.
 
-Sí, con la interpretación del Spec (§8.4 / `formulas.gravedad.proporcionalidad.interpretacion`):
+Ejecutados sin alimentar H (TRAZA_SOLO o ACTIVA_MUDA): geometria, otto_numinoso, embudo_clinico, trayectoria_hosteleria (SIN_SENAL), estabilidad_vectorial, aquiles_h, capa2_antecedentes, plugin_arquetipos_dinamicos (SIN_SENAL), predictor_vecinos_prefijo_v1 (SIN_PREFIJO_EN_INPUT), cameo_*, sidecar_caldero (FIXTURE), pre_h_analogical_search (FIXTURE), compuerta_cierre, guardianes, ruta_cierre_latente, predictibilidad_set_021.
 
-- **Negativa** = cerca del Sol sube más rápido = gravedad clásica / consolidación.
-- **Positiva** = lejos del Sol sube más rápido = convergencia (caer hacia el Sol).
+Dimensiones excluidas por constante (23): relational_activity, caldero_neighbor_*, cameo_*, geometric_*_context/latest_movement, propp_damage, greimas_opponent_friction, coupling_opponent, dynamis_* (varios buckets en 0), analog_alignment. Motivo documentado en dimension_guard.
 
-Napoleón +0.568 es convergencia (los lejanos aceleran). Mozart -0.777 es el caso opuesto: los que ya están cerca del Sol (`utopia_autonomia_atenas` a 0.7985) son los que suben más rápido. Eso es coherente con "consolidación" y con que haya 0 capturados y solo 1 siendo jalado. El signo no es un error de signo en la fórmula; es el patrón que el Spec predice para un campo que se está cerrando alrededor del atractor.
+## Lectura
 
-### 3.4 ¿El límite honesto está bien planteado?
+El motor cerró H1/H2 por rank_fusion con margen 0.56786 (banda FRAGIL). La reproducción independiente confirma que el número es la suma exacta de ranks fraccionales de 40 dimensiones + 10 laterales crudos + 3 ranks de resolución. No hay señal lateral dominante única; H1 gana por convergencia de Propp, estructura y laterales de traza/reporte_3d, mientras H2 gana en geometría e inercia. Caldero de vecinos no aportó (SIN_PREFIJO_EN_INPUT). La compuerta no detuvo la ejecución ni cambió el orden.
 
-Sí. El Spec y el paper (§9.3) dejan claro que el cometa es retrospectivo: el salto lo produce un pulso nuevo de `masa_favor` que llega con los tokens del corte. No se puede predecir el corte exacto ni el tamaño antes de que entre el pulso. Lo proyectivo es la extrapolación de la tendencia de distancia y la alerta cuando el pulso ya entró (intervalo observado 3–4 cortes: Napoleón C5→C9, Mozart C6→C9). Eso no promete el corte del cometa; solo avisa.
-
-## 4. Conclusión
-
-- Los valores publicados para Mozart son internamente consistentes (paper = comparación JSON).
-- El Spec es legible y reproducible sin código, siempre que se tenga el RESULT.
-- La proporcionalidad negativa es la interpretación correcta según el Spec (consolidación).
-- El límite honesto está bien puesto.
-- **No se puede afirmar una reproducción independiente de Mozart** hasta que esté disponible `RESULT_MOZART_CON_TEXTO_Z90_20261113.json` (o equivalente) con `P_FULL_244` y la lista de nudos.
-
-## 5. Qué falta para cerrar
-
-Subir el RESULT de Mozart a la rama (o indicar la ruta real si ya existe bajo otro nombre). Con eso se puede recomputar sol, nudos, cometa y Pearson y comparar cifra por cifra como hizo Gemini con Napoleón.
+Revisión hecha sobre el RESULT sellado. No se reejecutó el motor.
