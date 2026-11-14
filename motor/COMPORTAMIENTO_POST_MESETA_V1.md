@@ -70,6 +70,26 @@ subiendo de rango) y se busca PROPORCIONALIDAD.
 - **COMETA:** el corte donde varios nudos saltan a la vez (un arrastre).
 - **PROPORCIONALIDAD:** correlación pendiente ~ distancia al Sol.
 
+## Proyectivo (Marco, 2026-11-13) — `proyectar_gravedad(result, hasta_corte)`
+La retrospectiva (leer_gravedad) NO se elimina: queda como referencia para
+comparación e ingeniería inversa. Lo proyectivo es una ADICIÓN.
+
+Lee solo los cortes hasta `hasta_corte` y proyecta hacia adelante:
+- **Captura prevista:** si la distancia al Sol se cierra de forma monótona
+  (últimos 3 cortes), se extrapola el corte en que llega a 0. Si oscila o no
+  se cierra: NO_PROYECTABLE.
+- **Pulso / alerta de cometa:** si en el corte llegó masa_favor (>0), un
+  pulso acaba de entrar. Los pulsos se repiten a los ~3-4 cortes (Napoleón
+  C5->C9, Mozart C6->C9): se advierte un posible cometa en los siguientes
+  1-3 cortes (alerta, no predicción exacta).
+- **Dirección:** signo de la proporcionalidad hasta ahora.
+
+LÍMITE HONESTO: el salto del cometa lo causa un pulso nuevo de masa_favor
+que llega con el contenido del corte (tokens nuevos del input). No se puede
+predecir el corte exacto ni el tamaño del salto antes de que el pulso llegue,
+porque eso sería predecir el contenido del siguiente corte. Lo proyectivo es
+la extrapolación de la tendencia y la alerta temprana cuando el pulso ya entró.
+
 ## Verificación
 - `leer_resultado` contra `RESULT_NAPOLEON_10CORTES_FINAL27.json` (2026-11-13):
   en_meseta True, 7 familias bajo el top5 suben de rango, 0 cocinando,
@@ -84,3 +104,8 @@ subiendo de rango) y se busca PROPORCIONALIDAD.
   el más lento, 0.114 — su propia gravedad, "come al resto"); en tránsito
   `dumezil_f3_fecundidad`. Cometa en **C9** (3 nudos suben, salto total 0.32).
   Proporcionalidad pendiente~distancia: **0.568**.
+- **Proyectivo en FINAL27:** hasta C5 predice captura de predictivo_02 y
+  situacion_ambicion en C7 (real: C6, a 1 corte) y de dumezil_f3 en C9
+  (real: 0.014 en C10, casi capturado). Hasta C8 el pulso (3 nudos) alerta
+  cometa en 1-3 cortes y el cometa real es C9 (a 1 corte). La
+  proporcionalidad ya es estable desde C4 (0.675) hasta C8 (0.665).

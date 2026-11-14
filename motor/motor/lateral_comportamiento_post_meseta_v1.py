@@ -170,6 +170,146 @@ def leer_gravedad(result):
     }
 
 
+def proyectar_gravedad(result, hasta_corte=None):
+    """Versión PROYECTIVA de la gravedad (Marco, 2026-11-13). La retrospectiva
+    (leer_gravedad) NO se elimina: queda como referencia para comparación e
+    ingeniería inversa. Esta función es una ADICIÓN.
+
+    Lee solo los cortes hasta `hasta_corte` (por defecto, todos los que trae
+    el RESULT) y proyecta hacia adelante, corte por corte:
+
+    - CAPTURA PREVISTA: si la distancia al Sol se está cerrando de forma
+      monótona (últimos 3 cortes), se extrapola linealmente el corte en que
+      llega a 0. Si la distancia oscila o no se cierra: NO_PROYECTABLE.
+    - PULSO DETECTADO: si en el corte `hasta_corte` llegó masa_favor (>0),
+      un pulso acaba de entrar. Los pulsos se repiten a los ~3-4 cortes
+      (Napoleón C5->C9, Mozart C6->C9): se advierte un posible cometa en
+      los siguientes 1-3 cortes (alerta, no predicción exacta).
+    - DIRECCIÓN: signo de la proporcionalidad hasta ahora (convergencia +
+      o consolidación -), si hay suficientes nudos.
+
+    LÍMITE HONESTO: el salto del cometa lo causa un pulso nuevo de masa_favor
+    que llega con el contenido del corte (tokens nuevos del input). No se
+    puede predecir el corte exacto ni el tamaño del salto antes de que el
+    pulso llegue, porque eso sería predecir el contenido del siguiente corte.
+    Lo proyectivo es la extrapolación de la tendencia y la alerta temprana
+    cuando el pulso ya entró.
+    """
+    result = result or {}
+    si = result.get("salida_interpretable") or {}
+    h1 = None
+    h1d = si.get("H1")
+    if isinstance(h1d, dict):
+        h1 = h1d.get("familia")
+    if not h1:
+        cands = (result.get("pred") or {}).get("candidates") or []
+        if cands:
+            h1 = (cands[0] or {}).get("family")
+    motor = result.get("motor") or {}
+    cuts = motor.get("cuts") or []
+    if not cuts or not h1:
+        return {"proyectable": False, "motivo": "sin cortes o sin H1"}
+    # hasta_corte: nombre de corte ('C6') o índice; por defecto el último
+    if hasta_corte is None:
+        k = len(cuts) - 1
+    elif isinstance(hasta_corte, str):
+        k = next((i for i, c in enumerate(cuts) if (c or {}).get("corte") == hasta_corte), len(cuts) - 1)
+    else:
+        k = max(0, min(int(hasta_corte), len(cuts) - 1))
+    corte_k = (cuts[k] or {}).get("corte")
+
+    def peso(fam, idx):
+        p = (cuts[idx] or {}).get("P_FULL_244") or {}
+        v = p.get(fam)
+        return v if isinstance(v, (int, float)) else None
+
+    mf = result.get("movimiento_de_fondo") or {}
+    sf = mf.get("series_familias") or {}
+    fams = mf.get("familias_bajo_top5_subiendo_de_rango") or []
+    # familias a proyectar: las del fondo + las que tienen serie
+    fams_nombres = []
+    for f in fams:
+        if f.get("familia"):
+            fams_nombres.append(f["familia"])
+    peso_sol_k = peso(h1, k)
+    proyecciones = []
+    for fam in fams_nombres:
+        # distancia al Sol en los últimos cortes (hasta k)
+        dists = []
+        for i in range(max(0, k - 4), k + 1):
+            ps = peso(h1, i); pn = peso(fam, i)
+            if ps is not None and pn is not None:
+                dists.append((i, ps - pn))
+        if len(dists) < 3:
+            proyecciones.append({"familia": fam, "proyectable": False, "motivo": "pocos cortes con peso"})
+            continue
+        # ¿se cierra de forma monótona en los últimos 3?
+        ult = [d for _, d in dists[-3:]]
+        cierra = all(ult[i + 1] <= ult[i] + 1e-9 for i in range(len(ult) - 1)) and ult[-1] < ult[0]
+        captura = None
+        if cierra and len(ult) >= 2:
+            # extrapolación lineal con la pendiente de los últimos 3
+            import math
+            xs = list(range(len(ult))); ys = ult
+            n = len(xs); mx = sum(xs) / n; my = sum(ys) / n
+            den = sum((x - mx) ** 2 for x in xs)
+            m = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / den if den else 0
+            if m < -1e-9:
+                pasos = my / (-m) if my > 0 else 0
+                idx_cap = k + int(math.ceil(pasos))
+                captura = (cuts[idx_cap] or {}).get("corte") if idx_cap < len(cuts) else f"despues_de_{(cuts[-1] or {}).get('corte')}"
+        # pulso de masa en el corte k
+        s = sf.get(fam) or {}
+        masa = s.get("masa_favor_por_corte") or []
+        pulso_k = masa[k] if k < len(masa) else 0
+        proyecciones.append({
+            "familia": fam,
+            "distancia_al_sol_k": round(dists[-1][1], 3),
+            "cierra": bool(cierra),
+            "captura_prevista": captura,
+            "pulso_masa_en_k": pulso_k,
+            "proyectable": True,
+        })
+    # alerta de cometa: ¿llegó un pulso en k?
+    pulsos_k = [p for p in proyecciones if isinstance(p.get("pulso_masa_en_k"), (int, float)) and p["pulso_masa_en_k"] > 0]
+    cometa_previsto = None
+    if len(pulsos_k) >= 2:
+        cometa_previsto = {
+            "alerta": f"pulso de masa en {corte_k} en {len(pulsos_k)} nudos; posible cometa en los siguientes 1-3 cortes",
+            "nudos_con_pulso": [p["familia"] for p in pulsos_k],
+        }
+    # dirección hasta ahora (proporcionalidad con los datos hasta k)
+    prop = None
+    pares = []
+    for p in proyecciones:
+        if p.get("proyectable") and p.get("distancia_al_sol_k") is not None:
+            f = next((x for x in fams if x.get("familia") == p["familia"]), {})
+            pend = f.get("pendiente_rango_por_corte_(+sube)")
+            if pend is not None:
+                pares.append((p["distancia_al_sol_k"], pend))
+    if len(pares) >= 3:
+        import math
+        ds = [x[0] for x in pares]; ps = [x[1] for x in pares]
+        n = len(ds); md = sum(ds) / n; mp = sum(ps) / n
+        cov = sum((d - md) * (p - mp) for d, p in zip(ds, ps))
+        sd = math.sqrt(sum((d - md) ** 2 for d in ds)); sp = math.sqrt(sum((p - mp) ** 2 for p in ps))
+        prop = round(cov / (sd * sp), 3) if sd > 0 and sp > 0 else None
+    return {
+        "contrato": CONTRATO, "version": VERSION, "can_decide_H": CAN_DECIDE_H,
+        "modo": "PROYECTIVO", "hasta_corte": corte_k,
+        "sol": h1, "peso_sol_k": peso_sol_k,
+        "proyecciones": proyecciones,
+        "cometa_previsto": cometa_previsto,
+        "proporcionalidad_hasta_k": prop,
+        "lectura": (
+            f"proyección hasta {corte_k}: "
+            f"{sum(1 for p in proyecciones if p.get('captura_prevista'))} capturas previstas; "
+            + (cometa_previsto["alerta"] if cometa_previsto else "sin pulso de masa en este corte")
+            + (f"; proporcionalidad hasta aquí: {prop}" if prop is not None else "")
+        ),
+    }
+
+
 def leer_resultado(result):
     """Lee un RESULT completo y produce la lectura de comportamiento post-meseta."""
     result = result or {}
