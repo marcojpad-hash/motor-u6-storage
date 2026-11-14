@@ -1,0 +1,279 @@
+{
+  "case_id": "LISZT_NINO_7C",
+  "cuts": [
+    {
+      "A": [
+        [
+          "esfuerzo_sostenido_reciente",
+          0.72
+        ],
+        [
+          "determinacion",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.78
+        ],
+        [
+          "redes_prestigio",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "aprendizaje",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.75
+        ]
+      ],
+      "corte": "C1_1820",
+      "cut_id": "C1_1820",
+      "date": "1820-11-26",
+      "fecha_corte": "1820-11-26",
+      "hecho": "A los 9 años da sus primeros conciertos públicos en Sopron y Pressburg; un grupo de mecenas húngaros le financia los estudios en Viena.",
+      "id": "C1_1820"
+    },
+    {
+      "A": [
+        [
+          "mentoria_activa",
+          0.8
+        ],
+        [
+          "transmision_saber",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "redes_prestigio",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ]
+      ],
+      "corte": "C2_1822",
+      "cut_id": "C2_1822",
+      "date": "1822-12-01",
+      "fecha_corte": "1822-12-01",
+      "hecho": "Debut público en Viena el 1 de diciembre de 1822, un triunfo; estudia piano con Carl Czerny y composición con Antonio Salieri, y conoce a Beethoven y a Schubert.",
+      "id": "C2_1822"
+    },
+    {
+      "A": [
+        [
+          "generacion_ideas",
+          0.78
+        ],
+        [
+          "creatividad",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.78
+        ],
+        [
+          "estatus_social",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "orgullo",
+          0.78
+        ]
+      ],
+      "corte": "C3_1823",
+      "cut_id": "C3_1823",
+      "date": "1823-04-13",
+      "fecha_corte": "1823-04-13",
+      "hecho": "En su último concierto vienés, el 13 de abril de 1823, Beethoven —según la tradición— sube al escenario y lo besa en la frente; ese año aporta una variación al proyecto Diabelli junto a Schubert y Czerny.",
+      "id": "C3_1823"
+    },
+    {
+      "A": [
+        [
+          "carga_familiar",
+          0.72
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "escasez",
+          0.7
+        ],
+        [
+          "viaje",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "responsabilidad",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.75
+        ]
+      ],
+      "corte": "C4_1824",
+      "cut_id": "C4_1824",
+      "date": "1824-06",
+      "fecha_corte": "1824-06",
+      "hecho": "Con 12-13 años gira dando conciertos por ciudades alemanas y con lo que gana ayuda a sostener a su familia; en diciembre de 1823 ya vive en París.",
+      "id": "C4_1824"
+    },
+    {
+      "A": [
+        [
+          "perdida_familiar",
+          0.84
+        ],
+        [
+          "dependencia",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "cambio_repentino",
+          0.78
+        ],
+        [
+          "escasez",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "duelo",
+          0.82
+        ],
+        [
+          "resiliencia",
+          0.78
+        ]
+      ],
+      "corte": "C5_1827",
+      "cut_id": "C5_1827",
+      "date": "1827-08-28",
+      "fecha_corte": "1827-08-28",
+      "hecho": "Su padre Adam muere de fiebre tifoidea el 28 de agosto de 1827 en Boulogne-sur-Mer; con 15 años Liszt se instala en París con su madre y se gana la vida dando clases.",
+      "id": "C5_1827"
+    },
+    {
+      "A": [
+        [
+          "rivalidad_profesional",
+          0.78
+        ],
+        [
+          "competencia",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.75
+        ],
+        [
+          "reconocimiento_previo",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "ambicion",
+          0.84
+        ],
+        [
+          "vision",
+          0.8
+        ]
+      ],
+      "corte": "C6_1831",
+      "cut_id": "C6_1831",
+      "date": "1831-03",
+      "fecha_corte": "1831-03",
+      "hecho": "En marzo de 1831 escucha a Paganini en París y decide ser el Paganini del piano; ya es una figura del círculo parisino junto a Chopin y Berlioz.",
+      "id": "C6_1831"
+    },
+    {
+      "A": [
+        [
+          "compromiso_afectivo",
+          0.75
+        ],
+        [
+          "atraccion_prohibida",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "estatus_social",
+          0.78
+        ],
+        [
+          "redes_prestigio",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "pasion",
+          0.82
+        ],
+        [
+          "triunfo",
+          0.78
+        ]
+      ],
+      "corte": "C7_1835",
+      "cut_id": "C7_1835",
+      "date": "1835-12-24",
+      "fecha_corte": "1835-12-24",
+      "hecho": "A los 24 años es el virtuoso consagrado de París; vive con Marie d'Agoult y el 24 de diciembre de 1835 nace su hija Blandine.",
+      "id": "C7_1835"
+    }
+  ],
+  "freeze": "1823-04-13",
+  "person": "Franz Liszt",
+  "question": "¿Cuál es el tema central de esta vida?",
+  "random_seed": 20261113,
+  "source_notes": "https://en.wikipedia.org/wiki/Franz_Liszt ; https://en.wikipedia.org/wiki/Life_of_Franz_Liszt (solo hechos hasta dic-1835)",
+  "tipo_sujeto": "genio_nino",
+  "z_work_date": "1835-12-24",
+  "z_work_kind": "CASE_CUTOFF"
+}

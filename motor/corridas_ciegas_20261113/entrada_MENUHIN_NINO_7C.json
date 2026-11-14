@@ -1,0 +1,279 @@
+{
+  "case_id": "MENUHIN_NINO_7C",
+  "cuts": [
+    {
+      "A": [
+        [
+          "mentoria_activa",
+          0.75
+        ],
+        [
+          "transmision_saber",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "soporte",
+          0.78
+        ],
+        [
+          "oportunidad",
+          0.7
+        ]
+      ],
+      "P": [
+        [
+          "aprendizaje",
+          0.8
+        ],
+        [
+          "iniciativa_infantil",
+          0.78
+        ]
+      ],
+      "corte": "C1_1920",
+      "cut_id": "C1_1920",
+      "date": "1920-06",
+      "fecha_corte": "1920-06",
+      "hecho": "A los 4 años recibe sus primeras lecciones de violín con Sigmund Anker; sus padres habían querido a Louis Persinger, que al principio se negó a enseñarle.",
+      "id": "C1_1920"
+    },
+    {
+      "A": [
+        [
+          "perfeccionismo",
+          0.75
+        ],
+        [
+          "determinacion",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "oportunidad",
+          0.8
+        ],
+        [
+          "redes_prestigio",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "reconocimiento",
+          0.78
+        ]
+      ],
+      "corte": "C2_1923",
+      "cut_id": "C2_1923",
+      "date": "1923-06",
+      "fecha_corte": "1923-06",
+      "hecho": "Con 7 años actúa como violinista solista con la Orquesta Sinfónica de San Francisco; Persinger entonces acepta ser su maestro.",
+      "id": "C2_1923"
+    },
+    {
+      "A": [
+        [
+          "competencia",
+          0.72
+        ],
+        [
+          "rivalidad_profesional",
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.78
+        ],
+        [
+          "viaje",
+          0.72
+        ]
+      ],
+      "P": [
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "vision",
+          0.75
+        ]
+      ],
+      "corte": "C3_1926",
+      "cut_id": "C3_1926",
+      "date": "1926-01-17",
+      "fecha_corte": "1926-01-17",
+      "hecho": "El 17 de enero de 1926, con 9 años, debuta en recital en Nueva York, en el Manhattan Opera House.",
+      "id": "C3_1926"
+    },
+    {
+      "A": [
+        [
+          "mentoria_activa",
+          0.82
+        ],
+        [
+          "transmision_saber",
+          0.78
+        ]
+      ],
+      "C": [
+        [
+          "redes_prestigio",
+          0.8
+        ],
+        [
+          "oportunidad",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "triunfo",
+          0.84
+        ],
+        [
+          "aprendizaje",
+          0.78
+        ]
+      ],
+      "corte": "C4_1927-02",
+      "cut_id": "C4_1927-02",
+      "date": "1927-02-26",
+      "fecha_corte": "1927-02-26",
+      "hecho": "El 26 de febrero de 1927, con 10 años, debuta en Europa como solista con la Orquesta Lamoureux de París, dirigida por Paul Paray; en París empieza a estudiar con Georges Enescu.",
+      "id": "C4_1927-02"
+    },
+    {
+      "A": [
+        [
+          "perfeccionismo",
+          0.78
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.75
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.8
+        ],
+        [
+          "estatus_social",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "orgullo",
+          0.75
+        ]
+      ],
+      "corte": "C5_1927-11",
+      "cut_id": "C5_1927-11",
+      "date": "1927-11-25",
+      "fecha_corte": "1927-11-25",
+      "hecho": "El 25 de noviembre de 1927, con 11 años, toca el concierto para violín de Beethoven con Fritz Busch y la Sinfónica de Nueva York, con una acogida extraordinaria del público y la crítica.",
+      "id": "C5_1927-11"
+    },
+    {
+      "A": [
+        [
+          "determinacion",
+          0.75
+        ],
+        [
+          "resiliencia",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "viaje",
+          0.78
+        ],
+        [
+          "reconocimiento_previo",
+          0.75
+        ]
+      ],
+      "P": [
+        [
+          "triunfo",
+          0.82
+        ],
+        [
+          "creatividad",
+          0.78
+        ]
+      ],
+      "corte": "C6_1929",
+      "cut_id": "C6_1929",
+      "date": "1929-06",
+      "fecha_corte": "1929-06",
+      "hecho": "En 1929, con 12-13 años, debuta en Berlín tocando tres conciertos (Bach, Beethoven y Brahms) bajo la batuta de Bruno Walter y debuta en Londres; hace sus primeras grabaciones como solista en 1928-29 con Persinger al piano.",
+      "id": "C6_1929"
+    },
+    {
+      "A": [
+        [
+          "mentoria_activa",
+          0.75
+        ],
+        [
+          "transmision_saber",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "legitimidad_percibida",
+          0.82
+        ],
+        [
+          "estatus_social",
+          0.78
+        ]
+      ],
+      "P": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "logro_personal",
+          0.8
+        ]
+      ],
+      "corte": "C7_1932",
+      "cut_id": "C7_1932",
+      "date": "1932-07",
+      "fecha_corte": "1932-07",
+      "hecho": "En julio de 1932, con 16 años, graba el concierto para violín de Elgar con el propio compositor dirigiendo la orquesta; ya es una celebridad mundial.",
+      "id": "C7_1932"
+    }
+  ],
+  "freeze": "1926-01-17",
+  "person": "Yehudi Menuhin",
+  "question": "¿Cuál es el tema central de esta vida?",
+  "random_seed": 20261114,
+  "source_notes": "https://en.wikipedia.org/wiki/Yehudi_Menuhin (solo hechos hasta jul-1932)",
+  "tipo_sujeto": "genio_nino",
+  "z_work_date": "1932-07",
+  "z_work_kind": "CASE_CUTOFF"
+}
