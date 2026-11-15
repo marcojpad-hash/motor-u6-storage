@@ -1165,6 +1165,34 @@ def post_predictor(case, motor, pred, result_view, base, reg):
     out["memento_vs_top1"] = {"proto_H1_configuracion": ph.get("H1_candidata"), "nucleo_tokens": nuc, "top1": top1,
                               "nucleo_en_favor_de_top1": [t for t in nuc if t in fav], "nucleo_en_contra_de_top1": [t for t in nuc if t in con],
                               "lectura": "cuántos tokens del núcleo Memento (PRE, sin mirar top1) pertenecen al patrón top1; sensor, no decide H"}
+
+    def par_superpuesto_entrada():
+        # PAR_SUPERPUESTO_ENTRADA_V1: el empate se traduce en el input como
+        # un par unificado (dos-pasadas), no como dos patrones que compiten.
+        # Sensor post-predictor; solo observa, no decide H.
+        m, _ = _load(base, "lateral_par_superpuesto_entrada_v1.py", "lu_par_sup_entrada")
+        if m is None:
+            return "NO_CORRE", "falta lateral_par_superpuesto_entrada_v1.py", None
+        r = m.observar(case, motor, pred)
+        if not r.get("declarado"):
+            return "ACTIVA_MUDA", "sin par_superpuesto_entrada en el input", r
+        return "ACTIVA", f"par {r.get('par')} coincide_H1_H2={r.get('coincide_con_H1_H2')} sup={r.get('cortes_en_superposicion')}/{r.get('n_cortes')} sim={r.get('simetria_media')}", r
+    out["par_superpuesto_entrada"] = _pieza("par_superpuesto_entrada", "lateral_par_superpuesto_entrada_v1.py", "SENSOR (par superpuesto declarado en el input, post-predictor; no decide H)", par_superpuesto_entrada, base, reg)
+
+    def comportamiento_post_meseta():
+        # COMPORTAMIENTO_POST_MESETA_V1: una vez estabilizado (meseta), ver el
+        # comportamiento de TODO (no solo el fondo). Sensor post-predictor;
+        # solo observa, no decide H. El fondo corre después de post_predictor,
+        # así que aquí solo se deja constancia del régimen; la lectura completa
+        # se hace con leer_resultado() sobre el RESULT.
+        m, _ = _load(base, "lateral_comportamiento_post_meseta_v1.py", "lu_comp_post_meseta")
+        if m is None:
+            return "NO_CORRE", "falta lateral_comportamiento_post_meseta_v1.py", None
+        r = m.observar(case, motor, pred)
+        if not r.get("en_meseta"):
+            return "ACTIVA_MUDA", f"no en meseta (regimen={r.get('regimen')})", r
+        return "ACTIVA", f"en meseta ({r.get('regimen')}): lectura completa con leer_resultado()", r
+    out["comportamiento_post_meseta"] = _pieza("comportamiento_post_meseta", "lateral_comportamiento_post_meseta_v1.py", "SENSOR (comportamiento una vez estabilizado, post-predictor; no decide H)", comportamiento_post_meseta, base, reg)
     return out
 
 
