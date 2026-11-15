@@ -1,0 +1,48 @@
+{
+ "lote": "TRADUCTOR_V28_20261113",
+ "fecha_corrida": "2026-11-13",
+ "casos": [
+  {
+   "case_id": "LIMBO_6C",
+   "lote": "TRADUCTOR_V28",
+   "result_sha256": "65107c935b1666172dc4c59f87757ae7ba1567eec7b371fce39c5b76f3fd3102",
+   "result_bytes": 10651982,
+   "entrada_sha256": "80f462f4aa8b24380a65be68e1946297f938c439845704477f5a0119cb9a80f7",
+   "receipt_sha256": "c411b9a1ce3733e65c7eb36ce245a776f6f62b8b47565c7ea6eb28f8b5f1377c",
+   "ok": true,
+   "receipt_status": "COMPLETED",
+   "seconds": 113.586,
+   "H1": "eterno_retorno_01_caos_primordial",
+   "H1_rank_fusion": null,
+   "H2": "apego_03_evitativo"
+  },
+  {
+   "case_id": "MOZART_NINO_7C",
+   "lote": "TRADUCTOR_V28",
+   "result_sha256": "965178228451188edea7a13a0fb52cf0e7a2457c193c42728555628b5b4e0e7f",
+   "result_bytes": 9912152,
+   "entrada_sha256": "c22c887b67a18c0bc6890d691741e5e76a9059bb76239cbf52c7d559724e939c",
+   "receipt_sha256": "316589cc66fe8dc0ab8903bde592dbe07e806f88ff219d65c37f8dea842dbe7b",
+   "ok": true,
+   "receipt_status": "COMPLETED",
+   "seconds": 77.98,
+   "H1": "arquetipo_el_creador",
+   "H1_rank_fusion": null,
+   "H2": "9_audaz_empresa"
+  },
+  {
+   "case_id": "CAL_F001_02_TESLA_7C",
+   "lote": "TRADUCTOR_V28",
+   "result_sha256": "ccc76a348eac8819222b98891567fade5fc750c3e7a81b6b366ad62fc1cb8717",
+   "result_bytes": 11875375,
+   "entrada_sha256": "105425f1e04c8b00c20e833e9d45eca2668c4bbcd92936812c9141ee4903066c",
+   "receipt_sha256": "c244c20c7c0564563c5491c8a4b61e9c256b2a7b8f6ffb033331964355ba6529",
+   "ok": true,
+   "receipt_status": "COMPLETED",
+   "seconds": 76.987,
+   "H1": "22_todo_sacrificado_por_una_pasion",
+   "H1_rank_fusion": null,
+   "H2": "30_ambicion"
+  }
+ ]
+}

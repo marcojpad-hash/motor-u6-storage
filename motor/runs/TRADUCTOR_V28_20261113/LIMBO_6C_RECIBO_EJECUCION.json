@@ -1,0 +1,985 @@
+{
+  "receipt_version": "EXECUTION_RECEIPT_V1",
+  "status": "COMPLETED",
+  "case_id": "LIMBO_6C",
+  "started_epoch": 1794630296.786506,
+  "finished_epoch": 1794630410.372951,
+  "duration_seconds": 113.586,
+  "input_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/corridas_ciegas_20261113/entrada_LIMBO_6C.json",
+  "input_sha256": "80f462f4aa8b24380a65be68e1946297f938c439845704477f5a0119cb9a80f7",
+  "normalized_input_sha256": "027efa76a57594ae8bc1440701c6612044074a867c2ab89d5ba5399d2eb3a300",
+  "output_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_LIMBO_6C.json",
+  "output_sha256": "65107c935b1666172dc4c59f87757ae7ba1567eec7b371fce39c5b76f3fd3102",
+  "runner_path": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/correr_estandar.py",
+  "runner_sha256": "a05d292f7fae1216ec47a3b080f803f61750e63a2499949357a0a5ae96ebd78f",
+  "motor_sha256": "cfb13415646d1ff1068a7eae3567068219f57f34bed727a1ab168947bdcdea08",
+  "canonical_engine_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+  "patterns_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+  "monte_carlo": true,
+  "stages": [
+    {
+      "stage": "input_read_and_normalization",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "integrity_preflight",
+      "status": "COMPLETED"
+    },
+    {
+      "stage": "canonical_engine_and_patterns_hash_check",
+      "status": "MATCH",
+      "canonical_engine_expected_sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "patterns_expected_sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+    },
+    {
+      "stage": "motor_run",
+      "status": "COMPLETED",
+      "monte_carlo": true
+    },
+    {
+      "stage": "monte_carlo_diagnostics",
+      "status": "EXECUTED",
+      "engine_observation_calls": 18,
+      "engine_observation_calls_with_mc_metrics": 18,
+      "total_simulations": 9925,
+      "converged_calls": 18,
+      "nonconverged_calls": 0,
+      "calls": [
+        {
+          "observation_id": "C1_2022_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_2022_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C1_2022_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 675,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_2024_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 529,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_2024_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C2_2024_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 483,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_2025_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_2025_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C3_2025_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_2026_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_2026_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C4_2026_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 676,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_2026_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 576,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_2026_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        },
+        {
+          "observation_id": "C5_2026_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_2026_P",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_2026_A",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 484,
+          "converged": true
+        },
+        {
+          "observation_id": "C6_2026_C",
+          "enabled_requested": true,
+          "status": "EXECUTED",
+          "simulations": 575,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "stage": "terminal_resolution",
+      "status": "RESUELTO_OPERACIONALMENTE",
+      "method": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+      "H1": {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "porcentaje_relleno": 61.31,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 0.0,
+          "booker": 34.7222,
+          "dynamis": 81.5476,
+          "estructura": 75.0,
+          "frye": 48.6111,
+          "geometria_inercia": 50.0,
+          "greimas": 68.75,
+          "otras_dimensiones": 76.1364,
+          "puente_lateral": 72.9535,
+          "resolucion": 83.3333,
+          "trayectoria_estado": 83.3333
+        },
+        "peso_relativo": 0.114571,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 66.0
+      },
+      "H2": {
+        "familia": "apego_03_evitativo",
+        "porcentaje_relleno": 49.95,
+        "desglose_relleno_por_grupo_pct": {
+          "acoplamiento": 8.3333,
+          "booker": 34.7222,
+          "dynamis": 51.1905,
+          "estructura": 54.1667,
+          "frye": 51.3889,
+          "geometria_inercia": 62.5,
+          "greimas": 56.25,
+          "otras_dimensiones": 50.7576,
+          "puente_lateral": 86.7592,
+          "resolucion": 41.6667,
+          "trayectoria_estado": 51.6667
+        },
+        "peso_relativo": 0.094534,
+        "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+        "predictibilidad_estructural_pct": 55.73
+      }
+    },
+    {
+      "stage": "external_archetype_search",
+      "status": "EXECUTED_WITH_RESULTS",
+      "required": false,
+      "provider": "duckduckgo_lite",
+      "query_count": 1,
+      "result_count": 8,
+      "query_sha256": "a59d56c4e1d97abdd73db5dbc806debb9af4974560d394a526afc9c2600e7882"
+    },
+    {
+      "stage": "filtro_entrada_dirigida_017",
+      "status": "TRAZA_SIN_MODIFICACION",
+      "modo": "traza",
+      "n_aplicadas": 0
+    },
+    {
+      "stage": "consulta_dirigida",
+      "status": "NO_CONFIGURADO",
+      "modo": "off",
+      "adaptador": "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+      "n_preguntas": 0,
+      "verificacion_no_escribe_H": "DATO_AUSENTE_REQUIERE_CLASIFICACION"
+    },
+    {
+      "stage": "result_json_written",
+      "status": "COMPLETED",
+      "sha256": "65107c935b1666172dc4c59f87757ae7ba1567eec7b371fce39c5b76f3fd3102"
+    },
+    {
+      "stage": "unification_manifest_check",
+      "manifest": "UNIFICACION_SHA256_MANIFEST.json",
+      "manifest_sha256": "f5630bcb86ae31774f0c03a22841ca86461756be0d5195ba65de284b07b0aac2",
+      "manifest_files": 314,
+      "deriva": [
+        {
+          "path": "capa_llm/consulta_dirigida_v1.py",
+          "manifiesto": "573870a998fb",
+          "actual": "3d4d1154c08d"
+        },
+        {
+          "path": "correr_estandar.py",
+          "manifiesto": "19b5585c26b0",
+          "actual": "a05d292f7fae"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_AUDIT.json",
+          "manifiesto": "56fbe97d8f12",
+          "actual": "57e12dfbb91f"
+        },
+        {
+          "path": "motor/CONSISTENCY_ADVERSARIAL_LLM_PACKET.json",
+          "manifiesto": "f0912a3415f6",
+          "actual": "26c1f7eadd62"
+        },
+        {
+          "path": "motor/CONSISTENCY_AUTONOMA_LLM_PACKET.json",
+          "manifiesto": "07b20659a5ca",
+          "actual": "e2be0f45ea1b"
+        },
+        {
+          "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
+          "manifiesto": "c8da733e2f02",
+          "actual": "cfb13415646d"
+        },
+        {
+          "path": "motor/cameo_codebook_lateral_v1.json",
+          "manifiesto": "d575473d4ea4",
+          "actual": "6f043d41dc9a"
+        },
+        {
+          "path": "motor/estado_latencia_decimo_hombre.json",
+          "manifiesto": "a3818cc8f378",
+          "actual": "cc51a5c8c031"
+        },
+        {
+          "path": "motor/estado_latencia_v15_3_nativo.json",
+          "manifiesto": "80d1605b619f",
+          "actual": "32f4f933567a"
+        },
+        {
+          "path": "motor/geometria_multicapa/adaptador_convergencia_real_v1.py",
+          "manifiesto": "0cbfacf280bf",
+          "actual": "b1723f1a7ebd"
+        },
+        {
+          "path": "motor/geometria_multicapa/teseracto_recursivo_geometria_v0_4.py",
+          "manifiesto": "4e792ad228ce",
+          "actual": "b629d8e35bbf"
+        },
+        {
+          "path": "motor/guardianes_control_v1.py",
+          "manifiesto": "e043b84cca0c",
+          "actual": "db02955474c9"
+        },
+        {
+          "path": "motor/hipotesis_trayectoria_abierta_v1.py",
+          "manifiesto": "0199af0d65eb",
+          "actual": "53c74e7d23e4"
+        },
+        {
+          "path": "motor/laterales_unico_v1.py",
+          "manifiesto": "3ae6ffbf7a88",
+          "actual": "3ab030de99a0"
+        },
+        {
+          "path": "motor/plugin_cameo_institucional.py",
+          "manifiesto": "98a58d5bed02",
+          "actual": "c159ade7fcb6"
+        },
+        {
+          "path": "motor/plugin_circulo_monomito_v2.py",
+          "manifiesto": "9a6d858200f8",
+          "actual": "56a13786843f"
+        },
+        {
+          "path": "motor/plugin_trayectoria_hosteleria.py",
+          "manifiesto": "06b368ff5ce1",
+          "actual": "cffa3a7377ab"
+        },
+        {
+          "path": "motor/predictibilidad_set_021.py",
+          "manifiesto": "1d1ac27244ac",
+          "actual": "14418966d5cb"
+        },
+        {
+          "path": "motor/stinkbox_transport_v0_2.py",
+          "manifiesto": "a0253e6e2f51",
+          "actual": "7b9f761299ce"
+        },
+        {
+          "path": "motor/zonas_7783.json",
+          "manifiesto": "2148a44cb599",
+          "actual": "6f334bbd954a"
+        },
+        {
+          "path": "tests/test_catalog_integrity_contract.py",
+          "manifiesto": "3a424168dc51",
+          "actual": "1ed3d6c43e61"
+        }
+      ],
+      "ausentes": [],
+      "motor_fuera_de_manifiesto": [
+        "motor/MOTOR_V15_3_UNICO_20260927.py.pre-cableado-caldero",
+        "motor/MOTOR_V15_3_UNICO_20260927.py.pre-cuartos-contra",
+        "motor/SPEC_SCHRODINGER_V0_1.md",
+        "motor/bolsitas_tropo_v1.py",
+        "motor/ceb_runs/CAL_F001_01_NAPOLEON_1794180347369.flow_ledger.jsonl",
+        "motor/familias_tokens/black_mirror_tecnodistopia_lateral.json",
+        "motor/familias_tokens/cibernetica_ceguera_sensorial_algedonica.json",
+        "motor/familias_tokens/comunes_colapso_por_sobreexplotacion.json",
+        "motor/familias_tokens/geopolitica_interdependencia_armada.json",
+        "motor/familias_tokens/geopolitica_sobreextension_imperial_kennedy.json",
+        "motor/familias_tokens/geopolitica_trampa_recursos_rentismo.json",
+        "motor/familias_tokens/institucional_deriva_extractiva.json",
+        "motor/familias_tokens/juego_compromiso_irreversible_chicken.json",
+        "motor/familias_tokens/juego_escalada_dilema_seguridad.json",
+        "motor/familias_tokens/sistemica_acoplamiento_estrecho_accidente_normal.json",
+        "motor/familias_tokens/transicion_salida_voz_lealtad_hirschman.json",
+        "motor/lateral_comportamiento_post_meseta_v1.py",
+        "motor/lateral_par_superpuesto_entrada_v1.py",
+        "motor/lateral_traduccion_salida_v1.py",
+        "motor/observador_externo_v1.py",
+        "motor/plugin_circulo_monomito_v2.py.pre-cableado-caldero",
+        "motor/plugin_circulo_monomito_v2.py.pre-cuartos-contra",
+        "motor/schrodinger_transport_v0_1.py",
+        "motor/schrodinger_transport_v0_2.py"
+      ],
+      "bloqueantes": [],
+      "bloquea": false,
+      "status": "DRIFT_WARNED"
+    },
+    {
+      "stage": "candado_plugins",
+      "status": "OK",
+      "verificados": 116,
+      "fallos": [],
+      "bloquea": false
+    },
+    {
+      "stage": "ceb_ledger_preserved",
+      "status": "COMPLETED",
+      "manifiesto": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_LIMBO_6C_CEB_LEDGER_MANIFIESTO.json",
+      "ledgers": [
+        {
+          "copia": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/RESULT_LIMBO_6C_CEB_LEDGER_1.jsonl",
+          "sha256": "0c3e79d75c893249d5a1d97e792429993b824a02439635fb0be303c26ec0a83e",
+          "lineas": 36830
+        }
+      ]
+    },
+    {
+      "stage": "stinkbox_persistent_registry_primary_checkpoint",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "stinkbox_persistent_registry_ingest",
+      "status": "OK",
+      "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+      "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE"
+    },
+    {
+      "stage": "gate_z90",
+      "status": "RECHAZADO_DIAGNOSTICO",
+      "n_errores": 7,
+      "errores": [
+        "R1 modo_z debe ser 'historico' o 'vivo'",
+        "R3 C1_2022: sin 'evidencia'",
+        "R3 C2_2024: sin 'evidencia'",
+        "R3 C3_2025: sin 'evidencia'",
+        "R3 C4_2026: sin 'evidencia'",
+        "R3 C5_2026: sin 'evidencia'",
+        "R3 C6_2026: sin 'evidencia'"
+      ],
+      "bloquea": false
+    },
+    {
+      "stage": "filogenia_mezcla",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/FILOGENIA_MEZCLA_LIMBO_6C.json",
+      "sha256_json": "f6e09f26783eb364fa849826b68c33410373ebb8c443f23b34c49cbb6f5354da",
+      "bloquea": false
+    },
+    {
+      "stage": "teoria_color",
+      "status": "EJECUTADO",
+      "json": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_LIMBO_6C.json",
+      "png": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/COLOR_RESULT_LIMBO_6C.png",
+      "sha256_json": "62ffc8875083dd91524c1957a37ae4dc5556158d1733543b363868c65d7ed42b",
+      "bloquea": false
+    }
+  ],
+  "archetype_search_receipt": {
+    "required": false,
+    "status": "EXECUTED",
+    "provider": "duckduckgo_lite",
+    "query_count": 1,
+    "result_count": 8,
+    "query_sha256": "a59d56c4e1d97abdd73db5dbc806debb9af4974560d394a526afc9c2600e7882",
+    "raw_sources": 8,
+    "self_match_discarded": 0,
+    "tokens_after_filter": 122,
+    "z_corte": "2026-11-13",
+    "corte_temporal": {
+      "aplicado": true,
+      "z_corte": "2026-11-13",
+      "z_fuente": "freeze/z_trabajo (fallback z90_date)",
+      "modo": "leniente",
+      "raw_n": 8,
+      "con_fecha_n": 0,
+      "sin_fecha_n": 8,
+      "descartadas_post_z": [],
+      "descartadas_sin_fecha": [],
+      "conservadas_sin_fecha_n": 8,
+      "tokens_antes_corte": 122,
+      "tokens_despues_corte": 122
+    },
+    "query": "control impulsividad lealtad_pareja fidelidad intimidad compromiso frialdad desapego_emocional distancia_forzada silencio indiferencia_moral soledad incertidumbre abandono ruptura_pasado miedo celos adulterio traicion rivalidad competencia culpa arrepentimiento confrontacion busqueda_verdad honestidad desconfianza huida_del_llamado indecision perdida duelo",
+    "urls": [
+      "https://psicologiaymente.com/pareja/teoria-triangular-amor-sternberg",
+      "https://es.wikipedia.org/wiki/Teor%C3%ADa_triangular_del_amor",
+      "https://psicologoplus.com/teoria-triangular-amor-sternberg",
+      "https://titula.universidadeuropea.com/bitstream/handle/20.500.12880/2308/Martin%20MariadelaEncarnacion.pdf?sequence=1",
+      "https://es.scribd.com/document/839912207/Fidelidad-Lealtad-e-Interdependencia-en-las-Parejas-Claves-para-una-Relacion-Saludable",
+      "https://belenpicadopsicologia.com/triangulo-del-amor-sternberg/",
+      "https://emprendepsicologo.com/blog/teoria-triangular-del-amor-de-sternberg",
+      "https://afpsicologia.com/los-componentes-de-amor-de-pareja-equilibrado-teoria-triangula-de-sternberg/"
+    ],
+    "consultado_utc": "2026-11-14T04:24:59+00:00",
+    "selector": "auto",
+    "attempts": [
+      {
+        "provider": "ddgs",
+        "status": "FAILED",
+        "consultado_utc": "2026-11-14T04:24:58+00:00",
+        "error": "buscador ddgs fallido: No module named 'duckduckgo_search'"
+      },
+      {
+        "provider": "duckduckgo_html",
+        "status": "FAILED_NO_RESULTS",
+        "consultado_utc": "2026-11-14T04:24:58+00:00",
+        "error": "buscador duckduckgo_html sin resultados URL verificables"
+      },
+      {
+        "provider": "duckduckgo_lite",
+        "status": "EXECUTED",
+        "consultado_utc": "2026-11-14T04:24:59+00:00"
+      }
+    ],
+    "llm": false
+  },
+  "terminal_resolution": {
+    "status": "RESUELTO_OPERACIONALMENTE",
+    "H1": "eterno_retorno_01_caos_primordial",
+    "H2": "apego_03_evitativo",
+    "metodo": "MOTOR_RANK_FUSION_DESEMPATA_SOLO_EN_BANDA_020",
+    "grado": "AJUSTADA",
+    "estado_durante_corrida": "EVIDENCIA_SEPARADA",
+    "tortugas_ejecutado": true,
+    "tortugas_aplicado_al_orden": true,
+    "tortugas_no_reordena_fuera_de_banda": false,
+    "arquetipos_busqueda_status": "EXECUTED_WITH_SOURCES_NO_LLM_HINTS",
+    "llm_neighbor_hints_n": 0,
+    "casos_semejantes_consultados": 0,
+    "nota": "la incertidumbre se conserva en grado/objeciones; el estado terminal es una decisión operacional, no verdad validada"
+  },
+  "continuidad_corrida": {
+    "status": "NO_PAUSADA",
+    "final_decision_authorized": true
+  },
+  "huellas_declaradas_ausentes": [
+    {
+      "path": "$.matriz_mortalidad_z90.data_table_sha256",
+      "valor": "NO_APLICA_SIN_TABLA",
+      "motivo": "no existe mortality_statistics.jsonl.gz ni mortality_statistics.json ni filas mortality_statistics/mortality_observations en el input; ausencia declarada, no hash inventado"
+    }
+  ],
+  "salida_interpretable": {
+    "metodo": "indice_potencial_equilibrado_pct",
+    "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+    "unidad": "% de relleno estructural",
+    "rango": "0–100%",
+    "es_probabilidad": false,
+    "es_porcentaje_de_acierto": false,
+    "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+    "escala": {
+      "metodo": "indice_potencial_equilibrado_pct",
+      "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+      "unidad": "% de relleno estructural",
+      "rango": "0–100%",
+      "es_probabilidad": false,
+      "es_porcentaje_de_acierto": false,
+      "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+    },
+    "H1": {
+      "familia": "eterno_retorno_01_caos_primordial",
+      "porcentaje_relleno": 61.31,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 0.0,
+        "booker": 34.7222,
+        "dynamis": 81.5476,
+        "estructura": 75.0,
+        "frye": 48.6111,
+        "geometria_inercia": 50.0,
+        "greimas": 68.75,
+        "otras_dimensiones": 76.1364,
+        "puente_lateral": 72.9535,
+        "resolucion": 83.3333,
+        "trayectoria_estado": 83.3333
+      },
+      "peso_relativo": 0.114571,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 66.0
+    },
+    "H2": {
+      "familia": "apego_03_evitativo",
+      "porcentaje_relleno": 49.95,
+      "desglose_relleno_por_grupo_pct": {
+        "acoplamiento": 8.3333,
+        "booker": 34.7222,
+        "dynamis": 51.1905,
+        "estructura": 54.1667,
+        "frye": 51.3889,
+        "geometria_inercia": 62.5,
+        "greimas": 56.25,
+        "otras_dimensiones": 50.7576,
+        "puente_lateral": 86.7592,
+        "resolucion": 41.6667,
+        "trayectoria_estado": 51.6667
+      },
+      "peso_relativo": 0.094534,
+      "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+      "predictibilidad_estructural_pct": 55.73
+    },
+    "escala_predictibilidad": {
+      "nombre": "predictibilidad estructural (soporte interno)",
+      "es_probabilidad_calibrada": false,
+      "base_pct": 7.2667,
+      "techo_pct": 92.7333,
+      "pp_por_punto_de_rank_fusion": 1.612579,
+      "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar."
+    },
+    "hipotesis_necesarias_suficientes": [
+      {
+        "familia": "eterno_retorno_01_caos_primordial",
+        "rol": "eje",
+        "peso_en_set": 0.203879,
+        "predictibilidad_estructural_pct": 66.0,
+        "cobertura_unica_frac": 0.2562
+      },
+      {
+        "familia": "apego_03_evitativo",
+        "rol": "componente",
+        "peso_en_set": 0.168223,
+        "predictibilidad_estructural_pct": 55.73,
+        "cobertura_unica_frac": 0.1853
+      },
+      {
+        "familia": "36_perdida_de_los_seres_queridos",
+        "rol": "componente",
+        "peso_en_set": 0.150293,
+        "predictibilidad_estructural_pct": 50.56,
+        "cobertura_unica_frac": 0.0643
+      },
+      {
+        "familia": "34_remordimiento",
+        "rol": "componente",
+        "peso_en_set": 0.132019,
+        "predictibilidad_estructural_pct": 45.3,
+        "cobertura_unica_frac": 0.1285
+      },
+      {
+        "familia": "distopia_coercion_total",
+        "rol": "componente",
+        "peso_en_set": 0.125774,
+        "predictibilidad_estructural_pct": 43.5,
+        "cobertura_unica_frac": 0.1219
+      },
+      {
+        "familia": "monomito_05_cruce_del_primer_umbral",
+        "rol": "componente",
+        "peso_en_set": 0.113493,
+        "predictibilidad_estructural_pct": 39.96,
+        "cobertura_unica_frac": 0.117
+      },
+      {
+        "familia": "arquetipo_el_sabio",
+        "rol": "componente",
+        "peso_en_set": 0.10632,
+        "predictibilidad_estructural_pct": 37.89,
+        "cobertura_unica_frac": 0.0643
+      }
+    ],
+    "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+    "mezcla": {
+      "lectura": "H1_DOMINANTE",
+      "lectura_texto": "eterno_retorno_01_caos_primordial domina; apego_03_evitativo es rival distinto (margen 6.369424 >= 1.0 y afinidad 0.320928 < 0.5)",
+      "peso_H1": 0.114571,
+      "peso_H2": 0.094534,
+      "peso_H1_en_par": 0.547911,
+      "peso_H2_en_par": 0.452089
+    },
+    "grado": "AJUSTADA",
+    "conjunto_hipotesis_abiertas": {
+      "n_hipotesis": 10,
+      "cardinalidad_fija": false,
+      "hipotesis": [
+        {
+          "id": "H_001",
+          "familia": "eterno_retorno_01_caos_primordial",
+          "rol_en_set": "eje",
+          "rank_fusion": 36.420348,
+          "soporte_estructural_relativo": 0.14606662,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.248048,
+            "micro": 0.711004,
+            "meso": 0.573504,
+            "macro": 0.587564,
+            "aceleracion": 0.730009,
+            "divergencia_entre_escala": 0.137501,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_002",
+          "familia": "apego_03_evitativo",
+          "rol_en_set": "componente",
+          "rank_fusion": 30.050924,
+          "soporte_estructural_relativo": 0.12052156,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.059907,
+            "micro": 0.480543,
+            "meso": 0.527652,
+            "macro": 0.581666,
+            "aceleracion": 0.39454,
+            "divergencia_entre_escala": 0.101123,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_003",
+          "familia": "36_perdida_de_los_seres_queridos",
+          "rol_en_set": "componente",
+          "rank_fusion": 26.847908,
+          "soporte_estructural_relativo": 0.10767561,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.282312,
+            "micro": 0.782813,
+            "meso": 0.594992,
+            "macro": 0.545663,
+            "aceleracion": 0.782813,
+            "divergencia_entre_escala": 0.23715,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_004",
+          "familia": "social_13_le_bon_comportamiento_masas",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 26.709344,
+          "soporte_estructural_relativo": 0.10711989,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.03292,
+            "micro": 0.488802,
+            "meso": 0.532687,
+            "macro": 0.527891,
+            "aceleracion": 0.509466,
+            "divergencia_entre_escala": 0.043885,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_005",
+          "familia": "jaldun_02_institucionalizacion_y_sedentarismo",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 23.682144,
+          "soporte_estructural_relativo": 0.09497907,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.018147,
+            "micro": 0.492134,
+            "meso": 0.491041,
+            "macro": 0.489605,
+            "aceleracion": 0.506533,
+            "divergencia_entre_escala": 0.002529,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_006",
+          "familia": "34_remordimiento",
+          "rol_en_set": "componente",
+          "rank_fusion": 23.583489,
+          "soporte_estructural_relativo": 0.09458341,
+          "trazabilidad_geometrica": {
+            "regimen": "CONTINUIDAD_ASCENDENTE",
+            "senal_multiescala": 0.151042,
+            "micro": 0.490135,
+            "meso": 0.661031,
+            "macro": 0.575398,
+            "aceleracion": 0.152904,
+            "divergencia_entre_escala": 0.170897,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_007",
+          "familia": "distopia_coercion_total",
+          "rol_en_set": "componente",
+          "rank_fusion": 22.467939,
+          "soporte_estructural_relativo": 0.09010941,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.006259,
+            "micro": 0.485071,
+            "meso": 0.484525,
+            "macro": 0.521016,
+            "aceleracion": 0.503467,
+            "divergencia_entre_escala": 0.036491,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_008",
+          "familia": "sistema_domiciano",
+          "rol_en_set": "complementaria_trazabilidad_geometrica",
+          "rank_fusion": 20.311756,
+          "soporte_estructural_relativo": 0.08146187,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.006259,
+            "micro": 0.485071,
+            "meso": 0.484525,
+            "macro": 0.521016,
+            "aceleracion": 0.503467,
+            "divergencia_entre_escala": 0.036491,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_009",
+          "familia": "monomito_05_cruce_del_primer_umbral",
+          "rol_en_set": "componente",
+          "rank_fusion": 20.274131,
+          "soporte_estructural_relativo": 0.08131097,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": -0.036183,
+            "micro": 0.487736,
+            "meso": 0.453495,
+            "macro": 0.504495,
+            "aceleracion": 0.580623,
+            "divergencia_entre_escala": 0.051,
+            "n_cortes_observados": 6
+          }
+        },
+        {
+          "id": "H_010",
+          "familia": "arquetipo_el_sabio",
+          "rol_en_set": "componente",
+          "rank_fusion": 18.992673,
+          "soporte_estructural_relativo": 0.07617159,
+          "trazabilidad_geometrica": {
+            "regimen": "MESeta_O_ESTABILIZACION",
+            "senal_multiescala": 0.058792,
+            "micro": 0.501067,
+            "meso": 0.560791,
+            "macro": 0.52633,
+            "aceleracion": 0.264042,
+            "divergencia_entre_escala": 0.059724,
+            "n_cortes_observados": 6
+          }
+        }
+      ],
+      "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+    },
+    "apuesta_multiescenario": {
+      "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+      "escenarios": [
+        {
+          "escenario": "MESeta_O_ESTABILIZACION",
+          "hipotesis_que_convergen": [
+            "apego_03_evitativo",
+            "social_13_le_bon_comportamiento_masas",
+            "jaldun_02_institucionalizacion_y_sedentarismo",
+            "distopia_coercion_total",
+            "sistema_domiciano",
+            "monomito_05_cruce_del_primer_umbral",
+            "arquetipo_el_sabio"
+          ],
+          "n_hipotesis": 7,
+          "soporte_estructural_agregado": 0.65167436,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        },
+        {
+          "escenario": "CONTINUIDAD_ASCENDENTE",
+          "hipotesis_que_convergen": [
+            "eterno_retorno_01_caos_primordial",
+            "36_perdida_de_los_seres_queridos",
+            "34_remordimiento"
+          ],
+          "n_hipotesis": 3,
+          "soporte_estructural_agregado": 0.34832564,
+          "es_probabilidad": false,
+          "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+        }
+      ],
+      "apuesta_principal": {
+        "escenario": "MESeta_O_ESTABILIZACION",
+        "hipotesis_que_convergen": [
+          "apego_03_evitativo",
+          "social_13_le_bon_comportamiento_masas",
+          "jaldun_02_institucionalizacion_y_sedentarismo",
+          "distopia_coercion_total",
+          "sistema_domiciano",
+          "monomito_05_cruce_del_primer_umbral",
+          "arquetipo_el_sabio"
+        ],
+        "n_hipotesis": 7,
+        "soporte_estructural_agregado": 0.65167436,
+        "es_probabilidad": false,
+        "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+      },
+      "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+      "horizonte": "siguiente_corte",
+      "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+      "calibracion": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA"
+    }
+  },
+  "hypothesis_fronts_active_at_terminal": 0,
+  "null_values_in_result_json": 0,
+  "nonfinite_values_in_result_json": 0,
+  "result_missing_paths": [],
+  "result_nonfinite_paths": [],
+  "receipt_written_after_result": true,
+  "null_values_in_receipt": 0,
+  "nonfinite_values_in_receipt": 0,
+  "null_values_replaced_as_tortugas_in_receipt": 2,
+  "nonfinite_values_replaced_as_tortugas_in_receipt": 0,
+  "receipt_missing_paths": [
+    "$.stages[8].adaptador",
+    "$.stages[8].verificacion_no_escribe_H"
+  ],
+  "receipt_nonfinite_paths": [],
+  "stinkbox_persistent_registry_primary_checkpoint": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__LIMBO_6C",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__LIMBO_6C",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 5499
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 6,
+          "artifacts_skipped_same_sha": 244,
+          "new_event_records": 16652,
+          "new_token_strings": 59,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 5558
+        },
+        "stderr": ""
+      }
+    ]
+  },
+  "stinkbox_persistent_registry": {
+    "status": "OK",
+    "home": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_PERSISTENTE",
+    "storage": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+    "imports": [
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__LIMBO_6C",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/motor/runs/ESTANDAR__LIMBO_6C",
+          "artifacts_imported": 0,
+          "artifacts_skipped_same_sha": 1,
+          "new_event_records": 0,
+          "new_token_strings": 0,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 5558
+        },
+        "stderr": ""
+      },
+      {
+        "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+        "returncode": 0,
+        "detail": {
+          "status": "OK",
+          "source": "/home/hatch/workspace/u6-alterno/motor-cameo/STINKBOX_STORAGE",
+          "artifacts_imported": 5,
+          "artifacts_skipped_same_sha": 248,
+          "new_event_records": 19420,
+          "new_token_strings": 27,
+          "explicit_review_observations": 0,
+          "unique_tokens_total": 5585
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

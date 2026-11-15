@@ -1,0 +1,241 @@
+{
+ "case_id": "LIMBO_6C",
+ "person": "persona (anónima)",
+ "tipo_sujeto": "persona",
+ "question": "¿Qué es lo que podría pasar después de esto?",
+ "freeze": "2026-11-13",
+ "z_work_date": "2026-11-13",
+ "z_work_kind": "CASE_CUTOFF",
+ "random_seed": 20261113,
+ "source_notes": "Historia contada por la persona (2026-11-13, vía Marco). Relación de 4 años, vivían juntos. Seis momentos.",
+ "cuts": [
+  {
+   "id": "C1_2022",
+   "corte": "C1_2022",
+   "cut_id": "C1_2022",
+   "date": "2022-01",
+   "fecha_corte": "2022-01",
+   "hecho": "Hace cuatro años me junté con ella y nos fuimos a vivir juntos. Yo era bandido, la trataba mal, fui culero con ella.",
+   "P": [
+    [
+     "control",
+     0.78
+    ],
+    [
+     "impulsividad",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "lealtad_pareja",
+     0.7
+    ],
+    [
+     "fidelidad",
+     0.68
+    ]
+   ],
+   "C": [
+    [
+     "intimidad",
+     0.72
+    ],
+    [
+     "compromiso",
+     0.66
+    ]
+   ]
+  },
+  {
+   "id": "C2_2024",
+   "corte": "C2_2024",
+   "cut_id": "C2_2024",
+   "date": "2024-06",
+   "fecha_corte": "2024-06",
+   "hecho": "Ella estuvo mucho tiempo distante, ya casi no hablábamos, no nos veíamos, dormíamos juntos pero ya ni siquiera nos abrazábamos ni nada.",
+   "P": [
+    [
+     "frialdad",
+     0.78
+    ],
+    [
+     "desapego_emocional",
+     0.75
+    ]
+   ],
+   "A": [
+    [
+     "distancia_forzada",
+     0.8
+    ],
+    [
+     "silencio",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "indiferencia_moral",
+     0.68
+    ],
+    [
+     "soledad",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C3_2025",
+   "corte": "C3_2025",
+   "cut_id": "C3_2025",
+   "date": "2025-06",
+   "fecha_corte": "2025-06",
+   "hecho": "Después de eso me dijo que ya tenía mucho tiempo que ya no me quería.",
+   "P": [
+    [
+     "desapego_emocional",
+     0.78
+    ],
+    [
+     "incertidumbre",
+     0.72
+    ]
+   ],
+   "A": [
+    [
+     "abandono",
+     0.8
+    ],
+    [
+     "ruptura_pasado",
+     0.76
+    ]
+   ],
+   "C": [
+    [
+     "soledad",
+     0.74
+    ],
+    [
+     "miedo",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C4_2026",
+   "corte": "C4_2026",
+   "cut_id": "C4_2026",
+   "date": "2026-11-11",
+   "fecha_corte": "2026-11-11",
+   "hecho": "Apenas hubo una situación en la casa, donde un amigo de su hermano la estaba besando, yo los vi y pues obviamente golpeé al tipo este.",
+   "P": [
+    [
+     "celos",
+     0.84
+    ],
+    [
+     "impulsividad",
+     0.82
+    ]
+   ],
+   "A": [
+    [
+     "adulterio",
+     0.8
+    ],
+    [
+     "traicion",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "rivalidad",
+     0.76
+    ],
+    [
+     "competencia",
+     0.7
+    ]
+   ]
+  },
+  {
+   "id": "C5_2026",
+   "corte": "C5_2026",
+   "cut_id": "C5_2026",
+   "date": "2026-11-12",
+   "fecha_corte": "2026-11-12",
+   "hecho": "Llegó un momento en el que ella lo defendió, ella me dijo todo lo que me tenía que decir.",
+   "P": [
+    [
+     "culpa",
+     0.8
+    ],
+    [
+     "arrepentimiento",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "confrontacion",
+     0.82
+    ],
+    [
+     "busqueda_verdad",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "honestidad",
+     0.74
+    ],
+    [
+     "desconfianza",
+     0.72
+    ]
+   ]
+  },
+  {
+   "id": "C6_2026",
+   "corte": "C6_2026",
+   "cut_id": "C6_2026",
+   "date": "2026-11-13",
+   "fecha_corte": "2026-11-13",
+   "hecho": "Yo opté por salirme, sacar hoy mis cosas, me siento como en el limbo.",
+   "P": [
+    [
+     "huida_del_llamado",
+     0.78
+    ],
+    [
+     "indecision",
+     0.76
+    ]
+   ],
+   "A": [
+    [
+     "perdida",
+     0.8
+    ],
+    [
+     "duelo",
+     0.78
+    ]
+   ],
+   "C": [
+    [
+     "incertidumbre",
+     0.82
+    ],
+    [
+     "soledad",
+     0.78
+    ]
+   ]
+  }
+ ]
+}

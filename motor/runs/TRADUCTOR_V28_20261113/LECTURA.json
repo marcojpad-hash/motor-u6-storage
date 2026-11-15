@@ -1,0 +1,28 @@
+{
+ "entrega": "TRADUCTOR_V28_20261113",
+ "fecha_lectura": "2026-11-15",
+ "lecturas": [
+  {
+   "ruta": "CONTRATO_GUARDAR_CORRIDAS.md",
+   "sha256": "9a65ef8252337bcf953e6c43aabe4c966f769e049cfcc326c51793e205906403",
+   "reglas": [
+    "§3 formato de entrega"
+   ]
+  },
+  {
+   "ruta": "PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md",
+   "sha256": "d05320f003976d206e499fd74c24105d365760d02184821506747a8e11897b9b",
+   "reglas": [
+    "§3 recibo mínimo",
+    "§4 todo dato es un dato"
+   ]
+  },
+  {
+   "ruta": "casos/REGLAS.md",
+   "sha256": "7fed14c9baf0c32eec4298842790718e352fc4d732cdf715f1e661844fd5c08a",
+   "reglas": [
+    "regla 6"
+   ]
+  }
+ ]
+}

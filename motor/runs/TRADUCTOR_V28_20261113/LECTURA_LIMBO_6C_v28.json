@@ -1,0 +1,40 @@
+{
+ "lectura": "Basado en lo que me contaste, te perfilas a quedarte en el limbo. Estás a la mitad, en el umbral: optaste por salirte, pero sigues en el limbo. El limbo creció: antes no estaba así de grande. A través de estas situaciones: eso de que ella estuvo mucho tiempo distante, eso de que fuiste culero con ella y eso de que ya no te quería. El duelo no estaba antes: apareció apenas ahorita. Muy probablemente el duelo te pegue más fuerte, junto con todo eso. Y se perfila a que te venga otra oleada como aquella vez que ya no te quería. Y eso puede ir creciendo con el tiempo si las cosas siguen así.",
+ "anexo": {
+  "H1": "eterno_retorno_01_caos_primordial",
+  "H2": "apego_03_evitativo",
+  "sol_peso_Z": 0.7285,
+  "n_nudos": 3,
+  "n_capturados": 0,
+  "n_siendo_jalados": 1,
+  "n_resisten": 2,
+  "proporcionalidad": 0.996,
+  "alerta_cometa": true,
+  "cometa": "C3_2025",
+  "cometa_nudos": 2,
+  "cometa_salto": 0.238,
+  "punto_no_considerado": null,
+  "nuevos_en_Z": [
+   "36_perdida_de_los_seres_queridos",
+   "duelo_bonanno_02_comun_recuperacion",
+   "duelo_bonanno_03_cronico",
+   "duelo_bonanno_04_depresion_cronica_preexistente",
+   "monomito_03_rechazo_del_llamado"
+  ],
+  "en_meseta": true,
+  "registro": "primera",
+  "version": "v2.8_20261114",
+  "caminos": [
+   "eterno_retorno_01_caos_primordial",
+   "apego_03_evitativo",
+   "36_perdida_de_los_seres_queridos"
+  ],
+  "arquetipos_luces": [
+   "arquetipo_heroe",
+   "monomito_05_cruce_del_primer_umbral",
+   "arquetipo_el_sabio",
+   "arquetipo_el_amante"
+  ]
+ },
+ "violaciones": []
+}

@@ -1,0 +1,675 @@
+{
+ "case_id": "CAL_F001_02_TESLA_7C",
+ "lote": "TRADUCTOR_V28",
+ "fecha_corrida": "2026-11-13",
+ "ok": true,
+ "seconds": 76.987,
+ "result_completo_sha256": "ccc76a348eac8819222b98891567fade5fc750c3e7a81b6b366ad62fc1cb8717",
+ "result_completo_bytes": 11875375,
+ "entrada_sha256": "105425f1e04c8b00c20e833e9d45eca2668c4bbcd92936812c9141ee4903066c",
+ "receipt_sha256": "c244c20c7c0564563c5491c8a4b61e9c256b2a7b8f6ffb033331964355ba6529",
+ "receipt_status": "COMPLETED",
+ "salida_interpretable": {
+  "metodo": "indice_potencial_equilibrado_pct",
+  "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+  "unidad": "% de relleno estructural",
+  "rango": "0–100%",
+  "es_probabilidad": false,
+  "es_porcentaje_de_acierto": false,
+  "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+  "escala": {
+   "metodo": "indice_potencial_equilibrado_pct",
+   "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+   "unidad": "% de relleno estructural",
+   "rango": "0–100%",
+   "es_probabilidad": false,
+   "es_porcentaje_de_acierto": false,
+   "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+  },
+  "H1": {
+   "familia": "22_todo_sacrificado_por_una_pasion",
+   "porcentaje_relleno": 58.03,
+   "desglose_relleno_por_grupo_pct": {
+    "acoplamiento": 57.1429,
+    "booker": 60.7143,
+    "dynamis": 56.6327,
+    "estructura": 85.7143,
+    "frye": 50.0,
+    "geometria_inercia": 60.7143,
+    "greimas": 37.5,
+    "otras_dimensiones": 38.4615,
+    "puente_lateral": 80.7861,
+    "resolucion": 60.7143,
+    "trayectoria_estado": 50.0
+   },
+   "peso_relativo": 0.08134,
+   "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+   "predictibilidad_estructural_pct": 54.63
+  },
+  "H2": {
+   "familia": "30_ambicion",
+   "porcentaje_relleno": 48.42,
+   "desglose_relleno_por_grupo_pct": {
+    "acoplamiento": 0.0,
+    "booker": 36.9048,
+    "dynamis": 78.0612,
+    "estructura": 35.7143,
+    "frye": 48.8095,
+    "geometria_inercia": 75.0,
+    "greimas": 30.3571,
+    "otras_dimensiones": 55.4945,
+    "puente_lateral": 57.2603,
+    "resolucion": 53.5714,
+    "trayectoria_estado": 61.4286
+   },
+   "peso_relativo": 0.079832,
+   "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+   "predictibilidad_estructural_pct": 53.78
+  },
+  "escala_predictibilidad": {
+   "nombre": "predictibilidad estructural (soporte interno)",
+   "es_probabilidad_calibrada": false,
+   "base_pct": 8.6667,
+   "techo_pct": 91.3334,
+   "pp_por_punto_de_rank_fusion": 1.503031,
+   "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar."
+  },
+  "hipotesis_necesarias_suficientes": [
+   {
+    "familia": "22_todo_sacrificado_por_una_pasion",
+    "rol": "eje",
+    "peso_en_set": 0.138418,
+    "predictibilidad_estructural_pct": 54.63,
+    "cobertura_unica_frac": 0.0
+   },
+   {
+    "familia": "30_ambicion",
+    "rol": "componente",
+    "peso_en_set": 0.135852,
+    "predictibilidad_estructural_pct": 53.78,
+    "cobertura_unica_frac": 0.1267
+   },
+   {
+    "familia": "kwml_03_mago",
+    "rol": "componente",
+    "peso_en_set": 0.126205,
+    "predictibilidad_estructural_pct": 50.57,
+    "cobertura_unica_frac": 0.0912
+   },
+   {
+    "familia": "utopia_mentalidad_liberal",
+    "rol": "componente",
+    "peso_en_set": 0.122808,
+    "predictibilidad_estructural_pct": 49.44,
+    "cobertura_unica_frac": 0.2264
+   },
+   {
+    "familia": "cliodinamica_02_fase_estanflacion_presion",
+    "rol": "componente",
+    "peso_en_set": 0.121249,
+    "predictibilidad_estructural_pct": 48.93,
+    "cobertura_unica_frac": 0.1751
+   },
+   {
+    "familia": "24_rivalidad_de_superior_e_inferior",
+    "rol": "componente",
+    "peso_en_set": 0.119377,
+    "predictibilidad_estructural_pct": 48.3,
+    "cobertura_unica_frac": 0.0805
+   },
+   {
+    "familia": "social_04_rogers_difusion_innovaciones",
+    "rol": "componente",
+    "peso_en_set": 0.117854,
+    "predictibilidad_estructural_pct": 47.8,
+    "cobertura_unica_frac": 0.0873
+   },
+   {
+    "familia": "9_audaz_empresa",
+    "rol": "componente",
+    "peso_en_set": 0.118236,
+    "predictibilidad_estructural_pct": 47.93,
+    "cobertura_unica_frac": 0.0861
+   }
+  ],
+  "grado_inverso_set": "SET_CON_CORTES_SIN_EXPLICAR",
+  "mezcla": {
+   "lectura": "H1_CON_COMPONENTES_DE_H2",
+   "lectura_texto": "22_todo_sacrificado_por_una_pasion con componentes de 30_ambicion (margen 0.566859 < GATE_SEPARATION 1.0)",
+   "peso_H1": 0.08134,
+   "peso_H2": 0.079832,
+   "peso_H1_en_par": 0.504678,
+   "peso_H2_en_par": 0.495322
+  },
+  "grado": "FRAGIL",
+  "conjunto_hipotesis_abiertas": {
+   "n_hipotesis": 10,
+   "cardinalidad_fija": false,
+   "hipotesis": [
+    {
+     "id": "H_001",
+     "familia": "22_todo_sacrificado_por_una_pasion",
+     "rol_en_set": "eje",
+     "rank_fusion": 30.578607,
+     "soporte_estructural_relativo": 0.11305578,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.002531,
+      "micro": 0.460218,
+      "meso": 0.475832,
+      "macro": 0.567747,
+      "aceleracion": 0.472029,
+      "divergencia_entre_escala": 0.10753,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_002",
+     "familia": "30_ambicion",
+     "rol_en_set": "componente",
+     "rank_fusion": 30.011748,
+     "soporte_estructural_relativo": 0.11095998,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.008798,
+      "micro": 0.458099,
+      "meso": 0.517153,
+      "macro": 0.537946,
+      "aceleracion": 0.484405,
+      "divergencia_entre_escala": 0.079847,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_003",
+     "familia": "kwml_03_mago",
+     "rol_en_set": "componente",
+     "rank_fusion": 27.880551,
+     "soporte_estructural_relativo": 0.10308048,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.035346,
+      "micro": 0.463797,
+      "meso": 0.529725,
+      "macro": 0.559498,
+      "aceleracion": 0.355198,
+      "divergencia_entre_escala": 0.095701,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_004",
+     "familia": "utopia_mentalidad_liberal",
+     "rol_en_set": "componente",
+     "rank_fusion": 27.129992,
+     "soporte_estructural_relativo": 0.1003055,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.006813,
+      "micro": 0.47695,
+      "meso": 0.499787,
+      "macro": 0.513045,
+      "aceleracion": 0.448055,
+      "divergencia_entre_escala": 0.036095,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_005",
+     "familia": "cliodinamica_02_fase_estanflacion_presion",
+     "rol_en_set": "componente",
+     "rank_fusion": 26.785714,
+     "soporte_estructural_relativo": 0.09903263,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.056868,
+      "micro": 0.498133,
+      "meso": 0.534824,
+      "macro": 0.552346,
+      "aceleracion": 0.516527,
+      "divergencia_entre_escala": 0.054212,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_006",
+     "familia": "24_rivalidad_de_superior_e_inferior",
+     "rol_en_set": "componente",
+     "rank_fusion": 26.372104,
+     "soporte_estructural_relativo": 0.09750342,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.031207,
+      "micro": 0.485338,
+      "meso": 0.536773,
+      "macro": 0.524699,
+      "aceleracion": 0.503733,
+      "divergencia_entre_escala": 0.051436,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_007",
+     "familia": "9_audaz_empresa",
+     "rol_en_set": "componente",
+     "rank_fusion": 26.120043,
+     "soporte_estructural_relativo": 0.0965715,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.019608,
+      "micro": 0.488269,
+      "meso": 0.484125,
+      "macro": 0.557018,
+      "aceleracion": 0.503067,
+      "divergencia_entre_escala": 0.072892,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_008",
+     "familia": "social_04_rogers_difusion_innovaciones",
+     "rol_en_set": "componente",
+     "rank_fusion": 26.035714,
+     "soporte_estructural_relativo": 0.09625972,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.010973,
+      "micro": 0.492134,
+      "meso": 0.483712,
+      "macro": 0.507695,
+      "aceleracion": 0.513863,
+      "divergencia_entre_escala": 0.023982,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_009",
+     "familia": "tainter_04_colapso_por_simplificacion_forzada",
+     "rol_en_set": "complementaria_trazabilidad_geometrica",
+     "rank_fusion": 25.001428,
+     "soporte_estructural_relativo": 0.09243574,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.028167,
+      "micro": 0.480809,
+      "meso": 0.488309,
+      "macro": 0.488631,
+      "aceleracion": 0.486537,
+      "divergencia_entre_escala": 0.007821,
+      "n_cortes_observados": 7
+     }
+    },
+    {
+     "id": "H_010",
+     "familia": "schwartz_10_autodireccion",
+     "rol_en_set": "complementaria_trazabilidad_geometrica",
+     "rank_fusion": 24.55772,
+     "soporte_estructural_relativo": 0.09079525,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.002816,
+      "micro": 0.471631,
+      "meso": 0.516527,
+      "macro": 0.507618,
+      "aceleracion": 0.39314,
+      "divergencia_entre_escala": 0.044897,
+      "n_cortes_observados": 7
+     }
+    }
+   ],
+   "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+  },
+  "apuesta_multiescenario": {
+   "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenarios": [
+    {
+     "escenario": "MESeta_O_ESTABILIZACION",
+     "hipotesis_que_convergen": [
+      "22_todo_sacrificado_por_una_pasion",
+      "30_ambicion",
+      "kwml_03_mago",
+      "utopia_mentalidad_liberal",
+      "cliodinamica_02_fase_estanflacion_presion",
+      "24_rivalidad_de_superior_e_inferior",
+      "9_audaz_empresa",
+      "social_04_rogers_difusion_innovaciones",
+      "tainter_04_colapso_por_simplificacion_forzada",
+      "schwartz_10_autodireccion"
+     ],
+     "n_hipotesis": 10,
+     "soporte_estructural_agregado": 1.0,
+     "es_probabilidad": false,
+     "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+   ],
+   "apuesta_principal": {
+    "escenario": "MESeta_O_ESTABILIZACION",
+    "hipotesis_que_convergen": [
+     "22_todo_sacrificado_por_una_pasion",
+     "30_ambicion",
+     "kwml_03_mago",
+     "utopia_mentalidad_liberal",
+     "cliodinamica_02_fase_estanflacion_presion",
+     "24_rivalidad_de_superior_e_inferior",
+     "9_audaz_empresa",
+     "social_04_rogers_difusion_innovaciones",
+     "tainter_04_colapso_por_simplificacion_forzada",
+     "schwartz_10_autodireccion"
+    ],
+    "n_hipotesis": 10,
+    "soporte_estructural_agregado": 1.0,
+    "es_probabilidad": false,
+    "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+   },
+   "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+   "horizonte": "siguiente_corte",
+   "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+   "calibracion": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA"
+  }
+ },
+ "monte_carlo": {},
+ "predictive_validation": {
+  "status": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA",
+  "n_casos_resueltos_sellados": 173,
+  "structural_fill_is_probability": false,
+  "rank_fusion_is_probability": false,
+  "historical_reference": {
+   "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+   "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+   "module": "Grupo B predictor lateral de trayectorias",
+   "validation": "leave_one_out",
+   "n_reference_biographies": 15,
+   "n_evaluable_predictions": 121,
+   "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+   "functions_tested": {
+    "linear": "max(0, 1-d)",
+    "exponential": "exp(-3d)",
+    "inverse": "1/(1+3d)"
+   },
+   "top1_accuracy_pct": 64.46,
+   "top3_recall_pct": 97.52,
+   "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+   "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+  },
+  "reason": "desenlaces sellados por caso en el StinkBox (pruebas ciegas Z90), parciales y sin regla de acierto pre-registrada; baseline H1 más frecuente acierta 2 de 6; rank_fusion y relleno estructural son índices estructurales, no probabilidades"
+ },
+ "entrada": {
+  "case_id": "CAL_F001_02_TESLA_7C",
+  "question": "¿Qué ocurre con Tesla y su proyecto de transmisión inalámbrica financiado por J. P. Morgan?",
+  "person": "Nikola Tesla",
+  "tipo_sujeto": "cientifico",
+  "freeze": "1901-03-01",
+  "random_seed": 20261024,
+  "z_work_kind": "CASE_CUTOFF",
+  "z_work_date": "1943-01-07",
+  "cuts": [
+   {
+    "id": "C1_1884",
+    "corte": "C1_1884",
+    "cut_id": "C1_1884",
+    "date": "1884-06-06",
+    "fecha_corte": "1884-06-06",
+    "hecho": "Llega a Nueva York, trabaja para Edison y renuncia al poco tiempo por un desacuerdo de pago.",
+    "P": [
+     [
+      "ambicion",
+      0.75
+     ],
+     [
+      "autonomia",
+      0.78
+     ]
+    ],
+    "A": [
+     [
+      "creatividad",
+      0.8
+     ],
+     [
+      "desafio_autoridad",
+      0.65
+     ]
+    ],
+    "C": [
+     [
+      "oportunidad",
+      0.75
+     ],
+     [
+      "escasez",
+      0.7
+     ]
+    ]
+   },
+   {
+    "id": "C2_1893",
+    "corte": "C2_1893",
+    "cut_id": "C2_1893",
+    "date": "1893-05-01",
+    "fecha_corte": "1893-05-01",
+    "hecho": "Sus patentes de corriente alterna, licenciadas a Westinghouse (1888), iluminan la Exposición de Chicago.",
+    "P": [
+     [
+      "vision",
+      0.84
+     ],
+     [
+      "conocimiento",
+      0.8
+     ]
+    ],
+    "A": [
+     [
+      "creatividad",
+      0.84
+     ],
+     [
+      "generacion_ideas",
+      0.8
+     ]
+    ],
+    "C": [
+     [
+      "triunfo",
+      0.75
+     ],
+     [
+      "reconocimiento",
+      0.78
+     ]
+    ]
+   },
+   {
+    "id": "C3_1901",
+    "corte": "C3_1901",
+    "cut_id": "C3_1901",
+    "date": "1901-03-01",
+    "fecha_corte": "1901-03-01",
+    "hecho": "Morgan acepta financiar con 150 000 dólares una torre de transmisión inalámbrica (Wardenclyffe).",
+    "P": [
+     [
+      "visionario",
+      0.84
+     ],
+     [
+      "obsesion",
+      0.72
+     ]
+    ],
+    "A": [
+     [
+      "apuesta_extrema",
+      0.75
+     ],
+     [
+      "persuasion",
+      0.7
+     ]
+    ],
+    "C": [
+     [
+      "dependencia",
+      0.72
+     ],
+     [
+      "competencia",
+      0.75
+     ]
+    ]
+   },
+   {
+    "id": "C4_1906",
+    "corte": "C4_1906",
+    "cut_id": "C4_1906",
+    "date": "1906",
+    "fecha_corte": "1906",
+    "hecho": "En 1906 Wardenclyffe queda abandonado: Morgan retira el financiamiento y Tesla pierde el laboratorio y la torre.",
+    "P": [
+     [
+      "derrota_temporal",
+      0.84
+     ],
+     [
+      "obsesion",
+      0.78
+     ]
+    ],
+    "A": [
+     [
+      "apuesta_extrema",
+      0.78
+     ],
+     [
+      "resiliencia",
+      0.72
+     ]
+    ],
+    "C": [
+     [
+      "escasez",
+      0.82
+     ],
+     [
+      "dependencia",
+      0.75
+     ]
+    ]
+   },
+   {
+    "id": "C5_1915",
+    "corte": "C5_1915",
+    "cut_id": "C5_1915",
+    "date": "1915",
+    "fecha_corte": "1915",
+    "hecho": "En 1915 Edison y Tesla son candidatos al Nobel, pero ninguno lo recibe; Tesla rechaza compartirlo con Edison.",
+    "P": [
+     [
+      "orgullo",
+      0.82
+     ],
+     [
+      "ambicion",
+      0.75
+     ]
+    ],
+    "A": [
+     [
+      "desafio_autoridad",
+      0.78
+     ],
+     [
+      "discrecion",
+      0.7
+     ]
+    ],
+    "C": [
+     [
+      "reconocimiento",
+      0.78
+     ],
+     [
+      "rivalidad_profesional",
+      0.75
+     ]
+    ]
+   },
+   {
+    "id": "C6_1926",
+    "corte": "C6_1926",
+    "cut_id": "C6_1926",
+    "date": "1926",
+    "fecha_corte": "1926",
+    "hecho": "En 1926 vive en hoteles de Nueva York, alimenta palomas y trabaja en ideas que nadie financia.",
+    "P": [
+     [
+      "aislamiento_voluntario",
+      0.82
+     ],
+     [
+      "busqueda_verdad",
+      0.78
+     ]
+    ],
+    "A": [
+     [
+      "creatividad",
+      0.8
+     ],
+     [
+      "resiliencia",
+      0.72
+     ]
+    ],
+    "C": [
+     [
+      "escasez",
+      0.84
+     ],
+     [
+      "dependencia",
+      0.72
+     ]
+    ]
+   },
+   {
+    "id": "C7_1943",
+    "corte": "C7_1943",
+    "cut_id": "C7_1943",
+    "date": "1943-01-07",
+    "fecha_corte": "1943-01-07",
+    "hecho": "Muere el 7 de enero de 1943 en el hotel New Yorker, solo y endeudado; su obra se reconoce después de su muerte.",
+    "P": [
+     [
+      "derrota_temporal",
+      0.8
+     ],
+     [
+      "busqueda_seguridad",
+      0.68
+     ]
+    ],
+    "A": [
+     [
+      "devocion",
+      0.75
+     ],
+     [
+      "resiliencia",
+      0.7
+     ]
+    ],
+    "C": [
+     [
+      "reconocimiento",
+      0.75
+     ],
+     [
+      "legitimidad_percibida",
+      0.72
+     ]
+    ]
+   }
+  ],
+  "source_notes": "https://en.wikipedia.org/wiki/Nikola_Tesla ; https://en.wikipedia.org/wiki/Wardenclyffe_Tower (solo hechos hasta mar-1901)"
+ }
+}

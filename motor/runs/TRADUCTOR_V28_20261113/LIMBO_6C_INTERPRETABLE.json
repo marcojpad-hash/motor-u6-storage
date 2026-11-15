@@ -1,0 +1,636 @@
+{
+ "case_id": "LIMBO_6C",
+ "lote": "TRADUCTOR_V28",
+ "fecha_corrida": "2026-11-13",
+ "ok": true,
+ "seconds": 113.586,
+ "result_completo_sha256": "65107c935b1666172dc4c59f87757ae7ba1567eec7b371fce39c5b76f3fd3102",
+ "result_completo_bytes": 10651982,
+ "entrada_sha256": "80f462f4aa8b24380a65be68e1946297f938c439845704477f5a0119cb9a80f7",
+ "receipt_sha256": "c411b9a1ce3733e65c7eb36ce245a776f6f62b8b47565c7ea6eb28f8b5f1377c",
+ "receipt_status": "COMPLETED",
+ "salida_interpretable": {
+  "metodo": "indice_potencial_equilibrado_pct",
+  "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+  "unidad": "% de relleno estructural",
+  "rango": "0–100%",
+  "es_probabilidad": false,
+  "es_porcentaje_de_acierto": false,
+  "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico.",
+  "escala": {
+   "metodo": "indice_potencial_equilibrado_pct",
+   "definicion": "promedio equilibrado de las fracciones de relleno de los grupos estructurales activos",
+   "unidad": "% de relleno estructural",
+   "rango": "0–100%",
+   "es_probabilidad": false,
+   "es_porcentaje_de_acierto": false,
+   "nota": "La puntuación rank_fusion no es una probabilidad y queda solo como diagnóstico técnico."
+  },
+  "H1": {
+   "familia": "eterno_retorno_01_caos_primordial",
+   "porcentaje_relleno": 61.31,
+   "desglose_relleno_por_grupo_pct": {
+    "acoplamiento": 0.0,
+    "booker": 34.7222,
+    "dynamis": 81.5476,
+    "estructura": 75.0,
+    "frye": 48.6111,
+    "geometria_inercia": 50.0,
+    "greimas": 68.75,
+    "otras_dimensiones": 76.1364,
+    "puente_lateral": 72.9535,
+    "resolucion": 83.3333,
+    "trayectoria_estado": 83.3333
+   },
+   "peso_relativo": 0.114571,
+   "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+   "predictibilidad_estructural_pct": 66.0
+  },
+  "H2": {
+   "familia": "apego_03_evitativo",
+   "porcentaje_relleno": 49.95,
+   "desglose_relleno_por_grupo_pct": {
+    "acoplamiento": 8.3333,
+    "booker": 34.7222,
+    "dynamis": 51.1905,
+    "estructura": 54.1667,
+    "frye": 51.3889,
+    "geometria_inercia": 62.5,
+    "greimas": 56.25,
+    "otras_dimensiones": 50.7576,
+    "puente_lateral": 86.7592,
+    "resolucion": 41.6667,
+    "trayectoria_estado": 51.6667
+   },
+   "peso_relativo": 0.094534,
+   "unidad_peso_relativo": "proporción de rank_fusion sobre las candidatas publicadas (suma 1); no es probabilidad",
+   "predictibilidad_estructural_pct": 55.73
+  },
+  "escala_predictibilidad": {
+   "nombre": "predictibilidad estructural (soporte interno)",
+   "es_probabilidad_calibrada": false,
+   "base_pct": 7.2667,
+   "techo_pct": 92.7333,
+   "pp_por_punto_de_rank_fusion": 1.612579,
+   "formula": "pred = (1 - dmin_Z - sigma_Z) * rank_fusion/techo_rank + dmin_Z*0.5 + sigma_Z*E[P_azar]; E[P_azar]=0.5 (Fórmula 22 del Engine canónico con F en lugar de P). Variante ajustada (reconexión v2.A.1): pred_ajustada = K * F * factor_reconexion + base_pp/100, factor = 0.5 + 0.5*ajuste, ajuste = media(dh_supervivencia_frac, direccion_cuadrante_norm); la original queda intacta para comparar."
+  },
+  "hipotesis_necesarias_suficientes": [
+   {
+    "familia": "eterno_retorno_01_caos_primordial",
+    "rol": "eje",
+    "peso_en_set": 0.203879,
+    "predictibilidad_estructural_pct": 66.0,
+    "cobertura_unica_frac": 0.2562
+   },
+   {
+    "familia": "apego_03_evitativo",
+    "rol": "componente",
+    "peso_en_set": 0.168223,
+    "predictibilidad_estructural_pct": 55.73,
+    "cobertura_unica_frac": 0.1853
+   },
+   {
+    "familia": "36_perdida_de_los_seres_queridos",
+    "rol": "componente",
+    "peso_en_set": 0.150293,
+    "predictibilidad_estructural_pct": 50.56,
+    "cobertura_unica_frac": 0.0643
+   },
+   {
+    "familia": "34_remordimiento",
+    "rol": "componente",
+    "peso_en_set": 0.132019,
+    "predictibilidad_estructural_pct": 45.3,
+    "cobertura_unica_frac": 0.1285
+   },
+   {
+    "familia": "distopia_coercion_total",
+    "rol": "componente",
+    "peso_en_set": 0.125774,
+    "predictibilidad_estructural_pct": 43.5,
+    "cobertura_unica_frac": 0.1219
+   },
+   {
+    "familia": "monomito_05_cruce_del_primer_umbral",
+    "rol": "componente",
+    "peso_en_set": 0.113493,
+    "predictibilidad_estructural_pct": 39.96,
+    "cobertura_unica_frac": 0.117
+   },
+   {
+    "familia": "arquetipo_el_sabio",
+    "rol": "componente",
+    "peso_en_set": 0.10632,
+    "predictibilidad_estructural_pct": 37.89,
+    "cobertura_unica_frac": 0.0643
+   }
+  ],
+  "grado_inverso_set": "SET_EXPLICA_TODOS_LOS_CORTES",
+  "mezcla": {
+   "lectura": "H1_DOMINANTE",
+   "lectura_texto": "eterno_retorno_01_caos_primordial domina; apego_03_evitativo es rival distinto (margen 6.369424 >= 1.0 y afinidad 0.320928 < 0.5)",
+   "peso_H1": 0.114571,
+   "peso_H2": 0.094534,
+   "peso_H1_en_par": 0.547911,
+   "peso_H2_en_par": 0.452089
+  },
+  "grado": "AJUSTADA",
+  "conjunto_hipotesis_abiertas": {
+   "n_hipotesis": 10,
+   "cardinalidad_fija": false,
+   "hipotesis": [
+    {
+     "id": "H_001",
+     "familia": "eterno_retorno_01_caos_primordial",
+     "rol_en_set": "eje",
+     "rank_fusion": 36.420348,
+     "soporte_estructural_relativo": 0.14606662,
+     "trazabilidad_geometrica": {
+      "regimen": "CONTINUIDAD_ASCENDENTE",
+      "senal_multiescala": 0.248048,
+      "micro": 0.711004,
+      "meso": 0.573504,
+      "macro": 0.587564,
+      "aceleracion": 0.730009,
+      "divergencia_entre_escala": 0.137501,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_002",
+     "familia": "apego_03_evitativo",
+     "rol_en_set": "componente",
+     "rank_fusion": 30.050924,
+     "soporte_estructural_relativo": 0.12052156,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.059907,
+      "micro": 0.480543,
+      "meso": 0.527652,
+      "macro": 0.581666,
+      "aceleracion": 0.39454,
+      "divergencia_entre_escala": 0.101123,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_003",
+     "familia": "36_perdida_de_los_seres_queridos",
+     "rol_en_set": "componente",
+     "rank_fusion": 26.847908,
+     "soporte_estructural_relativo": 0.10767561,
+     "trazabilidad_geometrica": {
+      "regimen": "CONTINUIDAD_ASCENDENTE",
+      "senal_multiescala": 0.282312,
+      "micro": 0.782813,
+      "meso": 0.594992,
+      "macro": 0.545663,
+      "aceleracion": 0.782813,
+      "divergencia_entre_escala": 0.23715,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_004",
+     "familia": "social_13_le_bon_comportamiento_masas",
+     "rol_en_set": "complementaria_trazabilidad_geometrica",
+     "rank_fusion": 26.709344,
+     "soporte_estructural_relativo": 0.10711989,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.03292,
+      "micro": 0.488802,
+      "meso": 0.532687,
+      "macro": 0.527891,
+      "aceleracion": 0.509466,
+      "divergencia_entre_escala": 0.043885,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_005",
+     "familia": "jaldun_02_institucionalizacion_y_sedentarismo",
+     "rol_en_set": "complementaria_trazabilidad_geometrica",
+     "rank_fusion": 23.682144,
+     "soporte_estructural_relativo": 0.09497907,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.018147,
+      "micro": 0.492134,
+      "meso": 0.491041,
+      "macro": 0.489605,
+      "aceleracion": 0.506533,
+      "divergencia_entre_escala": 0.002529,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_006",
+     "familia": "34_remordimiento",
+     "rol_en_set": "componente",
+     "rank_fusion": 23.583489,
+     "soporte_estructural_relativo": 0.09458341,
+     "trazabilidad_geometrica": {
+      "regimen": "CONTINUIDAD_ASCENDENTE",
+      "senal_multiescala": 0.151042,
+      "micro": 0.490135,
+      "meso": 0.661031,
+      "macro": 0.575398,
+      "aceleracion": 0.152904,
+      "divergencia_entre_escala": 0.170897,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_007",
+     "familia": "distopia_coercion_total",
+     "rol_en_set": "componente",
+     "rank_fusion": 22.467939,
+     "soporte_estructural_relativo": 0.09010941,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.006259,
+      "micro": 0.485071,
+      "meso": 0.484525,
+      "macro": 0.521016,
+      "aceleracion": 0.503467,
+      "divergencia_entre_escala": 0.036491,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_008",
+     "familia": "sistema_domiciano",
+     "rol_en_set": "complementaria_trazabilidad_geometrica",
+     "rank_fusion": 20.311756,
+     "soporte_estructural_relativo": 0.08146187,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.006259,
+      "micro": 0.485071,
+      "meso": 0.484525,
+      "macro": 0.521016,
+      "aceleracion": 0.503467,
+      "divergencia_entre_escala": 0.036491,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_009",
+     "familia": "monomito_05_cruce_del_primer_umbral",
+     "rol_en_set": "componente",
+     "rank_fusion": 20.274131,
+     "soporte_estructural_relativo": 0.08131097,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": -0.036183,
+      "micro": 0.487736,
+      "meso": 0.453495,
+      "macro": 0.504495,
+      "aceleracion": 0.580623,
+      "divergencia_entre_escala": 0.051,
+      "n_cortes_observados": 6
+     }
+    },
+    {
+     "id": "H_010",
+     "familia": "arquetipo_el_sabio",
+     "rol_en_set": "componente",
+     "rank_fusion": 18.992673,
+     "soporte_estructural_relativo": 0.07617159,
+     "trazabilidad_geometrica": {
+      "regimen": "MESeta_O_ESTABILIZACION",
+      "senal_multiescala": 0.058792,
+      "micro": 0.501067,
+      "meso": 0.560791,
+      "macro": 0.52633,
+      "aceleracion": 0.264042,
+      "divergencia_entre_escala": 0.059724,
+      "n_cortes_observados": 6
+     }
+    }
+   ],
+   "compatibilidad_H1_H2": "aliases históricos; no limitan el conjunto"
+  },
+  "apuesta_multiescenario": {
+   "estado": "APUESTA_MULTIESCENARIO_SELLABLE",
+   "escenarios": [
+    {
+     "escenario": "MESeta_O_ESTABILIZACION",
+     "hipotesis_que_convergen": [
+      "apego_03_evitativo",
+      "social_13_le_bon_comportamiento_masas",
+      "jaldun_02_institucionalizacion_y_sedentarismo",
+      "distopia_coercion_total",
+      "sistema_domiciano",
+      "monomito_05_cruce_del_primer_umbral",
+      "arquetipo_el_sabio"
+     ],
+     "n_hipotesis": 7,
+     "soporte_estructural_agregado": 0.65167436,
+     "es_probabilidad": false,
+     "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    },
+    {
+     "escenario": "CONTINUIDAD_ASCENDENTE",
+     "hipotesis_que_convergen": [
+      "eterno_retorno_01_caos_primordial",
+      "36_perdida_de_los_seres_queridos",
+      "34_remordimiento"
+     ],
+     "n_hipotesis": 3,
+     "soporte_estructural_agregado": 0.34832564,
+     "es_probabilidad": false,
+     "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+    }
+   ],
+   "apuesta_principal": {
+    "escenario": "MESeta_O_ESTABILIZACION",
+    "hipotesis_que_convergen": [
+     "apego_03_evitativo",
+     "social_13_le_bon_comportamiento_masas",
+     "jaldun_02_institucionalizacion_y_sedentarismo",
+     "distopia_coercion_total",
+     "sistema_domiciano",
+     "monomito_05_cruce_del_primer_umbral",
+     "arquetipo_el_sabio"
+    ],
+    "n_hipotesis": 7,
+    "soporte_estructural_agregado": 0.65167436,
+    "es_probabilidad": false,
+    "lectura": "convergencia de trayectorias de las hipótesis; soporte relativo, no probabilidad calibrada"
+   },
+   "regla": "primero se forma el set abierto de hipótesis; después se agrupan continuaciones de trayectoria compartidas",
+   "horizonte": "siguiente_corte",
+   "no_es_forzoso_que_el_desenlace_coincida_con_una_hipotesis_individual": true,
+   "calibracion": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA"
+  }
+ },
+ "monte_carlo": {},
+ "predictive_validation": {
+  "status": "PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA",
+  "n_casos_resueltos_sellados": 255,
+  "structural_fill_is_probability": false,
+  "rank_fusion_is_probability": false,
+  "historical_reference": {
+   "schema": "HISTORICAL_PREDICTIVE_REFERENCE_V1",
+   "status": "PREVIOUS_EXPERIMENT_REPORTED_NOT_REEXECUTED_IN_PATCH10",
+   "module": "Grupo B predictor lateral de trayectorias",
+   "validation": "leave_one_out",
+   "n_reference_biographies": 15,
+   "n_evaluable_predictions": 121,
+   "matching": "Needleman-Wunsch / optimal matching; same-length prefixes; indel=1.0; substitution=2.0",
+   "functions_tested": {
+    "linear": "max(0, 1-d)",
+    "exponential": "exp(-3d)",
+    "inverse": "1/(1+3d)"
+   },
+   "top1_accuracy_pct": 64.46,
+   "top3_recall_pct": 97.52,
+   "interpretation": "Historical empirical accuracy/recall for this lateral trajectory predictor and small dataset; not a calibrated probability, not performance of the entire V15.3 motor, and not a forecast for unrelated domains.",
+   "source_file": "PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt"
+  },
+  "reason": "desenlaces sellados por caso en el StinkBox (pruebas ciegas Z90), parciales y sin regla de acierto pre-registrada; baseline H1 más frecuente acierta 2 de 6; rank_fusion y relleno estructural son índices estructurales, no probabilidades"
+ },
+ "entrada": {
+  "case_id": "LIMBO_6C",
+  "person": "persona (anónima)",
+  "tipo_sujeto": "persona",
+  "question": "¿Qué es lo que podría pasar después de esto?",
+  "freeze": "2026-11-13",
+  "z_work_date": "2026-11-13",
+  "z_work_kind": "CASE_CUTOFF",
+  "random_seed": 20261113,
+  "source_notes": "Historia contada por la persona (2026-11-13, vía Marco). Relación de 4 años, vivían juntos. Seis momentos.",
+  "cuts": [
+   {
+    "id": "C1_2022",
+    "corte": "C1_2022",
+    "cut_id": "C1_2022",
+    "date": "2022-01",
+    "fecha_corte": "2022-01",
+    "hecho": "Hace cuatro años me junté con ella y nos fuimos a vivir juntos. Yo era bandido, la trataba mal, fui culero con ella.",
+    "P": [
+     [
+      "control",
+      0.78
+     ],
+     [
+      "impulsividad",
+      0.75
+     ]
+    ],
+    "A": [
+     [
+      "lealtad_pareja",
+      0.7
+     ],
+     [
+      "fidelidad",
+      0.68
+     ]
+    ],
+    "C": [
+     [
+      "intimidad",
+      0.72
+     ],
+     [
+      "compromiso",
+      0.66
+     ]
+    ]
+   },
+   {
+    "id": "C2_2024",
+    "corte": "C2_2024",
+    "cut_id": "C2_2024",
+    "date": "2024-06",
+    "fecha_corte": "2024-06",
+    "hecho": "Ella estuvo mucho tiempo distante, ya casi no hablábamos, no nos veíamos, dormíamos juntos pero ya ni siquiera nos abrazábamos ni nada.",
+    "P": [
+     [
+      "frialdad",
+      0.78
+     ],
+     [
+      "desapego_emocional",
+      0.75
+     ]
+    ],
+    "A": [
+     [
+      "distancia_forzada",
+      0.8
+     ],
+     [
+      "silencio",
+      0.76
+     ]
+    ],
+    "C": [
+     [
+      "indiferencia_moral",
+      0.68
+     ],
+     [
+      "soledad",
+      0.7
+     ]
+    ]
+   },
+   {
+    "id": "C3_2025",
+    "corte": "C3_2025",
+    "cut_id": "C3_2025",
+    "date": "2025-06",
+    "fecha_corte": "2025-06",
+    "hecho": "Después de eso me dijo que ya tenía mucho tiempo que ya no me quería.",
+    "P": [
+     [
+      "desapego_emocional",
+      0.78
+     ],
+     [
+      "incertidumbre",
+      0.72
+     ]
+    ],
+    "A": [
+     [
+      "abandono",
+      0.8
+     ],
+     [
+      "ruptura_pasado",
+      0.76
+     ]
+    ],
+    "C": [
+     [
+      "soledad",
+      0.74
+     ],
+     [
+      "miedo",
+      0.7
+     ]
+    ]
+   },
+   {
+    "id": "C4_2026",
+    "corte": "C4_2026",
+    "cut_id": "C4_2026",
+    "date": "2026-11-11",
+    "fecha_corte": "2026-11-11",
+    "hecho": "Apenas hubo una situación en la casa, donde un amigo de su hermano la estaba besando, yo los vi y pues obviamente golpeé al tipo este.",
+    "P": [
+     [
+      "celos",
+      0.84
+     ],
+     [
+      "impulsividad",
+      0.82
+     ]
+    ],
+    "A": [
+     [
+      "adulterio",
+      0.8
+     ],
+     [
+      "traicion",
+      0.78
+     ]
+    ],
+    "C": [
+     [
+      "rivalidad",
+      0.76
+     ],
+     [
+      "competencia",
+      0.7
+     ]
+    ]
+   },
+   {
+    "id": "C5_2026",
+    "corte": "C5_2026",
+    "cut_id": "C5_2026",
+    "date": "2026-11-12",
+    "fecha_corte": "2026-11-12",
+    "hecho": "Llegó un momento en el que ella lo defendió, ella me dijo todo lo que me tenía que decir.",
+    "P": [
+     [
+      "culpa",
+      0.8
+     ],
+     [
+      "arrepentimiento",
+      0.76
+     ]
+    ],
+    "A": [
+     [
+      "confrontacion",
+      0.82
+     ],
+     [
+      "busqueda_verdad",
+      0.78
+     ]
+    ],
+    "C": [
+     [
+      "honestidad",
+      0.74
+     ],
+     [
+      "desconfianza",
+      0.72
+     ]
+    ]
+   },
+   {
+    "id": "C6_2026",
+    "corte": "C6_2026",
+    "cut_id": "C6_2026",
+    "date": "2026-11-13",
+    "fecha_corte": "2026-11-13",
+    "hecho": "Yo opté por salirme, sacar hoy mis cosas, me siento como en el limbo.",
+    "P": [
+     [
+      "huida_del_llamado",
+      0.78
+     ],
+     [
+      "indecision",
+      0.76
+     ]
+    ],
+    "A": [
+     [
+      "perdida",
+      0.8
+     ],
+     [
+      "duelo",
+      0.78
+     ]
+    ],
+    "C": [
+     [
+      "incertidumbre",
+      0.82
+     ],
+     [
+      "soledad",
+      0.78
+     ]
+    ]
+   }
+  ]
+ }
+}
