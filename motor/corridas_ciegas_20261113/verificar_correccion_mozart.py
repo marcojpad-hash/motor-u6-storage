@@ -6,7 +6,10 @@ Refuerzo 2026-11-14 (post-re-auditoría ChatGPT): comprobaciones expresas
 1c (estado == T1_COMPLETADO) y 3e (exactamente 77 etapas CEB); 20 checks.
 2a vuelta 2026-11-14: 3e exige cada etapa EXECUTED_AND_CONNECTED
 (VERIFIED_FLOW es el status agregado, no por etapa); los invariantes
-exigen H1/H2 presentes y apuesta dict antes de comparar; 20 checks."""
+exigen H1/H2 presentes y apuesta dict antes de comparar; 20 checks.
+3a vuelta 2026-11-14: 2 exige previo_error/visto_error str no vacío
+(la 2 aceptaba ""); 2d coherencia: una corrida no completada nunca
+puede clasificarse SIN_ERROR; 22 checks."""
 import json, sys
 from collections import Counter
 
@@ -38,9 +41,28 @@ def main():
           f"estado={ecr.get('estado')} hit_H={ecr.get('hit_H')}")
 
     # --- Hallazgo 2: previo_error con clasificación real (no placeholder) ---
-    check("2. previo_error no es placeholder",
-          ecr.get("previo_error") not in (None, "DATO_AUSENTE_REQUIERE_CLASIFICACION"),
-          f"previo_error={ecr.get('previo_error')}")
+    # 3a vuelta (2026-11-14): la comprobación aceptaba la cadena vacía (""
+    # no está en (None, "DATO_AUSENTE_REQUIERE_CLASIFICACION")) y no impedía
+    # que una corrida fallida se clasificara SIN_ERROR. Ahora previo_error y
+    # visto_error deben ser str no vacío, y una corrida no completada nunca
+    # puede llevar el SIN_ERROR que corresponde solo a la corrida completada.
+    pe = ecr.get("previo_error")
+    ve = ecr.get("visto_error")
+    check("2. previo_error es str no vacío y no es placeholder",
+          isinstance(pe, str) and bool(pe.strip())
+          and pe != "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+          f"previo_error={pe!r}")
+    check("2c. visto_error es str no vacío y no es placeholder",
+          isinstance(ve, str) and bool(ve.strip())
+          and ve != "DATO_AUSENTE_REQUIERE_CLASIFICACION",
+          f"visto_error={ve!r}")
+    check("2d. una corrida fallida nunca se clasifica SIN_ERROR",
+          (ecr.get("previo_status") == "COMPLETED_ISOLATED_SUBPROCESS"
+           or pe != "SIN_ERROR_CORRIDA_PREVIA_COMPLETADA")
+          and (ecr.get("visto_status") == "COMPLETED_ISOLATED_SUBPROCESS"
+               or ve != "SIN_ERROR_CORRIDA_RETENIDA_COMPLETADA"),
+          f"previo_status={ecr.get('previo_status')} previo_error={pe!r} "
+          f"visto_status={ecr.get('visto_status')} visto_error={ve!r}")
     aud = d.get("auditoria_salida_json") or {}
     check("2b. auditoria_salida_json sin faltantes",
           aud.get("faltantes_detectados") == 0 and not aud.get("rutas_faltantes"),

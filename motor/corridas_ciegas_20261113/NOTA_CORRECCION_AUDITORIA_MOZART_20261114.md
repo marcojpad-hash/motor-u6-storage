@@ -276,3 +276,43 @@ Entrada de reproducción: motor-cameo/motor/runs/ESTANDAR__MOZART_CON_TEXTO_Z90_
   (1/1c, 2, 3/3b/3c/3d/3e con 62/77 conectadas, 4b/4c/4d, 5/5b). Mutantes
   sintéticos: sin H1/H2 en ambos lados y apuesta como string — el verificador
   viejo aprueba en vacío (H1/H2) o crashea (apuesta); el nuevo falla limpio.
+
+## 3a vuelta del verificador (2026-11-14 ~19:32 CST)
+
+- Tercera observación de ChatGPT (no bloqueante, ya advertida al aprobar
+  1d44f90): la comprobación 2 aceptaba una cadena vacía en previo_error
+  ("" no está en (None, "DATO_AUSENTE_REQUIERE_CLASIFICACION")) y una
+  corrida previa fallida podía clasificarse como
+  SIN_ERROR_CORRIDA_PREVIA_COMPLETADA.
+- Cambio (verificar_correccion_mozart.py, sin debilitar ninguna comprobación
+  existente; 20 → 22 checks): 2 exige previo_error str no vacío
+  (isinstance + bool(strip())) y distinto del placeholder; 2c lo mismo
+  para visto_error; 2d coherencia: una corrida no completada nunca puede
+  llevar el SIN_ERROR que corresponde solo a la corrida completada
+  (previo_status/visto_status != COMPLETED_ISOLATED_SUBPROCESS ⇒ error !=
+  SIN_ERROR_CORRIDA_*_COMPLETADA).
+- Verificación por ejecución (clon limpio de
+  alterno/reconexion-2a1-correccion-auditoria-mozart, mismo comando de arriba,
+  salida /tmp/RESULT_MOZART_POST_FIX5_REPRO4.json, returncode 0, recibo
+  COMPLETED, result_missing_paths=[], sha256 272a1e115dd073cb... — otra vez
+  distinto por las rutas absolutas embebidas, como ya está documentado;
+  Monte Carlo 30/16,938 idéntico, H1/H2/apuesta idénticos): verificador
+  endurecido 22/22, exit 0. Contra el RESULT original sigue fallando donde
+  debe (1/1b/1c, 2, 2b, 3/3b/3c/3d/3e con 62/77 conectadas, 4b/4c/4d, 5/5b);
+  2c y 2d pasan en el original porque visto_error es el traceback real y
+  ningún error es SIN_ERROR — la mentira del original era el placeholder,
+  que caza la 2.
+- Mutantes sintéticos (sobre REPRO4): previo_error="", previo_error=123,
+  visto_error="" y previo fallido + SIN_ERROR — el verificador nuevo falla
+  exactamente la comprobación objetivo en cada uno (exit 1); el verificador
+  viejo (1d44f90) aprueba en vacío los tres huecos (previo_error="" y 123
+  pasan la 2; el fallido+SIN_ERROR es invisible sin 2d) — demostrado por
+  ejecución, no por lectura.
+- Nota de entorno (no es un fallo de la corrección): la reproducción necesitó
+  5 intentos; los 4 primeros murieron en PRIMARY TIMEOUT (90 s) por falta de
+  CPU — un trabajo hermano de narración Kokoro sostenía ~1.2 de los 1.5 CPUs
+  compartidos (load 7.6) y el primario solo recibía 25–36 s de CPU en 90 s
+  de pared. El 5º intento completó en 138.7 s de pared (58.7 s CPU) al bajar
+  la carga. No se tocó el timeout ni el código: el timeout de 90 s del
+  primario sigue igual; en una celda cargada la reproducción puede necesitar
+  reintento.
