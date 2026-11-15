@@ -197,3 +197,38 @@ Entrada de reproducción: motor-cameo/motor/runs/ESTANDAR__MOZART_CON_TEXTO_Z90_
 - estado_final vs predictor/compuerta: coexisten por diseño (capas distintas).
 - vecinos_caldero persistencia NO_ENCONTRADO_EN_STORE (filas[38], nota 010b):
   bug conocido aparte, NO es uno de los 5 hallazgos; no se tocó.
+
+## Refuerzo del verificador post-re-auditoría ChatGPT (2026-11-14 ~19:00 CST)
+
+- ChatGPT re-auditó en chat nuevo (veredicto provisional): acepta los 5 hallazgos
+  como corregidos según la evidencia, pero señaló que el verificador 18/18 tiene
+  pruebas más débiles que el contrato declarado: no exige expresamente
+  estado=T1_COMPLETADO ni exactamente 77 etapas CEB.
+- Cambio (verificar_correccion_mozart.py, sin debilitar ninguna comprobación
+  existente; 18 → 20 checks): 1c exige efectividad_corte_retenido.estado ==
+  T1_COMPLETADO; 3e exige exactamente 77 etapas CEB con status VERIFIED_FLOW.
+- Verificación por ejecución: FIX5 reproducido desde el código de la rama sola
+  (clon limpio de alterno/reconexion-2a1-correccion-auditoria-mozart, mismo
+  comando de arriba, salida /tmp/RESULT_MOZART_POST_FIX5_REPRO.json, exit 0,
+  recibo COMPLETED, result_missing_paths=[]): verificador reforzado 20/20,
+  exit 0; H1/H2/apuesta idénticos al original.
+- Corrección a la afirmación "reproducible byte a byte": el RESULT reproducido
+  tiene sha256 2072afa58be53ce1... (no 88bb0dcc96237eb1... del recibo) porque el
+  RESULT embebe rutas absolutas de la copia de trabajo (2.259 menciones de la
+  ruta del checkout). El contenido es idéntico (verificador 20/20, invariantes
+  iguales), pero el sha solo coincide si se reproduce en la misma ruta. La
+  reproducibilidad byte a byte vale ruta por ruta, no entre copias.
+- Gate Z90 y manifiesto (investigados, sin cambio de comportamiento): el gate
+  da RECHAZADO_DIAGNOSTICO con 10 errores R3 (C1–C10 sin 'evidencia') y
+  bloquea=false — preexistente (idéntico en el RESULT original del 13-nov) y
+  por diseño (el runner lo define como diagnóstico: los casos de fábrica no
+  traen evidencia; solo rechaza en preparación de fábrica/calibración). El
+  manifiesto da DRIFT_WARNED con 22 archivos en deriva (recibo FIX5 de la
+  rama), 0 ausentes, 24 fuera de manifiesto, bloquea=false, y el candado de
+  plugins 116 verificaciones sin fallos — por diseño (solo Engine/patterns
+  bloquean; ambos coinciden) y esperado por el contrato de tests. La deriva
+  la dominan las propias correcciones de esta auditoría (5 archivos) y
+  archivos de estado que mutan en cada corrida. Pendiente de decisión de
+  Marco (no hecho): refrescar el manifiesto al estado actual del pack y/o
+  mover los archivos de estado mutable a excluidos_estado_mutable; y si se
+  quiere exigir evidencia Z90 en las entradas de los casos.

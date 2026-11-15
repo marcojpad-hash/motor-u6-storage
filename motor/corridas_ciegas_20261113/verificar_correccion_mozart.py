@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Verifica los 5 hallazgos de la auditoría de ChatGPT sobre Mozart en un RESULT.
 Uso: python3 verificar_correccion_mozart.py <RESULT.json> [RESULT_ORIGINAL.json]
-Sale 0 solo si los 5 hallazgos están corregidos (o documentados como por diseño)."""
+Sale 0 solo si los 5 hallazgos están corregidos (o documentados como por diseño).
+Refuerzo 2026-11-14 (post-re-auditoría ChatGPT): comprobaciones expresas
+1c (estado == T1_COMPLETADO) y 3e (exactamente 77 etapas CEB); 20 checks."""
 import json, sys
 from collections import Counter
 
@@ -26,6 +28,11 @@ def main():
     check("1b. visto_status es COMPLETED",
           ecr.get("visto_status") == "COMPLETED_ISOLATED_SUBPROCESS",
           f"visto_status={ecr.get('visto_status')}")
+    # Refuerzo post-re-auditoría ChatGPT (2026-11-14): el contrato declara
+    # estado=T1_COMPLETADO, no solo "no falló". Exigencia expresa.
+    check("1c. efectividad_corte_retenido.estado == T1_COMPLETADO",
+          ecr.get("estado") == "T1_COMPLETADO",
+          f"estado={ecr.get('estado')} hit_H={ecr.get('hit_H')}")
 
     # --- Hallazgo 2: previo_error con clasificación real (no placeholder) ---
     check("2. previo_error no es placeholder",
@@ -53,6 +60,11 @@ def main():
     raw = open(path, encoding="utf-8").read()
     check("3d. sin aviso All-NaN slice",
           "All-NaN slice encountered" not in raw)
+    # Refuerzo post-re-auditoría ChatGPT (2026-11-14): el contrato declara
+    # exactamente 77 etapas CEB con VERIFIED_FLOW. Exigencia expresa del conteo.
+    check("3e. CEB tiene exactamente 77 etapas",
+          len(stages) == 77,
+          f"n_stages={len(stages)} status={ceb.get('status')}")
 
     # --- Hallazgo 4: Caldero ---
     filas = (((d.get("laterales_unico") or {}).get("post") or {}).get("estado_verificado") or {}).get("filas") or []
