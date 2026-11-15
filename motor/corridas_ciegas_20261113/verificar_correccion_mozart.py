@@ -3,7 +3,10 @@
 Uso: python3 verificar_correccion_mozart.py <RESULT.json> [RESULT_ORIGINAL.json]
 Sale 0 solo si los 5 hallazgos están corregidos (o documentados como por diseño).
 Refuerzo 2026-11-14 (post-re-auditoría ChatGPT): comprobaciones expresas
-1c (estado == T1_COMPLETADO) y 3e (exactamente 77 etapas CEB); 20 checks."""
+1c (estado == T1_COMPLETADO) y 3e (exactamente 77 etapas CEB); 20 checks.
+2a vuelta 2026-11-14: 3e exige cada etapa EXECUTED_AND_CONNECTED
+(VERIFIED_FLOW es el status agregado, no por etapa); los invariantes
+exigen H1/H2 presentes y apuesta dict antes de comparar; 20 checks."""
 import json, sys
 from collections import Counter
 
@@ -62,9 +65,20 @@ def main():
           "All-NaN slice encountered" not in raw)
     # Refuerzo post-re-auditoría ChatGPT (2026-11-14): el contrato declara
     # exactamente 77 etapas CEB con VERIFIED_FLOW. Exigencia expresa del conteo.
-    check("3e. CEB tiene exactamente 77 etapas",
-          len(stages) == 77,
-          f"n_stages={len(stages)} status={ceb.get('status')}")
+    # 2a vuelta (2026-11-14): no basta el conteo; cada una de las 77 etapas
+    # debe estar individualmente en el estado bueno. OJO vocabulario: la
+    # reserva pedía literalmente status == "VERIFIED_FLOW" por etapa, pero
+    # ese valor NO existe por etapa: ceb_runtime_v0_6_flow.py:456 asigna
+    # por etapa EXECUTED_AND_CONNECTED / OUTPUT_NO_OBSERVED_CONSUMER /
+    # OUTPUT_PERSISTED_WITHOUT_CONSUMER / EXECUTED_WITH_WARNINGS, y
+    # VERIFIED_FLOW es solo el status AGREGADO del CEB (ibíd.:520), que se
+    # pone justo cuando no hay etapas malas ni anomalías. El equivalente
+    # por etapa del agregado VERIFIED_FLOW es EXECUTED_AND_CONNECTED en
+    # las 77 (verificado por ejecución: el RESULT FIX5 reproducido trae
+    # 77/77 EXECUTED_AND_CONNECTED y el original 62/77).
+    check("3e. CEB tiene exactamente 77 etapas, cada una EXECUTED_AND_CONNECTED",
+          len(stages) == 77 and all(s.get("status") == "EXECUTED_AND_CONNECTED" for s in stages.values()),
+          f"n_stages={len(stages)} connected={sum(1 for s in stages.values() if s.get('status') == 'EXECUTED_AND_CONNECTED')} no_connected={sum(1 for s in stages.values() if s.get('status') != 'EXECUTED_AND_CONNECTED')} status={ceb.get('status')}")
 
     # --- Hallazgo 4: Caldero ---
     filas = (((d.get("laterales_unico") or {}).get("post") or {}).get("estado_verificado") or {}).get("filas") or []
@@ -98,11 +112,16 @@ def main():
     if orig is not None:
         def fam(h):
             return (h or {}).get("family") or (h or {}).get("familia") or h
+        # 2a vuelta (2026-11-14): H1/H2 deben EXISTIR en ambos antes de
+        # comparar; si faltan en los dos, fam(None)==fam(None) aprobaba
+        # en vacío.
         check("INV. H1 igual al original",
-              fam(d.get("H1")) == fam(orig.get("H1")),
+              d.get("H1") is not None and orig.get("H1") is not None
+              and fam(d.get("H1")) == fam(orig.get("H1")),
               f"{fam(d.get('H1'))} vs {fam(orig.get('H1'))}")
         check("INV. H2 igual al original",
-              fam(d.get("H2")) == fam(orig.get("H2")),
+              d.get("H2") is not None and orig.get("H2") is not None
+              and fam(d.get("H2")) == fam(orig.get("H2")),
               f"{fam(d.get('H2'))} vs {fam(orig.get('H2'))}")
         def _esc(e):
             # Escenario/hisótesis/n exactos; el agregado de soporte con
@@ -116,9 +135,16 @@ def main():
             return [(s.get("escenario"), tuple(s.get("hipotesis_que_convergen") or []),
                      s.get("n_hipotesis"), round(float(s.get("soporte_estructural_agregado") or 0), 6))
                     for s in (e or [])]
+        # 2a vuelta (2026-11-14): apuesta debe SER un diccionario en ambos
+        # antes de comparar su contenido; antes, si no era dict, el
+        # ternario aprobaba en vacío (True). El detalle también es
+        # a prueba de no-dict.
+        def _cal(a):
+            return a.get("calibracion") if isinstance(a, dict) else None
         check("INV. apuesta igual al original",
-              _esc((d.get("apuesta") or {}).get("escenarios")) == _esc((orig.get("apuesta") or {}).get("escenarios")) if isinstance(d.get("apuesta"), dict) else True,
-              f"calibracion nueva={ (d.get('apuesta') or {}).get('calibracion')} vs vieja={ (orig.get('apuesta') or {}).get('calibracion')} (cambio esperado del 13-nov)")
+              isinstance(d.get("apuesta"), dict) and isinstance(orig.get("apuesta"), dict)
+              and _esc(d["apuesta"].get("escenarios")) == _esc(orig["apuesta"].get("escenarios")),
+              f"calibracion nueva={_cal(d.get('apuesta'))} vs vieja={_cal(orig.get('apuesta'))} (cambio esperado del 13-nov)")
 
     print()
     print("RESULTADO:", "TODOS LOS HALLAZGOS CORREGIDOS" if ok else "HAY FALLOS PENDIENTES")

@@ -840,8 +840,13 @@ def main(argv) -> int:
         visto_case["_internal_analysis_no_external_search"]=True
         # The CEB tracer installs process audit hooks. Isolate the retained-cut reruns so
         # one execution cannot contaminate or stall the next calibration comparison.
-        sello=_run_internal_case_isolated(previo, rd, "INTERNAL_PREVIO")
-        visto=_run_internal_case_isolated(visto_case, rd, "INTERNAL_RETENIDO")
+        # CORRECCION_AUDITORIA_MOZART_20261114 (2a vuelta, timeout T1):
+        # el previo (9 cortes) tarda ~51 s medidos en esta VM y el timeout
+        # por defecto de 45 s lo mataba de forma intermitente (TIMEOUT →
+        # INTERNAL_T1_RUN_FAILED aunque el visto completara; visto: 2.6 s).
+        # 90 s iguala al PRIMARY (10 cortes, mismo orden de magnitud).
+        sello=_run_internal_case_isolated(previo, rd, "INTERNAL_PREVIO", timeout_seconds=90)
+        visto=_run_internal_case_isolated(visto_case, rd, "INTERNAL_RETENIDO", timeout_seconds=90)
         if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" or visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
             # CORRECCION_AUDITORIA_MOZART_20261114 (#2): previo_error/visto_error
             # eran sello/visto.get("stderr_tail") a secas. Una corrida que COMPLETÓ

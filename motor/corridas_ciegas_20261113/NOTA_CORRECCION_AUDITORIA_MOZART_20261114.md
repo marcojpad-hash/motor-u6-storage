@@ -232,3 +232,47 @@ Entrada de reproducción: motor-cameo/motor/runs/ESTANDAR__MOZART_CON_TEXTO_Z90_
   Marco (no hecho): refrescar el manifiesto al estado actual del pack y/o
   mover los archivos de estado mutable a excluidos_estado_mutable; y si se
   quiere exigir evidencia Z90 en las entradas de los casos.
+
+## 2a vuelta del verificador + timeout T1 (2026-11-14 ~19:15 CST)
+
+- Reservas de ChatGPT cerradas (verificar_correccion_mozart.py, sin debilitar
+  ninguna comprobación existente; siguen siendo 20 checks):
+  - 3e: ya no basta el conteo. Exige len(stages)==77 Y que cada una de las 77
+    etapas tenga individualmente status == "EXECUTED_AND_CONNECTED".
+    CORRECCIÓN DE VOCABULARIO: la reserva pedía literalmente status ==
+    "VERIFIED_FLOW" por etapa, pero ese valor NO existe por etapa:
+    ceb_runtime_v0_6_flow.py:456 asigna por etapa EXECUTED_AND_CONNECTED /
+    OUTPUT_NO_OBSERVED_CONSUMER / OUTPUT_PERSISTED_WITHOUT_CONSUMER /
+    EXECUTED_WITH_WARNINGS, y VERIFIED_FLOW es solo el status AGREGADO del
+    CEB (ibíd.:520), que se pone justo cuando no hay etapas malas ni
+    anomalías. El equivalente por etapa del agregado VERIFIED_FLOW es
+    EXECUTED_AND_CONNECTED en las 77 (verificado por ejecución: el RESULT
+    FIX5 reproducido trae 77/77 EXECUTED_AND_CONNECTED; el original 62/77).
+    Implementar el literal "VERIFIED_FLOW" por etapa habría hecho fallar el
+    verificador sobre el RESULT correcto.
+  - Invariantes: H1/H2 deben EXISTIR en ambos lados antes de comparar sus
+    familias (antes, si faltaban en los dos, fam(None)==fam(None) aprobaba
+    en vacío — demostrado: el verificador viejo da PASS "None vs None" con
+    ambos lados sin H1/H2); apuesta debe SER un diccionario en ambos antes
+    de comparar su contenido (antes, si no era dict, el ternario aprobaba
+    en vacío; además el detalle crasheaba con AttributeError si apuesta era
+    string — demostrado). El detalle ahora es a prueba de no-dict.
+- Hallazgo en la reproducción (no es un fallo de la corrección): la primera
+  reproducción FIX5 desde el clon limpio salió con estado=
+  INTERNAL_T1_RUN_FAILED por TIMEOUT del previo (previo_status=TIMEOUT,
+  visto completó bien). Causa medida por ejecución: el previo (9 cortes)
+  tarda 51.0 s y el timeout por defecto de _run_internal_case_isolated es
+  45 s; el retenido tarda 2.6 s. Corrección (correr_estandar.py, mismo
+  archivo que ya toca el PR): previo y visto con timeout_seconds=90, igual
+  que el PRIMARY (10 cortes). No cambia ningún resultado, solo deja terminar
+  las piernas internas.
+- Verificación por ejecución (clon limpio de
+  alterno/reconexion-2a1-correccion-auditoria-mozart, mismo comando de arriba,
+  salida /tmp/RESULT_MOZART_POST_FIX5_REPRO3.json, exit 0, recibo COMPLETED,
+  result_missing_paths=[], sha256 f5bdf972b962b4c7...; efectividad
+  T1_COMPLETADO, hit_H=HIT_HIPOTESIS_SET, Monte Carlo 30/16,938 idéntico):
+  verificador reforzado 20/20, exit 0 contra REPRO3 y contra REPRO (la
+  reproducción anterior); contra el RESULT original sigue fallando donde debe
+  (1/1c, 2, 3/3b/3c/3d/3e con 62/77 conectadas, 4b/4c/4d, 5/5b). Mutantes
+  sintéticos: sin H1/H2 en ambos lados y apuesta como string — el verificador
+  viejo aprueba en vacío (H1/H2) o crashea (apuesta); el nuevo falla limpio.
