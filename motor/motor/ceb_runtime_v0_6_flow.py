@@ -177,8 +177,11 @@ class FlowLedger:
         self.output('execution_integrity',payload)
         self.emit('EXECUTION_INTEGRITY_AUDIT','execution_integrity',payload)
         self.end('execution_integrity',payload)
-        if not payload['ok']:
-            self.terminal('execution_integrity','integrity_failure')
+        # CORRECCION_AUDITORIA_MOZART_20261114 (#3): la auditoría de integridad
+        # es un artefacto terminal por diseño (su salida es el propio informe
+        # de integridad); sin marca terminal el verificador la contaba como
+        # salida sin consumidor observado.
+        self.terminal('execution_integrity','integrity_failure' if not payload['ok'] else 'integrity_audit_artifact')
         return payload
 
     def emit(self,event,stage_id,payload=None,parent_stage_id=None):
@@ -451,6 +454,13 @@ class FlowVerifier:
             elif not s['started'] and s['registered']: s['status']='REGISTERED_NOT_STARTED'
             elif s['started'] and s['ended']:
                 s['status']='EXECUTED_WITH_WARNINGS' if s.get('warnings') else ('EXECUTED_AND_CONNECTED' if (s['consumers'] or s['terminal'] or not s['output']) else ('OUTPUT_PERSISTED_WITHOUT_CONSUMER' if s.get('io_writes') else 'OUTPUT_NO_OBSERVED_CONSUMER'))
+            elif not s['registered'] and not s['started'] and not s['ended'] and not s['output']:
+                # CORRECCION_AUDITORIA_MOZART_20261114 (#3): cubeta de diagnóstico
+                # (p. ej. UNSCOPED_RUNTIME, donde caen los avisos sin etapa
+                # atribuible): no es una etapa, así que UNKNOWN la metía en `bad`
+                # y el CEB quedaba INCOMPLETE por un artefacto del verificador,
+                # no por la corrida. Los avisos siguen en anomalies.
+                s['status']='DIAGNOSTIC_BUCKET'
             else: s['status']='UNKNOWN'
         if report:
             reported=report.get('execution',{}).get('component_status') or report.get('component_status') or []

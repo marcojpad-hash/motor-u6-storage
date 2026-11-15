@@ -697,6 +697,28 @@ def main(argv) -> int:
         # SIDECAR SELLADO: procedencia y texto original de cada respuesta. Fuera de runs/: el motor no lo lee.
         out.with_name(out.stem + "_CONSULTA_SELLADO.json").write_text(json.dumps(_cd_side, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
 
+    # GATE_Z90 (calibracion/gate_z90.py): compuerta Z_trabajo sobre la entrada.
+    # DIAGNOSTICO, no bloquea: los casos de fábrica no traen evidencia/modo_z,
+    # así que el gate reporta y se registra; no se rechaza la corrida.
+    # No toca Engine ni catálogo 244. Se ejecuta ANTES del motor, sobre el caso
+    # ya filtrado (FILTRO_017 / CONSULTA_DIRIGIDA).
+    _gate_z90 = None
+    try:
+        import importlib.util as _iugz
+        _gzp = ROOT / "calibracion" / "gate_z90.py"
+        if _gzp.is_file():
+            _gzs = _iugz.spec_from_file_location("gate_z90_u6", str(_gzp))
+            _gz = _iugz.module_from_spec(_gzs); _gzs.loader.exec_module(_gz)
+            _gz_errs = _gz.validar_entrada(case)
+            _gate_z90 = {"stage": "gate_z90", "status": "PASA" if not _gz_errs else "RECHAZADO_DIAGNOSTICO",
+                         "n_errores": len(_gz_errs), "errores": _gz_errs[:20],
+                         "nota": "diagnóstico pre-motor; no bloquea la corrida"}
+        else:
+            _gate_z90 = {"stage": "gate_z90", "status": "NOT_CONFIGURED", "n_errores": 0, "errores": []}
+    except Exception as _gz_exc:
+        _gate_z90 = {"stage": "gate_z90", "status": "ERROR", "n_errores": 0,
+                     "errores": [f"{type(_gz_exc).__name__}: {str(_gz_exc)[:200]}"]}
+
     rd = ROOT / "runs" / f"ESTANDAR__{nombre}"
     _build(rd)
     inp = rd / "_INPUT.json"
@@ -740,6 +762,18 @@ def main(argv) -> int:
     "can_decide_H": False,
     "motivo": "Cableada en runner; estadísticas solo con filas verificadas; no escribe H1/H2."
     })
+    # GATE_Z90: fila de registro (el gate corrió pre-motor; aquí solo se registra).
+    if _gate_z90 is not None:
+        _component_rows.append({
+        "pieza": "gate_z90",
+        "fuente": "calibracion",
+        "estado": "ACTIVA_DIAGNOSTICA" if _gate_z90.get("status") in ("PASA", "RECHAZADO_DIAGNOSTICO") else _gate_z90.get("status", "ERROR"),
+        "estado_crudo": _gate_z90.get("status"),
+        "alimenta_predictor": False,
+        "can_decide_H": False,
+        "n_errores": _gate_z90.get("n_errores", 0),
+        "motivo": "Cableado en runner (pre-motor, diagnóstico); no bloquea la corrida ni escribe H1/H2."
+        })
     result["registro_componentes"]["conteo"] = len(_component_rows)
     _search_run = ((result.get("features") or {}).get("external_archetype_search_receipt") or {})
     result["external_archetype_search_receipt"] = _search_run
@@ -790,19 +824,56 @@ def main(argv) -> int:
         previo["cuts"]=_plain_json_copy(cuts[:-1])
         previo["case_id"]=str(case.get("case_id"))+"_SIN_ULTIMO"
         previo["_internal_analysis_no_external_search"]=True
-        visto_case={"cuts":[retenido],"case_id":str(case.get("case_id"))+"_RETENIDO","question":"retenido",
-                    "random_seed":int(case.get("random_seed",0)),"_internal_analysis_no_external_search":True}
+        # CORRECCION_AUDITORIA_MOZART_20261114 (#1): el visto NO puede ser un
+        # caso pelado con solo el corte retenido. Las activaciones externas del
+        # corte se registran contra la taxonomía del caso (external_lights); sin
+        # ella, run_external levanta FAIL_UNKNOWN_TOKEN en el primer token
+        # (Mozart: 'creatividad', primera activación de C10) y la corrida
+        # interna falla siempre. El visto es el MISMO caso con un solo corte,
+        # igual que el previo es el mismo caso sin el último corte. La
+        # taxonomía es tabla de registro, no evidencia: no añade nada a H.
+        visto_case=_plain_json_copy(case)
+        visto_case["cuts"]=[retenido]
+        visto_case["case_id"]=str(case.get("case_id"))+"_RETENIDO"
+        visto_case["question"]="retenido"
+        visto_case["random_seed"]=int(case.get("random_seed",0))
+        visto_case["_internal_analysis_no_external_search"]=True
         # The CEB tracer installs process audit hooks. Isolate the retained-cut reruns so
         # one execution cannot contaminate or stall the next calibration comparison.
-        sello=_run_internal_case_isolated(previo, rd, "INTERNAL_PREVIO")
-        visto=_run_internal_case_isolated(visto_case, rd, "INTERNAL_RETENIDO")
+        # CORRECCION_AUDITORIA_MOZART_20261114 (2a vuelta, timeout T1):
+        # el previo (9 cortes) tarda ~51 s medidos en esta VM y el timeout
+        # por defecto de 45 s lo mataba de forma intermitente (TIMEOUT →
+        # INTERNAL_T1_RUN_FAILED aunque el visto completara; visto: 2.6 s).
+        # 90 s iguala al PRIMARY (10 cortes, mismo orden de magnitud).
+        sello=_run_internal_case_isolated(previo, rd, "INTERNAL_PREVIO", timeout_seconds=90)
+        visto=_run_internal_case_isolated(visto_case, rd, "INTERNAL_RETENIDO", timeout_seconds=90)
         if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" or visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
+            # CORRECCION_AUDITORIA_MOZART_20261114 (#2): previo_error/visto_error
+            # eran sello/visto.get("stderr_tail") a secas. Una corrida que COMPLETÓ
+            # no tiene stderr_tail → None → _sanitize_json_contract lo convertía
+            # en DATO_AUSENTE_REQUIERE_CLASIFICACION y el campo quedaba como
+            # faltante en auditoria_salida_json. Una corrida completada se
+            # clasifica SIN_ERROR explícito; solo la fallida lleva su traza.
             result["efectividad_corte_retenido"]={"estado":"INTERNAL_T1_RUN_FAILED", "previo_status":sello.get("_internal_run_status"),
-                "visto_status":visto.get("_internal_run_status"), "previo_error":sello.get("stderr_tail"), "visto_error":visto.get("stderr_tail"),
+                "visto_status":visto.get("_internal_run_status"),
+                "previo_error":(sello.get("stderr_tail") if sello.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" else "SIN_ERROR_CORRIDA_PREVIA_COMPLETADA"),
+                "visto_error":(visto.get("stderr_tail") if visto.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS" else "SIN_ERROR_CORRIDA_RETENIDA_COMPLETADA"),
                 "hit_H":"INCONCLUSO_CORRIDA_INTERNA_FALLIDA"}
         else:
             result["efectividad_corte_retenido"]=puntuar_t1(_plain_json_copy(sello), [retenido], _plain_json_copy(visto))
             result["efectividad_corte_retenido"]["internal_runs_isolated"] = True
+            # CORRECCION_AUDITORIA_MOZART_20261114 (#1/#2, camino de éxito):
+            # puntuar_t1 no emite estado/previo_error: el contrato del RESULT
+            # debe llevar los mismos campos en los dos caminos, para que un
+            # auditor lea estado y clasificación de errores sin importar si
+            # la corrida interna completó o falló. Aquí AMBAS completaron
+            # (la guarda de arriba lo garantiza), así que el estado es el
+            # de éxito y los errores son SIN_ERROR explícitos.
+            result["efectividad_corte_retenido"]["estado"] = "T1_COMPLETADO"
+            result["efectividad_corte_retenido"]["previo_status"] = "COMPLETED_ISOLATED_SUBPROCESS"
+            result["efectividad_corte_retenido"]["visto_status"] = "COMPLETED_ISOLATED_SUBPROCESS"
+            result["efectividad_corte_retenido"]["previo_error"] = "SIN_ERROR_CORRIDA_PREVIA_COMPLETADA"
+            result["efectividad_corte_retenido"]["visto_error"] = "SIN_ERROR_CORRIDA_RETENIDA_COMPLETADA"
     _ceb_pres = preservar_ledger_ceb(rd, out, result)
     if isinstance(result.get("ceb"), dict):
         result["ceb"]["ledger_preservado_U6"] = _ceb_pres
@@ -837,6 +908,28 @@ def main(argv) -> int:
         "rutas_faltantes": _result_missing_paths,
         "rutas_no_finitas": _result_nonfinite_paths,
         "estado": "LIMPIO" if not _result_missing_paths and not _result_nonfinite_paths else "REQUIERE_CLASIFICACION_O_REMEDICION"
+    }
+    # CORRECCION_AUDITORIA_MOZART_20261114 (#5): semántica explícita de los
+    # estados terminales, en el contrato de salida. Un auditor leyó
+    # estado_final=RESUELTO_OPERACIONALMENTE como contradictorio con
+    # predictor=LATENCIA_INFORMACIONAL y compuerta=SIN_CIERRE_PROPUESTO_
+    # LATENCIA_PREVIA. No es contradicción: describen capas distintas. La
+    # resolución operativa terminal existe (se produjo una resolución) Y el
+    # predictor retiene el cierre epistémico (latencia). La nota de
+    # resolucion_operativa_final ya lo decía; este bloque lo deja explícito
+    # para que no haya que inferirlo.
+    _pred_status = (result.get("predictor") or {}).get("status") or "SIN_PREDICTOR"
+    _compuerta_decision = (result.get("compuerta_cierre") or {}).get("decision") or "SIN_COMPUERTA"
+    result["semantica_estados"] = {
+        "contrato": "SEMANTICA_ESTADOS_TERMINALES_V1",
+        "estado_final": result.get("estado_final") or "SIN_ESTADO_FINAL",
+        "estado_final_significado": "decisión terminal OPERACIONAL: se produjo una resolución (ver resolucion_operativa_final); no es verdad validada ni cierre epistémico del predictor; la incertidumbre se conserva en grado/objeciones",
+        "predictor_status": _pred_status,
+        "predictor_status_significado": "estado epistémico del predictor en esta corrida; LATENCIA_INFORMACIONAL = el predictor retiene el cierre (hay pendientes/latencia) y no propone cierre",
+        "compuerta_cierre_decision": _compuerta_decision,
+        "compuerta_cierre_significado": "decisión de la compuerta de cierre en esta corrida; SIN_CIERRE_PROPUESTO_LATENCIA_PREVIA = la compuerta no propuso cierre por la latencia previa; la latencia no detiene la ejecución",
+        "regla_consistencia": "los tres pueden coexistir: la resolución operativa terminal existe Y el cierre del predictor queda retenido; describen capas distintas (resolución operacional vs estado epistémico del predictor vs decisión de la compuerta); no es contradicción",
+        "nota_resolucion": (result.get("resolucion_operativa_final") or {}).get("nota") or "sin nota de resolución",
     }
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
@@ -915,6 +1008,105 @@ def main(argv) -> int:
     _stinkbox_ingest = _ingest_stinkbox_registry(stink_home, stink_storage, rd)
     result["stinkbox_persistent_registry"] = _stinkbox_ingest
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
+    # LATERALES POST-CORRIDA (no deciden H; no tocan Engine/244): filogenia_mezcla
+    # y teoria_color leen el RESULT ya escrito y producen sus artefactos junto
+    # a él. Diagnóstico, no bloquean: si uno falla, se registra ERROR y la
+    # corrida sigue. El RESULT se reescribe para incluir el resumen; el recibo
+    # recalcula su sha después de esta reescritura. Nota de procedencia: la
+    # filogenia registra el sha del RESULT que leyó (previo a este resumen);
+    # su análisis no cambia porque lee campos que no se modifican aquí.
+    _laterales_post = {}
+    try:
+        import subprocess as _sub_lf
+        _lf_script = ROOT / "laterales" / "filogenia_mezcla" / "filogenia_mezcla.py"
+        if _lf_script.is_file():
+            _lf = _sub_lf.run([sys.executable, str(_lf_script), str(out), str(out.parent), "--prefix", nombre],
+                              cwd=str(ROOT), text=True, capture_output=True, timeout=300)
+            _lf_json = out.parent / f"FILOGENIA_MEZCLA_{nombre}.json"
+            _lf_md = out.parent / f"FILOGENIA_MEZCLA_{nombre}.md"
+            _lf_sum = {}
+            if _lf_json.is_file():
+                try:
+                    _lf_data = json.loads(_lf_json.read_text(encoding="utf-8"))
+                    _lf_sum = {"n_nodos": (_lf_data.get("grafo") or {}).get("n_nodos"),
+                               "n_aristas": (_lf_data.get("grafo") or {}).get("n_aristas"),
+                               "n_raices": (_lf_data.get("cierre") or {}).get("n_raices"),
+                               "pureza_max": (_lf_data.get("mezcla") or {}).get("pureza_proporcion_max"),
+                               "entropia_norm": (_lf_data.get("mezcla") or {}).get("entropia_normalizada")}
+                except Exception:
+                    _lf_sum = {}
+            _laterales_post["filogenia_mezcla"] = {
+                "status": "EJECUTADO" if _lf.returncode == 0 and _lf_json.is_file() else "ERROR",
+                "returncode": _lf.returncode,
+                "json": str(_lf_json) if _lf_json.is_file() else None,
+                "md": str(_lf_md) if _lf_md.is_file() else None,
+                "sha256_json": sha(_lf_json) if _lf_json.is_file() else None,
+                "resumen": _lf_sum,
+                "stdout": _lf.stdout[-500:], "stderr": _lf.stderr[-500:]}
+        else:
+            _laterales_post["filogenia_mezcla"] = {"status": "NOT_CONFIGURED"}
+    except Exception as _lf_exc:
+        _laterales_post["filogenia_mezcla"] = {"status": "ERROR", "error": f"{type(_lf_exc).__name__}: {str(_lf_exc)[:200]}"}
+    try:
+        import importlib.util as _iutc
+        _tc_p = ROOT / "laterales" / "teoria_color" / "teoria_color.py"
+        if _tc_p.is_file():
+            _tcs = _iutc.spec_from_file_location("teoria_color_u6", str(_tc_p))
+            _tc = _iutc.module_from_spec(_tcs); _tcs.loader.exec_module(_tc)
+            _tc_out = _tc.run(str(out), str(out.parent))
+            _tc_name = out.name.replace(".json", "")
+            _tc_json = out.parent / f"COLOR_{_tc_name}.json"
+            _tc_md = out.parent / f"COLOR_{_tc_name}.md"
+            _tc_png = out.parent / f"COLOR_{_tc_name}.png"
+            _laterales_post["teoria_color"] = {
+                "status": "EJECUTADO" if _tc_json.is_file() else "ERROR",
+                "json": str(_tc_json) if _tc_json.is_file() else None,
+                "md": str(_tc_md) if _tc_md.is_file() else None,
+                "png": str(_tc_png) if _tc_png.is_file() else None,
+                "sha256_json": sha(_tc_json) if _tc_json.is_file() else None,
+                "tono_final": (_tc_out or {}).get("tono_final_mezcla"),
+                "n_huecos": len((_tc_out or {}).get("huecos") or [])}
+        else:
+            _laterales_post["teoria_color"] = {"status": "NOT_CONFIGURED"}
+    except Exception as _tc_exc:
+        _laterales_post["teoria_color"] = {"status": "ERROR", "error": f"{type(_tc_exc).__name__}: {str(_tc_exc)[:200]}"}
+    try:
+        import importlib.util as _iudl
+        _dl_p = ROOT / "laterales" / "dialectica_hegeliana" / "dialectica.py"
+        if _dl_p.is_file():
+            _dls = _iudl.spec_from_file_location("dialectica_hegeliana_u6", str(_dl_p))
+            _dl = _iudl.module_from_spec(_dls); _dls.loader.exec_module(_dl)
+            _dl_out = _dl.run(str(out), str(out.parent))
+            _dl_name = out.name.replace(".json", "")
+            _dl_json = out.parent / f"DIALECTICA_{_dl_name}.json"
+            _dl_md = out.parent / f"DIALECTICA_{_dl_name}.md"
+            _laterales_post["dialectica_hegeliana"] = {
+                "status": "EJECUTADO" if _dl_json.is_file() else "ERROR",
+                "json": str(_dl_json) if _dl_json.is_file() else None,
+                "md": str(_dl_md) if _dl_md.is_file() else None,
+                "sha256_json": sha(_dl_json) if _dl_json.is_file() else None,
+                "triadas_completas": (_dl_out or {}).get("triadas_completas"),
+                "cortes_con_sintesis": (_dl_out or {}).get("cortes_con_sintesis"),
+                "punto_fijo_en": (_dl_out or {}).get("punto_fijo_en")}
+        else:
+            _laterales_post["dialectica_hegeliana"] = {"status": "NOT_CONFIGURED"}
+    except Exception as _dl_exc:
+        _laterales_post["dialectica_hegeliana"] = {"status": "ERROR", "error": f"{type(_dl_exc).__name__}: {str(_dl_exc)[:200]}"}
+    result["laterales_post_corrida"] = _laterales_post
+    for _pieza_lat, _res_lat in (("filogenia_mezcla", _laterales_post.get("filogenia_mezcla") or {}),
+                                 ("teoria_color", _laterales_post.get("teoria_color") or {}),
+                                 ("dialectica_hegeliana", _laterales_post.get("dialectica_hegeliana") or {})):
+        _component_rows.append({
+        "pieza": _pieza_lat,
+        "fuente": "laterales",
+        "estado": "ACTIVA_DIAGNOSTICA" if _res_lat.get("status") == "EJECUTADO" else _res_lat.get("status", "ERROR"),
+        "estado_crudo": _res_lat.get("status"),
+        "alimenta_predictor": False,
+        "can_decide_H": False,
+        "motivo": "Cableado en runner (post-corrida, lee el RESULT); no decide H ni escribe H1/H2."
+        })
+    result["registro_componentes"]["conteo"] = len(_component_rows)
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
     receipt["output_sha256"] = sha(out)
     for _stage in receipt.get("stages") or []:
         if _stage.get("stage") == "result_json_written": _stage["sha256"] = receipt["output_sha256"]
@@ -924,6 +1116,19 @@ def main(argv) -> int:
     receipt["stinkbox_persistent_registry"] = _stinkbox_ingest
     receipt["stages"].append({"stage": "stinkbox_persistent_registry_primary_checkpoint", "status": _stinkbox_primary_checkpoint.get("status", "ERROR"), "home": str(stink_home), "storage": str(stink_storage)})
     receipt["stages"].append({"stage": "stinkbox_persistent_registry_ingest", "status": _stinkbox_ingest.get("status", "ERROR"), "home": str(stink_home), "storage": str(stink_storage)})
+    # Etapas de los componentes cableados (evidencia de ejecución en el recibo).
+    receipt["stages"].append({"stage": "gate_z90", "status": (_gate_z90 or {}).get("status", "NO_EJECUTADO"),
+                             "n_errores": (_gate_z90 or {}).get("n_errores", 0),
+                             "errores": (_gate_z90 or {}).get("errores", [])[:20],
+                             "bloquea": False})
+    _lf_stage = (_laterales_post or {}).get("filogenia_mezcla") or {}
+    receipt["stages"].append({"stage": "filogenia_mezcla", "status": _lf_stage.get("status", "NO_EJECUTADO"),
+                             "json": _lf_stage.get("json"), "sha256_json": _lf_stage.get("sha256_json"),
+                             "bloquea": False})
+    _tc_stage = (_laterales_post or {}).get("teoria_color") or {}
+    receipt["stages"].append({"stage": "teoria_color", "status": _tc_stage.get("status", "NO_EJECUTADO"),
+                             "json": _tc_stage.get("json"), "png": _tc_stage.get("png"),
+                             "sha256_json": _tc_stage.get("sha256_json"), "bloquea": False})
     receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
     print(json.dumps({
         "ok": not search_required_failed and not _result_missing_paths and not _result_nonfinite_paths and _continuity_pause is None and _json_health(result)["nulls"] == 0 and _json_health(result)["nonfinite"] == 0,

@@ -21,7 +21,7 @@ def cargar_tusi_motor(motor: Path):
 
 def trayectorias(result):
     cuts = result["motor"]["cuts"]; ids = [c["corte"] for c in cuts]
-    fams = sorted(cuts[0]["P_FULL_244"]); assert len(fams) == 244
+    fams = sorted(cuts[0]["P_FULL_244"]); n_canon = int(result["motor"].get("n_canon") or len(fams)); assert len(fams) == n_canon
     X = {b: np.array([[float(c[f"{b}_FULL_244"][f]) for f in fams] for c in cuts]) for b in BOARDS}
     X["R732"] = np.hstack([X[b] for b in BOARDS])
     stored = np.array(result["motor"]["R732"]["dX_norm"]); recon = np.linalg.norm(np.diff(X["R732"], axis=0), axis=1)
@@ -46,10 +46,20 @@ def helice_tablero(X, rng):
     keep = ("helix_like", "radius_mean", "radius_cv", "phase_total_turns", "phase_direction_consistency", "axial_displacement", "pitch_per_turn_median", "n_points", "low_n_warning")
     f = lambda h: None if h is None else {k: (R(h[k]) if isinstance(h.get(k), float) else h.get(k)) for k in keep}
     cvn = np.array(cv, float)
+    # CORRECCION_AUDITORIA_MOZART_20261114 (#3): si todas las permutaciones
+    # nulas devuelven radius_cv NaN, la mediana no existe. Antes np.nanmedian
+    # avisaba "All-NaN slice encountered" y el CEB lo registraba como anomalía
+    # (RUNTIME_NUMERIC_WARNING). Se detecta explícito: la rama queda sin
+    # radius_cv_mediana (como ya ocurría por el filtrado posterior) y se deja
+    # constancia del motivo en radius_cv_mediana_nota. No se inventa un número.
+    _nulo = {"n": NNULL, "seed": SEED, "frac_helix_like_pct": R(100 * np.mean(hl), 2),
+             "frac_radius_cv_menor_o_igual_observado_pct": R(100 * np.nanmean(cvn <= hp.get("radius_cv", np.inf)), 2)}
+    if np.isnan(cvn).all():
+        _nulo["radius_cv_mediana_nota"] = "no computable: las %d permutaciones nulas devolvieron radius_cv NaN (rama degenerada; la mediana no existe)" % NNULL
+    else:
+        _nulo["radius_cv_mediana"] = R(np.nanmedian(cvn), 4)
     return {"varianza_explicada_pca3": var, "eje_pca": f(hp), "eje_deriva_primer_ultimo_corte": f(hd),
-            "nulo_orden_permutado": {"n": NNULL, "seed": SEED, "frac_helix_like_pct": R(100 * np.mean(hl), 2),
-                                     "radius_cv_mediana": R(np.nanmedian(cvn), 4),
-                                     "frac_radius_cv_menor_o_igual_observado_pct": R(100 * np.nanmean(cvn <= hp.get("radius_cv", np.inf)), 2)},
+            "nulo_orden_permutado": _nulo,
             "advertencia": "8 puntos es muy poco: fase ambigua, eje PCA sesgado hacia la deriva global; descriptivo, no prueba de hélice."}
 
 def pares_tableros(ids, X):
@@ -62,7 +72,26 @@ def pares_tableros(ids, X):
                 step = np.mean([np.linalg.norm(np.diff(M, axis=0), axis=1).mean() for M in (A, B)])
                 tau = 0.1 * step
                 S = np.vstack([A, B]); c = S.mean(0); _, s, Vt = np.linalg.svd(S - c, full_matrices=False)
-                r = int((s > 1e-10).sum()); Ar, Br = (A - c) @ Vt[:r].T, (B - c) @ Vt[:r].T  # rotación completa: preserva distancias
+                r = int((s > 1e-10).sum())
+                if r == 0:
+                    # Par degenerado: los dos tableros son idénticos y constantes
+                    # en este prefijo (sin varianza, p. ej. entrada sin tokens A/C:
+                    # A_FULL_244 y C_FULL_244 quedan en la base 0.5). No hay
+                    # trayectoria que comparar; se registra y se sigue con el
+                    # siguiente prefijo en vez de tumbar toda la capa.
+                    filas.append({"k": ids[k - 1], "cortes_usados": ids[:k],
+                                  "degenerado_sin_varianza": True,
+                                  "tau_0.1xpaso_medio": R(tau),
+                                  "d_full_en_Ck": None, "d_proj3_en_Ck": None,
+                                  "d_full_min_C1..Ck": None, "monotono_no_creciente": None,
+                                  "convergencia_full_en_Ck": None,
+                                  "interseccion_proyeccion_en_Ck": None,
+                                  "falso_positivo_proyeccion_en_Ck": None,
+                                  "cociente_proj_full_en_Ck": None,
+                                  "familias_crudas_coinciden_en_Ck_pct": None,
+                                  "falso_positivo_si_se_proyecta_a_familias_coincidentes": None})
+                    continue
+                Ar, Br = (A - c) @ Vt[:r].T, (B - c) @ Vt[:r].T  # rotación completa: preserva distancias
                 cmp = G.compare_trajectories(Ar, Br, projection_dims=list(range(min(3, r))), tol=tau)
                 pt = cmp["projection_test"]
                 filas.append({"k": ids[k - 1], "cortes_usados": ids[:k], "tau_0.1xpaso_medio": R(tau),
@@ -76,7 +105,12 @@ def pares_tableros(ids, X):
                               "falso_positivo_si_se_proyecta_a_familias_coincidentes": bool(np.any(np.abs(A[-1] - B[-1]) <= tau) and cmp["distance_sequence"][-1] > tau)})
             full = [np.linalg.norm(X[a][t] - X[b][t]) for t in range(len(ids))]
             out[f"{a}~{b}"] = {"d_full_244_por_corte": dict(zip(ids, [R(v, 4) for v in full])),
-                               "final_sobre_inicial": R(full[-1] / full[0], 4), "por_prefijo": filas}
+                               # Si los dos tableros coinciden en todo (distancia 0
+                               # siempre), el cociente final/inicial es 0/0: no es
+                               # un número, se registra como None.
+                               "final_sobre_inicial": R(full[-1] / full[0], 4) if full[0] > 0 else None,
+                               "degenerado_sin_varianza": bool(all(v == 0 for v in full)),
+                               "por_prefijo": filas}
     return out
 
 def tusi_bloque(ids, X, fams, dps, tusi, rng, cuts, motor):
@@ -108,9 +142,16 @@ def tusi_bloque(ids, X, fams, dps, tusi, rng, cuts, motor):
             zs = [r["z_vs_nulo"] for r in rows if r["z_vs_nulo"] is not None]
             dif = [abs(r["tusi_motor"] - r["tusi_local_modulo_externo"]) for r in rows if r["tusi_local_modulo_externo"] is not None]
             rows.sort(key=lambda r: -(r["z_vs_nulo"] or -9))
-            b_rows.append({"par_tableros": f"{p}~{q}", "n_familias": len(rows), "tusi_motor_mediana": R(np.median([r["tusi_motor"] for r in rows]), 4),
+            # Si no quedó ninguna fila (los dos tableros no se mueven: tusi
+            # devuelve None para todas las familias, p. ej. A~C cuando la
+            # entrada no trae tokens A/C), no hay mediana ni máximo que
+            # calcular; se registra como degenerado y se sigue.
+            b_rows.append({"par_tableros": f"{p}~{q}", "n_familias": len(rows),
+                           "tusi_motor_mediana": R(np.median([r["tusi_motor"] for r in rows]), 4) if rows else None,
                            "n_z_mayor_2": int(sum(z > 2 for z in zs)), "esperado_por_azar_aprox_z_mayor_2": R(0.023 * len(zs), 1),
-                           "diferencia_motor_vs_local_mediana": R(np.median(dif), 4), "diferencia_motor_vs_local_max": R(max(dif), 4),
+                           "diferencia_motor_vs_local_mediana": R(np.median(dif), 4) if dif else None,
+                           "diferencia_motor_vs_local_max": R(max(dif), 4) if dif else None,
+                           "degenerado_sin_movimiento": not rows,
                            "top5_por_z": rows[:5]})
     return {"a_entrada_motor_P_top5": a_rows, "b_familia_entre_tableros_FULL_244": b_rows,
             "lectura": "retrospectiva sobre todos los cortes del RESULT; sin corrección por comparaciones múltiples salvo el conteo esperado por azar."}
