@@ -1,0 +1,850 @@
+{
+ "case_id": "NAPOLEON_CON_TEXTO_Z90_U6_20261115",
+ "question": "¿Qué configuración dinámica se perfila en Napoleón cuando cada corte entra con su hecho y su narración reales, usando solo evidencia hasta Z90?",
+ "protocol": "BIOGRAFIA_Z90_CON_TEXTO_20261115",
+ "birth_date": "1769-08-15",
+ "death_date": "1821-05-05",
+ "z90_date": "1816-03-03",
+ "source_mode": "WEB_RESEARCH_FRESH_20261115",
+ "caldero_identity": {
+  "nombre_o_alias": "Napoleón Bonaparte",
+  "prohibido_self_match": true
+ },
+ "caldero_archetype_input": {
+  "tokens_activos": [
+   "ambicion",
+   "aprendizaje",
+   "audacia",
+   "competencia",
+   "conocimiento",
+   "creatividad",
+   "desafio_autoridad",
+   "independencia",
+   "liderazgo",
+   "logro_personal",
+   "poder",
+   "reconocimiento",
+   "reflexion",
+   "victoria"
+  ]
+ },
+ "caldero_search_sources": [
+  {
+   "id": "src1",
+   "texto": "C1 1779-05-15: Napoleón Bonaparte nace en Ajaccio el 15 de agosto de 1769 y en 1779 ingresa en la escuela militar de Brienne.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src2",
+   "texto": "C2 1785-09-30: En 1785 se gradúa en la École Militaire de París y es nombrado teniente segundo de artillería.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src3",
+   "texto": "C3 1793-12-19: El 19 de diciembre de 1793 Napoleón dirige la artillería que recupera el puerto de Tolón y asciende a general de brigada.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src4",
+   "texto": "C4 1796-04-11: En la campaña de Italia de 1796 obtiene las victorias de Montenotte y Lodi y su nombre se conoce en toda Francia.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src5",
+   "texto": "C5 1799-11-09: El 9 de noviembre de 1799 da el golpe de Estado del 18 Brumario y se convierte en Primer Cónsul.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src6",
+   "texto": "C6 1804-12-02: El 2 de diciembre de 1804 se corona emperador en Notre-Dame de París.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src7",
+   "texto": "C7 1805-12-02: El 2 de diciembre de 1805 vence en Austerlitz, su victoria más celebrada.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src8",
+   "texto": "C8 1807-07-07: El 7 de julio de 1807 firma la paz de Tilsit: es el apogeo de su poder en Europa.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src9",
+   "texto": "C9 1812-06-24: El 24 de junio de 1812 cruza el Niemen con la Grande Armée para invadir Rusia.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src10",
+   "texto": "C10 1816-03-03: Corte de frontera, 3 de marzo de 1816: sin hecho documentado en esa fecha; la evidencia más reciente antes del corte es la derrota definitiva de Waterloo el 18 de junio de 1815 y el exilio a Santa Elena en octubre de 1815, donde escribe sus memorias.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  }
+ ],
+ "caldero_llm_neighbor_hints": [],
+ "external_lights": [
+  {
+   "token": "ambicion",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "aprendizaje",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "audacia",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "competencia",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "conocimiento",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "creatividad",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "desafio_autoridad",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "independencia",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "liderazgo",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "logro_personal",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "poder",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "reconocimiento",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "reflexion",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  },
+  {
+   "token": "victoria",
+   "branch": "hecho_narracion_verificado",
+   "stereotype": "con_texto_20261115",
+   "axes": [
+    "trajectory"
+   ]
+  }
+ ],
+ "random_seed": 20261111,
+ "protocol_note": "Mismo P/A/C y mismo random_seed que NAPOLEON_10CORTES_FINAL27; la única diferencia es que cada corte trae hecho y narracion reales y verificados con fuente citada, antes del freeze. Fechas de corte iguales a FINAL27 para comparar limpio. Z90=1816-03-03 calculado desde nacimiento 1769-08-15 y muerte 1821-05-05; la muerte solo calcula la frontera temporal. C10 es corte de frontera: sin hecho en la fecha exacta, resume la evidencia documentada más reciente antes del corte (Waterloo y exilio a Santa Elena, 1815). Fuentes: las 4 de FINAL27 (Wikipedia es), reescritas por corte.",
+ "cuts": [
+  {
+   "id": "C1",
+   "date": "1779-05-15",
+   "P": [
+    [
+     "aprendizaje",
+     0.78
+    ],
+    [
+     "conocimiento",
+     0.66
+    ],
+    [
+     "ambicion",
+     0.68
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "aprendizaje",
+     "strength": 0.78,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "conocimiento",
+     "strength": 0.66,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.68,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "Napoleón Bonaparte nace en Ajaccio el 15 de agosto de 1769 y en 1779 ingresa en la escuela militar de Brienne.",
+   "narracion": "Nace en Ajaccio, en Córcega, en 1769. Diez años después deja la isla para ingresar en la escuela militar de Brienne, en Francia."
+  },
+  {
+   "id": "C2",
+   "date": "1785-09-30",
+   "P": [
+    [
+     "conocimiento",
+     0.76
+    ],
+    [
+     "competencia",
+     0.74
+    ],
+    [
+     "ambicion",
+     0.7
+    ],
+    [
+     "liderazgo",
+     0.66
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "conocimiento",
+     "strength": 0.76,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "competencia",
+     "strength": 0.74,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.7,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "liderazgo",
+     "strength": 0.66,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "En 1785 se gradúa en la École Militaire de París y es nombrado teniente segundo de artillería.",
+   "narracion": "Se gradúa en la École Militaire y recibe el nombramiento de teniente segundo de artillería en 1785. La artillería es el arma en la que se forma y con la que gana su primera gran batalla, Tolón."
+  },
+  {
+   "id": "C3",
+   "date": "1793-12-19",
+   "P": [
+    [
+     "competencia",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.78
+    ],
+    [
+     "reconocimiento",
+     0.74
+    ],
+    [
+     "liderazgo",
+     0.72
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "competencia",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.78,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.74,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "liderazgo",
+     "strength": 0.72,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 19 de diciembre de 1793 Napoleón dirige la artillería que recupera el puerto de Tolón y asciende a general de brigada.",
+   "narracion": "Su plan de artillería obliga a rendirse a la guarnición que defendía el puerto. El éxito le vale el ascenso a general de brigada."
+  },
+  {
+   "id": "C4",
+   "date": "1796-04-11",
+   "P": [
+    [
+     "ambicion",
+     0.82
+    ],
+    [
+     "victoria",
+     0.82
+    ],
+    [
+     "liderazgo",
+     0.8
+    ],
+    [
+     "reconocimiento",
+     0.74
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "ambicion",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "victoria",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "liderazgo",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.74,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "En la campaña de Italia de 1796 obtiene las victorias de Montenotte y Lodi y su nombre se conoce en toda Francia.",
+   "narracion": "Al mando del ejército de Italia, vence en Montenotte y en Lodi en 1796. Su nombre se conoce en toda Francia."
+  },
+  {
+   "id": "C5",
+   "date": "1799-11-09",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "desafio_autoridad",
+     0.82
+    ],
+    [
+     "poder",
+     0.8
+    ],
+    [
+     "independencia",
+     0.76
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "ambicion",
+     "strength": 0.84,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "desafio_autoridad",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "poder",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.76,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 9 de noviembre de 1799 da el golpe de Estado del 18 Brumario y se convierte en Primer Cónsul.",
+   "narracion": "El golpe disuelve el Directorio y Napoleón queda como Primer Cónsul. El poder se concentra en sus manos."
+  },
+  {
+   "id": "C6",
+   "date": "1804-12-02",
+   "P": [
+    [
+     "poder",
+     0.84
+    ],
+    [
+     "logro_personal",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.74
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "poder",
+     "strength": 0.84,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "logro_personal",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.74,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 2 de diciembre de 1804 se corona emperador en Notre-Dame de París.",
+   "narracion": "La coronación en Notre-Dame lo proclama emperador de los franceses. El imperio sustituye al consulado."
+  },
+  {
+   "id": "C7",
+   "date": "1805-12-02",
+   "P": [
+    [
+     "victoria",
+     0.84
+    ],
+    [
+     "liderazgo",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "logro_personal",
+     0.78
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "victoria",
+     "strength": 0.84,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "liderazgo",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "logro_personal",
+     "strength": 0.78,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 2 de diciembre de 1805 vence en Austerlitz, su victoria más celebrada.",
+   "narracion": "Austerlitz, el 2 de diciembre de 1805, es la victoria más celebrada de su carrera."
+  },
+  {
+   "id": "C8",
+   "date": "1807-07-07",
+   "P": [
+    [
+     "poder",
+     0.82
+    ],
+    [
+     "reconocimiento",
+     0.8
+    ],
+    [
+     "ambicion",
+     0.76
+    ],
+    [
+     "logro_personal",
+     0.74
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "poder",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "ambicion",
+     "strength": 0.76,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "logro_personal",
+     "strength": 0.74,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 7 de julio de 1807 firma la paz de Tilsit: es el apogeo de su poder en Europa.",
+   "narracion": "En Tilsit, el 7 de julio de 1807, se sella la paz con Rusia. Es el momento de mayor poder de Napoleón en Europa."
+  },
+  {
+   "id": "C9",
+   "date": "1812-06-24",
+   "P": [
+    [
+     "ambicion",
+     0.84
+    ],
+    [
+     "audacia",
+     0.8
+    ],
+    [
+     "desafio_autoridad",
+     0.78
+    ],
+    [
+     "poder",
+     0.72
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "ambicion",
+     "strength": 0.84,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "audacia",
+     "strength": 0.8,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "desafio_autoridad",
+     "strength": 0.78,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "poder",
+     "strength": 0.72,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "El 24 de junio de 1812 cruza el Niemen con la Grande Armée para invadir Rusia.",
+   "narracion": "La Grande Armée cruza el Niemen el 24 de junio de 1812 para invadir Rusia. Es la campaña más grande de su carrera."
+  },
+  {
+   "id": "C10",
+   "date": "1816-03-03",
+   "P": [
+    [
+     "reflexion",
+     0.82
+    ],
+    [
+     "creatividad",
+     0.76
+    ],
+    [
+     "aprendizaje",
+     0.72
+    ],
+    [
+     "independencia",
+     0.7
+    ],
+    [
+     "reconocimiento",
+     0.66
+    ]
+   ],
+   "A": [],
+   "C": [],
+   "external_activations": [
+    {
+     "token": "reflexion",
+     "strength": 0.82,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "creatividad",
+     "strength": 0.76,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "aprendizaje",
+     "strength": 0.72,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "independencia",
+     "strength": 0.7,
+     "source": "construccion_pecas_pre_Z90"
+    },
+    {
+     "token": "reconocimiento",
+     "strength": 0.66,
+     "source": "construccion_pecas_pre_Z90"
+    }
+   ],
+   "hecho": "Corte de frontera, 3 de marzo de 1816: sin hecho documentado en esa fecha; la evidencia más reciente antes del corte es la derrota definitiva de Waterloo el 18 de junio de 1815 y el exilio a Santa Elena en octubre de 1815, donde escribe sus memorias.",
+   "narracion": "Waterloo, el 18 de junio de 1815, es la derrota definitiva. En octubre de 1815 lo destierran a Santa Elena, donde escribe sus memorias."
+  }
+ ],
+ "caldero_search_fixture": [
+  {
+   "id": "src1",
+   "title": "src1",
+   "snippet": "C1 1779-05-15: Napoleón Bonaparte nace en Ajaccio el 15 de agosto de 1769 y en 1779 ingresa en la escuela militar de Brienne.",
+   "texto": "C1 1779-05-15: Napoleón Bonaparte nace en Ajaccio el 15 de agosto de 1769 y en 1779 ingresa en la escuela militar de Brienne.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src2",
+   "title": "src2",
+   "snippet": "C2 1785-09-30: En 1785 se gradúa en la École Militaire de París y es nombrado teniente segundo de artillería.",
+   "texto": "C2 1785-09-30: En 1785 se gradúa en la École Militaire de París y es nombrado teniente segundo de artillería.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src3",
+   "title": "src3",
+   "snippet": "C3 1793-12-19: El 19 de diciembre de 1793 Napoleón dirige la artillería que recupera el puerto de Tolón y asciende a general de brigada.",
+   "texto": "C3 1793-12-19: El 19 de diciembre de 1793 Napoleón dirige la artillería que recupera el puerto de Tolón y asciende a general de brigada.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src4",
+   "title": "src4",
+   "snippet": "C4 1796-04-11: En la campaña de Italia de 1796 obtiene las victorias de Montenotte y Lodi y su nombre se conoce en toda Francia.",
+   "texto": "C4 1796-04-11: En la campaña de Italia de 1796 obtiene las victorias de Montenotte y Lodi y su nombre se conoce en toda Francia.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src5",
+   "title": "src5",
+   "snippet": "C5 1799-11-09: El 9 de noviembre de 1799 da el golpe de Estado del 18 Brumario y se convierte en Primer Cónsul.",
+   "texto": "C5 1799-11-09: El 9 de noviembre de 1799 da el golpe de Estado del 18 Brumario y se convierte en Primer Cónsul.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src6",
+   "title": "src6",
+   "snippet": "C6 1804-12-02: El 2 de diciembre de 1804 se corona emperador en Notre-Dame de París.",
+   "texto": "C6 1804-12-02: El 2 de diciembre de 1804 se corona emperador en Notre-Dame de París.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src7",
+   "title": "src7",
+   "snippet": "C7 1805-12-02: El 2 de diciembre de 1805 vence en Austerlitz, su victoria más celebrada.",
+   "texto": "C7 1805-12-02: El 2 de diciembre de 1805 vence en Austerlitz, su victoria más celebrada.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src8",
+   "title": "src8",
+   "snippet": "C8 1807-07-07: El 7 de julio de 1807 firma la paz de Tilsit: es el apogeo de su poder en Europa.",
+   "texto": "C8 1807-07-07: El 7 de julio de 1807 firma la paz de Tilsit: es el apogeo de su poder en Europa.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src9",
+   "title": "src9",
+   "snippet": "C9 1812-06-24: El 24 de junio de 1812 cruza el Niemen con la Grande Armée para invadir Rusia.",
+   "texto": "C9 1812-06-24: El 24 de junio de 1812 cruza el Niemen con la Grande Armée para invadir Rusia.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  },
+  {
+   "id": "src10",
+   "title": "src10",
+   "snippet": "C10 1816-03-03: Corte de frontera, 3 de marzo de 1816: sin hecho documentado en esa fecha; la evidencia más reciente antes del corte es la derrota definitiva de Waterloo el 18 de junio de 1815 y el exilio a Santa Elena en octubre de 1815, donde escribe sus memorias.",
+   "texto": "C10 1816-03-03: Corte de frontera, 3 de marzo de 1816: sin hecho documentado en esa fecha; la evidencia más reciente antes del corte es la derrota definitiva de Waterloo el 18 de junio de 1815 y el exilio a Santa Elena en octubre de 1815, donde escribe sus memorias.",
+   "origen": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+  }
+ ],
+ "allow_static_search_fixture": true,
+ "freeze": "1816-03-03",
+ "z_trabajo": "1816-03-03",
+ "modo_z": "historico",
+ "fuentes_por_corte": [
+  {
+   "corte": "C1",
+   "fuentes": [
+    {
+     "que_verifica": "Napoleón Bonaparte nace en Ajaccio el 15 de agosto de 1769 y en 1779 ingresa en la escuela militar de Brienne.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C2",
+   "fuentes": [
+    {
+     "que_verifica": "En 1785 se gradúa en la École Militaire de París y es nombrado teniente segundo de artillería.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C3",
+   "fuentes": [
+    {
+     "que_verifica": "El 19 de diciembre de 1793 Napoleón dirige la artillería que recupera el puerto de Tolón y asciende a general de brigada.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C4",
+   "fuentes": [
+    {
+     "que_verifica": "En la campaña de Italia de 1796 obtiene las victorias de Montenotte y Lodi y su nombre se conoce en toda Francia.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C5",
+   "fuentes": [
+    {
+     "que_verifica": "El 9 de noviembre de 1799 da el golpe de Estado del 18 Brumario y se convierte en Primer Cónsul.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C6",
+   "fuentes": [
+    {
+     "que_verifica": "El 2 de diciembre de 1804 se corona emperador en Notre-Dame de París.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C7",
+   "fuentes": [
+    {
+     "que_verifica": "El 2 de diciembre de 1805 vence en Austerlitz, su victoria más celebrada.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C8",
+   "fuentes": [
+    {
+     "que_verifica": "El 7 de julio de 1807 firma la paz de Tilsit: es el apogeo de su poder en Europa.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C9",
+   "fuentes": [
+    {
+     "que_verifica": "El 24 de junio de 1812 cruza el Niemen con la Grande Armée para invadir Rusia.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  },
+  {
+   "corte": "C10",
+   "fuentes": [
+    {
+     "que_verifica": "Corte de frontera, 3 de marzo de 1816: sin hecho documentado en esa fecha; la evidencia más reciente antes del corte es la derrota definitiva de Waterloo el 18 de junio de 1815 y el exilio a Santa Elena en octubre de 1815, donde escribe sus memorias.",
+     "url": "https://es.wikipedia.org/wiki/Napole%C3%B3n_Bonaparte"
+    }
+   ]
+  }
+ ]
+}

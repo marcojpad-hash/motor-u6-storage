@@ -1,0 +1,267 @@
+{
+ "leer_resultado": {
+  "contrato": "COMPORTAMIENTO_POST_MESETA_V1",
+  "version": "v3_20261113",
+  "can_decide_H": false,
+  "en_meseta": true,
+  "regimen": "MESeta_O_ESTABILIZACION",
+  "comportamiento": {
+   "resumen_clases_fondo": {
+    "tokens": {
+     "LATENTE_DORMIDO": 8,
+     "DESCENSO": 3,
+     "PICO": 3
+    },
+    "familias": {
+     "LATENTE_DORMIDO": 26,
+     "PICO": 6,
+     "SIN_FORMA_CLARA": 2
+    }
+   },
+   "familias_bajo_top5_subiendo_de_rango": 7,
+   "lo_que_se_cocina_abajo_n": 0,
+   "tokens_que_se_cocinan_abajo_n": 0,
+   "formas_picos_mesetas": {
+    "utopia_mentalidad_liberal": "↗↘→→→→→→→",
+    "predictivo_02_mdp_politica_optima": "↘→→→↗↘↗↘→",
+    "situacion_dramatica_ambicion": "→→→→↗→→→→",
+    "24_rivalidad_de_superior_e_inferior": "→→→→→→→↗→",
+    "utopia_principio_mercado": "↗↗→→↘→→→→",
+    "30_ambicion": "↗→→→→↘↗→→",
+    "kwml_01_rey": "→→↗↘→↗↘→→",
+    "12_obtencion": "↗↗→→→→→→→",
+    "anacyclosis_01_monarquia": "→→→→→↗↘→→",
+    "schwartz_07_logro": "↗↗↘↗↘→→→→",
+    "arquetipo_el_gobernante": "→↗→→→→→→→"
+   }
+  },
+  "lo_que_emerge": [],
+  "punto_no_considerado": {
+   "familia": "dumezil_f2_fuerza",
+   "rango_en_Z": 23,
+   "pendiente_rango_por_corte": 1.0286,
+   "clase": "LATENTE_DORMIDO",
+   "nota": "sube de rango bajo el top5 pero clasificada LATENTE_DORMIDO (no emergente por umbral)"
+  },
+  "trazabilidad": {
+   "regimen": "MESeta_O_ESTABILIZACION",
+   "micro": 0.470833,
+   "meso": 0.48587,
+   "macro": 0.528572,
+   "aceleracion": 0.475353,
+   "divergencia_entre_escala": 0.057739,
+   "n_cortes_observados": 10
+  },
+  "gravedad": {
+   "sol": {
+    "familia": "arquetipo_el_gobernante",
+    "peso_Z": 0.7813
+   },
+   "nudos": [
+    {
+     "familia": "dumezil_f2_fuerza",
+     "peso_Z": 0.65,
+     "distancia_al_sol": 0.131,
+     "pendiente": 1.0286,
+     "rango_Z": 23,
+     "primera_aparicion": "C5",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "SIENDO_JALADO"
+    },
+    {
+     "familia": "utopia_mentalidad_milenarista",
+     "peso_Z": 0.683,
+     "distancia_al_sol": 0.099,
+     "pendiente": 0.9143,
+     "rango_Z": 14,
+     "primera_aparicion": "C5",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "SIENDO_JALADO"
+    },
+    {
+     "familia": "frye_mythos_romance",
+     "peso_Z": 0.668,
+     "distancia_al_sol": 0.113,
+     "pendiente": 0.5357,
+     "rango_Z": 17,
+     "primera_aparicion": "C4",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "SIENDO_JALADO"
+    },
+    {
+     "familia": "dumezil_f3_fecundidad",
+     "peso_Z": 0.767,
+     "distancia_al_sol": 0.014,
+     "pendiente": 0.1636,
+     "rango_Z": 10,
+     "primera_aparicion": "C1",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "EN_TRANSITO"
+    },
+    {
+     "familia": "predictivo_02_mdp_politica_optima",
+     "peso_Z": 0.781,
+     "distancia_al_sol": 0.0,
+     "pendiente": 0.1636,
+     "rango_Z": 6,
+     "primera_aparicion": "C1",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "CAPTURADO"
+    },
+    {
+     "familia": "dumezil_desequilibrio_f2_come_al_resto",
+     "peso_Z": 0.636,
+     "distancia_al_sol": 0.145,
+     "pendiente": 0.1143,
+     "rango_Z": 24,
+     "primera_aparicion": "C5",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "RESISTE"
+    },
+    {
+     "familia": "situacion_dramatica_ambicion",
+     "peso_Z": 0.781,
+     "distancia_al_sol": 0.0,
+     "pendiente": 0.1091,
+     "rango_Z": 8,
+     "primera_aparicion": "C1",
+     "clase": "LATENTE_DORMIDO",
+     "estado": "CAPTURADO"
+    }
+   ],
+   "cometa": {
+    "corte": "C9",
+    "nudos_que_suben": 3,
+    "salto_total": 0.32
+   },
+   "proporcionalidad": 0.568,
+   "n_nudos_proporcionalidad": 7,
+   "confianza_proporcionalidad": "BAJA_MUESTRA",
+   "capturados": [
+    "predictivo_02_mdp_politica_optima",
+    "situacion_dramatica_ambicion"
+   ],
+   "siendo_jalados": [
+    "dumezil_f2_fuerza",
+    "utopia_mentalidad_milenarista",
+    "frye_mythos_romance"
+   ],
+   "acercandose": [],
+   "resisten": [
+    "dumezil_desequilibrio_f2_come_al_resto"
+   ],
+   "lectura": "sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; acercándose: 0; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568 (NO CONCLUYENTE, n=7, BAJA_MUESTRA)"
+  },
+  "lectura": "estabilizado en meseta: 7 familias bajo el top5 suben de rango; lo que se cocina abajo: 0 familias / 0 tokens; emergentes: 0; punto no considerado: dumezil_f2_fuerza (rango Z 23, pendiente 1.0286); sol arquetipo_el_gobernante (peso Z 0.7813); capturados: 2; siendo jalados: 3; acercándose: 0; resisten: 1; cometa en C9 (3 nudos suben); proporcionalidad pendiente~distancia: 0.568 (NO CONCLUYENTE, n=7, BAJA_MUESTRA)"
+ },
+ "proyectar_gravedad": {
+  "contrato": "COMPORTAMIENTO_POST_MESETA_V1",
+  "version": "v3_20261113",
+  "can_decide_H": false,
+  "modo": "PROYECTIVO",
+  "hasta_corte": "C10",
+  "sol": "arquetipo_el_gobernante",
+  "peso_sol_k": 0.7813,
+  "proyecciones": [
+   {
+    "familia": "dumezil_f2_fuerza",
+    "distancia_al_sol_k": 0.131,
+    "cierra": true,
+    "captura_prevista": "despues_de_C10",
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "utopia_mentalidad_milenarista",
+    "distancia_al_sol_k": 0.099,
+    "cierra": true,
+    "captura_prevista": "despues_de_C10",
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "frye_mythos_romance",
+    "distancia_al_sol_k": 0.113,
+    "cierra": false,
+    "captura_prevista": null,
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "dumezil_f3_fecundidad",
+    "distancia_al_sol_k": 0.014,
+    "cierra": true,
+    "captura_prevista": "despues_de_C10",
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "predictivo_02_mdp_politica_optima",
+    "distancia_al_sol_k": 0.0,
+    "cierra": false,
+    "captura_prevista": null,
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "dumezil_desequilibrio_f2_come_al_resto",
+    "distancia_al_sol_k": 0.145,
+    "cierra": true,
+    "captura_prevista": "despues_de_C10",
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   },
+   {
+    "familia": "situacion_dramatica_ambicion",
+    "distancia_al_sol_k": 0.0,
+    "cierra": false,
+    "captura_prevista": null,
+    "pulso_masa_en_k": 0.0,
+    "proyectable": true
+   }
+  ],
+  "cometa_previsto": null,
+  "proporcionalidad_hasta_k": 0.568,
+  "n_nudos_proporcionalidad_hasta_k": 7,
+  "confianza_proporcionalidad_hasta_k": "BAJA_MUESTRA",
+  "lectura": "proyección hasta C10: 4 capturas previstas; sin pulso de masa en este corte; proporcionalidad hasta aquí: 0.568 (NO CONCLUYENTE, n=7, BAJA_MUESTRA)"
+ },
+ "traduccion": {
+  "lectura": "Lo que se ve en esta vida es una dirección que se va armando con lo que la acompaña, no con una sola cosa.",
+  "anexo": {
+   "H1": "arquetipo_el_gobernante",
+   "H2": "30_ambicion",
+   "sol_peso_Z": 0.7813,
+   "n_nudos": 3,
+   "n_capturados": 2,
+   "n_siendo_jalados": 3,
+   "n_resisten": 1,
+   "proporcionalidad": 0.568,
+   "alerta_cometa": false,
+   "cometa": "C9",
+   "cometa_nudos": 3,
+   "cometa_salto": 0.32,
+   "punto_no_considerado": null,
+   "nuevos_en_Z": [
+    "arquetipo_el_creador",
+    "mbti_introvertido",
+    "schwartz_10_autodireccion"
+   ],
+   "en_meseta": true,
+   "registro": "tercera",
+   "version": "v2.8_20261114",
+   "caminos": [
+    "arquetipo_el_gobernante",
+    "30_ambicion",
+    "situacion_dramatica_ambicion"
+   ],
+   "arquetipos_luces": [
+    "arquetipo_el_gobernante",
+    "arquetipo_heroe"
+   ]
+  },
+  "violaciones": [
+   "heroe"
+  ]
+ }
+}

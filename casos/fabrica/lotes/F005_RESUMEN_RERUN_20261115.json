@@ -1,0 +1,11 @@
+{
+ "lote": "F005",
+ "n_casos": 10,
+ "sin_result": 0,
+ "acierto_H1": 0,
+ "acierto_H2": 1,
+ "acierto_set": 3,
+ "acierto_apuesta": 1,
+ "acierto_destino": 2,
+ "acierto_destino_polaridad": 7
+}
