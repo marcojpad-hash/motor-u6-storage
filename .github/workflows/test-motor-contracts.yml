@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "motor/correr_estandar.py"
+      - "motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/tests/test_runner_json_contract.py"
       - "motor/motor/MOTOR_V15_3_UNICO_20260927.py"
       - "motor/motor/sidecar_caldero_busqueda_arquetipos.py"
@@ -12,7 +13,7 @@ on:
       - "motor/capa_llm/filtro_entrada_dirigida_017.py"
       - "motor/tests/test_cableado_017.py"
       - "motor/tests/test_filtro_tokens_arquetipos_v2.py"
-      - "tests/test_caldero_corte_temporal.py"
+      - "tests/test_caldero_corte_temporal.py motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/motor/matriz_mortalidad_z90_v0_2.py"
       - "motor/tests/test_matriz_mortalidad_z90_v0_2.py"
       - "motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SCHEMA_V1.json"
