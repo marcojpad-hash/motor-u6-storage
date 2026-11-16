@@ -13,7 +13,7 @@ on:
       - "motor/capa_llm/filtro_entrada_dirigida_017.py"
       - "motor/tests/test_cableado_017.py"
       - "motor/tests/test_filtro_tokens_arquetipos_v2.py"
-      - "tests/test_caldero_corte_temporal.py motor/tests/test_guardian_z90_correr_estandar.py"
+      - "tests/test_caldero_corte_temporal.py"
       - "motor/motor/matriz_mortalidad_z90_v0_2.py"
       - "motor/tests/test_matriz_mortalidad_z90_v0_2.py"
       - "motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SCHEMA_V1.json"
@@ -60,6 +60,6 @@ jobs:
         # numpy: test_cableado_017.py importa el runner único (lo exige en runtime).
         run: python -m pip install pytest numpy
       - name: Validate runner and mortality contracts
-        run: python -m pytest -q motor/tests/test_runner_json_contract.py motor/tests/test_matriz_mortalidad_z90_v0_2.py motor/tests/test_normalizar_mortalidad_preparacion.py motor/tests/test_cableado_017.py motor/tests/test_filtro_tokens_arquetipos_v2.py tests/test_caldero_corte_temporal.py
+        run: python -m pytest -q motor/tests/test_runner_json_contract.py motor/tests/test_matriz_mortalidad_z90_v0_2.py motor/tests/test_normalizar_mortalidad_preparacion.py motor/tests/test_cableado_017.py motor/tests/test_filtro_tokens_arquetipos_v2.py tests/test_caldero_corte_temporal.py motor/tests/test_guardian_z90_correr_estandar.py
       - name: Record source hashes
         run: sha256sum motor/correr_estandar.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py
