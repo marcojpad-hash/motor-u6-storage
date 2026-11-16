@@ -1,0 +1,25 @@
+COMPONENTES DEL MOTOR U6 - QUE HACEN, EN PALABRAS SIMPLES
+Leído del código directo, 2026-11-15 ~23:00 CST. Por Amor.
+
+AQUILES (plugin_aquiles_ancla_estricto.py)
+Verifica si el motor sí llega al final que la persona declaró. Toma el inicio y el final declarado del texto crudo, y toma un eje candidato que viene de fuera con cita, no lo inventa. Corre la función replicar del motor muchas veces, con bootstrap, hasta que la hipótesis se estabiliza o se quema el fusible en 8192 réplicas. Si el motor sí llega al final declarado, el ancla queda en PARA_DE_EMPUJAR_H. Si no llega, queda en NO_VERIFICADO o SEGUIR_EMPUJANDO. Después viene el freeze en Z_foto: lee la inercia del R732 en el último corte. Si no hay umbral calibrado de antemano, la traza queda ABIERTA y las tortugas quedan en verdadero, hacen falta cortes más finos del MISMO texto. Si hay umbral y la inercia lo cumple, la traza se congela en Z_foto. Aquiles no decide H, solo verifica si el motor sí aterriza donde la persona dijo que aterriza.
+
+TORTUGAS (nativo_tortugas en MOTOR_V15_3_NATIVO_V0_9_UNICO.py)
+Detectan cuando el giro del motor es puro ruido. Leen kappa_dir del R732, y si algún kappa está casi en 1.0, el giro es indistinguible del ruido, no se sabe si es un giro real o puro desmadre. Ahí la bandera es TORTUGAS_REMEDIR y la acción es remedir más fino, con cortes más finos del MISMO texto, sin cambiar familia y sin inventar fuerza. Si ningún kappa llega ahí, la bandera es OK_RESOLUCION y se sigue. Las tortugas no alimentan H, solo dicen que la resolución no alcanza y hay que mirar más de cerca.
+
+TORTUGA DE TRAZA (_tortuga_traza en MOTOR_V15_3_UNICO_20260927.py)
+Parte la historia más fina. Toma los cortes que ya hay y mete un punto medio entre cada par, así ves la trayectoria con el doble de detalle. No inventa nada nuevo, solo mira el mismo camino más de cerca para ver si el movimiento se lee claro. Si el movimiento se lee claro a esta mirada más fina, la traza es legible.
+
+HOMBRE DE ACERO (EPS_ACERO_020 = 0.25, GATE_SEPARATION = 1.0)
+Es el umbral que dice si H1 sí se separó de H2 o no. Si el hueco entre el primero y el segundo es más chico que la banda de acero, el hombre de acero dice NO_RESUELTO, no se resolvió, no se pueden distinguir. Es la frontera dura que decide si la separación es real o si siguen empatados. La banda es delta = min(GATE_SEPARATION, max(EPS_ACERO, 2/(N-1))).
+
+ACERO DEL CALDERO (caldero_zoomout_acero_v0_1.py)
+Hace zoom hacia afuera. Toma todos los movimientos de la trayectoria y los va sumando, corte por corte. El que más acumula es el ACERO, le pone nombre a la región que sobrevive. Los que sobreviven son los que tienen por lo menos la quinta parte de la fuerza del acero, esos forman la región. Es un lateral experimental, no decide H, solo nombra la dirección más fuerte de toda la situación y marca qué tanto se achica o se mantiene esa región.
+
+LATERALES (laterales_unico_v1.py)
+El hub coordina todas las piezas laterales. Cada pieza tiene que EJECUTARSE, si no corre es un fallo a investigar, no un adorno. Hay dos tipos: VOTO que entra al ranking como un módulo más, y SENSOR que solo se reporta y no entra al ranking. Ninguna pieza decide H, ninguna toca Engine ni el catálogo 244.
+
+PENDIENTES SIN RESOLVER:
+- EKT: Marco dice que es Hécate, la diosa del viento. No está en el catálogo 244, ni en el círculo del monomito, ni en el catálogo capa 2, ni en los arquetipos dinámicos. No se encontró dónde vive en el motor.
+- T10: Marco aclaró que es T10, no Teddies T70. El voice to text lo deformó. No se encontró qué es T10 en el motor.
+- Aquiles con asteroides: Marco aclaró que es asteroides, no esteroides. No se encontró qué tienen que ver los asteroides con Aquiles.
