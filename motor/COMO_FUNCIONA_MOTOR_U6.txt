@@ -1,0 +1,831 @@
+COMO FUNCIONA EL MOTOR U6 COMPLETO
+Explicacion leida del codigo, de principio a fin, en texto plano.
+Fuentes leidas: MOTOR_V15_3_NATIVO_V0_9_UNICO.py, Engine_V5_CANONICO_SOLO.py,
+correr_estandar.py, CONTRATO_ENTRADA_LLM.txt,
+CONTRATO_HIPOTESIS_ABIERTAS_GEOMETRIA_TRABAJO_20261020.md,
+MOTOR_V15_3_UNICO_20260927.py, teseracto_recursivo_geometria_v0_4.py,
+v153_convergencia_multinivel_v0_3.py, adaptador_convergencia_real_v1.py,
+sidecar_latentes_v1.py, sidecar_caldero_busqueda_arquetipos.py,
+sidecar_polti_caldero.py, hipotesis_trayectoria_abierta_v1.py,
+lateral_traduccion_salida_v1.py, lateral_comportamiento_post_meseta_v1.py,
+sidecar_geometria.py, plugin_picos_mesetas.py,
+lateral_par_superpuesto_entrada_v1.py, movimiento_de_fondo_u4.py,
+marcador_limite_geometrico_v0_1.py y los laterales de laterales/
+(cierre_dramatico, cosecha_stinkbox, dialectica_hegeliana, filogenia_mezcla,
+taxonomia_geopolitica, teoria_color, vinculacion_tokens).
+
+
+1. QUE ENTRA
+
+Entra una historia en prosa partida en cortes, de C1 a Cn. Cada corte trae
+tres ejes: P es el protagonista, A es el antagonista y C es el contexto.
+Cada eje es una lista de pares token y peso. Los pesos de entrada solo
+pueden ir de 0.60 a 0.84. Los tokens tienen que ser del catalogo de 244
+familias o de familias laterales; no se inventa el futuro. Cada corte trae
+ademas un hecho en prosa, que es lo que la persona conto en ese momento de
+su vida.
+
+La entrada trae tambien una cabecera: case_id, person, tipo_sujeto,
+question, freeze, z_work_date, z_work_kind que es CASE_CUTOFF, random_seed
+y source_notes.
+
+Hay una regla que manda en todo el motor: el FREEZE. La entrada se congela
+hasta Z, que es el ultimo corte. Nada posterior a Z entra. La prediccion
+ocurre DESPUES del freeze, nunca antes. El motor no reabre el corte
+siguiente: una vez sellado H1 y H2 y la apuesta, el corte futuro solo se
+puntua como acierto o fallo, no reescribe nada.
+
+Antes de correr, la entrada se valida: los tokens tienen que estar en el
+catalogo, los pesos entre 0.60 y 0.84, y no puede haber duplicados. Ademas
+pasa el FILTRO_017 antes de sellar.
+
+Hay un cuello de botella que se llama CUELLO_K igual a 5. Por eje y por
+corte, al Engine canonico solo le pasan 5 tokens. Pasan primero los del
+catalogo 244 y luego por peso descendente. Si hay empate, se desempata por
+evidencia U6: frecuencia en cortes previos, racha de presencia
+inmediatamente anterior, apoyo en otros ejes del mismo corte, y luego por
+posicion. Nunca se miran cortes posteriores para desempatar. Esto NO es
+un borrado: todos los tokens siguen en el input y en las capas no
+canonicas. El cuello solo limita lo que ve el Engine canonico.
+
+La entrada puede traer declarado un par superpuesto: dos familias que van
+juntas como una sola cosa con dos caras, no como dos rivales que compiten.
+El lateral de par superpuesto verifica despues que ese par declarado
+coincide con H1 y H2 y mide la superposicion por corte: hay superposicion
+cuando los dos pesos estan en 0.7 o mas en el mismo corte.
+
+
+2. QUE HACE EL ENGINE
+
+El Engine es el archivo Engine_V5_CANONICO_SOLO.py. Se llama Motor de
+Trazabilidad y Perfilamiento Estructural version 3. Es un nucleo
+BAYESIANO por corte. Hay tres instancias del Engine: una para P, una
+para A y una para C. El Engine solo entrega probabilidades por corte. La
+helice, la gravedad, el Sol, el cometa y la meseta NO estan en el Engine:
+estan en los laterales que se construyen encima de la salida por corte.
+
+Por cada observacion o corte, el Engine hace esto en orden:
+
+Primero, la incertidumbre del token: sigma_i es igual a 1 menos la
+confianza del token.
+
+Segundo, el epsilon, que es la Formula 3, la masa residual: ANTES de ver
+la evidencia, la probabilidad se mueve un poco hacia el centro con
+p igual a (1 menos epsilon) por p mas epsilon por 0.5, con epsilon igual
+a 0.05.
+
+Tercero, la actualizacion bayesiana: lh es el likelihood recortado entre
+0.001 y 0.999; p nueva es igual a p por lh dividido entre (p por lh mas
+(1 menos p) por (1 menos lh)). Apoyar usa el peso directo y contradecir
+usa 1 menos el peso. Cuando un token contradice, los demas tokens del
+mismo corte se registran como CONDICIONES. Esa es la Formula 10.
+
+Cuarto, delta_h(t) es el promedio de las incertidumbres de los tokens del
+corte. delta_min(t) es igual a 0.1 mas (0.25 menos 0.1) por delta_h(t), o
+sea que va de 0.1 a 0.25. Es el PISO: despues de actualizar, p se recorta
+al intervalo de delta_min a 1 menos delta_min. Asi ninguna probabilidad
+llega a los extremos.
+
+Quinto, sigma_sorpresa(t) es la desviacion estandar POBLACIONAL de las
+incertidumbres del corte. Si hay menos de 2 tokens es 0.0.
+
+Sexto, P_azar(t): spread es igual a sigma_sorpresa por 0.3; P_azar es
+igual a 0.5 mas un numero uniforme entre menos spread y mas spread,
+recortado entre 0 y 1. Se estima por Monte Carlo adaptativo: n inicial es
+el maximo entre 50 y el entero de ((sigma_sorpresa mas 0.1) dividido entre
+0.005) al cuadrado, con tope de 200,000, en tandas de 200 hasta que el
+error estandar sea menor que 0.005. Se usa la MEDIA de las simulaciones.
+
+Septimo, P_final, que es la Formula 22, el mixto: peso_evidencia es igual
+al maximo entre 0 y (1 menos delta_min menos sigma_sorpresa); p_final es
+igual a peso_evidencia por p(H) mas delta_min por 0.5 mas sigma_sorpresa
+por P_azar.
+
+Octavo, la indeterminacion: si el valor absoluto de (p menos 0.5) es menor
+que 0.1, la direccion es 0; si p es mayor que 0.5 la direccion es mas 1;
+si p es menor que 0.5 la direccion es menos 1.
+
+Noveno, la reevaluacion 50/50: si el valor absoluto de (favor menos
+contra) dividido entre el total es menor que theta_ambiguedad, que es 0.1,
+se reactiva memoria latente por similitud, con prioridad en los tokens que
+empujaron la hipotesis al limite. La confianza de un marcador reactivado
+decae segun el tiempo inactivo.
+
+Decimo, la cuarentena: si la suma de pesos del patron
+vulnerabilidad_sistemica es mayor o igual que 0.85, los marcadores con
+peso positivo se cuarentenan, o sea se guardan y no se usan. Se usa el
+peso CRUDO, no el descuento por evidence_status.
+
+Los multiplicadores de evidencia del catalogo son: primary_verified 1.0,
+secondary_verified 0.7, outdated 0.5, unverified 0.4,
+contestado_academicamente 0.4, contradicted_partial 0.2, contradicted 0.1.
+El peso que entra al calculo es 0.5 mas (peso original menos 0.5) por el
+multiplicador.
+
+La memoria latente decae 0.05 por dia y la confianza minima retenida es
+0.1.
+
+Entre cortes, los priors se heredan: se hereda Hypothesis.probability,
+NUNCA p_final, y se congela con freeze_priors() ANTES de ver el siguiente
+corte. El contrato es: priors mas SOLO tokens nuevos.
+
+Lo que el Engine NO tiene: el Grupo B sigue PENDIENTE y fuera de este
+archivo: peso dinamico completo con corpus P(Token|N_Q), campo semantico
+real, memoria por embeddings y calibracion empirica.
+
+
+3. QUE ES EL R732
+
+El R732 es la medida unificada del motor. Es el vector de estado completo
+en cada corte: se concatenan los tres tableros de 244 familias, P mas A
+mas C, y eso da 732 dimensiones, 3 por 244. Cada numero del vector es la
+probabilidad final p_final del Engine para esa familia, en ese eje y en
+ese corte.
+
+El motor nativo corre primero el Engine en los tres ejes y despues arma
+xt, que es la concatenacion de los tres tableros. Si el tamano de xt no es
+3 por el tamano del catalogo, se levanta el error R732_ROTO. Despues
+apila los xt de todos los cortes en una matriz Xm. De ahi sale todo lo
+geometrico:
+
+dX es la diferencia de Xm entre cortes consecutivos. dX_norm es la norma
+de cada fila de dX: cuanto se mueve el estado completo entre un corte y
+el siguiente.
+
+persist_cos es el coseno entre vectores dX consecutivos: si el movimiento
+sigue la misma direccion, el coseno es cercano a 1; si cambia de
+direccion, baja.
+
+kappa_dir es la raiz cuadrada de (1 menos coseno al cuadrado): cuanto
+gira la direccion del movimiento.
+
+El R732 que se guarda es X_shape, dX_norm, persist_cos, kappa_dir, con la
+nota de que dX, persist_cos y kappa_dir alimentan las dimensiones
+geometricas del predictor que ordena H1 y H2, pero no determinan H por si
+solos, y que las tortugas nativas remiden si esta borroso.
+
+El adaptador de convergencia verifica que el dX_norm guardado coincide
+con el reconstruido desde los tableros FULL_244 guardados, hasta 4
+decimales.
+
+El contrato dice que la geometria helicoidal y recursiva es descriptiva
+en el espacio abstracto de puntuaciones P, A y C, no una prueba fisica ni
+una validacion predictiva por si misma. P, A y C son tres coordenadas
+abstractas de puntuacion por patron, NO coordenadas fisicas.
+
+
+4. COMO SE CALCULA LA GEOMETRIA: HELICE, GIRO, SOL, COMETA, MESETA
+
+La geometria vive en los laterales, no en el Engine. Hay varias piezas:
+
+El sidecar de geometria usa solo el R732: dX, persist_cos y kappa_dir.
+La aceleracion es la diferencia de dX_norm entre pasos. Si hay menos de
+2 cortes, declara que no hay geometria y que no se invente ninguna.
+
+La helice se ajusta en el teseracto recursivo. Es un ajuste DESCRIPTIVO
+de helice en el espacio PAC abstracto. El eje se saca de la deriva de
+extremo a extremo, del primer al ultimo corte. Necesita minimo 5 cortes.
+Los criterios para decir que algo se parece a una helice son:
+radial_cv menor o igual que 0.15, phase_linearity_r2 mayor o igual que
+0.90, axial_pitch_r2 mayor o igual que 0.90, y el valor absoluto de la
+pendiente de fase entre 0.05 y pi. Se hace un control nulo permutando el
+orden temporal 100 veces con semilla fija, para ver si la forma de helice
+sale tambien por azar. Ademas se infiere una jerarquia por enlace Ward
+sobre los puntos PAC promedio en el tiempo, con niveles 244, 122, 61, 31,
+16, 8, 4, 2, 1. Esa jerarquia es inferida, no es ontologia nativa del
+motor. La helice NO alimenta H: feeds_H es falso.
+
+El giro es la fase acumulada de la helice, phase_total_turns: el angulo
+total que gira la trayectoria de un corte a otro. En las corridas medidas
+el giro total cae consistentemente alrededor de 220 a 245 grados. Eso es
+un hallazgo medido en las corridas, no una constante escrita en el
+codigo. El giro por paso no es la constante; la constante es el giro
+TOTAL.
+
+La convergencia multinivel compara trayectorias: secuencia de distancias
+entre tableros, contraccion monotona, convergencia de extremo y prueba de
+proyeccion. Tambien ajusta un mapa afin con entrenamiento y prueba, y
+mide la jerarquia recursiva por residuales adyacentes y razones de
+contraccion. El diagnostico de helice usa el eje PCA, radio_cv menor que
+0.15 y consistencia de direccion de fase mayor que 0.9. El Tusi es la
+formula del motor: 1 menos el valor absoluto de la suma de (a mas b)
+dividido entre la suma de (valor absoluto de a mas valor absoluto de b).
+Mide acoplamiento local entre dos series.
+
+El adaptador de convergencia real construye trayectorias reales por corte
+desde el RESULT guardado, solo de lectura, y aplica el modulo geometrico.
+Los tableros P, A y C son tres trayectorias PARALELAS, no niveles
+jerarquicos. Compara los pares de tableros P con A, P con C y A con C:
+distancia full de 244 por corte, convergencia, y si la proyeccion a 3
+dimensiones miente (falso positivo de proyeccion: dos tableros que se ven
+cerca en la proyeccion pero estan lejos en las 244 dimensiones). Tambien
+calcula la helice por tablero con un nulo de 200 permutaciones, la
+velocidad por tablero y el Tusi por pares de familias. Al final verifica
+que H quedo intacto por huella.
+
+Los picos y mesetas leen la forma temporal de cada familia: por corte se
+toma la serie de p; la diferencia d es p(t) menos p(t menos 1); flecha
+arriba si d es mayor o igual que 0.04, flecha abajo si d es menor o igual
+que menos 0.04, y plano si el valor absoluto de d es menor que 0.04. Ese
+plano es una meseta DE MOVIMIENTO, no quiere decir que sea el campeon.
+La senal de trabajo, no ley, es una subida que ocurre ANTES de que la
+familia sea Top1. El score es la fraccion de transiciones con flecha
+arriba.
+
+El movimiento de fondo mira TODOS los tokens y TODAS las familias, no
+solo el top. Es lo que se cocina abajo. Para cada token, su serie es su
+peso en el corte, el maximo entre ejes si aparece en varios, y 0 si no
+esta. Se usa el input COMPLETO, tambien los tokens que el cuello top-5 no
+paso al Engine. Para cada familia, su activacion es la media PAC de
+p_final menos 0.5 en el tablero del Engine alimentado con TODOS los
+tokens. Las clases son, en este orden: PICO, algun paso grande entre
+cortes consecutivos o aparicion aislada en un solo corte; LATENTE_DORMIDO,
+presente, ausente uno o mas cortes, y vuelve a estar presente antes o en
+Z; ASCENSO_LENTO, primera aparicion en la primera mitad de los cortes,
+sube neto, sube en al menos la mitad de los pasos y ningun paso grande,
+o sea que se cocina desde abajo; DESCENSO, se apaga antes de Z; MESETA,
+presente en 3 o mas cortes con rango de valores chico; SIN_FORMA_CLARA,
+ninguna de las anteriores. Las emergentes desde abajo son familias con
+rango en Z mayor que 5, rango en Z hasta 20, primera aparicion en la
+primera mitad, pendiente mayor que 0.005 por corte, que suben en la mitad
+o mas de los pasos desde que aparecen, sin caidas, y con mejor rango que
+el rango con el que aparecieron. Son candidatas a salir a la superficie
+despues de Z.
+
+El Sol, los nudos, el cometa y la meseta se leen en el lateral de
+comportamiento post-meseta. Es un SENSOR: can_decide_H es falso, solo
+observa, no toca H1, H2 ni el ranking, y solo LEE el RESULT ya armado.
+La idea es de Marco: no es leer nada mas el fondo. Una vez que la
+medicion SE ESTABILIZA, se ve el COMPORTAMIENTO: como se mueve TODO en
+general, no solo abajo. Eso da trazabilidad y puede hacer emerger un
+punto que antes no se habia considerado.
+
+El SOL es la familia mas pesada, H1, el atractor central. Todo es jalado
+hacia su peso. El Sol NUNCA es nudo: los nudos vienen de familias BAJO el
+top5 y H1 es el rango 1, asi que esta excluido por definicion.
+
+Los NUDOS son las familias bajo el top5 que suben de rango. Se mide su
+distancia al Sol, que es el peso del Sol menos el peso del nudo en Z, y
+su pendiente, que es el cambio de rango por corte. Segun eso cada nudo
+queda en un estado: CAPTURADO es que ya llego al peso del Sol, distancia
+menor o igual que 0.01; SIENDO_JALADO es que esta lejos del Sol,
+distancia mayor que 0.05, y sube rapido, pendiente mayor o igual que 0.5;
+ACERCANDOSE es que esta lejos y sube a velocidad media, pendiente entre
+0.2 y 0.5; RESISTE es que esta lejos pero no sube, pendiente menor que
+0.2, o sea que tiene su propia gravedad y puede ser un atractor rival;
+EN_TRANSITO es que esta cerca del Sol, distancia entre 0.01 y 0.05, y aun
+no esta capturado, a cualquier velocidad.
+
+El COMETA es el corte donde varios nudos saltan a la vez, un arrastre.
+Se busca el corte con mas nudos que suben y mayor salto total; en empate
+gana el corte mas temprano. El codigo deja escrita una nota honesta: el
+salto del cometa NO es separable del pulso de input. En los casos
+verificados, entre el 11 y el 19 por ciento de TODA la masa_favor del run
+llega en el corte del cometa. Los nudos saltan porque entro masa nueva,
+tokens nuevos, en ese corte. El cometa es un evento real y medible, el
+salto simultaneo, pero su causa es el pulso de input, no una dinamica
+gravitatoria pura.
+
+La PROPORCIONALIDAD es la correlacion de Pearson entre la pendiente y la
+distancia al Sol. La lectura es SOLO DE SIGNO: positivo es convergencia,
+negativo es consolidacion. No es elasticidad. Si la varianza de la
+distancia o de la pendiente es cero, es indefinida. Siempre va con su n y
+su confianza: con menos de 8 nudos la confianza es BAJA_MUESTRA y la
+lectura dice NO CONCLUYENTE. El numero se reporta pero no se presenta
+como hallazgo.
+
+La MESETA es el regimen MESeta_O_ESTABILIZACION. Es cuando la
+trazabilidad multiescala de H1 se estabiliza: la senal de micro, meso y
+macro se acerca a cero y no hay divergencia entre escalas. Solo cuando el
+caso esta estabilizado en meseta se hace la lectura de comportamiento
+post-meseta: como se mueve todo, lo que se cocina abajo, lo que emerge, y
+el punto no considerado, que es lo que emerge y NO esta en el top. Si no
+esta en meseta, no hay lectura de comportamiento.
+
+La proyeccion de la gravedad extrapola hacia adelante: CAPTURA PREVISTA,
+si la distancia al Sol se esta cerrando de forma monotona en los ultimos
+3 cortes, se extrapola linealmente el corte en que llega a 0; si la
+distancia oscila o no se cierra, es NO_PROYECTABLE. PULSO DETECTADO: si
+en el corte actual llego masa_favor mayor que 0 en 2 o mas nudos, se
+advierte un posible cometa en los siguientes 1 a 3 cortes, porque los
+pulsos se repiten a los 3 o 4 cortes. El limite honesto esta escrito en el
+codigo: no se puede predecir el corte exacto ni el tamano del salto antes
+de que el pulso llegue, porque eso seria predecir el contenido del
+siguiente corte. Lo proyectivo es la extrapolacion de la tendencia y la
+alerta temprana cuando el pulso ya entro.
+
+El marcador de limite geometrico opera sobre el R732 ya calculado. Tiene
+dos modos: ESTIMADO_DESDE_PREFIJO, que solo diagnostica contraccion,
+inmovilidad o curvatura en los cortes observados, sin afirmar que el
+proceso llego a su final; y RETROSPECTIVO_CON_LIMITE, que permite medir
+distancia geometrica al corte terminal unicamente cuando ese corte esta
+incluido en la secuencia. Las etiquetas de regimen son heuristicas
+descriptivas, no probabilidades.
+
+
+5. QUE HACE EL CALDERO
+
+El Caldero tiene dos partes: el sidecar de Polti que observa el tablero,
+y la busqueda de arquetipos por web.
+
+El sidecar de Polti observa la salida del motor nativo, los cortes mas
+el R732. Las 36 situaciones dramaticas de Polti y los arquetipos YA estan
+en el 244, en el tablero. El sidecar no lee ningun dataset externo. Por
+corte saca que Polti y que arquetipos estan en el top5 de P, de A y de C,
+y la union. Entre cortes calcula la transicion: que sube y que baja, con
+los 8 movimientos mas grandes. La proyeccion es la inercia del ultimo
+tablero Polti y arquetipo: los 3 persistentes de cada uno, mas dX_norm,
+persist_cos, kappa_dir y el numero de cortes. La nota dice: proyeccion es
+inercia del ultimo tablero, no es H. Alimenta_H es NO. Son senales para
+formular H, no son H.
+
+La busqueda de arquetipos es un sidecar AISLADO. Sus candados son: no
+toca F, no toca el 244, no toca el Engine_V5 y no toca el FREEZE. No
+integra ni modifica el motor canonico, ni los patrones, ni P, A, C, ni el
+freeze, ni H1 y H2, ni las probabilidades. El flujo es: arquetipo ciego,
+construccion de query, busqueda externa por adapter, filtro externo de
+self-match, corte temporal con vecinos menores o iguales que Z, extraccion
+tokenizada y salida lateral.
+
+La entrada es ciega: solo trae tokens, patrones y familias. La query se
+construye SOLO desde esos terminos. No acepta ni consulta la identidad
+real del caso. Si el arquetipo esta vacio, da error. La prueba del codigo
+lo deja claro: una query de ambicion, audaz_empresa y obtencion no trae
+ni el nombre ni la fecha del caso.
+
+La busqueda externa esta desacoplada por un adapter. Hay adapters para
+Exa con API key, OpenAI Responses con busqueda web, OpenRouter, Tavily,
+Brave, DuckDuckGo HTML y Google HTML, y una cadena libre en
+caldero_buscadores.py donde auto es el primer buscador libre que
+responda y las claves solo se usan si existen, sin LLM. El modo offline
+no hace HTTP y falla igual que si todos los proveedores fallaran. Solo
+cuenta como ejecutada si hay citas URL verificables. El adapter de
+fallback prueba los proveedores en orden y solo falla tras agotarlos.
+Ningun adapter hace fallback silencioso a una lista vacia: los errores se
+propagan para que el recibo marque la etapa como fallida.
+
+El filtro de self-match es EXTERNO al Caldero. La identidad real del caso
+vive solo en SelfMatchIdentity: nombre, fecha de nacimiento, fecha de
+muerte y hechos unicos. El filtro descarta cualquier fuente cuya URL,
+titulo o snippet contenga el nombre normalizado, la fecha de nacimiento,
+la fecha de muerte o algun hecho unico. Asi el Caldero nunca recibe nada
+del propio caso: busca analogos, no al mismo.
+
+El corte temporal dice que los vecinos tienen que ser menores o iguales
+que Z. Una fuente con fecha de publicacion conocida mayor que Z se
+descarta como post_z. Una fuente sin fecha, en modo estricto, se
+descarta; en modo leniente, que es el defecto, se conserva con la marca
+fecha_no_verificada. La fecha de publicacion NO es la fecha de consulta:
+consultado_utc nunca se usa como fecha de la fuente. Las fechas parciales
+de solo ano o ano y mes se normalizan al dia 1 con la marca fecha_parcial.
+El codigo documenta la consecuencia honesta: en modo estricto, con la
+cadena automatica actual, casi todas las fuentes caen porque la mayoria
+de los buscadores no entregan fecha; por eso el defecto es leniente.
+
+La extraccion tokenizada es determinista: saca terminos de 3 o mas
+letras, quita stopwords en espanol y en ingles, quita cifras sueltas y
+quita lo que no tiene letras. Una fuente cuenta como una observacion: un
+token repetido varias veces dentro de la misma fuente no aumenta su
+frecuencia de co-activacion. La salida es una lista de tokens vecinos con
+su frecuencia de co-activacion por fuente y sus referencias de fuente.
+
+Lo que recibe el Caldero, caldero_input, lleva solo tokens_neighbors,
+freeze_read_only, query_blind, self_match_filtered y
+corte_temporal_aplicado. Nunca expone la identidad ni las fuentes crudas.
+La auditoria si conserva la query exacta, el recibo del proveedor, las
+fuentes crudas antes del filtro, lo descartado y el motivo, y el corte
+temporal.
+
+Los vecinos se persisten en el store vecinos_caldero. El parche 011 de
+autoevidencia dice que los eventos del mismo case_id o del mismo input no
+cuentan como vecinos: no vale autoevidencia.
+
+Ademas, dentro de la corrida, el Caldero se cablea asi: el circulo
+monomito Q1 a Q4 mapea los vecinos del Caldero por familia monomito a
+favor y en contra; la interrelacion junta las luces externas con las
+luces persistentes del Caldero y hace una segunda pasada tras el
+StinkBox; los arcos emocionales se calculan aparte; y hay una busqueda
+analogica pre-H, ciega y offline salvo fuentes.
+
+El StinkBox registra observaciones de trayectoria R732 y luces laterales,
+y expone apoyo acotado por candidata al predictor. Nunca muta el canon
+ni H. Es repositorio de HALLAZGOS NUEVOS, no basurero: ningun token
+duplicado entra; si ya lo tenemos, se omite. La cosecha mide la
+proximidad de un token sin familia a cada familia del 244 con cuatro
+componentes deterministas, sin LLM y sin azar: nombre 0.5, raiz 0.3,
+co-activacion 0.2 y evidencia 0.3. El puntaje es el minimo entre 1.0 y la
+suma. Se activa como analogo de la familia mas cercana si el puntaje es
+mayor o igual que 0.50 y es la unica en el mejor puntaje. Si no, queda
+PENDIENTE: o el campo abarca varias familias, o necesita familia nueva,
+o hay empate en el mejor puntaje.
+
+
+6. COMO SE ELIGE EL CONJUNTO ABIERTO DE HIPOTESIS Y LA APUESTA
+
+Primero, el universo de candidatas es la union de las candidatas de P, A
+y C por corte: de 0 a 3 por eje, con p mayor o igual que 0.65.
+
+El predictor construye un vector de features por candidata. Las features
+son: state, continuity, recency, delta, lateral_breadth,
+axis_convergence, relational_activity y alignment, caldero_neighbor
+activity, memory y alignment, stinkbox_support, own_pattern_evidence,
+lateral_shared_evidence, lateral_candidate_specific, lateral_contribution,
+cameo_activity y profile_activity, geometric_inertia_alignment,
+geometric_direction_change, geometric_persistence_context,
+geometric_turn_context, geometric_latest_movement, trajectory micro,
+meso y macro support, trajectory_acceleration_support,
+trajectory_multiscale_convergence, trajectory_inertia_alignment,
+trajectory_curvature_response, mas las de structural y dynamis. Solo los
+campos numericos finitos entran al rank. Las dimensiones constantes o
+duplicadas se excluyen de la fusion, pero se registran, no se borran.
+Los rangos son fraccionales por dimension y los empates comparten el
+rango promedio. El desempate final es por score, menos state, menos slope
+y sha256 del candidato.
+
+La geometria por candidato sale del R732: persist_last, kappa_last y
+dX_last. La confianza geometrica es geom_trust igual a 1 menos 0.5 por el
+minimo entre 1 y kappa_last. La direccion geometrica es geom_direction
+igual al recorte entre 0 y 1 de (0.5 mas 0.5 por tangente hiperbolica de
+25 por el ultimo paso, por persist_last, por geom_trust).
+
+La evidencia propia del candidato es la de sus tokens a favor y en
+contra del patron 244 en los cortes observados, con masa a favor y masa
+en contra por corte. La evidencia dynamis usa cubetas: a favor,
+prosecucion, limites al exito, desplazamiento de carga, desvio
+contagonista, oscilacion emocional y atricion; en contra, evitacion,
+razon homeostatica, guardian, verificacion esceptica y balance sigma. La
+evidencia estructural usa las lentes de Propp, Booker, Greimas y Frye
+sobre los tokens propios observados del candidato, con Frye normalizado
+por 2.17.
+
+El pase de resolucion re-lee EL MISMO input congelado en tres
+resoluciones cuando el margen es menor que 1.0 o el nativo esta borroso:
+micro, que es direccion local mas acuerdo de ejes; meso, que es
+coactivacion relacional; y macro, que es persistencia mas forma total de
+la trayectoria. Anade dimensiones de evidencia, nunca cambia la familia.
+
+La tortuga de traza remide el mismo input partiendo cada tramo, o sea
+insertando puntos medios.
+
+El estado de informacion dice si hay suficiente: tiene que haber senal
+nueva, con el ultimo dX_norm mayor o igual que 0.1, Y resolucion agotada
+Y separacion, con margen mayor o igual que 1.0. Si no, queda
+LATENCIA_INFORMACIONAL. Un empate exacto entre top1 y top2 es EMPATE.
+
+La compuerta de cierre, antes de cerrar, re-revisa los pendientes vivos
+del StinkBox. Un pendiente vivo que contradiga el cierre propuesto lo
+deja en LATENCIA. La compuerta solo puede retener el cierre, nunca elegir
+H.
+
+Las tortugas guardianas remiden con borroso en verdadero sobre cortes
+subdivididos. El veredicto es TORTUGAS_SOSTIENE_TOP1 si 2 o mas niveles
+sostienen el top1.
+
+H1 y H2 solo se fijan si la informacion es suficiente. Si no, H1 y H2
+quedan en None. El contrato dice cardinalidad fija en falso: H1 y H2 son
+alias de compatibilidad, no definen el tamano del conjunto.
+
+La resolucion operativa terminal 017, en modo 020 que es el defecto y se
+llama EL MOTOR MANDA EN H, dice: el orden es rank_fusion; las tortugas y
+los casos semejantes SOLO desempatan DENTRO de la banda de indistincion,
+donde delta es el minimo entre GATE_SEPARATION y el maximo entre
+EPS_ACERO igual a 0.25 y 2 dividido entre (N menos 1). Las pistas de LLM
+de arquetipos son solo traza. Los pesos relativos son rank_fusion_i
+dividido entre la suma de rank_fusion sobre las candidatas publicadas, y
+no son probabilidad. La mezcla de H1 y H2 es: MEZCLA_H1_H2_SIN_SEPARACION
+si H1 cae en banda; H1_CON_COMPONENTES_DE_H2 si el margen es menor que
+GATE_SEPARATION o la afinidad es mayor o igual que 0.5; H1_DOMINANTE en
+otro caso. La afinidad 020 es el promedio de Jaccard de evidencia propia,
+Jaccard de catalogo a favor, co-activacion por corte, Jaccard del puente
+244-familias, y el maximo entre 0 y el Pearson de las series. Los casos
+semejantes se buscan en un indice cross-run por Jaccard de firma de
+tokens mayor o igual que 0.20, excluyendo el mismo caso.
+
+El cierre final 016 y 020 dice que al final SIEMPRE se emiten H1, H2,
+que son top1 y top2 de rank_fusion sin ranking nuevo, y la apuesta, con
+margen y grado FIRME, AJUSTADA o FRAGIL. FIRME es margen mayor o igual
+que 1.0 mas el acero que descarta al rival mas fuerte mas 0 objeciones.
+FRAGIL es margen menor que 1.0 mas senal contraria fuerte: el acero cae,
+el decimo hombre esta en banda de empate, hay subdeterminacion o hay
+empate exacto. AJUSTADA es el resto. La latencia solo queda como
+contexto.
+
+El decimo hombre con esteroides es una revision adversarial iterativa
+tras el cierre, con contrafactuales: quitar un modulo, quitar un token
+con re-corrida nativa, quitar una dimension, y pares de estres. Nunca
+reescribe H ni la apuesta.
+
+El conjunto abierto se construye en hipotesis_trayectoria_abierta_v1.
+El universo de hipotesis tiene cardinalidad variable y no hay maximo.
+H1 y H2 son alias historicos, no una restriccion del conjunto. La apuesta
+se construye DESPUES del conjunto y puede agrupar varias hipotesis en
+escenarios comunes. Ningun peso es probabilidad.
+
+La seleccion es asi: se toma el set necesario y suficiente 021, que es el
+modulo predictibilidad_set_021, y se le suman las complementarias de
+trazabilidad geometrica, que son las candidatas con candidate_trace_support
+mayor o igual que 2. Si el modulo 021 falla, el fallback es el universo
+completo observado, sin maximo. Si no hay candidatas, el estado es
+SIN_CANDIDATAS y no se inventa una apuesta.
+
+Cada hipotesis del set lleva su direccion multiescala, calculada de los
+soportes de trayectoria micro, meso, macro y aceleracion: la senal es el
+promedio de (2 por x menos 1) sobre micro, meso y macro, y el conflicto
+es el maximo menos el minimo. Los regimenes son: SIN_TRAYECTORIA_SUFICIENTE
+si hay menos de 2 cortes; GIRO_O_DIVERGENCIA_MULTIESCALA si el conflicto
+es mayor o igual que 0.48 o micro y macro apuntan en direcciones opuestas;
+CONTINUIDAD_ASCENDENTE si la senal es mayor que 0.12; CONTINUIDAD_DESCENDENTE
+si la senal es menor que menos 0.12; MESeta_O_ESTABILIZACION en el resto.
+
+El soporte estructural relativo de cada hipotesis es su rank_fusion
+desplazado para que no haya negativos ni ceros, dividido entre la suma de
+todos. No es probabilidad.
+
+Los escenarios agrupan las hipotesis por regimen. Cada escenario lleva
+las hipotesis que convergen en el, cuantas son y su soporte estructural
+agregado. La apuesta es multiescenario: su estado es
+APUESTA_MULTIESCENARIO_SELLABLE, la apuesta principal es el escenario con
+mas soporte agregado, el horizonte es el siguiente corte, y NO es forzoso
+que el desenlace coincida con una hipotesis individual. La calibracion es
+PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA. La apuesta legacy de
+H1 y H2 queda guardada como apuesta_legacy_H1_H2 y no es autoritativa.
+
+La apuesta post-Z del motor es una proyeccion longitudinal: x(Z mas k)
+es igual a x(Z) mas k por (x(Z) menos x(Z menos 1)), con k igual a 1 y
+k igual a n menos 1. La apuesta de destino personal 022 es un campo
+separado con auge, meseta, caida o ruptura, y no toca H1 ni H2.
+
+La salida interpretable da porcentaje de relleno estructural, NO
+probabilidad: H1 y H2 con su porcentaje de relleno y su desglose por
+grupo, el conjunto de hipotesis abiertas y la apuesta multiescenario.
+
+
+7. COMO SALE LA LECTURA
+
+El traductor es el lateral lateral_traduccion_salida_v1.py, version v2.8.
+Su funcion es traducir(result, entrada) y devuelve tres cosas: lectura,
+anexo y violaciones. Es un puente post-predictor: traduce el RESULT
+sellado a prosa. No decide H.
+
+Las reglas son de Marco. La salida viene en LA MISMA PROSA del input.
+Nunca se devuelve el token que salio ni en que porcentaje. La salida
+tiene que estar CALIBRADA entre el input que da la persona y lo que se le
+regresa: cada frase tiene que estar anclada en un momento concreto que la
+persona conto, un hecho, y en como se mueve un tema concreto: sube, se
+fija, se resiste, aparece. Si la lectura se le pudiera decir a cualquiera,
+esta mal.
+
+Cada tema se nombra con el sustantivo que la persona uso, que es el
+nombre propio del hecho donde el tema aparecio o salto, no con la etiqueta
+del catalogo. El nombre propio se saca de la ultima clausula del hecho.
+Si el input es en primera persona, la lectura es CORTA y en SEGUNDA
+persona: el que lee le habla a la persona. Si el input es en tercera
+persona, como una biografia, la lectura se queda en tercera. Los nombres
+se pasan a segunda persona por un diccionario de formas exactas; lo que no
+se reconoce queda como esta, porque sigue siendo palabra de la persona,
+no invento. Cada hecho largo se usa una sola vez en la lectura; los
+nombres cortos si se repiten.
+
+La formula de Marco es: Basado en lo que me contaste, te perfilas a
+quedarte en el limbo. Estas a la mitad, en el umbral: optaste por
+salirte, pero sigues en el limbo. El limbo crecio: antes no estaba asi de
+grande. A traves de estas situaciones: ya no me queria, el duelo y el
+apego. El duelo no estaba antes: aparecio apenas ahorita. Muy
+probablemente el duelo te pegue mas fuerte, junto con todo eso. Y se
+perfila a que te venga otra oleada como aquella vez que ya no te queria.
+Y eso puede ir creciendo con el tiempo si las cosas siguen asi.
+
+El tema central es un ESTADO, no una fuerza que jala: se dice estoy en
+el limbo, no lo que me jala es el limbo. El cierre dice el crecimiento
+del tema central, no un destino: no se dice hacia el limbo, porque el
+limbo es donde la persona YA ESTA, no hacia donde va. El limbo en sentido
+normal es estar a la mitad, en el umbral: ya te saliste, pero no llegaste
+a ningun lado.
+
+La v2.8 anade los HALLAZGOS del motor, cada uno con su evidencia: el tema
+central crecio y esta en su punto mas alto en el ultimo corte; lo nuevo no
+estaba antes, o sea que su primera aparicion fue en el ultimo corte y su
+clase es PICO; y la alerta de cometa de la proyeccion, que es que en el
+ultimo corte llego un pulso de masa en 2 o mas nudos y se perfila otra
+oleada en los siguientes 1 a 3 cortes, leida de proyectar_gravedad.
+
+El cometa y el regimen ya no se narran en la lectura: van solo al anexo.
+Las luces arquetipo y monomito y los caminos del Caldero van solo al
+anexo. La lectura solo dice que esta pasando, que va a pasar y hacia
+donde se perfila, en las palabras de la persona, con verbos que alguien
+diria de su vida.
+
+El anexo lleva todos los numeros: H1, H2, sol_peso_Z, n_nudos,
+n_capturados, n_siendo_jalados, n_resisten, proporcionalidad,
+alerta_cometa, cometa, cometa_nudos, cometa_salto, punto_no_considerado,
+nuevos_en_Z, en_meseta, registro, version, caminos y arquetipos_luces.
+Va al repo, NUNCA a la persona.
+
+El guardia _verificar_lectura revisa la lectura antes de entregarla: si
+la lectura contiene algun ID de familia del catalogo, un porcentaje, un
+decimal, un grado, H1 o H2, un ID de corte, top N, la palabra peso o la
+palabra token, se registra la violacion y la lectura entera se reemplaza
+por la frase generica segura: Lo que se ve en esta vida es una direccion
+que se va armando con lo que la acompana, no con una sola cosa.
+
+
+8. EL RECORRIDO COMPLETO DE UNA CORRIDA
+
+El que corre las corridas es correr_estandar.py. Se usa asi: python3
+correr_estandar.py cuts.json NOMBRE, con salida opcional. Tambien se puede
+pasar un RESULT con menos menos t1 y un futuro.json para puntuar el
+desenlace. El Monte Carlo es obligatorio: la opcion menos menos no-mc
+esta bloqueada.
+
+Antes de correr hace un preflight: verifica el SHA del Engine, que es
+665c39a2, y el SHA de patterns, que es d827dcc3, contra el manifiesto
+UNIFICACION_SHA256_MANIFEST.json. Una deriva en el manifiesto es solo un
+aviso, pero el Engine y patterns bloquean si no coinciden. Tambien pasa
+el candado de plugins.
+
+El FILTRO_017 se aplica a la entrada antes de sellar. El cableado del
+Caldero pasa caldero_search_sources a caldero_search_fixture. La consulta
+dirigida puede estar en off, on, offline o mock. El GATE_Z90 es un
+diagnostico pre-motor.
+
+La funcion _build copia el paquete motor entero a runs/ESTANDAR__X. La
+corrida primaria corre en un subproceso aislado: se ejecuta
+MOTOR_V15_3_UNICO_20260927.run con monte_carlo en verdadero. Despues se
+hace el ingest del registro del StinkBox. La matriz de mortalidad z90 es
+diagnostica y no escribe H. La validacion predictiva es
+PARCIAL_CON_DESENLACES_SIN_REGLA_PRE_REGISTRADA: el baseline de H1 mas
+frecuente acierta 2 de 6, y rank_fusion y el relleno estructural son
+indices estructurales, no probabilidades. La entrega es el plugin de
+luces version 1.
+
+El analisis interno de corte retenido corre dos variantes: el previo, que
+es el caso sin el ultimo corte, y el visto, que es el caso con solo el
+ultimo corte. El puntaje de t1 da HIT_HIPOTESIS_SET, MISS_HIPOTESIS_SET,
+HIT_H1, HIT_H2, MISS o INCONCLUSO.
+
+La compuerta de continuidad terminal dice que si no se justifica el
+cierre, la corrida queda PAUSADA_REANUDABLE, con exit 6 y un archivo
+CHECKPOINT_REANUDABLE.json.
+
+El RESULT se sanitiza, sin null, sin NaN y sin NAPIC, y se emite el recibo
+EXECUTION_RECEIPT_V1. Los laterales post-corrida son solo diagnostico y
+no deciden H: filogenia_mezcla, teoria_color y dialectica_hegeliana. Los
+codigos de salida son: 0 limpio, 3 fallos duros, 4 salida incompleta,
+5 hueco de metadatos y 6 pausada reanudable.
+
+El orden dentro de run del motor UNICO es: valida el caso, con cortes,
+case_id, sin fechas post-Z90 y pesos de 0.60 a 0.84; filtro 017; protocolo
+orden 0; semilla; freeze; ledger CEB; motor nativo correr_5x3; adaptador
+de emision, que regenera los tableros FULL_244 si faltan; modulos
+laterales; lateral CAMEO; guardias transversales, donde la GuardiaNoCruce
+verifica que las salidas laterales no muten tableros ni contengan campos
+probabilisticos; Caldero; monomito; interrelacion; arcos emocionales;
+resumen dynamis del caso; busqueda analogica pre-H; StinkBox;
+filtro_relleno_013; hub de laterales_unico_v1 pre-predictor, con votos
+como el negativo de Ricci-Forman contra el billar y las familias de
+tokens; tableros e historias desde FULL_244; adaptador CAMEO a 244 solo
+para auditoria; matriz_clases, funciones_souriau, marco_7783 y figura_pac;
+marcador_limite_geometrico enriquecido con Souriau; predictor _predict;
+metacognicion, que es contraste post-H y nunca reescribe H ni la apuesta;
+apuesta post-Z; guardianes de control estructural siempre encendidos, que
+verifican por hash que el predictor no cambia; ruta de cierre latente,
+donde NO_RESUELTO o DOBLE_NEGACION_LITOTE quedan LATENTE y las tortugas
+remiden, con H1, H2 y top1 intactos; modo estricto, con sus cuatro
+condiciones; hub post-predictor; convergencia_lateral; reporte_caso;
+predictibilidad_set_021; movimiento_de_fondo_u4; geometria multicapa;
+hipotesis_trayectoria_abierta_v1.construir, que produce
+result["hipotesis_trayectoria_abierta"], result["hipotesis"] y
+result["apuesta"]; registro_componentes; sumideros terminales CEB;
+normalizacion de la salida terminal; equivalencia de presentacion, que
+es la salida_interpretable; y apuesta_destino_personal_022.
+
+El observador externo NO decide H: decide_H es falso. Pero SI dice que
+va a pasar leyendo solo el RESULT sellado.
+
+
+9. LOS LATERALES SUELTOS
+
+Estos laterales son diagnostico. Ninguno decide H, ninguno toca el
+Engine ni el catalogo 244.
+
+El cierre dramatico hace inventario de tokens de cierre en el 244. Once
+tokens de cierre NO EXISTEN en el 244, ni a favor ni en contra: cierre,
+desenlace, anagnorisis, peripeteia, regreso, elixir, legado, testamento,
+despedida, culminacion y clausura. Redencion, reconocimiento y perdon
+existen SOLO como contra, con favor en 0. En las 81 entradas de la copia
+de trabajo solo aparecen TRES tokens de cierre: proposito_claro,
+reconocimiento y sabiduria_compartida. La tabla Polti esta casi vacia:
+19 de 36 situaciones SIN CASO. La medicion sombra pregunta que pasaria si
+los tokens de cierre faltantes hubieran estado en la entrada: se anaden
+al corte final en el eje P a peso de contrato 0.72 y se re-corre el
+tablero sombra. El token de cierre mueve a heroe a H1 sombra empatado en
+Semmelweis y Kolbe, y a monomito_12 a H1 sombra empatado en Tubman. En
+Juana y Mandela no mueve nada.
+
+La dialectica hegeliana es A mas B igual a C, y C es una nueva A. El
+catalogo ya entrelaza las tres familias: insubordinacion es contra de la
+tesis y favor de la antitesis, y paz_interior es contra de la antitesis y
+favor de la sintesis. La triada en un corte es: A es la tesis, los tokens
+del corte que estan a favor de dialectica_01; B es la antitesis, los
+tokens a favor de dialectica_02; C es la sintesis ya presente, los tokens
+a favor de dialectica_03. Hay triada completa cuando A y B no estan
+vacios. La sintesis desde A y B se alcanza por dos rutas del catalogo:
+compartir una familia con algun token de A o B, o ser vecino de Caldero
+de A o B; o estar en contra de la antitesis con antitesis real, donde la
+unica interseccion es paz_interior. Si no hay sintesis directa, se toma
+la sintesis POR ANALOGO: la familia activa que mas tokens favor comparte
+con la familia que falta. El ciclo entre cortes es que la sintesis del
+corte anterior entra como tesis del siguiente. El punto fijo es cuando la
+sintesis ya no cambia.
+
+La filogenia y mezcla lee un RESULT existente y produce de donde viene
+cada hipotesis, su filogenia, y como se mezclan. Es determinista, sin
+timestamps, con claves ordenadas y redondeo fijo.
+
+La teoria del color pone ejes: interno es P, externo es A y situacion es
+C. Cada hipotesis tiene un color: el tono es la mezcla de los 3 ejes, la
+intensidad es el RMS, la pureza es el maximo, la saturacion es el maximo
+menos el minimo y la entropia es normalizada. Cuando un eje no tiene
+tokens en un corte, ese eje queda HUECO y el tablero no es dato, es valor
+por defecto.
+
+La vinculacion de tokens es el contrato de como se vinculan. La
+vinculacion token con token en un corte es la suma, sobre las familias
+favor compartidas, del minimo de los pesos favor de cada token en esa
+familia, y solo si los dos tokens co-ocurren en el corte. Si no
+co-ocurren, es 0. Un vinculo sin familia compartida no existe. El vector
+de vinculo del token en un corte conserva la masa: la masa total del
+token es su peso en el corte, no se crea ni se destruye vinculo, se
+reparte o se transfiere. Si el token se resolvio a favor de una familia,
+todo su peso va ahi con signo mas; si se resolvio en contra, con signo
+menos; si quedo en superposicion, su peso se reparte entre sus familias
+en proporcion a los pesos del catalogo. El desplazamiento entre cortes es
+la diferencia del vector de vinculo agregado: la familia que mas vinculo
+GANA marca hacia donde se desplaza la trayectoria. El desplazamiento es
+FLUJO, cambio de masa de vinculo, no posicion.
+
+La taxonomia geopolitica son 10 familias laterales: Jervis, Schelling,
+Farrell y Newman, Auty, Sachs y Ross, Acemoglu y Robinson, Ostrom,
+Perrow, Beer, Hirschman y Kennedy. Son 50 tokens a favor y 40 en contra,
+en formato identico al del catalogo, pero con contenido nuevo: 0 de 10
+familias y 0 de 90 tokens existen en el 244. No entran al 244 porque el
+244 esta sellado por contrato. Ninguna entrada actual las encenderia:
+solo se activan si el traductor emite estos tokens exactos. Sirven como
+material de analogo para los laterales.
+
+La cosecha del StinkBox ya se describio en la seccion del Caldero.
+
+El sidecar de latentes es una memoria de factores. Tiene: primer
+destello, que es cuando aparece por primera vez cada token, cada relacion
+y cada familia, y a que nivel; convergencia, que es que precede a que,
+que co-ocurre y que cambia a la vez; trayectorias de relaciones token
+con token por corte, con estados OBSERVADA, LATENTE_INFERIDA y
+REAPARICION_COMPROBADA, donde una reaparicion se juzga MISMA o
+NUEVA_POSIBLE_GIRO por la forma y el Jaccard del contexto; lectura
+olvidada, que es que informacion ignoro el lider P en cada corte, o sea
+que tokens a favor de las demas candidatas no leyo el lider; suma
+restando, que suma las relaciones omitidas y resta las explicaciones de
+desaparicion con trayectoria viva y las coincidencias de un solo corte;
+tabla contrafactual con conjuntos INUS y regla de Laplace, que es (s mas
+1) dividido entre (n mas 2), recortada a 5 y 95 por ciento; y Ricci y
+billar por prefijo, sin fuga de futuro, o sea que toda lectura en el
+corte k usa solo C1 a Ck. Ningun numero de salida es mayor que 1 en valor
+absoluto. Los conteos van como texto s dividido entre n. El ledger es
+acumulativo y nunca borra. Al final verifica que H quedo intacto por
+huella.
+
+El lateral de par superpuesto ya se describio en la seccion de la
+entrada.
+
+
+10. LOS CANDADOS QUE MANDAN EN TODO EL MOTOR
+
+Nunca modificar el Engine ni patterns. Todo lo nuevo es lateral, con
+commit y entrada en avances. Eso esta en motor/REGLAS.md.
+
+FREEZE es frontera de informacion. La prediccion ocurre DESPUES.
+
+H1 y H2 son campos historicos y alias de compatibilidad. NO definen el
+tamano del conjunto ni la apuesta primaria.
+
+La geometria helicoidal y recursiva es descriptiva en el espacio
+abstracto de puntuaciones P, A y C, no prueba fisica ni validacion
+predictiva por si misma.
+
+Ningun peso es probabilidad. rank_fusion y el relleno estructural son
+indices estructurales. Los pesos relativos son rank_fusion_i dividido
+entre la suma de rank_fusion.
+
+El observador no decide H. El Caldero no decide H. Los laterales no
+deciden H. Solo el predictor ordena, y el cierre 020 fija H1 y H2 como
+top1 y top2 de rank_fusion.
+
+El token es la unidad, no la familia. El token se activa por si mismo.
+La helice es puramente geometria. H1 es el SIGUIENTE VECTOR y H2 un
+SEGUNDO VECTOR mas adelante. Un par que va junto en la vida real, como
+gobernante y ambicion, SE SUPERPONE, no compite ni se anula ni se suma.
+En la rueda cromatica, las opuestas estan peleadas y las adyacentes van
+de la mano.
+
+La predictibilidad es direccion y proyectividad, no que H1 gane. El
+motor anticipa CONTINUIDAD, no EMERGENCIA.
