@@ -4,6 +4,9 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 43805672321 | Motor runner contract tests | pull_request | 2026-11-15T22:42:10-06:00 | 2026-11-15T22:42:10-06:00 | 2026-11-15T22:42:26-06:00 | 16.0 | success |
+| 43805646279 | Motor runner contract tests | pull_request | 2026-11-15T22:41:54-06:00 | 2026-11-15T22:41:54-06:00 | 2026-11-15T22:42:12-06:00 | 18.0 | success |
+| 43793969620 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T20:44:23-06:00 | 2026-11-15T20:44:23-06:00 | 2026-11-15T20:45:50-06:00 | 87.0 | success |
 | 43771441374 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T16:49:45-06:00 | 2026-11-15T16:49:45-06:00 | 2026-11-15T16:51:17-06:00 | 92.0 | success |
 | 43742660696 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T11:42:57-06:00 | 2026-11-15T11:42:57-06:00 | 2026-11-15T11:44:18-06:00 | 81.0 | success |
 | 43706419486 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T04:55:40-06:00 | 2026-11-15T04:55:40-06:00 | 2026-11-15T04:57:26-06:00 | 106.0 | success |
@@ -100,15 +103,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 42926488297 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:49:29-06:00 | 2026-11-10T17:50:51-06:00 | 82.0 | success |
 | 42926338824 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:48:20-06:00 | 2026-11-10T17:49:13-06:00 | 53.0 | failure |
 | 42926059925 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T17:46:13-06:00 | 2026-11-10T17:46:13-06:00 | 2026-11-10T17:47:32-06:00 | 79.0 | success |
-| 42925995918 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:45:44-06:00 | 2026-11-10T17:45:44-06:00 | 2026-11-10T17:46:57-06:00 | 73.0 | success |
-| 42925925154 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:45:13-06:00 | 2026-11-10T17:45:13-06:00 | 2026-11-10T17:45:33-06:00 | 20.0 | failure |
-| 42925418016 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:41:23-06:00 | 2026-11-10T17:41:23-06:00 | 2026-11-10T17:42:58-06:00 | 95.0 | success |
 
 ## Fallos y cancelaciones
 
 - Run 43404246627 (supervisor): failure; jobs: supervisor / supervisor=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43404246627
 - Run 42926338824 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42926338824
-- Run 42925925154 (Mozart A/B — V15.3 con Caldero y sin Caldero): failure; jobs: mozart-ab=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925925154
 
 ## Límites
 

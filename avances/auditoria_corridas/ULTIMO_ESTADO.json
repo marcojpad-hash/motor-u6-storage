@@ -3,6 +3,96 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 43805672321,
+      "run_attempt": 1,
+      "workflow": "Motor runner contract tests",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "fix/issue-64-guardian-z90-correr-estandar",
+      "head_sha": "5eda368d85851a42f6f82f069c56c93983c60da2",
+      "created_at_utc": "2026-11-16T04:42:10Z",
+      "created_at_cdmx": "2026-11-15T22:42:10-06:00",
+      "started_at_utc": "2026-11-16T04:42:10Z",
+      "started_at_cdmx": "2026-11-15T22:42:10-06:00",
+      "finished_at_utc": "2026-11-16T04:42:26Z",
+      "finished_at_cdmx": "2026-11-15T22:42:26-06:00",
+      "duration_seconds": 16.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43805672321",
+      "jobs": [
+        {
+          "name": "runner-contract",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-16T04:42:13Z",
+          "finished_at_utc": "2026-11-16T04:42:25Z",
+          "duration_seconds": 12.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 43805646279,
+      "run_attempt": 1,
+      "workflow": "Motor runner contract tests",
+      "event": "pull_request",
+      "actor": "marcojpad-hash",
+      "branch": "fix/issue-64-guardian-z90-correr-estandar",
+      "head_sha": "07c28a9fd96f911b36e07a165e50700b09f38d8c",
+      "created_at_utc": "2026-11-16T04:41:54Z",
+      "created_at_cdmx": "2026-11-15T22:41:54-06:00",
+      "started_at_utc": "2026-11-16T04:41:54Z",
+      "started_at_cdmx": "2026-11-15T22:41:54-06:00",
+      "finished_at_utc": "2026-11-16T04:42:12Z",
+      "finished_at_cdmx": "2026-11-15T22:42:12-06:00",
+      "duration_seconds": 18.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43805646279",
+      "jobs": [
+        {
+          "name": "runner-contract",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-16T04:41:57Z",
+          "finished_at_utc": "2026-11-16T04:42:11Z",
+          "duration_seconds": 14.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "run_id": 43793969620,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "795368b0184ab5b742817e1f526e373b4588809e",
+      "created_at_utc": "2026-11-16T02:44:23Z",
+      "created_at_cdmx": "2026-11-15T20:44:23-06:00",
+      "started_at_utc": "2026-11-16T02:44:23Z",
+      "started_at_cdmx": "2026-11-15T20:44:23-06:00",
+      "finished_at_utc": "2026-11-16T02:45:50Z",
+      "finished_at_cdmx": "2026-11-15T20:45:50-06:00",
+      "duration_seconds": 87.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43793969620",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-16T02:44:26Z",
+          "finished_at_utc": "2026-11-16T02:45:49Z",
+          "duration_seconds": 83.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 43771441374,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -2916,117 +3006,6 @@
         }
       ],
       "artifacts": []
-    },
-    {
-      "run_id": 42925995918,
-      "run_attempt": 1,
-      "workflow": "Mozart A/B — V15.3 con Caldero y sin Caldero",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "work/mozart-ab-20261110",
-      "head_sha": "99de0c126302c419bcb4f7c1c5ce5e2a2c15260e",
-      "created_at_utc": "2026-11-10T23:45:44Z",
-      "created_at_cdmx": "2026-11-10T17:45:44-06:00",
-      "started_at_utc": "2026-11-10T23:45:44Z",
-      "started_at_cdmx": "2026-11-10T17:45:44-06:00",
-      "finished_at_utc": "2026-11-10T23:46:57Z",
-      "finished_at_cdmx": "2026-11-10T17:46:57-06:00",
-      "duration_seconds": 73.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925995918",
-      "jobs": [
-        {
-          "name": "mozart-ab",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-10T23:45:48Z",
-          "finished_at_utc": "2026-11-10T23:46:57Z",
-          "duration_seconds": 69.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "MOZART_AB_20261110_EVIDENCIA",
-          "created_at_utc": "2026-11-10T23:46:51Z",
-          "expired": false,
-          "size_in_bytes": 2212737
-        }
-      ]
-    },
-    {
-      "run_id": 42925925154,
-      "run_attempt": 1,
-      "workflow": "Mozart A/B — V15.3 con Caldero y sin Caldero",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "work/mozart-ab-20261110",
-      "head_sha": "928d89880e372ded2ddf7dd4ed472f68ce3e7449",
-      "created_at_utc": "2026-11-10T23:45:13Z",
-      "created_at_cdmx": "2026-11-10T17:45:13-06:00",
-      "started_at_utc": "2026-11-10T23:45:13Z",
-      "started_at_cdmx": "2026-11-10T17:45:13-06:00",
-      "finished_at_utc": "2026-11-10T23:45:33Z",
-      "finished_at_cdmx": "2026-11-10T17:45:33-06:00",
-      "duration_seconds": 20.0,
-      "status": "completed",
-      "conclusion": "failure",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925925154",
-      "jobs": [
-        {
-          "name": "mozart-ab",
-          "status": "completed",
-          "conclusion": "failure",
-          "started_at_utc": "2026-11-10T23:45:15Z",
-          "finished_at_utc": "2026-11-10T23:45:33Z",
-          "duration_seconds": 18.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "MOZART_AB_20261110_EVIDENCIA",
-          "created_at_utc": "2026-11-10T23:45:30Z",
-          "expired": false,
-          "size_in_bytes": 3200368
-        }
-      ]
-    },
-    {
-      "run_id": 42925418016,
-      "run_attempt": 1,
-      "workflow": "Mozart A/B — V15.3 con Caldero y sin Caldero",
-      "event": "push",
-      "actor": "marcojpad-hash",
-      "branch": "work/mozart-ab-20261110",
-      "head_sha": "fd765ea3cefb584fc6102df30cbad5523696fc72",
-      "created_at_utc": "2026-11-10T23:41:23Z",
-      "created_at_cdmx": "2026-11-10T17:41:23-06:00",
-      "started_at_utc": "2026-11-10T23:41:23Z",
-      "started_at_cdmx": "2026-11-10T17:41:23-06:00",
-      "finished_at_utc": "2026-11-10T23:42:58Z",
-      "finished_at_cdmx": "2026-11-10T17:42:58-06:00",
-      "duration_seconds": 95.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/42925418016",
-      "jobs": [
-        {
-          "name": "mozart-ab",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-10T23:41:26Z",
-          "finished_at_utc": "2026-11-10T23:42:57Z",
-          "duration_seconds": 91.0
-        }
-      ],
-      "artifacts": [
-        {
-          "name": "MOZART_AB_20261110_EVIDENCIA",
-          "created_at_utc": "2026-11-10T23:42:51Z",
-          "expired": false,
-          "size_in_bytes": 3200368
-        }
-      ]
     }
   ]
 }
