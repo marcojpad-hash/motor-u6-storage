@@ -1,1 +1,35 @@
-{"entrega":"F003_F004_20261111","fecha_lectura":"2026-11-11","lecturas":[{"reglas":["regla 6: nunca subir la corrida completa; solo un resumen por corrida en resultados/resultados.jsonl"],"ruta":"casos/REGLAS.md","sha256":"9c2dec25ead4bdce43eecd7f2f7a576563a2f826e98d297706997195ca96167b"},{"reglas":["casos/: hashes, plantilla, calibración, fábrica y resúmenes; nunca corridas completas"],"ruta":"CONTRATO_CARPETAS.md","sha256":"8e5c4b164e4d869539ead0d58eeb5417227af6826a530cdad98970cefa18f506"},{"reglas":["corridas completas quedan fuera del repo, en /workspace/FABRICA_CORRIDAS/<lote>/"],"ruta":"casos/fabrica/README.md","sha256":"9cc7ab20a350abddd03e93ae307119f84c0aae66a90360f3788e2ff8c428ca70"},{"reglas":["§3 recibo mínimo","§4 todo dato es un dato: se conservan picos, mesetas, valles y descensos"],"ruta":"PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md","sha256":"d05320f003976d206e499fd74c24105d365760d02184821506747a8e11897b9b"}]}
+{
+  "entrega": "F003_F004_20261111",
+  "fecha_lectura": "2026-11-17",
+  "lecturas": [
+    {
+      "ruta": "casos/REGLAS.md",
+      "sha256": "7fed14c9baf0c32eec4298842790718e352fc4d732cdf715f1e661844fd5c08a",
+      "reglas": [
+        "Regla 6: resumen por corrida en casos/resultados/resultados.jsonl; corrida completa en motor/runs/<LOTE>_<FECHA>/."
+      ]
+    },
+    {
+      "ruta": "CONTRATO_CARPETAS.md",
+      "sha256": "0af0f7622cb74e2e9d151f67a8f8d0f24924593b7a2254281c33b8f2d987fd4f",
+      "reglas": [
+        "casos/ conserva hashes, plantilla, calibración, fábrica y resúmenes; corridas completas en motor/runs/."
+      ]
+    },
+    {
+      "ruta": "casos/fabrica/README.md",
+      "sha256": "9dc1bf344fc0c04eb663fc21e4e38fc7127d9dc8f925567eb2e66ef8aeecc61d",
+      "reglas": [
+        "La fábrica guarda el resumen en resultados/resultados.jsonl y la corrida completa en motor/runs/<LOTE>_<FECHA>/."
+      ]
+    },
+    {
+      "ruta": "PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md",
+      "sha256": "d05320f003976d206e499fd74c24105d365760d02184821506747a8e11897b9b",
+      "reglas": [
+        "§3: recibo mínimo y estados de ejecución.",
+        "§4: conservar todos los datos, incluidos picos, mesetas, valles y descensos."
+      ]
+    }
+  ]
+}
