@@ -4,6 +4,15 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 44190600652 | Motor runner contract tests | pull_request | 2026-11-17T16:29:47-06:00 | 2026-11-17T16:29:47-06:00 | 2026-11-17T16:30:00-06:00 | 13.0 | success |
+| 44180615108 | Motor runner contract tests | pull_request | 2026-11-17T15:31:01-06:00 | 2026-11-17T15:31:01-06:00 | 2026-11-17T15:31:15-06:00 | 14.0 | success |
+| 44179167693 | Candado de entrega F003-F004 | pull_request | 2026-11-17T15:22:41-06:00 | 2026-11-17T15:22:41-06:00 | 2026-11-17T15:22:54-06:00 | 13.0 | success |
+| 44179107422 | Candado de entrega F003-F004 | pull_request | 2026-11-17T15:22:20-06:00 | 2026-11-17T15:22:20-06:00 | 2026-11-17T15:22:34-06:00 | 14.0 | success |
+| 44179088636 | Candado de entrega F003-F004 | push | 2026-11-17T15:22:15-06:00 | 2026-11-17T15:22:15-06:00 | 2026-11-17T15:22:24-06:00 | 9.0 | success |
+| 44178359180 | Candado de entrega F003-F004 | pull_request | 2026-11-17T15:18:07-06:00 | 2026-11-17T15:18:07-06:00 | 2026-11-17T15:18:16-06:00 | 9.0 | failure |
+| 44178288035 | Candado de entrega F003-F004 | push | 2026-11-17T15:17:43-06:00 | 2026-11-17T15:17:43-06:00 | 2026-11-17T15:17:55-06:00 | 12.0 | success |
+| 44178204486 | Candado de entrega F003-F004 | push | 2026-11-17T15:17:14-06:00 | 2026-11-17T15:17:14-06:00 | 2026-11-17T15:17:26-06:00 | 12.0 | success |
+| 44103126084 | Auditoría de corridas Motor U6 | schedule | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:28:06-06:00 | 100.0 | success |
 | 44017530422 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T22:29:27-06:00 | 2026-11-16T22:29:27-06:00 | 2026-11-16T22:30:55-06:00 | 88.0 | success |
 | 43966324640 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T16:03:52-06:00 | 2026-11-16T16:03:52-06:00 | 2026-11-16T16:05:40-06:00 | 108.0 | success |
 | 43857024022 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T05:21:27-06:00 | 2026-11-16T05:21:27-06:00 | 2026-11-16T05:22:57-06:00 | 90.0 | success |
@@ -94,18 +103,10 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 43017260379 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T06:04:59-06:00 | 2026-11-11T06:04:59-06:00 | 2026-11-11T06:06:35-06:00 | 96.0 | success |
 | 43009772157 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T05:10:46-06:00 | 2026-11-11T05:10:46-06:00 | 2026-11-11T05:12:28-06:00 | 102.0 | success |
 | 43001349545 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:10:22-06:00 | 2026-11-11T04:11:48-06:00 | 86.0 | success |
-| 42992461361 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:07:09-06:00 | 2026-11-11T03:08:25-06:00 | 76.0 | success |
-| 42983059551 | ChatGPT startup contract | push | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:40-06:00 | 2026-11-11T01:55:48-06:00 | 8.0 | success |
-| 42979722205 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:28:15-06:00 | 2026-11-11T01:29:41-06:00 | 86.0 | success |
-| 42970636108 | Auditoría de corridas Motor U6 | schedule | 2026-11-11T00:11:03-06:00 | 2026-11-11T00:11:03-06:00 | 2026-11-11T00:12:35-06:00 | 92.0 | success |
-| 42964151612 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T23:11:54-06:00 | 2026-11-10T23:11:54-06:00 | 2026-11-10T23:13:02-06:00 | 68.0 | success |
-| 42957162050 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T22:07:29-06:00 | 2026-11-10T22:07:29-06:00 | 2026-11-10T22:09:12-06:00 | 103.0 | success |
-| 42949707766 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T20:59:31-06:00 | 2026-11-10T20:59:31-06:00 | 2026-11-10T21:00:45-06:00 | 74.0 | success |
-| 42937976762 | Auditoría de corridas Motor U6 | schedule | 2026-11-10T19:18:23-06:00 | 2026-11-10T19:18:23-06:00 | 2026-11-10T19:19:42-06:00 | 79.0 | success |
-| 42926720289 | Mozart A/B — V15.3 con Caldero y sin Caldero | push | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:51:15-06:00 | 2026-11-10T17:52:26-06:00 | 71.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 44178359180 (Candado de entrega F003-F004): failure; jobs: validate=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44178359180
 - Run 43404246627 (supervisor): failure; jobs: supervisor / supervisor=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43404246627
 
 ## Límites
