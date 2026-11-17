@@ -36,3 +36,18 @@ También se comprobó que `LECTURA.json` conserva las descripciones antiguas de 
 ## Renovación de evidencia de lectura — 2026-11-17
 
 Se releyeron `casos/REGLAS.md`, `CONTRATO_CARPETAS.md`, `casos/fabrica/README.md` y `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`. Se regeneró `LECTURA.json` con los SHA-256 del contenido exacto leído y las reglas vigentes. Esta renovación corrige la evidencia documental obsoleta; no ejecuta `scripts/candado_entrega.py`, no recalifica las corridas y no cambia el estado predictivo `NO_CALIBRADO`.
+
+
+## Ejecución del candado de entrega — 2026-11-17
+
+Se ejecutó el archivo real `scripts/candado_entrega.py` mediante GitHub Actions, en Python 3.11.18, con el comando:
+
+`python scripts/candado_entrega.py motor/runs/F003_F004_20261111 --repo .`
+
+- Workflow run: `44179107422` (run #5); job: `134378330680`.
+- Commit que disparó la validación: `46cd283d9a589e36952674e32d40e15b5c46bbad`; checkout de la fuente validada: rama `alterno/cameo-pesos`.
+- Resultado literal: `CANDADO_ENTREGA: PASA`.
+- Criterios: **227 pasados, 0 incumplidos**.
+- La entrega F003/F004 cumple el contrato de almacenamiento y lectura; el candado permite guardarla.
+- Esta validación no ejecutó el motor ni tests de predicción, no recalificó los 20 casos y no altera `NO_CALIBRADO`. Los valores siguen siendo soporte estructural, no probabilidades calibradas.
+- Engine V5 y catálogo 244 no se modificaron.
