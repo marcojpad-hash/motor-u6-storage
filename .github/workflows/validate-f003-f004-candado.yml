@@ -1,0 +1,44 @@
+name: Candado de entrega F003-F004
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/validate-f003-f004-candado.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/candado_entrega.py"
+      - "motor/runs/F003_F004_20261111/**"
+      - "casos/REGLAS.md"
+      - "CONTRATO_CARPETAS.md"
+      - "casos/fabrica/README.md"
+      - "PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || 'alterno/cameo-pesos' }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ejecutar candado de entrega
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/candado_entrega.py motor/runs/F003_F004_20261111 --repo . 2>&1 | tee candado_f003_f004.log
+      - name: Conservar salida del candado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candado-f003-f004-${{ github.sha }}
+          path: candado_f003_f004.log
+          if-no-files-found: warn
+          retention-days: 30
