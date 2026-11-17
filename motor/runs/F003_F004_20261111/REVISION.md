@@ -32,3 +32,7 @@ Se releyeron individualmente los 20 archivos `*_RECIBO_EJECUCION.json` del lote 
 Por tanto, la frase anterior `receipt_missing_paths` no describe una ausencia estructural de esas claves: las rutas existen. El problema verificado es semántico y permanece abierto: ambos valores son marcadores de dato ausente que requieren clasificación; no demuestran que el adaptador esté configurado ni que la verificación de no escritura sobre H se haya realizado. No se infiere éxito de esos campos.
 
 También se comprobó que `LECTURA.json` conserva las descripciones antiguas de `casos/REGLAS.md`, `CONTRATO_CARPETAS.md` y `casos/fabrica/README.md`. Esas descripciones ya no coinciden con el contenido actual; la evidencia de lectura está obsoleta y debe renovarse antes de ejecutar el candado. No se modificó `LECTURA.json`, no se ejecutó `scripts/candado_entrega.py`, no se ejecutaron tests ni se corrió el motor. El estado `NO_CALIBRADO` permanece.
+
+## Renovación de evidencia de lectura — 2026-11-17
+
+Se releyeron `casos/REGLAS.md`, `CONTRATO_CARPETAS.md`, `casos/fabrica/README.md` y `PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`. Se regeneró `LECTURA.json` con los SHA-256 del contenido exacto leído y las reglas vigentes. Esta renovación corrige la evidencia documental obsoleta; no ejecuta `scripts/candado_entrega.py`, no recalifica las corridas y no cambia el estado predictivo `NO_CALIBRADO`.
