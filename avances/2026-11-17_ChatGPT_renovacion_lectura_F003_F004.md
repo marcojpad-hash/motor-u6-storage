@@ -13,11 +13,11 @@ Se renovó la evidencia de lectura del paquete F003/F004 porque `LECTURA.json` c
   sha256 antes: `2cf68fc0d9cfa4d352edaa3e54f2d5cfae08ec16230a101592e4c9657acbc308` | sha256 después: `529d8e6de875ad3005bbd4d6fc92d700955b7f2e0eeb0cb7b7c9b350b975c281`
   Commit: `380eaef52cafe75ba2b14f059276872f41a13c87`.
 
-## Hashes canónicos verificados (motor y catálogo)
+## Hashes canónicos (sin modificación)
 
 No se modificaron. Referencias declaradas por `motor/REGLAS.md`: Engine V5 `665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082`; catálogo 244 `d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1`. No se recalcularon en esta intervención.
 
-## Pruebas: 0 passed, 0 skipped, 0 failed (¿pasaron? no)
+## Pruebas: no ejecutadas (0 passed, 0 skipped, 0 failed)
 
 - Lectura y comprobación de vuelta de `LECTURA.json` y `REVISION.md`: verificada por GitHub.
 - SHA-256 de los cuatro documentos de protocolo: recalculados sobre el contenido recuperado y registrados en `LECTURA.json`.
