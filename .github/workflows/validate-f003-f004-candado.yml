@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || 'alterno/cameo-pesos' }}
+          ref: alterno/cameo-pesos
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
