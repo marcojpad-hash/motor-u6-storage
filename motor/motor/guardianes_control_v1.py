@@ -445,22 +445,46 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
 
     dh = seguro("DECIMO_HOMBRE_LATENCIA", lambda: g_decimo_hombre(base, case, motor, pred))[0]
     bloques.append(dh)
-    bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
-    bloques.extend(seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)))
-    bloques.append(seguro("LOGICA_COPI", lambda: g_copi(base, textos, motor, pred))[0])
-    if "POLARIDAD_CAUSAL" in omitir:
-        # Bypass visible en recibo (POLARIDAD_GUARDIAN=off): el bloque queda
-        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
-        bloques.append(_bloque("POLARIDAD_CAUSAL", [], "omitido por POLARIDAD_GUARDIAN=off (bypass visible en recibo)",
+    if "PREGUNTA_DETRAS_V2" in omitir:
+        # Bypass visible en recibo (PREGUNTA_DETRAS_GUARDIAN=off): el bloque queda marcado
+        # NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("PREGUNTA_DETRAS_V2", [], "omitido por PREGUNTA_DETRAS_GUARDIAN=off (bypass visible en recibo)",
                                0, [], "NO_CONFIGURADO", {"modo": "off"}))
     else:
-        bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
+        bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
+    if "PREGUNTA_DIRIGIDA_POST_HOC" in omitir and "FALACIAS" in omitir:
+        # Bypass visible en recibo (PREGUNTA_DIRIGIDA_GUARDIAN=off): los dos bloques
+        # quedan marcados NO_CONFIGURADO en lugar de desaparecer en silencio.
+        for _nombre in ("PREGUNTA_DIRIGIDA_POST_HOC", "FALACIAS"):
+            bloques.append(_bloque(_nombre, [], "omitido por PREGUNTA_DIRIGIDA_GUARDIAN=off (bypass visible en recibo)",
+                                   0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        for _b in seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)):
+            if _b["guardian"] in omitir:
+                bloques.append(_bloque(_b["guardian"], [], "omitido por bypass (bypass visible en recibo)",
+                                       0, [], "NO_CONFIGURADO", {"modo": "off"}))
+            else:
+                bloques.append(_b)
+    if "LOGICA_COPI" in omitir:
+        # Bypass visible en recibo (COPI_GUARDIAN=off): el bloque queda marcado
+        # NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("LOGICA_COPI", [], "omitido por COPI_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(seguro("LOGICA_COPI", lambda: g_copi(base, textos, motor, pred))[0])
+    bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
     lat_fronts = [f for f in (((pred.get("compuerta_cierre") or {}).get("latencia_escrita") or {}).get("abiertos_o_reafirmados") or [])]
     bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
     bloques.append(seguro("SHERLOCK_RIGOR", lambda: g_rigor(base, motor, pred))[0])
     bloques = [_h(b) for b in bloques]
     vecinos = [b for b in bloques if b["guardian"] in ("FALACIAS", "PREGUNTA_DIRIGIDA_POST_HOC", "LOGICA_COPI", "POLARIDAD_CAUSAL")]
-    bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
+    if "TROPOS_BERISTAIN" in omitir:
+        # Bypass visible en recibo (BERISTAIN_GUARDIAN=off): el bloque queda marcado
+        # NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("TROPOS_BERISTAIN", [], "omitido por BERISTAIN_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
     _anotar_vecinos(bloques)
     # BOLSITAS_TROPO (spec 2026-09-14, ids A–F): ruteo de los hallazgos de tropos y de
     # lógica enunciativa a bolsitas de marcaje. Highlight only: no decide H, no bloquea,
