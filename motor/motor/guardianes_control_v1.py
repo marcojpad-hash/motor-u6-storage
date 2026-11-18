@@ -452,7 +452,19 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
                                0, [], "NO_CONFIGURADO", {"modo": "off"}))
     else:
         bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
-    bloques.extend(seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)))
+    if "PREGUNTA_DIRIGIDA_POST_HOC" in omitir and "FALACIAS" in omitir:
+        # Bypass visible en recibo (PREGUNTA_DIRIGIDA_GUARDIAN=off): los dos bloques
+        # quedan marcados NO_CONFIGURADO en lugar de desaparecer en silencio.
+        for _nombre in ("PREGUNTA_DIRIGIDA_POST_HOC", "FALACIAS"):
+            bloques.append(_bloque(_nombre, [], "omitido por PREGUNTA_DIRIGIDA_GUARDIAN=off (bypass visible en recibo)",
+                                   0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        for _b in seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)):
+            if _b["guardian"] in omitir:
+                bloques.append(_bloque(_b["guardian"], [], "omitido por bypass (bypass visible en recibo)",
+                                       0, [], "NO_CONFIGURADO", {"modo": "off"}))
+            else:
+                bloques.append(_b)
     if "LOGICA_COPI" in omitir:
         # Bypass visible en recibo (COPI_GUARDIAN=off): el bloque queda marcado
         # NO_CONFIGURADO en lugar de desaparecer en silencio.
