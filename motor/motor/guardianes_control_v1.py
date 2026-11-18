@@ -481,7 +481,13 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
         bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
     lat_fronts = [f for f in (((pred.get("compuerta_cierre") or {}).get("latencia_escrita") or {}).get("abiertos_o_reafirmados") or [])]
     bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
-    bloques.append(seguro("SHERLOCK_RIGOR", lambda: g_rigor(base, motor, pred))[0])
+    if "SHERLOCK_RIGOR" in omitir:
+        # Bypass visible en recibo (SHERLOCK_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("SHERLOCK_RIGOR", [], "omitido por SHERLOCK_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(seguro("SHERLOCK_RIGOR", lambda: g_rigor(base, motor, pred))[0])
     bloques = [_h(b) for b in bloques]
     vecinos = [b for b in bloques if b["guardian"] in ("FALACIAS", "PREGUNTA_DIRIGIDA_POST_HOC", "LOGICA_COPI", "POLARIDAD_CAUSAL")]
     if "TROPOS_BERISTAIN" in omitir:
