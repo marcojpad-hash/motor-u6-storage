@@ -2902,16 +2902,39 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                        "resolver_status":auto_audit.get("status")})
 
     # Adversarial consistency verifier: control-only, after predictor, never feeds H.
-    verifier=_load("consistency_adversarial", "plugin_verificador_consistencia_adversarial.py")
-    if verifier is not None:
-        audit=_ceb_stage("plugin_verificador_consistencia_adversarial", lambda: verifier.run(result, BASE), shared=[result])
-        result["consistency_adversarial"]=audit
-        status.append({"component":"plugin_verificador_consistencia_adversarial.py",
-                       "status":"EXECUTED" if audit.get("status")=="PASS" else "EXECUTED_WITH_FINDINGS",
-                       "feeds_predictor":False,"feeds_H":False,"role":"control_only",
-                       "violations":audit.get("violations",[])})
+    # Cableado: VERIFICADOR_CONSISTENCIA=off deja el apagado NO_CONFIGURADO en el
+    # recibo (con verificador_modo off) en lugar de desaparecer en silencio; el modo
+    # queda visible en la fila de componentes en ambos casos. Defecto: activo.
+    _verificador_modo = (_os.environ.get("VERIFICADOR_CONSISTENCIA", "activo") or "activo").strip().lower()
+    if _verificador_modo == "activo":
+        verifier=_load("consistency_adversarial", "plugin_verificador_consistencia_adversarial.py")
+        if verifier is not None:
+            audit=_ceb_stage("plugin_verificador_consistencia_adversarial", lambda: verifier.run(result, BASE), shared=[result])
+            result["consistency_adversarial"]=audit
+            status.append({"component":"plugin_verificador_consistencia_adversarial.py",
+                           "status":"EXECUTED" if audit.get("status")=="PASS" else "EXECUTED_WITH_FINDINGS",
+                           "feeds_predictor":False,"feeds_H":False,"role":"control_only",
+                           "violations":audit.get("violations",[]),"verificador_modo":"activo"})
+        else:
+            result["consistency_adversarial"]={"status":"PLUGIN_MISSING","modo":"activo"}
+            status.append({"component":"plugin_verificador_consistencia_adversarial.py",
+                           "status":"PLUGIN_MISSING","feeds_predictor":False,"feeds_H":False,
+                           "role":"control_only","verificador_modo":"activo"})
+        _ver_rec = result.get("consistency_adversarial")
+        if isinstance(_ver_rec, dict):
+            _ver_rec["modo"] = "activo"
     else:
-        result["consistency_adversarial"]={"status":"PLUGIN_MISSING"}
+        # Bypass visible: apagado por bandera; no corre, no audita, no toca H, pero queda registrado.
+        _ver_audit = {"verifier_version":"CONSISTENCY_ADVERSARIAL_V0.1","status":"NO_CONFIGURADO",
+                      "file":"plugin_verificador_consistencia_adversarial.py","modo":"off",
+                      "motivo":"apagado por VERIFICADOR_CONSISTENCIA=off",
+                      "violations":[],"fixture_count":0,"can_decide_H":False,"feeds_H":False,
+                      "feeds_predictor":False}
+        result["consistency_adversarial"] = _ver_audit
+        status.append({"component":"plugin_verificador_consistencia_adversarial.py",
+                       "status":"NO_CONFIGURADO","feeds_predictor":False,"feeds_H":False,
+                       "role":"control_only","violations":[],
+                       "verificador_modo":"off"})
 
     # GUARDIANES (control estructural siempre-on). Corren sobre toda entrada DESPUES del
     # predictor y de los controles existentes; reciben copias; nunca escriben H ni patterns.
