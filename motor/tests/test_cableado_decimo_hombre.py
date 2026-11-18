@@ -302,7 +302,10 @@ def test_cableado_presente_en_runner_y_control():
     assert 'gmod.correr_guardianes' in src
     assert 'result["guardianes"]=guard_out' in src
     assert 'DECIMO_HOMBRE_GUARDIAN' in src
-    assert 'omitir=_decimo_omitir' in src
+    # Tras fusionar, el omitir es la unión de los conjuntos; lo que importa
+    # es que _decimo_omitir llegue a correr_guardianes.
+    _lineas_guardianes = [ln for ln in src.splitlines() if "correr_guardianes" in ln and "omitir=" in ln]
+    assert _lineas_guardianes and "_decimo_omitir" in _lineas_guardianes[0]
     assert '"decimo_hombre_modo":_decimo_modo' in src
     ctrl = CONTROL.read_text(encoding="utf-8")
     assert 'def correr_guardianes(' in ctrl and 'omitir=frozenset()' in ctrl
