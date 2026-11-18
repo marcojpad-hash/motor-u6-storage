@@ -2926,12 +2926,16 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     # NO_CONFIGURADO en lugar de desaparecer en silencio). Defecto: activo.
     _tropos_modo = (_os.environ.get("BERISTAIN_GUARDIAN", "activo") or "activo").strip().lower()
     _tropos_omitir = {"TROPOS_BERISTAIN"} if _tropos_modo == "off" else frozenset()
+    # PREGUNTA_DETRAS_GUARDIAN=off: bypass visible en recibo (el bloque PREGUNTA_DETRAS_V2 queda
+    # NO_CONFIGURADO en lugar de desaparecer en silencio). Defecto: activo.
+    _detras_modo = (_os.environ.get("PREGUNTA_DETRAS_GUARDIAN", "activo") or "activo").strip().lower()
+    _detras_omitir = {"PREGUNTA_DETRAS_V2"} if _detras_modo == "off" else frozenset()
     gmod=_load("guardianes_control_v1","guardianes_control_v1.py")
     if gmod is None or not hasattr(gmod,"correr_guardianes"):
         guard_out={"status":"FALTA_ARCHIVO","file":"guardianes_control_v1.py","can_decide_H":False}
     else:
         try:
-            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE,omitir=_copi_omitir | _tropos_omitir), shared=[case,motor,pred])
+            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE,omitir=_copi_omitir | _tropos_omitir | _detras_omitir), shared=[case,motor,pred])
             guard_out["status"]="EXECUTED"
         except Exception as e:
             guard_out={"status":"ERROR","error":f"{type(e).__name__}:{e}","can_decide_H":False}
@@ -2943,7 +2947,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     result["guardianes"]=guard_out
     result["filtro_entrada_dirigida_017"]=_f017_traza
     status.append({"component":"guardianes_control_v1.py","status":guard_out.get("status"),"feeds_predictor":False,"feeds_H":False,
-                   "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on","copi_modo":_copi_modo,"tropos_modo":_tropos_modo,
+                   "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on","copi_modo":_copi_modo,"tropos_modo":_tropos_modo,"detras_modo":_detras_modo,
                    "banderas":guard_out.get("banderas"),"H_intacto":guard_out["verificacion_H_intacto"]["predictor_igual"]})
 
     # RUTA DE CIERRE LATENTE (regla de Mj): lo que no se entiende o no se sostiene NO es cierre.
