@@ -641,6 +641,28 @@ def main(argv) -> int:
         _f017_cat = json.loads((MOTOR / "patterns_final_v14.json").read_text(encoding="utf-8"))
         case, _f017_traza = _f017.compuerta(case, _f017_modo, _f017_cat)
 
+    # Sombrero blanco v2 — filtro de admisión del input en la puerta de
+    # entrada. SOMBRERO_BLANCO=activo (defecto): admite solo lo
+    # objetivamente medible; el juicio se anota como ruido aparte y no
+    # alimenta al motor. traza: analiza sin modificar el caso. off: apagado
+    # (el recibo lo marca, no pasa en silencio). Se aplica ANTES de
+    # escribir _INPUT.json para que el input sellado sea el admitido (el
+    # runner lo vuelve a aplicar dentro de run() como red de seguridad para
+    # llamadas directas; es idempotente).
+    _sb_traza = None
+    _sb_modo = os.environ.get("SOMBRERO_BLANCO", "activo").strip().lower()
+    if _sb_modo in ("activo", "traza"):
+        import importlib.util as _iusb
+        _sbp = ROOT / "capa_llm" / "sombrero_blanco_filtro_v2.py"
+        _sbs = _iusb.spec_from_file_location("sombrero_blanco_filtro_v2", str(_sbp))
+        _sb = _iusb.module_from_spec(_sbs); _sbs.loader.exec_module(_sb)
+        case, _sb_traza = _sb.compuerta(case, _sb_modo)
+    else:
+        _sb_traza = {"version": "SOMBRERO_BLANCO_FILTRO_V2_20261117", "contrato": "SOMBRERO_BLANCO_SPEC_V1.1",
+                     "modo": "off", "status": "NO_CONFIGURADO", "n_hechos": 0, "n_ruido": 0,
+                     "can_decide_H": False, "feeds_predictor": False, "llamadas_llm": 0,
+                     "nota": "SOMBRERO_BLANCO=off"}
+
     # UNIFICADO_20261011 — capa LLM de CONSULTAS DIRIGIDAS (fuera del motor). CONSULTA_DIRIGIDA=off (defecto) no toca nada.
     #   on|offline: adaptador OFFLINE (sin respuestas, sin red)   mock: respuestas fijas de prueba (CONSULTA_FIXTURE, CONSULTA_CASE_KEY)
     _cd_traza = None
@@ -787,6 +809,11 @@ def main(argv) -> int:
     # aquí solo se registra la de la entrada estándar si run() no la dejó.
     if _f017_traza is not None and "filtro_entrada_dirigida_017" not in result:
         result["filtro_entrada_dirigida_017"] = _f017_traza  # traza sin contenido original (solo huellas)
+    # Sombrero blanco v2: la traza del filtro ya viene en result si run()
+    # la puso; aquí solo se registra la de la entrada estándar si run() no
+    # la dejó. La traza lleva el texto original y el ruido anotado.
+    if _sb_traza is not None and "sombrero_blanco" not in result:
+        result["sombrero_blanco"] = _sb_traza
     # A missing terminal justification pauses the execution for continuation; it is
     # never converted into a final hypothesis/decision by the serializer.
     _continuity_pause = _terminal_continuity_gate(result, case)
@@ -850,6 +877,7 @@ def main(argv) -> int:
             {"stage": "terminal_resolution", "status": terminal.get("status", result.get("estado_final", "OUTPUT_WRITTEN")), "method": terminal.get("method", terminal.get("metodo")), "H1": (result.get("salida_interpretable") or {}).get("H1"), "H2": (result.get("salida_interpretable") or {}).get("H2")},
             {"stage": "external_archetype_search", "status": "EXECUTED_WITH_RESULTS" if search_performed else ("FAILED_OPTIONAL_STAGE" if search_optional_failed else "NOT_VERIFIED"), "required": False, "provider": search_receipt.get("provider"), "query_count": search_receipt.get("query_count", 0), "result_count": search_receipt.get("result_count", 0), **({"error": search_receipt.get("error")} if search_receipt.get("error") is not None else {}), **({"query_sha256": search_receipt.get("query_sha256")} if search_receipt.get("query_sha256") is not None else {})},
             {"stage": "filtro_entrada_dirigida_017", "status": (_f017_traza or {}).get("status", "NO_CONFIGURADO"), "modo": (_f017_traza or {}).get("modo", "off"), "n_aplicadas": (_f017_traza or {}).get("n_aplicadas", 0)},
+            {"stage": "sombrero_blanco", "status": (_sb_traza or {}).get("status", "NO_CONFIGURADO"), "modo": (_sb_traza or {}).get("modo", "off"), "n_hechos": (_sb_traza or {}).get("n_hechos", 0), "n_ruido": (_sb_traza or {}).get("n_ruido", 0)},
             {"stage": "consulta_dirigida", "status": "COMPLETED" if _cd_traza is not None else "NO_CONFIGURADO", "modo": _cd_modo, "adaptador": (_cd_traza or {}).get("adaptador"), "n_preguntas": (_cd_traza or {}).get("n_preguntas", 0), "verificacion_no_escribe_H": (_cd_traza or {}).get("verificacion_no_escribe_H")},
             {"stage": "result_json_written", "status": "COMPLETED", "sha256": sha(out)},
             man_check,
