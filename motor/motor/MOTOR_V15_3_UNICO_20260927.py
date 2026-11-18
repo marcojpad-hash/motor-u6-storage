@@ -3165,126 +3165,154 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         status.append({"component":"cierre_final_016","status":"ERROR","error":str(_e016)})
     # PATCH 017 — Décimo Hombre con esteroides: capa adversarial iterativa/mayéutica.
     # Se ejecuta DESPUÉS del cierre de la corrida; audita y reabre preguntas, nunca reescribe H/apuesta.
-    try:
-        _dhx=_load("decimo_hombre_esteroides_mayeutica_v1", "decimo_hombre_esteroides_mayeutica_v1.py")
-        if _dhx is not None:
-            # PATCH05: cada contrafactual recalcula predictor real sobre copias; no modifica la corrida sellada.
-            def _dh_counterfactual(kind, target):
-                import copy as _copy_dh
-                _cf_case=_copy_dh.deepcopy(case)
-                _cf_features=_copy_dh.deepcopy(features)
-                _cf_boards=_copy_dh.deepcopy(boards)
-                _cf_histories=_copy_dh.deepcopy(histories)
-                _cf_motor=_copy_dh.deepcopy(motor)
-                if kind == "module":
-                    _cf_features.pop(str(target), None)
-                    _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None)
-                    return {"predictor":_cf_pred,"removed_module":str(target)}
-                if kind == "token_core":
-                    _removed=0
-                    for _cut in _cf_case.get("cuts") or []:
-                        for _axis in ("P","A","C"):
-                            _new=[]
-                            for _pair in _cut.get(_axis) or []:
-                                if isinstance(_pair,(list,tuple)) and len(_pair)>=1 and str(_pair[0])==str(target):
-                                    _removed+=1
-                                else: _new.append(_pair)
-                            _cut[_axis]=_new
-                    _native_cf=_load("v153_native_v09_cf", "MOTOR_V15_3_NATIVO_V0_9_UNICO.py") or _load("v153_native_v09_cf", "MOTOR_V15_3_NATIVO_V0_9.py")
-                    if _native_cf is None: return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":"NATIVE_ENGINE_NOT_LOADED"}
-                    _cf_question=str(_cf_case.get("question",_cf_case.get("case_id","case")))+"_ADVERSARIAL_ABLATION"
-                    _cf_motor=_native_cf.correr_5x3(_cf_case["cuts"],pregunta=_cf_question,
-                        annex_traza=False,obstaculo=_cf_case.get("obstaculo"),texto_polaridad=_cf_case.get("texto_polaridad"),monte_carlo=False)
-                    # Match the main execution's emission adapter. Native counterfactual runs with
-                    # annex_traza=False do not necessarily contain P/A/C_FULL_244; without this step
-                    # _predict receives empty boards and the supposed core ablation produces no ranking.
-                    if not all((cc.get("P_FULL_244") is not None and cc.get("A_FULL_244") is not None and cc.get("C_FULL_244") is not None)
-                               for cc in (_cf_motor.get("cuts") or [])):
-                        _cf_emit=_load("eng_emit_dh", "Engine_V5_CANONICO_SOLO.py")
-                        if _cf_emit is None:
-                            return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":"EMISSION_ADAPTER_ENGINE_MISSING"}
-                        _cf_pat_path=str(_PATTERNS_PATH())
-                        _cf_ep=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_P_EMIT")
-                        _cf_ea=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_A_EMIT")
-                        _cf_ec=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_C_EMIT")
-                        _cf_vocab=_native_cf.load_canonical()[1] if hasattr(_native_cf,"cuello_top_k") else None
-                        _cf_cu4=(lambda cid,e,rows,prev=None,cur=None: _native_cf.cuello_top_k(cid,e,rows,_cf_vocab,previos=prev,corte_actual=cur)[0]) if _cf_vocab is not None else (lambda cid,e,rows,prev=None,cur=None: rows)
-                        try:
-                            for _cf_i,(_cf_c,_cf_raw) in enumerate(zip(_cf_motor.get("cuts") or [],_cf_case["cuts"])):
-                                _cf_prev=_cf_case["cuts"][:_cf_i]
-                                _cf_c["P_FULL_244"]=_native_cf._board(_cf_emit,_cf_ep,_cf_c["corte"]+"_P_EMIT",_cf_cu4(_cf_c["corte"],"P",_cf_raw.get("P") or [],_cf_prev,_cf_raw))
-                                _cf_c["A_FULL_244"]=_native_cf._board(_cf_emit,_cf_ea,_cf_c["corte"]+"_A_EMIT",_cf_cu4(_cf_c["corte"],"A",_cf_raw.get("A") or [],_cf_prev,_cf_raw))
-                                _cf_c["C_FULL_244"]=_native_cf._board(_cf_emit,_cf_ec,_cf_c["corte"]+"_C_EMIT",_cf_cu4(_cf_c["corte"],"C",_cf_raw.get("C") or [],_cf_prev,_cf_raw))
-                            _cf_dims=[(len(cc.get("P_FULL_244") or {}),len(cc.get("A_FULL_244") or {}),len(cc.get("C_FULL_244") or {})) for cc in (_cf_motor.get("cuts") or [])]
-                            if not all(a==b==c==_n_patrones() for a,b,c in _cf_dims):
-                                return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":f"EMISSION_ADAPTER_DIMENSION_ERROR:{_cf_dims[:3]}"}
-                        finally:
-                            if hasattr(_native_cf,"_close_all_engines"):
-                                _native_cf._close_all_engines()
-                    _cf_boards=[]; _cf_histories=[]
-                    for _c in _cf_motor.get("cuts") or []:
-                        _cf_boards.append({"P":dict(_c.get("P_FULL_244") or {}),"A":dict(_c.get("A_FULL_244") or {}),"C":dict(_c.get("C_FULL_244") or {})})
-                        _cf_histories.append(_candidate_history_for_cut(_c))
-                    # Deliberately strip every lateral/sidecar output: this is the core-only, no-noise test.
-                    _cf_features={"cuts":_cf_case["cuts"]}
-                    _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None)
-                    return {"predictor":_cf_pred,"removed_token":str(target),"removed_count":_removed,"sidecars_stripped":True}
-                if kind == "dimension":
-                    _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None,adversarial_exclude_dimensions=(str(target),))
-                    return {"predictor":_cf_pred,"removed_dimension":str(target)}
-                if kind == "stress_pair":
-                    _spec=target if isinstance(target,dict) else {}
-                    _dims=tuple(str(x) for x in (_spec.get("dimensions") or []))
-                    _mods=[str(x) for x in (_spec.get("modules") or [])]
-                    for _mod in _mods: _cf_features.pop(_mod,None)
-                    _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None,adversarial_exclude_dimensions=_dims)
-                    return {"predictor":_cf_pred,"removed_dimensions":list(_dims),"removed_modules":_mods}
-                return {"predictor":{},"diagnostic":"UNKNOWN_COUNTERFACTUAL_KIND"}
-            _dh_audit=_ceb_stage("decimo_hombre_esteroides_mayeutica_v1", lambda: _dhx.run(case, result, _dh_counterfactual), shared=[result.get("predictor") or {}, result.get("cierre_final") or {}])
-            result["decimo_hombre_esteroides"]=_dh_audit
-            status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py",
-                           "status":("EXECUTED_WITH_CONCLUSION" if _dh_audit.get("status")=="EJECUTADO_CIERRE_ADVERSARIAL" else "EXECUTED_WITH_LIMITATIONS"),
-                           "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"rewrites_apuesta":False,
-                           "role":"adversarial_iterative_review_mayeutica_dialectica","n_attacks":len(_dh_audit.get("ataques") or []),
-                           "n_real_counterfactual_rankings":(_dh_audit.get("diagnosticos") or {}).get("actual_counterfactual_rankings",0),
-                           "orthogonal_residual_analysis":(_dh_audit.get("orthogonal_residual_analysis") or {}).get("status","NOT_REPORTED"),
-                           "decision_de_proceso":_dh_audit.get("decision_de_proceso")})
-        else:
-            _fallback_cands=[c for c in ((result.get("predictor") or {}).get("candidates") or []) if isinstance(c,dict) and c.get("family")]
-            _fallback_cands.sort(key=lambda c:float(c.get("rank_fusion") or 0.0),reverse=True)
-            _fallback_winner=_fallback_cands[0].get("family") if _fallback_cands else "NO_IDENTIFICABLE_CON_ESTA_ENTRADA"
-            result["decimo_hombre_esteroides"]={"version":"RECUPERACION_TERMINAL_PATCH05","status":"CIERRE_RECUPERADO_CON_DIAGNOSTICO",
-                "can_decide_H":False,"rewrites_H":False,"hipotesis_apuesta":{"candidata":_fallback_winner,"estado":"CONCLUSION_OPERACIONAL_RECUPERADA",
-                "fundamento":"La capa adversarial no está disponible; se recupera una conclusión operacional desde el ranking finito sin fingir pruebas adversariales.","no_equivale_a_verdad_demostrada":True},
-                "decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO","causa":"CAPA_ADVERSARIAL_NO_CARGADA",
-                "recuperacion":"RANKING_FINITO_RELEIDO_SIN_NULL_NAN","no_null_nan":True}
-            status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_TERMINAL_RECOVERY",
-                "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO"})
-    except Exception as _dhx_exc:
-        # PATCH05 recovery: retry the full dimensional/score adversarial pass without the
-        # optional native callback. The exception is recorded, but cannot terminate the run.
+    # Cableado: ESTEROIDES_GUARDIAN=off deja el apagado NO_CONFIGURADO en el recibo (con
+    # esteroides_modo off) en lugar de desaparecer en silencio; el modo queda visible en la
+    # fila de componentes en ambos casos. Defecto: activo.
+    _esteroides_modo = (_os.environ.get("ESTEROIDES_GUARDIAN", "activo") or "activo").strip().lower()
+    if _esteroides_modo == "activo":
         try:
-            _dhx_retry=locals().get("_dhx") or _load("decimo_hombre_esteroides_mayeutica_v1_retry", "decimo_hombre_esteroides_mayeutica_v1.py")
-            _dh_retry_out=_dhx_retry.run(case,result) if _dhx_retry is not None else None
-            if isinstance(_dh_retry_out,dict):
-                _dh_retry_out["recuperacion"]={"estado":"REINTENTO_DIMENSIONAL_EJECUTADO","causa_original":f"{type(_dhx_exc).__name__}:{_dhx_exc}",
-                    "contrafactual_nativo_disponible":False,"no_se_interrumpe_cierre":True}
-                result["decimo_hombre_esteroides"]=_dh_retry_out
-                status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_RECOVERY",
-                    "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":_dh_retry_out.get("decision_de_proceso")})
+            _dhx=_load("decimo_hombre_esteroides_mayeutica_v1", "decimo_hombre_esteroides_mayeutica_v1.py")
+            if _dhx is not None:
+                # PATCH05: cada contrafactual recalcula predictor real sobre copias; no modifica la corrida sellada.
+                def _dh_counterfactual(kind, target):
+                    import copy as _copy_dh
+                    _cf_case=_copy_dh.deepcopy(case)
+                    _cf_features=_copy_dh.deepcopy(features)
+                    _cf_boards=_copy_dh.deepcopy(boards)
+                    _cf_histories=_copy_dh.deepcopy(histories)
+                    _cf_motor=_copy_dh.deepcopy(motor)
+                    if kind == "module":
+                        _cf_features.pop(str(target), None)
+                        _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None)
+                        return {"predictor":_cf_pred,"removed_module":str(target)}
+                    if kind == "token_core":
+                        _removed=0
+                        for _cut in _cf_case.get("cuts") or []:
+                            for _axis in ("P","A","C"):
+                                _new=[]
+                                for _pair in _cut.get(_axis) or []:
+                                    if isinstance(_pair,(list,tuple)) and len(_pair)>=1 and str(_pair[0])==str(target):
+                                        _removed+=1
+                                    else: _new.append(_pair)
+                                _cut[_axis]=_new
+                        _native_cf=_load("v153_native_v09_cf", "MOTOR_V15_3_NATIVO_V0_9_UNICO.py") or _load("v153_native_v09_cf", "MOTOR_V15_3_NATIVO_V0_9.py")
+                        if _native_cf is None: return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":"NATIVE_ENGINE_NOT_LOADED"}
+                        _cf_question=str(_cf_case.get("question",_cf_case.get("case_id","case")))+"_ADVERSARIAL_ABLATION"
+                        _cf_motor=_native_cf.correr_5x3(_cf_case["cuts"],pregunta=_cf_question,
+                            annex_traza=False,obstaculo=_cf_case.get("obstaculo"),texto_polaridad=_cf_case.get("texto_polaridad"),monte_carlo=False)
+                        # Match the main execution's emission adapter. Native counterfactual runs with
+                        # annex_traza=False do not necessarily contain P/A/C_FULL_244; without this step
+                        # _predict receives empty boards and the supposed core ablation produces no ranking.
+                        if not all((cc.get("P_FULL_244") is not None and cc.get("A_FULL_244") is not None and cc.get("C_FULL_244") is not None)
+                                   for cc in (_cf_motor.get("cuts") or [])):
+                            _cf_emit=_load("eng_emit_dh", "Engine_V5_CANONICO_SOLO.py")
+                            if _cf_emit is None:
+                                return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":"EMISSION_ADAPTER_ENGINE_MISSING"}
+                            _cf_pat_path=str(_PATTERNS_PATH())
+                            _cf_ep=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_P_EMIT")
+                            _cf_ea=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_A_EMIT")
+                            _cf_ec=_native_cf._engine(_cf_emit,_cf_pat_path,_cf_question+"_C_EMIT")
+                            _cf_vocab=_native_cf.load_canonical()[1] if hasattr(_native_cf,"cuello_top_k") else None
+                            _cf_cu4=(lambda cid,e,rows,prev=None,cur=None: _native_cf.cuello_top_k(cid,e,rows,_cf_vocab,previos=prev,corte_actual=cur)[0]) if _cf_vocab is not None else (lambda cid,e,rows,prev=None,cur=None: rows)
+                            try:
+                                for _cf_i,(_cf_c,_cf_raw) in enumerate(zip(_cf_motor.get("cuts") or [],_cf_case["cuts"])):
+                                    _cf_prev=_cf_case["cuts"][:_cf_i]
+                                    _cf_c["P_FULL_244"]=_native_cf._board(_cf_emit,_cf_ep,_cf_c["corte"]+"_P_EMIT",_cf_cu4(_cf_c["corte"],"P",_cf_raw.get("P") or [],_cf_prev,_cf_raw))
+                                    _cf_c["A_FULL_244"]=_native_cf._board(_cf_emit,_cf_ea,_cf_c["corte"]+"_A_EMIT",_cf_cu4(_cf_c["corte"],"A",_cf_raw.get("A") or [],_cf_prev,_cf_raw))
+                                    _cf_c["C_FULL_244"]=_native_cf._board(_cf_emit,_cf_ec,_cf_c["corte"]+"_C_EMIT",_cf_cu4(_cf_c["corte"],"C",_cf_raw.get("C") or [],_cf_prev,_cf_raw))
+                                _cf_dims=[(len(cc.get("P_FULL_244") or {}),len(cc.get("A_FULL_244") or {}),len(cc.get("C_FULL_244") or {})) for cc in (_cf_motor.get("cuts") or [])]
+                                if not all(a==b==c==_n_patrones() for a,b,c in _cf_dims):
+                                    return {"predictor":{},"removed_token":str(target),"removed_count":_removed,"diagnostic":f"EMISSION_ADAPTER_DIMENSION_ERROR:{_cf_dims[:3]}"}
+                            finally:
+                                if hasattr(_native_cf,"_close_all_engines"):
+                                    _native_cf._close_all_engines()
+                        _cf_boards=[]; _cf_histories=[]
+                        for _c in _cf_motor.get("cuts") or []:
+                            _cf_boards.append({"P":dict(_c.get("P_FULL_244") or {}),"A":dict(_c.get("A_FULL_244") or {}),"C":dict(_c.get("C_FULL_244") or {})})
+                            _cf_histories.append(_candidate_history_for_cut(_c))
+                        # Deliberately strip every lateral/sidecar output: this is the core-only, no-noise test.
+                        _cf_features={"cuts":_cf_case["cuts"]}
+                        _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None)
+                        return {"predictor":_cf_pred,"removed_token":str(target),"removed_count":_removed,"sidecars_stripped":True}
+                    if kind == "dimension":
+                        _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None,adversarial_exclude_dimensions=(str(target),))
+                        return {"predictor":_cf_pred,"removed_dimension":str(target)}
+                    if kind == "stress_pair":
+                        _spec=target if isinstance(target,dict) else {}
+                        _dims=tuple(str(x) for x in (_spec.get("dimensions") or []))
+                        _mods=[str(x) for x in (_spec.get("modules") or [])]
+                        for _mod in _mods: _cf_features.pop(_mod,None)
+                        _cf_pred=_predict(_cf_boards,_cf_histories,_cf_motor,_cf_features,None,adversarial_exclude_dimensions=_dims)
+                        return {"predictor":_cf_pred,"removed_dimensions":list(_dims),"removed_modules":_mods}
+                    return {"predictor":{},"diagnostic":"UNKNOWN_COUNTERFACTUAL_KIND"}
+                _dh_audit=_ceb_stage("decimo_hombre_esteroides_mayeutica_v1", lambda: _dhx.run(case, result, _dh_counterfactual), shared=[result.get("predictor") or {}, result.get("cierre_final") or {}])
+                result["decimo_hombre_esteroides"]=_dh_audit
+                status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py",
+                               "status":("EXECUTED_WITH_CONCLUSION" if _dh_audit.get("status")=="EJECUTADO_CIERRE_ADVERSARIAL" else "EXECUTED_WITH_LIMITATIONS"),
+                               "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"rewrites_apuesta":False,
+                               "role":"adversarial_iterative_review_mayeutica_dialectica","n_attacks":len(_dh_audit.get("ataques") or []),
+                               "n_real_counterfactual_rankings":(_dh_audit.get("diagnosticos") or {}).get("actual_counterfactual_rankings",0),
+                               "orthogonal_residual_analysis":(_dh_audit.get("orthogonal_residual_analysis") or {}).get("status","NOT_REPORTED"),
+                               "decision_de_proceso":_dh_audit.get("decision_de_proceso"),
+                           "esteroides_modo": "activo"})
             else:
-                raise RuntimeError("NO_SE_PUDO_RECONSTRUIR_SALIDA_ADVERSARIAL")
-        except Exception as _retry_exc:
-            _cands=((result.get("predictor") or {}).get("candidates") or [])
-            _ranked=sorted([c for c in _cands if isinstance(c,dict) and c.get("family")],key=lambda c:float(c.get("rank_fusion") or 0.0),reverse=True)
-            _winner=_ranked[0].get("family") if _ranked else "NO_IDENTIFICABLE_CON_ESTA_ENTRADA"
-            result["decimo_hombre_esteroides"]={"version":"RECUPERACION_TERMINAL_PATCH05","status":"CIERRE_RECUPERADO_CON_DIAGNOSTICO",
-                "can_decide_H":False,"rewrites_H":False,"hipotesis_apuesta":{"candidata":_winner,"estado":"CONCLUSION_OPERACIONAL_RECUPERADA",
-                "fundamento":"Selección desde el ranking finito disponible; la capa adversarial sufrió un error interno y se registra la causa.","no_equivale_a_verdad_demostrada":True},
-                "decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO","causas":[f"ERROR_ORIGINAL:{type(_dhx_exc).__name__}:{_dhx_exc}",f"ERROR_REINTENTO:{type(_retry_exc).__name__}:{_retry_exc}"],
-                "recuperacion":"RANKING_FINITO_RELEIDO_SIN_NULL_NAN","no_null_nan":True}
-            status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_TERMINAL_RECOVERY",
-                "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO"})
+                _fallback_cands=[c for c in ((result.get("predictor") or {}).get("candidates") or []) if isinstance(c,dict) and c.get("family")]
+                _fallback_cands.sort(key=lambda c:float(c.get("rank_fusion") or 0.0),reverse=True)
+                _fallback_winner=_fallback_cands[0].get("family") if _fallback_cands else "NO_IDENTIFICABLE_CON_ESTA_ENTRADA"
+                result["decimo_hombre_esteroides"]={"version":"RECUPERACION_TERMINAL_PATCH05","status":"CIERRE_RECUPERADO_CON_DIAGNOSTICO",
+                    "can_decide_H":False,"rewrites_H":False,"hipotesis_apuesta":{"candidata":_fallback_winner,"estado":"CONCLUSION_OPERACIONAL_RECUPERADA",
+                    "fundamento":"La capa adversarial no está disponible; se recupera una conclusión operacional desde el ranking finito sin fingir pruebas adversariales.","no_equivale_a_verdad_demostrada":True},
+                    "decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO","causa":"CAPA_ADVERSARIAL_NO_CARGADA",
+                    "recuperacion":"RANKING_FINITO_RELEIDO_SIN_NULL_NAN","no_null_nan":True}
+                status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_TERMINAL_RECOVERY",
+                    "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO",
+                "esteroides_modo": "activo"})
+        except Exception as _dhx_exc:
+            # PATCH05 recovery: retry the full dimensional/score adversarial pass without the
+            # optional native callback. The exception is recorded, but cannot terminate the run.
+            try:
+                _dhx_retry=locals().get("_dhx") or _load("decimo_hombre_esteroides_mayeutica_v1_retry", "decimo_hombre_esteroides_mayeutica_v1.py")
+                _dh_retry_out=_dhx_retry.run(case,result) if _dhx_retry is not None else None
+                if isinstance(_dh_retry_out,dict):
+                    _dh_retry_out["recuperacion"]={"estado":"REINTENTO_DIMENSIONAL_EJECUTADO","causa_original":f"{type(_dhx_exc).__name__}:{_dhx_exc}",
+                        "contrafactual_nativo_disponible":False,"no_se_interrumpe_cierre":True}
+                    result["decimo_hombre_esteroides"]=_dh_retry_out
+                    status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_RECOVERY",
+                        "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":_dh_retry_out.get("decision_de_proceso"),
+                    "esteroides_modo": "activo"})
+                else:
+                    raise RuntimeError("NO_SE_PUDO_RECONSTRUIR_SALIDA_ADVERSARIAL")
+            except Exception as _retry_exc:
+                _cands=((result.get("predictor") or {}).get("candidates") or [])
+                _ranked=sorted([c for c in _cands if isinstance(c,dict) and c.get("family")],key=lambda c:float(c.get("rank_fusion") or 0.0),reverse=True)
+                _winner=_ranked[0].get("family") if _ranked else "NO_IDENTIFICABLE_CON_ESTA_ENTRADA"
+                result["decimo_hombre_esteroides"]={"version":"RECUPERACION_TERMINAL_PATCH05","status":"CIERRE_RECUPERADO_CON_DIAGNOSTICO",
+                    "can_decide_H":False,"rewrites_H":False,"hipotesis_apuesta":{"candidata":_winner,"estado":"CONCLUSION_OPERACIONAL_RECUPERADA",
+                    "fundamento":"Selección desde el ranking finito disponible; la capa adversarial sufrió un error interno y se registra la causa.","no_equivale_a_verdad_demostrada":True},
+                    "decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO","causas":[f"ERROR_ORIGINAL:{type(_dhx_exc).__name__}:{_dhx_exc}",f"ERROR_REINTENTO:{type(_retry_exc).__name__}:{_retry_exc}"],
+                    "recuperacion":"RANKING_FINITO_RELEIDO_SIN_NULL_NAN","no_null_nan":True}
+                status.append({"component":"decimo_hombre_esteroides_mayeutica_v1.py","status":"EXECUTED_WITH_TERMINAL_RECOVERY",
+                    "feeds_predictor":False,"feeds_H":False,"can_decide_H":False,"decision_de_proceso":"CONCLUSION_OPERACIONAL_RECUPERADA_CON_DIAGNOSTICO",
+                "esteroides_modo": "activo"})
+        _dh_rec = result.get("decimo_hombre_esteroides")
+        if isinstance(_dh_rec, dict):
+            _dh_rec["modo"] = "activo"
+    else:
+        # Bypass visible: apagado por bandera; no corre, no audita, no toca H, pero queda registrado.
+        _dh_audit = {"version": "1.1.0-20261009-PATCH05", "status": "NO_CONFIGURADO",
+                     "file": "decimo_hombre_esteroides_mayeutica_v1.py", "modo": "off",
+                     "motivo": "apagado por ESTEROIDES_GUARDIAN=off",
+                     "can_decide_H": False, "rewrites_H": False, "rewrites_apuesta_original": False,
+                     "ataques": [], "decision_de_proceso": "NO_CONFIGURADO"}
+        result["decimo_hombre_esteroides"] = _dh_audit
+        status.append({"component": "decimo_hombre_esteroides_mayeutica_v1.py",
+                       "status": "NO_CONFIGURADO", "feeds_predictor": False, "feeds_H": False,
+                       "can_decide_H": False, "rewrites_apuesta": False,
+                       "role": "adversarial_iterative_review_mayeutica_dialectica",
+                       "esteroides_modo": "off", "n_attacks": 0,
+                       "n_real_counterfactual_rankings": 0,
+                       "orthogonal_residual_analysis": "NOT_IMPLEMENTED",
+                       "decision_de_proceso": "NO_CONFIGURADO"})
     # U3_predictibilidad (021, 2026-10-11): escala de predictibilidad estructural con base (forma de P_final del Engine
     # canónico), set de hipótesis necesarias y suficientes (eje + componentes) y paso inverso post-freeze (hipótesis -> cortes).
     # Solo lee: can_decide_H=False; no cambia rank_fusion, orden, H1/H2, apuesta ni grado 020. Se apaga con PREDICTIBILIDAD_021=0.
