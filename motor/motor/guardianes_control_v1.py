@@ -488,7 +488,13 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
     else:
         bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
     lat_fronts = [f for f in (((pred.get("compuerta_cierre") or {}).get("latencia_escrita") or {}).get("abiertos_o_reafirmados") or [])]
-    bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
+    if "HOMBRE_DE_ACERO" in omitir:
+        # Bypass visible en recibo (ACERO_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("HOMBRE_DE_ACERO", [], "omitido por ACERO_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
     if "SHERLOCK_RIGOR" in omitir:
         # Bypass visible en recibo (SHERLOCK_GUARDIAN=off): el bloque queda
         # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
