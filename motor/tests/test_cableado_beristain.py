@@ -128,7 +128,10 @@ def test_cableado_presente_en_runner_y_control():
     assert 'gmod.correr_guardianes' in src
     assert 'result["guardianes"]=guard_out' in src
     assert 'BERISTAIN_GUARDIAN' in src
-    assert 'omitir=_tropos_omitir' in src
+    # Tras fusionar con Copi, el omitir es la unión de los conjuntos; lo que
+    # importa es que _tropos_omitir llegue a correr_guardianes.
+    _lineas_guardianes = [ln for ln in src.splitlines() if "correr_guardianes" in ln and "omitir=" in ln]
+    assert _lineas_guardianes and "_tropos_omitir" in _lineas_guardianes[0]
     assert '"tropos_modo":_tropos_modo' in src
     ctrl = CONTROL.read_text(encoding="utf-8")
     assert 'def correr_guardianes(' in ctrl and 'omitir=frozenset()' in ctrl
