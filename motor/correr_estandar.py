@@ -733,6 +733,22 @@ def main(argv) -> int:
         "contrato_entrada": "CONTRATO_ENTRADA_LLM.txt",
         "t1": "despues: correr_estandar.py RESULT.json --t1 futuro.json",
     }
+    # RESPUESTA_HUMANA (inputs-humanos, gh-issue-48): respuesta en prosa a la
+    # pregunta de la persona, post-corrida. No decide H ni reescribe el RESULT;
+    # solo lee el RESULT sellado y la entrada. Bandera RESPUESTA_HUMANA=0 la
+    # apaga con estado visible (APAGADA_POR_FLAG), nunca en silencio. Si el
+    # módulo falla, se registra FALLO_RESPUESTA_HUMANA y la corrida sigue.
+    try:
+        import importlib.util as _ilu_rh
+        _rh_path = Path(__file__).resolve().parent / "motor" / "respuesta_humana_v1.py"
+        _rh_spec = _ilu_rh.spec_from_file_location("respuesta_humana_v1", _rh_path)
+        _rh_mod = _ilu_rh.module_from_spec(_rh_spec)
+        _rh_spec.loader.exec_module(_rh_mod)
+        result["respuesta_humana"] = _rh_mod.responder(result, case)
+    except Exception as _rh_e:
+        result["respuesta_humana"] = {"status": "FALLO_RESPUESTA_HUMANA",
+                                      "motivo": "%s: %s" % (type(_rh_e).__name__, _rh_e),
+                                      "respuesta": ""}
     cuts=_plain_json_copy(case.get("cuts") or [])
     if len(cuts)>=2:
         retenido=_plain_json_copy(cuts[-1])
