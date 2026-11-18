@@ -443,8 +443,16 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
         except Exception as e:  # un guardián que truena no detiene la corrida
             return (_bloque(nombre, [], "", 0, [], "ERROR", {"error": f"{type(e).__name__}: {e}"}),)
 
-    dh = seguro("DECIMO_HOMBRE_LATENCIA", lambda: g_decimo_hombre(base, case, motor, pred))[0]
-    bloques.append(dh)
+    if "DECIMO_HOMBRE_LATENCIA" in omitir:
+        # Bypass visible en recibo (DECIMO_HOMBRE_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio. El registro
+        # de latencia que ruta_cierre_latente hace con el mismo plugin NO se
+        # apaga: solo se omite el bloque de control en correr_guardianes.
+        bloques.append(_bloque("DECIMO_HOMBRE_LATENCIA", [], "omitido por DECIMO_HOMBRE_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        dh = seguro("DECIMO_HOMBRE_LATENCIA", lambda: g_decimo_hombre(base, case, motor, pred))[0]
+        bloques.append(dh)
     if "PREGUNTA_DETRAS_V2" in omitir:
         # Bypass visible en recibo (PREGUNTA_DETRAS_GUARDIAN=off): el bloque queda marcado
         # NO_CONFIGURADO en lugar de desaparecer en silencio.
