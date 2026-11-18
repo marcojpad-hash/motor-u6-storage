@@ -1100,6 +1100,68 @@ def _aplicar_filtro_017(case):
     return payload, traza
 
 
+def _cargar_sombrero_blanco():
+    """Sombrero blanco v2: carga sombrero_blanco_filtro_v2 por ruta explícita.
+
+    Misma resolución de rutas que _cargar_filtro_017: la capa LLM vive en
+    motor/capa_llm/, fuera del motor. Devuelve el módulo o None si no está
+    en el pack.
+    """
+    import os as _os_sb
+    cands = []
+    env = _os_sb.environ.get("CAPA_LLM_DIR")
+    if env:
+        cands.append(Path(env))
+    cands.append(BASE.parent.parent / "capa_llm")
+    cands.append(BASE.parent / "capa_llm")
+    for d in cands:
+        fp = Path(d) / "sombrero_blanco_filtro_v2.py"
+        if fp.is_file():
+            spec = importlib.util.spec_from_file_location("sombrero_blanco_filtro_v2", str(fp))
+            if spec is None or spec.loader is None:
+                return None
+            mod = importlib.util.module_from_spec(spec)
+            try:
+                spec.loader.exec_module(mod)
+            except Exception:
+                return None
+            return mod
+    return None
+
+
+def _aplicar_sombrero_blanco(case):
+    """Sombrero blanco v2: compuerta de admisión al entrar a run(). Devuelve (caso_a_usar, traza).
+
+    Modo por env SOMBRERO_BLANCO: activo (defecto, el caso que sigue lleva
+    solo lo admitido; el juicio se anota como ruido aparte y no alimenta al
+    motor), traza (analiza sin modificar el caso), off (apagado).
+    Si el módulo no está en el pack o la compuerta falla, la traza dice
+    NO_DISPONIBLE/ERROR y la corrida sigue con el caso crudo (la capa LLM es
+    opcional; no es compuerta de decisión). El filtro sí va en run() porque
+    es una compuerta pura de entrada, idempotente, y debe cubrir también las
+    llamadas directas a run() (la puerta principal está en correr_estandar.py,
+    antes de escribir _INPUT.json).
+    """
+    import os as _os_sb
+    modo = (_os_sb.environ.get("SOMBRERO_BLANCO", "activo") or "activo").strip().lower()
+    _base = {"version": "SOMBRERO_BLANCO_FILTRO_V2_20261117", "contrato": "SOMBRERO_BLANCO_SPEC_V1.1",
+             "modo": modo, "status": "NO_CONFIGURADO", "n_hechos": 0, "n_ruido": 0}
+    if modo == "off":
+        return case, {**_base, "nota": "SOMBRERO_BLANCO=off"}
+    mod = _cargar_sombrero_blanco()
+    if mod is None:
+        return case, {**_base, "status": "NO_DISPONIBLE",
+                      "nota": "capa_llm/sombrero_blanco_filtro_v2.py no está en el pack; corrida con caso crudo"}
+    try:
+        payload, traza = mod.compuerta(case, modo)
+    except Exception as exc:
+        return case, {**_base, "status": "ERROR", "error": f"{type(exc).__name__}:{exc}",
+                      "nota": "la compuerta falló; corrida con caso crudo"}
+    traza = dict(traza or {})
+    traza["payload_aplicado"] = bool(modo == "activo")
+    return payload, traza
+
+
 def _build_pre_h_blind_input(case: Dict[str,Any], motor: Dict[str,Any], features: Dict[str,Any]) -> Dict[str,Any]:
     """PATCH13: semilla ciega estable construida solo desde los cortes congelados.
 
@@ -2068,6 +2130,10 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     _validate_case(case)
     # A5_20261107: filtro 017 cableado al runner único (ver _aplicar_filtro_017).
     case, _f017_traza = _aplicar_filtro_017(case)
+    # Sombrero blanco v2 cableado al runner único (ver _aplicar_sombrero_blanco):
+    # red de seguridad para llamadas directas a run(); la puerta principal
+    # está en correr_estandar.py, antes de escribir _INPUT.json.
+    case, _sb_traza = _aplicar_sombrero_blanco(case)
     _orden0=_protocolo_orden0(case)
     _RUN_CTX.clear(); _RUN_CTX["case_off"]=list(case.get("consolidado_off") or [])
     # PATCH 011: huella del input congelado (sin rutas del runner) para procedencia e idempotencia de stores.
@@ -2990,6 +3056,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         "patterns_sha256_antes":pat_antes,"patterns_sha256_despues":pat_despues,"patterns_igual":pat_antes==pat_despues,"catalogo_es_default_v14":pat_antes==PATTERNS_SHA_DEFAULT}
     result["guardianes"]=guard_out
     result["filtro_entrada_dirigida_017"]=_f017_traza
+    result["sombrero_blanco"]=_sb_traza
     status.append({"component":"guardianes_control_v1.py","status":guard_out.get("status"),"feeds_predictor":False,"feeds_H":False,
                    "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on","copi_modo":_copi_modo,"tropos_modo":_tropos_modo,"detras_modo":_detras_modo,"dirigida_modo":_dirigida_modo,"polaridad_modo":_polaridad_modo,"sherlock_modo":_sherlock_modo,"decimo_hombre_modo":_decimo_modo,"acero_modo":_acero_modo,
                    "banderas":guard_out.get("banderas"),"H_intacto":guard_out["verificacion_H_intacto"]["predictor_igual"]})
