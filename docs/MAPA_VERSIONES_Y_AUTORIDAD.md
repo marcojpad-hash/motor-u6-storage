@@ -1,6 +1,6 @@
 # Mapa de versiones y autoridad — Motor U6 / V15.3 / U7
 
-Corte: 2026-10-31. Fuente operativa: este repositorio en \`main\`.
+Corte: 2026-11-18. Fuente operativa: este repositorio en `alterno/cameo-pesos`, base `6d17974` (lote de cableado #16–#32 completo y fusionado). La versión anterior de este mapa (corte 2026-10-31, fuente `main`) quedó obsoleta: el runner UNICO cambió con el cableado, pero el Engine y el catálogo no.
 
 ## Componentes y nombres
 
@@ -9,7 +9,7 @@ Corte: 2026-10-31. Fuente operativa: este repositorio en \`main\`.
 | Motor canónico | \`motor/Engine_V5_CANONICO_SOLO.py\` | Activo y protegido. SHA-256 \`665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082\`, 30,507 bytes. |
 | Catálogo canónico | \`motor/patterns_final_v14.json\` | Activo y protegido. 244 patrones; SHA-256 \`d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1\`. |
 | Selección física | \`motor/ACTIVE_ENGINE_SELECTION.json\` y \`motor/CANDADO_ENGINE.json\` | Identifican Engine V5 como el componente canónico que corre. El hash antiguo \`e5d9...\` (24,944 bytes) no está presente y está expresamente prohibido. |
-| Runner integrado | V15.3 / \`MOTOR_V15_3_UNICO_20260927.py\` | Capa de orquestación/ejecución, distinta del motor canónico V5. En F006 el módulo ejecutado tuvo SHA-256 \`23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19\`. |
+| Runner integrado | V15.3 / \`MOTOR_V15_3_UNICO_20260927.py\` | Capa de orquestación/ejecución, distinta del motor canónico V5. El lote de cableado #16–#32 (base 6d17974) lo modificó: guardianes con bypass visible, validador duro Z90 (`_validate_case`), veredicto honesto de `_protocol_quality` y red de sombrero blanco v2. El SHA de F006 (\`23cd6749a2cce0da555fec3306c6ab7a44cedef429c319673d29fae6468b1f19\`) es histórico; el runner actual es el de la base 6d17974. |
 | Módulo nativo | \`MOTOR_V15_3_NATIVO_V0_9_UNICO.py\` | Módulo de la misma corrida F006; SHA-256 \`dac5599921d2f5629bfc15f3468a23f2390b931204752dfe99417fe84482b841\`. |
 | Harness U6 | \`motor/u6/run_u6.sh\` | Ejecución de paquete con dependencias del workspace; conserva rutas absolutas específicas. No es un runner portátil para Android ni para cualquier máquina sin el workspace. |
 | Herramienta U7 | \`u7/confianza_apuesta_u7.py\` | Herramienta lateral de confianza; no reemplaza ni decide el motor canónico. |

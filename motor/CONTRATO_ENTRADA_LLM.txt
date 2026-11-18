@@ -32,6 +32,21 @@ Reglas del LLM al tokenizar:
 
 PASO B — el motor corre, sella H1/H2/apuesta, no reabre t+1
 
+PUERTA DE ENTRADA (cableado 2026-11-18, lote #30–#31, base 6d17974)
+------------------------------------------------------------------
+Antes de correr, la entrada pasa dos puertas, en este orden:
+1. Z90 duro: `_validate_case` (primera línea de `run()` de UNICO) rechaza
+   la entrada cuando un corte trae `date` posterior a `z90_date` ->
+   `ValueError("POST_Z90_EN_INPUT: <id>")`. Sin bypass, por diseño.
+   (La compuerta de fábrica `motor/calibracion/gate_z90.py` sigue existiendo
+   para el armado del lote; ver ADDENDUM_Z_TRABAJO_20261024.)
+2. Sombrero blanco v2: `motor/capa_llm/sombrero_blanco_filtro_v2.py`
+   filtra la entrada en la puerta (puerta en `motor/correr_estandar.py`,
+   `SOMBRERO_BLANCO=activo` por defecto; red de seguridad en `run()` de
+   UNICO). Bypass visible: `SOMBRERO_BLANCO=off`.
+El filtro 017 (`capa_llm/filtro_entrada_dirigida_017.py`) corre en modo
+`traza` por defecto en UNICO (analiza sin modificar el caso).
+
 PASO C — cuando exista el futuro
 python3 correr_estandar.py RESULT_X.json --t1 futuro.json
 No reescribe H. Solo HIT/MISS.

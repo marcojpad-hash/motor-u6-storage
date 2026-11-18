@@ -1,12 +1,15 @@
 # Mapa de guardianes del motor U6
 
-Fecha de este mapa: 2026-11-10 (America/Mexico_City).  
-Repo: `marcojpad-hash/motor-u6-storage`.  
-Commit leído (HEAD de `main` al documentar): `37e03e103973b7e4a79e23dd721728b81ba7d4a6` (`audit: snapshot de corridas Actions`).
+Fecha de este mapa: 2026-11-18 (America/Mexico_City).
+Repo: `marcojpad-hash/motor-u6-storage`.
+Rama: `alterno/cameo-pesos`, base `6d17974` (lote de cableado #16–#32 completo y fusionado).
+Este mapa reemplaza al del 2026-11-10 (leído de `main`); esa versión quedó obsoleta por el cableado.
 
 Este documento describe **solo** las piezas de *este* repositorio que vigilan, filtran, juzgan o bloquean. No describe las que generan hipótesis ni las que ejecutan el motor. Polti, Souriau y Propp no son guardianes (son familias o lentes narrativas); no hay en este repo un guardián cuya función sea vigilarlos. En este repo **no hay** un paquete `guardia/` agnóstico ni un archivo llamado Cancerbero; el control de flujo vigente es `control_flujo_soluciones.py`.
 
-Cómo se verificó: se recorrió el árbol de `main`, se buscó por nombre y por llamadas (`guardian`, `guardia`, `sombrero`, `sherlock`, `copi`, `beristain`, `candado`, `compuerta`, `decimo`, `veto`, `filtro`, `validador`, `control_`), y se leyó el cableado en `MOTOR_V15_3_UNICO_20260927.py`, `laterales_unico_v1.py`, `correr_estandar.py` y `casos/fabrica/fabrica.py`. Lo que no se ejecutó en una corrida en vivo se marca como “leído en código, no reproducido en esta sesión”.
+Cómo se verificó: se recorrió el árbol de `alterno/cameo-pesos` (base 6d17974), se leyó el cableado en `MOTOR_V15_3_UNICO_20260927.py`, `guardianes_control_v1.py`, `laterales_unico_v1.py`, `correr_estandar.py` y los tests `motor/tests/test_cableado_*.py` (17 archivos, uno por módulo cableado). Cada módulo cableado tiene su prueba de ejecución. Lo que no se ejecutó en una corrida en vivo se marca como "leído en código, no reproducido en esta sesión".
+
+**Regla de bypass visible (lote #16–#32):** cada guardián cableado tiene un apagado visible por variable de entorno: con su variable en `off` (o `0`), el bloque queda marcado `NO_CONFIGURADO` (o `APAGADA_POR_FLAG`) en el recibo, nunca desaparece en silencio. Excepciones sin bypass, por diseño: **Z90** (validador duro de entrada) y **sombrero absorbido** (el veredicto ES la honestidad; es reporte, no puerta). Un contrato dice QUÉ HACE cada componente; los módulos no "quieren" nada.
 
 ## Cómo se orquestan
 
@@ -49,17 +52,26 @@ No hay otros “sombreros” (negro, etc.) en el código de este repo. El sombre
 **C. Sombrero absorbido en UNICO (`_protocol_quality` dentro de `_run_transversal_guards`)**
 
 - Qué vigila: la misma regex de ruido de protocolo y campos prohibidos, sobre la pregunta y la forma de los cortes, *antes* del predictor.
-- Salida: siempre `status=PASS`, con banderas `protocol_noise_in_question` y `no_probabilistic_fields_in_input`. `sombrero_blanco=ENFORCED` es una etiqueta, no un veto.
-- ¿Bloquea o solo marca? Solo marca. Aunque haya ruido, el status sigue siendo `PASS`.
-- Conectado (absorción en UNICO). Atado a U6 (cortes P/A/C).
+- Salida: veredicto HONESTO, derivado de comprobaciones reales. `status` es `PASS` solo sin violaciones (si no, `FAIL`); `sombrero_blanco` es `ENFORCED` solo sin violaciones (si no, `VIOLATED`); cada violación queda listada en `violaciones` (`SIN_PREGUNTA`, `RUIDO_PROTOCOLO_EN_PREGUNTA`, `CAMPOS_PROBABILISTICOS_EN_ENTRADA`, `SIN_CORTES`). Ya NO reporta `PASS`/`ENFORCED` siempre (eso era el estado anterior, corregido en el lote #32).
+- ¿Bloquea o solo marca? Solo marca: es REPORTE, no puerta. Un `FAIL` no bloquea la corrida ni reescribe H. **Sin bypass, por diseño** (el contrato del veredicto ES la honestidad).
+- Conectado (absorción en UNICO). Atado a U6 (cortes P/A/C). Prueba: `motor/tests/test_cableado_sombrero_absorbido.py` (12 tests).
+
+**D. Sombrero blanco v2 — filtro de admisión en la puerta de entrada (`motor/capa_llm/sombrero_blanco_filtro_v2.py`, `SOMBRERO_BLANCO_FILTRO_V2_20261117`)**
+
+- Qué vigila: en la puerta de entrada, qué textos son hechos admitidos y cuáles son ruido (de protocolo o fuera de catálogo), antes de que el caso entre al motor.
+- Salida: traza con `status`, `modo`, `n_hechos`, `n_ruido` y `payload_aplicado`.
+- ¿Bloquea o solo marca? Filtra en la puerta: admite solo lo admitido. Bypass visible: `SOMBRERO_BLANCO=off` (apagado visible).
+- Dónde se llama: puerta en `motor/correr_estandar.py` (`SOMBRERO_BLANCO=activo` por defecto) y red de seguridad en `run()` de UNICO (`_aplicar_sombrero_blanco`, que carga el módulo por ruta explícita; si el módulo no está en el pack, la corrida sigue con el caso crudo y lo anota).
+- Conectado. Atado a U6 (catálogo 244, cortes). Prueba: `motor/tests/test_cableado_sombrero_blanco.py` (13 tests).
 
 ### 1.2 `guardian_entrada_autoevidencia_v1.py`
 
 - Qué vigila: tokens de entrada P/A/C que son nombres de familia del catálogo (circularidad entrada→salida) o que *parecen* etiqueta de familia (`FORMA_FAMILIA`).
 - Salida: `status=EXECUTED` o `EXECUTED_WITH_FINDINGS`; `bandera` bool; `accion=SOLO_BANDERA`; `can_decide_H=False`.
 - ¿Bloquea o solo marca? Solo marca. El motor no quita esos tokens.
+- Bypass visible: `LAT_GUARDIAN_ENTRADA_AUTOEVIDENCIA=0` → apagado visible `APAGADA_POR_FLAG`.
 - Dónde se llama: `laterales_unico_v1.pre_predictor` (`guardian_entrada_autoevidencia`). Conectado.
-- Atado a U6: sí (nombres de familia del 244).
+- Atado a U6: sí (nombres de familia del 244). Prueba: `motor/tests/test_cableado_autoevidencia.py` (11 tests).
 
 ### 1.3 `capa_llm/filtro_entrada_dirigida_017.py`
 
@@ -70,13 +82,15 @@ No hay otros “sombreros” (negro, etc.) en el código de este repo. El sombre
 - Atado a U6: sí (catálogo, Z90, tokens P/A/C, sujetos).
 - Problema evidente: desacuerdo de default (`activo` en el docstring del módulo vs `traza` en UNICO).
 
-### 1.4 Compuerta Z_trabajo (`motor/calibracion/gate_z90.py`)
+### 1.4 Compuerta Z90 — validador duro de entrada (`_validate_case` en UNICO + `motor/calibracion/gate_z90.py`)
 
-- Qué vigila: que nada posterior al corte de trabajo entre al motor (reglas R1–R7: fechas, evidencia, archivo web, años posteriores, lista negra, lenguaje de futuro).
-- Salida: lista de errores; cualquier violación = rechazo.
-- ¿Bloquea o solo marca? **Bloquea**. En `fabrica.preparar_z`, una violación tumba el lote y no escribe nada. En `fabrica.correr`, si la entrada trae `gate_z`, revalida y sale con código 8. El arnés también rechaza el caso si hay `gate_z` o `FABRICA_GATE_Z90=1`.
-- Conectado en fábrica/arnés. No es un filtro interno de cada `run()` de UNICO salvo que la entrada ya venga con `gate_z`.
-- Atado a U6: sí (freeze, Z, desenlace sellado, modo histórico/vivo).
+- Qué vigila: que nada posterior al corte de trabajo (Z) entre al motor. Reglas R1–R7: fechas, evidencia, archivo web, años posteriores, lista negra, lenguaje de futuro.
+- **Validador duro en `run()` de UNICO** (`_validate_case`, primera línea de `run()`): rechaza la entrada cuando un corte trae `date` posterior a `z90_date` → `ValueError("POST_Z90_EN_INPUT: <id>")`. **Sí es un filtro interno de cada `run()`** (corregido en el lote #31; la versión anterior de este mapa decía que no lo era). **Sin bypass, por diseño** (es un validador duro, como `INPUT_INVALIDO`).
+- Compuerta de fábrica (`motor/calibracion/gate_z90.py`): en `fabrica.preparar_z`, una violación tumba el lote y no escribe nada. En `fabrica.correr`, si la entrada trae `gate_z`, revalida y sale con código 8. El arnés también rechaza el caso si hay `gate_z` o `FABRICA_GATE_Z90=1`.
+- Salida: lista de errores (fábrica) o excepción (UNICO); cualquier violación = rechazo.
+- ¿Bloquea o solo marca? **Bloquea** en ambos frentes.
+- Conectado en fábrica/arnés y en `run()` de UNICO.
+- Atado a U6: sí (freeze, Z, desenlace sellado, modo histórico/vivo). Prueba: `motor/tests/test_cableado_z90.py` (12 tests).
 
 La propia `fabrica.preparar()` (sin Z) también valida vocabulario 244, pesos 0,60–0,84, ausencia de campos de desenlace y hashes no duplicados, y **bloquea** el lote si falla. Es una compuerta de armado, no un guardián de corrida.
 
@@ -84,7 +98,7 @@ La propia `fabrica.preparar()` (sin Z) también valida vocabulario 244, pesos 0,
 
 ## 2. Capa de lógica y razonamiento
 
-Todas las de 2.1–2.7 corren dentro de `correr_guardianes()` (UNICO, post-predictor, copias). Un fallo de un guardián no detiene la corrida: sale `ERROR` en ese bloque.
+Todas las de 2.1–2.10 están cableadas en la ruta real de corrida y probadas con `motor/tests/test_cableado_*.py`. Las de 2.1–2.7 corren dentro de `correr_guardianes()` (UNICO, post-predictor, copias). Un fallo de un guardián no detiene la corrida: sale `ERROR` en ese bloque. **Bypass visible:** cada guardián de esta capa tiene su variable de entorno en `off` (o `0`); con ella, el bloque queda marcado `NO_CONFIGURADO` (o `APAGADA_POR_FLAG`) en el recibo, nunca desaparece en silencio. Variables: `DECIMO_HOMBRE_GUARDIAN`, `PREGUNTA_DETRAS_GUARDIAN`, `PREGUNTA_DIRIGIDA_GUARDIAN`, `COPI_GUARDIAN`, `POLARIDAD_GUARDIAN`, `ACERO_GUARDIAN`, `SHERLOCK_GUARDIAN`, `BERISTAIN_GUARDIAN`, `MODO_ESTRICTO`, `ESTEROIDES_GUARDIAN`, `VERIFICADOR_CONSISTENCIA`.
 
 ### 2.1 Décimo hombre / latencia — `control_latencia_decimo_hombre.py`
 
@@ -92,15 +106,17 @@ Todas las de 2.1–2.7 corren dentro de `correr_guardianes()` (UNICO, post-predi
 - Entrada: `p_momento` + tokens. Estados del expediente: `LATENCIA | DESEMPATE_DECIMO | ALMACENADO_ESPERANDO_DATOS | RESUELTO | OFF`. Si `p` cae en la banda 0,45–0,55, hace una re-tirada determinista; si sigue el empate, almacena y no cierra. Acciones: `LATENCIA_ACUMULAR_TOKENS`, `ESPERAR_MAS_TOKENS`, `SEGUIR_CON_P_DESEMPATADA`, etc. `Alimenta_H=NO`.
 - En el bloque `DECIMO_HOMBRE_LATENCIA`, `guardianes_control` calcula `p = 0.5 + 0.5·tanh(gap/σ)` por corte y en el cierre. Bandera: `LATENTE` si el cierre queda en banda, si no `MARCA` o `LIMPIO`.
 - ¿Bloquea o solo marca? Marca de proceso. No escribe H. Si el cierre queda latente, alimenta `ruta_cierre_latente` (retiene el *estado* de cierre).
+- Bypass visible: `DECIMO_HOMBRE_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
 - Conectado (vía `guardianes_control`). El store por caso se borra al terminar el bloque.
-- Atado a U6: sí (tablero 244, top1/top2, case_id).
+- Atado a U6: sí (tablero 244, top1/top2, case_id). Prueba: `motor/tests/test_cableado_decimo_hombre.py` (18 tests).
 
 ### 2.2 Pregunta detrás v2 — `plugin_pregunta_detras_v2.py`
 
 - Qué vigila: perfilamiento y tropos en la pregunta y los textos (lítote, hipérbole, etc.).
 - Salida del plugin: `bandera=RED_FLAG_POSIBLE_PERFILAMIENTO | MARCAJE_PERFILAMIENTO | None`; el bloque del orquestador la traduce a `MARCA` o `LIMPIO`. Acción del plugin: `continuar_con_highlight` o `continuar`.
 - ¿Bloquea o solo marca? Solo marca.
-- Conectado. SHA verificado. Atado a U6 en el uso (textos del caso), el plugin en sí es más léxico.
+- Bypass visible: `PREGUNTA_DETRAS_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
+- Conectado. SHA verificado. Atado a U6 en el uso (textos del caso), el plugin en sí es más léxico. Prueba: `motor/tests/test_cableado_pregunta_detras.py` (10 tests).
 
 ### 2.3 Pregunta dirigida + post hoc, y falacias — `plugin_pregunta_dirigida_v0_5_1.py`
 
@@ -111,28 +127,31 @@ Dos bloques:
 
 Estados de marca: `DETECTADA` (severidad `hard`) o `POSIBLE` (`soft`). Bandera del bloque: `MARCA` o `LIMPIO` (o `ERROR` si falta el archivo).
 
-¿Bloquea o solo marca? Solo marca (son vecinos de Beristáin). Conectado.
+¿Bloquea o solo marca? Solo marca (son vecinos de Beristáin). Bypass visible: `PREGUNTA_DIRIGIDA_GUARDIAN=off` → ambos bloques marcados `NO_CONFIGURADO`. Conectado. Prueba: `motor/tests/test_cableado_pregunta_dirigida_falacias.py` (13 tests).
 
 ### 2.4 Copi — `guardian_logica_copi_v1.py` (`LOGICA_COPI`, v1.0.1)
 
 - Qué vigila: consistencia lógica al estilo Copi (9 reglas de inferencia + 10 de reemplazo + falacias espejo). Tres adaptadores: (a) condicionales/causales del texto, (b) la regla de cierre del motor (`DETERMINADO` / latencia / compuerta), (c) cadena del top1 por corte (non sequitur, subdeterminación H1/H2).
 - Bandera: `MARCA` si hay `DETECTADA`; `NO_RESUELTO` si solo hay marcas no resueltas (átomo ambiguo, conclusión con átomo nuevo, top1 que no encabeza ningún corte, subdeterminación); `LIMPIO` si no hay marcas.
 - ¿Bloquea o solo marca? Marca. Un `NO_RESUELTO` puede retener el cierre vía `ruta_cierre_latente`.
-- Conectado. Muy atado a U6 en (b) y (c) (`compuerta_cierre`, `information_state`, cadena 244). El núcleo proposicional es genérico.
+- Bypass visible: `COPI_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
+- Conectado. Muy atado a U6 en (b) y (c) (`compuerta_cierre`, `information_state`, cadena 244). El núcleo proposicional es genérico. Prueba: `motor/tests/test_cableado_copi.py` (10 tests).
 
 ### 2.5 Polaridad causal — `plugin_polaridad_causal.py`
 
 - Qué vigila: polaridad del claim causal en cada texto (negación simple vs lítote).
 - Etiquetas que levantan marca: `NIEGA` (`DETECTADA`) y `DOBLE_NEGACION_LITOTE` (`LATENTE`). Bandera: `LATENTE` si hay lítote, si no `MARCA` o `LIMPIO`.
 - ¿Bloquea o solo marca? Marca. La lítote entra en `ruta_cierre_latente`.
-- Conectado. SHA verificado.
+- Bypass visible: `POLARIDAD_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
+- Conectado. SHA verificado. Prueba: `motor/tests/test_cableado_polaridad_causal.py` (12 tests).
 
 ### 2.6 Hombre de acero — `guardian_acero_rival_v1.py` + `sidecar_ablacion_hombre_acero.py`
 
 - Qué vigila: si el top1 sobrevive a la mejor versión honesta de los rivales (steelman: empates ≤10 % del rango a favor del rival; `EPS=0.25`). Veredictos por rival: `SOBREVIVE | NO_RESUELTO | CAE`. La ablación de pilares de H1 es observación (casi siempre sale “frágil”; no levanta la bandera por sí sola).
 - Bandera del bloque: `MARCA` si algún rival deja al top1 en `CAE`; `NO_RESUELTO` si empata; `LIMPIO` si sobrevive (ignorando las OBS de ablación).
 - ¿Bloquea o solo marca? Marca. `NO_RESUELTO` puede retener el cierre. Modo estricto sí usa el steelman como criterio C2 del cierre estricto.
-- Conectado. Muy atado a U6 (fusión por rangos, dimensiones del predictor, top10).
+- Bypass visible: `ACERO_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`; `run()` registra `acero_modo` en el status.
+- Conectado. Muy atado a U6 (fusión por rangos, dimensiones del predictor, top10). Prueba: `motor/tests/test_cableado_acero.py` (12 tests).
 
 ### 2.7 Sherlock / método de rigor — `plugin_metodo_rigor.py` (bloque `SHERLOCK_RIGOR`)
 
@@ -140,27 +159,30 @@ El plugin suelto es una alarma corta (Hecate: el letrero no cambió en 4 cortes;
 
 - Bandera: `MARCA` o `LIMPIO` (o `ERROR`).
 - ¿Bloquea o solo marca? Solo marca. No escribe H. `can_decide_H=False`.
+- Bypass visible: `SHERLOCK_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
 - Conectado vía `correr_guardianes`. También hay una llamada pre en laterales (`plugin_metodo_rigor (alimentado)`), como sensor, no como decisor. SHA verificado.
-- Atado a U6 (cadena por corte, `own_evidence`).
+- Atado a U6 (cadena por corte, `own_evidence`). Prueba: `motor/tests/test_cableado_sherlock.py` (13 tests).
 
 ### 2.8 Modo estricto — `modo_estricto_v1.py`
 
 - Qué vigila: cierre estricto con *todos* estos criterios: C0 la ruta de guardianes no quedó `LATENTE`; C1 el top1 encabeza al menos un corte; C2 el acero descarta al rival más fuerte (`SOBREVIVE`, `dif_acero > 0.25`); C3 H1≠H2 distinguibles y fuera de banda de empate; C4 Aquiles estable. Si falla alguno → `estado_cierre_estricto=LATENTE` con todos los motivos.
-- ¿Bloquea o solo marca? Retiene el *estado de cierre estricto*. No cambia H1/H2/top1/predictor/patterns (UNICO lo verifica). Se apaga con `MODO_ESTRICTO=0` (por defecto está on).
-- Conectado en UNICO, después de los guardianes. Atado a U6.
+- ¿Bloquea o solo marca? Retiene el *estado de cierre estricto*. No cambia H1/H2/top1/predictor/patterns (UNICO lo verifica). Se apaga con `MODO_ESTRICTO=0` (por defecto está on) → estado `NO_CONFIGURADO` visible.
+- Conectado en UNICO, después de los guardianes. Atado a U6. Prueba: `motor/tests/test_cableado_modo_estricto.py` (16 tests).
 
 ### 2.9 Décimo hombre con esteroides — `decimo_hombre_esteroides_mayeutica_v1.py` (v1.1.0)
 
 - Qué vigila: contrafactuales reales y mayéutica *después* del cierre. Consume candidatas y dimensiones del predictor. No interpreta un ataque registrado como prueba ejecutada. Entrega una conclusión adversarial aparte. Diagnostica Copi/Sherlock si vinieron vacíos, en vez de un PASS falso.
 - ¿Bloquea o solo marca? Marca / auditoría. No altera predictor, H ni la apuesta original.
-- Conectado en UNICO (con recuperaciones PATCH05 si falla). Atado a U6, pero el módulo evita nombres de casos concretos.
+- Bypass visible: `ESTEROIDES_GUARDIAN=off` → apagado visible `NO_CONFIGURADO` en el recibo.
+- Conectado en UNICO (con recuperaciones PATCH05 si falla). Atado a U6, pero el módulo evita nombres de casos concretos. Prueba: `motor/tests/test_cableado_esteroides.py` (12 tests).
 
 ### 2.10 Verificador de consistencia adversarial — `plugin_verificador_consistencia_adversarial.py`
 
 - Qué vigila: invariantes de contrato en la corrida real (empate exacto 0.0 no puede producir H, cierre solo si se agotó la resolución, laterales no escriben H, freeze, inmutabilidad del canon, etc.) más fixtures adversariales y un paquete para revisión LLM (sin hipótesis deseada).
 - Salida: `status=PASS` o hallazgos; `violations` (p. ej. `TIE_NO_WINNER`, `RESOLUTION_BEFORE_CLOSE`, `PATTERNS_HASH_DECLARATION_MISMATCH`). `FEEDS_H=False`.
 - ¿Bloquea o solo marca? Solo marca. UNICO lo registra como `EXECUTED` o `EXECUTED_WITH_FINDINGS`.
-- Conectado (post-predictor en UNICO). Atado a U6 (Engine, 244, Caldero, freeze).
+- Bypass visible: `VERIFICADOR_CONSISTENCIA=off` → apagado visible `NO_CONFIGURADO` en el recibo.
+- Conectado (post-predictor en UNICO). Atado a U6 (Engine, 244, Caldero, freeze). Prueba: `motor/tests/test_cableado_verificador.py` (14 tests).
 
 ---
 
@@ -171,8 +193,9 @@ El plugin suelto es una alarma corta (Hecate: el letrero no cambió en 4 cortes;
 - Qué vigila: lenguaje figurado en pregunta y textos para que **no se lea literal** como evidencia o perfil (metáfora, metonimia, sinécdoque, lítote, hipérbole, ironía solo como `NO_RESUELTO`, etc.). Palabra suelta ≠ tropo. Corre después de falacias, Copi, post hoc y polaridad, y `corregir_con_vecinos()` anota (sin cambiar las banderas ajenas) cuando una marca lógica se apoya en una figura.
 - Bandera: `NO_RESUELTO` si alguna marca lo es; `MARCA` si hay `DETECTADA` o `POSIBLE`; `LIMPIO` si no. `can_decide_H=False`.
 - ¿Bloquea o solo marca? Marca. `NO_RESUELTO` puede retener el cierre. También señala `TOKEN_POSIBLEMENTE_FIGURADO_EN_TABLERO` si un token del 244 se parece al fragmento figurado; eso no saca el token del tablero.
+- Bypass visible: `BERISTAIN_GUARDIAN=off` → bloque marcado `NO_CONFIGURADO`.
 - Conectado (último bloque de `correr_guardianes`). El catálogo de tropos es de Beristáin; el acoplamiento al tablero 244 y a los vecinos sí es U6.
-- Cobertura: varias figuras del inventario siguen `PENDIENTE_DE_REGLA` (metalepsis, imagen, …), documentado en el propio módulo.
+- Cobertura: varias figuras del inventario siguen `PENDIENTE_DE_REGLA` (metalepsis, imagen, …), documentado en el propio módulo. Prueba: `motor/tests/test_cableado_beristain.py` (11 tests).
 
 ---
 
@@ -291,7 +314,9 @@ Tres frentes, la misma huella:
 ## 6. Capa de salida
 
 - El sombrero blanco de salida (1.1.A) corre en `laterales_unico_v1.post_predictor`. Solo marca `salida_limpia`.
-- `filtro_entrada_dirigida_017.verificar_salida_llm` existe para revisar el texto de salida / `cierre_final`. En esta lectura no se vio una llamada equivalente a la compuerta de entrada dentro de `run()` de UNICO (la compuerta de entrada sí está cableada). No se afirma que esté desconectada del todo: puede usarla la capa LLM vía `consulta_dirigida_v1.py` en `correr_estandar`. No se abrió esa rama línea por línea en esta sesión más allá de constatar que `consulta_dirigida` carga el módulo 017.
+- **respuesta_humana** (`motor/motor/respuesta_humana_v1.py`, v1.0): responde LA pregunta en prosa desde el RESULT sellado, con evidencia citada en las palabras de la persona y en orden cronológico. Clasifica la pregunta (`QUE_VA_A_PASAR` / `POR_QUE` / `QUE_HAGO` / `AMBIGUA`), dice el grado y qué cortes quedan sin explicar, y pasa guardias de concordancia, fidelidad y narratividad. No muta el RESULT ni decide H. Contrato: `motor/CONTRATO_SALIDA_LLM.txt`. Bypass visible: `RESPUESTA_HUMANA=0` → `APAGADA_POR_FLAG`. Enchufe: puente post-corrida `observar()` en `motor/correr_estandar.py`; la salida va en `result["respuesta_humana"]`. Prueba: `motor/tests/test_cableado_respuesta_humana.py` (15 tests).
+- El traductor de salida (`motor/motor/lateral_traduccion_salida_v1.py` v2.8) **NO está cableado**: es una LECTURA (descripción de estados), no una respuesta. No se usa en la ruta de corrida; la salida en prosa la da `respuesta_humana`.
+- `filtro_entrada_dirigida_017.verificar_salida_llm` existe para revisar el texto de salida / `cierre_final`. En esta lectura no se vio una llamada equivalente a la compuerta de entrada dentro de `run()` de UNICO (la compuerta de entrada sí está cableada). No se afirma que esté desconectada del todo: puede usarla la capa LLM vía `consulta_dirigida_v1.py` en `correr_estandar`. No se abrió esa rama línea por línea en esta sesión más allá de constatar que `consulta_dirigida` carga el módulo 017. **Pendiente: cero llamadores confirmados en la auditoría de ejecución real; no es adorno, hay que resolverlo.**
 - `ruta_cierre_latente` + `modo_estricto` + `compuerta_cierre` retienen el estado de cierre, no reescriben H1/H2. El cierre de fin de corrida va en `cierre_final`.
 
 ---
@@ -307,9 +332,9 @@ Tres frentes, la misma huella:
 
 ## Problemas evidentes
 
-1. **Varios “filtros de entrada” no filtran en el default.** El sombrero absorbido en UNICO siempre sale `PASS`. `FILTRO_017` defaulta a `traza` (el docstring del módulo dice `activo`). El filtro de identidad zoom **corre y no devuelve** los descartes al Caldero. El sombrero de sidecar sí restringe textos del hub, y el de pistas LLM sí descarta tokens; no todos los guardianes de entrada tienen ese diente.
+1. **Varios "filtros de entrada" no filtran en el default.** El sombrero absorbido en UNICO **ya no** sale `PASS` siempre: desde el lote #32 el veredicto es honesto (`PASS`/`ENFORCED` solo sin violaciones; `FAIL`/`VIOLATED` con la lista en `violaciones`). Sigue pendiente: `FILTRO_017` defaulta a `traza` (el docstring del módulo dice `activo`). El filtro de identidad zoom **corre y no devuelve** los descartes al Caldero. El sombrero de sidecar sí restringe textos del hub, y el de pistas LLM sí descarta tokens; no todos los guardianes de entrada tienen ese diente.
 2. **Los guardianes de contenido casi nunca vetan; solo el estado de cierre y las compuertas de lote bloquean.** `can_decide_H=False` es el contrato. `ruta_cierre_latente` y el modo estricto pueden dejar el cierre en `LATENTE` sin tocar H1/H2. Un lote de fábrica sí puede morir con código 9 (CEB) o 3 (Engine) u 8 (Z). Eso está bien como diseño, pero se presta a leer “ENFORCED” / “GUARDIAN/FILTRO” como si cortaran el paso cuando a menudo solo anotan.
-3. **`control_flujo_soluciones.py` no está en el tubo siempre-on de UNICO.** El protocolo de orden 0 no llama a `contornar` / `aplicar_protocolo`. Ante un fallo de ejecución, la corrida no aplica sola la regla PIEDRA/CONTORNO/SIGUIENTE/EVIDENCIA. Además, `GuardiaNoCruce` está duplicada (archivo vs absorción) y `candado_plugins` no corre si se llama a UNICO sin `correr_estandar`.
+3. **Pendientes, no cableados todavía (no son adorno).** `control_flujo_soluciones.py` no está en el tubo siempre-on de UNICO: el protocolo de orden 0 no llama a `contornar` / `aplicar_protocolo`. Ante un fallo de ejecución, la corrida no aplica sola la regla PIEDRA/CONTORNO/SIGUIENTE/EVIDENCIA. Además, `GuardiaNoCruce` está duplicada (archivo vs absorción), `candado_plugins` no corre si se llama a UNICO sin `correr_estandar`, y `verificar_salida_llm` tiene cero llamadores. Estos tres son brechas que quedan por cablear; no se describen aquí como si estuvieran cableados.
 
 Casi todos los guardianes de *contenido* están atados a nombres del U6 (244, H1/H2, Caldero, StinkBox, cortes P/A/C, Engine). Los más despegables, si se quisiera reutilizar la idea en otro lado, serían el runtime del CEB, el núcleo proposicional de Copi, el catálogo de piedras del control de flujo, y los motivos del filtro de pistas (identidad/futuro/calendario/forma). Eso no se hizo en este repo.
 
@@ -320,23 +345,25 @@ Casi todos los guardianes de *contenido* están atados a nombres del U6 (244, H1
 | Guardián | Archivo(s) | Capa | ¿Bloquea o marca? | ¿Conectado al motor/fábrica? |
 |---|---|---|---|---|
 | Sombrero blanco (filtro in/out) | `sidecar_sombrero_blanco_filtro_v1.py` | entrada / salida | Marca; restringe textos del hub | Sí, laterales vía UNICO |
+| Sombrero blanco v2 (puerta de entrada) | `capa_llm/sombrero_blanco_filtro_v2.py` | entrada | Filtra en la puerta; bypass `SOMBRERO_BLANCO=off` | Sí, `correr_estandar` + red en `run()` |
 | Sombrero blanco (token → StinkBox) | `plugin_sombrero_blanco_token.py` | entrada / salida | Marca + escribe StinkBox | Sí, UNICO post-apuesta |
-| Sombrero absorbido | `_protocol_quality` en UNICO | entrada | Marca (`PASS` siempre) | Sí, absorbido |
-| Autoevidencia de entrada | `guardian_entrada_autoevidencia_v1.py` | entrada | Solo marca | Sí, laterales pre |
+| Sombrero absorbido | `_protocol_quality` en UNICO | entrada | Marca veredicto honesto (`PASS`/`FAIL`, `ENFORCED`/`VIOLATED` + `violaciones`); sin bypass | Sí, absorbido |
+| Autoevidencia de entrada | `guardian_entrada_autoevidencia_v1.py` | entrada | Solo marca; bypass `LAT_GUARDIAN_ENTRADA_AUTOEVIDENCIA=0` | Sí, laterales pre |
 | Filtro datos dirigidos 017 | `capa_llm/filtro_entrada_dirigida_017.py` | entrada (salida: ver §6) | Marca en default `traza`; filtra si `FILTRO_017=activo` | Sí, `run()` + `correr_estandar` |
-| Compuerta Z_trabajo | `calibracion/gate_z90.py` | entrada | Bloquea lote/caso | Sí, fábrica/arnés si `gate_z` |
-| Orquestador de guardianes | `guardianes_control_v1.py` | lógica (post-predictor) | Marca; puede retener cierre (`LATENTE`) | Sí, UNICO |
-| Décimo hombre / latencia | `control_latencia_decimo_hombre.py` | lógica / flujo | Marca proceso; alimenta cierre latente | Sí, vía orquestador |
-| Pregunta detrás v2 | `plugin_pregunta_detras_v2.py` | lógica | Marca | Sí, orquestador |
-| Dirigida, post hoc y falacias | `plugin_pregunta_dirigida_v0_5_1.py` | lógica | Marca | Sí, orquestador |
-| Copi | `guardian_logica_copi_v1.py` | lógica | Marca; `NO_RESUELTO` puede retener cierre | Sí, orquestador |
-| Polaridad causal | `plugin_polaridad_causal.py` | lógica | Marca; lítote puede retener cierre | Sí, orquestador |
-| Hombre de acero | `guardian_acero_rival_v1.py` + ablación | lógica | Marca; lo usa modo estricto (C2) | Sí, orquestador + modo estricto |
-| Sherlock / rigor | `plugin_metodo_rigor.py` | lógica | Marca | Sí, orquestador (+ sensor pre) |
-| Beristáin (tropos) | `guardian_tropos_beristain_v1.py` | retórica | Marca; `NO_RESUELTO` puede retener cierre | Sí, orquestador |
-| Modo estricto | `modo_estricto_v1.py` | lógica / cierre | Retiene cierre estricto; no toca H | Sí, UNICO (flag on) |
-| Décimo hombre esteroides | `decimo_hombre_esteroides_mayeutica_v1.py` | lógica / investigación | Auditoría, no toca H | Sí, UNICO post-cierre |
-| Consistencia adversarial | `plugin_verificador_consistencia_adversarial.py` | lógica / contrato | Marca violaciones | Sí, UNICO |
+| Compuerta Z90 | `_validate_case` en UNICO + `calibracion/gate_z90.py` | entrada | Bloquea (excepción `POST_Z90_EN_INPUT` en `run()`; lote/caso en fábrica); sin bypass | Sí, `run()` + fábrica/arnés |
+| Orquestador de guardianes | `guardianes_control_v1.py` | lógica (post-predictor) | Marca; puede retener cierre (`LATENTE`); bypass por guardián (ver §2) | Sí, UNICO |
+| Décimo hombre / latencia | `control_latencia_decimo_hombre.py` | lógica / flujo | Marca proceso; alimenta cierre latente; bypass `DECIMO_HOMBRE_GUARDIAN=off` | Sí, vía orquestador |
+| Pregunta detrás v2 | `plugin_pregunta_detras_v2.py` | lógica | Marca; bypass `PREGUNTA_DETRAS_GUARDIAN=off` | Sí, orquestador |
+| Dirigida, post hoc y falacias | `plugin_pregunta_dirigida_v0_5_1.py` | lógica | Marca; bypass `PREGUNTA_DIRIGIDA_GUARDIAN=off` | Sí, orquestador |
+| Copi | `guardian_logica_copi_v1.py` | lógica | Marca; `NO_RESUELTO` puede retener cierre; bypass `COPI_GUARDIAN=off` | Sí, orquestador |
+| Polaridad causal | `plugin_polaridad_causal.py` | lógica | Marca; lítote puede retener cierre; bypass `POLARIDAD_GUARDIAN=off` | Sí, orquestador |
+| Hombre de acero | `guardian_acero_rival_v1.py` + ablación | lógica | Marca; lo usa modo estricto (C2); bypass `ACERO_GUARDIAN=off` | Sí, orquestador + modo estricto |
+| Sherlock / rigor | `plugin_metodo_rigor.py` | lógica | Marca; bypass `SHERLOCK_GUARDIAN=off` | Sí, orquestador (+ sensor pre) |
+| Beristáin (tropos) | `guardian_tropos_beristain_v1.py` | retórica | Marca; `NO_RESUELTO` puede retener cierre; bypass `BERISTAIN_GUARDIAN=off` | Sí, orquestador |
+| Modo estricto | `modo_estricto_v1.py` | lógica / cierre | Retiene cierre estricto; no toca H; bypass `MODO_ESTRICTO=0` | Sí, UNICO (flag on) |
+| Décimo hombre esteroides | `decimo_hombre_esteroides_mayeutica_v1.py` | lógica / investigación | Auditoría, no toca H; bypass `ESTEROIDES_GUARDIAN=off` | Sí, UNICO post-cierre |
+| Consistencia adversarial | `plugin_verificador_consistencia_adversarial.py` | lógica / contrato | Marca violaciones; bypass `VERIFICADOR_CONSISTENCIA=off` | Sí, UNICO |
+| respuesta_humana | `motor/respuesta_humana_v1.py` | salida | Responde LA pregunta en prosa desde el RESULT; bypass `RESPUESTA_HUMANA=0` | Sí, `correr_estandar` post-corrida |
 | Pistas LLM Caldero | `guardian_pistas_llm_caldero_v1.py` | investigación | Filtra pistas (no veta la corrida) | Sí, fábrica + audit Caldero |
 | Identidad zoom | `filtro_identidad_zoom_out_zoom_in.py` | investigación | Reporta; no devuelve descartes al Caldero | Llamado, efecto nulo sobre Caldero |
 | Relleno 013/015 | `filtro_relleno_013.py` | investigación | Filtra votos de vecinos | Sí, UNICO |
