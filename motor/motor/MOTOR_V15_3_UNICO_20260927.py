@@ -2918,12 +2918,16 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     import copy as _copy
     snap_antes=_h_snapshot(pred); h_antes=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str)
     pat_antes=_sha(_PATTERNS_PATH())
+    # DECIMO_HOMBRE_GUARDIAN=off: bypass visible en recibo (el bloque DECIMO_HOMBRE_LATENCIA
+    # queda NO_CONFIGURADO en lugar de desaparecer en silencio). Defecto: activo.
+    _decimo_modo = (_os.environ.get("DECIMO_HOMBRE_GUARDIAN", "activo") or "activo").strip().lower()
+    _decimo_omitir = {"DECIMO_HOMBRE_LATENCIA"} if _decimo_modo == "off" else frozenset()
     gmod=_load("guardianes_control_v1","guardianes_control_v1.py")
     if gmod is None or not hasattr(gmod,"correr_guardianes"):
         guard_out={"status":"FALTA_ARCHIVO","file":"guardianes_control_v1.py","can_decide_H":False}
     else:
         try:
-            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE), shared=[case,motor,pred])
+            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE,omitir=_decimo_omitir), shared=[case,motor,pred])
             guard_out["status"]="EXECUTED"
         except Exception as e:
             guard_out={"status":"ERROR","error":f"{type(e).__name__}:{e}","can_decide_H":False}
@@ -2935,7 +2939,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     result["guardianes"]=guard_out
     result["filtro_entrada_dirigida_017"]=_f017_traza
     status.append({"component":"guardianes_control_v1.py","status":guard_out.get("status"),"feeds_predictor":False,"feeds_H":False,
-                   "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on",
+                   "can_decide_H":False,"role":"pruebas_de_control_estructural_siempre_on","decimo_hombre_modo":_decimo_modo,
                    "banderas":guard_out.get("banderas"),"H_intacto":guard_out["verificacion_H_intacto"]["predictor_igual"]})
 
     # RUTA DE CIERRE LATENTE (regla de Mj): lo que no se entiende o no se sostiene NO es cierre.
