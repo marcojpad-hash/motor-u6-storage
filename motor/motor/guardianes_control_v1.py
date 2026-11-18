@@ -447,7 +447,13 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
     bloques.append(dh)
     bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
     bloques.extend(seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)))
-    bloques.append(seguro("LOGICA_COPI", lambda: g_copi(base, textos, motor, pred))[0])
+    if "LOGICA_COPI" in omitir:
+        # Bypass visible en recibo (COPI_GUARDIAN=off): el bloque queda marcado
+        # NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("LOGICA_COPI", [], "omitido por COPI_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(seguro("LOGICA_COPI", lambda: g_copi(base, textos, motor, pred))[0])
     bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
     lat_fronts = [f for f in (((pred.get("compuerta_cierre") or {}).get("latencia_escrita") or {}).get("abiertos_o_reafirmados") or [])]
     bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
