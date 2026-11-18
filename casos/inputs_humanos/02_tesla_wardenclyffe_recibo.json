@@ -1,0 +1,35 @@
+{
+ "case_id": "inputs_humanos_02_tesla",
+ "pregunta": "¿Qué ocurre con Tesla y su proyecto de transmisión inalámbrica financiado por J. P. Morgan?",
+ "tipo_esperado": "POR_QUE",
+ "tipo_pregunta": "POR_QUE",
+ "ruido_meta": false,
+ "status": "OK",
+ "respuesta": "Preguntaste cuál es el tema central. Lo que manda es pasion ciega, y lo segundo es busqueda de poder sin limites. Esto se perfila así por lo que se cuenta, en orden: Llega a Nueva York, trabaja para Edison y renuncia al poco tiempo por un desacuerdo de pago. Sus patentes de corriente alterna, licenciadas a Westinghouse (1888), iluminan la Exposición de Chicago. Morgan acepta financiar con 150 000 dólares una torre de transmisión inalámbrica (Wardenclyffe). En 1906 Wardenclyffe queda abandonado: Morgan retira el financiamiento y Tesla pierde el laboratorio y la torre. En 1915 Edison y Tesla son candidatos al Nobel, pero ninguno lo recibe; Tesla rechaza compartirlo con Edison. En 1926 vive en hoteles de Nueva York, alimenta palomas y trabaja en ideas que nadie financia. Muere el 7 de enero de 1943 en el hotel New Yorker, solo y endeudado; su obra se reconoce después de su muerte. Es una lectura frágil, no firme. Hay cortes que el set no explica del todo.",
+ "escenarios": [
+  {
+   "escenario": "MESeta_O_ESTABILIZACION",
+   "soporte": 1.0,
+   "soporte_pct": 100,
+   "n_hipotesis": 10,
+   "es_probabilidad": false
+  }
+ ],
+ "grado": "FRAGIL",
+ "cortes_sin_explicar": [],
+ "concordancia": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "fidelidad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "narratividad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "violaciones": [],
+ "version": "v1.0_20261117",
+ "contrato": "CONTRATO_SALIDA_LLM"
+}

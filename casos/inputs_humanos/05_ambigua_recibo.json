@@ -1,0 +1,42 @@
+{
+ "case_id": "inputs_humanos_05_ambigua",
+ "pregunta": "¿Qué me dices de esto?",
+ "tipo_esperado": "AMBIGUA",
+ "tipo_pregunta": "AMBIGUA",
+ "ruido_meta": false,
+ "status": "OK",
+ "respuesta": "Tu pregunta no es específica, así que te doy lo que más se perfila. Lo que manda es ausencia total de limites u organizacion formal, y lo que más se perfila, con el 65% del soporte, es que las cosas se queden así. Esto se perfila así por lo que contaste, en orden: Hace cuatro años te juntaste con ella y nos fuimos a vivir juntos. Ella estuvo mucho tiempo distante, ya casi no hablábamos, no nos veíamos, dormíamos juntos pero ya ni siquiera nos abrazábamos ni nada. Después de eso te dijo que ya tenía mucho tiempo que ya no te quería. Apenas hubo una situación en la casa, donde un amigo de su hermano la estaba besando, los viste y pues obviamente golpeaste al tipo este. Llegó un momento en el que ella lo defendió, ella te dijo todo lo que te tenía que decir. Optaste por salirte, sacar hoy tus cosas, te sientes comes en el limbo. Es una lectura ajustada, no firme. El set explica todos los cortes. Si quieres, pregúntame qué va a pasar, por qué, o qué hacer.",
+ "escenarios": [
+  {
+   "escenario": "MESeta_O_ESTABILIZACION",
+   "soporte": 0.65167436,
+   "soporte_pct": 65,
+   "n_hipotesis": 7,
+   "es_probabilidad": false
+  },
+  {
+   "escenario": "CONTINUIDAD_ASCENDENTE",
+   "soporte": 0.34832564,
+   "soporte_pct": 35,
+   "n_hipotesis": 3,
+   "es_probabilidad": false
+  }
+ ],
+ "grado": "AJUSTADA",
+ "cortes_sin_explicar": [],
+ "concordancia": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "fidelidad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "narratividad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "violaciones": [],
+ "version": "v1.0_20261117",
+ "contrato": "CONTRATO_SALIDA_LLM"
+}

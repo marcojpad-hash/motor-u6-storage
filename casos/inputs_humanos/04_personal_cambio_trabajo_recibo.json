@@ -1,0 +1,42 @@
+{
+ "case_id": "inputs_humanos_04_cambio_trabajo",
+ "pregunta": "¿Qué hago? ¿Me cambio de trabajo o me quedo?",
+ "tipo_esperado": "QUE_HAGO",
+ "tipo_pregunta": "QUE_HAGO",
+ "ruido_meta": false,
+ "status": "OK",
+ "respuesta": "Preguntaste qué hacer. Esto no es una orden, es lo que se perfila. Si las cosas siguen como van, lo que más se perfila, con el 62% del soporte, es que las cosas se queden así. Si se mueve hacia lo otro, con el 38% del soporte, es que siga subiendo lo que apenas apareció. Esto se perfila así por lo que contaste, en orden: Llevas tres años en el mismo puesto, haces lo mismo todos los días y ya no aprendes nada. Te ofrecieron un puesto en otra empresa, con más sueldo pero con más horas y sin saber si te va a gustar. Le preguntaste a tu jefe si había un aumento o un cambio y te dijo que por ahora no, que espere. Anoche no dormiste pensando si te quedas por lo seguro o te arriesgas a lo nuevo. Es una lectura ajustada, no firme. El set explica todos los cortes. La decisión es tuya: el motor no decide por ti.",
+ "escenarios": [
+  {
+   "escenario": "MESETA_O_ESTABILIZACION",
+   "soporte": 0.62,
+   "soporte_pct": 62,
+   "n_hipotesis": 4,
+   "es_probabilidad": false
+  },
+  {
+   "escenario": "CONTINUIDAD_ASCENDENTE",
+   "soporte": 0.38,
+   "soporte_pct": 38,
+   "n_hipotesis": 2,
+   "es_probabilidad": false
+  }
+ ],
+ "grado": "AJUSTADA",
+ "cortes_sin_explicar": [],
+ "concordancia": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "fidelidad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "narratividad": {
+  "status": "OK",
+  "motivo": ""
+ },
+ "violaciones": [],
+ "version": "v1.0_20261117",
+ "contrato": "CONTRATO_SALIDA_LLM"
+}

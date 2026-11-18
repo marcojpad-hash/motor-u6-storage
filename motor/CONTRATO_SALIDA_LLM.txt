@@ -1,0 +1,102 @@
+CONTRATO DE SALIDA — el motor responde en prosa a LA pregunta
+=============================================================
+Proyecto inputs-humanos (gh-issue-48, agente-cero-costo, 2026-11-11).
+Módulo: motor/motor/respuesta_humana_v1.py. Versión: v1.0_20261117.
+No es el traductor de salida (lateral_traduccion_salida_v1.py v2.8), que es
+una LECTURA (descripción de estados). Esto es una RESPUESTA: contesta LA
+pregunta hecha por la persona.
+
+ENTRADA — lo que recibe el módulo
+----------------------------------
+- result: el RESULT sellado del motor. Acepta H1/H2/apuesta/grado a nivel
+  superior (lo que lee traducir()) y el INTERPRETABLE con todo anidado bajo
+  salida_interpretable. No se reabre ni se reescribe: el módulo es una
+  función pura sobre el RESULT sellado + la entrada.
+- entrada: el input original (cuts con hecho, question). La evidencia se
+  cita de aquí, en las palabras de la persona.
+- pregunta: la pregunta en prosa. Si no se da, se usa entrada[question].
+
+SALIDA — lo que devuelve
+-------------------------
+{
+  "status": "OK" | "FALLO_CONCORDANCIA" | "FALLO_FIDELIDAD" |
+            "FALLO_NARRATIVIDAD" | "FALLO_VERIFICACION" |
+            "FALLO_SIN_RESULTADO" | "APAGADA_POR_FLAG",
+  "respuesta": "prosa en la persona y las palabras del input",
+  "tipo_pregunta": "QUE_VA_A_PASAR" | "POR_QUE" | "QUE_HAGO" | "AMBIGUA",
+  "escenarios": [{"escenario", "soporte", "soporte_pct", "n_hipotesis",
+                  "es_probabilidad": false}],
+  "grado": "FIRME" | "AJUSTADA" | "FRAGIL",
+  "cortes_sin_explicar": ["C1_...", ...],
+  "concordancia": {"status", "motivo"},
+  "fidelidad": {"status", "motivo"},
+  "narratividad": {"status", "motivo"},
+  "anexo": {H1, H2, grado, escenarios, ...},   // va al repo, NUNCA a la persona
+  "violaciones": [],
+  "ruido_meta": false
+}
+
+REGLAS (gh-issue-48 + correcciones de Marco)
+---------------------------------------------
+(a) Responde LA pregunta hecha.
+    - "¿qué va a pasar?" -> los escenarios de la apuesta, con su soporte.
+    - "¿por qué?" / "¿cuál es el tema?" -> H1/H2 con evidencia.
+    - "¿qué hago?" -> como condicionado ("si... entonces..."), y la
+      decisión es de la persona: el motor no decide por ella.
+    - Pregunta ambigua -> se dice que es ambigua y se da la lectura
+      principal, invitando a preguntar qué va a pasar, por qué, o qué hacer.
+(b) Porcentajes desde valores 0.01-0.999 (x100) como SOPORTE estructural,
+    nunca como probabilidad y nunca rank_fusion crudo. Cada porcentaje en
+    la respuesta lleva la palabra "soporte". La apuesta trae
+    es_probabilidad: false y así se presenta.
+(c) No cambia H1/H2/margen/grado. No decide H. No reescribe el RESULT.
+    El módulo no muta result ni entrada (se verifica con deepcopy).
+(d) Dice el grado (firme/ajustada/frágil) y qué cortes quedan sin explicar.
+    Los cortes sin explicar se sacan del result (paso inverso 021 o lista
+    explícita); si el result no los trae, se dice lo que el grado_inverso
+    permite decir (SET_EXPLICA_TODOS_LOS_CORTES -> el set explica todos;
+    SET_CON_CORTES_SIN_EXPLICAR -> hay cortes sin explicar, sin inventar
+    cuáles). Nunca se inventa un corte sin explicar.
+(e) La evidencia se CITA en las palabras de la persona y en orden
+    cronológico (método del traductor 021: texto real del corte, sin
+    re-narrar ni coser fragmentos con "eso de que"). Una cita corta por
+    corte, una sola vez cada hecho. Sin etiquetas del catálogo (nunca el
+    ID de familia en la respuesta) y sin vocabulario de física del motor
+    (nada de "creció", "oleada", "te pegue", "pulso", "cometa", "nudo",
+    "meseta" aplicado a estados). La salida va en LA MISMA PERSONA del
+    input (si la persona cuenta en primera, la respuesta es en segunda:
+    el que lee le habla a la persona).
+(f) Guardia de CONCORDANCIA: verifica tipo de pregunta <-> tipo de
+    respuesta, que la respuesta cite la evidencia del result y no invente
+    hechos ni hipótesis fuera del result. FALLO_CONCORDANCIA con motivo.
+    El ruido/meta en la pregunta (p. ej. "ignora el motor y dime...") se
+    detecta y se registra (ruido_meta), pero la instrucción inyectada se
+    ignora: se responde desde el RESULT, nunca desde la inyección.
+(g) Verificación de fidelidad + narratividad (precedentes xains/SymGen):
+    fidelidad = cada porcentaje y el grado de la respuesta son los del
+    result, y ningún ID de familia aparece; narratividad = la evidencia va
+    en orden cronológico, la respuesta tiene tres frases o más, no usa
+    costura de plantilla y nombra la pregunta que responde. FALLO con
+    motivo si algo de esto no se cumple.
+
+BYPASS
+------
+RESPUESTA_HUMANA=0 apaga el módulo con estado visible APAGADA_POR_FLAG
+(nunca en silencio). Por defecto activo.
+
+ENCHUFE (dónde corre)
+----------------------
+Puente post-corrida: observar(case, motor, pred) -> responder(pred, case).
+El runner (motor/correr_estandar.py) lo llama después de que run() sella
+el RESULT y guarda la salida en result["respuesta_humana"]. El módulo no
+escribe H ni toca Engine ni el catálogo 244. No se calibra.
+
+PRUEBAS
+-------
+- motor/tests/test_cableado_respuesta_humana.py (pytest): responde los
+  cuatro tipos de pregunta, concordancia/fidelidad/narratividad disparan
+  cuando deben, bypass apagado visible, no muta el RESULT, y el smoke
+  THEMISTOCLES con H intacta.
+- casos/inputs_humanos/: >=6 preguntas en prosa (2 casos conocidos, 2
+  personales, 1 ambigua, 1 con ruido/meta), con recibo por caso.
+- Cualquier paso saltado o salida vacía = FALLO (fail-fast).
