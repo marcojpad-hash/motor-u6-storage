@@ -3009,7 +3009,10 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     # MODO ESTRICTO (27-sep-2026; flag MODO_ESTRICTO=0 lo apaga). Lateral sobre COPIAS: can_decide_H=false.
     # Cierre estricto (top1 encabeza un corte + acero descarta al rival más fuerte + H1/H2 distinguibles + Aquiles estable),
     # mapeo en negativo Ricci–Forman vs Billar y bloque rival/'qué ignoré'. H1/H2/top1/predictor/patterns: se verifica que no cambian.
-    if _os.environ.get("MODO_ESTRICTO","1")!="0":
+    # Cableado: el apagado queda NO_CONFIGURADO en el recibo (con estricto_modo off) en lugar de
+    # desaparecer en silencio; el modo queda visible en la fila de componentes en ambos casos.
+    _estricto_modo = "off" if _os.environ.get("MODO_ESTRICTO", "1") == "0" else "activo"
+    if _estricto_modo == "activo":
         snapE=_h_snapshot(pred); hE=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patE=_sha(_PATTERNS_PATH())
         top1E=(pred.get("candidates") or [{}])[0].get("family")
         emod=_load("modo_estricto_v1","modo_estricto_v1.py")
@@ -3024,12 +3027,27 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                 est={"status":"ERROR","error":f"{type(e).__name__}:{e}","trace":_tb.format_exc()[-1500:],"estado_cierre_estricto":"LATENTE","motivos":["error en modo estricto"],"can_decide_H":False}
         est["verificacion_H_intacto"]={"predictor_igual":snapE==_h_snapshot(pred),"H1_H2_igual":hE==json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str),
                                        "top1_igual":top1E==(pred.get("candidates") or [{}])[0].get("family"),"patterns_igual":patE==_sha(_PATTERNS_PATH())}
+        est["modo"]=_estricto_modo
         result["modo_estricto"]=est
         result["estado_cierre_estricto"]={"valor":est.get("estado_cierre_estricto"),"motivos":est.get("motivos"),"top1":top1E,
                                           "estado_cierre_vigente":(result.get("estado_cierre") or {}).get("valor"),
                                           "nota":"LATENTE = estado DURANTE la corrida (almacenado esperando datos); top1/H1/H2 se reportan igual y el cierre de fin de corrida va en cierre_final (016)"}
         status.append({"component":"modo_estricto_v1.py","status":est.get("status"),"feeds_predictor":False,"feeds_H":False,"can_decide_H":False,
-                       "can_only_withhold_closure":True,"estado_cierre_estricto":est.get("estado_cierre_estricto"),"H_intacto":est["verificacion_H_intacto"]})
+                       "can_only_withhold_closure":True,"estricto_modo":_estricto_modo,"estado_cierre_estricto":est.get("estado_cierre_estricto"),"H_intacto":est["verificacion_H_intacto"]})
+    else:
+        # Bypass visible: apagado por bandera; no corre, no retiene, no toca H, pero queda registrado.
+        snapE=_h_snapshot(pred); hE=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patE=_sha(_PATTERNS_PATH())
+        top1E=(pred.get("candidates") or [{}])[0].get("family")
+        est={"status":"NO_CONFIGURADO","file":"modo_estricto_v1.py","modo":"off","estado_cierre_estricto":"NO_CONFIGURADO",
+             "motivos":[],"motivo":"apagado por MODO_ESTRICTO=0","can_decide_H":False}
+        est["verificacion_H_intacto"]={"predictor_igual":snapE==_h_snapshot(pred),"H1_H2_igual":hE==json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str),
+                                       "top1_igual":top1E==(pred.get("candidates") or [{}])[0].get("family"),"patterns_igual":patE==_sha(_PATTERNS_PATH())}
+        result["modo_estricto"]=est
+        result["estado_cierre_estricto"]={"valor":"NO_CONFIGURADO","motivos":[],"motivo":"apagado por MODO_ESTRICTO=0","top1":top1E,
+                                          "estado_cierre_vigente":(result.get("estado_cierre") or {}).get("valor"),
+                                          "nota":"modo estricto apagado por bandera; no retiene el cierre ni toca H"}
+        status.append({"component":"modo_estricto_v1.py","status":"NO_CONFIGURADO","feeds_predictor":False,"feeds_H":False,"can_decide_H":False,
+                       "can_only_withhold_closure":True,"estricto_modo":"off","estado_cierre_estricto":"NO_CONFIGURADO","H_intacto":est["verificacion_H_intacto"]})
     # UNICO: HUB post-predictor (sensores que necesitan top1) + convergencia lateral + reporte por caso.
     snapU=_h_snapshot(pred); hU=json.dumps([result.get("H1"),result.get("H2")],sort_keys=True,default=str); patU=_sha(_PATTERNS_PATH())
     post={}
