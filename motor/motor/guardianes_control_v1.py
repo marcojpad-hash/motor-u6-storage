@@ -445,7 +445,13 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
 
     dh = seguro("DECIMO_HOMBRE_LATENCIA", lambda: g_decimo_hombre(base, case, motor, pred))[0]
     bloques.append(dh)
-    bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
+    if "PREGUNTA_DETRAS_V2" in omitir:
+        # Bypass visible en recibo (PREGUNTA_DETRAS_GUARDIAN=off): el bloque queda marcado
+        # NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("PREGUNTA_DETRAS_V2", [], "omitido por PREGUNTA_DETRAS_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
     bloques.extend(seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)))
     if "LOGICA_COPI" in omitir:
         # Bypass visible en recibo (COPI_GUARDIAN=off): el bloque queda marcado
