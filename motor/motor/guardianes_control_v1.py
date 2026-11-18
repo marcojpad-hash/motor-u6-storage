@@ -429,8 +429,9 @@ def ruta_cierre_latente(bloques, case, motor, pred, base):
     return out
 
 
-def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[str, Any], base: Path) -> Dict[str, Any]:
+def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[str, Any], base: Path, omitir=frozenset()) -> Dict[str, Any]:
     base = Path(base)
+    omitir = frozenset(omitir or ())
     textos = textos_de_entrada(case)
     question = str(case.get("question") or "")
     bloques = []
@@ -447,7 +448,13 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
     bloques.extend(seguro("PREGUNTA_DETRAS_V2", lambda: g_detras(base, question, textos)))
     bloques.extend(seguro("PREGUNTA_DIRIGIDA_POST_HOC", lambda: g_dirigida_y_falacias(base, question, textos)))
     bloques.append(seguro("LOGICA_COPI", lambda: g_copi(base, textos, motor, pred))[0])
-    bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
+    if "POLARIDAD_CAUSAL" in omitir:
+        # Bypass visible en recibo (POLARIDAD_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("POLARIDAD_CAUSAL", [], "omitido por POLARIDAD_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        bloques.append(seguro("POLARIDAD_CAUSAL", lambda: g_polaridad(base, textos))[0])
     lat_fronts = [f for f in (((pred.get("compuerta_cierre") or {}).get("latencia_escrita") or {}).get("abiertos_o_reafirmados") or [])]
     bloques.append(seguro("HOMBRE_DE_ACERO", lambda: g_acero(base, case, pred, lat_fronts))[0])
     bloques.append(seguro("SHERLOCK_RIGOR", lambda: g_rigor(base, motor, pred))[0])
