@@ -122,6 +122,12 @@ import re
 VERSION = "v2.8_20261114"
 CONTRATO = "TRADUCCION_SALIDA_V1"
 
+
+def esta_activa():
+    """True salvo que TRADUCCION_SALIDA=0 (apagado visible, no silencioso)."""
+    return os.environ.get("TRADUCCION_SALIDA", "1") != "0"
+
+
 _CATALOGO = None
 
 
@@ -536,7 +542,20 @@ def traducir(result, entrada=None, catalogo=None):
     result: dict RESULT del motor (con H1, H2, movimiento_de_fondo).
     entrada: dict de la entrada original (para el registro y los hechos).
     Devuelve {"lectura": str, "anexo": dict, "violaciones": list}.
+    Sin RESULT (o sin H1) no fabrica lectura: devuelve
+    FALLO_SIN_RESULTADO con lectura vacía. Con TRADUCCION_SALIDA=0
+    devuelve APAGADA_POR_FLAG, visible, nunca en silencio.
     """
+    if not esta_activa():
+        return {"lectura": "",
+                "anexo": {"status": "APAGADA_POR_FLAG", "version": VERSION},
+                "violaciones": []}
+    _h1_raw = result.get("H1") if isinstance(result, dict) else None
+    _h1_fam = _h1_raw.get("family") if isinstance(_h1_raw, dict) else None
+    if not _h1_fam:
+        return {"lectura": "",
+                "anexo": {"status": "FALLO_SIN_RESULTADO", "version": VERSION},
+                "violaciones": []}
     if catalogo is None:
         catalogo = _cargar_catalogo()
     registro = _registro(entrada)
@@ -798,6 +817,7 @@ def traducir(result, entrada=None, catalogo=None):
                    "con lo que la acompaña, no con una sola cosa.")
 
     anexo = {
+        "status": "OK",
         "H1": h1,
         "H2": h2,
         "sol_peso_Z": (grav.get("sol") or {}).get("peso_Z"),
@@ -819,6 +839,10 @@ def traducir(result, entrada=None, catalogo=None):
         "arquetipos_luces": list(dict.fromkeys(
             fam for fam in luces if _nombre_arquetipo(fam, catalogo))),
     }
+    # El runner (correr_estandar.py) trata cualquier null del RESULT como
+    # dato faltante y marca la corrida INCOMPLETE_OUTPUT_DATA. El anexo
+    # solo lleva valores que existen: lo ausente se omite, no se pone null.
+    anexo = {k: v for k, v in anexo.items() if v is not None}
     return {"lectura": lectura, "anexo": anexo, "violaciones": viol}
 
 

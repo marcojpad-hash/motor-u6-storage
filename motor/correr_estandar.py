@@ -771,6 +771,23 @@ def main(argv) -> int:
         result["respuesta_humana"] = {"status": "FALLO_RESPUESTA_HUMANA",
                                       "motivo": "%s: %s" % (type(_rh_e).__name__, _rh_e),
                                       "respuesta": ""}
+    # TRADUCCION_SALIDA (lateral 021, v2.8): lectura en prosa del RESULT
+    # sellado, en las palabras y la persona del input. No decide H ni
+    # reescribe el RESULT; solo lee el RESULT sellado y la entrada.
+    # Bandera TRADUCCION_SALIDA=0 la apaga con estado visible
+    # (APAGADA_POR_FLAG), nunca en silencio. Si el módulo falla, se
+    # registra FALLO_TRADUCCION_SALIDA y la corrida sigue.
+    try:
+        import importlib.util as _ilu_tr
+        _tr_path = Path(__file__).resolve().parent / "motor" / "lateral_traduccion_salida_v1.py"
+        _tr_spec = _ilu_tr.spec_from_file_location("lateral_traduccion_salida_v1", _tr_path)
+        _tr_mod = _ilu_tr.module_from_spec(_tr_spec)
+        _tr_spec.loader.exec_module(_tr_mod)
+        result["traduccion_salida"] = _tr_mod.traducir(result, case)
+    except Exception as _tr_e:
+        result["traduccion_salida"] = {"status": "FALLO_TRADUCCION_SALIDA",
+                                      "motivo": "%s: %s" % (type(_tr_e).__name__, _tr_e),
+                                      "lectura": ""}
     cuts=_plain_json_copy(case.get("cuts") or [])
     if len(cuts)>=2:
         retenido=_plain_json_copy(cuts[-1])
