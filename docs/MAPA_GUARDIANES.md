@@ -1,15 +1,15 @@
 # Mapa de guardianes del motor U6
 
-Fecha de este mapa: 2026-11-18 (America/Mexico_City).
+Fecha de este mapa: 2026-11-19 (America/Mexico_City).
 Repo: `marcojpad-hash/motor-u6-storage`.
-Rama: `alterno/cameo-pesos`, base `6d17974` (lote de cableado #16–#32 completo y fusionado).
+Rama: `alterno/cameo-pesos`, base `e60a29f` (lote de cableado #16–#34 completo y fusionado).
 Este mapa reemplaza al del 2026-11-10 (leído de `main`); esa versión quedó obsoleta por el cableado.
 
 Este documento describe **solo** las piezas de *este* repositorio que vigilan, filtran, juzgan o bloquean. No describe las que generan hipótesis ni las que ejecutan el motor. Polti, Souriau y Propp no son guardianes (son familias o lentes narrativas); no hay en este repo un guardián cuya función sea vigilarlos. En este repo **no hay** un paquete `guardia/` agnóstico ni un archivo llamado Cancerbero; el control de flujo vigente es `control_flujo_soluciones.py`.
 
-Cómo se verificó: se recorrió el árbol de `alterno/cameo-pesos` (base 6d17974), se leyó el cableado en `MOTOR_V15_3_UNICO_20260927.py`, `guardianes_control_v1.py`, `laterales_unico_v1.py`, `correr_estandar.py` y los tests `motor/tests/test_cableado_*.py` (17 archivos, uno por módulo cableado). Cada módulo cableado tiene su prueba de ejecución. Lo que no se ejecutó en una corrida en vivo se marca como "leído en código, no reproducido en esta sesión".
+Cómo se verificó: se recorrió el árbol de `alterno/cameo-pesos` (base e60a29f), se leyó el cableado en `MOTOR_V15_3_UNICO_20260927.py`, `guardianes_control_v1.py`, `laterales_unico_v1.py`, `correr_estandar.py` y los tests `motor/tests/test_cableado_*.py` (18 archivos, uno por módulo cableado). Cada módulo cableado tiene su prueba de ejecución. Lo que no se ejecutó en una corrida en vivo se marca como "leído en código, no reproducido en esta sesión".
 
-**Regla de bypass visible (lote #16–#32):** cada guardián cableado tiene un apagado visible por variable de entorno: con su variable en `off` (o `0`), el bloque queda marcado `NO_CONFIGURADO` (o `APAGADA_POR_FLAG`) en el recibo, nunca desaparece en silencio. Excepciones sin bypass, por diseño: **Z90** (validador duro de entrada) y **sombrero absorbido** (el veredicto ES la honestidad; es reporte, no puerta). Un contrato dice QUÉ HACE cada componente; los módulos no "quieren" nada.
+**Regla de bypass visible (lote #16–#34):** cada guardián cableado tiene un apagado visible por variable de entorno: con su variable en `off` (o `0`), el bloque queda marcado `NO_CONFIGURADO` (o `APAGADA_POR_FLAG`) en el recibo, nunca desaparece en silencio. Excepciones sin bypass, por diseño: **Z90** (validador duro de entrada) y **sombrero absorbido** (el veredicto ES la honestidad; es reporte, no puerta). Un contrato dice QUÉ HACE cada componente; los módulos no "quieren" nada.
 
 ## Cómo se orquestan
 
@@ -315,7 +315,7 @@ Tres frentes, la misma huella:
 
 - El sombrero blanco de salida (1.1.A) corre en `laterales_unico_v1.post_predictor`. Solo marca `salida_limpia`.
 - **respuesta_humana** (`motor/motor/respuesta_humana_v1.py`, v1.0): responde LA pregunta en prosa desde el RESULT sellado, con evidencia citada en las palabras de la persona y en orden cronológico. Clasifica la pregunta (`QUE_VA_A_PASAR` / `POR_QUE` / `QUE_HAGO` / `AMBIGUA`), dice el grado y qué cortes quedan sin explicar, y pasa guardias de concordancia, fidelidad y narratividad. No muta el RESULT ni decide H. Contrato: `motor/CONTRATO_SALIDA_LLM.txt`. Bypass visible: `RESPUESTA_HUMANA=0` → `APAGADA_POR_FLAG`. Enchufe: puente post-corrida `observar()` en `motor/correr_estandar.py`; la salida va en `result["respuesta_humana"]`. Prueba: `motor/tests/test_cableado_respuesta_humana.py` (15 tests).
-- El traductor de salida (`motor/motor/lateral_traduccion_salida_v1.py` v2.8) **NO está cableado**: es una LECTURA (descripción de estados), no una respuesta. No se usa en la ruta de corrida; la salida en prosa la da `respuesta_humana`.
+- El traductor de salida (`motor/motor/lateral_traduccion_salida_v1.py` v2.8) **SÍ está cableado** (lote #34): es una LECTURA (descripción de estados), no una respuesta. Corre en `motor/correr_estandar.py` tras sellar el RESULT, junto a `respuesta_humana`; la salida va en `result["traduccion_salida"]`. No decide H ni reescribe el RESULT. Bypass visible: `TRADUCCION_SALIDA=0` → `APAGADA_POR_FLAG`. Si falla, queda `FALLO_TRADUCCION_SALIDA` visible y la corrida sigue. Prueba: `motor/tests/test_cableado_traduccion_salida.py` (5 tests).
 - `filtro_entrada_dirigida_017.verificar_salida_llm` existe para revisar el texto de salida / `cierre_final`. En esta lectura no se vio una llamada equivalente a la compuerta de entrada dentro de `run()` de UNICO (la compuerta de entrada sí está cableada). No se afirma que esté desconectada del todo: puede usarla la capa LLM vía `consulta_dirigida_v1.py` en `correr_estandar`. No se abrió esa rama línea por línea en esta sesión más allá de constatar que `consulta_dirigida` carga el módulo 017. **Pendiente: cero llamadores confirmados en la auditoría de ejecución real; no es adorno, hay que resolverlo.**
 - `ruta_cierre_latente` + `modo_estricto` + `compuerta_cierre` retienen el estado de cierre, no reescriben H1/H2. El cierre de fin de corrida va en `cierre_final`.
 
