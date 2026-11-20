@@ -8,7 +8,11 @@ PASO A — antes de H (el LLM rellena esto y se corre el motor)
 {
   "case_id": "...",
   "question": "pregunta de predictibilidad",
-  "z90_date": "YYYY-MM-DD o null si Z=presente",
+  "fecha_nacimiento": "YYYY-MM-DD (obligatoria en biografía cerrada)",
+  "fecha_muerte": "YYYY-MM-DD (obligatoria en biografía cerrada; ausente en pregunta viva)",
+  "modo_z": "historico | vivo",
+  "z_trabajo": "YYYY-MM-DD (Z90 en biografía cerrada; hoy en pregunta viva)",
+  "z90_date": "YYYY-MM-DD (igual a z_trabajo; campo de compatibilidad consumido por UNICO)",
   "cuts": [
     {"id":"C1","date":"...","P":[["token_del_244",0.72]],"A":[...],"C":[...]}
   ],
@@ -20,6 +24,14 @@ PASO A — antes de H (el LLM rellena esto y se corre el motor)
   "caldero_llm_neighbor_hints": [],
   "external_lights": [{"token":"...","peso":0.7,"fuente":"capa2"}]
 }
+
+PROTOCOLO TEMPORAL BIOGRÁFICO (autoridad: motor/PROTOCOLO_BIOGRAFICO_Z90.md)
+----------------------------------------------------------------------------
+- Biografía cerrada: fecha_nacimiento y fecha_muerte obligatorias; Z90 = nacimiento + 90 % del intervalo nacimiento→muerte. z_trabajo y z90_date deben coincidir con Z90. La muerte solo calcula el límite; no entra como evidencia predictiva.
+- Pregunta viva: modo_z=vivo; z_trabajo y z90_date deben coincidir con la fecha actual; no se inventa fecha de muerte.
+- Cortes acumulativos y variables: el primero empieza en nacimiento; el último termina exactamente en Z90. No hay número fijo. Cada corte registra motivo (cambio de rol, crisis, decisión irreversible, cambio de vector o saturación). Las ventanas posteriores siguen acumulando desde el nacimiento.
+- La evidencia de cada corte debe ser conocida a su fecha de cierre: claim_date <= cuts[i].date; para fuente primaria, source_date <= cuts[i].date. Nada posterior al cierre del corte puede entrar.
+- La gate actual todavía no calcula Z90 ni valida nacimiento/muerte y ventanas acumulativas; no afirmar cumplimiento completo hasta que código y pruebas lo hagan.
 
 Reglas del LLM al tokenizar:
 - solo tokens del 244 o de familias laterales (Tucídides, etc.)
