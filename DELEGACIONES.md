@@ -58,3 +58,31 @@ Commits documentales: `c9df16250741348a1ce4bdee0814164b97d98ead`, `c27ae38f2a4b0
 
 Siguen abiertas en el bus adicional `agente-cero-costo`. Se consultaron en solo lectura. No se modificó ese repositorio ni se atribuyó avance no verificado. Sus trabajos de supervisor, Cancerbero, consulta dirigida/vecinos, sidecar histórico, inputs humanos y consulta LLM obligatoria siguen fuera de la evidencia de cierre de este run.
 
+
+
+## Seguimiento ChatGPT — 2026-11-20, run operador 8
+
+La orden permanente #465 sigue **PENDIENTE** en su objetivo de casos nuevos e independientes. No se ejecutó el motor, no se preparó entrada F007 y no se incrementó n. El issue #465 se mantuvo en solo lectura; el acuse diario está fijado para el cierre del día.
+
+### Ejecuciones y registro de Actions
+
+- Run [#44739754266](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44739754266): el job `auditar` (job id `136300124552`) y todos sus pasos terminaron `completed/success`. Es una auditoría de Actions, **no una corrida del motor**.
+- `avances/auditoria_corridas/ULTIMO_ESTADO.json` en main (blob `922087c6eab71716312434bae65b8e940b18781b`) conserva 87 registros y su más reciente es #44666733628 (2026-11-20 03:17:39Z); no incluye #44739754266. El snapshot está atrasado respecto del run observado. No se interpreta como ausencia de ejecución ni se modificó main.
+- PR #8 sigue `OPEN / NOT MERGED`. El check `runner-contract` documentado como SUCCESS no demuestra la implementación completa de Z90; la gate invocada sigue sin calcularlo.
+
+### Revalidación F007 y separación de funciones
+
+- Semillas F007 (blob `850297da7a15af430ee4a7065e8579bd021b0174`): 8 sujetos, 8 cortes C1 y 8 cortes C2 (dos por sujeto); aparecen 8 referencias a Wikipedia. No constituye cohorte primaria e independiente.
+- `casos/fabrica/fabrica.py` (blob `f956f4b3daa4498f790d7efe2d6623646f3589aa`), `preparar_z`: importa `SEMILLAS_Z` y `DESTINOS` en el mismo proceso; después escribe `entrada.json`, `desenlace_sellado.json` y, si el destino lo contiene, `destino_sellado.json`. No es ruta entry-only. `correr` abre los desenlaces después del compromiso. No invocar ninguno de esos comandos para F007.
+- `motor/calibracion/gate_z90.py` (blob `604d137be95a71a587a864158a0c076fab0c75f5`): `validar_entrada()` revisa formato de Z, fechas de corte y evidencia; no calcula Z90 desde nacimiento/muerte ni valida ventanas acumulativas, primer corte en nacimiento y último exactamente en Z90.
+- Sin ruta entry-only, runner válido, fuentes primarias y custodia independiente no se prepara ni ejecuta una cohorte. C01–C20 y sus custodias permanecen intactos.
+
+### Riesgo de autoridad en workflows de main (solo lectura)
+
+Los tres workflows de main inspeccionados conservan `permissions: contents: write` y operaciones que hacen push a main, pese a que el contrato de esta rama declara main `SOLO_CONSULTA`:
+
+- `.github/workflows/fabrica-lote-diario.yml` (blob `bdcec6c6c95de6f7f49e70e78d2875c382772fe0`): `workflow_dispatch`, ejecuta `preparar-z` + `correr` y puede hacer push a main.
+- `.github/workflows/fabrica-real-traza.yml` (blob `f142b7b59baf306bc8d8bda0c2a6e00fae0a0566`): `push`/dispatch sobre main; ejecuta `--rehacer CAL_F005_01_COURBET` y puede subir manifiestos a main. Ese input repetido no es un caso F007+ independiente.
+- `.github/workflows/auditar-corridas-actions.yml` (blob `8e85e31ba938dd62e63787433bece6c1ea8b5c36`): cron/workflow_run, `contents: write`, commit y push de snapshots a main; run #44739754266 observado.
+
+No se disparó ni modificó ningún workflow; no se tocaron permisos, secretos, ramas, main, motores, patrones, candados ni evidencia congelada. La incompatibilidad de autoridad queda documentada para resolución autorizada.
