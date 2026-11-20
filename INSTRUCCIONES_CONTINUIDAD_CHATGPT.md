@@ -44,7 +44,7 @@ Este documento permite que otra sesión o cuenta de un asistente de IA continúe
 - No ocultar errores auxiliares, diferencias entre corridas, resultados parciales o limitaciones del entorno.
 - Si un proceso no tiene datos suficientes, seguir la terminología y los contratos vigentes del proyecto; no convertir arbitrariamente un estado pendiente en una resolución final para que la corrida parezca completa.
 - No usar información posterior al corte de conocimiento permitido para formular hipótesis retrospectivamente.
-- En las pruebas biográficas según el protocolo previamente establecido, usar Z final/Z90 y las restricciones temporales definidas en los archivos de protocolo vigentes. Confirmarlas en el repositorio antes de ejecutar.
+- En pruebas biográficas, seguir obligatoriamente [motor/PROTOCOLO_BIOGRAFICO_Z90.md](motor/PROTOCOLO_BIOGRAFICO_Z90.md): biografía cerrada = Z_trabajo en Z90 (90 % del intervalo nacimiento→muerte), ventanas acumulativas desde nacimiento, primer corte en nacimiento y último exactamente en Z90; número de cortes variable. Pregunta viva = Z hoy. La gate de código aún no calcula ni valida toda esta regla; comprobar su implementación y pruebas antes de declarar cumplimiento.
 - El número canónico previamente establecido para el catálogo es 244 patrones. Verificar hashes y contratos reales antes de afirmar que no han cambiado.
 
 ## Cómo informar a M
