@@ -1,9 +1,25 @@
 # -*- coding: utf-8 -*-
-"""COMPUERTA Z_TRABAJO (2026-10-24): nada posterior al corte de trabajo entra al motor.
+"""COMPUERTA TEMPORAL Z_TRABAJO — protocolo biográfico Z90 (Mj, 2026-11-11).
 
-Z_trabajo = el corte en el que se "para" el caso (no es un año biográfico tipo 90 % de vida). En una pregunta
-de hoy, Z_trabajo es la fecha de hoy. Se aplica ANTES del motor: casos/fabrica/fabrica.py preparar (falla el lote) y
-calibracion/arnes_calibracion.py correr (rechaza el caso) si la entrada trae "gate_z" o FABRICA_GATE_Z90=1.
+Autoridad normativa: motor/PROTOCOLO_BIOGRAFICO_Z90.md.
+
+Regla acordada:
+- Biografía cerrada: Z_trabajo = Z90, punto situado al 90 % del intervalo
+  nacimiento→muerte. La fecha de muerte solo calcula el límite; no es evidencia
+  predictiva. Las ventanas son acumulativas desde el nacimiento; el primer corte
+  inicia en nacimiento y el último termina exactamente en Z90.
+- Pregunta viva: Z_trabajo = hoy.
+- No existe número universal de cortes. Se añaden por cambios de rol, crisis,
+  decisiones irreversibles o cambios de dirección del vector; se detienen por
+  saturación con umbral registrado. Z100 solo se libera después para validación.
+
+BRECHA DE IMPLEMENTACIÓN VERIFICADA (20-nov-2026):
+validar_entrada() todavía aplica las reglas genéricas R1–R7 descritas abajo,
+pero NO calcula Z90 desde nacimiento/muerte ni valida que la primera ventana
+inicie en nacimiento, que las ventanas sean acumulativas o que la última termine
+exactamente en Z90. Por tanto, este archivo aún NO demuestra cumplimiento
+completo del protocolo biográfico Z90. No declarar un lote Z90 válido hasta
+implementar esos controles y cubrirlos con pruebas.
 
 Campos de la entrada:
   z_trabajo            AAAA-MM-DD (si falta se usa freeze)
