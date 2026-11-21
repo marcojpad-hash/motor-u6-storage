@@ -1,0 +1,52 @@
+name: U6 sandbox-testing (manual, fail-closed)
+
+on:
+  workflow_dispatch:
+    inputs:
+      sandbox_sha:
+        description: Full commit SHA on sandbox-testing to inspect
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: u6-sandbox-testing-${{ inputs.sandbox_sha }}
+  cancel-in-progress: false
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout selected sandbox revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ inputs.sandbox_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          path: sandbox
+      - name: Verify selected revision belongs to sandbox-testing
+        working-directory: sandbox
+        env:
+          SELECTED_SHA: ${{ inputs.sandbox_sha }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SELECTED_SHA"
+          git merge-base --is-ancestor "$SELECTED_SHA" origin/sandbox-testing
+      - name: Install schema validator
+        run: python -m pip install --disable-pip-version-check 'jsonschema==4.23.0'
+      - name: Run fail-closed preflight
+        working-directory: sandbox
+        env:
+          GITHUB_SHA: ${{ inputs.sandbox_sha }}
+        run: python sandbox_runtime/runner_main.py --expected-sha "$GITHUB_SHA"
+      - name: Preserve preflight report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: u6-sandbox-preflight-${{ github.run_id }}-${{ github.run_attempt }}
+          path: sandbox/sandbox-report.json
+          if-no-files-found: warn
+          retention-days: 14

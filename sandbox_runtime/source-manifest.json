@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "status": "DOCUMENTED_NOT_RUNTIME_VERIFIED",
+  "sources": [
+    {
+      "repository": "marcojpad-hash/orquestador-central",
+      "path": "docs/orchestrator.v2.1.json",
+      "ref": "main",
+      "blob_sha": "315e9e844d2ceea898084878597f54f4e3deb760",
+      "role": "declarative_control_specification"
+    },
+    {
+      "repository": "marcojpad-hash/orquestador-central",
+      "path": "docs/INSTRUCCION_SANDBOX_VM.md",
+      "ref": "main",
+      "blob_sha": "eb1aa429fd3b27527f3da5f69c9982cd238f4631",
+      "role": "sandbox_contract"
+    },
+    {
+      "repository": "marcojpad-hash/motor-u6-storage",
+      "path": "motor/Engine_V5_CANONICO_SOLO.py",
+      "ref": "main",
+      "sha256": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+      "role": "protected_canonical"
+    },
+    {
+      "repository": "marcojpad-hash/motor-u6-storage",
+      "path": "motor/patterns_final_v14.json",
+      "ref": "main",
+      "sha256": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1",
+      "role": "protected_catalog"
+    }
+  ],
+  "note": "Source refs observed; no execution authorization."
+}

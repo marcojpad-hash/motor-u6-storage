@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "job_id": "sandbox-bootstrap-preflight",
+  "source": {
+    "repository": "marcojpad-hash/motor-u6-storage",
+    "ref": "sandbox-testing",
+    "commit_sha": "0000000000000000000000000000000000000000"
+  },
+  "execution_kind": "INFRASTRUCTURE_FIXTURE",
+  "steps": [
+    {
+      "id": "S01_VALIDATE",
+      "type": "VALIDATE",
+      "adapter_id": "validate_contracts_v1",
+      "required": true,
+      "timeout_seconds": 30
+    },
+    {
+      "id": "S02_PROTECTED",
+      "type": "VERIFY_PROTECTED_PATHS",
+      "adapter_id": "verify_protected_paths_v1",
+      "required": true,
+      "timeout_seconds": 30
+    }
+  ]
+}
