@@ -2,10 +2,14 @@ name: Motor runner contract tests
 
 on:
   push:
-    branches: [main]
+    branches: [main, alterno/cameo-pesos]
     paths:
       - "motor/correr_estandar.py"
       - "motor/tests/test_runner_json_contract.py"
+      - "motor/SHA256SUMS_MOTOR.txt"
+      - "motor/MANIFIESTO_COMPACTO_SHA256.json"
+      - "motor/UNIFICACION_SHA256_MANIFEST.json"
+      - "motor/scripts/regenerar_manifestos_trabajo.py"
       - "motor/calibracion/gate_z90.py"
       - "motor/tests/test_gate_z90_biografico.py"
       - "motor/PROTOCOLO_BIOGRAFICO_Z90.md"
@@ -34,6 +38,10 @@ on:
     paths:
       - "motor/correr_estandar.py"
       - "motor/tests/test_runner_json_contract.py"
+      - "motor/SHA256SUMS_MOTOR.txt"
+      - "motor/MANIFIESTO_COMPACTO_SHA256.json"
+      - "motor/UNIFICACION_SHA256_MANIFEST.json"
+      - "motor/scripts/regenerar_manifestos_trabajo.py"
       - "motor/calibracion/gate_z90.py"
       - "motor/tests/test_gate_z90_biografico.py"
       - "motor/PROTOCOLO_BIOGRAFICO_Z90.md"

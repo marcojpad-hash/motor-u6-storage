@@ -86,3 +86,21 @@ Los tres workflows de main inspeccionados conservan `permissions: contents: writ
 - `.github/workflows/auditar-corridas-actions.yml` (blob `8e85e31ba938dd62e63787433bece6c1ea8b5c36`): cron/workflow_run, `contents: write`, commit y push de snapshots a main; run #44739754266 observado.
 
 No se disparó ni modificó ningún workflow; no se tocaron permisos, secretos, ramas, main, motores, patrones, candados ni evidencia congelada. La incompatibilidad de autoridad queda documentada para resolución autorizada.
+
+## Seguimiento operador único — 2026-11-21, run 11
+
+### Gate biográfico Z90
+
+- **EJECUTADO:** commit `fa1a73bed69d22ed4667c6ad3322f2f16542df70` en `alterno/cameo-pesos`. Actualiza `motor/calibracion/gate_z90.py`, contrato/prompt y agrega `motor/tests/test_gate_z90_biografico.py`.
+- **CAMBIO:** cálculo determinista Z90 desde fechas exactas de nacimiento/muerte con truncamiento `(días * 9) // 10`; igualdad obligatoria de `z_trabajo` y `z90_date`; `window_start` igual al nacimiento en cada corte; cierres exactos, crecientes y último cierre = Z90; `claim_date` y fecha de fuente primaria no posteriores al cierre individual.
+- **PRUEBA LOCAL:** 14 pruebas aisladas pasaron sobre una copia de trabajo. La prueba remota de CI aún no se ha ejecutado.
+- **MANIFIESTOS:** el generador está en `motor/scripts/regenerar_manifestos_trabajo.py` (no en `scripts/`). Se agregó su ejecución de solo lectura al workflow de contratos. Los manifiestos aún requieren regeneración y lectura de vuelta antes de declarar el cambio totalmente verificado.
+- **LÍMITE:** la gate comprueba campos y fechas; no demuestra independencia humana del custodio ni acumulación semántica de vectores. La integración en `correr_estandar` continúa en PR #8, OPEN/NOT MERGED.
+- **F007 revalidado:** 8 sujetos, 2 cortes por sujeto, fuentes secundarias Wikipedia, sin fecha de nacimiento/muerte ni ventana explícita desde nacimiento. No es cohorte independiente y debe fallar la nueva compuerta. No se ejecutó ni se contó ninguna corrida.
+
+### Auditoría de autoridad de rama — workflow de Actions en main
+
+- **EVIDENCIA:** run `44961081920`, job `137019808201`, 2026-11-21 17:17 CDMX aprox. Ejecutó `python scripts/auditar_corridas_actions.py` y publicó el commit `bac12846b184f2a7b4e0e2f3f6c7e45a` en `motor-u6-storage/main`.
+- El workflow de main declara `permissions: contents: write`, hace checkout de `main` y ejecuta `git push origin HEAD:main`. Contradice la autoridad `main = SOLO_CONSULTA`.
+- El snapshot de esa ejecución informa 67 corridas y 1 fallo, pero `avances/auditoria_corridas/ULTIMO_ESTADO.md` conserva como última corrida la `44930761392`: el job consulta solo runs `completed`, por lo que se excluye a sí mismo mientras está `in_progress`. El registro queda desfasado inmediatamente después de cada autoauditoría.
+- **NO TOCADO:** no se revirtió el commit, no se cambió el workflow de main, no se cambiaron permisos y no se ejecutó el motor. La corrección de ese workflow requiere autorización expresa para modificar main o deshabilitarlo.
