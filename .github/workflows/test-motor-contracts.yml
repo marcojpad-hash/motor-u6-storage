@@ -82,5 +82,16 @@ jobs:
           python motor/scripts/regenerar_manifestos_trabajo.py
           grep -E 'calibracion/gate_z90.py|CONTRATO_ENTRADA_LLM.txt|tests/test_gate_z90_biografico.py' motor/SHA256SUMS_MOTOR.txt
           git diff --stat -- motor/SHA256SUMS_MOTOR.txt motor/MANIFIESTO_COMPACTO_SHA256.json motor/UNIFICACION_SHA256_MANIFEST.json
+      - name: Upload regenerated motor manifests for verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: motor-u6-manifests-${{ github.run_id }}
+          path: |
+            motor/SHA256SUMS_MOTOR.txt
+            motor/MANIFIESTO_COMPACTO_SHA256.json
+            motor/UNIFICACION_SHA256_MANIFEST.json
+          retention-days: 1
+          if-no-files-found: error
       - name: Record source hashes
         run: sha256sum motor/correr_estandar.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py
