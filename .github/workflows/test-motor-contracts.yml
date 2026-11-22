@@ -1,4 +1,5 @@
 name: Motor runner contract tests
+# Z90 gate verification: active branch only, contents: read; no runner/custody actions
 
 on:
   push:
