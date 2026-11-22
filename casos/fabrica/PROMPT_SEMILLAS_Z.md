@@ -47,11 +47,11 @@ Cada sujeto puede incluir `pistas_llm`: lista de `{"token":"...","family":"<fami
 
 ## Comando de fábrica
 
-`python3 casos/fabrica/fabrica.py preparar-z semillas_lote_X.py destinos_lote_X.py`
+**NO EJECUTAR desde el preparador:** `fabrica.py preparar-z`
 
-Este comando recibe ambos archivos; por ello solo puede ejecutarse en un entorno controlado que no revele destinos al preparador. No ejecutar `correr` desde el entorno del preparador: el runner actual abre desenlaces y la separación debe conservarse hasta que exista una ruta de ejecución sin unblinding.
+`preparar-z` carga `SEMILLAS_Z` y `DESTINOS` en el mismo proceso y escribe `entrada.json`, `desenlace_sellado.json` y `destino_sellado.json`. No existe una ruta entry-only real. El preparador entrega solo `semillas_lote_X.py`; el custodio independiente prepara y sella destinos fuera del entorno del preparador. No invocar `preparar-z`, `preparar` ni `correr` desde el entorno del preparador.
 
-**Límite de implementación:** la gate actual valida reglas temporales/evidenciales R1–R7, pero aún no calcula Z90 desde nacimiento/muerte ni comprueba las ventanas acumulativas. El prompt no sustituye esa validación de código. No declarar un lote Z90 válido hasta que la gate y sus pruebas cubran esas reglas.
+**Estado de implementación al 2026-11-21:** `motor/calibracion/gate_z90.py` ya calcula Z90 desde nacimiento/muerte y valida `window_start` desde nacimiento, cierres crecientes, último cierre = Z90 y evidencia por corte. La integración en `motor/correr_estandar.py` sigue en PR #8 (OPEN/NOT MERGED; `mergeable_state=dirty`). La gate no demuestra independencia humana del custodio ni acumulación semántica. No declarar lote estándar ejecutable hasta verificar el cableado y la custodia.
 
 ## Campos Z90 obligatorios en cada corte
 
