@@ -122,3 +122,17 @@ No se disparó ni modificó ningún workflow; no se tocaron permisos, secretos, 
 - **CI cableado:** .github/workflows/test-motor-contracts.yml incluye el test nuevo y se ejecuta en pushes a alterno/cameo-pesos. Run [#45002771468](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45002771468): **60 passed in 0.86s**, job runner-contract SUCCESS. El run previo #45002766038 probó la integración sin el test nuevo (53 passed); el run #45002771468 es la evidencia que sí incluye las siete pruebas nuevas.
 - Commits: runner bb6a31d9a77d43ac106f77927f9347b8bbadee7d; pruebas 1d878000c791eb108b4175c8471c5b3b3114caf6; workflow 658f3f27a61f70e16d95de916d23e3af93b5aae2. Lecturas de vuelta confirmadas.
 - **Estado de alcance:** PR #8 sigue OPEN / NOT MERGED / mergeable=false; no se fusionó ni se modificó su rama. El runner activo ya tiene el cableado y CI verde, pero esto no crea cohorte independiente, no acredita custodia y no autoriza F007. No se ejecutó el motor con casos reales, no se incrementó n y no se tocaron Engine V5, patterns 244, candados, main ni custodias.
+
+
+## Auditoría de workflows con escritura a main — 2026-11-22
+
+Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó ningún workflow y no se modificó main.** Riesgos confirmados en el contenido:
+
+- .github/workflows/auditar-corridas-actions.yml: schedule cada hora y workflow_run; permissions contents:write; checkout explícito de main; hace git push origin HEAD:main cuando cambia el snapshot.
+- .github/workflows/fabrica-lote-diario.yml: workflow_dispatch; contents:write; por defecto ejecuta preparar-z (carga semillas y destinos juntos) y luego correr; hace push directo a main. Está expresamente fuera de uso bajo el contrato vigente.
+- .github/workflows/fabrica-real-traza.yml: workflow_dispatch y push en main; contents:write; regenera manifiestos y los empuja a main; además ejecuta un caso F006 sellado y puede modificar resultados.
+- .github/workflows/update-mortality-wpp.yml: workflow_dispatch y push en main; contents:write; puede descargar y escribir datos WPP en main.
+- .github/workflows/chatgpt-startup-contract.yml y traza-campo-244.yml también se activan por push a main, pero la lectura de sus triggers no muestra escritura automática a main en el fragmento revisado.
+- .github/workflows/test-motor-contracts.yml ejecuta pruebas en main y alterno/cameo-pesos; es el CI de validación, no un workflow de producción.
+
+**Decisión operativa:** mantenerlos sin ejecutar. La rama activa no debe usar fabrica-lote-diario, fabrica-real-traza, auditar-corridas-actions ni update-mortality-wpp como atajos. La corrección estructural requiere cambiar la política de escritura de esos workflows en main, pero main está en modo solo lectura y no se alterará desde esta operación. La integración Z90 y sus pruebas sí permanecen en la rama activa, con CI de contratos ya verificado en run #45002771468.
