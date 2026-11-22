@@ -31,7 +31,7 @@ PROTOCOLO TEMPORAL BIOGRÁFICO (autoridad: motor/PROTOCOLO_BIOGRAFICO_Z90.md)
 - Pregunta viva: modo_z=vivo; z_trabajo y z90_date deben coincidir con la fecha actual; no se inventa fecha de muerte.
 - Cortes acumulativos y variables: el primero empieza en nacimiento; el último termina exactamente en Z90. No hay número fijo. Cada corte registra motivo (cambio de rol, crisis, decisión irreversible, cambio de vector o saturación). Las ventanas posteriores siguen acumulando desde el nacimiento.
 - La evidencia de cada corte debe ser conocida a su fecha de cierre: claim_date <= cuts[i].date; para fuente primaria, source_date <= cuts[i].date. Nada posterior al cierre del corte puede entrar.
-- La gate actual todavía no calcula Z90 ni valida nacimiento/muerte y ventanas acumulativas; no afirmar cumplimiento completo hasta que código y pruebas lo hagan.
+- `motor/calibracion/gate_z90.py` ya implementa y prueba el cálculo Z90 desde nacimiento/muerte, `window_start` acumulativo desde nacimiento, cierres crecientes, último corte = Z90 y límites de evidencia por corte. La integración en `motor/correr_estandar.py` permanece en PR #8 (OPEN/NOT MERGED); `_validate_case` del motor UNICO solo rechaza fechas posteriores a `z90_date` y no sustituye la gate completa. No declarar el flujo biográfico estándar ejecutable hasta verificar el cableado y la custodia independiente.
 
 Reglas del LLM al tokenizar:
 - solo tokens del 244 o de familias laterales (Tucídides, etc.)
