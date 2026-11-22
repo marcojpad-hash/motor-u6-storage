@@ -62,3 +62,11 @@ El filtro 017 (`capa_llm/filtro_entrada_dirigida_017.py`) corre en modo
 PASO C — cuando exista el futuro
 python3 correr_estandar.py RESULT_X.json --t1 futuro.json
 No reescribe H. Solo HIT/MISS.
+
+### Contrato computable Z90 (biografía cerrada)
+
+Además de los campos anteriores, cada entrada histórica debe incluir `fecha_nacimiento`, `fecha_muerte`, `z_trabajo` y `z90_date`, todos exactos `YYYY-MM-DD`. La compuerta calcula Z90 como nacimiento + `(días_entre_nacimiento_y_muerte * 9) // 10`; ambos campos Z deben coincidir con el resultado.
+
+Cada elemento de `cuts` debe incluir `window_start` igual a `fecha_nacimiento` y `date` como fecha de cierre exacta. Los cierres deben estar ordenados estrictamente y el último debe terminar exactamente en Z90. Las ventanas posteriores siguen comenzando en el nacimiento; no son ventanas incrementales.
+
+La fecha de cada afirmación debe ser <= fecha de cierre de su corte. Para fuentes primarias, `source_date` también debe ser <= ese cierre. La compuerta no prueba por sí sola la independencia real del custodio ni la acumulación semántica del contenido.

@@ -61,3 +61,12 @@ Este es el precedente operativo concreto, no el Churchill diagnóstico de un sol
 La regla central: no predecimos conociendo el desenlace. Construimos diez, o los cortes que correspondan, ventanas históricas progresivas y hacemos que el motor trabaje sin acceso al futuro.
 
 Fixture del precedente Mozart: casos/precedentes/MOZART_10_CORTES/INPUT_FROZEN.json
+
+## Implementación de la compuerta Z90 (2026-11-21)
+
+- En biografía cerrada, las fechas `fecha_nacimiento` y `fecha_muerte` son exactas `YYYY-MM-DD`.
+- Se calcula `Z90 = nacimiento + floor(0.9 × (muerte − nacimiento en días))`. Se truncan fracciones de día para no rebasar el 90 %. El caso Mozart (1756-01-27 a 1791-12-05) produce 1788-05-04.
+- `z_trabajo` y `z90_date` deben coincidir exactamente con ese resultado.
+- Cada corte usa `date` como fecha de cierre y `window_start` como inicio de ventana. En todos los cortes, `window_start` debe ser la fecha de nacimiento; los cierres deben crecer estrictamente y el último debe ser exactamente Z90.
+- La evidencia de cada corte debe respetar su propio cierre: `claim_date <= cuts[i].date`; para fuentes primarias también `source_date <= cuts[i].date`.
+- La compuerta valida estructura y fechas, no demuestra independencia humana del custodio ni que el contenido de los vectores sea semánticamente acumulativo. Eso sigue requiriendo custodia independiente y revisión externa.

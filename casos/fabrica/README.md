@@ -45,3 +45,9 @@ Además de H1, set y apuesta temática, cada corrida trae `apuesta_destino_perso
 - El `preparar` viejo queda bloqueado (código 7) salvo `FABRICA_PERMITIR_SIN_GATE=1`, solo para lotes ya sellados como F001.
 - La regla que se califique se congela con su sha256 ANTES de abrir destinos, y conviene probarla en sujetos que quien la diseñó no ha visto.
 - Cómo escribir semillas: `PROMPT_SEMILLAS_Z.md`.
+
+## Revalidación Z90 — 2026-11-21
+
+`motor/calibracion/gate_z90.py` ahora contiene la revisión `Z90_BIRTH_DEATH_WINDOWS_V1_20261121`: calcula Z90 desde nacimiento/muerte, exige `z_trabajo = z90_date = Z90`, valida `window_start` desde nacimiento en todos los cortes, cierres crecientes y último cierre en Z90. También compara `claim_date` y la fecha de fuente primaria con el cierre individual.
+
+Esto no resuelve la separación de funciones: `preparar-z` continúa bloqueado porque importa entradas y destinos en el mismo proceso; tampoco convierte F007 en cohorte independiente ni integra automáticamente `correr_estandar`. No ejecutar ni contar corridas hasta que exista ruta entry-only y custodia independiente.

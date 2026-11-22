@@ -52,3 +52,9 @@ Cada sujeto puede incluir `pistas_llm`: lista de `{"token":"...","family":"<fami
 Este comando recibe ambos archivos; por ello solo puede ejecutarse en un entorno controlado que no revele destinos al preparador. No ejecutar `correr` desde el entorno del preparador: el runner actual abre desenlaces y la separación debe conservarse hasta que exista una ruta de ejecución sin unblinding.
 
 **Límite de implementación:** la gate actual valida reglas temporales/evidenciales R1–R7, pero aún no calcula Z90 desde nacimiento/muerte ni comprueba las ventanas acumulativas. El prompt no sustituye esa validación de código. No declarar un lote Z90 válido hasta que la gate y sus pruebas cubran esas reglas.
+
+## Campos Z90 obligatorios en cada corte
+
+Para biografías cerradas, entrega `fecha_nacimiento` y `fecha_muerte` exactas. Calcula Z90 como nacimiento + `(días_entre_nacimiento_y_muerte * 9) // 10`; fija `z_trabajo` y `z90_date` exactamente en esa fecha.
+
+En cada objeto de `cuts`, incluye `window_start` igual a la fecha de nacimiento y `date` como fecha de cierre exacta. Todos los cortes son acumulativos desde el nacimiento, sus cierres son estrictamente crecientes y el último cierra exactamente en Z90. No uses fechas parciales en cortes biográficos cerrados.
