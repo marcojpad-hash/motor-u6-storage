@@ -4,6 +4,11 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 44967844378 | Motor runner contract tests | push | 2026-11-21T18:41:24-06:00 | 2026-11-21T18:41:24-06:00 | 2026-11-21T18:41:40-06:00 | 16.0 | success |
+| 44965583777 | Motor runner contract tests | push | 2026-11-21T18:13:40-06:00 | 2026-11-21T18:13:40-06:00 | 2026-11-21T18:14:02-06:00 | 22.0 | success |
+| 44965548371 | Motor runner contract tests | push | 2026-11-21T18:13:11-06:00 | 2026-11-21T18:13:11-06:00 | 2026-11-21T18:13:26-06:00 | 15.0 | success |
+| 44965447828 | Motor runner contract tests | push | 2026-11-21T18:11:58-06:00 | 2026-11-21T18:11:58-06:00 | 2026-11-21T18:12:14-06:00 | 16.0 | success |
+| 44961081920 | Auditoría de corridas Motor U6 | schedule | 2026-11-21T17:17:48-06:00 | 2026-11-21T17:17:48-06:00 | 2026-11-21T17:18:54-06:00 | 66.0 | success |
 | 44930761392 | Auditoría de corridas Motor U6 | schedule | 2026-11-21T11:34:11-06:00 | 2026-11-21T11:34:11-06:00 | 2026-11-21T11:35:29-06:00 | 78.0 | success |
 | 44901934207 | pip in /. - Update #1720446970 | dynamic | 2026-11-21T06:02:34-06:00 | 2026-11-21T06:02:34-06:00 | 2026-11-21T06:03:23-06:00 | 49.0 | success |
 | 44901934140 | github_actions in /. - Update #1720446965 | dynamic | 2026-11-21T06:02:34-06:00 | 2026-11-21T06:02:34-06:00 | 2026-11-21T06:03:14-06:00 | 40.0 | success |
@@ -66,11 +71,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 43771441374 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T16:49:45-06:00 | 2026-11-15T16:49:45-06:00 | 2026-11-15T16:51:17-06:00 | 92.0 | success |
 | 43742660696 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T11:42:57-06:00 | 2026-11-15T11:42:57-06:00 | 2026-11-15T11:44:18-06:00 | 81.0 | success |
 | 43706419486 | Auditoría de corridas Motor U6 | schedule | 2026-11-15T04:55:40-06:00 | 2026-11-15T04:55:40-06:00 | 2026-11-15T04:57:26-06:00 | 106.0 | success |
-| 43668869715 | Auditoría de corridas Motor U6 | schedule | 2026-11-14T20:40:22-06:00 | 2026-11-14T20:40:22-06:00 | 2026-11-14T20:41:47-06:00 | 85.0 | success |
-| 43663686310 | Motor runner contract tests | pull_request | 2026-11-14T19:33:59-06:00 | 2026-11-14T19:33:59-06:00 | 2026-11-14T19:34:14-06:00 | 15.0 | success |
-| 43662247452 | Motor runner contract tests | pull_request | 2026-11-14T19:15:43-06:00 | 2026-11-14T19:15:43-06:00 | 2026-11-14T19:16:00-06:00 | 17.0 | success |
-| 43661143857 | Motor runner contract tests | pull_request | 2026-11-14T19:02:26-06:00 | 2026-11-14T19:02:26-06:00 | 2026-11-14T19:02:45-06:00 | 19.0 | success |
-| 43654269273 | Motor runner contract tests | pull_request | 2026-11-14T17:38:46-06:00 | 2026-11-14T17:38:46-06:00 | 2026-11-14T17:39:05-06:00 | 19.0 | success |
 
 ## Fallos y cancelaciones
 
