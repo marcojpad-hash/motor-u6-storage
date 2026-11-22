@@ -43,14 +43,14 @@ La orden permanente #465 continúa **PENDIENTE** en su objetivo principal: no se
 
 - **Implementación propuesta en PR:** [PR #8](https://github.com/marcojpad-hash/motor-u6-storage/pull/8), rama `fix/issue-64-guardian-z90-correr-estandar`, head `5eda368d85851a42f6f82f069c56c93983c60da2`, destino `alterno/cameo-pesos`.
 - **Evidencia:** check `runner-contract` SUCCESS, run [#43399816075](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/43399816075); ocho pruebas específicas declaradas en `motor/tests/test_guardian_z90_correr_estandar.py`.
-- **Estado real:** PR abierto, sin merge; por tanto, el cableado no está integrado en esta rama. Además, el PR invoca la gate actual, que todavía no calcula Z90 desde nacimiento/muerte. Clasificación: **IMPLEMENTADO_EN_PR_NO_INTEGRADO; Z90_FUNCIONAL_INCOMPLETO**.
+- **Estado real al 2026-11-21:** PR abierto, sin merge; GitHub marca `mergeable=false` (`mergeable_state=dirty`), head `5eda368d85851a42f6f82f069c56c93983c60da2`, base `be98ec8645364b1330104de996fbd6339033547c` anterior al HEAD activo. El PR contiene `_guardian_z90` en `correr_estandar.py`; esta rama activa aún no lo invoca. La gate base ya calcula Z90 y valida ventanas/fechas. Clasificación: **GATE_Z90_IMPLEMENTADA_Y_PROBADA; RUNNER_CABLEADO_EN_PR_ABIERTO_CONFLICTIVO; NO_EJECUTABLE_ESTÁNDAR**.
 
 ### Issue #49 — cortes variables y Z90
 
 - El protocolo normativo ya existe en `motor/PROTOCOLO_BIOGRAFICO_Z90.md`.
 - Se corrigieron en esta rama `casos/fabrica/README.md`, `casos/fabrica/PROMPT_SEMILLAS_Z.md`, `motor/CONTRATO_ENTRADA_LLM.txt`, `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md` y el docstring de `motor/calibracion/gate_z90.py`.
 - Se eliminó la regla documental de tres cortes fijos; se explicitó Z90, ventanas acumulativas desde nacimiento, primer corte en nacimiento, último en Z90, número variable y separación preparador/custodio.
-- **Brecha pendiente:** la lógica de `validar_entrada()` aún no calcula Z90 ni verifica nacimiento/muerte, ventanas acumulativas o extremos de cortes. El docstring ahora lo declara expresamente. No se ejecutó el motor ni se afirmó cumplimiento de gate.
+- **Brecha pendiente actual:** la gate implementa cálculo y validación temporal/evidencial; falta integrar y validar el guardián en el runner estándar (PR #8) y resolver la separación de funciones/custodia. No se ejecutó el motor.
 
 Commits documentales: `c9df16250741348a1ce4bdee0814164b97d98ead`, `c27ae38f2a4b003d3ff95b0a306c579de6778cba`, `45e4abd88882a96c36439990f8ef3b80ee93681a`, `5f52acbda3553be89b01d12ee99ad86116cffb30`, `4d2ea0a06437262b9e127f6bbbe4acb1892d9484`.
 
@@ -68,13 +68,13 @@ La orden permanente #465 sigue **PENDIENTE** en su objetivo de casos nuevos e in
 
 - Run [#44739754266](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44739754266): el job `auditar` (job id `136300124552`) y todos sus pasos terminaron `completed/success`. Es una auditoría de Actions, **no una corrida del motor**.
 - `avances/auditoria_corridas/ULTIMO_ESTADO.json` en main (blob `922087c6eab71716312434bae65b8e940b18781b`) conserva 87 registros y su más reciente es #44666733628 (2026-11-20 03:17:39Z); no incluye #44739754266. El snapshot está atrasado respecto del run observado. No se interpreta como ausencia de ejecución ni se modificó main.
-- PR #8 sigue `OPEN / NOT MERGED`. El check `runner-contract` documentado como SUCCESS no demuestra la implementación completa de Z90; la gate invocada sigue sin calcularlo.
+- PR #8 sigue `OPEN / NOT MERGED`, `mergeable=false`, `mergeable_state=dirty`; el check `runner-contract` SUCCESS corresponde al head del 13-nov y no valida el HEAD activo ni la nueva gate por sí solo. El runner estándar de esta rama no tiene el guardián.
 
 ### Revalidación F007 y separación de funciones
 
 - Semillas F007 (blob `850297da7a15af430ee4a7065e8579bd021b0174`): 8 sujetos, 8 cortes C1 y 8 cortes C2 (dos por sujeto); aparecen 8 referencias a Wikipedia. No constituye cohorte primaria e independiente.
 - `casos/fabrica/fabrica.py` (blob `f956f4b3daa4498f790d7efe2d6623646f3589aa`), `preparar_z`: importa `SEMILLAS_Z` y `DESTINOS` en el mismo proceso; después escribe `entrada.json`, `desenlace_sellado.json` y, si el destino lo contiene, `destino_sellado.json`. No es ruta entry-only. `correr` abre los desenlaces después del compromiso. No invocar ninguno de esos comandos para F007.
-- `motor/calibracion/gate_z90.py` (blob `604d137be95a71a587a864158a0c076fab0c75f5`): `validar_entrada()` revisa formato de Z, fechas de corte y evidencia; no calcula Z90 desde nacimiento/muerte ni valida ventanas acumulativas, primer corte en nacimiento y último exactamente en Z90.
+- `motor/calibracion/gate_z90.py` (blob `9638f4c705c12593d38de749c68f0813cbeb405e`, revisión `Z90_BIRTH_DEATH_WINDOWS_V1_20261121`): calcula Z90 desde nacimiento/muerte; valida `z_trabajo=z90_date=Z90`, `window_start` desde nacimiento, cierres crecientes, último cierre = Z90 y evidencia no posterior a cada corte. No prueba custodia humana ni integración del runner.
 - Sin ruta entry-only, runner válido, fuentes primarias y custodia independiente no se prepara ni ejecuta una cohorte. C01–C20 y sus custodias permanecen intactos.
 
 ### Riesgo de autoridad en workflows de main (solo lectura)
