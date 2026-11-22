@@ -25,8 +25,8 @@ existente `motor/calibracion/arnes_calibracion.py`. No cambia el protocolo, no t
 - Casos que el motor pausa (exit 6, TORTUGAS) quedan como NO_SELLADO y no cuentan.
 
 ## Uso diario
-Lo único que no se automatiza sin riesgo de inventar es **escribir las semillas**: cada sujeto necesita hechos con fuente.
-El preparador redacta únicamente el archivo de semillas con 5–10 sujetos variados y no ve destinos. El custodio independiente crea y sella los destinos en un entorno separado. El runner debe producir RESULT/RECIBO/CEB/manifiesto ligados al input; el unblinding y la evaluación corresponden al custodio después de congelar la salida. La implementación actual de `correr` aún abre destinos, por lo que el preparador no debe ejecutarla. No contar casos como independientes sin fuentes primarias, Z90 válido, custodia separada y recibos.
+**Estado actual:** no existe una ruta entry-only segura. La única salida permitida al preparador es redactar y verificar el archivo de semillas; no debe materializar `entrada.json` con `preparar` o `preparar-z`, ni ejecutar `correr`. Cada sujeto necesita hechos con fuente primaria apta.
+El custodio independiente debe crear y sellar los destinos fuera del entorno del preparador. La ejecución y evaluación requieren un runner que produzca RESULT/RECIBO/CEB/manifiesto ligados al input y no abra destinos antes de congelar la salida. La implementación actual de `correr` abre desenlaces, por lo que solo el custodio puede realizar el unblinding. No contar casos como independientes sin fuentes primarias, Z90 válido, custodia separada y recibos.
 
 ## Apuesta de destino personal (PATCH 022)
 Además de H1, set y apuesta temática, cada corrida trae `apuesta_destino_personal`: auge | meseta | caida | ruptura.
