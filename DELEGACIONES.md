@@ -104,3 +104,11 @@ No se disparó ni modificó ningún workflow; no se tocaron permisos, secretos, 
 - El workflow de main declara `permissions: contents: write`, hace checkout de `main` y ejecuta `git push origin HEAD:main`. Contradice la autoridad `main = SOLO_CONSULTA`.
 - El snapshot de esa ejecución informa 67 corridas y 1 fallo, pero `avances/auditoria_corridas/ULTIMO_ESTADO.md` conserva como última corrida la `44930761392`: el job consulta solo runs `completed`, por lo que se excluye a sí mismo mientras está `in_progress`. El registro queda desfasado inmediatamente después de cada autoauditoría.
 - **NO TOCADO:** no se revirtió el commit, no se cambió el workflow de main, no se cambiaron permisos y no se ejecutó el motor. La corrección de ese workflow requiere autorización expresa para modificar main o deshabilitarlo.
+
+
+## Verificación posterior a la reconciliación documental — 2026-11-21
+
+- Se corrigieron las afirmaciones obsoletas sobre Z90 en `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md` y `motor/CONTRATO_ENTRADA_LLM.txt`: la gate de fábrica ya implementa el cálculo y la validación temporal; el cableado en `motor/correr_estandar.py` sigue pendiente en PR #8 (OPEN/NOT MERGED).
+- Registro de cambios: `avances/2026-11-21_ChatGPT_aclaracion_gate_z90.md`, commit `cd84673d06cc9b810aa7c95e1673462ed3af64c2`.
+- CI posterior a las dos correcciones documentales: run [#44967844378](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44967844378), commit probado `16db5d6701dd1484b6003557a4c248d1ffc58916`, **53 passed in 0.33s**, 0 skipped, 0 failed. Manifiestos regenerados en modo read-only: 367 archivos de unificación, 368 compactos y 369 líneas SHA256. Artifact `motor-u6-manifests-44967844378`, digest `sha256:d17fdf379501f4c637bb20aeb147ce1512cf15cb26d5be4d1125fbc210351241`, vence `2026-11-23T00:41:37Z`.
+- Esta prueba acredita contratos y manifiestos, no una corrida del motor ni independencia de F007. No se ejecutó el motor, no se abrió custodia, no se incrementó n y no se modificó `main`.
