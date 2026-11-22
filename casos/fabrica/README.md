@@ -8,9 +8,7 @@ existente `motor/calibracion/arnes_calibracion.py`. No cambia el protocolo, no t
 
 ## Flujo
 1. **Semillas** (`semillas_lote_XXXX.py`): por sujeto real, cortes P/A/C acumulativos y variables según la biografía; no existe un número universal. En biografías cerradas, el primer corte empieza en el nacimiento y el último termina exactamente en Z90; en preguntas vivas, Z es la fecha actual. Añadir cortes ante cambios de rol, crisis, decisiones irreversibles o cambios de dirección del vector; detenerse cuando el siguiente corte no cambie la trayectoria por debajo del umbral de saturación registrado. Cada corte debe declarar fecha, motivo y evidencia con fuentes, usando solo información conocida hasta su cierre. Tokens del vocabulario de los 244 y pesos 0,60–0,84. Las familias/destino quedan separados y sellados por custodio independiente.
-2. `python3 casos/fabrica/fabrica.py preparar casos/fabrica/semillas_lote_XXXX.py`
-   → `cola/<ID>/entrada.json` (sin desenlace) y `cola/<ID>/desenlace_sellado.json` (separado). Rechaza tokens fuera de vocabulario,
-   pesos fuera de contrato, cortes posteriores al freeze, campos de desenlace y entradas duplicadas.
+2. **Preparador: no ejecutar la fábrica.** `fabrica.py preparar` es legado: recibe familias dentro del módulo de semillas y escribe `desenlace_sellado.json`; no es una ruta entry-only. `preparar-z` importa `SEMILLAS_Z` y `DESTINOS` en el mismo proceso y escribe `entrada.json`, `desenlace_sellado.json` y, si existe, `destino_sellado.json`. El preparador solo entrega `semillas_lote_XXXX.py`. No invocar `preparar`, `preparar-z` ni `correr` desde el entorno del preparador hasta que exista una ruta entry-only real y custodia independiente verificada.
 3. `python3 casos/fabrica/fabrica.py correr --lote XXXX --n 5`
    - verifica Engine `665c39a2…` y patrones `d827dcc3…`;
    - escribe `lotes/XXXX_COMPROMISO.json` con el sha256 de cada entrada y cada desenlace **antes** de correr;
@@ -39,8 +37,8 @@ Además de H1, set y apuesta temática, cada corrida trae `apuesta_destino_perso
 - En las semillas de lotes nuevos, fija el destino ANTES de correr.
 
 ## Compuerta Z_trabajo + preparación ciega (obligatoria para lotes nuevos)
-- Lotes nuevos: `fabrica.py preparar-z semillas.py destinos.py`. Son dos archivos separados: el preparador no conoce el final; el custodio guarda destino y lista negra.
-- Protocolo biográfico: `motor/PROTOCOLO_BIOGRAFICO_Z90.md`. Biografía cerrada: Z_trabajo = Z90 (90 % del intervalo nacimiento→muerte); ventanas acumulativas desde nacimiento; primer corte en nacimiento y último exactamente en Z90. Pregunta viva: Z = hoy. No fijar número de cortes. La gate actual `gate_z90.py` valida reglas temporales/evidenciales R1–R7, pero todavía no calcula Z90 ni comprueba nacimiento, muerte y acumulación; no declarar esa compuerta completa hasta cerrar ese código y sus pruebas.
+- Lotes nuevos: el preparador entrega solo `semillas_lote_X.py`; el custodio independiente crea y sella `destinos_lote_X.py` fuera del entorno del preparador. No ejecutar `preparar-z` desde el preparador: la implementación actual importa ambos módulos en el mismo proceso y escribe entrada, desenlace y destino. No existe ruta entry-only.
+- Protocolo biográfico: `motor/PROTOCOLO_BIOGRAFICO_Z90.md`. Biografía cerrada: Z_trabajo = Z90 (90 % del intervalo nacimiento→muerte); ventanas acumulativas desde nacimiento; primer corte en nacimiento y último exactamente en Z90. Pregunta viva: Z = hoy. No fijar número de cortes. La gate `motor/calibracion/gate_z90.py` ya calcula Z90 y valida ventanas, cierres y evidencia por corte. La integración en `motor/correr_estandar.py` sigue en PR #8 (OPEN/NOT MERGED), con `mergeable_state=dirty`; no declarar el runner estándar habilitado hasta verificar el cableado y la custodia independiente.
 - Una sola violación rechaza el lote entero. `correr` vuelve a pasar la compuerta antes del motor; el arnés también la aplica si la entrada trae `gate_z`.
 - El `preparar` viejo queda bloqueado (código 7) salvo `FABRICA_PERMITIR_SIN_GATE=1`, solo para lotes ya sellados como F001.
 - La regla que se califique se congela con su sha256 ANTES de abrir destinos, y conviene probarla en sujetos que quien la diseñó no ha visto.
