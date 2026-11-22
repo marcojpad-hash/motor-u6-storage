@@ -41,3 +41,10 @@ Los 18 módulos siguientes están cableados en la ruta real de corrida y probado
 ## Evidencia de por qué
 - `informes/2026-11-11_cameo-alterno.md` (rama): Napoleón con CAMEO.
 - `casos/corridas_alterno/CHURCHILL_CAMEO_ALTERNO/` (rama, commit 428ceee): Churchill, misma entrada que 2026-10-24.
+
+ 
+## Addendum 2026-11-22 — guardián Z90 en runner estándar
+
+Además de la validación temporal interna de UNICO, motor/correr_estandar.py ejecuta _guardian_z90(case) después de normalizar/filtros y antes de llamar al motor. Se activa cuando la entrada declara gate_z, z_trabajo + modo_z o se establece FABRICA_GATE_Z90=1. La gate motor/calibracion/gate_z90.py valida Z90 histórico calculado desde nacimiento/muerte, z_trabajo=z90_date, ventanas acumulativas desde nacimiento, cierres crecientes, último corte en Z90 y evidencia temporal. Si hay errores, el runner bloquea antes del motor y escribe RESULT + recibo con BLOQUEADO_GUARDIAN_Z90 (exit 8); si la disciplina no está declarada, deja NO_CONFIGURADO visible y conserva la ruta previa.
+
+La integración está en alterno/cameo-pesos (runner commit bb6a31d9a77d43ac106f77927f9347b8bbadee7d). Las siete pruebas específicas se ejecutaron junto con el contrato existente: Actions run [#45002771468](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45002771468), **60 passed**, job runner-contract SUCCESS. Esta gate no demuestra custodia independiente ni convierte F007 en cohorte válida. La ejecución del motor real sigue separada de la prueba de bloqueo y no se realizó en esta actualización.
