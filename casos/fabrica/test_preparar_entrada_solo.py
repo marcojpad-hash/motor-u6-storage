@@ -62,8 +62,6 @@ def _case(case_id: str | None = None, person: str | None = None) -> dict:
             "vio_destino": False,
         },
         "source_notes": "Fixture sintético de prueba; no aporta evidencia experimental.",
-        "caldero_llm_neighbor_hints": [],
-        "caldero_llm_neighbor_hints_audit": {"status": "NO_PROVIDED"},
         "cuts": [
             {
                 "cut_id": "C1",
