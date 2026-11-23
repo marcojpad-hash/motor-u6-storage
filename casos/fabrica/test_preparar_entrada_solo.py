@@ -61,7 +61,7 @@ def _case(case_id: str | None = None, person: str | None = None) -> dict:
             "custodio_destino": "CUSTODIO_TEST",
             "vio_destino": False,
         },
-        "source_notes": ["Fixture sintético de prueba; no aporta evidencia experimental."],
+        "source_notes": "Fixture sintético de prueba; no aporta evidencia experimental.",
         "caldero_llm_neighbor_hints": [],
         "caldero_llm_neighbor_hints_audit": {"status": "NO_PROVIDED"},
         "cuts": [
@@ -204,10 +204,12 @@ def test_hypothesis_fields_are_rejected_before_write(tmp_path: Path):
 def test_entry_only_does_not_import_destination_module(tmp_path: Path):
     import sys
 
+    before = {name for name in sys.modules if "destinos_lote" in name.lower()}
     case = _case()
     seed = _write_seed(tmp_path / "seeds.json", [case])
     out = tmp_path / "entradas_solo"
     code, messages = prep.preparar_entrada_solo(seed, out)
 
     assert code == 0, messages
-    assert not any("destinos_lote" in name.lower() for name in sys.modules)
+    after = {name for name in sys.modules if "destinos_lote" in name.lower()}
+    assert after == before
