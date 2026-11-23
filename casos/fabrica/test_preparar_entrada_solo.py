@@ -22,7 +22,7 @@ def _case(case_id: str | None = None, person: str | None = None) -> dict:
     token = sorted(tokens)[0]
     birth = "2000-01-01"
     death = "2020-01-01"
-    z90 = gate.calcular_z90(date.fromisoformat(birth), date.fromisoformat(death)).isoformat()
+    z90 = gate.calcular_z90(birth, death).isoformat()
     person = person or f"TEST_SUBJECT_{uuid.uuid4().hex}"
     case_id = case_id or f"TEST_ENTRY_ONLY_{uuid.uuid4().hex}"
     evidence_1 = {
