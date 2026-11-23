@@ -62,6 +62,7 @@ on:
       - "motor/MORTALITY_AUDIT/MORTALITY_STATISTICS_SCHEMA_V1.json"
       - "motor/MORTALITY_AUDIT/mortality_statistics_template.csv"
       - ".github/workflows/test-motor-contracts.yml"
+      - "casos/fabrica/**"
   workflow_dispatch:
 
 permissions:
