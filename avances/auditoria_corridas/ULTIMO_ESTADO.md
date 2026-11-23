@@ -4,6 +4,23 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 45173282278 | Motor runner contract tests | push | 2026-11-23T06:19:59-06:00 | 2026-11-23T06:19:59-06:00 | 2026-11-23T06:20:29-06:00 | 30.0 | success |
+| 45172870551 | Motor runner contract tests | push | 2026-11-23T06:17:22-06:00 | 2026-11-23T06:17:22-06:00 | 2026-11-23T06:17:50-06:00 | 28.0 | success |
+| 45172749593 | Motor runner contract tests | push | 2026-11-23T06:16:35-06:00 | 2026-11-23T06:16:35-06:00 | 2026-11-23T06:16:52-06:00 | 17.0 | failure |
+| 45172689321 | Motor runner contract tests | push | 2026-11-23T06:16:12-06:00 | 2026-11-23T06:16:12-06:00 | 2026-11-23T06:16:29-06:00 | 17.0 | success |
+| 45123825860 | Motor runner contract tests | push | 2026-11-23T00:23:55-06:00 | 2026-11-23T00:23:55-06:00 | 2026-11-23T00:24:23-06:00 | 28.0 | success |
+| 45123761669 | Motor runner contract tests | push | 2026-11-23T00:23:21-06:00 | 2026-11-23T00:23:21-06:00 | 2026-11-23T00:23:35-06:00 | 14.0 | failure |
+| 45123757908 | Motor runner contract tests | push | 2026-11-23T00:23:19-06:00 | 2026-11-23T00:23:19-06:00 | 2026-11-23T00:23:38-06:00 | 19.0 | failure |
+| 45123753216 | Motor runner contract tests | push | 2026-11-23T00:23:16-06:00 | 2026-11-23T00:23:16-06:00 | 2026-11-23T00:23:29-06:00 | 13.0 | failure |
+| 45123663361 | Motor runner contract tests | push | 2026-11-23T00:22:30-06:00 | 2026-11-23T00:22:30-06:00 | 2026-11-23T00:22:50-06:00 | 20.0 | failure |
+| 45123620695 | Motor runner contract tests | push | 2026-11-23T00:22:07-06:00 | 2026-11-23T00:22:07-06:00 | 2026-11-23T00:22:24-06:00 | 17.0 | failure |
+| 45123617489 | Motor runner contract tests | push | 2026-11-23T00:22:06-06:00 | 2026-11-23T00:22:06-06:00 | 2026-11-23T00:22:24-06:00 | 18.0 | failure |
+| 45123568437 | Motor runner contract tests | push | 2026-11-23T00:21:39-06:00 | 2026-11-23T00:21:39-06:00 | 2026-11-23T00:21:57-06:00 | 18.0 | failure |
+| 45123498266 | Motor runner contract tests | push | 2026-11-23T00:21:00-06:00 | 2026-11-23T00:21:00-06:00 | 2026-11-23T00:21:17-06:00 | 17.0 | failure |
+| 45123481911 | Motor runner contract tests | push | 2026-11-23T00:20:51-06:00 | 2026-11-23T00:20:51-06:00 | 2026-11-23T00:21:09-06:00 | 18.0 | failure |
+| 45122642054 | Motor runner contract tests | push | 2026-11-23T00:13:14-06:00 | 2026-11-23T00:13:14-06:00 | 2026-11-23T00:13:32-06:00 | 18.0 | success |
+| 45122639985 | Motor runner contract tests | push | 2026-11-23T00:13:12-06:00 | 2026-11-23T00:13:12-06:00 | 2026-11-23T00:13:30-06:00 | 18.0 | failure |
+| 45102065549 | Auditoría de corridas Motor U6 | schedule | 2026-11-22T20:46:02-06:00 | 2026-11-22T20:46:02-06:00 | 2026-11-22T20:46:59-06:00 | 57.0 | success |
 | 45073989011 | Auditoría de corridas Motor U6 | schedule | 2026-11-22T15:46:44-06:00 | 2026-11-22T15:46:44-06:00 | 2026-11-22T15:47:37-06:00 | 53.0 | success |
 | 45037573857 | Auditoría de corridas Motor U6 | schedule | 2026-11-22T09:18:33-06:00 | 2026-11-22T09:18:33-06:00 | 2026-11-22T09:19:34-06:00 | 61.0 | success |
 | 45002771468 | Motor runner contract tests | push | 2026-11-22T02:25:49-06:00 | 2026-11-22T02:25:49-06:00 | 2026-11-22T02:26:08-06:00 | 19.0 | success |
@@ -69,12 +86,20 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 44103126084 | Auditoría de corridas Motor U6 | schedule | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:28:06-06:00 | 100.0 | success |
 | 44017530422 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T22:29:27-06:00 | 2026-11-16T22:29:27-06:00 | 2026-11-16T22:30:55-06:00 | 88.0 | success |
 | 43966324640 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T16:03:52-06:00 | 2026-11-16T16:03:52-06:00 | 2026-11-16T16:05:40-06:00 | 108.0 | success |
-| 43857024022 | Auditoría de corridas Motor U6 | schedule | 2026-11-16T05:21:27-06:00 | 2026-11-16T05:21:27-06:00 | 2026-11-16T05:22:57-06:00 | 90.0 | success |
-| 43805672321 | Motor runner contract tests | pull_request | 2026-11-15T22:42:10-06:00 | 2026-11-15T22:42:10-06:00 | 2026-11-15T22:42:26-06:00 | 16.0 | success |
-| 43805646279 | Motor runner contract tests | pull_request | 2026-11-15T22:41:54-06:00 | 2026-11-15T22:41:54-06:00 | 2026-11-15T22:42:12-06:00 | 18.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 45172749593 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45172749593
+- Run 45123761669 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123761669
+- Run 45123757908 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123757908
+- Run 45123753216 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123753216
+- Run 45123663361 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123663361
+- Run 45123620695 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123620695
+- Run 45123617489 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123617489
+- Run 45123568437 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123568437
+- Run 45123498266 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123498266
+- Run 45123481911 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123481911
+- Run 45122639985 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45122639985
 - Run 44178359180 (Candado de entrega F003-F004): failure; jobs: validate=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44178359180
 
 ## Límites
