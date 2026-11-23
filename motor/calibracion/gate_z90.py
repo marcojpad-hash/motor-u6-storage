@@ -26,7 +26,7 @@ import re
 import unicodedata
 
 VERSION = "GATE_Z_TRABAJO_20261024"  # identificador compatible con recibos existentes
-IMPLEMENTATION_REVISION = "Z90_BIRTH_DEATH_WINDOWS_V1_20261121"
+IMPLEMENTATION_REVISION = "Z90_BIRTH_DEATH_WINDOWS_V2_20261123"
 _FECHA = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 _FECHA_EXACTA = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _ANIO = re.compile(r"(?<!\d)(1[0-9]{3}|20[0-9]{2})(?!\d)")
@@ -122,6 +122,15 @@ def _validar_estructura_biografica(e: dict, errs: list):
         return nacimiento, z90
 
     cierres = []
+    if cuts and isinstance(cuts[0], dict):
+        primer_corte = cuts[0]
+        fecha_primer_corte = _fecha_exacta(primer_corte.get("date") or primer_corte.get("fecha_corte"))
+        if fecha_primer_corte is not None and fecha_primer_corte != nacimiento:
+            identificador = primer_corte.get("id") or primer_corte.get("cut_id") or "corte[0]"
+            errs.append(
+                f"R8 primer corte {identificador}: debe terminar exactamente en nacimiento "
+                f"{nacimiento.isoformat()}, no {fecha_primer_corte.isoformat()}"
+            )
     for i, c in enumerate(cuts):
         if not isinstance(c, dict):
             errs.append(f"R8 corte[{i}] debe ser objeto")
@@ -226,8 +235,13 @@ def validar_entrada(e: dict, prohibidas=None) -> list:
                          (("oldid=" in url or "/revision" in url) and _FECHA.match(sn) and _peor(sn) <= cut_limit)
                     if not ok:
                         errs.append(f"R4 {t}: secundaria en modo vivo sin copia congelada <= fecha de cierre del corte (archive.org o permalink+snapshot_date)")
-                elif not ciega:
-                    errs.append(f"R4 {t}: secundaria en modo histórico exige preparación ciega (preparador != custodio, vio_destino=false)")
+                else:
+                    if _FECHA.match(sd) and _peor(sd) > cut_limit:
+                        errs.append(
+                            f"R4 {t}: secundaria fechada {sd} después del cierre del corte {d}"
+                        )
+                    if not ciega:
+                        errs.append(f"R4 {t}: secundaria en modo histórico exige preparación ciega (preparador != custodio, vio_destino=false)")
             else:
                 errs.append(f"R3 {t}: tipo_fuente debe ser primaria|secundaria")
 
