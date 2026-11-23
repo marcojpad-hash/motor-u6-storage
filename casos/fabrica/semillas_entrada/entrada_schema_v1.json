@@ -72,7 +72,7 @@
               "additionalProperties": true
             }
           },
-          "source_notes": {"type": "array", "items": {"type": "string"}},
+          "source_notes": {"type": "string"},
           "pistas_llm": {"type": "array", "items": {"type": "object"}}
         },
         "additionalProperties": true
