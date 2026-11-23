@@ -109,7 +109,8 @@ def test_entry_only_writes_input_and_hash_only(tmp_path: Path):
     assert (case_dir / "entrada.sha256").read_text(encoding="utf-8") == f"{digest}  entrada.json\n"
     written = json.loads(raw)
     assert written["case_id"] == case["case_id"]
-    assert written["gate_implementation_revision"] == prep._helpers()._gate().IMPLEMENTATION_REVISION
+    assert written["gate_z"] == prep._helpers()._gate().VERSION
+    assert written["z_work_date"] == written["z_trabajo"]
     assert not (case_dir / "desenlace_sellado.json").exists()
     assert not (case_dir / "destino_sellado.json").exists()
     assert "ENTRY_ONLY_STAGED" in messages[0]
@@ -170,3 +171,43 @@ def test_entry_only_api_has_no_destination_parameter():
     params = inspect.signature(prep.preparar_entrada_solo).parameters
     assert "destinos" not in params
     assert "destination" not in params
+
+def test_existing_output_root_accepts_new_case_without_overwriting(tmp_path: Path):
+    first = _case()
+    second = _case()
+    out = tmp_path / "entradas_solo"
+    seed_one = _write_seed(tmp_path / "first.json", [first])
+    seed_two = _write_seed(tmp_path / "second.json", [second])
+
+    code_one, messages_one = prep.preparar_entrada_solo(seed_one, out)
+    code_two, messages_two = prep.preparar_entrada_solo(seed_two, out)
+
+    assert code_one == 0, messages_one
+    assert code_two == 0, messages_two
+    assert (out / first["case_id"] / "entrada.json").is_file()
+    assert (out / second["case_id"] / "entrada.json").is_file()
+
+
+def test_hypothesis_fields_are_rejected_before_write(tmp_path: Path):
+    case = _case()
+    case["H1"] = "NO_DEBE_EXISTIR_ANTES_DE_Z"
+    seed = _write_seed(tmp_path / "seeds.json", [case])
+    out = tmp_path / "entradas_solo"
+
+    code, messages = prep.preparar_entrada_solo(seed, out)
+
+    assert code == 1
+    assert any("campos de destino/desenlace" in message for message in messages)
+    assert not out.exists()
+
+
+def test_entry_only_does_not_import_destination_module(tmp_path: Path):
+    import sys
+
+    case = _case()
+    seed = _write_seed(tmp_path / "seeds.json", [case])
+    out = tmp_path / "entradas_solo"
+    code, messages = prep.preparar_entrada_solo(seed, out)
+
+    assert code == 0, messages
+    assert not any("destinos_lote" in name.lower() for name in sys.modules)
