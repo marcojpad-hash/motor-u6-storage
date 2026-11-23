@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "U6 entry-only input batch",
+  "type": "object",
+  "required": ["cases"],
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "case_id", "question", "person", "tipo_sujeto", "freeze",
+          "modo_z", "fecha_nacimiento", "fecha_muerte", "z_trabajo",
+          "z90_date", "random_seed", "preparacion_ciega", "cuts"
+        ],
+        "properties": {
+          "case_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"},
+          "question": {"type": "string", "minLength": 1},
+          "person": {"type": "string", "minLength": 1},
+          "tipo_sujeto": {"type": "string", "minLength": 1},
+          "freeze": {"type": "string", "format": "date"},
+          "modo_z": {"enum": ["historico", "vivo"]},
+          "fecha_nacimiento": {"type": "string", "format": "date"},
+          "fecha_muerte": {"type": "string", "format": "date"},
+          "z_trabajo": {"type": "string", "format": "date"},
+          "z90_date": {"type": "string", "format": "date"},
+          "random_seed": {"type": "integer"},
+          "preparacion_ciega": {
+            "type": "object",
+            "required": ["preparador_entrada", "custodio_destino", "vio_destino"],
+            "properties": {
+              "preparador_entrada": {"type": "string", "minLength": 1},
+              "custodio_destino": {"type": "string", "minLength": 1},
+              "vio_destino": {"const": false}
+            },
+            "additionalProperties": true
+          },
+          "cuts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["cut_id", "date", "window_start", "hecho", "P", "A", "C", "evidencia"],
+              "properties": {
+                "cut_id": {"type": "string", "minLength": 1},
+                "date": {"type": "string", "format": "date"},
+                "window_start": {"type": "string", "format": "date"},
+                "hecho": {"type": "string", "minLength": 1},
+                "P": {"$ref": "#/$defs/tokenWeights"},
+                "A": {"$ref": "#/$defs/tokenWeights"},
+                "C": {"$ref": "#/$defs/tokenWeights"},
+                "evidencia": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["afirmacion", "claim_date", "source_date", "source_url", "tipo_fuente", "conocido_en_Z"],
+                    "properties": {
+                      "afirmacion": {"type": "string", "minLength": 1},
+                      "claim_date": {"type": "string", "format": "date"},
+                      "source_date": {"type": "string", "format": "date"},
+                      "source_url": {"type": "string", "format": "uri"},
+                      "tipo_fuente": {"const": "primaria"},
+                      "conocido_en_Z": {"type": "string", "minLength": 1}
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "source_notes": {"type": "array", "items": {"type": "string"}},
+          "pistas_llm": {"type": "array", "items": {"type": "object"}}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "$defs": {
+    "tokenWeights": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [{"type": "string", "minLength": 1}, {"type": "number", "minimum": 0.6, "maximum": 0.84}],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    }
+  }
+}
