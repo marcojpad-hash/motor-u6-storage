@@ -17,3 +17,7 @@ _pendiente_subir/
 
 # Datos de mortalidad públicos y versionados; los demás gzip siguen excluidos
 !motor/MORTALITY_AUDIT/mortality_statistics.jsonl.gz
+
+# Entradas U6 locales: nunca versionar semillas ni entradas aisladas
+casos/fabrica/semillas_entrada/*.json
+casos/fabrica/entradas_solo/
