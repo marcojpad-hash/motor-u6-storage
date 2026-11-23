@@ -136,3 +136,13 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - .github/workflows/test-motor-contracts.yml ejecuta pruebas en main y alterno/cameo-pesos; es el CI de validación, no un workflow de producción.
 
 **Decisión operativa:** mantenerlos sin ejecutar. La rama activa no debe usar fabrica-lote-diario, fabrica-real-traza, auditar-corridas-actions ni update-mortality-wpp como atajos. La corrección estructural requiere cambiar la política de escritura de esos workflows en main, pero main está en modo solo lectura y no se alterará desde esta operación. La integración Z90 y sus pruebas sí permanecen en la rama activa, con CI de contratos ya verificado en run #45002771468.
+
+## Seguimiento operador único — 2026-11-23 — ruta entry-only e índice de casos previos
+
+- **EJECUTADO:** se endureció casos/fabrica/preparar_entrada_solo.py para indexar case_id y sujetos visibles antes de escribir. Lee solo resultados.jsonl, entradas JSON previas, entradas staged y casos/ciegos/**/entrada.json excluyendo cualquier ruta custodia. F007 se indexa mediante AST literal; no se importa ni ejecuta semillas_lote_F007.py.
+- **PROTECCIÓN:** los directorios C01–C20 reservan sus IDs sin abrir SALIDA_CONGELADA ni custodia. Un índice previo ilegible o malformado bloquea la escritura. La unicidad de sujetos contra identidades selladas C01–C20 sigue siendo responsabilidad del custodio, que debe comprobarla con su índice privado antes de sellar.
+- **PRUEBAS VERIFICADAS:** el primer fixture AST falló por un salto de línea escapado; se corrigió sin tocar lógica de producción. CI run #45172870551, commit 9f99f15de4bef42544157865ff8881c0f41f225e: runner-contract SUCCESS, 78 passed in 1.09s. Run previo #45172749593 quedó como fallo de fixture y no se cuenta como verificación.
+- **F007 revalidado:** ocho sujetos, dos cortes por sujeto, referencias secundarias Wikipedia y ausencia de fechas exactas de nacimiento/muerte/Z90; la gate actual lo rechaza. No se abrió destinos_lote_F007.py ni ninguna custodia.
+- **ESTADO DE PREPARACIÓN:** no hay JSON de semillas nuevo en semillas_entrada ni entradas staged en entradas_solo; no se creó destino, desenlace, RESULT, RECIBO o CEB; n no aumentó. No se ejecutó el motor.
+- **BLOQUEO PUNTUAL:** falta una cohorte con fuentes primarias y entrega/sello del custodio independiente. La ruta entry-only ya existe y CI la prueba; no sustituye la custodia. PR #8 continúa OPEN/NOT MERGED; main permanece SOLO_CONSULTA.
+- **PRIVACIDAD:** no se añadieron sujetos, semillas, destinos ni datos operativos personales al repositorio. La discrepancia de visibilidad pública frente a la política documentada sigue sin resolver; no se cambiaron permisos ni secretos.
