@@ -11,8 +11,8 @@ gate = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gate)
 
 
-def _ev(claim="Hecho conocido antes del corte.", claim_date="1758-01-01",
-        source_date="1758-01-01", tipo="secundaria"):
+def _ev(claim="Hecho conocido antes del corte.", claim_date="1756-01-27",
+        source_date="1756-01-27", tipo="secundaria"):
     return {
         "afirmacion": claim,
         "source_url": "https://en.wikipedia.org/wiki/Example",
@@ -40,9 +40,9 @@ def _case():
         "cuts": [
             {
                 "id": "C1",
-                "date": "1760-01-01",
+                "date": "1756-01-27",
                 "window_start": "1756-01-27",
-                "hecho": "Hecho histórico de 1758.",
+                "hecho": "Hecho histórico del nacimiento.",
                 "evidencia": [_ev()],
             },
             {
@@ -123,6 +123,19 @@ def test_rechaza_fuente_primaria_posterior_al_cierre_del_corte():
     case["cuts"][0]["evidencia"][0]["tipo_fuente"] = "primaria"
     case["cuts"][0]["evidencia"][0]["source_date"] = "1761-01-01"
     assert any("primaria fechada" in e for e in gate.validar_entrada(case))
+
+def test_rechaza_primer_corte_posterior_al_nacimiento():
+    case = _case()
+    case["cuts"][0]["date"] = "1756-01-28"
+    errs = gate.validar_entrada(case)
+    assert any("R8 primer corte" in e and "nacimiento" in e for e in errs)
+
+
+def test_rechaza_fuente_secundaria_posterior_al_cierre_en_historico():
+    case = _case()
+    case["cuts"][0]["evidencia"][0]["source_date"] = "1756-01-28"
+    errs = gate.validar_entrada(case)
+    assert any("secundaria fechada" in e for e in errs)
 
 
 def test_rechaza_cortes_con_fecha_parcial_en_historico():
