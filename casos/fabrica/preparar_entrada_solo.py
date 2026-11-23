@@ -30,6 +30,7 @@ CLAVES_DESTINO = {
     "outcome", "truth", "target", "destination", "destinations",
     "h1", "h2", "hypothesis", "hypotheses", "hipotesis", "hipotesis_1",
     "hipotesis_2", "prediction", "prediccion", "predictions", "ranking",
+    "caldero_llm_neighbor_hints", "caldero_llm_neighbor_hints_audit",
 }
 
 
@@ -133,7 +134,24 @@ def _normalizar_caso(caso: dict[str, Any], gate: Any) -> dict[str, Any]:
     cuts = normalizado.get("cuts") or []
     if cuts and isinstance(cuts[-1], dict):
         normalizado.setdefault("z_work_date", cuts[-1].get("date"))
-    normalizado.setdefault("source_notes", [])
+    normalizado.setdefault("source_notes", "")
+    raw_cuts = normalizado.get("cuts")
+    if isinstance(raw_cuts, list):
+        normalized_cuts = []
+        for index, raw_cut in enumerate(raw_cuts, start=1):
+            if not isinstance(raw_cut, dict):
+                normalized_cuts.append(raw_cut)
+                continue
+            cut = dict(raw_cut)
+            cut_id = cut.get("cut_id") or cut.get("id") or f"C{index}"
+            cut_date = cut.get("date") or cut.get("fecha_corte")
+            cut.setdefault("id", cut_id)
+            cut.setdefault("corte", cut_id)
+            cut.setdefault("cut_id", cut_id)
+            cut.setdefault("date", cut_date)
+            cut.setdefault("fecha_corte", cut_date)
+            normalized_cuts.append(cut)
+        normalizado["cuts"] = normalized_cuts
     return normalizado
 
 
