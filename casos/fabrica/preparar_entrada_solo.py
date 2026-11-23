@@ -27,7 +27,9 @@ CLAVES_DESTINO = {
     "destino", "destino_sellado", "destino_personal", "destino_real",
     "desenlace", "desenlace_sellado", "resultado_real", "ground_truth",
     "label_real", "familias", "familias_desenlace", "prohibidas_post_z",
-    "outcome", "truth", "target",
+    "outcome", "truth", "target", "destination", "destinations",
+    "h1", "h2", "hypothesis", "hypotheses", "hipotesis", "hipotesis_1",
+    "hipotesis_2", "prediction", "prediccion", "predictions", "ranking",
 }
 
 
@@ -69,7 +71,7 @@ def _ids_y_sujetos_previos() -> tuple[set[str], set[str]]:
     helper = _helpers()
     ids: set[str] = set()
     sujetos: set[str] = set()
-    path = Path(helper.RESULTADOS)
+    path = Path(helper.REPO) / "casos" / "resultados" / "resultados.jsonl"
     if path.is_file():
         for line in path.read_text(encoding="utf-8").splitlines():
             try:
@@ -127,14 +129,11 @@ def _validar_pares(caso: dict[str, Any], tokens: set[str]) -> list[str]:
 def _normalizar_caso(caso: dict[str, Any], gate: Any) -> dict[str, Any]:
     normalizado = dict(caso)
     normalizado.setdefault("gate_z", gate.VERSION)
-    normalizado.setdefault("gate_implementation_revision", getattr(gate, "IMPLEMENTATION_REVISION", ""))
     normalizado.setdefault("z_work_kind", "CASE_CUTOFF")
     cuts = normalizado.get("cuts") or []
     if cuts and isinstance(cuts[-1], dict):
         normalizado.setdefault("z_work_date", cuts[-1].get("date"))
     normalizado.setdefault("source_notes", [])
-    normalizado.setdefault("caldero_llm_neighbor_hints", [])
-    normalizado.setdefault("caldero_llm_neighbor_hints_audit", {"status": "NO_PROVIDED"})
     return normalizado
 
 
@@ -170,8 +169,8 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
         f_resolved = forbidden.resolve()
         if out_resolved == f_resolved or _dentro(out_resolved, f_resolved) or _dentro(f_resolved, out_resolved):
             errores.append(f"Salida no aislada; no puede coincidir con ni contener/acceder a {forbidden}")
-    if output_root.exists():
-        errores.append(f"La carpeta de salida ya existe; no se sobrescribe: {output_root}")
+    if output_root.exists() and not output_root.is_dir():
+        errores.append(f"La salida existe y no es directorio: {output_root}")
 
     seen_ids: set[str] = set()
     seen_subjects: set[str] = set()
@@ -210,9 +209,17 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
             errores.append(f"{case_id}: random_seed debe ser entero")
         if caso.get("gate_z") != gate.VERSION:
             errores.append(f"{case_id}: gate_z no coincide con la versión vigente {gate.VERSION}")
-        hints = caso.get("caldero_llm_neighbor_hints")
-        if hints not in (None, []):
-            errores.append(f"{case_id}: esta ruta entry-only v1 no acepta pistas LLM; no se invocan modelos")
+        if caso.get("z_work_kind") != "CASE_CUTOFF":
+            errores.append(f"{case_id}: z_work_kind debe ser CASE_CUTOFF")
+        cuts = caso.get("cuts") or []
+        if cuts and isinstance(cuts[-1], dict) and caso.get("z_work_date") != cuts[-1].get("date"):
+            errores.append(f"{case_id}: z_work_date debe coincidir con el último corte")
+        hints, hints_audit, hints_errors = helper._validar_pistas_llm(
+            caso.pop("pistas_llm", None), str(person or ""), _familias
+        )
+        errores.extend(f"{case_id}: {error}" for error in hints_errors)
+        caso["caldero_llm_neighbor_hints"] = hints
+        caso["caldero_llm_neighbor_hints_audit"] = hints_audit
         errores.extend(_validar_pares(caso, tokens))
         errores.extend(gate.validar_entrada(caso))
 
@@ -226,6 +233,11 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
         return 1, errores
 
     output_root.parent.mkdir(parents=True, exist_ok=True)
+    for case_id, _caso, _digest in prepared:
+        if (output_root / case_id).exists():
+            errores.append(f"{case_id}: ya existe en entradas_solo; no se sobrescribe")
+    if errores:
+        return 1, errores
     try:
         with tempfile.TemporaryDirectory(prefix=f".{output_root.name}.stage-", dir=output_root.parent) as tmp:
             stage = Path(tmp)
@@ -235,7 +247,9 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
                 serialized = json.dumps(caso, ensure_ascii=False, indent=2) + "\n"
                 (case_dir / "entrada.json").write_text(serialized, encoding="utf-8")
                 (case_dir / "entrada.sha256").write_text(f"{digest}  entrada.json\n", encoding="utf-8")
-            os.replace(stage, output_root)
+            output_root.mkdir(parents=True, exist_ok=True)
+            for case_id, _caso, _digest in prepared:
+                os.replace(stage / case_id, output_root / case_id)
     except FileExistsError:
         return 1, [f"La salida apareció durante la preparación; no se sobrescribió: {output_root}"]
     except OSError as exc:
