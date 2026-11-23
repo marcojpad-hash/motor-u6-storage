@@ -217,11 +217,11 @@ def test_previous_index_extracts_f007_identity_without_executing_module(tmp_path
     fake_repo = tmp_path / "repo"
     seed_dir = fake_repo / "casos" / "fabrica"
     seed_dir.mkdir(parents=True)
-    (seed_dir / "semillas_lote_F007.py").write_text(
-        'raise RuntimeError("no debe ejecutarse")\\n'
-        'SEMILLAS_Z = [{"id": "F007_TEST_01", "person": "SUJETO_F007_RESERVADO"}]\\n',
-        encoding="utf-8",
+    f007_text = (
+        'raise RuntimeError("no debe ejecutarse")' + chr(10)
+        + 'SEMILLAS_Z = [{"id": "F007_TEST_01", "person": "SUJETO_F007_RESERVADO"}]' + chr(10)
     )
+    (seed_dir / "semillas_lote_F007.py").write_text(f007_text, encoding="utf-8")
     monkeypatch.setattr(helper, "REPO", fake_repo)
 
     ids, subjects, errors = prep._ids_y_sujetos_previos()
@@ -229,8 +229,6 @@ def test_previous_index_extracts_f007_identity_without_executing_module(tmp_path
     assert "f007_test_01" in ids
     assert "sujeto_f007_reservado" in subjects
     assert errors == []
-
-
 def test_previous_index_reserves_c01_ids_and_never_reads_custody(tmp_path, monkeypatch):
     helper = prep._helpers()
     fake_repo = tmp_path / "repo"
@@ -297,10 +295,10 @@ def test_duplicate_subject_in_f007_is_rejected_before_staging(tmp_path, monkeypa
     fake_repo = tmp_path / "repo"
     seed_dir = fake_repo / "casos" / "fabrica"
     seed_dir.mkdir(parents=True)
-    (seed_dir / "semillas_lote_F007.py").write_text(
-        'SEMILLAS_Z = [{"id": "F007_TEST_01", "person": "SUJETO_DUPLICADO"}]\\n',
-        encoding="utf-8",
+    f007_text = (
+        'SEMILLAS_Z = [{"id": "F007_TEST_01", "person": "SUJETO_DUPLICADO"}]' + chr(10)
     )
+    (seed_dir / "semillas_lote_F007.py").write_text(f007_text, encoding="utf-8")
     monkeypatch.setattr(helper, "REPO", fake_repo)
     case = _case(person="SUJETO_DUPLICADO")
     seed = _write_seed(tmp_path / "new-seed.json", [case])
@@ -311,8 +309,6 @@ def test_duplicate_subject_in_f007_is_rejected_before_staging(tmp_path, monkeypa
     assert code == 1
     assert any("sujeto repetido" in message for message in messages)
     assert not out.exists()
-
-
 def test_case_id_from_lote20_is_rejected_before_staging(tmp_path, monkeypatch):
     helper = prep._helpers()
     fake_repo = tmp_path / "repo"
