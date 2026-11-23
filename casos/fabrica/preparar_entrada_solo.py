@@ -8,6 +8,7 @@ La custodia independiente y la ejecución son procesos posteriores distintos.
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import importlib.util
 import json
@@ -68,27 +69,135 @@ def _contiene_clave_destino(value: Any, ruta: str = "$") -> list[str]:
     return found
 
 
-def _ids_y_sujetos_previos() -> tuple[set[str], set[str]]:
+def _agregar_identidad_previa(row: Any, ids: set[str], sujetos: set[str]) -> None:
+    if not isinstance(row, dict):
+        return
+    case_id = row.get("case_id") or row.get("id")
+    person = row.get("person") or row.get("subject") or row.get("sujeto")
+    if isinstance(case_id, str) and case_id.strip():
+        ids.add(case_id.strip().casefold())
+    if isinstance(person, str) and person.strip():
+        sujetos.add(person.strip().casefold())
+
+
+def _filas_de_entrada_previa(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, dict):
+        cases = payload.get("cases")
+        if isinstance(cases, list):
+            return [row for row in cases if isinstance(row, dict)]
+        return [payload]
+    if isinstance(payload, list):
+        return [row for row in payload if isinstance(row, dict)]
+    return []
+
+
+def _leer_entrada_previa(path: Path, ids: set[str], sujetos: set[str], errores: list[str]) -> None:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        errores.append(f"{path}: {type(exc).__name__}: {exc}")
+        return
+    rows = _filas_de_entrada_previa(payload)
+    if not rows:
+        errores.append(f"{path}: no contiene un objeto de entrada ni una lista cases válida")
+        return
+    for row in rows:
+        _agregar_identidad_previa(row, ids, sujetos)
+
+
+def _ids_y_sujetos_previos(exclude_path: Path | None = None) -> tuple[set[str], set[str], list[str]]:
+    """Indexa entradas previas visibles sin abrir custodia ni salidas congeladas."""
     helper = _helpers()
+    repo = Path(helper.REPO)
     ids: set[str] = set()
     sujetos: set[str] = set()
-    path = Path(helper.REPO) / "casos" / "resultados" / "resultados.jsonl"
-    if path.is_file():
-        for line in path.read_text(encoding="utf-8").splitlines():
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if not isinstance(row, dict):
-                continue
-            case_id = row.get("case_id")
-            person = row.get("person") or row.get("subject") or row.get("sujeto")
-            if isinstance(case_id, str) and case_id.strip():
-                ids.add(case_id.strip().casefold())
-            if isinstance(person, str) and person.strip():
-                sujetos.add(person.strip().casefold())
-    return ids, sujetos
+    errores: list[str] = []
+    excluded = Path(exclude_path).resolve() if exclude_path is not None else None
 
+    # Registro histórico: solo se extraen case_id/person; no se usan H1/H2 ni desenlaces.
+    resultados = repo / "casos" / "resultados" / "resultados.jsonl"
+    if resultados.is_file():
+        try:
+            with resultados.open(encoding="utf-8") as handle:
+                for line_number, line in enumerate(handle, start=1):
+                    if not line.strip():
+                        continue
+                    try:
+                        row = json.loads(line)
+                    except json.JSONDecodeError as exc:
+                        errores.append(f"{resultados}:{line_number}: JSONDecodeError: {exc}")
+                        continue
+                    _agregar_identidad_previa(row, ids, sujetos)
+        except (OSError, UnicodeError) as exc:
+            errores.append(f"{resultados}: {type(exc).__name__}: {exc}")
+
+    # Entradas ciegas previas: solo entrada.json; cualquier ruta bajo custodia se excluye antes de leer.
+    blind_root = repo / "casos" / "ciegos"
+    if blind_root.is_dir():
+        for path in sorted(blind_root.rglob("entrada.json")):
+            if any(part.casefold() == "custodia" for part in path.parts):
+                continue
+            _leer_entrada_previa(path, ids, sujetos, errores)
+
+    # C01–C20 quedan reservados por ID sin abrir SALIDA_CONGELADA ni custodia.
+    lote20 = blind_root / "lote_20"
+    if lote20.is_dir():
+        try:
+            for child in sorted(lote20.iterdir()):
+                if child.is_dir() and re.fullmatch(r"C\d{2}", child.name):
+                    ids.add(child.name.casefold())
+        except OSError as exc:
+            errores.append(f"{lote20}: {type(exc).__name__}: {exc}")
+
+    # Semillas F007: AST literal; nunca se importa ni ejecuta el módulo.
+    f007 = repo / "casos" / "fabrica" / "semillas_lote_F007.py"
+    if f007.is_file():
+        try:
+            tree = ast.parse(f007.read_text(encoding="utf-8"), filename=str(f007))
+        except (OSError, UnicodeError, SyntaxError) as exc:
+            errores.append(f"{f007}: {type(exc).__name__}: {exc}")
+        else:
+            found_assignment = False
+            for node in tree.body:
+                if not isinstance(node, ast.Assign):
+                    continue
+                if not any(isinstance(target, ast.Name) and target.id == "SEMILLAS_Z" for target in node.targets):
+                    continue
+                found_assignment = True
+                if not isinstance(node.value, (ast.List, ast.Tuple)):
+                    errores.append(f"{f007}: SEMILLAS_Z no es una lista/tupla literal; no se ejecutó el módulo")
+                    continue
+                for item in node.value.elts:
+                    if not isinstance(item, ast.Dict):
+                        continue
+                    row: dict[str, Any] = {}
+                    for key_node, value_node in zip(item.keys, item.values):
+                        if not isinstance(key_node, ast.Constant) or not isinstance(key_node.value, str):
+                            continue
+                        if key_node.value not in {"id", "case_id", "person", "subject", "sujeto"}:
+                            continue
+                        if isinstance(value_node, ast.Constant):
+                            row[key_node.value] = value_node.value
+                    _agregar_identidad_previa(row, ids, sujetos)
+            if not found_assignment:
+                errores.append(f"{f007}: no se encontró SEMILLAS_Z literal; no se ejecutó el módulo")
+
+    fabrica = repo / "casos" / "fabrica"
+    semillas_dir = fabrica / "semillas_entrada"
+    if semillas_dir.is_dir():
+        for path in sorted(semillas_dir.glob("*.json")):
+            if path.name == "entrada_schema_v1.json":
+                continue
+            if excluded is not None and path.resolve() == excluded:
+                continue
+            _leer_entrada_previa(path, ids, sujetos, errores)
+
+    entradas_dir = fabrica / "entradas_solo"
+    if entradas_dir.is_dir():
+        for path in sorted(entradas_dir.glob("*/entrada.json")):
+            _leer_entrada_previa(path, ids, sujetos, errores)
+
+    return ids, sujetos, errores
 
 def _validar_pares(caso: dict[str, Any], tokens: set[str]) -> list[str]:
     errores: list[str] = []
@@ -158,11 +267,6 @@ def _normalizar_caso(caso: dict[str, Any], gate: Any) -> dict[str, Any]:
 def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) -> tuple[int, list[str]]:
     """Valida un lote JSON y escribe solo entrada.json + entrada.sha256."""
     helper = _helpers()
-    gate = helper._gate()
-    tokens, _familias = helper.vocab()
-    previous_hashes = helper.hashes_previos()
-    previous_ids, previous_subjects = _ids_y_sujetos_previos()
-
     seed_json = Path(seed_json)
     output_root = Path(output_root)
     errores: list[str] = []
@@ -170,8 +274,15 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
         return 2, [f"No existe el JSON de semillas: {seed_json}"]
     try:
         payload = json.loads(seed_json.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         return 2, [f"JSON de semillas inválido: {type(exc).__name__}: {exc}"]
+
+    gate = helper._gate()
+    tokens, _familias = helper.vocab()
+    previous_hashes = helper.hashes_previos()
+    previous_ids, previous_subjects, previous_errors = _ids_y_sujetos_previos(exclude_path=seed_json)
+    if previous_errors:
+        return 1, [f"Índice previo incompleto; no se escribe ninguna entrada: {error}" for error in previous_errors]
 
     cases = payload.get("cases") if isinstance(payload, dict) else None
     if not isinstance(cases, list) or not cases:
@@ -273,7 +384,10 @@ def preparar_entrada_solo(seed_json: Path, output_root: Path = ENTRADAS_SOLO) ->
     except OSError as exc:
         return 3, [f"Error al escribir entrada-only: {type(exc).__name__}: {exc}"]
 
-    return 0, [f"ENTRY_ONLY_STAGED: {len(prepared)} entrada(s); no se creó destino, desenlace ni resultado; custodia independiente pendiente"]
+    return 0, [
+        f"ENTRY_ONLY_STAGED: {len(prepared)} entrada(s); no se creó destino, desenlace ni resultado; custodia independiente pendiente",
+        "WARN_SUBJECT_UNIQUENESS: las identidades selladas de C01–C20 no se leen; el custodio debe verificar duplicados contra su índice privado antes de aceptar o sellar el lote",
+    ]
 
 
 def main(argv: list[str] | None = None) -> int:
