@@ -61,12 +61,15 @@ def _subject(sentence: str) -> str | None:
 
 
 def _functions(sentence: str, judgments: list[dict[str, str]]) -> dict[str, list[str]]:
+    buhler = ["REPRESENTATIVA"]
     jakobson = ["REFERENCIAL"]
     halliday = ["IDEACIONAL", "TEXTUAL"]
     if judgments:
+        buhler.append("EXPRESIVA")
         jakobson.append("EMOTIVA")
         halliday.append("INTERPERSONAL")
     if "?" in sentence or CONATIVE.search(sentence):
+        buhler.append("APELATIVA")
         jakobson.append("CONATIVA")
         halliday.append("INTERPERSONAL")
     if PHATIC.search(sentence):
@@ -75,7 +78,7 @@ def _functions(sentence: str, judgments: list[dict[str, str]]) -> dict[str, list
         jakobson.append("METALINGUISTICA")
     if POETIC.search(sentence):
         jakobson.append("POETICA")
-    return {"jakobson": sorted(set(jakobson)), "halliday": sorted(set(halliday))}
+    return {"buhler": sorted(set(buhler)), "jakobson": sorted(set(jakobson)), "halliday": sorted(set(halliday))}
 
 
 def analyze(records: list[dict[str, Any]]) -> dict[str, Any]:
