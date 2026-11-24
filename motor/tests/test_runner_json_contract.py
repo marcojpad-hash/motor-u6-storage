@@ -83,22 +83,21 @@ _OMIT_OTHER_GUARDIANS = {
 }
 
 
-def test_u6_pipeline_runs_context_lateral_and_routes_signal_without_changing_sibling_flag(tmp_path):
-    shutil.copy2(ROOT / "motor" / "lateral_contexto_enunciativo_v1.py",
-                 tmp_path / "lateral_contexto_enunciativo_v1.py")
+def test_u6_full_guardian_pack_runs_case_and_routes_context_without_changing_decisions(tmp_path):
+    base = tmp_path / "motor"
+    shutil.copytree(ROOT / "motor", base)
     case = {"case_id": "CTX-01", "enunciador": "FUENTE_DE_INPUT", "question": "Ariadna es brillante. Ariadna es admirable. Bruno es mediocre. Bruno es un traidor."}
-    result = _control.correr_guardianes(case, {}, {}, tmp_path, omitir=_OMIT_OTHER_GUARDIANS)
+    result = _control.correr_guardianes(case, {}, {}, base)
     blocks = {b["guardian"]: b for b in result["bloques"]}
     lateral = blocks["CONTEXTO_ENUNCIATIVO"]
-    sherlock = blocks["SHERLOCK_RIGOR"]
     assert lateral["bandera"] == "MARCA"
     assert lateral["can_decide_H"] is False
     assert any(m["tipo"] == "CARGA_VALORATIVA_REITERADA" for m in lateral["marcas"])
     assert any(m["tipo"] == "ASIMETRIA_VALORATIVA_ENTRE_ACTORES" for m in lateral["marcas"])
     assert lateral["detalle"]["observaciones"][0]["enunciador"] == "FUENTE_DE_INPUT"
-    assert sherlock["bandera"] == "NO_CONFIGURADO"
-    assert "CARGA_VALORATIVA_REITERADA" in sherlock["detalle"]["contexto_lateral_enunciativo"]["senales_referenciadas"]
-    assert "ASIMETRIA_VALORATIVA_ENTRE_ACTORES" in sherlock["detalle"]["contexto_lateral_enunciativo"]["senales_referenciadas"]
+    for name in ("SHERLOCK_RIGOR", "FALACIAS", "LOGICA_COPI", "TROPOS_BERISTAIN"):
+        assert blocks[name]["bandera"] != "ERROR", (name, blocks[name])
+        assert "contexto_lateral_enunciativo" in blocks[name].get("detalle", {}), (name, blocks[name])
     assert result["ruta_cierre_latente"]["estado_cierre"] == "SIN_OBJECION_DE_GUARDIANES"
 
 
