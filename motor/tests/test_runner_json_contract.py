@@ -112,3 +112,37 @@ def test_u6_pipeline_keeps_neutral_input_clean(tmp_path):
     blocks = {b["guardian"]: b for b in result["bloques"]}
     assert blocks["CONTEXTO_ENUNCIATIVO"]["bandera"] == "LIMPIO"
     assert blocks["CONTEXTO_ENUNCIATIVO"]["n_marcas"] == 0
+
+
+# Regression tests for unclassified linguistic polarity in the U6 lateral.
+_lateral_spec = importlib.util.spec_from_file_location(
+    "lateral_contexto_enunciativo_test", ROOT / "motor" / "lateral_contexto_enunciativo_v1.py"
+)
+_lateral = importlib.util.module_from_spec(_lateral_spec)
+_lateral_spec.loader.exec_module(_lateral)
+
+
+def test_lateral_counts_all_four_polarities_without_key_error():
+    report = _lateral.analyze([
+        {"text": "Ariadna debe cumplir."},
+        {"text": "Bruno es brillante."},
+        {"text": "Carla es mediocre."},
+        {"text": "Dalia es brillante y mediocre."},
+    ])
+    counts = report["conteos_por_actor"]
+    assert counts["Ariadna"] == {
+        "POSITIVA": 0, "NEGATIVA": 0, "MIXTA": 0, "NO_CLASIFICADA": 1
+    }
+    assert counts["Bruno"]["POSITIVA"] == 1
+    assert counts["Carla"]["NEGATIVA"] == 1
+    assert counts["Dalia"]["MIXTA"] == 1
+    assert all("NO_CLASIFICADA" in actor_counts for actor_counts in counts.values())
+    # Unclassified observations are preserved but do not inflate evaluative signals.
+    assert not any(s["tipo"] == "CARGA_VALORATIVA_REITERADA" for s in report["senales"])
+
+
+def test_lateral_empty_and_blank_records_are_safe():
+    report = _lateral.analyze([None, {}, {"text": "   "}, {"text": ""}])
+    assert report["observaciones"] == []
+    assert report["senales"] == []
+    assert report["conteos_por_actor"] == {}
