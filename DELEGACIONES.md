@@ -149,7 +149,7 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 
 ## Seguimiento operador único — 2026-11-24, 00:28 CDMX
 
-- **Rama y CI:** HEAD observado de `alterno/cameo-pesos` = `315c9369a9ec941d450213b7f049a9f2174d1831`; su commit más reciente añade solo este registro documental y tiene como base `NO_VERIFICADO`. El último CI de contratos es run [#45173282278](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45173282278), sobre el código `5fe3b6d6d4740597141dc8b508a513632e64ca05`: **78 passed**. No atribuir ese CI a una corrida del motor.
+- **Rama y CI:** HEAD observado de `alterno/cameo-pesos` = `315c9369a9ec941d450213b7f049a9f2174d1831`; su commit más reciente añade solo este registro documental y su padre verificado es `82a0b0dac5074d8f00955abdfa291c8752e050fb`. El último CI de contratos es run [#45173282278](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45173282278), sobre el código `5fe3b6d6d4740597141dc8b508a513632e64ca05`: **78 passed**. No atribuir ese CI a una corrida del motor.
 
 - **Preparación entry-only verificada:** `casos/fabrica/preparar_entrada_solo.py` (blob `891e37a482207399f9f929824e0935486b4b95b1`) acepta JSON, exige `case_id` y sujeto nuevos, `freeze=z_trabajo=z90_date`, versión exacta de `gate_z`, `z_work_kind=CASE_CUTOFF` y `z_work_date` igual al último corte. Escribe únicamente `entrada.json` y `entrada.sha256`; no crea destinos, desenlaces, RESULT ni RECIBO. `semillas_entrada/` contiene solo README y esquema; `entradas_solo/` no existe en el árbol actual: no hay entradas staged.
 
@@ -162,3 +162,10 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - **Autoridad de rama:** la última auditoría automática visible en U6 `main` es run [#45300660200](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45300660200), SUCCESS, que escribió el commit `8532017650362e0333259c375bad9361b7185701` en `main`. La escritura sigue contradiciendo `main=SOLO_CONSULTA`. No se revirtió ni se modificó el workflow, permisos, secretos o main.
 
 - **Decisión de ejecución:** no hay cohorte con fuentes primarias, Z90 completo y sello de custodio independiente. La siguiente acción válida es recibir esa cohorte separada; entonces el preparador solo podrá escribir entradas mediante `preparar_entrada_solo.py`, y el runner requerirá RESULT/RECIBO/CEB/manifiesto y lectura de vuelta por caso. No declarar calibración ni aumentar n antes de esas evidencias.
+
+### Corrección de CI entry-only — 2026-11-24
+
+- **EJECUTADO:** se corrigió `.github/workflows/test-motor-contracts.yml`. La ruta `casos/fabrica/test_preparar_entrada_solo.py` había quedado fuera del comando pytest por una continuación YAML ambigua; ahora está incluida explícitamente en un bloque `run: |` con las demás suites.
+- **Commit:** `03527aca1556761162a10680b78c3ac61e0f5635`; blob del workflow releído: `184472b46d66e4d442faa30dca26def35b3072bc`.
+- **CI VERIFICADO:** run [#45341793466](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45341793466), job `runner-contract` SUCCESS, **78 passed in 1.69s**. El log confirma que pytest recibió `casos/fabrica/test_preparar_entrada_solo.py`; la regeneración de manifiestos y su artifact también terminaron SUCCESS.
+- La corrección valida el contrato de preparación y el runner; **no** ejecuta casos reales, no crea destinos ni demuestra custodia independiente. n permanece en 45 sellados/evaluados; 5 siguen `NO_SELLADO`; incremento de n = 0.
