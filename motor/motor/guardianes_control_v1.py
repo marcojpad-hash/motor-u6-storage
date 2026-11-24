@@ -62,7 +62,7 @@ ORIGEN = {
 CANDADOS = {"can_decide_H": False, "escribe_H": False, "escribe_patterns": False, "reordena_candidatos": False,
             "alimenta": "convergencia/latencia (solo registro)", "siempre_on": True}
 EXCLUIR_TEXTO = {"P", "A", "C", "protocol", "case_id", "url", "caldero_neighbor_store", "random_seed", "z90_date",
-                 "date", "id", "birth_date", "death_date", "person", "source_basis", "future_data_excluded_from_input",
+                 "date", "id", "birth_date", "death_date", "person", "enunciador", "speaker", "attributed_to", "source_basis", "future_data_excluded_from_input",
                  "caldero_llm_neighbor_hints", "external_lights", "caldero_archetype_input", "stinkbox_root",
                  "stinkbox_pending_case_id", "stinkbox_cut_id", "consolidado_off", "external_activations"}
 
@@ -335,12 +335,13 @@ def g_tropos(base, case, question, textos, vecinos):
 
 
 # ------------------------------------------------------------------ lateral observacional de contexto enunciativo
-def g_contexto_enunciativo(base, textos):
+def g_contexto_enunciativo(base, textos, case=None):
     m, meta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo")
     if m is None:
         return _bloque("CONTEXTO_ENUNCIATIVO", [meta], "orientación valorativa y funciones discursivas", 0, [], "ERROR")
+    speaker = (case or {}).get("enunciador") or (case or {}).get("speaker")
     records = [{"text": t.get("texto", ""), "origin": t.get("origen", "INPUT"),
-                "speaker": t.get("enunciador")} for t in textos]
+                "speaker": speaker, "attributed_to": t.get("atribuido_a")} for t in textos]
     report = m.analyze(records)
     marks = [{"tipo": s["tipo"], "estado": "OBSERVACION", "evidencia": s} for s in report.get("senales", [])]
     return _bloque("CONTEXTO_ENUNCIATIVO", [meta],
@@ -528,7 +529,7 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
         bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
     # Lateral observacional: se ejecuta sin decidir H y entrega referencias contextuales
     # a los guardianes hermanos; nunca modifica sus banderas ni sus decisiones.
-    contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos))[0]
+    contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos, case))[0]
     bloques.append(_h(contexto))
     if contexto.get("bandera") != "ERROR":
         try:
