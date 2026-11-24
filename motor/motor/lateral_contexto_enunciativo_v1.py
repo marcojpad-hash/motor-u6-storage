@@ -137,6 +137,16 @@ def analyze(records: list[dict[str, Any]]) -> dict[str, Any]:
     if exclusions:
         signals.append({"tipo": "CIERRE_DISCURSIVO_DE_ALTERNATIVAS", "n_observaciones": len(exclusions),
                         "estado": "OBSERVACION_PARA_REVISION"})
+    poetic = [o for o in observations if "POETICA" in o["funciones_linguisticas"]["jakobson"]]
+    if poetic:
+        signals.append({"tipo": "FUNCION_POETICA_OBSERVADA", "n_observaciones": len(poetic),
+                        "estado": "OBSERVACION_PARA_REVISION"})
+    causal_or_intentional = [j for o in observations for j in o["juicios"]
+                             if j["tipo"] in ("CAUSAL", "INTENCIONAL")]
+    if causal_or_intentional:
+        signals.append({"tipo": "ATRIBUCION_CAUSAL_O_INTENCIONAL",
+                        "n_observaciones": len(causal_or_intentional),
+                        "estado": "OBSERVACION_PARA_REVISION"})
 
     routes = {
         "SHERLOCK_RIGOR": ["seleccion_asimetrica", "tesis_previa_vs_hechos"],
@@ -167,10 +177,10 @@ def attach_context(blocks: list[dict[str, Any]], report: dict[str, Any]) -> list
     refs = {
         "SHERLOCK_RIGOR": {"CARGA_VALORATIVA_REITERADA", "ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "CIERRE_DISCURSIVO_DE_ALTERNATIVAS"},
         "HECATE": {"CIERRE_DISCURSIVO_DE_ALTERNATIVAS"},
-        "SCHOPENHAUER": {"CARGA_VALORATIVA_REITERADA", "ASIMETRIA_VALORATIVA_ENTRE_ACTORES"},
-        "FALACIAS": {"ENMARCADO_ADVERSARIAL", "CIERRE_DISCURSIVO_DE_ALTERNATIVAS"},
-        "LOGICA_COPI": {"ASIMETRIA_VALORATIVA_ENTRE_ACTORES"},
-        "TROPOS_BERISTAIN": {"ENMARCADO_ADVERSARIAL"},
+        "SCHOPENHAUER": {"CARGA_VALORATIVA_REITERADA", "ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
+        "FALACIAS": {"ENMARCADO_ADVERSARIAL", "CIERRE_DISCURSIVO_DE_ALTERNATIVAS", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
+        "LOGICA_COPI": {"ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
+        "TROPOS_BERISTAIN": {"ENMARCADO_ADVERSARIAL", "FUNCION_POETICA_OBSERVADA"},
         "PREGUNTA_DIRIGIDA_POST_HOC": {"CIERRE_DISCURSIVO_DE_ALTERNATIVAS"},
     }
     signal_types = {s["tipo"] for s in report.get("senales", [])}
