@@ -152,9 +152,10 @@ def analyze(records: list[dict[str, Any]]) -> dict[str, Any]:
                         "estado": "OBSERVACION_PARA_REVISION"})
 
     routes = {
-        "SHERLOCK_RIGOR": ["seleccion_asimetrica", "tesis_previa_vs_hechos"],
-        "HECATE": ["exclusion_de_alternativas"],
-        "SCHOPENHAUER": ["atribucion_de_intencion", "certeza_o_duda"],
+        # Hecate, Holmes y Schopenhauer viven dentro del bloque SHERLOCK_RIGOR
+        # (guardianes_control_v1.py, linea 313); sus rutas van bajo esa clave.
+        "SHERLOCK_RIGOR": ["seleccion_asimetrica", "tesis_previa_vs_hechos",
+                           "exclusion_de_alternativas", "atribucion_de_intencion", "certeza_o_duda"],
         "FALACIAS": ["atribucion_causal", "cierre_discursivo"],
         "LOGICA_COPI": ["comparacion_de_premisas", "atribucion_causal"],
         "TROPOS_BERISTAIN": ["marco_adversarial", "funcion_poetica"],
@@ -179,8 +180,6 @@ def attach_context(blocks: list[dict[str, Any]], report: dict[str, Any]) -> list
     """Attach traceable references to sibling controls without changing their decisions."""
     refs = {
         "SHERLOCK_RIGOR": {"CARGA_VALORATIVA_REITERADA", "ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "CIERRE_DISCURSIVO_DE_ALTERNATIVAS", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
-        "HECATE": {"CIERRE_DISCURSIVO_DE_ALTERNATIVAS"},
-        "SCHOPENHAUER": {"CARGA_VALORATIVA_REITERADA", "ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
         "FALACIAS": {"ENMARCADO_ADVERSARIAL", "CIERRE_DISCURSIVO_DE_ALTERNATIVAS", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
         "LOGICA_COPI": {"ASIMETRIA_VALORATIVA_ENTRE_ACTORES", "ATRIBUCION_CAUSAL_O_INTENCIONAL"},
         "TROPOS_BERISTAIN": {"ENMARCADO_ADVERSARIAL", "FUNCION_POETICA_OBSERVADA"},

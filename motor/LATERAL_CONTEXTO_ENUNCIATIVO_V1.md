@@ -9,6 +9,10 @@
 
 Clon funcional de la implementación agnóstica del Orquestador Central, adaptado al contrato de U6. Registra juicios expresados, orientación valorativa, reiteraciones, asimetrías, encuadres adversariales, cierres discursivos y funciones de Bühler, Jakobson y Halliday. Conserva el fragmento, origen y enunciador declarado en el caso cuando existe.
 
+## Dirección y propósito
+
+El lateral existe para que los controles hermanos comparen evidencia antes de decidir: les entrega el contexto enunciativo del input — qué juicios trae, cómo se orienta valorativamente, qué funciones del lenguaje cumple — para que Sherlock/Rigor, Falacias, Copi, Beristáin y el resto lo contrasten con los hechos y las premisas. No sustituye a Sombrero Blanco, que conserva su admisión factual independiente, y no decide H: no puntúa, no veta, no reordena candidatos. Su único producto es contexto trazable; sin él, cada control juzgaría el input sin saber cómo fue enunciado.
+
 ## Cableado
 
 1. `correr_guardianes()` ejecuta el lateral después de Beristáin, dentro del paquete posterior al predictor.

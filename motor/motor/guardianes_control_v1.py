@@ -529,15 +529,21 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
         bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
     # Lateral observacional: se ejecuta sin decidir H y entrega referencias contextuales
     # a los guardianes hermanos; nunca modifica sus banderas ni sus decisiones.
-    contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos, case))[0]
-    bloques.append(_h(contexto))
-    if contexto.get("bandera") != "ERROR":
-        try:
-            _ctxmod, _ctxmeta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo_refs")
-            if _ctxmod is not None:
-                _ctxmod.attach_context(bloques, contexto.get("detalle") or {})
-        except Exception as e:
-            contexto.setdefault("detalle", {})["error_referencias"] = f"{type(e).__name__}: {e}"
+    if "CONTEXTO_ENUNCIATIVO" in omitir:
+        # Bypass visible en recibo (CONTEXTO_ENUNCIATIVO_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("CONTEXTO_ENUNCIATIVO", [], "omitido por CONTEXTO_ENUNCIATIVO_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos, case))[0]
+        bloques.append(_h(contexto))
+        if contexto.get("bandera") != "ERROR":
+            try:
+                _ctxmod, _ctxmeta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo_refs")
+                if _ctxmod is not None:
+                    _ctxmod.attach_context(bloques, contexto.get("detalle") or {})
+            except Exception as e:
+                contexto.setdefault("detalle", {})["error_referencias"] = f"{type(e).__name__}: {e}"
     _anotar_vecinos(bloques)
     # BOLSITAS_TROPO (spec 2026-09-14, ids A–F): ruteo de los hallazgos de tropos y de
     # lógica enunciativa a bolsitas de marcaje. Highlight only: no decide H, no bloquea,

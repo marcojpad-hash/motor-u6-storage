@@ -3063,12 +3063,16 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     # queda NO_CONFIGURADO en lugar de desaparecer en silencio). Defecto: activo.
     _acero_modo = (_os.environ.get("ACERO_GUARDIAN", "activo") or "activo").strip().lower()
     _acero_omitir = {"HOMBRE_DE_ACERO"} if _acero_modo == "off" else frozenset()
+    # CONTEXTO_ENUNCIATIVO_GUARDIAN=off: bypass visible en recibo (el bloque CONTEXTO_ENUNCIATIVO
+    # queda NO_CONFIGURADO en lugar de desaparecer en silencio). Defecto: activo.
+    _contexto_modo = (_os.environ.get("CONTEXTO_ENUNCIATIVO_GUARDIAN", "activo") or "activo").strip().lower()
+    _contexto_omitir = {"CONTEXTO_ENUNCIATIVO"} if _contexto_modo == "off" else frozenset()
     gmod=_load("guardianes_control_v1","guardianes_control_v1.py")
     if gmod is None or not hasattr(gmod,"correr_guardianes"):
         guard_out={"status":"FALTA_ARCHIVO","file":"guardianes_control_v1.py","can_decide_H":False}
     else:
         try:
-            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE,omitir=_copi_omitir | _tropos_omitir | _detras_omitir | _dirigida_omitir | _polaridad_omitir | _sherlock_omitir | _decimo_omitir | _acero_omitir), shared=[case,motor,pred])
+            guard_out=_ceb_stage("guardianes_control_v1", lambda: gmod.correr_guardianes(_copy.deepcopy(case),_copy.deepcopy(motor),_copy.deepcopy(pred),BASE,omitir=_copi_omitir | _tropos_omitir | _detras_omitir | _dirigida_omitir | _polaridad_omitir | _sherlock_omitir | _decimo_omitir | _acero_omitir | _contexto_omitir), shared=[case,motor,pred])
             guard_out["status"]="EXECUTED"
         except Exception as e:
             guard_out={"status":"ERROR","error":f"{type(e).__name__}:{e}","can_decide_H":False}
