@@ -84,7 +84,7 @@ def _functions(sentence: str, judgments: list[dict[str, str]]) -> dict[str, list
 def analyze(records: list[dict[str, Any]]) -> dict[str, Any]:
     """Analyze records shaped as {text, origin?, speaker?, attributed_to?}."""
     observations: list[dict[str, Any]] = []
-    actor_counts: dict[str, dict[str, int]] = defaultdict(lambda: {"POSITIVA": 0, "NEGATIVA": 0, "MIXTA": 0})
+    actor_counts: dict[str, dict[str, int]] = defaultdict(lambda: {"POSITIVA": 0, "NEGATIVA": 0, "MIXTA": 0, "NO_CLASIFICADA": 0})
     for record in records:
         if not isinstance(record, dict):
             continue
