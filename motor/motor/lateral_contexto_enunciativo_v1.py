@@ -17,7 +17,7 @@ CHANGES_INPUT = False
 JUDGMENT_RULES = {
     "ESTETICO": (r"\b(hermos[oa]s?|bell[oa]s?|fe[oa]s?|elegante[s]?|horrible[s]?)\b", "POSITIVA_NEGATIVA"),
     "VALORATIVO": (r"\b(brillante[s]?|excelente[s]?|mediocre[s]?|bueno[s]?|malo[s]?|admirable[s]?|terrible[s]?|superior|inferior)\b", "POSITIVA_NEGATIVA"),
-    "MORAL": (r"\b(cruel(?:es)?|honesto[s]?|deshonesto[s]?|corrupt[oa]s?|just[oa]s?|injust[oa]s?|ético[s]?|inmoral(?:es)?)\b", "POSITIVA_NEGATIVA"),
+    "MORAL": (r"\b(cruel(?:es)?|honesto[s]?|deshonesto[s]?|corrupt[oa]s?|just[oa]s?|injust[oa]s?|ético[s]?|inmoral(?:es)?|traidor(?:es)?)\b", "POSITIVA_NEGATIVA"),
     "PREDICTIVO": (r"\b(seguramente|probablemente|sin duda|va[n]? a|será[n]?|terminará[n]?|provocará[n]?|conseguirá[n]?|destruirá[n]?)\b", "PROYECCION"),
     "ESPECULATIVO": (r"\b(quizá[s]?|tal vez|acaso|podría[n]?|posiblemente|supongo|imagino|parece que)\b", "POSIBILIDAD"),
     "NORMATIVO": (r"\b(debe[n]?|debería[n]?|tiene[n]? que|tendría[n]? que|hay que|es necesario)\b", "DEBER"),
