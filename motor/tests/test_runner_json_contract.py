@@ -1,4 +1,5 @@
 import importlib.util
+import shutil
 import math
 from pathlib import Path
 
@@ -66,3 +67,45 @@ def test_continuity_state_preserves_reanudable_pause_contract():
         "required_next_action": "reanudar",
     }
     assert runner._continuity_result_payload(pause) == pause
+
+# Integration cases for the cloned enunciative-context lateral in U6.
+_control_spec = importlib.util.spec_from_file_location(
+    "guardianes_control_contexto_test", ROOT / "motor" / "guardianes_control_v1.py"
+)
+_control = importlib.util.module_from_spec(_control_spec)
+_control_spec.loader.exec_module(_control)
+
+_OMIT_OTHER_GUARDIANS = {
+    "DECIMO_HOMBRE_LATENCIA", "PREGUNTA_DETRAS_V2",
+    "PREGUNTA_DIRIGIDA_POST_HOC", "FALACIAS", "LOGICA_COPI",
+    "POLARIDAD_CAUSAL", "HOMBRE_DE_ACERO", "SHERLOCK_RIGOR",
+    "TROPOS_BERISTAIN",
+}
+
+
+def test_u6_pipeline_runs_context_lateral_and_routes_signal_without_changing_sibling_flag(tmp_path):
+    shutil.copy2(ROOT / "motor" / "lateral_contexto_enunciativo_v1.py",
+                 tmp_path / "lateral_contexto_enunciativo_v1.py")
+    case = {"case_id": "CTX-01", "question": "Ariadna es brillante. Ariadna es admirable."}
+    result = _control.correr_guardianes(case, {}, {}, tmp_path, omitir=_OMIT_OTHER_GUARDIANS)
+    blocks = {b["guardian"]: b for b in result["bloques"]}
+    lateral = blocks["CONTEXTO_ENUNCIATIVO"]
+    sherlock = blocks["SHERLOCK_RIGOR"]
+    assert lateral["bandera"] == "MARCA"
+    assert lateral["can_decide_H"] is False
+    assert any(m["tipo"] == "CARGA_VALORATIVA_REITERADA" for m in lateral["marcas"])
+    assert sherlock["bandera"] == "NO_CONFIGURADO"
+    assert sherlock["detalle"]["contexto_lateral_enunciativo"]["senales_referenciadas"] == [
+        "CARGA_VALORATIVA_REITERADA"
+    ]
+    assert result["ruta_cierre_latente"]["estado_cierre"] == "SIN_OBJECION_DE_GUARDIANES"
+
+
+def test_u6_pipeline_keeps_neutral_input_clean(tmp_path):
+    shutil.copy2(ROOT / "motor" / "lateral_contexto_enunciativo_v1.py",
+                 tmp_path / "lateral_contexto_enunciativo_v1.py")
+    case = {"case_id": "CTX-02", "question": "La reunión comenzó a las nueve y terminó a las diez."}
+    result = _control.correr_guardianes(case, {}, {}, tmp_path, omitir=_OMIT_OTHER_GUARDIANS)
+    blocks = {b["guardian"]: b for b in result["bloques"]}
+    assert blocks["CONTEXTO_ENUNCIATIVO"]["bandera"] == "LIMPIO"
+    assert blocks["CONTEXTO_ENUNCIATIVO"]["n_marcas"] == 0
