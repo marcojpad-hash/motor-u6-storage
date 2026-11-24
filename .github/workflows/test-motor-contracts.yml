@@ -79,9 +79,18 @@ jobs:
       - name: Install test runner
         # numpy: test_cableado_017.py importa el runner único (lo exige en runtime).
         run: python -m pip install pytest numpy
-      - name: Validate runner and mortality contracts
-        run: python -m pytest -q motor/tests/test_runner_json_contract.py motor/tests/test_matriz_mortalidad_z90_v0_2.py motor/tests/test_normalizar_mortalidad_preparacion.py motor/tests/test_cableado_017.py motor/tests/test_filtro_tokens_arquetipos_v2.py tests/test_caldero_corte_temporal.py motor/tests/test_gate_z90_biografico.py motor/tests/test_guardian_z90_correr_estandar.py
-          casos/fabrica/test_preparar_entrada_solo.py
+      - name: Validate runner, mortality, and entry-only contracts
+        run: |
+          python -m pytest -q \
+            motor/tests/test_runner_json_contract.py \
+            motor/tests/test_matriz_mortalidad_z90_v0_2.py \
+            motor/tests/test_normalizar_mortalidad_preparacion.py \
+            motor/tests/test_cableado_017.py \
+            motor/tests/test_filtro_tokens_arquetipos_v2.py \
+            tests/test_caldero_corte_temporal.py \
+            motor/tests/test_gate_z90_biografico.py \
+            motor/tests/test_guardian_z90_correr_estandar.py \
+            casos/fabrica/test_preparar_entrada_solo.py
       - name: Regenerate and inspect motor manifests (read-only)
         if: always()
         run: |
