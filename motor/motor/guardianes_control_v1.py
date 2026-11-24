@@ -334,6 +334,21 @@ def g_tropos(base, case, question, textos, vecinos):
                    r["n_revisados"], marcas, bandera, det)
 
 
+# ------------------------------------------------------------------ lateral observacional de contexto enunciativo
+def g_contexto_enunciativo(base, textos):
+    m, meta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo")
+    if m is None:
+        return _bloque("CONTEXTO_ENUNCIATIVO", [meta], "orientación valorativa y funciones discursivas", 0, [], "ERROR")
+    records = [{"text": t.get("texto", ""), "origin": t.get("origen", "INPUT"),
+                "speaker": t.get("enunciador")} for t in textos]
+    report = m.analyze(records)
+    marks = [{"tipo": s["tipo"], "estado": "OBSERVACION", "evidencia": s} for s in report.get("senales", [])]
+    return _bloque("CONTEXTO_ENUNCIATIVO", [meta],
+                   "juicios expresados, orientación valorativa, patrones y funciones lingüísticas",
+                   len(report.get("observaciones", [])), marks,
+                   "MARCA" if marks else "LIMPIO", report)
+
+
 def _anotar_vecinos(bloques):
     """Anota (sin cambiar banderas) en FALACIAS/COPI/POST HOC/POLARIDAD la corrección que viene de TROPOS."""
     tb = next((b for b in bloques if b["guardian"] == "TROPOS_BERISTAIN"), None)
@@ -511,6 +526,17 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
                                0, [], "NO_CONFIGURADO", {"modo": "off"}))
     else:
         bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
+    # Lateral observacional: se ejecuta sin decidir H y entrega referencias contextuales
+    # a los guardianes hermanos; nunca modifica sus banderas ni sus decisiones.
+    contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos))[0]
+    bloques.append(_h(contexto))
+    if contexto.get("bandera") != "ERROR":
+        try:
+            _ctxmod, _ctxmeta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo_refs")
+            if _ctxmod is not None:
+                _ctxmod.attach_context(bloques, contexto.get("detalle") or {})
+        except Exception as e:
+            contexto.setdefault("detalle", {})["error_referencias"] = f"{type(e).__name__}: {e}"
     _anotar_vecinos(bloques)
     # BOLSITAS_TROPO (spec 2026-09-14, ids A–F): ruteo de los hallazgos de tropos y de
     # lógica enunciativa a bolsitas de marcaje. Highlight only: no decide H, no bloquea,
