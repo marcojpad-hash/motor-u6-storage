@@ -4,6 +4,10 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 45461576292 | Motor runner contract tests | pull_request | 2026-11-24T12:37:43-06:00 | 2026-11-24T12:37:43-06:00 | 2026-11-24T12:38:00-06:00 | 17.0 | success |
+| 45461432764 | Motor runner contract tests | pull_request | 2026-11-24T12:36:53-06:00 | 2026-11-24T12:36:53-06:00 | 2026-11-24T12:37:21-06:00 | 28.0 | success |
+| 45461409708 | Motor runner contract tests | pull_request | 2026-11-24T12:36:46-06:00 | 2026-11-24T12:36:46-06:00 | 2026-11-24T12:37:03-06:00 | 17.0 | success |
+| 45379510923 | Auditoría de corridas Motor U6 | schedule | 2026-11-24T04:56:33-06:00 | 2026-11-24T04:56:33-06:00 | 2026-11-24T04:58:02-06:00 | 89.0 | success |
 | 45368985830 | Motor runner contract tests | pull_request | 2026-11-24T03:50:22-06:00 | 2026-11-24T03:50:22-06:00 | 2026-11-24T03:50:43-06:00 | 21.0 | success |
 | 45363366230 | Motor runner contract tests | pull_request | 2026-11-24T03:14:53-06:00 | 2026-11-24T03:14:53-06:00 | 2026-11-24T03:15:25-06:00 | 32.0 | success |
 | 45363074227 | Motor runner contract tests | pull_request | 2026-11-24T03:13:02-06:00 | 2026-11-24T03:13:02-06:00 | 2026-11-24T03:13:21-06:00 | 19.0 | success |
@@ -95,7 +99,6 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 44178359180 | Candado de entrega F003-F004 | pull_request | 2026-11-17T15:18:07-06:00 | 2026-11-17T15:18:07-06:00 | 2026-11-17T15:18:16-06:00 | 9.0 | failure |
 | 44178288035 | Candado de entrega F003-F004 | push | 2026-11-17T15:17:43-06:00 | 2026-11-17T15:17:43-06:00 | 2026-11-17T15:17:55-06:00 | 12.0 | success |
 | 44178204486 | Candado de entrega F003-F004 | push | 2026-11-17T15:17:14-06:00 | 2026-11-17T15:17:14-06:00 | 2026-11-17T15:17:26-06:00 | 12.0 | success |
-| 44103126084 | Auditoría de corridas Motor U6 | schedule | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:26:26-06:00 | 2026-11-17T08:28:06-06:00 | 100.0 | success |
 
 ## Fallos y cancelaciones
 
