@@ -92,6 +92,9 @@ def test_u6_full_guardian_pack_runs_case_and_routes_context_without_changing_dec
     lateral = blocks["CONTEXTO_ENUNCIATIVO"]
     assert lateral["bandera"] == "MARCA"
     assert lateral["can_decide_H"] is False
+    assert "EXPRESIVA" in lateral["detalle"]["observaciones"][0]["funciones_linguisticas"]["buhler"]
+    assert "EMOTIVA" in lateral["detalle"]["observaciones"][0]["funciones_linguisticas"]["jakobson"]
+    assert "INTERPERSONAL" in lateral["detalle"]["observaciones"][0]["funciones_linguisticas"]["halliday"]
     assert any(m["tipo"] == "CARGA_VALORATIVA_REITERADA" for m in lateral["marcas"])
     assert any(m["tipo"] == "ASIMETRIA_VALORATIVA_ENTRE_ACTORES" for m in lateral["marcas"])
     assert lateral["detalle"]["observaciones"][0]["enunciador"] == "FUENTE_DE_INPUT"
