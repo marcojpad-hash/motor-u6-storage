@@ -7,7 +7,7 @@
 
 ## Función
 
-Clon funcional de la implementación agnóstica del Orquestador Central, adaptado al contrato de U6. Registra juicios expresados, orientación valorativa, reiteraciones, asimetrías, encuadres adversariales, cierres discursivos y funciones lingüísticas. Conserva el fragmento, origen y enunciador declarado en el caso cuando existe.
+Clon funcional de la implementación agnóstica del Orquestador Central, adaptado al contrato de U6. Registra juicios expresados, orientación valorativa, reiteraciones, asimetrías, encuadres adversariales, cierres discursivos y funciones de Bühler, Jakobson y Halliday. Conserva el fragmento, origen y enunciador declarado en el caso cuando existe.
 
 ## Cableado
 
