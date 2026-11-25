@@ -200,3 +200,10 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - Michelangelo permanece **PENDIENTE_SOURCE_DATE**: la edición de 1875 declara que la copia de las `Ricordanze` es de época de Michelangelo, pero el custodio debe validar la fecha material/procedencia de esa copia para el primer corte. No preparar entrada hasta esa confirmación.
 - Marie Curie queda excluida por duplicidad; Florence Nightingale queda excluida porque la copia/certificación de nacimiento disponible tiene fecha de registro posterior al nacimiento.
 - No hay respuesta del custodio ni cohorte sellada. No se crean semillas ni se ejecuta el motor.
+
+
+### Trazabilidad de corrección de candidatos
+- Dossier actualizado para reflejar exactamente la pareja propuesta por el propietario en #465: Elizabeth II + Michelangelo. Se eliminaron los datos de Edward VII.
+- El cálculo de Elizabeth II quedó corregido a 35,204 días / 31,683 días al 90% / Z90 2013-01-17. El cálculo de Michelangelo queda 32,491 / 29,241 / Z90 1555-04-06.
+- La entrada de las `Ricordanze` permanece `PENDIENTE_SOURCE_DATE`; no se prepara hasta validación del custodio.
+- Commit de corrección del dossier: se registra en el historial del archivo; este tablero no contiene nuevas semillas ni predicciones.
