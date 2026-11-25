@@ -191,3 +191,12 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - HEAD observado al iniciar el corte: `2d32677b`.
 - Commits de documentación creados en este corte: `aa8f605f` (reconciliación de muestra), `4ff0dbb7` (dossier de fuentes/Z90) y `a186358c` (este tablero).
 - Estos commits actualizan solo documentación; no contienen nuevas entradas de caso ni cambios al motor.
+
+
+### Corrección de candidatos — 2026-11-24, posterior al acuse
+- El comentario de Marco `7146005810` es la autoridad vigente: los dos sustitutos son **Elizabeth II y Michelangelo Buonarroti**. La versión anterior del dossier que incluía Edward VII fue un error de lectura y queda supersedida por `avances/2026-11-24_fuentes_primarias_candidatos_z90.md`.
+- Elizabeth II: duración recalculada con la gate: 35,204 días; 31,683 días al 90%; Z90 2013-01-17. Coincide con el cálculo del comentario del propietario.
+- Michelangelo: 32,491 días; 29,241 días al 90%; Z90 1555-04-06. El cálculo coincide con el comentario del propietario.
+- Michelangelo permanece **PENDIENTE_SOURCE_DATE**: la edición de 1875 declara que la copia de las `Ricordanze` es de época de Michelangelo, pero el custodio debe validar la fecha material/procedencia de esa copia para el primer corte. No preparar entrada hasta esa confirmación.
+- Marie Curie queda excluida por duplicidad; Florence Nightingale queda excluida porque la copia/certificación de nacimiento disponible tiene fecha de registro posterior al nacimiento.
+- No hay respuesta del custodio ni cohorte sellada. No se crean semillas ni se ejecuta el motor.
