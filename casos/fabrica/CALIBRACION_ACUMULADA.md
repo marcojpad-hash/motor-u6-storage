@@ -103,3 +103,23 @@ destino exacto 15/40, polaridad 27/40. F005: 2 NO_SELLADO (Jobs, Nicolás II).
 - Los totales acumulados de esta tabla y el CSV permanecen sin cambios: F006 es una reevaluación del mismo caso, no una observación nueva.
 
 Evidencia compacta: \`casos/fabrica/lotes/F006_TRAZA_V2_R7_*\`. Manifiesto del artifact: \`F006_TRAZA_V2_R7_MANIFIESTO_ARTIFACTO.json\`. El artefacto original se verificó con SHA-256 \`0ef1887f395e229e77f1ea6b37ae9025fc23d63c6e3789fedfa7489913871ffb\`.
+
+
+## Reconciliación de muestra independiente — 2026-11-24
+
+La tabla histórica conserva **45 filas evaluadas** y 5 casos no sellados. Sin embargo, las cinco filas `F001_D022` reutilizan exactamente los cinco `input_sha256` de `F001`; la igualdad está documentada en `F001_COMPROMISO.json` y `F001_D022_COMPROMISO.json`. Son una reevaluación del mismo input para otro objetivo, no cinco casos independientes nuevos. Se aplica la regla permanente de no aumentar `n` por repetición, reevaluación o input idéntico.
+
+**Muestra independiente para comparar predicción: n=40**, no 45. Se excluyen las cinco filas F001_D022 y se conserva la tabla histórica sin alterar sus registros.
+
+| Métrica | Recuento independiente | Tasa |
+|---|---:|---:|
+| H1 | 8/40 | 20.0% |
+| H2 | 5/40 | 12.5% |
+| Set | 12/40 | 30.0% |
+| Apuesta / escenario | 10/40 | 25.0% |
+| Destino exacto | 12/35 | 34.3% |
+| Polaridad del destino | 23/35 | 65.7% |
+
+El denominador 35 de destino/polaridad corresponde a los inputs independientes de F002–F005 que tienen predicción de destino; los cinco inputs F001 originales no tenían esa salida. El denominador histórico 40 incluía los cinco D022 repetidos.
+
+No se derivan top-1/top-3 de estos agregados. Los cinco casos `NO_SELLADO`, la reevaluación F006/Courbet y las filas de integración de `resultados.jsonl` no aumentan `n`. El JSONL contiene 62 filas y 53 `case_id` distintos; esa cuenta de registros no es el tamaño de muestra independiente.
