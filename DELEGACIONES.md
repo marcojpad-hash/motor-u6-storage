@@ -207,3 +207,10 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - El cálculo de Elizabeth II quedó corregido a 35,204 días / 31,683 días al 90% / Z90 2013-01-17. El cálculo de Michelangelo queda 32,491 / 29,241 / Z90 1555-04-06.
 - La entrada de las `Ricordanze` permanece `PENDIENTE_SOURCE_DATE`; no se prepara hasta validación del custodio.
 - Commit de corrección del dossier: se registra en el historial del archivo; este tablero no contiene nuevas semillas ni predicciones.
+
+
+### Nota posterior — snapshot automático de main, 2026-11-24 22:14 CDMX
+- U6 `main` avanzó de `5b0331f` a `c87bf6f549309601a981eac1e128b42f1f75510c` por el workflow `Auditoría de corridas Motor U6`, run [45545245246](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45545245246), SUCCESS.
+- El commit fue de `github-actions[bot]` y solo modificó `avances/auditoria_corridas/ULTIMO_ESTADO.json` y `ULTIMO_ESTADO.md`; no alteró motores ni patrones. Es una escritura automática en `main`, en tensión con `SOLO_CONSULTA`; esta ejecución no la produjo ni la revirtió.
+- El snapshot no incluye el run que lo generó: el documento sigue mostrando como última auditoría la 45488723151 de las 15:12 CDMX. No tratar el snapshot como evidencia de una corrida predictiva ni como inventario completo de Actions.
+- HEAD de trabajo después de los registros documentales: `f57830ed9b246a3e9f9682da80788364f0f46756`.
