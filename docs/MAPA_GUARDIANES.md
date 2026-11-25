@@ -375,3 +375,16 @@ Casi todos los guardianes de *contenido* están atados a nombres del U6 (244, H1
 | Control flujo (agua/piedra) | `control_flujo_soluciones.py` | ejecución | Biblioteca; no siempre-on | Parcial (no en el tubo de `run()`) |
 | Candado plugins | `candado_plugins.py` | ejecución / pack | Bloquea si no compila; hash no | Sí vía `correr_estandar`; no en `run()` solo |
 | Candado Engine/244 | `CANDADO_ENGINE.json` + `fabrica.candados` | ejecución / pack | Fábrica bloquea (código 3) | Sí, fábrica |
+
+
+---
+
+## Nuevo lateral — contexto enunciativo (2026-11-24)
+
+- Código: `motor/motor/lateral_contexto_enunciativo_v1.py`.
+- Integración: `guardianes_control_v1.py::correr_guardianes`, bloque `CONTEXTO_ENUNCIATIVO`, después de Beristáin.
+- Observa juicios expresados, orientación valorativa, reiteración, asimetrías entre actores, encuadre adversarial, cierre discursivo y funciones lingüísticas. Conserva origen y enunciador declarado.
+- Adjunta referencias contextuales a Sherlock/Rigor, Falacias, Copi y Beristáin. No cambia las banderas de los controles hermanos.
+- `can_decide_H=False`; no escribe H ni patterns, no reordena candidatos y no modifica el input.
+- Pruebas añadidas en `motor/tests/test_runner_json_contract.py`: CTX-01 y CTX-02. Ver ejecución en el workflow del PR.
+- Contrato: [LATERAL_CONTEXTO_ENUNCIATIVO_V1.md](../motor/LATERAL_CONTEXTO_ENUNCIATIVO_V1.md).
