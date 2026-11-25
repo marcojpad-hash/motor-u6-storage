@@ -2,34 +2,38 @@
 **Corte de investigación:** 2026-11-24 22:00 CDMX  
 **Uso:** preparación documental únicamente. No contiene H1/H2, semillas, destinos ni predicciones.
 
-## Método de cálculo
-`Z90 = nacimiento + floor(0.9 × (muerte − nacimiento en días))`. Las fechas de muerte se usan solo para calcular la duración vital y congelar Z90. No se incorporan como evidencia para formular hipótesis. Toda evidencia de vida/actividad que se use después debe tener fecha igual o anterior a Z90.
+## Método
+`Z90 = nacimiento + floor(0.9 × (muerte − nacimiento en días))`. La fecha de muerte se usa solo para calcular la duración vital y congelar Z90; no se incorpora como evidencia predictiva. Toda evidencia para H1/H2 debe tener fecha igual o anterior a Z90.
 
 ## Candidato A — Elizabeth II
 - Nacimiento: 1926-04-21.
 - Muerte: 2022-09-08.
-- Duración: 35,221 días.
-- 90%: 31,698 días.
+- Duración: **35,204 días**.
+- 90%: **31,683 días**.
 - **Z90 calculado: 2013-01-17.**
 - Fuentes primarias anteriores a Z90:
-  - [The Gazette, London Gazette issue 33153 — aviso de nacimiento, 1926](https://www.thegazette.co.uk/London/issue/33153/page/2773).
-  - [The Gazette, London Gazette issue 39467 — declaración de acceso, 1952](https://www.thegazette.co.uk/London/issue/39467/page/).
-- Fuente oficial para la fecha final de vida, usada solo en el cálculo: [The Gazette — vida y reinado de Elizabeth II](https://www.thegazette.co.uk/the-life-and-reign-of-queen-elizabeth-ii), que remite al registro oficial de 2022 (issue 63808).
+  - [The London Gazette, issue 33153, 21-abr-1926, p. 2773 — aviso de nacimiento](https://www.thegazette.co.uk/London/issue/33153/page/2773/data.pdf).
+  - [Hansard, Queen's Speech, 04-nov-1952](https://api.parliament.uk/historic-hansard/commons/1952/nov/04/queens-speech).
+  - [Royal Household, address to Parliament, 20-mar-2012](https://www.royal.uk/queens-address-parliament-20-march-2012).
+- Fuente de la fecha final de vida, usada solo para el cálculo: extracto del registro escocés de defunciones emitido por National Records of Scotland; el asiento indica 08-sep-2022 y registro 16-sep-2022. [Copia del documento](https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Death_Certificate.webp). La copia no se usa como evidencia predictiva.
 
-## Candidato B — Edward VII
-- Nacimiento: 1841-11-09.
-- Muerte: 1910-05-06.
-- Duración: 25,033 días.
-- 90%: 22,529 días.
-- **Z90 calculado: 1903-06-30.**
-- Fuentes primarias anteriores a Z90:
-  - [The Gazette, London Gazette issue 20035 — aviso de nacimiento, 1841](https://www.thegazette.co.uk/London/issue/20035/page/2753).
-  - [The Gazette, London Gazette issue 27372 — proclamación de acceso, 1901](https://www.thegazette.co.uk/London/issue/27372/page/7137/data.pdf).
-  - [The Gazette, London Gazette issue 27489 — suplemento de coronación, 1902](https://www.thegazette.co.uk/London/issue/27489/supplement/1).
-- Fuente oficial para la fecha final de vida, usada solo en el cálculo: [The Gazette — vida y reinado de Edward VII](https://www.thegazette.co.uk/the-life-and-reign-of-king-edward-vii), que remite al registro oficial de 1910 (issue 28364).
+## Candidato B — Michelangelo Buonarroti
+- Nacimiento normalizado a calendario gregoriano proléptico: **1475-03-15**. El asiento original consigna 6-mar-1474 según el cómputo florentino/Juliano.
+- Muerte normalizada: **1564-02-28**. La carta contemporánea registra la muerte el 18-feb-1564 Juliano.
+- Duración: **32,491 días**.
+- 90%: **29,241 días**.
+- **Z90 calculado: 1555-04-06.**
+- Evidencia documental anterior a Z90:
+  - Nacimiento: entrada de Lodovico Buonarroti en las *Ricordanze*, fechada 6-mar-1474 florentino/Juliano. La edición documental de 1875 señala que existe en el Archivio Buonarroti una copia de época de Michelangelo tomada de las *Ricordanze* de su padre. [Transcripción de la edición de 1875](https://www.gutenberg.org/cache/epub/46599/pg46599-images.html). **Compuerta pendiente:** confirmar la fecha/procedencia de esa copia y que satisface `source_date` en el primer corte; no asumir que la fecha del asiento equivale automáticamente a la fecha material de la copia.
+  - Corte intermedio: contrato de la *Pietà*, fechado 27-ago-1498 Juliano = 05-sep-1498 gregoriano, en la edición documental citada.
+  - Evidencia final anterior a Z90: carta autógrafa a Lionardo, fechada 02-mar-1555 Juliano = 12-mar-1555 gregoriano, en la misma edición.
+- Fuente primaria para la fecha de muerte, usada solo para calcular la duración: carta de Daniele da Volterra a Giorgio Vasari, 17-mar-1564, que relata la muerte el viernes 18-feb-1564 Juliano. El documento se conserva en Biblioteca Nazionale Centrale di Firenze, Magliabechiano XXV.551, II, cc. 245r–246r; la transcripción aparece en el [catálogo documental de la Regione Toscana](https://www.regione.toscana.it/documents/10180/23969054/CatalogoMostra_Michelangelo-dAnnunzio.pdf/4437c87d-4ea4-6573-5fe7-81767a034774). No se usa como evidencia predictiva.
+
+## Candidatos descartados
+- **Marie Curie:** duplicada en los registros visibles F001_04 y F007_03.
+- **Florence Nightingale:** la copia/certificación de nacimiento disponible está registrada el 12-jul-1820, después del nacimiento del 12-may-1820; no satisface el primer corte.
 
 ## Unicidad y límites
-- La búsqueda en el ledger público no encontró coincidencia exacta para Elizabeth II ni Edward VII; sí aparece Isabel I, que es otra persona.
-- Esto **no sustituye** la comprobación del índice privado C01–C20 por Pecas/custodio. Ambos sujetos siguen sin aprobarse para entrada.
-- Los dos candidatos pertenecen a la misma dinastía británica. Son sujetos distintos, pero comparten contexto histórico; si el custodio exige independencia contextual más estricta, debe sustituirse uno antes de crear entradas.
-- No se generaron semillas ni se ejecutó el motor. No se abrió custodia ni se consultaron desenlaces.
+- La búsqueda del ledger público no encontró coincidencia exacta para Elizabeth II ni Michelangelo; esto no sustituye la comprobación del índice privado C01–C20 por Pecas/custodio.
+- Michelangelo **no está listo para entrada** hasta que se confirme la conversión Florentino/Juliano → gregoriano proléptico y la procedencia/fecha material de la copia de las *Ricordanze*.
+- No se asignan case_id ni se congelan entradas operativas. No se formulan H1/H2, no se generan semillas, no se abren destinos/custodia y no se ejecuta el motor.
