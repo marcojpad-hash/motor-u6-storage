@@ -2,6 +2,12 @@
 """
 plugin_pregunta_dirigida.py — PROPUESTA SIDECAR unificada (no cableado al limpio)
 
+V7 (hallazgo B-H3): de este módulo la ruta viva solo usa detectar_pregunta_dirigida,
+detectar_post_hoc y detectar_falacias. NO_CABLEADO — API disponible, sin llamador
+en la ruta V7: detectar_fuga_corpus, comparar_boards, sugerir_pregunta_neutral,
+auditar. Antes de cablearlas hay que definir qué haría el motor con su salida
+(hoy no está definido); no se cablean por suposición.
+
 Capas (se complementan; no pelean):
 
 1) FUGA_EN_CORPUS — tokens/hechos del corte solo tienen sentido con T+k.

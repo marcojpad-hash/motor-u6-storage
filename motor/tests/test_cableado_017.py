@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -106,3 +107,65 @@ def test_cableado_presente_en_runner_y_correr_estandar():
     assert '"stage": "filtro_entrada_dirigida_017"' in est_src
     assert '"stage": "consulta_dirigida"' in est_src
     assert 'result["consulta_dirigida"] = _cd_traza' in est_src
+
+
+# ------------------------------------------------- V7 (A-F1): verificación de salida cableada
+def _cierre_017():
+    return {"H1": "arquetipo_el_gobernante", "H2": "13_enemistad_de_parientes",
+            "margen": None, "grado": "AJUSTADA", "n_objeciones": 2,
+            "objeciones": [{"guardian": "LOGICA_COPI", "tipo": "NO_RESUELTO_TOP1_NO_ES_TOP_DE_NINGUN_CORTE"},
+                           {"criterio": "C1_top1_encabeza_un_corte"}],
+            "apuesta": {"familia_apostada": "arquetipo_el_gobernante",
+                        "frente_a": "13_enemistad_de_parientes"}}
+
+
+def test_verificar_salida_llm_detecta_h1_h2_invertidas():
+    f017 = _load_f017()
+    cf = _cierre_017()
+    texto = ("H2: 13_enemistad_de_parientes. H1: arquetipo_el_gobernante. "
+             "Grado: AJUSTADA. Hay 2 objeciones.")
+    v = f017.verificar_salida_llm(texto, cf, catalogo=_catalogo())
+    assert "ORDEN_H1_H2_INVERTIDO" in v["violaciones"]
+    assert v["huella_salida_017"] == f017.huella_salida(cf)
+
+
+def test_verificar_salida_llm_texto_limpio_pasa():
+    f017 = _load_f017()
+    cf = _cierre_017()
+    hs = f017.huella_salida(cf)
+    texto = ("H1: arquetipo_el_gobernante. H2: 13_enemistad_de_parientes. "
+             "Grado: AJUSTADA. Hay 2 objeciones. Huella: " + hs)
+    v = f017.verificar_salida_llm(texto, cf, catalogo=_catalogo())
+    assert v["ok"] is True, v
+    assert v["huella_citada"] is True
+
+
+def _python_con_numpy_017():
+    for cand in (sys.executable, "/usr/bin/python3"):
+        try:
+            subprocess.run([cand, "-c", "import numpy"], capture_output=True,
+                           timeout=60, check=True)
+            return cand
+        except Exception:
+            continue
+    return sys.executable
+
+
+def test_runner_verifica_salida_llm(tmp_path):
+    # Vivo (subproceso correr_estandar.py, THEMISTOCLES): la verificación de
+    # salida existe en el RESULT con su huella (A-F1: antes nadie la llamaba).
+    entrada = ROOT / "inputs" / "THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json"
+    salida = tmp_path / "resultado_017.json"
+    env = dict(os.environ)
+    env.pop("FILTRO_017", None)
+    r = subprocess.run([_python_con_numpy_017(), "correr_estandar.py", str(entrada),
+                        "V7_017_SMOKE", str(salida)],
+                       cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0, r.stdout[-2000:] + r.stderr[-2000:]
+    res = json.loads(salida.read_text(encoding="utf-8"))
+    v = res.get("verificacion_salida_llm")
+    assert v is not None, "sin verificacion_salida_llm en una corrida real"
+    assert v.get("status") == "EJECUTADA"
+    assert v.get("huella_salida_017")
+    assert "respuesta_humana" in v.get("por_salida", {})
+    assert "traduccion_salida" in v.get("por_salida", {})

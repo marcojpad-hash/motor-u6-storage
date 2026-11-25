@@ -9,13 +9,13 @@ escribe H, reordena candidatos ni toca patterns_final_v14.json. El motor verific
 que el bloque del predictor quedó byte a byte igual (hash antes/después).
 
 Piezas (se cargan desde la carpeta de corrida y se verifica su sha):
-  control_latencia_decimo_hombre.py ff03241d (T)       → DECIMO_HOMBRE_LATENCIA
-  plugin_pregunta_detras_v2.py      771cb526 (2.3.3 = SB 2.3.2 f0b1a92b + fix demostrativo) → PREGUNTA_DETRAS_V2
+  control_latencia_decimo_hombre.py 7d385e57 (T)       → DECIMO_HOMBRE_LATENCIA (V7: nota puente legacy B-H6)
+  plugin_pregunta_detras_v2.py      d31eb8c0 (2.3.3 = SB 2.3.2 f0b1a92b + fix demostrativo) → PREGUNTA_DETRAS_V2 (V7: CABLEADO, OK Marco 25-nov-2026)
   plugin_pregunta_dirigida_v0_5_1.py (base SB 0.5.0 19f59a1d + capa 0.5.1) → PREGUNTA_DIRIGIDA_POST_HOC y FALACIAS
   guardian_logica_copi_v1.py        (nuevo)             → LOGICA_COPI
   plugin_polaridad_causal.py        534ae636 (T)        → POLARIDAD_CAUSAL
   sidecar_ablacion_hombre_acero.py  7db774c0 (zip CHECKPOINT_REPRODUCIBLE_20260920) + guardian_acero_rival_v1.py (nuevo) → HOMBRE_DE_ACERO
-  plugin_metodo_rigor.py            a4f5659e            → SHERLOCK_RIGOR (ahora recibe cadena_top1)
+  plugin_metodo_rigor.py            d274814d            → SHERLOCK_RIGOR (ahora recibe cadena_top1) (V7: nota Holmes/Schopenhauer B-H2)
   guardian_tropos_beristain_v1.py   (nuevo 27-sep)      → TROPOS_BERISTAIN (vecino de FALACIAS y LOGICA_COPI)
 
 V1.1 (27-sep, versión TROPOS):
@@ -42,10 +42,10 @@ from typing import Any, Dict, List, Optional
 
 VERSION = "GUARDIANES_CONTROL_V1_2_UNICO_20260927"  # V1.2: espera detrás v2 2.3.3 (fix demostrativo); resto = V1.1 (f26f8c56)
 SHA_ESPERADO = {
-    "control_latencia_decimo_hombre.py": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345",
-    "plugin_pregunta_detras_v2.py": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247",
+    "control_latencia_decimo_hombre.py": "7d385e57d39f2440935251eb83af8183ca1fd5581e9247fedaf65ef11a6a2615",  # V7: nota de puente legacy (B-H6) en el docstring; solo texto.
+    "plugin_pregunta_detras_v2.py": "d31eb8c078a999e9f93944128eb50e53e61604cce9c74035c2febc894b8792f4",  # V7: docstring "PROPUESTA. No cablear" obsoleto → CABLEADO (OK de Marco 25-nov-2026).
     "plugin_polaridad_causal.py": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739",
-    "plugin_metodo_rigor.py": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0",
+    "plugin_metodo_rigor.py": "d274814d87010803c109122f17e57001cb455e9da00b0f14416a21155e6bdc32",  # V7: nota Holmes/Schopenhauer plantilla manual (B-H2) en el docstring; solo texto.
     "sidecar_ablacion_hombre_acero.py": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60",
 }
 ORIGEN = {
@@ -402,6 +402,23 @@ def ruta_cierre_latente(bloques, case, motor, pred, base):
                     motivos.append({"guardian": g, "tipo": "CIERRE_EN_BANDA_DE_EMPATE", "estado_marca": "LATENTE",
                                     "fragmento": json.dumps({k: ev.get(k) for k in ("top1", "top2", "gap_rank", "p_momento")}, ensure_ascii=False),
                                     "origen": None, "corte_idx": None, "corte": None, "alcance": "CIERRE"})
+            continue
+        if g == "CONTEXTO_ENUNCIATIVO":
+            # V7 (B-H1): las señales fuertes del lateral (asimetría valorativa
+            # entre actores / cierre discursivo de alternativas) llegan al
+            # cierre como objeción trazable. Solo objeción: no retiene el
+            # cierre ni toca H1/H2/top1 (ruta_cierre_latente solo registra).
+            # Las demás señales (carga reiterada, atribución causal, función
+            # poética, enmarcado adversarial) quedan como observación.
+            for mk in b.get("marcas") or []:
+                if mk.get("estado") == "OBSERVACION" and mk.get("tipo") in (
+                        "ASIMETRIA_VALORATIVA_ENTRE_ACTORES",
+                        "CIERRE_DISCURSIVO_DE_ALTERNATIVAS"):
+                    motivos.append({"guardian": g, "tipo": mk.get("tipo"),
+                                    "estado_marca": "OBSERVACION",
+                                    "fragmento": json.dumps(mk.get("evidencia") or {}, ensure_ascii=False)[:500],
+                                    "origen": (mk.get("evidencia") or {}).get("origen"),
+                                    "corte_idx": None, "corte": None, "alcance": "CIERRE"})
             continue
         propias = [mk for mk in b.get("marcas") or [] if mk.get("estado") == "NO_RESUELTO" or mk.get("tipo") == "DOBLE_NEGACION_LITOTE"]
         for mk in propias:

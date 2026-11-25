@@ -6,6 +6,11 @@ La capa no usa nombres/casos concretos. Consume las candidatas y dimensiones que
 el predictor y recibe un runner de contrafactuales del motor. Nunca interpreta un ataque
 registrado como una prueba ejecutada. No altera el predictor original, H ni la apuesta
 original; entrega una conclusión adversarial separada y trazable.
+
+V7 (hallazgo B-H4): el campo orthogonal_residual_analysis es NOT_IMPLEMENTED por
+diseño — esta capa ejecuta ablaciones/contrafactuales de ranking, no calcula
+proyecciones ni residuos ortogonales. No se implementará sin definir primero sobre
+qué espacio se proyecta; el campo queda con su reason, no se promete lo que no hace.
 """
 from __future__ import annotations
 from typing import Any, Dict, List, Callable

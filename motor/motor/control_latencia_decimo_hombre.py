@@ -16,6 +16,12 @@ Es la regla general para NO ATORARSE cuando el corte no cuadra con la ejecución
 
 Candados: Alimenta_H=NO · no Engine/244/FREEZE. Solo marca estado de proceso.
 Polaridad/doble-negación es UN consumidor de esta capa, no el dueño.
+
+V7 (hallazgo B-H6): polaridad_con_latencia() es un puente LEGACY — se escribió
+antes de la ruta de cierre latente y la ruta viva lo sustituyó: el consumo vivo
+de polaridad por la latencia es ruta_cierre_latente() (guardianes_control_v1.py),
+que recoge DOBLE_NEGACION_LITOTE y registra p=0.5 en latencia. El puente queda
+como función disponible, no como ruta de guardianes.
 """
 from __future__ import annotations
 

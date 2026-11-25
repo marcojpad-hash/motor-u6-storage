@@ -286,6 +286,14 @@ class FlowLedger:
             self.end(audit_sid, {'runtime_warning_count': len(self.warnings)})
             self.emit('RUN_END','run',{'terminal_stages':sorted(self.terminals),'runtime_warning_count':len(self.warnings)})
             self._closed=True
+            # V7 (C-F3): el trazador global no debe seguir apuntando a este
+            # ledger cerrado. Quien lo tome después (p. ej. construir() de
+            # hipotesis_trayectoria_abierta vía _ACTIVE_FLOW_TRACER)
+            # recibiría CEB_LEDGER_CLOSED al primer emit.
+            global _ACTIVE_FLOW_TRACER
+            _tracer = _ACTIVE_FLOW_TRACER
+            if _tracer is not None and getattr(_tracer, "ledger", None) is self:
+                _ACTIVE_FLOW_TRACER = None
             try:
                 if getattr(self,'_prev_showwarning',None) is not None:
                     warnings.showwarning=self._prev_showwarning
@@ -345,6 +353,13 @@ class FlowTracer:
         _ACTIVE_FLOW_TRACER = self
     def observable(self,mapping,name): return ObservableDict(mapping,ceb=self.ledger,name=name)
     def call(self,name,fn,*args,shared=None,terminal=False,**kwargs):
+        if getattr(self.ledger, "_closed", False):
+            # V7 (C-F3): el ledger ya está cerrado (p. ej. un run() previo en
+            # el mismo proceso lo cerró y este trazador quedó como global
+            # activo). El cálculo sigue sin traza: no se inventa auditoría
+            # ni se altera la salida; trazar sobre un ledger cerrado solo
+            # puede levantar CEB_LEDGER_CLOSED.
+            return fn(*args, **kwargs)
         base=str(name or getattr(fn,'__name__','anonymous')); self.counts[base]=self.counts.get(base,0)+1; sid=f'{base}#{self.counts[base]}'
         self.ledger.register(sid,base,self.parent,{'callable':getattr(fn,'__qualname__',repr(fn)),'module':getattr(fn,'__module__',None)})
         self.ledger.start(sid,list(args)+list(kwargs.values()),self.parent)

@@ -101,7 +101,14 @@ def test_u6_full_guardian_pack_runs_case_and_routes_context_without_changing_dec
     for name in ("SHERLOCK_RIGOR", "FALACIAS", "LOGICA_COPI", "TROPOS_BERISTAIN"):
         assert blocks[name]["bandera"] != "ERROR", (name, blocks[name])
         assert "contexto_lateral_enunciativo" in blocks[name].get("detalle", {}), (name, blocks[name])
-    assert result["ruta_cierre_latente"]["estado_cierre"] == "SIN_OBJECION_DE_GUARDIANES"
+    # V7 (B-H1): la asimetría valorativa del lateral llega al cierre como
+    # objeción trazable (antes se ignoraba: H1 del informe).
+    ruta = result["ruta_cierre_latente"]
+    assert ruta["estado_cierre"] == "LATENTE", ruta
+    assert ruta["n_motivos"] == 1, ruta
+    assert ruta["motivos"][0]["guardian"] == "CONTEXTO_ENUNCIATIVO"
+    assert ruta["motivos"][0]["tipo"] == "ASIMETRIA_VALORATIVA_ENTRE_ACTORES"
+    assert ruta["motivos"][0]["alcance"] == "CIERRE"
 
 
 def test_u6_pipeline_keeps_neutral_input_clean(tmp_path):

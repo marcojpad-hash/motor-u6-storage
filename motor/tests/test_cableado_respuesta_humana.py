@@ -255,6 +255,8 @@ def test_runner_enchufa_respuesta_humana():
     assert "respuesta_humana_v1" in texto
     assert "RESPUESTA_HUMANA" in texto
     assert 'result["respuesta_humana"]' in texto
+    # V7 (A-F2): el runner usa el puente observar(), no responder() directo.
+    assert "observar(" in texto
     rh = _load_rh()
     result, ent = _v28("LIMBO_6C_INTERPRETABLE.json")
     out = rh.observar(ent, None, result)

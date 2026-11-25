@@ -235,6 +235,19 @@ def test_cableado_presente_en_runner_y_correr_estandar():
     assert 'result["sombrero_blanco"]' in src_correr
 
 
+def test_fila_token_no_declara_feeds_predictor():
+    # V7 (A-F5): la fila histórica de laterales_unico_v1.py decía
+    # "EXECUTED feeds_predictor=True" para el plugin token, y el plugin NO
+    # alimenta al predictor (UNICO y laterales :1143 ya declaran False).
+    # Anti-regresión estática, acotada a la fila del plugin token (la cadena
+    # feeds_predictor=True aparece en otras filas genéricas, fuera de este
+    # hallazgo, y no se tocan).
+    src = (MOTOR / "motor" / "laterales_unico_v1.py").read_text(encoding="utf-8")
+    assert '"plugin_sombrero_blanco_token.py": "EXECUTED feeds_predictor=True"' not in src
+    assert '"plugin_sombrero_blanco_token.py": "EXECUTED feeds_predictor=False"' in src
+    assert '"feeds_predictor_declarado": False' in src
+
+
 # ------------------------------------------------- bypass se marca en el recibo
 def _corrida_fixture(modo_sb, tmpdir):
     fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """PLUGIN_PREGUNTA_DETRAS v2.3.2 — lente semántica + calibrador morfosintáctico + tropos.
 
-PROPUESTA. No cablear al limpio sin OK de Marco.
+V7 (2026-11-25): CABLEADO — el OK de Marco llegó (integración autorizada expresamente
+el 25-nov-2026; la rama alterna se absorbió en V7). La línea vieja "PROPUESTA. No
+cablear al limpio sin OK de Marco" quedó obsoleta y se sustituye por esta nota.
 No toca Engine_V5 / F / p / 244. No inventa H. No activa tokens.
 
 v1 = lista de frases (TRAMPAS).

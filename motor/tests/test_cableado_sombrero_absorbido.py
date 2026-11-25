@@ -75,7 +75,7 @@ MOTOR_DIR = ROOT / "motor"
 UNICO = MOTOR_DIR / "MOTOR_V15_3_UNICO_20260927.py"
 THEMISTOCLES = ROOT / "inputs" / "THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json"
 
-SHA_UNICO = "473f56cc"
+SHA_UNICO = "89062ad0"  # V7 P2: C-F4 (candado plugins en run()), C-F3 (plan_contorno en excepts de cierre), B-H4 (violaciones del verificador a objeciones), A-F4 (gate Z90 en run()), C-F1 (filtro zoom en _do_caldero); cambio intencional, H intacto (ver smoke V7).
 SHA_ENGINE = "665c39a2"
 SHA_PATTERNS = "d827dcc3"
 

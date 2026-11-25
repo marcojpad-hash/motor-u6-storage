@@ -97,6 +97,16 @@ def test_rigor_holmes_apellidos():
     assert m.rigor({"cadena_top1": "A → B"}, hipotesis="")["auto"] == []
 
 
+def test_rigor_solo_hecate_con_hipotesis_de_catalogo():
+    # V7 (B-H2): con una hipótesis que es un nombre de familia del catálogo
+    # 244, Holmes/Schopenhauer del plugin no pueden disparar (literales e
+    # inverso sin fuente en la ruta real); lo único vivo del plugin es Hécate.
+    m = _load_rigor()
+    auto = m.rigor({"cadena_top1": "A → A → A → A"},
+                   hipotesis="arquetipo_el_gobernante")["auto"]
+    assert auto == ["HECATE_MAS_DE_LO_MISMO: el letrero no cambio 4 cortes"]
+
+
 def test_rigor_schopenhauer_inverso():
     m = _load_rigor()
     assert m.rigor({"cadena_top1": "A → B"},
@@ -262,7 +272,7 @@ def test_corrida_real_ejecuta_sherlock(tmp_path):
     assert sal.get("auto") == [], sal
     piezas_meta = {p.get("archivo"): p for p in b.get("piezas", [])}
     assert piezas_meta["plugin_metodo_rigor.py"]["sha_ok"] is True, piezas_meta
-    assert piezas_meta["plugin_metodo_rigor.py"]["sha256"].startswith("a4f5659e")
+    assert piezas_meta["plugin_metodo_rigor.py"]["sha256"].startswith("d274814d")  # V7: nota B-H2 en el docstring; solo texto.
     # H intacto: los guardianes solo marcan, no reescriben predictor ni H
     v = g.get("verificacion_H_intacto") or {}
     assert v.get("predictor_igual") is True and v.get("H1_H2_igual") is True

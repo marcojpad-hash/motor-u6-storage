@@ -20,7 +20,9 @@ intacta), pero con `MODO_ESTRICTO=0` desaparecía en silencio: ni
 de componentes. Este PR no reescribe el núcleo: añade la rama `else`
 que deja el apagado marcado `NO_CONFIGURADO` (con `estricto_modo: off`)
 y registra `estricto_modo` en la fila de componentes en ambos casos.
-SHA esperado del plugin (`c0fe7fbd…`) coincide con el archivo actual.
+SHA esperado del plugin (`9143a098…`) coincide con el archivo actual.
+(V7: el docstring corrigió la referencia obsoleta al runner; SHA anterior
+`c0fe7fbd…`.)
 
 Contrato de la familia: el bloque corre DESPUÉS del predictor y de los
 guardianes, solo RETIENE el estado de cierre estricto
@@ -69,7 +71,7 @@ ESTRICTO = MOTOR_DIR / "modo_estricto_v1.py"
 UNICO = MOTOR_DIR / "MOTOR_V15_3_UNICO_20260927.py"
 THEMISTOCLES = ROOT / "inputs" / "THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json"
 
-SHA_ESTRICTO = "c0fe7fbd"
+SHA_ESTRICTO = "9143a098"
 SHA_ENGINE = "665c39a2"
 SHA_PATTERNS = "d827dcc3"
 

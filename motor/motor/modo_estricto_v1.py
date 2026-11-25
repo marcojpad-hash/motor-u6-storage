@@ -3,7 +3,8 @@
 """modo_estricto_v1.py — MODO DE CORRIDA ESTRICTO (27-sep-2026). Lateral. can_decide_H=false.
 
 No escribe H1/H2, no reordena candidatos, no toca Engine_V5 ni patterns (solo lectura).
-Se llama al final de run() en MOTOR_..._ESTRICTO_20260927.py sobre COPIAS de case/motor/pred.
+Se llama al final de run() en MOTOR_V15_3_UNICO_20260927.py (el runner activo; la
+referencia vieja a MOTOR_..._ESTRICTO_20260927.py quedó obsoleta) sobre COPIAS de case/motor/pred.
 A CIEGAS: no lee resultados registrados ni objetivos; solo la corrida en curso y piezas del run dir.
 
 1) CIERRE ESTRICTO. Hay cierre solo si se cumplen TODAS:

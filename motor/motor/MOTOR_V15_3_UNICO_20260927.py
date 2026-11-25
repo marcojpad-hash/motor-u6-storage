@@ -159,6 +159,130 @@ def _load(name: str, filename: str):
     return mod
 
 
+def _aplicar_gate_z90(case):
+    """V7 (A-F4 resto): Z90 en run() cuando el caso lo declara.
+
+    Antes Z90 solo validaba fechas en run() (_validate_case) y el gate
+    completo (calibracion/gate_z90.py) solo vivía en correr_estandar. Se
+    ejecuta solo si el caso declara gate_z o z_trabajo+modo_z; si no, no hay
+    compuerta (comportamiento anterior intacto). Con la compuerta declarada,
+    un error de validación levanta ValueError y la corrida no arranca.
+    El gate se carga por ruta explícita (BASE.parent/calibracion/gate_z90.py),
+    no por _load (no vive bajo BASE/motor/).
+    """
+    if not (case.get("gate_z") or (case.get("z_trabajo") and case.get("modo_z"))):
+        return {"status": "SIN_COMPUERTA",
+                "motivo": "el caso no declara gate_z ni z_trabajo+modo_z"}
+    p = BASE.parent / "calibracion" / "gate_z90.py"
+    if not p.is_file():
+        raise RuntimeError("GATE_Z90_FALTA_ARCHIVO: calibracion/gate_z90.py no cargó")
+    spec = importlib.util.spec_from_file_location("gate_z90_v7", str(p))
+    gz = importlib.util.module_from_spec(spec)
+    sys.modules["gate_z90_v7"] = gz
+    spec.loader.exec_module(gz)
+    entrada = {
+        "z_trabajo": case.get("z_trabajo") or case.get("z_work_date") or case.get("z90_date") or case.get("freeze"),
+        "modo_z": case.get("modo_z") or ("historico" if case.get("z_work_kind") == "BIOGRAPHY_Z90" else "vivo"),
+        "z90_date": case.get("z90_date"),
+        "cuts": case.get("cuts"),
+        "preparacion_ciega": case.get("preparacion_ciega"),
+        "fecha_nacimiento": case.get("fecha_nacimiento") or case.get("birth_date"),
+        "fecha_muerte": case.get("fecha_muerte") or case.get("death_date"),
+    }
+    errs = gz.validar_entrada(entrada)
+    if errs:
+        raise ValueError("GATE_Z90: " + "; ".join(errs))
+    return {"status": "OK", "z_trabajo": entrada["z_trabajo"], "modo_z": entrada["modo_z"]}
+
+
+def _aplicar_filtro_zoom_caldero(out, case):
+    """V7 (C-F1): filtro de identidad zoom sobre las fuentes crudas del Caldero.
+
+    Antes el zoom corría pero no devolvía descartes al Caldero (ACTIVA_MUDA
+    perpetuo). La identidad sale de _case_identity (person + fechas del caso);
+    no hace falta caldero_identity en el input. Solo se descartan las fuentes
+    que SON el sujeto del caso (misma_identidad_zoom_in); sus tokens salen de
+    tokens_neighbors solo si ninguna otra fuente los sostiene. Nunca rompe la
+    corrida: un fallo del filtro deja los tokens como estaban y queda
+    registrado en la auditoría. Devuelve el dict de auditoría zoom_identity.
+    """
+    try:
+        zf = _load("filtro_identidad_zoom_out_zoom_in", "filtro_identidad_zoom_out_zoom_in.py")
+        ident = _case_identity(case)
+        if zf is None:
+            audit = {"status": "FALTA_ARCHIVO", "file": "filtro_identidad_zoom_out_zoom_in.py"}
+        elif not ident:
+            audit = {"status": "ACTIVA_MUDA",
+                     "motivo": "sin identidad en el input (ni caldero_identity ni person ni identity)"}
+        else:
+            raw = (out.get("audit") or {}).get("raw_sources_before_self_match") or []
+            kept, disc = zf.ZoomIdentityFilter(ident).filter([s for s in raw if isinstance(s, dict)])
+            disc_urls = {d.get("url") for d in disc if d.get("url")}
+            tn = (out.get("caldero_input") or {}).get("tokens_neighbors") or []
+            tn2 = [r for r in tn if not (isinstance(r, dict) and (r.get("source_refs") or [])
+                                         and set(r.get("source_refs") or []) <= disc_urls)]
+            if disc_urls and (out.get("caldero_input") or {}).get("tokens_neighbors") is not None:
+                out["caldero_input"]["tokens_neighbors"] = tn2
+            audit = {"status": "EXECUTED", "n_fuentes": len(raw),
+                     "descartadas_misma_identidad": disc,
+                     "n_descartadas": len(disc),
+                     "n_tokens_antes": len(tn), "n_tokens_despues": len(tn2)}
+    except Exception as e:
+        audit = {"status": "ERROR", "error": f"{type(e).__name__}:{e}"}
+    out.setdefault("audit", {})["zoom_identity"] = audit
+    return audit
+
+
+def _verificar_candado_plugins_run(force=False):
+    """V7 (C-F4): candado de plugins al inicio de run().
+
+    Antes solo corría en correr_estandar.py (preflight); una llamada directa a
+    run() lo saltaba. Verifica cada .py de motor/ (salvo el Engine canónico):
+    compila y prohíbe imports directos al Engine. Un plugin no compilable o
+    que importe el Engine levanta PluginCorruptoError/ImportProhibidoError y
+    la corrida se ABORTA (muro, no aviso). Los cambios de hash no bloquean
+    (BYPASS_HASH_CAMBIO; eso lo gestiona registrar_o_comparar, que no corre aquí).
+    El resultado se cachea por proceso (compilar 115 archivos cuesta ~2.3 s);
+    force=True lo re-ejecuta (lo usan los tests que rompen un plugin a propósito).
+    Si candado_plugins.py falta, levanta (fail closed: sin candado no hay corrida).
+    """
+    global _CANDADO_PLUGINS_CACHE
+    if _CANDADO_PLUGINS_CACHE is not None and not force:
+        return _CANDADO_PLUGINS_CACHE
+    cp = _load("candado_plugins_v7", "candado_plugins.py")
+    if cp is None:
+        raise RuntimeError("CANDADO_PLUGINS_FALTA_ARCHIVO: candado_plugins.py no cargó")
+    verificados = 0
+    for f in sorted(BASE.glob("*.py")):
+        if f.name == "Engine_V5_CANONICO_SOLO.py":
+            continue
+        cp.verificar_plugin(str(f))  # levanta PluginCorruptoError / ImportProhibidoError
+        verificados += 1
+    res = {"status": "OK", "verificados": verificados, "fallos": []}
+    _CANDADO_PLUGINS_CACHE = res
+    return res
+
+
+_CANDADO_PLUGINS_CACHE = None
+
+
+def _plan_contorno(piedra, contexto=None):
+    """V7 (C-F3): plan de contorno para un fallo del runner (control_flujo_soluciones.contornar).
+
+    Se llama desde los except que convierten un fallo de guardián/cierre en
+    bloque ERROR del recibo, para que el fallo llegue con su contorno y no
+    solo con el error. Nunca rompe la corrida: si el módulo falta o contornar
+    falla, devuelve None.
+    """
+    try:
+        cf = _load("control_flujo_soluciones_v7", "control_flujo_soluciones.py")
+        if cf is None or not hasattr(cf, "contornar"):
+            return None
+        return cf.contornar(str(piedra)[:500], contexto=contexto)
+    except Exception:
+        return None
+
+
 def _prefijo_monomito(cuts, vocab):
     """PATCH 005: prefijo de estados monomíticos SOLO desde el input (sin inferencia).
     Por corte: clave explícita (estado_monomito|monomito|etapa_monomito|stage) o un único token P/A/C
@@ -2151,6 +2275,11 @@ def _run_geometria_multicapa_working(result: Dict[str, Any], case: Dict[str, Any
 def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
     catalog_integrity = _verify_patterns_contract()
     _validate_case(case)
+    # V7 (A-F4): gate Z90 en run() cuando el caso lo declara (gate_z o
+    # z_trabajo+modo_z); si no lo declara, no hay compuerta.
+    _gate_z90 = _aplicar_gate_z90(case)
+    # V7 (C-F4): candado de plugins al inicio de run() (antes solo en correr_estandar).
+    _candado_plugins = _verificar_candado_plugins_run()
     # A5_20261107: filtro 017 cableado al runner único (ver _aplicar_filtro_017).
     case, _f017_traza = _aplicar_filtro_017(case)
     # Sombrero blanco v2 cableado al runner único (ver _aplicar_sombrero_blanco):
@@ -2404,6 +2533,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                 _gpl_audit["aceptadas_detalle"]=_hints
                 out=caldero_mod.CalderoArchetypeSearchSidecar(adapter,caldero_mod.SelfMatchFilter(identity)).run(active,llm_neighbor_hints=_hints,cutoff_date=_z_corte,corte_modo=_corte_modo)
                 out.setdefault("audit",{})["guardian_pistas_llm"]=_gpl_audit
+                _aplicar_filtro_zoom_caldero(out, case)  # V7 (C-F1): descartes zoom -> tokens_neighbors
                 features["caldero_busqueda_arquetipos"]=out
                 return out
             caldero_search=_ceb_stage("sidecar_caldero_busqueda_arquetipos",_do_caldero)
@@ -2953,7 +3083,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             motor["sombrero_blanco"]={"status":"ERROR","error":str(_sb_exc),"can_decide_H":False}
             status.append({"component":"plugin_sombrero_blanco_token.py","status":"ERROR","reason":str(_sb_exc),"feeds_predictor":False,"feeds_H":False,"can_decide_H":False})
     result={"version":VERSION,"hash_candado":CANON_HASH,"patterns_sha256":_sha(_PATTERNS_PATH()),"M":M,
-            "n_canon":_n_patrones(),"catalogo_patrones":{"ruta":str(_PATTERNS_PATH()),"sha256":_sha(_PATTERNS_PATH()),"n_patrones":_n_patrones(),"es_default_v14":_sha(_PATTERNS_PATH())==PATTERNS_SHA_DEFAULT,"integridad_contrato":catalog_integrity,"validacion_puentes":(_hub_det.get("catalogo") if isinstance(_hub_det,dict) else None)},"protocolo_orden0":_orden0,"case_id":case["case_id"],"protocol":case.get("protocol"),
+            "n_canon":_n_patrones(),"catalogo_patrones":{"ruta":str(_PATTERNS_PATH()),"sha256":_sha(_PATTERNS_PATH()),"n_patrones":_n_patrones(),"es_default_v14":_sha(_PATTERNS_PATH())==PATTERNS_SHA_DEFAULT,"integridad_contrato":catalog_integrity,"validacion_puentes":(_hub_det.get("catalogo") if isinstance(_hub_det,dict) else None)},"protocolo_orden0":_orden0,"candado_plugins":_candado_plugins,"gate_z90":_gate_z90,"case_id":case["case_id"],"protocol":case.get("protocol"),
             "freeze":freeze,"execution":{"engine":str(Path(getattr(native,"__file__", "MOTOR_V15_3_NATIVO_V0_9.py")).name),"plugins_and_lenses":"FUNCTIONALLY_EXECUTED_WHERE_PRESENT; no legacy ON/OFF semantics","random_seed":seed,
             "component_status":status,"component_inventory":inventory,"monte_carlo":monte_carlo,"execution_identity":execution_identity},
             "execution_identity":execution_identity,"motor":motor,"features":features,"protocol_controls":transversal,
@@ -3260,7 +3390,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
         result["resolucion_operativa_terminal_017"]={"status":"OMITIDO_CIERRE_TERMINAL_016","regla":"CIERRE_TERMINAL=016: sin reordenamiento terminal (tortugas/casos semejantes/pistas LLM no escriben H)"}
         status.append({"component":"resolucion_operativa_terminal_017","status":"OMITIDO_CIERRE_TERMINAL_016","feeds_predictor":False,"feeds_H":False,"can_decide_H":False})
     except Exception as _r017e:
-        result["resolucion_operativa_terminal_017"]={"status":"ERROR","error":f"{type(_r017e).__name__}:{_r017e}"}
+        result["resolucion_operativa_terminal_017"]={"status":"ERROR","error":f"{type(_r017e).__name__}:{_r017e}","plan_contorno":_plan_contorno(f"{type(_r017e).__name__}:{_r017e}", contexto="resolucion_operativa_terminal_017")}
         status.append({"component":"resolucion_operativa_terminal_017","status":"ERROR","error":str(_r017e)})
 
     # PATCH 016 — CIERRE DE FIN DE CORRIDA (regla Mj 2026-10-06 21:25 CT): la latencia es estado DURANTE la corrida y de
@@ -3282,7 +3412,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
                        "grado":_cf016.get("grado"),"H1":_cf016.get("H1"),"H2":_cf016.get("H2"),"margen":_cf016.get("margen")})
     except Exception as _e016:
         import traceback as _tb016
-        result["cierre_final"]={"status":"ERROR","error":f"{type(_e016).__name__}:{_e016}","trace":_tb016.format_exc()[-1500:]}
+        result["cierre_final"]={"status":"ERROR","error":f"{type(_e016).__name__}:{_e016}","trace":_tb016.format_exc()[-1500:],"plan_contorno":_plan_contorno(f"{type(_e016).__name__}:{_e016}", contexto="cierre_final_016")}
         status.append({"component":"cierre_final_016","status":"ERROR","error":str(_e016)})
     # PATCH 017 — Décimo Hombre con esteroides: capa adversarial iterativa/mayéutica.
     # Se ejecuta DESPUÉS del cierre de la corrida; audita y reabre preguntas, nunca reescribe H/apuesta.
@@ -4375,6 +4505,14 @@ def _cierre_final_016_lineaA(result,pred,run_ctx=None):
                                                +([f"décimo hombre: cierre en banda de empate (p={c3.get('decimo_hombre_cierre_p')})"] if emp_dh else [])),
                            "nota":"releído para el cierre final: 'sin H1/sin H2' del estricto era el estado del predictor DURANTE la corrida"})
     if c4 is not None and not c4.get("ok"): objeciones.append({"fuente":"modo_estricto","criterio":"C4_aquiles_estable","detalle":mot_e.get("C4")})
+    # V7 (B-H4): las violaciones del verificador de consistencia adversarial
+    # llegan al cierre como objeciones (antes el paquete LLM lo leía nadie y
+    # las violaciones no las consumía nadie). Solo objeción: gradúan el grado
+    # (FIRME exige 0 objeciones), no reescriben H1/H2.
+    adv = result.get("consistency_adversarial") or {}
+    for v in (adv.get("violations") or []):
+        objeciones.append({"fuente": "verificador_consistencia", "criterio": str(v),
+                           "detalle": "violación del verificador de consistencia adversarial en esta corrida"})
     objeciones=_deduplicar_objeciones_016(objeciones)
     separado=margen is not None and margen>=GATE_SEPARATION
     fuerte=[k for k,v in (("acero_CAE",acero["veredicto_top1"]=="CAE"),("acero_rival_no_alineado",not acero["rival_alineado_apuesta"]),("decimo_hombre_banda_empate",emp_dh),("subdeterminacion",subdet),("empate_exacto",emp)) if v]
@@ -4520,6 +4658,16 @@ def _cierre_final_016(result,pred,run_ctx=None):
                                                +([f"décimo hombre: cierre en banda de empate (p={c3.get('decimo_hombre_cierre_p')})"] if emp_dh else [])),
                            "nota":"releído para el cierre final: 'sin H1/sin H2' del estricto era el estado del predictor DURANTE la corrida"})
     if c4 is not None and not c4.get("ok"): objeciones.append({"fuente":"modo_estricto","criterio":"C4_aquiles_estable","detalle":mot_e.get("C4")})
+    # V7 (B-H4): las violaciones del verificador de consistencia adversarial
+    # llegan al cierre como objeciones (antes el paquete LLM lo leía nadie y
+    # las violaciones no las consumía nadie). Solo objeción: gradúan el grado
+    # (FIRME exige 0 objeciones), no reescriben H1/H2. _cierre_final_020
+    # reutiliza estas objeciones (llama a _cierre_final_016), así que el
+    # cierre por defecto también las lleva.
+    adv = result.get("consistency_adversarial") or {}
+    for v in (adv.get("violations") or []):
+        objeciones.append({"fuente": "verificador_consistencia", "criterio": str(v),
+                           "detalle": "violación del verificador de consistencia adversarial en esta corrida"})
     objeciones=_deduplicar_objeciones_016(objeciones)
     separado=margen is not None and margen>=GATE_SEPARATION
     fuerte=[k for k,v in (("acero_CAE",acero["veredicto_top1"]=="CAE"),("acero_rival_no_alineado",not acero["rival_alineado_apuesta"]),("decimo_hombre_banda_empate",emp_dh),("subdeterminacion",subdet),("empate_exacto",emp)) if v]
