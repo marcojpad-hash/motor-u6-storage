@@ -185,3 +185,9 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - Se creó `avances/2026-11-24_fuentes_primarias_candidatos_z90.md` con fuentes oficiales y cálculos provisionales para dos candidatos. La búsqueda del ledger público no encontró coincidencia exacta, pero la unicidad final depende del índice privado del custodio.
 - No se modificaron motores canónicos, pesos, catálogo 244, FREEZE, salidas congeladas, secretos ni permisos. No se abrió ni cerró PR. No hubo corridas nuevas.
 - **Siguiente compuerta mínima:** acuse del custodio confirmando unicidad y entregando el sellado independiente. Entonces preparar solo entradas entry-only y ejecutar con el runner real, leyendo de vuelta RESULT, RECIBO, CEB y manifiesto.
+
+
+### Trazabilidad del registro 22:00
+- HEAD observado al iniciar el corte: `2d32677b`.
+- Commits de documentación creados en este corte: `aa8f605f` (reconciliación de muestra), `4ff0dbb7` (dossier de fuentes/Z90) y `a186358c` (este tablero).
+- Estos commits actualizan solo documentación; no contienen nuevas entradas de caso ni cambios al motor.
