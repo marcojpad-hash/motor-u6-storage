@@ -169,3 +169,19 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - **Commit:** `03527aca1556761162a10680b78c3ac61e0f5635`; blob del workflow releído: `184472b46d66e4d442faa30dca26def35b3072bc`.
 - **CI VERIFICADO:** run [#45341793466](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45341793466), job `runner-contract` SUCCESS, **78 passed in 1.69s**. El log confirma que pytest recibió `casos/fabrica/test_preparar_entrada_solo.py`; la regeneración de manifiestos y su artifact también terminaron SUCCESS.
 - La corrección valida el contrato de preparación y el runner; **no** ejecuta casos reales, no crea destinos ni demuestra custodia independiente. n permanece en 45 sellados/evaluados; 5 siguen `NO_SELLADO`; incremento de n = 0.
+
+
+## 2026-11-24 22:00 CDMX — reconciliación operativa y correcciones
+
+- Rama activa `alterno/cameo-pesos`: HEAD `2d32677b`. `main` permanece solo consulta en HEAD `5b0331f`; ese commit de main fue generado por el workflow automático de snapshot de Actions, no por esta ejecución. No se revirtió ni se escribió en main.
+- **Corrección de estado técnico:** la gate Z90 está completa en la rama activa: calcula Z90 desde nacimiento/muerte, exige primer corte en nacimiento, ventanas acumulativas y último corte exactamente en Z90. `motor/correr_estandar.py` invoca el guardián. `preparar_entrada_solo.py` escribe únicamente `entrada.json` y `entrada.sha256`; no importa destinos. No ejecutar `fabrica.py preparar-z` ni `fabrica.py correr`.
+- Último CI de la rama activa observado: 78 pruebas aprobadas en run 45341793466, sobre commit anterior al HEAD documental actual. No se lanzó CI manualmente en este corte.
+- **F007 sigue inválido:** 8 sujetos, 2 cortes por sujeto, fuentes secundarias Wikipedia y sin campos/validación Z90 conforme al schema. No se crearon entradas ni se ejecutó el motor.
+- El custodio no respondió después del comentario #465 `7146005810`. No existe cohorte sellada ni acuse independiente. No se accedió a custodia.
+- **Corrección de n:** `CALIBRACION_ACUMULADA.md` reportaba 45 filas evaluadas, pero cinco filas F001_D022 reutilizan exactamente los cinco hashes de entrada de F001. Según la regla anti-duplicados, la muestra independiente es **n=40**. Recuento corregido: H1 8/40 (20.0%), H2 5/40 (12.5%), set 12/40 (30.0%), escenario 10/40 (25.0%), destino exacto 12/35 (34.3%) y polaridad 23/35 (65.7%). Se añadió reconciliación sin alterar filas históricas. F006/Courbet, filas de integración y reevaluaciones no aumentan n.
+- `resultados.jsonl` tiene 62 filas y 53 case_id distintos; no se usa ese total como n experimental.
+- PR #38 sigue abierto y sin merge. Su HEAD `3a6cbf6887a79fcb7c5b0c12891e1bed322a7975` tiene un CI exitoso de 82 pruebas (run 45461576292). Las pruebas comprueban el bloque de contexto y referencias estables, pero no comparan explícitamente H1/H2/top-1 antes y después; esa invariancia sigue sin prueba directa.
+- `avances/2026-11-24_ChatGPT_tercera_capa_lectura_contextual.md` es una propuesta documental; no equivale a implementación. No confundirla con la rama separada de PR #38.
+- Se creó `avances/2026-11-24_fuentes_primarias_candidatos_z90.md` con fuentes oficiales y cálculos provisionales para dos candidatos. La búsqueda del ledger público no encontró coincidencia exacta, pero la unicidad final depende del índice privado del custodio.
+- No se modificaron motores canónicos, pesos, catálogo 244, FREEZE, salidas congeladas, secretos ni permisos. No se abrió ni cerró PR. No hubo corridas nuevas.
+- **Siguiente compuerta mínima:** acuse del custodio confirmando unicidad y entregando el sellado independiente. Entonces preparar solo entradas entry-only y ejecutar con el runner real, leyendo de vuelta RESULT, RECIBO, CEB y manifiesto.
