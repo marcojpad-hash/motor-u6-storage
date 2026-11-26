@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -78,6 +79,7 @@ jobs:
           cp "motor/RESULT_${CASE_ID}.json" /tmp/u7-evidencia/
           cp "motor/RESULT_${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
           cp "$INPUT_FILE" /tmp/u7-evidencia/entrada.json
+          cp motor/RESULT_${CASE_ID}_CEB_LEDGER_*.jsonl /tmp/u7-evidencia/ 2>/dev/null || true
           python - <<'PY'
           import json, pathlib, sys
           d=pathlib.Path("/tmp/u7-evidencia")
