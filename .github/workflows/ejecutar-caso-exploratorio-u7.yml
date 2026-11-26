@@ -45,39 +45,15 @@ jobs:
         run: |
           set -euo pipefail
           if [ "${GITHUB_EVENT_NAME}" = "push" ]; then
-            CHANGED_CASES="$(git diff --name-only "$GITHUB_EVENT_BEFORE" "$GITHUB_SHA" -- casos/ejecuciones_exploratorias/ | grep -E '\\.json
-          test -n "$INPUT_FILE"
-          case "$INPUT_FILE" in casos/ejecuciones_exploratorias/*.json) ;; *) echo "RUTA_ENTRADA_NO_PERMITIDA"; exit 2;; esac
-          test -f "$INPUT_FILE"
-          test -n "$CASE_ID"
-          mkdir -p /tmp/u7-evidencia
-          python -B motor/correr_estandar.py "$INPUT_FILE" "$CASE_ID"
-          cp "motor/RESULT_${CASE_ID}.json" /tmp/u7-evidencia/
-          cp "motor/RESULT_${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
-          cp "$INPUT_FILE" /tmp/u7-evidencia/entrada.json
-          cp motor/RESULT_${CASE_ID}_CEB_LEDGER_*.jsonl /tmp/u7-evidencia/ 2>/dev/null || true
-          python - <<'PY'
-          import json, pathlib, sys
-          d=pathlib.Path("/tmp/u7-evidencia")
-          r=json.loads(next(d.glob("*RECIBO_EJECUCION.json")).read_text())
-          print(json.dumps({"case_id":r.get("case_id"),"status":r.get("status"),"input_sha256":r.get("input_sha256"),"output_sha256":r.get("output_sha256"),"canonical_engine_sha256":r.get("canonical_engine_sha256"),"patterns_sha256":r.get("patterns_sha256"),"duration_seconds":r.get("duration_seconds")},ensure_ascii=False,indent=2))
-          if r.get("status") not in ("COMPLETED","COMPLETED_WITH_METADATA_GAP"):
-              sys.exit(3)
-          PY
-      - name: Publicar recibo y salida como artefacto
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: motor-u7-${{ github.run_id }}-${{ github.run_attempt }}
-          path: /tmp/u7-evidencia/
-          if-no-files-found: warn
-          retention-days: 30
- || true)"
-            COUNT="$(printf '%s\\n' "$CHANGED_CASES" | sed '/^$/d' | wc -l | tr -d ' ')"
+            CHANGED_CASES="$(git diff --name-only "$GITHUB_EVENT_BEFORE" "$GITHUB_SHA" -- casos/ejecuciones_exploratorias/ | grep -E '\.json$' || true)"
+            COUNT="$(printf '%s\n' "$CHANGED_CASES" | sed '/^$/d' | wc -l | tr -d ' ')"
             if [ "$COUNT" -ne 1 ]; then
               echo "PUSH_REQUIRES_EXACTLY_ONE_CHANGED_CASE_JSON; found=$COUNT"
               exit 2
             fi
+            INPUT_FILE="$CHANGED_CASES"
+            CASE_ID="$(basename "$INPUT_FILE" .json)"
+          fi
             INPUT_FILE="$CHANGED_CASES"
             CASE_ID="$(basename "$INPUT_FILE" .json)"
           fi
