@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: \${{ github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -40,12 +40,12 @@ jobs:
       - name: Resolver entrada y ejecutar Motor U7
         id: run
         env:
-          INPUT_FILE: ${{ inputs.case_file }}
-          CASE_ID: ${{ inputs.case_id }}
+          INPUT_FILE: \${{ inputs.case_file }}
+          CASE_ID: \${{ inputs.case_id }}
         run: |
           set -euo pipefail
-          if [ "${GITHUB_EVENT_NAME}" = "push" ]; then
-            INPUT_FILE="$(git ls-tree -r --name-only "$GITHUB_SHA" | grep '^casos/ejecuciones_exploratorias/ZZZ_.*json | sort | tail -n 1)"
+          if [ "\${GITHUB_EVENT_NAME}" = "push" ]; then
+            INPUT_FILE="$(git ls-tree -r --name-only "$GITHUB_SHA" | grep '^casos/ejecuciones_exploratorias/ZZZ_.*json$' | sort | tail -n 1)"
             CASE_ID="$(basename "$INPUT_FILE" .json)"
           fi
           test -n "$INPUT_FILE"
@@ -54,8 +54,8 @@ jobs:
           test -n "$CASE_ID"
           mkdir -p /tmp/u7-evidencia
           python -B motor/correr_estandar.py "$INPUT_FILE" "$CASE_ID"
-          cp "motor/RESULT_${CASE_ID}.json" /tmp/u7-evidencia/
-          cp "motor/RESULT_${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
+          cp "motor/RESULT_\${CASE_ID}.json" /tmp/u7-evidencia/
+          cp "motor/RESULT_\${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
           cp "$INPUT_FILE" /tmp/u7-evidencia/entrada.json
           python - <<'PY'
           import json, pathlib, sys
@@ -69,35 +69,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: motor-u7-${{ github.run_id }}-${{ github.run_attempt }}
-          path: /tmp/u7-evidencia/
-          if-no-files-found: warn
-          retention-days: 30
- | sort | tail -n 1)"
-            CASE_ID="$(basename "$INPUT_FILE" .json)"
-          fi
-          test -n "$INPUT_FILE"
-          case "$INPUT_FILE" in casos/ejecuciones_exploratorias/*.json) ;; *) echo "RUTA_ENTRADA_NO_PERMITIDA"; exit 2;; esac
-          test -f "$INPUT_FILE"
-          test -n "$CASE_ID"
-          mkdir -p /tmp/u7-evidencia
-          python -B motor/correr_estandar.py "$INPUT_FILE" "$CASE_ID"
-          cp "motor/RESULT_${CASE_ID}.json" /tmp/u7-evidencia/
-          cp "motor/RESULT_${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
-          cp "$INPUT_FILE" /tmp/u7-evidencia/entrada.json
-          python - <<'PY'
-          import json, pathlib, sys
-          d=pathlib.Path("/tmp/u7-evidencia")
-          r=json.loads(next(d.glob("*RECIBO_EJECUCION.json")).read_text())
-          print(json.dumps({"case_id":r.get("case_id"),"status":r.get("status"),"input_sha256":r.get("input_sha256"),"output_sha256":r.get("output_sha256"),"canonical_engine_sha256":r.get("canonical_engine_sha256"),"patterns_sha256":r.get("patterns_sha256"),"duration_seconds":r.get("duration_seconds")},ensure_ascii=False,indent=2))
-          if r.get("status") not in ("COMPLETED","COMPLETED_WITH_METADATA_GAP"):
-              sys.exit(3)
-          PY
-      - name: Publicar recibo y salida como artefacto
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: motor-u7-${{ github.run_id }}-${{ github.run_attempt }}
+          name: motor-u7-\${{ github.run_id }}-\${{ github.run_attempt }}
           path: /tmp/u7-evidencia/
           if-no-files-found: warn
           retention-days: 30
