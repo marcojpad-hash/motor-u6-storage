@@ -53,10 +53,11 @@ jobs:
         env:
           INPUT_FILE: ${{ inputs.case_file }}
           CASE_ID: ${{ inputs.case_id }}
+          EVENT_BEFORE: ${{ github.event.before }}
         run: |
           set -euo pipefail
           if [ "${GITHUB_EVENT_NAME}" = "push" ]; then
-            CHANGED_CASES="$(git diff --name-only "$GITHUB_EVENT_BEFORE" "$GITHUB_SHA" -- casos/ejecuciones_exploratorias/ | grep -E '\.json$' || true)"
+            CHANGED_CASES="$(git diff --name-only "$EVENT_BEFORE" "$GITHUB_SHA" -- casos/ejecuciones_exploratorias/ | grep -E '\.json$' || true)"
             COUNT="$(printf '%s\n' "$CHANGED_CASES" | sed '/^$/d' | wc -l | tr -d ' ')"
             if [ "$COUNT" -ne 1 ]; then
               echo "PUSH_REQUIRES_EXACTLY_ONE_CHANGED_CASE_JSON; found=$COUNT"
