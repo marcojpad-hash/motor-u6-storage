@@ -55,6 +55,7 @@ def _plan_contorno(piedra: str, contexto: str) -> dict:
         if spec is None or spec.loader is None:
             raise RuntimeError("NO_SPEC_CONTROL_FLUJO")
         module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
         spec.loader.exec_module(module)
         return module.contornar(str(piedra)[:500], contexto=contexto)
     except Exception as exc:

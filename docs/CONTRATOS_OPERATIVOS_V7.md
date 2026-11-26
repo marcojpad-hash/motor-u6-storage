@@ -387,7 +387,7 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 - **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL en la ruta estándar. Evidencia automatizada: `motor/tests/test_cableado_plan_contorno.py` y `motor/tests/test_control_flujo_runner.py`.
   - UNICO adjunta planes a los errores de cierre operativo 017 y cierre final 016 sin cambiar H.
   - El runner estándar adjunta planes a fallos del subproceso primario y de módulos de salida; toda excepción no controlada pasa por `_main_with_control_flujo` y devuelve JSON estructurado con exit code 3.
-  - El control no neutraliza ni salta paradas duras. Engine V5, catálogo 244 y Z90 conservan sus candados. No modifica input, predictor, H1/H2 ni hashes.
+  - Las discrepancias de Engine V5, catálogo 244, FREEZE o Z90 se convierten en PARADA_DURA: el plan permite diagnóstico y tareas independientes, pero prohíbe BYPASS_HASH_CAMBIO y cualquier ejecución sustitutiva. No modifica input, predictor, H1/H2 ni hashes.
   - `aplicar_protocolo` no existe como API en este módulo; la API implementada y llamada es `contornar(piedra_o_error, contexto=None)`.
 
 ### 5.6 Protocolo kernel (protocolo_kernel_motor.py, orden 0)

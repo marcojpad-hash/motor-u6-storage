@@ -44,4 +44,6 @@ def test_contour_does_not_bypass_hard_gate():
     plan = runner._plan_contorno("hash mismatch ENGINE canonical", "test_hard_gate")
     assert plan["plugin"] == "CONTROL_FLUJO_SOLUCIONES"
     assert plan["Alimenta_H"] == "NO"
-    assert any("Engine" in str(x) or "candado" in str(x).lower() for x in plan["contornos"])
+    assert plan["parada_dura"] is True
+    assert plan["accion"] == "DIAGNOSTICAR_SIN_EJECUTAR"
+    assert not any("BYPASS_HASH_CAMBIO" in str(x) for x in plan["contornos"])
