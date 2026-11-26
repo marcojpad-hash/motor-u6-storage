@@ -8,7 +8,7 @@ Esta carpeta conserva copias byte-a-byte (contenido UTF-8 recuperado por GitHub)
 - No constituyen un paquete autónomo ejecutable.
 - No se modificó ningún archivo fuente ni se alteró el motor canónico.
 - El catálogo de 244 patrones no se copia aquí: no es un motor.
-- La rama operativa de U6 es `alterno/cameo-pesos`; `main` permanece SOLO_CONSULTA.
+- Estas copias son antecedentes de versiones previas; no describen la línea operativa actual. Motor U7 trabaja en `alterno/cameo-pesos`; `main` permanece SOLO_CONSULTA.
 
 ## Inventario y procedencia
 
