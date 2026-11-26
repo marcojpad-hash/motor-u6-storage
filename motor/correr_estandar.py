@@ -49,7 +49,7 @@ def sha(p: Path) -> str:
 
 def _plan_contorno(piedra: str, contexto: str) -> dict:
     """Adaptador de fallos al control de flujo; nunca altera H ni salta candados."""
-    path = MOTOR / "motor" / "control_flujo_soluciones.py"
+    path = MOTOR / "control_flujo_soluciones.py"
     try:
         spec = importlib.util.spec_from_file_location("control_flujo_soluciones_runner", path)
         if spec is None or spec.loader is None:
