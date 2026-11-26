@@ -373,8 +373,14 @@ def _build(rd: Path) -> None:
         dest = rd / p.name
         if p.is_file():
             shutil.copy2(p, dest)
-        elif p.is_dir() and p.name in ("familias_tokens", "vecinos_caldero", "tokens_laterales", "geometria_multicapa", "calibracion"):
+        elif p.is_dir() and p.name in ("familias_tokens", "vecinos_caldero", "tokens_laterales", "geometria_multicapa"):
             shutil.copytree(p, dest)
+    # The Z90 guardian resolves ROOT/calibracion/gate_z90.py inside the isolated run.
+    # calibracion lives beside correr_estandar.py, not inside MOTOR, so copy it explicitly.
+    calibration_src = ROOT / "calibracion"
+    calibration_dst = rd / "calibracion"
+    if calibration_src.is_dir():
+        shutil.copytree(calibration_src, calibration_dst)
     if not (rd / "MOTOR_V15_3_NATIVO_V0_9.py").exists() and (rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py").exists():
         shutil.copy2(rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py", rd / "MOTOR_V15_3_NATIVO_V0_9.py")
 
