@@ -8,9 +8,19 @@
       "sha256": "8980e79507f6392955b10e9e662eef4c91870c0dd4519fed52db2e5a5ed5e43f"
     },
     {
+      "path": "CALDERO_POLTI.md",
+      "bytes": 13982,
+      "sha256": "f031af8c3135544ffb990c088c1fd941fce160bd84b40bb5f8c04a00de61a56d"
+    },
+    {
       "path": "CANDADO_ENGINE.json",
       "bytes": 543,
       "sha256": "40066336b6a7c836563cd61297796b1f9f01a640159c99b28f9ac6902de04ea0"
+    },
+    {
+      "path": "CANDADO_OPERATIVO_V7.json",
+      "bytes": 4923,
+      "sha256": "fbaeedeb208333e378cec0a90e4b61a01b2bbcfc9d71c5b9668c5811a6327c26"
     },
     {
       "path": "COMO_CORRER.md",
@@ -19,8 +29,8 @@
     },
     {
       "path": "CONTRATO_ENTRADA_LLM.txt",
-      "bytes": 1437,
-      "sha256": "ab4aaf95926020eb8e3420ca70aac2bdae83b8357cccbe90d85aa4c7da0e6815"
+      "bytes": 5162,
+      "sha256": "f46e8e3b70f701cb977dd79bcf3c056d7a05a03d610b2e38da4561a9b97754cd"
     },
     {
       "path": "CONTRATO_ENTRADA_LLM_ADDENDUM_ESPECTRO_20261019.txt",
@@ -41,6 +51,11 @@
       "path": "CONTRATO_HIPOTESIS_ABIERTAS_GEOMETRIA_TRABAJO_20261020.md",
       "bytes": 4098,
       "sha256": "5a67b3ea52b8b3d44a9afb14b39510cdc8643ebbb34989d5705e7fa7932f93d9"
+    },
+    {
+      "path": "CONTRATO_SALIDA_LLM.txt",
+      "bytes": 5542,
+      "sha256": "0bd5fcf21b05207cfbd4331dad78015f95b196f2ed74ec9253dbead06f015fa5"
     },
     {
       "path": "DELIVERY_SHA256_R2.json",
@@ -71,6 +86,11 @@
       "path": "INFORME_MOTOR_TRABAJO_HIPOTESIS_ABIERTAS_20261020.md",
       "bytes": 4385,
       "sha256": "c605c2ba236bde1f8af17b837da5f386737d30a005bbf47798cc266e4f57b50c"
+    },
+    {
+      "path": "LATERAL_CONTEXTO_ENUNCIATIVO_V1.md",
+      "bytes": 2920,
+      "sha256": "8fbb8da6a86c099db4a474d774cb0582fb086274fa607a9b7d59343ea34de2d8"
     },
     {
       "path": "LEEME_MOTOR.md",
@@ -163,6 +183,11 @@
       "sha256": "2f01a4f4089c7f98c9c6580e0590ab6df8eed2db2e1428215374d342e2ecb47d"
     },
     {
+      "path": "PROTOCOLO_BIOGRAFICO_Z90.md",
+      "bytes": 3285,
+      "sha256": "1e5407c37e7e4a976569ac96067b75698ce0b27a83771cbe0daa5818b0a19c98"
+    },
+    {
       "path": "README_COMPACTACION.md",
       "bytes": 2417,
       "sha256": "4a07d8e4e2716c62fd7c31ac276c636ce73151f699879889ffc17ff20398dcc7"
@@ -239,8 +264,8 @@
     },
     {
       "path": "UNIFICACION_SHA256_MANIFEST.json",
-      "bytes": 55049,
-      "sha256": "e0ca30df4ff375405c1c0574cd80bec427ae0d04dca2c3509580297382a8ba22"
+      "bytes": 64787,
+      "sha256": "add3fd0ff13ba402ba293d02ca9d81c2b6ebe89bd4030ae657e030ed949e7784"
     },
     {
       "path": "audit/CORRIDA_REAL_HIPOTESIS_ABIERTAS_20261020.json",
@@ -299,8 +324,8 @@
     },
     {
       "path": "calibracion/gate_z90.py",
-      "bytes": 6677,
-      "sha256": "86e939f7ca23295e42d8494c5931d097f61f7aaca58d7b939d0d5caaca8ee698"
+      "bytes": 11583,
+      "sha256": "9a830eea5cf06d78be3f7dfd32c278874b0ddcf6bf55a711677b91018eb34997"
     },
     {
       "path": "capa_llm/FIXTURE_MOCK_CONSULTA_20261011.json",
@@ -314,13 +339,73 @@
     },
     {
       "path": "capa_llm/filtro_entrada_dirigida_017.py",
-      "bytes": 46344,
-      "sha256": "282b9284abd17bb9a735f026260ae0723828a4fe9a7dda820e1fb993b19c90d7"
+      "bytes": 46624,
+      "sha256": "2b3b1f8c9f1633f70079a25096c4ec369c6ad7db6b27d99e27f2bc5fc5277dd1"
+    },
+    {
+      "path": "capa_llm/sombrero_blanco_filtro_v2.py",
+      "bytes": 21643,
+      "sha256": "866921c89d305cacb5deb0ce785627601a2dc8b76a6ba9eeda70512c3d2de888"
     },
     {
       "path": "capa_llm/traduccion_contextual_021.py",
       "bytes": 9134,
       "sha256": "af9077fd031febb2a77d68b27bd3cec5c6667a921fe5b8b9d33d3884c396533b"
+    },
+    {
+      "path": "controles_generales/README.md",
+      "bytes": 4302,
+      "sha256": "b04be514524b40614d221a692f76c06238cac07460bef6d16874ac1ec6c041d6"
+    },
+    {
+      "path": "controles_generales/__init__.py",
+      "bytes": 1383,
+      "sha256": "e30d97acf0189c5e40563f09b779e0caa5f5bd49aee5522354621d00f954b0c2"
+    },
+    {
+      "path": "controles_generales/compuerta_cierre.py",
+      "bytes": 1999,
+      "sha256": "76ea32a63603cafaf13046d8af85443f515e033951202914a7800a114ba15fab"
+    },
+    {
+      "path": "controles_generales/coordinador.py",
+      "bytes": 5568,
+      "sha256": "d58b87586c1927661c8002a7ee980995ca83759db54c21cdb244dc972475d5a9"
+    },
+    {
+      "path": "controles_generales/corte_temporal.py",
+      "bytes": 2332,
+      "sha256": "5362ae31409e0996fd104baaf00d5e64dcd7424b96dac5db6c1f352486951370"
+    },
+    {
+      "path": "controles_generales/filtro_admision.py",
+      "bytes": 4470,
+      "sha256": "a073212b6e9d475b13598e8c429988106a823fc2a424aeb9175731bd3bce8117"
+    },
+    {
+      "path": "controles_generales/guardia_separacion.py",
+      "bytes": 3372,
+      "sha256": "2efa38bff42a2b7de5d6c9a05134c11023213c335fabfbdefab803a0e02a83fa"
+    },
+    {
+      "path": "controles_generales/secuencia_fases.py",
+      "bytes": 3017,
+      "sha256": "13882096b62b6ee675dd56adb19acb074889fe56483fd912bcd786dba4059c69"
+    },
+    {
+      "path": "controles_generales/tipos.py",
+      "bytes": 2463,
+      "sha256": "ad8192bb1eb2877c952c4ef7c9c20271b362c8d07defe192c120ff4cf36c5e4e"
+    },
+    {
+      "path": "controles_generales/verificador_integridad.py",
+      "bytes": 3378,
+      "sha256": "cbd5d5baf82c98ab1b8aec597046f0913ac8242f9377c874a2bd5f3002d89890"
+    },
+    {
+      "path": "controles_generales/verificador_salida.py",
+      "bytes": 3271,
+      "sha256": "ef25c965ca0f3a5eecdd49e7ce796b39c90db2f6acf36823d9ac5da31e4a2044"
     },
     {
       "path": "correr_caso_nuevo.sh",
@@ -329,8 +414,13 @@
     },
     {
       "path": "correr_estandar.py",
-      "bytes": 54673,
-      "sha256": "3a0d88a99ba24d8dd43948c617b999962b6fda33bfa90f28cb0e1c669b69d226"
+      "bytes": 78440,
+      "sha256": "f3780520aa304e46fd7944e0b5fb3fdaf94bc91c4e1478c171fc8f8d440e1e68"
+    },
+    {
+      "path": "ejemplos/adaptador_proyecto_a_controles_generales.py",
+      "bytes": 4498,
+      "sha256": "44b3c582de0d3b5eb41ce4e3ba7e4b5699f447b5c639d70eb7893c6580a250b7"
     },
     {
       "path": "inputs/GIORDANO_BRUNO_PATCH19_COMPACTO.json",
@@ -439,8 +529,8 @@
     },
     {
       "path": "motor/MOTOR_V15_3_UNICO_20260927.py",
-      "bytes": 332838,
-      "sha256": "ef9aad3bcbd01a00ac80a5b1face55913b527d470042f710d01d4838c4e3edf3"
+      "bytes": 355141,
+      "sha256": "fe59f23ef3c0173c2916d5c15be4745b0e34cbf274d20285d1b1b1bffb088684"
     },
     {
       "path": "motor/PROTOCOLO_METACOGNICION_V01.md",
@@ -456,6 +546,11 @@
       "path": "motor/SPEC_BUSCADOR_AGNOSTICO.md",
       "bytes": 1465,
       "sha256": "884047471cc0be693cf772129d4213babc7a4c5dc9ef86b5afc0070e79023c5a"
+    },
+    {
+      "path": "motor/SPEC_SCHRODINGER_V0_1.md",
+      "bytes": 20386,
+      "sha256": "3ff76aaf679939a4574ea755ee33bf10e87c580040872e4b0708a58570fe41e2"
     },
     {
       "path": "motor/analogos_fase_v1.py",
@@ -488,6 +583,11 @@
       "sha256": "9c501ac312260282507f551b4f8e75c5ad314ef76dcb05b3da35f2027c8d8b4f"
     },
     {
+      "path": "motor/bolsitas_tropo_v1.py",
+      "bytes": 11981,
+      "sha256": "2b0f57c96d7cdbe33f42e032d4bfdd7d12b1239eb359a76ca1d6b91165634301"
+    },
+    {
       "path": "motor/caldero_II_runner_generico.py",
       "bytes": 2745,
       "sha256": "14c0a8130f3951c1fd0e8139bbba8d7a572b4ddebe1e1083767da2b7a4c8f9f7"
@@ -509,8 +609,8 @@
     },
     {
       "path": "motor/cameo_codebook_lateral_v1.json",
-      "bytes": 11554,
-      "sha256": "d575473d4ea4a81f71ab37b36da9a342e623e99c18bae7fd99eeee8bc2162057"
+      "bytes": 16946,
+      "sha256": "6f043d41dc9a081488d5e208baaeac230551fe9a7039be84ab527714554fec6a"
     },
     {
       "path": "motor/cameo_to_244_adapter_v1.py",
@@ -549,8 +649,8 @@
     },
     {
       "path": "motor/ceb_runtime_v0_6_flow.py",
-      "bytes": 29108,
-      "sha256": "206d24c5e6cb2b900b6323904f80548717d08807299ebadddf5f3218dafd3c66"
+      "bytes": 30038,
+      "sha256": "f8a7f6e97468fea6c805f72cb09dc64e9747e1d9ddbd03df13f181b270e341df"
     },
     {
       "path": "motor/coactivacion_escalas.py",
@@ -559,18 +659,18 @@
     },
     {
       "path": "motor/control_flujo_soluciones.py",
-      "bytes": 11121,
-      "sha256": "058e834825495f153b53afffbdca99ce3ca089a6aa37dc296eaeb8106b9427ea"
+      "bytes": 13010,
+      "sha256": "9b1c4b5553270d4f726a8714a5975660b32ba705b40a01e31f7aa02c441a42bf"
     },
     {
       "path": "motor/control_latencia_decimo_hombre.py",
-      "bytes": 10038,
-      "sha256": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345"
+      "bytes": 10417,
+      "sha256": "7d385e57d39f2440935251eb83af8183ca1fd5581e9247fedaf65ef11a6a2615"
     },
     {
       "path": "motor/decimo_hombre_esteroides_mayeutica_v1.py",
-      "bytes": 27419,
-      "sha256": "1fa9b7798785b54122ccfd215b8134a619e3c1819ad6008ad9ad51f055e66521"
+      "bytes": 27751,
+      "sha256": "5f494acee8db9ec497267b36022fb5ba325a512281547ee09283be92e3f745a7"
     },
     {
       "path": "motor/estabilidad_vectorial_h.py",
@@ -744,13 +844,13 @@
     },
     {
       "path": "motor/guardian_tropos_beristain_v1.py",
-      "bytes": 65554,
-      "sha256": "1886af5e9247464a7f87f74a25863cf4a5eee46375c22d44668f80d81e8baf68"
+      "bytes": 65979,
+      "sha256": "ec806594be8084b0cfdcb376e7859bae7196c544cad8e9c4ab53320660d31367"
     },
     {
       "path": "motor/guardianes_control_v1.py",
-      "bytes": 29862,
-      "sha256": "e043b84cca0c3af1f2297615936f9ba5e533d1dd977a56aed3b914c02f629f4b"
+      "bytes": 38520,
+      "sha256": "0b197b5b5d3e79bd395fedf6dd68e52bd290984e9ec132012f7cdb105525e52b"
     },
     {
       "path": "motor/hipotesis_trayectoria_abierta_v1.py",
@@ -758,9 +858,19 @@
       "sha256": "0199af0d65ebdaa1dfa10c1222cca871a1a3795d7e15d0f6f7d478be324fc4f7"
     },
     {
+      "path": "motor/lateral_contexto_enunciativo_v1.py",
+      "bytes": 11432,
+      "sha256": "e778adefdc0859f037d9092c6933b1a24a10072335bd0386882bad2ca104552e"
+    },
+    {
+      "path": "motor/lateral_traduccion_salida_v1.py",
+      "bytes": 36030,
+      "sha256": "2790741400696aff87ce362e198dd86395271a6fbd1c819aeafd13425eb8e775"
+    },
+    {
       "path": "motor/laterales_unico_v1.py",
-      "bytes": 97272,
-      "sha256": "3ae6ffbf7a887c5219ca0db055240968d186c01136363ccc5e5181e7434c294b"
+      "bytes": 101372,
+      "sha256": "2ef6f09333af072388313cc2c2409f6f6d21867baabf9f519fc613c245728410"
     },
     {
       "path": "motor/lectura_negativo_ricci_vs_billar_v0_1.py",
@@ -809,8 +919,8 @@
     },
     {
       "path": "motor/modo_estricto_v1.py",
-      "bytes": 17194,
-      "sha256": "c0fe7fbdc2a49cb7b8f11e837e8b2cb084214416092822d254933f8341f07c1e"
+      "bytes": 17282,
+      "sha256": "9143a0985ffeaf00f8dc5f34abda9053bf1edfeac1ebf400af23b080ebfe3210"
     },
     {
       "path": "motor/motor_interrelacion_extensible_v0_1.py",
@@ -869,8 +979,8 @@
     },
     {
       "path": "motor/plugin_cameo_institucional.py",
-      "bytes": 2753,
-      "sha256": "98a58d5bed02a0fececb3cb9df2f7fb76b78cd7c8b1947bd7887c8d0dfefe36c"
+      "bytes": 3975,
+      "sha256": "c159ade7fcb6f9d6f39aac89d8e0f5f6e297a87cd36339e186fc93a0cf493d98"
     },
     {
       "path": "motor/plugin_capa2_antecedentes_arquetipos.py",
@@ -909,8 +1019,8 @@
     },
     {
       "path": "motor/plugin_metodo_rigor.py",
-      "bytes": 1594,
-      "sha256": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0"
+      "bytes": 2256,
+      "sha256": "d274814d87010803c109122f17e57001cb455e9da00b0f14416a21155e6bdc32"
     },
     {
       "path": "motor/plugin_otto_numinoso.py",
@@ -929,8 +1039,8 @@
     },
     {
       "path": "motor/plugin_pregunta_detras_v2.py",
-      "bytes": 36628,
-      "sha256": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247"
+      "bytes": 36834,
+      "sha256": "d31eb8c078a999e9f93944128eb50e53e61604cce9c74035c2febc894b8792f4"
     },
     {
       "path": "motor/plugin_pregunta_dirigida.py",
@@ -939,8 +1049,8 @@
     },
     {
       "path": "motor/plugin_pregunta_dirigida_v0_5_1.py",
-      "bytes": 56609,
-      "sha256": "8aa9fc79eb591e1bd29fce121606311f51edfef7166691f2704aa6491963204e"
+      "bytes": 56996,
+      "sha256": "11fc90114f8d5386286b0f65085a9804138b2e4f69ecbc673e152b525f9a4bf1"
     },
     {
       "path": "motor/plugin_reporte_3d.py",
@@ -1008,6 +1118,11 @@
       "sha256": "3dab8d38d979efa5a4948a0e05b0a2dbd14421d9ab7ff6e09d5cda99c276aecc"
     },
     {
+      "path": "motor/respuesta_humana_v1.py",
+      "bytes": 34074,
+      "sha256": "6c5bc29d2fc6ef582c0fc9b74f5e9a82bbb2e2ebb75d74fbbee905ffca334abd"
+    },
+    {
       "path": "motor/ricci_forman_coocurrencia_v0_1.py",
       "bytes": 5101,
       "sha256": "5349df3910c1d025f5e3c98bb9921f1cf74caac2514771aadef53161d4298e5b"
@@ -1016,6 +1131,16 @@
       "path": "motor/schrodinger_transport_esqueleto_v0_1.py",
       "bytes": 2173,
       "sha256": "e88cd66f1fbe4aead9a36c231d6f727d2cbdb8f0d138412215d448d1af68f599"
+    },
+    {
+      "path": "motor/schrodinger_transport_v0_1.py",
+      "bytes": 21093,
+      "sha256": "3b057312304d4b03f1b139430244f8ca1b617eb8a2a127d51063cc2ce7f96791"
+    },
+    {
+      "path": "motor/schrodinger_transport_v0_2.py",
+      "bytes": 19065,
+      "sha256": "86df05bd491d144242eb3f62ab4e650acfcdf337cd7a5fa60b916306153b6fce"
     },
     {
       "path": "motor/semiotica_deriva_v0_1.py",
@@ -1099,8 +1224,8 @@
     },
     {
       "path": "motor/stinkbox_transport_v0_2.py",
-      "bytes": 19668,
-      "sha256": "a0253e6e2f51fd362d9a38e365e14d4cb5370d404c5830ba58950a8b89f4d275"
+      "bytes": 24107,
+      "sha256": "7b9f761299ce21acb50f4859a31c852f6a28bec792fc3b8f3e021b8abfbdb161"
     },
     {
       "path": "motor/sujetos_014.py",
@@ -1293,9 +1418,19 @@
       "sha256": "0568dce427a907a323429477e79fc63f3cbf2a3fed6ad303e141329fecf3d448"
     },
     {
+      "path": "tests/fixtures/limbo_traduccion_result.json",
+      "bytes": 57635,
+      "sha256": "204387cf6397c726449d74420535ef73e699886fe0c7192e7338412dd67b680a"
+    },
+    {
       "path": "tests/fixtures/mortality_ablation_summary.json",
       "bytes": 655,
       "sha256": "bba84db97d2c56ed7e795fb05480615baf8be2705b505982000c8537519dd60a"
+    },
+    {
+      "path": "tests/fixtures/napoleon_traduccion_result.json",
+      "bytes": 56801,
+      "sha256": "fe52185698736418acdeab6627020adcd1948e2998b0ce1081d05e9b7a87b4a4"
     },
     {
       "path": "tests/fixtures/patch19_receipt_summary.json",
@@ -1319,8 +1454,123 @@
     },
     {
       "path": "tests/test_cableado_017.py",
-      "bytes": 4815,
-      "sha256": "d64c1bad4261e8be60453550518accfc339755f154054b85d6391a8e607e9fcf"
+      "bytes": 7625,
+      "sha256": "f7c35a4eff8bbaa877f4f5d24a1c85c562b2912779ef6cd5d52ca9c9787fa120"
+    },
+    {
+      "path": "tests/test_cableado_acero.py",
+      "bytes": 19762,
+      "sha256": "208bb8f5b87b98dfd8e4353cd4245e82f9dc4f1d3e2e25ef1bd83c4102ac6718"
+    },
+    {
+      "path": "tests/test_cableado_autoevidencia.py",
+      "bytes": 15549,
+      "sha256": "487a1194f52fdb181a25f5becae9f91187eb156821b66e49ccd0e1cfc3a75693"
+    },
+    {
+      "path": "tests/test_cableado_beristain.py",
+      "bytes": 11576,
+      "sha256": "7102aa47053f6fbccd079d5e106e0b61fed0e71d65788c64fe02c7c07ee4d9ce"
+    },
+    {
+      "path": "tests/test_cableado_candado_plugins_run.py",
+      "bytes": 3202,
+      "sha256": "8be37284b1427dd95caddf71f469fabe111763f9c97a84e77bbac96fb6a83ccc"
+    },
+    {
+      "path": "tests/test_cableado_compuerta_cierre.py",
+      "bytes": 3795,
+      "sha256": "adb97b600d4ec9b49d69127d7fcc26dec78b3ce6b2a4b0756f59aa71fc64a351"
+    },
+    {
+      "path": "tests/test_cableado_confianza_apuesta_u7.py",
+      "bytes": 6131,
+      "sha256": "2a4659ee6846e1d5d4ee0ce353443de025cb23e0fc72b0b7a16f6cabe8f28763"
+    },
+    {
+      "path": "tests/test_cableado_copi.py",
+      "bytes": 9373,
+      "sha256": "de7bb284f2dc8f6e718975d0325f97dc783b33e9fbc36ca1228bb288c7876563"
+    },
+    {
+      "path": "tests/test_cableado_decimo_hombre.py",
+      "bytes": 21933,
+      "sha256": "62a4cd569c942f21a75ebff805f57b3299ec0491c45db31d37258147dd35064c"
+    },
+    {
+      "path": "tests/test_cableado_esteroides.py",
+      "bytes": 21003,
+      "sha256": "1cc62044dfe5edf84ab01a0cc82d78234e0dfd8927a188c75dc4417d24afbe3a"
+    },
+    {
+      "path": "tests/test_cableado_modo_estricto.py",
+      "bytes": 22627,
+      "sha256": "a81fd7cb9e5d8d02b58c90370c786b47fdfa2de3cdbb4a0fd0a3349ec209cc7b"
+    },
+    {
+      "path": "tests/test_cableado_plan_contorno.py",
+      "bytes": 2894,
+      "sha256": "eb9aeab0d868940f3b77b6266a111ec6df7057e69764a318563d256823c2b6ff"
+    },
+    {
+      "path": "tests/test_cableado_polaridad_causal.py",
+      "bytes": 16548,
+      "sha256": "c540c601c68f8a8cbf40475c5567c98862b3176ac648fb1daa38db550514725b"
+    },
+    {
+      "path": "tests/test_cableado_pregunta_detras.py",
+      "bytes": 11160,
+      "sha256": "7bbbf6aa12718351159c91a9e79d4d02731f86090e23e4adc0ccb7c8563d59b5"
+    },
+    {
+      "path": "tests/test_cableado_pregunta_dirigida_falacias.py",
+      "bytes": 15420,
+      "sha256": "779d746e210317e8689fb6209a4a681dd465a3d4e5a67707a82605f5868876bd"
+    },
+    {
+      "path": "tests/test_cableado_respuesta_humana.py",
+      "bytes": 12433,
+      "sha256": "15a05c04a5d7773fd2a08f5b2ae112c64c156d50f2cb50d83ce51728aa63dc0a"
+    },
+    {
+      "path": "tests/test_cableado_sherlock.py",
+      "bytes": 16488,
+      "sha256": "b7d6854085a76ed05413608dfa90a832eb66e4343bb2b87bc2f6485203a870d1"
+    },
+    {
+      "path": "tests/test_cableado_sombrero_absorbido.py",
+      "bytes": 13723,
+      "sha256": "a4c6890feee277e4290524c0e1eff437ac555a0ec4d6501fec2a0883672dbee8"
+    },
+    {
+      "path": "tests/test_cableado_sombrero_blanco.py",
+      "bytes": 12766,
+      "sha256": "bacd4d08ba8861b203cbe31f15d8fb733496c59438db5f1a7c913c929da7c68a"
+    },
+    {
+      "path": "tests/test_cableado_traduccion_salida.py",
+      "bytes": 7514,
+      "sha256": "68f358bbaafb8945568b84e29bfdb257b1fe0eef741f0692b243f8957cc889ae"
+    },
+    {
+      "path": "tests/test_cableado_verificador.py",
+      "bytes": 19290,
+      "sha256": "64277c21c11f6dbc34e3a2d1ab41dea326558ab9a7788425ef4e45b6cf429f83"
+    },
+    {
+      "path": "tests/test_cableado_verificador_cierre.py",
+      "bytes": 1868,
+      "sha256": "99f106a9446712055d7230f5cb52253731cc72463c01837fcb811a2aa73e63e2"
+    },
+    {
+      "path": "tests/test_cableado_z90.py",
+      "bytes": 11335,
+      "sha256": "35059c91bd7812e3d1f2fb2221afb670664efef88aae621cfd2947c50b39455a"
+    },
+    {
+      "path": "tests/test_cableado_zoom_caldero.py",
+      "bytes": 3579,
+      "sha256": "3ff7c20fe2d5d1891d20ababcc853dba81807cd37f5f56841bbeb698f2f90cca"
     },
     {
       "path": "tests/test_caldero_buscadores_offline.py",
@@ -1334,8 +1584,8 @@
     },
     {
       "path": "tests/test_ceb_closed_audit_hook.py",
-      "bytes": 898,
-      "sha256": "7487701defaca76da08679b7416f5492cbfcf48328d44f43b9b8b0db3df4ce2c"
+      "bytes": 2340,
+      "sha256": "5c09bf32c70c8ee13d27eefb7e20d0f47c823cde8ebf71bed7cc3e1bdab16afd"
     },
     {
       "path": "tests/test_cierre_020.py",
@@ -1344,8 +1594,8 @@
     },
     {
       "path": "tests/test_confianza_apuesta_u7.py",
-      "bytes": 3424,
-      "sha256": "df870bcc7b9c7476556f1f2198ae37583a7ca21943220c4756f93b3898332f08"
+      "bytes": 6029,
+      "sha256": "990790d26c301ab73aace096bf6a5cd1dc271f69964a5dd93daf5a0c48578aba"
     },
     {
       "path": "tests/test_confianza_terminal_alignment.py",
@@ -1356,6 +1606,16 @@
       "path": "tests/test_consulta_dirigida_v1.py",
       "bytes": 3981,
       "sha256": "458e5901711988180719090466419187fc1353ad89a415e3a3c1d7c271266995"
+    },
+    {
+      "path": "tests/test_control_flujo_runner.py",
+      "bytes": 2844,
+      "sha256": "73a07c3d86068e782fe7ecc840d79ce221cce2817991dd88bf10cad55c06e012"
+    },
+    {
+      "path": "tests/test_coordinador_controles_generales.py",
+      "bytes": 9591,
+      "sha256": "54b6818ddbe5e2ae11a336b3c7889eb9b52035c737eeffdb8c7d33621aea110b"
     },
     {
       "path": "tests/test_decimo_truthful_status.py",
@@ -1383,9 +1643,19 @@
       "sha256": "40a60559c66d25e3b13e2e5ec0337655bc2004b3a39168be582e3995c80cb4a8"
     },
     {
+      "path": "tests/test_gate_z90_biografico.py",
+      "bytes": 6629,
+      "sha256": "b4003e3d5c15921925a8dd411cafd7fd826ab7b0c569b895db634d0683f440b7"
+    },
+    {
       "path": "tests/test_guardian_pistas_llm_caldero.py",
       "bytes": 751,
       "sha256": "d6c8fa0a4b2efbf6df23205c26d575d18c1b07451a59ca1a4a5eba07bccc3c32"
+    },
+    {
+      "path": "tests/test_guardian_z90_correr_estandar.py",
+      "bytes": 5666,
+      "sha256": "0e2ef68e582324d547e290f65b2c1d04d9122957d50e5814cac6d798b24a8253"
     },
     {
       "path": "tests/test_hipotesis_trayectoria_abierta.py",
@@ -1439,8 +1709,8 @@
     },
     {
       "path": "tests/test_runner_json_contract.py",
-      "bytes": 3683,
-      "sha256": "fda0e0151068be02aea57dbe9e050c15f578f65b3936062103780bd8ff86987b"
+      "bytes": 8103,
+      "sha256": "816b419152bd482a626ed2dd24ba396b714d1d497372bb01691cb5d0031adc53"
     },
     {
       "path": "tests/test_runner_no_mc_output_path.py",
@@ -1453,9 +1723,24 @@
       "sha256": "17000d5a094019a451b38238f273b87bae6f656e611802f3336edf5bf999d561"
     },
     {
+      "path": "tests/test_schrodinger_v0_1.py",
+      "bytes": 4232,
+      "sha256": "e2050124d3b3743c18c0db68e98986df1cfa1aa6356da60c1ea72d4200ae447d"
+    },
+    {
+      "path": "tests/test_schrodinger_v0_2.py",
+      "bytes": 5163,
+      "sha256": "ad5dc14e9cb20cabf09693c26e541d4364a1d9faef4514d45018511bc64720ba"
+    },
+    {
       "path": "tests/test_stinkbox_registry_integration.py",
       "bytes": 5667,
       "sha256": "3b67bc6bdfb20ee5214e87efaf6de39a91248478c60e9de52cbbf88047ebd5e8"
+    },
+    {
+      "path": "tests/test_traductor_v24.py",
+      "bytes": 927,
+      "sha256": "a85d58735d8d8c9e0ac2dbc56efd1828a131204baf7cdd77edc0f66619087e64"
     },
     {
       "path": "tests/test_u4_todos_tokens.py",
@@ -1584,8 +1869,8 @@
     },
     {
       "path": "u7/confianza_apuesta_u7.py",
-      "bytes": 7024,
-      "sha256": "2f84e60a1ed246c20a5ca4eb80b5300dd41f3fca623e798ae550f5a226e04d48"
+      "bytes": 8080,
+      "sha256": "6527284aae4ae9829cbf5b4b0fff0ffcf591487250b34afa04b92218e84737c9"
     },
     {
       "path": "watchdog_u6.py",
