@@ -16,13 +16,13 @@
 > - Continuidad: [`INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md).
 > - **Antes de afirmar una ejecución o interpretar resultados, aplica [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md).** Lee el recibo junto al JSON de salida; el código inspeccionado no demuestra que se ejecutó.
 > - **No uses ZIP/zipball.** Lee archivo por archivo con la API de GitHub/conector o `git clone`.
-Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
+Repositorio compartido del Motor U7 de predicción narrativa. El slug motor-u6-storage se conserva por compatibilidad. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
 
 ## Carpetas
 
 | Carpeta | Qué contiene |
 |---|---|
-| `motor/` | Motor U6 agnóstico (código, contratos, pruebas, calibración) y laterales en `motor/laterales/`. Sin corridas, sin vendor, sin evidencias. |
+| `motor/` | Motor U7 agnóstico (código, contratos de módulos, pruebas, calibración) y laterales en `motor/laterales/`. Sin corridas, sin vendor, sin evidencias. |
 | `casos/` | Solo hashes de casos y entradas, la plantilla de caso nuevo y **resúmenes** de resultados (`casos/resultados/resultados.jsonl`). Nunca corridas completas. |
 | `stinkbox/` | Tokens StinkBox deduplicados con conteo y procedencia (`tokens.jsonl`), índice de artefactos de origen y candidatos documentales. |
 | `avances/` | Bitácora de cambios: quién, cuándo, qué cambió (antes → después), hashes y pruebas. |
