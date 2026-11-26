@@ -373,7 +373,7 @@ def _build(rd: Path) -> None:
         dest = rd / p.name
         if p.is_file():
             shutil.copy2(p, dest)
-        elif p.is_dir() and p.name in ("familias_tokens", "vecinos_caldero", "tokens_laterales", "geometria_multicapa"):
+        elif p.is_dir() and p.name in ("familias_tokens", "vecinos_caldero", "tokens_laterales", "geometria_multicapa", "calibracion"):
             shutil.copytree(p, dest)
     if not (rd / "MOTOR_V15_3_NATIVO_V0_9.py").exists() and (rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py").exists():
         shutil.copy2(rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py", rd / "MOTOR_V15_3_NATIVO_V0_9.py")
