@@ -54,9 +54,6 @@ jobs:
             INPUT_FILE="$CHANGED_CASES"
             CASE_ID="$(basename "$INPUT_FILE" .json)"
           fi
-            INPUT_FILE="$CHANGED_CASES"
-            CASE_ID="$(basename "$INPUT_FILE" .json)"
-          fi
           test -n "$INPUT_FILE"
           case "$INPUT_FILE" in casos/ejecuciones_exploratorias/*.json) ;; *) echo "RUTA_ENTRADA_NO_PERMITIDA"; exit 2;; esac
           test -f "$INPUT_FILE"
