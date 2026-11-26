@@ -72,6 +72,7 @@ def _verificar_hashes_canonicos(eng: Path, pat: Path) -> dict:
 
     Runs independently of the optional SHA manifest: a missing manifest can
     never downgrade a canonical hash mismatch to a warning.
+    U7: Engine V5 and the 244-pattern catalog are hard gates in every standard run.
     """
     engine_hash = sha(eng)
     patterns_hash = sha(pat)
