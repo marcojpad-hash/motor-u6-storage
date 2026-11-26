@@ -3610,7 +3610,7 @@ def run(case: Dict[str,Any], monte_carlo: bool=True) -> Dict[str,Any]:
             status.append({"component":"movimiento_de_fondo_u4.py","status":"ERROR","error":str(_eu4),"can_decide_H":False})
     # WORKING PATCH: integra geometría multicapas que antes solo corría en un ZIP lateral separado.
     # Se ejecuta sobre el prefijo completo hasta Z; sus trazas alimentan el generador del set abierto.
-    result["geometria_multicapa"] = _run_geometria_multicapa_working(result, case)
+    result["geometria_multicapa"] = _ceb_stage("geometria_multicapa_integrada_working_v1", lambda: _run_geometria_multicapa_working(result, case), shared=[result, case])
     _geo_status = result["geometria_multicapa"]
     status.append({"component":"geometria_multicapa_integrada_working_v1", "status":_geo_status.get("status", "ERROR"),
                    "feeds_predictor":False, "feeds_H":bool(_geo_status.get("feeds_hypothesis_generation")),
