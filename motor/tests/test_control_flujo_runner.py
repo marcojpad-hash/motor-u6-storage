@@ -20,7 +20,7 @@ def test_runner_control_flujo_produces_plan():
     runner = _load_runner()
     plan = runner._plan_contorno("ModuleNotFoundError: lateral faltante", "test")
     assert plan["plugin"] == "CONTROL_FLUJO_SOLUCIONES"
-    assert plan["tipo_piedra"] == "archivo_ausente"
+    assert plan["tipo_piedra"] == "import_o_dependencia"
     assert plan["contornos"] and plan["formato_respuesta_obligatorio"]
     assert plan["Alimenta_H"] == "NO"
 
