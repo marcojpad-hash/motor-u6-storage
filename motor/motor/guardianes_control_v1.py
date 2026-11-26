@@ -9,13 +9,13 @@ escribe H, reordena candidatos ni toca patterns_final_v14.json. El motor verific
 que el bloque del predictor quedó byte a byte igual (hash antes/después).
 
 Piezas (se cargan desde la carpeta de corrida y se verifica su sha):
-  control_latencia_decimo_hombre.py ff03241d (T)       → DECIMO_HOMBRE_LATENCIA
-  plugin_pregunta_detras_v2.py      771cb526 (2.3.3 = SB 2.3.2 f0b1a92b + fix demostrativo) → PREGUNTA_DETRAS_V2
+  control_latencia_decimo_hombre.py 7d385e57 (T)       → DECIMO_HOMBRE_LATENCIA (V7: nota puente legacy B-H6)
+  plugin_pregunta_detras_v2.py      d31eb8c0 (2.3.3 = SB 2.3.2 f0b1a92b + fix demostrativo) → PREGUNTA_DETRAS_V2 (V7: CABLEADO, OK Marco 25-nov-2026)
   plugin_pregunta_dirigida_v0_5_1.py (base SB 0.5.0 19f59a1d + capa 0.5.1) → PREGUNTA_DIRIGIDA_POST_HOC y FALACIAS
   guardian_logica_copi_v1.py        (nuevo)             → LOGICA_COPI
   plugin_polaridad_causal.py        534ae636 (T)        → POLARIDAD_CAUSAL
   sidecar_ablacion_hombre_acero.py  7db774c0 (zip CHECKPOINT_REPRODUCIBLE_20260920) + guardian_acero_rival_v1.py (nuevo) → HOMBRE_DE_ACERO
-  plugin_metodo_rigor.py            a4f5659e            → SHERLOCK_RIGOR (ahora recibe cadena_top1)
+  plugin_metodo_rigor.py            d274814d            → SHERLOCK_RIGOR (ahora recibe cadena_top1) (V7: nota Holmes/Schopenhauer B-H2)
   guardian_tropos_beristain_v1.py   (nuevo 27-sep)      → TROPOS_BERISTAIN (vecino de FALACIAS y LOGICA_COPI)
 
 V1.1 (27-sep, versión TROPOS):
@@ -42,10 +42,10 @@ from typing import Any, Dict, List, Optional
 
 VERSION = "GUARDIANES_CONTROL_V1_2_UNICO_20260927"  # V1.2: espera detrás v2 2.3.3 (fix demostrativo); resto = V1.1 (f26f8c56)
 SHA_ESPERADO = {
-    "control_latencia_decimo_hombre.py": "ff03241d42d7770c2af83de60eeb41db6bdbba78a0511f7470ca65b766220345",
-    "plugin_pregunta_detras_v2.py": "771cb526eafe56e10967e31d1c9320296beff77b83ef81bf76ac46114244c247",
+    "control_latencia_decimo_hombre.py": "7d385e57d39f2440935251eb83af8183ca1fd5581e9247fedaf65ef11a6a2615",  # V7: nota de puente legacy (B-H6) en el docstring; solo texto.
+    "plugin_pregunta_detras_v2.py": "d31eb8c078a999e9f93944128eb50e53e61604cce9c74035c2febc894b8792f4",  # V7: docstring "PROPUESTA. No cablear" obsoleto → CABLEADO (OK de Marco 25-nov-2026).
     "plugin_polaridad_causal.py": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739",
-    "plugin_metodo_rigor.py": "a4f5659e14e6aab2e40a0929a3c1f2388b89f304dcc2c9a4cb43ebe7cc332cf0",
+    "plugin_metodo_rigor.py": "d274814d87010803c109122f17e57001cb455e9da00b0f14416a21155e6bdc32",  # V7: nota Holmes/Schopenhauer plantilla manual (B-H2) en el docstring; solo texto.
     "sidecar_ablacion_hombre_acero.py": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60",
 }
 ORIGEN = {
@@ -62,7 +62,7 @@ ORIGEN = {
 CANDADOS = {"can_decide_H": False, "escribe_H": False, "escribe_patterns": False, "reordena_candidatos": False,
             "alimenta": "convergencia/latencia (solo registro)", "siempre_on": True}
 EXCLUIR_TEXTO = {"P", "A", "C", "protocol", "case_id", "url", "caldero_neighbor_store", "random_seed", "z90_date",
-                 "date", "id", "birth_date", "death_date", "person", "source_basis", "future_data_excluded_from_input",
+                 "date", "id", "birth_date", "death_date", "person", "enunciador", "speaker", "attributed_to", "source_basis", "future_data_excluded_from_input",
                  "caldero_llm_neighbor_hints", "external_lights", "caldero_archetype_input", "stinkbox_root",
                  "stinkbox_pending_case_id", "stinkbox_cut_id", "consolidado_off", "external_activations"}
 
@@ -334,6 +334,22 @@ def g_tropos(base, case, question, textos, vecinos):
                    r["n_revisados"], marcas, bandera, det)
 
 
+# ------------------------------------------------------------------ lateral observacional de contexto enunciativo
+def g_contexto_enunciativo(base, textos, case=None):
+    m, meta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo")
+    if m is None:
+        return _bloque("CONTEXTO_ENUNCIATIVO", [meta], "orientación valorativa y funciones discursivas", 0, [], "ERROR")
+    speaker = (case or {}).get("enunciador") or (case or {}).get("speaker")
+    records = [{"text": t.get("texto", ""), "origin": t.get("origen", "INPUT"),
+                "speaker": speaker, "attributed_to": t.get("atribuido_a")} for t in textos]
+    report = m.analyze(records)
+    marks = [{"tipo": s["tipo"], "estado": "OBSERVACION", "evidencia": s} for s in report.get("senales", [])]
+    return _bloque("CONTEXTO_ENUNCIATIVO", [meta],
+                   "juicios expresados, orientación valorativa, patrones y funciones lingüísticas",
+                   len(report.get("observaciones", [])), marks,
+                   "MARCA" if marks else "LIMPIO", report)
+
+
 def _anotar_vecinos(bloques):
     """Anota (sin cambiar banderas) en FALACIAS/COPI/POST HOC/POLARIDAD la corrección que viene de TROPOS."""
     tb = next((b for b in bloques if b["guardian"] == "TROPOS_BERISTAIN"), None)
@@ -386,6 +402,23 @@ def ruta_cierre_latente(bloques, case, motor, pred, base):
                     motivos.append({"guardian": g, "tipo": "CIERRE_EN_BANDA_DE_EMPATE", "estado_marca": "LATENTE",
                                     "fragmento": json.dumps({k: ev.get(k) for k in ("top1", "top2", "gap_rank", "p_momento")}, ensure_ascii=False),
                                     "origen": None, "corte_idx": None, "corte": None, "alcance": "CIERRE"})
+            continue
+        if g == "CONTEXTO_ENUNCIATIVO":
+            # V7 (B-H1): las señales fuertes del lateral (asimetría valorativa
+            # entre actores / cierre discursivo de alternativas) llegan al
+            # cierre como objeción trazable. Solo objeción: no retiene el
+            # cierre ni toca H1/H2/top1 (ruta_cierre_latente solo registra).
+            # Las demás señales (carga reiterada, atribución causal, función
+            # poética, enmarcado adversarial) quedan como observación.
+            for mk in b.get("marcas") or []:
+                if mk.get("estado") == "OBSERVACION" and mk.get("tipo") in (
+                        "ASIMETRIA_VALORATIVA_ENTRE_ACTORES",
+                        "CIERRE_DISCURSIVO_DE_ALTERNATIVAS"):
+                    motivos.append({"guardian": g, "tipo": mk.get("tipo"),
+                                    "estado_marca": "OBSERVACION",
+                                    "fragmento": json.dumps(mk.get("evidencia") or {}, ensure_ascii=False)[:500],
+                                    "origen": (mk.get("evidencia") or {}).get("origen"),
+                                    "corte_idx": None, "corte": None, "alcance": "CIERRE"})
             continue
         propias = [mk for mk in b.get("marcas") or [] if mk.get("estado") == "NO_RESUELTO" or mk.get("tipo") == "DOBLE_NEGACION_LITOTE"]
         for mk in propias:
@@ -511,6 +544,23 @@ def correr_guardianes(case: Dict[str, Any], motor: Dict[str, Any], pred: Dict[st
                                0, [], "NO_CONFIGURADO", {"modo": "off"}))
     else:
         bloques.append(_h(seguro("TROPOS_BERISTAIN", lambda: g_tropos(base, case, question, textos, vecinos))[0]))
+    # Lateral observacional: se ejecuta sin decidir H y entrega referencias contextuales
+    # a los guardianes hermanos; nunca modifica sus banderas ni sus decisiones.
+    if "CONTEXTO_ENUNCIATIVO" in omitir:
+        # Bypass visible en recibo (CONTEXTO_ENUNCIATIVO_GUARDIAN=off): el bloque queda
+        # marcado NO_CONFIGURADO en lugar de desaparecer en silencio.
+        bloques.append(_bloque("CONTEXTO_ENUNCIATIVO", [], "omitido por CONTEXTO_ENUNCIATIVO_GUARDIAN=off (bypass visible en recibo)",
+                               0, [], "NO_CONFIGURADO", {"modo": "off"}))
+    else:
+        contexto = seguro("CONTEXTO_ENUNCIATIVO", lambda: g_contexto_enunciativo(base, textos, case))[0]
+        bloques.append(_h(contexto))
+        if contexto.get("bandera") != "ERROR":
+            try:
+                _ctxmod, _ctxmeta = _cargar(base, "lateral_contexto_enunciativo_v1.py", "g_contexto_enunciativo_refs")
+                if _ctxmod is not None:
+                    _ctxmod.attach_context(bloques, contexto.get("detalle") or {})
+            except Exception as e:
+                contexto.setdefault("detalle", {})["error_referencias"] = f"{type(e).__name__}: {e}"
     _anotar_vecinos(bloques)
     # BOLSITAS_TROPO (spec 2026-09-14, ids A–F): ruteo de los hallazgos de tropos y de
     # lógica enunciativa a bolsitas de marcaje. Highlight only: no decide H, no bloquea,

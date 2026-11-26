@@ -1,0 +1,58 @@
+{
+  "version": "CANDADO_OPERATIVO_V7",
+  "fecha": "2026-11-25",
+  "rama": "alterno/version-unificada-7",
+  "base_commits": {
+    "alterno_cameo_pesos_base": "53ea887",
+    "lateral_enunciativo_merge": "792d881",
+    "orquestador_pr10_merge": "8253eafd15481cbfd078744880e10a544323fe32"
+  },
+  "canonicos": {
+    "motor/motor/Engine_V5_CANONICO_SOLO.py": "665c39a2861e58772522e91272563260d980908b1d4ab9f7092d3413d0c36082",
+    "motor/motor/patterns_final_v14.json": "d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1"
+  },
+  "orquestador": {
+    "repo": "marcojpad-hash/orquestador-central",
+    "commit": "8253eafd15481cbfd078744880e10a544323fe32",
+    "archivos": {
+      "runtime/diagnostics/ruta_contexto_enunciativo.py": "9396e609b33319270cf09cbe212ddeaf646d4f1b478bf5084c131269025fbd0b",
+      "runtime/diagnostics/lateral_contexto_enunciativo.py": "9dce1dc805c2c213d2eac8f142cb2f01c37a01e1e0e8bb64657eba1025cb4833"
+    }
+  },
+  "hashes_operativos": {
+    "motor/motor/MOTOR_V15_3_UNICO_20260927.py": "89062ad0da313b2d32b772421a87ad48cd37e3cbf206a590359e32ecde128c66",
+    "motor/correr_estandar.py": "07de63f4aab3cbe48262641c31d72f7c9a0e407d70fbe2397e60247d5f585d4c",
+    "motor/motor/lateral_contexto_enunciativo_v1.py": "e778adefdc0859f037d9092c6933b1a24a10072335bd0386882bad2ca104552e",
+    "motor/motor/guardianes_control_v1.py": "0b197b5b5d3e79bd395fedf6dd68e52bd290984e9ec132012f7cdb105525e52b",
+    "motor/capa_llm/filtro_entrada_dirigida_017.py": "2b3b1f8c9f1633f70079a25096c4ec369c6ad7db6b27d99e27f2bc5fc5277dd1",
+    "motor/motor/plugin_sombrero_blanco_token.py": "52cd7d13aef7d7f5769622b24a604428d50e7fe286364ff3671bb23fa3cee9c5",
+    "motor/motor/autoevidencia_stores_011.py": "8513d64f4587acd55d5f29ff24d61c3ce20c14d19550b8a87ee8c9a07e0449ee",
+    "motor/calibracion/gate_z90.py": "9a830eea5cf06d78be3f7dfd32c278874b0ddcf6bf55a711677b91018eb34997",
+    "motor/motor/control_latencia_decimo_hombre.py": "7d385e57d39f2440935251eb83af8183ca1fd5581e9247fedaf65ef11a6a2615",
+    "motor/motor/plugin_pregunta_detras_v2.py": "d31eb8c078a999e9f93944128eb50e53e61604cce9c74035c2febc894b8792f4",
+    "motor/motor/plugin_pregunta_dirigida_v0_5_1.py": "11fc90114f8d5386286b0f65085a9804138b2e4f69ecbc673e152b525f9a4bf1",
+    "motor/motor/guardian_logica_copi_v1.py": "0101f666ecd70c9cd7aeaa3691f8c34e8d04e75a68594e61c2af3f481a12d519",
+    "motor/motor/plugin_polaridad_causal.py": "534ae6366b525f5114ff36217fca0760585602ff2ba513b13a642dcb1082e739",
+    "motor/motor/sidecar_ablacion_hombre_acero.py": "7db774c0c4934260db59f0a9305e074792488e75bde1560ed7a562f1de277f60",
+    "motor/motor/guardian_acero_rival_v1.py": "314d19f5d477d4be370d1c40e7ee06ce391383c2eef26139e42a52e43a007f79",
+    "motor/motor/plugin_metodo_rigor.py": "d274814d87010803c109122f17e57001cb455e9da00b0f14416a21155e6bdc32",
+    "motor/motor/modo_estricto_v1.py": "9143a0985ffeaf00f8dc5f34abda9053bf1edfeac1ebf400af23b080ebfe3210",
+    "motor/motor/decimo_hombre_esteroides_mayeutica_v1.py": "5f494acee8db9ec497267b36022fb5ba325a512281547ee09283be92e3f745a7",
+    "motor/motor/plugin_verificador_consistencia_adversarial.py": "10b5e163c22e002715a39c4997194e6211d3179fe2d4ae5ab37bf168d2dfef19",
+    "motor/motor/guardian_tropos_beristain_v1.py": "ec806594be8084b0cfdcb376e7859bae7196c544cad8e9c4ab53320660d31367",
+    "motor/motor/sidecar_caldero_busqueda_arquetipos.py": "3e00ec89cfc1037f88ea3a60d40048818c6c447c078b92b886eb60038bf4fdf9",
+    "motor/motor/guardian_pistas_llm_caldero_v1.py": "f54e5e1f1999bb33c79e4f58f1e3d612476eeda549d5d57d75ae41d8a52fd641",
+    "motor/motor/filtro_identidad_zoom_out_zoom_in.py": "1d00fb10f02f0e0f68863654d67d5d368a66c3e3b7b1ec4accb319e1430f48be",
+    "motor/motor/filtro_relleno_013.py": "a69aa7bc1cf0988dcc22f26adda332f0f029ad92926fdcb55dfffee91e0287be",
+    "motor/motor/sujetos_014.py": "1d8e285a3c228d7f243152a56ffd0b982048c3da3374883823224354e219bd8d",
+    "motor/motor/protocolo_kernel_motor.py": "e95f180246e5fad23615eedf74efd2464777cb6ffb2931a653f0888868209d99",
+    "motor/motor/control_flujo_soluciones.py": "058e834825495f153b53afffbdca99ce3ca089a6aa37dc296eaeb8106b9427ea",
+    "motor/motor/candado_plugins.py": "2a66950516dfa751b0d1a4e4162d80046ba59187b7041dffd6831cff31842de1",
+    "motor/motor/plugin_guardia_no_cruce.py": "27759007f33abe577cc53ebaff785d922cbdd096072ac7c2fcf9ec614cb6e828",
+    "motor/motor/ceb_runtime_v0_6_flow.py": "f8a7f6e97468fea6c805f72cb09dc64e9747e1d9ddbd03df13f181b270e341df",
+    "motor/motor/respuesta_humana_v1.py": "6c5bc29d2fc6ef582c0fc9b74f5e9a82bbb2e2ebb75d74fbbee905ffca334abd",
+    "motor/motor/lateral_traduccion_salida_v1.py": "2790741400696aff87ce362e198dd86395271a6fbd1c819aeafd13425eb8e775",
+    "motor/u7/confianza_apuesta_u7.py": "6527284aae4ae9829cbf5b4b0fff0ffcf591487250b34afa04b92218e84737c9"
+  },
+  "nota": "El runner antiguo (53ea887) NO pasa este candado: su hash de runner difiere del registrado aquí. Los canónicos NO cambian."
+}

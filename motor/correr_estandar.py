@@ -13,6 +13,7 @@ Familias laterales: ON (no afinadas; van como backup de arranque).
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import os
 import shutil
@@ -562,6 +563,33 @@ def _efectividad_corte_retenido(sello: dict, visto: dict, retenido) -> dict:
     return out
 
 
+def _confianza_apuesta_u7(result: dict) -> dict:
+    """Confianza de la apuesta U7 (V7): observación post-corrida sobre el RESULT.
+
+    Solo LEE el resultado; no toca H1/H2, la decisión ni los hashes. Se ejecuta
+    después de construir y sanear el RESULT, antes de escribirlo. Si no puede
+    correr (módulo ausente, RESULT incompleto) o está desactivada por
+    U7_CONFIAZA_APUESTA=off, queda registrada como NO_EJECUTADO con su motivo:
+    nunca pasa en silencio. NOT_CALIBRATED: los pesos W iguales (B1-B6 = 1) son
+    un placeholder documentado, no una calibración (ver u7/confianza_apuesta_u7.py).
+    """
+    if os.environ.get("U7_CONFIAZA_APUESTA", "").strip().lower() == "off":
+        return {"status": "NO_EJECUTADO", "motivo": "desactivado por U7_CONFIAZA_APUESTA=off"}
+    try:
+        _spec = importlib.util.spec_from_file_location(
+            "confianza_apuesta_u7", ROOT / "u7" / "confianza_apuesta_u7.py")
+        _mod = importlib.util.module_from_spec(_spec)
+        sys.modules[_spec.name] = _mod
+        _spec.loader.exec_module(_mod)
+        _out = _mod.calc(result)
+        _out, _u7_missing, _u7_nonfinite = _sanitize_json_contract(_out)
+        _out["status"] = "EJECUTADA"
+        return _out
+    except Exception as _e:
+        return {"status": "NO_EJECUTADO",
+                "motivo": "%s: %s" % (type(_e).__name__, _e)}
+
+
 def _parse_standard_args(argv):
     """Parse input/name/output independently from --no-mc, wherever it appears."""
     positional = [x for x in argv[1:] if x != "--no-mc"]
@@ -643,7 +671,7 @@ def main(argv) -> int:
         score["stinkbox_persistent_registry"] = _ingest_stinkbox_registry(stink_home, stink_storage, rd)
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(score, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
-        print(json.dumps({"ok": True, **{k: score[k] for k in ("hit_H", "H1_sellada", "H2_sellada")}, "stinkbox_persistent_registry": score["stinkbox_persistent_registry"]}, ensure_ascii=False))
+        print(json.dumps({"ok": True, **{k: score[k] for k in ("hit_H", "H1_sellada_compatibilidad", "H2_sellada_compatibilidad")}, "stinkbox_persistent_registry": score["stinkbox_persistent_registry"]}, ensure_ascii=False))  # V7 (C-F5): puntuar_t1 devuelve *_compatibilidad, no H1_sellada/H2_sellada; la línea vieja levantaba KeyError en --t1.
         return 0
 
     # Flags are never interpreted as file paths; MC is then enforced below.
@@ -892,7 +920,7 @@ def main(argv) -> int:
         _rh_spec = _ilu_rh.spec_from_file_location("respuesta_humana_v1", _rh_path)
         _rh_mod = _ilu_rh.module_from_spec(_rh_spec)
         _rh_spec.loader.exec_module(_rh_mod)
-        result["respuesta_humana"] = _rh_mod.responder(result, case)
+        result["respuesta_humana"] = _rh_mod.observar(case, None, result)  # V7 (A-F2): el puente documentado; responder() directo dejaba observar() muerto.
     except Exception as _rh_e:
         result["respuesta_humana"] = {"status": "FALLO_RESPUESTA_HUMANA",
                                       "motivo": "%s: %s" % (type(_rh_e).__name__, _rh_e),
@@ -914,6 +942,56 @@ def main(argv) -> int:
         result["traduccion_salida"] = {"status": "FALLO_TRADUCCION_SALIDA",
                                       "motivo": "%s: %s" % (type(_tr_e).__name__, _tr_e),
                                       "lectura": ""}
+    # VERIFICACION_SALIDA_017 (V7; hallazgo A-F1: la función existía y está
+    # probada en aislamiento, pero nadie la llamaba en ninguna corrida).
+    # Verifica la prosa de salida (respuesta_humana + traduccion_salida)
+    # contra el cierre_final sellado: H1/H2 mencionadas y en orden, grado
+    # declarado, objeciones declaradas, huella citada. No decide H ni
+    # reescribe el RESULT; solo deja la verificación visible. Las violaciones
+    # se registran, no tumban la corrida (mismo patrón que
+    # FALLO_TRADUCCION_SALIDA). Si el módulo falla, se registra
+    # FALLO_VERIFICACION_SALIDA_017 y la corrida sigue.
+    try:
+        import importlib.util as _ilu_v017
+        _v017_path = ROOT / "capa_llm" / "filtro_entrada_dirigida_017.py"
+        _v017_spec = _ilu_v017.spec_from_file_location("filtro_entrada_dirigida_017", str(_v017_path))
+        _v017_mod = _ilu_v017.module_from_spec(_v017_spec)
+        _v017_spec.loader.exec_module(_v017_mod)
+        _v017_cat = json.loads((MOTOR / "patterns_final_v14.json").read_text(encoding="utf-8"))
+        _v017_cf = result.get("cierre_final") or {}
+        # Etiquetas legibles: description del catálogo por familia (la prosa
+        # usa "deseo de control e influencia", no el id "arquetipo_el_gobernante").
+        _v017_et = {}
+        for _f in (_v017_cf.get("H1"), _v017_cf.get("H2")):
+            _e = _v017_cat.get(_f) if isinstance(_v017_cat, dict) else None
+            if isinstance(_e, dict) and _e.get("description"):
+                _v017_et[_f] = str(_e["description"]).rstrip(".").strip()
+        _v017_por_salida = {}
+        for _k, _txt in (("respuesta_humana", (result.get("respuesta_humana") or {}).get("respuesta", "")),
+                         ("traduccion_salida", (result.get("traduccion_salida") or {}).get("lectura", ""))):
+            if not str(_txt or "").strip():
+                _v017_por_salida[_k] = {"status": "SIN_PROSA", "ok": "NO_VERIFICABLE", "violaciones": [],
+                                        "huella_salida_017": _v017_mod.huella_salida(_v017_cf),
+                                        "huella_citada": False}
+            else:
+                _v017_por_salida[_k] = _v017_mod.verificar_salida_llm(
+                    str(_txt), _v017_cf, etiquetas=_v017_et, catalogo=_v017_cat)
+        # Sin nulos: el contrato JSON del runner cuenta un null como ruta
+        # faltante (INCOMPLETE_OUTPUT_DATA, exit 4); campos_inmutables trae
+        # margen=None cuando el cierre no tiene margen.
+        def _v017_sin_nulos(_x):
+            if isinstance(_x, dict):
+                return {_k: _v017_sin_nulos(_v) for _k, _v in _x.items()}
+            if isinstance(_x, list):
+                return [_v017_sin_nulos(_v) for _v in _x]
+            return "NO_APLICA" if _x is None else _x
+        result["verificacion_salida_llm"] = _v017_sin_nulos(
+            {"status": "EJECUTADA", "version": _v017_mod.VERSION,
+             "por_salida": _v017_por_salida,
+             "huella_salida_017": _v017_mod.huella_salida(_v017_cf)})
+    except Exception as _v017_e:
+        result["verificacion_salida_llm"] = {"status": "FALLO_VERIFICACION_SALIDA_017",
+                                             "motivo": "%s: %s" % (type(_v017_e).__name__, _v017_e)}
     cuts=_plain_json_copy(case.get("cuts") or [])
     if len(cuts)>=2:
         retenido=_plain_json_copy(cuts[-1])
@@ -968,6 +1046,10 @@ def main(argv) -> int:
         "rutas_no_finitas": _result_nonfinite_paths,
         "estado": "LIMPIO" if not _result_missing_paths and not _result_nonfinite_paths else "REQUIERE_CLASIFICACION_O_REMEDICION"
     }
+    # U7 (V7): confianza de la apuesta, observación post-corrida. Solo lee el
+    # RESULT; no toca H1/H2, la decisión ni los hashes.
+    _u7 = _confianza_apuesta_u7(result)
+    result["confianza_apuesta_u7"] = _u7
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
 
@@ -987,6 +1069,14 @@ def main(argv) -> int:
     search_required_failed = False
     search_optional_failed = bool(not search_performed and search_receipt.get("status") == "FAILED")
     terminal = result.get("terminal_resolution") or result.get("resolucion_operativa_final") or result.get("resolucion_operativa_terminal_017") or (result.get("prediccion") or {}).get("terminal_resolution") or {}
+    # U7 (V7): la etapa del recibo lleva el puntaje; el detalle completo
+    # (B1-B6) va en result["confianza_apuesta_u7"].
+    _u7_stage = {"stage": "confianza_apuesta_u7", "status": _u7.get("status")}
+    if _u7.get("status") == "EJECUTADA":
+        _u7_stage.update({"S": _u7.get("S"), "confianza_apuesta_pct": _u7.get("confianza_apuesta_pct"),
+                          "bloques": _u7.get("bloques"), "calibrada": _u7.get("calibrada")})
+    else:
+        _u7_stage["motivo"] = _u7.get("motivo")
     receipt = {
         "receipt_version": "EXECUTION_RECEIPT_V1",
         "status": "PAUSED_REQUIRES_RESUME" if _continuity_pause is not None else _receipt_status(search_required_failed, _result_missing_paths, _result_nonfinite_paths),
@@ -1022,6 +1112,7 @@ def main(argv) -> int:
             candado_check,
             {"stage": "ceb_ledger_preserved", "status": "COMPLETED" if _ceb_pres.get("ledgers") else "NO_LEDGER", "manifiesto": _ceb_pres.get("manifiesto"),
              "ledgers": [{k: x[k] for k in ("copia", "sha256", "lineas")} for x in _ceb_pres.get("ledgers") or []]},
+            _u7_stage,
         ],
         "archetype_search_receipt": search_receipt,
         "guardian_z90": result_guardian_z90,

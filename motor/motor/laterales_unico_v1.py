@@ -1248,9 +1248,9 @@ def estado_verificado(case, motor, pred, result_view, base, reg):
         if comp == "cameo_to_244_adapter_v1.py":
             mot += f" (cameo_to_244.json presente en el pack: {(Path(base) / 'cameo_to_244.json').is_file()})"
         fila(comp, {"matriz_clases": "PRESENTE", "plugin_guardia_no_cruce.py": "ABSORBIDO_EN_GUARDIA_TRANSVERSAL", "cameo_to_244_adapter_v1.py": "NOT_APPLICABLE",
-                    "protocolo_orden0": "(sin fila)", "plugin_sombrero_blanco_token.py": "EXECUTED feeds_predictor=True"}[comp],
+                    "protocolo_orden0": "(sin fila)", "plugin_sombrero_blanco_token.py": "EXECUTED feeds_predictor=False"}[comp],
              "GUARDIAN_FILTRO" if comp == "plugin_sombrero_blanco_token.py" else "ACTIVA_MUDA", [], mot,
-             **({"feeds_predictor_declarado": True, "feeds_predictor_corregido": False} if comp == "plugin_sombrero_blanco_token.py" else {}))
+             **({"feeds_predictor_declarado": False, "feeds_predictor_corregido": True} if comp == "plugin_sombrero_blanco_token.py" else {}))  # V7 (A-F5): el plugin no alimenta al predictor; la fila vieja decía True.
     ph = foto.get("pre_h") or {}
     lleg, mot = llegada("pre_h_analogical_search(V0.18)")
     fila("pre_h_analogical_search(V0.18)", ph.get("status"), "ACTIVA" if lleg else ("ACTIVA_MUDA" if ph.get("status") == "API_PENDING" else ("ACTIVA" if ph.get("tokens_neighbors") else "ACTIVA_MUDA")), lleg,

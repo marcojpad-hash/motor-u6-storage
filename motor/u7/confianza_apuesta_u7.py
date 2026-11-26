@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """U7 · Confianza de la apuesta (post-corrida, solo lee RESULT json; no toca motor/Engine/patterns).
-NO calibrada: pesos iguales fijados a priori, sin ajuste a desenlaces.
+
+NOT_CALIBRATED: los pesos W son los seis en 1 (B1-B6 iguales, fijados a priori,
+sin ajuste a desenlaces). Son un placeholder documentado, NO una calibración:
+no hay datos para calibrarlos y no se inventan pesos. El puntaje S y la
+confianza son una observación, no una probabilidad calibrada.
+Para calibrarlo harían falta pares de puntajes U7 contra desenlaces reales,
+con n suficiente, y un ajuste explícito con su validación; hasta entonces los
+pesos iguales se quedan como están y el campo "calibrada" es False.
 uso: python3 confianza_apuesta_u7.py RESULT.json [...]  -> imprime json por caso
 """
 import json, sys
@@ -79,12 +86,23 @@ def calc(d):
     cambio = 0.0 if dh.get("cambio_tras_adversario") else 1.0
     b4 = (share + abl + acero + cambio) / 4
     det["B4"] = {"supervivencia_H1": share, "ablacion_sin_cambio_lider": abl, "acero": acero_raw.get("veredicto_top1"), "acero_rival": rival_acero, "acero_alineado_a_H2": bool(acero_alineado), "acero_aporte": acero, "cambio_tras_adversario": dh.get("cambio_tras_adversario")}
-    # B5 SIN_ULTIMO (RETENIDO no usable: tops_t1 vacío por defecto de cableado en puntuar_t1)
+    # B5 SIN_ULTIMO (V7, hallazgo C-F5: el RESULT real trae
+    # H1_sellada_compatibilidad y tops_t1 con 10 ítems; la clave H1_sellada
+    # no existe y B5 puntuaba 0.0 siempre en datos reales).
+    # V7, segunda mitad de B5 (hallazgo de ChatGPT, verificado en código):
+    # retenido_usable solo se REGISTRABA, nunca condicionaba b5. Sin tops_t1
+    # la evaluación retenida no corrió: B5 neutral 0.5, como B4 con el acero
+    # (nunca invertir ni aplicar a ciegas). Sin esto, hs None daba 0.0 y
+    # castigaba H1 por una evaluación que ni siquiera corrió.
     e = d.get("efectividad_corte_retenido") or {}
     set_f = [m["familia"] for m in (d.get("hipotesis_necesarias_suficientes") or {}).get("miembros", [])] if isinstance(d.get("hipotesis_necesarias_suficientes"), dict) else []
-    hs = e.get("H1_sellada")
-    b5 = 1.0 if hs == h1 else 0.5 if (hs == h2 or hs in set_f) else 0.0
-    det["B5"] = {"H1_sin_ultimo": hs, "retenido_hit": e.get("hit_H"), "retenido_usable": bool(e.get("tops_t1"))}
+    hs = e.get("H1_sellada") or e.get("H1_sellada_compatibilidad")
+    retenido_usable = bool(e.get("tops_t1"))
+    if not retenido_usable:
+        b5 = 0.5
+    else:
+        b5 = 1.0 if hs == h1 else 0.5 if (hs == h2 or hs in set_f) else 0.0
+    det["B5"] = {"H1_sin_ultimo": hs, "retenido_hit": e.get("hit_H"), "retenido_usable": retenido_usable}
     # B6 fondo: emergentes que no compiten (acero inverso) y ausencia de corriente fuerte fuera del top5
     ab = d.get("lo_que_se_cocina_abajo") or []
     if ab:

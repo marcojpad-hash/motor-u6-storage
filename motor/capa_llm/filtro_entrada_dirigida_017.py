@@ -34,9 +34,12 @@ Reglas (cada bandera: tipo, regla, motivo, corte, campo, span, inicio, fin, acci
   SESGO_CONSULTOR    la pregunta trae etiquetas/evaluativos, o 3+ palabras seguidas de la pregunta aparecen copiadas en el payload. -> 'warn'.
   META_PROTOCOLO     marcas de protocolo en el payload ('punto Z90', 'ejercicio blanco', notion, patch...). -> 'strip'.
   SIN_TEXTO_CORTE    el corte no trae hecho/narracion (016 no puede derivar personajes). -> 'info'.
-Modo en vivo (FILTRO_017, por defecto 'activo'): solo IDENTIDAD_NOMBRE / IDENTIDAD_OBRA / CALENDARIO se aplican (neutralize/strip)
+Modo en vivo (FILTRO_017, por defecto 'traza'): solo IDENTIDAD_NOMBRE / IDENTIDAD_OBRA / CALENDARIO se aplican (neutralize/strip)
 y solo dentro del PAYLOAD (question, hecho/narracion/facts/texto, tokens, caldero_search_sources.texto, tokens_activos,
 external_lights.token). Todo lo demás: warn + traza. 'traza' = solo reporta. 'off' = el motor no lo carga.
+(V7, hallazgo A-F3: el docstring decía 'activo' por defecto, pero UNICO y correr_estandar defaultean a 'traza'; el
+default real es traza — detectar y dejar huella sin tocar el caso. Cambiar a 'activo' es una decisión de producto,
+de una línea en los dos defaults, no un bug.)
 La traza que entra al resultado del motor NO lleva nombres: solo huella sha256[:8] del span (como 016).
 """
 from __future__ import annotations

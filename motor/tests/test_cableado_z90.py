@@ -50,6 +50,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[1]  # motor/
 MOTOR_DIR = ROOT / "motor"
 UNICO = MOTOR_DIR / "MOTOR_V15_3_UNICO_20260927.py"
@@ -233,3 +235,49 @@ def test_corrida_limite_fecha_igual_a_z90_pasa(tmp_path):
 def test_constantes_y_sha_engine_y_catalogo():
     assert _sha256(MOTOR_DIR / "Engine_V5_CANONICO_SOLO.py").startswith(SHA_ENGINE)
     assert _sha256(MOTOR_DIR / "patterns_final_v14.json").startswith(SHA_PATTERNS)
+
+
+# ------------------------------------------------------------------ 5) V7 (A-F4): gate Z90 en run()
+def _caso_gate_vivo_valido():
+    # Modo vivo con evidencia primaria completa: pasa validar_entrada.
+    return {"case_id": "Z90_GATE_VIVO",
+            "question": "¿Qué arquetipo domina el caso?",
+            "cuts": [{"id": "C1", "date": "0480-01-01",
+                      "P": [["amenaza_central", 0.70]], "A": [], "C": [],
+                      "evidencia": [{"afirmacion": "hubo una amenaza central",
+                                     "source_url": "https://example.com/fuente",
+                                     "source_date": "0480-01-01",
+                                     "claim_date": "0480-01-01",
+                                     "conocido_en_Z": "sí",
+                                     "tipo_fuente": "primaria"}]}],
+            "z90_date": "0480-06-01",
+            "z_trabajo": "0480-06-01",
+            "modo_z": "vivo",
+            "gate_z": True}
+
+
+def test_gate_z90_caso_valido_pasa():
+    m = _load_unico()
+    res = m._aplicar_gate_z90(_caso_gate_vivo_valido())
+    assert res["status"] == "OK", res
+    assert res["modo_z"] == "vivo"
+
+
+def test_gate_z90_sin_declaracion_no_hay_compuerta():
+    m = _load_unico()
+    res = m._aplicar_gate_z90(_caso_base())
+    assert res["status"] == "SIN_COMPUERTA", res
+
+
+def test_run_bloquea_caso_con_gate_sin_evidencia():
+    # Vivo (run() directo): el caso pasa _validate_case pero el gate Z90 lo
+    # bloquea (R3: corte sin evidencia). Antes el gate no corría en run().
+    m = _load_unico()
+    case = _caso_base()
+    case["gate_z"] = True
+    case["z_trabajo"] = "0480-06-01"
+    case["modo_z"] = "vivo"
+    with pytest.raises(ValueError) as ei:
+        m.run(case)
+    assert "GATE_Z90" in str(ei.value), ei.value
+    assert "R3" in str(ei.value), ei.value

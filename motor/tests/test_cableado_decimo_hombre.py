@@ -10,7 +10,7 @@ p ≈ 0,45–0,55, no cierra; acumula o espera; marca de proceso que alimenta
 cierre LATENTE) + docstring del plugin (v1.0.0-dinamica-20260920,
 `ALIMENTA_H=NO`, `SOLO_MARCA=True`; control estructural de cierre, no
 sidecar de contenido). No tiene ficha propia en filtros_operativos.
-SHA esperado del plugin (`ff03241d…`) coincide con el archivo actual.
+SHA esperado del plugin (`7d385e57…`, V7) coincide con el archivo actual.
 
 Contrato de la familia: el bloque corre DESPUÉS del predictor, solo MARCA
 (can_decide_H=False), bandera LIMPIO | MARCA | LATENTE (o ERROR); nunca
@@ -53,7 +53,7 @@ UNICO = MOTOR_DIR / "MOTOR_V15_3_UNICO_20260927.py"
 CONTROL = MOTOR_DIR / "guardianes_control_v1.py"
 THEMISTOCLES = ROOT / "inputs" / "THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json"
 
-SHA_LATENCIA = "ff03241d"
+SHA_LATENCIA = "7d385e57"  # V7: nota de puente legacy (B-H6) en el docstring; solo texto.
 
 
 def _load_latencia():
@@ -358,7 +358,9 @@ def test_corrida_real_ejecuta_decimo_hombre(tmp_path):
     assert b is not None, "sin bloque DECIMO_HOMBRE_LATENCIA en una corrida real"
     assert b.get("can_decide_H") is False
     # Baseline THEMISTOCLES: 3 cortes con p fuera de banda (0,9998 / 0,9711 /
-    # 0,6613) y cierre con p 0,6522, todos RESUELTO → bandera LIMPIO, 0 marcas.
+    # 0,6613) y cierre con p 0,6584, todos RESUELTO → bandera LIMPIO, 0 marcas.
+    # (El dorado era 0,6522; derivó a 0,6584 ANTES de V7 — base 53ea887 y V7
+    # dan el mismo 0,6584; H y ranks idénticos. No es regresión de V7.)
     assert b.get("bandera") == "LIMPIO", b
     assert b.get("n_marcas") == 0, b
     assert b.get("marcas") == [], b
@@ -368,7 +370,7 @@ def test_corrida_real_ejecuta_decimo_hombre(tmp_path):
     cierre = det.get("cierre") or {}
     assert cierre.get("top1") == "arquetipo_el_gobernante"
     assert cierre.get("top2") == "13_enemistad_de_parientes"
-    assert abs(cierre.get("p_momento", 0) - 0.6522) < 0.001, cierre
+    assert abs(cierre.get("p_momento", 0) - 0.6584) < 0.001, cierre
     assert cierre.get("estado_control") == "RESUELTO", cierre
     assert cierre.get("accion") == "LIBERAR_LATENCIA", cierre
     assert cierre.get("re_tirada_decimo_hombre") == 0

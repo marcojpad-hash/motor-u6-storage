@@ -13,6 +13,13 @@ Ancla
   metáfora como transferencia de dominio, NO_RESUELTO), SPEC_BERISTAIN_TROPOS_BOLSITAS y
   SPEC_TROPOS_BOLSITAS_ARQUETIPOS (bolsitas → estante PERFIL / PREGUNTA_SESGO / CAMPO / LOGICA).
 
+V7 (hallazgo B-H5): METALEPSIS, IMAGEN, ASINDETON y ZEUGMA quedan FUERA DE
+COBERTURA (codigo PENDIENTE_DE_REGLA en el catálogo): no se escribió la regla
+de construcción para esas 4 figuras — la regla de método exige construcción, no
+palabra suelta, y no se definió cuál es la construcción de cada una. Se listan
+en pendiente_de_regla, no se detectan; escribir sus reglas es trabajo de regla
+nueva, no reparación.
+
 Código previo reutilizado (no se reescribió)
   - plugin_pregunta_detras_v2.py v2.3.2: reglas de lítote e hipérbole (marco_litotes /
     marco_hiperbole). Aquí se llaman tal cual y se suman estructuras nuevas.

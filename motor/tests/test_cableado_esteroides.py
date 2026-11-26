@@ -19,7 +19,8 @@ bandera y el bloque corría siempre. Este PR no reescribe el núcleo: añade la 
 `ESTEROIDES_GUARDIAN` (defecto activo; `off` = bypass visible NO_CONFIGURADO con
 `esteroides_modo: off`) y registra `esteroides_modo` en la fila de componentes en ambos
 casos, más `modo` en el recibo del bloque.
-SHA esperado del plugin (`1fa9b779…`) coincide con el archivo actual.
+SHA esperado del plugin (`5f494ace…`) coincide con el archivo actual.
+(V7: el docstring B-H4 añadió 5 líneas al plugin; SHA anterior `1fa9b779…`.)
 
 Contrato de la familia: el bloque corre DESPUÉS del cierre final (016), solo AUDITA
 (`can_decide_H=False`, `rewrites_H=False`); nunca escribe H ni patterns ni la apuesta
@@ -69,7 +70,7 @@ ESTEROIDES = MOTOR_DIR / "decimo_hombre_esteroides_mayeutica_v1.py"
 UNICO = MOTOR_DIR / "MOTOR_V15_3_UNICO_20260927.py"
 THEMISTOCLES = ROOT / "inputs" / "THEMISTOCLES_FREEZE_480BC_CATALOG_REPAIR_R2.json"
 
-SHA_ESTEROIDES = "1fa9b779"
+SHA_ESTEROIDES = "5f494ace"
 SHA_ENGINE = "665c39a2"
 SHA_PATTERNS = "d827dcc3"
 
