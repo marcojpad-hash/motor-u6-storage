@@ -47,3 +47,24 @@ def test_contour_does_not_bypass_hard_gate():
     assert plan["parada_dura"] is True
     assert plan["accion"] == "DIAGNOSTICAR_SIN_EJECUTAR"
     assert not any("BYPASS_HASH_CAMBIO" in str(x) for x in plan["contornos"])
+
+
+def test_canonical_hash_mismatch_is_hard_block_even_without_manifest(monkeypatch):
+    runner = _load_runner()
+    def fake_sha(path):
+        return "sha-mismatch"
+    monkeypatch.setattr(runner, "sha", fake_sha)
+    gate = runner._verificar_hashes_canonicos(Path("Engine_V5_CANONICO_SOLO.py"), Path("patterns_final_v14.json"))
+    assert gate["bloquea"] is True
+    assert gate["status"] == "BLOCKED_CANONICAL_HASH"
+    assert gate["H_emitida"] is False
+    assert gate["plan_contorno"]["parada_dura"] is True
+    assert gate["plan_contorno"]["accion"] == "DIAGNOSTICAR_SIN_EJECUTAR"
+
+
+def test_z90_gate_is_hard_stop_not_contoured_around():
+    runner = _load_runner()
+    plan = runner._plan_contorno("Z90 gate blocked: POST_Z90_EN_INPUT", "guardian_z90_gate")
+    assert plan["parada_dura"] is True
+    assert plan["accion"] == "DIAGNOSTICAR_SIN_EJECUTAR"
+    assert not any("bypass" in str(x).lower() for x in plan["contornos"])

@@ -387,9 +387,9 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 - **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL en la ruta estándar. Evidencia automatizada: `motor/tests/test_cableado_plan_contorno.py` y `motor/tests/test_control_flujo_runner.py`.
   - UNICO adjunta planes a los errores de cierre operativo 017 y cierre final 016 sin cambiar H.
   - El runner estándar adjunta planes a fallos del subproceso primario y de módulos de salida; toda excepción no controlada pasa por `_main_with_control_flujo` y devuelve JSON estructurado con exit code 3.
-  - Las discrepancias de Engine V5, catálogo 244, FREEZE o Z90 se convierten en PARADA_DURA: el plan permite diagnóstico y tareas independientes, pero prohíbe BYPASS_HASH_CAMBIO y cualquier ejecución sustitutiva. No modifica input, predictor, H1/H2 ni hashes.
+  - El runner verifica Engine V5 y catálogo 244 contra sus hashes canónicos de forma independiente del manifiesto opcional; un manifiesto ausente no degrada el candado. Las discrepancias o archivos ausentes de Engine/244, FREEZE o Z90 se convierten en PARADA_DURA: el plan permite diagnóstico y tareas independientes, pero prohíbe BYPASS_HASH_CAMBIO y cualquier ejecución sustitutiva. El bloqueo Z90 deja el plan en RESULT y RECIBO. No modifica input, predictor, H1/H2 ni hashes.
   - `aplicar_protocolo` no existe como API en este módulo; la API implementada y llamada es `contornar(piedra_o_error, contexto=None)`.
-  - **CI verificado:** run [#45860500437](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860500437), job `runner-contract` SUCCESS, 92 pruebas aprobadas en 41.81 s (incluye los tres tests nuevos y el test de integración UNICO).
+  - **CI anterior verificado:** run [#45860500437](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860500437), job `runner-contract` SUCCESS, 92 pruebas aprobadas en 41.81 s. Se amplió después la gate canónica independiente del manifiesto; la verificación de esta ampliación está pendiente de la siguiente corrida CI.
 
 ### 5.6 Protocolo kernel (protocolo_kernel_motor.py, orden 0)
 - **Función:** arrancar la matriz y clasificar la pregunta antes de todo.

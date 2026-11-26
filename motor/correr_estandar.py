@@ -67,6 +67,27 @@ def _plan_contorno(piedra: str, contexto: str) -> dict:
 
 
 
+def _verificar_hashes_canonicos(eng: Path, pat: Path) -> dict:
+    """Hard gate for the protected Engine V5 and 244-pattern catalog.
+
+    Runs independently of the optional SHA manifest: a missing manifest can
+    never downgrade a canonical hash mismatch to a warning.
+    """
+    engine_hash = sha(eng)
+    patterns_hash = sha(pat)
+    mismatch = []
+    if engine_hash != ENGINE_SHA:
+        mismatch.append({"artifact":"Engine_V5_CANONICO_SOLO.py", "expected":ENGINE_SHA, "actual":engine_hash})
+    if patterns_hash != PAT_SHA:
+        mismatch.append({"artifact":"patterns_final_v14.json", "expected":PAT_SHA, "actual":patterns_hash})
+    if not mismatch:
+        return {"status":"MATCH", "bloquea":False, "engine_sha256":engine_hash, "patterns_sha256":patterns_hash}
+    plan = _plan_contorno("hash mismatch Engine V5 canonical and/or patterns 244: " + json.dumps(mismatch),
+                          "canonical_engine_patterns_gate")
+    return {"status":"BLOCKED_CANONICAL_HASH", "bloquea":True, "mismatches":mismatch,
+            "plan_contorno":plan, "H_emitida":False}
+
+
 def _ceb_root_tmpfs() -> Path | None:
     """Default CEB ledger dir on tmpfs (RAM) when CEB_ROOT is not set.
 
@@ -722,19 +743,30 @@ def main(argv) -> int:
         import subprocess as _subprocess
         pf = _subprocess.run([sys.executable, str(preflight)], cwd=str(ROOT), text=True, capture_output=True)
         if pf.returncode != 0:
-            print(pf.stdout, file=sys.stderr)
-            print("PREFLIGHT_INTEGRIDAD_FALLIDO: corrida bloqueada", file=sys.stderr)
+            plan = _plan_contorno(f"preflight integridad fallido: {pf.stdout[-1000:]} {pf.stderr[-1000:]}", "preflight_integridad")
+            print(json.dumps({"ok":False,"stage":"preflight_integridad","status":"BLOQUEADO",
+                              "stdout":pf.stdout[-2000:],"stderr":pf.stderr[-2000:],"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
             return 4
 
     eng = MOTOR / "Engine_V5_CANONICO_SOLO.py"
     pat = MOTOR / "patterns_final_v14.json"
     if not eng.is_file() or not pat.is_file():
-        print("FALTA Engine o patterns en motor/", file=sys.stderr)
+        piedra = "Engine V5 canonical missing" if not eng.is_file() else "patterns 244 missing"
+        plan = _plan_contorno(piedra, "canonical_artifact_missing")
+        print(json.dumps({"ok":False,"stage":"canonical_artifact_missing","status":"PARADA_DURA",
+                          "error":piedra,"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
+        return 3
+    canonical_hash_check = _verificar_hashes_canonicos(eng, pat)
+    if canonical_hash_check.get("bloquea"):
+        print(json.dumps({"ok":False,"stage":"canonical_engine_patterns_gate",**canonical_hash_check},ensure_ascii=False),file=sys.stderr)
         return 3
     # U6 #4: manifiesto SHA256 del pack en preflight (aviso + recibo; bloquea solo Engine/patterns)
     man_check = verificar_manifiesto()
     if man_check.get("bloquea"):
-        print("MANIFIESTO: Engine o patterns no coinciden -> corrida bloqueada " + json.dumps(man_check.get("bloqueantes")), file=sys.stderr)
+        plan = _plan_contorno("hash mismatch Engine V5 and/or patterns 244 in SHA manifest: " + json.dumps(man_check.get("bloqueantes")), "canonical_manifest_gate")
+        man_check["plan_contorno"] = plan
+        print(json.dumps({"ok":False,"stage":"unification_manifest_check","status":"PARADA_DURA",
+                          "manifiesto":man_check,"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
         return 5
     if man_check.get("status") == "DRIFT_WARNED":
         print(f"AVISO MANIFIESTO: deriva={len(man_check['deriva'])} ausentes={len(man_check['ausentes'])} fuera={len(man_check['motor_fuera_de_manifiesto'])}", file=sys.stderr)
@@ -808,11 +840,14 @@ def main(argv) -> int:
     # Issue #64: validar Z90 después de normalizar/filtros y antes de ejecutar el motor.
     result_guardian_z90 = _guardian_z90(case)
     if result_guardian_z90.get("bloquea"):
+        _z90_plan = _plan_contorno("Z90 gate blocked: " + json.dumps(result_guardian_z90, ensure_ascii=False, default=str), "guardian_z90_gate")
+        result_guardian_z90["control_flujo_soluciones"] = _z90_plan
         _t_bloqueo = time.time()
         _resultado_bloqueo = _sanitize_json_contract({
             "case_id": case.get("case_id"),
             "estado": "BLOQUEADO_GUARDIAN_Z90",
             "guardian_z90": result_guardian_z90,
+            "control_flujo_soluciones": _z90_plan,
             "estandar": {"entrada": "correr_estandar.py", "engine_sha256": sha(eng), "patterns_sha256": sha(pat)},
         })[0]
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -836,7 +871,7 @@ def main(argv) -> int:
             "monte_carlo": True,
             "stages": [
                 {"stage": "input_read_and_normalization", "status": "COMPLETED"},
-            {"stage": "control_flujo_soluciones", "status": "AVAILABLE_ON_FAILURE", "module": "motor/motor/control_flujo_soluciones.py", "failure_paths": ["UNICO cierre 017/016", "subproceso primario fallido", "excepciones no controladas del runner", "respuesta_humana", "traduccion_salida", "verificacion_salida_llm"], "hard_gates_preserved": ["Engine V5", "patterns 244", "Z90"]},
+                {"stage": "control_flujo_soluciones", "status": "PARADA_DURA", "plan": _z90_plan},
                 {"stage": "guardian_z90", "status": "RECHAZADO", "version": result_guardian_z90.get("version"),
                  "errores": result_guardian_z90.get("errores"), "n_errores": result_guardian_z90.get("n_errores")},
                 {"stage": "motor_run", "status": "BLOQUEADO_POR_GUARDIAN_Z90"},
@@ -848,7 +883,7 @@ def main(argv) -> int:
         receipt_path.write_text(json.dumps(_recibo_bloqueo, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
         print(json.dumps({"ok": False, "stage": "guardian_z90", "status": "BLOQUEADO_GUARDIAN_Z90",
                           "case_id": case.get("case_id"), "errores": result_guardian_z90.get("errores"),
-                          "output": str(out), "execution_receipt": str(receipt_path)}, ensure_ascii=False))
+                          "plan_contorno": _z90_plan, "output": str(out), "execution_receipt": str(receipt_path)}, ensure_ascii=False))
         try:
             _log = _u6_logger(nombre)
             if _log is not None:

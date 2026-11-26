@@ -137,10 +137,11 @@ def _es_parada_dura(piedra_o_error: str, contexto: Optional[str]) -> bool:
     """Reconoce candados de identidad/tiempo que un contorno nunca debe saltar."""
     t = f"{piedra_o_error or ''} {contexto or ''}".casefold()
     hash_problem = any(x in t for x in ("hash", "sha", "mismatch", "no coincide", "candado", "corrupt"))
-    engine_gate = "engine" in t and hash_problem
-    patterns_gate = ("patterns" in t or "patrones" in t or "catálogo 244" in t or "catalogo 244" in t) and hash_problem
-    freeze_gate = "freeze" in t and any(x in t for x in ("hash", "mismatch", "futuro", "posterior", "candado"))
-    z90_gate = "z90" in t and any(x in t for x in ("post", "gate", "fecha", "posterior", "candado", "invalid", "mismatch"))
+    missing_problem = any(x in t for x in ("missing", "falta", "ausente", "no existe", "not found"))
+    engine_gate = "engine" in t and (hash_problem or missing_problem)
+    patterns_gate = ("patterns" in t or "patrones" in t or "catálogo 244" in t or "catalogo 244" in t) and (hash_problem or missing_problem)
+    freeze_gate = "freeze" in t and any(x in t for x in ("hash", "mismatch", "futuro", "posterior", "candado", "gate", "blocked", "bloquead"))
+    z90_gate = "z90" in t and any(x in t for x in ("post", "gate", "fecha", "posterior", "candado", "invalid", "mismatch", "bloquead", "blocked"))
     return bool(engine_gate or patterns_gate or freeze_gate or z90_gate)
 
 

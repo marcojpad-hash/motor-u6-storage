@@ -9,6 +9,8 @@ Se consolidó una sola autoridad contractual para Motor U7 y se amplió el cable
 - `motor/correr_estandar.py::_plan_contorno` — antes no había adaptador común del control de flujo en el runner estándar → ahora carga `motor/motor/control_flujo_soluciones.py` y produce un plan estructurado.
 - `motor/correr_estandar.py::_main_with_control_flujo` — antes una excepción no controlada podía terminar sin contorno → ahora registra PIEDRA/CONTORNO/SIGUIENTE/EVIDENCIA en JSON y conserva exit code 3.
 - `motor/correr_estandar.py::main` — antes el fallo del subproceso primario retornaba solo un mensaje → ahora escribe RESULT de fallo y `_RECIBO_EJECUCION.json` con el error y el contorno.
+- `motor/correr_estandar.py::_verificar_hashes_canonicos` — antes el hash canónico podía degradarse a aviso si faltaba el manifiesto → ahora Engine V5 y catálogo 244 se validan siempre contra sus hashes fijados, de forma independiente del manifiesto.
+- Los bloqueos de Engine/244 ausentes o con hash distinto, errores de manifiesto y gate Z90 dejan un plan de PARADA_DURA; el plan prohíbe el bypass y no autoriza ejecutar ni sustituir el artefacto.
 - Errores de respuesta humana, traducción y verificación de salida ahora incluyen plan de contorno.
 - `docs/CONTRATOS_OPERATIVOS_V7.md` queda como autoridad contractual única; corrige control de flujo y describe confianza U7 post-corrida B1–B6 con `calibrada=false`.
 - Los contratos anteriores se archivan bajo `antecedentes_motor/historial_contratos/`; sus rutas originales son avisos, no instrucciones activas.
