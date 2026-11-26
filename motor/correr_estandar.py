@@ -570,8 +570,8 @@ def _confianza_apuesta_u7(result: dict) -> dict:
     después de construir y sanear el RESULT, antes de escribirlo. Si no puede
     correr (módulo ausente, RESULT incompleto) o está desactivada por
     U7_CONFIAZA_APUESTA=off, queda registrada como NO_EJECUTADO con su motivo:
-    nunca pasa en silencio. NOT_CALIBRATED: los pesos W iguales (B1-B6 = 1) son
-    un placeholder documentado, no una calibración (ver u7/confianza_apuesta_u7.py).
+    nunca pasa en silencio. EN OPERACIÓN: los pesos W iguales (B1-B6 = 1) son
+    un punto de partida documentado, no una calibración ajustada (ver u7/confianza_apuesta_u7.py).
     """
     if os.environ.get("U7_CONFIAZA_APUESTA", "").strip().lower() == "off":
         return {"status": "NO_EJECUTADO", "motivo": "desactivado por U7_CONFIAZA_APUESTA=off"}

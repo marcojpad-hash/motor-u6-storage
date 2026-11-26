@@ -94,7 +94,7 @@ def test_corrida_ejecuta_u7_y_registra_puntaje_en_resultado_y_recibo():
         u7 = resultado["confianza_apuesta_u7"]
         assert u7["status"] == "EJECUTADA"
         assert 0.0 <= u7["S"] <= 1.0
-        assert u7["calibrada"] is False  # NOT_CALIBRATED: pesos iguales, placeholder
+        assert u7["calibrada"] is False  # pesos iguales, punto de partida (sin ajuste a desenlaces todavía)
         assert set(u7["bloques"]) == {"B1_dominancia", "B2_set_mezcla", "B3_laterales",
                                        "B4_robustez_adversarial", "B5_estabilidad_sin_ultimo",
                                        "B6_fondo"}
