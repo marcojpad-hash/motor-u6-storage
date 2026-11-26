@@ -1,6 +1,9 @@
-# FEEDME actualizado — Motor U6 / ChatGPT
+> **Contrato activo único:** [docs/CONTRATOS_OPERATIVOS_V7.md](docs/CONTRATOS_OPERATIVOS_V7.md). Los documentos anteriores están archivados en `antecedentes_motor/historial_contratos/`; no usarlos como instrucciones vigentes.
+> **Rama operativa:** `alterno/cameo-pesos`. **Nombre operativo:** Motor U7.
 
-Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobre Motor U6. Abrirlo al iniciar una tarea. El repositorio es la fuente de verdad; esta página dirige al protocolo, a las carpetas de seguimiento y a los registros.
+# FEEDME actualizado — Motor U7 / ChatGPT
+
+Este es el punto único de entrada y seguimiento para el trabajo sobre Motor U7. El repositorio conserva el slug motor-u6-storage por compatibilidad. Abrirlo al iniciar una tarea. El repositorio es la fuente de verdad; esta página dirige al protocolo, a las carpetas de seguimiento y a los registros.
 
 ## Arranque obligatorio
 
@@ -11,7 +14,7 @@ Este es el punto único de entrada y seguimiento para el trabajo de ChatGPT sobr
 5. Ejecutar la tarea con las herramientas disponibles; no limitarse a describir el plan.
 
 
-## Continuidad de investigación U6 — 2026-11-04
+## Continuidad de investigación — antecedente U6, 2026-11-04
 
 - **Antes de repetir el análisis**, leer [handoff de continuidad](docs/CONTINUIDAD_INVESTIGACION_U6_2026-11-04.md). Resume qué se inspeccionó, qué hallazgos quedaron establecidos y desde dónde debe continuar el siguiente modelo.
 - Informe técnico de la reconstrucción: [RECONSTRUCCION_FUNCIONAL_U6](informes/2026-11-04_RECONSTRUCCION_FUNCIONAL_U6.md).

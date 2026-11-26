@@ -1,6 +1,10 @@
+> **AUTORIDAD OPERATIVA ÚNICA:** el motor vigente se llama **Motor U7**. Rama `alterno/cameo-pesos`. Contrato activo único: [docs/CONTRATOS_OPERATIVOS_V7.md](docs/CONTRATOS_OPERATIVOS_V7.md). Los contratos previos se conservan en `antecedentes_motor/historial_contratos/`; las rutas antiguas solo redirigen y no contienen reglas activas.
+> **Ruta estándar:** `motor/correr_estandar.py` → UNICO → guardianes/laterales/CEB → salida humana/traducción/verificación → observador U7 → RESULT + RECIBO. `control_flujo_soluciones.py` atiende fallos sin alterar H ni saltar candados duros.
+> **Protecciones:** `motor/Engine_V5_CANONICO_SOLO.py` y `motor/patterns_final_v14.json` no se modifican. El slug del repositorio y las rutas U6/V15.3 se conservan por compatibilidad; no indican un segundo motor vigente.
+
 > **MEMORIA COMPARTIDA OBLIGATORIA:** Antes de cualquier trabajo, cualquier modelo debe leer [AGENTS.md](AGENTS.md), [el protocolo transversal](https://github.com/marcojpad-hash/memoria-compartida/blob/main/PROTOCOLO_MEMORIA_COMPARTIDA_OBLIGATORIA.md) y [el índice de memoria](https://github.com/marcojpad-hash/memoria-compartida/blob/main/INDICE.md); consultar los hechos pertinentes y sincronizar los hechos durables al terminar. No empezar desde la memoria conversacional.
 
-# motor-u6-storage
+# Motor U7 — repositorio `motor-u6-storage` (slug histórico)
 
 
  > **Contrato transversal obligatorio para todos los modelos:** [Contrato de trabajo multi-modelo](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CONTRATO_TRABAJO_MULTI_MODELO.md). Declarar capacidades reales antes de asumir permisos o ejecución.

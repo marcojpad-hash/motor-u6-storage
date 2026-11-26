@@ -1,8 +1,11 @@
+> **Motor operativo: U7.** El repositorio conserva el slug histórico `motor-u6-storage`; rama activa `alterno/cameo-pesos`. El único contrato operativo es [docs/CONTRATOS_OPERATIVOS_V7.md](docs/CONTRATOS_OPERATIVOS_V7.md). Los contratos anteriores están archivados y no son instrucciones activas.
+> **Control de flujo:** `motor/motor/control_flujo_soluciones.py` se usa ante errores; UNICO y el runner estándar adjuntan contornos sin saltar candados duros ni cambiar H.
+
 > **Punto de entrada obligatorio:** comenzar por [`FEEDME_ACTUALIZADO.md`](FEEDME_ACTUALIZADO.md), revisar el seguimiento y después seguir [`INICIO_SESION_CHATGPT.md`](INICIO_SESION_CHATGPT.md) y [`LLM_STARTUP_SIDECAR.md`](LLM_STARTUP_SIDECAR.md) antes de cada tarea sobre el motor.
 > **No ZIP:** lee este repo archivo por archivo (API GitHub/conector o `git clone`). Mapa de carpetas: [`CONTRATO_CARPETAS.md`](CONTRATO_CARPETAS.md). Último informe: [`informes/2026-10-25_CEB_cableado_y_smoke.md`](informes/2026-10-25_CEB_cableado_y_smoke.md).
 > **OBLIGATORIO EN CADA TAREA SOBRE EL MOTOR:** leer [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md) y comprobar los artefactos reales. Código leído ≠ motor ejecutado. Para una corrida, leer el JSON y su `_RECIBO_EJECUCION.json`; no afirmar ejecución sin evidencia ligada a input y hashes. Preservar el campo completo: no descartar datos por estar fuera del top, en valle/meseta/descenso o por contradecir la hipótesis.
 
-# CONTINUIDAD DE INTERACCIÓN — ChatGPT / Motor U6
+# CONTINUIDAD DE INTERACCIÓN — ChatGPT / Motor U7
 
 Fecha de preparación: 2026-10-24  
 Repositorio: https://github.com/marcojpad-hash/motor-u6-storage  
@@ -44,7 +47,7 @@ Este documento permite que otra sesión o cuenta de un asistente de IA continúe
 - No ocultar errores auxiliares, diferencias entre corridas, resultados parciales o limitaciones del entorno.
 - Si un proceso no tiene datos suficientes, seguir la terminología y los contratos vigentes del proyecto; no convertir arbitrariamente un estado pendiente en una resolución final para que la corrida parezca completa.
 - No usar información posterior al corte de conocimiento permitido para formular hipótesis retrospectivamente.
-- En pruebas biográficas, seguir obligatoriamente [motor/PROTOCOLO_BIOGRAFICO_Z90.md](motor/PROTOCOLO_BIOGRAFICO_Z90.md): biografía cerrada = Z_trabajo en Z90 (90 % del intervalo nacimiento→muerte), ventanas acumulativas desde nacimiento, primer corte en nacimiento y último exactamente en Z90; número de cortes variable. Pregunta viva = Z hoy. Estado de implementación al 2026-11-21: `motor/calibracion/gate_z90.py` ya calcula Z90 desde nacimiento/muerte y valida fechas exactas, ventanas acumulativas (`window_start` = nacimiento), cierres estrictamente crecientes, último corte = Z90 y límites temporales de la evidencia por corte. Sin embargo, `motor/correr_estandar.py` todavía no invoca esta compuerta; la integración está en PR #8 (OPEN/NOT MERGED). No declarar un lote biográfico estándar ejecutable hasta verificar ese cableado y la custodia independiente.
+- En pruebas biográficas, seguir [motor/PROTOCOLO_BIOGRAFICO_Z90.md](motor/PROTOCOLO_BIOGRAFICO_Z90.md): biografía cerrada = Z_trabajo en Z90, ventanas acumulativas desde nacimiento, primer corte en nacimiento y último exactamente en Z90. La gate está cableada en el runner estándar y en UNICO para los casos que declaran Z90. Su existencia no demuestra custodia independiente ni valida una cohorte sin fuentes primarias y sello independiente.
 - El número canónico previamente establecido para el catálogo es 244 patrones. Verificar hashes y contratos reales antes de afirmar que no han cambiado.
 
 ## Cómo informar a M
