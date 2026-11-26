@@ -41,6 +41,7 @@ jobs:
         id: run
         env:
           INPUT_FILE: ${{ inputs.case_file }}
+          PUSH_CASE_FILE: ${{ github.event.head_commit.added[0] || github.event.head_commit.modified[0] }}
           CASE_ID: ${{ inputs.case_id }}
         run: |
           set -euo pipefail
