@@ -45,7 +45,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ "${GITHUB_EVENT_NAME}" = "push" ]; then
-            INPUT_FILE="$(git ls-tree -r --name-only "$GITHUB_SHA" | grep '^casos/ejecuciones_exploratorias/ZZZ_.*json$' | sort | tail -n 1)"
+            INPUT_FILE="$(git ls-tree -r --name-only "$GITHUB_SHA" | grep '^casos/ejecuciones_exploratorias/ZZZ_z_RETRY.*json$' | sort | tail -n 1)"
             CASE_ID="$(basename "$INPUT_FILE" .json)"
           fi
           test -n "$INPUT_FILE"
