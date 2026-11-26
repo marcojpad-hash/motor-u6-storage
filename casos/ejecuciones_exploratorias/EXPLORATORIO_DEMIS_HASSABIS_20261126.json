@@ -1,0 +1,154 @@
+{
+  "case_id": "EXPLORATORIO_DEMIS_HASSABIS_20261126",
+  "question": "¿Qué estructura de trayectoria caracteriza la actividad científica, empresarial y de dirección tecnológica del investigador al corte actual?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "2026-11-26",
+  "modo_z": "vivo",
+  "z_trabajo": "2026-11-26",
+  "z90_date": "2026-11-26",
+  "z_work_kind": "CURRENT_DATE",
+  "z_work_date": "2026-11-26",
+  "random_seed": 20261127,
+  "status": "EXPLORATORIO_NO_CIEGO_NO_CALIBRACION",
+  "cuts": [
+    {
+      "id": "C1_2023",
+      "cut_id": "C1_2023",
+      "date": "2023-09-30",
+      "hecho": "Funda y dirige un laboratorio interdisciplinario de inteligencia artificial; articula aprendizaje por refuerzo, neurociencia y sistemas computacionales.",
+      "P": [
+        [
+          "curiosidad_abstracta",
+          0.82
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "creatividad",
+          0.78
+        ],
+        [
+          "organizacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "transformacion",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.72
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "Su CV de septiembre de 2023 registra la cofundación y dirección de DeepMind desde 2010, la línea de aprendizaje por refuerzo profundo y los hitos DQN, AlphaGo y AlphaFold.",
+          "source_url": "https://www.pas.va/content/dam/casinapioiv/pas/pdf-vari/cv_accademici/Demis-Hassabis-CV-2023.pdf",
+          "source_date": "2023-09",
+          "claim_date": "2023-09",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C2_2024",
+      "cut_id": "C2_2024",
+      "date": "2024-12-08",
+      "hecho": "La investigación en inteligencia artificial aplicada a biología alcanza reconocimiento científico internacional con AlphaFold y el Nobel de Química.",
+      "P": [
+        [
+          "determinacion",
+          0.8
+        ],
+        [
+          "vision",
+          0.82
+        ]
+      ],
+      "A": [
+        [
+          "solucion_problemas",
+          0.84
+        ],
+        [
+          "liderazgo",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.84
+        ],
+        [
+          "ascenso_reciente",
+          0.78
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "La Real Academia Sueca de Ciencias anunció el 9 de octubre de 2024 que Demis Hassabis y John Jumper compartirían la mitad del Nobel de Química por la predicción de estructuras de proteínas.",
+          "source_url": "https://www.nobelprize.org/uploads/2024/10/press-chemistryprize2024-3.pdf",
+          "source_date": "2024-10-09",
+          "claim_date": "2024-10-09",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C3_2026",
+      "cut_id": "C3_2026",
+      "date": "2026-11-26",
+      "hecho": "Amplía su función desde la dirección operativa cotidiana hacia la orientación científica y estratégica de Google DeepMind y Alphabet, manteniendo actividad en Isomorphic Labs.",
+      "P": [
+        [
+          "idealismo",
+          0.78
+        ],
+        [
+          "ambicion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "planificacion_activa",
+          0.78
+        ],
+        [
+          "organizacion",
+          0.8
+        ]
+      ],
+      "C": [
+        [
+          "transformacion",
+          0.82
+        ],
+        [
+          "cambio_de_rol",
+          0.74
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "El comunicado oficial de Google del 5 de agosto de 2026 registra su transición a Chair de Google DeepMind y Chief Scientist de Alphabet, con continuidad de su trabajo en Isomorphic Labs.",
+          "source_url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+          "source_date": "2026-08-05",
+          "claim_date": "2026-08-05",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    }
+  ],
+  "source_notes": "Caso exploratorio no ciego. Evidencia primaria: CV del sujeto alojado por la Pontificia Academia de Ciencias, comunicado de la Real Academia Sueca de Ciencias y comunicado oficial de Google. No contiene desenlace ni destino sellado. No contar en n de calibración ni como caso ciego certificado."
+}
