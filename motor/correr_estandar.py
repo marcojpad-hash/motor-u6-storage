@@ -378,9 +378,10 @@ def _build(rd: Path) -> None:
     # The Z90 guardian resolves ROOT/calibracion/gate_z90.py inside the isolated run.
     # calibracion lives beside correr_estandar.py, not inside MOTOR, so copy it explicitly.
     calibration_src = ROOT / "calibracion"
-    calibration_dst = rd / "calibracion"
+    # UNICO resolves BASE.parent/calibracion from each isolated run directory.
+    calibration_dst = rd.parent / "calibracion"
     if calibration_src.is_dir():
-        shutil.copytree(calibration_src, calibration_dst)
+        shutil.copytree(calibration_src, calibration_dst, dirs_exist_ok=True)
     if not (rd / "MOTOR_V15_3_NATIVO_V0_9.py").exists() and (rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py").exists():
         shutil.copy2(rd / "MOTOR_V15_3_NATIVO_V0_9_UNICO.py", rd / "MOTOR_V15_3_NATIVO_V0_9.py")
 
