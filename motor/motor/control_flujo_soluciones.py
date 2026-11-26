@@ -133,10 +133,37 @@ def clasificar_piedra(texto_error: str) -> str:
     return "drama_generico"
 
 
+def _es_parada_dura(piedra_o_error: str, contexto: Optional[str]) -> bool:
+    """Reconoce candados de identidad/tiempo que un contorno nunca debe saltar."""
+    t = f"{piedra_o_error or ''} {contexto or ''}".casefold()
+    hash_problem = any(x in t for x in ("hash", "sha", "mismatch", "no coincide", "candado", "corrupt"))
+    missing_problem = any(x in t for x in ("missing", "falta", "ausente", "no existe", "not found"))
+    engine_gate = "engine" in t and (hash_problem or missing_problem)
+    patterns_gate = ("patterns" in t or "patrones" in t or "catálogo 244" in t or "catalogo 244" in t) and (hash_problem or missing_problem)
+    freeze_gate = "freeze" in t and any(x in t for x in ("hash", "mismatch", "futuro", "posterior", "candado", "gate", "blocked", "bloquead"))
+    z90_gate = "z90" in t and any(x in t for x in ("post", "gate", "fecha", "posterior", "candado", "invalid", "mismatch", "bloquead", "blocked"))
+    return bool(engine_gate or patterns_gate or freeze_gate or z90_gate)
+
+
 def contornar(piedra_o_error: str, *, contexto: Optional[str] = None) -> Dict[str, Any]:
-    """Dada una piedra, devuelve contornos (soluciones) y formato de salida."""
+    """Devuelve contornos; nunca autoriza saltar candados canónicos o temporales."""
     kind = clasificar_piedra(piedra_o_error)
     spec = CONTORNOS[kind]
+    hard_stop = _es_parada_dura(piedra_o_error, contexto)
+    if hard_stop:
+        contornos = [
+            "PARADA_DURA: no ejecutar ni sustituir el artefacto/corte protegido.",
+            "Leer el artefacto, manifiesto y recibo para identificar la discrepancia exacta.",
+            "Continuar solo con tareas independientes que no dependan del artefacto/corte bloqueado.",
+        ]
+        prohibido = [
+            "Aplicar BYPASS_HASH_CAMBIO al Engine V5 o al catálogo 244.",
+            "Saltar FREEZE/Z90 o introducir evidencia posterior al corte.",
+            "Sustituir el artefacto canónico por una copia o versión lateral.",
+        ]
+    else:
+        contornos = list(spec["contornos"])
+        prohibido = list(spec["prohibido"])
     return {
         "plugin": "CONTROL_FLUJO_SOLUCIONES",
         "version": __version__,
@@ -147,15 +174,17 @@ def contornar(piedra_o_error: str, *, contexto: Optional[str] = None) -> Dict[st
         "piedra": spec["piedra"],
         "entrada": (piedra_o_error or "")[:500],
         "contexto": contexto,
-        "contornos": spec["contornos"],
-        "prohibido": spec["prohibido"],
+        "parada_dura": hard_stop,
+        "accion": "DIAGNOSTICAR_SIN_EJECUTAR" if hard_stop else "APLICAR_CONTORNO_SEGURO",
+        "contornos": contornos,
+        "prohibido": prohibido,
         "formato_respuesta_obligatorio": [
             "PIEDRA: (qué trabó, 1 línea)",
             "CONTORNO: (qué ruta tomas)",
             "SIGUIENTE: (acción concreta ya)",
             "EVIDENCIA: (hash/ruta/resultado)",
         ],
-        "regla": "Soluciones, no problemas. El obstáculo informa el contorno; no detiene el río.",
+        "regla": "Soluciones, no problemas. El obstáculo informa el contorno; no detiene el río salvo candado duro.",
     }
 
 

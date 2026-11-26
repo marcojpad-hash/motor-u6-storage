@@ -1,6 +1,10 @@
+> **AUTORIDAD OPERATIVA ÚNICA:** el motor vigente se llama **Motor U7**. Rama `alterno/cameo-pesos`. Contrato activo único: [docs/CONTRATOS_OPERATIVOS_V7.md](docs/CONTRATOS_OPERATIVOS_V7.md). Los contratos previos se conservan en `antecedentes_motor/historial_contratos/`; las rutas antiguas solo redirigen y no contienen reglas activas.
+> **Ruta estándar:** `motor/correr_estandar.py` → UNICO → guardianes/laterales/CEB → salida humana/traducción/verificación → observador U7 → RESULT + RECIBO. `control_flujo_soluciones.py` atiende fallos sin alterar H ni saltar candados duros.
+> **Protecciones:** `motor/Engine_V5_CANONICO_SOLO.py` y `motor/patterns_final_v14.json` no se modifican. El slug del repositorio y las rutas U6/V15.3 se conservan por compatibilidad; no indican un segundo motor vigente.
+
 > **MEMORIA COMPARTIDA OBLIGATORIA:** Antes de cualquier trabajo, cualquier modelo debe leer [AGENTS.md](AGENTS.md), [el protocolo transversal](https://github.com/marcojpad-hash/memoria-compartida/blob/main/PROTOCOLO_MEMORIA_COMPARTIDA_OBLIGATORIA.md) y [el índice de memoria](https://github.com/marcojpad-hash/memoria-compartida/blob/main/INDICE.md); consultar los hechos pertinentes y sincronizar los hechos durables al terminar. No empezar desde la memoria conversacional.
 
-# motor-u6-storage
+# Motor U7 — repositorio `motor-u6-storage` (slug histórico)
 
 
  > **Contrato transversal obligatorio para todos los modelos:** [Contrato de trabajo multi-modelo](https://github.com/marcojpad-hash/orquestador-central/blob/main/docs/CONTRATO_TRABAJO_MULTI_MODELO.md). Declarar capacidades reales antes de asumir permisos o ejecución.
@@ -12,13 +16,13 @@
 > - Continuidad: [`INSTRUCCIONES_CONTINUIDAD_CHATGPT.md`](INSTRUCCIONES_CONTINUIDAD_CHATGPT.md).
 > - **Antes de afirmar una ejecución o interpretar resultados, aplica [`PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md`](PROTOCOLO_EJECUCION_Y_LECTURA_LLM.md).** Lee el recibo junto al JSON de salida; el código inspeccionado no demuestra que se ejecutó.
 > - **No uses ZIP/zipball.** Lee archivo por archivo con la API de GitHub/conector o `git clone`.
-Almacenamiento común (privado) del motor U6 de predicción narrativa de Mj. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
+Repositorio compartido del Motor U7 de predicción narrativa. El slug motor-u6-storage se conserva por compatibilidad. Lo leen y escriben Claude, ChatGPT y Grok Bot. Funciona como lo que hacíamos con Notion, pero sin un modelo de lenguaje que coordine: las reglas están escritas en cada carpeta (`REGLAS.md`) y el historial lo lleva git.
 
 ## Carpetas
 
 | Carpeta | Qué contiene |
 |---|---|
-| `motor/` | Motor U6 agnóstico (código, contratos, pruebas, calibración) y laterales en `motor/laterales/`. Sin corridas, sin vendor, sin evidencias. |
+| `motor/` | Motor U7 agnóstico (código, contratos de módulos, pruebas, calibración) y laterales en `motor/laterales/`. Sin corridas, sin vendor, sin evidencias. |
 | `casos/` | Solo hashes de casos y entradas, la plantilla de caso nuevo y **resúmenes** de resultados (`casos/resultados/resultados.jsonl`). Nunca corridas completas. |
 | `stinkbox/` | Tokens StinkBox deduplicados con conteo y procedencia (`tokens.jsonl`), índice de artefactos de origen y candidatos documentales. |
 | `avances/` | Bitácora de cambios: quién, cuándo, qué cambió (antes → después), hashes y pruebas. |

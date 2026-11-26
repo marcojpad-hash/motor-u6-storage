@@ -6,6 +6,9 @@ on:
     branches: [main, alterno/cameo-pesos]
     paths:
       - "motor/correr_estandar.py"
+      - "motor/motor/control_flujo_soluciones.py"
+      - "motor/tests/test_cableado_plan_contorno.py"
+      - "motor/tests/test_control_flujo_runner.py"
       - "motor/tests/test_runner_json_contract.py"
       - "motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/SHA256SUMS_MOTOR.txt"
@@ -40,6 +43,9 @@ on:
   pull_request:
     paths:
       - "motor/correr_estandar.py"
+      - "motor/motor/control_flujo_soluciones.py"
+      - "motor/tests/test_cableado_plan_contorno.py"
+      - "motor/tests/test_control_flujo_runner.py"
       - "motor/tests/test_runner_json_contract.py"
       - "motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/SHA256SUMS_MOTOR.txt"
@@ -83,6 +89,8 @@ jobs:
         run: |
           python -m pytest -q \
             motor/tests/test_runner_json_contract.py \
+            motor/tests/test_cableado_plan_contorno.py \
+            motor/tests/test_control_flujo_runner.py \
             motor/tests/test_matriz_mortalidad_z90_v0_2.py \
             motor/tests/test_normalizar_mortalidad_preparacion.py \
             motor/tests/test_cableado_017.py \

@@ -66,3 +66,12 @@ def test_except_cierre_final_adjunta_plan():
     assert plan.get("plugin") == "CONTROL_FLUJO_SOLUCIONES", plan
     assert plan.get("contornos"), plan
     assert (res.get("H1") or {}).get("family") == "arquetipo_el_gobernante"
+
+
+def test_contornar_hash_engine_is_hard_stop_not_bypass():
+    runner = _load_unico()
+    plan = runner._plan_contorno("hash mismatch Engine V5 canonical", contexto="candado")
+    assert plan is not None
+    assert plan.get("parada_dura") is True
+    assert plan.get("accion") == "DIAGNOSTICAR_SIN_EJECUTAR"
+    assert not any("BYPASS_HASH_CAMBIO" in str(x) for x in plan.get("contornos") or [])

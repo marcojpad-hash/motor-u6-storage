@@ -47,6 +47,48 @@ def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
+def _plan_contorno(piedra: str, contexto: str) -> dict:
+    """Adaptador de fallos al control de flujo; nunca altera H ni salta candados.
+
+    U7: punto común de contorno para los fallos del runner estándar.
+    """
+    path = MOTOR / "control_flujo_soluciones.py"
+    try:
+        spec = importlib.util.spec_from_file_location("control_flujo_soluciones_runner", path)
+        if spec is None or spec.loader is None:
+            raise RuntimeError("NO_SPEC_CONTROL_FLUJO")
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+        return module.contornar(str(piedra)[:500], contexto=contexto)
+    except Exception as exc:
+        return {"plugin":"CONTROL_FLUJO_SOLUCIONES", "status":"FALLO_CARGA_CONTROL_FLUJO",
+                "contexto":contexto, "error":f"{type(exc).__name__}:{exc}", "Alimenta_H":"NO"}
+
+
+
+def _verificar_hashes_canonicos(eng: Path, pat: Path) -> dict:
+    """Hard gate for the protected Engine V5 and 244-pattern catalog.
+
+    Runs independently of the optional SHA manifest: a missing manifest can
+    never downgrade a canonical hash mismatch to a warning.
+    U7: Engine V5 and the 244-pattern catalog are hard gates in every standard run.
+    """
+    engine_hash = sha(eng)
+    patterns_hash = sha(pat)
+    mismatch = []
+    if engine_hash != ENGINE_SHA:
+        mismatch.append({"artifact":"Engine_V5_CANONICO_SOLO.py", "expected":ENGINE_SHA, "actual":engine_hash})
+    if patterns_hash != PAT_SHA:
+        mismatch.append({"artifact":"patterns_final_v14.json", "expected":PAT_SHA, "actual":patterns_hash})
+    if not mismatch:
+        return {"status":"MATCH", "bloquea":False, "engine_sha256":engine_hash, "patterns_sha256":patterns_hash}
+    plan = _plan_contorno("hash mismatch Engine V5 canonical and/or patterns 244: " + json.dumps(mismatch),
+                          "canonical_engine_patterns_gate")
+    return {"status":"BLOCKED_CANONICAL_HASH", "bloquea":True, "mismatches":mismatch,
+            "plan_contorno":plan, "H_emitida":False}
+
+
 def _ceb_root_tmpfs() -> Path | None:
     """Default CEB ledger dir on tmpfs (RAM) when CEB_ROOT is not set.
 
@@ -702,19 +744,30 @@ def main(argv) -> int:
         import subprocess as _subprocess
         pf = _subprocess.run([sys.executable, str(preflight)], cwd=str(ROOT), text=True, capture_output=True)
         if pf.returncode != 0:
-            print(pf.stdout, file=sys.stderr)
-            print("PREFLIGHT_INTEGRIDAD_FALLIDO: corrida bloqueada", file=sys.stderr)
+            plan = _plan_contorno(f"preflight integridad fallido: {pf.stdout[-1000:]} {pf.stderr[-1000:]}", "preflight_integridad")
+            print(json.dumps({"ok":False,"stage":"preflight_integridad","status":"BLOQUEADO",
+                              "stdout":pf.stdout[-2000:],"stderr":pf.stderr[-2000:],"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
             return 4
 
     eng = MOTOR / "Engine_V5_CANONICO_SOLO.py"
     pat = MOTOR / "patterns_final_v14.json"
     if not eng.is_file() or not pat.is_file():
-        print("FALTA Engine o patterns en motor/", file=sys.stderr)
+        piedra = "Engine V5 canonical missing" if not eng.is_file() else "patterns 244 missing"
+        plan = _plan_contorno(piedra, "canonical_artifact_missing")
+        print(json.dumps({"ok":False,"stage":"canonical_artifact_missing","status":"PARADA_DURA",
+                          "error":piedra,"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
+        return 3
+    canonical_hash_check = _verificar_hashes_canonicos(eng, pat)
+    if canonical_hash_check.get("bloquea"):
+        print(json.dumps({"ok":False,"stage":"canonical_engine_patterns_gate",**canonical_hash_check},ensure_ascii=False),file=sys.stderr)
         return 3
     # U6 #4: manifiesto SHA256 del pack en preflight (aviso + recibo; bloquea solo Engine/patterns)
     man_check = verificar_manifiesto()
     if man_check.get("bloquea"):
-        print("MANIFIESTO: Engine o patterns no coinciden -> corrida bloqueada " + json.dumps(man_check.get("bloqueantes")), file=sys.stderr)
+        plan = _plan_contorno("hash mismatch Engine V5 and/or patterns 244 in SHA manifest: " + json.dumps(man_check.get("bloqueantes")), "canonical_manifest_gate")
+        man_check["plan_contorno"] = plan
+        print(json.dumps({"ok":False,"stage":"unification_manifest_check","status":"PARADA_DURA",
+                          "manifiesto":man_check,"plan_contorno":plan},ensure_ascii=False),file=sys.stderr)
         return 5
     if man_check.get("status") == "DRIFT_WARNED":
         print(f"AVISO MANIFIESTO: deriva={len(man_check['deriva'])} ausentes={len(man_check['ausentes'])} fuera={len(man_check['motor_fuera_de_manifiesto'])}", file=sys.stderr)
@@ -788,11 +841,14 @@ def main(argv) -> int:
     # Issue #64: validar Z90 después de normalizar/filtros y antes de ejecutar el motor.
     result_guardian_z90 = _guardian_z90(case)
     if result_guardian_z90.get("bloquea"):
+        _z90_plan = _plan_contorno("Z90 gate blocked: " + json.dumps(result_guardian_z90, ensure_ascii=False, default=str), "guardian_z90_gate")
+        result_guardian_z90["control_flujo_soluciones"] = _z90_plan
         _t_bloqueo = time.time()
         _resultado_bloqueo = _sanitize_json_contract({
             "case_id": case.get("case_id"),
             "estado": "BLOQUEADO_GUARDIAN_Z90",
             "guardian_z90": result_guardian_z90,
+            "control_flujo_soluciones": _z90_plan,
             "estandar": {"entrada": "correr_estandar.py", "engine_sha256": sha(eng), "patterns_sha256": sha(pat)},
         })[0]
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -816,6 +872,7 @@ def main(argv) -> int:
             "monte_carlo": True,
             "stages": [
                 {"stage": "input_read_and_normalization", "status": "COMPLETED"},
+                {"stage": "control_flujo_soluciones", "status": "PARADA_DURA", "plan": _z90_plan},
                 {"stage": "guardian_z90", "status": "RECHAZADO", "version": result_guardian_z90.get("version"),
                  "errores": result_guardian_z90.get("errores"), "n_errores": result_guardian_z90.get("n_errores")},
                 {"stage": "motor_run", "status": "BLOQUEADO_POR_GUARDIAN_Z90"},
@@ -827,7 +884,7 @@ def main(argv) -> int:
         receipt_path.write_text(json.dumps(_recibo_bloqueo, ensure_ascii=False, indent=2, allow_nan=False, default=str), encoding="utf-8")
         print(json.dumps({"ok": False, "stage": "guardian_z90", "status": "BLOQUEADO_GUARDIAN_Z90",
                           "case_id": case.get("case_id"), "errores": result_guardian_z90.get("errores"),
-                          "output": str(out), "execution_receipt": str(receipt_path)}, ensure_ascii=False))
+                          "plan_contorno": _z90_plan, "output": str(out), "execution_receipt": str(receipt_path)}, ensure_ascii=False))
         try:
             _log = _u6_logger(nombre)
             if _log is not None:
@@ -856,7 +913,27 @@ def main(argv) -> int:
     # offline (exit 0); el fallo de búsqueda no es etapa obligatoria.
     result = _run_internal_case_isolated(case, rd, "PRIMARY", timeout_seconds=90)
     if result.get("_internal_run_status") != "COMPLETED_ISOLATED_SUBPROCESS":
-        print(json.dumps({"ok": False, "stage": "primary_motor_subprocess", "error": result}, ensure_ascii=False))
+        _plan = _plan_contorno(json.dumps(result, ensure_ascii=False, default=str), "primary_motor_subprocess")
+        _failure = {"case_id":case.get("case_id"), "estado_ejecucion":"FALLIDA",
+                    "stage":"primary_motor_subprocess", "error":result, "control_flujo_soluciones":_plan,
+                    "H_emitida":False, "nota":"El contorno no convierte una corrida fallida en completada ni inventa H."}
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(_failure, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+        _failed_receipt_path = out.with_name(out.stem + "_RECIBO_EJECUCION.json")
+        _failed_receipt = {"receipt_version":"EXECUTION_RECEIPT_V1", "status":"FALLIDA_SUBPROCESO_PRIMARIO",
+            "case_id":case.get("case_id"), "started_epoch":round(t0,6), "finished_epoch":round(time.time(),6),
+            "input_path":str(src.resolve()), "input_sha256":sha(src),
+            "normalized_input_sha256":hashlib.sha256(json.dumps(case,ensure_ascii=False,sort_keys=True,default=str).encode("utf-8")).hexdigest(),
+            "output_path":str(out.resolve()), "output_sha256":sha(out),
+            "runner_path":str(Path(__file__).resolve()), "runner_sha256":sha(Path(__file__).resolve()),
+            "canonical_engine_sha256":sha(eng), "patterns_sha256":sha(pat), "monte_carlo":True,
+            "stages":[{"stage":"input_read_and_normalization","status":"COMPLETED"},
+                      {"stage":"primary_motor_subprocess","status":result.get("_internal_run_status"),"error":result},
+                      {"stage":"control_flujo_soluciones","status":_plan.get("status","APLICADO"),"plan":_plan}],
+            "receipt_written_after_result":True}
+        _failed_receipt_path.write_text(json.dumps(_failed_receipt,ensure_ascii=False,indent=2,default=str),encoding="utf-8")
+        print(json.dumps({"ok":False,"stage":"primary_motor_subprocess","error":result,"plan_contorno":_plan,
+                          "output":str(out),"execution_receipt":str(_failed_receipt_path)},ensure_ascii=False))
         return 3
     result.pop("_internal_run_status", None)
     result.pop("_internal_run_label", None)
@@ -924,7 +1001,8 @@ def main(argv) -> int:
     except Exception as _rh_e:
         result["respuesta_humana"] = {"status": "FALLO_RESPUESTA_HUMANA",
                                       "motivo": "%s: %s" % (type(_rh_e).__name__, _rh_e),
-                                      "respuesta": ""}
+                                      "respuesta": "",
+                                      "plan_contorno": _plan_contorno(f"{type(_rh_e).__name__}: {_rh_e}", "respuesta_humana")}
     # TRADUCCION_SALIDA (lateral 021, v2.8): lectura en prosa del RESULT
     # sellado, en las palabras y la persona del input. No decide H ni
     # reescribe el RESULT; solo lee el RESULT sellado y la entrada.
@@ -941,7 +1019,8 @@ def main(argv) -> int:
     except Exception as _tr_e:
         result["traduccion_salida"] = {"status": "FALLO_TRADUCCION_SALIDA",
                                       "motivo": "%s: %s" % (type(_tr_e).__name__, _tr_e),
-                                      "lectura": ""}
+                                      "lectura": "",
+                                      "plan_contorno": _plan_contorno(f"{type(_tr_e).__name__}: {_tr_e}", "traduccion_salida")}
     # VERIFICACION_SALIDA_017 (V7; hallazgo A-F1: la función existía y está
     # probada en aislamiento, pero nadie la llamaba en ninguna corrida).
     # Verifica la prosa de salida (respuesta_humana + traduccion_salida)
@@ -991,7 +1070,8 @@ def main(argv) -> int:
              "huella_salida_017": _v017_mod.huella_salida(_v017_cf)})
     except Exception as _v017_e:
         result["verificacion_salida_llm"] = {"status": "FALLO_VERIFICACION_SALIDA_017",
-                                             "motivo": "%s: %s" % (type(_v017_e).__name__, _v017_e)}
+                                             "motivo": "%s: %s" % (type(_v017_e).__name__, _v017_e),
+                                             "plan_contorno": _plan_contorno(f"{type(_v017_e).__name__}: {_v017_e}", "verificacion_salida_llm")}
     cuts=_plain_json_copy(case.get("cuts") or [])
     if len(cuts)>=2:
         retenido=_plain_json_copy(cuts[-1])
@@ -1198,5 +1278,20 @@ def main(argv) -> int:
     return _rc
 
 
+def _main_with_control_flujo(argv) -> int:
+    """Última red de seguridad: excepción no controlada -> contorno y exit no exitoso."""
+    try:
+        return main(argv)
+    except SystemExit:
+        raise
+    except Exception as exc:
+        plan = _plan_contorno(f"{type(exc).__name__}: {exc}", "runner_unhandled_exception")
+        payload = {"ok":False, "estado_ejecucion":"FALLIDA", "stage":"runner_unhandled_exception",
+                   "error":f"{type(exc).__name__}: {exc}", "plan_contorno":plan,
+                   "nota":"El contorno no elimina el error ni autoriza saltar candados duros."}
+        print(json.dumps(payload,ensure_ascii=False,default=str),file=sys.stderr)
+        return 3
+
+
 if __name__ == "__main__":
-    raise SystemExit(main(sys.argv))
+    raise SystemExit(_main_with_control_flujo(sys.argv))

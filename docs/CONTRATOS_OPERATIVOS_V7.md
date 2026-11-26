@@ -1,7 +1,9 @@
-# Contratos operativos — Versión Unificada 7 (V7)
+# Contrato operativo vigente — Motor U7
 
-Fecha: 2026-11-25. Rama: `alterno/version-unificada-7` (absorbe `alterno/cameo-pesos`).
-Base: `53ea887` + lateral enunciativo (PR #38) + lateral del orquestador (PR #10) + lotes #16–#36.
+Fecha de consolidación: 2026-11-26. Repositorio: `marcojpad-hash/motor-u6-storage` (slug histórico conservado). Rama operativa: `alterno/cameo-pesos`. Base verificada: `dbb60e7` (PR #39 integrado). Este archivo es la **única autoridad contractual operativa**. Los contratos anteriores se conservan en `antecedentes_motor/historial_contratos/` y no gobiernan la ejecución.
+
+El nombre operativo es **Motor U7**. Los nombres U6/V15.3 que permanecen en rutas, módulos, hashes o formatos son identificadores históricos/de compatibilidad; no designan un segundo motor.
+
 
 Cada contrato dice **con qué trabaja** el módulo (entradas, fuentes de datos,
 dependencias, herramientas) y **qué produce**. Los veredictos son
@@ -380,18 +382,14 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
   no problemas. El obstáculo informa el contorno; no detiene el río."
 - **Entradas:** la piedra (qué trabó, 1 línea) + contexto.
 - **Fuentes de datos:** `CONTORNOS` (tabla de piedras → contornos).
-- **Dependencias:** run() (vía `_plan_contorno` en los except de cierre).
-- **Produce:** plan de contorno (tipo_piedra, contornos, prohibido,
-  formato_respuesta_obligatorio).
-- **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL. Evidencia:
-  `test_cableado_plan_contorno.py` (nuevo: el helper devuelve el plan; los
-  dos except de cierre lo adjuntan; ejecución forzando el fallo de
-  `_cierre_final_020`: el bloque ERROR trae su plan).
-  - **C-F3 cerrado en V7** — antes ningún except del runner llamaba jamás a
-    `contornar`/`aplicar_protocolo`. Nota: `aplicar_protocolo` no existe
-    como función en `control_flujo_soluciones.py`; la función real es
-    `contornar(piedra_o_error, contexto=None)`. El nombre del informe era
-    impreciso; la función es la misma.
+- **Dependencias:** UNICO (`_plan_contorno` en errores de cierre 017/016) y `motor/correr_estandar.py` (adaptador estándar + guardia final de excepciones).
+- **Produce:** plan estructurado con tipo de piedra, contornos, prohibiciones y formato PIEDRA/CONTORNO/SIGUIENTE/EVIDENCIA. En fallo del subproceso primario también produce RESULT de fallo y `_RECIBO_EJECUCION.json` con el contorno.
+- **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL en la ruta estándar. Evidencia automatizada: `motor/tests/test_cableado_plan_contorno.py` y `motor/tests/test_control_flujo_runner.py`.
+  - UNICO adjunta planes a los errores de cierre operativo 017 y cierre final 016 sin cambiar H.
+  - El runner estándar adjunta planes a fallos del subproceso primario y de módulos de salida; toda excepción no controlada pasa por `_main_with_control_flujo` y devuelve JSON estructurado con exit code 3.
+  - El runner verifica Engine V5 y catálogo 244 contra sus hashes canónicos de forma independiente del manifiesto opcional; un manifiesto ausente no degrada el candado. Las discrepancias o archivos ausentes de Engine/244, FREEZE o Z90 se convierten en PARADA_DURA: el plan permite diagnóstico y tareas independientes, pero prohíbe BYPASS_HASH_CAMBIO y cualquier ejecución sustitutiva. El bloqueo Z90 deja el plan en RESULT y RECIBO. No modifica input, predictor, H1/H2 ni hashes.
+  - `aplicar_protocolo` no existe como API en este módulo; la API implementada y llamada es `contornar(piedra_o_error, contexto=None)`.
+  - **CI verificado:** run [#45860926469](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860926469), job `runner-contract` SUCCESS, 94 pruebas aprobadas en 41.30 s. Incluye la validación del hash canónico independiente del manifiesto y la parada dura Z90.
 
 ### 5.6 Protocolo kernel (protocolo_kernel_motor.py, orden 0)
 - **Función:** arrancar la matriz y clasificar la pregunta antes de todo.
@@ -525,17 +523,14 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 
 ---
 
-## 9. Herramienta U7 — confianza de apuesta (fuera del motor)
+## 9. Capa U7 — confianza de apuesta post-corrida
 
-- **Función:** medir la confianza de la apuesta (no del motor): estabilidad
-  de H1 sin el último corte, acuerdo entre H1/H2, etc. Es una herramienta
-  lateral, no parte del motor.
-- **Entradas:** un RESULT real (efectividad_corte_retenido, tops_t1, H1/H2).
-- **Fuentes de datos:** el RESULT de una corrida.
-- **Dependencias:** `u7/confianza_apuesta_u7.py` (standalone).
-- **Produce:** confianza de apuesta (%) por bloques (B1–B5).
-- **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL (como herramienta).
-  Evidencia: `test_confianza_apuesta_u7.py`.
+- **Función:** observación de robustez de la apuesta, separada de la decisión del predictor. Evalúa seis bloques B1–B6 sobre el RESULT ya construido; no decide ni reescribe H1/H2.
+- **Entradas:** RESULT de la corrida (cierre, predictor, señales laterales, acero, efectividad del corte retenido y candidatos emergentes).
+- **Fuentes de datos:** el RESULT primario y `motor/u7/confianza_apuesta_u7.py`.
+- **Dependencias:** `motor/correr_estandar.py::_confianza_apuesta_u7`, invocado en la ruta estándar antes de escribir el RESULT; el detalle queda en `result["confianza_apuesta_u7"]` y la etapa resumida en el recibo.
+- **Produce:** puntaje y desglose B1–B6. Estado actual `calibrada=false`: los seis pesos iguales son placeholder, no pesos aprendidos ni probabilidad calibrada.
+- **Veredicto:** CABLEADO / INTEGRADO / FUNCIONAL como observador post-corrida; no altera el predictor. Evidencia: `motor/tests/test_confianza_apuesta_u7.py` y `motor/tests/test_cableado_confianza_apuesta_u7.py`.
   - **C-F5 cerrado en V7** — B5 leía `H1_sellada`, pero el RESULT real trae
     `H1_sellada_compatibilidad`, así que B5 puntuaba 0.0 siempre en RESULTs
     reales (solo pasaba en su fixture). Ahora lee el campo real. Verificado
@@ -559,7 +554,7 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
   motor / FUNCIONAL (en aislamiento: 29 tests).
   - **C-F9 — causa exacta:** el coordinador #35 tiene 29 tests en
     aislamiento y cero llamadores en el motor; su adaptador está declarado
-    como "documentación ejecutable". No se cierra con código en V7 porque
+    como "documentación ejecutable". No queda demostrado por el cableado actual porque
     es una decisión de diseño: o se cablea un adaptador real U6 con recibo,
     o se declara explícitamente como biblioteca de referencia. Esa decisión
     está pendiente de Marco. No queda como "pendiente de valoración" sin
@@ -567,7 +562,7 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 
 ---
 
-## 11. Lo que NO se cierra con código en V7 (causas exactas)
+## 11. Límites reales que no deben confundirse con cableado
 
 - **C-F2 (predictor Grupo B, 64.46% / 97.52%):** el número es cita de un txt
   (`PROPUESTA_GRUPO_B_V0_1_PRUEBA_2026-09-06.txt`) que **no existe en el

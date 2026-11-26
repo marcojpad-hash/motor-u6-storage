@@ -1,4 +1,6 @@
-# Contrato de carpetas — motor-u6-storage
+# Contrato de carpetas — Motor U7 (repositorio motor-u6-storage)
+
+**Identidad operativa:** Motor U7. El slug del repositorio se conserva por compatibilidad. El único contrato operativo general es `docs/CONTRATOS_OPERATIVOS_V7.md`; los contratos operativos previos están archivados en `antecedentes_motor/historial_contratos/`.
 
 ## Regla de lectura (obligatoria)
 - **Prohibido depender de ZIP/zipball.** Ningún modelo debe pedir ni necesitar descargar el ZIP.
@@ -6,7 +8,7 @@
 - Orden sugerido: este archivo → `INSTRUCCIONES_CONTINUIDAD_CHATGPT.md` → último informe en `informes/` → `avances/` reciente.
 
 ## Para qué es cada carpeta
-- `motor/` — Motor U6 (código, contratos, candados, laterales). **Engine y catálogo 244 no se tocan.** Leer `motor/REGLAS.md`.
+- `motor/` — Motor U7 (código, contratos de módulos, candados, laterales). **Engine y catálogo 244 no se tocan.** Leer `motor/REGLAS.md`.
 - `casos/` — Hashes de casos, plantilla, calibración, fábrica y resúmenes de resultados. El resumen de una línea por corrida va en `resultados/resultados.jsonl`; la corrida completa va en `motor/runs/<LOTE>_<FECHA>/` para el historial (ver `CONTRATO_GUARDAR_CORRIDAS.md`).
 - `stinkbox/` — Tokens StinkBox deduplicados (`tokens.jsonl`), procedencia y reportes de brechas.
 - `avances/` — Bitácora técnica por cambio (antes → después, hashes, pruebas). Una entrada por commit relevante.
