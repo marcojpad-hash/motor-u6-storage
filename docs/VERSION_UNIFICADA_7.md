@@ -1,7 +1,38 @@
-# Versión Unificada 7 (V7) — Motor U6
+# Motor U7 unificado — Versión Unificada 7 (V7)
 
 Fecha: 2026-11-25. Rama: `alterno/version-unificada-7` (pendiente de
 fusionar en `alterno/cameo-pesos`; NO fusionada todavía).
+**Actualización 2026-11-26 (orden de Marco): el motor ES U7, unificado.**
+
+## El motor es U7 (unificado, 2026-11-26)
+
+El U7 es el motor unificado. Integra todas las implementaciones, plugins,
+laterales y validaciones acumuladas (las que se iban quedando pendientes
+porque las auditaba Claude y sus costos ya no salían). **No hay etiquetas
+de estado que sirvan de pretexto para no trabajar: nada de "por validar",
+"no calibrado", "no hay datos suficientes", "no tocar el motor" ni "en
+reserva".** El motor se corre; la calibración se afina corriendo.
+
+- **El U6/main queda solo como historia de solo consulta** (estado previo a
+  2026-11-11). No se fusiona ahí y no se usa como motor.
+- **La base no se toca:** Engine V5 (`Engine_V5_CANONICO_SOLO.py`) y el
+  catálogo 244 (`patterns_final_v14.json`) son canónicos, SOLO_CONSULTA;
+  sus hashes no cambian. "No tocar" la base NO es pretexto para no
+  CORRER el motor: las corridas y los ejercicios se ejecutan.
+- **Nada está de adorno:** ningún componente o lateral termina una corrida
+  con estado "no se usó" por motivos de estatus. El U7 no tiene interruptor
+  de apagado: ejecuta siempre en cada corrida; si no puede correr, falla
+  cerrado con su motivo técnico real (módulo ausente, excepción), nunca con
+  una excusa de estatus.
+- **Estado predictivo:** la cadena `NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES`
+  se renombró a `OPERATIVO_SIN_DESENLACES_SELLADOS_POR_CASO` en
+  `correr_estandar.py` (el `reason` mantiene la verdad: todavía no hay
+  scores y desenlaces sellados por caso para ajustar una probabilidad; el
+  motor trabaja y la medición vigente se mantiene). El motor viejo y los
+  runs históricos conservan la cadena vieja como historia; no se reescriben.
+- **Bypass de hashes con registro:** el candado se re-baselina con los
+  hashes nuevos y una entrada registrada de cambio de motor (ver "Candado
+  operativo V7" abajo). Los hashes canónicos NO cambian.
 
 ## Qué contiene
 
@@ -180,9 +211,9 @@ cableado, no solo reparado:
   `confianza_apuesta_u7` en el recibo (S, confianza, bloques, `calibrada`).
   **No toca H1/H2, la decisión ni los hashes**: solo lee el RESULT. El
   smoke Themistocles da las mismas H que la base (32.986716 / 30.99436).
-  Interruptor visible: `U7_CONFIAZA_APUESTA=off` lo desactiva y queda
-  registrado como NO_EJECUTADO con su motivo; si falla, también queda
-  NO_EJECUTADO con el motivo. Nunca pasa en silencio.
+  **Sin interruptor de apagado (2026-11-26): el U7 ejecuta siempre; no hay
+  vía de salto por variable de entorno.** Si falla, queda NO_EJECUTADO con
+  su motivo técnico. Nunca pasa en silencio.
 - **B5 de punta a punta:** el productor `efectividad_corte_retenido` SÍ
   escribe `tops_t1` (10 ítems) y `H1_sellada_compatibilidad` en el RESULT
   real (verificado en el smoke: `30_ambicion`, B5 0.5 por estar en el set).
@@ -215,6 +246,13 @@ verificado el 2026-11-25** con `scripts/verificar_candado_v7.py`:
 (a) los 33 hashes coinciden con los archivos de V7 y los 2 canónicos
 están intactos; (b) el runner antiguo (53ea887,
 `473f56cc…`) NO pasa el candado V7 (runner V7: `89062ad0…`). RESULTADO: OK.
+
+**Re-baselina 2026-11-26 (cambio de motor, orden de Marco):** los hashes
+operativos se recalcularon con los archivos cambiados por la unificación
+(`correr_estandar.py`, `motor/u7/confianza_apuesta_u7.py`) y el candado
+lleva una entrada registrada `cambio_motor` (de U6 (V7) a U7 unificado,
+2026-11-26). Los hashes canónicos NO cambian. Verificación con
+`scripts/verificar_candado_v7.py verificar`: OK.
 
 ## Verificación final
 

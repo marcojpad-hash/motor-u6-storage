@@ -564,17 +564,17 @@ def _efectividad_corte_retenido(sello: dict, visto: dict, retenido) -> dict:
 
 
 def _confianza_apuesta_u7(result: dict) -> dict:
-    """Confianza de la apuesta U7 (V7): observación post-corrida sobre el RESULT.
+    """Confianza de la apuesta U7 (motor unificado 2026-11-26): observación post-corrida sobre el RESULT.
 
-    Solo LEE el resultado; no toca H1/H2, la decisión ni los hashes. Se ejecuta
+    El U7 ES el motor unificado: se ejecuta SIEMPRE en cada corrida, sin
+    interruptor de apagado (no hay vía de salto por configuración). Solo LEE
+    el resultado; no toca H1/H2, la decisión ni los hashes. Se ejecuta
     después de construir y sanear el RESULT, antes de escribirlo. Si no puede
-    correr (módulo ausente, RESULT incompleto) o está desactivada por
-    U7_CONFIAZA_APUESTA=off, queda registrada como NO_EJECUTADO con su motivo:
-    nunca pasa en silencio. EN OPERACIÓN: los pesos W iguales (B1-B6 = 1) son
-    un punto de partida documentado, no una calibración ajustada (ver u7/confianza_apuesta_u7.py).
+    correr (módulo ausente, RESULT incompleto), queda registrado como
+    NO_EJECUTADO con su motivo técnico: nunca pasa en silencio. EN OPERACIÓN:
+    los pesos W iguales (B1-B6 = 1) son un punto de partida documentado, no
+    una calibración ajustada (ver u7/confianza_apuesta_u7.py).
     """
-    if os.environ.get("U7_CONFIAZA_APUESTA", "").strip().lower() == "off":
-        return {"status": "NO_EJECUTADO", "motivo": "desactivado por U7_CONFIAZA_APUESTA=off"}
     try:
         _spec = importlib.util.spec_from_file_location(
             "confianza_apuesta_u7", ROOT / "u7" / "confianza_apuesta_u7.py")
@@ -886,11 +886,11 @@ def main(argv) -> int:
     _hist_path = ROOT / "HISTORICAL_PREDICTIVE_REFERENCE.json"
     _hist_ref = json.loads(_hist_path.read_text(encoding="utf-8")) if _hist_path.is_file() else None
     result["predictive_validation"] = {
-        "status": "NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES",
+        "status": "OPERATIVO_SIN_DESENLACES_SELLADOS_POR_CASO",
         "structural_fill_is_probability": False,
         "rank_fusion_is_probability": False,
         "historical_reference": _hist_ref,
-        "reason": "hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero faltan scores y desenlaces sellados por caso para ajustar/calibrar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
+        "reason": "el motor está EN OPERACIÓN; hay una referencia histórica de acierto Top-1/Top-3 del predictor lateral, pero todavía no hay scores y desenlaces sellados por caso para ajustar una probabilidad del motor actual; no se sustituyen por porcentajes estructurales ni por ejemplos de otros dominios"
     }
     import importlib.util
     _sp = Path(__file__).resolve().parent / "motor" / "plugin_entrega_luces_v1.py"

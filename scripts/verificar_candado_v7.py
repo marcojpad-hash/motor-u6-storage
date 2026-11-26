@@ -92,6 +92,18 @@ BASE_COMMITS = {
     "orquestador_pr10_merge": "8253eafd15481cbfd078744880e10a544323fe32",
 }
 
+# Cambio de motor registrado (2026-11-26, orden de Marco): el U7 es el motor
+# unificado. Las etiquetas por-validar/no-calibrado eran pretexto para no
+# trabajar. Esta entrada vive en el generador para que un re-baselina no la
+# pierda; los hashes canónicos NO cambian.
+CAMBIO_MOTOR = {
+    "de": "U6 (V7)",
+    "a": "U7 unificado",
+    "fecha": "2026-11-26",
+    "orden": "Marco 26-nov-2026",
+    "motivo": "motor unificado; las etiquetas por-validar/no-calibrado eran pretexto para no trabajar",
+}
+
 
 def _sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -107,12 +119,13 @@ def generar():
         hashes[rel] = _sha256(p)
     candado = {
         "version": "CANDADO_OPERATIVO_V7",
-        "fecha": "2026-11-25",
+        "fecha": "2026-11-26",
         "rama": "alterno/version-unificada-7",
         "base_commits": BASE_COMMITS,
         "canonicos": CANONICOS,
         "orquestador": ORQUESTADOR,
         "hashes_operativos": hashes,
+        "cambio_motor": CAMBIO_MOTOR,
         "nota": ("El runner antiguo (53ea887) NO pasa este candado: su hash de "
                  "runner difiere del registrado aquí. Los canónicos NO cambian."),
     }

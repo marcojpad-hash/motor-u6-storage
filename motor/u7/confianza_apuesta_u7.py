@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """U7 · Confianza de la apuesta (post-corrida, solo lee RESULT json; no toca motor/Engine/patterns).
 
-EN OPERACIÓN: los pesos W son los seis en 1 (B1-B6 iguales, fijados a priori,
+MOTOR UNIFICADO (2026-11-26, orden de Marco): el U7 es el motor unificado.
+Integra las implementaciones, plugins, laterales y validaciones acumuladas;
+el U6/main queda solo como historia de solo consulta. EN OPERACIÓN: los
+pesos W son los seis en 1 (B1-B6 iguales, fijados a priori,
 sin ajuste a desenlaces). Son un punto de partida documentado, NO una
 calibración ajustada: no se inventan pesos. El puntaje S y la confianza son
 una observación, no una probabilidad calibrada.

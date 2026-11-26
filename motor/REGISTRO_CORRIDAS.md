@@ -75,3 +75,9 @@ Los JSON completos, ledgers y outputs se retiraron de los paquetes operativos pa
 - H1 `13_enemistad_de_parientes`; H2 `30_ambicion`; cierre `RESUELTO_OPERACIONALMENTE`; Monte Carlo: 7.273 simulaciones.
 - La corrida produjo JSON de resultado y recibo, pero la invocación superó el límite de 200 s antes de la etapa automática de persistencia. Se importaron manualmente 188 eventos de evidencia; 54 tokens únicos nuevos quedaron en el registro, clasificados como vocabulario externo. La fuente, input, recibo y resumen compacto están en `STINKBOX_PERSISTENTE_20261020/imported_runs/`.
 - Estado predictivo: `NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES`; no se cuenta como acierto/error por falta de reveal posterior.
+
+
+## 2026-11-26 — Motor U7 unificado (cambio de estado, no corrida)
+
+- Orden de Marco (12:09): el motor es U7, unificado. El U6/main queda solo como historia de solo consulta.
+- `predictive_validation.status` pasa de `NOT_CALIBRATED_NO_CASE_LEVEL_OUTCOMES` a `OPERATIVO_SIN_DESENLACES_SELLADOS_POR_CASO` en `correr_estandar.py`. La entrada 2026-10-20 de arriba conserva la cadena vieja porque es el estado que registró esa corrida en su momento; no se reescribe la historia.

@@ -27,7 +27,8 @@ def test_cableado_estatico_u7_en_correr_estandar():
     assert "def _confianza_apuesta_u7" in src
     assert 'result["confianza_apuesta_u7"]' in src
     assert '"stage": "confianza_apuesta_u7"' in src
-    assert "U7_CONFIAZA_APUESTA" in src
+    # Sin vía de salto: el U7 no tiene interruptor de apagado por variable.
+    assert "U7_CONFIAZA_APUESTA" not in src
 
 
 def _fixture_u7_minimo():
@@ -52,7 +53,7 @@ def _fixture_u7_minimo():
     }
 
 
-def test_helper_u7_ejecuta_en_proceso_y_desactivado_queda_registrado(monkeypatch):
+def test_helper_u7_ejecuta_en_proceso_siempre(monkeypatch):
     monkeypatch.delenv("U7_CONFIAZA_APUESTA", raising=False)
     out = runner._confianza_apuesta_u7(_fixture_u7_minimo())
     assert out["status"] == "EJECUTADA"
@@ -60,11 +61,11 @@ def test_helper_u7_ejecuta_en_proceso_y_desactivado_queda_registrado(monkeypatch
     assert out["calibrada"] is False
     assert set(out["bloques"]) == {"B1_dominancia", "B2_set_mezcla", "B3_laterales",
                                     "B4_robustez_adversarial", "B5_estabilidad_sin_ultimo", "B6_fondo"}
-    # Estado desactivado visible, nunca en silencio.
+    # Sin vía de salto: aunque se ponga la variable vieja en off, el U7 ejecuta.
+    # Si no puede correr, falla cerrado con su motivo técnico, nunca en silencio.
     monkeypatch.setenv("U7_CONFIAZA_APUESTA", "off")
-    off = runner._confianza_apuesta_u7(_fixture_u7_minimo())
-    assert off["status"] == "NO_EJECUTADO"
-    assert "U7_CONFIAZA_APUESTA=off" in off["motivo"]
+    out_off = runner._confianza_apuesta_u7(_fixture_u7_minimo())
+    assert out_off["status"] == "EJECUTADA"
 
 
 def _corrida_u7(tmpdir):

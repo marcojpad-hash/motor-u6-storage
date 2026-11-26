@@ -1,6 +1,6 @@
 {
   "version": "CANDADO_OPERATIVO_V7",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "rama": "alterno/version-unificada-7",
   "base_commits": {
     "alterno_cameo_pesos_base": "53ea887",
@@ -21,7 +21,7 @@
   },
   "hashes_operativos": {
     "motor/motor/MOTOR_V15_3_UNICO_20260927.py": "89062ad0da313b2d32b772421a87ad48cd37e3cbf206a590359e32ecde128c66",
-    "motor/correr_estandar.py": "07de63f4aab3cbe48262641c31d72f7c9a0e407d70fbe2397e60247d5f585d4c",
+    "motor/correr_estandar.py": "a4a0e5ddeb1c095f3c75bb0c7ac995a91dc8523c91ef0ec720601751568a3989",
     "motor/motor/lateral_contexto_enunciativo_v1.py": "e778adefdc0859f037d9092c6933b1a24a10072335bd0386882bad2ca104552e",
     "motor/motor/guardianes_control_v1.py": "0b197b5b5d3e79bd395fedf6dd68e52bd290984e9ec132012f7cdb105525e52b",
     "motor/capa_llm/filtro_entrada_dirigida_017.py": "2b3b1f8c9f1633f70079a25096c4ec369c6ad7db6b27d99e27f2bc5fc5277dd1",
@@ -52,7 +52,14 @@
     "motor/motor/ceb_runtime_v0_6_flow.py": "f8a7f6e97468fea6c805f72cb09dc64e9747e1d9ddbd03df13f181b270e341df",
     "motor/motor/respuesta_humana_v1.py": "6c5bc29d2fc6ef582c0fc9b74f5e9a82bbb2e2ebb75d74fbbee905ffca334abd",
     "motor/motor/lateral_traduccion_salida_v1.py": "2790741400696aff87ce362e198dd86395271a6fbd1c819aeafd13425eb8e775",
-    "motor/u7/confianza_apuesta_u7.py": "6527284aae4ae9829cbf5b4b0fff0ffcf591487250b34afa04b92218e84737c9"
+    "motor/u7/confianza_apuesta_u7.py": "2d23c23584068fd8500192bda1a282f933df0f7558e62b63f03f8a1ae7e739e4"
+  },
+  "cambio_motor": {
+    "de": "U6 (V7)",
+    "a": "U7 unificado",
+    "fecha": "2026-11-26",
+    "orden": "Marco 26-nov-2026",
+    "motivo": "motor unificado; las etiquetas por-validar/no-calibrado eran pretexto para no trabajar"
   },
   "nota": "El runner antiguo (53ea887) NO pasa este candado: su hash de runner difiere del registrado aquí. Los canónicos NO cambian."
 }
