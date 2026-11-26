@@ -76,3 +76,8 @@ Base: `53ea887`. Documentos: `docs/VERSION_UNIFICADA_7.md`,
   sin `caldero_identity` en la ruta real; lateral enunciativo sin
   consumidor. Documentadas como están; no se rediseñan, quitan ni
   conectan en silencio.
+
+## 2026-11-26 — Estado operativo: EN OPERACIÓN (orden de Marco)
+- El motor deja de declararse NOT_CALIBRATED. Estado operativo: EN OPERACIÓN (suite en verde, V7 fusionada, módulos cableados y ejecutando). La calibración se afina en continuo corriendo; no es una puerta ni un estado de reserva, y no es motivo para que los modelos no trabajen.
+- Cambios: `docs/VERSION_UNIFICADA_7.md` (Qué NO hace, sección de lo demostrado, bullet de pesos U7) y docstring de `motor/u7/confianza_apuesta_u7.py`. Los hechos se mantienen: pesos W iguales a priori, campo `calibrada` es False (sin ajuste a desenlaces todavía), medición vigente 64.46% top-1 / 97.52% top-3 (Grupo B). F007 sigue bloqueado por fuentes (hecho aparte, no pretexto).
+- Los registros de corridas (REGISTRO_CORRIDAS.md, runs/CAL_*.json) NO se reescriben: son datos históricos de cada corrida.

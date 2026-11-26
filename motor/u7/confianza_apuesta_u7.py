@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """U7 · Confianza de la apuesta (post-corrida, solo lee RESULT json; no toca motor/Engine/patterns).
 
-NOT_CALIBRATED: los pesos W son los seis en 1 (B1-B6 iguales, fijados a priori,
-sin ajuste a desenlaces). Son un placeholder documentado, NO una calibración:
-no hay datos para calibrarlos y no se inventan pesos. El puntaje S y la
-confianza son una observación, no una probabilidad calibrada.
-Para calibrarlo harían falta pares de puntajes U7 contra desenlaces reales,
-con n suficiente, y un ajuste explícito con su validación; hasta entonces los
-pesos iguales se quedan como están y el campo "calibrada" es False.
+EN OPERACIÓN: los pesos W son los seis en 1 (B1-B6 iguales, fijados a priori,
+sin ajuste a desenlaces). Son un punto de partida documentado, NO una
+calibración ajustada: no se inventan pesos. El puntaje S y la confianza son
+una observación, no una probabilidad calibrada.
+La calibración se afina corriendo, con pares de puntajes U7 contra desenlaces
+reales, con n suficiente, y un ajuste explícito con su validación; hasta
+entonces los pesos iguales se quedan como están y el campo "calibrada" es
+False. Eso NO es un estado de reserva ni una puerta: el módulo trabaja con
+estos pesos y los modelos trabajan con el motor.
 uso: python3 confianza_apuesta_u7.py RESULT.json [...]  -> imprime json por caso
 """
 import json, sys

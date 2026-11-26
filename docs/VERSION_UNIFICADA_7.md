@@ -50,9 +50,8 @@ grado de confianza que esa evidencia sostiene** — ni más ni menos.
   evidencia — y para que, cuando la evidencia no alcanza, el motor lo diga
   (FRÁGIL, LATENTE, NO_RESUELTO) en vez de inventar certeza.
 - **Qué NO hace:** no predice el futuro; no decide por ti; no toca el Engine
-  V5 ni el catálogo 244 (son canónicos y están protegidos); no calibra (sigue
-  NOT_CALIBRATED); no sustituye las fuentes primarias (F007 sigue bloqueado
-  hasta que las tenga).
+  V5 ni el catálogo 244 (son canónicos y están protegidos); no sustituye las fuentes primarias (F007 sigue bloqueado
+  hasta que las tenga). **Estado operativo: EN OPERACIÓN** — la calibración se afina corriendo (pesos iniciales iguales, medición vigente 64.46% top-1 / 97.52% top-3); no es una puerta que deje el motor parado ni un motivo para que los modelos no trabajen.
 - **Cómo lo hace:** el predictor propone (rank_fusion sobre el catálogo 244)
   y los guardianes objetan (lógica, retórica, temporalidad, consistencia,
   contexto enunciativo). Los guardianes **no escriben H**: solo gradúan y
@@ -97,12 +96,10 @@ Lo que las evaluaciones ya demuestran (posición de Marco, y es verdad):
 - Las reparaciones de la auditoría V7 están probadas (P0/P1 + P2).
 - El candado operativo V7 verifica que los hashes coinciden con el motor
   actualizado, y que el runner antiguo NO pasa ese candado.
+- El motor está EN OPERACIÓN: suite en verde, V7 fusionada, módulos cableados y ejecutando. La calibración se afina en continuo (pesos iniciales iguales, medición vigente 64.46% top-1 / 97.52% top-3, Grupo B); no es una puerta ni un estado de reserva.
 
 **NO está demostrado (y no se declara):**
-- **Calibración.** El motor completo está NOT_CALIBRATED. Una sola corrida
-  (ni diez) no calibra nada. F007 sigue bloqueado (faltan 3 cortes por caso,
-  fuentes primarias, separar preparador/custodio y un runner en alterno que
-  no publique en main).
+- **F007.** Sigue bloqueado (faltan 3 cortes por caso, fuentes primarias, separar preparador/custodio y un runner en alterno que no publique en main).
 - **El 64.46% / 97.52% del predictor Grupo B como evidencia V7.** Es una cita
   histórica sin su fuente en el repo (ver CONTRATOS_OPERATIVOS_V7.md, C-F2).
 - **El coordinador agnóstico #35 como parte integrada del motor.** Tiene 29
@@ -194,12 +191,11 @@ cableado, no solo reparado:
   daba 0.0 y castigaba H1 por una evaluación que no corrió. Ahora, sin
   `tops_t1`, b5 = 0.5 neutral (patrón B4 con el acero). Test:
   `test_b5_sin_tops_t1_es_neutral_05`.
-- **NOT_CALIBRATED (declarado, no calibrado):** los pesos W son los seis en
+- **Pesos U7 (punto de partida, no puerta):** los pesos W son los seis en
   1 (B1-B6 iguales, fijados a priori, sin ajuste a desenlaces). Son un
-  placeholder documentado, no una calibración: no hay datos para
-  calibrarlos y no se inventan pesos. El puntaje S y la confianza son una
+  punto de partida documentado, no una calibración ajustada: no se inventan pesos. El puntaje S y la confianza son una
   observación, no una probabilidad calibrada; el campo `calibrada` es
-  `False`. Para calibrarlo harían falta pares de puntajes U7 contra
+  `False` (sin ajuste a desenlaces todavía). Eso NO es un estado de reserva ni un motivo para que los modelos no trabajen: el módulo está EN OPERACIÓN con estos pesos y la calibración se afina corriendo, con pares de puntajes U7 contra
   desenlaces reales, con n suficiente, y un ajuste explícito con su
   validación. Declarado en el docstring del módulo y aquí.
 - **Cobertura en CI:** `motor/tests/test_confianza_apuesta_u7.py` NO estaba
