@@ -21,6 +21,6 @@ Se consolidó una sola autoridad contractual para Motor U7 y se amplió el cable
 - Catálogo 244: `d827dcc3882634ec2d21b3a480d0fee811b28d8fa1b73bab04f0af2c2d6667a1` (protegido; no modificado).
 - Base de trabajo: `dbb60e7248359aedc5ba4a827dbacf292b92cd48`.
 
-## Pruebas: pendientes de CI
+## Pruebas: 92 passed, 0 skipped, 0 failed
 
-Se añadieron tres pruebas para el adaptador del runner: carga y plan, excepción no controlada con salida no exitosa, y preservación de candados duros. El workflow también ejecuta el test existente `test_cableado_plan_contorno.py`. No se afirma ejecución local ni resultado CI hasta recibir el workflow.
+**CI verificado:** run [#45860500437](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860500437), job `runner-contract` SUCCESS, 92 pruebas aprobadas en 41.81 s. Incluye las tres pruebas del adaptador del runner, el test de integración `test_cableado_plan_contorno.py`, runner JSON, Z90 y preparación entry-only. El primer run #45860284178 detectó tres fallos de carga por ruta duplicada `motor/motor/motor`; se corrigió la ruta a `motor/motor/control_flujo_soluciones.py` y la re-corrida completa pasó. No se ejecutó una corrida productiva ni se alteraron Engine V5, catálogo 244 o custodia.

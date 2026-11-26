@@ -389,6 +389,7 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
   - El runner estándar adjunta planes a fallos del subproceso primario y de módulos de salida; toda excepción no controlada pasa por `_main_with_control_flujo` y devuelve JSON estructurado con exit code 3.
   - Las discrepancias de Engine V5, catálogo 244, FREEZE o Z90 se convierten en PARADA_DURA: el plan permite diagnóstico y tareas independientes, pero prohíbe BYPASS_HASH_CAMBIO y cualquier ejecución sustitutiva. No modifica input, predictor, H1/H2 ni hashes.
   - `aplicar_protocolo` no existe como API en este módulo; la API implementada y llamada es `contornar(piedra_o_error, contexto=None)`.
+  - **CI verificado:** run [#45860500437](https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860500437), job `runner-contract` SUCCESS, 92 pruebas aprobadas en 41.81 s (incluye los tres tests nuevos y el test de integración UNICO).
 
 ### 5.6 Protocolo kernel (protocolo_kernel_motor.py, orden 0)
 - **Función:** arrancar la matriz y clasificar la pregunta antes de todo.
