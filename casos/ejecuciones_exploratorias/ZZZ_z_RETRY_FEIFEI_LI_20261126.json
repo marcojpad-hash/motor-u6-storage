@@ -9,7 +9,7 @@
   "z_work_kind": "CURRENT_DATE",
   "z_work_date": "2026-11-26",
   "random_seed": 20261126,
-  "status": "EXPLORATORIO_REINTENTO_TECNICO_MISMO_SUJETO_NO_INDEPENDIENTE_V5",
+  "status": "EXPLORATORIO_NO_CIEGO_NO_CALIBRACION",
   "cuts": [
     {
       "id": "C1_2011",
@@ -150,5 +150,5 @@
       ]
     }
   ],
-  "source_notes": "Caso exploratorio no ciego. Evidencia institucional/autobiográfica de Stanford; no contiene desenlace ni destino sellado. No contar en n de calibración ni como caso ciego certificado. Versión V2: el corte que recoge la fuente fechada solo por año se cierra el 2018-01-01 para respetar el límite temporal inclusivo. Reintento V5 con compuerta Z90 copiada al workspace aislado; no es una observación independiente."
+  "source_notes": "Caso exploratorio no ciego. Evidencia institucional/autobiográfica de Stanford; no contiene desenlace ni destino sellado. No contar en n de calibración ni como caso ciego certificado. Versión V2: el corte que recoge la fuente fechada solo por año se cierra el 2018-01-01 para respetar el límite temporal inclusivo. Caso exploratorio en paralelo al expediente de Demis Hassabis; no constituye cohorte ciega ni calibración."
 }
