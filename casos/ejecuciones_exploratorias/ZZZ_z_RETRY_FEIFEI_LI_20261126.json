@@ -1,0 +1,154 @@
+{
+  "case_id": "ZZZ_z_RETRY_FEIFEI_LI_20261126",
+  "question": "¿Qué estructura de trayectoria caracteriza la actividad académica, científica y de innovación de la investigadora al corte actual?",
+  "tipo_sujeto": "cientifico",
+  "freeze": "2026-11-26",
+  "modo_z": "vivo",
+  "z_trabajo": "2026-11-26",
+  "z90_date": "2026-11-26",
+  "z_work_kind": "CURRENT_DATE",
+  "z_work_date": "2026-11-26",
+  "random_seed": 20261126,
+  "status": "EXPLORATORIO_REINTENTO_TECNICO_MISMO_SUJETO_NO_INDEPENDIENTE_V5",
+  "cuts": [
+    {
+      "id": "C1_2011",
+      "cut_id": "C1_2011",
+      "date": "2011-10-20",
+      "hecho": "Consolida una trayectoria académica en visión por computadora; ocupa una plaza de Assistant Professor en Stanford tras desempeñarse en Princeton e Illinois.",
+      "P": [
+        [
+          "conocimiento",
+          0.8
+        ],
+        [
+          "curiosidad_abstracta",
+          0.78
+        ]
+      ],
+      "A": [
+        [
+          "analisis",
+          0.8
+        ],
+        [
+          "esfuerzo_sostenido_reciente",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "reconocimiento",
+          0.68
+        ],
+        [
+          "estabilidad_ocupacional",
+          0.72
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "Su CV registra el puesto de Assistant Professor en Stanford desde junio de 2009 y experiencia académica previa en Princeton e Illinois.",
+          "source_url": "https://cs.stanford.edu/people/feifeili/LiFei-Fei_ProfessionalCV_noref.pdf",
+          "source_date": "2011-10-20",
+          "claim_date": "2011-10-20",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C2_2017",
+      "cut_id": "C2_2017",
+      "date": "2018-01-01",
+      "hecho": "Asume liderazgo de laboratorio y de comunidad académica mientras mantiene una agenda de investigación en aprendizaje automático y visión por computadora.",
+      "P": [
+        [
+          "ambicion",
+          0.78
+        ],
+        [
+          "determinacion",
+          0.8
+        ]
+      ],
+      "A": [
+        [
+          "liderazgo",
+          0.8
+        ],
+        [
+          "planificacion_activa",
+          0.76
+        ]
+      ],
+      "C": [
+        [
+          "ascenso_reciente",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.72
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "El programa académico de Stanford la identifica como Associate Professor, directora de Stanford AI Lab y Stanford Vision Lab, y co-chair de Rising Stars 2017.",
+          "source_url": "https://risingstars2017.stanford.edu/organizing-committee/fei-fei-li-rising-stars-co-chair/",
+          "source_date": "2017",
+          "claim_date": "2017",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    },
+    {
+      "id": "C3_2026",
+      "cut_id": "C3_2026",
+      "date": "2026-11-26",
+      "hecho": "Mantiene posición académica en Stanford y combina investigación, dirección institucional y emprendimiento en inteligencia espacial.",
+      "P": [
+        [
+          "vision",
+          0.82
+        ],
+        [
+          "idealismo",
+          0.74
+        ]
+      ],
+      "A": [
+        [
+          "organizacion",
+          0.78
+        ],
+        [
+          "audacia",
+          0.72
+        ]
+      ],
+      "C": [
+        [
+          "transformacion",
+          0.76
+        ],
+        [
+          "reconocimiento",
+          0.8
+        ]
+      ],
+      "evidencia": [
+        {
+          "afirmacion": "El perfil institucional vigente la identifica como profesora Sequoia, cofundadora y CEO de World Labs, y cofundadora directora de Stanford HAI; registra más de 400 artículos científicos.",
+          "source_url": "https://www.cs.stanford.edu/people/fei-fei-li",
+          "source_date": "2026-11-26",
+          "claim_date": "2026-11-26",
+          "tipo_fuente": "primaria",
+          "conocido_en_Z": "sí"
+        }
+      ]
+    }
+  ],
+  "source_notes": "Caso exploratorio no ciego. Evidencia institucional/autobiográfica de Stanford; no contiene desenlace ni destino sellado. No contar en n de calibración ni como caso ciego certificado. Versión V2: el corte que recoge la fuente fechada solo por año se cierra el 2018-01-01 para respetar el límite temporal inclusivo. Reintento V5 con compuerta Z90 copiada al workspace aislado; no es una observación independiente."
+}
