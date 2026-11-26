@@ -4,6 +4,45 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 
 | Run | Workflow | Evento | Creación CDMX | Inicio CDMX | Fin CDMX | Duración (s) | Estado |
 |---:|---|---|---|---|---|---:|---|
+| 45866459057 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:17:24-06:00 | 2026-11-26T11:17:24-06:00 | 2026-11-26T11:17:59-06:00 | 35.0 | success |
+| 45866388817 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:16:57-06:00 | 2026-11-26T11:16:57-06:00 | 2026-11-26T11:17:19-06:00 | 22.0 | failure |
+| 45866285313 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:16:13-06:00 | 2026-11-26T11:16:13-06:00 | 2026-11-26T11:16:35-06:00 | 22.0 | failure |
+| 45866155637 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:15:20-06:00 | 2026-11-26T11:15:20-06:00 | 2026-11-26T11:15:42-06:00 | 22.0 | failure |
+| 45866015761 | .github/workflows/ejecutar-caso-exploratorio-u7.yml | push | 2026-11-26T11:14:26-06:00 | 2026-11-26T11:14:26-06:00 | 2026-11-26T11:14:26-06:00 | 0.0 | failure |
+| 45865989627 | .github/workflows/ejecutar-caso-exploratorio-u7.yml | push | 2026-11-26T11:14:15-06:00 | 2026-11-26T11:14:15-06:00 | 2026-11-26T11:14:15-06:00 | 0.0 | failure |
+| 45865983746 | Motor runner contract tests | push | 2026-11-26T11:14:13-06:00 | 2026-11-26T11:14:13-06:00 | 2026-11-26T11:15:13-06:00 | 60.0 | success |
+| 45864948542 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:07:16-06:00 | 2026-11-26T11:07:16-06:00 | 2026-11-26T11:07:45-06:00 | 29.0 | success |
+| 45864696050 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:05:35-06:00 | 2026-11-26T11:05:35-06:00 | 2026-11-26T11:06:08-06:00 | 33.0 | success |
+| 45864668357 | Motor runner contract tests | push | 2026-11-26T11:05:25-06:00 | 2026-11-26T11:05:25-06:00 | 2026-11-26T11:06:17-06:00 | 52.0 | success |
+| 45864470410 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:04:07-06:00 | 2026-11-26T11:04:07-06:00 | 2026-11-26T11:04:26-06:00 | 19.0 | failure |
+| 45864449105 | Motor runner contract tests | push | 2026-11-26T11:03:59-06:00 | 2026-11-26T11:03:59-06:00 | 2026-11-26T11:04:59-06:00 | 60.0 | success |
+| 45864325251 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:03:09-06:00 | 2026-11-26T11:03:09-06:00 | 2026-11-26T11:03:30-06:00 | 21.0 | failure |
+| 45864311647 | Motor runner contract tests | push | 2026-11-26T11:03:03-06:00 | 2026-11-26T11:03:03-06:00 | 2026-11-26T11:04:04-06:00 | 61.0 | success |
+| 45864202443 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:02:20-06:00 | 2026-11-26T11:02:20-06:00 | 2026-11-26T11:02:38-06:00 | 18.0 | failure |
+| 45864068092 | .github/workflows/ejecutar-caso-exploratorio-u7.yml | push | 2026-11-26T11:01:26-06:00 | 2026-11-26T11:01:26-06:00 | 2026-11-26T11:01:26-06:00 | 0.0 | failure |
+| 45864055714 | .github/workflows/ejecutar-caso-exploratorio-u7.yml | push | 2026-11-26T11:01:21-06:00 | 2026-11-26T11:01:21-06:00 | 2026-11-26T11:01:21-06:00 | 0.0 | failure |
+| 45863956200 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:00:45-06:00 | 2026-11-26T11:00:45-06:00 | 2026-11-26T11:01:03-06:00 | 18.0 | failure |
+| 45863910085 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T11:00:28-06:00 | 2026-11-26T11:00:28-06:00 | 2026-11-26T11:00:48-06:00 | 20.0 | failure |
+| 45863795033 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T10:59:44-06:00 | 2026-11-26T10:59:44-06:00 | 2026-11-26T11:00:00-06:00 | 16.0 | failure |
+| 45863752758 | .github/workflows/ejecutar-caso-exploratorio-u7.yml | push | 2026-11-26T10:59:26-06:00 | 2026-11-26T10:59:26-06:00 | 2026-11-26T10:59:26-06:00 | 0.0 | failure |
+| 45863639890 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T10:58:38-06:00 | 2026-11-26T10:58:38-06:00 | 2026-11-26T10:59:02-06:00 | 24.0 | failure |
+| 45863412211 | Motor U7 — ejecutar caso exploratorio aislado | push | 2026-11-26T10:57:02-06:00 | 2026-11-26T10:57:02-06:00 | 2026-11-26T10:57:26-06:00 | 24.0 | failure |
+| 45861322178 | Motor runner contract tests | push | 2026-11-26T10:43:06-06:00 | 2026-11-26T10:43:06-06:00 | 2026-11-26T10:43:55-06:00 | 49.0 | success |
+| 45861145554 | Motor runner contract tests | pull_request | 2026-11-26T10:41:55-06:00 | 2026-11-26T10:41:55-06:00 | 2026-11-26T10:42:53-06:00 | 58.0 | success |
+| 45861145528 | ChatGPT startup contract | pull_request | 2026-11-26T10:41:55-06:00 | 2026-11-26T10:41:55-06:00 | 2026-11-26T10:42:03-06:00 | 8.0 | success |
+| 45860926469 | Motor runner contract tests | pull_request | 2026-11-26T10:40:27-06:00 | 2026-11-26T10:40:27-06:00 | 2026-11-26T10:41:25-06:00 | 58.0 | success |
+| 45860926413 | ChatGPT startup contract | pull_request | 2026-11-26T10:40:27-06:00 | 2026-11-26T10:40:27-06:00 | 2026-11-26T10:40:35-06:00 | 8.0 | success |
+| 45860715867 | ChatGPT startup contract | pull_request | 2026-11-26T10:39:04-06:00 | 2026-11-26T10:39:04-06:00 | 2026-11-26T10:39:14-06:00 | 10.0 | success |
+| 45860715752 | Motor runner contract tests | pull_request | 2026-11-26T10:39:03-06:00 | 2026-11-26T10:39:03-06:00 | 2026-11-26T10:39:56-06:00 | 53.0 | success |
+| 45860622539 | ChatGPT startup contract | pull_request | 2026-11-26T10:38:26-06:00 | 2026-11-26T10:38:26-06:00 | 2026-11-26T10:38:34-06:00 | 8.0 | success |
+| 45860622290 | Motor runner contract tests | pull_request | 2026-11-26T10:38:26-06:00 | 2026-11-26T10:38:26-06:00 | 2026-11-26T10:39:29-06:00 | 63.0 | success |
+| 45860500437 | Motor runner contract tests | pull_request | 2026-11-26T10:37:38-06:00 | 2026-11-26T10:37:38-06:00 | 2026-11-26T10:38:37-06:00 | 59.0 | success |
+| 45860500267 | ChatGPT startup contract | pull_request | 2026-11-26T10:37:38-06:00 | 2026-11-26T10:37:38-06:00 | 2026-11-26T10:37:50-06:00 | 12.0 | success |
+| 45860409263 | Motor runner contract tests | pull_request | 2026-11-26T10:37:03-06:00 | 2026-11-26T10:37:03-06:00 | 2026-11-26T10:37:58-06:00 | 55.0 | failure |
+| 45860409181 | ChatGPT startup contract | pull_request | 2026-11-26T10:37:03-06:00 | 2026-11-26T10:37:03-06:00 | 2026-11-26T10:37:10-06:00 | 7.0 | success |
+| 45860284178 | Motor runner contract tests | pull_request | 2026-11-26T10:36:14-06:00 | 2026-11-26T10:36:14-06:00 | 2026-11-26T10:37:14-06:00 | 60.0 | failure |
+| 45860284028 | ChatGPT startup contract | pull_request | 2026-11-26T10:36:14-06:00 | 2026-11-26T10:36:14-06:00 | 2026-11-26T10:36:24-06:00 | 10.0 | success |
+| 45782316783 | Auditoría de corridas Motor U6 | schedule | 2026-11-26T02:20:22-06:00 | 2026-11-26T02:20:22-06:00 | 2026-11-26T02:21:22-06:00 | 60.0 | success |
 | 45726694069 | Motor runner contract tests | push | 2026-11-25T18:09:30-06:00 | 2026-11-25T18:09:30-06:00 | 2026-11-25T18:10:03-06:00 | 33.0 | success |
 | 45722831693 | Auditoría de corridas Motor U6 | schedule | 2026-11-25T17:37:47-06:00 | 2026-11-25T17:37:47-06:00 | 2026-11-25T17:38:42-06:00 | 55.0 | success |
 | 45682858063 | Motor runner contract tests | pull_request | 2026-11-25T13:12:19-06:00 | 2026-11-25T13:12:19-06:00 | 2026-11-25T13:12:52-06:00 | 33.0 | success |
@@ -63,11 +102,27 @@ Ventana: últimos 7 días. Horas mostradas en America/Mexico_City; marcas UTC co
 | 44739754266 | Auditoría de corridas Motor U6 | schedule | 2026-11-20T06:54:54-06:00 | 2026-11-20T06:54:54-06:00 | 2026-11-20T06:56:17-06:00 | 83.0 | success |
 | 44666733628 | Auditoría de corridas Motor U6 | schedule | 2026-11-19T21:17:39-06:00 | 2026-11-19T21:17:39-06:00 | 2026-11-19T21:19:09-06:00 | 90.0 | success |
 | 44620455649 | Auditoría de corridas Motor U6 | schedule | 2026-11-19T15:36:25-06:00 | 2026-11-19T15:36:25-06:00 | 2026-11-19T15:37:49-06:00 | 84.0 | success |
-| 44530843231 | Auditoría de corridas Motor U6 | schedule | 2026-11-19T07:10:31-06:00 | 2026-11-19T07:10:31-06:00 | 2026-11-19T07:11:50-06:00 | 79.0 | success |
-| 44513581682 | Motor runner contract tests | pull_request | 2026-11-19T05:18:10-06:00 | 2026-11-19T05:18:10-06:00 | 2026-11-19T05:18:29-06:00 | 19.0 | success |
 
 ## Fallos y cancelaciones
 
+- Run 45866388817 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45866388817
+- Run 45866285313 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45866285313
+- Run 45866155637 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45866155637
+- Run 45866015761 (.github/workflows/ejecutar-caso-exploratorio-u7.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45866015761
+- Run 45865989627 (.github/workflows/ejecutar-caso-exploratorio-u7.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45865989627
+- Run 45864470410 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45864470410
+- Run 45864325251 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45864325251
+- Run 45864202443 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45864202443
+- Run 45864068092 (.github/workflows/ejecutar-caso-exploratorio-u7.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45864068092
+- Run 45864055714 (.github/workflows/ejecutar-caso-exploratorio-u7.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45864055714
+- Run 45863956200 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863956200
+- Run 45863910085 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863910085
+- Run 45863795033 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863795033
+- Run 45863752758 (.github/workflows/ejecutar-caso-exploratorio-u7.yml): failure; jobs: sin detalle de job; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863752758
+- Run 45863639890 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863639890
+- Run 45863412211 (Motor U7 — ejecutar caso exploratorio aislado): failure; jobs: ejecutar=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45863412211
+- Run 45860409263 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860409263
+- Run 45860284178 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45860284178
 - Run 45361873106 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45361873106
 - Run 45172749593 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45172749593
 - Run 45123761669 (Motor runner contract tests): failure; jobs: runner-contract=failure; https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45123761669
