@@ -18,7 +18,7 @@ on:
       - "casos/ejecuciones_exploratorias/**"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   ejecutar:
@@ -35,6 +35,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Regenerar y persistir manifiestos del paquete motor
+        run: |
+          set -euo pipefail
+          python -B motor/scripts/regenerar_manifestos_trabajo.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motor/UNIFICACION_SHA256_MANIFEST.json motor/MANIFIESTO_COMPACTO_SHA256.json motor/SHA256SUMS_MOTOR.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: regenerar manifiestos del paquete Motor U7"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
       - name: Instalar dependencias del runner
         run: python -m pip install --upgrade numpy scipy ddgs primp lxml click
       - name: Resolver entrada y ejecutar Motor U7
@@ -59,6 +70,9 @@ jobs:
           test -f "$INPUT_FILE"
           test -n "$CASE_ID"
           mkdir -p /tmp/u7-evidencia
+          cp motor/UNIFICACION_SHA256_MANIFEST.json /tmp/u7-evidencia/
+          cp motor/MANIFIESTO_COMPACTO_SHA256.json /tmp/u7-evidencia/
+          cp motor/SHA256SUMS_MOTOR.txt /tmp/u7-evidencia/
           python -B motor/correr_estandar.py "$INPUT_FILE" "$CASE_ID"
           cp "motor/RESULT_${CASE_ID}.json" /tmp/u7-evidencia/
           cp "motor/RESULT_${CASE_ID}_RECIBO_EJECUCION.json" /tmp/u7-evidencia/
