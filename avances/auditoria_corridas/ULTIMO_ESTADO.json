@@ -3,6 +3,36 @@
   "window_days": 7,
   "runs": [
     {
+      "run_id": 45985808823,
+      "run_attempt": 1,
+      "workflow": "Auditoría de corridas Motor U6",
+      "event": "schedule",
+      "actor": "marcojpad-hash",
+      "branch": "main",
+      "head_sha": "89daed21e0159815c6088d0b0f11c69ca730bbe0",
+      "created_at_utc": "2026-11-27T10:52:54Z",
+      "created_at_cdmx": "2026-11-27T04:52:54-06:00",
+      "started_at_utc": "2026-11-27T10:52:54Z",
+      "started_at_cdmx": "2026-11-27T04:52:54-06:00",
+      "finished_at_utc": "2026-11-27T10:54:19Z",
+      "finished_at_cdmx": "2026-11-27T04:54:19-06:00",
+      "duration_seconds": 85.0,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/45985808823",
+      "jobs": [
+        {
+          "name": "auditar",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at_utc": "2026-11-27T10:52:58Z",
+          "finished_at_utc": "2026-11-27T10:54:18Z",
+          "duration_seconds": 80.0
+        }
+      ],
+      "artifacts": []
+    },
+    {
       "run_id": 45926878075,
       "run_attempt": 1,
       "workflow": "Auditoría de corridas Motor U6",
@@ -259,14 +289,7 @@
           "duration_seconds": 56.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45865983746",
-          "created_at_utc": "2026-11-26T17:15:10Z",
-          "expired": false,
-          "size_in_bytes": 64481
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45864948542,
@@ -370,14 +393,7 @@
           "duration_seconds": 48.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45864668357",
-          "created_at_utc": "2026-11-26T17:06:13Z",
-          "expired": false,
-          "size_in_bytes": 64472
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45864470410,
@@ -437,14 +453,7 @@
           "duration_seconds": 56.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45864449105",
-          "created_at_utc": "2026-11-26T17:04:56Z",
-          "expired": false,
-          "size_in_bytes": 64470
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45864325251,
@@ -504,14 +513,7 @@
           "duration_seconds": 54.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45864311647",
-          "created_at_utc": "2026-11-26T17:04:01Z",
-          "expired": false,
-          "size_in_bytes": 64475
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45864202443,
@@ -784,14 +786,7 @@
           "duration_seconds": 46.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45861322178",
-          "created_at_utc": "2026-11-26T16:43:52Z",
-          "expired": false,
-          "size_in_bytes": 64473
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45861145554,
@@ -821,14 +816,7 @@
           "duration_seconds": 53.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45861145554",
-          "created_at_utc": "2026-11-26T16:42:49Z",
-          "expired": false,
-          "size_in_bytes": 64480
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45861145528,
@@ -888,14 +876,7 @@
           "duration_seconds": 54.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860926469",
-          "created_at_utc": "2026-11-26T16:41:21Z",
-          "expired": false,
-          "size_in_bytes": 64487
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860926413,
@@ -985,14 +966,7 @@
           "duration_seconds": 49.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860715752",
-          "created_at_utc": "2026-11-26T16:39:52Z",
-          "expired": false,
-          "size_in_bytes": 64458
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860622539,
@@ -1052,14 +1026,7 @@
           "duration_seconds": 58.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860622290",
-          "created_at_utc": "2026-11-26T16:39:25Z",
-          "expired": false,
-          "size_in_bytes": 64443
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860500437,
@@ -1089,14 +1056,7 @@
           "duration_seconds": 55.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860500437",
-          "created_at_utc": "2026-11-26T16:38:34Z",
-          "expired": false,
-          "size_in_bytes": 64452
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860500267,
@@ -1156,14 +1116,7 @@
           "duration_seconds": 52.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860409263",
-          "created_at_utc": "2026-11-26T16:37:55Z",
-          "expired": false,
-          "size_in_bytes": 64605
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860409181,
@@ -1223,14 +1176,7 @@
           "duration_seconds": 56.0
         }
       ],
-      "artifacts": [
-        {
-          "name": "motor-u6-manifests-45860284178",
-          "created_at_utc": "2026-11-26T16:37:11Z",
-          "expired": false,
-          "size_in_bytes": 64611
-        }
-      ]
+      "artifacts": []
     },
     {
       "run_id": 45860284028,
@@ -2968,36 +2914,6 @@
           "started_at_utc": "2026-11-20T21:06:09Z",
           "finished_at_utc": "2026-11-20T21:07:22Z",
           "duration_seconds": 73.0
-        }
-      ],
-      "artifacts": []
-    },
-    {
-      "run_id": 44739754266,
-      "run_attempt": 1,
-      "workflow": "Auditoría de corridas Motor U6",
-      "event": "schedule",
-      "actor": "marcojpad-hash",
-      "branch": "main",
-      "head_sha": "c867c8819408316a3bae8f903573c998101352c0",
-      "created_at_utc": "2026-11-20T12:54:54Z",
-      "created_at_cdmx": "2026-11-20T06:54:54-06:00",
-      "started_at_utc": "2026-11-20T12:54:54Z",
-      "started_at_cdmx": "2026-11-20T06:54:54-06:00",
-      "finished_at_utc": "2026-11-20T12:56:17Z",
-      "finished_at_cdmx": "2026-11-20T06:56:17-06:00",
-      "duration_seconds": 83.0,
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/marcojpad-hash/motor-u6-storage/actions/runs/44739754266",
-      "jobs": [
-        {
-          "name": "auditar",
-          "status": "completed",
-          "conclusion": "success",
-          "started_at_utc": "2026-11-20T12:54:58Z",
-          "finished_at_utc": "2026-11-20T12:56:16Z",
-          "duration_seconds": 78.0
         }
       ],
       "artifacts": []
