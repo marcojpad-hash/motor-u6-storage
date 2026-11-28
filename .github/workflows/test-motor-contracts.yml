@@ -14,8 +14,11 @@ on:
       - "motor/lectura_funcional_v1.py"
       - "motor/tests/test_lectura_funcional_v1.py"
       - "motor/motor/control_flujo_soluciones.py"
+      - "motor/motor/ceb_runtime_v0_6_flow.py"
+      - "motor/tests/test_ceb_closed_audit_hook.py"
       - "motor/tests/test_cableado_plan_contorno.py"
       - "motor/tests/test_control_flujo_runner.py"
+            motor/tests/test_ceb_closed_audit_hook.py \
       - "motor/tests/test_runner_json_contract.py"
       - "motor/motor/respuesta_humana_v1.py"
       - "motor/tests/test_cableado_respuesta_humana.py"
@@ -62,6 +65,8 @@ on:
       - "motor/lectura_funcional_v1.py"
       - "motor/tests/test_lectura_funcional_v1.py"
       - "motor/motor/control_flujo_soluciones.py"
+      - "motor/motor/ceb_runtime_v0_6_flow.py"
+      - "motor/tests/test_ceb_closed_audit_hook.py"
       - "motor/tests/test_cableado_plan_contorno.py"
       - "motor/tests/test_control_flujo_runner.py"
       - "motor/tests/test_runner_json_contract.py"
@@ -142,4 +147,4 @@ jobs:
           retention-days: 1
           if-no-files-found: error
       - name: Record source hashes
-        run: sha256sum motor/correr_estandar.py motor/motor/respuesta_humana_v1.py motor/motor/plugin_verificador_consistencia_adversarial.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py motor/lectura_funcional_v1.py
+        run: sha256sum motor/correr_estandar.py motor/motor/respuesta_humana_v1.py motor/motor/plugin_verificador_consistencia_adversarial.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/ceb_runtime_v0_6_flow.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py motor/lectura_funcional_v1.py
