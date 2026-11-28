@@ -1,5 +1,5 @@
 name: Motor runner contract tests
-# Z90 gate verification: active branch only, contents: read; no runner/custody actions
+# Contract/regression tests only; synthetic fixtures; no real-case preparation or custody access
 
 on:
   push:
@@ -10,6 +10,10 @@ on:
       - "motor/tests/test_cableado_plan_contorno.py"
       - "motor/tests/test_control_flujo_runner.py"
       - "motor/tests/test_runner_json_contract.py"
+      - "motor/motor/respuesta_humana_v1.py"
+      - "motor/tests/test_cableado_respuesta_humana.py"
+      - "motor/motor/plugin_verificador_consistencia_adversarial.py"
+      - "motor/tests/test_cableado_verificador.py"
       - "motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/SHA256SUMS_MOTOR.txt"
       - "motor/MANIFIESTO_COMPACTO_SHA256.json"
@@ -47,6 +51,10 @@ on:
       - "motor/tests/test_cableado_plan_contorno.py"
       - "motor/tests/test_control_flujo_runner.py"
       - "motor/tests/test_runner_json_contract.py"
+      - "motor/motor/respuesta_humana_v1.py"
+      - "motor/tests/test_cableado_respuesta_humana.py"
+      - "motor/motor/plugin_verificador_consistencia_adversarial.py"
+      - "motor/tests/test_cableado_verificador.py"
       - "motor/tests/test_guardian_z90_correr_estandar.py"
       - "motor/SHA256SUMS_MOTOR.txt"
       - "motor/MANIFIESTO_COMPACTO_SHA256.json"
@@ -89,6 +97,8 @@ jobs:
         run: |
           python -m pytest -q \
             motor/tests/test_runner_json_contract.py \
+            motor/tests/test_cableado_respuesta_humana.py \
+            motor/tests/test_cableado_verificador.py \
             motor/tests/test_cableado_plan_contorno.py \
             motor/tests/test_control_flujo_runner.py \
             motor/tests/test_matriz_mortalidad_z90_v0_2.py \
@@ -117,4 +127,4 @@ jobs:
           retention-days: 1
           if-no-files-found: error
       - name: Record source hashes
-        run: sha256sum motor/correr_estandar.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py
+        run: sha256sum motor/correr_estandar.py motor/motor/respuesta_humana_v1.py motor/motor/plugin_verificador_consistencia_adversarial.py motor/motor/MOTOR_V15_3_UNICO_20260927.py motor/motor/MOTOR_V15_3_NATIVO_V0_9_UNICO.py motor/motor/matriz_mortalidad_z90_v0_2.py motor/motor/sidecar_caldero_busqueda_arquetipos.py motor/motor/filtro_tokens_arquetipos_v2.py motor/capa_llm/filtro_entrada_dirigida_017.py
