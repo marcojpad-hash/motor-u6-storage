@@ -1,0 +1,43 @@
+name: POE-U6 linguistic false-positive diagnostic
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "motor/orquestacion/diagnostico_falsos_positivos_v0_2.py"
+      - "motor/orquestacion/calibrador_linguistico_poe_v0_3.py"
+      - "motor/tests/test_calibrador_linguistico_poe_v0_3.py"
+      - "motor/tests/test_orquestacion_diagnostico_v0_2.py"
+      - "motor/motor/plugin_pregunta_detras_v2.py"
+      - "motor/motor/guardian_logica_copi_v1.py"
+      - "motor/motor/guardianes_control_v1.py"
+      - ".github/workflows/poe-linguistic-diagnostic.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linguistic-diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Execute real linguistic components on controlled corpus
+        run: python -B motor/orquestacion/diagnostico_falsos_positivos_v0_2.py
+      - name: Execute lateral contextual calibrator
+        run: python -B motor/orquestacion/calibrador_linguistico_poe_v0_3.py
+      - name: Verify diagnostic and calibrator contracts
+        run: |
+          python -B -m unittest discover -s motor/tests -p 'test_orquestacion_diagnostico_v0_2.py' -v
+          python -B -m unittest discover -s motor/tests -p 'test_calibrador_linguistico_poe_v0_3.py' -v
+      - name: Upload measured results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: POE_U6_CALIBRADOR_LINGUISTICO_V03
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30
