@@ -232,3 +232,5 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - **CI VERIFICADO:** run 46109112168, job runner-contract SUCCESS, 138 passed in 84.46 s. El workflow ahora incluye el runtime y el test CEB en sus filtros y en pytest. El primer ajuste del workflow produjo un run sin jobs por YAML inválido; se corrigió y el run posterior quedó SUCCESS.
 - **Manifiestos:** regeneración ejecutada por CI y artifact 15248309793 descargado/revisado; SHA-256 nuevo del runtime CEB: 25935b543556ccf4f309a92b9fdea6111b7c85e4850d74b377998bad33e81e7a. El snapshot ULTIMO_ESTADO.json/MD de la rama no refleja estos runs recientes (último registro visible: 10-nov); para este corte la fuente de verdad fue Actions + logs + artifact, no ese snapshot.
 - No se ejecutaron casos nuevos, no se incrementó muestra, no se abrió custodia/destinos y no se modificaron motores canónicos, catálogo 244, pesos, FREEZE ni main.
+
+- Commits verificados: runtime 0bebbd74; tests df1846d; workflow corregido d022b943 (el commit previo 02a4e5b produjo un run sin jobs y no se cuenta como validación). Bitácora 318f7a6e; tablero 078e883.
