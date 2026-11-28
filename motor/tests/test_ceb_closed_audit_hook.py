@@ -49,3 +49,50 @@ def test_verifier_marca_salida_persistida_sin_consumidor(tmp_path):
     assert out["stages"]["neighbor_store"]["status"] == "OUTPUT_NO_OBSERVED_CONSUMER"
     assert out["status"] == "VERIFIED_FLOW_WITH_ANOMALIES"
     assert any(a.get("type") == "FEEDS_OUTPUT_NOT_CONSUMED" for a in out["anomalies"])
+
+
+def test_verifier_optional_failed_stage_is_non_blocking_but_visible(tmp_path):
+    ledger = tmp_path / "optional-failure.jsonl"
+    stage_id = "sidecar_caldero_busqueda_arquetipos#1"
+    rows = [
+        {"event": "STAGE_REGISTER", "stage_id": stage_id,
+         "payload": {"name": "sidecar_caldero_busqueda_arquetipos"}},
+        {"event": "STAGE_START", "stage_id": stage_id, "payload": {}},
+        {"event": "STAGE_ERROR", "stage_id": stage_id,
+         "payload": {"type": "RuntimeError", "message": "búsqueda externa deshabilitada"}},
+        {"event": "STAGE_END", "stage_id": stage_id, "payload": {}},
+        {"event": "RUN_END", "stage_id": "run", "payload": {}},
+    ]
+    ledger.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+    report = {"execution": {"component_status": [
+        {"component": "sidecar_caldero_busqueda_arquetipos.py",
+         "status": "OPTIONAL_STAGE_FAILED", "required": False,
+         "feeds_predictor": False, "error": "búsqueda externa deshabilitada"}
+    ]}}
+    out = ceb.FlowVerifier(ledger).verify(report)
+    assert out["stages"][stage_id]["status"] == "FAILED_OPTIONAL_STAGE"
+    assert out["status"] == "VERIFIED_FLOW_WITH_ANOMALIES"
+    assert any(a.get("type") == "OPTIONAL_STAGE_FAILED" and a.get("required") is False
+               for a in out["anomalies"])
+
+
+def test_verifier_required_failed_stage_remains_incomplete(tmp_path):
+    ledger = tmp_path / "required-failure.jsonl"
+    stage_id = "required_stage#1"
+    rows = [
+        {"event": "STAGE_REGISTER", "stage_id": stage_id,
+         "payload": {"name": "required_stage"}},
+        {"event": "STAGE_START", "stage_id": stage_id, "payload": {}},
+        {"event": "STAGE_ERROR", "stage_id": stage_id,
+         "payload": {"type": "RuntimeError", "message": "required failure"}},
+        {"event": "STAGE_END", "stage_id": stage_id, "payload": {}},
+        {"event": "RUN_END", "stage_id": "run", "payload": {}},
+    ]
+    ledger.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+    report = {"execution": {"component_status": [
+        {"component": "required_stage.py", "status": "FAILED",
+         "required": True, "feeds_predictor": True}
+    ]}}
+    out = ceb.FlowVerifier(ledger).verify(report)
+    assert out["stages"][stage_id]["status"] == "FAILED"
+    assert out["status"] == "INCOMPLETE"
