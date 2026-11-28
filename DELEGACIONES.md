@@ -222,3 +222,13 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - La etapa prepara un paquete mínimo por rutas declaradas y valida una revisión de otro modelo ligada a hashes. El sidecar puede ALLOWED o BLOCKED antes del handoff; no altera RESULT, RECIBO, H1/H2, ranking, pesos ni motores canónicos.
 - CI: run 46106989385, success, 134 passed en 50.30 s.
 - Límite explícito: la identidad del revisor es DECLARED_ONLY; no hay autenticación criptográfica ni llamada automática a otro modelo. No se declara integración automática en correr_estandar.py ni reparación de C-F8.
+
+
+### 2026-11-27 — CEB opcional no bloqueante y CI
+
+- **Hallazgo:** FlowVerifier convertía cualquier STAGE_ERROR en bloqueo aunque el reporte del componente declarara OPTIONAL_STAGE_FAILED con required=false. El error opcional quedaba como CEB INCOMPLETE, aunque no impedía el flujo obligatorio.
+- **Corrección en rama activa:** los fallos con required=false ahora quedan como FAILED_OPTIONAL_STAGE y anomalía explícita OPTIONAL_STAGE_FAILED; el CEB resultante es VERIFIED_FLOW_WITH_ANOMALIES. Si required=true o el campo no existe, el fallo sigue produciendo INCOMPLETE. No se oculta el error.
+- **Regresión:** se añadieron dos pruebas: opcional falla sin bloquear y fallo requerido sigue bloqueando.
+- **CI VERIFICADO:** run 46109112168, job runner-contract SUCCESS, 138 passed in 84.46 s. El workflow ahora incluye el runtime y el test CEB en sus filtros y en pytest. El primer ajuste del workflow produjo un run sin jobs por YAML inválido; se corrigió y el run posterior quedó SUCCESS.
+- **Manifiestos:** regeneración ejecutada por CI y artifact 15248309793 descargado/revisado; SHA-256 nuevo del runtime CEB: 25935b543556ccf4f309a92b9fdea6111b7c85e4850d74b377998bad33e81e7a. El snapshot ULTIMO_ESTADO.json/MD de la rama no refleja estos runs recientes (último registro visible: 10-nov); para este corte la fuente de verdad fue Actions + logs + artifact, no ese snapshot.
+- No se ejecutaron casos nuevos, no se incrementó muestra, no se abrió custodia/destinos y no se modificaron motores canónicos, catálogo 244, pesos, FREEZE ni main.
