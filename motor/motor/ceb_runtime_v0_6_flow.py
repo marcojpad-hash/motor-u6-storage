@@ -489,6 +489,31 @@ class FlowVerifier:
                 if '(pre)' in lname: matches=[x for x in matches if '.pre_predictor' in x[0]]
                 if '(post)' in lname: matches=[x for x in matches if '.post_predictor' in x[0]]
                 claimed=str(rr.get('status','')).upper(); feeds=bool(rr.get('feeds_H',False) or rr.get('feeds_predictor',False))
+                # Un fallo declarado como opcional no invalida el flujo completo.
+                # Se conserva como anomalía explícita y el stage deja de contar como
+                # bloqueo; los fallos requeridos o sin required=false siguen bloqueando.
+                optional_failed = claimed == 'OPTIONAL_STAGE_FAILED' and rr.get('required') is False
+                if optional_failed:
+                    failed_matches = [(sid, ss) for sid, ss in matches if ss['status'] == 'FAILED']
+                    if failed_matches:
+                        for sid, ss in failed_matches:
+                            ss['status'] = 'FAILED_OPTIONAL_STAGE'
+                        anomalies.append({
+                            'type': 'OPTIONAL_STAGE_FAILED',
+                            'component': name,
+                            'required': False,
+                            'stage_ids': [sid for sid, _ in failed_matches],
+                            'error': rr.get('error'),
+                        })
+                    else:
+                        anomalies.append({
+                            'type': 'OPTIONAL_STAGE_FAILURE_NOT_OBSERVED',
+                            'component': name,
+                            'required': False,
+                            'stage_ids': [sid for sid, _ in matches],
+                            'error': rr.get('error'),
+                        })
+                    continue
                 non_authoritative = claimed in {'AUDIT_ONLY','PLUGIN_SALTADO','APAGADO_ABLACION','CABLEADO_NO_EJECUTADO','CABLEADO_ESPERANDO_LLM_SEARCH','API_PENDING','ACTIVA_MUDA','ABSORBIDO_EN_GUARDIA_TRANSVERSAL'}
                 if claimed=='EXECUTED' and not matches:
                     anomalies.append({'type':'REPORTED_EXECUTED_NOT_OBSERVED','component':name})
