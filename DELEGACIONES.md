@@ -214,3 +214,11 @@ Lectura de los ocho workflows presentes en alterno/cameo-pesos. **No se disparó
 - El commit fue de `github-actions[bot]` y solo modificó `avances/auditoria_corridas/ULTIMO_ESTADO.json` y `ULTIMO_ESTADO.md`; no alteró motores ni patrones. Es una escritura automática en `main`, en tensión con `SOLO_CONSULTA`; esta ejecución no la produjo ni la revirtió.
 - El snapshot no incluye el run que lo generó: el documento sigue mostrando como última auditoría la 45488723151 de las 15:12 CDMX. No tratar el snapshot como evidencia de una corrida predictiva ni como inventario completo de Actions.
 - HEAD de trabajo después de los registros documentales: `f57830ed9b246a3e9f9682da80788364f0f46756`.
+
+
+### 2026-11-27 — LECTURA_FUNCIONAL_AGNOSTICA_V1
+
+- Contrato y skill agnósticos añadidos en docs; plantilla de contrato, esquema JSON, CLI post-corrida y suite sintética en motor.
+- La etapa prepara un paquete mínimo por rutas declaradas y valida una revisión de otro modelo ligada a hashes. El sidecar puede ALLOWED o BLOCKED antes del handoff; no altera RESULT, RECIBO, H1/H2, ranking, pesos ni motores canónicos.
+- CI: run 46106989385, success, 134 passed en 50.30 s.
+- Límite explícito: la identidad del revisor es DECLARED_ONLY; no hay autenticación criptográfica ni llamada automática a otro modelo. No se declara integración automática en correr_estandar.py ni reparación de C-F8.

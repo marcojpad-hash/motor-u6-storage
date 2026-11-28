@@ -29,4 +29,4 @@ La revisión se realiza después de escribir RESULT porque necesita el hash fina
 
 Se incorpora una suite sintética para paquete mínimo, PASS, FAIL, UNKNOWN, ausencia de revisión, hash discordante, referencias inválidas, identidad declarada no independiente y modo observacional sin compuerta.
 
-Estado CI: pendiente de la primera ejecución del workflow con este commit. No se declara FUNCIONAL hasta leer el run y el resultado de vuelta.
+Estado CI: VERIFICADO. Run 46106989385, conclusión success; 134 passed en 50.30 s. Lectura de vuelta del run y del log completada. La etapa queda FUNCIONAL como validador post-run, no como integración automática en correr_estandar.py.

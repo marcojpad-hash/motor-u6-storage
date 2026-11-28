@@ -589,7 +589,7 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 - **Dependencias:** motor/lectura_funcional_v1.py (prepare / apply), motor/LECTURA_FUNCIONAL_REVIEW_V1.schema.json, docs/SKILL_LECTURA_FUNCIONAL_AGNOSTICA_V1.md.
 - **Produce:** sidecar FUNCTIONAL_GATE_RESULT_V1 con PASS / FAIL / INDETERMINATE y ALLOWED / BLOCKED / NOT_GATING. No modifica RESULT, RECIBO, H1/H2, ranking, pesos ni evidencia.
 - **Punto de integración:** post-corrida, antes del handoff. El revisor necesita el RESULT final y su hash; por eso no se invoca dentro del predictor. El orquestador debe ejecutar prepare, solicitar revisión independiente y ejecutar apply antes de liberar el artefacto.
-- **Veredicto inicial:** CABLEADO_POSTRUN. La integración automática en correr_estandar.py no está hecha; la revisión externa todavía requiere otro modelo. CI de la suite nueva pendiente.
+- **Veredicto inicial:** CABLEADO_POSTRUN. La integración automática en correr_estandar.py no está hecha; la revisión externa todavía requiere otro modelo. CI verificado: run 46106989385, 134 pruebas aprobadas en 50.30 s.
 - **Independencia:** el validador exige modelos y run_id distintos, pero la identidad real no está autenticada; el sidecar informa DECLARED_ONLY.
 - **Límite:** no es un predictor, no recalibra U7 y no resuelve C-F8. review_pending de StinkBox conserva su bloqueo documentado.
 

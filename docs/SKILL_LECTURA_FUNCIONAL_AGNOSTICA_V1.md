@@ -54,7 +54,7 @@ Cada check contiene:
 
 Cada entrada de evidence_map contiene:
 - ref: referencia exacta;
-- relation: supports, contradicts ou limits;
+- relation: supports, contradicts or limits;
 - note: qué demuestra o limita esa evidencia.
 
 decision debe ser consistente con los checks:

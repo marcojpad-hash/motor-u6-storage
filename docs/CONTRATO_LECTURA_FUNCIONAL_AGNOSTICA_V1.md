@@ -1,6 +1,6 @@
 # Contrato de capacidad — Lectura funcional agnóstica V1
 
-**Estado:** implementada como etapa post-corrida separada; CI pendiente al primer commit de integración.  
+**Estado:** implementada como etapa post-corrida separada; CI verificado: run 46106989385, 134 pruebas aprobadas en 50.30 s.  
 **Ámbito:** Motor U7, rama operativa alterno/cameo-pesos.  
 **Naturaleza:** lateral de diagnóstico funcional del artefacto; no es predictor ni calibrador.
 
@@ -97,5 +97,5 @@ La nueva lectura es ortogonal a esas piezas. Tampoco resuelve C-F8: el review_pe
 
 **CABLEADO_POSTRUN:** CLI prepare/apply y sidecar implementados.  
 **INTEGRADO_EN_RUNNER:** NO; la revisión ocurre después de que existe RESULT y requiere otro modelo. El orquestador debe invocar apply antes de liberar el artefacto.  
-**FUNCIONAL:** pendiente de CI de la suite nueva.  
+**FUNCIONAL:** verificado por CI 46106989385 (134 passed, 50.30 s).  
 **INDEPENDENCIA_VERIFICADA:** no; por ahora solo se valida la declaración del revisor.
