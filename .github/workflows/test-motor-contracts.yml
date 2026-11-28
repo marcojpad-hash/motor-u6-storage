@@ -18,7 +18,6 @@ on:
       - "motor/tests/test_ceb_closed_audit_hook.py"
       - "motor/tests/test_cableado_plan_contorno.py"
       - "motor/tests/test_control_flujo_runner.py"
-            motor/tests/test_ceb_closed_audit_hook.py \
       - "motor/tests/test_runner_json_contract.py"
       - "motor/motor/respuesta_humana_v1.py"
       - "motor/tests/test_cableado_respuesta_humana.py"
@@ -121,6 +120,7 @@ jobs:
             motor/tests/test_cableado_verificador.py \
             motor/tests/test_cableado_plan_contorno.py \
             motor/tests/test_control_flujo_runner.py \
+            motor/tests/test_ceb_closed_audit_hook.py \
             motor/tests/test_matriz_mortalidad_z90_v0_2.py \
             motor/tests/test_normalizar_mortalidad_preparacion.py \
             motor/tests/test_cableado_017.py \
