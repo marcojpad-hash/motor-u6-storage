@@ -1,0 +1,48 @@
+{
+  "contract_id": "TASK_CONTRACT_ID",
+  "task_type": "task_type",
+  "purpose": "Describe the concrete function this artifact must fulfill.",
+  "audience": "Who consumes the final artifact.",
+  "desired_outcome": "Observable outcome that would satisfy the task.",
+  "constraints": [
+    "Non-negotiable constraint for this task."
+  ],
+  "non_goals": [
+    "What this task must not attempt."
+  ],
+  "evidence_requirements": [
+    "What evidence must be traceable in the final artifact."
+  ],
+  "completion_criteria": [
+    {
+      "id": "purpose_fulfilled",
+      "requirement": "The artifact achieves the purpose defined above.",
+      "critical": true
+    },
+    {
+      "id": "intent_coherence",
+      "requirement": "The artifact remains coherent with the intended outcome and constraints.",
+      "critical": true
+    },
+    {
+      "id": "evidence_traceable",
+      "requirement": "Material conclusions can be reconstructed from admitted evidence.",
+      "critical": true
+    },
+    {
+      "id": "limits_disclosed",
+      "requirement": "Relevant uncertainty and limits are explicit.",
+      "critical": true
+    }
+  ],
+  "input_paths": [
+    "/question"
+  ],
+  "artifact_paths": [
+    "/respuesta_humana/respuesta"
+  ],
+  "evidence_paths": [
+    "/cierre_final"
+  ],
+  "gate_required": true
+}

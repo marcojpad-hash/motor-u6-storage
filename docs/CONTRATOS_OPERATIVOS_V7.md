@@ -579,3 +579,17 @@ exacta. No hay "pendiente de valoración" sin causa nombrada.
 - **F3/F7:** cerrados como diseño con causa (ver 1.3 y 5.1).
 - **F5 (fila histórica `feeds_predictor=True` en laterales):** corregida en
   V7 (A-F5: la fila del plugin token ahora dice `feeds_predictor=False`).
+
+
+## 12. Lectura funcional agnóstica post-corrida
+
+- **Función:** comprobar si el artefacto final cumple el propósito observable definido por el contrato de tarea y si su relación con la entrada y la evidencia puede reconstruirse.
+- **Criterios:** los define cada contrato; no se codifican criterios editoriales de CAPCOT ni una lista universal de checks.
+- **Entradas:** contrato de tarea, extractos mínimos de input, artefacto final, evidencia seleccionada y revisión emitida por otro modelo.
+- **Dependencias:** motor/lectura_funcional_v1.py (prepare / apply), motor/LECTURA_FUNCIONAL_REVIEW_V1.schema.json, docs/SKILL_LECTURA_FUNCIONAL_AGNOSTICA_V1.md.
+- **Produce:** sidecar FUNCTIONAL_GATE_RESULT_V1 con PASS / FAIL / INDETERMINATE y ALLOWED / BLOCKED / NOT_GATING. No modifica RESULT, RECIBO, H1/H2, ranking, pesos ni evidencia.
+- **Punto de integración:** post-corrida, antes del handoff. El revisor necesita el RESULT final y su hash; por eso no se invoca dentro del predictor. El orquestador debe ejecutar prepare, solicitar revisión independiente y ejecutar apply antes de liberar el artefacto.
+- **Veredicto inicial:** CABLEADO_POSTRUN. La integración automática en correr_estandar.py no está hecha; la revisión externa todavía requiere otro modelo. CI de la suite nueva pendiente.
+- **Independencia:** el validador exige modelos y run_id distintos, pero la identidad real no está autenticada; el sidecar informa DECLARED_ONLY.
+- **Límite:** no es un predictor, no recalibra U7 y no resuelve C-F8. review_pending de StinkBox conserva su bloqueo documentado.
+
